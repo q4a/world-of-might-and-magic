@@ -1,8 +1,12 @@
 #pragma once
 
 #include <cassert>
-#include <cmath>
 #include <limits>
+#ifndef _WINDOWS
+#undef min
+#undef max
+#endif
+#include <cmath>
 #include <cstdint>
 
 #define pi_double 3.14159265358979323846
