@@ -2,6 +2,8 @@
 
 #ifdef _WINDOWS
 #include <Windows.h>
+#else
+#include <cstring>
 #endif
 #include <stdio.h>
 
