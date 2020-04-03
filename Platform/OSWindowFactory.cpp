@@ -1,6 +1,8 @@
 #include "Platform/OSWindowFactory.h"
 
+#ifdef _WINDOWS
 #include <Windows.h>
+#endif
 #include <stdio.h>
 
 #include "Platform/Api.h"
