@@ -723,10 +723,8 @@ struct Player {
     int pure_accuracy_used;
     int pure_might_used;
     union {  // 214h
-        struct {
-            std::array<ItemGen, 126> pInventoryItemList;
-            std::array<ItemGen, 12> pEquippedItems;
-        };
+        std::array<ItemGen, 126> pInventoryItemList;
+        std::array<ItemGen, 12> pEquippedItems;
         std::array<ItemGen, 138> pOwnItems;
     };
 
