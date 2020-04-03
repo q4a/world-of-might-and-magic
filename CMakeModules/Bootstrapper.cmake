@@ -61,10 +61,17 @@ if (NOT EXISTS "${LIBRARY_DIR}")
     )
 endif()
 
-include("${CMAKE_CURRENT_SOURCE_DIR}/CMakeModules/thirdparty/zlib.cmake")
-include("${CMAKE_CURRENT_SOURCE_DIR}/CMakeModules/thirdparty/OpenAL.cmake")
-include("${CMAKE_CURRENT_SOURCE_DIR}/CMakeModules/thirdparty/SDL2.cmake")
-include("${CMAKE_CURRENT_SOURCE_DIR}/CMakeModules/thirdparty/ffmpeg.cmake")
+if (WIN32)
+    include("${CMAKE_CURRENT_SOURCE_DIR}/CMakeModules/thirdparty/zlib.cmake")
+    include("${CMAKE_CURRENT_SOURCE_DIR}/CMakeModules/thirdparty/OpenAL.cmake")
+    include("${CMAKE_CURRENT_SOURCE_DIR}/CMakeModules/thirdparty/SDL2.cmake")
+    include("${CMAKE_CURRENT_SOURCE_DIR}/CMakeModules/thirdparty/ffmpeg.cmake")
+else()
+#    find_package(FFMPEG REQUIRED)
+#    find_package(OPENAL REQUIRED)
+    find_package(SDL2 REQUIRED)
+    find_package(ZLIB REQUIRED)
+endif()
 
 
 # we add the sub-directories that we want CMake to scan
