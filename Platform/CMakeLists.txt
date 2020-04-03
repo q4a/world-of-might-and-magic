@@ -13,6 +13,7 @@ if(WIN32)
     list(APPEND PLATFORM_SOURCES Win/AppSettings.cpp Win/Win.cpp)
     list(APPEND PLATFORM_HEADERS Win/Win.h)
 else()
+include_directories(${SDL_INCLUDE_DIRS})
 endif()
 
 add_library(platform STATIC ${PLATFORM_SOURCES} ${PLATFORM_HEADERS})
