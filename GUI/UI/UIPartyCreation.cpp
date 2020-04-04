@@ -1,6 +1,5 @@
 #define _CRTDBG_MAP_ALLOC
 #define _CRT_SECURE_NO_WARNINGS
-#include <crtdbg.h>
 #include <stdlib.h>
 
 #include "src/Application/Game.h"
@@ -456,7 +455,7 @@ void GUIWindow_PartyCreation::Update() {
 
         pGUIWindow_CurrentMenu->DrawTextInRect(
             pFontCreate, pIntervalX + 72, pIntervalY + 12, 0,
-            pParty->pPlayers[i].GetRaceName(), 130, 0);
+            pParty->pPlayers[i].GetRaceName().c_str(), 130, 0);
 
         pTextCenter = pFontCreate->AlignText_Center(150, pText);
         pGUIWindow_CurrentMenu->DrawText(pFontCreate, pTextCenter + uX - 24,

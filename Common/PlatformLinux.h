@@ -11,3 +11,22 @@ inline void _strlwr(char *src)
     for (;*it;++it)
         *it = tolower(*it);
 }
+
+#include <string.h>
+inline char *_strrev(char *str)
+{
+    if (!str || ! *str)
+        return str;
+
+    char ch;
+    int i = strlen(str) - 1, j = 0;
+    while (i > j)
+    {
+        ch = str[i];
+        str[i] = str[j];
+        str[j] = ch;
+        i--;
+        j++;
+    }
+    return str;
+}

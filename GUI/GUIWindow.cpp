@@ -692,7 +692,8 @@ void GUIWindow::DrawText(GUIFont *font, int uX, int uY,
 int GUIWindow::DrawTextInRect(GUIFont *font, unsigned int x, unsigned int y,
     unsigned int color, const char *text,
     int rect_width, int reverse_text) {
-    return DrawTextInRect(font, x, y, color, String(text), rect_width, reverse_text);
+    String label = String(text);
+    return DrawTextInRect(font, x, y, color, label, rect_width, reverse_text);
 }
 
 //----- (0044CB4F) --------------------------------------------------------
@@ -2177,7 +2178,8 @@ String _4B254D_SkillMasteryTeacher(int trainerInfo) {
 
 String BuildDialogueString(const char *lpsz, unsigned __int8 uPlayerID,
     ItemGen *a3, char *a4, int a5, GameTime *a6) {
-    return BuildDialogueString(String(lpsz), uPlayerID, a3, a4, a5, a6);
+    String str = String(lpsz);
+    return BuildDialogueString(str, uPlayerID, a3, a4, a5, a6);
 }
 
 //----- (00495461) --------------------------------------------------------
