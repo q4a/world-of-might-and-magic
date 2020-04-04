@@ -47,7 +47,7 @@
 #include "Engine/Objects/Actor.h"
 
 #include "Platform/Api.h"
-#include "Platform/OsWindow.h"
+#include "Platform/OSWindow.h"
 
 
 RenderOpenGL::RenderOpenGL()
