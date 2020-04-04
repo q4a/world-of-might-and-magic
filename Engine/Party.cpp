@@ -301,9 +301,9 @@ void Party::TakeGold(int amount) {
 unsigned int Party::GetPartyFame() {
     unsigned __int64 total_exp = 0;
     for (uint i = 0; i < 4; ++i) total_exp += pPlayers[i].uExperience;
-    return (unsigned int)(min(
-        total_exp / 1000,
-        UINT_MAX));  // min wasn't present, but could be incorrect without it
+    return std::min(
+        (unsigned int)(total_exp / 1000),
+        UINT_MAX);  // min wasn't present, but could be incorrect without it
 }
 
 //----- (0049137D) --------------------------------------------------------

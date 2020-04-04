@@ -1741,10 +1741,10 @@ void RenderOpenGL::DrawTextureNew(float u, float v, Image *tex) {
     // check for overlap
     if ((clipx < z && clipz > x && clipy > w && clipw < y)) return;
 
-    int drawx = max(x, clipx);
-    int drawy = max(y, clipy);
-    int draww = min(w, clipw);
-    int drawz = min(z, clipz);
+    int drawx = std::max(x, clipx);
+    int drawy = std::max(y, clipy);
+    int draww = std::min(w, clipw);
+    int drawz = std::min(z, clipz);
 
     float depth = 0;
 
@@ -1806,7 +1806,7 @@ void RenderOpenGL::DrawTextureCustomHeight(float u, float v, class Image *img,
     unsigned int uOutY = 480 * v;
 
     int width = img->GetWidth();
-    int height = min(img->GetHeight(), custom_height);
+    int height = std::min((int)img->GetHeight(), custom_height);
     v6 = (unsigned __int16 *)img->GetPixels(IMAGE_FORMAT_R5G6B5);
 
     // v5 = &this->pTargetSurface[uOutX + uOutY * this->uTargetSurfacePitch];
@@ -1827,13 +1827,13 @@ void RenderOpenGL::DrawTextureCustomHeight(float u, float v, class Image *img,
             height += uOutY - this->clip_y;
             // v5 += this->uTargetSurfacePitch * v11;
         }
-        v12 = max(this->clip_x, uOutX);
+        v12 = std::max((unsigned int)this->clip_x, uOutX);
         if ((signed int)(width + v12) > (signed int)this->clip_z) {
-            width = this->clip_z - max(this->clip_x, uOutX);
+            width = this->clip_z - std::max(this->clip_x, (int)uOutX);
         }
-        v15 = max(this->clip_y, uOutY);
+        v15 = std::max((unsigned int)this->clip_y, uOutY);
         if ((signed int)(v15 + height) > (signed int)this->clip_w) {
-            height = this->clip_w - max(this->clip_y, uOutY);
+            height = this->clip_w - std::max(this->clip_y, (int)uOutY);
         }
     }
 
