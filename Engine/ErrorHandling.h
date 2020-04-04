@@ -24,7 +24,7 @@ void Assert_impl_(const char *filename, const char *functionname,
                   int line, bool condition, const char *condition_string = nullptr,
                   const char *format = nullptr, ...);
 
-#ifndef WIN32
+#ifndef _WINDOWS
 #define __debugbreak(...) assert(false);
 #endif
 

@@ -16,8 +16,8 @@
     #endif
 #endif
 
-#include <gl/glu.h>
-#include <gL/gl.h>
+#include <GL/glu.h>
+#include <GL/gl.h>
 
 
 #include <SDL.h>

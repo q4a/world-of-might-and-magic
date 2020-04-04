@@ -73,7 +73,8 @@ list(APPEND GRAPHICS_HEADERS
     Direct3D/RenderD3D.h
     Direct3D/TextureD3D.h
 )
-
+else()
+include_directories(${SDL_INCLUDE_DIRS})
 endif()
 
 add_library(graphics STATIC ${GRAPHICS_SOURCES} ${GRAPHICS_HEADERS})

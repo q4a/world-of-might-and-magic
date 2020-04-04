@@ -2,8 +2,10 @@
 
 #include "Engine/Graphics/IRenderConfig.h"
 #include "Engine/Graphics/IRenderConfigFactory.h"
-#include "Engine/Graphics/Direct3D/Render.h"
 #include "Engine/Graphics/OpenGL/RenderOpenGL.h"
+#ifdef _WINDOWS
+#include "Engine/Graphics/Direct3D/Render.h"
+#endif
 
 using Graphics::IRenderFactory;
 using Graphics::IRenderConfig;
