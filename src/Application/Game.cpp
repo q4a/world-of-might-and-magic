@@ -965,7 +965,7 @@ void Game::EventLoop() {
                         EventProcessor(dword_5C3418, 0, 1, dword_5C341C);
                     }
                     if (!_stricmp(s_SavedMapName.data(), "d05.blv"))
-                        pParty->GetPlayingTime() += GameTime::FromDays(4);
+                        pParty->GetPlayingTime().AddDays(4);
                     continue;
 
                 case UIMSG_TransitionWindowCloseBtn:
@@ -2836,8 +2836,7 @@ void Game::GameLoop() {
                 for (uint i = 0; i < 4; ++i)
                     pParty->pPlayers[i].SetVariable(VAR_Award, 85);
                 pParty->days_played_without_rest = 0;
-                pParty->GetPlayingTime() +=
-                    GameTime::FromDays(7);  // += 2580480
+                pParty->GetPlayingTime().AddDays(7);  // += 2580480
                 HEXRAYS_LOWORD(pParty->uFlags) &= ~0x204;
                 pParty->SetGold(0);
                 pOtherOverlayList->Reset();
