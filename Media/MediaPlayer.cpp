@@ -32,11 +32,6 @@ extern "C" {
 #include "libswscale/swscale.h"
 }
 
-#ifdef _WINDOWS
-#undef min
-#undef max
-#endif
-
 #pragma comment(lib, "avcodec.lib")
 #pragma comment(lib, "avformat.lib")
 #pragma comment(lib, "avutil.lib")

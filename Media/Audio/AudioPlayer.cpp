@@ -16,11 +16,6 @@
 
 #include "Media/Audio/OpenALSoundProvider.h"
 
-#ifdef _WINDOWS
-#undef min
-#undef max
-#endif
-
 int sLastTrackLengthMS;
 AudioPlayer *pAudioPlayer;
 SoundList *pSoundList;
