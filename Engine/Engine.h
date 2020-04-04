@@ -3,6 +3,7 @@
 #include <memory>
 #include <string>
 #include <float.h>
+#include <climits>
 #ifndef _WINDOWS
 #include "Common/PlatformLinux.h"
 #endif

@@ -20,6 +20,7 @@ set(OBJECTS_HEADERS Actor.h
 
 if(WIN32)
 else()
+  set(CMAKE_CXX_FLAGS "-fpermissive ${CMAKE_CXX_FLAGS}")
 endif()
 
 add_library(objects STATIC ${OBJECTS_SOURCES} ${OBJECTS_HEADERS})
