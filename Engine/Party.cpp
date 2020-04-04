@@ -1,6 +1,7 @@
 #include "Engine/Party.h"
 
 #include <stdlib.h>
+#include <climits>
 
 #include "Engine/Engine.h"
 #include "Engine/Localization.h"
