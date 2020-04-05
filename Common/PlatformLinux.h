@@ -30,3 +30,6 @@ inline char *_strrev(char *str)
     }
     return str;
 }
+
+#include <unistd.h>
+#define _access access
