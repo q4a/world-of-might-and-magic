@@ -8,6 +8,7 @@ set(IO_HEADERS Keyboard.h
 
 if(WIN32)
 else()
+include_directories(${SDL_INCLUDE_DIRS})
 endif()
 
 add_library(io STATIC ${IO_SOURCES} ${IO_HEADERS})

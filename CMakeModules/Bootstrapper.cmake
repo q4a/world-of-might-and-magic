@@ -1,8 +1,5 @@
 include("${CMAKE_CURRENT_SOURCE_DIR}/CMakeModules/Common.cmake")
 
-
-SET (CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} /SAFESEH:NO")
-
 # Support both 32 and 64 bit builds
 if (${CMAKE_SIZEOF_VOID_P} MATCHES 8)
   set(BUILD_TYPE "x64")

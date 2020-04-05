@@ -31,5 +31,8 @@ inline char *_strrev(char *str)
     return str;
 }
 
+#include <iostream>
+#define _flushall() std::cout.flush()
+
 #include <unistd.h>
 #define _access access
