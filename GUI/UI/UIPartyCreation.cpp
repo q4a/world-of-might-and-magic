@@ -453,9 +453,10 @@ void GUIWindow_PartyCreation::Update() {
                 130, 0);
         }
 
+        String pRaceName = pParty->pPlayers[i].GetRaceName();
         pGUIWindow_CurrentMenu->DrawTextInRect(
             pFontCreate, pIntervalX + 72, pIntervalY + 12, 0,
-            pParty->pPlayers[i].GetRaceName().c_str(), 130, 0);
+            pRaceName, 130, 0);
 
         pTextCenter = pFontCreate->AlignText_Center(150, pText);
         pGUIWindow_CurrentMenu->DrawText(pFontCreate, pTextCenter + uX - 24,

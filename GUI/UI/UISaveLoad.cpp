@@ -1,6 +1,8 @@
 #include "GUI/UI/UISaveLoad.h"
 
+#ifdef _WINDOWS
 #include <io.h>
+#endif
 #include <string>
 
 #include "Engine/Engine.h"

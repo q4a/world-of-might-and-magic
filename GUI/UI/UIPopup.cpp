@@ -81,7 +81,8 @@ void CharacterUI_DrawTooltip(const char *title, String &content) {
 }
 
 void CharacterUI_DrawTooltip(const char *title, const char *content) {
-    CharacterUI_DrawTooltip(title, String(content));
+    String content_str = String(content);
+    CharacterUI_DrawTooltip(title, content_str);
 }
 
 //----- (004151D9) --------------------------------------------------------
@@ -1132,11 +1133,12 @@ void CharacterUI_SkillsTab_ShowHint() {
         for (GUIButton *pButton : pGUIWindow_CurrentMenu->vButtons) {
             if (pButton->msg == UIMSG_SkillUp && pX >= pButton->uX &&
                 pX <= pButton->uZ && pY >= pButton->uY && pY <= pButton->uW) {
+                String pSkillDescText = CharacterUI_GetSkillDescText(
+                    uActiveCharacter - 1,
+                    (PLAYER_SKILL_TYPE)pButton->msg_param);
                 CharacterUI_DrawTooltip(
                     localization->GetSkillName(pButton->msg_param),
-                    CharacterUI_GetSkillDescText(
-                        uActiveCharacter - 1,
-                        (PLAYER_SKILL_TYPE)pButton->msg_param));
+                    pSkillDescText);
             }
         }
     } else {
