@@ -30,8 +30,7 @@ include(CheckIncludeFile)
 include(CheckIncludeFileCXX)
 include(CheckIncludeFiles)
 
-
-
+if (WIN32)
 set(LIB_DIR "${CMAKE_CURRENT_SOURCE_DIR}/lib")
 
 # actual library dir for current build configuration
@@ -40,7 +39,7 @@ set(LIBRARY_DIR "${LIB_DIR}/${BUILD_PLATFORM}/${BUILD_TYPE}")
 set(DEPS_ZIP_FILENAME "all_deps_${BUILD_PLATFORM}_${BUILD_TYPE}.zip")
 set(DEPS_ZIP_FULL_PATH "${LIB_DIR}/${DEPS_ZIP_FILENAME}")
 
-if (WIN32)
+
 # resolve 3d party libs
 if (NOT EXISTS "${LIBRARY_DIR}")
     if (NOT EXISTS "${DEPS_ZIP_FULL_PATH}")

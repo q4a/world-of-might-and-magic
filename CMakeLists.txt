@@ -81,9 +81,17 @@ target_compile_features (World_of_Might_and_Magic
 )
 target_check_style(World_of_Might_and_Magic)
 
+if(WIN32)
 target_link_libraries(World_of_Might_and_Magic zlib openal sdl2 ffmpeg)
-target_link_libraries(World_of_Might_and_Magic game arcomage engine gui io media platform objects spells tables graphics turnengine serialization)
 target_link_libraries(World_of_Might_and_Magic ddraw.lib dxguid.lib)
+else()
+message(STATUS "ZLIB_LIBRARIES = ${ZLIB_LIBRARIES}")
+message(STATUS "SDL_LIBRARIES = ${SDL_LIBRARIES}")
+message(STATUS "FFMPEG_LIBRARIES = ${FFMPEG_LIBRARIES}")
+
+target_link_libraries(World_of_Might_and_Magic ${ZLIB_LIBRARIES} ${SDL_LIBRARIES} ${FFMPEG_LIBRARIES})
+endif()
+target_link_libraries(World_of_Might_and_Magic game arcomage engine gui io media platform objects spells tables graphics turnengine serialization)
 
 set_property(
     DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT World_of_Might_and_Magic
