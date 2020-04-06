@@ -49,6 +49,9 @@
 #include "Platform/Api.h"
 #include "Platform/OSWindow.h"
 
+std::shared_ptr<IRender> render;
+
+RenderVertexSoft array_507D30[50];
 
 RenderOpenGL::RenderOpenGL()
     : RenderBase() {

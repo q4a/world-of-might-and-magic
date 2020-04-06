@@ -47,14 +47,12 @@
 using EngineIoc = Engine_::IocContainer;
 
 struct IDirectDrawClipper *pDDrawClipper;
-std::shared_ptr<IRender> render;
 struct RenderVertexD3D3 pVertices[50];
 int uNumDecorationsDrawnThisFrame;
 RenderBillboard pBillboardRenderList[500];
 unsigned int uNumBillboardsToDraw;
 int uNumSpritesDrawnThisFrame;
 
-RenderVertexSoft array_507D30[50];
 RenderVertexSoft VertexRenderList[50];  // array_50AC10
 RenderVertexSoft array_73D150[20];
 
