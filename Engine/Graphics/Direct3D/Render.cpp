@@ -2736,19 +2736,6 @@ void Render::ResetUIClipRect() {
         Gdiplus::Rect(0, 0, window->GetWidth(), window->GetHeight()));
 }
 
-uint32_t Color32(uint16_t color16) {
-    uint32_t c = color16;
-    uint32_t b = (c & 31) * 8;
-    uint32_t g = ((c >> 5) & 63) * 4;
-    uint32_t r = ((c >> 11) & 31) * 8;
-
-    return Color32(r, g, b);
-}
-
-uint32_t Color32(uint32_t r, uint32_t g, uint32_t b, uint32_t a) {
-    return (a << 24) | (r << 16) | (g << 8) | b;
-}
-
 uint32_t Color32_SwapRedBlue(uint16_t color16) {
     uint32_t c = color16;
     unsigned int b = (c & 31) * 8;
@@ -2756,11 +2743,6 @@ uint32_t Color32_SwapRedBlue(uint16_t color16) {
     unsigned int r = ((c >> 11) & 31) * 8;
 
     return (b << 16) | (g << 8) | r;
-}
-
-uint16_t Color16(uint32_t r, uint32_t g, uint32_t b) {
-    return (b >> (8 - 5)) | 0x7E0 & (g << (6 + 5 - 8)) |
-           0xF800 & (r << (6 + 5 + 5 - 8));
 }
 
 Gdiplus::Bitmap *Render::BitmapWithImage(Image *image) {
@@ -3717,18 +3699,6 @@ void Render::DrawBuildingsD3D() {
             }
         }
     }
-}
-
-
-
-bool PauseGameDrawing() {
-    if (current_screen_type != CURRENT_SCREEN::SCREEN_GAME &&
-        current_screen_type != CURRENT_SCREEN::SCREEN_NPC_DIALOGUE &&
-        current_screen_type != CURRENT_SCREEN::SCREEN_CHANGE_LOCATION) {
-        if (current_screen_type == CURRENT_SCREEN::SCREEN_INPUT_BLV) return uCurrentHouse_Animation;
-        if (current_screen_type != CURRENT_SCREEN::SCREEN_BRANCHLESS_NPC_DIALOG) return true;
-    }
-    return false;
 }
 
 unsigned short *Render::MakeScreenshot(int width, int height) {

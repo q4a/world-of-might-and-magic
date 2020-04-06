@@ -50,7 +50,7 @@ message(STATUS "PROJECT_VERSION_PATCH = ${PROJECT_VERSION_PATCH}")
 
 if(CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
   set(CMAKE_CXX_FLAGS "-std=c++2a ${CMAKE_CXX_FLAGS}")
-  set(CMAKE_EXE_LINKER_FLAGS "-fuse-ld=gold")
+  set(CMAKE_EXE_LINKER_FLAGS "-fuse-ld=gold -pthread")
   set(CMAKE_SHARED_LINKER_FLAGS "$-fuse-ld=gold")
 elseif(CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
   set(CMAKE_CXX_FLAGS "-std=c++11 -stdlib=libc++ ${CMAKE_CXX_FLAGS}")

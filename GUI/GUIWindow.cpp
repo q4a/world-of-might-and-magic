@@ -134,6 +134,16 @@ MENU_STATE GetCurrentMenuID() {
     return sCurrentMenuID;
 }
 
+bool PauseGameDrawing() {
+    if (current_screen_type != CURRENT_SCREEN::SCREEN_GAME &&
+        current_screen_type != CURRENT_SCREEN::SCREEN_NPC_DIALOGUE &&
+        current_screen_type != CURRENT_SCREEN::SCREEN_CHANGE_LOCATION) {
+        if (current_screen_type == CURRENT_SCREEN::SCREEN_INPUT_BLV) return uCurrentHouse_Animation;
+        if (current_screen_type != CURRENT_SCREEN::SCREEN_BRANCHLESS_NPC_DIALOG) return true;
+    }
+    return false;
+}
+
 OnCastTargetedSpell::OnCastTargetedSpell(unsigned int x, unsigned int y,
     unsigned int width,
     unsigned int height, int button,
