@@ -24,5 +24,5 @@ else()
 endif()
 
 add_library(objects STATIC ${OBJECTS_SOURCES} ${OBJECTS_HEADERS})
-target_link_libraries(objects gui)
+target_link_libraries(objects engine gui)
 target_check_style(objects)

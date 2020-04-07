@@ -73,7 +73,7 @@ target_check_style(engine)
 if(WIN32)
     target_link_libraries(engine zlib)
 else()
-    target_link_libraries(engine z)
+    target_link_libraries(engine z game)
 endif()
 
 add_subdirectory(Graphics)
