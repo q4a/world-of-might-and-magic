@@ -1,0 +1,1032 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Файл C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavutil/hwcontext.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d1/d45/hwcontext_8h.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#typedef-members">Определения типов</a> &#124;
+<a href="#enum-members">Перечисления</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл hwcontext.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><a href="../../d1/d45/hwcontext_8h_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d5e/struct_a_v_h_w_device_context.html">AVHWDeviceContext</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d7a/struct_a_v_h_w_frames_context.html">AVHWFramesContext</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d35/struct_a_v_h_w_frames_constraints.html">AVHWFramesConstraints</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Определения типов</h2></td></tr>
+<tr class="memitem:afd6b9b94d31220b0a46135e3ab5663fc"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="../../d1/d45/hwcontext_8h.html#afd6b9b94d31220b0a46135e3ab5663fc">AVHWDeviceInternal</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d45/hwcontext_8h.html#afd6b9b94d31220b0a46135e3ab5663fc">AVHWDeviceInternal</a></td></tr>
+<tr class="separator:afd6b9b94d31220b0a46135e3ab5663fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4d8b831a98ce344c3d8d4d4c166957e"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="../../d1/d5e/struct_a_v_h_w_device_context.html">AVHWDeviceContext</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d45/hwcontext_8h.html#ad4d8b831a98ce344c3d8d4d4c166957e">AVHWDeviceContext</a></td></tr>
+<tr class="separator:ad4d8b831a98ce344c3d8d4d4c166957e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01b62f32bcd517164857e7b5f5359f85"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="../../d1/d45/hwcontext_8h.html#a01b62f32bcd517164857e7b5f5359f85">AVHWFramesInternal</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d45/hwcontext_8h.html#a01b62f32bcd517164857e7b5f5359f85">AVHWFramesInternal</a></td></tr>
+<tr class="separator:a01b62f32bcd517164857e7b5f5359f85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58078beaf9ea9f2a289a213f0c8d3cdf"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="../../da/d7a/struct_a_v_h_w_frames_context.html">AVHWFramesContext</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d45/hwcontext_8h.html#a58078beaf9ea9f2a289a213f0c8d3cdf">AVHWFramesContext</a></td></tr>
+<tr class="separator:a58078beaf9ea9f2a289a213f0c8d3cdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3a67324776d151e070d6cb21aa80fbe"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="../../d0/d35/struct_a_v_h_w_frames_constraints.html">AVHWFramesConstraints</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d45/hwcontext_8h.html#af3a67324776d151e070d6cb21aa80fbe">AVHWFramesConstraints</a></td></tr>
+<tr class="separator:af3a67324776d151e070d6cb21aa80fbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Перечисления</h2></td></tr>
+<tr class="memitem:acf25724be4b066a51ad86aa9214b0d34"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d45/hwcontext_8h.html#acf25724be4b066a51ad86aa9214b0d34">AVHWDeviceType</a> { <br />
+&#160;&#160;<a class="el" href="../../d1/d45/hwcontext_8h.html#acf25724be4b066a51ad86aa9214b0d34a30886e466fe9fbaccae236530101af9c">AV_HWDEVICE_TYPE_NONE</a>, 
+<a class="el" href="../../d1/d45/hwcontext_8h.html#acf25724be4b066a51ad86aa9214b0d34a41592a72e14c349fae1277a46268c29a">AV_HWDEVICE_TYPE_VDPAU</a>, 
+<a class="el" href="../../d1/d45/hwcontext_8h.html#acf25724be4b066a51ad86aa9214b0d34a8447d4488b0fc4113c281cbdc6e7334e">AV_HWDEVICE_TYPE_CUDA</a>, 
+<a class="el" href="../../d1/d45/hwcontext_8h.html#acf25724be4b066a51ad86aa9214b0d34af5dfa6181a3a6efb0f4a0c5f38d76b95">AV_HWDEVICE_TYPE_VAAPI</a>, 
+<br />
+&#160;&#160;<a class="el" href="../../d1/d45/hwcontext_8h.html#acf25724be4b066a51ad86aa9214b0d34acc6f1868dad1c636d4747cc91ce71d10">AV_HWDEVICE_TYPE_DXVA2</a>, 
+<a class="el" href="../../d1/d45/hwcontext_8h.html#acf25724be4b066a51ad86aa9214b0d34a7a74cd2f21d680a11aa8b321ddff1358">AV_HWDEVICE_TYPE_QSV</a>, 
+<a class="el" href="../../d1/d45/hwcontext_8h.html#acf25724be4b066a51ad86aa9214b0d34a81d980fb470d1c32c3b0c1ebb8e6e2c4">AV_HWDEVICE_TYPE_VIDEOTOOLBOX</a>, 
+<a class="el" href="../../d1/d45/hwcontext_8h.html#acf25724be4b066a51ad86aa9214b0d34a1823a64d48c796978b892dd669659c4c">AV_HWDEVICE_TYPE_D3D11VA</a>, 
+<br />
+&#160;&#160;<a class="el" href="../../d1/d45/hwcontext_8h.html#acf25724be4b066a51ad86aa9214b0d34aa04ac36fb964a5c191566a8e809de743">AV_HWDEVICE_TYPE_DRM</a>, 
+<a class="el" href="../../d1/d45/hwcontext_8h.html#acf25724be4b066a51ad86aa9214b0d34a6ba51b0079c626ee6d02991f078ecc98">AV_HWDEVICE_TYPE_OPENCL</a>, 
+<a class="el" href="../../d1/d45/hwcontext_8h.html#acf25724be4b066a51ad86aa9214b0d34a773070fc89c1397360cb469ec6302de2">AV_HWDEVICE_TYPE_MEDIACODEC</a>
+<br />
+ }</td></tr>
+<tr class="separator:acf25724be4b066a51ad86aa9214b0d34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba8d70ed754b2536ca497d7d50ec7b1e"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d45/hwcontext_8h.html#aba8d70ed754b2536ca497d7d50ec7b1e">AVHWFrameTransferDirection</a> { <a class="el" href="../../d1/d45/hwcontext_8h.html#aba8d70ed754b2536ca497d7d50ec7b1eae8d368e74899ae136a198bf469c0c6db">AV_HWFRAME_TRANSFER_DIRECTION_FROM</a>, 
+<a class="el" href="../../d1/d45/hwcontext_8h.html#aba8d70ed754b2536ca497d7d50ec7b1eae5219126b03aab37ca8b466b8f337ec6">AV_HWFRAME_TRANSFER_DIRECTION_TO</a>
+ }</td></tr>
+<tr class="separator:aba8d70ed754b2536ca497d7d50ec7b1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae33c78feb670de33d2abf21ec0624531"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="../../d1/d45/hwcontext_8h.html#ae33c78feb670de33d2abf21ec0624531a236262031fe4c5503b2611c2c8fb520b">AV_HWFRAME_MAP_READ</a> = 1 &lt;&lt; 0, 
+<a class="el" href="../../d1/d45/hwcontext_8h.html#ae33c78feb670de33d2abf21ec0624531ab2e22cc927a3d88fe833b50bf3d71948">AV_HWFRAME_MAP_WRITE</a> = 1 &lt;&lt; 1, 
+<a class="el" href="../../d1/d45/hwcontext_8h.html#ae33c78feb670de33d2abf21ec0624531ac12b0a2a379fe4b4b00353aac56ed9f4">AV_HWFRAME_MAP_OVERWRITE</a> = 1 &lt;&lt; 2, 
+<a class="el" href="../../d1/d45/hwcontext_8h.html#ae33c78feb670de33d2abf21ec0624531a9f73eea942c7ed1ad5d56918bffa4ce3">AV_HWFRAME_MAP_DIRECT</a> = 1 &lt;&lt; 3
+ }</td></tr>
+<tr class="separator:ae33c78feb670de33d2abf21ec0624531"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a541943ddced791765349645a30adfa4d"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="../../d1/d45/hwcontext_8h.html#acf25724be4b066a51ad86aa9214b0d34">AVHWDeviceType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d45/hwcontext_8h.html#a541943ddced791765349645a30adfa4d">av_hwdevice_find_type_by_name</a> (const char *<a class="el" href="../../df/d32/_s_d_l__egl_8h.html#aaced7cfc21e7d37775d6921bb8177239">name</a>)</td></tr>
+<tr class="separator:a541943ddced791765349645a30adfa4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb2b99a15f3fdde25a2fd19353ac5a67"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d45/hwcontext_8h.html#afb2b99a15f3fdde25a2fd19353ac5a67">av_hwdevice_get_type_name</a> (enum <a class="el" href="../../d1/d45/hwcontext_8h.html#acf25724be4b066a51ad86aa9214b0d34">AVHWDeviceType</a> <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#ad5ddf6fca7b585646515660e810e0188">type</a>)</td></tr>
+<tr class="separator:afb2b99a15f3fdde25a2fd19353ac5a67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fb42d664a6ec87f8802e9132b85cac3"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="../../d1/d45/hwcontext_8h.html#acf25724be4b066a51ad86aa9214b0d34">AVHWDeviceType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d45/hwcontext_8h.html#a0fb42d664a6ec87f8802e9132b85cac3">av_hwdevice_iterate_types</a> (enum <a class="el" href="../../d1/d45/hwcontext_8h.html#acf25724be4b066a51ad86aa9214b0d34">AVHWDeviceType</a> prev)</td></tr>
+<tr class="separator:a0fb42d664a6ec87f8802e9132b85cac3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cb1f874bb5a0ed7743f9a2b73b47e6e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/dc0/struct_a_v_buffer_ref.html">AVBufferRef</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d45/hwcontext_8h.html#a1cb1f874bb5a0ed7743f9a2b73b47e6e">av_hwdevice_ctx_alloc</a> (enum <a class="el" href="../../d1/d45/hwcontext_8h.html#acf25724be4b066a51ad86aa9214b0d34">AVHWDeviceType</a> <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#ad5ddf6fca7b585646515660e810e0188">type</a>)</td></tr>
+<tr class="separator:a1cb1f874bb5a0ed7743f9a2b73b47e6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11d8c9101c95cdcab3dbc5b4c03dfd4d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d45/hwcontext_8h.html#a11d8c9101c95cdcab3dbc5b4c03dfd4d">av_hwdevice_ctx_init</a> (<a class="el" href="../../d0/dc0/struct_a_v_buffer_ref.html">AVBufferRef</a> *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#ad32bdec748ba376f6c0d2df39ab9a95b">ref</a>)</td></tr>
+<tr class="separator:a11d8c9101c95cdcab3dbc5b4c03dfd4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac085a5abc44c5330b64489416a42482d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d45/hwcontext_8h.html#ac085a5abc44c5330b64489416a42482d">av_hwdevice_ctx_create</a> (<a class="el" href="../../d0/dc0/struct_a_v_buffer_ref.html">AVBufferRef</a> **device_ctx, enum <a class="el" href="../../d1/d45/hwcontext_8h.html#acf25724be4b066a51ad86aa9214b0d34">AVHWDeviceType</a> <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#ad5ddf6fca7b585646515660e810e0188">type</a>, const char *device, <a class="el" href="../../d2/db0/group__lavu__dict.html#ga1d7cc0833bee918994a600556410315f">AVDictionary</a> *opts, int <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#ac7ba7d3cce3d19ca020e056b37231289">flags</a>)</td></tr>
+<tr class="separator:ac085a5abc44c5330b64489416a42482d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6af4a20a0338e3b74075f606e4b5b369"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d45/hwcontext_8h.html#a6af4a20a0338e3b74075f606e4b5b369">av_hwdevice_ctx_create_derived</a> (<a class="el" href="../../d0/dc0/struct_a_v_buffer_ref.html">AVBufferRef</a> **dst_ctx, enum <a class="el" href="../../d1/d45/hwcontext_8h.html#acf25724be4b066a51ad86aa9214b0d34">AVHWDeviceType</a> <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#ad5ddf6fca7b585646515660e810e0188">type</a>, <a class="el" href="../../d0/dc0/struct_a_v_buffer_ref.html">AVBufferRef</a> *src_ctx, int <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#ac7ba7d3cce3d19ca020e056b37231289">flags</a>)</td></tr>
+<tr class="separator:a6af4a20a0338e3b74075f606e4b5b369"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48f93ecf13855387e89d6d5e34054b11"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/dc0/struct_a_v_buffer_ref.html">AVBufferRef</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d45/hwcontext_8h.html#a48f93ecf13855387e89d6d5e34054b11">av_hwframe_ctx_alloc</a> (<a class="el" href="../../d0/dc0/struct_a_v_buffer_ref.html">AVBufferRef</a> *device_ctx)</td></tr>
+<tr class="separator:a48f93ecf13855387e89d6d5e34054b11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66a7e1ebc7e459ce07d3de6639ac7e38"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d45/hwcontext_8h.html#a66a7e1ebc7e459ce07d3de6639ac7e38">av_hwframe_ctx_init</a> (<a class="el" href="../../d0/dc0/struct_a_v_buffer_ref.html">AVBufferRef</a> *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#ad32bdec748ba376f6c0d2df39ab9a95b">ref</a>)</td></tr>
+<tr class="separator:a66a7e1ebc7e459ce07d3de6639ac7e38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03e7cf122b61f6472d0a4d37f52d4965"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d45/hwcontext_8h.html#a03e7cf122b61f6472d0a4d37f52d4965">av_hwframe_get_buffer</a> (<a class="el" href="../../d0/dc0/struct_a_v_buffer_ref.html">AVBufferRef</a> *hwframe_ctx, <a class="el" href="../../d6/d03/struct_a_v_frame.html">AVFrame</a> *frame, int <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#ac7ba7d3cce3d19ca020e056b37231289">flags</a>)</td></tr>
+<tr class="separator:a03e7cf122b61f6472d0a4d37f52d4965"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf1b1664b8239d953ae2cac8b643815a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d45/hwcontext_8h.html#abf1b1664b8239d953ae2cac8b643815a">av_hwframe_transfer_data</a> (<a class="el" href="../../d6/d03/struct_a_v_frame.html">AVFrame</a> *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a92034251bfd455d524a9b5610cddba00">dst</a>, const <a class="el" href="../../d6/d03/struct_a_v_frame.html">AVFrame</a> *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a72e0fdf0f845ded60b1fada9e9195cd7">src</a>, int <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#ac7ba7d3cce3d19ca020e056b37231289">flags</a>)</td></tr>
+<tr class="separator:abf1b1664b8239d953ae2cac8b643815a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae758c36d3b0c446af7f9eb1f57110a49"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d45/hwcontext_8h.html#ae758c36d3b0c446af7f9eb1f57110a49">av_hwframe_transfer_get_formats</a> (<a class="el" href="../../d0/dc0/struct_a_v_buffer_ref.html">AVBufferRef</a> *hwframe_ctx, enum <a class="el" href="../../d1/d45/hwcontext_8h.html#aba8d70ed754b2536ca497d7d50ec7b1e">AVHWFrameTransferDirection</a> dir, enum <a class="el" href="../../dd/d6c/pixfmt_8h.html#a9a8e335cf3be472042bc9f0cf80cd4c5">AVPixelFormat</a> **formats, int <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#ac7ba7d3cce3d19ca020e056b37231289">flags</a>)</td></tr>
+<tr class="separator:ae758c36d3b0c446af7f9eb1f57110a49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebc6d255d84b533ce27aa1fdd8021484"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d45/hwcontext_8h.html#aebc6d255d84b533ce27aa1fdd8021484">av_hwdevice_hwconfig_alloc</a> (<a class="el" href="../../d0/dc0/struct_a_v_buffer_ref.html">AVBufferRef</a> *device_ctx)</td></tr>
+<tr class="separator:aebc6d255d84b533ce27aa1fdd8021484"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80f4c1184e1758150b6d9bc0adf2c1df"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d35/struct_a_v_h_w_frames_constraints.html">AVHWFramesConstraints</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d45/hwcontext_8h.html#a80f4c1184e1758150b6d9bc0adf2c1df">av_hwdevice_get_hwframe_constraints</a> (<a class="el" href="../../d0/dc0/struct_a_v_buffer_ref.html">AVBufferRef</a> *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#ad32bdec748ba376f6c0d2df39ab9a95b">ref</a>, const <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *hwconfig)</td></tr>
+<tr class="separator:a80f4c1184e1758150b6d9bc0adf2c1df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29da7fa7ffa73266d1cbfccb116ed634"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d45/hwcontext_8h.html#a29da7fa7ffa73266d1cbfccb116ed634">av_hwframe_constraints_free</a> (<a class="el" href="../../d0/d35/struct_a_v_h_w_frames_constraints.html">AVHWFramesConstraints</a> **constraints)</td></tr>
+<tr class="separator:a29da7fa7ffa73266d1cbfccb116ed634"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99e028453fba7e66483c2189439219d2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d45/hwcontext_8h.html#a99e028453fba7e66483c2189439219d2">av_hwframe_map</a> (<a class="el" href="../../d6/d03/struct_a_v_frame.html">AVFrame</a> *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a92034251bfd455d524a9b5610cddba00">dst</a>, const <a class="el" href="../../d6/d03/struct_a_v_frame.html">AVFrame</a> *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a72e0fdf0f845ded60b1fada9e9195cd7">src</a>, int <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#ac7ba7d3cce3d19ca020e056b37231289">flags</a>)</td></tr>
+<tr class="separator:a99e028453fba7e66483c2189439219d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5228c42445cffd10087f0590614edb13"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d45/hwcontext_8h.html#a5228c42445cffd10087f0590614edb13">av_hwframe_ctx_create_derived</a> (<a class="el" href="../../d0/dc0/struct_a_v_buffer_ref.html">AVBufferRef</a> **derived_frame_ctx, enum <a class="el" href="../../dd/d6c/pixfmt_8h.html#a9a8e335cf3be472042bc9f0cf80cd4c5">AVPixelFormat</a> <a class="el" href="../../d3/d78/_s_d_l__audio_8h.html#a71a65ffd977afe9c3fef116a5bc9ee27">format</a>, <a class="el" href="../../d0/dc0/struct_a_v_buffer_ref.html">AVBufferRef</a> *derived_device_ctx, <a class="el" href="../../d0/dc0/struct_a_v_buffer_ref.html">AVBufferRef</a> *source_frame_ctx, int <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#ac7ba7d3cce3d19ca020e056b37231289">flags</a>)</td></tr>
+<tr class="separator:a5228c42445cffd10087f0590614edb13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Типы</h2>
+<a id="afd6b9b94d31220b0a46135e3ab5663fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd6b9b94d31220b0a46135e3ab5663fc">&#9670;&nbsp;</a></span>AVHWDeviceInternal</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="../../d1/d45/hwcontext_8h.html#afd6b9b94d31220b0a46135e3ab5663fc">AVHWDeviceInternal</a> <a class="el" href="../../d1/d45/hwcontext_8h.html#afd6b9b94d31220b0a46135e3ab5663fc">AVHWDeviceInternal</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d1/d45/hwcontext_8h_source.html">hwcontext.h</a> строка <a class="el" href="../../d1/d45/hwcontext_8h_source.html#l00041">41</a></p>
+
+</div>
+</div>
+<a id="ad4d8b831a98ce344c3d8d4d4c166957e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4d8b831a98ce344c3d8d4d4c166957e">&#9670;&nbsp;</a></span>AVHWDeviceContext</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="../../d1/d5e/struct_a_v_h_w_device_context.html">AVHWDeviceContext</a> <a class="el" href="../../d1/d5e/struct_a_v_h_w_device_context.html">AVHWDeviceContext</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This struct aggregates all the (hardware/vendor-specific) "high-level" state, i.e. state that is not tied to a concrete processing configuration. E.g., in an API that supports hardware-accelerated encoding and decoding, this struct will (if possible) wrap the state that is common to both encoding and decoding and from which specific instances of encoders or decoders can be derived.</p>
+<p>This struct is reference-counted with the AVBuffer mechanism. The <a class="el" href="../../d1/d45/hwcontext_8h.html#a1cb1f874bb5a0ed7743f9a2b73b47e6e">av_hwdevice_ctx_alloc()</a> constructor yields a reference, whose data field points to the actual <a class="el" href="../../d1/d5e/struct_a_v_h_w_device_context.html">AVHWDeviceContext</a>. Further objects derived from <a class="el" href="../../d1/d5e/struct_a_v_h_w_device_context.html">AVHWDeviceContext</a> (such as <a class="el" href="../../da/d7a/struct_a_v_h_w_frames_context.html">AVHWFramesContext</a>, describing a frame pool with specific properties) will hold an internal reference to it. After all the references are released, the <a class="el" href="../../d1/d5e/struct_a_v_h_w_device_context.html">AVHWDeviceContext</a> itself will be freed, optionally invoking a user-specified callback for uninitializing the hardware state. </p>
+
+</div>
+</div>
+<a id="a01b62f32bcd517164857e7b5f5359f85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01b62f32bcd517164857e7b5f5359f85">&#9670;&nbsp;</a></span>AVHWFramesInternal</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="../../d1/d45/hwcontext_8h.html#a01b62f32bcd517164857e7b5f5359f85">AVHWFramesInternal</a> <a class="el" href="../../d1/d45/hwcontext_8h.html#a01b62f32bcd517164857e7b5f5359f85">AVHWFramesInternal</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d1/d45/hwcontext_8h_source.html">hwcontext.h</a> строка <a class="el" href="../../d1/d45/hwcontext_8h_source.html#l00111">111</a></p>
+
+</div>
+</div>
+<a id="a58078beaf9ea9f2a289a213f0c8d3cdf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58078beaf9ea9f2a289a213f0c8d3cdf">&#9670;&nbsp;</a></span>AVHWFramesContext</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="../../da/d7a/struct_a_v_h_w_frames_context.html">AVHWFramesContext</a> <a class="el" href="../../da/d7a/struct_a_v_h_w_frames_context.html">AVHWFramesContext</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This struct describes a set or pool of "hardware" frames (i.e. those with data not located in normal system memory). All the frames in the pool are assumed to be allocated in the same way and interchangeable.</p>
+<p>This struct is reference-counted with the AVBuffer mechanism and tied to a given <a class="el" href="../../d1/d5e/struct_a_v_h_w_device_context.html">AVHWDeviceContext</a> instance. The <a class="el" href="../../d1/d45/hwcontext_8h.html#a48f93ecf13855387e89d6d5e34054b11">av_hwframe_ctx_alloc()</a> constructor yields a reference, whose data field points to the actual <a class="el" href="../../da/d7a/struct_a_v_h_w_frames_context.html">AVHWFramesContext</a> struct. </p>
+
+</div>
+</div>
+<a id="af3a67324776d151e070d6cb21aa80fbe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3a67324776d151e070d6cb21aa80fbe">&#9670;&nbsp;</a></span>AVHWFramesConstraints</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="../../d0/d35/struct_a_v_h_w_frames_constraints.html">AVHWFramesConstraints</a> <a class="el" href="../../d0/d35/struct_a_v_h_w_frames_constraints.html">AVHWFramesConstraints</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This struct describes the constraints on hardware frames attached to a given device with a hardware-specific configuration. This is returned by <a class="el" href="../../d1/d45/hwcontext_8h.html#a80f4c1184e1758150b6d9bc0adf2c1df">av_hwdevice_get_hwframe_constraints()</a> and must be freed by <a class="el" href="../../d1/d45/hwcontext_8h.html#a29da7fa7ffa73266d1cbfccb116ed634">av_hwframe_constraints_free()</a> after use. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Перечисления</h2>
+<a id="acf25724be4b066a51ad86aa9214b0d34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf25724be4b066a51ad86aa9214b0d34">&#9670;&nbsp;</a></span>AVHWDeviceType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="../../d1/d45/hwcontext_8h.html#acf25724be4b066a51ad86aa9214b0d34">AVHWDeviceType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="acf25724be4b066a51ad86aa9214b0d34a30886e466fe9fbaccae236530101af9c"></a>AV_HWDEVICE_TYPE_NONE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="acf25724be4b066a51ad86aa9214b0d34a41592a72e14c349fae1277a46268c29a"></a>AV_HWDEVICE_TYPE_VDPAU&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="acf25724be4b066a51ad86aa9214b0d34a8447d4488b0fc4113c281cbdc6e7334e"></a>AV_HWDEVICE_TYPE_CUDA&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="acf25724be4b066a51ad86aa9214b0d34af5dfa6181a3a6efb0f4a0c5f38d76b95"></a>AV_HWDEVICE_TYPE_VAAPI&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="acf25724be4b066a51ad86aa9214b0d34acc6f1868dad1c636d4747cc91ce71d10"></a>AV_HWDEVICE_TYPE_DXVA2&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="acf25724be4b066a51ad86aa9214b0d34a7a74cd2f21d680a11aa8b321ddff1358"></a>AV_HWDEVICE_TYPE_QSV&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="acf25724be4b066a51ad86aa9214b0d34a81d980fb470d1c32c3b0c1ebb8e6e2c4"></a>AV_HWDEVICE_TYPE_VIDEOTOOLBOX&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="acf25724be4b066a51ad86aa9214b0d34a1823a64d48c796978b892dd669659c4c"></a>AV_HWDEVICE_TYPE_D3D11VA&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="acf25724be4b066a51ad86aa9214b0d34aa04ac36fb964a5c191566a8e809de743"></a>AV_HWDEVICE_TYPE_DRM&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="acf25724be4b066a51ad86aa9214b0d34a6ba51b0079c626ee6d02991f078ecc98"></a>AV_HWDEVICE_TYPE_OPENCL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="acf25724be4b066a51ad86aa9214b0d34a773070fc89c1397360cb469ec6302de2"></a>AV_HWDEVICE_TYPE_MEDIACODEC&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d1/d45/hwcontext_8h_source.html">hwcontext.h</a> строка <a class="el" href="../../d1/d45/hwcontext_8h_source.html#l00027">27</a></p>
+<div class="fragment"><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                    {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="../../d1/d45/hwcontext_8h.html#acf25724be4b066a51ad86aa9214b0d34a30886e466fe9fbaccae236530101af9c">AV_HWDEVICE_TYPE_NONE</a>,</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="../../d1/d45/hwcontext_8h.html#acf25724be4b066a51ad86aa9214b0d34a41592a72e14c349fae1277a46268c29a">AV_HWDEVICE_TYPE_VDPAU</a>,</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="../../d1/d45/hwcontext_8h.html#acf25724be4b066a51ad86aa9214b0d34a8447d4488b0fc4113c281cbdc6e7334e">AV_HWDEVICE_TYPE_CUDA</a>,</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="../../d1/d45/hwcontext_8h.html#acf25724be4b066a51ad86aa9214b0d34af5dfa6181a3a6efb0f4a0c5f38d76b95">AV_HWDEVICE_TYPE_VAAPI</a>,</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="../../d1/d45/hwcontext_8h.html#acf25724be4b066a51ad86aa9214b0d34acc6f1868dad1c636d4747cc91ce71d10">AV_HWDEVICE_TYPE_DXVA2</a>,</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="../../d1/d45/hwcontext_8h.html#acf25724be4b066a51ad86aa9214b0d34a7a74cd2f21d680a11aa8b321ddff1358">AV_HWDEVICE_TYPE_QSV</a>,</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="../../d1/d45/hwcontext_8h.html#acf25724be4b066a51ad86aa9214b0d34a81d980fb470d1c32c3b0c1ebb8e6e2c4">AV_HWDEVICE_TYPE_VIDEOTOOLBOX</a>,</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="../../d1/d45/hwcontext_8h.html#acf25724be4b066a51ad86aa9214b0d34a1823a64d48c796978b892dd669659c4c">AV_HWDEVICE_TYPE_D3D11VA</a>,</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="../../d1/d45/hwcontext_8h.html#acf25724be4b066a51ad86aa9214b0d34aa04ac36fb964a5c191566a8e809de743">AV_HWDEVICE_TYPE_DRM</a>,</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="../../d1/d45/hwcontext_8h.html#acf25724be4b066a51ad86aa9214b0d34a6ba51b0079c626ee6d02991f078ecc98">AV_HWDEVICE_TYPE_OPENCL</a>,</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="../../d1/d45/hwcontext_8h.html#acf25724be4b066a51ad86aa9214b0d34a773070fc89c1397360cb469ec6302de2">AV_HWDEVICE_TYPE_MEDIACODEC</a>,</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;};</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aba8d70ed754b2536ca497d7d50ec7b1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba8d70ed754b2536ca497d7d50ec7b1e">&#9670;&nbsp;</a></span>AVHWFrameTransferDirection</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="../../d1/d45/hwcontext_8h.html#aba8d70ed754b2536ca497d7d50ec7b1e">AVHWFrameTransferDirection</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="aba8d70ed754b2536ca497d7d50ec7b1eae8d368e74899ae136a198bf469c0c6db"></a>AV_HWFRAME_TRANSFER_DIRECTION_FROM&#160;</td><td class="fielddoc"><p>Transfer the data from the queried hw frame. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aba8d70ed754b2536ca497d7d50ec7b1eae5219126b03aab37ca8b466b8f337ec6"></a>AV_HWFRAME_TRANSFER_DIRECTION_TO&#160;</td><td class="fielddoc"><p>Transfer the data to the queried hw frame. </p>
+</td></tr>
+</table>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d1/d45/hwcontext_8h_source.html">hwcontext.h</a> строка <a class="el" href="../../d1/d45/hwcontext_8h_source.html#l00394">394</a></p>
+<div class="fragment"><div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;                                {</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;    <a class="code" href="../../d1/d45/hwcontext_8h.html#aba8d70ed754b2536ca497d7d50ec7b1eae8d368e74899ae136a198bf469c0c6db">AV_HWFRAME_TRANSFER_DIRECTION_FROM</a>,</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160; </div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;    <a class="code" href="../../d1/d45/hwcontext_8h.html#aba8d70ed754b2536ca497d7d50ec7b1eae5219126b03aab37ca8b466b8f337ec6">AV_HWFRAME_TRANSFER_DIRECTION_TO</a>,</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;};</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae33c78feb670de33d2abf21ec0624531"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae33c78feb670de33d2abf21ec0624531">&#9670;&nbsp;</a></span>anonymous enum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Flags to apply to frame mappings. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="ae33c78feb670de33d2abf21ec0624531a236262031fe4c5503b2611c2c8fb520b"></a>AV_HWFRAME_MAP_READ&#160;</td><td class="fielddoc"><p>The mapping must be readable. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ae33c78feb670de33d2abf21ec0624531ab2e22cc927a3d88fe833b50bf3d71948"></a>AV_HWFRAME_MAP_WRITE&#160;</td><td class="fielddoc"><p>The mapping must be writeable. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ae33c78feb670de33d2abf21ec0624531ac12b0a2a379fe4b4b00353aac56ed9f4"></a>AV_HWFRAME_MAP_OVERWRITE&#160;</td><td class="fielddoc"><p>The mapped frame will be overwritten completely in subsequent operations, so the current frame data need not be loaded. Any values which are not overwritten are unspecified. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ae33c78feb670de33d2abf21ec0624531a9f73eea942c7ed1ad5d56918bffa4ce3"></a>AV_HWFRAME_MAP_DIRECT&#160;</td><td class="fielddoc"><p>The mapping must be direct. That is, there must not be any copying in the map or unmap steps. Note that performance of direct mappings may be much lower than normal memory. </p>
+</td></tr>
+</table>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d1/d45/hwcontext_8h_source.html">hwcontext.h</a> строка <a class="el" href="../../d1/d45/hwcontext_8h_source.html#l00499">499</a></p>
+<div class="fragment"><div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;     {</div>
+<div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;    <a class="code" href="../../d1/d45/hwcontext_8h.html#ae33c78feb670de33d2abf21ec0624531a236262031fe4c5503b2611c2c8fb520b">AV_HWFRAME_MAP_READ</a>      = 1 &lt;&lt; 0,</div>
+<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;    <a class="code" href="../../d1/d45/hwcontext_8h.html#ae33c78feb670de33d2abf21ec0624531ab2e22cc927a3d88fe833b50bf3d71948">AV_HWFRAME_MAP_WRITE</a>     = 1 &lt;&lt; 1,</div>
+<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;    <a class="code" href="../../d1/d45/hwcontext_8h.html#ae33c78feb670de33d2abf21ec0624531ac12b0a2a379fe4b4b00353aac56ed9f4">AV_HWFRAME_MAP_OVERWRITE</a> = 1 &lt;&lt; 2,</div>
+<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;    <a class="code" href="../../d1/d45/hwcontext_8h.html#ae33c78feb670de33d2abf21ec0624531a9f73eea942c7ed1ad5d56918bffa4ce3">AV_HWFRAME_MAP_DIRECT</a>    = 1 &lt;&lt; 3,</div>
+<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;};</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Функции</h2>
+<a id="a541943ddced791765349645a30adfa4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a541943ddced791765349645a30adfa4d">&#9670;&nbsp;</a></span>av_hwdevice_find_type_by_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="../../d1/d45/hwcontext_8h.html#acf25724be4b066a51ad86aa9214b0d34">AVHWDeviceType</a> av_hwdevice_find_type_by_name </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Look up an AVHWDeviceType by name.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>String name of the device type (case-insensitive). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>The type from enum AVHWDeviceType, or AV_HWDEVICE_TYPE_NONE if not found. </dd></dl>
+
+</div>
+</div>
+<a id="afb2b99a15f3fdde25a2fd19353ac5a67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb2b99a15f3fdde25a2fd19353ac5a67">&#9670;&nbsp;</a></span>av_hwdevice_get_type_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* av_hwdevice_get_type_name </td>
+          <td>(</td>
+          <td class="paramtype">enum <a class="el" href="../../d1/d45/hwcontext_8h.html#acf25724be4b066a51ad86aa9214b0d34">AVHWDeviceType</a>&#160;</td>
+          <td class="paramname"><em>type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the string name of an AVHWDeviceType.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>Type from enum AVHWDeviceType. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Pointer to a static string containing the name, or NULL if the type is not valid. </dd></dl>
+
+</div>
+</div>
+<a id="a0fb42d664a6ec87f8802e9132b85cac3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fb42d664a6ec87f8802e9132b85cac3">&#9670;&nbsp;</a></span>av_hwdevice_iterate_types()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="../../d1/d45/hwcontext_8h.html#acf25724be4b066a51ad86aa9214b0d34">AVHWDeviceType</a> av_hwdevice_iterate_types </td>
+          <td>(</td>
+          <td class="paramtype">enum <a class="el" href="../../d1/d45/hwcontext_8h.html#acf25724be4b066a51ad86aa9214b0d34">AVHWDeviceType</a>&#160;</td>
+          <td class="paramname"><em>prev</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Iterate over supported device types.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>AV_HWDEVICE_TYPE_NONE initially, then the previous type returned by this function in subsequent iterations. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>The next usable device type from enum AVHWDeviceType, or AV_HWDEVICE_TYPE_NONE if there are no more. </dd></dl>
+
+</div>
+</div>
+<a id="a1cb1f874bb5a0ed7743f9a2b73b47e6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cb1f874bb5a0ed7743f9a2b73b47e6e">&#9670;&nbsp;</a></span>av_hwdevice_ctx_alloc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/dc0/struct_a_v_buffer_ref.html">AVBufferRef</a>* av_hwdevice_ctx_alloc </td>
+          <td>(</td>
+          <td class="paramtype">enum <a class="el" href="../../d1/d45/hwcontext_8h.html#acf25724be4b066a51ad86aa9214b0d34">AVHWDeviceType</a>&#160;</td>
+          <td class="paramname"><em>type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Allocate an <a class="el" href="../../d1/d5e/struct_a_v_h_w_device_context.html">AVHWDeviceContext</a> for a given hardware type.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>the type of the hardware device to allocate. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>a reference to the newly created <a class="el" href="../../d1/d5e/struct_a_v_h_w_device_context.html">AVHWDeviceContext</a> on success or NULL on failure. </dd></dl>
+
+</div>
+</div>
+<a id="a11d8c9101c95cdcab3dbc5b4c03dfd4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11d8c9101c95cdcab3dbc5b4c03dfd4d">&#9670;&nbsp;</a></span>av_hwdevice_ctx_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int av_hwdevice_ctx_init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/dc0/struct_a_v_buffer_ref.html">AVBufferRef</a> *&#160;</td>
+          <td class="paramname"><em>ref</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Finalize the device context before use. This function must be called after the context is filled with all the required information and before it is used in any way.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ref</td><td>a reference to the <a class="el" href="../../d1/d5e/struct_a_v_h_w_device_context.html">AVHWDeviceContext</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>0 on success, a negative AVERROR code on failure </dd></dl>
+
+</div>
+</div>
+<a id="ac085a5abc44c5330b64489416a42482d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac085a5abc44c5330b64489416a42482d">&#9670;&nbsp;</a></span>av_hwdevice_ctx_create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int av_hwdevice_ctx_create </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/dc0/struct_a_v_buffer_ref.html">AVBufferRef</a> **&#160;</td>
+          <td class="paramname"><em>device_ctx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">enum <a class="el" href="../../d1/d45/hwcontext_8h.html#acf25724be4b066a51ad86aa9214b0d34">AVHWDeviceType</a>&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>device</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d2/db0/group__lavu__dict.html#ga1d7cc0833bee918994a600556410315f">AVDictionary</a> *&#160;</td>
+          <td class="paramname"><em>opts</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>flags</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Open a device of the specified type and create an <a class="el" href="../../d1/d5e/struct_a_v_h_w_device_context.html">AVHWDeviceContext</a> for it.</p>
+<p>This is a convenience function intended to cover the simple cases. Callers who need to fine-tune device creation/management should open the device manually and then wrap it in an <a class="el" href="../../d1/d5e/struct_a_v_h_w_device_context.html">AVHWDeviceContext</a> using <a class="el" href="../../d1/d45/hwcontext_8h.html#a1cb1f874bb5a0ed7743f9a2b73b47e6e">av_hwdevice_ctx_alloc()</a>/av_hwdevice_ctx_init().</p>
+<p>The returned context is already initialized and ready for use, the caller should not call <a class="el" href="../../d1/d45/hwcontext_8h.html#a11d8c9101c95cdcab3dbc5b4c03dfd4d">av_hwdevice_ctx_init()</a> on it. The user_opaque/free fields of the created <a class="el" href="../../d1/d5e/struct_a_v_h_w_device_context.html">AVHWDeviceContext</a> are set by this function and should not be touched by the caller.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">device_ctx</td><td>On success, a reference to the newly-created device context will be written here. The reference is owned by the caller and must be released with <a class="el" href="../../d9/d3c/group__lavu__buffer.html#ga135e9e929b5033bb8f68322497b2effc">av_buffer_unref()</a> when no longer needed. On failure, NULL will be written to this pointer. </td></tr>
+    <tr><td class="paramname">type</td><td>The type of the device to create. </td></tr>
+    <tr><td class="paramname">device</td><td>A type-specific string identifying the device to open. </td></tr>
+    <tr><td class="paramname">opts</td><td>A dictionary of additional (type-specific) options to use in opening the device. The dictionary remains owned by the caller. </td></tr>
+    <tr><td class="paramname">flags</td><td>currently unused</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>0 on success, a negative AVERROR code on failure. </dd></dl>
+
+</div>
+</div>
+<a id="a6af4a20a0338e3b74075f606e4b5b369"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6af4a20a0338e3b74075f606e4b5b369">&#9670;&nbsp;</a></span>av_hwdevice_ctx_create_derived()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int av_hwdevice_ctx_create_derived </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/dc0/struct_a_v_buffer_ref.html">AVBufferRef</a> **&#160;</td>
+          <td class="paramname"><em>dst_ctx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">enum <a class="el" href="../../d1/d45/hwcontext_8h.html#acf25724be4b066a51ad86aa9214b0d34">AVHWDeviceType</a>&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d0/dc0/struct_a_v_buffer_ref.html">AVBufferRef</a> *&#160;</td>
+          <td class="paramname"><em>src_ctx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>flags</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Create a new device of the specified type from an existing device.</p>
+<p>If the source device is a device of the target type or was originally derived from such a device (possibly through one or more intermediate devices of other types), then this will return a reference to the existing device of the same type as is requested.</p>
+<p>Otherwise, it will attempt to derive a new device from the given source device. If direct derivation to the new type is not implemented, it will attempt the same derivation from each ancestor of the source device in turn looking for an implemented derivation method.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dst_ctx</td><td>On success, a reference to the newly-created <a class="el" href="../../d1/d5e/struct_a_v_h_w_device_context.html">AVHWDeviceContext</a>. </td></tr>
+    <tr><td class="paramname">type</td><td>The type of the new device to create. </td></tr>
+    <tr><td class="paramname">src_ctx</td><td>A reference to an existing <a class="el" href="../../d1/d5e/struct_a_v_h_w_device_context.html">AVHWDeviceContext</a> which will be used to create the new device. </td></tr>
+    <tr><td class="paramname">flags</td><td>Currently unused; should be set to zero. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Zero on success, a negative AVERROR code on failure. </dd></dl>
+
+</div>
+</div>
+<a id="a48f93ecf13855387e89d6d5e34054b11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48f93ecf13855387e89d6d5e34054b11">&#9670;&nbsp;</a></span>av_hwframe_ctx_alloc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/dc0/struct_a_v_buffer_ref.html">AVBufferRef</a>* av_hwframe_ctx_alloc </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/dc0/struct_a_v_buffer_ref.html">AVBufferRef</a> *&#160;</td>
+          <td class="paramname"><em>device_ctx</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Allocate an <a class="el" href="../../da/d7a/struct_a_v_h_w_frames_context.html">AVHWFramesContext</a> tied to a given device context.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">device_ctx</td><td>a reference to a <a class="el" href="../../d1/d5e/struct_a_v_h_w_device_context.html">AVHWDeviceContext</a>. This function will make a new reference for internal use, the one passed to the function remains owned by the caller. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>a reference to the newly created <a class="el" href="../../da/d7a/struct_a_v_h_w_frames_context.html">AVHWFramesContext</a> on success or NULL on failure. </dd></dl>
+
+</div>
+</div>
+<a id="a66a7e1ebc7e459ce07d3de6639ac7e38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66a7e1ebc7e459ce07d3de6639ac7e38">&#9670;&nbsp;</a></span>av_hwframe_ctx_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int av_hwframe_ctx_init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/dc0/struct_a_v_buffer_ref.html">AVBufferRef</a> *&#160;</td>
+          <td class="paramname"><em>ref</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Finalize the context before use. This function must be called after the context is filled with all the required information and before it is attached to any frames.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ref</td><td>a reference to the <a class="el" href="../../da/d7a/struct_a_v_h_w_frames_context.html">AVHWFramesContext</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>0 on success, a negative AVERROR code on failure </dd></dl>
+
+</div>
+</div>
+<a id="a03e7cf122b61f6472d0a4d37f52d4965"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03e7cf122b61f6472d0a4d37f52d4965">&#9670;&nbsp;</a></span>av_hwframe_get_buffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int av_hwframe_get_buffer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/dc0/struct_a_v_buffer_ref.html">AVBufferRef</a> *&#160;</td>
+          <td class="paramname"><em>hwframe_ctx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d6/d03/struct_a_v_frame.html">AVFrame</a> *&#160;</td>
+          <td class="paramname"><em>frame</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>flags</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Allocate a new frame attached to the given <a class="el" href="../../da/d7a/struct_a_v_h_w_frames_context.html">AVHWFramesContext</a>.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hwframe_ctx</td><td>a reference to an <a class="el" href="../../da/d7a/struct_a_v_h_w_frames_context.html">AVHWFramesContext</a> </td></tr>
+    <tr><td class="paramname">frame</td><td>an empty (freshly allocated or unreffed) frame to be filled with newly allocated buffers. </td></tr>
+    <tr><td class="paramname">flags</td><td>currently unused, should be set to zero </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>0 on success, a negative AVERROR code on failure </dd></dl>
+
+</div>
+</div>
+<a id="abf1b1664b8239d953ae2cac8b643815a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf1b1664b8239d953ae2cac8b643815a">&#9670;&nbsp;</a></span>av_hwframe_transfer_data()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int av_hwframe_transfer_data </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d6/d03/struct_a_v_frame.html">AVFrame</a> *&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d6/d03/struct_a_v_frame.html">AVFrame</a> *&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>flags</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Copy data to or from a hw surface. At least one of dst/src must have an <a class="el" href="../../da/d7a/struct_a_v_h_w_frames_context.html">AVHWFramesContext</a> attached.</p>
+<p>If src has an <a class="el" href="../../da/d7a/struct_a_v_h_w_frames_context.html">AVHWFramesContext</a> attached, then the format of dst (if set) must use one of the formats returned by av_hwframe_transfer_get_formats(src, AV_HWFRAME_TRANSFER_DIRECTION_FROM). If dst has an <a class="el" href="../../da/d7a/struct_a_v_h_w_frames_context.html">AVHWFramesContext</a> attached, then the format of src must use one of the formats returned by av_hwframe_transfer_get_formats(dst, AV_HWFRAME_TRANSFER_DIRECTION_TO)</p>
+<p>dst may be "clean" (i.e. with data/buf pointers unset), in which case the data buffers will be allocated by this function using <a class="el" href="../../d5/de8/group__lavu__frame.html#ga6b1acbfa82c79bf7fd78d868572f0ceb">av_frame_get_buffer()</a>. If dst-&gt;format is set, then this format will be used, otherwise (when dst-&gt;format is AV_PIX_FMT_NONE) the first acceptable format will be chosen.</p>
+<p>The two frames must have matching allocated dimensions (i.e. equal to <a class="el" href="../../da/d7a/struct_a_v_h_w_frames_context.html#a9e6f29d0f744930cdd0e8bdff8771520">AVHWFramesContext.width</a>/height), since not all device types support transferring a sub-rectangle of the whole surface. The display dimensions (i.e. <a class="el" href="../../d6/d03/struct_a_v_frame.html#a1e71ce60cedd5f3b6811714a9f7f9e0a">AVFrame.width</a>/height) may be smaller than the allocated dimensions, but also have to be equal for both frames. When the display dimensions are smaller than the allocated dimensions, the content of the padding in the destination frame is unspecified.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dst</td><td>the destination frame. dst is not touched on failure. </td></tr>
+    <tr><td class="paramname">src</td><td>the source frame. </td></tr>
+    <tr><td class="paramname">flags</td><td>currently unused, should be set to zero </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>0 on success, a negative AVERROR error code on failure. </dd></dl>
+
+</div>
+</div>
+<a id="ae758c36d3b0c446af7f9eb1f57110a49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae758c36d3b0c446af7f9eb1f57110a49">&#9670;&nbsp;</a></span>av_hwframe_transfer_get_formats()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int av_hwframe_transfer_get_formats </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/dc0/struct_a_v_buffer_ref.html">AVBufferRef</a> *&#160;</td>
+          <td class="paramname"><em>hwframe_ctx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">enum <a class="el" href="../../d1/d45/hwcontext_8h.html#aba8d70ed754b2536ca497d7d50ec7b1e">AVHWFrameTransferDirection</a>&#160;</td>
+          <td class="paramname"><em>dir</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">enum <a class="el" href="../../dd/d6c/pixfmt_8h.html#a9a8e335cf3be472042bc9f0cf80cd4c5">AVPixelFormat</a> **&#160;</td>
+          <td class="paramname"><em>formats</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>flags</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get a list of possible source or target formats usable in <a class="el" href="../../d1/d45/hwcontext_8h.html#abf1b1664b8239d953ae2cac8b643815a">av_hwframe_transfer_data()</a>.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hwframe_ctx</td><td>the frame context to obtain the information for </td></tr>
+    <tr><td class="paramname">dir</td><td>the direction of the transfer </td></tr>
+    <tr><td class="paramname">formats</td><td>the pointer to the output format list will be written here. The list is terminated with AV_PIX_FMT_NONE and must be freed by the caller when no longer needed using <a class="el" href="../../db/d76/group__lavu__mem__funcs.html#ga0c9096f498624c525aa2315b8a20c411">av_free()</a>. If this function returns successfully, the format list will have at least one item (not counting the terminator). On failure, the contents of this pointer are unspecified. </td></tr>
+    <tr><td class="paramname">flags</td><td>currently unused, should be set to zero </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>0 on success, a negative AVERROR code on failure. </dd></dl>
+
+</div>
+</div>
+<a id="aebc6d255d84b533ce27aa1fdd8021484"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebc6d255d84b533ce27aa1fdd8021484">&#9670;&nbsp;</a></span>av_hwdevice_hwconfig_alloc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>* av_hwdevice_hwconfig_alloc </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/dc0/struct_a_v_buffer_ref.html">AVBufferRef</a> *&#160;</td>
+          <td class="paramname"><em>device_ctx</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Allocate a HW-specific configuration structure for a given HW device. After use, the user must free all members as required by the specific hardware structure being used, then free the structure itself with <a class="el" href="../../db/d76/group__lavu__mem__funcs.html#ga0c9096f498624c525aa2315b8a20c411">av_free()</a>.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">device_ctx</td><td>a reference to the associated <a class="el" href="../../d1/d5e/struct_a_v_h_w_device_context.html">AVHWDeviceContext</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>The newly created HW-specific configuration structure on success or NULL on failure. </dd></dl>
+
+</div>
+</div>
+<a id="a80f4c1184e1758150b6d9bc0adf2c1df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80f4c1184e1758150b6d9bc0adf2c1df">&#9670;&nbsp;</a></span>av_hwdevice_get_hwframe_constraints()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d35/struct_a_v_h_w_frames_constraints.html">AVHWFramesConstraints</a>* av_hwdevice_get_hwframe_constraints </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/dc0/struct_a_v_buffer_ref.html">AVBufferRef</a> *&#160;</td>
+          <td class="paramname"><em>ref</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *&#160;</td>
+          <td class="paramname"><em>hwconfig</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the constraints on HW frames given a device and the HW-specific configuration to be used with that device. If no HW-specific configuration is provided, returns the maximum possible capabilities of the device.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ref</td><td>a reference to the associated <a class="el" href="../../d1/d5e/struct_a_v_h_w_device_context.html">AVHWDeviceContext</a>. </td></tr>
+    <tr><td class="paramname">hwconfig</td><td>a filled HW-specific configuration structure, or NULL to return the maximum possible capabilities of the device. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd><a class="el" href="../../d0/d35/struct_a_v_h_w_frames_constraints.html">AVHWFramesConstraints</a> structure describing the constraints on the device, or NULL if not available. </dd></dl>
+
+</div>
+</div>
+<a id="a29da7fa7ffa73266d1cbfccb116ed634"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29da7fa7ffa73266d1cbfccb116ed634">&#9670;&nbsp;</a></span>av_hwframe_constraints_free()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> av_hwframe_constraints_free </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/d35/struct_a_v_h_w_frames_constraints.html">AVHWFramesConstraints</a> **&#160;</td>
+          <td class="paramname"><em>constraints</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Free an AVHWFrameConstraints structure.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">constraints</td><td>The (filled or unfilled) AVHWFrameConstraints structure. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a99e028453fba7e66483c2189439219d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99e028453fba7e66483c2189439219d2">&#9670;&nbsp;</a></span>av_hwframe_map()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int av_hwframe_map </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d6/d03/struct_a_v_frame.html">AVFrame</a> *&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d6/d03/struct_a_v_frame.html">AVFrame</a> *&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>flags</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Map a hardware frame.</p>
+<p>This has a number of different possible effects, depending on the format and origin of the src and dst frames. On input, src should be a usable frame with valid buffers and dst should be blank (typically as just created by <a class="el" href="../../d5/de8/group__lavu__frame.html#gac700017c5270c79c1e1befdeeb008b2f">av_frame_alloc()</a>). src should have an associated hwframe context, and dst may optionally have a format and associated hwframe context.</p>
+<p>If src was created by mapping a frame from the hwframe context of dst, then this function undoes the mapping - dst is replaced by a reference to the frame that src was originally mapped from.</p>
+<p>If both src and dst have an associated hwframe context, then this function attempts to map the src frame from its hardware context to that of dst and then fill dst with appropriate data to be usable there. This will only be possible if the hwframe contexts and associated devices are compatible - given compatible devices, <a class="el" href="../../d1/d45/hwcontext_8h.html#a5228c42445cffd10087f0590614edb13">av_hwframe_ctx_create_derived()</a> can be used to create a hwframe context for dst in which mapping should be possible.</p>
+<p>If src has a hwframe context but dst does not, then the src frame is mapped to normal memory and should thereafter be usable as a normal frame. If the format is set on dst, then the mapping will attempt to create dst with that format and fail if it is not possible. If format is unset (is AV_PIX_FMT_NONE) then dst will be mapped with whatever the most appropriate format to use is (probably the sw_format of the src hwframe context).</p>
+<p>A return value of AVERROR(ENOSYS) indicates that the mapping is not possible with the given arguments and hwframe setup, while other return values indicate that it failed somehow.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dst</td><td>Destination frame, to contain the mapping. </td></tr>
+    <tr><td class="paramname">src</td><td>Source frame, to be mapped. </td></tr>
+    <tr><td class="paramname">flags</td><td>Some combination of AV_HWFRAME_MAP_* flags. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Zero on success, negative AVERROR code on failure. </dd></dl>
+
+</div>
+</div>
+<a id="a5228c42445cffd10087f0590614edb13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5228c42445cffd10087f0590614edb13">&#9670;&nbsp;</a></span>av_hwframe_ctx_create_derived()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int av_hwframe_ctx_create_derived </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/dc0/struct_a_v_buffer_ref.html">AVBufferRef</a> **&#160;</td>
+          <td class="paramname"><em>derived_frame_ctx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">enum <a class="el" href="../../dd/d6c/pixfmt_8h.html#a9a8e335cf3be472042bc9f0cf80cd4c5">AVPixelFormat</a>&#160;</td>
+          <td class="paramname"><em>format</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d0/dc0/struct_a_v_buffer_ref.html">AVBufferRef</a> *&#160;</td>
+          <td class="paramname"><em>derived_device_ctx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d0/dc0/struct_a_v_buffer_ref.html">AVBufferRef</a> *&#160;</td>
+          <td class="paramname"><em>source_frame_ctx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>flags</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Create and initialise an <a class="el" href="../../da/d7a/struct_a_v_h_w_frames_context.html">AVHWFramesContext</a> as a mapping of another existing <a class="el" href="../../da/d7a/struct_a_v_h_w_frames_context.html">AVHWFramesContext</a> on a different device.</p>
+<p><a class="el" href="../../d1/d45/hwcontext_8h.html#a66a7e1ebc7e459ce07d3de6639ac7e38">av_hwframe_ctx_init()</a> should not be called after this.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">derived_frame_ctx</td><td>On success, a reference to the newly created <a class="el" href="../../da/d7a/struct_a_v_h_w_frames_context.html">AVHWFramesContext</a>. </td></tr>
+    <tr><td class="paramname">derived_device_ctx</td><td>A reference to the device to create the new <a class="el" href="../../da/d7a/struct_a_v_h_w_frames_context.html">AVHWFramesContext</a> on. </td></tr>
+    <tr><td class="paramname">source_frame_ctx</td><td>A reference to an existing <a class="el" href="../../da/d7a/struct_a_v_h_w_frames_context.html">AVHWFramesContext</a> which will be mapped to the derived context. </td></tr>
+    <tr><td class="paramname">flags</td><td>Some combination of AV_HWFRAME_MAP_* flags, defining the mapping parameters to apply to frames which are allocated in the derived device. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Zero on success, negative AVERROR code on failure. </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="ahwcontext_8h_html_aba8d70ed754b2536ca497d7d50ec7b1eae8d368e74899ae136a198bf469c0c6db"><div class="ttname"><a href="../../d1/d45/hwcontext_8h.html#aba8d70ed754b2536ca497d7d50ec7b1eae8d368e74899ae136a198bf469c0c6db">AV_HWFRAME_TRANSFER_DIRECTION_FROM</a></div><div class="ttdeci">@ AV_HWFRAME_TRANSFER_DIRECTION_FROM</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d45/hwcontext_8h_source.html#l00398">hwcontext.h:398</a></div></div>
+<div class="ttc" id="ahwcontext_8h_html_acf25724be4b066a51ad86aa9214b0d34a30886e466fe9fbaccae236530101af9c"><div class="ttname"><a href="../../d1/d45/hwcontext_8h.html#acf25724be4b066a51ad86aa9214b0d34a30886e466fe9fbaccae236530101af9c">AV_HWDEVICE_TYPE_NONE</a></div><div class="ttdeci">@ AV_HWDEVICE_TYPE_NONE</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d45/hwcontext_8h_source.html#l00028">hwcontext.h:28</a></div></div>
+<div class="ttc" id="ahwcontext_8h_html_acf25724be4b066a51ad86aa9214b0d34a773070fc89c1397360cb469ec6302de2"><div class="ttname"><a href="../../d1/d45/hwcontext_8h.html#acf25724be4b066a51ad86aa9214b0d34a773070fc89c1397360cb469ec6302de2">AV_HWDEVICE_TYPE_MEDIACODEC</a></div><div class="ttdeci">@ AV_HWDEVICE_TYPE_MEDIACODEC</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d45/hwcontext_8h_source.html#l00038">hwcontext.h:38</a></div></div>
+<div class="ttc" id="ahwcontext_8h_html_acf25724be4b066a51ad86aa9214b0d34a81d980fb470d1c32c3b0c1ebb8e6e2c4"><div class="ttname"><a href="../../d1/d45/hwcontext_8h.html#acf25724be4b066a51ad86aa9214b0d34a81d980fb470d1c32c3b0c1ebb8e6e2c4">AV_HWDEVICE_TYPE_VIDEOTOOLBOX</a></div><div class="ttdeci">@ AV_HWDEVICE_TYPE_VIDEOTOOLBOX</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d45/hwcontext_8h_source.html#l00034">hwcontext.h:34</a></div></div>
+<div class="ttc" id="ahwcontext_8h_html_acf25724be4b066a51ad86aa9214b0d34a8447d4488b0fc4113c281cbdc6e7334e"><div class="ttname"><a href="../../d1/d45/hwcontext_8h.html#acf25724be4b066a51ad86aa9214b0d34a8447d4488b0fc4113c281cbdc6e7334e">AV_HWDEVICE_TYPE_CUDA</a></div><div class="ttdeci">@ AV_HWDEVICE_TYPE_CUDA</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d45/hwcontext_8h_source.html#l00030">hwcontext.h:30</a></div></div>
+<div class="ttc" id="ahwcontext_8h_html_acf25724be4b066a51ad86aa9214b0d34a1823a64d48c796978b892dd669659c4c"><div class="ttname"><a href="../../d1/d45/hwcontext_8h.html#acf25724be4b066a51ad86aa9214b0d34a1823a64d48c796978b892dd669659c4c">AV_HWDEVICE_TYPE_D3D11VA</a></div><div class="ttdeci">@ AV_HWDEVICE_TYPE_D3D11VA</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d45/hwcontext_8h_source.html#l00035">hwcontext.h:35</a></div></div>
+<div class="ttc" id="ahwcontext_8h_html_ae33c78feb670de33d2abf21ec0624531ab2e22cc927a3d88fe833b50bf3d71948"><div class="ttname"><a href="../../d1/d45/hwcontext_8h.html#ae33c78feb670de33d2abf21ec0624531ab2e22cc927a3d88fe833b50bf3d71948">AV_HWFRAME_MAP_WRITE</a></div><div class="ttdeci">@ AV_HWFRAME_MAP_WRITE</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d45/hwcontext_8h_source.html#l00507">hwcontext.h:507</a></div></div>
+<div class="ttc" id="ahwcontext_8h_html_acf25724be4b066a51ad86aa9214b0d34acc6f1868dad1c636d4747cc91ce71d10"><div class="ttname"><a href="../../d1/d45/hwcontext_8h.html#acf25724be4b066a51ad86aa9214b0d34acc6f1868dad1c636d4747cc91ce71d10">AV_HWDEVICE_TYPE_DXVA2</a></div><div class="ttdeci">@ AV_HWDEVICE_TYPE_DXVA2</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d45/hwcontext_8h_source.html#l00032">hwcontext.h:32</a></div></div>
+<div class="ttc" id="ahwcontext_8h_html_acf25724be4b066a51ad86aa9214b0d34a6ba51b0079c626ee6d02991f078ecc98"><div class="ttname"><a href="../../d1/d45/hwcontext_8h.html#acf25724be4b066a51ad86aa9214b0d34a6ba51b0079c626ee6d02991f078ecc98">AV_HWDEVICE_TYPE_OPENCL</a></div><div class="ttdeci">@ AV_HWDEVICE_TYPE_OPENCL</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d45/hwcontext_8h_source.html#l00037">hwcontext.h:37</a></div></div>
+<div class="ttc" id="ahwcontext_8h_html_ae33c78feb670de33d2abf21ec0624531a9f73eea942c7ed1ad5d56918bffa4ce3"><div class="ttname"><a href="../../d1/d45/hwcontext_8h.html#ae33c78feb670de33d2abf21ec0624531a9f73eea942c7ed1ad5d56918bffa4ce3">AV_HWFRAME_MAP_DIRECT</a></div><div class="ttdeci">@ AV_HWFRAME_MAP_DIRECT</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d45/hwcontext_8h_source.html#l00519">hwcontext.h:519</a></div></div>
+<div class="ttc" id="ahwcontext_8h_html_ae33c78feb670de33d2abf21ec0624531a236262031fe4c5503b2611c2c8fb520b"><div class="ttname"><a href="../../d1/d45/hwcontext_8h.html#ae33c78feb670de33d2abf21ec0624531a236262031fe4c5503b2611c2c8fb520b">AV_HWFRAME_MAP_READ</a></div><div class="ttdeci">@ AV_HWFRAME_MAP_READ</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d45/hwcontext_8h_source.html#l00503">hwcontext.h:503</a></div></div>
+<div class="ttc" id="ahwcontext_8h_html_acf25724be4b066a51ad86aa9214b0d34af5dfa6181a3a6efb0f4a0c5f38d76b95"><div class="ttname"><a href="../../d1/d45/hwcontext_8h.html#acf25724be4b066a51ad86aa9214b0d34af5dfa6181a3a6efb0f4a0c5f38d76b95">AV_HWDEVICE_TYPE_VAAPI</a></div><div class="ttdeci">@ AV_HWDEVICE_TYPE_VAAPI</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d45/hwcontext_8h_source.html#l00031">hwcontext.h:31</a></div></div>
+<div class="ttc" id="ahwcontext_8h_html_acf25724be4b066a51ad86aa9214b0d34a41592a72e14c349fae1277a46268c29a"><div class="ttname"><a href="../../d1/d45/hwcontext_8h.html#acf25724be4b066a51ad86aa9214b0d34a41592a72e14c349fae1277a46268c29a">AV_HWDEVICE_TYPE_VDPAU</a></div><div class="ttdeci">@ AV_HWDEVICE_TYPE_VDPAU</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d45/hwcontext_8h_source.html#l00029">hwcontext.h:29</a></div></div>
+<div class="ttc" id="ahwcontext_8h_html_acf25724be4b066a51ad86aa9214b0d34a7a74cd2f21d680a11aa8b321ddff1358"><div class="ttname"><a href="../../d1/d45/hwcontext_8h.html#acf25724be4b066a51ad86aa9214b0d34a7a74cd2f21d680a11aa8b321ddff1358">AV_HWDEVICE_TYPE_QSV</a></div><div class="ttdeci">@ AV_HWDEVICE_TYPE_QSV</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d45/hwcontext_8h_source.html#l00033">hwcontext.h:33</a></div></div>
+<div class="ttc" id="ahwcontext_8h_html_ae33c78feb670de33d2abf21ec0624531ac12b0a2a379fe4b4b00353aac56ed9f4"><div class="ttname"><a href="../../d1/d45/hwcontext_8h.html#ae33c78feb670de33d2abf21ec0624531ac12b0a2a379fe4b4b00353aac56ed9f4">AV_HWFRAME_MAP_OVERWRITE</a></div><div class="ttdeci">@ AV_HWFRAME_MAP_OVERWRITE</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d45/hwcontext_8h_source.html#l00513">hwcontext.h:513</a></div></div>
+<div class="ttc" id="ahwcontext_8h_html_acf25724be4b066a51ad86aa9214b0d34aa04ac36fb964a5c191566a8e809de743"><div class="ttname"><a href="../../d1/d45/hwcontext_8h.html#acf25724be4b066a51ad86aa9214b0d34aa04ac36fb964a5c191566a8e809de743">AV_HWDEVICE_TYPE_DRM</a></div><div class="ttdeci">@ AV_HWDEVICE_TYPE_DRM</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d45/hwcontext_8h_source.html#l00036">hwcontext.h:36</a></div></div>
+<div class="ttc" id="ahwcontext_8h_html_aba8d70ed754b2536ca497d7d50ec7b1eae5219126b03aab37ca8b466b8f337ec6"><div class="ttname"><a href="../../d1/d45/hwcontext_8h.html#aba8d70ed754b2536ca497d7d50ec7b1eae5219126b03aab37ca8b466b8f337ec6">AV_HWFRAME_TRANSFER_DIRECTION_TO</a></div><div class="ttdeci">@ AV_HWFRAME_TRANSFER_DIRECTION_TO</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d45/hwcontext_8h_source.html#l00403">hwcontext.h:403</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_97aefd0d527b934f1d99a682da8fe6a9.html">lib</a></li><li class="navelem"><a class="el" href="../../dir_da53678e933bc13c5b44fc9f96ac81aa.html">win32</a></li><li class="navelem"><a class="el" href="../../dir_7ac189985cec0e073b46d34a5d96bfc1.html">x86</a></li><li class="navelem"><a class="el" href="../../dir_e3469dbcd8a5e63a5540df758d989c34.html">ffmpeg-4.2.2</a></li><li class="navelem"><a class="el" href="../../dir_880368755e1ee5b32b1864dac7163836.html">include</a></li><li class="navelem"><a class="el" href="../../dir_e95abcf8ca274311b94b0e3a5da6ed50.html">libavutil</a></li><li class="navelem"><a class="el" href="../../d1/d45/hwcontext_8h.html">hwcontext.h</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:04:16. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,596 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Файл C:/git/world-of-might-and-magic/Engine/Graphics/OpenGL/RenderOpenGL.cpp</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('da/d79/_render_open_g_l_8cpp.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Функции</a> &#124;
+<a href="#var-members">Переменные</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл RenderOpenGL.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><a href="../../da/d79/_render_open_g_l_8cpp_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a99692fd7f5691c536b66eae01c931b01"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d79/_render_open_g_l_8cpp.html#a99692fd7f5691c536b66eae01c931b01">BlendColors</a> (unsigned int a1, unsigned int a2)</td></tr>
+<tr class="separator:a99692fd7f5691c536b66eae01c931b01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3989bb5338ec37b4251ac5edf57a32bd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d79/_render_open_g_l_8cpp.html#a3989bb5338ec37b4251ac5edf57a32bd">_set_3d_projection_matrix</a> ()</td></tr>
+<tr class="separator:a3989bb5338ec37b4251ac5edf57a32bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27a3ab41e96351d06e3c7b710d3f1944"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d79/_render_open_g_l_8cpp.html#a27a3ab41e96351d06e3c7b710d3f1944">_set_3d_modelview_matrix</a> ()</td></tr>
+<tr class="separator:a27a3ab41e96351d06e3c7b710d3f1944"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1108f9d7135f0d9f2c5c50c88651dbd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d79/_render_open_g_l_8cpp.html#ad1108f9d7135f0d9f2c5c50c88651dbd">_set_ortho_projection</a> (bool gameviewport=false)</td></tr>
+<tr class="separator:ad1108f9d7135f0d9f2c5c50c88651dbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf488e14cf803ae074bec87b17c6afb7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d79/_render_open_g_l_8cpp.html#acf488e14cf803ae074bec87b17c6afb7">_set_ortho_modelview</a> ()</td></tr>
+<tr class="separator:acf488e14cf803ae074bec87b17c6afb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:a21d31464313b2c66ff88d4aa97b66143"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="../../d9/d20/class_i_render.html">IRender</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d79/_render_open_g_l_8cpp.html#a21d31464313b2c66ff88d4aa97b66143">render</a></td></tr>
+<tr class="separator:a21d31464313b2c66ff88d4aa97b66143"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af77da57a69c9069857ce9547af8c1d2a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d79/_render_open_g_l_8cpp.html#af77da57a69c9069857ce9547af8c1d2a">uNumDecorationsDrawnThisFrame</a></td></tr>
+<tr class="separator:af77da57a69c9069857ce9547af8c1d2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1520f6ad4523bbbcaa49c3aee9e3f9af"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/d3e/struct_render_billboard.html">RenderBillboard</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d79/_render_open_g_l_8cpp.html#a1520f6ad4523bbbcaa49c3aee9e3f9af">pBillboardRenderList</a> [500]</td></tr>
+<tr class="separator:a1520f6ad4523bbbcaa49c3aee9e3f9af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6febe181f878f6fbcaff79909f3cd767"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d79/_render_open_g_l_8cpp.html#a6febe181f878f6fbcaff79909f3cd767">uNumBillboardsToDraw</a></td></tr>
+<tr class="separator:a6febe181f878f6fbcaff79909f3cd767"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63fd4ef6a6526e47a97f8688b63c4c30"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d79/_render_open_g_l_8cpp.html#a63fd4ef6a6526e47a97f8688b63c4c30">uNumSpritesDrawnThisFrame</a></td></tr>
+<tr class="separator:a63fd4ef6a6526e47a97f8688b63c4c30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7722562f00abbc88c6d6dfc91e713986"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d1a/struct_render_vertex_soft.html">RenderVertexSoft</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d79/_render_open_g_l_8cpp.html#a7722562f00abbc88c6d6dfc91e713986">array_507D30</a> [50]</td></tr>
+<tr class="separator:a7722562f00abbc88c6d6dfc91e713986"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a785c9cd92f156aa959562d5cc61875df"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d79/_render_open_g_l_8cpp.html#a785c9cd92f156aa959562d5cc61875df">terrain_block_scale</a> = 512</td></tr>
+<tr class="separator:a785c9cd92f156aa959562d5cc61875df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fb472553e4280dc559388f31f964105"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d79/_render_open_g_l_8cpp.html#a4fb472553e4280dc559388f31f964105">terrain_height_scale</a> = 32</td></tr>
+<tr class="separator:a4fb472553e4280dc559388f31f964105"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1d15ac174b77495c99fba1dfc6cdded"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d1a/struct_render_vertex_soft.html">RenderVertexSoft</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d79/_render_open_g_l_8cpp.html#ab1d15ac174b77495c99fba1dfc6cdded">ogl_draw_buildings_vertices</a> [20]</td></tr>
+<tr class="separator:ab1d15ac174b77495c99fba1dfc6cdded"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Функции</h2>
+<a id="a99692fd7f5691c536b66eae01c931b01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99692fd7f5691c536b66eae01c931b01">&#9670;&nbsp;</a></span>BlendColors()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int BlendColors </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>a1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>a2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d4/d58/_render_base_8cpp_source.html">RenderBase.cpp</a> строка <a class="el" href="../../d4/d58/_render_base_8cpp_source.html#l00265">265</a></p>
+<div class="fragment"><div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;                                                           {</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    <a class="code" href="../../d2/d83/_m_m7_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#ac03904b1f7e359bb2acf10a755e97c5a">alpha</a> =</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;        (<a class="code" href="../../d2/d83/_m_m7_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a>)floorf(0.5<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a> + (a1 &gt;&gt; 24) / 255.0f * (a2 &gt;&gt; 24) / 255.0<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a> * 255.0<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a>);</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    <a class="code" href="../../d2/d83/_m_m7_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a> red = (<a class="code" href="../../d2/d83/_m_m7_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a>)floorf(0.5<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a> + ((a1 &gt;&gt; 16) &amp; 0xFF) / 255.0<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a> *</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;                                       ((a2 &gt;&gt; 16) &amp; 0xFF) / 255.0<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a> * 255.0<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a>);</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    <a class="code" href="../../d2/d83/_m_m7_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#ac14cda87cf6c751d53b65a3cd41c35a1">green</a> = (<a class="code" href="../../d2/d83/_m_m7_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a>)floorf(0.5<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a> + ((a1 &gt;&gt; 8) &amp; 0xFF) / 255.0<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a> *</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;                                         ((a2 &gt;&gt; 8) &amp; 0xFF) / 255.0<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a> * 255.0<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a>);</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    <a class="code" href="../../d2/d83/_m_m7_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1853b32584a90fa75432925f3e26d0e8">blue</a> = (<a class="code" href="../../d2/d83/_m_m7_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a>)floorf(0.5<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a> + ((a1 &gt;&gt; 0) &amp; 0xFF) / 255.0<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a> *</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;                                        ((a2 &gt;&gt; 0) &amp; 0xFF) / 255.0<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a> * 255.0<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a>);</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    <span class="keywordflow">return</span> (<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#ac03904b1f7e359bb2acf10a755e97c5a">alpha</a> &lt;&lt; 24) | (red &lt;&lt; 16) | (<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#ac14cda87cf6c751d53b65a3cd41c35a1">green</a> &lt;&lt; 8) | <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1853b32584a90fa75432925f3e26d0e8">blue</a>;</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Используется в <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l00218">RenderOpenGL::DrawBillboard_Indoor()</a> и <a class="el" href="../../d4/d58/_render_base_8cpp_source.html#l00277">RenderBase::TransformBillboard()</a>.</p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../da/d79/_render_open_g_l_8cpp_a99692fd7f5691c536b66eae01c931b01_icgraph.svg" width="622" height="118"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a3989bb5338ec37b4251ac5edf57a32bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3989bb5338ec37b4251ac5edf57a32bd">&#9670;&nbsp;</a></span>_set_3d_projection_matrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> _set_3d_projection_matrix </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html">RenderOpenGL.cpp</a> строка <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l01059">1059</a></p>
+<div class="fragment"><div class="line"><a name="l01059"></a><span class="lineno"> 1059</span>&#160;                                 {</div>
+<div class="line"><a name="l01060"></a><span class="lineno"> 1060</span>&#160;    <span class="keywordtype">float</span> near_clip = <a class="code" href="../../dc/d16/_indoor_camera_d3_d_8cpp.html#adea3dd5475289b8ba2698ac5d77b3d14">pIndoorCameraD3D</a>-&gt;<a class="code" href="../../d9/de5/struct_indoor_camera_d3_d.html#a6ade9a050aa9009a83e21461c6c470c4">GetNearClip</a>();</div>
+<div class="line"><a name="l01061"></a><span class="lineno"> 1061</span>&#160;    <span class="keywordtype">float</span> far_clip = <a class="code" href="../../dc/d16/_indoor_camera_d3_d_8cpp.html#adea3dd5475289b8ba2698ac5d77b3d14">pIndoorCameraD3D</a>-&gt;<a class="code" href="../../d9/de5/struct_indoor_camera_d3_d.html#ae44ac296d0d5225048b313e14edf7da1">GetFarClip</a>();</div>
+<div class="line"><a name="l01062"></a><span class="lineno"> 1062</span>&#160; </div>
+<div class="line"><a name="l01063"></a><span class="lineno"> 1063</span>&#160;    <a class="code" href="../../df/dc4/_s_d_l__opengl_8h.html#af14e38e22806d0220680b52edbc3bcef">glMatrixMode</a>(GL_PROJECTION);</div>
+<div class="line"><a name="l01064"></a><span class="lineno"> 1064</span>&#160;    <a class="code" href="../../df/dc4/_s_d_l__opengl_8h.html#a6577472f85b23086331edadaf0311a49">glLoadIdentity</a>();</div>
+<div class="line"><a name="l01065"></a><span class="lineno"> 1065</span>&#160; </div>
+<div class="line"><a name="l01066"></a><span class="lineno"> 1066</span>&#160; </div>
+<div class="line"><a name="l01067"></a><span class="lineno"> 1067</span>&#160;    <span class="comment">// outdoors 60 - should be 75?</span></div>
+<div class="line"><a name="l01068"></a><span class="lineno"> 1068</span>&#160;    <span class="comment">// indoors 65?/</span></div>
+<div class="line"><a name="l01069"></a><span class="lineno"> 1069</span>&#160;    <span class="comment">// something to do with ratio of screenwidth to viewport width</span></div>
+<div class="line"><a name="l01070"></a><span class="lineno"> 1070</span>&#160; </div>
+<div class="line"><a name="l01071"></a><span class="lineno"> 1071</span>&#160; </div>
+<div class="line"><a name="l01072"></a><span class="lineno"> 1072</span>&#160;    gluPerspective(65, <span class="keywordtype">double</span>(<a class="code" href="../../d6/d5b/mm7__data_8cpp.html#a8916b10b5a6b131ede8f6dbf200e4866">game_viewport_width</a>/<span class="keywordtype">double</span>(<a class="code" href="../../d6/d5b/mm7__data_8cpp.html#afd93b2f71cb70a7279451964648b30c4">game_viewport_height</a>))  <span class="comment">// 65.0f</span></div>
+<div class="line"><a name="l01073"></a><span class="lineno"> 1073</span>&#160;                   <span class="comment">/*(GLfloat)window-&gt;GetWidth() / (GLfloat)window-&gt;GetHeight()*/</span>,</div>
+<div class="line"><a name="l01074"></a><span class="lineno"> 1074</span>&#160;                   near_clip, far_clip);</div>
+<div class="line"><a name="l01075"></a><span class="lineno"> 1075</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d6/d5b/mm7__data_8cpp_source.html#l00195">game_viewport_height</a>, <a class="el" href="../../d6/d5b/mm7__data_8cpp_source.html#l00194">game_viewport_width</a>, <a class="el" href="../../dc/d16/_indoor_camera_d3_d_8cpp_source.html#l00159">IndoorCameraD3D::GetFarClip()</a>, <a class="el" href="../../dc/d16/_indoor_camera_d3_d_8cpp_source.html#l00146">IndoorCameraD3D::GetNearClip()</a>, <a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a6577472f85b23086331edadaf0311a49">glLoadIdentity()</a>, <a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#af14e38e22806d0220680b52edbc3bcef">glMatrixMode()</a> и <a class="el" href="../../dc/d16/_indoor_camera_d3_d_8cpp_source.html#l00021">pIndoorCameraD3D</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l02018">RenderOpenGL::DrawBuildingsD3D()</a>, <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l02381">RenderOpenGL::DrawIndoorPolygon()</a> и <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l01121">RenderOpenGL::RenderTerrainD3D()</a>.</p>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../da/d79/_render_open_g_l_8cpp_a3989bb5338ec37b4251ac5edf57a32bd_cgraph.svg" width="395" height="190"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../da/d79/_render_open_g_l_8cpp_a3989bb5338ec37b4251ac5edf57a32bd_icgraph.svg" width="416" height="155"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a27a3ab41e96351d06e3c7b710d3f1944"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27a3ab41e96351d06e3c7b710d3f1944">&#9670;&nbsp;</a></span>_set_3d_modelview_matrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> _set_3d_modelview_matrix </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html">RenderOpenGL.cpp</a> строка <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l01077">1077</a></p>
+<div class="fragment"><div class="line"><a name="l01077"></a><span class="lineno"> 1077</span>&#160;                                {</div>
+<div class="line"><a name="l01078"></a><span class="lineno"> 1078</span>&#160;    <a class="code" href="../../df/dc4/_s_d_l__opengl_8h.html#af14e38e22806d0220680b52edbc3bcef">glMatrixMode</a>(GL_MODELVIEW);</div>
+<div class="line"><a name="l01079"></a><span class="lineno"> 1079</span>&#160;    <a class="code" href="../../df/dc4/_s_d_l__opengl_8h.html#a6577472f85b23086331edadaf0311a49">glLoadIdentity</a>();</div>
+<div class="line"><a name="l01080"></a><span class="lineno"> 1080</span>&#160;    <a class="code" href="../../df/dc4/_s_d_l__opengl_8h.html#a8fd928b1b75f4c7b75bd3b0fa06a3fd3">glScalef</a>(1.0<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a>, 1.0<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a>, -1.0<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a>);</div>
+<div class="line"><a name="l01081"></a><span class="lineno"> 1081</span>&#160; </div>
+<div class="line"><a name="l01082"></a><span class="lineno"> 1082</span>&#160;    <span class="keywordtype">int</span> camera_x = <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a9131ac68bf00fcaf956e6b6d2dde7a6d">vPosition</a>.x - <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a6f9d2c63684a7ed7ce17464defa4bb7c">y_rotation_granularity</a> * cosf(2 * pi_double * <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a58acc77e1ce8db07f410d3557b8f4805">sRotationY</a> / 2048.0);</div>
+<div class="line"><a name="l01083"></a><span class="lineno"> 1083</span>&#160;    <span class="keywordtype">int</span> camera_z = <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a9131ac68bf00fcaf956e6b6d2dde7a6d">vPosition</a>.y - <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a6f9d2c63684a7ed7ce17464defa4bb7c">y_rotation_granularity</a> * sinf(2 * pi_double * <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a58acc77e1ce8db07f410d3557b8f4805">sRotationY</a> / 2048.0);</div>
+<div class="line"><a name="l01084"></a><span class="lineno"> 1084</span>&#160;    <span class="keywordtype">int</span> camera_y = <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a9131ac68bf00fcaf956e6b6d2dde7a6d">vPosition</a>.z + <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a03b208cf4d0a96cf7cd99e7475976a94">sEyelevel</a>;</div>
+<div class="line"><a name="l01085"></a><span class="lineno"> 1085</span>&#160; </div>
+<div class="line"><a name="l01086"></a><span class="lineno"> 1086</span>&#160;    gluLookAt(camera_x, camera_y, camera_z,</div>
+<div class="line"><a name="l01087"></a><span class="lineno"> 1087</span>&#160; </div>
+<div class="line"><a name="l01088"></a><span class="lineno"> 1088</span>&#160;              camera_x - <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a6f9d2c63684a7ed7ce17464defa4bb7c">y_rotation_granularity</a> *</div>
+<div class="line"><a name="l01089"></a><span class="lineno"> 1089</span>&#160;                      cosf(2 * 3.14159 * <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a58acc77e1ce8db07f410d3557b8f4805">sRotationY</a> / 2048.0) <span class="comment">/*- 5*/</span>,</div>
+<div class="line"><a name="l01090"></a><span class="lineno"> 1090</span>&#160;              camera_y - <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a6f9d2c63684a7ed7ce17464defa4bb7c">y_rotation_granularity</a> *</div>
+<div class="line"><a name="l01091"></a><span class="lineno"> 1091</span>&#160;                             sinf(2 * 3.14159 * (<a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#adcfe721445b79ef3f4cfdd51a2ee0ba1">sRotationX</a><span class="comment">/*-25*/</span>) / 2048.0),</div>
+<div class="line"><a name="l01092"></a><span class="lineno"> 1092</span>&#160;              camera_z - <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a6f9d2c63684a7ed7ce17464defa4bb7c">y_rotation_granularity</a> *</div>
+<div class="line"><a name="l01093"></a><span class="lineno"> 1093</span>&#160;                             sinf(2 * 3.14159 * <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a58acc77e1ce8db07f410d3557b8f4805">sRotationY</a> / 2048.0),</div>
+<div class="line"><a name="l01094"></a><span class="lineno"> 1094</span>&#160; </div>
+<div class="line"><a name="l01095"></a><span class="lineno"> 1095</span>&#160;              0, 1, 0);</div>
+<div class="line"><a name="l01096"></a><span class="lineno"> 1096</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a6577472f85b23086331edadaf0311a49">glLoadIdentity()</a>, <a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#af14e38e22806d0220680b52edbc3bcef">glMatrixMode()</a>, <a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a8fd928b1b75f4c7b75bd3b0fa06a3fd3">glScalef()</a>, <a class="el" href="../../da/db4/_party_8cpp_source.html#l00030">pParty</a>, <a class="el" href="../../db/d38/_party_8h_source.html#l00239">Party::sEyelevel</a>, <a class="el" href="../../db/d38/_party_8h_source.html#l00252">Party::sRotationX</a>, <a class="el" href="../../db/d38/_party_8h_source.html#l00251">Party::sRotationY</a>, <a class="el" href="../../db/d38/_party_8h_source.html#l00250">Party::vPosition</a> и <a class="el" href="../../db/d38/_party_8h_source.html#l00242">Party::y_rotation_granularity</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l02018">RenderOpenGL::DrawBuildingsD3D()</a>, <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l02381">RenderOpenGL::DrawIndoorPolygon()</a> и <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l01121">RenderOpenGL::RenderTerrainD3D()</a>.</p>
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../da/d79/_render_open_g_l_8cpp_a27a3ab41e96351d06e3c7b710d3f1944_cgraph.svg" width="339" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../da/d79/_render_open_g_l_8cpp_a27a3ab41e96351d06e3c7b710d3f1944_icgraph.svg" width="463" height="155"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ad1108f9d7135f0d9f2c5c50c88651dbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1108f9d7135f0d9f2c5c50c88651dbd">&#9670;&nbsp;</a></span>_set_ortho_projection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> _set_ortho_projection </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>gameviewport</em> = <code>false</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html">RenderOpenGL.cpp</a> строка <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l01098">1098</a></p>
+<div class="fragment"><div class="line"><a name="l01098"></a><span class="lineno"> 1098</span>&#160;                                                      {</div>
+<div class="line"><a name="l01099"></a><span class="lineno"> 1099</span>&#160;    <span class="keywordflow">if</span> (!gameviewport) {  <span class="comment">// project over entire window</span></div>
+<div class="line"><a name="l01100"></a><span class="lineno"> 1100</span>&#160;        <a class="code" href="../../df/dc4/_s_d_l__opengl_8h.html#a8e93835e91933b7078c88f905dd8599c">glViewport</a>(0, 0, <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a92dbce8e3247f6a78126c99877caacb6">window</a>-&gt;GetWidth(), <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a92dbce8e3247f6a78126c99877caacb6">window</a>-&gt;GetHeight());</div>
+<div class="line"><a name="l01101"></a><span class="lineno"> 1101</span>&#160; </div>
+<div class="line"><a name="l01102"></a><span class="lineno"> 1102</span>&#160;        <a class="code" href="../../df/dc4/_s_d_l__opengl_8h.html#af14e38e22806d0220680b52edbc3bcef">glMatrixMode</a>(GL_PROJECTION);</div>
+<div class="line"><a name="l01103"></a><span class="lineno"> 1103</span>&#160;        <a class="code" href="../../df/dc4/_s_d_l__opengl_8h.html#a6577472f85b23086331edadaf0311a49">glLoadIdentity</a>();</div>
+<div class="line"><a name="l01104"></a><span class="lineno"> 1104</span>&#160;        <a class="code" href="../../df/dc4/_s_d_l__opengl_8h.html#a0b8f6a8ca74db98ff0e9ae3aef33b77e">glOrtho</a>(0, <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a92dbce8e3247f6a78126c99877caacb6">window</a>-&gt;GetWidth(), <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a92dbce8e3247f6a78126c99877caacb6">window</a>-&gt;GetHeight(), 0, -1, 1);</div>
+<div class="line"><a name="l01105"></a><span class="lineno"> 1105</span>&#160;    } <span class="keywordflow">else</span> {  <span class="comment">// project to game viewport</span></div>
+<div class="line"><a name="l01106"></a><span class="lineno"> 1106</span>&#160;        <a class="code" href="../../df/dc4/_s_d_l__opengl_8h.html#a8e93835e91933b7078c88f905dd8599c">glViewport</a>(<a class="code" href="../../d6/d5b/mm7__data_8cpp.html#af1ed4b32929d9f52e90e679540582951">game_viewport_x</a>, <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a92dbce8e3247f6a78126c99877caacb6">window</a>-&gt;GetHeight()-<a class="code" href="../../d6/d5b/mm7__data_8cpp.html#a7aae4f909c93695ff070e1a6a4a29224">game_viewport_w</a>-1, <a class="code" href="../../d6/d5b/mm7__data_8cpp.html#a8916b10b5a6b131ede8f6dbf200e4866">game_viewport_width</a>, <a class="code" href="../../d6/d5b/mm7__data_8cpp.html#afd93b2f71cb70a7279451964648b30c4">game_viewport_height</a>);</div>
+<div class="line"><a name="l01107"></a><span class="lineno"> 1107</span>&#160; </div>
+<div class="line"><a name="l01108"></a><span class="lineno"> 1108</span>&#160;        <a class="code" href="../../df/dc4/_s_d_l__opengl_8h.html#af14e38e22806d0220680b52edbc3bcef">glMatrixMode</a>(GL_PROJECTION);</div>
+<div class="line"><a name="l01109"></a><span class="lineno"> 1109</span>&#160;        <a class="code" href="../../df/dc4/_s_d_l__opengl_8h.html#a6577472f85b23086331edadaf0311a49">glLoadIdentity</a>();</div>
+<div class="line"><a name="l01110"></a><span class="lineno"> 1110</span>&#160;        <a class="code" href="../../df/dc4/_s_d_l__opengl_8h.html#a0b8f6a8ca74db98ff0e9ae3aef33b77e">glOrtho</a>(<a class="code" href="../../d6/d5b/mm7__data_8cpp.html#af1ed4b32929d9f52e90e679540582951">game_viewport_x</a>, <a class="code" href="../../d6/d5b/mm7__data_8cpp.html#adc95f63d7a148a13bcc41be40565abbb">game_viewport_z</a>, <a class="code" href="../../d6/d5b/mm7__data_8cpp.html#a7aae4f909c93695ff070e1a6a4a29224">game_viewport_w</a>, <a class="code" href="../../d6/d5b/mm7__data_8cpp.html#aee6f7aebb8fc3cf3a860cab46a1beb8b">game_viewport_y</a>, 1, -1);  <span class="comment">// far = 1 but ogl looks down -z</span></div>
+<div class="line"><a name="l01111"></a><span class="lineno"> 1111</span>&#160;    }</div>
+<div class="line"><a name="l01112"></a><span class="lineno"> 1112</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d6/d5b/mm7__data_8cpp_source.html#l00195">game_viewport_height</a>, <a class="el" href="../../d6/d5b/mm7__data_8cpp_source.html#l00199">game_viewport_w</a>, <a class="el" href="../../d6/d5b/mm7__data_8cpp_source.html#l00194">game_viewport_width</a>, <a class="el" href="../../d6/d5b/mm7__data_8cpp_source.html#l00196">game_viewport_x</a>, <a class="el" href="../../d6/d5b/mm7__data_8cpp_source.html#l00197">game_viewport_y</a>, <a class="el" href="../../d6/d5b/mm7__data_8cpp_source.html#l00198">game_viewport_z</a>, <a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a6577472f85b23086331edadaf0311a49">glLoadIdentity()</a>, <a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#af14e38e22806d0220680b52edbc3bcef">glMatrixMode()</a>, <a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a0b8f6a8ca74db98ff0e9ae3aef33b77e">glOrtho()</a> и <a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a8e93835e91933b7078c88f905dd8599c">glViewport()</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l01769">RenderOpenGL::BeginScene()</a>, <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l01625">RenderOpenGL::DoRenderBillboards_D3D()</a> и <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l01378">RenderOpenGL::DrawOutdoorSkyD3D()</a>.</p>
+<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../da/d79/_render_open_g_l_8cpp_ad1108f9d7135f0d9f2c5c50c88651dbd_cgraph.svg" width="308" height="190"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../da/d79/_render_open_g_l_8cpp_ad1108f9d7135f0d9f2c5c50c88651dbd_icgraph.svg" width="100%" height="430"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="acf488e14cf803ae074bec87b17c6afb7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf488e14cf803ae074bec87b17c6afb7">&#9670;&nbsp;</a></span>_set_ortho_modelview()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> _set_ortho_modelview </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html">RenderOpenGL.cpp</a> строка <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l01114">1114</a></p>
+<div class="fragment"><div class="line"><a name="l01114"></a><span class="lineno"> 1114</span>&#160;                            {</div>
+<div class="line"><a name="l01115"></a><span class="lineno"> 1115</span>&#160;    <a class="code" href="../../df/dc4/_s_d_l__opengl_8h.html#af14e38e22806d0220680b52edbc3bcef">glMatrixMode</a>(GL_MODELVIEW);</div>
+<div class="line"><a name="l01116"></a><span class="lineno"> 1116</span>&#160;    <a class="code" href="../../df/dc4/_s_d_l__opengl_8h.html#a6577472f85b23086331edadaf0311a49">glLoadIdentity</a>();</div>
+<div class="line"><a name="l01117"></a><span class="lineno"> 1117</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a6577472f85b23086331edadaf0311a49">glLoadIdentity()</a> и <a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#af14e38e22806d0220680b52edbc3bcef">glMatrixMode()</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l01769">RenderOpenGL::BeginScene()</a>, <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l01625">RenderOpenGL::DoRenderBillboards_D3D()</a> и <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l01378">RenderOpenGL::DrawOutdoorSkyD3D()</a>.</p>
+<div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-7-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-7-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../da/d79/_render_open_g_l_8cpp_acf488e14cf803ae074bec87b17c6afb7_cgraph.svg" width="311" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-8-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-8-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../da/d79/_render_open_g_l_8cpp_acf488e14cf803ae074bec87b17c6afb7_icgraph.svg" width="100%" height="430"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Переменные</h2>
+<a id="a21d31464313b2c66ff88d4aa97b66143"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21d31464313b2c66ff88d4aa97b66143">&#9670;&nbsp;</a></span>render</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="../../d9/d20/class_i_render.html">IRender</a>&gt; render</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html">RenderOpenGL.cpp</a> строка <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l00052">52</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d9/dd3/_cast_spell_info_8cpp_source.html#l00046">CastSpellInfoHelpers::_427E01_cast_spell()</a>, <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l02373">_441A4E_overlay_on_portrait()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l00399">Engine::_44EEA7()</a>, <a class="el" href="../../de/d6c/_spell_fx_renderer_8cpp_source.html#l00144">SpellFX_Billboard::_47829F_sphere_particle()</a>, <a class="el" href="../../d9/d21/_u_i_shops_8cpp_source.html#l00648">AlchemyMagicShopWares()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l01453">Render::am_Blt_Chroma()</a>, <a class="el" href="../../d9/dc7/_lightmap_builder_8cpp_source.html#l00192">LightmapBuilder::ApplyLight_ODM()</a>, <a class="el" href="../../da/deb/_u_i_arena_8cpp_source.html#l00095">ArenaFight()</a>, <a class="el" href="../../d9/d21/_u_i_shops_8cpp_source.html#l00483">ArmorShopWares()</a>, <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l00203">RenderOpenGL::BeginSceneD3D()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l01776">Render::BeginSceneD3D()</a>, <a class="el" href="../../d4/d58/_render_base_8cpp_source.html#l00049">RenderBase::Billboard_ProbablyAddToListAndSortByZOrder()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l03038">Render::BlendTextures()</a>, <a class="el" href="../../d1/d3f/_spellbook_8cpp_source.html#l00307">BookUI_Spellbook_DrawCurrentSchoolBackground()</a>, <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l02545">buttonbox()</a>, <a class="el" href="../../db/dd5/_u_i_character_8cpp_source.html#l00812">GUIWindow_CharacterRecord::CharacterUI_AwardsTab_Draw()</a>, <a class="el" href="../../db/dd5/_u_i_character_8cpp_source.html#l01867">CharacterUI_DrawItem()</a>, <a class="el" href="../../db/dd5/_u_i_character_8cpp_source.html#l00930">CharacterUI_DrawPaperdoll()</a>, <a class="el" href="../../db/dd5/_u_i_character_8cpp_source.html#l01911">CharacterUI_DrawPaperdollWithRingOverlay()</a>, <a class="el" href="../../db/dd5/_u_i_character_8cpp_source.html#l01829">CharacterUI_InventoryTab_Draw()</a>, <a class="el" href="../../db/dd5/_u_i_character_8cpp_source.html#l00776">GUIWindow_CharacterRecord::CharacterUI_SkillsTab_Draw()</a>, <a class="el" href="../../db/dd5/_u_i_character_8cpp_source.html#l02296">GUIWindow_CharacterRecord::CharacterUI_StatsTab_Draw()</a>, <a class="el" href="../../db/d88/_texture_open_g_l_8cpp_source.html#l00006">TextureOpenGL::Create()</a>, <a class="el" href="../../dc/d16/_indoor_camera_d3_d_8cpp_source.html#l00390">IndoorCameraD3D::debug_outline_d3d()</a>, <a class="el" href="../../dc/d16/_indoor_camera_d3_d_8cpp_source.html#l00414">IndoorCameraD3D::DebugDrawPortal()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l00478">Engine::Deinitialize()</a>, <a class="el" href="../../dc/d16/_indoor_camera_d3_d_8cpp_source.html#l00311">IndoorCameraD3D::do_draw_debug_line_sw()</a>, <a class="el" href="../../d9/dc7/_lightmap_builder_8cpp_source.html#l00344">LightmapBuilder::DoDraw_183808_Lightmaps()</a>, <a class="el" href="../../de/dd4/_vis_8cpp_source.html#l01418">Vis::DoesRayIntersectBillboard()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l00796">DoPrepareWorld()</a>, <a class="el" href="../../d7/d51/_g_u_i_progress_bar_8cpp_source.html#l00105">GUIProgressBar::Draw()</a>, <a class="el" href="../../dc/d46/_particle_engine_8cpp_source.html#l00113">ParticleEngine::Draw()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l00166">Engine::Draw()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00322">IndoorLocation::Draw()</a>, <a class="el" href="../../d9/dc7/_lightmap_builder_8cpp_source.html#l00835">LightmapBuilder::Draw_183808_Lightmaps()</a>, <a class="el" href="../../db/dd5/_u_i_character_8cpp_source.html#l00925">draw_leather()</a>, <a class="el" href="../../d3/d70/_arcomage_2_arcomage_8cpp_source.html#l01690">DrawBeastsCount()</a>, <a class="el" href="../../d5/da1/_decal_builder_8cpp_source.html#l00517">DecalBuilder::DrawBloodsplats()</a>, <a class="el" href="../../d0/d67/_map_book_8cpp_source.html#l00180">DrawBook_Map_sub()</a>, <a class="el" href="../../d3/d70/_arcomage_2_arcomage_8cpp_source.html#l01646">DrawBricksCount()</a>, <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l02018">RenderOpenGL::DrawBuildingsD3D()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l03510">Render::DrawBuildingsD3D()</a>, <a class="el" href="../../d3/d70/_arcomage_2_arcomage_8cpp_source.html#l01908">DrawCardAnimation()</a>, <a class="el" href="../../d3/d70/_arcomage_2_arcomage_8cpp_source.html#l01800">DrawCards()</a>, <a class="el" href="../../d7/d54/_mouse_8cpp_source.html#l00197">Mouse::DrawCursorToTarget()</a>, <a class="el" href="../../d5/da1/_decal_builder_8cpp_source.html#l00511">DecalBuilder::DrawDecals()</a>, <a class="el" href="../../d3/d70/_arcomage_2_arcomage_8cpp_source.html#l01414">DrawGameUI()</a>, <a class="el" href="../../d3/d70/_arcomage_2_arcomage_8cpp_source.html#l01668">DrawGemsCount()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l00252">Engine::DrawGUI()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l00067">Actor::DrawHealthBar()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l05795">Render::DrawIndoorSky()</a>, <a class="el" href="../../d9/dc7/_lightmap_builder_8cpp_source.html#l00802">LightmapBuilder::DrawLightmaps()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l02924">Render::DrawMasked()</a>, <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l00581">RenderOpenGL::DrawMonsterPortrait()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l03120">Render::DrawMonsterPortrait()</a>, <a class="el" href="../../dc/d46/_particle_engine_8cpp_source.html#l00259">ParticleEngine::DrawParticles_BLV()</a>, <a class="el" href="../../de/d6c/_spell_fx_renderer_8cpp_source.html#l01317">SpellFxRenderer::DrawPlayerBuffAnims()</a>, <a class="el" href="../../d3/d70/_arcomage_2_arcomage_8cpp_source.html#l01624">DrawPlayerLevels()</a>, <a class="el" href="../../d3/d70/_arcomage_2_arcomage_8cpp_source.html#l01712">DrawPlayersTowers()</a>, <a class="el" href="../../d3/d70/_arcomage_2_arcomage_8cpp_source.html#l01763">DrawPlayersWall()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l00899">Render::DrawPolygon()</a>, <a class="el" href="../../d6/ded/_u_i_popup_8cpp_source.html#l00089">DrawPopupWindow()</a>, <a class="el" href="../../de/d6c/_spell_fx_renderer_8cpp_source.html#l00221">SpellFxRenderer::DrawProjectiles()</a>, <a class="el" href="../../d3/d70/_arcomage_2_arcomage_8cpp_source.html#l03065">DrawRect()</a>, <a class="el" href="../../d3/d70/_arcomage_2_arcomage_8cpp_source.html#l01451">DrawRectanglesForText()</a>, <a class="el" href="../../d6/db3/_weather_8cpp_source.html#l00010">Weather::DrawSnow()</a>, <a class="el" href="../../d3/d70/_arcomage_2_arcomage_8cpp_source.html#l00407">DrawSparks()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l01815">Render::DrawTerrainPolygon()</a>, <a class="el" href="../../d4/d5e/_g_u_i_font_8cpp_source.html#l00388">GUIFont::DrawText()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l02857">Render::DrawText()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l02880">Render::DrawTextAlpha()</a>, <a class="el" href="../../d4/d5e/_g_u_i_font_8cpp_source.html#l00496">GUIFont::DrawTextInRect()</a>, <a class="el" href="../../d4/d5e/_g_u_i_font_8cpp_source.html#l00088">GUIFont::DrawTextLine()</a>, <a class="el" href="../../de/d68/_overlays_8cpp_source.html#l00067">OtherOverlayList::DrawTurnBasedIcon()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l00157">Engine_DeinitializeAndTerminate()</a>, <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l00826">EnterHouse()</a>, <a class="el" href="../../df/d21/_game_menu_8cpp_source.html#l00070">Application::Menu::EventLoop()</a>, <a class="el" href="../../d7/db5/_game_8cpp_source.html#l00322">Application::Game::EventLoop()</a>, <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l00084">OutdoorLocation::ExecDraw()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00409">IndoorLocation::ExecDraw_d3d()</a>, <a class="el" href="../../db/d8c/_u_i_credits_8cpp_source.html#l00095">GUICredits::ExecuteCredits()</a>, <a class="el" href="../../d7/db5/_game_8cpp_source.html#l02704">Application::Game::GameLoop()</a>, <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l01057">GameUI_CharacterQuickRecord_Draw()</a>, <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l01688">GameUI_DrawCharacterSelectionFrame()</a>, <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l02236">GameUI_DrawHiredNPCs()</a>, <a class="el" href="../../d6/ded/_u_i_popup_8cpp_source.html#l00168">GameUI_DrawItemInfo()</a>, <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l01197">GameUI_DrawLifeManaBars()</a>, <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l01916">GameUI_DrawMinimap()</a>, <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l00891">GameUI_DrawNPCPopup()</a>, <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l01699">GameUI_DrawPartySpells()</a>, <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l01766">GameUI_DrawPortraits()</a>, <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l01248">GameUI_DrawRightPanel()</a>, <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l01254">GameUI_DrawRightPanelFrames()</a>, <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l01154">GameUI_DrawRightPanelItems()</a>, <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l02205">GameUI_DrawTorchlightAndWizardEye()</a>, <a class="el" href="../../d4/dca/_u_i_status_bar_8cpp_source.html#l00071">GameUI_StatusBar_Draw()</a>, <a class="el" href="../../d4/dca/_u_i_status_bar_8cpp_source.html#l00088">GameUI_StatusBar_DrawImmediate()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l01768">Render::GetBillboardDrawListSize()</a>, <a class="el" href="../../d3/d93/_assets_manager_8cpp_source.html#l00126">AssetsManager::GetBitmap()</a>, <a class="el" href="../../d3/d93/_assets_manager_8cpp_source.html#l00066">AssetsManager::GetImage_Alpha()</a>, <a class="el" href="../../d3/d93/_assets_manager_8cpp_source.html#l00034">AssetsManager::GetImage_ColorKey()</a>, <a class="el" href="../../d3/d93/_assets_manager_8cpp_source.html#l00111">AssetsManager::GetImage_PCXFromFile()</a>, <a class="el" href="../../d3/d93/_assets_manager_8cpp_source.html#l00081">AssetsManager::GetImage_PCXFromIconsLOD()</a>, <a class="el" href="../../d3/d93/_assets_manager_8cpp_source.html#l00096">AssetsManager::GetImage_PCXFromNewLOD()</a>, <a class="el" href="../../d3/d93/_assets_manager_8cpp_source.html#l00051">AssetsManager::GetImage_Solid()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l01772">Render::GetParentBillboardID()</a>, <a class="el" href="../../d3/d93/_assets_manager_8cpp_source.html#l00141">AssetsManager::GetSprite()</a>, <a class="el" href="../../db/d8c/_u_i_credits_8cpp_source.html#l00015">GUICredits::GUICredits()</a>, <a class="el" href="../../d4/d5b/_u_i_guilds_8cpp_source.html#l00027">GuildDialog()</a>, <a class="el" href="../../d9/d68/_u_i_save_load_8cpp_source.html#l00121">GUIWindow_Load::GUIWindow_Load()</a>, <a class="el" href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00397">GUIWindow::HouseDialogManager()</a>, <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00653">MPlayer::HouseMovieLoop()</a>, <a class="el" href="../../d6/ded/_u_i_popup_8cpp_source.html#l01817">Inventory_ItemPopupAndAlchemy()</a>, <a class="el" href="../../de/dd4/_vis_8cpp_source.html#l01324">Vis::is_part_of_selection()</a>, <a class="el" href="../../de/dd4/_vis_8cpp_source.html#l00132">Vis::IsPolygonOccludedByBillboard()</a>, <a class="el" href="../../db/d19/_image_loader_8cpp_source.html#l00291">Bitmaps_LOD_Loader::Load()</a>, <a class="el" href="../../db/d19/_image_loader_8cpp_source.html#l00333">Sprites_LOD_Loader::Load()</a>, <a class="el" href="../../db/d88/_texture_open_g_l_8cpp_source.html#l00058">TextureOpenGL::LoadImageData()</a>, <a class="el" href="../../d7/d5b/_texture_d3_d_8cpp_source.html#l00065">TextureD3D::LoadImageData()</a>, <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html#l00149">LODFile_Sprites::LoadSprite()</a>, <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html#l01063">LODFile_IconsBitmaps::LoadTextureFromLOD()</a>, <a class="el" href="../../d7/dc5/_u_i_main_menu_8cpp_source.html#l00118">GUIWindow_MainMenu::Loop()</a>, <a class="el" href="../../d9/d68/_u_i_save_load_8cpp_source.html#l00399">MainMenuLoad_Loop()</a>, <a class="el" href="../../df/d21/_game_menu_8cpp_source.html#l00512">Application::Menu::MenuLoop()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l00903">Engine::MM7_Initialize()</a>, <a class="el" href="../../d6/ded/_u_i_popup_8cpp_source.html#l00563">MonsterPopup_Draw()</a>, <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l03788">ODM_LoadAndInitialize()</a>, <a class="el" href="../../dc/da3/_game_window_handler_8cpp_source.html#l00196">Application::GameWindowHandler::OnActivated()</a>, <a class="el" href="../../d4/dff/_win_api_window_8cpp_source.html#l00565">WinApiWindow::OnOSMenu()</a>, <a class="el" href="../../dc/da3/_game_window_handler_8cpp_source.html#l00187">Application::GameWindowHandler::OnPaint()</a>, <a class="el" href="../../db/dd5/_u_i_character_8cpp_source.html#l02712">OnPaperdollLeftClick()</a>, <a class="el" href="../../dc/da3/_game_window_handler_8cpp_source.html#l00034">Application::GameWindowHandler::OnScreenshot()</a>, <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l01047">OnSelectShopDialogueOption()</a>, <a class="el" href="../../de/da8/_u_i_party_creation_8cpp_source.html#l00856">PartyCreationUI_LoopInternal()</a>, <a class="el" href="../../de/dd4/_vis_8cpp_source.html#l01303">Vis::PickBillboards_Keyboard()</a>, <a class="el" href="../../de/dd4/_vis_8cpp_source.html#l00231">Vis::PickBillboards_Mouse()</a>, <a class="el" href="../../d8/d67/_chest_8cpp_source.html#l00391">Chest::PlaceItems()</a>, <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00705">MPlayer::PlayFullscreenMovie()</a>, <a class="el" href="../../d3/d70/_arcomage_2_arcomage_8cpp_source.html#l02982">ArcomageGame::PrepareArcomage()</a>, <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l00695">RenderOpenGL::PrepareDecorationsRenderList_ODM()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l00713">Render::PrepareDecorationsRenderList_ODM()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l02310">PrepareToLoadBLV()</a>, <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l01995">RenderOpenGL::Present()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l01245">Present_NoColorKey()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l01115">Render::PresentBlackScreen()</a>, <a class="el" href="../../d7/d54/_mouse_8cpp_source.html#l00206">Mouse::ReadCursorWithItem()</a>, <a class="el" href="../../de/d6c/_spell_fx_renderer_8cpp_source.html#l01239">SpellFxRenderer::RenderSpecialEffects()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l00214">Render::RenderTerrainD3D()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00163">BLVRenderParams::Reset()</a>, <a class="el" href="../../d4/d9d/_save_load_8cpp_source.html#l00238">SaveGame()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l01082">Engine::SecondaryInitialization()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l08186">Player::SetBeacon()</a>, <a class="el" href="../../d7/db5/_game_8cpp_source.html#l00221">ShowMM7IntroVideo_and_LoadingScreen()</a>, <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l03426">SimpleHouseDialog()</a>, <a class="el" href="../../d9/dc7/_lightmap_builder_8cpp_source.html#l00074">LightmapBuilder::StackLight_TerrainFace()</a>, <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l02200">TavernDialog()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l02947">Render::TexturePixelRotateDraw()</a>, <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l01915">TownHallDialog()</a>, <a class="el" href="../../d4/d58/_render_base_8cpp_source.html#l00231">RenderBase::TransformBillboardsAndSetPalettesODM()</a>, <a class="el" href="../../d3/d70/_arcomage_2_arcomage_8cpp_source.html#l01194">TurnChange()</a>, <a class="el" href="../../d9/d68/_u_i_save_load_8cpp_source.html#l00231">UI_DrawSaveLoad()</a>, <a class="el" href="../../d6/ded/_u_i_popup_8cpp_source.html#l01459">UI_OnMouseRightClick()</a>, <a class="el" href="../../d9/d21/_u_i_shops_8cpp_source.html#l00874">UIShop_Buy_Identify_Repair()</a>, <a class="el" href="../../d3/d59/_lloyds_book_8cpp_source.html#l00060">GUIWindow_LloydsBook::Update()</a>, <a class="el" href="../../dc/d90/_autonotes_book_8cpp_source.html#l00106">GUIWindow_AutonotesBook::Update()</a>, <a class="el" href="../../db/d9f/_town_portal_book_8cpp_source.html#l00048">GUIWindow_TownPortalBook::Update()</a>, <a class="el" href="../../d3/d20/_quest_book_8cpp_source.html#l00067">GUIWindow_QuestBook::Update()</a>, <a class="el" href="../../df/d8d/_calendar_book_8cpp_source.html#l00060">GUIWindow_CalendarBook::Update()</a>, <a class="el" href="../../dd/d41/_journal_book_8cpp_source.html#l00093">GUIWindow_JournalBook::Update()</a>, <a class="el" href="../../dc/dda/_u_i_quick_reference_8cpp_source.html#l00038">GUIWindow_QuickReference::Update()</a>, <a class="el" href="../../d1/d3f/_spellbook_8cpp_source.html#l00154">GUIWindow_Spellbook::Update()</a>, <a class="el" href="../../db/dd5/_u_i_character_8cpp_source.html#l00528">GUIWindow_CharacterRecord::Update()</a>, <a class="el" href="../../d0/d67/_map_book_8cpp_source.html#l00081">GUIWindow_MapBook::Update()</a>, <a class="el" href="../../d9/d68/_u_i_save_load_8cpp_source.html#l00111">GUIWindow_Save::Update()</a>, <a class="el" href="../../dd/d76/_u_i_dialogue_8cpp_source.html#l00238">GUIWindow_Dialogue::Update()</a>, <a class="el" href="../../de/d09/_u_i_transition_8cpp_source.html#l00227">GUIWindow_Travel::Update()</a>, <a class="el" href="../../d7/dc5/_u_i_main_menu_8cpp_source.html#l00047">GUIWindow_MainMenu::Update()</a>, <a class="el" href="../../d1/d10/_u_i_rest_8cpp_source.html#l00123">GUIWindow_Rest::Update()</a>, <a class="el" href="../../db/d8c/_u_i_credits_8cpp_source.html#l00055">GUICredits::Update()</a>, <a class="el" href="../../de/da8/_u_i_party_creation_8cpp_source.html#l00303">GUIWindow_PartyCreation::Update()</a>, <a class="el" href="../../d7/d15/_u_i_chest_8cpp_source.html#l00037">GUIWindow_Chest::Update()</a>, <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l00159">GUIWindow_GameMenu::Update()</a>, <a class="el" href="../../dd/df9/_u_i_inventory_8cpp_source.html#l00047">GUIWindow_Inventory_CastSpell::Update()</a>, <a class="el" href="../../de/d09/_u_i_transition_8cpp_source.html#l00279">GUIWindow_Transition::Update()</a>, <a class="el" href="../../d1/d10/_u_i_rest_8cpp_source.html#l00034">GUIWindow_RestWindow::Update()</a>, <a class="el" href="../../dd/d76/_u_i_dialogue_8cpp_source.html#l00552">GUIWindow_GenericDialogue::Update()</a>, <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l00741">GUIWindow_GameOptions::Update()</a>, <a class="el" href="../../d9/d68/_u_i_save_load_8cpp_source.html#l00218">GUIWindow_Load::Update()</a>, <a class="el" href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00822">GUIWindow_BooksButtonOverlay::Update()</a>, <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l00274">GUIWindow_GameKeyBindings::Update()</a>, <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l00567">GUIWindow_GameVideoOptions::Update()</a>, <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l02496">GUIWindow_DebugMenu::Update()</a>, <a class="el" href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00833">OnButtonClick::Update()</a>, <a class="el" href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00846">OnButtonClick2::Update()</a>, <a class="el" href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00863">OnButtonClick3::Update()</a>, <a class="el" href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00877">OnButtonClick4::Update()</a>, <a class="el" href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00889">OnSaveLoad::Update()</a>, <a class="el" href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00909">OnCancel::Update()</a>, <a class="el" href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00925">OnCancel2::Update()</a>, <a class="el" href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00940">OnCancel3::Update()</a>, <a class="el" href="../../d9/d21/_u_i_shops_8cpp_source.html#l00327">WeaponShopWares()</a>, <a class="el" href="../../d7/d5b/_texture_d3_d_8cpp_source.html#l00087">TextureD3D::~TextureD3D()</a> и <a class="el" href="../../db/d88/_texture_open_g_l_8cpp_source.html#l00076">TextureOpenGL::~TextureOpenGL()</a>.</p>
+
+</div>
+</div>
+<a id="af77da57a69c9069857ce9547af8c1d2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af77da57a69c9069857ce9547af8c1d2a">&#9670;&nbsp;</a></span>uNumDecorationsDrawnThisFrame</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int uNumDecorationsDrawnThisFrame</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html">RenderOpenGL.cpp</a> строка <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l00053">53</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l00084">OutdoorLocation::ExecDraw()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l03042">IndoorLocation::PrepareDecorationsRenderList_BLV()</a>, <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l00695">RenderOpenGL::PrepareDecorationsRenderList_ODM()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l00713">Render::PrepareDecorationsRenderList_ODM()</a> и <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00102">PrepareDrawLists_BLV()</a>.</p>
+
+</div>
+</div>
+<a id="a1520f6ad4523bbbcaa49c3aee9e3f9af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1520f6ad4523bbbcaa49c3aee9e3f9af">&#9670;&nbsp;</a></span>pBillboardRenderList</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dd/d3e/struct_render_billboard.html">RenderBillboard</a> pBillboardRenderList[500]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html">RenderOpenGL.cpp</a> строка <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l00054">54</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../de/dd4/_vis_8cpp_source.html#l01418">Vis::DoesRayIntersectBillboard()</a>, <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l01625">RenderOpenGL::DoRenderBillboards_D3D()</a>, <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l00358">RenderOpenGL::DrawBillboardList_BLV()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l00178">Render::DrawBillboardList_BLV()</a>, <a class="el" href="../../d4/d58/_render_base_8cpp_source.html#l00109">RenderBase::DrawSpriteObjects_ODM()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l05654">FindBillboardsLightLevels_BLV()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l03772">Render::GetActorsInViewport()</a>, <a class="el" href="../../de/dd4/_vis_8cpp_source.html#l01324">Vis::is_part_of_selection()</a>, <a class="el" href="../../de/dd4/_vis_8cpp_source.html#l00132">Vis::IsPolygonOccludedByBillboard()</a>, <a class="el" href="../../de/dd4/_vis_8cpp_source.html#l01303">Vis::PickBillboards_Keyboard()</a>, <a class="el" href="../../de/dd4/_vis_8cpp_source.html#l00231">Vis::PickBillboards_Mouse()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l02739">IndoorLocation::PrepareActorRenderList_BLV()</a>, <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l01722">OutdoorLocation::PrepareActorsDrawList()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l03042">IndoorLocation::PrepareDecorationsRenderList_BLV()</a>, <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l00695">RenderOpenGL::PrepareDecorationsRenderList_ODM()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l00713">Render::PrepareDecorationsRenderList_ODM()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l02871">IndoorLocation::PrepareItemsRenderList_BLV()</a> и <a class="el" href="../../d4/d58/_render_base_8cpp_source.html#l00231">RenderBase::TransformBillboardsAndSetPalettesODM()</a>.</p>
+
+</div>
+</div>
+<a id="a6febe181f878f6fbcaff79909f3cd767"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6febe181f878f6fbcaff79909f3cd767">&#9670;&nbsp;</a></span>uNumBillboardsToDraw</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int uNumBillboardsToDraw</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html">RenderOpenGL.cpp</a> строка <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l00055">55</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l00084">OutdoorLocation::ExecDraw()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l05654">FindBillboardsLightLevels_BLV()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l02739">IndoorLocation::PrepareActorRenderList_BLV()</a>, <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l01722">OutdoorLocation::PrepareActorsDrawList()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l03042">IndoorLocation::PrepareDecorationsRenderList_BLV()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00102">PrepareDrawLists_BLV()</a> и <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l02871">IndoorLocation::PrepareItemsRenderList_BLV()</a>.</p>
+
+</div>
+</div>
+<a id="a63fd4ef6a6526e47a97f8688b63c4c30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63fd4ef6a6526e47a97f8688b63c4c30">&#9670;&nbsp;</a></span>uNumSpritesDrawnThisFrame</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int uNumSpritesDrawnThisFrame</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html">RenderOpenGL.cpp</a> строка <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l00056">56</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/d58/_render_base_8cpp_source.html#l00109">RenderBase::DrawSpriteObjects_ODM()</a>, <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l00084">OutdoorLocation::ExecDraw()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l02739">IndoorLocation::PrepareActorRenderList_BLV()</a>, <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l01722">OutdoorLocation::PrepareActorsDrawList()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00102">PrepareDrawLists_BLV()</a> и <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l02871">IndoorLocation::PrepareItemsRenderList_BLV()</a>.</p>
+
+</div>
+</div>
+<a id="a7722562f00abbc88c6d6dfc91e713986"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7722562f00abbc88c6d6dfc91e713986">&#9670;&nbsp;</a></span>array_507D30</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/d1a/struct_render_vertex_soft.html">RenderVertexSoft</a> array_507D30[50]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html">RenderOpenGL.cpp</a> строка <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l00058">58</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l02381">RenderOpenGL::DrawIndoorPolygon()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l01992">Render::DrawIndoorPolygon()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l05795">Render::DrawIndoorSky()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l06203">Render::DrawIndoorSkyPolygon()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00409">IndoorLocation::ExecDraw_d3d()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l03394">ODM_FarClip()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l03296">ODM_NearClip()</a> и <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l02180">ODM_Project()</a>.</p>
+
+</div>
+</div>
+<a id="a785c9cd92f156aa959562d5cc61875df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a785c9cd92f156aa959562d5cc61875df">&#9670;&nbsp;</a></span>terrain_block_scale</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int terrain_block_scale = 512</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html">RenderOpenGL.cpp</a> строка <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l01119">1119</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l01303">RenderOpenGL::DrawTerrainPolygon()</a> и <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l01121">RenderOpenGL::RenderTerrainD3D()</a>.</p>
+
+</div>
+</div>
+<a id="a4fb472553e4280dc559388f31f964105"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fb472553e4280dc559388f31f964105">&#9670;&nbsp;</a></span>terrain_height_scale</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int terrain_height_scale = 32</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html">RenderOpenGL.cpp</a> строка <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l01120">1120</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l01303">RenderOpenGL::DrawTerrainPolygon()</a>.</p>
+
+</div>
+</div>
+<a id="ab1d15ac174b77495c99fba1dfc6cdded"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1d15ac174b77495c99fba1dfc6cdded">&#9670;&nbsp;</a></span>ogl_draw_buildings_vertices</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/d1a/struct_render_vertex_soft.html">RenderVertexSoft</a> ogl_draw_buildings_vertices[20]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html">RenderOpenGL.cpp</a> строка <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l02017">2017</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l02018">RenderOpenGL::DrawBuildingsD3D()</a> и <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l02208">RenderOpenGL::DrawPolygon()</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="astruct_party_html_a9131ac68bf00fcaf956e6b6d2dde7a6d"><div class="ttname"><a href="../../d0/d14/struct_party.html#a9131ac68bf00fcaf956e6b6d2dde7a6d">Party::vPosition</a></div><div class="ttdeci">Vec3_int_ vPosition</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00250">Party.h:250</a></div></div>
+<div class="ttc" id="astruct_party_html_a6f9d2c63684a7ed7ce17464defa4bb7c"><div class="ttname"><a href="../../d0/d14/struct_party.html#a6f9d2c63684a7ed7ce17464defa4bb7c">Party::y_rotation_granularity</a></div><div class="ttdeci">int y_rotation_granularity</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00242">Party.h:242</a></div></div>
+<div class="ttc" id="astruct_party_html_adcfe721445b79ef3f4cfdd51a2ee0ba1"><div class="ttname"><a href="../../d0/d14/struct_party.html#adcfe721445b79ef3f4cfdd51a2ee0ba1">Party::sRotationX</a></div><div class="ttdeci">int sRotationX</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00252">Party.h:252</a></div></div>
+<div class="ttc" id="astruct_party_html_a03b208cf4d0a96cf7cd99e7475976a94"><div class="ttname"><a href="../../d0/d14/struct_party.html#a03b208cf4d0a96cf7cd99e7475976a94">Party::sEyelevel</a></div><div class="ttdeci">int sEyelevel</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00239">Party.h:239</a></div></div>
+<div class="ttc" id="amm7__data_8cpp_html_a8916b10b5a6b131ede8f6dbf200e4866"><div class="ttname"><a href="../../d6/d5b/mm7__data_8cpp.html#a8916b10b5a6b131ede8f6dbf200e4866">game_viewport_width</a></div><div class="ttdeci">unsigned int game_viewport_width</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d5b/mm7__data_8cpp_source.html#l00194">mm7_data.cpp:194</a></div></div>
+<div class="ttc" id="amm7__data_8cpp_html_af1ed4b32929d9f52e90e679540582951"><div class="ttname"><a href="../../d6/d5b/mm7__data_8cpp.html#af1ed4b32929d9f52e90e679540582951">game_viewport_x</a></div><div class="ttdeci">int game_viewport_x</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d5b/mm7__data_8cpp_source.html#l00196">mm7_data.cpp:196</a></div></div>
+<div class="ttc" id="amm7__data_8cpp_html_afd93b2f71cb70a7279451964648b30c4"><div class="ttname"><a href="../../d6/d5b/mm7__data_8cpp.html#afd93b2f71cb70a7279451964648b30c4">game_viewport_height</a></div><div class="ttdeci">unsigned int game_viewport_height</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d5b/mm7__data_8cpp_source.html#l00195">mm7_data.cpp:195</a></div></div>
+<div class="ttc" id="amm7__data_8cpp_html_aee6f7aebb8fc3cf3a860cab46a1beb8b"><div class="ttname"><a href="../../d6/d5b/mm7__data_8cpp.html#aee6f7aebb8fc3cf3a860cab46a1beb8b">game_viewport_y</a></div><div class="ttdeci">int game_viewport_y</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d5b/mm7__data_8cpp_source.html#l00197">mm7_data.cpp:197</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_ac03904b1f7e359bb2acf10a755e97c5a"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#ac03904b1f7e359bb2acf10a755e97c5a">alpha</a></div><div class="ttdeci">GLfloat GLfloat GLfloat alpha</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l00415">SDL_opengl_glext.h:415</a></div></div>
+<div class="ttc" id="a_party_8cpp_html_a638b1d8b985f1c7f8b69f2d81286f98e"><div class="ttname"><a href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a></div><div class="ttdeci">Party * pParty</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db4/_party_8cpp_source.html#l00030">Party.cpp:30</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl_8h_html_a6577472f85b23086331edadaf0311a49"><div class="ttname"><a href="../../df/dc4/_s_d_l__opengl_8h.html#a6577472f85b23086331edadaf0311a49">glLoadIdentity</a></div><div class="ttdeci">GLAPI void GLAPIENTRY glLoadIdentity(void)</div></div>
+<div class="ttc" id="a_s_d_l__opengl_8h_html_a8e93835e91933b7078c88f905dd8599c"><div class="ttname"><a href="../../df/dc4/_s_d_l__opengl_8h.html#a8e93835e91933b7078c88f905dd8599c">glViewport</a></div><div class="ttdeci">GLAPI void GLAPIENTRY glViewport(GLint x, GLint y, GLsizei width, GLsizei height)</div></div>
+<div class="ttc" id="a_s_d_l__opengl_8h_html_a8fd928b1b75f4c7b75bd3b0fa06a3fd3"><div class="ttname"><a href="../../df/dc4/_s_d_l__opengl_8h.html#a8fd928b1b75f4c7b75bd3b0fa06a3fd3">glScalef</a></div><div class="ttdeci">GLAPI void GLAPIENTRY glScalef(GLfloat x, GLfloat y, GLfloat z)</div></div>
+<div class="ttc" id="a_s_d_l__egl_8h_html_a92dbce8e3247f6a78126c99877caacb6"><div class="ttname"><a href="../../df/d32/_s_d_l__egl_8h.html#a92dbce8e3247f6a78126c99877caacb6">window</a></div><div class="ttdeci">EGLSurface EGLNativeWindowType * window</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/_s_d_l__egl_8h_source.html#l01580">SDL_egl.h:1580</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a691492ec0bd6383f91200e49f6ae40ed"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a></div><div class="ttdeci">GLfloat f</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l01873">SDL_opengl_glext.h:1873</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a1853b32584a90fa75432925f3e26d0e8"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1853b32584a90fa75432925f3e26d0e8">blue</a></div><div class="ttdeci">GLbyte GLbyte blue</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l00382">SDL_opengl_glext.h:382</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_ac14cda87cf6c751d53b65a3cd41c35a1"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#ac14cda87cf6c751d53b65a3cd41c35a1">green</a></div><div class="ttdeci">GLbyte green</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l00382">SDL_opengl_glext.h:382</a></div></div>
+<div class="ttc" id="amm7__data_8cpp_html_a7aae4f909c93695ff070e1a6a4a29224"><div class="ttname"><a href="../../d6/d5b/mm7__data_8cpp.html#a7aae4f909c93695ff070e1a6a4a29224">game_viewport_w</a></div><div class="ttdeci">int game_viewport_w</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d5b/mm7__data_8cpp_source.html#l00199">mm7_data.cpp:199</a></div></div>
+<div class="ttc" id="a_m_m7_8h_html_a91ad9478d81a7aaf2593e8d9c3d06a14"><div class="ttname"><a href="../../d2/d83/_m_m7_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a></div><div class="ttdeci">unsigned int uint</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d83/_m_m7_8h_source.html#l00004">MM7.h:4</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl_8h_html_af14e38e22806d0220680b52edbc3bcef"><div class="ttname"><a href="../../df/dc4/_s_d_l__opengl_8h.html#af14e38e22806d0220680b52edbc3bcef">glMatrixMode</a></div><div class="ttdeci">GLAPI void GLAPIENTRY glMatrixMode(GLenum mode)</div></div>
+<div class="ttc" id="astruct_indoor_camera_d3_d_html_ae44ac296d0d5225048b313e14edf7da1"><div class="ttname"><a href="../../d9/de5/struct_indoor_camera_d3_d.html#ae44ac296d0d5225048b313e14edf7da1">IndoorCameraD3D::GetFarClip</a></div><div class="ttdeci">float GetFarClip() const</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d16/_indoor_camera_d3_d_8cpp_source.html#l00159">IndoorCameraD3D.cpp:159</a></div></div>
+<div class="ttc" id="astruct_indoor_camera_d3_d_html_a6ade9a050aa9009a83e21461c6c470c4"><div class="ttname"><a href="../../d9/de5/struct_indoor_camera_d3_d.html#a6ade9a050aa9009a83e21461c6c470c4">IndoorCameraD3D::GetNearClip</a></div><div class="ttdeci">float GetNearClip() const</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d16/_indoor_camera_d3_d_8cpp_source.html#l00146">IndoorCameraD3D.cpp:146</a></div></div>
+<div class="ttc" id="a_indoor_camera_d3_d_8cpp_html_adea3dd5475289b8ba2698ac5d77b3d14"><div class="ttname"><a href="../../dc/d16/_indoor_camera_d3_d_8cpp.html#adea3dd5475289b8ba2698ac5d77b3d14">pIndoorCameraD3D</a></div><div class="ttdeci">IndoorCameraD3D * pIndoorCameraD3D</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d16/_indoor_camera_d3_d_8cpp_source.html#l00021">IndoorCameraD3D.cpp:21</a></div></div>
+<div class="ttc" id="amm7__data_8cpp_html_adc95f63d7a148a13bcc41be40565abbb"><div class="ttname"><a href="../../d6/d5b/mm7__data_8cpp.html#adc95f63d7a148a13bcc41be40565abbb">game_viewport_z</a></div><div class="ttdeci">int game_viewport_z</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d5b/mm7__data_8cpp_source.html#l00198">mm7_data.cpp:198</a></div></div>
+<div class="ttc" id="astruct_party_html_a58acc77e1ce8db07f410d3557b8f4805"><div class="ttname"><a href="../../d0/d14/struct_party.html#a58acc77e1ce8db07f410d3557b8f4805">Party::sRotationY</a></div><div class="ttdeci">int sRotationY</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00251">Party.h:251</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl_8h_html_a0b8f6a8ca74db98ff0e9ae3aef33b77e"><div class="ttname"><a href="../../df/dc4/_s_d_l__opengl_8h.html#a0b8f6a8ca74db98ff0e9ae3aef33b77e">glOrtho</a></div><div class="ttdeci">GLAPI void GLAPIENTRY glOrtho(GLdouble left, GLdouble right, GLdouble bottom, GLdouble top, GLdouble near_val, GLdouble far_val)</div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_0b6ee6e7e9547e675db4add2e5de97da.html">Engine</a></li><li class="navelem"><a class="el" href="../../dir_bb84c1711d8a00602a64a24ea462155a.html">Graphics</a></li><li class="navelem"><a class="el" href="../../dir_b47e9e73f9c46789e70231e6197cbb79.html">OpenGL</a></li><li class="navelem"><a class="el" href="../../da/d79/_render_open_g_l_8cpp.html">RenderOpenGL.cpp</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:03:56. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

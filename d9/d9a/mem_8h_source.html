@@ -1,0 +1,264 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Исходный файл C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavutil/mem.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d9/d9a/mem_8h_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">mem.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d9/d9a/mem_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * copyright (c) 2006 Michael Niedermayer &lt;michaelni@gmx.at&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * This file is part of FFmpeg.</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * FFmpeg is free software; you can redistribute it and/or</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> * modify it under the terms of the GNU Lesser General Public</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> * License as published by the Free Software Foundation; either</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> * version 2.1 of the License, or (at your option) any later version.</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> * FFmpeg is distributed in the hope that it will be useful,</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> * but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> * Lesser General Public License for more details.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> * You should have received a copy of the GNU Lesser General Public</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> * License along with FFmpeg; if not, write to the Free Software</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#ifndef AVUTIL_MEM_H</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#define AVUTIL_MEM_H</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &lt;limits.h&gt;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../da/d6e/attributes_8h.html">attributes.h</a>&quot;</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../da/d41/error_8h.html">error.h</a>&quot;</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d7/d93/avutil_8h.html">avutil.h</a>&quot;</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="preprocessor">#if defined(__INTEL_COMPILER) &amp;&amp; __INTEL_COMPILER &lt; 1110 || defined(__SUNPRO_C)</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="preprocessor">    #define DECLARE_ALIGNED(n,t,v)      t __attribute__ ((aligned (n))) v</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="preprocessor">    #define DECLARE_ASM_ALIGNED(n,t,v)  t __attribute__ ((aligned (n))) v</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="preprocessor">    #define DECLARE_ASM_CONST(n,t,v)    const t __attribute__ ((aligned (n))) v</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="preprocessor">#elif defined(__DJGPP__)</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="preprocessor">    #define DECLARE_ALIGNED(n,t,v)      t __attribute__ ((aligned (FFMIN(n, 16)))) v</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="preprocessor">    #define DECLARE_ASM_ALIGNED(n,t,v)  t av_used __attribute__ ((aligned (FFMIN(n, 16)))) v</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="preprocessor">    #define DECLARE_ASM_CONST(n,t,v)    static const t av_used __attribute__ ((aligned (FFMIN(n, 16)))) v</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="preprocessor">#elif defined(__GNUC__) || defined(__clang__)</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="preprocessor">    #define DECLARE_ALIGNED(n,t,v)      t __attribute__ ((aligned (n))) v</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="preprocessor">    #define DECLARE_ASM_ALIGNED(n,t,v)  t av_used __attribute__ ((aligned (n))) v</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="preprocessor">    #define DECLARE_ASM_CONST(n,t,v)    static const t av_used __attribute__ ((aligned (n))) v</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="preprocessor">#elif defined(_MSC_VER)</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="preprocessor">    #define DECLARE_ALIGNED(n,t,v)      __declspec(align(n)) t v</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="preprocessor">    #define DECLARE_ASM_ALIGNED(n,t,v)  __declspec(align(n)) t v</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="preprocessor">    #define DECLARE_ASM_CONST(n,t,v)    __declspec(align(n)) static const t v</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="preprocessor">    #define DECLARE_ALIGNED(n,t,v)      t v</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="preprocessor">    #define DECLARE_ASM_ALIGNED(n,t,v)  t v</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="preprocessor">    #define DECLARE_ASM_CONST(n,t,v)    static const t v</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="preprocessor">#if AV_GCC_VERSION_AT_LEAST(3,1)</span></div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="preprocessor">    #define av_malloc_attrib __attribute__((__malloc__))</span></div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<span class="preprocessor">    #define av_malloc_attrib</span></div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;<span class="preprocessor">#if AV_GCC_VERSION_AT_LEAST(4,3)</span></div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;<span class="preprocessor">    #define av_alloc_size(...) __attribute__((alloc_size(__VA_ARGS__)))</span></div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;<span class="preprocessor">    #define av_alloc_size(...)</span></div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160; </div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;<span class="keywordtype">void</span> *<a class="code" href="../../db/d76/group__lavu__mem__funcs.html#gacbca30ebc510a7e4156d66e7aceb2dc8">av_malloc</a>(<span class="keywordtype">size_t</span> <a class="code" href="../../db/d76/group__lavu__mem__funcs.html#ga3d1e3edfcf61ca2d831883e1afbad89e">size</a>) av_malloc_attrib <a class="code" href="../../db/d76/group__lavu__mem__funcs.html#ga6531cf9cce83adf3ebf0495c8adc92b6">av_alloc_size</a>(1);</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160; </div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;<span class="keywordtype">void</span> *<a class="code" href="../../db/d76/group__lavu__mem__funcs.html#gaf143ecab33a3868b57345466c39de7c1">av_mallocz</a>(<span class="keywordtype">size_t</span> <a class="code" href="../../db/d76/group__lavu__mem__funcs.html#ga3d1e3edfcf61ca2d831883e1afbad89e">size</a>) av_malloc_attrib <a class="code" href="../../db/d76/group__lavu__mem__funcs.html#ga6531cf9cce83adf3ebf0495c8adc92b6">av_alloc_size</a>(1);</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160; </div>
+<div class="line"><a name="l00220"></a><span class="lineno"><a class="line" href="../../db/d76/group__lavu__mem__funcs.html#ga34e10fdac079a9ca4512b8ccd7f20b8a">  220</a></span>&#160;<a class="code" href="../../db/d76/group__lavu__mem__funcs.html#ga6531cf9cce83adf3ebf0495c8adc92b6">av_alloc_size</a>(1, 2) <a class="code" href="../../d3/d78/_s_d_l__audio_8h.html#aa5cb90967788ada2711894ca158ece01">void</a> *av_malloc_array(<span class="keywordtype">size_t</span> <a class="code" href="../../db/d76/group__lavu__mem__funcs.html#ga79fd723df92f68cf8a6207a1d98b4c01">nmemb</a>, <span class="keywordtype">size_t</span> <a class="code" href="../../db/d76/group__lavu__mem__funcs.html#ga3d1e3edfcf61ca2d831883e1afbad89e">size</a>);</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160; </div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;<a class="code" href="../../db/d76/group__lavu__mem__funcs.html#ga6531cf9cce83adf3ebf0495c8adc92b6">av_alloc_size</a>(1, 2) <span class="keywordtype">void</span> *av_mallocz_array(<span class="keywordtype">size_t</span> <a class="code" href="../../db/d76/group__lavu__mem__funcs.html#ga79fd723df92f68cf8a6207a1d98b4c01">nmemb</a>, <span class="keywordtype">size_t</span> <a class="code" href="../../db/d76/group__lavu__mem__funcs.html#ga3d1e3edfcf61ca2d831883e1afbad89e">size</a>);</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160; </div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;<span class="keywordtype">void</span> *<a class="code" href="../../db/d76/group__lavu__mem__funcs.html#gaaf38f6d994f5a85854ef47fd98fa6e9a">av_calloc</a>(<span class="keywordtype">size_t</span> <a class="code" href="../../db/d76/group__lavu__mem__funcs.html#ga79fd723df92f68cf8a6207a1d98b4c01">nmemb</a>, <span class="keywordtype">size_t</span> <a class="code" href="../../db/d76/group__lavu__mem__funcs.html#ga3d1e3edfcf61ca2d831883e1afbad89e">size</a>) av_malloc_attrib;</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160; </div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;<span class="keywordtype">void</span> *<a class="code" href="../../db/d76/group__lavu__mem__funcs.html#ga74bb2298daa9cd0b5f1d0b2c1c3e26bb">av_realloc</a>(<span class="keywordtype">void</span> *ptr, <span class="keywordtype">size_t</span> <a class="code" href="../../db/d76/group__lavu__mem__funcs.html#ga3d1e3edfcf61ca2d831883e1afbad89e">size</a>) <a class="code" href="../../db/d76/group__lavu__mem__funcs.html#ga6531cf9cce83adf3ebf0495c8adc92b6">av_alloc_size</a>(2);</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160; </div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;av_warn_unused_result</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../db/d76/group__lavu__mem__funcs.html#ga9665abf3720f9f460790c2c3b224c052">av_reallocp</a>(<span class="keywordtype">void</span> *ptr, <span class="keywordtype">size_t</span> <a class="code" href="../../db/d76/group__lavu__mem__funcs.html#ga3d1e3edfcf61ca2d831883e1afbad89e">size</a>);</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160; </div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;<span class="keywordtype">void</span> *<a class="code" href="../../db/d76/group__lavu__mem__funcs.html#gae5ca394e7536fcd2689008b011a211ad">av_realloc_f</a>(<span class="keywordtype">void</span> *ptr, <span class="keywordtype">size_t</span> nelem, <span class="keywordtype">size_t</span> elsize);</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160; </div>
+<div class="line"><a name="l00323"></a><span class="lineno"><a class="line" href="../../db/d76/group__lavu__mem__funcs.html#ga79fd723df92f68cf8a6207a1d98b4c01">  323</a></span>&#160;<a class="code" href="../../db/d76/group__lavu__mem__funcs.html#ga6531cf9cce83adf3ebf0495c8adc92b6">av_alloc_size</a>(2, 3) <span class="keywordtype">void</span> *av_realloc_array(<span class="keywordtype">void</span> *ptr, <span class="keywordtype">size_t</span> <a class="code" href="../../db/d76/group__lavu__mem__funcs.html#ga79fd723df92f68cf8a6207a1d98b4c01">nmemb</a>, <span class="keywordtype">size_t</span> <a class="code" href="../../db/d76/group__lavu__mem__funcs.html#ga3d1e3edfcf61ca2d831883e1afbad89e">size</a>);</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160; </div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../db/d76/group__lavu__mem__funcs.html#gad8fde0c159ac905909339e082a049cde">av_reallocp_array</a>(<span class="keywordtype">void</span> *ptr, <span class="keywordtype">size_t</span> <a class="code" href="../../db/d76/group__lavu__mem__funcs.html#ga79fd723df92f68cf8a6207a1d98b4c01">nmemb</a>, <span class="keywordtype">size_t</span> <a class="code" href="../../db/d76/group__lavu__mem__funcs.html#ga3d1e3edfcf61ca2d831883e1afbad89e">size</a>);</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160; </div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;<span class="keywordtype">void</span> *<a class="code" href="../../db/d76/group__lavu__mem__funcs.html#ga869fd8884d8d29a7a4910d879926d94a">av_fast_realloc</a>(<span class="keywordtype">void</span> *ptr, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> *<a class="code" href="../../db/d76/group__lavu__mem__funcs.html#ga3d1e3edfcf61ca2d831883e1afbad89e">size</a>, <span class="keywordtype">size_t</span> min_size);</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160; </div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../db/d76/group__lavu__mem__funcs.html#ga29d0252b981f157e713a68ffca52f003">av_fast_malloc</a>(<span class="keywordtype">void</span> *ptr, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> *<a class="code" href="../../db/d76/group__lavu__mem__funcs.html#ga3d1e3edfcf61ca2d831883e1afbad89e">size</a>, <span class="keywordtype">size_t</span> min_size);</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160; </div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../db/d76/group__lavu__mem__funcs.html#ga0bfda4adf7f9e943f9eb1a08eeda3791">av_fast_mallocz</a>(<span class="keywordtype">void</span> *ptr, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> *<a class="code" href="../../db/d76/group__lavu__mem__funcs.html#ga3d1e3edfcf61ca2d831883e1afbad89e">size</a>, <span class="keywordtype">size_t</span> min_size);</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160; </div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../db/d76/group__lavu__mem__funcs.html#ga0c9096f498624c525aa2315b8a20c411">av_free</a>(<span class="keywordtype">void</span> *ptr);</div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160; </div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../db/d76/group__lavu__mem__funcs.html#ga0cc84043ea2167ad005c86e11d0bcdba">av_freep</a>(<span class="keywordtype">void</span> *ptr);</div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160; </div>
+<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;<span class="keywordtype">char</span> *<a class="code" href="../../db/d76/group__lavu__mem__funcs.html#ga7c352f4cff02184f005323691375fea9">av_strdup</a>(const <span class="keywordtype">char</span> *<a class="code" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>) av_malloc_attrib;</div>
+<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160; </div>
+<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;<span class="keywordtype">char</span> *<a class="code" href="../../db/d76/group__lavu__mem__funcs.html#gaffde7a717e3a603ed11a998c18d68cad">av_strndup</a>(const <span class="keywordtype">char</span> *<a class="code" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>, <span class="keywordtype">size_t</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a652168017ea9a8bbcead03d5c16269fb">len</a>) av_malloc_attrib;</div>
+<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160; </div>
+<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;<span class="keywordtype">void</span> *<a class="code" href="../../db/d76/group__lavu__mem__funcs.html#ga4ad5e6363f4a6b6eddfdb427e21166f2">av_memdup</a>(const <span class="keywordtype">void</span> *<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>, <span class="keywordtype">size_t</span> <a class="code" href="../../db/d76/group__lavu__mem__funcs.html#ga3d1e3edfcf61ca2d831883e1afbad89e">size</a>);</div>
+<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160; </div>
+<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../db/d76/group__lavu__mem__funcs.html#ga3ea4736dcceab4ba033b8abd2c2a180e">av_memcpy_backptr</a>(<a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a92034251bfd455d524a9b5610cddba00">dst</a>, <span class="keywordtype">int</span> back, <span class="keywordtype">int</span> cnt);</div>
+<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160; </div>
+<div class="line"><a name="l00609"></a><span class="lineno">  609</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../da/dd5/group__lavu__mem__dynarray.html#ga385b582522cedf5a88ce2cf158c396c9">av_dynarray_add</a>(<span class="keywordtype">void</span> *tab_ptr, <span class="keywordtype">int</span> *nb_ptr, <span class="keywordtype">void</span> *elem);</div>
+<div class="line"><a name="l00610"></a><span class="lineno">  610</span>&#160; </div>
+<div class="line"><a name="l00621"></a><span class="lineno">  621</span>&#160;av_warn_unused_result</div>
+<div class="line"><a name="l00622"></a><span class="lineno">  622</span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../da/dd5/group__lavu__mem__dynarray.html#ga5e3735b4568e78fffd7c4ea2f793996e">av_dynarray_add_nofree</a>(<span class="keywordtype">void</span> *tab_ptr, <span class="keywordtype">int</span> *nb_ptr, <span class="keywordtype">void</span> *elem);</div>
+<div class="line"><a name="l00623"></a><span class="lineno">  623</span>&#160; </div>
+<div class="line"><a name="l00647"></a><span class="lineno">  647</span>&#160;<span class="keywordtype">void</span> *<a class="code" href="../../da/dd5/group__lavu__mem__dynarray.html#ga9f60ff848186092d6705276a52ea0bb9">av_dynarray2_add</a>(<span class="keywordtype">void</span> **tab_ptr, <span class="keywordtype">int</span> *nb_ptr, <span class="keywordtype">size_t</span> elem_size,</div>
+<div class="line"><a name="l00648"></a><span class="lineno">  648</span>&#160;                       const <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *elem_data);</div>
+<div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160; </div>
+<div class="line"><a name="l00669"></a><span class="lineno"><a class="line" href="../../df/d2e/group__lavu__mem__misc.html#ga368c719d3bdce4de169910a4158df66b">  669</a></span>&#160;static inline <span class="keywordtype">int</span> <a class="code" href="../../df/d2e/group__lavu__mem__misc.html#ga368c719d3bdce4de169910a4158df66b">av_size_mult</a>(<span class="keywordtype">size_t</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a3309789fc188587d666cda5ece79cf82">a</a>, <span class="keywordtype">size_t</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0f71581a41fd2264c8944126dabbd010">b</a>, <span class="keywordtype">size_t</span> *<a class="code" href="../../df/dc4/_s_d_l__opengl_8h.html#a42ce7cdc612e53abee15043f80220d97">r</a>)</div>
+<div class="line"><a name="l00670"></a><span class="lineno">  670</span>&#160;{</div>
+<div class="line"><a name="l00671"></a><span class="lineno">  671</span>&#160;    <span class="keywordtype">size_t</span> <a class="code" href="../../df/dc4/_s_d_l__opengl_8h.html#a7d65d00ca3b0630d9b5c52df855b19f5">t</a> = <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a3309789fc188587d666cda5ece79cf82">a</a> * <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0f71581a41fd2264c8944126dabbd010">b</a>;</div>
+<div class="line"><a name="l00672"></a><span class="lineno">  672</span>&#160;    <span class="comment">/* Hack inspired from glibc: don&#39;t try the division if nelem and elsize</span></div>
+<div class="line"><a name="l00673"></a><span class="lineno">  673</span>&#160;<span class="comment">     * are both less than sqrt(SIZE_MAX). */</span></div>
+<div class="line"><a name="l00674"></a><span class="lineno">  674</span>&#160;    <span class="keywordflow">if</span> ((<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a3309789fc188587d666cda5ece79cf82">a</a> | <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0f71581a41fd2264c8944126dabbd010">b</a>) &gt;= ((<span class="keywordtype">size_t</span>)1 &lt;&lt; (<span class="keyword">sizeof</span>(<span class="keywordtype">size_t</span>) * 4)) &amp;&amp; <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a3309789fc188587d666cda5ece79cf82">a</a> &amp;&amp; <a class="code" href="../../df/dc4/_s_d_l__opengl_8h.html#a7d65d00ca3b0630d9b5c52df855b19f5">t</a> / <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a3309789fc188587d666cda5ece79cf82">a</a> != <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0f71581a41fd2264c8944126dabbd010">b</a>)</div>
+<div class="line"><a name="l00675"></a><span class="lineno">  675</span>&#160;        <span class="keywordflow">return</span> AVERROR(EINVAL);</div>
+<div class="line"><a name="l00676"></a><span class="lineno">  676</span>&#160;    *<a class="code" href="../../df/dc4/_s_d_l__opengl_8h.html#a42ce7cdc612e53abee15043f80220d97">r</a> = <a class="code" href="../../df/dc4/_s_d_l__opengl_8h.html#a7d65d00ca3b0630d9b5c52df855b19f5">t</a>;</div>
+<div class="line"><a name="l00677"></a><span class="lineno">  677</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00678"></a><span class="lineno">  678</span>&#160;}</div>
+<div class="line"><a name="l00679"></a><span class="lineno">  679</span>&#160; </div>
+<div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../df/d2e/group__lavu__mem__misc.html#ga2204fc859b4a3ca2d5bfd1bf4e8c4dfb">av_max_alloc</a>(<span class="keywordtype">size_t</span> max);</div>
+<div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160; </div>
+<div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* AVUTIL_MEM_H */</span><span class="preprocessor"></span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="a_s_d_l__opengl_8h_html_a4af680a6c683f88ed67b76f207f2e6e4"><div class="ttname"><a href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a></div><div class="ttdeci">GLdouble s</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dc4/_s_d_l__opengl_8h_source.html#l02063">SDL_opengl.h:2063</a></div></div>
+<div class="ttc" id="agroup__lavu__mem__funcs_html_gacbca30ebc510a7e4156d66e7aceb2dc8"><div class="ttname"><a href="../../db/d76/group__lavu__mem__funcs.html#gacbca30ebc510a7e4156d66e7aceb2dc8">av_malloc</a></div><div class="ttdeci">void * av_malloc(size_t size) av_malloc_attrib av_alloc_size(1)</div></div>
+<div class="ttc" id="agroup__lavu__mem__dynarray_html_ga9f60ff848186092d6705276a52ea0bb9"><div class="ttname"><a href="../../da/dd5/group__lavu__mem__dynarray.html#ga9f60ff848186092d6705276a52ea0bb9">av_dynarray2_add</a></div><div class="ttdeci">void * av_dynarray2_add(void **tab_ptr, int *nb_ptr, size_t elem_size, const uint8_t *elem_data)</div></div>
+<div class="ttc" id="agroup__lavu__mem__funcs_html_ga4ad5e6363f4a6b6eddfdb427e21166f2"><div class="ttname"><a href="../../db/d76/group__lavu__mem__funcs.html#ga4ad5e6363f4a6b6eddfdb427e21166f2">av_memdup</a></div><div class="ttdeci">void * av_memdup(const void *p, size_t size)</div></div>
+<div class="ttc" id="agroup__lavu__mem__misc_html_ga2204fc859b4a3ca2d5bfd1bf4e8c4dfb"><div class="ttname"><a href="../../df/d2e/group__lavu__mem__misc.html#ga2204fc859b4a3ca2d5bfd1bf4e8c4dfb">av_max_alloc</a></div><div class="ttdeci">void av_max_alloc(size_t max)</div></div>
+<div class="ttc" id="agroup__lavu__mem__funcs_html_gae5ca394e7536fcd2689008b011a211ad"><div class="ttname"><a href="../../db/d76/group__lavu__mem__funcs.html#gae5ca394e7536fcd2689008b011a211ad">av_realloc_f</a></div><div class="ttdeci">void * av_realloc_f(void *ptr, size_t nelem, size_t elsize)</div></div>
+<div class="ttc" id="agroup__lavu__mem__funcs_html_ga74bb2298daa9cd0b5f1d0b2c1c3e26bb"><div class="ttname"><a href="../../db/d76/group__lavu__mem__funcs.html#ga74bb2298daa9cd0b5f1d0b2c1c3e26bb">av_realloc</a></div><div class="ttdeci">void * av_realloc(void *ptr, size_t size) av_alloc_size(2)</div></div>
+<div class="ttc" id="agroup__lavu__mem__funcs_html_ga3ea4736dcceab4ba033b8abd2c2a180e"><div class="ttname"><a href="../../db/d76/group__lavu__mem__funcs.html#ga3ea4736dcceab4ba033b8abd2c2a180e">av_memcpy_backptr</a></div><div class="ttdeci">void av_memcpy_backptr(uint8_t *dst, int back, int cnt)</div></div>
+<div class="ttc" id="agroup__lavu__mem__funcs_html_ga869fd8884d8d29a7a4910d879926d94a"><div class="ttname"><a href="../../db/d76/group__lavu__mem__funcs.html#ga869fd8884d8d29a7a4910d879926d94a">av_fast_realloc</a></div><div class="ttdeci">void * av_fast_realloc(void *ptr, unsigned int *size, size_t min_size)</div></div>
+<div class="ttc" id="agroup__lavu__mem__funcs_html_ga0cc84043ea2167ad005c86e11d0bcdba"><div class="ttname"><a href="../../db/d76/group__lavu__mem__funcs.html#ga0cc84043ea2167ad005c86e11d0bcdba">av_freep</a></div><div class="ttdeci">void av_freep(void *ptr)</div></div>
+<div class="ttc" id="agroup__lavu__mem__misc_html_ga368c719d3bdce4de169910a4158df66b"><div class="ttname"><a href="../../df/d2e/group__lavu__mem__misc.html#ga368c719d3bdce4de169910a4158df66b">av_size_mult</a></div><div class="ttdeci">static int av_size_mult(size_t a, size_t b, size_t *r)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d9a/mem_8h_source.html#l00669">mem.h:669</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a652168017ea9a8bbcead03d5c16269fb"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a652168017ea9a8bbcead03d5c16269fb">len</a></div><div class="ttdeci">GLenum GLsizei len</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l02929">SDL_opengl_glext.h:2929</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_aa5367c14d90f462230c2611b81b41d23"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a></div><div class="ttdeci">GLfloat GLfloat p</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l11093">SDL_opengl_glext.h:11093</a></div></div>
+<div class="ttc" id="agroup__lavu__mem__funcs_html_ga0bfda4adf7f9e943f9eb1a08eeda3791"><div class="ttname"><a href="../../db/d76/group__lavu__mem__funcs.html#ga0bfda4adf7f9e943f9eb1a08eeda3791">av_fast_mallocz</a></div><div class="ttdeci">void av_fast_mallocz(void *ptr, unsigned int *size, size_t min_size)</div></div>
+<div class="ttc" id="aerror_8h_html"><div class="ttname"><a href="../../da/d41/error_8h.html">error.h</a></div></div>
+<div class="ttc" id="agroup__lavu__mem__funcs_html_gaf143ecab33a3868b57345466c39de7c1"><div class="ttname"><a href="../../db/d76/group__lavu__mem__funcs.html#gaf143ecab33a3868b57345466c39de7c1">av_mallocz</a></div><div class="ttdeci">void * av_mallocz(size_t size) av_malloc_attrib av_alloc_size(1)</div></div>
+<div class="ttc" id="agroup__lavu__mem__dynarray_html_ga385b582522cedf5a88ce2cf158c396c9"><div class="ttname"><a href="../../da/dd5/group__lavu__mem__dynarray.html#ga385b582522cedf5a88ce2cf158c396c9">av_dynarray_add</a></div><div class="ttdeci">void av_dynarray_add(void *tab_ptr, int *nb_ptr, void *elem)</div></div>
+<div class="ttc" id="agroup__lavu__mem__funcs_html_ga9665abf3720f9f460790c2c3b224c052"><div class="ttname"><a href="../../db/d76/group__lavu__mem__funcs.html#ga9665abf3720f9f460790c2c3b224c052">av_reallocp</a></div><div class="ttdeci">av_warn_unused_result int av_reallocp(void *ptr, size_t size)</div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a92034251bfd455d524a9b5610cddba00"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a92034251bfd455d524a9b5610cddba00">dst</a></div><div class="ttdeci">GLenum GLenum dst</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l01740">SDL_opengl_glext.h:1740</a></div></div>
+<div class="ttc" id="agroup__lavu__mem__funcs_html_gad8fde0c159ac905909339e082a049cde"><div class="ttname"><a href="../../db/d76/group__lavu__mem__funcs.html#gad8fde0c159ac905909339e082a049cde">av_reallocp_array</a></div><div class="ttdeci">int av_reallocp_array(void *ptr, size_t nmemb, size_t size)</div></div>
+<div class="ttc" id="aattributes_8h_html"><div class="ttname"><a href="../../da/d6e/attributes_8h.html">attributes.h</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl_8h_html_a7d65d00ca3b0630d9b5c52df855b19f5"><div class="ttname"><a href="../../df/dc4/_s_d_l__opengl_8h.html#a7d65d00ca3b0630d9b5c52df855b19f5">t</a></div><div class="ttdeci">GLdouble GLdouble t</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dc4/_s_d_l__opengl_8h_source.html#l02071">SDL_opengl.h:2071</a></div></div>
+<div class="ttc" id="agroup__lavu__mem__funcs_html_ga79fd723df92f68cf8a6207a1d98b4c01"><div class="ttname"><a href="../../db/d76/group__lavu__mem__funcs.html#ga79fd723df92f68cf8a6207a1d98b4c01">nmemb</a></div><div class="ttdeci">size_t nmemb</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d9a/mem_8h_source.html#l00323">mem.h:323</a></div></div>
+<div class="ttc" id="a_s_d_l__audio_8h_html_aa5cb90967788ada2711894ca158ece01"><div class="ttname"><a href="../../d3/d78/_s_d_l__audio_8h.html#aa5cb90967788ada2711894ca158ece01">void</a></div><div class="ttdeci">typedef void(SDLCALL *SDL_AudioFilter)(struct SDL_AudioCVT *cvt</div></div>
+<div class="ttc" id="a_s_d_l__config_8h_html_aba7bc1797add20fe3efdf37ced1182c5"><div class="ttname"><a href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a></div><div class="ttdeci">unsigned __int8 uint8_t</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d8f/_s_d_l__config_8h_source.html#l00035">SDL_config.h:35</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a0f71581a41fd2264c8944126dabbd010"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0f71581a41fd2264c8944126dabbd010">b</a></div><div class="ttdeci">GLboolean GLboolean GLboolean b</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l01112">SDL_opengl_glext.h:1112</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl_8h_html_a42ce7cdc612e53abee15043f80220d97"><div class="ttname"><a href="../../df/dc4/_s_d_l__opengl_8h.html#a42ce7cdc612e53abee15043f80220d97">r</a></div><div class="ttdeci">GLdouble GLdouble GLdouble r</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dc4/_s_d_l__opengl_8h_source.html#l02079">SDL_opengl.h:2079</a></div></div>
+<div class="ttc" id="agroup__lavu__mem__funcs_html_ga0c9096f498624c525aa2315b8a20c411"><div class="ttname"><a href="../../db/d76/group__lavu__mem__funcs.html#ga0c9096f498624c525aa2315b8a20c411">av_free</a></div><div class="ttdeci">void av_free(void *ptr)</div></div>
+<div class="ttc" id="agroup__lavu__mem__dynarray_html_ga5e3735b4568e78fffd7c4ea2f793996e"><div class="ttname"><a href="../../da/dd5/group__lavu__mem__dynarray.html#ga5e3735b4568e78fffd7c4ea2f793996e">av_dynarray_add_nofree</a></div><div class="ttdeci">av_warn_unused_result int av_dynarray_add_nofree(void *tab_ptr, int *nb_ptr, void *elem)</div></div>
+<div class="ttc" id="agroup__lavu__mem__funcs_html_gaaf38f6d994f5a85854ef47fd98fa6e9a"><div class="ttname"><a href="../../db/d76/group__lavu__mem__funcs.html#gaaf38f6d994f5a85854ef47fd98fa6e9a">av_calloc</a></div><div class="ttdeci">void * av_calloc(size_t nmemb, size_t size) av_malloc_attrib</div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a3309789fc188587d666cda5ece79cf82"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a3309789fc188587d666cda5ece79cf82">a</a></div><div class="ttdeci">GLboolean GLboolean GLboolean GLboolean a</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l01112">SDL_opengl_glext.h:1112</a></div></div>
+<div class="ttc" id="agroup__lavu__mem__funcs_html_ga7c352f4cff02184f005323691375fea9"><div class="ttname"><a href="../../db/d76/group__lavu__mem__funcs.html#ga7c352f4cff02184f005323691375fea9">av_strdup</a></div><div class="ttdeci">char * av_strdup(const char *s) av_malloc_attrib</div></div>
+<div class="ttc" id="aavutil_8h_html"><div class="ttname"><a href="../../d7/d93/avutil_8h.html">avutil.h</a></div></div>
+<div class="ttc" id="agroup__lavu__mem__funcs_html_ga6531cf9cce83adf3ebf0495c8adc92b6"><div class="ttname"><a href="../../db/d76/group__lavu__mem__funcs.html#ga6531cf9cce83adf3ebf0495c8adc92b6">av_alloc_size</a></div><div class="ttdeci">av_alloc_size(1, 2) void *av_malloc_array(size_t nmemb</div></div>
+<div class="ttc" id="agroup__lavu__mem__funcs_html_ga3d1e3edfcf61ca2d831883e1afbad89e"><div class="ttname"><a href="../../db/d76/group__lavu__mem__funcs.html#ga3d1e3edfcf61ca2d831883e1afbad89e">size</a></div><div class="ttdeci">GLsizeiptr size</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l00540">SDL_opengl_glext.h:540</a></div></div>
+<div class="ttc" id="agroup__lavu__mem__funcs_html_ga29d0252b981f157e713a68ffca52f003"><div class="ttname"><a href="../../db/d76/group__lavu__mem__funcs.html#ga29d0252b981f157e713a68ffca52f003">av_fast_malloc</a></div><div class="ttdeci">void av_fast_malloc(void *ptr, unsigned int *size, size_t min_size)</div></div>
+<div class="ttc" id="agroup__lavu__mem__funcs_html_gaffde7a717e3a603ed11a998c18d68cad"><div class="ttname"><a href="../../db/d76/group__lavu__mem__funcs.html#gaffde7a717e3a603ed11a998c18d68cad">av_strndup</a></div><div class="ttdeci">char * av_strndup(const char *s, size_t len) av_malloc_attrib</div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_97aefd0d527b934f1d99a682da8fe6a9.html">lib</a></li><li class="navelem"><a class="el" href="../../dir_da53678e933bc13c5b44fc9f96ac81aa.html">win32</a></li><li class="navelem"><a class="el" href="../../dir_7ac189985cec0e073b46d34a5d96bfc1.html">x86</a></li><li class="navelem"><a class="el" href="../../dir_e3469dbcd8a5e63a5540df758d989c34.html">ffmpeg-4.2.2</a></li><li class="navelem"><a class="el" href="../../dir_880368755e1ee5b32b1864dac7163836.html">include</a></li><li class="navelem"><a class="el" href="../../dir_e95abcf8ca274311b94b0e3a5da6ed50.html">libavutil</a></li><li class="navelem"><a class="el" href="../../d9/d9a/mem_8h.html">mem.h</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:03:40. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

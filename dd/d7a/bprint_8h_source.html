@@ -1,0 +1,207 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Исходный файл C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavutil/bprint.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('dd/d7a/bprint_8h_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">bprint.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../dd/d7a/bprint_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Copyright (c) 2012 Nicolas George</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * This file is part of FFmpeg.</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * FFmpeg is free software; you can redistribute it and/or</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> * modify it under the terms of the GNU Lesser General Public</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> * License as published by the Free Software Foundation; either</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> * version 2.1 of the License, or (at your option) any later version.</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> * FFmpeg is distributed in the hope that it will be useful,</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> * but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> * Lesser General Public License for more details.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> * You should have received a copy of the GNU Lesser General Public</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> * License along with FFmpeg; if not, write to the Free Software</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#ifndef AVUTIL_BPRINT_H</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#define AVUTIL_BPRINT_H</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;stdarg.h&gt;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../da/d6e/attributes_8h.html">attributes.h</a>&quot;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../df/dbf/avstring_8h.html">avstring.h</a>&quot;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#define FF_PAD_STRUCTURE(name, size, ...) \</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">struct ff_pad_helper_##name { __VA_ARGS__ }; \</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">typedef struct name { \</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">    __VA_ARGS__ \</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">    char reserved_padding[size - sizeof(struct ff_pad_helper_##name)]; \</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">} name;</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<a class="code" href="../../dd/d7a/bprint_8h.html#a6aa38da4460d5eded81c6d738cc9bd13">FF_PAD_STRUCTURE</a>(AVBPrint, 1024,</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordtype">char</span> *str;         </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordtype">unsigned</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a652168017ea9a8bbcead03d5c16269fb">len</a>;      </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordtype">unsigned</span> <a class="code" href="../../db/d76/group__lavu__mem__funcs.html#ga3d1e3edfcf61ca2d831883e1afbad89e">size</a>;     </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordtype">unsigned</span> <a class="code" href="../../dd/d7a/bprint_8h.html#acf8cd3996e691221ed7bdb8310ea2fc2">size_max</a>; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordtype">char</span> reserved_internal_buffer[1];</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;)</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;#define AV_BPRINT_SIZE_UNLIMITED  ((<span class="keywordtype">unsigned</span>)-1)</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="preprocessor">#define AV_BPRINT_SIZE_AUTOMATIC  1</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="preprocessor">#define AV_BPRINT_SIZE_COUNT_ONLY 0</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="../../dd/d7a/bprint_8h.html#acf8cd3996e691221ed7bdb8310ea2fc2">  111</a></span>&#160;<span class="keywordtype">void</span> av_bprint_init(AVBPrint *<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa3b73d9ca9f2e2396cbeae1ce6ce14be">buf</a>, <span class="keywordtype">unsigned</span> <a class="code" href="../../dd/d7a/bprint_8h.html#a938b4c4eed995775474a106731647736">size_init</a>, <span class="keywordtype">unsigned</span> <a class="code" href="../../dd/d7a/bprint_8h.html#acf8cd3996e691221ed7bdb8310ea2fc2">size_max</a>);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../dd/d7a/bprint_8h.html#af70c16532f4ba50c599e4eaa67a1d63b">av_bprint_init_for_buffer</a>(AVBPrint *<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa3b73d9ca9f2e2396cbeae1ce6ce14be">buf</a>, <span class="keywordtype">char</span> *<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a76461e97a098d2c9ae20ac193d3825ae">buffer</a>, <span class="keywordtype">unsigned</span> <a class="code" href="../../db/d76/group__lavu__mem__funcs.html#ga3d1e3edfcf61ca2d831883e1afbad89e">size</a>);</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../dd/d7a/bprint_8h.html#aa2e89377fd7c92db534f29caff1af209">av_bprintf</a>(AVBPrint *<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa3b73d9ca9f2e2396cbeae1ce6ce14be">buf</a>, <span class="keyword">const</span> <span class="keywordtype">char</span> *fmt, ...) av_printf_format(2, 3);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../dd/d7a/bprint_8h.html#ae24ca62b5e2ba99651636c04b61240f1">av_vbprintf</a>(AVBPrint *<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa3b73d9ca9f2e2396cbeae1ce6ce14be">buf</a>, const <span class="keywordtype">char</span> *fmt, va_list vl_arg);</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../dd/d7a/bprint_8h.html#aabc9a9d58de61dd824e625d59a7531bb">av_bprint_chars</a>(AVBPrint *<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa3b73d9ca9f2e2396cbeae1ce6ce14be">buf</a>, <span class="keywordtype">char</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1f2d7f8147412c43ba2303a56f97ee73">c</a>, <span class="keywordtype">unsigned</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#ae2b4646468bc89d0ba646f5cf838e051">n</a>);</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../dd/d7a/bprint_8h.html#aa215ba46a975d996e483cf0b9dcc85e5">av_bprint_append_data</a>(AVBPrint *<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa3b73d9ca9f2e2396cbeae1ce6ce14be">buf</a>, const <span class="keywordtype">char</span> *<a class="code" href="../../df/dc4/_s_d_l__opengl_8h.html#a2e335d56e2846b0fea47eed068b2d34a">data</a>, <span class="keywordtype">unsigned</span> <a class="code" href="../../db/d76/group__lavu__mem__funcs.html#ga3d1e3edfcf61ca2d831883e1afbad89e">size</a>);</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160; </div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;struct tm;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../dd/d7a/bprint_8h.html#a4896e4efea5b234507bcbba45ca0397b">av_bprint_strftime</a>(AVBPrint *<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa3b73d9ca9f2e2396cbeae1ce6ce14be">buf</a>, const <span class="keywordtype">char</span> *fmt, const struct tm *tm);</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160; </div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../dd/d7a/bprint_8h.html#a32f3999614d90e082602d54a3c5237d6">av_bprint_get_buffer</a>(AVBPrint *<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa3b73d9ca9f2e2396cbeae1ce6ce14be">buf</a>, <span class="keywordtype">unsigned</span> <a class="code" href="../../db/d76/group__lavu__mem__funcs.html#ga3d1e3edfcf61ca2d831883e1afbad89e">size</a>,</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;                          <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> **mem, <span class="keywordtype">unsigned</span> *actual_size);</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160; </div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../dd/d7a/bprint_8h.html#ab1c28dbff5990dbd37e6c00e3d7c438b">av_bprint_clear</a>(AVBPrint *<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa3b73d9ca9f2e2396cbeae1ce6ce14be">buf</a>);</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
+<div class="line"><a name="l00185"></a><span class="lineno"><a class="line" href="../../dd/d7a/bprint_8h.html#a07432f704c49a6fa636197e2aa80bac0">  185</a></span>&#160;static inline <span class="keywordtype">int</span> <a class="code" href="../../dd/d7a/bprint_8h.html#a07432f704c49a6fa636197e2aa80bac0">av_bprint_is_complete</a>(const AVBPrint *<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa3b73d9ca9f2e2396cbeae1ce6ce14be">buf</a>)</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;{</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa3b73d9ca9f2e2396cbeae1ce6ce14be">buf</a>-&gt;len &lt; <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa3b73d9ca9f2e2396cbeae1ce6ce14be">buf</a>-&gt;size;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;}</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160; </div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../dd/d7a/bprint_8h.html#a3fd45f50d9d4f7cc8fed5331a37f47ea">av_bprint_finalize</a>(AVBPrint *<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa3b73d9ca9f2e2396cbeae1ce6ce14be">buf</a>, <span class="keywordtype">char</span> **ret_str);</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160; </div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../dd/d7a/bprint_8h.html#a14ec58eeaa6d4a3571cd9f0ffb873e62">av_bprint_escape</a>(AVBPrint *dstbuf, <span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a72e0fdf0f845ded60b1fada9e9195cd7">src</a>, <span class="keyword">const</span> <span class="keywordtype">char</span> *special_chars,</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;                      <span class="keyword">enum</span> <a class="code" href="../../d9/d28/group__lavu__string.html#gaef885958293f07153383f99db573ff5a">AVEscapeMode</a> <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a1e71d9c196e4683cc06c4b54d53f7ef5">mode</a>, <span class="keywordtype">int</span> <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ac7ba7d3cce3d19ca020e056b37231289">flags</a>);</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160; </div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* AVUTIL_BPRINT_H */</span><span class="preprocessor"></span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="abprint_8h_html_ab1c28dbff5990dbd37e6c00e3d7c438b"><div class="ttname"><a href="../../dd/d7a/bprint_8h.html#ab1c28dbff5990dbd37e6c00e3d7c438b">av_bprint_clear</a></div><div class="ttdeci">void av_bprint_clear(AVBPrint *buf)</div></div>
+<div class="ttc" id="abprint_8h_html_aa215ba46a975d996e483cf0b9dcc85e5"><div class="ttname"><a href="../../dd/d7a/bprint_8h.html#aa215ba46a975d996e483cf0b9dcc85e5">av_bprint_append_data</a></div><div class="ttdeci">void av_bprint_append_data(AVBPrint *buf, const char *data, unsigned size)</div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_ae2b4646468bc89d0ba646f5cf838e051"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#ae2b4646468bc89d0ba646f5cf838e051">n</a></div><div class="ttdeci">GLdouble n</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l01955">SDL_opengl_glext.h:1955</a></div></div>
+<div class="ttc" id="abprint_8h_html_aabc9a9d58de61dd824e625d59a7531bb"><div class="ttname"><a href="../../dd/d7a/bprint_8h.html#aabc9a9d58de61dd824e625d59a7531bb">av_bprint_chars</a></div><div class="ttdeci">void av_bprint_chars(AVBPrint *buf, char c, unsigned n)</div></div>
+<div class="ttc" id="a_s_d_l__egl_8h_html_a1e71d9c196e4683cc06c4b54d53f7ef5"><div class="ttname"><a href="../../df/d32/_s_d_l__egl_8h.html#a1e71d9c196e4683cc06c4b54d53f7ef5">mode</a></div><div class="ttdeci">EGLSyncKHR EGLenum mode</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/_s_d_l__egl_8h_source.html#l01056">SDL_egl.h:1056</a></div></div>
+<div class="ttc" id="abprint_8h_html_a6aa38da4460d5eded81c6d738cc9bd13"><div class="ttname"><a href="../../dd/d7a/bprint_8h.html#a6aa38da4460d5eded81c6d738cc9bd13">FF_PAD_STRUCTURE</a></div><div class="ttdeci">FF_PAD_STRUCTURE(AVBPrint, 1024, char *str;unsigned len;unsigned size;unsigned size_max;char reserved_internal_buffer[1];) void av_bprint_init(AVBPrint *buf</div></div>
+<div class="ttc" id="abprint_8h_html_aa2e89377fd7c92db534f29caff1af209"><div class="ttname"><a href="../../dd/d7a/bprint_8h.html#aa2e89377fd7c92db534f29caff1af209">av_bprintf</a></div><div class="ttdeci">void av_bprintf(AVBPrint *buf, const char *fmt,...) av_printf_format(2</div></div>
+<div class="ttc" id="abprint_8h_html_a32f3999614d90e082602d54a3c5237d6"><div class="ttname"><a href="../../dd/d7a/bprint_8h.html#a32f3999614d90e082602d54a3c5237d6">av_bprint_get_buffer</a></div><div class="ttdeci">void av_bprint_get_buffer(AVBPrint *buf, unsigned size, unsigned char **mem, unsigned *actual_size)</div></div>
+<div class="ttc" id="a_s_d_l__egl_8h_html_a76461e97a098d2c9ae20ac193d3825ae"><div class="ttname"><a href="../../df/d32/_s_d_l__egl_8h.html#a76461e97a098d2c9ae20ac193d3825ae">buffer</a></div><div class="ttdeci">EGLContext EGLenum EGLClientBuffer buffer</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/_s_d_l__egl_8h_source.html#l00952">SDL_egl.h:952</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a652168017ea9a8bbcead03d5c16269fb"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a652168017ea9a8bbcead03d5c16269fb">len</a></div><div class="ttdeci">GLenum GLsizei len</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l02929">SDL_opengl_glext.h:2929</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_aa3b73d9ca9f2e2396cbeae1ce6ce14be"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa3b73d9ca9f2e2396cbeae1ce6ce14be">buf</a></div><div class="ttdeci">GLenum GLuint GLenum GLsizei const GLchar * buf</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l02483">SDL_opengl_glext.h:2483</a></div></div>
+<div class="ttc" id="abprint_8h_html_acf8cd3996e691221ed7bdb8310ea2fc2"><div class="ttname"><a href="../../dd/d7a/bprint_8h.html#acf8cd3996e691221ed7bdb8310ea2fc2">size_max</a></div><div class="ttdeci">unsigned unsigned size_max</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7a/bprint_8h_source.html#l00111">bprint.h:111</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a72e0fdf0f845ded60b1fada9e9195cd7"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a72e0fdf0f845ded60b1fada9e9195cd7">src</a></div><div class="ttdeci">GLenum src</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l01740">SDL_opengl_glext.h:1740</a></div></div>
+<div class="ttc" id="abprint_8h_html_a07432f704c49a6fa636197e2aa80bac0"><div class="ttname"><a href="../../dd/d7a/bprint_8h.html#a07432f704c49a6fa636197e2aa80bac0">av_bprint_is_complete</a></div><div class="ttdeci">static int av_bprint_is_complete(const AVBPrint *buf)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7a/bprint_8h_source.html#l00185">bprint.h:185</a></div></div>
+<div class="ttc" id="abprint_8h_html_ae24ca62b5e2ba99651636c04b61240f1"><div class="ttname"><a href="../../dd/d7a/bprint_8h.html#ae24ca62b5e2ba99651636c04b61240f1">av_vbprintf</a></div><div class="ttdeci">void void av_vbprintf(AVBPrint *buf, const char *fmt, va_list vl_arg)</div></div>
+<div class="ttc" id="aattributes_8h_html"><div class="ttname"><a href="../../da/d6e/attributes_8h.html">attributes.h</a></div></div>
+<div class="ttc" id="abprint_8h_html_a3fd45f50d9d4f7cc8fed5331a37f47ea"><div class="ttname"><a href="../../dd/d7a/bprint_8h.html#a3fd45f50d9d4f7cc8fed5331a37f47ea">av_bprint_finalize</a></div><div class="ttdeci">int av_bprint_finalize(AVBPrint *buf, char **ret_str)</div></div>
+<div class="ttc" id="abprint_8h_html_af70c16532f4ba50c599e4eaa67a1d63b"><div class="ttname"><a href="../../dd/d7a/bprint_8h.html#af70c16532f4ba50c599e4eaa67a1d63b">av_bprint_init_for_buffer</a></div><div class="ttdeci">void av_bprint_init_for_buffer(AVBPrint *buf, char *buffer, unsigned size)</div></div>
+<div class="ttc" id="a_s_d_l__opengl_8h_html_a2e335d56e2846b0fea47eed068b2d34a"><div class="ttname"><a href="../../df/dc4/_s_d_l__opengl_8h.html#a2e335d56e2846b0fea47eed068b2d34a">data</a></div><div class="ttdeci">GLint GLenum GLsizei GLsizei GLsizei GLint GLsizei const GLvoid * data</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dc4/_s_d_l__opengl_8h_source.html#l01974">SDL_opengl.h:1974</a></div></div>
+<div class="ttc" id="abprint_8h_html_a14ec58eeaa6d4a3571cd9f0ffb873e62"><div class="ttname"><a href="../../dd/d7a/bprint_8h.html#a14ec58eeaa6d4a3571cd9f0ffb873e62">av_bprint_escape</a></div><div class="ttdeci">void av_bprint_escape(AVBPrint *dstbuf, const char *src, const char *special_chars, enum AVEscapeMode mode, int flags)</div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a1f2d7f8147412c43ba2303a56f97ee73"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1f2d7f8147412c43ba2303a56f97ee73">c</a></div><div class="ttdeci">const GLubyte * c</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l11096">SDL_opengl_glext.h:11096</a></div></div>
+<div class="ttc" id="a_s_d_l__egl_8h_html_ac7ba7d3cce3d19ca020e056b37231289"><div class="ttname"><a href="../../df/d32/_s_d_l__egl_8h.html#ac7ba7d3cce3d19ca020e056b37231289">flags</a></div><div class="ttdeci">EGLSyncKHR EGLint flags</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/_s_d_l__egl_8h_source.html#l00898">SDL_egl.h:898</a></div></div>
+<div class="ttc" id="abprint_8h_html_a938b4c4eed995775474a106731647736"><div class="ttname"><a href="../../dd/d7a/bprint_8h.html#a938b4c4eed995775474a106731647736">size_init</a></div><div class="ttdeci">unsigned size_init</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7a/bprint_8h_source.html#l00111">bprint.h:111</a></div></div>
+<div class="ttc" id="agroup__lavu__mem__funcs_html_ga3d1e3edfcf61ca2d831883e1afbad89e"><div class="ttname"><a href="../../db/d76/group__lavu__mem__funcs.html#ga3d1e3edfcf61ca2d831883e1afbad89e">size</a></div><div class="ttdeci">GLsizeiptr size</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l00540">SDL_opengl_glext.h:540</a></div></div>
+<div class="ttc" id="abprint_8h_html_a4896e4efea5b234507bcbba45ca0397b"><div class="ttname"><a href="../../dd/d7a/bprint_8h.html#a4896e4efea5b234507bcbba45ca0397b">av_bprint_strftime</a></div><div class="ttdeci">void av_bprint_strftime(AVBPrint *buf, const char *fmt, const struct tm *tm)</div></div>
+<div class="ttc" id="agroup__lavu__string_html_gaef885958293f07153383f99db573ff5a"><div class="ttname"><a href="../../d9/d28/group__lavu__string.html#gaef885958293f07153383f99db573ff5a">AVEscapeMode</a></div><div class="ttdeci">AVEscapeMode</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dbf/avstring_8h_source.html#l00313">avstring.h:313</a></div></div>
+<div class="ttc" id="aavstring_8h_html"><div class="ttname"><a href="../../df/dbf/avstring_8h.html">avstring.h</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_97aefd0d527b934f1d99a682da8fe6a9.html">lib</a></li><li class="navelem"><a class="el" href="../../dir_da53678e933bc13c5b44fc9f96ac81aa.html">win32</a></li><li class="navelem"><a class="el" href="../../dir_7ac189985cec0e073b46d34a5d96bfc1.html">x86</a></li><li class="navelem"><a class="el" href="../../dir_e3469dbcd8a5e63a5540df758d989c34.html">ffmpeg-4.2.2</a></li><li class="navelem"><a class="el" href="../../dir_880368755e1ee5b32b1864dac7163836.html">include</a></li><li class="navelem"><a class="el" href="../../dir_e95abcf8ca274311b94b0e3a5da6ed50.html">libavutil</a></li><li class="navelem"><a class="el" href="../../dd/d7a/bprint_8h.html">bprint.h</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:03:38. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

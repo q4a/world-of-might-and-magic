@@ -1,0 +1,760 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Структура AVCodec</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('df/d2a/struct_a_v_codec.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="../../d0/d49/struct_a_v_codec-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Структура AVCodec<div class="ingroups"><a class="el" href="../../d5/de3/group__libavc.html">libavcodec</a> &raquo; <a class="el" href="../../d5/d44/group__lavc__core.html">Core functions/structures.</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="../../d4/d02/avcodec_8h_source.html">avcodec.h</a>&gt;</code></p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Граф связей класса AVCodec:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d6/d0d/struct_a_v_codec__coll__graph.svg" width="404" height="306"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:ad3daa3e729850b573c139a83be8938ca"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d2a/struct_a_v_codec.html#ad3daa3e729850b573c139a83be8938ca">name</a></td></tr>
+<tr class="separator:ad3daa3e729850b573c139a83be8938ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb4afcfce3b6541ed70aa7f21d507422"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d2a/struct_a_v_codec.html#acb4afcfce3b6541ed70aa7f21d507422">long_name</a></td></tr>
+<tr class="separator:acb4afcfce3b6541ed70aa7f21d507422"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab539ca86026d043803c24ba06fa84197"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="../../d7/d83/group__lavu__misc.html#ga9a84bba4713dfced21a1a56163be1f48">AVMediaType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d2a/struct_a_v_codec.html#ab539ca86026d043803c24ba06fa84197">type</a></td></tr>
+<tr class="separator:ab539ca86026d043803c24ba06fa84197"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01a53d07936f4c7ee280444793b6967b"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="../../d5/d44/group__lavc__core.html#gaadca229ad2c20e060a14fec08a5cc7ce">AVCodecID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d2a/struct_a_v_codec.html#a01a53d07936f4c7ee280444793b6967b">id</a></td></tr>
+<tr class="separator:a01a53d07936f4c7ee280444793b6967b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af51f7ff3dac8b730f46b9713e49a2518"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d2a/struct_a_v_codec.html#af51f7ff3dac8b730f46b9713e49a2518">capabilities</a></td></tr>
+<tr class="separator:af51f7ff3dac8b730f46b9713e49a2518"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cc75a0ab41697df21a8cd649662190c"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d7/d28/struct_a_v_rational.html">AVRational</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d2a/struct_a_v_codec.html#a5cc75a0ab41697df21a8cd649662190c">supported_framerates</a></td></tr>
+<tr class="memdesc:a5cc75a0ab41697df21a8cd649662190c"><td class="mdescLeft">&#160;</td><td class="mdescRight">array of supported framerates, or NULL if any, array is terminated by {0,0}  <a href="../../df/d2a/struct_a_v_codec.html#a5cc75a0ab41697df21a8cd649662190c">Подробнее...</a><br /></td></tr>
+<tr class="separator:a5cc75a0ab41697df21a8cd649662190c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2b97bd3c19686025e1b7d577329c250"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="../../dd/d6c/pixfmt_8h.html#a9a8e335cf3be472042bc9f0cf80cd4c5">AVPixelFormat</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d2a/struct_a_v_codec.html#ac2b97bd3c19686025e1b7d577329c250">pix_fmts</a></td></tr>
+<tr class="memdesc:ac2b97bd3c19686025e1b7d577329c250"><td class="mdescLeft">&#160;</td><td class="mdescRight">array of supported pixel formats, or NULL if unknown, array is terminated by -1  <a href="../../df/d2a/struct_a_v_codec.html#ac2b97bd3c19686025e1b7d577329c250">Подробнее...</a><br /></td></tr>
+<tr class="separator:ac2b97bd3c19686025e1b7d577329c250"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee7a194f1c3251958d3dabed3fa8148e"><td class="memItemLeft" align="right" valign="top">const int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d2a/struct_a_v_codec.html#aee7a194f1c3251958d3dabed3fa8148e">supported_samplerates</a></td></tr>
+<tr class="memdesc:aee7a194f1c3251958d3dabed3fa8148e"><td class="mdescLeft">&#160;</td><td class="mdescRight">array of supported audio samplerates, or NULL if unknown, array is terminated by 0  <a href="../../df/d2a/struct_a_v_codec.html#aee7a194f1c3251958d3dabed3fa8148e">Подробнее...</a><br /></td></tr>
+<tr class="separator:aee7a194f1c3251958d3dabed3fa8148e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac19f4c45370f715412ad5c7b78daacf"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="../../da/d54/group__lavu__sampfmts.html#gaf9a51ca15301871723577c730b5865c5">AVSampleFormat</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d2a/struct_a_v_codec.html#aac19f4c45370f715412ad5c7b78daacf">sample_fmts</a></td></tr>
+<tr class="memdesc:aac19f4c45370f715412ad5c7b78daacf"><td class="mdescLeft">&#160;</td><td class="mdescRight">array of supported sample formats, or NULL if unknown, array is terminated by -1  <a href="../../df/d2a/struct_a_v_codec.html#aac19f4c45370f715412ad5c7b78daacf">Подробнее...</a><br /></td></tr>
+<tr class="separator:aac19f4c45370f715412ad5c7b78daacf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d4c5152626bbd1f575a3e0014cb59e7"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../dd/df4/alext_8h.html#aec6fcb673ff035718c238c8c9d544c47">uint64_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d2a/struct_a_v_codec.html#a1d4c5152626bbd1f575a3e0014cb59e7">channel_layouts</a></td></tr>
+<tr class="memdesc:a1d4c5152626bbd1f575a3e0014cb59e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">array of support channel layouts, or NULL if unknown. array is terminated by 0  <a href="../../df/d2a/struct_a_v_codec.html#a1d4c5152626bbd1f575a3e0014cb59e7">Подробнее...</a><br /></td></tr>
+<tr class="separator:a1d4c5152626bbd1f575a3e0014cb59e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc51006d374ca72dfa3b0e29cbb1d981"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d2a/struct_a_v_codec.html#afc51006d374ca72dfa3b0e29cbb1d981">max_lowres</a></td></tr>
+<tr class="memdesc:afc51006d374ca72dfa3b0e29cbb1d981"><td class="mdescLeft">&#160;</td><td class="mdescRight">maximum value for lowres supported by the decoder  <a href="../../df/d2a/struct_a_v_codec.html#afc51006d374ca72dfa3b0e29cbb1d981">Подробнее...</a><br /></td></tr>
+<tr class="separator:afc51006d374ca72dfa3b0e29cbb1d981"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ded9f7ec1fa1a73ea3e831428c100fa"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d2/de1/struct_a_v_class.html">AVClass</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d2a/struct_a_v_codec.html#a4ded9f7ec1fa1a73ea3e831428c100fa">priv_class</a></td></tr>
+<tr class="memdesc:a4ded9f7ec1fa1a73ea3e831428c100fa"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d2/de1/struct_a_v_class.html">AVClass</a> for the private context.  <a href="../../df/d2a/struct_a_v_codec.html#a4ded9f7ec1fa1a73ea3e831428c100fa">Подробнее...</a><br /></td></tr>
+<tr class="separator:a4ded9f7ec1fa1a73ea3e831428c100fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac832350f2bac582fe3d174e2e3b1eb5e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d7/dc6/struct_a_v_profile.html">AVProfile</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d2a/struct_a_v_codec.html#ac832350f2bac582fe3d174e2e3b1eb5e">profiles</a></td></tr>
+<tr class="memdesc:ac832350f2bac582fe3d174e2e3b1eb5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">array of recognized profiles, or NULL if unknown, array is terminated by {FF_PROFILE_UNKNOWN}  <a href="../../df/d2a/struct_a_v_codec.html#ac832350f2bac582fe3d174e2e3b1eb5e">Подробнее...</a><br /></td></tr>
+<tr class="separator:ac832350f2bac582fe3d174e2e3b1eb5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2f26d22c4dc49710bebc0fceda4d125"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d2a/struct_a_v_codec.html#ad2f26d22c4dc49710bebc0fceda4d125">wrapper_name</a></td></tr>
+<tr class="separator:ad2f26d22c4dc49710bebc0fceda4d125"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa86c803fcfc0ebb569b15d4645d0e796"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d2a/struct_a_v_codec.html#aa86c803fcfc0ebb569b15d4645d0e796">priv_data_size</a></td></tr>
+<tr class="separator:aa86c803fcfc0ebb569b15d4645d0e796"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab423f961a2ce8ef9442010909a29dbf5"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="../../df/d2a/struct_a_v_codec.html">AVCodec</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d2a/struct_a_v_codec.html#ab423f961a2ce8ef9442010909a29dbf5">next</a></td></tr>
+<tr class="separator:ab423f961a2ce8ef9442010909a29dbf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16e4be8873bd93ac84c7b7d86455d518"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d5/d44/group__lavc__core.html#ga27561af66de4a75c3da1dc61f8c5cd9a">AVCodecDefault</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d2a/struct_a_v_codec.html#a16e4be8873bd93ac84c7b7d86455d518">defaults</a></td></tr>
+<tr class="separator:a16e4be8873bd93ac84c7b7d86455d518"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47f02232b1793c788132d0ca0fd2252a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d2a/struct_a_v_codec.html#a47f02232b1793c788132d0ca0fd2252a">init_static_data</a> )(struct <a class="el" href="../../df/d2a/struct_a_v_codec.html">AVCodec</a> *codec)</td></tr>
+<tr class="separator:a47f02232b1793c788132d0ca0fd2252a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76f222be1221210dadda60e4fce08e80"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d2a/struct_a_v_codec.html#a76f222be1221210dadda60e4fce08e80">init</a> )(<a class="el" href="../../de/d1f/struct_a_v_codec_context.html">AVCodecContext</a> *)</td></tr>
+<tr class="separator:a76f222be1221210dadda60e4fce08e80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d108464b7461d2e4f1e27ad685c8c2b"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d2a/struct_a_v_codec.html#a5d108464b7461d2e4f1e27ad685c8c2b">encode_sub</a> )(<a class="el" href="../../de/d1f/struct_a_v_codec_context.html">AVCodecContext</a> *, <a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa3b73d9ca9f2e2396cbeae1ce6ce14be">buf</a>, int buf_size, const struct <a class="el" href="../../d8/d8b/struct_a_v_subtitle.html">AVSubtitle</a> *sub)</td></tr>
+<tr class="separator:a5d108464b7461d2e4f1e27ad685c8c2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac764e717bb18064de8e4608b8dce5ca4"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d2a/struct_a_v_codec.html#ac764e717bb18064de8e4608b8dce5ca4">encode2</a> )(<a class="el" href="../../de/d1f/struct_a_v_codec_context.html">AVCodecContext</a> *avctx, <a class="el" href="../../d4/d31/struct_a_v_packet.html">AVPacket</a> *avpkt, const <a class="el" href="../../d6/d03/struct_a_v_frame.html">AVFrame</a> *frame, int *got_packet_ptr)</td></tr>
+<tr class="separator:ac764e717bb18064de8e4608b8dce5ca4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e8ca285370a79a060026b9c36f65f0d"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d2a/struct_a_v_codec.html#a2e8ca285370a79a060026b9c36f65f0d">decode</a> )(<a class="el" href="../../de/d1f/struct_a_v_codec_context.html">AVCodecContext</a> *, <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *outdata, int *outdata_size, <a class="el" href="../../d4/d31/struct_a_v_packet.html">AVPacket</a> *avpkt)</td></tr>
+<tr class="separator:a2e8ca285370a79a060026b9c36f65f0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e200e27b37d64d1f941260aeffeb265"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d2a/struct_a_v_codec.html#a7e200e27b37d64d1f941260aeffeb265">close</a> )(<a class="el" href="../../de/d1f/struct_a_v_codec_context.html">AVCodecContext</a> *)</td></tr>
+<tr class="separator:a7e200e27b37d64d1f941260aeffeb265"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b4da7efc52b8b702d403ecb419f1984"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d2a/struct_a_v_codec.html#a0b4da7efc52b8b702d403ecb419f1984">send_frame</a> )(<a class="el" href="../../de/d1f/struct_a_v_codec_context.html">AVCodecContext</a> *avctx, const <a class="el" href="../../d6/d03/struct_a_v_frame.html">AVFrame</a> *frame)</td></tr>
+<tr class="separator:a0b4da7efc52b8b702d403ecb419f1984"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c68c6a2b8e5c2e2d08a5c6815d6d781"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d2a/struct_a_v_codec.html#a1c68c6a2b8e5c2e2d08a5c6815d6d781">receive_packet</a> )(<a class="el" href="../../de/d1f/struct_a_v_codec_context.html">AVCodecContext</a> *avctx, <a class="el" href="../../d4/d31/struct_a_v_packet.html">AVPacket</a> *avpkt)</td></tr>
+<tr class="separator:a1c68c6a2b8e5c2e2d08a5c6815d6d781"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c158410eee477797d99ad5a98ef966b"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d2a/struct_a_v_codec.html#a3c158410eee477797d99ad5a98ef966b">receive_frame</a> )(<a class="el" href="../../de/d1f/struct_a_v_codec_context.html">AVCodecContext</a> *avctx, <a class="el" href="../../d6/d03/struct_a_v_frame.html">AVFrame</a> *frame)</td></tr>
+<tr class="separator:a3c158410eee477797d99ad5a98ef966b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70d96d86e4c055f218d5164f94685647"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d2a/struct_a_v_codec.html#a70d96d86e4c055f218d5164f94685647">flush</a> )(<a class="el" href="../../de/d1f/struct_a_v_codec_context.html">AVCodecContext</a> *)</td></tr>
+<tr class="separator:a70d96d86e4c055f218d5164f94685647"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30b99d076ad0288b0d9bf3c931df8986"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d2a/struct_a_v_codec.html#a30b99d076ad0288b0d9bf3c931df8986">caps_internal</a></td></tr>
+<tr class="separator:a30b99d076ad0288b0d9bf3c931df8986"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4227db7a6938acb9f88e328a3ae0eab2"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d2a/struct_a_v_codec.html#a4227db7a6938acb9f88e328a3ae0eab2">bsfs</a></td></tr>
+<tr class="separator:a4227db7a6938acb9f88e328a3ae0eab2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa20cf56732e14e5dddb94498f192dedb"><td class="memItemLeft" align="right" valign="top">const struct AVCodecHWConfigInternal **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d2a/struct_a_v_codec.html#aa20cf56732e14e5dddb94498f192dedb">hw_configs</a></td></tr>
+<tr class="separator:aa20cf56732e14e5dddb94498f192dedb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Frame-level threading support functions</div></td></tr>
+<tr class="memitem:a7f9ba73a1d649c453a34b33d15ad99c3"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d2a/struct_a_v_codec.html#a7f9ba73a1d649c453a34b33d15ad99c3">init_thread_copy</a> )(<a class="el" href="../../de/d1f/struct_a_v_codec_context.html">AVCodecContext</a> *)</td></tr>
+<tr class="separator:a7f9ba73a1d649c453a34b33d15ad99c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a286e505d913763a6bb9ea2bfee00f2c3"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d2a/struct_a_v_codec.html#a286e505d913763a6bb9ea2bfee00f2c3">update_thread_context</a> )(<a class="el" href="../../de/d1f/struct_a_v_codec_context.html">AVCodecContext</a> *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a92034251bfd455d524a9b5610cddba00">dst</a>, const <a class="el" href="../../de/d1f/struct_a_v_codec_context.html">AVCodecContext</a> *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a72e0fdf0f845ded60b1fada9e9195cd7">src</a>)</td></tr>
+<tr class="separator:a286e505d913763a6bb9ea2bfee00f2c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p><a class="el" href="../../df/d2a/struct_a_v_codec.html">AVCodec</a>. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d4/d02/avcodec_8h_source.html">avcodec.h</a> строка <a class="el" href="../../d4/d02/avcodec_8h_source.html#l03481">3481</a></p>
+</div><h2 class="groupheader">Данные класса</h2>
+<a id="ad3daa3e729850b573c139a83be8938ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3daa3e729850b573c139a83be8938ca">&#9670;&nbsp;</a></span>name</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* AVCodec::name</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Name of the codec implementation. The name is globally unique among encoders and among decoders (but an encoder and a decoder can share the same name). This is the primary way to find a codec from the user perspective. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d4/d02/avcodec_8h_source.html">avcodec.h</a> строка <a class="el" href="../../d4/d02/avcodec_8h_source.html#l03488">3488</a></p>
+
+</div>
+</div>
+<a id="acb4afcfce3b6541ed70aa7f21d507422"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb4afcfce3b6541ed70aa7f21d507422">&#9670;&nbsp;</a></span>long_name</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* AVCodec::long_name</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Descriptive name for the codec, meant to be more human readable than name. You should use the NULL_IF_CONFIG_SMALL() macro to define it. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d4/d02/avcodec_8h_source.html">avcodec.h</a> строка <a class="el" href="../../d4/d02/avcodec_8h_source.html#l03493">3493</a></p>
+
+</div>
+</div>
+<a id="ab539ca86026d043803c24ba06fa84197"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab539ca86026d043803c24ba06fa84197">&#9670;&nbsp;</a></span>type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="../../d7/d83/group__lavu__misc.html#ga9a84bba4713dfced21a1a56163be1f48">AVMediaType</a> AVCodec::type</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d4/d02/avcodec_8h_source.html">avcodec.h</a> строка <a class="el" href="../../d4/d02/avcodec_8h_source.html#l03494">3494</a></p>
+
+</div>
+</div>
+<a id="a01a53d07936f4c7ee280444793b6967b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01a53d07936f4c7ee280444793b6967b">&#9670;&nbsp;</a></span>id</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="../../d5/d44/group__lavc__core.html#gaadca229ad2c20e060a14fec08a5cc7ce">AVCodecID</a> AVCodec::id</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d4/d02/avcodec_8h_source.html">avcodec.h</a> строка <a class="el" href="../../d4/d02/avcodec_8h_source.html#l03495">3495</a></p>
+
+</div>
+</div>
+<a id="af51f7ff3dac8b730f46b9713e49a2518"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af51f7ff3dac8b730f46b9713e49a2518">&#9670;&nbsp;</a></span>capabilities</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int AVCodec::capabilities</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Codec capabilities. see AV_CODEC_CAP_* </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d4/d02/avcodec_8h_source.html">avcodec.h</a> строка <a class="el" href="../../d4/d02/avcodec_8h_source.html#l03500">3500</a></p>
+
+</div>
+</div>
+<a id="a5cc75a0ab41697df21a8cd649662190c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cc75a0ab41697df21a8cd649662190c">&#9670;&nbsp;</a></span>supported_framerates</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="../../d7/d28/struct_a_v_rational.html">AVRational</a>* AVCodec::supported_framerates</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>array of supported framerates, or NULL if any, array is terminated by {0,0} </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d4/d02/avcodec_8h_source.html">avcodec.h</a> строка <a class="el" href="../../d4/d02/avcodec_8h_source.html#l03501">3501</a></p>
+
+</div>
+</div>
+<a id="ac2b97bd3c19686025e1b7d577329c250"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2b97bd3c19686025e1b7d577329c250">&#9670;&nbsp;</a></span>pix_fmts</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="../../dd/d6c/pixfmt_8h.html#a9a8e335cf3be472042bc9f0cf80cd4c5">AVPixelFormat</a>* AVCodec::pix_fmts</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>array of supported pixel formats, or NULL if unknown, array is terminated by -1 </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d4/d02/avcodec_8h_source.html">avcodec.h</a> строка <a class="el" href="../../d4/d02/avcodec_8h_source.html#l03502">3502</a></p>
+
+</div>
+</div>
+<a id="aee7a194f1c3251958d3dabed3fa8148e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee7a194f1c3251958d3dabed3fa8148e">&#9670;&nbsp;</a></span>supported_samplerates</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int* AVCodec::supported_samplerates</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>array of supported audio samplerates, or NULL if unknown, array is terminated by 0 </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d4/d02/avcodec_8h_source.html">avcodec.h</a> строка <a class="el" href="../../d4/d02/avcodec_8h_source.html#l03503">3503</a></p>
+
+</div>
+</div>
+<a id="aac19f4c45370f715412ad5c7b78daacf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac19f4c45370f715412ad5c7b78daacf">&#9670;&nbsp;</a></span>sample_fmts</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="../../da/d54/group__lavu__sampfmts.html#gaf9a51ca15301871723577c730b5865c5">AVSampleFormat</a>* AVCodec::sample_fmts</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>array of supported sample formats, or NULL if unknown, array is terminated by -1 </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d4/d02/avcodec_8h_source.html">avcodec.h</a> строка <a class="el" href="../../d4/d02/avcodec_8h_source.html#l03504">3504</a></p>
+
+</div>
+</div>
+<a id="a1d4c5152626bbd1f575a3e0014cb59e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d4c5152626bbd1f575a3e0014cb59e7">&#9670;&nbsp;</a></span>channel_layouts</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="../../dd/df4/alext_8h.html#aec6fcb673ff035718c238c8c9d544c47">uint64_t</a>* AVCodec::channel_layouts</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>array of support channel layouts, or NULL if unknown. array is terminated by 0 </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d4/d02/avcodec_8h_source.html">avcodec.h</a> строка <a class="el" href="../../d4/d02/avcodec_8h_source.html#l03505">3505</a></p>
+
+</div>
+</div>
+<a id="afc51006d374ca72dfa3b0e29cbb1d981"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc51006d374ca72dfa3b0e29cbb1d981">&#9670;&nbsp;</a></span>max_lowres</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> AVCodec::max_lowres</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>maximum value for lowres supported by the decoder </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d4/d02/avcodec_8h_source.html">avcodec.h</a> строка <a class="el" href="../../d4/d02/avcodec_8h_source.html#l03506">3506</a></p>
+
+</div>
+</div>
+<a id="a4ded9f7ec1fa1a73ea3e831428c100fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ded9f7ec1fa1a73ea3e831428c100fa">&#9670;&nbsp;</a></span>priv_class</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="../../d2/de1/struct_a_v_class.html">AVClass</a>* AVCodec::priv_class</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="../../d2/de1/struct_a_v_class.html">AVClass</a> for the private context. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d4/d02/avcodec_8h_source.html">avcodec.h</a> строка <a class="el" href="../../d4/d02/avcodec_8h_source.html#l03507">3507</a></p>
+
+</div>
+</div>
+<a id="ac832350f2bac582fe3d174e2e3b1eb5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac832350f2bac582fe3d174e2e3b1eb5e">&#9670;&nbsp;</a></span>profiles</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="../../d7/dc6/struct_a_v_profile.html">AVProfile</a>* AVCodec::profiles</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>array of recognized profiles, or NULL if unknown, array is terminated by {FF_PROFILE_UNKNOWN} </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d4/d02/avcodec_8h_source.html">avcodec.h</a> строка <a class="el" href="../../d4/d02/avcodec_8h_source.html#l03508">3508</a></p>
+
+</div>
+</div>
+<a id="ad2f26d22c4dc49710bebc0fceda4d125"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2f26d22c4dc49710bebc0fceda4d125">&#9670;&nbsp;</a></span>wrapper_name</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* AVCodec::wrapper_name</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Group name of the codec implementation. This is a short symbolic name of the wrapper backing this codec. A wrapper uses some kind of external implementation for the codec, such as an external library, or a codec implementation provided by the OS or the hardware. If this field is NULL, this is a builtin, libavcodec native codec. If non-NULL, this will be the suffix in <a class="el" href="../../df/d2a/struct_a_v_codec.html#ad3daa3e729850b573c139a83be8938ca">AVCodec.name</a> in most cases (usually <a class="el" href="../../df/d2a/struct_a_v_codec.html#ad3daa3e729850b573c139a83be8938ca">AVCodec.name</a> will be of the form "&lt;codec_name&gt;_&lt;wrapper_name&gt;"). </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d4/d02/avcodec_8h_source.html">avcodec.h</a> строка <a class="el" href="../../d4/d02/avcodec_8h_source.html#l03520">3520</a></p>
+
+</div>
+</div>
+<a id="aa86c803fcfc0ebb569b15d4645d0e796"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa86c803fcfc0ebb569b15d4645d0e796">&#9670;&nbsp;</a></span>priv_data_size</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int AVCodec::priv_data_size</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d4/d02/avcodec_8h_source.html">avcodec.h</a> строка <a class="el" href="../../d4/d02/avcodec_8h_source.html#l03529">3529</a></p>
+
+</div>
+</div>
+<a id="ab423f961a2ce8ef9442010909a29dbf5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab423f961a2ce8ef9442010909a29dbf5">&#9670;&nbsp;</a></span>next</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="../../df/d2a/struct_a_v_codec.html">AVCodec</a>* AVCodec::next</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d4/d02/avcodec_8h_source.html">avcodec.h</a> строка <a class="el" href="../../d4/d02/avcodec_8h_source.html#l03530">3530</a></p>
+
+</div>
+</div>
+<a id="a7f9ba73a1d649c453a34b33d15ad99c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f9ba73a1d649c453a34b33d15ad99c3">&#9670;&nbsp;</a></span>init_thread_copy</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int(* AVCodec::init_thread_copy) (<a class="el" href="../../de/d1f/struct_a_v_codec_context.html">AVCodecContext</a> *)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>If defined, called on thread contexts when they are created. If the codec allocates writable tables in <a class="el" href="../../df/d2a/struct_a_v_codec.html#a76f222be1221210dadda60e4fce08e80">init()</a>, re-allocate them here. priv_data will be set to a copy of the original. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d4/d02/avcodec_8h_source.html">avcodec.h</a> строка <a class="el" href="../../d4/d02/avcodec_8h_source.html#l03540">3540</a></p>
+
+</div>
+</div>
+<a id="a286e505d913763a6bb9ea2bfee00f2c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a286e505d913763a6bb9ea2bfee00f2c3">&#9670;&nbsp;</a></span>update_thread_context</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int(* AVCodec::update_thread_context) (<a class="el" href="../../de/d1f/struct_a_v_codec_context.html">AVCodecContext</a> *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a92034251bfd455d524a9b5610cddba00">dst</a>, const <a class="el" href="../../de/d1f/struct_a_v_codec_context.html">AVCodecContext</a> *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a72e0fdf0f845ded60b1fada9e9195cd7">src</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Copy necessary context variables from a previous thread context to the current one. If not defined, the next thread will start automatically; otherwise, the codec must call ff_thread_finish_setup().</p>
+<p>dst and src will (rarely) point to the same context, in which case memcpy should be skipped. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d4/d02/avcodec_8h_source.html">avcodec.h</a> строка <a class="el" href="../../d4/d02/avcodec_8h_source.html#l03548">3548</a></p>
+
+</div>
+</div>
+<a id="a16e4be8873bd93ac84c7b7d86455d518"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16e4be8873bd93ac84c7b7d86455d518">&#9670;&nbsp;</a></span>defaults</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="../../d5/d44/group__lavc__core.html#ga27561af66de4a75c3da1dc61f8c5cd9a">AVCodecDefault</a>* AVCodec::defaults</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Private codec-specific defaults. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d4/d02/avcodec_8h_source.html">avcodec.h</a> строка <a class="el" href="../../d4/d02/avcodec_8h_source.html#l03554">3554</a></p>
+
+</div>
+</div>
+<a id="a47f02232b1793c788132d0ca0fd2252a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47f02232b1793c788132d0ca0fd2252a">&#9670;&nbsp;</a></span>init_static_data</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>(* AVCodec::init_static_data) (struct <a class="el" href="../../df/d2a/struct_a_v_codec.html">AVCodec</a> *codec)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Initialize codec static data, called from <a class="el" href="../../d5/d44/group__lavc__core.html#ga7086a11f0d1f1dac9f5d40bf0962476c">avcodec_register()</a>.</p>
+<p>This is not intended for time consuming operations as it is run for every codec regardless of that codec being used. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d4/d02/avcodec_8h_source.html">avcodec.h</a> строка <a class="el" href="../../d4/d02/avcodec_8h_source.html#l03562">3562</a></p>
+
+</div>
+</div>
+<a id="a76f222be1221210dadda60e4fce08e80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76f222be1221210dadda60e4fce08e80">&#9670;&nbsp;</a></span>init</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int(* AVCodec::init) (<a class="el" href="../../de/d1f/struct_a_v_codec_context.html">AVCodecContext</a> *)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d4/d02/avcodec_8h_source.html">avcodec.h</a> строка <a class="el" href="../../d4/d02/avcodec_8h_source.html#l03564">3564</a></p>
+
+</div>
+</div>
+<a id="a5d108464b7461d2e4f1e27ad685c8c2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d108464b7461d2e4f1e27ad685c8c2b">&#9670;&nbsp;</a></span>encode_sub</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int(* AVCodec::encode_sub) (<a class="el" href="../../de/d1f/struct_a_v_codec_context.html">AVCodecContext</a> *, <a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa3b73d9ca9f2e2396cbeae1ce6ce14be">buf</a>, int buf_size, const struct <a class="el" href="../../d8/d8b/struct_a_v_subtitle.html">AVSubtitle</a> *sub)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d4/d02/avcodec_8h_source.html">avcodec.h</a> строка <a class="el" href="../../d4/d02/avcodec_8h_source.html#l03565">3565</a></p>
+
+</div>
+</div>
+<a id="ac764e717bb18064de8e4608b8dce5ca4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac764e717bb18064de8e4608b8dce5ca4">&#9670;&nbsp;</a></span>encode2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int(* AVCodec::encode2) (<a class="el" href="../../de/d1f/struct_a_v_codec_context.html">AVCodecContext</a> *avctx, <a class="el" href="../../d4/d31/struct_a_v_packet.html">AVPacket</a> *avpkt, const <a class="el" href="../../d6/d03/struct_a_v_frame.html">AVFrame</a> *frame, int *got_packet_ptr)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Encode data to an <a class="el" href="../../d4/d31/struct_a_v_packet.html">AVPacket</a>.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">avctx</td><td>codec context </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">avpkt</td><td>output <a class="el" href="../../d4/d31/struct_a_v_packet.html">AVPacket</a> (may contain a user-provided buffer) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">frame</td><td><a class="el" href="../../d6/d03/struct_a_v_frame.html">AVFrame</a> containing the raw data to be encoded </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">got_packet_ptr</td><td>encoder sets to 0 or 1 to indicate that a non-empty packet was returned in avpkt. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>0 on success, negative error code on failure </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d4/d02/avcodec_8h_source.html">avcodec.h</a> строка <a class="el" href="../../d4/d02/avcodec_8h_source.html#l03577">3577</a></p>
+
+</div>
+</div>
+<a id="a2e8ca285370a79a060026b9c36f65f0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e8ca285370a79a060026b9c36f65f0d">&#9670;&nbsp;</a></span>decode</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int(* AVCodec::decode) (<a class="el" href="../../de/d1f/struct_a_v_codec_context.html">AVCodecContext</a> *, <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *outdata, int *outdata_size, <a class="el" href="../../d4/d31/struct_a_v_packet.html">AVPacket</a> *avpkt)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d4/d02/avcodec_8h_source.html">avcodec.h</a> строка <a class="el" href="../../d4/d02/avcodec_8h_source.html#l03579">3579</a></p>
+
+</div>
+</div>
+<a id="a7e200e27b37d64d1f941260aeffeb265"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e200e27b37d64d1f941260aeffeb265">&#9670;&nbsp;</a></span>close</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int(* AVCodec::close) (<a class="el" href="../../de/d1f/struct_a_v_codec_context.html">AVCodecContext</a> *)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d4/d02/avcodec_8h_source.html">avcodec.h</a> строка <a class="el" href="../../d4/d02/avcodec_8h_source.html#l03580">3580</a></p>
+
+</div>
+</div>
+<a id="a0b4da7efc52b8b702d403ecb419f1984"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b4da7efc52b8b702d403ecb419f1984">&#9670;&nbsp;</a></span>send_frame</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int(* AVCodec::send_frame) (<a class="el" href="../../de/d1f/struct_a_v_codec_context.html">AVCodecContext</a> *avctx, const <a class="el" href="../../d6/d03/struct_a_v_frame.html">AVFrame</a> *frame)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Encode API with decoupled packet/frame dataflow. The API is the same as the avcodec_ prefixed APIs (<a class="el" href="../../d0/d0c/group__lavc__decoding.html#ga9395cb802a5febf1f00df31497779169">avcodec_send_frame()</a> etc.), except that:</p><ul>
+<li>never called if the codec is closed or the wrong type,</li>
+<li>if AV_CODEC_CAP_DELAY is not set, drain frames are never sent,</li>
+<li>only one drain frame is ever passed down, </li>
+</ul>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d4/d02/avcodec_8h_source.html">avcodec.h</a> строка <a class="el" href="../../d4/d02/avcodec_8h_source.html#l03589">3589</a></p>
+
+</div>
+</div>
+<a id="a1c68c6a2b8e5c2e2d08a5c6815d6d781"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c68c6a2b8e5c2e2d08a5c6815d6d781">&#9670;&nbsp;</a></span>receive_packet</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int(* AVCodec::receive_packet) (<a class="el" href="../../de/d1f/struct_a_v_codec_context.html">AVCodecContext</a> *avctx, <a class="el" href="../../d4/d31/struct_a_v_packet.html">AVPacket</a> *avpkt)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d4/d02/avcodec_8h_source.html">avcodec.h</a> строка <a class="el" href="../../d4/d02/avcodec_8h_source.html#l03590">3590</a></p>
+
+</div>
+</div>
+<a id="a3c158410eee477797d99ad5a98ef966b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c158410eee477797d99ad5a98ef966b">&#9670;&nbsp;</a></span>receive_frame</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int(* AVCodec::receive_frame) (<a class="el" href="../../de/d1f/struct_a_v_codec_context.html">AVCodecContext</a> *avctx, <a class="el" href="../../d6/d03/struct_a_v_frame.html">AVFrame</a> *frame)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Decode API with decoupled packet/frame dataflow. This function is called to get one output frame. It should call ff_decode_get_packet() to obtain input data. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d4/d02/avcodec_8h_source.html">avcodec.h</a> строка <a class="el" href="../../d4/d02/avcodec_8h_source.html#l03597">3597</a></p>
+
+</div>
+</div>
+<a id="a70d96d86e4c055f218d5164f94685647"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70d96d86e4c055f218d5164f94685647">&#9670;&nbsp;</a></span>flush</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>(* AVCodec::flush) (<a class="el" href="../../de/d1f/struct_a_v_codec_context.html">AVCodecContext</a> *)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Flush buffers. Will be called when seeking </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d4/d02/avcodec_8h_source.html">avcodec.h</a> строка <a class="el" href="../../d4/d02/avcodec_8h_source.html#l03602">3602</a></p>
+
+</div>
+</div>
+<a id="a30b99d076ad0288b0d9bf3c931df8986"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30b99d076ad0288b0d9bf3c931df8986">&#9670;&nbsp;</a></span>caps_internal</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int AVCodec::caps_internal</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Internal codec capabilities. See FF_CODEC_CAP_* in internal.h </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d4/d02/avcodec_8h_source.html">avcodec.h</a> строка <a class="el" href="../../d4/d02/avcodec_8h_source.html#l03607">3607</a></p>
+
+</div>
+</div>
+<a id="a4227db7a6938acb9f88e328a3ae0eab2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4227db7a6938acb9f88e328a3ae0eab2">&#9670;&nbsp;</a></span>bsfs</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* AVCodec::bsfs</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Decoding only, a comma-separated list of bitstream filters to apply to packets before decoding. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d4/d02/avcodec_8h_source.html">avcodec.h</a> строка <a class="el" href="../../d4/d02/avcodec_8h_source.html#l03613">3613</a></p>
+
+</div>
+</div>
+<a id="aa20cf56732e14e5dddb94498f192dedb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa20cf56732e14e5dddb94498f192dedb">&#9670;&nbsp;</a></span>hw_configs</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const struct AVCodecHWConfigInternal** AVCodec::hw_configs</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Array of pointers to hardware configurations supported by the codec, or NULL if no hardware supported. The array is terminated by a NULL pointer.</p>
+<p>The user can only access this field via <a class="el" href="../../d5/d44/group__lavc__core.html#ga4f80582a2ea9c0e141de5d6f6152008f">avcodec_get_hw_config()</a>. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d4/d02/avcodec_8h_source.html">avcodec.h</a> строка <a class="el" href="../../d4/d02/avcodec_8h_source.html#l03622">3622</a></p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов структуры находятся в файле:<ul>
+<li>C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavcodec/<a class="el" href="../../d4/d02/avcodec_8h_source.html">avcodec.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../df/d2a/struct_a_v_codec.html">AVCodec</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:04:33. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

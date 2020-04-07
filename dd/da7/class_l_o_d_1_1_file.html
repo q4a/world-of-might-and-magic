@@ -1,0 +1,1285 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Класс LOD::File</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('dd/da7/class_l_o_d_1_1_file.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pro-methods">Защищенные члены</a> &#124;
+<a href="#pro-attribs">Защищенные данные</a> &#124;
+<a href="../../d1/d54/class_l_o_d_1_1_file-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс LOD::File</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="../../d3/db2/_l_o_d_8h_source.html">LOD.h</a>&gt;</code></p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Граф наследования:LOD::File:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d7/dc5/class_l_o_d_1_1_file__inherit__graph.svg" width="464" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">см. легенду</a>]</span></center></div>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="../../closed.png" alt="+"/> Граф связей класса LOD::File:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../dc/da1/class_l_o_d_1_1_file__coll__graph.svg" width="262" height="127"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a9727a0a74fa79d7c2f968c677320b26f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/da7/class_l_o_d_1_1_file.html#a9727a0a74fa79d7c2f968c677320b26f">File</a> ()</td></tr>
+<tr class="separator:a9727a0a74fa79d7c2f968c677320b26f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd8f745940e2b331880f1830fcfbae60"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/da7/class_l_o_d_1_1_file.html#abd8f745940e2b331880f1830fcfbae60">~File</a> ()</td></tr>
+<tr class="separator:abd8f745940e2b331880f1830fcfbae60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa32d8447321690bead61de05f93352be"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/da7/class_l_o_d_1_1_file.html#aa32d8447321690bead61de05f93352be">Open</a> (const <a class="el" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> &amp;pFilename)</td></tr>
+<tr class="separator:aa32d8447321690bead61de05f93352be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab71fc5e72e25e22a2712c317528db0d9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/da7/class_l_o_d_1_1_file.html#ab71fc5e72e25e22a2712c317528db0d9">Close</a> ()</td></tr>
+<tr class="separator:ab71fc5e72e25e22a2712c317528db0d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4069f908e27c3507a03d2bb12ad6f0f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/da7/class_l_o_d_1_1_file.html#ae4069f908e27c3507a03d2bb12ad6f0f">LoadRaw</a> (const <a class="el" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> &amp;pContainer, <a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a7c94ea6f8948649f8d181ae55911eeaf">size_t</a> *data_size=nullptr)</td></tr>
+<tr class="separator:ae4069f908e27c3507a03d2bb12ad6f0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2af972a90784bbcfa975ccd0346385d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/da7/class_l_o_d_1_1_file.html#af2af972a90784bbcfa975ccd0346385d">LoadCompressedTexture</a> (const <a class="el" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> &amp;pContainer, <a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a7c94ea6f8948649f8d181ae55911eeaf">size_t</a> *data_size=nullptr)</td></tr>
+<tr class="separator:af2af972a90784bbcfa975ccd0346385d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1b41c19c91c2c90723d263089c30a30"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/da7/class_l_o_d_1_1_file.html#ad1b41c19c91c2c90723d263089c30a30">LoadCompressed</a> (const <a class="el" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> &amp;pContainer, <a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a7c94ea6f8948649f8d181ae55911eeaf">size_t</a> *data_size=nullptr)</td></tr>
+<tr class="separator:ad1b41c19c91c2c90723d263089c30a30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f308ac99a49c87179a5dff49084b81f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/da7/class_l_o_d_1_1_file.html#a5f308ac99a49c87179a5dff49084b81f">DoesContainerExist</a> (const <a class="el" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> &amp;filename)</td></tr>
+<tr class="separator:a5f308ac99a49c87179a5dff49084b81f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76ad87710f9789b6d473a3e6695d04bf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/da7/class_l_o_d_1_1_file.html#a76ad87710f9789b6d473a3e6695d04bf">GetSubNodeName</a> (<a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a7c94ea6f8948649f8d181ae55911eeaf">size_t</a> <a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a57f14e05b1900f16a2da82ade47d0c6d">index</a>) const</td></tr>
+<tr class="separator:a76ad87710f9789b6d473a3e6695d04bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cbd11dc40049f05d547c4073900e598"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a7c94ea6f8948649f8d181ae55911eeaf">size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/da7/class_l_o_d_1_1_file.html#a0cbd11dc40049f05d547c4073900e598">GetSubNodesCount</a> () const</td></tr>
+<tr class="separator:a0cbd11dc40049f05d547c4073900e598"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73d8b96f07e67ee01160123e613a1466"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/da7/class_l_o_d_1_1_file.html#a73d8b96f07e67ee01160123e613a1466">GetSubNodeIndex</a> (const <a class="el" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> &amp;<a class="el" href="../../df/d32/_s_d_l__egl_8h.html#aaced7cfc21e7d37775d6921bb8177239">name</a>) const</td></tr>
+<tr class="separator:a73d8b96f07e67ee01160123e613a1466"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Защищенные члены</h2></td></tr>
+<tr class="memitem:a3b042a1ac553b2cfdf5b3a1298ce9375"><td class="memItemLeft" align="right" valign="top">FILE *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/da7/class_l_o_d_1_1_file.html#a3b042a1ac553b2cfdf5b3a1298ce9375">FindContainer</a> (const <a class="el" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> &amp;filename, <a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a7c94ea6f8948649f8d181ae55911eeaf">size_t</a> *data_size=nullptr)</td></tr>
+<tr class="separator:a3b042a1ac553b2cfdf5b3a1298ce9375"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd059bd33f1b7f3f28a59b5f1eb1ad92"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/da7/class_l_o_d_1_1_file.html#abd059bd33f1b7f3f28a59b5f1eb1ad92">OpenFile</a> (const <a class="el" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> &amp;sFilename)</td></tr>
+<tr class="separator:abd059bd33f1b7f3f28a59b5f1eb1ad92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94f80b82e0e80faee257d1cb18f8267d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/da7/class_l_o_d_1_1_file.html#a94f80b82e0e80faee257d1cb18f8267d">LoadHeader</a> ()</td></tr>
+<tr class="separator:a94f80b82e0e80faee257d1cb18f8267d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3272ae8caf1e5a3ffb1f2533e46a477b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/da7/class_l_o_d_1_1_file.html#a3272ae8caf1e5a3ffb1f2533e46a477b">LoadSubIndices</a> (const <a class="el" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> &amp;sFolder)</td></tr>
+<tr class="separator:a3272ae8caf1e5a3ffb1f2533e46a477b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f6af489e25a2a9a623cad5f8c923ea9"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/da7/class_l_o_d_1_1_file.html#a5f6af489e25a2a9a623cad5f8c923ea9">ResetSubIndices</a> ()</td></tr>
+<tr class="separator:a5f6af489e25a2a9a623cad5f8c923ea9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Защищенные данные</h2></td></tr>
+<tr class="memitem:a686f8c6509748a20a067d674590c1ccb"><td class="memItemLeft" align="right" valign="top">FILE *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/da7/class_l_o_d_1_1_file.html#a686f8c6509748a20a067d674590c1ccb">pFile</a></td></tr>
+<tr class="separator:a686f8c6509748a20a067d674590c1ccb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d14fe6afb04d6cc126047e44bf82b62"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/da7/class_l_o_d_1_1_file.html#a4d14fe6afb04d6cc126047e44bf82b62">pLODName</a></td></tr>
+<tr class="separator:a4d14fe6afb04d6cc126047e44bf82b62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f762d0ab8fac8fdcf8fa4d66cec32ed"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/da7/class_l_o_d_1_1_file.html#a8f762d0ab8fac8fdcf8fa4d66cec32ed">isFileOpened</a></td></tr>
+<tr class="separator:a8f762d0ab8fac8fdcf8fa4d66cec32ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ce37440b37d55351995559664161bd8"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="../../dc/d2a/struct_l_o_d_1_1_file_header.html">FileHeader</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/da7/class_l_o_d_1_1_file.html#a2ce37440b37d55351995559664161bd8">header</a></td></tr>
+<tr class="separator:a2ce37440b37d55351995559664161bd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3206b35b36bdb0effcfe6a659eaf1f91"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../d1/db2/struct_l_o_d_1_1_directory.html">Directory</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/da7/class_l_o_d_1_1_file.html#a3206b35b36bdb0effcfe6a659eaf1f91">pRoot</a></td></tr>
+<tr class="separator:a3206b35b36bdb0effcfe6a659eaf1f91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c952c2df6ae15342439a86dfe56469a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/da7/class_l_o_d_1_1_file.html#a2c952c2df6ae15342439a86dfe56469a">pContainerName</a></td></tr>
+<tr class="separator:a2c952c2df6ae15342439a86dfe56469a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5efc3f8cf7a80ac7a968d3b399dddbb9"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/da7/class_l_o_d_1_1_file.html#a5efc3f8cf7a80ac7a968d3b399dddbb9">uOffsetToSubIndex</a></td></tr>
+<tr class="separator:a5efc3f8cf7a80ac7a968d3b399dddbb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5e9bff4552e687f91ca583bdee1e4cf"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/da7/class_l_o_d_1_1_file.html#af5e9bff4552e687f91ca583bdee1e4cf">uNumSubDirs</a></td></tr>
+<tr class="separator:af5e9bff4552e687f91ca583bdee1e4cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9ff8061e107a4d4524340f0ce20a358"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="../../d1/db2/struct_l_o_d_1_1_directory.html">Directory</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/da7/class_l_o_d_1_1_file.html#aa9ff8061e107a4d4524340f0ce20a358">pSubIndices</a></td></tr>
+<tr class="separator:aa9ff8061e107a4d4524340f0ce20a358"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock">
+<p class="definition">См. определение в файле <a class="el" href="../../d3/db2/_l_o_d_8h_source.html">LOD.h</a> строка <a class="el" href="../../d3/db2/_l_o_d_8h_source.html#l00058">58</a></p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a9727a0a74fa79d7c2f968c677320b26f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9727a0a74fa79d7c2f968c677320b26f">&#9670;&nbsp;</a></span>File()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LOD::File::File </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html">LOD.cpp</a> строка <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html#l00739">739</a></p>
+<div class="fragment"><div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;              : <a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#a8f762d0ab8fac8fdcf8fa4d66cec32ed">isFileOpened</a>(<span class="keyword">false</span>) {</div>
+<div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160;    <a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#a686f8c6509748a20a067d674590c1ccb">pFile</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160;    <a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#aa9ff8061e107a4d4524340f0ce20a358">pSubIndices</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00742"></a><span class="lineno">  742</span>&#160;    <a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#ab71fc5e72e25e22a2712c317528db0d9">Close</a>();</div>
+<div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html#l00243">Close()</a>, <a class="el" href="../../d3/db2/_l_o_d_8h_source.html#l00083">pFile</a> и <a class="el" href="../../d3/db2/_l_o_d_8h_source.html#l00094">pSubIndices</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html#l00098">LODFile_Sprites::LoadSpriteFromFile()</a>.</p>
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../dd/da7/class_l_o_d_1_1_file_a9727a0a74fa79d7c2f968c677320b26f_cgraph.svg" width="284" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../dd/da7/class_l_o_d_1_1_file_a9727a0a74fa79d7c2f968c677320b26f_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="abd8f745940e2b331880f1830fcfbae60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd8f745940e2b331880f1830fcfbae60">&#9670;&nbsp;</a></span>~File()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">LOD::File::~File </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html">LOD.cpp</a> строка <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html#l00745">745</a></p>
+<div class="fragment"><div class="line"><a name="l00745"></a><span class="lineno">  745</span>&#160;               {</div>
+<div class="line"><a name="l00746"></a><span class="lineno">  746</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#a8f762d0ab8fac8fdcf8fa4d66cec32ed">isFileOpened</a>) {</div>
+<div class="line"><a name="l00747"></a><span class="lineno">  747</span>&#160;        fclose(<a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#a686f8c6509748a20a067d674590c1ccb">pFile</a>);</div>
+<div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160;    }</div>
+<div class="line"><a name="l00749"></a><span class="lineno">  749</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="aa32d8447321690bead61de05f93352be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa32d8447321690bead61de05f93352be">&#9670;&nbsp;</a></span>Open()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LOD::File::Open </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>pFilename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html">LOD.cpp</a> строка <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html#l00751">751</a></p>
+<div class="fragment"><div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160;                                          {</div>
+<div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#abd059bd33f1b7f3f28a59b5f1eb1ad92">OpenFile</a>(sFilename)) {</div>
+<div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00754"></a><span class="lineno">  754</span>&#160;    }</div>
+<div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160; </div>
+<div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#a94f80b82e0e80faee257d1cb18f8267d">LoadHeader</a>()) {</div>
+<div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;    }</div>
+<div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160; </div>
+<div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#a3272ae8caf1e5a3ffb1f2533e46a477b">LoadSubIndices</a>(<a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#a3206b35b36bdb0effcfe6a659eaf1f91">pRoot</a>.front().pFilename);</div>
+<div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Используется в <a class="el" href="../../d9/d68/_u_i_save_load_8cpp_source.html#l00121">GUIWindow_Load::GUIWindow_Load()</a>, <a class="el" href="../../d9/d68/_u_i_save_load_8cpp_source.html#l00035">GUIWindow_Save::GUIWindow_Save()</a>, <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html#l01218">Initialize_GamesLOD_NewLOD()</a> и <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html#l00141">LODFile_Sprites::LoadSprites()</a>.</p>
+<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../dd/da7/class_l_o_d_1_1_file_aa32d8447321690bead61de05f93352be_icgraph.svg" width="100%" height="454"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ab71fc5e72e25e22a2712c317528db0d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab71fc5e72e25e22a2712c317528db0d9">&#9670;&nbsp;</a></span>Close()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> LOD::File::Close </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html">LOD.cpp</a> строка <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html#l00243">243</a></p>
+<div class="fragment"><div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;                    {</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#a8f762d0ab8fac8fdcf8fa4d66cec32ed">isFileOpened</a>) {</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;        <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    }</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160; </div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    <a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#a2c952c2df6ae15342439a86dfe56469a">pContainerName</a>.clear();</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    <a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#a3206b35b36bdb0effcfe6a659eaf1f91">pRoot</a>.clear();</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    free(<a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#aa9ff8061e107a4d4524340f0ce20a358">pSubIndices</a>);</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    <a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#aa9ff8061e107a4d4524340f0ce20a358">pSubIndices</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    fclose(<a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#a686f8c6509748a20a067d674590c1ccb">pFile</a>);</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    <a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#a8f762d0ab8fac8fdcf8fa4d66cec32ed">isFileOpened</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    <a class="code" href="../../de/d42/_l_o_d_8cpp.html#a5e3e5362d7a687a56b2fa1dcced33774">_6A0CA8_lod_unused</a> = 0;</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html#l00028">_6A0CA8_lod_unused</a>, <a class="el" href="../../d3/db2/_l_o_d_8h_source.html#l00085">isFileOpened</a>, <a class="el" href="../../d3/db2/_l_o_d_8h_source.html#l00090">pContainerName</a>, <a class="el" href="../../d3/db2/_l_o_d_8h_source.html#l00083">pFile</a>, <a class="el" href="../../d3/db2/_l_o_d_8h_source.html#l00089">pRoot</a> и <a class="el" href="../../d3/db2/_l_o_d_8h_source.html#l00094">pSubIndices</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html#l00739">File()</a>.</p>
+<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../dd/da7/class_l_o_d_1_1_file_ab71fc5e72e25e22a2712c317528db0d9_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ae4069f908e27c3507a03d2bb12ad6f0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4069f908e27c3507a03d2bb12ad6f0f">&#9670;&nbsp;</a></span>LoadRaw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> * LOD::File::LoadRaw </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>pContainer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a7c94ea6f8948649f8d181ae55911eeaf">size_t</a> *&#160;</td>
+          <td class="paramname"><em>data_size</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html">LOD.cpp</a> строка <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html#l00895">895</a></p>
+<div class="fragment"><div class="line"><a name="l00895"></a><span class="lineno">  895</span>&#160;                                                                  {</div>
+<div class="line"><a name="l00896"></a><span class="lineno">  896</span>&#160;    <span class="keywordflow">if</span> (data_size != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00897"></a><span class="lineno">  897</span>&#160;        *data_size = 0;</div>
+<div class="line"><a name="l00898"></a><span class="lineno">  898</span>&#160;    }</div>
+<div class="line"><a name="l00899"></a><span class="lineno">  899</span>&#160; </div>
+<div class="line"><a name="l00900"></a><span class="lineno">  900</span>&#160;    <span class="keywordtype">size_t</span> <a class="code" href="../../db/d76/group__lavu__mem__funcs.html#ga3d1e3edfcf61ca2d831883e1afbad89e">size</a> = 0;</div>
+<div class="line"><a name="l00901"></a><span class="lineno">  901</span>&#160;    FILE *<a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#a9727a0a74fa79d7c2f968c677320b26f">File</a> = <a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#a3b042a1ac553b2cfdf5b3a1298ce9375">FindContainer</a>(pContainer, &amp;<a class="code" href="../../db/d76/group__lavu__mem__funcs.html#ga3d1e3edfcf61ca2d831883e1afbad89e">size</a>);</div>
+<div class="line"><a name="l00902"></a><span class="lineno">  902</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#a9727a0a74fa79d7c2f968c677320b26f">File</a>) {</div>
+<div class="line"><a name="l00903"></a><span class="lineno">  903</span>&#160;        Error(<span class="stringliteral">&quot;Unable to load %s&quot;</span>, pContainer.c_str());</div>
+<div class="line"><a name="l00904"></a><span class="lineno">  904</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00905"></a><span class="lineno">  905</span>&#160;    }</div>
+<div class="line"><a name="l00906"></a><span class="lineno">  906</span>&#160; </div>
+<div class="line"><a name="l00907"></a><span class="lineno">  907</span>&#160;    <span class="keywordtype">void</span> *<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a321ff419cd5252e54cf95e64dc6687ee">result</a> = malloc(<a class="code" href="../../db/d76/group__lavu__mem__funcs.html#ga3d1e3edfcf61ca2d831883e1afbad89e">size</a>);</div>
+<div class="line"><a name="l00908"></a><span class="lineno">  908</span>&#160;    <span class="keywordflow">if</span> (fread(<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a321ff419cd5252e54cf95e64dc6687ee">result</a>, <a class="code" href="../../db/d76/group__lavu__mem__funcs.html#ga3d1e3edfcf61ca2d831883e1afbad89e">size</a>, 1, <a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#a9727a0a74fa79d7c2f968c677320b26f">File</a>) != 1) {</div>
+<div class="line"><a name="l00909"></a><span class="lineno">  909</span>&#160;        free(<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a321ff419cd5252e54cf95e64dc6687ee">result</a>);</div>
+<div class="line"><a name="l00910"></a><span class="lineno">  910</span>&#160;        <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a321ff419cd5252e54cf95e64dc6687ee">result</a> = 0;</div>
+<div class="line"><a name="l00911"></a><span class="lineno">  911</span>&#160;        <a class="code" href="../../db/d76/group__lavu__mem__funcs.html#ga3d1e3edfcf61ca2d831883e1afbad89e">size</a> = 0;</div>
+<div class="line"><a name="l00912"></a><span class="lineno">  912</span>&#160;    }</div>
+<div class="line"><a name="l00913"></a><span class="lineno">  913</span>&#160; </div>
+<div class="line"><a name="l00914"></a><span class="lineno">  914</span>&#160;    <span class="keywordflow">if</span> (data_size != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00915"></a><span class="lineno">  915</span>&#160;        *data_size = <a class="code" href="../../db/d76/group__lavu__mem__funcs.html#ga3d1e3edfcf61ca2d831883e1afbad89e">size</a>;</div>
+<div class="line"><a name="l00916"></a><span class="lineno">  916</span>&#160;    }</div>
+<div class="line"><a name="l00917"></a><span class="lineno">  917</span>&#160; </div>
+<div class="line"><a name="l00918"></a><span class="lineno">  918</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a321ff419cd5252e54cf95e64dc6687ee">result</a>;</div>
+<div class="line"><a name="l00919"></a><span class="lineno">  919</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Используется в <a class="el" href="../../d9/d68/_u_i_save_load_8cpp_source.html#l00121">GUIWindow_Load::GUIWindow_Load()</a>, <a class="el" href="../../d9/d68/_u_i_save_load_8cpp_source.html#l00035">GUIWindow_Save::GUIWindow_Save()</a>, <a class="el" href="../../d4/d9d/_save_load_8cpp_source.html#l00077">LoadGame()</a> и <a class="el" href="../../d4/d9d/_save_load_8cpp_source.html#l00566">SaveNewGame()</a>.</p>
+<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../dd/da7/class_l_o_d_1_1_file_ae4069f908e27c3507a03d2bb12ad6f0f_icgraph.svg" width="100%" height="442"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="af2af972a90784bbcfa975ccd0346385d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2af972a90784bbcfa975ccd0346385d">&#9670;&nbsp;</a></span>LoadCompressedTexture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> * LOD::File::LoadCompressedTexture </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>pContainer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a7c94ea6f8948649f8d181ae55911eeaf">size_t</a> *&#160;</td>
+          <td class="paramname"><em>data_size</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html">LOD.cpp</a> строка <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html#l00921">921</a></p>
+<div class="fragment"><div class="line"><a name="l00921"></a><span class="lineno">  921</span>&#160;                                                                                {</div>
+<div class="line"><a name="l00922"></a><span class="lineno">  922</span>&#160;    <span class="keywordtype">void</span> *<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a321ff419cd5252e54cf95e64dc6687ee">result</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00923"></a><span class="lineno">  923</span>&#160;    <span class="keywordflow">if</span> (data_size != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00924"></a><span class="lineno">  924</span>&#160;        *data_size = 0;</div>
+<div class="line"><a name="l00925"></a><span class="lineno">  925</span>&#160;    }</div>
+<div class="line"><a name="l00926"></a><span class="lineno">  926</span>&#160; </div>
+<div class="line"><a name="l00927"></a><span class="lineno">  927</span>&#160;    FILE *<a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#a9727a0a74fa79d7c2f968c677320b26f">File</a> = <a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#a3b042a1ac553b2cfdf5b3a1298ce9375">FindContainer</a>(pContainer, 0);</div>
+<div class="line"><a name="l00928"></a><span class="lineno">  928</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#a9727a0a74fa79d7c2f968c677320b26f">File</a>) {</div>
+<div class="line"><a name="l00929"></a><span class="lineno">  929</span>&#160;        Error(<span class="stringliteral">&quot;Unable to load %s&quot;</span>, pContainer.c_str());</div>
+<div class="line"><a name="l00930"></a><span class="lineno">  930</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00931"></a><span class="lineno">  931</span>&#160;    }</div>
+<div class="line"><a name="l00932"></a><span class="lineno">  932</span>&#160; </div>
+<div class="line"><a name="l00933"></a><span class="lineno">  933</span>&#160;    <a class="code" href="../../d6/de3/struct_texture_header.html">TextureHeader</a> DstBuf;</div>
+<div class="line"><a name="l00934"></a><span class="lineno">  934</span>&#160;    fread(&amp;DstBuf, 1, <span class="keyword">sizeof</span>(<a class="code" href="../../d6/de3/struct_texture_header.html">TextureHeader</a>), <a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#a9727a0a74fa79d7c2f968c677320b26f">File</a>);</div>
+<div class="line"><a name="l00935"></a><span class="lineno">  935</span>&#160; </div>
+<div class="line"><a name="l00936"></a><span class="lineno">  936</span>&#160;    <span class="keywordflow">if</span> (DstBuf.<a class="code" href="../../d6/de3/struct_texture_header.html#a1779bca4bab9309bc22d6cb0203ccf9a">uDecompressedSize</a>) {</div>
+<div class="line"><a name="l00937"></a><span class="lineno">  937</span>&#160;        <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a321ff419cd5252e54cf95e64dc6687ee">result</a> = malloc(DstBuf.<a class="code" href="../../d6/de3/struct_texture_header.html#a1779bca4bab9309bc22d6cb0203ccf9a">uDecompressedSize</a>);</div>
+<div class="line"><a name="l00938"></a><span class="lineno">  938</span>&#160;        <span class="keywordtype">void</span> *tmp_buf = malloc(DstBuf.<a class="code" href="../../d6/de3/struct_texture_header.html#aa29d8bd61966f56a4a298a0fd5d3bc58">uTextureSize</a>);</div>
+<div class="line"><a name="l00939"></a><span class="lineno">  939</span>&#160;        fread(tmp_buf, 1, DstBuf.<a class="code" href="../../d6/de3/struct_texture_header.html#aa29d8bd61966f56a4a298a0fd5d3bc58">uTextureSize</a>, <a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#a9727a0a74fa79d7c2f968c677320b26f">File</a>);</div>
+<div class="line"><a name="l00940"></a><span class="lineno">  940</span>&#160;        <a class="code" href="../../d9/d3e/namespacezlib.html#ae552beaf4387a81c63a28b01a9cc7ab4">zlib::Uncompress</a>(<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a321ff419cd5252e54cf95e64dc6687ee">result</a>, &amp;DstBuf.<a class="code" href="../../d6/de3/struct_texture_header.html#a1779bca4bab9309bc22d6cb0203ccf9a">uDecompressedSize</a>, tmp_buf,</div>
+<div class="line"><a name="l00941"></a><span class="lineno">  941</span>&#160;                         DstBuf.<a class="code" href="../../d6/de3/struct_texture_header.html#aa29d8bd61966f56a4a298a0fd5d3bc58">uTextureSize</a>);</div>
+<div class="line"><a name="l00942"></a><span class="lineno">  942</span>&#160;        DstBuf.<a class="code" href="../../d6/de3/struct_texture_header.html#aa29d8bd61966f56a4a298a0fd5d3bc58">uTextureSize</a> = DstBuf.<a class="code" href="../../d6/de3/struct_texture_header.html#a1779bca4bab9309bc22d6cb0203ccf9a">uDecompressedSize</a>;</div>
+<div class="line"><a name="l00943"></a><span class="lineno">  943</span>&#160;        free(tmp_buf);</div>
+<div class="line"><a name="l00944"></a><span class="lineno">  944</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00945"></a><span class="lineno">  945</span>&#160;        <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a321ff419cd5252e54cf95e64dc6687ee">result</a> = malloc(DstBuf.<a class="code" href="../../d6/de3/struct_texture_header.html#aa29d8bd61966f56a4a298a0fd5d3bc58">uTextureSize</a>);</div>
+<div class="line"><a name="l00946"></a><span class="lineno">  946</span>&#160;        fread(<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a321ff419cd5252e54cf95e64dc6687ee">result</a>, 1, DstBuf.<a class="code" href="../../d6/de3/struct_texture_header.html#aa29d8bd61966f56a4a298a0fd5d3bc58">uTextureSize</a>, <a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#a9727a0a74fa79d7c2f968c677320b26f">File</a>);</div>
+<div class="line"><a name="l00947"></a><span class="lineno">  947</span>&#160;    }</div>
+<div class="line"><a name="l00948"></a><span class="lineno">  948</span>&#160; </div>
+<div class="line"><a name="l00949"></a><span class="lineno">  949</span>&#160;    <span class="keywordflow">if</span> (data_size != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00950"></a><span class="lineno">  950</span>&#160;        *data_size = DstBuf.<a class="code" href="../../d6/de3/struct_texture_header.html#aa29d8bd61966f56a4a298a0fd5d3bc58">uTextureSize</a>;</div>
+<div class="line"><a name="l00951"></a><span class="lineno">  951</span>&#160;    }</div>
+<div class="line"><a name="l00952"></a><span class="lineno">  952</span>&#160; </div>
+<div class="line"><a name="l00953"></a><span class="lineno">  953</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a321ff419cd5252e54cf95e64dc6687ee">result</a>;</div>
+<div class="line"><a name="l00954"></a><span class="lineno">  954</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d9/de5/_image_8h_source.html#l00090">TextureHeader::uDecompressedSize</a>, <a class="el" href="../../da/d23/_zlib_wrapper_8cpp_source.html#l00007">zlib::Uncompress()</a> и <a class="el" href="../../d9/de5/_image_8h_source.html#l00081">TextureHeader::uTextureSize</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../db/d8c/_u_i_credits_8cpp_source.html#l00015">GUICredits::GUICredits()</a>, <a class="el" href="../../da/d25/_faction_table_8cpp_source.html#l00008">FactionTable::Initialize()</a>, <a class="el" href="../../dd/d8c/_localization_8cpp_source.html#l00034">Localization::Initialize()</a>, <a class="el" href="../../d5/d88/_storyline_text_table_8cpp_source.html#l00013">StorylineText::Initialize()</a>, <a class="el" href="../../dd/d31/_map_info_8cpp_source.html#l00047">MapStats::Initialize()</a>, <a class="el" href="../../d1/d6c/_n_p_c_8cpp_source.html#l00445">NPCStats::Initialize()</a>, <a class="el" href="../../d6/d6c/_monsters_8cpp_source.html#l00491">MonsterStats::Initialize()</a>, <a class="el" href="../../da/df3/_spells_8cpp_source.html#l00385">SpellStats::Initialize()</a>, <a class="el" href="../../d9/d99/_items_8cpp_source.html#l00181">ItemsTable::Initialize()</a>, <a class="el" href="../../dd/d8c/_localization_8cpp_source.html#l00418">Localization::InitializeAttributeNames()</a>, <a class="el" href="../../d1/d6c/_n_p_c_8cpp_source.html#l00945">InitializeAutonotes()</a>, <a class="el" href="../../d1/d6c/_n_p_c_8cpp_source.html#l00771">InitializeAwards()</a>, <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l03715">InitializeBuildingResidents()</a>, <a class="el" href="../../dd/d8c/_localization_8cpp_source.html#l00300">Localization::InitializeClassNames()</a>, <a class="el" href="../../d1/d6c/_n_p_c_8cpp_source.html#l00852">InitializeMerchants()</a>, <a class="el" href="../../d1/d6c/_n_p_c_8cpp_source.html#l00284">NPCStats::InitializeNPCData()</a>, <a class="el" href="../../d1/d6c/_n_p_c_8cpp_source.html#l00158">NPCStats::InitializeNPCText()</a>, <a class="el" href="../../d6/d6c/_monsters_8cpp_source.html#l00451">MonsterStats::InitializePlacements()</a>, <a class="el" href="../../d1/d6c/_n_p_c_8cpp_source.html#l01012">InitializeQuests()</a>, <a class="el" href="../../d1/d6c/_n_p_c_8cpp_source.html#l00814">InitializeScrolls()</a>, <a class="el" href="../../dd/d8c/_localization_8cpp_source.html#l00244">Localization::InitializeSkillNames()</a>, <a class="el" href="../../d1/d6c/_n_p_c_8cpp_source.html#l00905">InitializeTransitions()</a>, <a class="el" href="../../df/d5c/_events_8cpp_source.html#l00059">LoadEventsToBuffer()</a>, <a class="el" href="../../d4/d5e/_g_u_i_font_8cpp_source.html#l00056">GUIFont::LoadFont()</a>, <a class="el" href="../../d9/d99/_items_8cpp_source.html#l00541">ItemsTable::LoadPotionNotes()</a>, <a class="el" href="../../d9/d99/_items_8cpp_source.html#l00494">ItemsTable::LoadPotions()</a> и <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l00903">Engine::MM7_Initialize()</a>.</p>
+<div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-7-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-7-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../dd/da7/class_l_o_d_1_1_file_af2af972a90784bbcfa975ccd0346385d_cgraph.svg" width="368" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-8-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-8-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../dd/da7/class_l_o_d_1_1_file_af2af972a90784bbcfa975ccd0346385d_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ad1b41c19c91c2c90723d263089c30a30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1b41c19c91c2c90723d263089c30a30">&#9670;&nbsp;</a></span>LoadCompressed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> * LOD::File::LoadCompressed </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>pContainer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a7c94ea6f8948649f8d181ae55911eeaf">size_t</a> *&#160;</td>
+          <td class="paramname"><em>data_size</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html">LOD.cpp</a> строка <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html#l00965">965</a></p>
+<div class="fragment"><div class="line"><a name="l00965"></a><span class="lineno">  965</span>&#160;                                                                         {</div>
+<div class="line"><a name="l00966"></a><span class="lineno">  966</span>&#160;    static_assert(<span class="keyword">sizeof</span>(<a class="code" href="../../d0/deb/struct_compressed_header.html">CompressedHeader</a>) == 16, <span class="stringliteral">&quot;Wrong type size&quot;</span>);</div>
+<div class="line"><a name="l00967"></a><span class="lineno">  967</span>&#160; </div>
+<div class="line"><a name="l00968"></a><span class="lineno">  968</span>&#160;    <span class="keywordtype">void</span> *<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a321ff419cd5252e54cf95e64dc6687ee">result</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00969"></a><span class="lineno">  969</span>&#160;    <span class="keywordflow">if</span> (data_size != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00970"></a><span class="lineno">  970</span>&#160;        *data_size = 0;</div>
+<div class="line"><a name="l00971"></a><span class="lineno">  971</span>&#160;    }</div>
+<div class="line"><a name="l00972"></a><span class="lineno">  972</span>&#160; </div>
+<div class="line"><a name="l00973"></a><span class="lineno">  973</span>&#160;    FILE *<a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#a9727a0a74fa79d7c2f968c677320b26f">File</a> = <a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#a3b042a1ac553b2cfdf5b3a1298ce9375">FindContainer</a>(pContainer, 0);</div>
+<div class="line"><a name="l00974"></a><span class="lineno">  974</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#a9727a0a74fa79d7c2f968c677320b26f">File</a>) {</div>
+<div class="line"><a name="l00975"></a><span class="lineno">  975</span>&#160;        Error(<span class="stringliteral">&quot;Unable to load %s&quot;</span>, pContainer.c_str());</div>
+<div class="line"><a name="l00976"></a><span class="lineno">  976</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00977"></a><span class="lineno">  977</span>&#160;    }</div>
+<div class="line"><a name="l00978"></a><span class="lineno">  978</span>&#160; </div>
+<div class="line"><a name="l00979"></a><span class="lineno">  979</span>&#160;    <a class="code" href="../../d0/deb/struct_compressed_header.html">CompressedHeader</a> <a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#a2ce37440b37d55351995559664161bd8">header</a>;</div>
+<div class="line"><a name="l00980"></a><span class="lineno">  980</span>&#160;    fread(&amp;<a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#a2ce37440b37d55351995559664161bd8">header</a>, 1, <span class="keyword">sizeof</span>(<a class="code" href="../../d0/deb/struct_compressed_header.html">CompressedHeader</a>), <a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#a9727a0a74fa79d7c2f968c677320b26f">File</a>);</div>
+<div class="line"><a name="l00981"></a><span class="lineno">  981</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#a2ce37440b37d55351995559664161bd8">header</a>.uVersion != 91969 || (memcmp(&amp;<a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#a2ce37440b37d55351995559664161bd8">header</a>.pMagic, <span class="stringliteral">&quot;mvii&quot;</span>, 4) != 0)) {</div>
+<div class="line"><a name="l00982"></a><span class="lineno">  982</span>&#160;        Error(<span class="stringliteral">&quot;Unable to load %s&quot;</span>, pContainer.c_str());</div>
+<div class="line"><a name="l00983"></a><span class="lineno">  983</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00984"></a><span class="lineno">  984</span>&#160;    }</div>
+<div class="line"><a name="l00985"></a><span class="lineno">  985</span>&#160; </div>
+<div class="line"><a name="l00986"></a><span class="lineno">  986</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#a2ce37440b37d55351995559664161bd8">header</a>.uDecompressedSize) {</div>
+<div class="line"><a name="l00987"></a><span class="lineno">  987</span>&#160;        <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a321ff419cd5252e54cf95e64dc6687ee">result</a> = malloc(<a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#a2ce37440b37d55351995559664161bd8">header</a>.uDecompressedSize);</div>
+<div class="line"><a name="l00988"></a><span class="lineno">  988</span>&#160;        <span class="keywordtype">void</span> *tmp_buf = malloc(<a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#a2ce37440b37d55351995559664161bd8">header</a>.uCompressedSize);</div>
+<div class="line"><a name="l00989"></a><span class="lineno">  989</span>&#160;        fread(tmp_buf, 1, <a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#a2ce37440b37d55351995559664161bd8">header</a>.uCompressedSize, <a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#a9727a0a74fa79d7c2f968c677320b26f">File</a>);</div>
+<div class="line"><a name="l00990"></a><span class="lineno">  990</span>&#160;        <a class="code" href="../../d9/d3e/namespacezlib.html#ae552beaf4387a81c63a28b01a9cc7ab4">zlib::Uncompress</a>(<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a321ff419cd5252e54cf95e64dc6687ee">result</a>, &amp;<a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#a2ce37440b37d55351995559664161bd8">header</a>.uDecompressedSize, tmp_buf, <a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#a2ce37440b37d55351995559664161bd8">header</a>.uCompressedSize);</div>
+<div class="line"><a name="l00991"></a><span class="lineno">  991</span>&#160;        <a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#a2ce37440b37d55351995559664161bd8">header</a>.uCompressedSize = <a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#a2ce37440b37d55351995559664161bd8">header</a>.uDecompressedSize;</div>
+<div class="line"><a name="l00992"></a><span class="lineno">  992</span>&#160;        free(tmp_buf);</div>
+<div class="line"><a name="l00993"></a><span class="lineno">  993</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00994"></a><span class="lineno">  994</span>&#160;        <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a321ff419cd5252e54cf95e64dc6687ee">result</a> = malloc(<a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#a2ce37440b37d55351995559664161bd8">header</a>.uCompressedSize);</div>
+<div class="line"><a name="l00995"></a><span class="lineno">  995</span>&#160;        fread(<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a321ff419cd5252e54cf95e64dc6687ee">result</a>, 1, <a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#a2ce37440b37d55351995559664161bd8">header</a>.uCompressedSize, <a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#a9727a0a74fa79d7c2f968c677320b26f">File</a>);</div>
+<div class="line"><a name="l00996"></a><span class="lineno">  996</span>&#160;    }</div>
+<div class="line"><a name="l00997"></a><span class="lineno">  997</span>&#160; </div>
+<div class="line"><a name="l00998"></a><span class="lineno">  998</span>&#160;    <span class="keywordflow">if</span> (data_size != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00999"></a><span class="lineno">  999</span>&#160;        *data_size = <a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#a2ce37440b37d55351995559664161bd8">header</a>.uCompressedSize;</div>
+<div class="line"><a name="l01000"></a><span class="lineno"> 1000</span>&#160;    }</div>
+<div class="line"><a name="l01001"></a><span class="lineno"> 1001</span>&#160; </div>
+<div class="line"><a name="l01002"></a><span class="lineno"> 1002</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a321ff419cd5252e54cf95e64dc6687ee">result</a>;</div>
+<div class="line"><a name="l01003"></a><span class="lineno"> 1003</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html#l00959">CompressedHeader::pMagic</a>, <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html#l00960">CompressedHeader::uCompressedSize</a>, <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html#l00961">CompressedHeader::uDecompressedSize</a>, <a class="el" href="../../da/d23/_zlib_wrapper_8cpp_source.html#l00007">zlib::Uncompress()</a> и <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html#l00958">CompressedHeader::uVersion</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l00980">OutdoorLocation::Load()</a> и <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00858">IndoorLocation::Load()</a>.</p>
+<div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-9-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-9-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../dd/da7/class_l_o_d_1_1_file_ad1b41c19c91c2c90723d263089c30a30_cgraph.svg" width="368" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-10-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-10-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-10-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../dd/da7/class_l_o_d_1_1_file_ad1b41c19c91c2c90723d263089c30a30_icgraph.svg" width="100%" height="416"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a5f308ac99a49c87179a5dff49084b81f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f308ac99a49c87179a5dff49084b81f">&#9670;&nbsp;</a></span>DoesContainerExist()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LOD::File::DoesContainerExist </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html">LOD.cpp</a> строка <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html#l00833">833</a></p>
+<div class="fragment"><div class="line"><a name="l00833"></a><span class="lineno">  833</span>&#160;                                                         {</div>
+<div class="line"><a name="l00834"></a><span class="lineno">  834</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; <a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#af5e9bff4552e687f91ca583bdee1e4cf">uNumSubDirs</a>; ++i) {</div>
+<div class="line"><a name="l00835"></a><span class="lineno">  835</span>&#160;        <span class="keywordflow">if</span> (!_stricmp(pContainer.c_str(), <a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#aa9ff8061e107a4d4524340f0ce20a358">pSubIndices</a>[i].<a class="code" href="../../d1/db2/struct_l_o_d_1_1_directory.html#a6c35e089ebc35dd9b6395ce39103a143">pFilename</a>)) {</div>
+<div class="line"><a name="l00836"></a><span class="lineno">  836</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00837"></a><span class="lineno">  837</span>&#160;        }</div>
+<div class="line"><a name="l00838"></a><span class="lineno">  838</span>&#160;    }</div>
+<div class="line"><a name="l00839"></a><span class="lineno">  839</span>&#160; </div>
+<div class="line"><a name="l00840"></a><span class="lineno">  840</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00841"></a><span class="lineno">  841</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Используется в <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l00980">OutdoorLocation::Load()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00858">IndoorLocation::Load()</a> и <a class="el" href="../../d4/d9d/_save_load_8cpp_source.html#l00077">LoadGame()</a>.</p>
+<div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-11-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-11-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-11-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../dd/da7/class_l_o_d_1_1_file_a5f308ac99a49c87179a5dff49084b81f_icgraph.svg" width="100%" height="444"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a76ad87710f9789b6d473a3e6695d04bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76ad87710f9789b6d473a3e6695d04bf">&#9670;&nbsp;</a></span>GetSubNodeName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> LOD::File::GetSubNodeName </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a7c94ea6f8948649f8d181ae55911eeaf">size_t</a>&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d3/db2/_l_o_d_8h_source.html">LOD.h</a> строка <a class="el" href="../../d3/db2/_l_o_d_8h_source.html#l00071">71</a></p>
+<div class="fragment"><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#aa9ff8061e107a4d4524340f0ce20a358">pSubIndices</a>[<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a57f14e05b1900f16a2da82ade47d0c6d">index</a>].<a class="code" href="../../d1/db2/struct_l_o_d_1_1_directory.html#a6c35e089ebc35dd9b6395ce39103a143">pFilename</a>; }</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d3/db2/_l_o_d_8h_source.html#l00048">LOD::Directory::pFilename</a> и <a class="el" href="../../d3/db2/_l_o_d_8h_source.html#l00094">pSubIndices</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d7/db5/_game_8cpp_source.html#l00322">Application::Game::EventLoop()</a>, <a class="el" href="../../d4/d9d/_save_load_8cpp_source.html#l00566">SaveNewGame()</a> и <a class="el" href="../../dd/d31/_map_info_8cpp_source.html#l00213">MapStats::sub_410D99_get_map_index()</a>.</p>
+<div id="dynsection-12" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-12-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-12-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-12-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../dd/da7/class_l_o_d_1_1_file_a76ad87710f9789b6d473a3e6695d04bf_icgraph.svg" width="100%" height="427"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a0cbd11dc40049f05d547c4073900e598"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0cbd11dc40049f05d547c4073900e598">&#9670;&nbsp;</a></span>GetSubNodesCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a7c94ea6f8948649f8d181ae55911eeaf">size_t</a> LOD::File::GetSubNodesCount </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d3/db2/_l_o_d_8h_source.html">LOD.h</a> строка <a class="el" href="../../d3/db2/_l_o_d_8h_source.html#l00072">72</a></p>
+<div class="fragment"><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#af5e9bff4552e687f91ca583bdee1e4cf">uNumSubDirs</a>; }</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d3/db2/_l_o_d_8h_source.html#l00093">uNumSubDirs</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d7/db5/_game_8cpp_source.html#l00322">Application::Game::EventLoop()</a> и <a class="el" href="../../d4/d9d/_save_load_8cpp_source.html#l00566">SaveNewGame()</a>.</p>
+<div id="dynsection-13" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-13-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-13-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-13-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../dd/da7/class_l_o_d_1_1_file_a0cbd11dc40049f05d547c4073900e598_icgraph.svg" width="100%" height="378"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a73d8b96f07e67ee01160123e613a1466"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73d8b96f07e67ee01160123e613a1466">&#9670;&nbsp;</a></span>GetSubNodeIndex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int LOD::File::GetSubNodeIndex </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html">LOD.cpp</a> строка <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html#l01005">1005</a></p>
+<div class="fragment"><div class="line"><a name="l01005"></a><span class="lineno"> 1005</span>&#160;                                                     {</div>
+<div class="line"><a name="l01006"></a><span class="lineno"> 1006</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a57f14e05b1900f16a2da82ade47d0c6d">index</a> = 0; <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a57f14e05b1900f16a2da82ade47d0c6d">index</a> &lt; <a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#af5e9bff4552e687f91ca583bdee1e4cf">uNumSubDirs</a>; <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a57f14e05b1900f16a2da82ade47d0c6d">index</a>++) {</div>
+<div class="line"><a name="l01007"></a><span class="lineno"> 1007</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#aaced7cfc21e7d37775d6921bb8177239">name</a> == <a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#aa9ff8061e107a4d4524340f0ce20a358">pSubIndices</a>[<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a57f14e05b1900f16a2da82ade47d0c6d">index</a>].pFilename) {</div>
+<div class="line"><a name="l01008"></a><span class="lineno"> 1008</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a57f14e05b1900f16a2da82ade47d0c6d">index</a>;</div>
+<div class="line"><a name="l01009"></a><span class="lineno"> 1009</span>&#160;        }</div>
+<div class="line"><a name="l01010"></a><span class="lineno"> 1010</span>&#160;    }</div>
+<div class="line"><a name="l01011"></a><span class="lineno"> 1011</span>&#160; </div>
+<div class="line"><a name="l01012"></a><span class="lineno"> 1012</span>&#160;    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l01013"></a><span class="lineno"> 1013</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Используется в <a class="el" href="../../d7/db5/_game_8cpp_source.html#l00322">Application::Game::EventLoop()</a> и <a class="el" href="../../d2/d82/_player_8cpp_source.html#l08186">Player::SetBeacon()</a>.</p>
+<div id="dynsection-14" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-14-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-14-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-14-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../dd/da7/class_l_o_d_1_1_file_a73d8b96f07e67ee01160123e613a1466_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a3b042a1ac553b2cfdf5b3a1298ce9375"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b042a1ac553b2cfdf5b3a1298ce9375">&#9670;&nbsp;</a></span>FindContainer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FILE * LOD::File::FindContainer </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a7c94ea6f8948649f8d181ae55911eeaf">size_t</a> *&#160;</td>
+          <td class="paramname"><em>data_size</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html">LOD.cpp</a> строка <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html#l00851">851</a></p>
+<div class="fragment"><div class="line"><a name="l00851"></a><span class="lineno">  851</span>&#160;                                                                             {</div>
+<div class="line"><a name="l00852"></a><span class="lineno">  852</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#a8f762d0ab8fac8fdcf8fa4d66cec32ed">isFileOpened</a>) {</div>
+<div class="line"><a name="l00853"></a><span class="lineno">  853</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00854"></a><span class="lineno">  854</span>&#160;    }</div>
+<div class="line"><a name="l00855"></a><span class="lineno">  855</span>&#160;    <span class="keywordflow">if</span> (data_size != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00856"></a><span class="lineno">  856</span>&#160;        *data_size = 0;</div>
+<div class="line"><a name="l00857"></a><span class="lineno">  857</span>&#160;    }</div>
+<div class="line"><a name="l00858"></a><span class="lineno">  858</span>&#160; </div>
+<div class="line"><a name="l00859"></a><span class="lineno">  859</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="../../d2/d83/_m_m7_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a> i = 0; i &lt; <a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#af5e9bff4552e687f91ca583bdee1e4cf">uNumSubDirs</a>; ++i) {</div>
+<div class="line"><a name="l00860"></a><span class="lineno">  860</span>&#160;        <span class="keywordflow">if</span> (!_stricmp(pContainer_Name.c_str(), <a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#aa9ff8061e107a4d4524340f0ce20a358">pSubIndices</a>[i].<a class="code" href="../../d1/db2/struct_l_o_d_1_1_directory.html#a6c35e089ebc35dd9b6395ce39103a143">pFilename</a>)) {</div>
+<div class="line"><a name="l00861"></a><span class="lineno">  861</span>&#160;            fseek(<a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#a686f8c6509748a20a067d674590c1ccb">pFile</a>, <a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#a5efc3f8cf7a80ac7a968d3b399dddbb9">uOffsetToSubIndex</a> + <a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#aa9ff8061e107a4d4524340f0ce20a358">pSubIndices</a>[i].uOfsetFromSubindicesStart, SEEK_SET);</div>
+<div class="line"><a name="l00862"></a><span class="lineno">  862</span>&#160;            <span class="keywordflow">if</span> (data_size != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00863"></a><span class="lineno">  863</span>&#160;                *data_size = <a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#aa9ff8061e107a4d4524340f0ce20a358">pSubIndices</a>[i].<a class="code" href="../../d1/db2/struct_l_o_d_1_1_directory.html#a07c35304ad77ebcadebd6723c4a7b4b2">uDataSize</a>;</div>
+<div class="line"><a name="l00864"></a><span class="lineno">  864</span>&#160;            }</div>
+<div class="line"><a name="l00865"></a><span class="lineno">  865</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#a686f8c6509748a20a067d674590c1ccb">pFile</a>;</div>
+<div class="line"><a name="l00866"></a><span class="lineno">  866</span>&#160;        }</div>
+<div class="line"><a name="l00867"></a><span class="lineno">  867</span>&#160;    }</div>
+<div class="line"><a name="l00868"></a><span class="lineno">  868</span>&#160; </div>
+<div class="line"><a name="l00869"></a><span class="lineno">  869</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00870"></a><span class="lineno">  870</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Используется в <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html#l00149">LODFile_Sprites::LoadSprite()</a> и <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html#l00098">LODFile_Sprites::LoadSpriteFromFile()</a>.</p>
+<div id="dynsection-15" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-15-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-15-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-15-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../dd/da7/class_l_o_d_1_1_file_a3b042a1ac553b2cfdf5b3a1298ce9375_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="abd059bd33f1b7f3f28a59b5f1eb1ad92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd059bd33f1b7f3f28a59b5f1eb1ad92">&#9670;&nbsp;</a></span>OpenFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LOD::File::OpenFile </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>sFilename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html">LOD.cpp</a> строка <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html#l00763">763</a></p>
+<div class="fragment"><div class="line"><a name="l00763"></a><span class="lineno">  763</span>&#160;                                              {</div>
+<div class="line"><a name="l00764"></a><span class="lineno">  764</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#a8f762d0ab8fac8fdcf8fa4d66cec32ed">isFileOpened</a>) {</div>
+<div class="line"><a name="l00765"></a><span class="lineno">  765</span>&#160;        <a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#ab71fc5e72e25e22a2712c317528db0d9">Close</a>();</div>
+<div class="line"><a name="l00766"></a><span class="lineno">  766</span>&#160;    }</div>
+<div class="line"><a name="l00767"></a><span class="lineno">  767</span>&#160; </div>
+<div class="line"><a name="l00768"></a><span class="lineno">  768</span>&#160;    <a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#a686f8c6509748a20a067d674590c1ccb">pFile</a> = fopen(sFilename.c_str(), <span class="stringliteral">&quot;rb&quot;</span>);</div>
+<div class="line"><a name="l00769"></a><span class="lineno">  769</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#a686f8c6509748a20a067d674590c1ccb">pFile</a> == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00770"></a><span class="lineno">  770</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00771"></a><span class="lineno">  771</span>&#160;    }</div>
+<div class="line"><a name="l00772"></a><span class="lineno">  772</span>&#160; </div>
+<div class="line"><a name="l00773"></a><span class="lineno">  773</span>&#160;    <a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#a4d14fe6afb04d6cc126047e44bf82b62">pLODName</a> = sFilename;</div>
+<div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160; </div>
+<div class="line"><a name="l00775"></a><span class="lineno">  775</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00776"></a><span class="lineno">  776</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a94f80b82e0e80faee257d1cb18f8267d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94f80b82e0e80faee257d1cb18f8267d">&#9670;&nbsp;</a></span>LoadHeader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LOD::File::LoadHeader </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html">LOD.cpp</a> строка <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html#l00778">778</a></p>
+<div class="fragment"><div class="line"><a name="l00778"></a><span class="lineno">  778</span>&#160;                         {</div>
+<div class="line"><a name="l00779"></a><span class="lineno">  779</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#a686f8c6509748a20a067d674590c1ccb">pFile</a> == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00780"></a><span class="lineno">  780</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00781"></a><span class="lineno">  781</span>&#160;    }</div>
+<div class="line"><a name="l00782"></a><span class="lineno">  782</span>&#160; </div>
+<div class="line"><a name="l00783"></a><span class="lineno">  783</span>&#160;    fseek(<a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#a686f8c6509748a20a067d674590c1ccb">pFile</a>, 0, SEEK_SET);</div>
+<div class="line"><a name="l00784"></a><span class="lineno">  784</span>&#160; </div>
+<div class="line"><a name="l00785"></a><span class="lineno">  785</span>&#160;    <span class="keywordflow">if</span> (fread(&amp;<a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#a2ce37440b37d55351995559664161bd8">header</a>, <span class="keyword">sizeof</span>(<a class="code" href="../../dc/d2a/struct_l_o_d_1_1_file_header.html">LOD::FileHeader</a>), 1, <a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#a686f8c6509748a20a067d674590c1ccb">pFile</a>) != 1) {</div>
+<div class="line"><a name="l00786"></a><span class="lineno">  786</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160;    }</div>
+<div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#a2ce37440b37d55351995559664161bd8">header</a>.<a class="code" href="../../dc/d2a/struct_l_o_d_1_1_file_header.html#a240d59af40663fc994f669ed9fd3afcf">uNumIndices</a>; i++) {</div>
+<div class="line"><a name="l00789"></a><span class="lineno">  789</span>&#160;        <a class="code" href="../../d1/db2/struct_l_o_d_1_1_directory.html">LOD::Directory</a> dir;</div>
+<div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160;        <span class="keywordflow">if</span> (fread(&amp;dir, <span class="keyword">sizeof</span>(<a class="code" href="../../d1/db2/struct_l_o_d_1_1_directory.html">LOD::Directory</a>), 1, <a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#a686f8c6509748a20a067d674590c1ccb">pFile</a>) != 1) {</div>
+<div class="line"><a name="l00791"></a><span class="lineno">  791</span>&#160;            <a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#a3206b35b36bdb0effcfe6a659eaf1f91">pRoot</a>.clear();</div>
+<div class="line"><a name="l00792"></a><span class="lineno">  792</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160;        }</div>
+<div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160;        <a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#a3206b35b36bdb0effcfe6a659eaf1f91">pRoot</a>.push_back(dir);</div>
+<div class="line"><a name="l00795"></a><span class="lineno">  795</span>&#160;    }</div>
+<div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160; </div>
+<div class="line"><a name="l00797"></a><span class="lineno">  797</span>&#160;    fseek(<a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#a686f8c6509748a20a067d674590c1ccb">pFile</a>, 0, SEEK_SET);</div>
+<div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160; </div>
+<div class="line"><a name="l00799"></a><span class="lineno">  799</span>&#160;    <a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#a8f762d0ab8fac8fdcf8fa4d66cec32ed">isFileOpened</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00800"></a><span class="lineno">  800</span>&#160; </div>
+<div class="line"><a name="l00801"></a><span class="lineno">  801</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00802"></a><span class="lineno">  802</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a3272ae8caf1e5a3ffb1f2533e46a477b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3272ae8caf1e5a3ffb1f2533e46a477b">&#9670;&nbsp;</a></span>LoadSubIndices()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LOD::File::LoadSubIndices </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>sFolder</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html">LOD.cpp</a> строка <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html#l00804">804</a></p>
+<div class="fragment"><div class="line"><a name="l00804"></a><span class="lineno">  804</span>&#160;                                                     {</div>
+<div class="line"><a name="l00805"></a><span class="lineno">  805</span>&#160;    <a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#a5f6af489e25a2a9a623cad5f8c923ea9">ResetSubIndices</a>();</div>
+<div class="line"><a name="l00806"></a><span class="lineno">  806</span>&#160; </div>
+<div class="line"><a name="l00807"></a><span class="lineno">  807</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="../../d1/db2/struct_l_o_d_1_1_directory.html">LOD::Directory</a> &amp;dir : <a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#a3206b35b36bdb0effcfe6a659eaf1f91">pRoot</a>) {</div>
+<div class="line"><a name="l00808"></a><span class="lineno">  808</span>&#160;        <span class="keywordflow">if</span> (!_stricmp(pContainer.c_str(), dir.pFilename)) {</div>
+<div class="line"><a name="l00809"></a><span class="lineno">  809</span>&#160;            <a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#a2c952c2df6ae15342439a86dfe56469a">pContainerName</a> = pContainer;</div>
+<div class="line"><a name="l00810"></a><span class="lineno">  810</span>&#160;            <a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#a5efc3f8cf7a80ac7a968d3b399dddbb9">uOffsetToSubIndex</a> = dir.uOfsetFromSubindicesStart;</div>
+<div class="line"><a name="l00811"></a><span class="lineno">  811</span>&#160;            <a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#af5e9bff4552e687f91ca583bdee1e4cf">uNumSubDirs</a> = dir.uNumSubIndices;</div>
+<div class="line"><a name="l00812"></a><span class="lineno">  812</span>&#160;            fseek(<a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#a686f8c6509748a20a067d674590c1ccb">pFile</a>, <a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#a5efc3f8cf7a80ac7a968d3b399dddbb9">uOffsetToSubIndex</a>, SEEK_SET);</div>
+<div class="line"><a name="l00813"></a><span class="lineno">  813</span>&#160;            <a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#aa9ff8061e107a4d4524340f0ce20a358">pSubIndices</a> = (<a class="code" href="../../d1/db2/struct_l_o_d_1_1_directory.html">LOD::Directory</a> *)malloc(<span class="keyword">sizeof</span>(<a class="code" href="../../d1/db2/struct_l_o_d_1_1_directory.html">LOD::Directory</a>) * <a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#af5e9bff4552e687f91ca583bdee1e4cf">uNumSubDirs</a>);</div>
+<div class="line"><a name="l00814"></a><span class="lineno">  814</span>&#160; </div>
+<div class="line"><a name="l00815"></a><span class="lineno">  815</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#aa9ff8061e107a4d4524340f0ce20a358">pSubIndices</a>) {</div>
+<div class="line"><a name="l00816"></a><span class="lineno">  816</span>&#160;                fread(<a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#aa9ff8061e107a4d4524340f0ce20a358">pSubIndices</a>, <span class="keyword">sizeof</span>(<a class="code" href="../../d1/db2/struct_l_o_d_1_1_directory.html">LOD::Directory</a>), <a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#af5e9bff4552e687f91ca583bdee1e4cf">uNumSubDirs</a>, <a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#a686f8c6509748a20a067d674590c1ccb">pFile</a>);</div>
+<div class="line"><a name="l00817"></a><span class="lineno">  817</span>&#160;            }</div>
+<div class="line"><a name="l00818"></a><span class="lineno">  818</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00819"></a><span class="lineno">  819</span>&#160;        }</div>
+<div class="line"><a name="l00820"></a><span class="lineno">  820</span>&#160;    }</div>
+<div class="line"><a name="l00821"></a><span class="lineno">  821</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00822"></a><span class="lineno">  822</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Используется в <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html#l00141">LODFile_Sprites::LoadSprites()</a>.</p>
+<div id="dynsection-16" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-16-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-16-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-16-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../dd/da7/class_l_o_d_1_1_file_a3272ae8caf1e5a3ffb1f2533e46a477b_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a5f6af489e25a2a9a623cad5f8c923ea9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f6af489e25a2a9a623cad5f8c923ea9">&#9670;&nbsp;</a></span>ResetSubIndices()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> LOD::File::ResetSubIndices </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Переопределяется в <a class="el" href="../../d6/d34/class_l_o_d_1_1_writeable_file.html#a9701458ff3b4a3009e6acc4e706d2060">LOD::WriteableFile</a>.</p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html">LOD.cpp</a> строка <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html#l00283">283</a></p>
+<div class="fragment"><div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;                              {</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#a8f762d0ab8fac8fdcf8fa4d66cec32ed">isFileOpened</a>) {</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;        <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    }</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160; </div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    <a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#a2c952c2df6ae15342439a86dfe56469a">pContainerName</a>.clear();</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    <a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#a5efc3f8cf7a80ac7a968d3b399dddbb9">uOffsetToSubIndex</a> = 0;</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    free(<a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#aa9ff8061e107a4d4524340f0ce20a358">pSubIndices</a>);</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    <a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#aa9ff8061e107a4d4524340f0ce20a358">pSubIndices</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Используется в <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html#l00294">LOD::WriteableFile::ResetSubIndices()</a>.</p>
+<div id="dynsection-17" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-17-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-17-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-17-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../dd/da7/class_l_o_d_1_1_file_a5f6af489e25a2a9a623cad5f8c923ea9_icgraph.svg" width="374" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="a686f8c6509748a20a067d674590c1ccb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a686f8c6509748a20a067d674590c1ccb">&#9670;&nbsp;</a></span>pFile</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FILE* LOD::File::pFile</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d3/db2/_l_o_d_8h_source.html">LOD.h</a> строка <a class="el" href="../../d3/db2/_l_o_d_8h_source.html#l00083">83</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html#l00243">Close()</a> и <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html#l00739">File()</a>.</p>
+
+</div>
+</div>
+<a id="a4d14fe6afb04d6cc126047e44bf82b62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d14fe6afb04d6cc126047e44bf82b62">&#9670;&nbsp;</a></span>pLODName</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> LOD::File::pLODName</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d3/db2/_l_o_d_8h_source.html">LOD.h</a> строка <a class="el" href="../../d3/db2/_l_o_d_8h_source.html#l00084">84</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html#l00446">LOD::WriteableFile::_4621A7()</a>.</p>
+
+</div>
+</div>
+<a id="a8f762d0ab8fac8fdcf8fa4d66cec32ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f762d0ab8fac8fdcf8fa4d66cec32ed">&#9670;&nbsp;</a></span>isFileOpened</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LOD::File::isFileOpened</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d3/db2/_l_o_d_8h_source.html">LOD.h</a> строка <a class="el" href="../../d3/db2/_l_o_d_8h_source.html#l00085">85</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html#l00243">Close()</a>.</p>
+
+</div>
+</div>
+<a id="a2ce37440b37d55351995559664161bd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ce37440b37d55351995559664161bd8">&#9670;&nbsp;</a></span>header</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="../../dc/d2a/struct_l_o_d_1_1_file_header.html">FileHeader</a> LOD::File::header</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d3/db2/_l_o_d_8h_source.html">LOD.h</a> строка <a class="el" href="../../d3/db2/_l_o_d_8h_source.html#l00087">87</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html#l00030">LODFile_IconsBitmaps::LoadDummyTexture()</a> и <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html#l00149">LODFile_Sprites::LoadSprite()</a>.</p>
+
+</div>
+</div>
+<a id="a3206b35b36bdb0effcfe6a659eaf1f91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3206b35b36bdb0effcfe6a659eaf1f91">&#9670;&nbsp;</a></span>pRoot</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="../../d1/db2/struct_l_o_d_1_1_directory.html">Directory</a>&gt; LOD::File::pRoot</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d3/db2/_l_o_d_8h_source.html">LOD.h</a> строка <a class="el" href="../../d3/db2/_l_o_d_8h_source.html#l00089">89</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html#l00243">Close()</a>.</p>
+
+</div>
+</div>
+<a id="a2c952c2df6ae15342439a86dfe56469a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c952c2df6ae15342439a86dfe56469a">&#9670;&nbsp;</a></span>pContainerName</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> LOD::File::pContainerName</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d3/db2/_l_o_d_8h_source.html">LOD.h</a> строка <a class="el" href="../../d3/db2/_l_o_d_8h_source.html#l00090">90</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html#l00243">Close()</a> и <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html#l00149">LODFile_Sprites::LoadSprite()</a>.</p>
+
+</div>
+</div>
+<a id="a5efc3f8cf7a80ac7a968d3b399dddbb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5efc3f8cf7a80ac7a968d3b399dddbb9">&#9670;&nbsp;</a></span>uOffsetToSubIndex</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int LOD::File::uOffsetToSubIndex</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d3/db2/_l_o_d_8h_source.html">LOD.h</a> строка <a class="el" href="../../d3/db2/_l_o_d_8h_source.html#l00091">91</a></p>
+
+</div>
+</div>
+<a id="af5e9bff4552e687f91ca583bdee1e4cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5e9bff4552e687f91ca583bdee1e4cf">&#9670;&nbsp;</a></span>uNumSubDirs</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int LOD::File::uNumSubDirs</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d3/db2/_l_o_d_8h_source.html">LOD.h</a> строка <a class="el" href="../../d3/db2/_l_o_d_8h_source.html#l00093">93</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d3/db2/_l_o_d_8h_source.html#l00112">LOD::WriteableFile::ClearSubNodes()</a> и <a class="el" href="../../d3/db2/_l_o_d_8h_source.html#l00072">GetSubNodesCount()</a>.</p>
+
+</div>
+</div>
+<a id="aa9ff8061e107a4d4524340f0ce20a358"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9ff8061e107a4d4524340f0ce20a358">&#9670;&nbsp;</a></span>pSubIndices</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="../../d1/db2/struct_l_o_d_1_1_directory.html">Directory</a>* LOD::File::pSubIndices</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d3/db2/_l_o_d_8h_source.html">LOD.h</a> строка <a class="el" href="../../d3/db2/_l_o_d_8h_source.html#l00094">94</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html#l00243">Close()</a>, <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html#l00739">File()</a> и <a class="el" href="../../d3/db2/_l_o_d_8h_source.html#l00071">GetSubNodeName()</a>.</p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>C:/git/world-of-might-and-magic/Engine/<a class="el" href="../../d3/db2/_l_o_d_8h_source.html">LOD.h</a></li>
+<li>C:/git/world-of-might-and-magic/Engine/<a class="el" href="../../de/d42/_l_o_d_8cpp_source.html">LOD.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="astruct_l_o_d_1_1_directory_html_a07c35304ad77ebcadebd6723c4a7b4b2"><div class="ttname"><a href="../../d1/db2/struct_l_o_d_1_1_directory.html#a07c35304ad77ebcadebd6723c4a7b4b2">LOD::Directory::uDataSize</a></div><div class="ttdeci">uint32_t uDataSize</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/_l_o_d_8h_source.html#l00051">LOD.h:51</a></div></div>
+<div class="ttc" id="astruct_l_o_d_1_1_file_header_html_a240d59af40663fc994f669ed9fd3afcf"><div class="ttname"><a href="../../dc/d2a/struct_l_o_d_1_1_file_header.html#a240d59af40663fc994f669ed9fd3afcf">LOD::FileHeader::uNumIndices</a></div><div class="ttdeci">uint32_t uNumIndices</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/_l_o_d_8h_source.html#l00039">LOD.h:39</a></div></div>
+<div class="ttc" id="aclass_l_o_d_1_1_file_html_a5f6af489e25a2a9a623cad5f8c923ea9"><div class="ttname"><a href="../../dd/da7/class_l_o_d_1_1_file.html#a5f6af489e25a2a9a623cad5f8c923ea9">LOD::File::ResetSubIndices</a></div><div class="ttdeci">virtual void ResetSubIndices()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d42/_l_o_d_8cpp_source.html#l00283">LOD.cpp:283</a></div></div>
+<div class="ttc" id="astruct_l_o_d_1_1_directory_html_a6c35e089ebc35dd9b6395ce39103a143"><div class="ttname"><a href="../../d1/db2/struct_l_o_d_1_1_directory.html#a6c35e089ebc35dd9b6395ce39103a143">LOD::Directory::pFilename</a></div><div class="ttdeci">char pFilename[15]</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/_l_o_d_8h_source.html#l00048">LOD.h:48</a></div></div>
+<div class="ttc" id="aclass_l_o_d_1_1_file_html_a2ce37440b37d55351995559664161bd8"><div class="ttname"><a href="../../dd/da7/class_l_o_d_1_1_file.html#a2ce37440b37d55351995559664161bd8">LOD::File::header</a></div><div class="ttdeci">struct FileHeader header</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/_l_o_d_8h_source.html#l00087">LOD.h:87</a></div></div>
+<div class="ttc" id="aclass_l_o_d_1_1_file_html_a3206b35b36bdb0effcfe6a659eaf1f91"><div class="ttname"><a href="../../dd/da7/class_l_o_d_1_1_file.html#a3206b35b36bdb0effcfe6a659eaf1f91">LOD::File::pRoot</a></div><div class="ttdeci">std::vector&lt; Directory &gt; pRoot</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/_l_o_d_8h_source.html#l00089">LOD.h:89</a></div></div>
+<div class="ttc" id="aclass_l_o_d_1_1_file_html_ab71fc5e72e25e22a2712c317528db0d9"><div class="ttname"><a href="../../dd/da7/class_l_o_d_1_1_file.html#ab71fc5e72e25e22a2712c317528db0d9">LOD::File::Close</a></div><div class="ttdeci">void Close()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d42/_l_o_d_8cpp_source.html#l00243">LOD.cpp:243</a></div></div>
+<div class="ttc" id="astruct_compressed_header_html"><div class="ttname"><a href="../../d0/deb/struct_compressed_header.html">CompressedHeader</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d42/_l_o_d_8cpp_source.html#l00957">LOD.cpp:957</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a57f14e05b1900f16a2da82ade47d0c6d"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a57f14e05b1900f16a2da82ade47d0c6d">index</a></div><div class="ttdeci">GLuint index</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l00663">SDL_opengl_glext.h:663</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a321ff419cd5252e54cf95e64dc6687ee"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a321ff419cd5252e54cf95e64dc6687ee">result</a></div><div class="ttdeci">GLuint64EXT * result</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l09435">SDL_opengl_glext.h:9435</a></div></div>
+<div class="ttc" id="aclass_l_o_d_1_1_file_html_a686f8c6509748a20a067d674590c1ccb"><div class="ttname"><a href="../../dd/da7/class_l_o_d_1_1_file.html#a686f8c6509748a20a067d674590c1ccb">LOD::File::pFile</a></div><div class="ttdeci">FILE * pFile</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/_l_o_d_8h_source.html#l00083">LOD.h:83</a></div></div>
+<div class="ttc" id="astruct_l_o_d_1_1_directory_html"><div class="ttname"><a href="../../d1/db2/struct_l_o_d_1_1_directory.html">LOD::Directory</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/_l_o_d_8h_source.html#l00045">LOD.h:45</a></div></div>
+<div class="ttc" id="aclass_l_o_d_1_1_file_html_a5efc3f8cf7a80ac7a968d3b399dddbb9"><div class="ttname"><a href="../../dd/da7/class_l_o_d_1_1_file.html#a5efc3f8cf7a80ac7a968d3b399dddbb9">LOD::File::uOffsetToSubIndex</a></div><div class="ttdeci">unsigned int uOffsetToSubIndex</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/_l_o_d_8h_source.html#l00091">LOD.h:91</a></div></div>
+<div class="ttc" id="aclass_l_o_d_1_1_file_html_a8f762d0ab8fac8fdcf8fa4d66cec32ed"><div class="ttname"><a href="../../dd/da7/class_l_o_d_1_1_file.html#a8f762d0ab8fac8fdcf8fa4d66cec32ed">LOD::File::isFileOpened</a></div><div class="ttdeci">bool isFileOpened</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/_l_o_d_8h_source.html#l00085">LOD.h:85</a></div></div>
+<div class="ttc" id="aclass_l_o_d_1_1_file_html_a3b042a1ac553b2cfdf5b3a1298ce9375"><div class="ttname"><a href="../../dd/da7/class_l_o_d_1_1_file.html#a3b042a1ac553b2cfdf5b3a1298ce9375">LOD::File::FindContainer</a></div><div class="ttdeci">FILE * FindContainer(const String &amp;filename, size_t *data_size=nullptr)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d42/_l_o_d_8cpp_source.html#l00851">LOD.cpp:851</a></div></div>
+<div class="ttc" id="a_l_o_d_8cpp_html_a5e3e5362d7a687a56b2fa1dcced33774"><div class="ttname"><a href="../../de/d42/_l_o_d_8cpp.html#a5e3e5362d7a687a56b2fa1dcced33774">_6A0CA8_lod_unused</a></div><div class="ttdeci">int _6A0CA8_lod_unused</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d42/_l_o_d_8cpp_source.html#l00028">LOD.cpp:28</a></div></div>
+<div class="ttc" id="aclass_l_o_d_1_1_file_html_a9727a0a74fa79d7c2f968c677320b26f"><div class="ttname"><a href="../../dd/da7/class_l_o_d_1_1_file.html#a9727a0a74fa79d7c2f968c677320b26f">LOD::File::File</a></div><div class="ttdeci">File()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d42/_l_o_d_8cpp_source.html#l00739">LOD.cpp:739</a></div></div>
+<div class="ttc" id="aclass_l_o_d_1_1_file_html_a3272ae8caf1e5a3ffb1f2533e46a477b"><div class="ttname"><a href="../../dd/da7/class_l_o_d_1_1_file.html#a3272ae8caf1e5a3ffb1f2533e46a477b">LOD::File::LoadSubIndices</a></div><div class="ttdeci">bool LoadSubIndices(const String &amp;sFolder)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d42/_l_o_d_8cpp_source.html#l00804">LOD.cpp:804</a></div></div>
+<div class="ttc" id="aclass_l_o_d_1_1_file_html_aa9ff8061e107a4d4524340f0ce20a358"><div class="ttname"><a href="../../dd/da7/class_l_o_d_1_1_file.html#aa9ff8061e107a4d4524340f0ce20a358">LOD::File::pSubIndices</a></div><div class="ttdeci">struct Directory * pSubIndices</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/_l_o_d_8h_source.html#l00094">LOD.h:94</a></div></div>
+<div class="ttc" id="astruct_texture_header_html_a1779bca4bab9309bc22d6cb0203ccf9a"><div class="ttname"><a href="../../d6/de3/struct_texture_header.html#a1779bca4bab9309bc22d6cb0203ccf9a">TextureHeader::uDecompressedSize</a></div><div class="ttdeci">uint32_t uDecompressedSize</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/de5/_image_8h_source.html#l00090">Image.h:90</a></div></div>
+<div class="ttc" id="aclass_l_o_d_1_1_file_html_af5e9bff4552e687f91ca583bdee1e4cf"><div class="ttname"><a href="../../dd/da7/class_l_o_d_1_1_file.html#af5e9bff4552e687f91ca583bdee1e4cf">LOD::File::uNumSubDirs</a></div><div class="ttdeci">unsigned int uNumSubDirs</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/_l_o_d_8h_source.html#l00093">LOD.h:93</a></div></div>
+<div class="ttc" id="astruct_texture_header_html_aa29d8bd61966f56a4a298a0fd5d3bc58"><div class="ttname"><a href="../../d6/de3/struct_texture_header.html#aa29d8bd61966f56a4a298a0fd5d3bc58">TextureHeader::uTextureSize</a></div><div class="ttdeci">uint32_t uTextureSize</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/de5/_image_8h_source.html#l00081">Image.h:81</a></div></div>
+<div class="ttc" id="anamespacezlib_html_ae552beaf4387a81c63a28b01a9cc7ab4"><div class="ttname"><a href="../../d9/d3e/namespacezlib.html#ae552beaf4387a81c63a28b01a9cc7ab4">zlib::Uncompress</a></div><div class="ttdeci">int Uncompress(void *dest, unsigned int *destLen, const void *source, unsigned int sourceLen)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d23/_zlib_wrapper_8cpp_source.html#l00007">ZlibWrapper.cpp:7</a></div></div>
+<div class="ttc" id="a_s_d_l__egl_8h_html_aaced7cfc21e7d37775d6921bb8177239"><div class="ttname"><a href="../../df/d32/_s_d_l__egl_8h.html#aaced7cfc21e7d37775d6921bb8177239">name</a></div><div class="ttdeci">EGLImageKHR EGLint * name</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/_s_d_l__egl_8h_source.html#l01497">SDL_egl.h:1497</a></div></div>
+<div class="ttc" id="aclass_l_o_d_1_1_file_html_a2c952c2df6ae15342439a86dfe56469a"><div class="ttname"><a href="../../dd/da7/class_l_o_d_1_1_file.html#a2c952c2df6ae15342439a86dfe56469a">LOD::File::pContainerName</a></div><div class="ttdeci">String pContainerName</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/_l_o_d_8h_source.html#l00090">LOD.h:90</a></div></div>
+<div class="ttc" id="a_m_m7_8h_html_a91ad9478d81a7aaf2593e8d9c3d06a14"><div class="ttname"><a href="../../d2/d83/_m_m7_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a></div><div class="ttdeci">unsigned int uint</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d83/_m_m7_8h_source.html#l00004">MM7.h:4</a></div></div>
+<div class="ttc" id="aclass_l_o_d_1_1_file_html_a94f80b82e0e80faee257d1cb18f8267d"><div class="ttname"><a href="../../dd/da7/class_l_o_d_1_1_file.html#a94f80b82e0e80faee257d1cb18f8267d">LOD::File::LoadHeader</a></div><div class="ttdeci">bool LoadHeader()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d42/_l_o_d_8cpp_source.html#l00778">LOD.cpp:778</a></div></div>
+<div class="ttc" id="aclass_l_o_d_1_1_file_html_abd059bd33f1b7f3f28a59b5f1eb1ad92"><div class="ttname"><a href="../../dd/da7/class_l_o_d_1_1_file.html#abd059bd33f1b7f3f28a59b5f1eb1ad92">LOD::File::OpenFile</a></div><div class="ttdeci">virtual bool OpenFile(const String &amp;sFilename)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d42/_l_o_d_8cpp_source.html#l00763">LOD.cpp:763</a></div></div>
+<div class="ttc" id="astruct_texture_header_html"><div class="ttname"><a href="../../d6/de3/struct_texture_header.html">TextureHeader</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/de5/_image_8h_source.html#l00078">Image.h:78</a></div></div>
+<div class="ttc" id="agroup__lavu__mem__funcs_html_ga3d1e3edfcf61ca2d831883e1afbad89e"><div class="ttname"><a href="../../db/d76/group__lavu__mem__funcs.html#ga3d1e3edfcf61ca2d831883e1afbad89e">size</a></div><div class="ttdeci">GLsizeiptr size</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l00540">SDL_opengl_glext.h:540</a></div></div>
+<div class="ttc" id="astruct_l_o_d_1_1_file_header_html"><div class="ttname"><a href="../../dc/d2a/struct_l_o_d_1_1_file_header.html">LOD::FileHeader</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/_l_o_d_8h_source.html#l00022">LOD.h:22</a></div></div>
+<div class="ttc" id="aclass_l_o_d_1_1_file_html_a4d14fe6afb04d6cc126047e44bf82b62"><div class="ttname"><a href="../../dd/da7/class_l_o_d_1_1_file.html#a4d14fe6afb04d6cc126047e44bf82b62">LOD::File::pLODName</a></div><div class="ttdeci">String pLODName</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/_l_o_d_8h_source.html#l00084">LOD.h:84</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../d7/d3d/namespace_l_o_d.html">LOD</a></li><li class="navelem"><a class="el" href="../../dd/da7/class_l_o_d_1_1_file.html">File</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:05:27. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

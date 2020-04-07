@@ -1,0 +1,195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Исходный файл C:/git/world-of-might-and-magic/Engine/Graphics/stru9.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('df/d33/stru9_8h_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">stru9.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../df/d33/stru9_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../da/d20/_i_render_8h.html">Engine/Graphics/IRender.h</a>&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">/*  341 */</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#pragma pack(push, 1)</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="../../d0/dc4/struct_vertex_buffer.html">    6</a></span>&#160;<span class="keyword">struct </span><a class="code" href="../../d0/dc4/struct_vertex_buffer.html">VertexBuffer</a> {</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="comment">//----- (0049835A) --------------------------------------------------------</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="../../d0/dc4/struct_vertex_buffer.html#adb25d82a47ad82d5b69a75ac111401b8">    8</a></span>&#160;    <span class="keyword">inline</span> <a class="code" href="../../d0/dc4/struct_vertex_buffer.html#adb25d82a47ad82d5b69a75ac111401b8">VertexBuffer</a>() {</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; 64; ++i) <a class="code" href="../../d0/dc4/struct_vertex_buffer.html#a0aa44fb5b01864c1fb37d7ff26aa0893">pVertices</a>[i].flt_2C = 0.0<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a>;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <a class="code" href="../../d0/dc4/struct_vertex_buffer.html#a60147eac2992239a42721d63a6d3b1b0">uNumVertices</a> = 0;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    }</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="../../d0/dc4/struct_vertex_buffer.html#a0aa44fb5b01864c1fb37d7ff26aa0893">   14</a></span>&#160;    <a class="code" href="../../db/d1a/struct_render_vertex_soft.html">RenderVertexSoft</a> <a class="code" href="../../d0/dc4/struct_vertex_buffer.html#a0aa44fb5b01864c1fb37d7ff26aa0893">pVertices</a>[64];</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="../../d0/dc4/struct_vertex_buffer.html#a60147eac2992239a42721d63a6d3b1b0">   15</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d0/dc4/struct_vertex_buffer.html#a60147eac2992239a42721d63a6d3b1b0">uNumVertices</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;};</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#pragma pack(pop)</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">/*  342 */</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#pragma pack(push, 1)</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="../../d3/de3/structstru312.html">   21</a></span>&#160;<span class="keyword">struct </span><a class="code" href="../../d3/de3/structstru312.html">stru312</a> {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="comment">//----- (004BE6D1) --------------------------------------------------------</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="../../d3/de3/structstru312.html#a9c615d70accf9bb76054b635571df5e8">   23</a></span>&#160;    <span class="keyword">inline</span> <a class="code" href="../../d3/de3/structstru312.html#a9c615d70accf9bb76054b635571df5e8">stru312</a>() {}</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="../../d3/de3/structstru312.html#a23f776e50c75b97fd8d56c0b10f22b3b">   25</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="../../d3/de3/structstru312.html#a23f776e50c75b97fd8d56c0b10f22b3b">x</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="../../d3/de3/structstru312.html#ac8d51977c5445eb89637fb8004ddb3a2">   26</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="../../d3/de3/structstru312.html#ac8d51977c5445eb89637fb8004ddb3a2">y</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="../../d3/de3/structstru312.html#afecb9cb2110ea8c1ba17c2a608c2a0cd">   27</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="../../d3/de3/structstru312.html#afecb9cb2110ea8c1ba17c2a608c2a0cd">z</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="../../d3/de3/structstru312.html#ad6f2ebd4a487919923fb4f0486402c2c">   28</a></span>&#160;    <span class="keywordtype">char</span> <a class="code" href="../../d3/de3/structstru312.html#ad6f2ebd4a487919923fb4f0486402c2c">field_C</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="../../d3/de3/structstru312.html#a176a71b0f971199696a054f3ea936b97">   29</a></span>&#160;    <span class="keywordtype">char</span> <a class="code" href="../../d3/de3/structstru312.html#a176a71b0f971199696a054f3ea936b97">pad</a>[3];</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;};</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#pragma pack(pop)</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">/*  126 */</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#pragma pack(push, 1)</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="../../da/d1a/structstru9.html">   35</a></span>&#160;<span class="keyword">struct </span><a class="code" href="../../da/d1a/structstru9.html">stru9</a> {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="comment">//----- (00498093) --------------------------------------------------------</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="../../da/d1a/structstru9.html#a911762b4a82725c1c17cffee2e98993f">   37</a></span>&#160;    <span class="keyword">inline</span> <a class="code" href="../../da/d1a/structstru9.html#a911762b4a82725c1c17cffee2e98993f">stru9</a>() {}</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../da/d1a/structstru9.html#a55b8e1592eecb724cfd6ecf6fcfb76cd">_4980B9</a>(<span class="keyword">struct</span> <a class="code" href="../../db/d1a/struct_render_vertex_soft.html">RenderVertexSoft</a> *a1, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> uNumVertices,</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                 <span class="keywordtype">float</span> a3, <span class="keywordtype">float</span> a4, <span class="keywordtype">float</span> a5,</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                 <span class="keyword">struct</span> <a class="code" href="../../db/d1a/struct_render_vertex_soft.html">RenderVertexSoft</a> *pOutVertices,</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                 <span class="keywordtype">signed</span> <span class="keywordtype">int</span> *pOutNumVertices);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../da/d1a/structstru9.html#a8163b4a03068ca4b9627a1550b1c30c4">_498377</a>(<span class="keyword">struct</span> <a class="code" href="../../db/d1a/struct_render_vertex_soft.html">RenderVertexSoft</a> *pPortalBounding,</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                 <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> uNumVertices,</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                 <span class="keyword">struct</span> <a class="code" href="../../da/d76/struct_indoor_camera_d3_d___vec4.html">IndoorCameraD3D_Vec4</a> *<a class="code" href="../../d2/dc7/_render_8cpp.html#a885ebc5851e45409068290c374bcee32">pVertices</a>,</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                 <span class="keyword">struct</span> <a class="code" href="../../db/d1a/struct_render_vertex_soft.html">RenderVertexSoft</a> *pVertices2,</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                 <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> *pOutNumVertices);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../da/d1a/structstru9.html#a59d7b621538c9ccedebb1d52b5acee96">AdjustVerticesToFrustumPlane</a>(<a class="code" href="../../db/d1a/struct_render_vertex_soft.html">RenderVertexSoft</a> *pInVertices, <span class="keywordtype">signed</span> <span class="keywordtype">int</span> pInNumVertices,</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <a class="code" href="../../db/d1a/struct_render_vertex_soft.html">RenderVertexSoft</a> *pOutVertices,</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> *pOutNumVertices,</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keyword">struct</span> <a class="code" href="../../d5/d06/struct_vec3__float__.html">Vec3_float_</a> *CamFrustumNormal, <span class="keywordtype">float</span> CamDotDistance, <span class="keywordtype">char</span> *VertsAdjusted,</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordtype">int</span> unused);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../da/d1a/structstru9.html#ae4ffefad03ff4681b61e3d80561bd88c">AddVertex</a>(<span class="keyword">struct</span> <a class="code" href="../../d0/dc4/struct_vertex_buffer.html">VertexBuffer</a> *pVertexBuffer,</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                   <span class="keyword">struct</span> <a class="code" href="../../db/d1a/struct_render_vertex_soft.html">RenderVertexSoft</a> *pVertex);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../da/d1a/structstru9.html#a957d8b5e3348f9626104d33ef95ef97b">ClipDecalVertsToFace</a>(<span class="keyword">struct</span> <a class="code" href="../../db/d1a/struct_render_vertex_soft.html">RenderVertexSoft</a> *a1, <span class="keyword">struct</span> <a class="code" href="../../db/d1a/struct_render_vertex_soft.html">RenderVertexSoft</a> *a2,</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                 <span class="keyword">struct</span> <a class="code" href="../../db/d1a/struct_render_vertex_soft.html">RenderVertexSoft</a> *a3, <span class="keyword">struct</span> <a class="code" href="../../d3/de3/structstru312.html">stru312</a> *a4,</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                 <span class="keyword">struct</span> <a class="code" href="../../db/d1a/struct_render_vertex_soft.html">RenderVertexSoft</a> *a5);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../da/d1a/structstru9.html#a0d2c4eed441efb491ef20c4ab865f5aa">AreVectorsCollinear</a>(<span class="keyword">struct</span> <a class="code" href="../../db/d1a/struct_render_vertex_soft.html">RenderVertexSoft</a> *a1,</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                             <span class="keyword">struct</span> <a class="code" href="../../db/d1a/struct_render_vertex_soft.html">RenderVertexSoft</a> *a2, <span class="keyword">struct</span> <a class="code" href="../../d3/de3/structstru312.html">stru312</a> *a3);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../da/d1a/structstru9.html#a0f7deb8b6ff330a77c2a7ea9ebdf5fb9">DoDecalVertsNeedClipping</a>(<span class="keyword">struct</span> <a class="code" href="../../db/d1a/struct_render_vertex_soft.html">RenderVertexSoft</a> *a1, <span class="keyword">struct</span> <a class="code" href="../../db/d1a/struct_render_vertex_soft.html">RenderVertexSoft</a> *a2,</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                 <span class="keyword">struct</span> <a class="code" href="../../db/d1a/struct_render_vertex_soft.html">RenderVertexSoft</a> *a3, <span class="keyword">struct</span> <a class="code" href="../../d3/de3/structstru312.html">stru312</a> *a4);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="../../da/d1a/structstru9.html#a44768dbc2720dbf8ce46b6a1e14e4bd4">   63</a></span>&#160;    <a class="code" href="../../d3/d78/_s_d_l__audio_8h.html#aa5cb90967788ada2711894ca158ece01">void</a> (***<a class="code" href="../../da/d1a/structstru9.html#a44768dbc2720dbf8ce46b6a1e14e4bd4">vdestructor_ptr</a>)(<a class="code" href="../../da/d1a/structstru9.html">stru9</a> *, bool);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;};</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">#pragma pack(pop)</span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="astruct_vec3__float___html"><div class="ttname"><a href="../../d5/d06/struct_vec3__float__.html">Vec3_float_</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d90/_vector_types_8h_source.html#l00074">VectorTypes.h:74</a></div></div>
+<div class="ttc" id="astructstru312_html_ad6f2ebd4a487919923fb4f0486402c2c"><div class="ttname"><a href="../../d3/de3/structstru312.html#ad6f2ebd4a487919923fb4f0486402c2c">stru312::field_C</a></div><div class="ttdeci">char field_C</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d33/stru9_8h_source.html#l00028">stru9.h:28</a></div></div>
+<div class="ttc" id="astructstru312_html_a9c615d70accf9bb76054b635571df5e8"><div class="ttname"><a href="../../d3/de3/structstru312.html#a9c615d70accf9bb76054b635571df5e8">stru312::stru312</a></div><div class="ttdeci">stru312()</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d33/stru9_8h_source.html#l00023">stru9.h:23</a></div></div>
+<div class="ttc" id="astructstru312_html_a23f776e50c75b97fd8d56c0b10f22b3b"><div class="ttname"><a href="../../d3/de3/structstru312.html#a23f776e50c75b97fd8d56c0b10f22b3b">stru312::x</a></div><div class="ttdeci">float x</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d33/stru9_8h_source.html#l00025">stru9.h:25</a></div></div>
+<div class="ttc" id="astruct_indoor_camera_d3_d___vec4_html"><div class="ttname"><a href="../../da/d76/struct_indoor_camera_d3_d___vec4.html">IndoorCameraD3D_Vec4</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcf/_indoor_camera_d3_d_8h_source.html#l00032">IndoorCameraD3D.h:32</a></div></div>
+<div class="ttc" id="astructstru312_html"><div class="ttname"><a href="../../d3/de3/structstru312.html">stru312</a></div><div class="ttdef"><b>Definition:</b> <a href="../../df/d33/stru9_8h_source.html#l00021">stru9.h:21</a></div></div>
+<div class="ttc" id="astructstru9_html_a0d2c4eed441efb491ef20c4ab865f5aa"><div class="ttname"><a href="../../da/d1a/structstru9.html#a0d2c4eed441efb491ef20c4ab865f5aa">stru9::AreVectorsCollinear</a></div><div class="ttdeci">bool AreVectorsCollinear(struct RenderVertexSoft *a1, struct RenderVertexSoft *a2, struct stru312 *a3)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d48/stru9_8cpp_source.html#l00339">stru9.cpp:339</a></div></div>
+<div class="ttc" id="astruct_vertex_buffer_html_adb25d82a47ad82d5b69a75ac111401b8"><div class="ttname"><a href="../../d0/dc4/struct_vertex_buffer.html#adb25d82a47ad82d5b69a75ac111401b8">VertexBuffer::VertexBuffer</a></div><div class="ttdeci">VertexBuffer()</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d33/stru9_8h_source.html#l00008">stru9.h:8</a></div></div>
+<div class="ttc" id="astructstru9_html_a59d7b621538c9ccedebb1d52b5acee96"><div class="ttname"><a href="../../da/d1a/structstru9.html#a59d7b621538c9ccedebb1d52b5acee96">stru9::AdjustVerticesToFrustumPlane</a></div><div class="ttdeci">bool AdjustVerticesToFrustumPlane(RenderVertexSoft *pInVertices, signed int pInNumVertices, RenderVertexSoft *pOutVertices, unsigned int *pOutNumVertices, struct Vec3_float_ *CamFrustumNormal, float CamDotDistance, char *VertsAdjusted, int unused)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d48/stru9_8cpp_source.html#l00164">stru9.cpp:164</a></div></div>
+<div class="ttc" id="a_render_8cpp_html_a885ebc5851e45409068290c374bcee32"><div class="ttname"><a href="../../d2/dc7/_render_8cpp.html#a885ebc5851e45409068290c374bcee32">pVertices</a></div><div class="ttdeci">struct RenderVertexD3D3 pVertices[50]</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dc7/_render_8cpp_source.html#l00050">Render.cpp:50</a></div></div>
+<div class="ttc" id="a_i_render_8h_html"><div class="ttname"><a href="../../da/d20/_i_render_8h.html">IRender.h</a></div></div>
+<div class="ttc" id="astructstru9_html_a911762b4a82725c1c17cffee2e98993f"><div class="ttname"><a href="../../da/d1a/structstru9.html#a911762b4a82725c1c17cffee2e98993f">stru9::stru9</a></div><div class="ttdeci">stru9()</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d33/stru9_8h_source.html#l00037">stru9.h:37</a></div></div>
+<div class="ttc" id="astructstru312_html_afecb9cb2110ea8c1ba17c2a608c2a0cd"><div class="ttname"><a href="../../d3/de3/structstru312.html#afecb9cb2110ea8c1ba17c2a608c2a0cd">stru312::z</a></div><div class="ttdeci">float z</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d33/stru9_8h_source.html#l00027">stru9.h:27</a></div></div>
+<div class="ttc" id="astructstru9_html_a44768dbc2720dbf8ce46b6a1e14e4bd4"><div class="ttname"><a href="../../da/d1a/structstru9.html#a44768dbc2720dbf8ce46b6a1e14e4bd4">stru9::vdestructor_ptr</a></div><div class="ttdeci">void(*** vdestructor_ptr)(stru9 *, bool)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d33/stru9_8h_source.html#l00063">stru9.h:63</a></div></div>
+<div class="ttc" id="astructstru9_html_a55b8e1592eecb724cfd6ecf6fcfb76cd"><div class="ttname"><a href="../../da/d1a/structstru9.html#a55b8e1592eecb724cfd6ecf6fcfb76cd">stru9::_4980B9</a></div><div class="ttdeci">bool _4980B9(struct RenderVertexSoft *a1, unsigned int uNumVertices, float a3, float a4, float a5, struct RenderVertexSoft *pOutVertices, signed int *pOutNumVertices)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d48/stru9_8cpp_source.html#l00379">stru9.cpp:379</a></div></div>
+<div class="ttc" id="astructstru9_html_a0f7deb8b6ff330a77c2a7ea9ebdf5fb9"><div class="ttname"><a href="../../da/d1a/structstru9.html#a0f7deb8b6ff330a77c2a7ea9ebdf5fb9">stru9::DoDecalVertsNeedClipping</a></div><div class="ttdeci">bool DoDecalVertsNeedClipping(struct RenderVertexSoft *a1, struct RenderVertexSoft *a2, struct RenderVertexSoft *a3, struct stru312 *a4)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d48/stru9_8cpp_source.html#l00357">stru9.cpp:357</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a691492ec0bd6383f91200e49f6ae40ed"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a></div><div class="ttdeci">GLfloat f</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l01873">SDL_opengl_glext.h:1873</a></div></div>
+<div class="ttc" id="astructstru9_html_a8163b4a03068ca4b9627a1550b1c30c4"><div class="ttname"><a href="../../da/d1a/structstru9.html#a8163b4a03068ca4b9627a1550b1c30c4">stru9::_498377</a></div><div class="ttdeci">bool _498377(struct RenderVertexSoft *pPortalBounding, unsigned int uNumVertices, struct IndoorCameraD3D_Vec4 *pVertices, struct RenderVertexSoft *pVertices2, unsigned int *pOutNumVertices)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d48/stru9_8cpp_source.html#l00008">stru9.cpp:8</a></div></div>
+<div class="ttc" id="astructstru9_html_a957d8b5e3348f9626104d33ef95ef97b"><div class="ttname"><a href="../../da/d1a/structstru9.html#a957d8b5e3348f9626104d33ef95ef97b">stru9::ClipDecalVertsToFace</a></div><div class="ttdeci">bool ClipDecalVertsToFace(struct RenderVertexSoft *a1, struct RenderVertexSoft *a2, struct RenderVertexSoft *a3, struct stru312 *a4, struct RenderVertexSoft *a5)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d48/stru9_8cpp_source.html#l00250">stru9.cpp:250</a></div></div>
+<div class="ttc" id="astruct_vertex_buffer_html_a60147eac2992239a42721d63a6d3b1b0"><div class="ttname"><a href="../../d0/dc4/struct_vertex_buffer.html#a60147eac2992239a42721d63a6d3b1b0">VertexBuffer::uNumVertices</a></div><div class="ttdeci">int uNumVertices</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d33/stru9_8h_source.html#l00015">stru9.h:15</a></div></div>
+<div class="ttc" id="a_s_d_l__audio_8h_html_aa5cb90967788ada2711894ca158ece01"><div class="ttname"><a href="../../d3/d78/_s_d_l__audio_8h.html#aa5cb90967788ada2711894ca158ece01">void</a></div><div class="ttdeci">typedef void(SDLCALL *SDL_AudioFilter)(struct SDL_AudioCVT *cvt</div></div>
+<div class="ttc" id="astructstru9_html"><div class="ttname"><a href="../../da/d1a/structstru9.html">stru9</a></div><div class="ttdef"><b>Definition:</b> <a href="../../df/d33/stru9_8h_source.html#l00035">stru9.h:35</a></div></div>
+<div class="ttc" id="astructstru9_html_ae4ffefad03ff4681b61e3d80561bd88c"><div class="ttname"><a href="../../da/d1a/structstru9.html#ae4ffefad03ff4681b61e3d80561bd88c">stru9::AddVertex</a></div><div class="ttdeci">void AddVertex(struct VertexBuffer *pVertexBuffer, struct RenderVertexSoft *pVertex)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d48/stru9_8cpp_source.html#l00236">stru9.cpp:236</a></div></div>
+<div class="ttc" id="astruct_vertex_buffer_html"><div class="ttname"><a href="../../d0/dc4/struct_vertex_buffer.html">VertexBuffer</a></div><div class="ttdef"><b>Definition:</b> <a href="../../df/d33/stru9_8h_source.html#l00006">stru9.h:6</a></div></div>
+<div class="ttc" id="astructstru312_html_a176a71b0f971199696a054f3ea936b97"><div class="ttname"><a href="../../d3/de3/structstru312.html#a176a71b0f971199696a054f3ea936b97">stru312::pad</a></div><div class="ttdeci">char pad[3]</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d33/stru9_8h_source.html#l00029">stru9.h:29</a></div></div>
+<div class="ttc" id="astructstru312_html_ac8d51977c5445eb89637fb8004ddb3a2"><div class="ttname"><a href="../../d3/de3/structstru312.html#ac8d51977c5445eb89637fb8004ddb3a2">stru312::y</a></div><div class="ttdeci">float y</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d33/stru9_8h_source.html#l00026">stru9.h:26</a></div></div>
+<div class="ttc" id="astruct_render_vertex_soft_html"><div class="ttname"><a href="../../db/d1a/struct_render_vertex_soft.html">RenderVertexSoft</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/d20/_i_render_8h_source.html#l00113">IRender.h:113</a></div></div>
+<div class="ttc" id="astruct_vertex_buffer_html_a0aa44fb5b01864c1fb37d7ff26aa0893"><div class="ttname"><a href="../../d0/dc4/struct_vertex_buffer.html#a0aa44fb5b01864c1fb37d7ff26aa0893">VertexBuffer::pVertices</a></div><div class="ttdeci">RenderVertexSoft pVertices[64]</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d33/stru9_8h_source.html#l00014">stru9.h:14</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_0b6ee6e7e9547e675db4add2e5de97da.html">Engine</a></li><li class="navelem"><a class="el" href="../../dir_bb84c1711d8a00602a64a24ea462155a.html">Graphics</a></li><li class="navelem"><a class="el" href="../../df/d33/stru9_8h.html">stru9.h</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:03:30. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,730 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Файл C:/git/world-of-might-and-magic/Engine/OurMath.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d0/dc0/_our_math_8h.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#func-members">Функции</a> &#124;
+<a href="#var-members">Переменные</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл OurMath.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><a href="../../d0/dc0/_our_math_8h_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dc9/structfixed.html">fixed</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d38/structstru193__math.html">stru193_math</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a6f934d757f0bee6d89896c7783663481"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/df4/alext_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dc0/_our_math_8h.html#a6f934d757f0bee6d89896c7783663481">fixpoint_mul</a> (int, int)</td></tr>
+<tr class="separator:a6f934d757f0bee6d89896c7783663481"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0e99487f7c2ea9f26c3e1b6acfabf81"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/df4/alext_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dc0/_our_math_8h.html#aa0e99487f7c2ea9f26c3e1b6acfabf81">fixpoint_dot</a> (int <a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a49825216c96caaeb09237b36651181c5">x1</a>, int <a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a7b907a03236685c534d89d604cff23c8">x2</a>, int <a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a3af6c78fcdfccea028a5878bc747ef39">y1</a>, int <a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a2be1135ed68e8d80fa9e130c7814f8c2">y2</a>, int z1, int z2)</td></tr>
+<tr class="separator:aa0e99487f7c2ea9f26c3e1b6acfabf81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bdf27934bffbfa089daaeb21bef234a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/df4/alext_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dc0/_our_math_8h.html#a5bdf27934bffbfa089daaeb21bef234a">fixpoint_div</a> (int, int)</td></tr>
+<tr class="separator:a5bdf27934bffbfa089daaeb21bef234a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52f1bdee7e430fa4469bb94efb478de1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/df4/alext_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dc0/_our_math_8h.html#a52f1bdee7e430fa4469bb94efb478de1">fixpoint_sub_unknown</a> (int, int)</td></tr>
+<tr class="separator:a52f1bdee7e430fa4469bb94efb478de1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0291a2ad34d9448b49019f7be6a6e503"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dc0/_our_math_8h.html#a0291a2ad34d9448b49019f7be6a6e503">fixpoint_from_float</a> (float <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#a8ad81492d410ff2ac11f754f4042150f">value</a>)</td></tr>
+<tr class="separator:a0291a2ad34d9448b49019f7be6a6e503"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ceb3f872920afca04b7158dbda4078a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dc0/_our_math_8h.html#a2ceb3f872920afca04b7158dbda4078a">fixpoint_from_int</a> (int lhv, int rhv)</td></tr>
+<tr class="separator:a2ceb3f872920afca04b7158dbda4078a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac6e421d654d85d401b67bcb0da79680"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dc0/_our_math_8h.html#aac6e421d654d85d401b67bcb0da79680">integer_sqrt</a> (int <a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a26942fd2ed566ef553eae82d2c109c8f">val</a>)</td></tr>
+<tr class="separator:aac6e421d654d85d401b67bcb0da79680"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b46ede8d1d8678f2c7835a70c46f10c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dc0/_our_math_8h.html#a6b46ede8d1d8678f2c7835a70c46f10c">GetDiceResult</a> (unsigned int uNumDice, unsigned int uDiceSides)</td></tr>
+<tr class="separator:a6b46ede8d1d8678f2c7835a70c46f10c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50ee4d4946888926bdf5a920129a322a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dc0/_our_math_8h.html#a50ee4d4946888926bdf5a920129a322a">round_to_int</a> (float <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#ad0e63d0edcdbd3d79554076bf309fd47">x</a>)</td></tr>
+<tr class="separator:a50ee4d4946888926bdf5a920129a322a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2a1e13f594afe4778ee046c1a6763a5"><td class="memTemplParams" colspan="2">template&lt;typename FloatType &gt; </td></tr>
+<tr class="memitem:ab2a1e13f594afe4778ee046c1a6763a5"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d0/dc0/_our_math_8h.html#ab2a1e13f594afe4778ee046c1a6763a5">bankersRounding</a> (const FloatType &amp;<a class="el" href="../../df/d32/_s_d_l__egl_8h.html#a8ad81492d410ff2ac11f754f4042150f">value</a>)</td></tr>
+<tr class="separator:ab2a1e13f594afe4778ee046c1a6763a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4df6b7b16fb58429d0153a520ad42153"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:a4df6b7b16fb58429d0153a520ad42153"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d0/dc0/_our_math_8h.html#a4df6b7b16fb58429d0153a520ad42153">bankersRounding&lt; float &gt;</a> (const float &amp;inValue)</td></tr>
+<tr class="separator:a4df6b7b16fb58429d0153a520ad42153"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae05bc48f61f3b3f873e62918eb7ba6ca"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:ae05bc48f61f3b3f873e62918eb7ba6ca"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d0/dc0/_our_math_8h.html#ae05bc48f61f3b3f873e62918eb7ba6ca">bankersRounding&lt; double &gt;</a> (const double &amp;inValue)</td></tr>
+<tr class="separator:ae05bc48f61f3b3f873e62918eb7ba6ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:a954e0b4aff4557f1c600694ee5cf55fd"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="../../d6/d38/structstru193__math.html">stru193_math</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dc0/_our_math_8h.html#a954e0b4aff4557f1c600694ee5cf55fd">stru_5C6E00</a></td></tr>
+<tr class="separator:a954e0b4aff4557f1c600694ee5cf55fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Функции</h2>
+<a id="a6f934d757f0bee6d89896c7783663481"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f934d757f0bee6d89896c7783663481">&#9670;&nbsp;</a></span>fixpoint_mul()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dd/df4/alext_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a> fixpoint_mul </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/db6/_our_math_8cpp_source.html">OurMath.cpp</a> строка <a class="el" href="../../de/db6/_our_math_8cpp_source.html#l00138">138</a></p>
+<div class="fragment"><div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;                                     {</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="keywordflow">return</span> ((__int64)a1 * (__int64)a2) &gt;&gt; 16;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Используется в <a class="el" href="../../d9/dd3/_cast_spell_info_8cpp_source.html#l00046">CastSpellInfoHelpers::_427E01_cast_spell()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l05298">_45063B_spawn_some_monster()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l02699">Actor::_46DF1A_collide_against_actor()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l04855">_46E0B2_collide_against_decorations()</a>, <a class="el" href="../../db/d87/_sprites_8cpp_source.html#l00447">_46E26D_collide_against_sprites()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l04790">_46EF01_collision_chech_player()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l02507">Actor::ActorDamageFromMonster()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l02003">Actor::AI_Pursue1()</a>, <a class="el" href="../../dc/d16/_indoor_camera_d3_d_8cpp_source.html#l00088">IndoorCameraD3D::ApplyViewTransform_TrueIfStillVisible_BLV()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l02530">BLV_GetFloorLevel()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l04655">BLV_ProcessPartyActions()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l01506">BLV_UpdateDoors()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l05697">stru141_actor_collision_object::CalcMovementExtents()</a>, <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l00062">SkyBillboardStruct::CalcSkyFrustumVec()</a>, <a class="el" href="../../de/dd4/_vis_8cpp_source.html#l00585">Vis::CheckIntersectBModel()</a>, <a class="el" href="../../d9/ded/_sprite_object_8cpp_source.html#l00056">SpriteObject::Create()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l03379">Actor::DamageMonsterFromParty()</a>, <a class="el" href="../../d0/d67/_map_book_8cpp_source.html#l00180">DrawBook_Map_sub()</a>, <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l02018">RenderOpenGL::DrawBuildingsD3D()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l03510">Render::DrawBuildingsD3D()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l05795">Render::DrawIndoorSky()</a>, <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l01378">RenderOpenGL::DrawOutdoorSkyD3D()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l05613">Render::DrawOutdoorSkyD3D()</a>, <a class="el" href="../../d4/d58/_render_base_8cpp_source.html#l00109">RenderBase::DrawSpriteObjects_ODM()</a>, <a class="el" href="../../de/db6/_our_math_8cpp_source.html#l00142">fixpoint_dot()</a>, <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l01916">GameUI_DrawMinimap()</a>, <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l03254">GetCeilingHeight()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l04045">GetPortalScreenCoord()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l01279">IndoorLocation::GetSector()</a>, <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l04044">GetTerrainHeightsAroundParty2()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l05516">IsBModelVisible()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l05553">ItemDamageFromActor()</a>, <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l01877">ODM_GetFloorLevel()</a>, <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l02221">ODM_ProcessPartyActions()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l02871">IndoorLocation::PrepareItemsRenderList_BLV()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l05063">SpawnEncounter()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l04688">sub_4070EF_prolly_detect_player()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l05424">sub_4075DB()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l03199">sub_407A1C()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l04969">sub_44FA4C_spawn_light_elemental()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l05027">sub_47531C()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l05082">sub_4754BF()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l05403">sub_475D85()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l05467">sub_475F30()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l02606">Actor::SummonMinion()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l01718">UpdateActors_BLV()</a>, <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l03393">UpdateActors_ODM()</a>, <a class="el" href="../../d9/ded/_sprite_object_8cpp_source.html#l00463">SpriteObject::UpdateObject_fn0_BLV()</a> и <a class="el" href="../../d9/ded/_sprite_object_8cpp_source.html#l00130">SpriteObject::UpdateObject_fn0_ODM()</a>.</p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d0/dc0/_our_math_8h_a6f934d757f0bee6d89896c7783663481_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="aa0e99487f7c2ea9f26c3e1b6acfabf81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0e99487f7c2ea9f26c3e1b6acfabf81">&#9670;&nbsp;</a></span>fixpoint_dot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dd/df4/alext_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a> fixpoint_dot </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>z1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>z2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/db6/_our_math_8cpp_source.html">OurMath.cpp</a> строка <a class="el" href="../../de/db6/_our_math_8cpp_source.html#l00142">142</a></p>
+<div class="fragment"><div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;                                                                     {</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../de/db6/_our_math_8cpp.html#abc4811d26f9864e00046c39c39d65680">fixpoint_mul</a>(<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a49825216c96caaeb09237b36651181c5">x1</a>, <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a7b907a03236685c534d89d604cff23c8">x2</a>) + <a class="code" href="../../de/db6/_our_math_8cpp.html#abc4811d26f9864e00046c39c39d65680">fixpoint_mul</a>(<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a3af6c78fcdfccea028a5878bc747ef39">y1</a>, <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a2be1135ed68e8d80fa9e130c7814f8c2">y2</a>) + <a class="code" href="../../de/db6/_our_math_8cpp.html#abc4811d26f9864e00046c39c39d65680">fixpoint_mul</a>(z1, z2);</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../de/db6/_our_math_8cpp_source.html#l00138">fixpoint_mul()</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l00062">SkyBillboardStruct::CalcSkyFrustumVec()</a>.</p>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/dc0/_our_math_8h_aa0e99487f7c2ea9f26c3e1b6acfabf81_cgraph.svg" width="238" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d0/dc0/_our_math_8h_aa0e99487f7c2ea9f26c3e1b6acfabf81_icgraph.svg" width="100%" height="448"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a5bdf27934bffbfa089daaeb21bef234a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bdf27934bffbfa089daaeb21bef234a">&#9670;&nbsp;</a></span>fixpoint_div()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dd/df4/alext_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a> fixpoint_div </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/db6/_our_math_8cpp_source.html">OurMath.cpp</a> строка <a class="el" href="../../de/db6/_our_math_8cpp_source.html#l00147">147</a></p>
+<div class="fragment"><div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;{ <span class="keywordflow">return</span> ((__int64)a1 &lt;&lt; 16) / a2; }</div>
+</div><!-- fragment -->
+<p class="reference">Используется в <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l02530">BLV_GetFloorLevel()</a>, <a class="el" href="../../de/dd4/_vis_8cpp_source.html#l00585">Vis::CheckIntersectBModel()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l04045">GetPortalScreenCoord()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l01279">IndoorLocation::GetSector()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00163">BLVRenderParams::Reset()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l04688">sub_4070EF_prolly_detect_player()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l05424">sub_4075DB()</a> и <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l03199">sub_407A1C()</a>.</p>
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d0/dc0/_our_math_8h_a5bdf27934bffbfa089daaeb21bef234a_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a52f1bdee7e430fa4469bb94efb478de1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52f1bdee7e430fa4469bb94efb478de1">&#9670;&nbsp;</a></span>fixpoint_sub_unknown()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dd/df4/alext_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a> fixpoint_sub_unknown </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/db6/_our_math_8cpp_source.html">OurMath.cpp</a> строка <a class="el" href="../../de/db6/_our_math_8cpp_source.html#l00149">149</a></p>
+<div class="fragment"><div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;                                             {</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <span class="keywordflow">return</span> (((__int64)a1 &lt;&lt; 16) * a2) &gt;&gt; 16;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a0291a2ad34d9448b49019f7be6a6e503"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0291a2ad34d9448b49019f7be6a6e503">&#9670;&nbsp;</a></span>fixpoint_from_float()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int fixpoint_from_float </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/db6/_our_math_8cpp_source.html">OurMath.cpp</a> строка <a class="el" href="../../de/db6/_our_math_8cpp_source.html#l00154">154</a></p>
+<div class="fragment"><div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;                                   {</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="comment">//  float X.Yf -&gt; int XXXX YYYY</span></div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a85b8f6c07fbc1fb5d77c2ae090f21995">left</a> = floorf((<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a26942fd2ed566ef553eae82d2c109c8f">val</a> - 0.5<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a>) + 0.5<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a>);</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a5ffadbbacc6b89cf6218bc43b384d3fe">right</a> = floorf((<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a26942fd2ed566ef553eae82d2c109c8f">val</a> - <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a85b8f6c07fbc1fb5d77c2ae090f21995">left</a>) * 65536.0<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a>);</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keywordflow">return</span> (<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a85b8f6c07fbc1fb5d77c2ae090f21995">left</a> &lt;&lt; 16) | <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a5ffadbbacc6b89cf6218bc43b384d3fe">right</a>;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Используется в <a class="el" href="../../de/dd4/_vis_8cpp_source.html#l00921">Vis::CastPickRay()</a> и <a class="el" href="../../d0/dc0/_our_math_8h_source.html#l00025">fixed::FromFloat()</a>.</p>
+<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d0/dc0/_our_math_8h_a0291a2ad34d9448b49019f7be6a6e503_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a2ceb3f872920afca04b7158dbda4078a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ceb3f872920afca04b7158dbda4078a">&#9670;&nbsp;</a></span>fixpoint_from_int()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int fixpoint_from_int </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>lhv</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>rhv</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/db6/_our_math_8cpp_source.html">OurMath.cpp</a> строка <a class="el" href="../../de/db6/_our_math_8cpp_source.html#l00161">161</a></p>
+<div class="fragment"><div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;{ <span class="keywordflow">return</span> (lhv &lt;&lt; 16) | rhv; }</div>
+</div><!-- fragment -->
+<p class="reference">Используется в <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00163">BLVRenderParams::Reset()</a>.</p>
+<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d0/dc0/_our_math_8h_a2ceb3f872920afca04b7158dbda4078a_icgraph.svg" width="100%" height="448"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="aac6e421d654d85d401b67bcb0da79680"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac6e421d654d85d401b67bcb0da79680">&#9670;&nbsp;</a></span>integer_sqrt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int integer_sqrt </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>val</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/db6/_our_math_8cpp_source.html">OurMath.cpp</a> строка <a class="el" href="../../de/db6/_our_math_8cpp_source.html#l00164">164</a></p>
+<div class="fragment"><div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;                          {</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="comment">//Получение квадратного корня//</span></div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a321ff419cd5252e54cf95e64dc6687ee">result</a>;       <span class="comment">// eax@2</span></div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0928f6d0f0f794ba000a21dfae422136">v2</a>;  <span class="comment">// edx@3</span></div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#acc806b31cbf466ceba6555983d8b814d">v3</a>;  <span class="comment">// edi@3</span></div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="keywordtype">int</span> v5;           <span class="comment">// esi@4</span></div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160; </div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a26942fd2ed566ef553eae82d2c109c8f">val</a> &lt; 1) <span class="keywordflow">return</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a26942fd2ed566ef553eae82d2c109c8f">val</a>;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160; </div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0928f6d0f0f794ba000a21dfae422136">v2</a> = 0;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#acc806b31cbf466ceba6555983d8b814d">v3</a> = <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a26942fd2ed566ef553eae82d2c109c8f">val</a>;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a321ff419cd5252e54cf95e64dc6687ee">result</a> = 0;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; 16; ++i) {</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a321ff419cd5252e54cf95e64dc6687ee">result</a> *= 2;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0928f6d0f0f794ba000a21dfae422136">v2</a> = (<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#acc806b31cbf466ceba6555983d8b814d">v3</a> &gt;&gt; 30) | 4 * <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0928f6d0f0f794ba000a21dfae422136">v2</a>;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        v5 = 2 * <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a321ff419cd5252e54cf95e64dc6687ee">result</a> + 1;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#acc806b31cbf466ceba6555983d8b814d">v3</a> *= 4;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0928f6d0f0f794ba000a21dfae422136">v2</a> &gt;= v5) {</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;            ++<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a321ff419cd5252e54cf95e64dc6687ee">result</a>;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;            <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0928f6d0f0f794ba000a21dfae422136">v2</a> -= v5;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        }</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    }</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a26942fd2ed566ef553eae82d2c109c8f">val</a> - <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a321ff419cd5252e54cf95e64dc6687ee">result</a> * <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a321ff419cd5252e54cf95e64dc6687ee">result</a> &gt;= (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>)(<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a321ff419cd5252e54cf95e64dc6687ee">result</a> - 1)) ++<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a321ff419cd5252e54cf95e64dc6687ee">result</a>;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a321ff419cd5252e54cf95e64dc6687ee">result</a>;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Используется в <a class="el" href="../../d2/d82/_player_8cpp_source.html#l07643">Player::_42ECB5_PlayerAttacksActor()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l02699">Actor::_46DF1A_collide_against_actor()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l04855">_46E0B2_collide_against_decorations()</a>, <a class="el" href="../../db/d87/_sprites_8cpp_source.html#l00447">_46E26D_collide_against_sprites()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l04790">_46EF01_collision_chech_player()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l04655">BLV_ProcessPartyActions()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l05697">stru141_actor_collision_object::CalcMovementExtents()</a>, <a class="el" href="../../dc/d90/_vector_types_8h_source.html#l00048">Vec3&lt; int &gt;::Normalize()</a>, <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l02221">ODM_ProcessPartyActions()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l04688">sub_4070EF_prolly_detect_player()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l03199">sub_407A1C()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l05277">sub_4088E9()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l01718">UpdateActors_BLV()</a>, <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l03393">UpdateActors_ODM()</a>, <a class="el" href="../../d9/ded/_sprite_object_8cpp_source.html#l00463">SpriteObject::UpdateObject_fn0_BLV()</a> и <a class="el" href="../../d9/ded/_sprite_object_8cpp_source.html#l00130">SpriteObject::UpdateObject_fn0_ODM()</a>.</p>
+<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d0/dc0/_our_math_8h_aac6e421d654d85d401b67bcb0da79680_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a6b46ede8d1d8678f2c7835a70c46f10c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b46ede8d1d8678f2c7835a70c46f10c">&#9670;&nbsp;</a></span>GetDiceResult()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GetDiceResult </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>uNumDice</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>uDiceSides</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/db6/_our_math_8cpp_source.html">OurMath.cpp</a> строка <a class="el" href="../../de/db6/_our_math_8cpp_source.html#l00194">194</a></p>
+<div class="fragment"><div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;                                                                  {</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#acc806b31cbf466ceba6555983d8b814d">v3</a> = 0;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <span class="keywordflow">if</span> (uDiceSides) {</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; uNumDice; ++i)</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;            <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#acc806b31cbf466ceba6555983d8b814d">v3</a> += rand() % uDiceSides + 1;</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#acc806b31cbf466ceba6555983d8b814d">v3</a>;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    }</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Используется в <a class="el" href="../../d9/d99/_items_8cpp_source.html#l00042">ItemGen::_439DF3_get_additional_damage()</a> и <a class="el" href="../../da/df3/_spells_8cpp_source.html#l00745">_43AFE3_calc_spell_damage()</a>.</p>
+<div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-7-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-7-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d0/dc0/_our_math_8h_a6b46ede8d1d8678f2c7835a70c46f10c_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a50ee4d4946888926bdf5a920129a322a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50ee4d4946888926bdf5a920129a322a">&#9670;&nbsp;</a></span>round_to_int()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int round_to_int </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d0/dc0/_our_math_8h_source.html">OurMath.h</a> строка <a class="el" href="../../d0/dc0/_our_math_8h_source.html#l00018">18</a></p>
+<div class="fragment"><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{ <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)floor(<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ad0e63d0edcdbd3d79554076bf309fd47">x</a> + 0.5<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a>); }</div>
+</div><!-- fragment -->
+<p class="reference">Используется в <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l05598">Polygon::_normalize_v_18()</a>, <a class="el" href="../../d5/da1/_decal_builder_8cpp_source.html#l00358">DecalBuilder::ApplyDecals_OutdoorFace()</a>, <a class="el" href="../../dc/dc7/_palette_manager_8cpp_source.html#l00843">ReplaceHSV()</a> и <a class="el" href="../../de/d6c/_spell_fx_renderer_8cpp_source.html#l01653">SpellFX_Billboard::SpellFXProject()</a>.</p>
+<div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-8-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-8-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d0/dc0/_our_math_8h_a50ee4d4946888926bdf5a920129a322a_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ab2a1e13f594afe4778ee046c1a6763a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2a1e13f594afe4778ee046c1a6763a5">&#9670;&nbsp;</a></span>bankersRounding()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename FloatType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int bankersRounding </td>
+          <td>(</td>
+          <td class="paramtype">const FloatType &amp;&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d0/dc0/_our_math_8h_source.html">OurMath.h</a> строка <a class="el" href="../../d0/dc0/_our_math_8h_source.html#l00098">98</a></p>
+<div class="fragment"><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                                                   {</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    assert(<span class="stringliteral">&quot;Method unsupported for this type&quot;</span> &amp;&amp; <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a8ad81492d410ff2ac11f754f4042150f">value</a>;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Используется в <a class="el" href="../../d5/da1/_decal_builder_8cpp_source.html#l00050">DecalBuilder::AddBloodsplat()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l02277">Render::DrawProjectile()</a>, <a class="el" href="../../d9/d1e/_random_8cpp_source.html#l00028">Random::GetInRange()</a>, <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l00522">ODMFace::IsBackfaceNotCulled()</a> и <a class="el" href="../../dc/d90/_vector_types_8h_source.html#l00057">Vec3&lt; int &gt;::Normalize_float()</a>.</p>
+<div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-9-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-9-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d0/dc0/_our_math_8h_ab2a1e13f594afe4778ee046c1a6763a5_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a4df6b7b16fb58429d0153a520ad42153"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4df6b7b16fb58429d0153a520ad42153">&#9670;&nbsp;</a></span>bankersRounding&lt; float &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="../../d0/dc0/_our_math_8h.html#ab2a1e13f594afe4778ee046c1a6763a5">bankersRounding</a>&lt; float &gt; </td>
+          <td>(</td>
+          <td class="paramtype">const float &amp;&#160;</td>
+          <td class="paramname"><em>inValue</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d0/dc0/_our_math_8h_source.html">OurMath.h</a> строка <a class="el" href="../../d0/dc0/_our_math_8h_source.html#l00104">104</a></p>
+<div class="fragment"><div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                                                        {</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keyword">union </span>Cast {</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <span class="keywordtype">double</span> d;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="keywordtype">long</span> <a class="code" href="../../df/d02/intreadwrite_8h.html#a16cd113ebebc840282cf932d933469a4">l</a>;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    };</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keyword">volatile</span> Cast <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1f2d7f8147412c43ba2303a56f97ee73">c</a>;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1f2d7f8147412c43ba2303a56f97ee73">c</a>.d = inValue + 6755399441055744.0;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1f2d7f8147412c43ba2303a56f97ee73">c</a>.l;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../df/d02/intreadwrite_8h_source.html#l00001">l</a>.</p>
+
+</div>
+</div>
+<a id="ae05bc48f61f3b3f873e62918eb7ba6ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae05bc48f61f3b3f873e62918eb7ba6ca">&#9670;&nbsp;</a></span>bankersRounding&lt; double &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="../../d0/dc0/_our_math_8h.html#ab2a1e13f594afe4778ee046c1a6763a5">bankersRounding</a>&lt; double &gt; </td>
+          <td>(</td>
+          <td class="paramtype">const double &amp;&#160;</td>
+          <td class="paramname"><em>inValue</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d0/dc0/_our_math_8h_source.html">OurMath.h</a> строка <a class="el" href="../../d0/dc0/_our_math_8h_source.html#l00117">117</a></p>
+<div class="fragment"><div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                                                          {</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordtype">double</span> maxValue = std::numeric_limits&lt;int&gt;::max();</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    assert(maxValue - 6755399441055744.0 &gt;= inValue);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keyword">union </span>Cast {</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <span class="keywordtype">double</span> d;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <span class="keywordtype">long</span> <a class="code" href="../../df/d02/intreadwrite_8h.html#a16cd113ebebc840282cf932d933469a4">l</a>;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    };</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keyword">volatile</span> Cast <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1f2d7f8147412c43ba2303a56f97ee73">c</a>;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1f2d7f8147412c43ba2303a56f97ee73">c</a>.d = inValue + 6755399441055744.0;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1f2d7f8147412c43ba2303a56f97ee73">c</a>.l;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../df/d02/intreadwrite_8h_source.html#l00001">l</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Переменные</h2>
+<a id="a954e0b4aff4557f1c600694ee5cf55fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a954e0b4aff4557f1c600694ee5cf55fd">&#9670;&nbsp;</a></span>stru_5C6E00</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="../../d6/d38/structstru193__math.html">stru193_math</a>* stru_5C6E00</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d6/d5b/mm7__data_8cpp_source.html">mm7_data.cpp</a> строка <a class="el" href="../../d6/d5b/mm7__data_8cpp_source.html#l00019">19</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d9/dd3/_cast_spell_info_8cpp_source.html#l00046">CastSpellInfoHelpers::_427E01_cast_spell()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l05298">_45063B_spawn_some_monster()</a>, <a class="el" href="../../d9/ded/_sprite_object_8cpp_source.html#l01017">_46BFFA_update_spell_fx()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l01853">Actor::AI_Bored()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l02070">Actor::AI_Flee()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l02003">Actor::AI_Pursue1()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l01696">Actor::AI_RandomMove()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l00199">Actor::AI_SpellAttack()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l04655">BLV_ProcessPartyActions()</a>, <a class="el" href="../../dc/d16/_indoor_camera_d3_d_8cpp_source.html#l01184">IndoorCameraD3D::CalculateRotations()</a>, <a class="el" href="../../d9/ded/_sprite_object_8cpp_source.html#l00056">SpriteObject::Create()</a>, <a class="el" href="../../d0/d67/_map_book_8cpp_source.html#l00180">DrawBook_Map_sub()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l05795">Render::DrawIndoorSky()</a>, <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l01378">RenderOpenGL::DrawOutdoorSkyD3D()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l05613">Render::DrawOutdoorSkyD3D()</a>, <a class="el" href="../../d4/d58/_render_base_8cpp_source.html#l00109">RenderBase::DrawSpriteObjects_ODM()</a>, <a class="el" href="../../da/df3/_spells_8cpp_source.html#l00429">EventCastSpell()</a>, <a class="el" href="../../df/d5c/_events_8cpp_source.html#l00260">EventProcessor()</a>, <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l01916">GameUI_DrawMinimap()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l00890">Actor::GetDirectionInfo()</a>, <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l02196">ODMRenderParams::Initialize()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l05516">IsBModelVisible()</a>, <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l02221">ODM_ProcessPartyActions()</a>, <a class="el" href="../../d8/d67/_chest_8cpp_source.html#l00041">Chest::Open()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l02739">IndoorLocation::PrepareActorRenderList_BLV()</a>, <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l01722">OutdoorLocation::PrepareActorsDrawList()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l03042">IndoorLocation::PrepareDecorationsRenderList_BLV()</a>, <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l00695">RenderOpenGL::PrepareDecorationsRenderList_ODM()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l00713">Render::PrepareDecorationsRenderList_ODM()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l02871">IndoorLocation::PrepareItemsRenderList_BLV()</a>, <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l04396">GUIWindow_House::Release()</a>, <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l01121">RenderOpenGL::RenderTerrainD3D()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l05063">SpawnEncounter()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l03199">sub_407A1C()</a>, <a class="el" href="../../d9/ded/_sprite_object_8cpp_source.html#l00937">SpriteObject::sub_42F7EB_DropItemAt()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l04969">sub_44FA4C_spawn_light_elemental()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l02606">Actor::SummonMinion()</a>, <a class="el" href="../../dd/d31/_map_info_8cpp_source.html#l00308">TeleportToStartingPoint()</a>, <a class="el" href="../../de/dd4/_vis_8cpp_source.html#l00889">UnprojectX()</a>, <a class="el" href="../../de/dd4/_vis_8cpp_source.html#l00905">UnprojectY()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l02745">Actor::UpdateActorAI()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l01718">UpdateActors_BLV()</a>, <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l03393">UpdateActors_ODM()</a>, <a class="el" href="../../d9/ded/_sprite_object_8cpp_source.html#l00463">SpriteObject::UpdateObject_fn0_BLV()</a>, <a class="el" href="../../d9/ded/_sprite_object_8cpp_source.html#l00130">SpriteObject::UpdateObject_fn0_ODM()</a> и <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l00429">OutdoorLocation::UpdateSunlightVectors()</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a5ffadbbacc6b89cf6218bc43b384d3fe"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a5ffadbbacc6b89cf6218bc43b384d3fe">right</a></div><div class="ttdeci">GLdouble GLdouble right</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l06106">SDL_opengl_glext.h:6106</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a49825216c96caaeb09237b36651181c5"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a49825216c96caaeb09237b36651181c5">x1</a></div><div class="ttdeci">GLuint GLfloat GLfloat GLfloat x1</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l08586">SDL_opengl_glext.h:8586</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a321ff419cd5252e54cf95e64dc6687ee"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a321ff419cd5252e54cf95e64dc6687ee">result</a></div><div class="ttdeci">GLuint64EXT * result</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l09435">SDL_opengl_glext.h:9435</a></div></div>
+<div class="ttc" id="a_s_d_l__egl_8h_html_ad0e63d0edcdbd3d79554076bf309fd47"><div class="ttname"><a href="../../df/d32/_s_d_l__egl_8h.html#ad0e63d0edcdbd3d79554076bf309fd47">x</a></div><div class="ttdeci">EGLSurface EGLint x</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/_s_d_l__egl_8h_source.html#l01596">SDL_egl.h:1596</a></div></div>
+<div class="ttc" id="a_our_math_8cpp_html_abc4811d26f9864e00046c39c39d65680"><div class="ttname"><a href="../../de/db6/_our_math_8cpp.html#abc4811d26f9864e00046c39c39d65680">fixpoint_mul</a></div><div class="ttdeci">__int64 fixpoint_mul(int a1, int a2)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/db6/_our_math_8cpp_source.html#l00138">OurMath.cpp:138</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a691492ec0bd6383f91200e49f6ae40ed"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a></div><div class="ttdeci">GLfloat f</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l01873">SDL_opengl_glext.h:1873</a></div></div>
+<div class="ttc" id="aintreadwrite_8h_html_a16cd113ebebc840282cf932d933469a4"><div class="ttname"><a href="../../df/d02/intreadwrite_8h.html#a16cd113ebebc840282cf932d933469a4">l</a></div><div class="ttdeci">uint64_t l</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d02/intreadwrite_8h_source.html#l00001">intreadwrite.h:1</a></div></div>
+<div class="ttc" id="a_s_d_l__egl_8h_html_a8ad81492d410ff2ac11f754f4042150f"><div class="ttname"><a href="../../df/d32/_s_d_l__egl_8h.html#a8ad81492d410ff2ac11f754f4042150f">value</a></div><div class="ttdeci">EGLSyncKHR EGLint EGLint * value</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/_s_d_l__egl_8h_source.html#l00899">SDL_egl.h:899</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a26942fd2ed566ef553eae82d2c109c8f"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a26942fd2ed566ef553eae82d2c109c8f">val</a></div><div class="ttdeci">GLuint GLfloat * val</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l01495">SDL_opengl_glext.h:1495</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a7b907a03236685c534d89d604cff23c8"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a7b907a03236685c534d89d604cff23c8">x2</a></div><div class="ttdeci">GLfixed GLfixed x2</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l04586">SDL_opengl_glext.h:4586</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a1f2d7f8147412c43ba2303a56f97ee73"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1f2d7f8147412c43ba2303a56f97ee73">c</a></div><div class="ttdeci">const GLubyte * c</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l11096">SDL_opengl_glext.h:11096</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a0928f6d0f0f794ba000a21dfae422136"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0928f6d0f0f794ba000a21dfae422136">v2</a></div><div class="ttdeci">GLfloat GLfloat GLfloat v2</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l00695">SDL_opengl_glext.h:695</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_acc806b31cbf466ceba6555983d8b814d"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#acc806b31cbf466ceba6555983d8b814d">v3</a></div><div class="ttdeci">GLfloat GLfloat GLfloat GLfloat v3</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l00696">SDL_opengl_glext.h:696</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a3af6c78fcdfccea028a5878bc747ef39"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a3af6c78fcdfccea028a5878bc747ef39">y1</a></div><div class="ttdeci">GLfixed y1</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l04586">SDL_opengl_glext.h:4586</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a2be1135ed68e8d80fa9e130c7814f8c2"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a2be1135ed68e8d80fa9e130c7814f8c2">y2</a></div><div class="ttdeci">GLfixed GLfixed GLfixed y2</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l04586">SDL_opengl_glext.h:4586</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a85b8f6c07fbc1fb5d77c2ae090f21995"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a85b8f6c07fbc1fb5d77c2ae090f21995">left</a></div><div class="ttdeci">GLint left</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l01952">SDL_opengl_glext.h:1952</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_0b6ee6e7e9547e675db4add2e5de97da.html">Engine</a></li><li class="navelem"><a class="el" href="../../d0/dc0/_our_math_8h.html">OurMath.h</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:04:02. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Исходный файл C:/git/world-of-might-and-magic/Engine/Graphics/Weather.cpp</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d6/db3/_weather_8cpp_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Weather.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d6/db3/_weather_8cpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../da/d20/_i_render_8h.html">Engine/Graphics/IRender.h</a>&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../de/dcf/_engine_8h.html">Engine/Engine.h</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d7/d19/_viewport_8h.html">Engine/Graphics/Viewport.h</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../db/dc8/_weather_8h.html">Engine/Graphics/Weather.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="../../db/dc8/_weather_8h.html#a2c03e069ed1d8e1cabd74e8382c595c5">    8</a></span>&#160;<a class="code" href="../../d2/d72/class_weather.html">Weather</a> *<a class="code" href="../../d6/db3/_weather_8cpp.html#a2c03e069ed1d8e1cabd74e8382c595c5">pWeather</a> = <span class="keyword">new</span> <a class="code" href="../../d2/d72/class_weather.html">Weather</a>;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="../../d2/d72/class_weather.html#a4eb8a0a9c33f9e806564fdba8175251d">   10</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d2/d72/class_weather.html#a4eb8a0a9c33f9e806564fdba8175251d">Weather::DrawSnow</a>() {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="../../d2/d72/class_weather.html#a41fe2564abab46988942106cecb9e30b">Screen_Coord</a>.size(); ++i) {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="../../db/d76/group__lavu__mem__funcs.html#ga3d1e3edfcf61ca2d831883e1afbad89e">size</a> = 1;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <span class="keywordtype">int</span> base = 3;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <span class="keywordflow">if</span> (i &gt;= 950) {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;            <a class="code" href="../../db/d76/group__lavu__mem__funcs.html#ga3d1e3edfcf61ca2d831883e1afbad89e">size</a> = 4;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            base = 10;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (i &gt;= 700) {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            <a class="code" href="../../db/d76/group__lavu__mem__funcs.html#ga3d1e3edfcf61ca2d831883e1afbad89e">size</a> = 2;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            base = 5;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        }</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <a class="code" href="../../d2/d72/class_weather.html#a41fe2564abab46988942106cecb9e30b">Screen_Coord</a>[i].x += rand() % base - base / 2;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <a class="code" href="../../d2/d72/class_weather.html#a41fe2564abab46988942106cecb9e30b">Screen_Coord</a>[i].y += rand() % <a class="code" href="../../db/d76/group__lavu__mem__funcs.html#ga3d1e3edfcf61ca2d831883e1afbad89e">size</a> + <a class="code" href="../../db/d76/group__lavu__mem__funcs.html#ga3d1e3edfcf61ca2d831883e1afbad89e">size</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../d2/d72/class_weather.html#a41fe2564abab46988942106cecb9e30b">Screen_Coord</a>[i].<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ad0e63d0edcdbd3d79554076bf309fd47">x</a> &lt; (<span class="keywordtype">int</span>)<a class="code" href="../../d7/d19/_viewport_8h.html#a3728133a9af71bc7d784f76d49025ec0">viewparams</a>-&gt;<a class="code" href="../../d4/d10/struct_viewing_params.html#a8119d96b769d0c9aa243ce7707dff495">uScreen_topL_X</a>) {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            <a class="code" href="../../d2/d72/class_weather.html#a41fe2564abab46988942106cecb9e30b">Screen_Coord</a>[i].x = <a class="code" href="../../d7/d19/_viewport_8h.html#a3728133a9af71bc7d784f76d49025ec0">viewparams</a>-&gt;<a class="code" href="../../d4/d10/struct_viewing_params.html#a1dc59f857eb2c292d7fb20b015dc923e">uScreen_BttmR_X</a> + rand() % base;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="../../d2/d72/class_weather.html#a41fe2564abab46988942106cecb9e30b">Screen_Coord</a>[i].<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ad0e63d0edcdbd3d79554076bf309fd47">x</a> &gt;=</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                   ((<span class="keywordtype">int</span>)<a class="code" href="../../d7/d19/_viewport_8h.html#a3728133a9af71bc7d784f76d49025ec0">viewparams</a>-&gt;<a class="code" href="../../d4/d10/struct_viewing_params.html#a1dc59f857eb2c292d7fb20b015dc923e">uScreen_BttmR_X</a> - <a class="code" href="../../db/d76/group__lavu__mem__funcs.html#ga3d1e3edfcf61ca2d831883e1afbad89e">size</a>)) {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            <a class="code" href="../../d2/d72/class_weather.html#a41fe2564abab46988942106cecb9e30b">Screen_Coord</a>[i].x = <a class="code" href="../../d7/d19/_viewport_8h.html#a3728133a9af71bc7d784f76d49025ec0">viewparams</a>-&gt;<a class="code" href="../../d4/d10/struct_viewing_params.html#a8119d96b769d0c9aa243ce7707dff495">uScreen_topL_X</a> - rand() % base;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        }</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../d2/d72/class_weather.html#a41fe2564abab46988942106cecb9e30b">Screen_Coord</a>[i].<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a1675d9d7bb68e1657ff028643b4037e3">y</a> &gt;= ((<span class="keywordtype">int</span>)<a class="code" href="../../d7/d19/_viewport_8h.html#a3728133a9af71bc7d784f76d49025ec0">viewparams</a>-&gt;<a class="code" href="../../d4/d10/struct_viewing_params.html#ac97e1866062fd02d9bb11890e929fdbb">uScreen_BttmR_Y</a> - <a class="code" href="../../db/d76/group__lavu__mem__funcs.html#ga3d1e3edfcf61ca2d831883e1afbad89e">size</a>)) {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            <a class="code" href="../../d2/d72/class_weather.html#a41fe2564abab46988942106cecb9e30b">Screen_Coord</a>[i].y = <a class="code" href="../../d7/d19/_viewport_8h.html#a3728133a9af71bc7d784f76d49025ec0">viewparams</a>-&gt;<a class="code" href="../../d4/d10/struct_viewing_params.html#ac40d2f06d3295ded0065fd1a1ee82886">uScreen_topL_Y</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            <a class="code" href="../../d2/d72/class_weather.html#a41fe2564abab46988942106cecb9e30b">Screen_Coord</a>[i].x = <a class="code" href="../../d7/d19/_viewport_8h.html#a3728133a9af71bc7d784f76d49025ec0">viewparams</a>-&gt;<a class="code" href="../../d4/d10/struct_viewing_params.html#a8119d96b769d0c9aa243ce7707dff495">uScreen_topL_X</a> +</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                                (rand() % (<a class="code" href="../../d7/d19/_viewport_8h.html#a3728133a9af71bc7d784f76d49025ec0">viewparams</a>-&gt;<a class="code" href="../../d4/d10/struct_viewing_params.html#a1dc59f857eb2c292d7fb20b015dc923e">uScreen_BttmR_X</a> -</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                                           <a class="code" href="../../d7/d19/_viewport_8h.html#a3728133a9af71bc7d784f76d49025ec0">viewparams</a>-&gt;<a class="code" href="../../d4/d10/struct_viewing_params.html#a8119d96b769d0c9aa243ce7707dff495">uScreen_topL_X</a> - <a class="code" href="../../db/d76/group__lavu__mem__funcs.html#ga3d1e3edfcf61ca2d831883e1afbad89e">size</a>));</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        }</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <a class="code" href="../../da/d20/_i_render_8h.html#a21d31464313b2c66ff88d4aa97b66143">render</a>-&gt;FillRectFast(<a class="code" href="../../d2/d72/class_weather.html#a41fe2564abab46988942106cecb9e30b">Screen_Coord</a>[i].<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ad0e63d0edcdbd3d79554076bf309fd47">x</a>, <a class="code" href="../../d2/d72/class_weather.html#a41fe2564abab46988942106cecb9e30b">Screen_Coord</a>[i].<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a1675d9d7bb68e1657ff028643b4037e3">y</a>, <a class="code" href="../../db/d76/group__lavu__mem__funcs.html#ga3d1e3edfcf61ca2d831883e1afbad89e">size</a>, <a class="code" href="../../db/d76/group__lavu__mem__funcs.html#ga3d1e3edfcf61ca2d831883e1afbad89e">size</a>,</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                             0xFFFF);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    }</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="../../d2/d72/class_weather.html#ac7f0b125d7428336ec4078f5dc9792ec">   41</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d2/d72/class_weather.html#ac7f0b125d7428336ec4078f5dc9792ec">Weather::Initialize</a>() {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a9a82cf3caff84cabc4598e2619faac17">width</a> = <a class="code" href="../../d7/d19/_viewport_8h.html#a683f48a16877bc7823b2de13e88833ea">pViewport</a>-&gt;<a class="code" href="../../de/d02/struct_viewport.html#a96e33ebc4a92267e4b8d6167622a0264">uScreen_BR_X</a> - <a class="code" href="../../d7/d19/_viewport_8h.html#a683f48a16877bc7823b2de13e88833ea">pViewport</a>-&gt;<a class="code" href="../../de/d02/struct_viewport.html#a9c3255392c8a1905c8abf6ee5bd3d9f6">uScreen_TL_X</a> - 4;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#aa352f2804b9902ac30769c00dde75d5f">height</a> = <a class="code" href="../../d7/d19/_viewport_8h.html#a683f48a16877bc7823b2de13e88833ea">pViewport</a>-&gt;<a class="code" href="../../de/d02/struct_viewport.html#ab586d691e469ea5641c59eab21b9650d">uScreen_BR_Y</a> - <a class="code" href="../../d7/d19/_viewport_8h.html#a683f48a16877bc7823b2de13e88833ea">pViewport</a>-&gt;<a class="code" href="../../de/d02/struct_viewport.html#a2f5f292098e3d7e0d1d4bb7819336720">uScreen_TL_Y</a> - 4;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="../../d8/dc8/struct_point.html">Point</a> &amp;point : <a class="code" href="../../d2/d72/class_weather.html#a41fe2564abab46988942106cecb9e30b">Screen_Coord</a>) {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        point.x = <a class="code" href="../../d7/d19/_viewport_8h.html#a683f48a16877bc7823b2de13e88833ea">pViewport</a>-&gt;<a class="code" href="../../de/d02/struct_viewport.html#ac16b3f70dd69dcf7616df72d1596d572">uViewportTL_X</a> + rand() % <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a9a82cf3caff84cabc4598e2619faac17">width</a>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        point.y = <a class="code" href="../../d7/d19/_viewport_8h.html#a683f48a16877bc7823b2de13e88833ea">pViewport</a>-&gt;<a class="code" href="../../de/d02/struct_viewport.html#adce3b4dd37b178f6cac3372808faaad1">uViewportTL_Y</a> + rand() % <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#aa352f2804b9902ac30769c00dde75d5f">height</a>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="../../d2/d72/class_weather.html#a2ec0c7d6df38bad09d809ac747412414">   50</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d2/d72/class_weather.html#a2ec0c7d6df38bad09d809ac747412414">Weather::Draw</a>() {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../d2/d72/class_weather.html#a4578db68c72c722ddd5d9dab905a8cea">bRenderSnow</a> &amp;&amp; <a class="code" href="../../d4/d68/_engine_8cpp.html#a911c866a46f710d4f1b358efcfb2604a">engine</a>-&gt;AllowSnow()) {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <a class="code" href="../../d2/d72/class_weather.html#a4eb8a0a9c33f9e806564fdba8175251d">DrawSnow</a>();</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="../../d2/d72/class_weather.html#a2f35921e4fe1828481eef9719c7c9610">   56</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="../../d2/d72/class_weather.html#a2f35921e4fe1828481eef9719c7c9610">Weather::OnPlayerTurn</a>(<span class="keywordtype">int</span> dangle) {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="../../d2/d72/class_weather.html#a4578db68c72c722ddd5d9dab905a8cea">bRenderSnow</a>) {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> screen_width =</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <a class="code" href="../../d7/d19/_viewport_8h.html#a3728133a9af71bc7d784f76d49025ec0">viewparams</a>-&gt;<a class="code" href="../../d4/d10/struct_viewing_params.html#a1dc59f857eb2c292d7fb20b015dc923e">uScreen_BttmR_X</a> - <a class="code" href="../../d7/d19/_viewport_8h.html#a3728133a9af71bc7d784f76d49025ec0">viewparams</a>-&gt;<a class="code" href="../../d4/d10/struct_viewing_params.html#a8119d96b769d0c9aa243ce7707dff495">uScreen_topL_X</a>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="../../d8/dc8/struct_point.html">Point</a> &amp;point : <a class="code" href="../../d2/d72/class_weather.html#a41fe2564abab46988942106cecb9e30b">Screen_Coord</a>) {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        point.x += dangle;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordflow">if</span> (point.x &lt; (<span class="keywordtype">int</span>)<a class="code" href="../../d7/d19/_viewport_8h.html#a3728133a9af71bc7d784f76d49025ec0">viewparams</a>-&gt;<a class="code" href="../../d4/d10/struct_viewing_params.html#a1dc59f857eb2c292d7fb20b015dc923e">uScreen_BttmR_X</a> - 4) {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <span class="keywordflow">if</span> (point.x &gt;= (<span class="keywordtype">int</span>)<a class="code" href="../../d7/d19/_viewport_8h.html#a3728133a9af71bc7d784f76d49025ec0">viewparams</a>-&gt;<a class="code" href="../../d4/d10/struct_viewing_params.html#a8119d96b769d0c9aa243ce7707dff495">uScreen_topL_X</a>) {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            point.x += screen_width;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            point.x -= screen_width + 4;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="a_viewport_8h_html"><div class="ttname"><a href="../../d7/d19/_viewport_8h.html">Viewport.h</a></div></div>
+<div class="ttc" id="astruct_viewport_html_adce3b4dd37b178f6cac3372808faaad1"><div class="ttname"><a href="../../de/d02/struct_viewport.html#adce3b4dd37b178f6cac3372808faaad1">Viewport::uViewportTL_Y</a></div><div class="ttdeci">int uViewportTL_Y</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d19/_viewport_8h_source.html#l00023">Viewport.h:23</a></div></div>
+<div class="ttc" id="aclass_weather_html_a4578db68c72c722ddd5d9dab905a8cea"><div class="ttname"><a href="../../d2/d72/class_weather.html#a4578db68c72c722ddd5d9dab905a8cea">Weather::bRenderSnow</a></div><div class="ttdeci">bool bRenderSnow</div><div class="ttdef"><b>Definition:</b> <a href="../../db/dc8/_weather_8h_source.html#l00018">Weather.h:18</a></div></div>
+<div class="ttc" id="a_s_d_l__egl_8h_html_aa352f2804b9902ac30769c00dde75d5f"><div class="ttname"><a href="../../df/d32/_s_d_l__egl_8h.html#aa352f2804b9902ac30769c00dde75d5f">height</a></div><div class="ttdeci">EGLSurface EGLint EGLint EGLint EGLint height</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/_s_d_l__egl_8h_source.html#l01596">SDL_egl.h:1596</a></div></div>
+<div class="ttc" id="a_engine_8cpp_html_a911c866a46f710d4f1b358efcfb2604a"><div class="ttname"><a href="../../d4/d68/_engine_8cpp.html#a911c866a46f710d4f1b358efcfb2604a">engine</a></div><div class="ttdeci">std::shared_ptr&lt; Engine &gt; engine</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d68/_engine_8cpp_source.html#l00130">Engine.cpp:130</a></div></div>
+<div class="ttc" id="astruct_viewport_html_a9c3255392c8a1905c8abf6ee5bd3d9f6"><div class="ttname"><a href="../../de/d02/struct_viewport.html#a9c3255392c8a1905c8abf6ee5bd3d9f6">Viewport::uScreen_TL_X</a></div><div class="ttdeci">int uScreen_TL_X</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d19/_viewport_8h_source.html#l00018">Viewport.h:18</a></div></div>
+<div class="ttc" id="a_engine_8h_html"><div class="ttname"><a href="../../de/dcf/_engine_8h.html">Engine.h</a></div></div>
+<div class="ttc" id="astruct_viewing_params_html_ac40d2f06d3295ded0065fd1a1ee82886"><div class="ttname"><a href="../../d4/d10/struct_viewing_params.html#ac40d2f06d3295ded0065fd1a1ee82886">ViewingParams::uScreen_topL_Y</a></div><div class="ttdeci">unsigned int uScreen_topL_Y</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d19/_viewport_8h_source.html#l00061">Viewport.h:61</a></div></div>
+<div class="ttc" id="astruct_viewing_params_html_a1dc59f857eb2c292d7fb20b015dc923e"><div class="ttname"><a href="../../d4/d10/struct_viewing_params.html#a1dc59f857eb2c292d7fb20b015dc923e">ViewingParams::uScreen_BttmR_X</a></div><div class="ttdeci">unsigned int uScreen_BttmR_X</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d19/_viewport_8h_source.html#l00062">Viewport.h:62</a></div></div>
+<div class="ttc" id="astruct_viewport_html_a2f5f292098e3d7e0d1d4bb7819336720"><div class="ttname"><a href="../../de/d02/struct_viewport.html#a2f5f292098e3d7e0d1d4bb7819336720">Viewport::uScreen_TL_Y</a></div><div class="ttdeci">int uScreen_TL_Y</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d19/_viewport_8h_source.html#l00019">Viewport.h:19</a></div></div>
+<div class="ttc" id="a_weather_8cpp_html_a2c03e069ed1d8e1cabd74e8382c595c5"><div class="ttname"><a href="../../d6/db3/_weather_8cpp.html#a2c03e069ed1d8e1cabd74e8382c595c5">pWeather</a></div><div class="ttdeci">Weather * pWeather</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/db3/_weather_8cpp_source.html#l00008">Weather.cpp:8</a></div></div>
+<div class="ttc" id="a_s_d_l__egl_8h_html_a1675d9d7bb68e1657ff028643b4037e3"><div class="ttname"><a href="../../df/d32/_s_d_l__egl_8h.html#a1675d9d7bb68e1657ff028643b4037e3">y</a></div><div class="ttdeci">EGLSurface EGLint EGLint y</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/_s_d_l__egl_8h_source.html#l01596">SDL_egl.h:1596</a></div></div>
+<div class="ttc" id="astruct_viewport_html_ab586d691e469ea5641c59eab21b9650d"><div class="ttname"><a href="../../de/d02/struct_viewport.html#ab586d691e469ea5641c59eab21b9650d">Viewport::uScreen_BR_Y</a></div><div class="ttdeci">int uScreen_BR_Y</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d19/_viewport_8h_source.html#l00021">Viewport.h:21</a></div></div>
+<div class="ttc" id="astruct_viewing_params_html_a8119d96b769d0c9aa243ce7707dff495"><div class="ttname"><a href="../../d4/d10/struct_viewing_params.html#a8119d96b769d0c9aa243ce7707dff495">ViewingParams::uScreen_topL_X</a></div><div class="ttdeci">unsigned int uScreen_topL_X</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d19/_viewport_8h_source.html#l00060">Viewport.h:60</a></div></div>
+<div class="ttc" id="a_i_render_8h_html"><div class="ttname"><a href="../../da/d20/_i_render_8h.html">IRender.h</a></div></div>
+<div class="ttc" id="a_s_d_l__egl_8h_html_ad0e63d0edcdbd3d79554076bf309fd47"><div class="ttname"><a href="../../df/d32/_s_d_l__egl_8h.html#ad0e63d0edcdbd3d79554076bf309fd47">x</a></div><div class="ttdeci">EGLSurface EGLint x</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/_s_d_l__egl_8h_source.html#l01596">SDL_egl.h:1596</a></div></div>
+<div class="ttc" id="a_viewport_8h_html_a3728133a9af71bc7d784f76d49025ec0"><div class="ttname"><a href="../../d7/d19/_viewport_8h.html#a3728133a9af71bc7d784f76d49025ec0">viewparams</a></div><div class="ttdeci">struct ViewingParams * viewparams</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d5b/mm7__data_8cpp_source.html#l00022">mm7_data.cpp:22</a></div></div>
+<div class="ttc" id="aclass_weather_html_ac7f0b125d7428336ec4078f5dc9792ec"><div class="ttname"><a href="../../d2/d72/class_weather.html#ac7f0b125d7428336ec4078f5dc9792ec">Weather::Initialize</a></div><div class="ttdeci">void Initialize()</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/db3/_weather_8cpp_source.html#l00041">Weather.cpp:41</a></div></div>
+<div class="ttc" id="astruct_viewport_html_a96e33ebc4a92267e4b8d6167622a0264"><div class="ttname"><a href="../../de/d02/struct_viewport.html#a96e33ebc4a92267e4b8d6167622a0264">Viewport::uScreen_BR_X</a></div><div class="ttdeci">int uScreen_BR_X</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d19/_viewport_8h_source.html#l00020">Viewport.h:20</a></div></div>
+<div class="ttc" id="aclass_weather_html_a2ec0c7d6df38bad09d809ac747412414"><div class="ttname"><a href="../../d2/d72/class_weather.html#a2ec0c7d6df38bad09d809ac747412414">Weather::Draw</a></div><div class="ttdeci">void Draw()</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/db3/_weather_8cpp_source.html#l00050">Weather.cpp:50</a></div></div>
+<div class="ttc" id="a_s_d_l__egl_8h_html_a9a82cf3caff84cabc4598e2619faac17"><div class="ttname"><a href="../../df/d32/_s_d_l__egl_8h.html#a9a82cf3caff84cabc4598e2619faac17">width</a></div><div class="ttdeci">EGLSurface EGLint EGLint EGLint width</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/_s_d_l__egl_8h_source.html#l01596">SDL_egl.h:1596</a></div></div>
+<div class="ttc" id="a_weather_8h_html"><div class="ttname"><a href="../../db/dc8/_weather_8h.html">Weather.h</a></div></div>
+<div class="ttc" id="a_viewport_8h_html_a683f48a16877bc7823b2de13e88833ea"><div class="ttname"><a href="../../d7/d19/_viewport_8h.html#a683f48a16877bc7823b2de13e88833ea">pViewport</a></div><div class="ttdeci">struct Viewport * pViewport</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d5b/mm7__data_8cpp_source.html#l00021">mm7_data.cpp:21</a></div></div>
+<div class="ttc" id="aclass_weather_html_a2f35921e4fe1828481eef9719c7c9610"><div class="ttname"><a href="../../d2/d72/class_weather.html#a2f35921e4fe1828481eef9719c7c9610">Weather::OnPlayerTurn</a></div><div class="ttdeci">bool OnPlayerTurn(int dangle)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/db3/_weather_8cpp_source.html#l00056">Weather.cpp:56</a></div></div>
+<div class="ttc" id="aclass_weather_html_a4eb8a0a9c33f9e806564fdba8175251d"><div class="ttname"><a href="../../d2/d72/class_weather.html#a4eb8a0a9c33f9e806564fdba8175251d">Weather::DrawSnow</a></div><div class="ttdeci">void DrawSnow()</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/db3/_weather_8cpp_source.html#l00010">Weather.cpp:10</a></div></div>
+<div class="ttc" id="astruct_point_html"><div class="ttname"><a href="../../d8/dc8/struct_point.html">Point</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d18/_point_8h_source.html#l00003">Point.h:3</a></div></div>
+<div class="ttc" id="agroup__lavu__mem__funcs_html_ga3d1e3edfcf61ca2d831883e1afbad89e"><div class="ttname"><a href="../../db/d76/group__lavu__mem__funcs.html#ga3d1e3edfcf61ca2d831883e1afbad89e">size</a></div><div class="ttdeci">GLsizeiptr size</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l00540">SDL_opengl_glext.h:540</a></div></div>
+<div class="ttc" id="astruct_viewing_params_html_ac97e1866062fd02d9bb11890e929fdbb"><div class="ttname"><a href="../../d4/d10/struct_viewing_params.html#ac97e1866062fd02d9bb11890e929fdbb">ViewingParams::uScreen_BttmR_Y</a></div><div class="ttdeci">unsigned int uScreen_BttmR_Y</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d19/_viewport_8h_source.html#l00063">Viewport.h:63</a></div></div>
+<div class="ttc" id="aclass_weather_html_a41fe2564abab46988942106cecb9e30b"><div class="ttname"><a href="../../d2/d72/class_weather.html#a41fe2564abab46988942106cecb9e30b">Weather::Screen_Coord</a></div><div class="ttdeci">std::array&lt; Point, 1000 &gt; Screen_Coord</div><div class="ttdef"><b>Definition:</b> <a href="../../db/dc8/_weather_8h_source.html#l00016">Weather.h:16</a></div></div>
+<div class="ttc" id="aclass_weather_html"><div class="ttname"><a href="../../d2/d72/class_weather.html">Weather</a></div><div class="ttdef"><b>Definition:</b> <a href="../../db/dc8/_weather_8h_source.html#l00007">Weather.h:7</a></div></div>
+<div class="ttc" id="astruct_viewport_html_ac16b3f70dd69dcf7616df72d1596d572"><div class="ttname"><a href="../../de/d02/struct_viewport.html#ac16b3f70dd69dcf7616df72d1596d572">Viewport::uViewportTL_X</a></div><div class="ttdeci">int uViewportTL_X</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d19/_viewport_8h_source.html#l00022">Viewport.h:22</a></div></div>
+<div class="ttc" id="a_i_render_8h_html_a21d31464313b2c66ff88d4aa97b66143"><div class="ttname"><a href="../../da/d20/_i_render_8h.html#a21d31464313b2c66ff88d4aa97b66143">render</a></div><div class="ttdeci">std::shared_ptr&lt; IRender &gt; render</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d79/_render_open_g_l_8cpp_source.html#l00052">RenderOpenGL.cpp:52</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_0b6ee6e7e9547e675db4add2e5de97da.html">Engine</a></li><li class="navelem"><a class="el" href="../../dir_bb84c1711d8a00602a64a24ea462155a.html">Graphics</a></li><li class="navelem"><a class="el" href="../../d6/db3/_weather_8cpp.html">Weather.cpp</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:03:30. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

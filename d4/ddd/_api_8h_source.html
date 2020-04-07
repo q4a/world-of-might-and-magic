@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Исходный файл C:/git/world-of-might-and-magic/Platform/Api.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d4/ddd/_api_8h_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Api.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d4/ddd/_api_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d1/d18/_point_8h.html">Engine/Point.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../de/df7/_strings_8h.html">Engine/Strings.h</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d0/df6/_o_s_window_8h.html">Platform/OSWindow.h</a>&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../d4/ddd/_api_8h.html#aaa98c64d3d239ead56412b33f374b380">OS_GetAppInt</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *pKey, <span class="keywordtype">int</span> uDefValue);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d4/ddd/_api_8h.html#a716c74cc8645a28cfddb611fdebbe584">OS_SetAppInt</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *pKey, <span class="keywordtype">int</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a26942fd2ed566ef553eae82d2c109c8f">val</a>);</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="../../d4/ddd/_api_8h.html#a830acc9f064bc234e0e87be40be2bf12">OS_GetAppString</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#ab25d8cd967ccbd19b630d7100ff8f67e">path</a>, <span class="keywordtype">char</span> *out_string, <span class="keywordtype">int</span> out_string_size);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d4/ddd/_api_8h.html#a830acc9f064bc234e0e87be40be2bf12">OS_GetAppString</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *pKeyName, <span class="keywordtype">char</span> *pOutString, <span class="keywordtype">int</span> uBufLen,</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;                     <span class="keyword">const</span> <span class="keywordtype">char</span> *pDefaultValue);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d4/ddd/_api_8h.html#a844495f44e2eb6f276fb6d327ddb26be">OS_SetAppString</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *pKey, <span class="keyword">const</span> <span class="keywordtype">char</span> *pString);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d4/ddd/_api_8h.html#a31deacbca65ef0527fe0c3795dee1864">OS_MsgBox</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *msg, <span class="keyword">const</span> <span class="keywordtype">char</span> *title);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d4/ddd/_api_8h.html#a5cef487a72338601ca50cf631f126329">OS_WaitMessage</a>();</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d4/ddd/_api_8h.html#af7d412f0b97d32aa54005f85a72ba8b3">OS_Sleep</a>(<span class="keywordtype">int</span> ms);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d4/ddd/_api_8h.html#a613b304c6f652a7c69a38c599eeed7e0">OS_ShowCursor</a>(<span class="keywordtype">bool</span> show);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="../../d4/ddd/_api_8h.html#a5d3a103186dfe38a891a15131aa4a0de">OS_OpenConsole</a>();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<a class="code" href="../../d8/dc8/struct_point.html">Point</a> <a class="code" href="../../d4/ddd/_api_8h.html#a0b146f68309cef6ce17261d7576d58b4">OS_GetMouseCursorPos</a>();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../d4/ddd/_api_8h.html#ac0cda4967d55e3ade51d622720b64936">OS_GetTime</a>();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<a class="code" href="../../dd/df4/alext_8h.html#aec6fcb673ff035718c238c8c9d544c47">uint64_t</a> <a class="code" href="../../d4/ddd/_api_8h.html#a9035b2d1cb606d985454a0fc660957c1">OS_GetPrecisionTime</a>();</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="../../d4/ddd/_api_8h.html#a97891da131318db644e7304a057c317a">OS_IfShiftPressed</a>();</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="../../d4/ddd/_api_8h.html#afcf1e1d3f06b3cebefde41d256128b66">OS_IfCtrlPressed</a>();</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;std::vector&lt;std::string&gt; <a class="code" href="../../d4/ddd/_api_8h.html#a57e533599a2f36c46d01cf3855ba76ee">OS_FindFiles</a>(<span class="keyword">const</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#ae84541b4f3d8e1ea24ec0f466a8c568b">std::string</a> &amp;folder, <span class="keyword">const</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#ae84541b4f3d8e1ea24ec0f466a8c568b">std::string</a> &amp;<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a2e8825c19147a8250013df8e4275f5b6">mask</a>);</div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="a_o_s_window_8h_html"><div class="ttname"><a href="../../d0/df6/_o_s_window_8h.html">OSWindow.h</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a2e8825c19147a8250013df8e4275f5b6"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a2e8825c19147a8250013df8e4275f5b6">mask</a></div><div class="ttdeci">GLenum GLint GLuint mask</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l00660">SDL_opengl_glext.h:660</a></div></div>
+<div class="ttc" id="a_api_8h_html_a613b304c6f652a7c69a38c599eeed7e0"><div class="ttname"><a href="../../d4/ddd/_api_8h.html#a613b304c6f652a7c69a38c599eeed7e0">OS_ShowCursor</a></div><div class="ttdeci">void OS_ShowCursor(bool show)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d84/_lin_8cpp_source.html#l00028">Lin.cpp:28</a></div></div>
+<div class="ttc" id="a_point_8h_html"><div class="ttname"><a href="../../d1/d18/_point_8h.html">Point.h</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_ab25d8cd967ccbd19b630d7100ff8f67e"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#ab25d8cd967ccbd19b630d7100ff8f67e">path</a></div><div class="ttdeci">GLsizei const GLchar *const  * path</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l03733">SDL_opengl_glext.h:3733</a></div></div>
+<div class="ttc" id="a_api_8h_html_a9035b2d1cb606d985454a0fc660957c1"><div class="ttname"><a href="../../d4/ddd/_api_8h.html#a9035b2d1cb606d985454a0fc660957c1">OS_GetPrecisionTime</a></div><div class="ttdeci">uint64_t OS_GetPrecisionTime()</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d2e/_win_8cpp_source.html#l00019">Win.cpp:19</a></div></div>
+<div class="ttc" id="aalext_8h_html_aec6fcb673ff035718c238c8c9d544c47"><div class="ttname"><a href="../../dd/df4/alext_8h.html#aec6fcb673ff035718c238c8c9d544c47">uint64_t</a></div><div class="ttdeci">unsigned __int64 uint64_t</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/df4/alext_8h_source.html#l00032">alext.h:32</a></div></div>
+<div class="ttc" id="a_api_8h_html_a57e533599a2f36c46d01cf3855ba76ee"><div class="ttname"><a href="../../d4/ddd/_api_8h.html#a57e533599a2f36c46d01cf3855ba76ee">OS_FindFiles</a></div><div class="ttdeci">std::vector&lt; std::string &gt; OS_FindFiles(const std::string &amp;folder, const std::string &amp;mask)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d84/_lin_8cpp_source.html#l00060">Lin.cpp:60</a></div></div>
+<div class="ttc" id="a_api_8h_html_af7d412f0b97d32aa54005f85a72ba8b3"><div class="ttname"><a href="../../d4/ddd/_api_8h.html#af7d412f0b97d32aa54005f85a72ba8b3">OS_Sleep</a></div><div class="ttdeci">void OS_Sleep(int ms)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d84/_lin_8cpp_source.html#l00036">Lin.cpp:36</a></div></div>
+<div class="ttc" id="a_api_8h_html_a31deacbca65ef0527fe0c3795dee1864"><div class="ttname"><a href="../../d4/ddd/_api_8h.html#a31deacbca65ef0527fe0c3795dee1864">OS_MsgBox</a></div><div class="ttdeci">void OS_MsgBox(const char *msg, const char *title)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d84/_lin_8cpp_source.html#l00008">Lin.cpp:8</a></div></div>
+<div class="ttc" id="a_api_8h_html_ac0cda4967d55e3ade51d622720b64936"><div class="ttname"><a href="../../d4/ddd/_api_8h.html#ac0cda4967d55e3ade51d622720b64936">OS_GetTime</a></div><div class="ttdeci">unsigned int OS_GetTime()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d84/_lin_8cpp_source.html#l00012">Lin.cpp:12</a></div></div>
+<div class="ttc" id="a_api_8h_html_a97891da131318db644e7304a057c317a"><div class="ttname"><a href="../../d4/ddd/_api_8h.html#a97891da131318db644e7304a057c317a">OS_IfShiftPressed</a></div><div class="ttdeci">bool OS_IfShiftPressed()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d84/_lin_8cpp_source.html#l00018">Lin.cpp:18</a></div></div>
+<div class="ttc" id="a_api_8h_html_a830acc9f064bc234e0e87be40be2bf12"><div class="ttname"><a href="../../d4/ddd/_api_8h.html#a830acc9f064bc234e0e87be40be2bf12">OS_GetAppString</a></div><div class="ttdeci">bool OS_GetAppString(const char *path, char *out_string, int out_string_size)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dd4/_launcher_8cpp_source.html#l00062">Launcher.cpp:62</a></div></div>
+<div class="ttc" id="a_api_8h_html_afcf1e1d3f06b3cebefde41d256128b66"><div class="ttname"><a href="../../d4/ddd/_api_8h.html#afcf1e1d3f06b3cebefde41d256128b66">OS_IfCtrlPressed</a></div><div class="ttdeci">bool OS_IfCtrlPressed()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d84/_lin_8cpp_source.html#l00023">Lin.cpp:23</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a26942fd2ed566ef553eae82d2c109c8f"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a26942fd2ed566ef553eae82d2c109c8f">val</a></div><div class="ttdeci">GLuint GLfloat * val</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l01495">SDL_opengl_glext.h:1495</a></div></div>
+<div class="ttc" id="a_api_8h_html_a0b146f68309cef6ce17261d7576d58b4"><div class="ttname"><a href="../../d4/ddd/_api_8h.html#a0b146f68309cef6ce17261d7576d58b4">OS_GetMouseCursorPos</a></div><div class="ttdeci">Point OS_GetMouseCursorPos()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d84/_lin_8cpp_source.html#l00040">Lin.cpp:40</a></div></div>
+<div class="ttc" id="a_api_8h_html_a716c74cc8645a28cfddb611fdebbe584"><div class="ttname"><a href="../../d4/ddd/_api_8h.html#a716c74cc8645a28cfddb611fdebbe584">OS_SetAppInt</a></div><div class="ttdeci">void OS_SetAppInt(const char *pKey, int val)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d84/_lin_8cpp_source.html#l00098">Lin.cpp:98</a></div></div>
+<div class="ttc" id="a_api_8h_html_a844495f44e2eb6f276fb6d327ddb26be"><div class="ttname"><a href="../../d4/ddd/_api_8h.html#a844495f44e2eb6f276fb6d327ddb26be">OS_SetAppString</a></div><div class="ttdeci">void OS_SetAppString(const char *pKey, const char *pString)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d84/_lin_8cpp_source.html#l00093">Lin.cpp:93</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_ae84541b4f3d8e1ea24ec0f466a8c568b"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#ae84541b4f3d8e1ea24ec0f466a8c568b">string</a></div><div class="ttdeci">GLsizei const GLchar *const  * string</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l00691">SDL_opengl_glext.h:691</a></div></div>
+<div class="ttc" id="astruct_point_html"><div class="ttname"><a href="../../d8/dc8/struct_point.html">Point</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d18/_point_8h_source.html#l00003">Point.h:3</a></div></div>
+<div class="ttc" id="a_api_8h_html_a5d3a103186dfe38a891a15131aa4a0de"><div class="ttname"><a href="../../d4/ddd/_api_8h.html#a5d3a103186dfe38a891a15131aa4a0de">OS_OpenConsole</a></div><div class="ttdeci">bool OS_OpenConsole()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d84/_lin_8cpp_source.html#l00048">Lin.cpp:48</a></div></div>
+<div class="ttc" id="a_api_8h_html_a5cef487a72338601ca50cf631f126329"><div class="ttname"><a href="../../d4/ddd/_api_8h.html#a5cef487a72338601ca50cf631f126329">OS_WaitMessage</a></div><div class="ttdeci">void OS_WaitMessage()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d84/_lin_8cpp_source.html#l00032">Lin.cpp:32</a></div></div>
+<div class="ttc" id="a_api_8h_html_aaa98c64d3d239ead56412b33f374b380"><div class="ttname"><a href="../../d4/ddd/_api_8h.html#aaa98c64d3d239ead56412b33f374b380">OS_GetAppInt</a></div><div class="ttdeci">int OS_GetAppInt(const char *pKey, int uDefValue)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d84/_lin_8cpp_source.html#l00089">Lin.cpp:89</a></div></div>
+<div class="ttc" id="a_strings_8h_html"><div class="ttname"><a href="../../de/df7/_strings_8h.html">Strings.h</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_46f0a310448968fe371c870cd868aa1f.html">Platform</a></li><li class="navelem"><a class="el" href="../../d4/ddd/_api_8h.html">Api.h</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:03:44. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

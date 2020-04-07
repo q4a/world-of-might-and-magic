@@ -1,0 +1,504 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Класс Engine_::EngineConfigFactory</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d8/d01/class_engine___1_1_engine_config_factory.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pri-methods">Закрытые члены</a> &#124;
+<a href="#pri-attribs">Закрытые данные</a> &#124;
+<a href="../../dc/d6b/class_engine___1_1_engine_config_factory-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс Engine_::EngineConfigFactory</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="../../d0/db9/_engine_config_factory_8h_source.html">EngineConfigFactory.h</a>&gt;</code></p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Граф связей класса Engine_::EngineConfigFactory:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../df/d55/class_engine___1_1_engine_config_factory__coll__graph.svg" width="208" height="127"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:ac4e4e0399f1c5d18429e3362e02ba575"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d01/class_engine___1_1_engine_config_factory.html#ac4e4e0399f1c5d18429e3362e02ba575">EngineConfigFactory</a> ()</td></tr>
+<tr class="separator:ac4e4e0399f1c5d18429e3362e02ba575"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a804c794e5bec269e9b3f725f09f4d6aa"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="../../d5/ddb/class_engine___1_1_engine_config.html">EngineConfig</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d01/class_engine___1_1_engine_config_factory.html#a804c794e5bec269e9b3f725f09f4d6aa">Create</a> ()</td></tr>
+<tr class="separator:a804c794e5bec269e9b3f725f09f4d6aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93d7aaaee852b5f132e45bafe54c0bf9"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="../../d5/ddb/class_engine___1_1_engine_config.html">EngineConfig</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d01/class_engine___1_1_engine_config_factory.html#a93d7aaaee852b5f132e45bafe54c0bf9">CreateFromCommandLine</a> (const <a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#ae84541b4f3d8e1ea24ec0f466a8c568b">std::string</a> &amp;cmd)</td></tr>
+<tr class="separator:a93d7aaaee852b5f132e45bafe54c0bf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7cdad38d496dcab73102e91aef1e553"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="../../d5/ddb/class_engine___1_1_engine_config.html">EngineConfig</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d01/class_engine___1_1_engine_config_factory.html#af7cdad38d496dcab73102e91aef1e553">Clone</a> (std::shared_ptr&lt; const <a class="el" href="../../d5/ddb/class_engine___1_1_engine_config.html">EngineConfig</a> &gt; other)</td></tr>
+<tr class="separator:af7cdad38d496dcab73102e91aef1e553"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3100a2d7d327a3d87ea2b173b3e36cef"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="../../d5/ddb/class_engine___1_1_engine_config.html">EngineConfig</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d01/class_engine___1_1_engine_config_factory.html#a3100a2d7d327a3d87ea2b173b3e36cef">Mutate</a> (std::shared_ptr&lt; const <a class="el" href="../../d5/ddb/class_engine___1_1_engine_config.html">EngineConfig</a> &gt; <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#a13b3686016f6a1889a75cd91a854514a">config</a>, std::function&lt; <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>(std::shared_ptr&lt; <a class="el" href="../../d5/ddb/class_engine___1_1_engine_config.html">EngineConfig</a> &gt; &amp;)&gt; mutator)</td></tr>
+<tr class="separator:a3100a2d7d327a3d87ea2b173b3e36cef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Закрытые члены</h2></td></tr>
+<tr class="memitem:a0a184fd1cd7d7f3ad2c435d925e6ab04"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="../../d5/ddb/class_engine___1_1_engine_config.html">EngineConfig</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d01/class_engine___1_1_engine_config_factory.html#a0a184fd1cd7d7f3ad2c435d925e6ab04">CreateDefaultConfiguration</a> ()</td></tr>
+<tr class="separator:a0a184fd1cd7d7f3ad2c435d925e6ab04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Закрытые данные</h2></td></tr>
+<tr class="memitem:a5a65508147d53154b677bcf1c69b1df7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d70/class_log.html">Log</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d01/class_engine___1_1_engine_config_factory.html#a5a65508147d53154b677bcf1c69b1df7">log</a> = nullptr</td></tr>
+<tr class="separator:a5a65508147d53154b677bcf1c69b1df7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock">
+<p class="definition">См. определение в файле <a class="el" href="../../d0/db9/_engine_config_factory_8h_source.html">EngineConfigFactory.h</a> строка <a class="el" href="../../d0/db9/_engine_config_factory_8h_source.html#l00015">15</a></p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="ac4e4e0399f1c5d18429e3362e02ba575"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4e4e0399f1c5d18429e3362e02ba575">&#9670;&nbsp;</a></span>EngineConfigFactory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Engine_::EngineConfigFactory::EngineConfigFactory </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d0/db9/_engine_config_factory_8h_source.html">EngineConfigFactory.h</a> строка <a class="el" href="../../d0/db9/_engine_config_factory_8h_source.html#l00017">17</a></p>
+<div class="fragment"><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;                                 {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        this-&gt;<a class="code" href="../../d8/d01/class_engine___1_1_engine_config_factory.html#a5a65508147d53154b677bcf1c69b1df7">log</a> = <a class="code" href="../../d1/d12/class_engine___1_1_ioc_container.html#a095a16a5af8d2d49ae6445b823332256">EngineIoc::ResolveLogger</a>();</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    }</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d0/db9/_engine_config_factory_8h_source.html#l00031">log</a> и <a class="el" href="../../de/d8c/_engine_2_ioc_container_8cpp_source.html#l00051">Engine_::IocContainer::ResolveLogger()</a>.</p>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d8/d01/class_engine___1_1_engine_config_factory_ac4e4e0399f1c5d18429e3362e02ba575_cgraph.svg" width="100%" height="366"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a804c794e5bec269e9b3f725f09f4d6aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a804c794e5bec269e9b3f725f09f4d6aa">&#9670;&nbsp;</a></span>Create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="../../d5/ddb/class_engine___1_1_engine_config.html">EngineConfig</a> &gt; EngineConfigFactory::Create </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d7/d55/_engine_config_factory_8cpp_source.html">EngineConfigFactory.cpp</a> строка <a class="el" href="../../d7/d55/_engine_config_factory_8cpp_source.html#l00083">83</a></p>
+<div class="fragment"><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                                                        {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d8/d01/class_engine___1_1_engine_config_factory.html#a0a184fd1cd7d7f3ad2c435d925e6ab04">CreateDefaultConfiguration</a>();</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d7/d55/_engine_config_factory_8cpp_source.html#l00012">CreateDefaultConfiguration()</a>.</p>
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d8/d01/class_engine___1_1_engine_config_factory_a804c794e5bec269e9b3f725f09f4d6aa_cgraph.svg" width="608" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a93d7aaaee852b5f132e45bafe54c0bf9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93d7aaaee852b5f132e45bafe54c0bf9">&#9670;&nbsp;</a></span>CreateFromCommandLine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="../../d5/ddb/class_engine___1_1_engine_config.html">EngineConfig</a> &gt; EngineConfigFactory::CreateFromCommandLine </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#ae84541b4f3d8e1ea24ec0f466a8c568b">std::string</a> &amp;&#160;</td>
+          <td class="paramname"><em>cmd</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d7/d55/_engine_config_factory_8cpp_source.html">EngineConfigFactory.cpp</a> строка <a class="el" href="../../d7/d55/_engine_config_factory_8cpp_source.html#l00087">87</a></p>
+<div class="fragment"><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                                                                                           {</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keyword">auto</span> <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a13b3686016f6a1889a75cd91a854514a">config</a> = <a class="code" href="../../d8/d01/class_engine___1_1_engine_config_factory.html#a0a184fd1cd7d7f3ad2c435d925e6ab04">CreateDefaultConfiguration</a>();</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="comment">// config-&gt;renderer_name = &quot;OpenGL&quot;;</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../d7/d55/_engine_config_factory_8cpp.html#ace0db77cf6aa379f73aed1c8c6be5136">FindCaseInsensitive</a>(cmd, <span class="stringliteral">&quot;-window&quot;</span>)) {</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a13b3686016f6a1889a75cd91a854514a">config</a>-&gt;dword_6BE368_debug_settings_2 |= DEBUG_SETTINGS_RUN_IN_WIDOW;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    }</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../d7/d55/_engine_config_factory_8cpp.html#ace0db77cf6aa379f73aed1c8c6be5136">FindCaseInsensitive</a>(cmd, <span class="stringliteral">&quot;-nointro&quot;</span>)) {</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a13b3686016f6a1889a75cd91a854514a">config</a>-&gt;no_intro = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    }</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../d7/d55/_engine_config_factory_8cpp.html#ace0db77cf6aa379f73aed1c8c6be5136">FindCaseInsensitive</a>(cmd, <span class="stringliteral">&quot;-nologo&quot;</span>)) {</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a13b3686016f6a1889a75cd91a854514a">config</a>-&gt;no_logo = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    }</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../d7/d55/_engine_config_factory_8cpp.html#ace0db77cf6aa379f73aed1c8c6be5136">FindCaseInsensitive</a>(cmd, <span class="stringliteral">&quot;-nosound&quot;</span>)) {</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a13b3686016f6a1889a75cd91a854514a">config</a>-&gt;no_sound = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    }</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../d7/d55/_engine_config_factory_8cpp.html#ace0db77cf6aa379f73aed1c8c6be5136">FindCaseInsensitive</a>(cmd, <span class="stringliteral">&quot;-novideo&quot;</span>)) {</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a13b3686016f6a1889a75cd91a854514a">config</a>-&gt;no_video = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    }</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../d7/d55/_engine_config_factory_8cpp.html#ace0db77cf6aa379f73aed1c8c6be5136">FindCaseInsensitive</a>(cmd, <span class="stringliteral">&quot;-nowalksound&quot;</span>)) {</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a13b3686016f6a1889a75cd91a854514a">config</a>-&gt;no_walk_sound = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    }</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../d7/d55/_engine_config_factory_8cpp.html#ace0db77cf6aa379f73aed1c8c6be5136">FindCaseInsensitive</a>(cmd, <span class="stringliteral">&quot;-nomarg&quot;</span>)) {</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a13b3686016f6a1889a75cd91a854514a">config</a>-&gt;no_margareth = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    }</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../d7/d55/_engine_config_factory_8cpp.html#ace0db77cf6aa379f73aed1c8c6be5136">FindCaseInsensitive</a>(cmd, <span class="stringliteral">&quot;-render=&quot;</span>)) {</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../d7/d55/_engine_config_factory_8cpp.html#ace0db77cf6aa379f73aed1c8c6be5136">FindCaseInsensitive</a>(cmd, <span class="stringliteral">&quot;-render=DirectDraw&quot;</span>)) {</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a13b3686016f6a1889a75cd91a854514a">config</a>-&gt;renderer_name = <span class="stringliteral">&quot;DirectDraw&quot;</span>;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        }</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../d7/d55/_engine_config_factory_8cpp.html#ace0db77cf6aa379f73aed1c8c6be5136">FindCaseInsensitive</a>(cmd, <span class="stringliteral">&quot;-render=OpenGL&quot;</span>)) {</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a13b3686016f6a1889a75cd91a854514a">config</a>-&gt;renderer_name = <span class="stringliteral">&quot;OpenGL&quot;</span>;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        }</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    }</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a13b3686016f6a1889a75cd91a854514a">config</a>;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d7/d55/_engine_config_factory_8cpp_source.html#l00012">CreateDefaultConfiguration()</a> и <a class="el" href="../../d7/d55/_engine_config_factory_8cpp_source.html#l00059">FindCaseInsensitive()</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/ddc/_engine_factory_8cpp_source.html#l00011">Engine_::EngineFactory::CreateEngine()</a>.</p>
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d8/d01/class_engine___1_1_engine_config_factory_a93d7aaaee852b5f132e45bafe54c0bf9_cgraph.svg" width="608" height="122"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d8/d01/class_engine___1_1_engine_config_factory_a93d7aaaee852b5f132e45bafe54c0bf9_icgraph.svg" width="626" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="af7cdad38d496dcab73102e91aef1e553"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7cdad38d496dcab73102e91aef1e553">&#9670;&nbsp;</a></span>Clone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="../../d5/ddb/class_engine___1_1_engine_config.html">EngineConfig</a> &gt; EngineConfigFactory::Clone </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; const <a class="el" href="../../d5/ddb/class_engine___1_1_engine_config.html">EngineConfig</a> &gt;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d7/d55/_engine_config_factory_8cpp_source.html">EngineConfigFactory.cpp</a> строка <a class="el" href="../../d7/d55/_engine_config_factory_8cpp_source.html#l00069">69</a></p>
+<div class="fragment"><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                                                                                              {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordflow">return</span> std::make_shared&lt;EngineConfig&gt;(*other.get());</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Используется в <a class="el" href="../../de/dcf/_engine_8h_source.html#l00150">Engine::SetForceRedraw()</a>, <a class="el" href="../../de/dcf/_engine_8h_source.html#l00143">Engine::SetSaturateFaces()</a> и <a class="el" href="../../de/dcf/_engine_8h_source.html#l00136">Engine::SetUnderwater()</a>.</p>
+<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d8/d01/class_engine___1_1_engine_config_factory_af7cdad38d496dcab73102e91aef1e553_icgraph.svg" width="578" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a3100a2d7d327a3d87ea2b173b3e36cef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3100a2d7d327a3d87ea2b173b3e36cef">&#9670;&nbsp;</a></span>Mutate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="../../d5/ddb/class_engine___1_1_engine_config.html">EngineConfig</a> &gt; EngineConfigFactory::Mutate </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; const <a class="el" href="../../d5/ddb/class_engine___1_1_engine_config.html">EngineConfig</a> &gt;&#160;</td>
+          <td class="paramname"><em>config</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::function&lt; <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>(std::shared_ptr&lt; <a class="el" href="../../d5/ddb/class_engine___1_1_engine_config.html">EngineConfig</a> &gt; &amp;)&gt;&#160;</td>
+          <td class="paramname"><em>mutator</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d7/d55/_engine_config_factory_8cpp_source.html">EngineConfigFactory.cpp</a> строка <a class="el" href="../../d7/d55/_engine_config_factory_8cpp_source.html#l00073">73</a></p>
+<div class="fragment"><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keyword">auto</span> new_config = std::make_shared&lt;EngineConfig&gt;(*<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a13b3686016f6a1889a75cd91a854514a">config</a>.get());</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    mutator(new_config);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordflow">return</span> new_config;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Используется в <a class="el" href="../../de/dcf/_engine_8h_source.html#l00412">Engine::MutateConfig()</a>.</p>
+<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d8/d01/class_engine___1_1_engine_config_factory_a3100a2d7d327a3d87ea2b173b3e36cef_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a0a184fd1cd7d7f3ad2c435d925e6ab04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a184fd1cd7d7f3ad2c435d925e6ab04">&#9670;&nbsp;</a></span>CreateDefaultConfiguration()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="../../d5/ddb/class_engine___1_1_engine_config.html">EngineConfig</a> &gt; EngineConfigFactory::CreateDefaultConfiguration </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d7/d55/_engine_config_factory_8cpp_source.html">EngineConfigFactory.cpp</a> строка <a class="el" href="../../d7/d55/_engine_config_factory_8cpp_source.html#l00012">12</a></p>
+<div class="fragment"><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;                                                                            {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keyword">auto</span> cfg = std::make_shared&lt;EngineConfig&gt;();</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordflow">if</span> (!cfg-&gt;no_walk_sound) {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        cfg-&gt;no_walk_sound = <a class="code" href="../../d4/ddd/_api_8h.html#aaa98c64d3d239ead56412b33f374b380">OS_GetAppInt</a>(<span class="stringliteral">&quot;WalkSound&quot;</span>, 1) == 0;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    }</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordflow">if</span> (!cfg-&gt;always_run) {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        cfg-&gt;always_run = <a class="code" href="../../d4/ddd/_api_8h.html#aaa98c64d3d239ead56412b33f374b380">OS_GetAppInt</a>(<span class="stringliteral">&quot;valAlwaysRun&quot;</span>, 0) != 0;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    }</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    cfg-&gt;flip_on_exit = <a class="code" href="../../d4/ddd/_api_8h.html#aaa98c64d3d239ead56412b33f374b380">OS_GetAppInt</a>(<span class="stringliteral">&quot;FlipOnExit&quot;</span>, 0) != 0;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    cfg-&gt;show_damage = <a class="code" href="../../d4/ddd/_api_8h.html#aaa98c64d3d239ead56412b33f374b380">OS_GetAppInt</a>(<span class="stringliteral">&quot;ShowDamage&quot;</span>, 1) != 0;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">int</span> turn_type = <a class="code" href="../../d4/ddd/_api_8h.html#aaa98c64d3d239ead56412b33f374b380">OS_GetAppInt</a>(<span class="stringliteral">&quot;TurnDelta&quot;</span>, 3);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordflow">switch</span> (turn_type) {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">case</span> 1:             <span class="comment">// 16x</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <a class="code" href="../../d8/d01/class_engine___1_1_engine_config_factory.html#a5a65508147d53154b677bcf1c69b1df7">log</a>-&gt;<a class="code" href="../../d6/d70/class_log.html#ac0de2621497ca3b2fbf208624c08bcdf">Warning</a>(L<span class="stringliteral">&quot;x16 Turn Speed&quot;</span>);  <span class="comment">// really shouldn&#39;t use this mode</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        cfg-&gt;turn_speed = 128;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordflow">case</span> 2:             <span class="comment">// 32x</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <a class="code" href="../../d8/d01/class_engine___1_1_engine_config_factory.html#a5a65508147d53154b677bcf1c69b1df7">log</a>-&gt;<a class="code" href="../../d6/d70/class_log.html#ac0de2621497ca3b2fbf208624c08bcdf">Warning</a>(L<span class="stringliteral">&quot;x32 Turn Speed&quot;</span>);  <span class="comment">// really shouldn&#39;t use this mode</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        cfg-&gt;turn_speed = 64;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordflow">case</span> 3:             <span class="comment">// smooth</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        cfg-&gt;turn_speed = 0;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    cfg-&gt;sound_level = std::min(4, <a class="code" href="../../d4/ddd/_api_8h.html#aaa98c64d3d239ead56412b33f374b380">OS_GetAppInt</a>(<span class="stringliteral">&quot;soundflag&quot;</span>, 9));</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    cfg-&gt;music_level = std::min(3, <a class="code" href="../../d4/ddd/_api_8h.html#aaa98c64d3d239ead56412b33f374b380">OS_GetAppInt</a>(<span class="stringliteral">&quot;musicflag&quot;</span>, 9));</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    cfg-&gt;voice_level = std::min(4, <a class="code" href="../../d4/ddd/_api_8h.html#aaa98c64d3d239ead56412b33f374b380">OS_GetAppInt</a>(<span class="stringliteral">&quot;CharVoices&quot;</span>, 9));</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    cfg-&gt;gamma = std::min(4, <a class="code" href="../../d4/ddd/_api_8h.html#aaa98c64d3d239ead56412b33f374b380">OS_GetAppInt</a>(<span class="stringliteral">&quot;GammaPos&quot;</span>, 4));</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../d4/ddd/_api_8h.html#aaa98c64d3d239ead56412b33f374b380">OS_GetAppInt</a>(<span class="stringliteral">&quot;Bloodsplats&quot;</span>, 1))</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        cfg-&gt;flags2 |= GAME_FLAGS_2_DRAW_BLOODSPLATS;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        cfg-&gt;flags2 &amp;= ~GAME_FLAGS_2_DRAW_BLOODSPLATS;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    cfg-&gt;no_bloodsplats = !(cfg-&gt;flags2 &amp; GAME_FLAGS_2_DRAW_BLOODSPLATS);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordflow">return</span> cfg;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d0/db9/_engine_config_factory_8h_source.html#l00031">log</a>, <a class="el" href="../../de/d84/_lin_8cpp_source.html#l00089">OS_GetAppInt()</a> и <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00028">Log::Warning()</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d7/d55/_engine_config_factory_8cpp_source.html#l00083">Create()</a> и <a class="el" href="../../d7/d55/_engine_config_factory_8cpp_source.html#l00087">CreateFromCommandLine()</a>.</p>
+<div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-7-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-7-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d8/d01/class_engine___1_1_engine_config_factory_a0a184fd1cd7d7f3ad2c435d925e6ab04_cgraph.svg" width="363" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-8-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-8-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d8/d01/class_engine___1_1_engine_config_factory_a0a184fd1cd7d7f3ad2c435d925e6ab04_icgraph.svg" width="100%" height="388"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="a5a65508147d53154b677bcf1c69b1df7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a65508147d53154b677bcf1c69b1df7">&#9670;&nbsp;</a></span>log</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d6/d70/class_log.html">Log</a>* Engine_::EngineConfigFactory::log = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d0/db9/_engine_config_factory_8h_source.html">EngineConfigFactory.h</a> строка <a class="el" href="../../d0/db9/_engine_config_factory_8h_source.html#l00031">31</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d7/d55/_engine_config_factory_8cpp_source.html#l00012">CreateDefaultConfiguration()</a> и <a class="el" href="../../d0/db9/_engine_config_factory_8h_source.html#l00017">EngineConfigFactory()</a>.</p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>C:/git/world-of-might-and-magic/Engine/<a class="el" href="../../d0/db9/_engine_config_factory_8h_source.html">EngineConfigFactory.h</a></li>
+<li>C:/git/world-of-might-and-magic/Engine/<a class="el" href="../../d7/d55/_engine_config_factory_8cpp_source.html">EngineConfigFactory.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aclass_engine___1_1_ioc_container_html_a095a16a5af8d2d49ae6445b823332256"><div class="ttname"><a href="../../d1/d12/class_engine___1_1_ioc_container.html#a095a16a5af8d2d49ae6445b823332256">Engine_::IocContainer::ResolveLogger</a></div><div class="ttdeci">static Log * ResolveLogger()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d8c/_engine_2_ioc_container_8cpp_source.html#l00051">IocContainer.cpp:51</a></div></div>
+<div class="ttc" id="aclass_engine___1_1_engine_config_factory_html_a5a65508147d53154b677bcf1c69b1df7"><div class="ttname"><a href="../../d8/d01/class_engine___1_1_engine_config_factory.html#a5a65508147d53154b677bcf1c69b1df7">Engine_::EngineConfigFactory::log</a></div><div class="ttdeci">Log * log</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/db9/_engine_config_factory_8h_source.html#l00031">EngineConfigFactory.h:31</a></div></div>
+<div class="ttc" id="a_engine_config_factory_8cpp_html_ace0db77cf6aa379f73aed1c8c6be5136"><div class="ttname"><a href="../../d7/d55/_engine_config_factory_8cpp.html#ace0db77cf6aa379f73aed1c8c6be5136">FindCaseInsensitive</a></div><div class="ttdeci">static bool FindCaseInsensitive(const std::string &amp;haystack, const std::string &amp;needle)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d55/_engine_config_factory_8cpp_source.html#l00059">EngineConfigFactory.cpp:59</a></div></div>
+<div class="ttc" id="aclass_log_html_ac0de2621497ca3b2fbf208624c08bcdf"><div class="ttname"><a href="../../d6/d70/class_log.html#ac0de2621497ca3b2fbf208624c08bcdf">Log::Warning</a></div><div class="ttdeci">void Warning(const wchar_t *pFormat,...)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/da7/_log_8cpp_source.html#l00028">Log.cpp:28</a></div></div>
+<div class="ttc" id="aclass_engine___1_1_engine_config_factory_html_a0a184fd1cd7d7f3ad2c435d925e6ab04"><div class="ttname"><a href="../../d8/d01/class_engine___1_1_engine_config_factory.html#a0a184fd1cd7d7f3ad2c435d925e6ab04">Engine_::EngineConfigFactory::CreateDefaultConfiguration</a></div><div class="ttdeci">std::shared_ptr&lt; EngineConfig &gt; CreateDefaultConfiguration()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d55/_engine_config_factory_8cpp_source.html#l00012">EngineConfigFactory.cpp:12</a></div></div>
+<div class="ttc" id="a_s_d_l__egl_8h_html_a13b3686016f6a1889a75cd91a854514a"><div class="ttname"><a href="../../df/d32/_s_d_l__egl_8h.html#a13b3686016f6a1889a75cd91a854514a">config</a></div><div class="ttdeci">EGLConfig config</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/_s_d_l__egl_8h_source.html#l01149">SDL_egl.h:1149</a></div></div>
+<div class="ttc" id="a_api_8h_html_aaa98c64d3d239ead56412b33f374b380"><div class="ttname"><a href="../../d4/ddd/_api_8h.html#aaa98c64d3d239ead56412b33f374b380">OS_GetAppInt</a></div><div class="ttdeci">int OS_GetAppInt(const char *pKey, int uDefValue)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d84/_lin_8cpp_source.html#l00089">Lin.cpp:89</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../d1/db6/namespace_engine__.html">Engine_</a></li><li class="navelem"><a class="el" href="../../d8/d01/class_engine___1_1_engine_config_factory.html">EngineConfigFactory</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:05:26. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

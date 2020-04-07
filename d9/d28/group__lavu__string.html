@@ -1,0 +1,1419 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: String Manipulation</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d9/d28/group__lavu__string.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#enum-members">Перечисления</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">String Manipulation<div class="ingroups"><a class="el" href="../../dd/d8a/group__lavu.html">libavutil</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Граф связей класса String Manipulation:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d9/d28/group__lavu__string.svg" width="256" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Перечисления</h2></td></tr>
+<tr class="memitem:gaef885958293f07153383f99db573ff5a"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d28/group__lavu__string.html#gaef885958293f07153383f99db573ff5a">AVEscapeMode</a> { <a class="el" href="../../d9/d28/group__lavu__string.html#ggaef885958293f07153383f99db573ff5aa342d7bf60c9a7cb7a886f70f81ac5071">AV_ESCAPE_MODE_AUTO</a>, 
+<a class="el" href="../../d9/d28/group__lavu__string.html#ggaef885958293f07153383f99db573ff5aa8b2d26951a9e06d8f7c12977a204eaf9">AV_ESCAPE_MODE_BACKSLASH</a>, 
+<a class="el" href="../../d9/d28/group__lavu__string.html#ggaef885958293f07153383f99db573ff5aa84da6c323003df474c690ccf5d4e5d67">AV_ESCAPE_MODE_QUOTE</a>
+ }</td></tr>
+<tr class="separator:gaef885958293f07153383f99db573ff5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:ga6135a12628e2b6a63c8d3d9b3a742b06"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d28/group__lavu__string.html#ga6135a12628e2b6a63c8d3d9b3a742b06">av_strstart</a> (const char *str, const char *pfx, const char **ptr)</td></tr>
+<tr class="separator:ga6135a12628e2b6a63c8d3d9b3a742b06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacd29ff1f7e62230a113c88fa10d3f5b9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d28/group__lavu__string.html#gacd29ff1f7e62230a113c88fa10d3f5b9">av_stristart</a> (const char *str, const char *pfx, const char **ptr)</td></tr>
+<tr class="separator:gacd29ff1f7e62230a113c88fa10d3f5b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga47e14424edfb96d3f6bf0fca96a76fe5"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d28/group__lavu__string.html#ga47e14424edfb96d3f6bf0fca96a76fe5">av_stristr</a> (const char *haystack, const char *needle)</td></tr>
+<tr class="separator:ga47e14424edfb96d3f6bf0fca96a76fe5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga827486f333df7bc9a4e7f9bd212ba472"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d28/group__lavu__string.html#ga827486f333df7bc9a4e7f9bd212ba472">av_strnstr</a> (const char *haystack, const char *needle, <a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a7c94ea6f8948649f8d181ae55911eeaf">size_t</a> hay_length)</td></tr>
+<tr class="separator:ga827486f333df7bc9a4e7f9bd212ba472"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga716447ae73b612bcf3a405b9b4608f6c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a7c94ea6f8948649f8d181ae55911eeaf">size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d28/group__lavu__string.html#ga716447ae73b612bcf3a405b9b4608f6c">av_strlcpy</a> (char *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a92034251bfd455d524a9b5610cddba00">dst</a>, const char *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a72e0fdf0f845ded60b1fada9e9195cd7">src</a>, <a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a7c94ea6f8948649f8d181ae55911eeaf">size_t</a> <a class="el" href="../../db/d76/group__lavu__mem__funcs.html#ga3d1e3edfcf61ca2d831883e1afbad89e">size</a>)</td></tr>
+<tr class="separator:ga716447ae73b612bcf3a405b9b4608f6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga193877ba459faf314c3d285b6082cf73"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a7c94ea6f8948649f8d181ae55911eeaf">size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d28/group__lavu__string.html#ga193877ba459faf314c3d285b6082cf73">av_strlcat</a> (char *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a92034251bfd455d524a9b5610cddba00">dst</a>, const char *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a72e0fdf0f845ded60b1fada9e9195cd7">src</a>, <a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a7c94ea6f8948649f8d181ae55911eeaf">size_t</a> <a class="el" href="../../db/d76/group__lavu__mem__funcs.html#ga3d1e3edfcf61ca2d831883e1afbad89e">size</a>)</td></tr>
+<tr class="separator:ga193877ba459faf314c3d285b6082cf73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae264e2caf6ad1ca830ce3f2b49abdf50"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a7c94ea6f8948649f8d181ae55911eeaf">size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d28/group__lavu__string.html#gae264e2caf6ad1ca830ce3f2b49abdf50">av_strlcatf</a> (char *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a92034251bfd455d524a9b5610cddba00">dst</a>, <a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a7c94ea6f8948649f8d181ae55911eeaf">size_t</a> <a class="el" href="../../db/d76/group__lavu__mem__funcs.html#ga3d1e3edfcf61ca2d831883e1afbad89e">size</a>, const char *fmt,...) av_printf_format(3</td></tr>
+<tr class="separator:gae264e2caf6ad1ca830ce3f2b49abdf50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1cb2a3929575d28a415dc02b917ecc01"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a7c94ea6f8948649f8d181ae55911eeaf">size_t</a> static <a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a7c94ea6f8948649f8d181ae55911eeaf">size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d28/group__lavu__string.html#ga1cb2a3929575d28a415dc02b917ecc01">av_strnlen</a> (const char *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>, <a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a7c94ea6f8948649f8d181ae55911eeaf">size_t</a> <a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a652168017ea9a8bbcead03d5c16269fb">len</a>)</td></tr>
+<tr class="separator:ga1cb2a3929575d28a415dc02b917ecc01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0a8e3f4a2a3039c441bd0826e4727462"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d28/group__lavu__string.html#ga0a8e3f4a2a3039c441bd0826e4727462">av_asprintf</a> (const char *fmt,...) av_printf_format(1</td></tr>
+<tr class="separator:ga0a8e3f4a2a3039c441bd0826e4727462"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga45d0395a448bc186baf081933ea816c9"><td class="memItemLeft" align="right" valign="top">char char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d28/group__lavu__string.html#ga45d0395a448bc186baf081933ea816c9">av_d2str</a> (double d)</td></tr>
+<tr class="separator:ga45d0395a448bc186baf081933ea816c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7b438169b430f6edf4f4451d867a9218"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d28/group__lavu__string.html#ga7b438169b430f6edf4f4451d867a9218">av_get_token</a> (const char **<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa3b73d9ca9f2e2396cbeae1ce6ce14be">buf</a>, const char *term)</td></tr>
+<tr class="separator:ga7b438169b430f6edf4f4451d867a9218"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3d4270f4ed651c414e2850090b9b77c4"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d28/group__lavu__string.html#ga3d4270f4ed651c414e2850090b9b77c4">av_strtok</a> (char *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>, const char *delim, char **saveptr)</td></tr>
+<tr class="separator:ga3d4270f4ed651c414e2850090b9b77c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga54f9d8cb6e7f411fb145dd6ade19e939"><td class="memItemLeft" align="right" valign="top">static av_const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d28/group__lavu__string.html#ga54f9d8cb6e7f411fb145dd6ade19e939">av_isdigit</a> (int <a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1f2d7f8147412c43ba2303a56f97ee73">c</a>)</td></tr>
+<tr class="separator:ga54f9d8cb6e7f411fb145dd6ade19e939"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga91dbda7570409baeb62265fa5f425039"><td class="memItemLeft" align="right" valign="top">static av_const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d28/group__lavu__string.html#ga91dbda7570409baeb62265fa5f425039">av_isgraph</a> (int <a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1f2d7f8147412c43ba2303a56f97ee73">c</a>)</td></tr>
+<tr class="separator:ga91dbda7570409baeb62265fa5f425039"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga96490acc8dd8d85f2ee43bc605661ffa"><td class="memItemLeft" align="right" valign="top">static av_const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d28/group__lavu__string.html#ga96490acc8dd8d85f2ee43bc605661ffa">av_isspace</a> (int <a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1f2d7f8147412c43ba2303a56f97ee73">c</a>)</td></tr>
+<tr class="separator:ga96490acc8dd8d85f2ee43bc605661ffa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9c20e01cbc94a7c9996a8ce93de046b0"><td class="memItemLeft" align="right" valign="top">static av_const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d28/group__lavu__string.html#ga9c20e01cbc94a7c9996a8ce93de046b0">av_toupper</a> (int <a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1f2d7f8147412c43ba2303a56f97ee73">c</a>)</td></tr>
+<tr class="separator:ga9c20e01cbc94a7c9996a8ce93de046b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4586526cc16bff30163dee592ed2897c"><td class="memItemLeft" align="right" valign="top">static av_const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d28/group__lavu__string.html#ga4586526cc16bff30163dee592ed2897c">av_tolower</a> (int <a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1f2d7f8147412c43ba2303a56f97ee73">c</a>)</td></tr>
+<tr class="separator:ga4586526cc16bff30163dee592ed2897c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga644b6231c0c43b9e2925db980f6bfa81"><td class="memItemLeft" align="right" valign="top">static av_const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d28/group__lavu__string.html#ga644b6231c0c43b9e2925db980f6bfa81">av_isxdigit</a> (int <a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1f2d7f8147412c43ba2303a56f97ee73">c</a>)</td></tr>
+<tr class="separator:ga644b6231c0c43b9e2925db980f6bfa81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4c60b7d4ce023a6466bc033e31c5349c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d28/group__lavu__string.html#ga4c60b7d4ce023a6466bc033e31c5349c">av_strcasecmp</a> (const char *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a3309789fc188587d666cda5ece79cf82">a</a>, const char *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0f71581a41fd2264c8944126dabbd010">b</a>)</td></tr>
+<tr class="separator:ga4c60b7d4ce023a6466bc033e31c5349c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaea8a7c8c2832c11e753fbfc0d1464970"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d28/group__lavu__string.html#gaea8a7c8c2832c11e753fbfc0d1464970">av_strncasecmp</a> (const char *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a3309789fc188587d666cda5ece79cf82">a</a>, const char *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0f71581a41fd2264c8944126dabbd010">b</a>, <a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a7c94ea6f8948649f8d181ae55911eeaf">size_t</a> <a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#ae2b4646468bc89d0ba646f5cf838e051">n</a>)</td></tr>
+<tr class="separator:gaea8a7c8c2832c11e753fbfc0d1464970"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf67c5971eb2a00a02286316d36a88d73"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d28/group__lavu__string.html#gaf67c5971eb2a00a02286316d36a88d73">av_strireplace</a> (const char *str, const char *from, const char *to)</td></tr>
+<tr class="separator:gaf67c5971eb2a00a02286316d36a88d73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1fe5db82a1f7639434fc01bf83919096"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d28/group__lavu__string.html#ga1fe5db82a1f7639434fc01bf83919096">av_basename</a> (const char *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#ab25d8cd967ccbd19b630d7100ff8f67e">path</a>)</td></tr>
+<tr class="separator:ga1fe5db82a1f7639434fc01bf83919096"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac50facc4ebec4a3a4a06c058a71bc027"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d28/group__lavu__string.html#gac50facc4ebec4a3a4a06c058a71bc027">av_dirname</a> (char *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#ab25d8cd967ccbd19b630d7100ff8f67e">path</a>)</td></tr>
+<tr class="separator:gac50facc4ebec4a3a4a06c058a71bc027"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5883fa1071129810bccfad9b3e779371"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d28/group__lavu__string.html#ga5883fa1071129810bccfad9b3e779371">av_match_name</a> (const char *<a class="el" href="../../df/d32/_s_d_l__egl_8h.html#aaced7cfc21e7d37775d6921bb8177239">name</a>, const char *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a339b9616ddcfbc036f0258f8dcdd8902">names</a>)</td></tr>
+<tr class="separator:ga5883fa1071129810bccfad9b3e779371"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7a948df0bd80a22f3fc4a267c4ef08c1"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d28/group__lavu__string.html#ga7a948df0bd80a22f3fc4a267c4ef08c1">av_append_path_component</a> (const char *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#ab25d8cd967ccbd19b630d7100ff8f67e">path</a>, const char *component)</td></tr>
+<tr class="separator:ga7a948df0bd80a22f3fc4a267c4ef08c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3c5e00d3f0575f2a3858f837656c08e9"><td class="memItemLeft" align="right" valign="top">av_warn_unused_result int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d28/group__lavu__string.html#ga3c5e00d3f0575f2a3858f837656c08e9">av_escape</a> (char **<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a92034251bfd455d524a9b5610cddba00">dst</a>, const char *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a72e0fdf0f845ded60b1fada9e9195cd7">src</a>, const char *special_chars, enum <a class="el" href="../../d9/d28/group__lavu__string.html#gaef885958293f07153383f99db573ff5a">AVEscapeMode</a> <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#a1e71d9c196e4683cc06c4b54d53f7ef5">mode</a>, int <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#ac7ba7d3cce3d19ca020e056b37231289">flags</a>)</td></tr>
+<tr class="separator:ga3c5e00d3f0575f2a3858f837656c08e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac6e5b8d7ba04ac2023e825222c36bee3"><td class="memItemLeft" align="right" valign="top">av_warn_unused_result int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d28/group__lavu__string.html#gac6e5b8d7ba04ac2023e825222c36bee3">av_utf8_decode</a> (<a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a37994e3b11c72957c6f454c6ec96d43d">int32_t</a> *codep, const <a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> **bufp, const <a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *buf_end, unsigned int <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#ac7ba7d3cce3d19ca020e056b37231289">flags</a>)</td></tr>
+<tr class="separator:gac6e5b8d7ba04ac2023e825222c36bee3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9a6eb11f2b4053d6bba95d8da156da2d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d28/group__lavu__string.html#ga9a6eb11f2b4053d6bba95d8da156da2d">av_match_list</a> (const char *<a class="el" href="../../df/d32/_s_d_l__egl_8h.html#aaced7cfc21e7d37775d6921bb8177239">name</a>, const char *list, char separator)</td></tr>
+<tr class="separator:ga9a6eb11f2b4053d6bba95d8da156da2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa21d05e9ef9081a5dc847cf033aad1cd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d28/group__lavu__string.html#gaa21d05e9ef9081a5dc847cf033aad1cd">av_sscanf</a> (const char *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#ae84541b4f3d8e1ea24ec0f466a8c568b">string</a>, const char *<a class="el" href="../../d3/d78/_s_d_l__audio_8h.html#a71a65ffd977afe9c3fef116a5bc9ee27">format</a>,...)</td></tr>
+<tr class="separator:gaa21d05e9ef9081a5dc847cf033aad1cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<h2 class="groupheader">Перечисления</h2>
+<a id="gaef885958293f07153383f99db573ff5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaef885958293f07153383f99db573ff5a">&#9670;&nbsp;</a></span>AVEscapeMode</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="../../d9/d28/group__lavu__string.html#gaef885958293f07153383f99db573ff5a">AVEscapeMode</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../df/dbf/avstring_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavutil/avstring.h</a>&gt;</code></p>
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="ggaef885958293f07153383f99db573ff5aa342d7bf60c9a7cb7a886f70f81ac5071"></a>AV_ESCAPE_MODE_AUTO&#160;</td><td class="fielddoc"><p>Use auto-selected escaping mode. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaef885958293f07153383f99db573ff5aa8b2d26951a9e06d8f7c12977a204eaf9"></a>AV_ESCAPE_MODE_BACKSLASH&#160;</td><td class="fielddoc"><p>Use backslash escaping. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaef885958293f07153383f99db573ff5aa84da6c323003df474c690ccf5d4e5d67"></a>AV_ESCAPE_MODE_QUOTE&#160;</td><td class="fielddoc"><p>Use single-quote escaping. </p>
+</td></tr>
+</table>
+
+<p class="definition">См. определение в файле <a class="el" href="../../df/dbf/avstring_8h_source.html">avstring.h</a> строка <a class="el" href="../../df/dbf/avstring_8h_source.html#l00313">313</a></p>
+<div class="fragment"><div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;                  {</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    <a class="code" href="../../d9/d28/group__lavu__string.html#ggaef885958293f07153383f99db573ff5aa342d7bf60c9a7cb7a886f70f81ac5071">AV_ESCAPE_MODE_AUTO</a>,      </div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    <a class="code" href="../../d9/d28/group__lavu__string.html#ggaef885958293f07153383f99db573ff5aa8b2d26951a9e06d8f7c12977a204eaf9">AV_ESCAPE_MODE_BACKSLASH</a>, </div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    <a class="code" href="../../d9/d28/group__lavu__string.html#ggaef885958293f07153383f99db573ff5aa84da6c323003df474c690ccf5d4e5d67">AV_ESCAPE_MODE_QUOTE</a>,     </div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;};</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Функции</h2>
+<a id="ga6135a12628e2b6a63c8d3d9b3a742b06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6135a12628e2b6a63c8d3d9b3a742b06">&#9670;&nbsp;</a></span>av_strstart()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int av_strstart </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pfx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char **&#160;</td>
+          <td class="paramname"><em>ptr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../df/dbf/avstring_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavutil/avstring.h</a>&gt;</code></p>
+<p>Return non-zero if pfx is a prefix of str. If it is, *ptr is set to the address of the first character in str after the prefix.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>input string </td></tr>
+    <tr><td class="paramname">pfx</td><td>prefix to test </td></tr>
+    <tr><td class="paramname">ptr</td><td>updated if the prefix is matched inside str </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>non-zero if the prefix matches, zero otherwise </dd></dl>
+
+</div>
+</div>
+<a id="gacd29ff1f7e62230a113c88fa10d3f5b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gacd29ff1f7e62230a113c88fa10d3f5b9">&#9670;&nbsp;</a></span>av_stristart()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int av_stristart </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pfx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char **&#160;</td>
+          <td class="paramname"><em>ptr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../df/dbf/avstring_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavutil/avstring.h</a>&gt;</code></p>
+<p>Return non-zero if pfx is a prefix of str independent of case. If it is, *ptr is set to the address of the first character in str after the prefix.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>input string </td></tr>
+    <tr><td class="paramname">pfx</td><td>prefix to test </td></tr>
+    <tr><td class="paramname">ptr</td><td>updated if the prefix is matched inside str </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>non-zero if the prefix matches, zero otherwise </dd></dl>
+
+</div>
+</div>
+<a id="ga47e14424edfb96d3f6bf0fca96a76fe5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga47e14424edfb96d3f6bf0fca96a76fe5">&#9670;&nbsp;</a></span>av_stristr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* av_stristr </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>haystack</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>needle</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../df/dbf/avstring_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavutil/avstring.h</a>&gt;</code></p>
+<p>Locate the first case-independent occurrence in the string haystack of the string needle. A zero-length string needle is considered to match at the start of haystack.</p>
+<p>This function is a case-insensitive version of the standard strstr().</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">haystack</td><td>string to search in </td></tr>
+    <tr><td class="paramname">needle</td><td>string to search for </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>pointer to the located match within haystack or a null pointer if no match </dd></dl>
+
+</div>
+</div>
+<a id="ga827486f333df7bc9a4e7f9bd212ba472"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga827486f333df7bc9a4e7f9bd212ba472">&#9670;&nbsp;</a></span>av_strnstr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* av_strnstr </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>haystack</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>needle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a7c94ea6f8948649f8d181ae55911eeaf">size_t</a>&#160;</td>
+          <td class="paramname"><em>hay_length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../df/dbf/avstring_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavutil/avstring.h</a>&gt;</code></p>
+<p>Locate the first occurrence of the string needle in the string haystack where not more than hay_length characters are searched. A zero-length string needle is considered to match at the start of haystack.</p>
+<p>This function is a length-limited version of the standard strstr().</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">haystack</td><td>string to search in </td></tr>
+    <tr><td class="paramname">needle</td><td>string to search for </td></tr>
+    <tr><td class="paramname">hay_length</td><td>length of string to search in </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>pointer to the located match within haystack or a null pointer if no match </dd></dl>
+
+</div>
+</div>
+<a id="ga716447ae73b612bcf3a405b9b4608f6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga716447ae73b612bcf3a405b9b4608f6c">&#9670;&nbsp;</a></span>av_strlcpy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a7c94ea6f8948649f8d181ae55911eeaf">size_t</a> av_strlcpy </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a7c94ea6f8948649f8d181ae55911eeaf">size_t</a>&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../df/dbf/avstring_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavutil/avstring.h</a>&gt;</code></p>
+<p>Copy the string src to dst, but no more than size - 1 bytes, and null-terminate dst.</p>
+<p>This function is the same as BSD strlcpy().</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dst</td><td>destination buffer </td></tr>
+    <tr><td class="paramname">src</td><td>source string </td></tr>
+    <tr><td class="paramname">size</td><td>size of destination buffer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>the length of src</dd></dl>
+<dl class="section warning"><dt>Предупреждения</dt><dd>since the return value is the length of src, src absolutely <em>must</em> be a properly 0-terminated string, otherwise this will read beyond the end of the buffer and possibly crash. </dd></dl>
+
+</div>
+</div>
+<a id="ga193877ba459faf314c3d285b6082cf73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga193877ba459faf314c3d285b6082cf73">&#9670;&nbsp;</a></span>av_strlcat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a7c94ea6f8948649f8d181ae55911eeaf">size_t</a> av_strlcat </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a7c94ea6f8948649f8d181ae55911eeaf">size_t</a>&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../df/dbf/avstring_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavutil/avstring.h</a>&gt;</code></p>
+<p>Append the string src to the string dst, but to a total length of no more than size - 1 bytes, and null-terminate dst.</p>
+<p>This function is similar to BSD strlcat(), but differs when size &lt;= strlen(dst).</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dst</td><td>destination buffer </td></tr>
+    <tr><td class="paramname">src</td><td>source string </td></tr>
+    <tr><td class="paramname">size</td><td>size of destination buffer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>the total length of src and dst</dd></dl>
+<dl class="section warning"><dt>Предупреждения</dt><dd>since the return value use the length of src and dst, these absolutely <em>must</em> be a properly 0-terminated strings, otherwise this will read beyond the end of the buffer and possibly crash. </dd></dl>
+
+</div>
+</div>
+<a id="gae264e2caf6ad1ca830ce3f2b49abdf50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae264e2caf6ad1ca830ce3f2b49abdf50">&#9670;&nbsp;</a></span>av_strlcatf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a7c94ea6f8948649f8d181ae55911eeaf">size_t</a> av_strlcatf </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a7c94ea6f8948649f8d181ae55911eeaf">size_t</a>&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>fmt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../df/dbf/avstring_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavutil/avstring.h</a>&gt;</code></p>
+<p>Append output to a string, according to a format. Never write out of the destination buffer, and always put a terminating 0 within the buffer. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dst</td><td>destination buffer (string to which the output is appended) </td></tr>
+    <tr><td class="paramname">size</td><td>total size of the destination buffer </td></tr>
+    <tr><td class="paramname">fmt</td><td>printf-compatible format string, specifying how the following parameters are used </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>the length of the string that would have been generated if enough space had been available </dd></dl>
+
+</div>
+</div>
+<a id="ga1cb2a3929575d28a415dc02b917ecc01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1cb2a3929575d28a415dc02b917ecc01">&#9670;&nbsp;</a></span>av_strnlen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a7c94ea6f8948649f8d181ae55911eeaf">size_t</a> static <a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a7c94ea6f8948649f8d181ae55911eeaf">size_t</a> av_strnlen </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a7c94ea6f8948649f8d181ae55911eeaf">size_t</a>&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../df/dbf/avstring_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavutil/avstring.h</a>&gt;</code></p>
+<p>Get the count of continuous non zero chars starting from the beginning.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">len</td><td>maximum number of characters to check in the string, that is the maximum value which is returned by the function </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../df/dbf/avstring_8h_source.html">avstring.h</a> строка <a class="el" href="../../df/dbf/avstring_8h_source.html#l00140">140</a></p>
+<div class="fragment"><div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;{</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <span class="keywordtype">size_t</span> i;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="keywordflow">for</span> (i = 0; i &lt; <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a652168017ea9a8bbcead03d5c16269fb">len</a> &amp;&amp; <a class="code" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>[i]; i++)</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        ;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="keywordflow">return</span> i;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ga0a8e3f4a2a3039c441bd0826e4727462"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0a8e3f4a2a3039c441bd0826e4727462">&#9670;&nbsp;</a></span>av_asprintf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* av_asprintf </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>fmt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../df/dbf/avstring_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavutil/avstring.h</a>&gt;</code></p>
+<p>Print arguments following specified format into a large enough auto allocated buffer. It is similar to GNU asprintf(). </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fmt</td><td>printf-compatible format string, specifying how the following parameters are used. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>the allocated string </dd></dl>
+<dl class="section note"><dt>Заметки</dt><dd>You have to free the string yourself with <a class="el" href="../../db/d76/group__lavu__mem__funcs.html#ga0c9096f498624c525aa2315b8a20c411">av_free()</a>. </dd></dl>
+
+</div>
+</div>
+<a id="ga45d0395a448bc186baf081933ea816c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga45d0395a448bc186baf081933ea816c9">&#9670;&nbsp;</a></span>av_d2str()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char char* av_d2str </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>d</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../df/dbf/avstring_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavutil/avstring.h</a>&gt;</code></p>
+<p>Convert a number to an av_malloced string. </p>
+
+</div>
+</div>
+<a id="ga7b438169b430f6edf4f4451d867a9218"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7b438169b430f6edf4f4451d867a9218">&#9670;&nbsp;</a></span>av_get_token()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* av_get_token </td>
+          <td>(</td>
+          <td class="paramtype">const char **&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>term</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../df/dbf/avstring_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavutil/avstring.h</a>&gt;</code></p>
+<p>Unescape the given string until a non escaped terminating char, and return the token corresponding to the unescaped string.</p>
+<p>The normal \ and ' escaping is supported. Leading and trailing whitespaces are removed, unless they are escaped with '\' or are enclosed between ''.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buf</td><td>the buffer to parse, buf will be updated to point to the terminating char </td></tr>
+    <tr><td class="paramname">term</td><td>a 0-terminated list of terminating chars </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>the malloced unescaped string, which must be av_freed by the user, NULL in case of allocation failure </dd></dl>
+
+</div>
+</div>
+<a id="ga3d4270f4ed651c414e2850090b9b77c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3d4270f4ed651c414e2850090b9b77c4">&#9670;&nbsp;</a></span>av_strtok()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* av_strtok </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>delim</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>saveptr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../df/dbf/avstring_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavutil/avstring.h</a>&gt;</code></p>
+<p>Split the string into several tokens which can be accessed by successive calls to <a class="el" href="../../d9/d28/group__lavu__string.html#ga3d4270f4ed651c414e2850090b9b77c4">av_strtok()</a>.</p>
+<p>A token is defined as a sequence of characters not belonging to the set specified in delim.</p>
+<p>On the first call to <a class="el" href="../../d9/d28/group__lavu__string.html#ga3d4270f4ed651c414e2850090b9b77c4">av_strtok()</a>, s should point to the string to parse, and the value of saveptr is ignored. In subsequent calls, s should be NULL, and saveptr should be unchanged since the previous call.</p>
+<p>This function is similar to strtok_r() defined in POSIX.1.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">s</td><td>the string to parse, may be NULL </td></tr>
+    <tr><td class="paramname">delim</td><td>0-terminated list of token delimiters, must be non-NULL </td></tr>
+    <tr><td class="paramname">saveptr</td><td>user-provided pointer which points to stored information necessary for <a class="el" href="../../d9/d28/group__lavu__string.html#ga3d4270f4ed651c414e2850090b9b77c4">av_strtok()</a> to continue scanning the same string. saveptr is updated to point to the next character after the first delimiter found, or to NULL if the string was terminated </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>the found token, or NULL when no token is found </dd></dl>
+
+</div>
+</div>
+<a id="ga54f9d8cb6e7f411fb145dd6ade19e939"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga54f9d8cb6e7f411fb145dd6ade19e939">&#9670;&nbsp;</a></span>av_isdigit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static av_const int av_isdigit </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>c</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../df/dbf/avstring_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavutil/avstring.h</a>&gt;</code></p>
+<p>Locale-independent conversion of ASCII isdigit. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../df/dbf/avstring_8h_source.html">avstring.h</a> строка <a class="el" href="../../df/dbf/avstring_8h_source.html#l00206">206</a></p>
+<div class="fragment"><div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;{</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1f2d7f8147412c43ba2303a56f97ee73">c</a> &gt;= <span class="charliteral">&#39;0&#39;</span> &amp;&amp; <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1f2d7f8147412c43ba2303a56f97ee73">c</a> &lt;= <span class="charliteral">&#39;9&#39;</span>;</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Используется в <a class="el" href="../../df/dbf/avstring_8h_source.html#l00251">av_isxdigit()</a>.</p>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d9/d28/group__lavu__string_ga54f9d8cb6e7f411fb145dd6ade19e939_icgraph.svg" width="216" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ga91dbda7570409baeb62265fa5f425039"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga91dbda7570409baeb62265fa5f425039">&#9670;&nbsp;</a></span>av_isgraph()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static av_const int av_isgraph </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>c</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../df/dbf/avstring_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavutil/avstring.h</a>&gt;</code></p>
+<p>Locale-independent conversion of ASCII isgraph. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../df/dbf/avstring_8h_source.html">avstring.h</a> строка <a class="el" href="../../df/dbf/avstring_8h_source.html#l00214">214</a></p>
+<div class="fragment"><div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;{</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1f2d7f8147412c43ba2303a56f97ee73">c</a> &gt; 32 &amp;&amp; <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1f2d7f8147412c43ba2303a56f97ee73">c</a> &lt; 127;</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ga96490acc8dd8d85f2ee43bc605661ffa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga96490acc8dd8d85f2ee43bc605661ffa">&#9670;&nbsp;</a></span>av_isspace()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static av_const int av_isspace </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>c</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../df/dbf/avstring_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavutil/avstring.h</a>&gt;</code></p>
+<p>Locale-independent conversion of ASCII isspace. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../df/dbf/avstring_8h_source.html">avstring.h</a> строка <a class="el" href="../../df/dbf/avstring_8h_source.html#l00222">222</a></p>
+<div class="fragment"><div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;{</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1f2d7f8147412c43ba2303a56f97ee73">c</a> == <span class="charliteral">&#39; &#39;</span> || <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1f2d7f8147412c43ba2303a56f97ee73">c</a> == <span class="charliteral">&#39;\f&#39;</span> || <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1f2d7f8147412c43ba2303a56f97ee73">c</a> == <span class="charliteral">&#39;\n&#39;</span> || <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1f2d7f8147412c43ba2303a56f97ee73">c</a> == <span class="charliteral">&#39;\r&#39;</span> || <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1f2d7f8147412c43ba2303a56f97ee73">c</a> == <span class="charliteral">&#39;\t&#39;</span> ||</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;           <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1f2d7f8147412c43ba2303a56f97ee73">c</a> == <span class="charliteral">&#39;\v&#39;</span>;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ga9c20e01cbc94a7c9996a8ce93de046b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9c20e01cbc94a7c9996a8ce93de046b0">&#9670;&nbsp;</a></span>av_toupper()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static av_const int av_toupper </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>c</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../df/dbf/avstring_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavutil/avstring.h</a>&gt;</code></p>
+<p>Locale-independent conversion of ASCII characters to uppercase. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../df/dbf/avstring_8h_source.html">avstring.h</a> строка <a class="el" href="../../df/dbf/avstring_8h_source.html#l00231">231</a></p>
+<div class="fragment"><div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;{</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1f2d7f8147412c43ba2303a56f97ee73">c</a> &gt;= <span class="charliteral">&#39;a&#39;</span> &amp;&amp; <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1f2d7f8147412c43ba2303a56f97ee73">c</a> &lt;= <span class="charliteral">&#39;z&#39;</span>)</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1f2d7f8147412c43ba2303a56f97ee73">c</a> ^= 0x20;</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1f2d7f8147412c43ba2303a56f97ee73">c</a>;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ga4586526cc16bff30163dee592ed2897c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4586526cc16bff30163dee592ed2897c">&#9670;&nbsp;</a></span>av_tolower()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static av_const int av_tolower </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>c</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../df/dbf/avstring_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavutil/avstring.h</a>&gt;</code></p>
+<p>Locale-independent conversion of ASCII characters to lowercase. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../df/dbf/avstring_8h_source.html">avstring.h</a> строка <a class="el" href="../../df/dbf/avstring_8h_source.html#l00241">241</a></p>
+<div class="fragment"><div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;{</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1f2d7f8147412c43ba2303a56f97ee73">c</a> &gt;= <span class="charliteral">&#39;A&#39;</span> &amp;&amp; <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1f2d7f8147412c43ba2303a56f97ee73">c</a> &lt;= <span class="charliteral">&#39;Z&#39;</span>)</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;        <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1f2d7f8147412c43ba2303a56f97ee73">c</a> ^= 0x20;</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1f2d7f8147412c43ba2303a56f97ee73">c</a>;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Используется в <a class="el" href="../../df/dbf/avstring_8h_source.html#l00251">av_isxdigit()</a>.</p>
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d9/d28/group__lavu__string_ga4586526cc16bff30163dee592ed2897c_icgraph.svg" width="224" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ga644b6231c0c43b9e2925db980f6bfa81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga644b6231c0c43b9e2925db980f6bfa81">&#9670;&nbsp;</a></span>av_isxdigit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static av_const int av_isxdigit </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>c</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../df/dbf/avstring_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavutil/avstring.h</a>&gt;</code></p>
+<p>Locale-independent conversion of ASCII isxdigit. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../df/dbf/avstring_8h_source.html">avstring.h</a> строка <a class="el" href="../../df/dbf/avstring_8h_source.html#l00251">251</a></p>
+<div class="fragment"><div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;{</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1f2d7f8147412c43ba2303a56f97ee73">c</a> = <a class="code" href="../../d9/d28/group__lavu__string.html#ga4586526cc16bff30163dee592ed2897c">av_tolower</a>(<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1f2d7f8147412c43ba2303a56f97ee73">c</a>);</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d9/d28/group__lavu__string.html#ga54f9d8cb6e7f411fb145dd6ade19e939">av_isdigit</a>(<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1f2d7f8147412c43ba2303a56f97ee73">c</a>) || (<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1f2d7f8147412c43ba2303a56f97ee73">c</a> &gt;= <span class="charliteral">&#39;a&#39;</span> &amp;&amp; <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1f2d7f8147412c43ba2303a56f97ee73">c</a> &lt;= <span class="charliteral">&#39;f&#39;</span>);</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../df/dbf/avstring_8h_source.html#l00206">av_isdigit()</a> и <a class="el" href="../../df/dbf/avstring_8h_source.html#l00241">av_tolower()</a>.</p>
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d9/d28/group__lavu__string_ga644b6231c0c43b9e2925db980f6bfa81_cgraph.svg" width="224" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ga4c60b7d4ce023a6466bc033e31c5349c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4c60b7d4ce023a6466bc033e31c5349c">&#9670;&nbsp;</a></span>av_strcasecmp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int av_strcasecmp </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../df/dbf/avstring_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavutil/avstring.h</a>&gt;</code></p>
+<p>Locale-independent case-insensitive compare. </p><dl class="section note"><dt>Заметки</dt><dd>This means only ASCII-range characters are case-insensitive </dd></dl>
+
+</div>
+</div>
+<a id="gaea8a7c8c2832c11e753fbfc0d1464970"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaea8a7c8c2832c11e753fbfc0d1464970">&#9670;&nbsp;</a></span>av_strncasecmp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int av_strncasecmp </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a7c94ea6f8948649f8d181ae55911eeaf">size_t</a>&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../df/dbf/avstring_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavutil/avstring.h</a>&gt;</code></p>
+<p>Locale-independent case-insensitive compare. </p><dl class="section note"><dt>Заметки</dt><dd>This means only ASCII-range characters are case-insensitive </dd></dl>
+
+</div>
+</div>
+<a id="gaf67c5971eb2a00a02286316d36a88d73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf67c5971eb2a00a02286316d36a88d73">&#9670;&nbsp;</a></span>av_strireplace()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* av_strireplace </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>from</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>to</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../df/dbf/avstring_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavutil/avstring.h</a>&gt;</code></p>
+<p>Locale-independent strings replace. </p><dl class="section note"><dt>Заметки</dt><dd>This means only ASCII-range characters are replace </dd></dl>
+
+</div>
+</div>
+<a id="ga1fe5db82a1f7639434fc01bf83919096"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1fe5db82a1f7639434fc01bf83919096">&#9670;&nbsp;</a></span>av_basename()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* av_basename </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../df/dbf/avstring_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavutil/avstring.h</a>&gt;</code></p>
+<p>Thread safe basename. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>the path, on DOS both \ and / are considered separators. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>pointer to the basename substring. </dd></dl>
+
+</div>
+</div>
+<a id="gac50facc4ebec4a3a4a06c058a71bc027"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac50facc4ebec4a3a4a06c058a71bc027">&#9670;&nbsp;</a></span>av_dirname()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* av_dirname </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../df/dbf/avstring_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavutil/avstring.h</a>&gt;</code></p>
+<p>Thread safe dirname. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>the path, on DOS both \ and / are considered separators. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>the path with the separator replaced by the string terminator or ".". </dd></dl>
+<dl class="section note"><dt>Заметки</dt><dd>the function may change the input string. </dd></dl>
+
+</div>
+</div>
+<a id="ga5883fa1071129810bccfad9b3e779371"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5883fa1071129810bccfad9b3e779371">&#9670;&nbsp;</a></span>av_match_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int av_match_name </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>names</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../df/dbf/avstring_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavutil/avstring.h</a>&gt;</code></p>
+<p>Match instances of a name in a comma-separated list of names. List entries are checked from the start to the end of the names list, the first match ends further processing. If an entry prefixed with '-' matches, then 0 is returned. The "ALL" list entry is considered to match all names.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>Name to look for. </td></tr>
+    <tr><td class="paramname">names</td><td>List of names. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>1 on match, 0 otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="ga7a948df0bd80a22f3fc4a267c4ef08c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7a948df0bd80a22f3fc4a267c4ef08c1">&#9670;&nbsp;</a></span>av_append_path_component()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* av_append_path_component </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>component</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../df/dbf/avstring_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavutil/avstring.h</a>&gt;</code></p>
+<p>Append path component to the existing path. Path separator '/' is placed between when needed. Resulting string have to be freed with <a class="el" href="../../db/d76/group__lavu__mem__funcs.html#ga0c9096f498624c525aa2315b8a20c411">av_free()</a>. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>base path </td></tr>
+    <tr><td class="paramname">component</td><td>component to be appended </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>new path or NULL on error. </dd></dl>
+
+</div>
+</div>
+<a id="ga3c5e00d3f0575f2a3858f837656c08e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3c5e00d3f0575f2a3858f837656c08e9">&#9670;&nbsp;</a></span>av_escape()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">av_warn_unused_result int av_escape </td>
+          <td>(</td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>special_chars</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">enum <a class="el" href="../../d9/d28/group__lavu__string.html#gaef885958293f07153383f99db573ff5a">AVEscapeMode</a>&#160;</td>
+          <td class="paramname"><em>mode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>flags</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../df/dbf/avstring_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavutil/avstring.h</a>&gt;</code></p>
+<p>Escape string in src, and put the escaped string in an allocated string in *dst, which must be freed with <a class="el" href="../../db/d76/group__lavu__mem__funcs.html#ga0c9096f498624c525aa2315b8a20c411">av_free()</a>.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dst</td><td>pointer where an allocated string is put </td></tr>
+    <tr><td class="paramname">src</td><td>string to escape, must be non-NULL </td></tr>
+    <tr><td class="paramname">special_chars</td><td>string containing the special characters which need to be escaped, can be NULL </td></tr>
+    <tr><td class="paramname">mode</td><td>escape mode to employ, see AV_ESCAPE_MODE_* macros. Any unknown value for mode will be considered equivalent to AV_ESCAPE_MODE_BACKSLASH, but this behaviour can change without notice. </td></tr>
+    <tr><td class="paramname">flags</td><td>flags which control how to escape, see AV_ESCAPE_FLAG_ macros </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>the length of the allocated string, or a negative error code in case of error </dd></dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="../../dd/d7a/bprint_8h.html#a14ec58eeaa6d4a3571cd9f0ffb873e62">av_bprint_escape()</a> </dd></dl>
+
+</div>
+</div>
+<a id="gac6e5b8d7ba04ac2023e825222c36bee3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac6e5b8d7ba04ac2023e825222c36bee3">&#9670;&nbsp;</a></span>av_utf8_decode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">av_warn_unused_result int av_utf8_decode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a37994e3b11c72957c6f454c6ec96d43d">int32_t</a> *&#160;</td>
+          <td class="paramname"><em>codep</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> **&#160;</td>
+          <td class="paramname"><em>bufp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *&#160;</td>
+          <td class="paramname"><em>buf_end</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>flags</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../df/dbf/avstring_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavutil/avstring.h</a>&gt;</code></p>
+<p>Read and decode a single UTF-8 code point (character) from the buffer in *buf, and update *buf to point to the next byte to decode.</p>
+<p>In case of an invalid byte sequence, the pointer will be updated to the next byte after the invalid sequence and the function will return an error code.</p>
+<p>Depending on the specified flags, the function will also fail in case the decoded code point does not belong to a valid range.</p>
+<dl class="section note"><dt>Заметки</dt><dd>For speed-relevant code a carefully implemented use of GET_UTF8() may be preferred.</dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">codep</td><td>pointer used to return the parsed code in case of success. The value in *codep is set even in case the range check fails. </td></tr>
+    <tr><td class="paramname">bufp</td><td>pointer to the address the first byte of the sequence to decode, updated by the function to point to the byte next after the decoded sequence </td></tr>
+    <tr><td class="paramname">buf_end</td><td>pointer to the end of the buffer, points to the next byte past the last in the buffer. This is used to avoid buffer overreads (in case of an unfinished UTF-8 sequence towards the end of the buffer). </td></tr>
+    <tr><td class="paramname">flags</td><td>a collection of AV_UTF8_FLAG_* flags </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>&gt;= 0 in case a sequence was successfully read, a negative value in case of invalid sequence </dd></dl>
+
+</div>
+</div>
+<a id="ga9a6eb11f2b4053d6bba95d8da156da2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9a6eb11f2b4053d6bba95d8da156da2d">&#9670;&nbsp;</a></span>av_match_list()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int av_match_list </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>list</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>separator</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../df/dbf/avstring_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavutil/avstring.h</a>&gt;</code></p>
+<p>Check if a name is in a list. </p><dl class="section return"><dt>Возвращает</dt><dd>0 if not found, or the 1 based index where it has been found in the list. </dd></dl>
+
+</div>
+</div>
+<a id="gaa21d05e9ef9081a5dc847cf033aad1cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa21d05e9ef9081a5dc847cf033aad1cd">&#9670;&nbsp;</a></span>av_sscanf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int av_sscanf </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>string</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>format</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../df/dbf/avstring_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavutil/avstring.h</a>&gt;</code></p>
+<p>See libc sscanf manual for more information. Locale-independent sscanf implementation. </p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="a_s_d_l__opengl_8h_html_a4af680a6c683f88ed67b76f207f2e6e4"><div class="ttname"><a href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a></div><div class="ttdeci">GLdouble s</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dc4/_s_d_l__opengl_8h_source.html#l02063">SDL_opengl.h:2063</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a652168017ea9a8bbcead03d5c16269fb"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a652168017ea9a8bbcead03d5c16269fb">len</a></div><div class="ttdeci">GLenum GLsizei len</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l02929">SDL_opengl_glext.h:2929</a></div></div>
+<div class="ttc" id="agroup__lavu__string_html_ggaef885958293f07153383f99db573ff5aa84da6c323003df474c690ccf5d4e5d67"><div class="ttname"><a href="../../d9/d28/group__lavu__string.html#ggaef885958293f07153383f99db573ff5aa84da6c323003df474c690ccf5d4e5d67">AV_ESCAPE_MODE_QUOTE</a></div><div class="ttdeci">@ AV_ESCAPE_MODE_QUOTE</div><div class="ttdoc">Use single-quote escaping.</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dbf/avstring_8h_source.html#l00316">avstring.h:316</a></div></div>
+<div class="ttc" id="agroup__lavu__string_html_ggaef885958293f07153383f99db573ff5aa342d7bf60c9a7cb7a886f70f81ac5071"><div class="ttname"><a href="../../d9/d28/group__lavu__string.html#ggaef885958293f07153383f99db573ff5aa342d7bf60c9a7cb7a886f70f81ac5071">AV_ESCAPE_MODE_AUTO</a></div><div class="ttdeci">@ AV_ESCAPE_MODE_AUTO</div><div class="ttdoc">Use auto-selected escaping mode.</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dbf/avstring_8h_source.html#l00314">avstring.h:314</a></div></div>
+<div class="ttc" id="agroup__lavu__string_html_ga54f9d8cb6e7f411fb145dd6ade19e939"><div class="ttname"><a href="../../d9/d28/group__lavu__string.html#ga54f9d8cb6e7f411fb145dd6ade19e939">av_isdigit</a></div><div class="ttdeci">static av_const int av_isdigit(int c)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dbf/avstring_8h_source.html#l00206">avstring.h:206</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a1f2d7f8147412c43ba2303a56f97ee73"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1f2d7f8147412c43ba2303a56f97ee73">c</a></div><div class="ttdeci">const GLubyte * c</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l11096">SDL_opengl_glext.h:11096</a></div></div>
+<div class="ttc" id="agroup__lavu__string_html_ggaef885958293f07153383f99db573ff5aa8b2d26951a9e06d8f7c12977a204eaf9"><div class="ttname"><a href="../../d9/d28/group__lavu__string.html#ggaef885958293f07153383f99db573ff5aa8b2d26951a9e06d8f7c12977a204eaf9">AV_ESCAPE_MODE_BACKSLASH</a></div><div class="ttdeci">@ AV_ESCAPE_MODE_BACKSLASH</div><div class="ttdoc">Use backslash escaping.</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dbf/avstring_8h_source.html#l00315">avstring.h:315</a></div></div>
+<div class="ttc" id="agroup__lavu__string_html_ga4586526cc16bff30163dee592ed2897c"><div class="ttname"><a href="../../d9/d28/group__lavu__string.html#ga4586526cc16bff30163dee592ed2897c">av_tolower</a></div><div class="ttdeci">static av_const int av_tolower(int c)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dbf/avstring_8h_source.html#l00241">avstring.h:241</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:04:24. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

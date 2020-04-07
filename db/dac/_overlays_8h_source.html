@@ -1,0 +1,210 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Исходный файл C:/git/world-of-might-and-magic/Engine/Graphics/Overlays.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('db/dac/_overlays_8h_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Overlays.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../db/dac/_overlays_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;cstdint&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">/*  282 */</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#pragma pack(push, 1)</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="../../db/dca/struct_other_overlay.html">    7</a></span>&#160;<span class="keyword">struct </span><a class="code" href="../../db/dca/struct_other_overlay.html">OtherOverlay</a> {</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <a class="code" href="../../db/dca/struct_other_overlay.html#a43a9075189313fc52879244ccb8e02a9">OtherOverlay</a>();</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../db/dca/struct_other_overlay.html#a5398dc06bba4fa8c1bbfa026ace4cbb2">Reset</a>();</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="../../db/dca/struct_other_overlay.html#a299cd6121c17c551bc07fdf3355f6918">   11</a></span>&#160;    <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> <a class="code" href="../../db/dca/struct_other_overlay.html#a299cd6121c17c551bc07fdf3355f6918">field_0</a>;</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="../../db/dca/struct_other_overlay.html#a074486064bf5fca7028c6a5c7cc667f3">   12</a></span>&#160;    <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> <a class="code" href="../../db/dca/struct_other_overlay.html#a074486064bf5fca7028c6a5c7cc667f3">field_2</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="../../db/dca/struct_other_overlay.html#a9fc3637209f6989f7c2fcfad43771537">   13</a></span>&#160;    <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> <a class="code" href="../../db/dca/struct_other_overlay.html#a9fc3637209f6989f7c2fcfad43771537">sprite_frame_time</a>;  <span class="comment">// __int16 field_4;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="../../db/dca/struct_other_overlay.html#a8f02f37ba6330b14864382d500bcfef6">   14</a></span>&#160;    <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> <a class="code" href="../../db/dca/struct_other_overlay.html#a8f02f37ba6330b14864382d500bcfef6">field_6</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="../../db/dca/struct_other_overlay.html#ab318f7ec2a2ddef2cebf7f35c1ca9800">   15</a></span>&#160;    <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> <a class="code" href="../../db/dca/struct_other_overlay.html#ab318f7ec2a2ddef2cebf7f35c1ca9800">screen_space_x</a>;  <span class="comment">// __int16 field_8;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="../../db/dca/struct_other_overlay.html#a97322e7c3c8b96d9d75cd5974dae6cf7">   16</a></span>&#160;    <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> <a class="code" href="../../db/dca/struct_other_overlay.html#a97322e7c3c8b96d9d75cd5974dae6cf7">screen_space_y</a>;  <span class="comment">// __int16 field_A;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="../../db/dca/struct_other_overlay.html#a80b19a132ca63b2dec783db29b1286d9">   17</a></span>&#160;    <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> <a class="code" href="../../db/dca/struct_other_overlay.html#a80b19a132ca63b2dec783db29b1286d9">field_C</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="../../db/dca/struct_other_overlay.html#adcfa1cab6ed064ac39a47ca45531e47d">   18</a></span>&#160;    <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> <a class="code" href="../../db/dca/struct_other_overlay.html#adcfa1cab6ed064ac39a47ca45531e47d">field_E</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="../../db/dca/struct_other_overlay.html#ab62477eaa7995d57871c1dd85fbe0c89">   19</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../db/dca/struct_other_overlay.html#ab62477eaa7995d57871c1dd85fbe0c89">field_10</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;};</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#pragma pack(pop)</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">/*   63 */</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#pragma pack(push, 1)</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="../../d8/df0/struct_other_overlay_list.html">   25</a></span>&#160;<span class="keyword">struct </span><a class="code" href="../../d8/df0/struct_other_overlay_list.html">OtherOverlayList</a> {</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="../../d8/df0/struct_other_overlay_list.html#ad36dbee31da9afcbd6fccf746bd3421f">   26</a></span>&#160;    <span class="keyword">inline</span> <a class="code" href="../../d8/df0/struct_other_overlay_list.html#ad36dbee31da9afcbd6fccf746bd3421f">OtherOverlayList</a>()</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        :  <span class="comment">//----- (0045848D)</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;          <a class="code" href="../../d8/df0/struct_other_overlay_list.html#a51a08c47b4efc9685ce53e9a504fa31f">field_3E8</a>(0),</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;          <a class="code" href="../../d8/df0/struct_other_overlay_list.html#a78989d89b6816badcacc224e0e658d61">bRedraw</a>(false) {}</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d8/df0/struct_other_overlay_list.html#a83122f4c8186f4ce17422c8bfda565a7">Reset</a>();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d8/df0/struct_other_overlay_list.html#a654e0f796a574ab0c25fe8f2fe83167b">_4418B1</a>(<span class="keywordtype">int</span> a2, <span class="keywordtype">int</span> a3, <span class="keywordtype">int</span> a4, <span class="keywordtype">int</span> a5);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d8/df0/struct_other_overlay_list.html#ad025856568f0fe6830666eaed52c0c16">_4418B6</a>(<span class="keywordtype">int</span> uOverlayID, <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> a3, <span class="keywordtype">int</span> a4, <span class="keywordtype">int</span> a5, <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> a6);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d8/df0/struct_other_overlay_list.html#a61666e5206168149ccbd4f4ced5587cd">DrawTurnBasedIcon</a>(<span class="keywordtype">int</span> a2);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="../../d8/df0/struct_other_overlay_list.html#a73423f16e52608314863f6b02600c7e0">   36</a></span>&#160;    <a class="code" href="../../db/dca/struct_other_overlay.html">OtherOverlay</a> <a class="code" href="../../d8/df0/struct_other_overlay_list.html#a73423f16e52608314863f6b02600c7e0">pOverlays</a>[50];</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="../../d8/df0/struct_other_overlay_list.html#a51a08c47b4efc9685ce53e9a504fa31f">   37</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d8/df0/struct_other_overlay_list.html#a51a08c47b4efc9685ce53e9a504fa31f">field_3E8</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="../../d8/df0/struct_other_overlay_list.html#a78989d89b6816badcacc224e0e658d61">   38</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d8/df0/struct_other_overlay_list.html#a78989d89b6816badcacc224e0e658d61">bRedraw</a>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;};</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#pragma pack(pop)</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">/*   52 */</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#pragma pack(push, 1)</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="../../d1/d39/struct_overlay_desc.html">   44</a></span>&#160;<span class="keyword">struct </span><a class="code" href="../../d1/d39/struct_overlay_desc.html">OverlayDesc</a> {</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="../../d1/d39/struct_overlay_desc.html#a64f744ac13589e521a609939ca2903c2">   45</a></span>&#160;    <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> <a class="code" href="../../d1/d39/struct_overlay_desc.html#a64f744ac13589e521a609939ca2903c2">uOverlayID</a>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="../../d1/d39/struct_overlay_desc.html#a18c42a2c9e0fa23380bede19cce5ad88">   46</a></span>&#160;    <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> <a class="code" href="../../d1/d39/struct_overlay_desc.html#a18c42a2c9e0fa23380bede19cce5ad88">uOverlayType</a>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="../../d1/d39/struct_overlay_desc.html#aed7b4d239272725965773be77d845796">   47</a></span>&#160;    <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> <a class="code" href="../../d1/d39/struct_overlay_desc.html#aed7b4d239272725965773be77d845796">uSpriteFramesetID</a>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="../../d1/d39/struct_overlay_desc.html#aa3790fcb984964cd778adcba040d0f53">   48</a></span>&#160;    <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> <a class="code" href="../../d1/d39/struct_overlay_desc.html#aa3790fcb984964cd778adcba040d0f53">field_6</a>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;};</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#pragma pack(pop)</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#pragma pack(push, 1)</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="../../d8/d68/struct_overlay_list.html">   53</a></span>&#160;<span class="keyword">struct </span><a class="code" href="../../d8/d68/struct_overlay_list.html">OverlayList</a> {</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="../../d8/d68/struct_overlay_list.html#a1db7dcb70d351a42f5762d7194593836">   54</a></span>&#160;    <span class="keyword">inline</span> <a class="code" href="../../d8/d68/struct_overlay_list.html#a1db7dcb70d351a42f5762d7194593836">OverlayList</a>()</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        :  <span class="comment">//----- (00458474)</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;          <a class="code" href="../../d8/d68/struct_overlay_list.html#ab6845da54dd15901191380e1328e3493">uNumOverlays</a>(0),</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;          <a class="code" href="../../d8/d68/struct_overlay_list.html#a29f04f3bae043d5f8ec976ef1c9d8c0e">pOverlays</a>(nullptr) {}</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d8/d68/struct_overlay_list.html#a8ee5df622cc90fb45ae84a52d1babe20">ToFile</a>();</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d8/d68/struct_overlay_list.html#abdd698256afa738e0ae6d70fa10b65c6">FromFile</a>(<span class="keywordtype">void</span> *data_mm6, <span class="keywordtype">void</span> *data_mm7, <span class="keywordtype">void</span> *data_mm8);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d8/d68/struct_overlay_list.html#a721ba36c7767efaf8d5a21a920136190">FromFileTxt</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *Args);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d8/d68/struct_overlay_list.html#a7dda79ede4cf1c0dd5a96032e680d7ca">InitializeSprites</a>();</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="../../d8/d68/struct_overlay_list.html#ab6845da54dd15901191380e1328e3493">   64</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../d8/d68/struct_overlay_list.html#ab6845da54dd15901191380e1328e3493">uNumOverlays</a>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="../../d8/d68/struct_overlay_list.html#a29f04f3bae043d5f8ec976ef1c9d8c0e">   65</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="../../d1/d39/struct_overlay_desc.html">OverlayDesc</a> *<a class="code" href="../../d8/d68/struct_overlay_list.html#a29f04f3bae043d5f8ec976ef1c9d8c0e">pOverlays</a>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;};</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">#pragma pack(pop)</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="keyword">extern</span> <span class="keyword">struct </span><a class="code" href="../../d8/df0/struct_other_overlay_list.html">OtherOverlayList</a> *<a class="code" href="../../db/dac/_overlays_8h.html#aa512635acfca2f1fa4fb7976cf2f01f5">pOtherOverlayList</a>;  <span class="comment">// idb</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keyword">extern</span> <span class="keyword">struct </span><a class="code" href="../../d8/d68/struct_overlay_list.html">OverlayList</a> *<a class="code" href="../../db/dac/_overlays_8h.html#a8bdb8312c42c9962bf898608c35282fc">pOverlayList</a>;</div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="a_s_d_l__config_8h_html_a273cf69d639a59973b6019625df33e30"><div class="ttname"><a href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a></div><div class="ttdeci">unsigned __int16 uint16_t</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d8f/_s_d_l__config_8h_source.html#l00037">SDL_config.h:37</a></div></div>
+<div class="ttc" id="astruct_other_overlay_html_ab62477eaa7995d57871c1dd85fbe0c89"><div class="ttname"><a href="../../db/dca/struct_other_overlay.html#ab62477eaa7995d57871c1dd85fbe0c89">OtherOverlay::field_10</a></div><div class="ttdeci">int field_10</div><div class="ttdef"><b>Definition:</b> <a href="../../db/dac/_overlays_8h_source.html#l00019">Overlays.h:19</a></div></div>
+<div class="ttc" id="astruct_overlay_desc_html_a64f744ac13589e521a609939ca2903c2"><div class="ttname"><a href="../../d1/d39/struct_overlay_desc.html#a64f744ac13589e521a609939ca2903c2">OverlayDesc::uOverlayID</a></div><div class="ttdeci">uint16_t uOverlayID</div><div class="ttdef"><b>Definition:</b> <a href="../../db/dac/_overlays_8h_source.html#l00045">Overlays.h:45</a></div></div>
+<div class="ttc" id="a_s_d_l__config_8h_html_a269259c924dce846340ddbb810db2e3c"><div class="ttname"><a href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a></div><div class="ttdeci">signed __int16 int16_t</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d8f/_s_d_l__config_8h_source.html#l00036">SDL_config.h:36</a></div></div>
+<div class="ttc" id="astruct_overlay_desc_html"><div class="ttname"><a href="../../d1/d39/struct_overlay_desc.html">OverlayDesc</a></div><div class="ttdef"><b>Definition:</b> <a href="../../db/dac/_overlays_8h_source.html#l00044">Overlays.h:44</a></div></div>
+<div class="ttc" id="astruct_overlay_list_html_a1db7dcb70d351a42f5762d7194593836"><div class="ttname"><a href="../../d8/d68/struct_overlay_list.html#a1db7dcb70d351a42f5762d7194593836">OverlayList::OverlayList</a></div><div class="ttdeci">OverlayList()</div><div class="ttdef"><b>Definition:</b> <a href="../../db/dac/_overlays_8h_source.html#l00054">Overlays.h:54</a></div></div>
+<div class="ttc" id="astruct_overlay_list_html_a7dda79ede4cf1c0dd5a96032e680d7ca"><div class="ttname"><a href="../../d8/d68/struct_overlay_list.html#a7dda79ede4cf1c0dd5a96032e680d7ca">OverlayList::InitializeSprites</a></div><div class="ttdeci">void InitializeSprites()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d68/_overlays_8cpp_source.html#l00100">Overlays.cpp:100</a></div></div>
+<div class="ttc" id="astruct_other_overlay_list_html_ad025856568f0fe6830666eaed52c0c16"><div class="ttname"><a href="../../d8/df0/struct_other_overlay_list.html#ad025856568f0fe6830666eaed52c0c16">OtherOverlayList::_4418B6</a></div><div class="ttdeci">int _4418B6(int uOverlayID, int16_t a3, int a4, int a5, int16_t a6)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d68/_overlays_8cpp_source.html#l00032">Overlays.cpp:32</a></div></div>
+<div class="ttc" id="astruct_overlay_desc_html_aed7b4d239272725965773be77d845796"><div class="ttname"><a href="../../d1/d39/struct_overlay_desc.html#aed7b4d239272725965773be77d845796">OverlayDesc::uSpriteFramesetID</a></div><div class="ttdeci">uint16_t uSpriteFramesetID</div><div class="ttdef"><b>Definition:</b> <a href="../../db/dac/_overlays_8h_source.html#l00047">Overlays.h:47</a></div></div>
+<div class="ttc" id="astruct_other_overlay_list_html_a654e0f796a574ab0c25fe8f2fe83167b"><div class="ttname"><a href="../../d8/df0/struct_other_overlay_list.html#a654e0f796a574ab0c25fe8f2fe83167b">OtherOverlayList::_4418B1</a></div><div class="ttdeci">int _4418B1(int a2, int a3, int a4, int a5)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d68/_overlays_8cpp_source.html#l00029">Overlays.cpp:29</a></div></div>
+<div class="ttc" id="astruct_other_overlay_list_html_a78989d89b6816badcacc224e0e658d61"><div class="ttname"><a href="../../d8/df0/struct_other_overlay_list.html#a78989d89b6816badcacc224e0e658d61">OtherOverlayList::bRedraw</a></div><div class="ttdeci">int bRedraw</div><div class="ttdef"><b>Definition:</b> <a href="../../db/dac/_overlays_8h_source.html#l00038">Overlays.h:38</a></div></div>
+<div class="ttc" id="astruct_other_overlay_html_a9fc3637209f6989f7c2fcfad43771537"><div class="ttname"><a href="../../db/dca/struct_other_overlay.html#a9fc3637209f6989f7c2fcfad43771537">OtherOverlay::sprite_frame_time</a></div><div class="ttdeci">int16_t sprite_frame_time</div><div class="ttdef"><b>Definition:</b> <a href="../../db/dac/_overlays_8h_source.html#l00013">Overlays.h:13</a></div></div>
+<div class="ttc" id="astruct_overlay_list_html"><div class="ttname"><a href="../../d8/d68/struct_overlay_list.html">OverlayList</a></div><div class="ttdef"><b>Definition:</b> <a href="../../db/dac/_overlays_8h_source.html#l00053">Overlays.h:53</a></div></div>
+<div class="ttc" id="astruct_other_overlay_html_a80b19a132ca63b2dec783db29b1286d9"><div class="ttname"><a href="../../db/dca/struct_other_overlay.html#a80b19a132ca63b2dec783db29b1286d9">OtherOverlay::field_C</a></div><div class="ttdeci">int16_t field_C</div><div class="ttdef"><b>Definition:</b> <a href="../../db/dac/_overlays_8h_source.html#l00017">Overlays.h:17</a></div></div>
+<div class="ttc" id="astruct_other_overlay_html_a299cd6121c17c551bc07fdf3355f6918"><div class="ttname"><a href="../../db/dca/struct_other_overlay.html#a299cd6121c17c551bc07fdf3355f6918">OtherOverlay::field_0</a></div><div class="ttdeci">int16_t field_0</div><div class="ttdef"><b>Definition:</b> <a href="../../db/dac/_overlays_8h_source.html#l00011">Overlays.h:11</a></div></div>
+<div class="ttc" id="astruct_other_overlay_list_html_ad36dbee31da9afcbd6fccf746bd3421f"><div class="ttname"><a href="../../d8/df0/struct_other_overlay_list.html#ad36dbee31da9afcbd6fccf746bd3421f">OtherOverlayList::OtherOverlayList</a></div><div class="ttdeci">OtherOverlayList()</div><div class="ttdef"><b>Definition:</b> <a href="../../db/dac/_overlays_8h_source.html#l00026">Overlays.h:26</a></div></div>
+<div class="ttc" id="astruct_other_overlay_list_html_a73423f16e52608314863f6b02600c7e0"><div class="ttname"><a href="../../d8/df0/struct_other_overlay_list.html#a73423f16e52608314863f6b02600c7e0">OtherOverlayList::pOverlays</a></div><div class="ttdeci">OtherOverlay pOverlays[50]</div><div class="ttdef"><b>Definition:</b> <a href="../../db/dac/_overlays_8h_source.html#l00036">Overlays.h:36</a></div></div>
+<div class="ttc" id="astruct_overlay_list_html_a721ba36c7767efaf8d5a21a920136190"><div class="ttname"><a href="../../d8/d68/struct_overlay_list.html#a721ba36c7767efaf8d5a21a920136190">OverlayList::FromFileTxt</a></div><div class="ttdeci">bool FromFileTxt(const char *Args)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d68/_overlays_8cpp_source.html#l00138">Overlays.cpp:138</a></div></div>
+<div class="ttc" id="astruct_other_overlay_html"><div class="ttname"><a href="../../db/dca/struct_other_overlay.html">OtherOverlay</a></div><div class="ttdef"><b>Definition:</b> <a href="../../db/dac/_overlays_8h_source.html#l00007">Overlays.h:7</a></div></div>
+<div class="ttc" id="astruct_overlay_desc_html_a18c42a2c9e0fa23380bede19cce5ad88"><div class="ttname"><a href="../../d1/d39/struct_overlay_desc.html#a18c42a2c9e0fa23380bede19cce5ad88">OverlayDesc::uOverlayType</a></div><div class="ttdeci">uint16_t uOverlayType</div><div class="ttdef"><b>Definition:</b> <a href="../../db/dac/_overlays_8h_source.html#l00046">Overlays.h:46</a></div></div>
+<div class="ttc" id="astruct_overlay_desc_html_aa3790fcb984964cd778adcba040d0f53"><div class="ttname"><a href="../../d1/d39/struct_overlay_desc.html#aa3790fcb984964cd778adcba040d0f53">OverlayDesc::field_6</a></div><div class="ttdeci">int16_t field_6</div><div class="ttdef"><b>Definition:</b> <a href="../../db/dac/_overlays_8h_source.html#l00048">Overlays.h:48</a></div></div>
+<div class="ttc" id="astruct_other_overlay_html_a97322e7c3c8b96d9d75cd5974dae6cf7"><div class="ttname"><a href="../../db/dca/struct_other_overlay.html#a97322e7c3c8b96d9d75cd5974dae6cf7">OtherOverlay::screen_space_y</a></div><div class="ttdeci">int16_t screen_space_y</div><div class="ttdef"><b>Definition:</b> <a href="../../db/dac/_overlays_8h_source.html#l00016">Overlays.h:16</a></div></div>
+<div class="ttc" id="astruct_other_overlay_list_html_a61666e5206168149ccbd4f4ced5587cd"><div class="ttname"><a href="../../d8/df0/struct_other_overlay_list.html#a61666e5206168149ccbd4f4ced5587cd">OtherOverlayList::DrawTurnBasedIcon</a></div><div class="ttdeci">void DrawTurnBasedIcon(int a2)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d68/_overlays_8cpp_source.html#l00067">Overlays.cpp:67</a></div></div>
+<div class="ttc" id="a_overlays_8h_html_aa512635acfca2f1fa4fb7976cf2f01f5"><div class="ttname"><a href="../../db/dac/_overlays_8h.html#aa512635acfca2f1fa4fb7976cf2f01f5">pOtherOverlayList</a></div><div class="ttdeci">struct OtherOverlayList * pOtherOverlayList</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d68/_overlays_8cpp_source.html#l00019">Overlays.cpp:19</a></div></div>
+<div class="ttc" id="astruct_other_overlay_html_a8f02f37ba6330b14864382d500bcfef6"><div class="ttname"><a href="../../db/dca/struct_other_overlay.html#a8f02f37ba6330b14864382d500bcfef6">OtherOverlay::field_6</a></div><div class="ttdeci">int16_t field_6</div><div class="ttdef"><b>Definition:</b> <a href="../../db/dac/_overlays_8h_source.html#l00014">Overlays.h:14</a></div></div>
+<div class="ttc" id="a_overlays_8h_html_a8bdb8312c42c9962bf898608c35282fc"><div class="ttname"><a href="../../db/dac/_overlays_8h.html#a8bdb8312c42c9962bf898608c35282fc">pOverlayList</a></div><div class="ttdeci">struct OverlayList * pOverlayList</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d68/_overlays_8cpp_source.html#l00020">Overlays.cpp:20</a></div></div>
+<div class="ttc" id="astruct_other_overlay_html_adcfa1cab6ed064ac39a47ca45531e47d"><div class="ttname"><a href="../../db/dca/struct_other_overlay.html#adcfa1cab6ed064ac39a47ca45531e47d">OtherOverlay::field_E</a></div><div class="ttdeci">int16_t field_E</div><div class="ttdef"><b>Definition:</b> <a href="../../db/dac/_overlays_8h_source.html#l00018">Overlays.h:18</a></div></div>
+<div class="ttc" id="astruct_other_overlay_html_ab318f7ec2a2ddef2cebf7f35c1ca9800"><div class="ttname"><a href="../../db/dca/struct_other_overlay.html#ab318f7ec2a2ddef2cebf7f35c1ca9800">OtherOverlay::screen_space_x</a></div><div class="ttdeci">int16_t screen_space_x</div><div class="ttdef"><b>Definition:</b> <a href="../../db/dac/_overlays_8h_source.html#l00015">Overlays.h:15</a></div></div>
+<div class="ttc" id="astruct_overlay_list_html_ab6845da54dd15901191380e1328e3493"><div class="ttname"><a href="../../d8/d68/struct_overlay_list.html#ab6845da54dd15901191380e1328e3493">OverlayList::uNumOverlays</a></div><div class="ttdeci">unsigned int uNumOverlays</div><div class="ttdef"><b>Definition:</b> <a href="../../db/dac/_overlays_8h_source.html#l00064">Overlays.h:64</a></div></div>
+<div class="ttc" id="astruct_overlay_list_html_a29f04f3bae043d5f8ec976ef1c9d8c0e"><div class="ttname"><a href="../../d8/d68/struct_overlay_list.html#a29f04f3bae043d5f8ec976ef1c9d8c0e">OverlayList::pOverlays</a></div><div class="ttdeci">struct OverlayDesc * pOverlays</div><div class="ttdef"><b>Definition:</b> <a href="../../db/dac/_overlays_8h_source.html#l00065">Overlays.h:65</a></div></div>
+<div class="ttc" id="astruct_other_overlay_list_html"><div class="ttname"><a href="../../d8/df0/struct_other_overlay_list.html">OtherOverlayList</a></div><div class="ttdef"><b>Definition:</b> <a href="../../db/dac/_overlays_8h_source.html#l00025">Overlays.h:25</a></div></div>
+<div class="ttc" id="astruct_other_overlay_html_a074486064bf5fca7028c6a5c7cc667f3"><div class="ttname"><a href="../../db/dca/struct_other_overlay.html#a074486064bf5fca7028c6a5c7cc667f3">OtherOverlay::field_2</a></div><div class="ttdeci">int16_t field_2</div><div class="ttdef"><b>Definition:</b> <a href="../../db/dac/_overlays_8h_source.html#l00012">Overlays.h:12</a></div></div>
+<div class="ttc" id="astruct_other_overlay_html_a43a9075189313fc52879244ccb8e02a9"><div class="ttname"><a href="../../db/dca/struct_other_overlay.html#a43a9075189313fc52879244ccb8e02a9">OtherOverlay::OtherOverlay</a></div><div class="ttdeci">OtherOverlay()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d68/_overlays_8cpp_source.html#l00216">Overlays.cpp:216</a></div></div>
+<div class="ttc" id="astruct_other_overlay_list_html_a51a08c47b4efc9685ce53e9a504fa31f"><div class="ttname"><a href="../../d8/df0/struct_other_overlay_list.html#a51a08c47b4efc9685ce53e9a504fa31f">OtherOverlayList::field_3E8</a></div><div class="ttdeci">int field_3E8</div><div class="ttdef"><b>Definition:</b> <a href="../../db/dac/_overlays_8h_source.html#l00037">Overlays.h:37</a></div></div>
+<div class="ttc" id="astruct_overlay_list_html_abdd698256afa738e0ae6d70fa10b65c6"><div class="ttname"><a href="../../d8/d68/struct_overlay_list.html#abdd698256afa738e0ae6d70fa10b65c6">OverlayList::FromFile</a></div><div class="ttdeci">void FromFile(void *data_mm6, void *data_mm7, void *data_mm8)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d68/_overlays_8cpp_source.html#l00119">Overlays.cpp:119</a></div></div>
+<div class="ttc" id="astruct_overlay_list_html_a8ee5df622cc90fb45ae84a52d1babe20"><div class="ttname"><a href="../../d8/d68/struct_overlay_list.html#a8ee5df622cc90fb45ae84a52d1babe20">OverlayList::ToFile</a></div><div class="ttdeci">void ToFile()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d68/_overlays_8cpp_source.html#l00106">Overlays.cpp:106</a></div></div>
+<div class="ttc" id="astruct_other_overlay_list_html_a83122f4c8186f4ce17422c8bfda565a7"><div class="ttname"><a href="../../d8/df0/struct_other_overlay_list.html#a83122f4c8186f4ce17422c8bfda565a7">OtherOverlayList::Reset</a></div><div class="ttdeci">void Reset()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d68/_overlays_8cpp_source.html#l00024">Overlays.cpp:24</a></div></div>
+<div class="ttc" id="astruct_other_overlay_html_a5398dc06bba4fa8c1bbfa026ace4cbb2"><div class="ttname"><a href="../../db/dca/struct_other_overlay.html#a5398dc06bba4fa8c1bbfa026ace4cbb2">OtherOverlay::Reset</a></div><div class="ttdeci">void Reset()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d68/_overlays_8cpp_source.html#l00203">Overlays.cpp:203</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_0b6ee6e7e9547e675db4add2e5de97da.html">Engine</a></li><li class="navelem"><a class="el" href="../../dir_bb84c1711d8a00602a64a24ea462155a.html">Graphics</a></li><li class="navelem"><a class="el" href="../../db/dac/_overlays_8h.html">Overlays.h</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:03:30. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

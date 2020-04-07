@@ -1,0 +1,975 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Файл C:/git/world-of-might-and-magic/Engine/Spells/Spells.cpp</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('da/df3/_spells_8cpp.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#typedef-members">Определения типов</a> &#124;
+<a href="#func-members">Функции</a> &#124;
+<a href="#var-members">Переменные</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл Spells.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><a href="../../da/df3/_spells_8cpp_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Определения типов</h2></td></tr>
+<tr class="memitem:a8df51996eaa93ee226542e4ebb9d6f14"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/df3/_spells_8cpp.html#a8df51996eaa93ee226542e4ebb9d6f14">EngineIoc</a> = <a class="el" href="../../d1/d12/class_engine___1_1_ioc_container.html">Engine_::IocContainer</a></td></tr>
+<tr class="separator:a8df51996eaa93ee226542e4ebb9d6f14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:aa51fba097ba9e6f40d89dc0b86fd39c4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/df3/_spells_8cpp.html#aa51fba097ba9e6f40d89dc0b86fd39c4">EventCastSpell</a> (int uSpellID, int uSkillLevel, int uSkill, int fromx, int fromy, int fromz, int tox, int toy, int toz)</td></tr>
+<tr class="separator:aa51fba097ba9e6f40d89dc0b86fd39c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfbdd4d78e350d3527361aa9e2b59ab7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/df3/_spells_8cpp.html#abfbdd4d78e350d3527361aa9e2b59ab7">sub_427769_isSpellQuickCastableOnShiftClick</a> (unsigned int uSpellID)</td></tr>
+<tr class="separator:abfbdd4d78e350d3527361aa9e2b59ab7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44fbb4b3786eae908c8906eea67fed90"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/df3/_spells_8cpp.html#a44fbb4b3786eae908c8906eea67fed90">_43AFE3_calc_spell_damage</a> (int spellId, int spellLevel, signed int skillMastery, int currentHp)</td></tr>
+<tr class="separator:a44fbb4b3786eae908c8906eea67fed90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:ad751f48ec25997384265298b15224f31"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d64/struct_spell_fx_renderer.html">SpellFxRenderer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/df3/_spells_8cpp.html#ad751f48ec25997384265298b15224f31">spell_fx_renderer</a> = <a class="el" href="../../d1/d12/class_engine___1_1_ioc_container.html#a29d34163cc9c0b9585b4f2440918de8f">EngineIoc::ResolveSpellFxRenderer</a>()</td></tr>
+<tr class="separator:ad751f48ec25997384265298b15224f31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4581c53add732726da636f8e2208de31"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a52f38e7d822a46377fde7a02708eedb1">std::array</a>&lt; <a class="el" href="../../da/dff/struct_town_portal_data.html">TownPortalData</a>, 6 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/df3/_spells_8cpp.html#a4581c53add732726da636f8e2208de31">TownPortalList</a></td></tr>
+<tr class="separator:a4581c53add732726da636f8e2208de31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a627363ab8ebcce2dc02cc92efff9a04e"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="../../d1/d36/struct_spell_stats.html">SpellStats</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/df3/_spells_8cpp.html#a627363ab8ebcce2dc02cc92efff9a04e">pSpellStats</a> = nullptr</td></tr>
+<tr class="separator:a627363ab8ebcce2dc02cc92efff9a04e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abee11e345176388e44e56589a7699aa2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a52f38e7d822a46377fde7a02708eedb1">std::array</a>&lt; <a class="el" href="../../d1/d92/structstru324__spell__id__to__sprite__mapping.html">stru324_spell_id_to_sprite_mapping</a>, 103 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/df3/_spells_8cpp.html#abee11e345176388e44e56589a7699aa2">spell_sprite_mapping</a></td></tr>
+<tr class="separator:abee11e345176388e44e56589a7699aa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afeea304dba34104f1346823e70a6ce7d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a52f38e7d822a46377fde7a02708eedb1">std::array</a>&lt; <a class="el" href="../../d0/d82/class_spell_data.html">SpellData</a>, 100 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/df3/_spells_8cpp.html#afeea304dba34104f1346823e70a6ce7d">pSpellDatas</a></td></tr>
+<tr class="separator:afeea304dba34104f1346823e70a6ce7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a400a5f2eda31bbefaad7acd9bd478063"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a52f38e7d822a46377fde7a02708eedb1">std::array</a>&lt; <a class="el" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5">SPELL_TYPE</a>, 25 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/df3/_spells_8cpp.html#a400a5f2eda31bbefaad7acd9bd478063">wand_spell_ids</a></td></tr>
+<tr class="separator:a400a5f2eda31bbefaad7acd9bd478063"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65e903b3603561e27898c7292f91884c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a52f38e7d822a46377fde7a02708eedb1">std::array</a>&lt; <a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a52f38e7d822a46377fde7a02708eedb1">std::array</a>&lt; struct <a class="el" href="../../d1/d1f/struct_spell_book_icon_pos.html">SpellBookIconPos</a>, 12 &gt;, 9 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/df3/_spells_8cpp.html#a65e903b3603561e27898c7292f91884c">pIconPos</a></td></tr>
+<tr class="separator:a65e903b3603561e27898c7292f91884c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Типы</h2>
+<a id="a8df51996eaa93ee226542e4ebb9d6f14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8df51996eaa93ee226542e4ebb9d6f14">&#9670;&nbsp;</a></span>EngineIoc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d4/d68/_engine_8cpp.html#a8df51996eaa93ee226542e4ebb9d6f14">EngineIoc</a> =  <a class="el" href="../../d1/d12/class_engine___1_1_ioc_container.html">Engine_::IocContainer</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/df3/_spells_8cpp_source.html">Spells.cpp</a> строка <a class="el" href="../../da/df3/_spells_8cpp_source.html#l00020">20</a></p>
+
+</div>
+</div>
+<h2 class="groupheader">Функции</h2>
+<a id="aa51fba097ba9e6f40d89dc0b86fd39c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa51fba097ba9e6f40d89dc0b86fd39c4">&#9670;&nbsp;</a></span>EventCastSpell()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> EventCastSpell </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>uSpellID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>uSkillLevel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>uSkill</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fromx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fromy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fromz</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>tox</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>toy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>toz</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/df3/_spells_8cpp_source.html">Spells.cpp</a> строка <a class="el" href="../../da/df3/_spells_8cpp_source.html#l00429">429</a></p>
+<div class="fragment"><div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;                                                                     {</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> skillMasteryPlusOne = uSkillLevel + 1;</div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;    Assert(skillMasteryPlusOne &gt; 0 &amp;&amp; skillMasteryPlusOne &lt;= 4,</div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;           <span class="stringliteral">&quot;Invalid mastery level&quot;</span>);</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160; </div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;    <a class="code" href="../../dd/df4/alext_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a> x_coord_delta = 0;</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;    <a class="code" href="../../dd/df4/alext_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a> y_coord_delta = 0;</div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;    <a class="code" href="../../dd/df4/alext_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a> z_coord_delta = 0;</div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;    <span class="keywordflow">if</span> (tox || toy || toz) {</div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;        x_coord_delta = tox - fromx;</div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;        y_coord_delta = toy - fromy;</div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;        z_coord_delta = toz - fromz;</div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;        x_coord_delta = <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a9131ac68bf00fcaf956e6b6d2dde7a6d">vPosition</a>.x - fromx;</div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;        y_coord_delta = <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a9131ac68bf00fcaf956e6b6d2dde7a6d">vPosition</a>.y - fromy;</div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;        z_coord_delta = (<a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a9131ac68bf00fcaf956e6b6d2dde7a6d">vPosition</a>.z + <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a03b208cf4d0a96cf7cd99e7475976a94">sEyelevel</a>) - fromz;</div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;    }</div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160; </div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;    <span class="keywordtype">int</span> yaw = 0;</div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;    <span class="keywordtype">int</span> pitch = 0;</div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;    <span class="keywordtype">double</span> distance_to_target = sqrt((<span class="keywordtype">long</span> <span class="keywordtype">double</span>)(</div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;        x_coord_delta * x_coord_delta + y_coord_delta * y_coord_delta +</div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;        z_coord_delta * z_coord_delta));</div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;    <span class="keywordflow">if</span> (distance_to_target &lt;= 1.0) {</div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;        distance_to_target = 1;</div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;        <a class="code" href="../../dd/df4/alext_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a> ySquared = y_coord_delta * y_coord_delta;</div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;        <a class="code" href="../../dd/df4/alext_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a> xSquared = x_coord_delta * x_coord_delta;</div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;        <span class="keywordtype">int</span> xy_distance = (int)sqrt((<span class="keywordtype">long</span> <span class="keywordtype">double</span>)(xSquared + ySquared));</div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;        yaw = <a class="code" href="../../d6/d5b/mm7__data_8cpp.html#a954e0b4aff4557f1c600694ee5cf55fd">stru_5C6E00</a>-&gt;<a class="code" href="../../d6/d38/structstru193__math.html#ae5c580a8915049b2fe00949acf3ca728">Atan2</a>((<span class="keywordtype">int</span>)x_coord_delta, (int)y_coord_delta);</div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;        pitch = <a class="code" href="../../d6/d5b/mm7__data_8cpp.html#a954e0b4aff4557f1c600694ee5cf55fd">stru_5C6E00</a>-&gt;<a class="code" href="../../d6/d38/structstru193__math.html#ae5c580a8915049b2fe00949acf3ca728">Atan2</a>(xy_distance, (<span class="keywordtype">int</span>)z_coord_delta);</div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;    }</div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160; </div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;    <a class="code" href="../../d0/d5a/struct_sprite_object.html">SpriteObject</a> spell_sprites;</div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160; </div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;    <span class="keywordflow">switch</span> (uSpellID) {</div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5ac550842d8cecdb466903b3b3f53f357f">SPELL_FIRE_FIRE_BOLT</a>:</div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5ac8516477fda4b9010b446168dd2b4484">SPELL_FIRE_FIREBALL</a>:</div>
+<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a10493e53950452f6decc7ff5417e7a54">SPELL_AIR_LIGHNING_BOLT</a>:</div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a1d1009b3de0b3f20f31f97e501f996fd">SPELL_WATER_ICE_BOLT</a>:</div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5af201a3e73ee75fb779ffaaba160ddd59">SPELL_WATER_ACID_BURST</a>:</div>
+<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a7b443858f4901e1adb4eb2c48a97d0d0">SPELL_WATER_ICE_BLAST</a>:</div>
+<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5ac62edc94567f310d91e1c7628014d3df">SPELL_EARTH_BLADES</a>:</div>
+<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5af3f27be8d9abff61cf04ef6189ebb7c8">SPELL_EARTH_ROCK_BLAST</a>:</div>
+<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a7797e044ba6ed10af0b549952e30773c">SPELL_WATER_POISON_SPRAY</a>:</div>
+<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a3e6e3837105b44b1542434675af1e4fb">SPELL_AIR_SPARKS</a>:</div>
+<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a623ed475113f855db5f6365c4b7d01ab">SPELL_EARTH_DEATH_BLOSSOM</a>:</div>
+<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;            spell_sprites.<a class="code" href="../../d0/d5a/struct_sprite_object.html#ad2e7d71942f08206dfaf1119488119ec">uType</a> = <a class="code" href="../../da/df3/_spells_8cpp.html#abee11e345176388e44e56589a7699aa2">spell_sprite_mapping</a>[uSpellID].uSpriteType;</div>
+<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;            spell_sprites.<a class="code" href="../../d0/d5a/struct_sprite_object.html#a2412bd3fcf5506dd473c61799993bea5">containing_item</a>.<a class="code" href="../../d7/d9c/struct_item_gen.html#a1e9fb8b4d5efcc3dc012888383570b49">Reset</a>();</div>
+<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;            spell_sprites.<a class="code" href="../../d0/d5a/struct_sprite_object.html#a2a37b8b7b081e50f0bc57e8398a3427e">spell_id</a> = uSpellID;</div>
+<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;            spell_sprites.<a class="code" href="../../d0/d5a/struct_sprite_object.html#a068ed23baa9a3349add10c17e5e08ffe">spell_level</a> = uSkill;</div>
+<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;            spell_sprites.<a class="code" href="../../d0/d5a/struct_sprite_object.html#ab02e86b3024cc91906cff5b1c9bdf813">spell_skill</a> = skillMasteryPlusOne;</div>
+<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;            spell_sprites.<a class="code" href="../../d0/d5a/struct_sprite_object.html#aabb65ea6fbef0442eed5db1e1fbf7d94">uObjectDescID</a> = <a class="code" href="../../d3/d09/_object_list_8cpp.html#a9f89e58bc05824c5e9f0f79b533781cf">pObjectList</a>-&gt;<a class="code" href="../../dc/d41/class_object_list.html#a9b403a9566abade0fcb2161a1510756d">ObjectIDByItemID</a>(spell_sprites.<a class="code" href="../../d0/d5a/struct_sprite_object.html#ad2e7d71942f08206dfaf1119488119ec">uType</a>);</div>
+<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;            spell_sprites.<a class="code" href="../../d0/d5a/struct_sprite_object.html#a4b7260250301c7af83a015e8d5fff349">vPosition</a>.x = fromx;</div>
+<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;            spell_sprites.<a class="code" href="../../d0/d5a/struct_sprite_object.html#a4b7260250301c7af83a015e8d5fff349">vPosition</a>.y = fromy;</div>
+<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;            spell_sprites.<a class="code" href="../../d0/d5a/struct_sprite_object.html#a4b7260250301c7af83a015e8d5fff349">vPosition</a>.z = fromz;</div>
+<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;            spell_sprites.<a class="code" href="../../d0/d5a/struct_sprite_object.html#ad2cd544dbec0bd1abc1ad34457032991">uAttributes</a> = 16;</div>
+<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;            spell_sprites.<a class="code" href="../../d0/d5a/struct_sprite_object.html#a09dc0e813adde2ff7a59cc5742c98e9e">uSectorID</a> = <a class="code" href="../../d1/d4a/_indoor_8cpp.html#a9b7a8d8a38babff41b0d4655a053ca75">pIndoor</a>-&gt;<a class="code" href="../../d6/d9e/struct_indoor_location.html#aaaf5a1255bb773cc796685052c9abd29">GetSector</a>(fromx, fromy, fromz);</div>
+<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;            spell_sprites.<a class="code" href="../../d0/d5a/struct_sprite_object.html#a0b8a844a307e3814e7b396443da81fd9">field_60_distance_related_prolly_lod</a> = distance_to_target;</div>
+<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;            spell_sprites.<a class="code" href="../../d0/d5a/struct_sprite_object.html#a563869da66353b04c96de2e9003af8f5">uSpriteFrameID</a> = 0;</div>
+<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;            spell_sprites.<a class="code" href="../../d0/d5a/struct_sprite_object.html#a36dfc0ae5604d14f26411bb700cd2b5a">spell_caster_pid</a> = 8000 | <a class="code" href="../../de/deb/_actor_8h.html#a842c5e2e69277690b064bf363c017980af4e29e4b20cbac0b34cab311f8190c93">OBJECT_Item</a>;</div>
+<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;            spell_sprites.<a class="code" href="../../d0/d5a/struct_sprite_object.html#a2579a5c13b90f698e535fff84452357f">uSoundID</a> = 0;</div>
+<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;    }</div>
+<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160; </div>
+<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;    <span class="keywordtype">int</span> spell_length = 0;</div>
+<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;    <a class="code" href="../../df/dc2/struct_game_time.html">GameTime</a> spell_expire_time;</div>
+<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;    <span class="keywordtype">int</span> spell_power;</div>
+<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;    <span class="keywordtype">int</span> launch_angle;</div>
+<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;    <span class="keywordtype">int</span> launch_speed;</div>
+<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;    <span class="keywordtype">int</span> spell_num_objects = 0;</div>
+<div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;    <span class="keywordtype">int</span> spell_spray_arc;</div>
+<div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;    <span class="keywordtype">int</span> spell_spray_angles;</div>
+<div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;    <span class="keywordtype">int</span> spriteid;</div>
+<div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160; </div>
+<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;    <span class="keywordflow">switch</span> (uSpellID) {</div>
+<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5ac550842d8cecdb466903b3b3f53f357f">SPELL_FIRE_FIRE_BOLT</a>:</div>
+<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5ac8516477fda4b9010b446168dd2b4484">SPELL_FIRE_FIREBALL</a>:</div>
+<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a10493e53950452f6decc7ff5417e7a54">SPELL_AIR_LIGHNING_BOLT</a>:</div>
+<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a1d1009b3de0b3f20f31f97e501f996fd">SPELL_WATER_ICE_BOLT</a>:</div>
+<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5af201a3e73ee75fb779ffaaba160ddd59">SPELL_WATER_ACID_BURST</a>:</div>
+<div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a7b443858f4901e1adb4eb2c48a97d0d0">SPELL_WATER_ICE_BLAST</a>:</div>
+<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5ac62edc94567f310d91e1c7628014d3df">SPELL_EARTH_BLADES</a>:</div>
+<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5af3f27be8d9abff61cf04ef6189ebb7c8">SPELL_EARTH_ROCK_BLAST</a>:</div>
+<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;            <span class="comment">// v20 = yaw;</span></div>
+<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;            spell_sprites.<a class="code" href="../../d0/d5a/struct_sprite_object.html#ac71b5e2935fc351126013f0ac824e1c8">spell_target_pid</a> = 0;</div>
+<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;            spell_sprites.<a class="code" href="../../d0/d5a/struct_sprite_object.html#a9afdb1af762f6a4054b9983f8dc79837">uFacing</a> = yaw;</div>
+<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;            spell_sprites.<a class="code" href="../../d0/d5a/struct_sprite_object.html#a2579a5c13b90f698e535fff84452357f">uSoundID</a> = 0;</div>
+<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;            launch_speed =</div>
+<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;                <a class="code" href="../../d3/d09/_object_list_8cpp.html#a9f89e58bc05824c5e9f0f79b533781cf">pObjectList</a></div>
+<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;                    -&gt;<a class="code" href="../../dc/d41/class_object_list.html#af04d1d3f616aaf9a2ceb87ca6299f1e9">pObjects</a>[(<span class="keywordtype">signed</span> __int16)spell_sprites.<a class="code" href="../../d0/d5a/struct_sprite_object.html#aabb65ea6fbef0442eed5db1e1fbf7d94">uObjectDescID</a>]</div>
+<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;                    .<a class="code" href="../../d9/d88/struct_object_desc.html#a5f9a5f42e401aea0d868102e6b7b8cf0">uSpeed</a>;</div>
+<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;            spriteid = spell_sprites.<a class="code" href="../../d0/d5a/struct_sprite_object.html#acc34bdc1ca30537412a1509a39f98168">Create</a>(yaw, pitch, launch_speed, 0);</div>
+<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;            <span class="comment">//    pAudioPlayer-&gt;PlaySound((SoundID)word_4EE088_sound_ids[uSpellID],</span></div>
+<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;            <span class="comment">//    0, 0, fromx, fromy, 0, 0, 0);</span></div>
+<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;            <a class="code" href="../../d3/df2/_audio_player_8cpp.html#a3ee6d655d35b46ebac53ef678255f75b">pAudioPlayer</a>-&gt;<a class="code" href="../../d7/dc2/class_audio_player.html#ad938453bac4a71f0b6e6de615460e957">PlaySpellSound</a>(uSpellID, PID(<a class="code" href="../../de/deb/_actor_8h.html#a842c5e2e69277690b064bf363c017980af4e29e4b20cbac0b34cab311f8190c93">OBJECT_Item</a>, spriteid));</div>
+<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a7797e044ba6ed10af0b549952e30773c">SPELL_WATER_POISON_SPRAY</a>:</div>
+<div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;            spell_num_objects = (skillMasteryPlusOne * 2) - 1;</div>
+<div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;            spell_sprites.<a class="code" href="../../d0/d5a/struct_sprite_object.html#ac71b5e2935fc351126013f0ac824e1c8">spell_target_pid</a> = 0;</div>
+<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;            spell_sprites.<a class="code" href="../../d0/d5a/struct_sprite_object.html#a9afdb1af762f6a4054b9983f8dc79837">uFacing</a> = yaw;</div>
+<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;            <span class="keywordflow">if</span> (spell_num_objects == 1) {</div>
+<div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;                launch_speed =</div>
+<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;                    <a class="code" href="../../d3/d09/_object_list_8cpp.html#a9f89e58bc05824c5e9f0f79b533781cf">pObjectList</a></div>
+<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;                        -&gt;<a class="code" href="../../dc/d41/class_object_list.html#af04d1d3f616aaf9a2ceb87ca6299f1e9">pObjects</a>[(<span class="keywordtype">signed</span> __int16)spell_sprites.<a class="code" href="../../d0/d5a/struct_sprite_object.html#aabb65ea6fbef0442eed5db1e1fbf7d94">uObjectDescID</a>]</div>
+<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;                        .<a class="code" href="../../d9/d88/struct_object_desc.html#a5f9a5f42e401aea0d868102e6b7b8cf0">uSpeed</a>;</div>
+<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;                spriteid = spell_sprites.<a class="code" href="../../d0/d5a/struct_sprite_object.html#acc34bdc1ca30537412a1509a39f98168">Create</a>(yaw, pitch, launch_speed, 0);</div>
+<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;                spell_spray_arc =</div>
+<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;                    (<span class="keywordtype">signed</span> int)(60 * <a class="code" href="../../d6/d5b/mm7__data_8cpp.html#a954e0b4aff4557f1c600694ee5cf55fd">stru_5C6E00</a>-&gt;<a class="code" href="../../d6/d38/structstru193__math.html#af14e1d25baaec50921cce5bbbc8ea0f6">uIntegerDoublePi</a>) / 360;</div>
+<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;                spell_spray_angles = spell_spray_arc / (spell_num_objects - 1);</div>
+<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = spell_spray_arc / -2; i &lt;= spell_spray_arc / 2;</div>
+<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;                     i += spell_spray_angles) {</div>
+<div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;                    spell_sprites.<a class="code" href="../../d0/d5a/struct_sprite_object.html#a9afdb1af762f6a4054b9983f8dc79837">uFacing</a> = i + yaw;</div>
+<div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;                    spriteid = spell_sprites.<a class="code" href="../../d0/d5a/struct_sprite_object.html#acc34bdc1ca30537412a1509a39f98168">Create</a>(</div>
+<div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;                        i + yaw, pitch,</div>
+<div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;                        <a class="code" href="../../d3/d09/_object_list_8cpp.html#a9f89e58bc05824c5e9f0f79b533781cf">pObjectList</a>-&gt;<a class="code" href="../../dc/d41/class_object_list.html#af04d1d3f616aaf9a2ceb87ca6299f1e9">pObjects</a>[spell_sprites.<a class="code" href="../../d0/d5a/struct_sprite_object.html#aabb65ea6fbef0442eed5db1e1fbf7d94">uObjectDescID</a>]</div>
+<div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160;                            .<a class="code" href="../../d9/d88/struct_object_desc.html#a5f9a5f42e401aea0d868102e6b7b8cf0">uSpeed</a>,</div>
+<div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;                        0);</div>
+<div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;                }</div>
+<div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160;            }</div>
+<div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;            <span class="comment">//    pAudioPlayer-&gt;PlaySound((SoundID)word_4EE088_sound_ids[uSpellID],</span></div>
+<div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;            <span class="comment">//    0, 0, fromx, fromy, 0, 0, 0);</span></div>
+<div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;            <a class="code" href="../../d3/df2/_audio_player_8cpp.html#a3ee6d655d35b46ebac53ef678255f75b">pAudioPlayer</a>-&gt;<a class="code" href="../../d7/dc2/class_audio_player.html#ad938453bac4a71f0b6e6de615460e957">PlaySpellSound</a>(uSpellID, PID(<a class="code" href="../../de/deb/_actor_8h.html#a842c5e2e69277690b064bf363c017980af4e29e4b20cbac0b34cab311f8190c93">OBJECT_Item</a>, spriteid));</div>
+<div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a3e6e3837105b44b1542434675af1e4fb">SPELL_AIR_SPARKS</a>:</div>
+<div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160;            spell_num_objects = (skillMasteryPlusOne * 2) + 1;</div>
+<div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160;            spell_spray_arc =</div>
+<div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;                (<span class="keywordtype">signed</span> int)(60 * <a class="code" href="../../d6/d5b/mm7__data_8cpp.html#a954e0b4aff4557f1c600694ee5cf55fd">stru_5C6E00</a>-&gt;<a class="code" href="../../d6/d38/structstru193__math.html#af14e1d25baaec50921cce5bbbc8ea0f6">uIntegerDoublePi</a>) / 360;</div>
+<div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;            spell_spray_angles = spell_spray_arc / (spell_num_objects - 1);</div>
+<div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;            spell_sprites.<a class="code" href="../../d0/d5a/struct_sprite_object.html#ac71b5e2935fc351126013f0ac824e1c8">spell_target_pid</a> = 4;</div>
+<div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = spell_spray_arc / -2; i &lt;= spell_spray_arc / 2;</div>
+<div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;                 i += spell_spray_angles) {</div>
+<div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;                spell_sprites.<a class="code" href="../../d0/d5a/struct_sprite_object.html#a9afdb1af762f6a4054b9983f8dc79837">uFacing</a> = i + yaw;</div>
+<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;                spriteid = spell_sprites.<a class="code" href="../../d0/d5a/struct_sprite_object.html#acc34bdc1ca30537412a1509a39f98168">Create</a>(</div>
+<div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;                    i + yaw, pitch,</div>
+<div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;                    <a class="code" href="../../d3/d09/_object_list_8cpp.html#a9f89e58bc05824c5e9f0f79b533781cf">pObjectList</a>-&gt;<a class="code" href="../../dc/d41/class_object_list.html#af04d1d3f616aaf9a2ceb87ca6299f1e9">pObjects</a>[spell_sprites.<a class="code" href="../../d0/d5a/struct_sprite_object.html#aabb65ea6fbef0442eed5db1e1fbf7d94">uObjectDescID</a>].<a class="code" href="../../d9/d88/struct_object_desc.html#a5f9a5f42e401aea0d868102e6b7b8cf0">uSpeed</a>,</div>
+<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;                    0);</div>
+<div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;            }</div>
+<div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160;            <span class="comment">//    pAudioPlayer-&gt;PlaySound((SoundID)word_4EE088_sound_ids[uSpellID],</span></div>
+<div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;            <span class="comment">//    0, 0, fromx, fromy, 0, 0, 0);</span></div>
+<div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;            <a class="code" href="../../d3/df2/_audio_player_8cpp.html#a3ee6d655d35b46ebac53ef678255f75b">pAudioPlayer</a>-&gt;<a class="code" href="../../d7/dc2/class_audio_player.html#ad938453bac4a71f0b6e6de615460e957">PlaySpellSound</a>(uSpellID, PID(<a class="code" href="../../de/deb/_actor_8h.html#a842c5e2e69277690b064bf363c017980af4e29e4b20cbac0b34cab311f8190c93">OBJECT_Item</a>, spriteid));</div>
+<div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a623ed475113f855db5f6365c4b7d01ab">SPELL_EARTH_DEATH_BLOSSOM</a>:</div>
+<div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="../../d1/d4a/_indoor_8cpp.html#af7004771e2f64ebae04197860cd1f3d3">uCurrentlyLoadedLevelType</a> == <a class="code" href="../../da/dc7/_indoor_8h.html#a24bf8802234f411139f3a641894c3f70a15a823faa9b1cebf4eec0ccc61356569">LEVEL_Indoor</a>) <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;            spell_sprites.<a class="code" href="../../d0/d5a/struct_sprite_object.html#ac71b5e2935fc351126013f0ac824e1c8">spell_target_pid</a> = 4;</div>
+<div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;            launch_speed =</div>
+<div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;                <a class="code" href="../../d3/d09/_object_list_8cpp.html#a9f89e58bc05824c5e9f0f79b533781cf">pObjectList</a>-&gt;<a class="code" href="../../dc/d41/class_object_list.html#af04d1d3f616aaf9a2ceb87ca6299f1e9">pObjects</a>[spell_sprites.<a class="code" href="../../d0/d5a/struct_sprite_object.html#aabb65ea6fbef0442eed5db1e1fbf7d94">uObjectDescID</a>].<a class="code" href="../../d9/d88/struct_object_desc.html#a5f9a5f42e401aea0d868102e6b7b8cf0">uSpeed</a>;</div>
+<div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;            launch_angle = <a class="code" href="../../d6/d5b/mm7__data_8cpp.html#a954e0b4aff4557f1c600694ee5cf55fd">stru_5C6E00</a>-&gt;<a class="code" href="../../d6/d38/structstru193__math.html#a934f5bef4348dfa90bc562afbf38caac">uIntegerHalfPi</a> / 2;</div>
+<div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160;            spriteid = spell_sprites.<a class="code" href="../../d0/d5a/struct_sprite_object.html#acc34bdc1ca30537412a1509a39f98168">Create</a>(yaw, launch_angle, launch_speed, 0);</div>
+<div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160;            <span class="comment">//    pAudioPlayer-&gt;PlaySound((SoundID)word_4EE088_sound_ids[uSpellID],</span></div>
+<div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160;            <span class="comment">//    0, 0, fromx, fromy, 0, 0, 0);</span></div>
+<div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160;            <a class="code" href="../../d3/df2/_audio_player_8cpp.html#a3ee6d655d35b46ebac53ef678255f75b">pAudioPlayer</a>-&gt;<a class="code" href="../../d7/dc2/class_audio_player.html#ad938453bac4a71f0b6e6de615460e957">PlaySpellSound</a>(uSpellID, PID(<a class="code" href="../../de/deb/_actor_8h.html#a842c5e2e69277690b064bf363c017980af4e29e4b20cbac0b34cab311f8190c93">OBJECT_Item</a>, spriteid));</div>
+<div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160; </div>
+<div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5af09b97eaf3fa0b78eb4d2ef55b5820b5">SPELL_FIRE_HASTE</a>:</div>
+<div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;            <span class="keywordflow">if</span> (skillMasteryPlusOne &gt; 0) {</div>
+<div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;                <span class="keywordflow">if</span> (skillMasteryPlusOne &lt;= 2)</div>
+<div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;                    spell_length = 60 * (uSkill + 60);</div>
+<div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (skillMasteryPlusOne == 3)</div>
+<div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160;                    spell_length = 180 * (uSkill + 20);</div>
+<div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (skillMasteryPlusOne == 4)</div>
+<div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;                    spell_length = 240 * (uSkill + 15);</div>
+<div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;            }</div>
+<div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;            <span class="keywordflow">for</span> (<a class="code" href="../../d2/d83/_m_m7_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a> i = 0; i &lt; 4; ++i)</div>
+<div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;                <span class="keywordflow">if</span> (<a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a25894a432feab69bcbbff2194bac47dd">pPlayers</a>[i].IsWeak()) <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160;            <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a34fa5acc9c480f82f6f60aa0b3c02feb">pPartyBuffs</a>[<a class="code" href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80dfa714e9cc910fc85bd06a140c2b023caf5">PARTY_BUFF_HASTE</a>].Apply(</div>
+<div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160;                <a class="code" href="../../df/dc2/struct_game_time.html">GameTime</a>(<a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a2e22e5307901cb1acb688185168b6161">GetPlayingTime</a>() + <a class="code" href="../../df/dc2/struct_game_time.html#a988d4e6b372bedab06913239264fd54c">GameTime::FromSeconds</a>(spell_length)),</div>
+<div class="line"><a name="l00598"></a><span class="lineno">  598</span>&#160;                skillMasteryPlusOne, 0, 0, 0);</div>
+<div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160;            <a class="code" href="../../da/df3/_spells_8cpp.html#ad751f48ec25997384265298b15224f31">spell_fx_renderer</a>-&gt;<a class="code" href="../../db/d64/struct_spell_fx_renderer.html#a05fe8d486699c6edb1053c644fd4993b">SetPlayerBuffAnim</a>(uSpellID, 0);</div>
+<div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;            <a class="code" href="../../da/df3/_spells_8cpp.html#ad751f48ec25997384265298b15224f31">spell_fx_renderer</a>-&gt;<a class="code" href="../../db/d64/struct_spell_fx_renderer.html#a05fe8d486699c6edb1053c644fd4993b">SetPlayerBuffAnim</a>(uSpellID, 1);</div>
+<div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160;            <a class="code" href="../../da/df3/_spells_8cpp.html#ad751f48ec25997384265298b15224f31">spell_fx_renderer</a>-&gt;<a class="code" href="../../db/d64/struct_spell_fx_renderer.html#a05fe8d486699c6edb1053c644fd4993b">SetPlayerBuffAnim</a>(uSpellID, 2);</div>
+<div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;            <a class="code" href="../../da/df3/_spells_8cpp.html#ad751f48ec25997384265298b15224f31">spell_fx_renderer</a>-&gt;<a class="code" href="../../db/d64/struct_spell_fx_renderer.html#a05fe8d486699c6edb1053c644fd4993b">SetPlayerBuffAnim</a>(uSpellID, 3);</div>
+<div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160;            <span class="comment">//    pAudioPlayer-&gt;PlaySound((SoundID)word_4EE088_sound_ids[uSpellID],</span></div>
+<div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160;            <span class="comment">//    0, 0, fromx, fromy, 0, 0, 0);  // звук алтаря</span></div>
+<div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160;            <a class="code" href="../../d3/df2/_audio_player_8cpp.html#a3ee6d655d35b46ebac53ef678255f75b">pAudioPlayer</a>-&gt;<a class="code" href="../../d7/dc2/class_audio_player.html#ad938453bac4a71f0b6e6de615460e957">PlaySpellSound</a>(uSpellID, 0);</div>
+<div class="line"><a name="l00606"></a><span class="lineno">  606</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00607"></a><span class="lineno">  607</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a3a1ad0c15bd910105a79b9d911154a42">SPELL_AIR_SHIELD</a>:</div>
+<div class="line"><a name="l00608"></a><span class="lineno">  608</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a5285dcb7ec1f09423355b6c839731869">SPELL_EARTH_STONESKIN</a>:</div>
+<div class="line"><a name="l00609"></a><span class="lineno">  609</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5aba03c679bb0d523f3ffd02fe460b989e">SPELL_SPIRIT_HEROISM</a>:</div>
+<div class="line"><a name="l00610"></a><span class="lineno">  610</span>&#160;            <span class="keywordflow">switch</span> (skillMasteryPlusOne) {</div>
+<div class="line"><a name="l00611"></a><span class="lineno">  611</span>&#160;                <span class="keywordflow">case</span> 1:</div>
+<div class="line"><a name="l00612"></a><span class="lineno">  612</span>&#160;                <span class="keywordflow">case</span> 2:</div>
+<div class="line"><a name="l00613"></a><span class="lineno">  613</span>&#160;                    spell_length = 300 * (uSkill + 12);</div>
+<div class="line"><a name="l00614"></a><span class="lineno">  614</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00615"></a><span class="lineno">  615</span>&#160;                <span class="keywordflow">case</span> 3:</div>
+<div class="line"><a name="l00616"></a><span class="lineno">  616</span>&#160;                    spell_length = 900 * (uSkill + 4);</div>
+<div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00618"></a><span class="lineno">  618</span>&#160;                <span class="keywordflow">case</span> 4:</div>
+<div class="line"><a name="l00619"></a><span class="lineno">  619</span>&#160;                    spell_length = 3600 * (uSkill + 1);</div>
+<div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00621"></a><span class="lineno">  621</span>&#160;            }</div>
+<div class="line"><a name="l00622"></a><span class="lineno">  622</span>&#160;            <span class="keywordflow">switch</span> (uSpellID) {</div>
+<div class="line"><a name="l00623"></a><span class="lineno">  623</span>&#160;                <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a3a1ad0c15bd910105a79b9d911154a42">SPELL_AIR_SHIELD</a>:</div>
+<div class="line"><a name="l00624"></a><span class="lineno">  624</span>&#160;                    spell_num_objects = 0;</div>
+<div class="line"><a name="l00625"></a><span class="lineno">  625</span>&#160;                    uSkill = 14;</div>
+<div class="line"><a name="l00626"></a><span class="lineno">  626</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00627"></a><span class="lineno">  627</span>&#160;                <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a5285dcb7ec1f09423355b6c839731869">SPELL_EARTH_STONESKIN</a>:</div>
+<div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160;                    spell_num_objects = uSkill + 5;</div>
+<div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160;                    uSkill = 15;</div>
+<div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160;                <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5aba03c679bb0d523f3ffd02fe460b989e">SPELL_SPIRIT_HEROISM</a>:</div>
+<div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;                    spell_num_objects = uSkill + 5;</div>
+<div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160;                    uSkill = 9;</div>
+<div class="line"><a name="l00634"></a><span class="lineno">  634</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160;            }</div>
+<div class="line"><a name="l00636"></a><span class="lineno">  636</span>&#160;            <a class="code" href="../../da/df3/_spells_8cpp.html#ad751f48ec25997384265298b15224f31">spell_fx_renderer</a>-&gt;<a class="code" href="../../db/d64/struct_spell_fx_renderer.html#a05fe8d486699c6edb1053c644fd4993b">SetPlayerBuffAnim</a>(uSpellID, 0);</div>
+<div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160;            <a class="code" href="../../da/df3/_spells_8cpp.html#ad751f48ec25997384265298b15224f31">spell_fx_renderer</a>-&gt;<a class="code" href="../../db/d64/struct_spell_fx_renderer.html#a05fe8d486699c6edb1053c644fd4993b">SetPlayerBuffAnim</a>(uSpellID, 1);</div>
+<div class="line"><a name="l00638"></a><span class="lineno">  638</span>&#160;            <a class="code" href="../../da/df3/_spells_8cpp.html#ad751f48ec25997384265298b15224f31">spell_fx_renderer</a>-&gt;<a class="code" href="../../db/d64/struct_spell_fx_renderer.html#a05fe8d486699c6edb1053c644fd4993b">SetPlayerBuffAnim</a>(uSpellID, 2);</div>
+<div class="line"><a name="l00639"></a><span class="lineno">  639</span>&#160;            <a class="code" href="../../da/df3/_spells_8cpp.html#ad751f48ec25997384265298b15224f31">spell_fx_renderer</a>-&gt;<a class="code" href="../../db/d64/struct_spell_fx_renderer.html#a05fe8d486699c6edb1053c644fd4993b">SetPlayerBuffAnim</a>(uSpellID, 3);</div>
+<div class="line"><a name="l00640"></a><span class="lineno">  640</span>&#160;            spell_expire_time =</div>
+<div class="line"><a name="l00641"></a><span class="lineno">  641</span>&#160;                <a class="code" href="../../df/dc2/struct_game_time.html">GameTime</a>(<a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a2e22e5307901cb1acb688185168b6161">GetPlayingTime</a>() + <a class="code" href="../../df/dc2/struct_game_time.html#a988d4e6b372bedab06913239264fd54c">GameTime::FromSeconds</a>(spell_length));</div>
+<div class="line"><a name="l00642"></a><span class="lineno">  642</span>&#160;            <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a34fa5acc9c480f82f6f60aa0b3c02feb">pPartyBuffs</a>[uSkill].Apply(spell_expire_time,</div>
+<div class="line"><a name="l00643"></a><span class="lineno">  643</span>&#160;                                              skillMasteryPlusOne,</div>
+<div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160;                                              spell_num_objects, 0, 0);</div>
+<div class="line"><a name="l00645"></a><span class="lineno">  645</span>&#160;            <span class="comment">//    pAudioPlayer-&gt;PlaySound((SoundID)word_4EE088_sound_ids[uSpellID],</span></div>
+<div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160;            <span class="comment">//    0, 0, fromx, fromy, 0, 0, 0);</span></div>
+<div class="line"><a name="l00647"></a><span class="lineno">  647</span>&#160;            <a class="code" href="../../d3/df2/_audio_player_8cpp.html#a3ee6d655d35b46ebac53ef678255f75b">pAudioPlayer</a>-&gt;<a class="code" href="../../d7/dc2/class_audio_player.html#ad938453bac4a71f0b6e6de615460e957">PlaySpellSound</a>(uSpellID, 0);</div>
+<div class="line"><a name="l00648"></a><span class="lineno">  648</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a1770a8fe7cee3b1e8c8596d95347a090">SPELL_FIRE_IMMOLATION</a>:</div>
+<div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160;            <span class="keywordflow">if</span> (skillMasteryPlusOne == 4)</div>
+<div class="line"><a name="l00651"></a><span class="lineno">  651</span>&#160;                spell_length = 600 * uSkill;</div>
+<div class="line"><a name="l00652"></a><span class="lineno">  652</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00653"></a><span class="lineno">  653</span>&#160;                spell_length = 60 * uSkill;</div>
+<div class="line"><a name="l00654"></a><span class="lineno">  654</span>&#160;            <a class="code" href="../../da/df3/_spells_8cpp.html#ad751f48ec25997384265298b15224f31">spell_fx_renderer</a>-&gt;<a class="code" href="../../db/d64/struct_spell_fx_renderer.html#a05fe8d486699c6edb1053c644fd4993b">SetPlayerBuffAnim</a>(uSpellID, 0);</div>
+<div class="line"><a name="l00655"></a><span class="lineno">  655</span>&#160;            <a class="code" href="../../da/df3/_spells_8cpp.html#ad751f48ec25997384265298b15224f31">spell_fx_renderer</a>-&gt;<a class="code" href="../../db/d64/struct_spell_fx_renderer.html#a05fe8d486699c6edb1053c644fd4993b">SetPlayerBuffAnim</a>(uSpellID, 1);</div>
+<div class="line"><a name="l00656"></a><span class="lineno">  656</span>&#160;            <a class="code" href="../../da/df3/_spells_8cpp.html#ad751f48ec25997384265298b15224f31">spell_fx_renderer</a>-&gt;<a class="code" href="../../db/d64/struct_spell_fx_renderer.html#a05fe8d486699c6edb1053c644fd4993b">SetPlayerBuffAnim</a>(uSpellID, 2);</div>
+<div class="line"><a name="l00657"></a><span class="lineno">  657</span>&#160;            <a class="code" href="../../da/df3/_spells_8cpp.html#ad751f48ec25997384265298b15224f31">spell_fx_renderer</a>-&gt;<a class="code" href="../../db/d64/struct_spell_fx_renderer.html#a05fe8d486699c6edb1053c644fd4993b">SetPlayerBuffAnim</a>(uSpellID, 3);</div>
+<div class="line"><a name="l00658"></a><span class="lineno">  658</span>&#160; </div>
+<div class="line"><a name="l00659"></a><span class="lineno">  659</span>&#160;            spell_expire_time =</div>
+<div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160;                <a class="code" href="../../df/dc2/struct_game_time.html">GameTime</a>(<a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a2e22e5307901cb1acb688185168b6161">GetPlayingTime</a>() + <a class="code" href="../../df/dc2/struct_game_time.html#a988d4e6b372bedab06913239264fd54c">GameTime::FromSeconds</a>(spell_length));</div>
+<div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;            <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a34fa5acc9c480f82f6f60aa0b3c02feb">pPartyBuffs</a>[<a class="code" href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80dfa0873a4f505e8da2be49aa61b88b9c10d">PARTY_BUFF_IMMOLATION</a>].Apply(</div>
+<div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;                spell_expire_time, skillMasteryPlusOne, uSkill, 0, 0);</div>
+<div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160;            <span class="comment">//    pAudioPlayer-&gt;PlaySound((SoundID)word_4EE088_sound_ids[uSpellID],</span></div>
+<div class="line"><a name="l00664"></a><span class="lineno">  664</span>&#160;            <span class="comment">//    0, 0, fromx, fromy, 0, 0, 0);</span></div>
+<div class="line"><a name="l00665"></a><span class="lineno">  665</span>&#160;            <a class="code" href="../../d3/df2/_audio_player_8cpp.html#a3ee6d655d35b46ebac53ef678255f75b">pAudioPlayer</a>-&gt;<a class="code" href="../../d7/dc2/class_audio_player.html#ad938453bac4a71f0b6e6de615460e957">PlaySpellSound</a>(uSpellID, 0);</div>
+<div class="line"><a name="l00666"></a><span class="lineno">  666</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00667"></a><span class="lineno">  667</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5ab65b0daeabd4adc3f709447337084f2a">SPELL_FIRE_PROTECTION_FROM_FIRE</a>:</div>
+<div class="line"><a name="l00668"></a><span class="lineno">  668</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a3780d7dcd93972e322680127334aaf12">SPELL_AIR_PROTECTION_FROM_AIR</a>:</div>
+<div class="line"><a name="l00669"></a><span class="lineno">  669</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5ad5239f7da0b9f01232c0747445163611">SPELL_WATER_PROTECTION_FROM_WATER</a>:</div>
+<div class="line"><a name="l00670"></a><span class="lineno">  670</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5ad706cce1ee837fcc96610e32a25d995b">SPELL_EARTH_PROTECTION_FROM_EARTH</a>:</div>
+<div class="line"><a name="l00671"></a><span class="lineno">  671</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a97ed1d2304a7eb07f9e2042a17778797">SPELL_MIND_PROTECTION_FROM_MIND</a>:</div>
+<div class="line"><a name="l00672"></a><span class="lineno">  672</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a22c0d3e30898c3af61e3948fef21b4ea">SPELL_BODY_PROTECTION_FROM_BODY</a>:</div>
+<div class="line"><a name="l00673"></a><span class="lineno">  673</span>&#160;            spell_length = 3600 * uSkill;</div>
+<div class="line"><a name="l00674"></a><span class="lineno">  674</span>&#160;            spell_num_objects = uSkill * skillMasteryPlusOne;</div>
+<div class="line"><a name="l00675"></a><span class="lineno">  675</span>&#160; </div>
+<div class="line"><a name="l00676"></a><span class="lineno">  676</span>&#160;            <span class="keywordflow">switch</span> (uSpellID) {</div>
+<div class="line"><a name="l00677"></a><span class="lineno">  677</span>&#160;                <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5ab65b0daeabd4adc3f709447337084f2a">SPELL_FIRE_PROTECTION_FROM_FIRE</a>:</div>
+<div class="line"><a name="l00678"></a><span class="lineno">  678</span>&#160;                    uSkill = <a class="code" href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80dfa95364e4632a66b4e3033629ee350d101">PARTY_BUFF_RESIST_FIRE</a>;</div>
+<div class="line"><a name="l00679"></a><span class="lineno">  679</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00680"></a><span class="lineno">  680</span>&#160;                <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a3780d7dcd93972e322680127334aaf12">SPELL_AIR_PROTECTION_FROM_AIR</a>:</div>
+<div class="line"><a name="l00681"></a><span class="lineno">  681</span>&#160;                    uSkill = <a class="code" href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80dfa0cfd076d0ee96fcabe3f0cbe7ac5f02e">PARTY_BUFF_RESIST_AIR</a>;</div>
+<div class="line"><a name="l00682"></a><span class="lineno">  682</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00683"></a><span class="lineno">  683</span>&#160;                <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5ad5239f7da0b9f01232c0747445163611">SPELL_WATER_PROTECTION_FROM_WATER</a>:</div>
+<div class="line"><a name="l00684"></a><span class="lineno">  684</span>&#160;                    uSkill = <a class="code" href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80dfa5ddb27c75588446b065c12eb9d5afcc9">PARTY_BUFF_RESIST_WATER</a>;</div>
+<div class="line"><a name="l00685"></a><span class="lineno">  685</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00686"></a><span class="lineno">  686</span>&#160;                <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5ad706cce1ee837fcc96610e32a25d995b">SPELL_EARTH_PROTECTION_FROM_EARTH</a>:</div>
+<div class="line"><a name="l00687"></a><span class="lineno">  687</span>&#160;                    uSkill = <a class="code" href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80dfa9db51cc9d4c57a15ec0c83b5f59db342">PARTY_BUFF_RESIST_EARTH</a>;</div>
+<div class="line"><a name="l00688"></a><span class="lineno">  688</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00689"></a><span class="lineno">  689</span>&#160;                <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a97ed1d2304a7eb07f9e2042a17778797">SPELL_MIND_PROTECTION_FROM_MIND</a>:</div>
+<div class="line"><a name="l00690"></a><span class="lineno">  690</span>&#160;                    uSkill = <a class="code" href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80dfa25b168c1e2df55713ae2f5b946f411cb">PARTY_BUFF_RESIST_MIND</a>;</div>
+<div class="line"><a name="l00691"></a><span class="lineno">  691</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160;                <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a22c0d3e30898c3af61e3948fef21b4ea">SPELL_BODY_PROTECTION_FROM_BODY</a>:</div>
+<div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160;                    uSkill = <a class="code" href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80dfa19d0e136a15d2fd35fd2c5138d1d9c72">PARTY_BUFF_RESIST_BODY</a>;</div>
+<div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;            }</div>
+<div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;            <a class="code" href="../../da/df3/_spells_8cpp.html#ad751f48ec25997384265298b15224f31">spell_fx_renderer</a>-&gt;<a class="code" href="../../db/d64/struct_spell_fx_renderer.html#a05fe8d486699c6edb1053c644fd4993b">SetPlayerBuffAnim</a>(uSpellID, 0);</div>
+<div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;            <a class="code" href="../../da/df3/_spells_8cpp.html#ad751f48ec25997384265298b15224f31">spell_fx_renderer</a>-&gt;<a class="code" href="../../db/d64/struct_spell_fx_renderer.html#a05fe8d486699c6edb1053c644fd4993b">SetPlayerBuffAnim</a>(uSpellID, 1);</div>
+<div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;            <a class="code" href="../../da/df3/_spells_8cpp.html#ad751f48ec25997384265298b15224f31">spell_fx_renderer</a>-&gt;<a class="code" href="../../db/d64/struct_spell_fx_renderer.html#a05fe8d486699c6edb1053c644fd4993b">SetPlayerBuffAnim</a>(uSpellID, 2);</div>
+<div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160;            <a class="code" href="../../da/df3/_spells_8cpp.html#ad751f48ec25997384265298b15224f31">spell_fx_renderer</a>-&gt;<a class="code" href="../../db/d64/struct_spell_fx_renderer.html#a05fe8d486699c6edb1053c644fd4993b">SetPlayerBuffAnim</a>(uSpellID, 3);</div>
+<div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160;            <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a34fa5acc9c480f82f6f60aa0b3c02feb">pPartyBuffs</a>[uSkill].Apply(</div>
+<div class="line"><a name="l00701"></a><span class="lineno">  701</span>&#160;                <a class="code" href="../../df/dc2/struct_game_time.html">GameTime</a>(<a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a2e22e5307901cb1acb688185168b6161">GetPlayingTime</a>() + <a class="code" href="../../df/dc2/struct_game_time.html#a988d4e6b372bedab06913239264fd54c">GameTime::FromSeconds</a>(spell_length)),</div>
+<div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160;                skillMasteryPlusOne, spell_num_objects, 0, 0);</div>
+<div class="line"><a name="l00703"></a><span class="lineno">  703</span>&#160;            <span class="comment">//    pAudioPlayer-&gt;PlaySound((SoundID)word_4EE088_sound_ids[uSpellID],</span></div>
+<div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160;            <span class="comment">//    0, 0, fromx, fromy, 0, 0, 0);</span></div>
+<div class="line"><a name="l00705"></a><span class="lineno">  705</span>&#160;            <a class="code" href="../../d3/df2/_audio_player_8cpp.html#a3ee6d655d35b46ebac53ef678255f75b">pAudioPlayer</a>-&gt;<a class="code" href="../../d7/dc2/class_audio_player.html#ad938453bac4a71f0b6e6de615460e957">PlaySpellSound</a>(uSpellID, 0);</div>
+<div class="line"><a name="l00706"></a><span class="lineno">  706</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00707"></a><span class="lineno">  707</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a82d5fbe09317463769ab9bbac4140dde">SPELL_LIGHT_DAY_OF_THE_GODS</a>:</div>
+<div class="line"><a name="l00708"></a><span class="lineno">  708</span>&#160;            <span class="keywordflow">switch</span> (skillMasteryPlusOne) {</div>
+<div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160;                <span class="keywordflow">case</span> 2:</div>
+<div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;                    spell_length = 10800 * uSkill;</div>
+<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160;                    spell_power = 3 * uSkill + 10;</div>
+<div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;                <span class="keywordflow">case</span> 3:</div>
+<div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;                    spell_length = 18000 * uSkill;</div>
+<div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160;                    spell_power = 5 * uSkill + 10;</div>
+<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160;                <span class="keywordflow">case</span> 4:</div>
+<div class="line"><a name="l00718"></a><span class="lineno">  718</span>&#160;                    spell_length = 14400 * uSkill;</div>
+<div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160;                    spell_power = 4 * uSkill + 10;</div>
+<div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160;            }</div>
+<div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160;            <a class="code" href="../../da/df3/_spells_8cpp.html#ad751f48ec25997384265298b15224f31">spell_fx_renderer</a>-&gt;<a class="code" href="../../db/d64/struct_spell_fx_renderer.html#a05fe8d486699c6edb1053c644fd4993b">SetPlayerBuffAnim</a>(uSpellID, 0);</div>
+<div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160;            <a class="code" href="../../da/df3/_spells_8cpp.html#ad751f48ec25997384265298b15224f31">spell_fx_renderer</a>-&gt;<a class="code" href="../../db/d64/struct_spell_fx_renderer.html#a05fe8d486699c6edb1053c644fd4993b">SetPlayerBuffAnim</a>(uSpellID, 1);</div>
+<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;            <a class="code" href="../../da/df3/_spells_8cpp.html#ad751f48ec25997384265298b15224f31">spell_fx_renderer</a>-&gt;<a class="code" href="../../db/d64/struct_spell_fx_renderer.html#a05fe8d486699c6edb1053c644fd4993b">SetPlayerBuffAnim</a>(uSpellID, 2);</div>
+<div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160;            <a class="code" href="../../da/df3/_spells_8cpp.html#ad751f48ec25997384265298b15224f31">spell_fx_renderer</a>-&gt;<a class="code" href="../../db/d64/struct_spell_fx_renderer.html#a05fe8d486699c6edb1053c644fd4993b">SetPlayerBuffAnim</a>(uSpellID, 3);</div>
+<div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160; </div>
+<div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160;            spell_expire_time =</div>
+<div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160;                <a class="code" href="../../df/dc2/struct_game_time.html">GameTime</a>(<a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a2e22e5307901cb1acb688185168b6161">GetPlayingTime</a>() + <a class="code" href="../../df/dc2/struct_game_time.html#a988d4e6b372bedab06913239264fd54c">GameTime::FromSeconds</a>(spell_length));</div>
+<div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;            <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a34fa5acc9c480f82f6f60aa0b3c02feb">pPartyBuffs</a>[<a class="code" href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80dfab13703d70e23ca64a2f30328ef02420a">PARTY_BUFF_DAY_OF_GODS</a>].Apply(</div>
+<div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160;                spell_expire_time, skillMasteryPlusOne, spell_power, 0, 0);</div>
+<div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160;            <span class="comment">//    pAudioPlayer-&gt;PlaySound((SoundID)word_4EE088_sound_ids[uSpellID],</span></div>
+<div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160;            <span class="comment">//    0, 0, fromx, fromy, 0, 0, 0);</span></div>
+<div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160;            <a class="code" href="../../d3/df2/_audio_player_8cpp.html#a3ee6d655d35b46ebac53ef678255f75b">pAudioPlayer</a>-&gt;<a class="code" href="../../d7/dc2/class_audio_player.html#ad938453bac4a71f0b6e6de615460e957">PlaySpellSound</a>(uSpellID, 0);</div>
+<div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;        <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;    }</div>
+<div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../de/db6/_our_math_8cpp_source.html#l00046">stru193_math::Atan2()</a>, <a class="el" href="../../d4/dd4/_sprite_object_8h_source.html#l00227">SpriteObject::containing_item</a>, <a class="el" href="../../d9/ded/_sprite_object_8cpp_source.html#l00056">SpriteObject::Create()</a>, <a class="el" href="../../d4/dd4/_sprite_object_8h_source.html#l00234">SpriteObject::field_60_distance_related_prolly_lod</a>, <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00083">GameTime::FromSeconds()</a>, <a class="el" href="../../db/d38/_party_8h_source.html#l00230">Party::GetPlayingTime()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l01279">IndoorLocation::GetSector()</a>, <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00286">LEVEL_Indoor</a>, <a class="el" href="../../de/deb/_actor_8h_source.html#l00066">OBJECT_Item</a>, <a class="el" href="../../d3/d09/_object_list_8cpp_source.html#l00007">ObjectList::ObjectIDByItemID()</a>, <a class="el" href="../../db/d38/_party_8h_source.html#l00073">PARTY_BUFF_DAY_OF_GODS</a>, <a class="el" href="../../db/d38/_party_8h_source.html#l00079">PARTY_BUFF_HASTE</a>, <a class="el" href="../../db/d38/_party_8h_source.html#l00081">PARTY_BUFF_IMMOLATION</a>, <a class="el" href="../../db/d38/_party_8h_source.html#l00071">PARTY_BUFF_RESIST_AIR</a>, <a class="el" href="../../db/d38/_party_8h_source.html#l00072">PARTY_BUFF_RESIST_BODY</a>, <a class="el" href="../../db/d38/_party_8h_source.html#l00075">PARTY_BUFF_RESIST_EARTH</a>, <a class="el" href="../../db/d38/_party_8h_source.html#l00077">PARTY_BUFF_RESIST_FIRE</a>, <a class="el" href="../../db/d38/_party_8h_source.html#l00083">PARTY_BUFF_RESIST_MIND</a>, <a class="el" href="../../db/d38/_party_8h_source.html#l00088">PARTY_BUFF_RESIST_WATER</a>, <a class="el" href="../../d3/df2/_audio_player_8cpp_source.html#l00020">pAudioPlayer</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00049">pIndoor</a>, <a class="el" href="../../d3/df2/_audio_player_8cpp_source.html#l00476">AudioPlayer::PlaySpellSound()</a>, <a class="el" href="../../d3/d09/_object_list_8cpp_source.html#l00005">pObjectList</a>, <a class="el" href="../../d7/dd2/_object_list_8h_source.html#l00054">ObjectList::pObjects</a>, <a class="el" href="../../da/db4/_party_8cpp_source.html#l00030">pParty</a>, <a class="el" href="../../db/d38/_party_8h_source.html#l00309">Party::pPartyBuffs</a>, <a class="el" href="../../db/d38/_party_8h_source.html#l00310">Party::pPlayers</a>, <a class="el" href="../../d9/d99/_items_8cpp_source.html#l00133">ItemGen::Reset()</a>, <a class="el" href="../../de/d6c/_spell_fx_renderer_8cpp_source.html#l01103">SpellFxRenderer::SetPlayerBuffAnim()</a>, <a class="el" href="../../db/d38/_party_8h_source.html#l00239">Party::sEyelevel</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00031">SPELL_AIR_LIGHNING_BOLT</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00027">SPELL_AIR_PROTECTION_FROM_AIR</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00030">SPELL_AIR_SHIELD</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00028">SPELL_AIR_SPARKS</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00087">SPELL_BODY_PROTECTION_FROM_BODY</a>, <a class="el" href="../../d4/dd4/_sprite_object_8h_source.html#l00232">SpriteObject::spell_caster_pid</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00054">SPELL_EARTH_BLADES</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00058">SPELL_EARTH_DEATH_BLOSSOM</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00051">SPELL_EARTH_PROTECTION_FROM_EARTH</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00056">SPELL_EARTH_ROCK_BLAST</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00053">SPELL_EARTH_STONESKIN</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00014">SPELL_FIRE_FIRE_BOLT</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00018">SPELL_FIRE_FIREBALL</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00017">SPELL_FIRE_HASTE</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00020">SPELL_FIRE_IMMOLATION</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00015">SPELL_FIRE_PROTECTION_FROM_FIRE</a>, <a class="el" href="../../da/df3/_spells_8cpp_source.html#l00022">spell_fx_renderer</a>, <a class="el" href="../../d4/dd4/_sprite_object_8h_source.html#l00228">SpriteObject::spell_id</a>, <a class="el" href="../../d4/dd4/_sprite_object_8h_source.html#l00229">SpriteObject::spell_level</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00102">SPELL_LIGHT_DAY_OF_THE_GODS</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00075">SPELL_MIND_PROTECTION_FROM_MIND</a>, <a class="el" href="../../d4/dd4/_sprite_object_8h_source.html#l00230">SpriteObject::spell_skill</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00067">SPELL_SPIRIT_HEROISM</a>, <a class="el" href="../../da/df3/_spells_8cpp_source.html#l00035">spell_sprite_mapping</a>, <a class="el" href="../../d4/dd4/_sprite_object_8h_source.html#l00233">SpriteObject::spell_target_pid</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00043">SPELL_WATER_ACID_BURST</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00046">SPELL_WATER_ICE_BLAST</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00040">SPELL_WATER_ICE_BOLT</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00038">SPELL_WATER_POISON_SPRAY</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00039">SPELL_WATER_PROTECTION_FROM_WATER</a>, <a class="el" href="../../d6/d5b/mm7__data_8cpp_source.html#l00019">stru_5C6E00</a>, <a class="el" href="../../d4/dd4/_sprite_object_8h_source.html#l00222">SpriteObject::uAttributes</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00052">uCurrentlyLoadedLevelType</a>, <a class="el" href="../../d4/dd4/_sprite_object_8h_source.html#l00220">SpriteObject::uFacing</a>, <a class="el" href="../../d0/dc0/_our_math_8h_source.html#l00090">stru193_math::uIntegerDoublePi</a>, <a class="el" href="../../d0/dc0/_our_math_8h_source.html#l00089">stru193_math::uIntegerHalfPi</a>, <a class="el" href="../../d4/dd4/_sprite_object_8h_source.html#l00217">SpriteObject::uObjectDescID</a>, <a class="el" href="../../d4/dd4/_sprite_object_8h_source.html#l00223">SpriteObject::uSectorID</a>, <a class="el" href="../../d4/dd4/_sprite_object_8h_source.html#l00221">SpriteObject::uSoundID</a>, <a class="el" href="../../d7/dd2/_object_list_8h_source.html#l00031">ObjectDesc::uSpeed</a>, <a class="el" href="../../d4/dd4/_sprite_object_8h_source.html#l00224">SpriteObject::uSpriteFrameID</a>, <a class="el" href="../../d4/dd4/_sprite_object_8h_source.html#l00215">SpriteObject::uType</a>, <a class="el" href="../../d4/dd4/_sprite_object_8h_source.html#l00218">SpriteObject::vPosition</a> и <a class="el" href="../../db/d38/_party_8h_source.html#l00250">Party::vPosition</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../df/d5c/_events_8cpp_source.html#l00260">EventProcessor()</a>.</p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../da/df3/_spells_8cpp_aa51fba097ba9e6f40d89dc0b86fd39c4_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../da/df3/_spells_8cpp_aa51fba097ba9e6f40d89dc0b86fd39c4_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="abfbdd4d78e350d3527361aa9e2b59ab7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfbdd4d78e350d3527361aa9e2b59ab7">&#9670;&nbsp;</a></span>sub_427769_isSpellQuickCastableOnShiftClick()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool sub_427769_isSpellQuickCastableOnShiftClick </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>uSpellID</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/df3/_spells_8cpp_source.html">Spells.cpp</a> строка <a class="el" href="../../da/df3/_spells_8cpp_source.html#l00741">741</a></p>
+<div class="fragment"><div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160;                                                                        {</div>
+<div class="line"><a name="l00742"></a><span class="lineno">  742</span>&#160;    <span class="keywordflow">return</span> (<a class="code" href="../../da/df3/_spells_8cpp.html#afeea304dba34104f1346823e70a6ce7d">pSpellDatas</a>[uSpellID].stats &amp; 0xC) != 0;</div>
+<div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../da/df3/_spells_8cpp_source.html#l00170">pSpellDatas</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../dd/da4/_viewport_8cpp_source.html#l00315">Engine::OnGameViewportClick()</a>.</p>
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../da/df3/_spells_8cpp_abfbdd4d78e350d3527361aa9e2b59ab7_icgraph.svg" width="483" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a44fbb4b3786eae908c8906eea67fed90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44fbb4b3786eae908c8906eea67fed90">&#9670;&nbsp;</a></span>_43AFE3_calc_spell_damage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int _43AFE3_calc_spell_damage </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>spellId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>spellLevel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">signed int&#160;</td>
+          <td class="paramname"><em>skillMastery</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>currentHp</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/df3/_spells_8cpp_source.html">Spells.cpp</a> строка <a class="el" href="../../da/df3/_spells_8cpp_source.html#l00745">745</a></p>
+<div class="fragment"><div class="line"><a name="l00746"></a><span class="lineno">  746</span>&#160;                                                                      {</div>
+<div class="line"><a name="l00747"></a><span class="lineno">  747</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a321ff419cd5252e54cf95e64dc6687ee">result</a>;       <span class="comment">// eax@1</span></div>
+<div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> v5;  <span class="comment">// [sp-4h] [bp-8h]@9</span></div>
+<div class="line"><a name="l00749"></a><span class="lineno">  749</span>&#160; </div>
+<div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;    <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a321ff419cd5252e54cf95e64dc6687ee">result</a> = 0;</div>
+<div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160;    <span class="keywordflow">if</span> (spellId == <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5ab1853eaddcc9b61b10df7979e425c9dd">SPELL_FIRE_FIRE_SPIKE</a>) {</div>
+<div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160;        <span class="keywordflow">switch</span> (skillMastery) {</div>
+<div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160;            <span class="keywordflow">case</span> 1:</div>
+<div class="line"><a name="l00754"></a><span class="lineno">  754</span>&#160;            <span class="keywordflow">case</span> 2:</div>
+<div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160;                v5 = 6;</div>
+<div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160;            <span class="keywordflow">case</span> 3:</div>
+<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;                v5 = 8;</div>
+<div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160;            <span class="keywordflow">case</span> 4:</div>
+<div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160;                v5 = 10;</div>
+<div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00763"></a><span class="lineno">  763</span>&#160;            <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00764"></a><span class="lineno">  764</span>&#160;                <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00765"></a><span class="lineno">  765</span>&#160;        }</div>
+<div class="line"><a name="l00766"></a><span class="lineno">  766</span>&#160;        <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a321ff419cd5252e54cf95e64dc6687ee">result</a> = <a class="code" href="../../de/db6/_our_math_8cpp.html#a6b46ede8d1d8678f2c7835a70c46f10c">GetDiceResult</a>(spellLevel, v5);</div>
+<div class="line"><a name="l00767"></a><span class="lineno">  767</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (spellId == <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5ab61dbd68de154ea78fe981268ec1b337">SPELL_EARTH_MASS_DISTORTION</a>) {</div>
+<div class="line"><a name="l00768"></a><span class="lineno">  768</span>&#160;        <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a321ff419cd5252e54cf95e64dc6687ee">result</a> = currentHp *</div>
+<div class="line"><a name="l00769"></a><span class="lineno">  769</span>&#160;            (<a class="code" href="../../da/df3/_spells_8cpp.html#afeea304dba34104f1346823e70a6ce7d">pSpellDatas</a>[<a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5ab61dbd68de154ea78fe981268ec1b337">SPELL_EARTH_MASS_DISTORTION</a>].baseDamage +</div>
+<div class="line"><a name="l00770"></a><span class="lineno">  770</span>&#160;                2 * spellLevel) /</div>
+<div class="line"><a name="l00771"></a><span class="lineno">  771</span>&#160;            100;</div>
+<div class="line"><a name="l00772"></a><span class="lineno">  772</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00773"></a><span class="lineno">  773</span>&#160;        <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a321ff419cd5252e54cf95e64dc6687ee">result</a> =</div>
+<div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160;            <a class="code" href="../../da/df3/_spells_8cpp.html#afeea304dba34104f1346823e70a6ce7d">pSpellDatas</a>[spellId].baseDamage +</div>
+<div class="line"><a name="l00775"></a><span class="lineno">  775</span>&#160;            <a class="code" href="../../de/db6/_our_math_8cpp.html#a6b46ede8d1d8678f2c7835a70c46f10c">GetDiceResult</a>(spellLevel, <a class="code" href="../../da/df3/_spells_8cpp.html#afeea304dba34104f1346823e70a6ce7d">pSpellDatas</a>[spellId].bonusSkillDamage);</div>
+<div class="line"><a name="l00776"></a><span class="lineno">  776</span>&#160;    }</div>
+<div class="line"><a name="l00777"></a><span class="lineno">  777</span>&#160; </div>
+<div class="line"><a name="l00778"></a><span class="lineno">  778</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a321ff419cd5252e54cf95e64dc6687ee">result</a>;</div>
+<div class="line"><a name="l00779"></a><span class="lineno">  779</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../de/db6/_our_math_8cpp_source.html#l00194">GetDiceResult()</a>, <a class="el" href="../../da/df3/_spells_8cpp_source.html#l00170">pSpellDatas</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00059">SPELL_EARTH_MASS_DISTORTION</a> и <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00019">SPELL_FIRE_FIRE_SPIKE</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l01314">Actor::_43B3E0_CalcDamage()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l03379">Actor::DamageMonsterFromParty()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l06928">DamagePlayerFromMonster()</a> и <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l05553">ItemDamageFromActor()</a>.</p>
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../da/df3/_spells_8cpp_a44fbb4b3786eae908c8906eea67fed90_cgraph.svg" width="307" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../da/df3/_spells_8cpp_a44fbb4b3786eae908c8906eea67fed90_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Переменные</h2>
+<a id="ad751f48ec25997384265298b15224f31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad751f48ec25997384265298b15224f31">&#9670;&nbsp;</a></span>spell_fx_renderer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/d64/struct_spell_fx_renderer.html">SpellFxRenderer</a>* spell_fx_renderer = <a class="el" href="../../d1/d12/class_engine___1_1_ioc_container.html#a29d34163cc9c0b9585b4f2440918de8f">EngineIoc::ResolveSpellFxRenderer</a>()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/df3/_spells_8cpp_source.html">Spells.cpp</a> строка <a class="el" href="../../da/df3/_spells_8cpp_source.html#l00022">22</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../da/df3/_spells_8cpp_source.html#l00429">EventCastSpell()</a>.</p>
+
+</div>
+</div>
+<a id="a4581c53add732726da636f8e2208de31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4581c53add732726da636f8e2208de31">&#9670;&nbsp;</a></span>TownPortalList</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a52f38e7d822a46377fde7a02708eedb1">std::array</a>&lt;<a class="el" href="../../da/dff/struct_town_portal_data.html">TownPortalData</a>, 6&gt; TownPortalList</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Инициализатор</b><div class="fragment"><div class="line">=  </div>
+<div class="line">    {{{Vec3_int_(-5121, 2107, 1), 1536, 0, 21, 0},</div>
+<div class="line">      {Vec3_int_(-15148, -10240, 1473), 0, 0, 4, 0},</div>
+<div class="line">      {Vec3_int_(-10519, 5375, 753), 512, 0, 3, 0},</div>
+<div class="line">      {Vec3_int_(3114, -11055, 513), 0, 0, 10, 0},</div>
+<div class="line">      {Vec3_int_(-158, 7624, 1), 512, 0, 7, 0},</div>
+<div class="line">      {Vec3_int_(-1837, -4247, 65), 65, 0, 8, 0}}}</div>
+</div><!-- fragment -->
+<p class="definition">См. определение в файле <a class="el" href="../../da/df3/_spells_8cpp_source.html">Spells.cpp</a> строка <a class="el" href="../../da/df3/_spells_8cpp_source.html#l00024">24</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d7/db5/_game_8cpp_source.html#l00322">Application::Game::EventLoop()</a>.</p>
+
+</div>
+</div>
+<a id="a627363ab8ebcce2dc02cc92efff9a04e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a627363ab8ebcce2dc02cc92efff9a04e">&#9670;&nbsp;</a></span>pSpellStats</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="../../d1/d36/struct_spell_stats.html">SpellStats</a>* pSpellStats = nullptr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/df3/_spells_8cpp_source.html">Spells.cpp</a> строка <a class="el" href="../../da/df3/_spells_8cpp_source.html#l00032">32</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l02507">Actor::ActorDamageFromMonster()</a>, <a class="el" href="../../db/dd5/_u_i_character_8cpp_source.html#l02296">GUIWindow_CharacterRecord::CharacterUI_StatsTab_Draw()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l06928">DamagePlayerFromMonster()</a>, <a class="el" href="../../d6/ded/_u_i_popup_8cpp_source.html#l01372">DrawSpellDescriptionPopup()</a>, <a class="el" href="../../d7/db5/_game_8cpp_source.html#l00322">Application::Game::EventLoop()</a>, <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l01057">GameUI_CharacterQuickRecord_Draw()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l02198">Player::GetSpellSchool()</a>, <a class="el" href="../../d9/d99/_items_8cpp_source.html#l00181">ItemsTable::Initialize()</a>, <a class="el" href="../../d6/ded/_u_i_popup_8cpp_source.html#l00563">MonsterPopup_Draw()</a>, <a class="el" href="../../d9/d21/_u_i_shops_8cpp_source.html#l01577">sub_4B1523_showSpellbookInfo()</a> и <a class="el" href="../../dc/dda/_u_i_quick_reference_8cpp_source.html#l00038">GUIWindow_QuickReference::Update()</a>.</p>
+
+</div>
+</div>
+<a id="abee11e345176388e44e56589a7699aa2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abee11e345176388e44e56589a7699aa2">&#9670;&nbsp;</a></span>spell_sprite_mapping</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a52f38e7d822a46377fde7a02708eedb1">std::array</a>&lt;<a class="el" href="../../d1/d92/structstru324__spell__id__to__sprite__mapping.html">stru324_spell_id_to_sprite_mapping</a>, 103&gt; spell_sprite_mapping</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/df3/_spells_8cpp_source.html">Spells.cpp</a> строка <a class="el" href="../../da/df3/_spells_8cpp_source.html#l00035">35</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d9/dd3/_cast_spell_info_8cpp_source.html#l00046">CastSpellInfoHelpers::_427E01_cast_spell()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l01929">_493938_regenerate()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l00199">Actor::AI_SpellAttack()</a>, <a class="el" href="../../da/df3/_spells_8cpp_source.html#l00429">EventCastSpell()</a> и <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l00696">Actor::GetObjDescId()</a>.</p>
+
+</div>
+</div>
+<a id="afeea304dba34104f1346823e70a6ce7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afeea304dba34104f1346823e70a6ce7d">&#9670;&nbsp;</a></span>pSpellDatas</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a52f38e7d822a46377fde7a02708eedb1">std::array</a>&lt;<a class="el" href="../../d0/d82/class_spell_data.html">SpellData</a>, 100&gt; pSpellDatas</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/df3/_spells_8cpp_source.html">Spells.cpp</a> строка <a class="el" href="../../da/df3/_spells_8cpp_source.html#l00170">170</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d9/dd3/_cast_spell_info_8cpp_source.html#l00046">CastSpellInfoHelpers::_427E01_cast_spell()</a>, <a class="el" href="../../da/df3/_spells_8cpp_source.html#l00745">_43AFE3_calc_spell_damage()</a>, <a class="el" href="../../d6/ded/_u_i_popup_8cpp_source.html#l01372">DrawSpellDescriptionPopup()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l02203">Player::GetAttackRecoveryTime()</a>, <a class="el" href="../../da/df3/_spells_8cpp_source.html#l00385">SpellStats::Initialize()</a>, <a class="el" href="../../d9/d5c/_keyboard_8cpp_source.html#l00332">Keyboard::ProcessInputActions()</a>, <a class="el" href="../../da/df3/_spells_8cpp_source.html#l00741">sub_427769_isSpellQuickCastableOnShiftClick()</a> и <a class="el" href="../../d9/d21/_u_i_shops_8cpp_source.html#l01577">sub_4B1523_showSpellbookInfo()</a>.</p>
+
+</div>
+</div>
+<a id="a400a5f2eda31bbefaad7acd9bd478063"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a400a5f2eda31bbefaad7acd9bd478063">&#9670;&nbsp;</a></span>wand_spell_ids</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a52f38e7d822a46377fde7a02708eedb1">std::array</a>&lt;<a class="el" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5">SPELL_TYPE</a>, 25&gt; wand_spell_ids</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Инициализатор</b><div class="fragment"><div class="line">= {{</div>
+<div class="line">    </div>
+<div class="line">    </div>
+<div class="line">    <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5ac550842d8cecdb466903b3b3f53f357f">SPELL_FIRE_FIRE_BOLT</a>, <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a3e6e3837105b44b1542434675af1e4fb">SPELL_AIR_SPARKS</a>, <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a7797e044ba6ed10af0b549952e30773c">SPELL_WATER_POISON_SPRAY</a>,</div>
+<div class="line">    <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a658830c8695b891b991332539df51b0d">SPELL_EARTH_STUN</a>, <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5ac381a2914cebec943b2718180d9e7f43">SPELL_BODY_HARM</a>,</div>
+<div class="line">    </div>
+<div class="line">    </div>
+<div class="line">    </div>
+<div class="line">    <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5ab5b2490bf8105760b631726608b7ffbe">SPELL_LIGHT_LIGHT_BOLT</a>, <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a1d1009b3de0b3f20f31f97e501f996fd">SPELL_WATER_ICE_BOLT</a>, <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5af784478eeae84e0b3f690588c2fb40a3">SPELL_SPIRIT_SPIRIT_LASH</a>,</div>
+<div class="line">    <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a4031760d28797556690326c334a8e014">SPELL_MIND_MIND_BLAST</a>, <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a078bad6a3968611fe1be427446a8d4bf">SPELL_EARTH_DEADLY_SWARM</a>,</div>
+<div class="line">    </div>
+<div class="line">    </div>
+<div class="line">    </div>
+<div class="line">    <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5ac8516477fda4b9010b446168dd2b4484">SPELL_FIRE_FIREBALL</a>, <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5af201a3e73ee75fb779ffaaba160ddd59">SPELL_WATER_ACID_BURST</a>, <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a10493e53950452f6decc7ff5417e7a54">SPELL_AIR_LIGHNING_BOLT</a>,</div>
+<div class="line">    <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5ac62edc94567f310d91e1c7628014d3df">SPELL_EARTH_BLADES</a>, <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a2b27970612ef4e969d342dabc82dc106">SPELL_MIND_CHARM</a>,</div>
+<div class="line">    </div>
+<div class="line">    </div>
+<div class="line">    </div>
+<div class="line">    <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a7b443858f4901e1adb4eb2c48a97d0d0">SPELL_WATER_ICE_BLAST</a>, <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a63249e16e7b9ff9323f139775ecb111d">SPELL_BODY_FLYING_FIST</a>, <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5af3f27be8d9abff61cf04ef6189ebb7c8">SPELL_EARTH_ROCK_BLAST</a>,</div>
+<div class="line">    <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a77a5c6e00aaa63aac9c9e33ff811ee6e">SPELL_LIGHT_PARALYZE</a>, <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a7920f1af8f0ed0ec1268d59db41fdb05">SPELL_DARK_TOXIC_CLOUD</a>,</div>
+<div class="line">    </div>
+<div class="line">    </div>
+<div class="line">    </div>
+<div class="line">    <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5ac6854383e0e1a0c423d6a5eb04086deb">SPELL_AIR_IMPLOSION</a>, <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5ab61dbd68de154ea78fe981268ec1b337">SPELL_EARTH_MASS_DISTORTION</a>, <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a15b585917f89c97a0d52735faa91cd93">SPELL_DARK_SHARPMETAL</a>,</div>
+<div class="line">    <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a492082e657a5a79a9ccfd8b1317032a6">SPELL_DARK_SHRINKING_RAY</a>, <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5af6146c4c377c08df7f5c2f88111f3540">SPELL_FIRE_INCINERATE</a></div>
+<div class="line">}}</div>
+</div><!-- fragment -->
+<p class="definition">См. определение в файле <a class="el" href="../../da/df3/_spells_8cpp_source.html">Spells.cpp</a> строка <a class="el" href="../../da/df3/_spells_8cpp_source.html#l00280">280</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d2/d82/_player_8cpp_source.html#l07643">Player::_42ECB5_PlayerAttacksActor()</a> и <a class="el" href="../../d2/d82/_player_8cpp_source.html#l02203">Player::GetAttackRecoveryTime()</a>.</p>
+
+</div>
+</div>
+<a id="a65e903b3603561e27898c7292f91884c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65e903b3603561e27898c7292f91884c">&#9670;&nbsp;</a></span>pIconPos</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a52f38e7d822a46377fde7a02708eedb1">std::array</a>&lt;<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a52f38e7d822a46377fde7a02708eedb1">std::array</a>&lt;struct <a class="el" href="../../d1/d1f/struct_spell_book_icon_pos.html">SpellBookIconPos</a>, 12&gt;, 9&gt; pIconPos</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Инициализатор</b><div class="fragment"><div class="line">= {{</div>
+<div class="line">    {{{0,   0},   {17,  13},  {115, 2},   {217, 15},  {299, 6},   {28,  125},</div>
+<div class="line">      {130, 133}, {294, 114}, {11,  232}, {134, 233}, {237, 171}, {296, 231}}},</div>
+<div class="line"> </div>
+<div class="line">    {{{0,   0},   {19,  9},   {117, 3},   {206, 13},  {285, 7},   {16,  123},</div>
+<div class="line">      {113, 101}, {201, 118}, {317, 110}, {11,  230}, {149, 236}, {296, 234}}},</div>
+<div class="line"> </div>
+<div class="line">    {{{0,  0},   {17,  9},   {140, 0},   {210, 34},  {293, 5},   {15,  98},</div>
+<div class="line">      {78, 121}, {175, 136}, {301, 115}, {15,  226}, {154, 225}, {272, 220}}},</div>
+<div class="line"> </div>
+<div class="line">    {{{0,   0},   {7,   9},   {156, 2},   {277, 9},   {11,  117}, {111, 82},</div>
+<div class="line">      {180, 102}, {303, 108}, {10,  229}, {120, 221}, {201, 217}, {296, 225}}},</div>
+<div class="line"> </div>
+<div class="line">    {{{0,   0},   {18,  8},   {89,  15},  {192, 14},  {292, 7},   {22,  129},</div>
+<div class="line">      {125, 146}, {217, 136}, {305, 115}, {22,  226}, {174, 237}, {290, 231}}},</div>
+<div class="line"> </div>
+<div class="line">    {{{0,   0},  {18,  12},  {148, 9},   {292, 7},   {17,  122}, {121, 99},</div>
+<div class="line">      {220, 87}, {293, 112}, {13,  236}, {128, 213}, {220, 223}, {315, 223}}},</div>
+<div class="line"> </div>
+<div class="line">    {{{0,   0},   {23,  14},  {127, 8},   {204, 0},   {306, 8},   {14,  115},</div>
+<div class="line">      {122, 132}, {200, 116}, {293, 122}, {20,  228}, {154, 228}, {294, 239}}},</div>
+<div class="line"> </div>
+<div class="line">    {{{0,   0},  {19,  14},  {124, 10},  {283, 12},  {8,   105}, {113, 89},</div>
+<div class="line">      {190, 82}, {298, 108}, {18,  181}, {101, 204}, {204, 203}, {285, 218}}},</div>
+<div class="line"> </div>
+<div class="line">    {{{0,   0},   {18,  17},  {110, 16},  {201, 15},  {307, 15},  {18,  148},</div>
+<div class="line">      {125, 166}, {201, 123}, {275, 120}, {28,  235}, {217, 222}, {324, 216}}}</div>
+<div class="line">}}</div>
+</div><!-- fragment -->
+<p class="definition">См. определение в файле <a class="el" href="../../da/df3/_spells_8cpp_source.html">Spells.cpp</a> строка <a class="el" href="../../da/df3/_spells_8cpp_source.html#l00307">307</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d1/d3f/_spellbook_8cpp_source.html#l00072">GUIWindow_Spellbook::OpenSpellbook()</a> и <a class="el" href="../../d1/d3f/_spellbook_8cpp_source.html#l00154">GUIWindow_Spellbook::Update()</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="a_spells_8cpp_html_ad751f48ec25997384265298b15224f31"><div class="ttname"><a href="../../da/df3/_spells_8cpp.html#ad751f48ec25997384265298b15224f31">spell_fx_renderer</a></div><div class="ttdeci">SpellFxRenderer * spell_fx_renderer</div><div class="ttdef"><b>Definition:</b> <a href="../../da/df3/_spells_8cpp_source.html#l00022">Spells.cpp:22</a></div></div>
+<div class="ttc" id="astruct_sprite_object_html"><div class="ttname"><a href="../../d0/d5a/struct_sprite_object.html">SpriteObject</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dd4/_sprite_object_8h_source.html#l00189">SpriteObject.h:189</a></div></div>
+<div class="ttc" id="a_spells_8cpp_html_abee11e345176388e44e56589a7699aa2"><div class="ttname"><a href="../../da/df3/_spells_8cpp.html#abee11e345176388e44e56589a7699aa2">spell_sprite_mapping</a></div><div class="ttdeci">std::array&lt; stru324_spell_id_to_sprite_mapping, 103 &gt; spell_sprite_mapping</div><div class="ttdef"><b>Definition:</b> <a href="../../da/df3/_spells_8cpp_source.html#l00035">Spells.cpp:35</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5a77a5c6e00aaa63aac9c9e33ff811ee6e"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a77a5c6e00aaa63aac9c9e33ff811ee6e">SPELL_LIGHT_PARALYZE</a></div><div class="ttdeci">@ SPELL_LIGHT_PARALYZE</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00100">Spells.h:100</a></div></div>
+<div class="ttc" id="astruct_object_desc_html_a5f9a5f42e401aea0d868102e6b7b8cf0"><div class="ttname"><a href="../../d9/d88/struct_object_desc.html#a5f9a5f42e401aea0d868102e6b7b8cf0">ObjectDesc::uSpeed</a></div><div class="ttdeci">int16_t uSpeed</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dd2/_object_list_8h_source.html#l00031">ObjectList.h:31</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5a5285dcb7ec1f09423355b6c839731869"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a5285dcb7ec1f09423355b6c839731869">SPELL_EARTH_STONESKIN</a></div><div class="ttdeci">@ SPELL_EARTH_STONESKIN</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00053">Spells.h:53</a></div></div>
+<div class="ttc" id="astruct_party_html_a9131ac68bf00fcaf956e6b6d2dde7a6d"><div class="ttname"><a href="../../d0/d14/struct_party.html#a9131ac68bf00fcaf956e6b6d2dde7a6d">Party::vPosition</a></div><div class="ttdeci">Vec3_int_ vPosition</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00250">Party.h:250</a></div></div>
+<div class="ttc" id="a_party_8h_html_a7935db13258ffa8a17fd65aa633b80dfab13703d70e23ca64a2f30328ef02420a"><div class="ttname"><a href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80dfab13703d70e23ca64a2f30328ef02420a">PARTY_BUFF_DAY_OF_GODS</a></div><div class="ttdeci">@ PARTY_BUFF_DAY_OF_GODS</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00073">Party.h:73</a></div></div>
+<div class="ttc" id="astructstru193__math_html_af14e1d25baaec50921cce5bbbc8ea0f6"><div class="ttname"><a href="../../d6/d38/structstru193__math.html#af14e1d25baaec50921cce5bbbc8ea0f6">stru193_math::uIntegerDoublePi</a></div><div class="ttdeci">static const unsigned int uIntegerDoublePi</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dc0/_our_math_8h_source.html#l00090">OurMath.h:90</a></div></div>
+<div class="ttc" id="astruct_sprite_object_html_a9afdb1af762f6a4054b9983f8dc79837"><div class="ttname"><a href="../../d0/d5a/struct_sprite_object.html#a9afdb1af762f6a4054b9983f8dc79837">SpriteObject::uFacing</a></div><div class="ttdeci">unsigned __int16 uFacing</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dd4/_sprite_object_8h_source.html#l00220">SpriteObject.h:220</a></div></div>
+<div class="ttc" id="astruct_party_html_a2e22e5307901cb1acb688185168b6161"><div class="ttname"><a href="../../d0/d14/struct_party.html#a2e22e5307901cb1acb688185168b6161">Party::GetPlayingTime</a></div><div class="ttdeci">GameTime &amp; GetPlayingTime()</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00230">Party.h:230</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5ab5b2490bf8105760b631726608b7ffbe"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5ab5b2490bf8105760b631726608b7ffbe">SPELL_LIGHT_LIGHT_BOLT</a></div><div class="ttdeci">@ SPELL_LIGHT_LIGHT_BOLT</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00097">Spells.h:97</a></div></div>
+<div class="ttc" id="astruct_sprite_object_html_a0b8a844a307e3814e7b396443da81fd9"><div class="ttname"><a href="../../d0/d5a/struct_sprite_object.html#a0b8a844a307e3814e7b396443da81fd9">SpriteObject::field_60_distance_related_prolly_lod</a></div><div class="ttdeci">char field_60_distance_related_prolly_lod</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dd4/_sprite_object_8h_source.html#l00234">SpriteObject.h:234</a></div></div>
+<div class="ttc" id="a_actor_8h_html_a842c5e2e69277690b064bf363c017980af4e29e4b20cbac0b34cab311f8190c93"><div class="ttname"><a href="../../de/deb/_actor_8h.html#a842c5e2e69277690b064bf363c017980af4e29e4b20cbac0b34cab311f8190c93">OBJECT_Item</a></div><div class="ttdeci">@ OBJECT_Item</div><div class="ttdef"><b>Definition:</b> <a href="../../de/deb/_actor_8h_source.html#l00066">Actor.h:66</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5a7797e044ba6ed10af0b549952e30773c"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a7797e044ba6ed10af0b549952e30773c">SPELL_WATER_POISON_SPRAY</a></div><div class="ttdeci">@ SPELL_WATER_POISON_SPRAY</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00038">Spells.h:38</a></div></div>
+<div class="ttc" id="a_party_8h_html_a7935db13258ffa8a17fd65aa633b80dfa0873a4f505e8da2be49aa61b88b9c10d"><div class="ttname"><a href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80dfa0873a4f505e8da2be49aa61b88b9c10d">PARTY_BUFF_IMMOLATION</a></div><div class="ttdeci">@ PARTY_BUFF_IMMOLATION</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00081">Party.h:81</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5af3f27be8d9abff61cf04ef6189ebb7c8"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5af3f27be8d9abff61cf04ef6189ebb7c8">SPELL_EARTH_ROCK_BLAST</a></div><div class="ttdeci">@ SPELL_EARTH_ROCK_BLAST</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00056">Spells.h:56</a></div></div>
+<div class="ttc" id="astruct_party_html_a03b208cf4d0a96cf7cd99e7475976a94"><div class="ttname"><a href="../../d0/d14/struct_party.html#a03b208cf4d0a96cf7cd99e7475976a94">Party::sEyelevel</a></div><div class="ttdeci">int sEyelevel</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00239">Party.h:239</a></div></div>
+<div class="ttc" id="astruct_sprite_object_html_a09dc0e813adde2ff7a59cc5742c98e9e"><div class="ttname"><a href="../../d0/d5a/struct_sprite_object.html#a09dc0e813adde2ff7a59cc5742c98e9e">SpriteObject::uSectorID</a></div><div class="ttdeci">__int16 uSectorID</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dd4/_sprite_object_8h_source.html#l00223">SpriteObject.h:223</a></div></div>
+<div class="ttc" id="astructstru193__math_html_a934f5bef4348dfa90bc562afbf38caac"><div class="ttname"><a href="../../d6/d38/structstru193__math.html#a934f5bef4348dfa90bc562afbf38caac">stru193_math::uIntegerHalfPi</a></div><div class="ttdeci">static const unsigned int uIntegerHalfPi</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dc0/_our_math_8h_source.html#l00089">OurMath.h:89</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5a078bad6a3968611fe1be427446a8d4bf"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a078bad6a3968611fe1be427446a8d4bf">SPELL_EARTH_DEADLY_SWARM</a></div><div class="ttdeci">@ SPELL_EARTH_DEADLY_SWARM</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00052">Spells.h:52</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5ab1853eaddcc9b61b10df7979e425c9dd"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5ab1853eaddcc9b61b10df7979e425c9dd">SPELL_FIRE_FIRE_SPIKE</a></div><div class="ttdeci">@ SPELL_FIRE_FIRE_SPIKE</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00019">Spells.h:19</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5ac381a2914cebec943b2718180d9e7f43"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5ac381a2914cebec943b2718180d9e7f43">SPELL_BODY_HARM</a></div><div class="ttdeci">@ SPELL_BODY_HARM</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00088">Spells.h:88</a></div></div>
+<div class="ttc" id="a_our_math_8cpp_html_a6b46ede8d1d8678f2c7835a70c46f10c"><div class="ttname"><a href="../../de/db6/_our_math_8cpp.html#a6b46ede8d1d8678f2c7835a70c46f10c">GetDiceResult</a></div><div class="ttdeci">int GetDiceResult(unsigned int uNumDice, unsigned int uDiceSides)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/db6/_our_math_8cpp_source.html#l00194">OurMath.cpp:194</a></div></div>
+<div class="ttc" id="aclass_object_list_html_a9b403a9566abade0fcb2161a1510756d"><div class="ttname"><a href="../../dc/d41/class_object_list.html#a9b403a9566abade0fcb2161a1510756d">ObjectList::ObjectIDByItemID</a></div><div class="ttdeci">unsigned int ObjectIDByItemID(unsigned int uItemID)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d09/_object_list_8cpp_source.html#l00007">ObjectList.cpp:7</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5ad706cce1ee837fcc96610e32a25d995b"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5ad706cce1ee837fcc96610e32a25d995b">SPELL_EARTH_PROTECTION_FROM_EARTH</a></div><div class="ttdeci">@ SPELL_EARTH_PROTECTION_FROM_EARTH</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00051">Spells.h:51</a></div></div>
+<div class="ttc" id="aalext_8h_html_a67a9885ef4908cb72ce26d75b694386c"><div class="ttname"><a href="../../dd/df4/alext_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a></div><div class="ttdeci">__int64 int64_t</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/df4/alext_8h_source.html#l00031">alext.h:31</a></div></div>
+<div class="ttc" id="astruct_party_html_a25894a432feab69bcbbff2194bac47dd"><div class="ttname"><a href="../../d0/d14/struct_party.html#a25894a432feab69bcbbff2194bac47dd">Party::pPlayers</a></div><div class="ttdeci">std::array&lt; Player, 4 &gt; pPlayers</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00310">Party.h:310</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5a623ed475113f855db5f6365c4b7d01ab"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a623ed475113f855db5f6365c4b7d01ab">SPELL_EARTH_DEATH_BLOSSOM</a></div><div class="ttdeci">@ SPELL_EARTH_DEATH_BLOSSOM</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00058">Spells.h:58</a></div></div>
+<div class="ttc" id="a_party_8h_html_a7935db13258ffa8a17fd65aa633b80dfa0cfd076d0ee96fcabe3f0cbe7ac5f02e"><div class="ttname"><a href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80dfa0cfd076d0ee96fcabe3f0cbe7ac5f02e">PARTY_BUFF_RESIST_AIR</a></div><div class="ttdeci">@ PARTY_BUFF_RESIST_AIR</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00071">Party.h:71</a></div></div>
+<div class="ttc" id="astruct_sprite_object_html_ad2e7d71942f08206dfaf1119488119ec"><div class="ttname"><a href="../../d0/d5a/struct_sprite_object.html#ad2e7d71942f08206dfaf1119488119ec">SpriteObject::uType</a></div><div class="ttdeci">SPRITE_OBJECT_TYPE uType</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dd4/_sprite_object_8h_source.html#l00215">SpriteObject.h:215</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5a4031760d28797556690326c334a8e014"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a4031760d28797556690326c334a8e014">SPELL_MIND_MIND_BLAST</a></div><div class="ttdeci">@ SPELL_MIND_MIND_BLAST</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00074">Spells.h:74</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5ab65b0daeabd4adc3f709447337084f2a"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5ab65b0daeabd4adc3f709447337084f2a">SPELL_FIRE_PROTECTION_FROM_FIRE</a></div><div class="ttdeci">@ SPELL_FIRE_PROTECTION_FROM_FIRE</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00015">Spells.h:15</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5a97ed1d2304a7eb07f9e2042a17778797"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a97ed1d2304a7eb07f9e2042a17778797">SPELL_MIND_PROTECTION_FROM_MIND</a></div><div class="ttdeci">@ SPELL_MIND_PROTECTION_FROM_MIND</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00075">Spells.h:75</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5a15b585917f89c97a0d52735faa91cd93"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a15b585917f89c97a0d52735faa91cd93">SPELL_DARK_SHARPMETAL</a></div><div class="ttdeci">@ SPELL_DARK_SHARPMETAL</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00113">Spells.h:113</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5a1d1009b3de0b3f20f31f97e501f996fd"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a1d1009b3de0b3f20f31f97e501f996fd">SPELL_WATER_ICE_BOLT</a></div><div class="ttdeci">@ SPELL_WATER_ICE_BOLT</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00040">Spells.h:40</a></div></div>
+<div class="ttc" id="astruct_item_gen_html_a1e9fb8b4d5efcc3dc012888383570b49"><div class="ttname"><a href="../../d7/d9c/struct_item_gen.html#a1e9fb8b4d5efcc3dc012888383570b49">ItemGen::Reset</a></div><div class="ttdeci">void Reset()</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d99/_items_8cpp_source.html#l00133">Items.cpp:133</a></div></div>
+<div class="ttc" id="a_party_8h_html_a7935db13258ffa8a17fd65aa633b80dfa25b168c1e2df55713ae2f5b946f411cb"><div class="ttname"><a href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80dfa25b168c1e2df55713ae2f5b946f411cb">PARTY_BUFF_RESIST_MIND</a></div><div class="ttdeci">@ PARTY_BUFF_RESIST_MIND</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00083">Party.h:83</a></div></div>
+<div class="ttc" id="astruct_sprite_object_html_a563869da66353b04c96de2e9003af8f5"><div class="ttname"><a href="../../d0/d5a/struct_sprite_object.html#a563869da66353b04c96de2e9003af8f5">SpriteObject::uSpriteFrameID</a></div><div class="ttdeci">unsigned __int16 uSpriteFrameID</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dd4/_sprite_object_8h_source.html#l00224">SpriteObject.h:224</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5a3780d7dcd93972e322680127334aaf12"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a3780d7dcd93972e322680127334aaf12">SPELL_AIR_PROTECTION_FROM_AIR</a></div><div class="ttdeci">@ SPELL_AIR_PROTECTION_FROM_AIR</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00027">Spells.h:27</a></div></div>
+<div class="ttc" id="a_indoor_8cpp_html_a9b7a8d8a38babff41b0d4655a053ca75"><div class="ttname"><a href="../../d1/d4a/_indoor_8cpp.html#a9b7a8d8a38babff41b0d4655a053ca75">pIndoor</a></div><div class="ttdeci">IndoorLocation * pIndoor</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d4a/_indoor_8cpp_source.html#l00049">Indoor.cpp:49</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a321ff419cd5252e54cf95e64dc6687ee"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a321ff419cd5252e54cf95e64dc6687ee">result</a></div><div class="ttdeci">GLuint64EXT * result</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l09435">SDL_opengl_glext.h:9435</a></div></div>
+<div class="ttc" id="astruct_sprite_object_html_aabb65ea6fbef0442eed5db1e1fbf7d94"><div class="ttname"><a href="../../d0/d5a/struct_sprite_object.html#aabb65ea6fbef0442eed5db1e1fbf7d94">SpriteObject::uObjectDescID</a></div><div class="ttdeci">unsigned __int16 uObjectDescID</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dd4/_sprite_object_8h_source.html#l00217">SpriteObject.h:217</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5ac550842d8cecdb466903b3b3f53f357f"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5ac550842d8cecdb466903b3b3f53f357f">SPELL_FIRE_FIRE_BOLT</a></div><div class="ttdeci">@ SPELL_FIRE_FIRE_BOLT</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00014">Spells.h:14</a></div></div>
+<div class="ttc" id="astruct_party_html_a34fa5acc9c480f82f6f60aa0b3c02feb"><div class="ttname"><a href="../../d0/d14/struct_party.html#a34fa5acc9c480f82f6f60aa0b3c02feb">Party::pPartyBuffs</a></div><div class="ttdeci">std::array&lt; SpellBuff, 20 &gt; pPartyBuffs</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00309">Party.h:309</a></div></div>
+<div class="ttc" id="astruct_sprite_object_html_a4b7260250301c7af83a015e8d5fff349"><div class="ttname"><a href="../../d0/d5a/struct_sprite_object.html#a4b7260250301c7af83a015e8d5fff349">SpriteObject::vPosition</a></div><div class="ttdeci">struct Vec3_int_ vPosition</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dd4/_sprite_object_8h_source.html#l00218">SpriteObject.h:218</a></div></div>
+<div class="ttc" id="a_party_8cpp_html_a638b1d8b985f1c7f8b69f2d81286f98e"><div class="ttname"><a href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a></div><div class="ttdeci">Party * pParty</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db4/_party_8cpp_source.html#l00030">Party.cpp:30</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5a7b443858f4901e1adb4eb2c48a97d0d0"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a7b443858f4901e1adb4eb2c48a97d0d0">SPELL_WATER_ICE_BLAST</a></div><div class="ttdeci">@ SPELL_WATER_ICE_BLAST</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00046">Spells.h:46</a></div></div>
+<div class="ttc" id="a_party_8h_html_a7935db13258ffa8a17fd65aa633b80dfa5ddb27c75588446b065c12eb9d5afcc9"><div class="ttname"><a href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80dfa5ddb27c75588446b065c12eb9d5afcc9">PARTY_BUFF_RESIST_WATER</a></div><div class="ttdeci">@ PARTY_BUFF_RESIST_WATER</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00088">Party.h:88</a></div></div>
+<div class="ttc" id="aclass_audio_player_html_ad938453bac4a71f0b6e6de615460e957"><div class="ttname"><a href="../../d7/dc2/class_audio_player.html#ad938453bac4a71f0b6e6de615460e957">AudioPlayer::PlaySpellSound</a></div><div class="ttdeci">void PlaySpellSound(unsigned int spell, unsigned int pid)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/df2/_audio_player_8cpp_source.html#l00476">AudioPlayer.cpp:476</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5a2b27970612ef4e969d342dabc82dc106"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a2b27970612ef4e969d342dabc82dc106">SPELL_MIND_CHARM</a></div><div class="ttdeci">@ SPELL_MIND_CHARM</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00077">Spells.h:77</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5a1770a8fe7cee3b1e8c8596d95347a090"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a1770a8fe7cee3b1e8c8596d95347a090">SPELL_FIRE_IMMOLATION</a></div><div class="ttdeci">@ SPELL_FIRE_IMMOLATION</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00020">Spells.h:20</a></div></div>
+<div class="ttc" id="a_party_8h_html_a7935db13258ffa8a17fd65aa633b80dfa714e9cc910fc85bd06a140c2b023caf5"><div class="ttname"><a href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80dfa714e9cc910fc85bd06a140c2b023caf5">PARTY_BUFF_HASTE</a></div><div class="ttdeci">@ PARTY_BUFF_HASTE</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00079">Party.h:79</a></div></div>
+<div class="ttc" id="a_spells_8cpp_html_afeea304dba34104f1346823e70a6ce7d"><div class="ttname"><a href="../../da/df3/_spells_8cpp.html#afeea304dba34104f1346823e70a6ce7d">pSpellDatas</a></div><div class="ttdeci">std::array&lt; SpellData, 100 &gt; pSpellDatas</div><div class="ttdef"><b>Definition:</b> <a href="../../da/df3/_spells_8cpp_source.html#l00170">Spells.cpp:170</a></div></div>
+<div class="ttc" id="astruct_sprite_object_html_a2a37b8b7b081e50f0bc57e8398a3427e"><div class="ttname"><a href="../../d0/d5a/struct_sprite_object.html#a2a37b8b7b081e50f0bc57e8398a3427e">SpriteObject::spell_id</a></div><div class="ttdeci">int spell_id</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dd4/_sprite_object_8h_source.html#l00228">SpriteObject.h:228</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5a658830c8695b891b991332539df51b0d"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a658830c8695b891b991332539df51b0d">SPELL_EARTH_STUN</a></div><div class="ttdeci">@ SPELL_EARTH_STUN</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00049">Spells.h:49</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5a3a1ad0c15bd910105a79b9d911154a42"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a3a1ad0c15bd910105a79b9d911154a42">SPELL_AIR_SHIELD</a></div><div class="ttdeci">@ SPELL_AIR_SHIELD</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00030">Spells.h:30</a></div></div>
+<div class="ttc" id="a_indoor_8h_html_a24bf8802234f411139f3a641894c3f70a15a823faa9b1cebf4eec0ccc61356569"><div class="ttname"><a href="../../da/dc7/_indoor_8h.html#a24bf8802234f411139f3a641894c3f70a15a823faa9b1cebf4eec0ccc61356569">LEVEL_Indoor</a></div><div class="ttdeci">@ LEVEL_Indoor</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dc7/_indoor_8h_source.html#l00286">Indoor.h:286</a></div></div>
+<div class="ttc" id="astruct_sprite_object_html_acc34bdc1ca30537412a1509a39f98168"><div class="ttname"><a href="../../d0/d5a/struct_sprite_object.html#acc34bdc1ca30537412a1509a39f98168">SpriteObject::Create</a></div><div class="ttdeci">int Create(int yaw, int pitch, int a4, int a5)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/ded/_sprite_object_8cpp_source.html#l00056">SpriteObject.cpp:56</a></div></div>
+<div class="ttc" id="astruct_sprite_object_html_a2412bd3fcf5506dd473c61799993bea5"><div class="ttname"><a href="../../d0/d5a/struct_sprite_object.html#a2412bd3fcf5506dd473c61799993bea5">SpriteObject::containing_item</a></div><div class="ttdeci">struct ItemGen containing_item</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dd4/_sprite_object_8h_source.html#l00227">SpriteObject.h:227</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5ac8516477fda4b9010b446168dd2b4484"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5ac8516477fda4b9010b446168dd2b4484">SPELL_FIRE_FIREBALL</a></div><div class="ttdeci">@ SPELL_FIRE_FIREBALL</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00018">Spells.h:18</a></div></div>
+<div class="ttc" id="astruct_sprite_object_html_a2579a5c13b90f698e535fff84452357f"><div class="ttname"><a href="../../d0/d5a/struct_sprite_object.html#a2579a5c13b90f698e535fff84452357f">SpriteObject::uSoundID</a></div><div class="ttdeci">unsigned __int16 uSoundID</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dd4/_sprite_object_8h_source.html#l00221">SpriteObject.h:221</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5a22c0d3e30898c3af61e3948fef21b4ea"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a22c0d3e30898c3af61e3948fef21b4ea">SPELL_BODY_PROTECTION_FROM_BODY</a></div><div class="ttdeci">@ SPELL_BODY_PROTECTION_FROM_BODY</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00087">Spells.h:87</a></div></div>
+<div class="ttc" id="astructstru193__math_html_ae5c580a8915049b2fe00949acf3ca728"><div class="ttname"><a href="../../d6/d38/structstru193__math.html#ae5c580a8915049b2fe00949acf3ca728">stru193_math::Atan2</a></div><div class="ttdeci">unsigned int Atan2(int x, int y)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/db6/_our_math_8cpp_source.html#l00046">OurMath.cpp:46</a></div></div>
+<div class="ttc" id="a_party_8h_html_a7935db13258ffa8a17fd65aa633b80dfa9db51cc9d4c57a15ec0c83b5f59db342"><div class="ttname"><a href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80dfa9db51cc9d4c57a15ec0c83b5f59db342">PARTY_BUFF_RESIST_EARTH</a></div><div class="ttdeci">@ PARTY_BUFF_RESIST_EARTH</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00075">Party.h:75</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5af784478eeae84e0b3f690588c2fb40a3"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5af784478eeae84e0b3f690588c2fb40a3">SPELL_SPIRIT_SPIRIT_LASH</a></div><div class="ttdeci">@ SPELL_SPIRIT_SPIRIT_LASH</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00068">Spells.h:68</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5a3e6e3837105b44b1542434675af1e4fb"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a3e6e3837105b44b1542434675af1e4fb">SPELL_AIR_SPARKS</a></div><div class="ttdeci">@ SPELL_AIR_SPARKS</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00028">Spells.h:28</a></div></div>
+<div class="ttc" id="astruct_sprite_object_html_a068ed23baa9a3349add10c17e5e08ffe"><div class="ttname"><a href="../../d0/d5a/struct_sprite_object.html#a068ed23baa9a3349add10c17e5e08ffe">SpriteObject::spell_level</a></div><div class="ttdeci">int spell_level</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dd4/_sprite_object_8h_source.html#l00229">SpriteObject.h:229</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5ab61dbd68de154ea78fe981268ec1b337"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5ab61dbd68de154ea78fe981268ec1b337">SPELL_EARTH_MASS_DISTORTION</a></div><div class="ttdeci">@ SPELL_EARTH_MASS_DISTORTION</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00059">Spells.h:59</a></div></div>
+<div class="ttc" id="astruct_sprite_object_html_ac71b5e2935fc351126013f0ac824e1c8"><div class="ttname"><a href="../../d0/d5a/struct_sprite_object.html#ac71b5e2935fc351126013f0ac824e1c8">SpriteObject::spell_target_pid</a></div><div class="ttdeci">int spell_target_pid</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dd4/_sprite_object_8h_source.html#l00233">SpriteObject.h:233</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5af201a3e73ee75fb779ffaaba160ddd59"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5af201a3e73ee75fb779ffaaba160ddd59">SPELL_WATER_ACID_BURST</a></div><div class="ttdeci">@ SPELL_WATER_ACID_BURST</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00043">Spells.h:43</a></div></div>
+<div class="ttc" id="a_m_m7_8h_html_a91ad9478d81a7aaf2593e8d9c3d06a14"><div class="ttname"><a href="../../d2/d83/_m_m7_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a></div><div class="ttdeci">unsigned int uint</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d83/_m_m7_8h_source.html#l00004">MM7.h:4</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5ac6854383e0e1a0c423d6a5eb04086deb"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5ac6854383e0e1a0c423d6a5eb04086deb">SPELL_AIR_IMPLOSION</a></div><div class="ttdeci">@ SPELL_AIR_IMPLOSION</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00033">Spells.h:33</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5ad5239f7da0b9f01232c0747445163611"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5ad5239f7da0b9f01232c0747445163611">SPELL_WATER_PROTECTION_FROM_WATER</a></div><div class="ttdeci">@ SPELL_WATER_PROTECTION_FROM_WATER</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00039">Spells.h:39</a></div></div>
+<div class="ttc" id="astruct_sprite_object_html_ab02e86b3024cc91906cff5b1c9bdf813"><div class="ttname"><a href="../../d0/d5a/struct_sprite_object.html#ab02e86b3024cc91906cff5b1c9bdf813">SpriteObject::spell_skill</a></div><div class="ttdeci">int spell_skill</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dd4/_sprite_object_8h_source.html#l00230">SpriteObject.h:230</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5ac62edc94567f310d91e1c7628014d3df"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5ac62edc94567f310d91e1c7628014d3df">SPELL_EARTH_BLADES</a></div><div class="ttdeci">@ SPELL_EARTH_BLADES</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00054">Spells.h:54</a></div></div>
+<div class="ttc" id="amm7__data_8cpp_html_a954e0b4aff4557f1c600694ee5cf55fd"><div class="ttname"><a href="../../d6/d5b/mm7__data_8cpp.html#a954e0b4aff4557f1c600694ee5cf55fd">stru_5C6E00</a></div><div class="ttdeci">struct stru193_math * stru_5C6E00</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d5b/mm7__data_8cpp_source.html#l00019">mm7_data.cpp:19</a></div></div>
+<div class="ttc" id="a_party_8h_html_a7935db13258ffa8a17fd65aa633b80dfa19d0e136a15d2fd35fd2c5138d1d9c72"><div class="ttname"><a href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80dfa19d0e136a15d2fd35fd2c5138d1d9c72">PARTY_BUFF_RESIST_BODY</a></div><div class="ttdeci">@ PARTY_BUFF_RESIST_BODY</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00072">Party.h:72</a></div></div>
+<div class="ttc" id="a_party_8h_html_a7935db13258ffa8a17fd65aa633b80dfa95364e4632a66b4e3033629ee350d101"><div class="ttname"><a href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80dfa95364e4632a66b4e3033629ee350d101">PARTY_BUFF_RESIST_FIRE</a></div><div class="ttdeci">@ PARTY_BUFF_RESIST_FIRE</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00077">Party.h:77</a></div></div>
+<div class="ttc" id="a_indoor_8cpp_html_af7004771e2f64ebae04197860cd1f3d3"><div class="ttname"><a href="../../d1/d4a/_indoor_8cpp.html#af7004771e2f64ebae04197860cd1f3d3">uCurrentlyLoadedLevelType</a></div><div class="ttdeci">LEVEL_TYPE uCurrentlyLoadedLevelType</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d4a/_indoor_8cpp_source.html#l00052">Indoor.cpp:52</a></div></div>
+<div class="ttc" id="astruct_indoor_location_html_aaaf5a1255bb773cc796685052c9abd29"><div class="ttname"><a href="../../d6/d9e/struct_indoor_location.html#aaaf5a1255bb773cc796685052c9abd29">IndoorLocation::GetSector</a></div><div class="ttdeci">int GetSector(int sX, int sY, int sZ)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d4a/_indoor_8cpp_source.html#l01279">Indoor.cpp:1279</a></div></div>
+<div class="ttc" id="aclass_object_list_html_af04d1d3f616aaf9a2ceb87ca6299f1e9"><div class="ttname"><a href="../../dc/d41/class_object_list.html#af04d1d3f616aaf9a2ceb87ca6299f1e9">ObjectList::pObjects</a></div><div class="ttdeci">struct ObjectDesc * pObjects</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dd2/_object_list_8h_source.html#l00054">ObjectList.h:54</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5a10493e53950452f6decc7ff5417e7a54"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a10493e53950452f6decc7ff5417e7a54">SPELL_AIR_LIGHNING_BOLT</a></div><div class="ttdeci">@ SPELL_AIR_LIGHNING_BOLT</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00031">Spells.h:31</a></div></div>
+<div class="ttc" id="a_audio_player_8cpp_html_a3ee6d655d35b46ebac53ef678255f75b"><div class="ttname"><a href="../../d3/df2/_audio_player_8cpp.html#a3ee6d655d35b46ebac53ef678255f75b">pAudioPlayer</a></div><div class="ttdeci">AudioPlayer * pAudioPlayer</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/df2/_audio_player_8cpp_source.html#l00020">AudioPlayer.cpp:20</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5a63249e16e7b9ff9323f139775ecb111d"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a63249e16e7b9ff9323f139775ecb111d">SPELL_BODY_FLYING_FIST</a></div><div class="ttdeci">@ SPELL_BODY_FLYING_FIST</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00094">Spells.h:94</a></div></div>
+<div class="ttc" id="astruct_spell_fx_renderer_html_a05fe8d486699c6edb1053c644fd4993b"><div class="ttname"><a href="../../db/d64/struct_spell_fx_renderer.html#a05fe8d486699c6edb1053c644fd4993b">SpellFxRenderer::SetPlayerBuffAnim</a></div><div class="ttdeci">void SetPlayerBuffAnim(uint16_t uSpellID, uint16_t uPlayerID)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d6c/_spell_fx_renderer_8cpp_source.html#l01103">SpellFxRenderer.cpp:1103</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5a7920f1af8f0ed0ec1268d59db41fdb05"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a7920f1af8f0ed0ec1268d59db41fdb05">SPELL_DARK_TOXIC_CLOUD</a></div><div class="ttdeci">@ SPELL_DARK_TOXIC_CLOUD</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00110">Spells.h:110</a></div></div>
+<div class="ttc" id="astruct_sprite_object_html_ad2cd544dbec0bd1abc1ad34457032991"><div class="ttname"><a href="../../d0/d5a/struct_sprite_object.html#ad2cd544dbec0bd1abc1ad34457032991">SpriteObject::uAttributes</a></div><div class="ttdeci">unsigned __int16 uAttributes</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dd4/_sprite_object_8h_source.html#l00222">SpriteObject.h:222</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5a492082e657a5a79a9ccfd8b1317032a6"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a492082e657a5a79a9ccfd8b1317032a6">SPELL_DARK_SHRINKING_RAY</a></div><div class="ttdeci">@ SPELL_DARK_SHRINKING_RAY</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00112">Spells.h:112</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5af09b97eaf3fa0b78eb4d2ef55b5820b5"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5af09b97eaf3fa0b78eb4d2ef55b5820b5">SPELL_FIRE_HASTE</a></div><div class="ttdeci">@ SPELL_FIRE_HASTE</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00017">Spells.h:17</a></div></div>
+<div class="ttc" id="astruct_game_time_html"><div class="ttname"><a href="../../df/dc2/struct_game_time.html">GameTime</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d0e/_engine_2_time_8h_source.html#l00014">Time.h:14</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5af6146c4c377c08df7f5c2f88111f3540"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5af6146c4c377c08df7f5c2f88111f3540">SPELL_FIRE_INCINERATE</a></div><div class="ttdeci">@ SPELL_FIRE_INCINERATE</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00023">Spells.h:23</a></div></div>
+<div class="ttc" id="a_object_list_8cpp_html_a9f89e58bc05824c5e9f0f79b533781cf"><div class="ttname"><a href="../../d3/d09/_object_list_8cpp.html#a9f89e58bc05824c5e9f0f79b533781cf">pObjectList</a></div><div class="ttdeci">struct ObjectList * pObjectList</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d09/_object_list_8cpp_source.html#l00005">ObjectList.cpp:5</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5aba03c679bb0d523f3ffd02fe460b989e"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5aba03c679bb0d523f3ffd02fe460b989e">SPELL_SPIRIT_HEROISM</a></div><div class="ttdeci">@ SPELL_SPIRIT_HEROISM</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00067">Spells.h:67</a></div></div>
+<div class="ttc" id="astruct_game_time_html_a988d4e6b372bedab06913239264fd54c"><div class="ttname"><a href="../../df/dc2/struct_game_time.html#a988d4e6b372bedab06913239264fd54c">GameTime::FromSeconds</a></div><div class="ttdeci">static GameTime FromSeconds(int seconds)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d0e/_engine_2_time_8h_source.html#l00083">Time.h:83</a></div></div>
+<div class="ttc" id="astruct_sprite_object_html_a36dfc0ae5604d14f26411bb700cd2b5a"><div class="ttname"><a href="../../d0/d5a/struct_sprite_object.html#a36dfc0ae5604d14f26411bb700cd2b5a">SpriteObject::spell_caster_pid</a></div><div class="ttdeci">int spell_caster_pid</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dd4/_sprite_object_8h_source.html#l00232">SpriteObject.h:232</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5a82d5fbe09317463769ab9bbac4140dde"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a82d5fbe09317463769ab9bbac4140dde">SPELL_LIGHT_DAY_OF_THE_GODS</a></div><div class="ttdeci">@ SPELL_LIGHT_DAY_OF_THE_GODS</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00102">Spells.h:102</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_0b6ee6e7e9547e675db4add2e5de97da.html">Engine</a></li><li class="navelem"><a class="el" href="../../dir_2a7ddc455d45d47bc23ad4371c29ec34.html">Spells</a></li><li class="navelem"><a class="el" href="../../da/df3/_spells_8cpp.html">Spells.cpp</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:04:03. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

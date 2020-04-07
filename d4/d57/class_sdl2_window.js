@@ -1,0 +1,27 @@
+var class_sdl2_window =
+[
+    [ "Sdl2Window", "d4/d57/class_sdl2_window.html#addb1d9ecad2bc1260176955897c7f5a4", null ],
+    [ "SetFullscreenMode", "d4/d57/class_sdl2_window.html#abbd8e2f42347486b3ce48558e9d2dcfe", null ],
+    [ "SetWindowedMode", "d4/d57/class_sdl2_window.html#a0273d305e391308bdc0ae8bc36c48609", null ],
+    [ "SetCursor", "d4/d57/class_sdl2_window.html#ac30dd9445ebf4328334279c2f0d50015", null ],
+    [ "GetX", "d4/d57/class_sdl2_window.html#aab0e38bad68951c8b41432957cdafc83", null ],
+    [ "GetY", "d4/d57/class_sdl2_window.html#a83afc986e1d5e333da9bc29a20f2f287", null ],
+    [ "GetWidth", "d4/d57/class_sdl2_window.html#a16f47136e465da1f74000cfd693e1d42", null ],
+    [ "GetHeight", "d4/d57/class_sdl2_window.html#a660a2dc37d35ff663fc7476a10a0f0d9", null ],
+    [ "TransformCursorPos", "d4/d57/class_sdl2_window.html#a3c6a909a607294e6d66905441cfb0500", null ],
+    [ "OnOSMenu", "d4/d57/class_sdl2_window.html#adfe7d305c7f0e50a8cab70d4207e2e9e", null ],
+    [ "Show", "d4/d57/class_sdl2_window.html#a0dd6c37030f6dad341aec034d0bff1dd", null ],
+    [ "Focused", "d4/d57/class_sdl2_window.html#a1132084f0f2631cc02b43e9ea47c2917", null ],
+    [ "Activate", "d4/d57/class_sdl2_window.html#a9b769335b68750a84afc47d9e010118a", null ],
+    [ "PeekSingleMessage", "d4/d57/class_sdl2_window.html#a025ddd23e30a4cfd14f9361834f51d3c", null ],
+    [ "PeekMessageLoop", "d4/d57/class_sdl2_window.html#ad7e54fb14bc94c3939631a909ec17370", null ],
+    [ "GetWinApiHandle", "d4/d57/class_sdl2_window.html#a8eaac87bbd4503351ad52d37c6e15050", null ],
+    [ "OpenGlCreate", "d4/d57/class_sdl2_window.html#a7ecb3da7df633650a7bdb9a6fe315986", null ],
+    [ "OpenGlSwapBuffers", "d4/d57/class_sdl2_window.html#a8d67346939b1f65cf3efad96830bcf91", null ],
+    [ "MessageProc", "d4/d57/class_sdl2_window.html#a0740a9d8bb0e5dbfb051d7ae8a1b72a9", null ],
+    [ "SdlkToChar", "d4/d57/class_sdl2_window.html#ab4529e15e1d69dad91bb973f867b27e6", null ],
+    [ "SdlkToVk", "d4/d57/class_sdl2_window.html#aee4a68885d185a8081f43e09946f0a43", null ],
+    [ "sdlWindow", "d4/d57/class_sdl2_window.html#ab75b7efdeb1e2317fee04b7ddb47ea2b", null ],
+    [ "sdlWindowSurface", "d4/d57/class_sdl2_window.html#ad567958132cd42a0034ae708cf60987c", null ],
+    [ "sdlOpenGlContext", "d4/d57/class_sdl2_window.html#ae3225aff912a27cd00b07e448b6b4951", null ]
+];

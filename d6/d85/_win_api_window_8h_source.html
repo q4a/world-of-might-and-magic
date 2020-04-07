@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Исходный файл C:/git/world-of-might-and-magic/Platform/WinApiWindow.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d6/d85/_win_api_window_8h_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">WinApiWindow.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d6/d85/_win_api_window_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;Windows.h&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d0/df6/_o_s_window_8h.html">Platform/OSWindow.h</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keywordtype">void</span> *<a class="code" href="../../d6/d85/_win_api_window_8h.html#a22a789a112de13ffaea21f1533e7ef02">WinApiMsgRouter</a>(HWND hwnd, <span class="keywordtype">int</span> msg, <span class="keywordtype">int</span> wparam, <span class="keywordtype">void</span> *lparam);</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="../../d3/da4/class_win_api_window.html">    9</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d3/da4/class_win_api_window.html">WinApiWindow</a> : <span class="keyword">public</span> <a class="code" href="../../db/da4/class_o_s_window.html">OSWindow</a> {</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="../../d3/da4/class_win_api_window.html#a89deb661d9e4b84e25ba83199172357a">   11</a></span>&#160;    <span class="keyword">explicit</span> <a class="code" href="../../d3/da4/class_win_api_window.html#a89deb661d9e4b84e25ba83199172357a">WinApiWindow</a>(HWND <a class="code" href="../../d3/da4/class_win_api_window.html#ab2be2212caa6cc05d8c089966f82ad36">hwnd</a>)</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        : <a class="code" href="../../db/da4/class_o_s_window.html">OSWindow</a>() {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        this-&gt;hwnd = <a class="code" href="../../d3/da4/class_win_api_window.html#ab2be2212caa6cc05d8c089966f82ad36">hwnd</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    }</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d3/da4/class_win_api_window.html#a8e980242e5c51f3740dce17e55bd15df">SetFullscreenMode</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d3/da4/class_win_api_window.html#a33e9ef16a0f133d00c32accd8aae21d4">SetWindowedMode</a>(<span class="keywordtype">int</span> new_window_width, <span class="keywordtype">int</span> new_window_height) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d3/da4/class_win_api_window.html#ad8bf3afce78caa7bfb94dfff47bd179b">SetCursor</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *cursor_name) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d3/da4/class_win_api_window.html#a45f7496c41c2a7bce97867b0d486dd21">GetX</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d3/da4/class_win_api_window.html#ac0a03beeab3bc3773bbde9e2d6d67a01">GetY</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../d3/da4/class_win_api_window.html#ad4eef290a18562f46ef79c885f6945aa">GetWidth</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../d3/da4/class_win_api_window.html#a28c57f4e1c49fe85193f6b29f3387cf6">GetHeight</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="../../d8/dc8/struct_point.html">Point</a> <a class="code" href="../../d3/da4/class_win_api_window.html#aa1871fe0ac2192607e2289bdcbff1604">TransformCursorPos</a>(<a class="code" href="../../d8/dc8/struct_point.html">Point</a> &amp;pt) <span class="keyword">const override</span>;  <span class="comment">// screen to client</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d3/da4/class_win_api_window.html#ac7dffd1a9acce9462f7373d678d79f0a">OnOSMenu</a>(<span class="keywordtype">int</span> item_id) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d3/da4/class_win_api_window.html#a4765def8be1b8357a87dbe7eb7ad08f4">Show</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d3/da4/class_win_api_window.html#ae8ae2c1a2aa01dc483dbda914d711348">Focused</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d3/da4/class_win_api_window.html#a2cf345adb0061db3632ad44d8264db70">Activate</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d3/da4/class_win_api_window.html#ac73a1c3ffeebead24c8dbd21e85848d9">PeekSingleMessage</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d3/da4/class_win_api_window.html#acf26c3fbded5b1d9f3540cd9aefda9ca">PeekMessageLoop</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">void</span> *<a class="code" href="../../d3/da4/class_win_api_window.html#a4c69da169aa8a542cbc3b0ccc7170e6c">GetWinApiHandle</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;     <span class="keywordtype">bool</span> <a class="code" href="../../d3/da4/class_win_api_window.html#ad522bd6b9cf87a887e4429771a5b4089">WinApiMessageProc</a>(<span class="keywordtype">int</span> msg, <span class="keywordtype">int</span> wparam, <span class="keywordtype">void</span> *lparam, <span class="keywordtype">void</span> **<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a321ff419cd5252e54cf95e64dc6687ee">result</a>);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;     <span class="keywordtype">void</span> *<a class="code" href="../../d3/da4/class_win_api_window.html#a3e4818c615699f2dd8cc61418dd1bec1">CreateDebugMenuPanel</a>();</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="../../d3/da4/class_win_api_window.html#ab2be2212caa6cc05d8c089966f82ad36">   43</a></span>&#160;     HWND <a class="code" href="../../d3/da4/class_win_api_window.html#ab2be2212caa6cc05d8c089966f82ad36">hwnd</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;     <span class="keyword">friend</span> <span class="keywordtype">void</span> *<a class="code" href="../../d3/da4/class_win_api_window.html#a22a789a112de13ffaea21f1533e7ef02">WinApiMsgRouter</a>(HWND <a class="code" href="../../d3/da4/class_win_api_window.html#ab2be2212caa6cc05d8c089966f82ad36">hwnd</a>, <span class="keywordtype">int</span> msg, <span class="keywordtype">int</span> wparam, <span class="keywordtype">void</span> *lparam);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;};</div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="a_o_s_window_8h_html"><div class="ttname"><a href="../../d0/df6/_o_s_window_8h.html">OSWindow.h</a></div></div>
+<div class="ttc" id="aclass_win_api_window_html_ac7dffd1a9acce9462f7373d678d79f0a"><div class="ttname"><a href="../../d3/da4/class_win_api_window.html#ac7dffd1a9acce9462f7373d678d79f0a">WinApiWindow::OnOSMenu</a></div><div class="ttdeci">bool OnOSMenu(int item_id) override</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dff/_win_api_window_8cpp_source.html#l00565">WinApiWindow.cpp:565</a></div></div>
+<div class="ttc" id="aclass_win_api_window_html_a22a789a112de13ffaea21f1533e7ef02"><div class="ttname"><a href="../../d3/da4/class_win_api_window.html#a22a789a112de13ffaea21f1533e7ef02">WinApiWindow::WinApiMsgRouter</a></div><div class="ttdeci">friend void * WinApiMsgRouter(HWND hwnd, int msg, int wparam, void *lparam)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dff/_win_api_window_8cpp_source.html#l00193">WinApiWindow.cpp:193</a></div></div>
+<div class="ttc" id="aclass_win_api_window_html_a28c57f4e1c49fe85193f6b29f3387cf6"><div class="ttname"><a href="../../d3/da4/class_win_api_window.html#a28c57f4e1c49fe85193f6b29f3387cf6">WinApiWindow::GetHeight</a></div><div class="ttdeci">unsigned int GetHeight() const override</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dff/_win_api_window_8cpp_source.html#l00064">WinApiWindow.cpp:64</a></div></div>
+<div class="ttc" id="aclass_win_api_window_html_a2cf345adb0061db3632ad44d8264db70"><div class="ttname"><a href="../../d3/da4/class_win_api_window.html#a2cf345adb0061db3632ad44d8264db70">WinApiWindow::Activate</a></div><div class="ttdeci">void Activate() override</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dff/_win_api_window_8cpp_source.html#l00015">WinApiWindow.cpp:15</a></div></div>
+<div class="ttc" id="aclass_win_api_window_html_a4c69da169aa8a542cbc3b0ccc7170e6c"><div class="ttname"><a href="../../d3/da4/class_win_api_window.html#a4c69da169aa8a542cbc3b0ccc7170e6c">WinApiWindow::GetWinApiHandle</a></div><div class="ttdeci">void * GetWinApiHandle() override</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dff/_win_api_window_8cpp_source.html#l00011">WinApiWindow.cpp:11</a></div></div>
+<div class="ttc" id="aclass_win_api_window_html_a89deb661d9e4b84e25ba83199172357a"><div class="ttname"><a href="../../d3/da4/class_win_api_window.html#a89deb661d9e4b84e25ba83199172357a">WinApiWindow::WinApiWindow</a></div><div class="ttdeci">WinApiWindow(HWND hwnd)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d85/_win_api_window_8h_source.html#l00011">WinApiWindow.h:11</a></div></div>
+<div class="ttc" id="aclass_win_api_window_html_a33e9ef16a0f133d00c32accd8aae21d4"><div class="ttname"><a href="../../d3/da4/class_win_api_window.html#a33e9ef16a0f133d00c32accd8aae21d4">WinApiWindow::SetWindowedMode</a></div><div class="ttdeci">void SetWindowedMode(int new_window_width, int new_window_height) override</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dff/_win_api_window_8cpp_source.html#l00255">WinApiWindow.cpp:255</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a321ff419cd5252e54cf95e64dc6687ee"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a321ff419cd5252e54cf95e64dc6687ee">result</a></div><div class="ttdeci">GLuint64EXT * result</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l09435">SDL_opengl_glext.h:9435</a></div></div>
+<div class="ttc" id="aclass_o_s_window_html"><div class="ttname"><a href="../../db/da4/class_o_s_window.html">OSWindow</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/df6/_o_s_window_8h_source.html#l00012">OSWindow.h:12</a></div></div>
+<div class="ttc" id="aclass_win_api_window_html_ac0a03beeab3bc3773bbde9e2d6d67a01"><div class="ttname"><a href="../../d3/da4/class_win_api_window.html#ac0a03beeab3bc3773bbde9e2d6d67a01">WinApiWindow::GetY</a></div><div class="ttdeci">int GetY() const override</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dff/_win_api_window_8cpp_source.html#l00054">WinApiWindow.cpp:54</a></div></div>
+<div class="ttc" id="aclass_win_api_window_html_aa1871fe0ac2192607e2289bdcbff1604"><div class="ttname"><a href="../../d3/da4/class_win_api_window.html#aa1871fe0ac2192607e2289bdcbff1604">WinApiWindow::TransformCursorPos</a></div><div class="ttdeci">Point TransformCursorPos(Point &amp;pt) const override</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dff/_win_api_window_8cpp_source.html#l00071">WinApiWindow.cpp:71</a></div></div>
+<div class="ttc" id="a_win_api_window_8h_html_a22a789a112de13ffaea21f1533e7ef02"><div class="ttname"><a href="../../d6/d85/_win_api_window_8h.html#a22a789a112de13ffaea21f1533e7ef02">WinApiMsgRouter</a></div><div class="ttdeci">void * WinApiMsgRouter(HWND hwnd, int msg, int wparam, void *lparam)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dff/_win_api_window_8cpp_source.html#l00193">WinApiWindow.cpp:193</a></div></div>
+<div class="ttc" id="aclass_win_api_window_html_a8e980242e5c51f3740dce17e55bd15df"><div class="ttname"><a href="../../d3/da4/class_win_api_window.html#a8e980242e5c51f3740dce17e55bd15df">WinApiWindow::SetFullscreenMode</a></div><div class="ttdeci">void SetFullscreenMode() override</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dff/_win_api_window_8cpp_source.html#l00241">WinApiWindow.cpp:241</a></div></div>
+<div class="ttc" id="aclass_win_api_window_html_a4765def8be1b8357a87dbe7eb7ad08f4"><div class="ttname"><a href="../../d3/da4/class_win_api_window.html#a4765def8be1b8357a87dbe7eb7ad08f4">WinApiWindow::Show</a></div><div class="ttdeci">void Show() override</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dff/_win_api_window_8cpp_source.html#l00209">WinApiWindow.cpp:209</a></div></div>
+<div class="ttc" id="aclass_win_api_window_html_a3e4818c615699f2dd8cc61418dd1bec1"><div class="ttname"><a href="../../d3/da4/class_win_api_window.html#a3e4818c615699f2dd8cc61418dd1bec1">WinApiWindow::CreateDebugMenuPanel</a></div><div class="ttdeci">void * CreateDebugMenuPanel()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dff/_win_api_window_8cpp_source.html#l00291">WinApiWindow.cpp:291</a></div></div>
+<div class="ttc" id="aclass_win_api_window_html_ad4eef290a18562f46ef79c885f6945aa"><div class="ttname"><a href="../../d3/da4/class_win_api_window.html#ad4eef290a18562f46ef79c885f6945aa">WinApiWindow::GetWidth</a></div><div class="ttdeci">unsigned int GetWidth() const override</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dff/_win_api_window_8cpp_source.html#l00059">WinApiWindow.cpp:59</a></div></div>
+<div class="ttc" id="aclass_win_api_window_html_ad8bf3afce78caa7bfb94dfff47bd179b"><div class="ttname"><a href="../../d3/da4/class_win_api_window.html#ad8bf3afce78caa7bfb94dfff47bd179b">WinApiWindow::SetCursor</a></div><div class="ttdeci">void SetCursor(const char *cursor_name) override</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dff/_win_api_window_8cpp_source.html#l00214">WinApiWindow.cpp:214</a></div></div>
+<div class="ttc" id="aclass_win_api_window_html_ad522bd6b9cf87a887e4429771a5b4089"><div class="ttname"><a href="../../d3/da4/class_win_api_window.html#ad522bd6b9cf87a887e4429771a5b4089">WinApiWindow::WinApiMessageProc</a></div><div class="ttdeci">bool WinApiMessageProc(int msg, int wparam, void *lparam, void **result)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dff/_win_api_window_8cpp_source.html#l00078">WinApiWindow.cpp:78</a></div></div>
+<div class="ttc" id="aclass_win_api_window_html"><div class="ttname"><a href="../../d3/da4/class_win_api_window.html">WinApiWindow</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d85/_win_api_window_8h_source.html#l00009">WinApiWindow.h:9</a></div></div>
+<div class="ttc" id="aclass_win_api_window_html_acf26c3fbded5b1d9f3540cd9aefda9ca"><div class="ttname"><a href="../../d3/da4/class_win_api_window.html#acf26c3fbded5b1d9f3540cd9aefda9ca">WinApiWindow::PeekMessageLoop</a></div><div class="ttdeci">void PeekMessageLoop() override</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dff/_win_api_window_8cpp_source.html#l00023">WinApiWindow.cpp:23</a></div></div>
+<div class="ttc" id="aclass_win_api_window_html_a45f7496c41c2a7bce97867b0d486dd21"><div class="ttname"><a href="../../d3/da4/class_win_api_window.html#a45f7496c41c2a7bce97867b0d486dd21">WinApiWindow::GetX</a></div><div class="ttdeci">int GetX() const override</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dff/_win_api_window_8cpp_source.html#l00049">WinApiWindow.cpp:49</a></div></div>
+<div class="ttc" id="astruct_point_html"><div class="ttname"><a href="../../d8/dc8/struct_point.html">Point</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d18/_point_8h_source.html#l00003">Point.h:3</a></div></div>
+<div class="ttc" id="aclass_win_api_window_html_ab2be2212caa6cc05d8c089966f82ad36"><div class="ttname"><a href="../../d3/da4/class_win_api_window.html#ab2be2212caa6cc05d8c089966f82ad36">WinApiWindow::hwnd</a></div><div class="ttdeci">HWND hwnd</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d85/_win_api_window_8h_source.html#l00043">WinApiWindow.h:43</a></div></div>
+<div class="ttc" id="aclass_win_api_window_html_ac73a1c3ffeebead24c8dbd21e85848d9"><div class="ttname"><a href="../../d3/da4/class_win_api_window.html#ac73a1c3ffeebead24c8dbd21e85848d9">WinApiWindow::PeekSingleMessage</a></div><div class="ttdeci">void PeekSingleMessage() override</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dff/_win_api_window_8cpp_source.html#l00035">WinApiWindow.cpp:35</a></div></div>
+<div class="ttc" id="aclass_win_api_window_html_ae8ae2c1a2aa01dc483dbda914d711348"><div class="ttname"><a href="../../d3/da4/class_win_api_window.html#ae8ae2c1a2aa01dc483dbda914d711348">WinApiWindow::Focused</a></div><div class="ttdeci">bool Focused() override</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dff/_win_api_window_8cpp_source.html#l00069">WinApiWindow.cpp:69</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_46f0a310448968fe371c870cd868aa1f.html">Platform</a></li><li class="navelem"><a class="el" href="../../d6/d85/_win_api_window_8h.html">WinApiWindow.h</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:03:45. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Исходный файл C:/git/world-of-might-and-magic/Engine/Log.cpp</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d0/da7/_log_8cpp_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Log.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d0/da7/_log_8cpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;stdarg.h&gt;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;time.h&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d6/d3a/_engine_2_log_8h.html">Engine/Log.h</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d4/ddd/_api_8h.html">Platform/Api.h</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="../../d6/d70/class_log.html#ad9612fc4cd0f7350a0ae2a0a0fcad55e">    9</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="../../d6/d70/class_log.html#ad9612fc4cd0f7350a0ae2a0a0fcad55e">Log::Initialize</a>() { <span class="keywordflow">return</span> this-&gt;<a class="code" href="../../d6/d70/class_log.html#a6bb044027bfb497d496aedb0788c79f1">initialized</a> = <a class="code" href="../../d4/ddd/_api_8h.html#a5d3a103186dfe38a891a15131aa4a0de">OS_OpenConsole</a>(); }</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="../../d6/d70/class_log.html#a9962588a107d3b4aa927cf12284e0fc7">   11</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d6/d70/class_log.html#a9962588a107d3b4aa927cf12284e0fc7">Log::Info</a>(<span class="keyword">const</span> <span class="keywordtype">wchar_t</span> *pFormat, ...) {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keywordflow">if</span> (this-&gt;<a class="code" href="../../d6/d70/class_log.html#a6bb044027bfb497d496aedb0788c79f1">initialized</a>) {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        va_list args;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <span class="keywordtype">wchar_t</span> pMsg[8192];</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        va_start(args, pFormat);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        vswprintf_s(pMsg, 8192, pFormat, args);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        va_end(args);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        time_t <a class="code" href="../../df/dc4/_s_d_l__opengl_8h.html#a7d65d00ca3b0630d9b5c52df855b19f5">t</a> = time(NULL);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keyword">struct </span>tm tm = *localtime(&amp;<a class="code" href="../../df/dc4/_s_d_l__opengl_8h.html#a7d65d00ca3b0630d9b5c52df855b19f5">t</a>);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        printf(<span class="stringliteral">&quot;[%04d/%02d/%02d %02d:%02d:%02d] %S\n&quot;</span>, tm.tm_year + 1900,</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;               tm.tm_mon + 1, tm.tm_mday, tm.tm_hour, tm.tm_min, tm.tm_sec,</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;               pMsg);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    }</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="../../d6/d70/class_log.html#ac0de2621497ca3b2fbf208624c08bcdf">   28</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d6/d70/class_log.html#ac0de2621497ca3b2fbf208624c08bcdf">Log::Warning</a>(<span class="keyword">const</span> <span class="keywordtype">wchar_t</span> *pFormat, ...) {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordflow">if</span> (this-&gt;<a class="code" href="../../d6/d70/class_log.html#a6bb044027bfb497d496aedb0788c79f1">initialized</a>) {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        va_list args;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keywordtype">wchar_t</span> pMsg[8192];</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        va_start(args, pFormat);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        vswprintf_s(pMsg, 8192, pFormat, args);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        va_end(args);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        time_t <a class="code" href="../../df/dc4/_s_d_l__opengl_8h.html#a7d65d00ca3b0630d9b5c52df855b19f5">t</a> = time(NULL);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keyword">struct </span>tm tm = *localtime(&amp;<a class="code" href="../../df/dc4/_s_d_l__opengl_8h.html#a7d65d00ca3b0630d9b5c52df855b19f5">t</a>);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        printf(<span class="stringliteral">&quot;[%04d/%02d/%02d %02d:%02d:%02d] %S\n&quot;</span>, tm.tm_year + 1900,</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;               tm.tm_mon + 1, tm.tm_mday, tm.tm_hour, tm.tm_min, tm.tm_sec,</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;               pMsg);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    }</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">//----- (004BE386) --------------------------------------------------------</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="../../d0/da7/_log_8cpp.html#a648e45bbf3333d23303f8114ea3b198f">   46</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d0/da7/_log_8cpp.html#a648e45bbf3333d23303f8114ea3b198f">log_error</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *pMessage) {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a435c176a02c061b43e19bdf7c86cceae">v1</a>;  <span class="comment">// edi@1</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    FILE *<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a>;         <span class="comment">// eax@1</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    FILE *<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#acc806b31cbf466ceba6555983d8b814d">v3</a>;        <span class="comment">// esi@1</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a435c176a02c061b43e19bdf7c86cceae">v1</a> = pMessage;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a> = fopen(<span class="stringliteral">&quot;errorlog.txt&quot;</span>, <span class="stringliteral">&quot;a&quot;</span>);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#acc806b31cbf466ceba6555983d8b814d">v3</a> = <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a>) {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        fprintf(<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a>, <span class="stringliteral">&quot;%s\n&quot;</span>, <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a435c176a02c061b43e19bdf7c86cceae">v1</a>);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        fclose(<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#acc806b31cbf466ceba6555983d8b814d">v3</a>);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        fflush(<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#acc806b31cbf466ceba6555983d8b814d">v3</a>);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aclass_log_html_a9962588a107d3b4aa927cf12284e0fc7"><div class="ttname"><a href="../../d6/d70/class_log.html#a9962588a107d3b4aa927cf12284e0fc7">Log::Info</a></div><div class="ttdeci">void Info(const wchar_t *pFormat,...)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/da7/_log_8cpp_source.html#l00011">Log.cpp:11</a></div></div>
+<div class="ttc" id="aclass_log_html_ad9612fc4cd0f7350a0ae2a0a0fcad55e"><div class="ttname"><a href="../../d6/d70/class_log.html#ad9612fc4cd0f7350a0ae2a0a0fcad55e">Log::Initialize</a></div><div class="ttdeci">bool Initialize()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/da7/_log_8cpp_source.html#l00009">Log.cpp:9</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a435c176a02c061b43e19bdf7c86cceae"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a435c176a02c061b43e19bdf7c86cceae">v1</a></div><div class="ttdeci">GLfloat GLfloat v1</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l00694">SDL_opengl_glext.h:694</a></div></div>
+<div class="ttc" id="aclass_log_html_ac0de2621497ca3b2fbf208624c08bcdf"><div class="ttname"><a href="../../d6/d70/class_log.html#ac0de2621497ca3b2fbf208624c08bcdf">Log::Warning</a></div><div class="ttdeci">void Warning(const wchar_t *pFormat,...)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/da7/_log_8cpp_source.html#l00028">Log.cpp:28</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a691492ec0bd6383f91200e49f6ae40ed"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a></div><div class="ttdeci">GLfloat f</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l01873">SDL_opengl_glext.h:1873</a></div></div>
+<div class="ttc" id="a_log_8cpp_html_a648e45bbf3333d23303f8114ea3b198f"><div class="ttname"><a href="../../d0/da7/_log_8cpp.html#a648e45bbf3333d23303f8114ea3b198f">log_error</a></div><div class="ttdeci">void log_error(const char *pMessage)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/da7/_log_8cpp_source.html#l00046">Log.cpp:46</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl_8h_html_a7d65d00ca3b0630d9b5c52df855b19f5"><div class="ttname"><a href="../../df/dc4/_s_d_l__opengl_8h.html#a7d65d00ca3b0630d9b5c52df855b19f5">t</a></div><div class="ttdeci">GLdouble GLdouble t</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dc4/_s_d_l__opengl_8h_source.html#l02071">SDL_opengl.h:2071</a></div></div>
+<div class="ttc" id="aclass_log_html_a6bb044027bfb497d496aedb0788c79f1"><div class="ttname"><a href="../../d6/d70/class_log.html#a6bb044027bfb497d496aedb0788c79f1">Log::initialized</a></div><div class="ttdeci">bool initialized</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d3a/_engine_2_log_8h_source.html#l00012">Log.h:12</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_acc806b31cbf466ceba6555983d8b814d"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#acc806b31cbf466ceba6555983d8b814d">v3</a></div><div class="ttdeci">GLfloat GLfloat GLfloat GLfloat v3</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l00696">SDL_opengl_glext.h:696</a></div></div>
+<div class="ttc" id="a_api_8h_html_a5d3a103186dfe38a891a15131aa4a0de"><div class="ttname"><a href="../../d4/ddd/_api_8h.html#a5d3a103186dfe38a891a15131aa4a0de">OS_OpenConsole</a></div><div class="ttdeci">bool OS_OpenConsole()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d84/_lin_8cpp_source.html#l00048">Lin.cpp:48</a></div></div>
+<div class="ttc" id="a_engine_2_log_8h_html"><div class="ttname"><a href="../../d6/d3a/_engine_2_log_8h.html">Log.h</a></div></div>
+<div class="ttc" id="a_api_8h_html"><div class="ttname"><a href="../../d4/ddd/_api_8h.html">Api.h</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_0b6ee6e7e9547e675db4add2e5de97da.html">Engine</a></li><li class="navelem"><a class="el" href="../../d0/da7/_log_8cpp.html">Log.cpp</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:03:31. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

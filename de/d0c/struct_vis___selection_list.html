@@ -1,0 +1,523 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Структура Vis_SelectionList</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('de/d0c/struct_vis___selection_list.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Открытые типы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="../../d3/d61/struct_vis___selection_list-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Структура Vis_SelectionList</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="../../de/d6e/_vis_8h_source.html">Vis.h</a>&gt;</code></p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Граф связей класса Vis_SelectionList:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d8/dcc/struct_vis___selection_list__coll__graph.svg" width="162" height="142"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Открытые типы</h2></td></tr>
+<tr class="memitem:a9e474fcb1237991d944eecc3f71c5ee3"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d0c/struct_vis___selection_list.html#a9e474fcb1237991d944eecc3f71c5ee3">PointerCreationType</a> { <a class="el" href="../../de/d0c/struct_vis___selection_list.html#a9e474fcb1237991d944eecc3f71c5ee3acbd7036c6ee4c5ea52fe9148a57bd599">All</a> = 0, 
+<a class="el" href="../../de/d0c/struct_vis___selection_list.html#a9e474fcb1237991d944eecc3f71c5ee3a88fdec2dd7629c51c2ff04c0702cd931">Unique</a> = 1
+ }</td></tr>
+<tr class="separator:a9e474fcb1237991d944eecc3f71c5ee3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a290d9f6e6b1bacba1ca5173520fc1cb3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d0c/struct_vis___selection_list.html#a290d9f6e6b1bacba1ca5173520fc1cb3">Vis_SelectionList</a> ()</td></tr>
+<tr class="separator:a290d9f6e6b1bacba1ca5173520fc1cb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2ed5b1984900bf6d36a0f1550767b57"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d0c/struct_vis___selection_list.html#ab2ed5b1984900bf6d36a0f1550767b57">~Vis_SelectionList</a> ()</td></tr>
+<tr class="separator:ab2ed5b1984900bf6d36a0f1550767b57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c08c5ed82599ad479d58ca2ff8bd146"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d04/struct_vis___object_info.html">Vis_ObjectInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d0c/struct_vis___selection_list.html#a2c08c5ed82599ad479d58ca2ff8bd146">SelectionPointers</a> (int a2, int a3)</td></tr>
+<tr class="separator:a2c08c5ed82599ad479d58ca2ff8bd146"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add61fa6d164124008c5c8cdec8e6b637"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d0c/struct_vis___selection_list.html#add61fa6d164124008c5c8cdec8e6b637">create_object_pointers</a> (<a class="el" href="../../de/d0c/struct_vis___selection_list.html#a9e474fcb1237991d944eecc3f71c5ee3">PointerCreationType</a> <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#ad5ddf6fca7b585646515660e810e0188">type</a>=<a class="el" href="../../de/d0c/struct_vis___selection_list.html#a9e474fcb1237991d944eecc3f71c5ee3acbd7036c6ee4c5ea52fe9148a57bd599">All</a>)</td></tr>
+<tr class="separator:add61fa6d164124008c5c8cdec8e6b637"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98a278dcbeb54ceca2c997f2dc7ea580"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d0c/struct_vis___selection_list.html#a98a278dcbeb54ceca2c997f2dc7ea580">AddObject</a> (<a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#ab49790263c78300fbf05719e38246198">object</a>, <a class="el" href="../../de/d6e/_vis_8h.html#ae18f1a9725894d10f4422f0ec7f3bc5e">VisObjectType</a> <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#ad5ddf6fca7b585646515660e810e0188">type</a>, int <a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#aa8bd8cf1eef34712fdb6ad58b540a2ee">depth</a>, int pid)</td></tr>
+<tr class="separator:a98a278dcbeb54ceca2c997f2dc7ea580"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:a284d8773e1dd4704710510b4194e0e34"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>(***&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d0c/struct_vis___selection_list.html#a284d8773e1dd4704710510b4194e0e34">vdestructor_ptr</a> )(<a class="el" href="../../de/d0c/struct_vis___selection_list.html">Vis_SelectionList</a> *, bool)</td></tr>
+<tr class="separator:a284d8773e1dd4704710510b4194e0e34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58efa7d2096205f16172c95248606f13"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d04/struct_vis___object_info.html">Vis_ObjectInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d0c/struct_vis___selection_list.html#a58efa7d2096205f16172c95248606f13">object_pool</a> [512]</td></tr>
+<tr class="separator:a58efa7d2096205f16172c95248606f13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9d6fec9b5009f6ee734325736a4adb1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d04/struct_vis___object_info.html">Vis_ObjectInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d0c/struct_vis___selection_list.html#aa9d6fec9b5009f6ee734325736a4adb1">object_pointers</a> [512]</td></tr>
+<tr class="separator:aa9d6fec9b5009f6ee734325736a4adb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0398de8b18d73f1e71486157e7b1eba9"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d0c/struct_vis___selection_list.html#a0398de8b18d73f1e71486157e7b1eba9">uNumPointers</a></td></tr>
+<tr class="separator:a0398de8b18d73f1e71486157e7b1eba9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock">
+<p class="definition">См. определение в файле <a class="el" href="../../de/d6e/_vis_8h_source.html">Vis.h</a> строка <a class="el" href="../../de/d6e/_vis_8h_source.html#l00042">42</a></p>
+</div><h2 class="groupheader">Перечисления</h2>
+<a id="a9e474fcb1237991d944eecc3f71c5ee3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e474fcb1237991d944eecc3f71c5ee3">&#9670;&nbsp;</a></span>PointerCreationType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="../../de/d0c/struct_vis___selection_list.html#a9e474fcb1237991d944eecc3f71c5ee3">Vis_SelectionList::PointerCreationType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="a9e474fcb1237991d944eecc3f71c5ee3acbd7036c6ee4c5ea52fe9148a57bd599"></a>All&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a9e474fcb1237991d944eecc3f71c5ee3a88fdec2dd7629c51c2ff04c0702cd931"></a>Unique&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/d6e/_vis_8h_source.html">Vis.h</a> строка <a class="el" href="../../de/d6e/_vis_8h_source.html#l00043">43</a></p>
+<div class="fragment"><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;{ <a class="code" href="../../de/d0c/struct_vis___selection_list.html#a9e474fcb1237991d944eecc3f71c5ee3acbd7036c6ee4c5ea52fe9148a57bd599">All</a> = 0, <a class="code" href="../../de/d0c/struct_vis___selection_list.html#a9e474fcb1237991d944eecc3f71c5ee3a88fdec2dd7629c51c2ff04c0702cd931">Unique</a> = 1 };</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a290d9f6e6b1bacba1ca5173520fc1cb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a290d9f6e6b1bacba1ca5173520fc1cb3">&#9670;&nbsp;</a></span>Vis_SelectionList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vis_SelectionList::Vis_SelectionList </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/dd4/_vis_8cpp_source.html">Vis.cpp</a> строка <a class="el" href="../../de/dd4/_vis_8cpp_source.html#l01236">1236</a></p>
+<div class="fragment"><div class="line"><a name="l01236"></a><span class="lineno"> 1236</span>&#160;                                     {</div>
+<div class="line"><a name="l01237"></a><span class="lineno"> 1237</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="../../d2/d83/_m_m7_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a> i = 0; i &lt; 512; ++i) {</div>
+<div class="line"><a name="l01238"></a><span class="lineno"> 1238</span>&#160;        <a class="code" href="../../de/d0c/struct_vis___selection_list.html#a58efa7d2096205f16172c95248606f13">object_pool</a>[i].<a class="code" href="../../d1/d04/struct_vis___object_info.html#a64bb844e72f7363e677968e44270bea1">object</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l01239"></a><span class="lineno"> 1239</span>&#160;        <a class="code" href="../../de/d0c/struct_vis___selection_list.html#a58efa7d2096205f16172c95248606f13">object_pool</a>[i].<a class="code" href="../../d1/d04/struct_vis___object_info.html#a2e26f42b2edf03edaf4622ea46cc2466">depth</a> = -1;</div>
+<div class="line"><a name="l01240"></a><span class="lineno"> 1240</span>&#160;        <a class="code" href="../../de/d0c/struct_vis___selection_list.html#a58efa7d2096205f16172c95248606f13">object_pool</a>[i].<a class="code" href="../../d1/d04/struct_vis___object_info.html#a7068ff7a34d87d817b300b2a83c3a8ba">object_pid</a> = PID_INVALID;</div>
+<div class="line"><a name="l01241"></a><span class="lineno"> 1241</span>&#160;        <a class="code" href="../../de/d0c/struct_vis___selection_list.html#a58efa7d2096205f16172c95248606f13">object_pool</a>[i].<a class="code" href="../../d1/d04/struct_vis___object_info.html#a1a87c2750a9f1a3bbc3071ffd7536b11">object_type</a> = <a class="code" href="../../de/d6e/_vis_8h.html#ae18f1a9725894d10f4422f0ec7f3bc5eadc0e957887a5d2750d8d3d39c995cc6d">VisObjectType_Any</a>;</div>
+<div class="line"><a name="l01242"></a><span class="lineno"> 1242</span>&#160;    }</div>
+<div class="line"><a name="l01243"></a><span class="lineno"> 1243</span>&#160;    <a class="code" href="../../de/d0c/struct_vis___selection_list.html#a0398de8b18d73f1e71486157e7b1eba9">uNumPointers</a> = 0;</div>
+<div class="line"><a name="l01244"></a><span class="lineno"> 1244</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../de/d6e/_vis_8h_source.html#l00034">Vis_ObjectInfo::depth</a>, <a class="el" href="../../de/d6e/_vis_8h_source.html#l00029">Vis_ObjectInfo::object</a>, <a class="el" href="../../de/d6e/_vis_8h_source.html#l00033">Vis_ObjectInfo::object_pid</a>, <a class="el" href="../../de/d6e/_vis_8h_source.html#l00061">object_pool</a>, <a class="el" href="../../de/d6e/_vis_8h_source.html#l00037">Vis_ObjectInfo::object_type</a>, <a class="el" href="../../de/d6e/_vis_8h_source.html#l00063">uNumPointers</a> и <a class="el" href="../../de/d6e/_vis_8h_source.html#l00005">VisObjectType_Any</a>.</p>
+
+</div>
+</div>
+<a id="ab2ed5b1984900bf6d36a0f1550767b57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2ed5b1984900bf6d36a0f1550767b57">&#9670;&nbsp;</a></span>~Vis_SelectionList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vis_SelectionList::~Vis_SelectionList </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/d6e/_vis_8h_source.html">Vis.h</a> строка <a class="el" href="../../de/d6e/_vis_8h_source.html#l00047">47</a></p>
+<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;{}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a2c08c5ed82599ad479d58ca2ff8bd146"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c08c5ed82599ad479d58ca2ff8bd146">&#9670;&nbsp;</a></span>SelectionPointers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d04/struct_vis___object_info.html">Vis_ObjectInfo</a> * Vis_SelectionList::SelectionPointers </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>a2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>a3</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/dd4/_vis_8cpp_source.html">Vis.cpp</a> строка <a class="el" href="../../de/dd4/_vis_8cpp_source.html#l00956">956</a></p>
+<div class="fragment"><div class="line"><a name="l00957"></a><span class="lineno">  957</span>&#160;                                                              {</div>
+<div class="line"><a name="l00958"></a><span class="lineno">  958</span>&#160;    <span class="comment">// unsigned int v3; // esi@1</span></div>
+<div class="line"><a name="l00959"></a><span class="lineno">  959</span>&#160;    <span class="comment">// signed int v4; // edx@1</span></div>
+<div class="line"><a name="l00960"></a><span class="lineno">  960</span>&#160;    <span class="comment">// char *v5; // eax@2</span></div>
+<div class="line"><a name="l00961"></a><span class="lineno">  961</span>&#160;    <span class="comment">// Vis_ObjectInfo *result; // eax@6</span></div>
+<div class="line"><a name="l00962"></a><span class="lineno">  962</span>&#160; </div>
+<div class="line"><a name="l00963"></a><span class="lineno">  963</span>&#160;    <span class="comment">// v3 = this-&gt;uNumPointers;</span></div>
+<div class="line"><a name="l00964"></a><span class="lineno">  964</span>&#160;    <span class="keywordflow">if</span> (this-&gt;<a class="code" href="../../de/d0c/struct_vis___selection_list.html#a0398de8b18d73f1e71486157e7b1eba9">uNumPointers</a> &gt; 0) {</div>
+<div class="line"><a name="l00965"></a><span class="lineno">  965</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="../../d2/d83/_m_m7_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a> i = 0; i &lt; this-&gt;<a class="code" href="../../de/d0c/struct_vis___selection_list.html#a0398de8b18d73f1e71486157e7b1eba9">uNumPointers</a>; ++i) {</div>
+<div class="line"><a name="l00966"></a><span class="lineno">  966</span>&#160;            <span class="keywordflow">if</span> (this-&gt;<a class="code" href="../../de/d0c/struct_vis___selection_list.html#a58efa7d2096205f16172c95248606f13">object_pool</a>[i].object_type == pVisObjectType &amp;&amp;</div>
+<div class="line"><a name="l00967"></a><span class="lineno">  967</span>&#160;                this-&gt;<a class="code" href="../../de/d0c/struct_vis___selection_list.html#a58efa7d2096205f16172c95248606f13">object_pool</a>[i].object_pid == pid)</div>
+<div class="line"><a name="l00968"></a><span class="lineno">  968</span>&#160;                <span class="keywordflow">return</span> &amp;this-&gt;<a class="code" href="../../de/d0c/struct_vis___selection_list.html#a58efa7d2096205f16172c95248606f13">object_pool</a>[i];</div>
+<div class="line"><a name="l00969"></a><span class="lineno">  969</span>&#160;        }</div>
+<div class="line"><a name="l00970"></a><span class="lineno">  970</span>&#160;    }</div>
+<div class="line"><a name="l00971"></a><span class="lineno">  971</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00972"></a><span class="lineno">  972</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../de/d6e/_vis_8h_source.html#l00061">object_pool</a> и <a class="el" href="../../de/d6e/_vis_8h_source.html#l00063">uNumPointers</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../de/dd4/_vis_8cpp_source.html#l00036">Vis::DetermineFacetIntersection()</a>.</p>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../de/d0c/struct_vis___selection_list_a2c08c5ed82599ad479d58ca2ff8bd146_icgraph.svg" width="100%" height="388"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="add61fa6d164124008c5c8cdec8e6b637"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add61fa6d164124008c5c8cdec8e6b637">&#9670;&nbsp;</a></span>create_object_pointers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> Vis_SelectionList::create_object_pointers </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../de/d0c/struct_vis___selection_list.html#a9e474fcb1237991d944eecc3f71c5ee3">PointerCreationType</a>&#160;</td>
+          <td class="paramname"><em>type</em> = <code><a class="el" href="../../de/d0c/struct_vis___selection_list.html#a9e474fcb1237991d944eecc3f71c5ee3acbd7036c6ee4c5ea52fe9148a57bd599">All</a></code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/dd4/_vis_8cpp_source.html">Vis.cpp</a> строка <a class="el" href="../../de/dd4/_vis_8cpp_source.html#l00975">975</a></p>
+<div class="fragment"><div class="line"><a name="l00975"></a><span class="lineno">  975</span>&#160;                                                                       {</div>
+<div class="line"><a name="l00976"></a><span class="lineno">  976</span>&#160;    <span class="keywordflow">switch</span> (<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ad5ddf6fca7b585646515660e810e0188">type</a>) {</div>
+<div class="line"><a name="l00977"></a><span class="lineno">  977</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="../../de/d0c/struct_vis___selection_list.html#a9e474fcb1237991d944eecc3f71c5ee3acbd7036c6ee4c5ea52fe9148a57bd599">All</a>: {</div>
+<div class="line"><a name="l00978"></a><span class="lineno">  978</span>&#160;            <span class="keywordflow">for</span> (<a class="code" href="../../d2/d83/_m_m7_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a> i = 0; i &lt; <a class="code" href="../../de/d0c/struct_vis___selection_list.html#a0398de8b18d73f1e71486157e7b1eba9">uNumPointers</a>; ++i)</div>
+<div class="line"><a name="l00979"></a><span class="lineno">  979</span>&#160;                <a class="code" href="../../de/d0c/struct_vis___selection_list.html#aa9d6fec9b5009f6ee734325736a4adb1">object_pointers</a>[i] = &amp;<a class="code" href="../../de/d0c/struct_vis___selection_list.html#a58efa7d2096205f16172c95248606f13">object_pool</a>[i];</div>
+<div class="line"><a name="l00980"></a><span class="lineno">  980</span>&#160;        } <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00981"></a><span class="lineno">  981</span>&#160; </div>
+<div class="line"><a name="l00982"></a><span class="lineno">  982</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="../../de/d0c/struct_vis___selection_list.html#a9e474fcb1237991d944eecc3f71c5ee3a88fdec2dd7629c51c2ff04c0702cd931">Unique</a>:  <span class="comment">// seems quite retarted; the inner if condition will never</span></div>
+<div class="line"><a name="l00983"></a><span class="lineno">  983</span>&#160;                      <span class="comment">// trigger, since we compare pointers, not values.</span></div>
+<div class="line"><a name="l00984"></a><span class="lineno">  984</span>&#160;                      <span class="comment">// pointers will always be unique</span></div>
+<div class="line"><a name="l00985"></a><span class="lineno">  985</span>&#160;        {             <span class="comment">// but it may be decompilation error thou</span></div>
+<div class="line"><a name="l00986"></a><span class="lineno">  986</span>&#160;            <span class="keywordtype">bool</span> create = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00987"></a><span class="lineno">  987</span>&#160; </div>
+<div class="line"><a name="l00988"></a><span class="lineno">  988</span>&#160;            <span class="keywordflow">for</span> (<a class="code" href="../../d2/d83/_m_m7_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a> i = 0; i &lt; <a class="code" href="../../de/d0c/struct_vis___selection_list.html#a0398de8b18d73f1e71486157e7b1eba9">uNumPointers</a>; ++i) {</div>
+<div class="line"><a name="l00989"></a><span class="lineno">  989</span>&#160;                <span class="keywordflow">for</span> (<a class="code" href="../../d2/d83/_m_m7_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a> j = 0; j &lt; i; ++j) {</div>
+<div class="line"><a name="l00990"></a><span class="lineno">  990</span>&#160;                    <span class="keywordflow">if</span> (<a class="code" href="../../de/d0c/struct_vis___selection_list.html#aa9d6fec9b5009f6ee734325736a4adb1">object_pointers</a>[j] == &amp;<a class="code" href="../../de/d0c/struct_vis___selection_list.html#a58efa7d2096205f16172c95248606f13">object_pool</a>[i]) {</div>
+<div class="line"><a name="l00991"></a><span class="lineno">  991</span>&#160;                        create = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00992"></a><span class="lineno">  992</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00993"></a><span class="lineno">  993</span>&#160;                    }</div>
+<div class="line"><a name="l00994"></a><span class="lineno">  994</span>&#160;                }</div>
+<div class="line"><a name="l00995"></a><span class="lineno">  995</span>&#160; </div>
+<div class="line"><a name="l00996"></a><span class="lineno">  996</span>&#160;                <span class="keywordflow">if</span> (create) <a class="code" href="../../de/d0c/struct_vis___selection_list.html#aa9d6fec9b5009f6ee734325736a4adb1">object_pointers</a>[i] = &amp;<a class="code" href="../../de/d0c/struct_vis___selection_list.html#a58efa7d2096205f16172c95248606f13">object_pool</a>[i];</div>
+<div class="line"><a name="l00997"></a><span class="lineno">  997</span>&#160;            }</div>
+<div class="line"><a name="l00998"></a><span class="lineno">  998</span>&#160;        } <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00999"></a><span class="lineno">  999</span>&#160; </div>
+<div class="line"><a name="l01000"></a><span class="lineno"> 1000</span>&#160;        <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l01001"></a><span class="lineno"> 1001</span>&#160;            <a class="code" href="../../de/d8c/_engine_2_ioc_container_8cpp.html#a9be76595edb968c5dfb165ec86ba2959">logger</a>-&gt;<a class="code" href="../../d6/d70/class_log.html#ac0de2621497ca3b2fbf208624c08bcdf">Warning</a>(</div>
+<div class="line"><a name="l01002"></a><span class="lineno"> 1002</span>&#160;                L<span class="stringliteral">&quot;Unknown pointer creation flag passed to &quot;</span></div>
+<div class="line"><a name="l01003"></a><span class="lineno"> 1003</span>&#160;                L<span class="stringliteral">&quot;::create_object_pointers()&quot;</span>);</div>
+<div class="line"><a name="l01004"></a><span class="lineno"> 1004</span>&#160;    }</div>
+<div class="line"><a name="l01005"></a><span class="lineno"> 1005</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../de/d6e/_vis_8h_source.html#l00043">All</a>, <a class="el" href="../../de/d8c/_engine_2_ioc_container_8cpp_source.html#l00047">logger</a>, <a class="el" href="../../de/d6e/_vis_8h_source.html#l00062">object_pointers</a>, <a class="el" href="../../de/d6e/_vis_8h_source.html#l00061">object_pool</a>, <a class="el" href="../../de/d6e/_vis_8h_source.html#l00043">Unique</a>, <a class="el" href="../../de/d6e/_vis_8h_source.html#l00063">uNumPointers</a> и <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00028">Log::Warning()</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../de/dd4/_vis_8cpp_source.html#l00036">Vis::DetermineFacetIntersection()</a>, <a class="el" href="../../de/dd4/_vis_8cpp_source.html#l01418">Vis::DoesRayIntersectBillboard()</a>, <a class="el" href="../../de/dd4/_vis_8cpp_source.html#l00403">Vis::PickClosestActor()</a>, <a class="el" href="../../de/dd4/_vis_8cpp_source.html#l01247">Vis::PickKeyboard()</a> и <a class="el" href="../../de/dd4/_vis_8cpp_source.html#l01268">Vis::PickMouse()</a>.</p>
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../de/d0c/struct_vis___selection_list_add61fa6d164124008c5c8cdec8e6b637_cgraph.svg" width="311" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../de/d0c/struct_vis___selection_list_add61fa6d164124008c5c8cdec8e6b637_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a98a278dcbeb54ceca2c997f2dc7ea580"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98a278dcbeb54ceca2c997f2dc7ea580">&#9670;&nbsp;</a></span>AddObject()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> Vis_SelectionList::AddObject </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *&#160;</td>
+          <td class="paramname"><em>object</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../de/d6e/_vis_8h.html#ae18f1a9725894d10f4422f0ec7f3bc5e">VisObjectType</a>&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>depth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>pid</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/d6e/_vis_8h_source.html">Vis.h</a> строка <a class="el" href="../../de/d6e/_vis_8h_source.html#l00051">51</a></p>
+<div class="fragment"><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                                   {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <a class="code" href="../../de/d0c/struct_vis___selection_list.html#a58efa7d2096205f16172c95248606f13">object_pool</a>[<a class="code" href="../../de/d0c/struct_vis___selection_list.html#a0398de8b18d73f1e71486157e7b1eba9">uNumPointers</a>].<a class="code" href="../../d1/d04/struct_vis___object_info.html#a64bb844e72f7363e677968e44270bea1">object</a> = <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#ab49790263c78300fbf05719e38246198">object</a>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <a class="code" href="../../de/d0c/struct_vis___selection_list.html#a58efa7d2096205f16172c95248606f13">object_pool</a>[<a class="code" href="../../de/d0c/struct_vis___selection_list.html#a0398de8b18d73f1e71486157e7b1eba9">uNumPointers</a>].<a class="code" href="../../d1/d04/struct_vis___object_info.html#a1a87c2750a9f1a3bbc3071ffd7536b11">object_type</a> = <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ad5ddf6fca7b585646515660e810e0188">type</a>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <a class="code" href="../../de/d0c/struct_vis___selection_list.html#a58efa7d2096205f16172c95248606f13">object_pool</a>[<a class="code" href="../../de/d0c/struct_vis___selection_list.html#a0398de8b18d73f1e71486157e7b1eba9">uNumPointers</a>].<a class="code" href="../../d1/d04/struct_vis___object_info.html#a2e26f42b2edf03edaf4622ea46cc2466">depth</a> = <a class="code" href="../../df/dc4/_s_d_l__opengl_8h.html#aa8bd8cf1eef34712fdb6ad58b540a2ee">depth</a>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <a class="code" href="../../de/d0c/struct_vis___selection_list.html#a58efa7d2096205f16172c95248606f13">object_pool</a>[<a class="code" href="../../de/d0c/struct_vis___selection_list.html#a0398de8b18d73f1e71486157e7b1eba9">uNumPointers</a>].<a class="code" href="../../d1/d04/struct_vis___object_info.html#a7068ff7a34d87d817b300b2a83c3a8ba">object_pid</a> = pid;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <a class="code" href="../../de/d0c/struct_vis___selection_list.html#a0398de8b18d73f1e71486157e7b1eba9">uNumPointers</a>++;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    }</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../de/d6e/_vis_8h_source.html#l00034">Vis_ObjectInfo::depth</a>, <a class="el" href="../../de/d6e/_vis_8h_source.html#l00029">Vis_ObjectInfo::object</a>, <a class="el" href="../../de/d6e/_vis_8h_source.html#l00033">Vis_ObjectInfo::object_pid</a>, <a class="el" href="../../de/d6e/_vis_8h_source.html#l00061">object_pool</a>, <a class="el" href="../../de/d6e/_vis_8h_source.html#l00037">Vis_ObjectInfo::object_type</a> и <a class="el" href="../../de/d6e/_vis_8h_source.html#l00063">uNumPointers</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../de/dd4/_vis_8cpp_source.html#l01303">Vis::PickBillboards_Keyboard()</a>, <a class="el" href="../../de/dd4/_vis_8cpp_source.html#l00231">Vis::PickBillboards_Mouse()</a>, <a class="el" href="../../de/dd4/_vis_8cpp_source.html#l01571">Vis::PickIndoorFaces_Keyboard()</a>, <a class="el" href="../../de/dd4/_vis_8cpp_source.html#l01601">Vis::PickOutdoorFaces_Keyboard()</a> и <a class="el" href="../../de/dd4/_vis_8cpp_source.html#l00359">Vis::PickOutdoorFaces_Mouse()</a>.</p>
+<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../de/d0c/struct_vis___selection_list_a98a278dcbeb54ceca2c997f2dc7ea580_icgraph.svg" width="100%" height="588"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="a284d8773e1dd4704710510b4194e0e34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a284d8773e1dd4704710510b4194e0e34">&#9670;&nbsp;</a></span>vdestructor_ptr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>(*** Vis_SelectionList::vdestructor_ptr) (<a class="el" href="../../de/d0c/struct_vis___selection_list.html">Vis_SelectionList</a> *, bool)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/d6e/_vis_8h_source.html">Vis.h</a> строка <a class="el" href="../../de/d6e/_vis_8h_source.html#l00060">60</a></p>
+
+</div>
+</div>
+<a id="a58efa7d2096205f16172c95248606f13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58efa7d2096205f16172c95248606f13">&#9670;&nbsp;</a></span>object_pool</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d04/struct_vis___object_info.html">Vis_ObjectInfo</a> Vis_SelectionList::object_pool[512]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/d6e/_vis_8h_source.html">Vis.h</a> строка <a class="el" href="../../de/d6e/_vis_8h_source.html#l00061">61</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../de/d6e/_vis_8h_source.html#l00051">AddObject()</a>, <a class="el" href="../../de/dd4/_vis_8cpp_source.html#l00975">create_object_pointers()</a>, <a class="el" href="../../de/dd4/_vis_8cpp_source.html#l00305">Vis::PickIndoorFaces_Mouse()</a>, <a class="el" href="../../de/dd4/_vis_8cpp_source.html#l00956">SelectionPointers()</a> и <a class="el" href="../../de/dd4/_vis_8cpp_source.html#l01236">Vis_SelectionList()</a>.</p>
+
+</div>
+</div>
+<a id="aa9d6fec9b5009f6ee734325736a4adb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9d6fec9b5009f6ee734325736a4adb1">&#9670;&nbsp;</a></span>object_pointers</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d04/struct_vis___object_info.html">Vis_ObjectInfo</a>* Vis_SelectionList::object_pointers[512]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/d6e/_vis_8h_source.html">Vis.h</a> строка <a class="el" href="../../de/d6e/_vis_8h_source.html#l00062">62</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../de/dd4/_vis_8cpp_source.html#l00975">create_object_pointers()</a>, <a class="el" href="../../de/dd4/_vis_8cpp_source.html#l00036">Vis::DetermineFacetIntersection()</a>, <a class="el" href="../../de/dd4/_vis_8cpp_source.html#l01418">Vis::DoesRayIntersectBillboard()</a>, <a class="el" href="../../de/dd4/_vis_8cpp_source.html#l00517">Vis::get_picked_object_zbuf_val()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l00718">Engine::OutlineSelection()</a>, <a class="el" href="../../de/dd4/_vis_8cpp_source.html#l00403">Vis::PickClosestActor()</a>, <a class="el" href="../../de/dd4/_vis_8cpp_source.html#l01247">Vis::PickKeyboard()</a> и <a class="el" href="../../de/dd4/_vis_8cpp_source.html#l01268">Vis::PickMouse()</a>.</p>
+
+</div>
+</div>
+<a id="a0398de8b18d73f1e71486157e7b1eba9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0398de8b18d73f1e71486157e7b1eba9">&#9670;&nbsp;</a></span>uNumPointers</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int Vis_SelectionList::uNumPointers</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/d6e/_vis_8h_source.html">Vis.h</a> строка <a class="el" href="../../de/d6e/_vis_8h_source.html#l00063">63</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../de/d6e/_vis_8h_source.html#l00051">AddObject()</a>, <a class="el" href="../../de/dd4/_vis_8cpp_source.html#l00975">create_object_pointers()</a>, <a class="el" href="../../de/dd4/_vis_8cpp_source.html#l00036">Vis::DetermineFacetIntersection()</a>, <a class="el" href="../../de/dd4/_vis_8cpp_source.html#l01418">Vis::DoesRayIntersectBillboard()</a>, <a class="el" href="../../de/dd4/_vis_8cpp_source.html#l00517">Vis::get_picked_object_zbuf_val()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l00718">Engine::OutlineSelection()</a>, <a class="el" href="../../de/dd4/_vis_8cpp_source.html#l00403">Vis::PickClosestActor()</a>, <a class="el" href="../../de/dd4/_vis_8cpp_source.html#l00305">Vis::PickIndoorFaces_Mouse()</a>, <a class="el" href="../../de/dd4/_vis_8cpp_source.html#l01247">Vis::PickKeyboard()</a>, <a class="el" href="../../de/dd4/_vis_8cpp_source.html#l01268">Vis::PickMouse()</a>, <a class="el" href="../../de/dd4/_vis_8cpp_source.html#l00956">SelectionPointers()</a> и <a class="el" href="../../de/dd4/_vis_8cpp_source.html#l01236">Vis_SelectionList()</a>.</p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов структур находятся в файлах:<ul>
+<li>C:/git/world-of-might-and-magic/Engine/Graphics/<a class="el" href="../../de/d6e/_vis_8h_source.html">Vis.h</a></li>
+<li>C:/git/world-of-might-and-magic/Engine/Graphics/<a class="el" href="../../de/dd4/_vis_8cpp_source.html">Vis.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="astruct_vis___object_info_html_a7068ff7a34d87d817b300b2a83c3a8ba"><div class="ttname"><a href="../../d1/d04/struct_vis___object_info.html#a7068ff7a34d87d817b300b2a83c3a8ba">Vis_ObjectInfo::object_pid</a></div><div class="ttdeci">uint16_t object_pid</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d6e/_vis_8h_source.html#l00033">Vis.h:33</a></div></div>
+<div class="ttc" id="astruct_vis___selection_list_html_a58efa7d2096205f16172c95248606f13"><div class="ttname"><a href="../../de/d0c/struct_vis___selection_list.html#a58efa7d2096205f16172c95248606f13">Vis_SelectionList::object_pool</a></div><div class="ttdeci">Vis_ObjectInfo object_pool[512]</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d6e/_vis_8h_source.html#l00061">Vis.h:61</a></div></div>
+<div class="ttc" id="a_vis_8h_html_ae18f1a9725894d10f4422f0ec7f3bc5eadc0e957887a5d2750d8d3d39c995cc6d"><div class="ttname"><a href="../../de/d6e/_vis_8h.html#ae18f1a9725894d10f4422f0ec7f3bc5eadc0e957887a5d2750d8d3d39c995cc6d">VisObjectType_Any</a></div><div class="ttdeci">@ VisObjectType_Any</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d6e/_vis_8h_source.html#l00005">Vis.h:5</a></div></div>
+<div class="ttc" id="astruct_vis___selection_list_html_a9e474fcb1237991d944eecc3f71c5ee3acbd7036c6ee4c5ea52fe9148a57bd599"><div class="ttname"><a href="../../de/d0c/struct_vis___selection_list.html#a9e474fcb1237991d944eecc3f71c5ee3acbd7036c6ee4c5ea52fe9148a57bd599">Vis_SelectionList::All</a></div><div class="ttdeci">@ All</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d6e/_vis_8h_source.html#l00043">Vis.h:43</a></div></div>
+<div class="ttc" id="astruct_vis___object_info_html_a64bb844e72f7363e677968e44270bea1"><div class="ttname"><a href="../../d1/d04/struct_vis___object_info.html#a64bb844e72f7363e677968e44270bea1">Vis_ObjectInfo::object</a></div><div class="ttdeci">void * object</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d6e/_vis_8h_source.html#l00029">Vis.h:29</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_ab49790263c78300fbf05719e38246198"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#ab49790263c78300fbf05719e38246198">object</a></div><div class="ttdeci">GLuint object</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l06060">SDL_opengl_glext.h:6060</a></div></div>
+<div class="ttc" id="astruct_vis___selection_list_html_a9e474fcb1237991d944eecc3f71c5ee3a88fdec2dd7629c51c2ff04c0702cd931"><div class="ttname"><a href="../../de/d0c/struct_vis___selection_list.html#a9e474fcb1237991d944eecc3f71c5ee3a88fdec2dd7629c51c2ff04c0702cd931">Vis_SelectionList::Unique</a></div><div class="ttdeci">@ Unique</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d6e/_vis_8h_source.html#l00043">Vis.h:43</a></div></div>
+<div class="ttc" id="aclass_log_html_ac0de2621497ca3b2fbf208624c08bcdf"><div class="ttname"><a href="../../d6/d70/class_log.html#ac0de2621497ca3b2fbf208624c08bcdf">Log::Warning</a></div><div class="ttdeci">void Warning(const wchar_t *pFormat,...)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/da7/_log_8cpp_source.html#l00028">Log.cpp:28</a></div></div>
+<div class="ttc" id="a_s_d_l__egl_8h_html_ad5ddf6fca7b585646515660e810e0188"><div class="ttname"><a href="../../df/d32/_s_d_l__egl_8h.html#ad5ddf6fca7b585646515660e810e0188">type</a></div><div class="ttdeci">EGLenum type</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/_s_d_l__egl_8h_source.html#l00850">SDL_egl.h:850</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl_8h_html_aa8bd8cf1eef34712fdb6ad58b540a2ee"><div class="ttname"><a href="../../df/dc4/_s_d_l__opengl_8h.html#aa8bd8cf1eef34712fdb6ad58b540a2ee">depth</a></div><div class="ttdeci">GLint GLint GLsizei GLsizei GLsizei depth</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dc4/_s_d_l__opengl_8h_source.html#l01572">SDL_opengl.h:1572</a></div></div>
+<div class="ttc" id="a_m_m7_8h_html_a91ad9478d81a7aaf2593e8d9c3d06a14"><div class="ttname"><a href="../../d2/d83/_m_m7_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a></div><div class="ttdeci">unsigned int uint</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d83/_m_m7_8h_source.html#l00004">MM7.h:4</a></div></div>
+<div class="ttc" id="astruct_vis___object_info_html_a2e26f42b2edf03edaf4622ea46cc2466"><div class="ttname"><a href="../../d1/d04/struct_vis___object_info.html#a2e26f42b2edf03edaf4622ea46cc2466">Vis_ObjectInfo::depth</a></div><div class="ttdeci">int16_t depth</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d6e/_vis_8h_source.html#l00034">Vis.h:34</a></div></div>
+<div class="ttc" id="astruct_vis___selection_list_html_a0398de8b18d73f1e71486157e7b1eba9"><div class="ttname"><a href="../../de/d0c/struct_vis___selection_list.html#a0398de8b18d73f1e71486157e7b1eba9">Vis_SelectionList::uNumPointers</a></div><div class="ttdeci">unsigned int uNumPointers</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d6e/_vis_8h_source.html#l00063">Vis.h:63</a></div></div>
+<div class="ttc" id="a_engine_2_ioc_container_8cpp_html_a9be76595edb968c5dfb165ec86ba2959"><div class="ttname"><a href="../../de/d8c/_engine_2_ioc_container_8cpp.html#a9be76595edb968c5dfb165ec86ba2959">logger</a></div><div class="ttdeci">Log * logger</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d8c/_engine_2_ioc_container_8cpp_source.html#l00047">IocContainer.cpp:47</a></div></div>
+<div class="ttc" id="astruct_vis___object_info_html_a1a87c2750a9f1a3bbc3071ffd7536b11"><div class="ttname"><a href="../../d1/d04/struct_vis___object_info.html#a1a87c2750a9f1a3bbc3071ffd7536b11">Vis_ObjectInfo::object_type</a></div><div class="ttdeci">VisObjectType object_type</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d6e/_vis_8h_source.html#l00037">Vis.h:37</a></div></div>
+<div class="ttc" id="astruct_vis___selection_list_html_aa9d6fec9b5009f6ee734325736a4adb1"><div class="ttname"><a href="../../de/d0c/struct_vis___selection_list.html#aa9d6fec9b5009f6ee734325736a4adb1">Vis_SelectionList::object_pointers</a></div><div class="ttdeci">Vis_ObjectInfo * object_pointers[512]</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d6e/_vis_8h_source.html#l00062">Vis.h:62</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../de/d0c/struct_vis___selection_list.html">Vis_SelectionList</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:05:25. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

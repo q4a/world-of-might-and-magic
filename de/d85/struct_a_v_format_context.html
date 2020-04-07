@@ -1,0 +1,1657 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Структура AVFormatContext</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('de/d85/struct_a_v_format_context.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="../../d5/dcf/struct_a_v_format_context-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Структура AVFormatContext</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a>&gt;</code></p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Граф связей класса AVFormatContext:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d5/d29/struct_a_v_format_context__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:a0c396740b9a2487aa57d4352d2dc1687"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d2/de1/struct_a_v_class.html">AVClass</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d85/struct_a_v_format_context.html#a0c396740b9a2487aa57d4352d2dc1687">av_class</a></td></tr>
+<tr class="separator:a0c396740b9a2487aa57d4352d2dc1687"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5111ee0a5f5022475a7769e7c029223b"><td class="memItemLeft" align="right" valign="top">ff_const59 struct <a class="el" href="../../d8/dcc/struct_a_v_input_format.html">AVInputFormat</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d85/struct_a_v_format_context.html#a5111ee0a5f5022475a7769e7c029223b">iformat</a></td></tr>
+<tr class="separator:a5111ee0a5f5022475a7769e7c029223b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ea46e61c666f21e7e770dc14e7e36e5"><td class="memItemLeft" align="right" valign="top">ff_const59 struct <a class="el" href="../../d9/d35/struct_a_v_output_format.html">AVOutputFormat</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d85/struct_a_v_format_context.html#a7ea46e61c666f21e7e770dc14e7e36e5">oformat</a></td></tr>
+<tr class="separator:a7ea46e61c666f21e7e770dc14e7e36e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4c0777e54085af2f3f1b27130e2b21b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d85/struct_a_v_format_context.html#ac4c0777e54085af2f3f1b27130e2b21b">priv_data</a></td></tr>
+<tr class="separator:ac4c0777e54085af2f3f1b27130e2b21b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e7324262b6b78522e52064daaa7bc87"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/dcc/struct_a_v_i_o_context.html">AVIOContext</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d85/struct_a_v_format_context.html#a1e7324262b6b78522e52064daaa7bc87">pb</a></td></tr>
+<tr class="separator:a1e7324262b6b78522e52064daaa7bc87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e6076343df1ffc2e16cedbba3f3f397"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d85/struct_a_v_format_context.html#a4e6076343df1ffc2e16cedbba3f3f397">ctx_flags</a></td></tr>
+<tr class="separator:a4e6076343df1ffc2e16cedbba3f3f397"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b748d924898b08b89ff4974afd17285"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d85/struct_a_v_format_context.html#a0b748d924898b08b89ff4974afd17285">nb_streams</a></td></tr>
+<tr class="separator:a0b748d924898b08b89ff4974afd17285"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfefb6b6cf21e87a0dcbd1a547ba2348"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d4/d6c/struct_a_v_stream.html">AVStream</a> **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d85/struct_a_v_format_context.html#acfefb6b6cf21e87a0dcbd1a547ba2348">streams</a></td></tr>
+<tr class="separator:acfefb6b6cf21e87a0dcbd1a547ba2348"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ba487d69c36685e55522811455b34b2"><td class="memItemLeft" align="right" valign="top">attribute_deprecated char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d85/struct_a_v_format_context.html#a7ba487d69c36685e55522811455b34b2">filename</a> [1024]</td></tr>
+<tr class="separator:a7ba487d69c36685e55522811455b34b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a651c97cb2dcd2241d42f0062a0bbd4e3"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d85/struct_a_v_format_context.html#a651c97cb2dcd2241d42f0062a0bbd4e3">url</a></td></tr>
+<tr class="separator:a651c97cb2dcd2241d42f0062a0bbd4e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2590129e00adfa726ab2033a10e905e9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/df4/alext_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d85/struct_a_v_format_context.html#a2590129e00adfa726ab2033a10e905e9">start_time</a></td></tr>
+<tr class="separator:a2590129e00adfa726ab2033a10e905e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0ea78ac48f5bb0a15a15c1c472744d9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/df4/alext_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d85/struct_a_v_format_context.html#ad0ea78ac48f5bb0a15a15c1c472744d9">duration</a></td></tr>
+<tr class="separator:ad0ea78ac48f5bb0a15a15c1c472744d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a972a02b9e3b542a426e323a8f8e3ea41"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/df4/alext_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d85/struct_a_v_format_context.html#a972a02b9e3b542a426e323a8f8e3ea41">bit_rate</a></td></tr>
+<tr class="separator:a972a02b9e3b542a426e323a8f8e3ea41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0739c2952969d3c67788f02ea829f549"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d85/struct_a_v_format_context.html#a0739c2952969d3c67788f02ea829f549">packet_size</a></td></tr>
+<tr class="separator:a0739c2952969d3c67788f02ea829f549"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58422ed3d461b3440a15cf057ac5f5b7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d85/struct_a_v_format_context.html#a58422ed3d461b3440a15cf057ac5f5b7">max_delay</a></td></tr>
+<tr class="separator:a58422ed3d461b3440a15cf057ac5f5b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32379cc371463b235d54235d4af06a15"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d85/struct_a_v_format_context.html#a32379cc371463b235d54235d4af06a15">flags</a></td></tr>
+<tr class="separator:a32379cc371463b235d54235d4af06a15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb47a2a7362ac575b4986e0028786a41"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/df4/alext_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d85/struct_a_v_format_context.html#acb47a2a7362ac575b4986e0028786a41">probesize</a></td></tr>
+<tr class="separator:acb47a2a7362ac575b4986e0028786a41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d860662c014f88277c8f20e238fa694"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/df4/alext_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d85/struct_a_v_format_context.html#a4d860662c014f88277c8f20e238fa694">max_analyze_duration</a></td></tr>
+<tr class="separator:a4d860662c014f88277c8f20e238fa694"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19cb4471ba011fc7adc5e17344c608f5"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d85/struct_a_v_format_context.html#a19cb4471ba011fc7adc5e17344c608f5">key</a></td></tr>
+<tr class="separator:a19cb4471ba011fc7adc5e17344c608f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f2c1db3070cc100938eaed81ff3767d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d85/struct_a_v_format_context.html#a1f2c1db3070cc100938eaed81ff3767d">keylen</a></td></tr>
+<tr class="separator:a1f2c1db3070cc100938eaed81ff3767d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58c8c4d0ea974e0fcb0ce06fb1174f9f"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d85/struct_a_v_format_context.html#a58c8c4d0ea974e0fcb0ce06fb1174f9f">nb_programs</a></td></tr>
+<tr class="separator:a58c8c4d0ea974e0fcb0ce06fb1174f9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c2c5a4c758966349ff513e95154d062"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d56/struct_a_v_program.html">AVProgram</a> **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d85/struct_a_v_format_context.html#a4c2c5a4c758966349ff513e95154d062">programs</a></td></tr>
+<tr class="separator:a4c2c5a4c758966349ff513e95154d062"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab179ade0dbe905ab2867b7001bf618ec"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="../../d5/d44/group__lavc__core.html#gaadca229ad2c20e060a14fec08a5cc7ce">AVCodecID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d85/struct_a_v_format_context.html#ab179ade0dbe905ab2867b7001bf618ec">video_codec_id</a></td></tr>
+<tr class="separator:ab179ade0dbe905ab2867b7001bf618ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c99fc118bf047959a0284bffc2c1a9a"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="../../d5/d44/group__lavc__core.html#gaadca229ad2c20e060a14fec08a5cc7ce">AVCodecID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d85/struct_a_v_format_context.html#a1c99fc118bf047959a0284bffc2c1a9a">audio_codec_id</a></td></tr>
+<tr class="separator:a1c99fc118bf047959a0284bffc2c1a9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acca61846d663b15e5a56b35c903e4d3b"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="../../d5/d44/group__lavc__core.html#gaadca229ad2c20e060a14fec08a5cc7ce">AVCodecID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d85/struct_a_v_format_context.html#acca61846d663b15e5a56b35c903e4d3b">subtitle_codec_id</a></td></tr>
+<tr class="separator:acca61846d663b15e5a56b35c903e4d3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0470d586a71d4f356194d202591617d"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d85/struct_a_v_format_context.html#ab0470d586a71d4f356194d202591617d">max_index_size</a></td></tr>
+<tr class="separator:ab0470d586a71d4f356194d202591617d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae188350a3838a14a233bf272d68998be"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d85/struct_a_v_format_context.html#ae188350a3838a14a233bf272d68998be">max_picture_buffer</a></td></tr>
+<tr class="separator:ae188350a3838a14a233bf272d68998be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f60043baf4abd0d201ccefc27bb4306"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d85/struct_a_v_format_context.html#a6f60043baf4abd0d201ccefc27bb4306">nb_chapters</a></td></tr>
+<tr class="separator:a6f60043baf4abd0d201ccefc27bb4306"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac17d5fc2dcdb00806cc83b02d9f940f3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d87/struct_a_v_chapter.html">AVChapter</a> **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d85/struct_a_v_format_context.html#ac17d5fc2dcdb00806cc83b02d9f940f3">chapters</a></td></tr>
+<tr class="separator:ac17d5fc2dcdb00806cc83b02d9f940f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3019a56080ed2e3297ff25bc2ff88adf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/db0/group__lavu__dict.html#ga1d7cc0833bee918994a600556410315f">AVDictionary</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d85/struct_a_v_format_context.html#a3019a56080ed2e3297ff25bc2ff88adf">metadata</a></td></tr>
+<tr class="separator:a3019a56080ed2e3297ff25bc2ff88adf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5ddb5cee1df28f21739133f2e37f1c5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/df4/alext_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d85/struct_a_v_format_context.html#aa5ddb5cee1df28f21739133f2e37f1c5">start_time_realtime</a></td></tr>
+<tr class="separator:aa5ddb5cee1df28f21739133f2e37f1c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a517e6b5dcada506a49ef413d4d8d477a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d85/struct_a_v_format_context.html#a517e6b5dcada506a49ef413d4d8d477a">fps_probe_size</a></td></tr>
+<tr class="separator:a517e6b5dcada506a49ef413d4d8d477a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeebb15a72d1503e641b633aeb3be0bf0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d85/struct_a_v_format_context.html#aeebb15a72d1503e641b633aeb3be0bf0">error_recognition</a></td></tr>
+<tr class="separator:aeebb15a72d1503e641b633aeb3be0bf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b37acfe4024d92ee510064e80920b40"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/dc9/struct_a_v_i_o_interrupt_c_b.html">AVIOInterruptCB</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d85/struct_a_v_format_context.html#a5b37acfe4024d92ee510064e80920b40">interrupt_callback</a></td></tr>
+<tr class="separator:a5b37acfe4024d92ee510064e80920b40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4478e9742f661800cf7e0af84136cae"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d85/struct_a_v_format_context.html#ab4478e9742f661800cf7e0af84136cae">debug</a></td></tr>
+<tr class="separator:ab4478e9742f661800cf7e0af84136cae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00edb6b7a31f8dabfa668334ca1f92d7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/df4/alext_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d85/struct_a_v_format_context.html#a00edb6b7a31f8dabfa668334ca1f92d7">max_interleave_delta</a></td></tr>
+<tr class="separator:a00edb6b7a31f8dabfa668334ca1f92d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5017684cf0a84c990f60c8d50adec144"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d85/struct_a_v_format_context.html#a5017684cf0a84c990f60c8d50adec144">strict_std_compliance</a></td></tr>
+<tr class="separator:a5017684cf0a84c990f60c8d50adec144"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0302506d4b3434da77b8b3db43821aa0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d85/struct_a_v_format_context.html#a0302506d4b3434da77b8b3db43821aa0">event_flags</a></td></tr>
+<tr class="separator:a0302506d4b3434da77b8b3db43821aa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7854e5186dd14ce91dea1dfd0bb826f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d85/struct_a_v_format_context.html#ad7854e5186dd14ce91dea1dfd0bb826f">max_ts_probe</a></td></tr>
+<tr class="separator:ad7854e5186dd14ce91dea1dfd0bb826f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a032c7d859883eddc9d87a9e3b2cc3853"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d85/struct_a_v_format_context.html#a032c7d859883eddc9d87a9e3b2cc3853">avoid_negative_ts</a></td></tr>
+<tr class="separator:a032c7d859883eddc9d87a9e3b2cc3853"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d331e9a0609a93dd4593af6c118cc4b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d85/struct_a_v_format_context.html#a5d331e9a0609a93dd4593af6c118cc4b">ts_id</a></td></tr>
+<tr class="separator:a5d331e9a0609a93dd4593af6c118cc4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac02383c2106cca8022f8a293399aed58"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d85/struct_a_v_format_context.html#ac02383c2106cca8022f8a293399aed58">audio_preload</a></td></tr>
+<tr class="separator:ac02383c2106cca8022f8a293399aed58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae20c589e20f22f74f1687702de6d2e8e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d85/struct_a_v_format_context.html#ae20c589e20f22f74f1687702de6d2e8e">max_chunk_duration</a></td></tr>
+<tr class="separator:ae20c589e20f22f74f1687702de6d2e8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d8cfff712c81d1cbc725b40ce02f7e7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d85/struct_a_v_format_context.html#a3d8cfff712c81d1cbc725b40ce02f7e7">max_chunk_size</a></td></tr>
+<tr class="separator:a3d8cfff712c81d1cbc725b40ce02f7e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90251622aa2b78badbb846274aff4633"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d85/struct_a_v_format_context.html#a90251622aa2b78badbb846274aff4633">use_wallclock_as_timestamps</a></td></tr>
+<tr class="separator:a90251622aa2b78badbb846274aff4633"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e6814c9de3c272396f07e2ff18c7b27"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d85/struct_a_v_format_context.html#a5e6814c9de3c272396f07e2ff18c7b27">avio_flags</a></td></tr>
+<tr class="separator:a5e6814c9de3c272396f07e2ff18c7b27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95035552afae17c1b7cd701ad72e67b5"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="../../dc/df2/avformat_8h.html#a7c2692ffa20d3e888e40e79eeda6d73b">AVDurationEstimationMethod</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d85/struct_a_v_format_context.html#a95035552afae17c1b7cd701ad72e67b5">duration_estimation_method</a></td></tr>
+<tr class="separator:a95035552afae17c1b7cd701ad72e67b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9042cdda3a644e4ef46bfeffa34e4f3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/df4/alext_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d85/struct_a_v_format_context.html#ad9042cdda3a644e4ef46bfeffa34e4f3">skip_initial_bytes</a></td></tr>
+<tr class="separator:ad9042cdda3a644e4ef46bfeffa34e4f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe4c7f02033d4b58b3636b9e42db25de"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d85/struct_a_v_format_context.html#afe4c7f02033d4b58b3636b9e42db25de">correct_ts_overflow</a></td></tr>
+<tr class="separator:afe4c7f02033d4b58b3636b9e42db25de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41a1f108aa38e851f65ff4f0a70ce5a5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d85/struct_a_v_format_context.html#a41a1f108aa38e851f65ff4f0a70ce5a5">seek2any</a></td></tr>
+<tr class="separator:a41a1f108aa38e851f65ff4f0a70ce5a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fdd77fff4c7df1e30ce1d42e10922e9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d85/struct_a_v_format_context.html#a1fdd77fff4c7df1e30ce1d42e10922e9">flush_packets</a></td></tr>
+<tr class="separator:a1fdd77fff4c7df1e30ce1d42e10922e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65f11f94f40f83866ebe651c8ae111cf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d85/struct_a_v_format_context.html#a65f11f94f40f83866ebe651c8ae111cf">probe_score</a></td></tr>
+<tr class="separator:a65f11f94f40f83866ebe651c8ae111cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d1f665ecabe03e3d18accbb1ebb32b1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d85/struct_a_v_format_context.html#a7d1f665ecabe03e3d18accbb1ebb32b1">format_probesize</a></td></tr>
+<tr class="separator:a7d1f665ecabe03e3d18accbb1ebb32b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3b43e2a040a3ce658620711a8345234"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d85/struct_a_v_format_context.html#aa3b43e2a040a3ce658620711a8345234">codec_whitelist</a></td></tr>
+<tr class="separator:aa3b43e2a040a3ce658620711a8345234"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcaa5a7c53d4b0224a5fc2d23e88ea03"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d85/struct_a_v_format_context.html#abcaa5a7c53d4b0224a5fc2d23e88ea03">format_whitelist</a></td></tr>
+<tr class="separator:abcaa5a7c53d4b0224a5fc2d23e88ea03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a8bec51da36db65ff864f88a85805d9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/df2/avformat_8h.html#a7bec8d592652431045d81a02fef74f28">AVFormatInternal</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d85/struct_a_v_format_context.html#a8a8bec51da36db65ff864f88a85805d9">internal</a></td></tr>
+<tr class="separator:a8a8bec51da36db65ff864f88a85805d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45afe89c377463a1b9446ac94b3c513b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d85/struct_a_v_format_context.html#a45afe89c377463a1b9446ac94b3c513b">io_repositioned</a></td></tr>
+<tr class="separator:a45afe89c377463a1b9446ac94b3c513b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1891d82f7f853a16ebcba7cae939c4f0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/d2a/struct_a_v_codec.html">AVCodec</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d85/struct_a_v_format_context.html#a1891d82f7f853a16ebcba7cae939c4f0">video_codec</a></td></tr>
+<tr class="separator:a1891d82f7f853a16ebcba7cae939c4f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab73f76ceac8ed711c56decc2d64456f0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/d2a/struct_a_v_codec.html">AVCodec</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d85/struct_a_v_format_context.html#ab73f76ceac8ed711c56decc2d64456f0">audio_codec</a></td></tr>
+<tr class="separator:ab73f76ceac8ed711c56decc2d64456f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cc6a317755fa4f65b0bab36bcb18c87"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/d2a/struct_a_v_codec.html">AVCodec</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d85/struct_a_v_format_context.html#a9cc6a317755fa4f65b0bab36bcb18c87">subtitle_codec</a></td></tr>
+<tr class="separator:a9cc6a317755fa4f65b0bab36bcb18c87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f39359931d266a5cd68223ca68dd3a1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/d2a/struct_a_v_codec.html">AVCodec</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d85/struct_a_v_format_context.html#a6f39359931d266a5cd68223ca68dd3a1">data_codec</a></td></tr>
+<tr class="separator:a6f39359931d266a5cd68223ca68dd3a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fc5a51cf62b6e8ad379c1ac57d4a0c4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d85/struct_a_v_format_context.html#a6fc5a51cf62b6e8ad379c1ac57d4a0c4">metadata_header_padding</a></td></tr>
+<tr class="separator:a6fc5a51cf62b6e8ad379c1ac57d4a0c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71797838db59ca0682dd2d18b149134e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d85/struct_a_v_format_context.html#a71797838db59ca0682dd2d18b149134e">opaque</a></td></tr>
+<tr class="separator:a71797838db59ca0682dd2d18b149134e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab569e23a4966ca1f708fb498dd6b3d5f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/df2/avformat_8h.html#a80856b99bcf4373936fb4fba028b11ca">av_format_control_message</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d85/struct_a_v_format_context.html#ab569e23a4966ca1f708fb498dd6b3d5f">control_message_cb</a></td></tr>
+<tr class="separator:ab569e23a4966ca1f708fb498dd6b3d5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a711dc3e6159c44dc31843f915b893a12"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/df4/alext_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d85/struct_a_v_format_context.html#a711dc3e6159c44dc31843f915b893a12">output_ts_offset</a></td></tr>
+<tr class="separator:a711dc3e6159c44dc31843f915b893a12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afeccb79eb120b1c79d7d269e8049237a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d85/struct_a_v_format_context.html#afeccb79eb120b1c79d7d269e8049237a">dump_separator</a></td></tr>
+<tr class="separator:afeccb79eb120b1c79d7d269e8049237a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2112b67f2f7a58bde5b6d13dc353b58d"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="../../d5/d44/group__lavc__core.html#gaadca229ad2c20e060a14fec08a5cc7ce">AVCodecID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d85/struct_a_v_format_context.html#a2112b67f2f7a58bde5b6d13dc353b58d">data_codec_id</a></td></tr>
+<tr class="separator:a2112b67f2f7a58bde5b6d13dc353b58d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9c10b010a81a6a4700b675ee915d93c"><td class="memItemLeft" align="right" valign="top">attribute_deprecated int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d85/struct_a_v_format_context.html#ad9c10b010a81a6a4700b675ee915d93c">open_cb</a> )(struct <a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>, <a class="el" href="../../d7/dcc/struct_a_v_i_o_context.html">AVIOContext</a> **<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>, const char *<a class="el" href="../../de/d85/struct_a_v_format_context.html#a651c97cb2dcd2241d42f0062a0bbd4e3">url</a>, int <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#ac7ba7d3cce3d19ca020e056b37231289">flags</a>, const <a class="el" href="../../da/dc9/struct_a_v_i_o_interrupt_c_b.html">AVIOInterruptCB</a> *int_cb, <a class="el" href="../../d2/db0/group__lavu__dict.html#ga1d7cc0833bee918994a600556410315f">AVDictionary</a> **options)</td></tr>
+<tr class="separator:ad9c10b010a81a6a4700b675ee915d93c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfa686249f83379ee2e3d5b295d9f442"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d85/struct_a_v_format_context.html#adfa686249f83379ee2e3d5b295d9f442">protocol_whitelist</a></td></tr>
+<tr class="separator:adfa686249f83379ee2e3d5b295d9f442"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3f615ad9ff79fb90f4eb136a1f58065"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d85/struct_a_v_format_context.html#af3f615ad9ff79fb90f4eb136a1f58065">io_open</a> )(struct <a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>, <a class="el" href="../../d7/dcc/struct_a_v_i_o_context.html">AVIOContext</a> **<a class="el" href="../../de/d85/struct_a_v_format_context.html#a1e7324262b6b78522e52064daaa7bc87">pb</a>, const char *<a class="el" href="../../de/d85/struct_a_v_format_context.html#a651c97cb2dcd2241d42f0062a0bbd4e3">url</a>, int <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#ac7ba7d3cce3d19ca020e056b37231289">flags</a>, <a class="el" href="../../d2/db0/group__lavu__dict.html#ga1d7cc0833bee918994a600556410315f">AVDictionary</a> **options)</td></tr>
+<tr class="separator:af3f615ad9ff79fb90f4eb136a1f58065"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88077ea47abd7cd3fefe7828f778a686"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d85/struct_a_v_format_context.html#a88077ea47abd7cd3fefe7828f778a686">io_close</a> )(struct <a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>, <a class="el" href="../../d7/dcc/struct_a_v_i_o_context.html">AVIOContext</a> *<a class="el" href="../../de/d85/struct_a_v_format_context.html#a1e7324262b6b78522e52064daaa7bc87">pb</a>)</td></tr>
+<tr class="separator:a88077ea47abd7cd3fefe7828f778a686"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae06bb84162881843504ecd870c328690"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d85/struct_a_v_format_context.html#ae06bb84162881843504ecd870c328690">protocol_blacklist</a></td></tr>
+<tr class="separator:ae06bb84162881843504ecd870c328690"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11bf0a9a1ba16bc402c6a237b58b4da1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d85/struct_a_v_format_context.html#a11bf0a9a1ba16bc402c6a237b58b4da1">max_streams</a></td></tr>
+<tr class="separator:a11bf0a9a1ba16bc402c6a237b58b4da1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9896cb7089991b18c5e7acb4f17f6b2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d85/struct_a_v_format_context.html#ae9896cb7089991b18c5e7acb4f17f6b2">skip_estimate_duration_from_pts</a></td></tr>
+<tr class="separator:ae9896cb7089991b18c5e7acb4f17f6b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p><a class="el" href="../../d3/dbf/struct_format.html">Format</a> I/O context. New fields can be added to the end with minor version bumps. Removal, reordering and changes to existing fields require a major version bump. sizeof(AVFormatContext) must not be used outside libav*, use <a class="el" href="../../dd/dab/group__lavf__core.html#gac7a91abf2f59648d995894711f070f62">avformat_alloc_context()</a> to create an <a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a>.</p>
+<p>Fields can be accessed through AVOptions (av_opt*), the name string used matches the associated command line parameter name and can be found in libavformat/options_table.h. The AVOption/command line parameter names differ in some cases from the C structure field names for historic reasons or brevity. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l01344">1344</a></p>
+</div><h2 class="groupheader">Данные класса</h2>
+<a id="a0c396740b9a2487aa57d4352d2dc1687"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c396740b9a2487aa57d4352d2dc1687">&#9670;&nbsp;</a></span>av_class</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="../../d2/de1/struct_a_v_class.html">AVClass</a>* AVFormatContext::av_class</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A class for logging and <a class="el" href="../../da/da1/group__avoptions.html">AVOptions</a>. Set by <a class="el" href="../../dd/dab/group__lavf__core.html#gac7a91abf2f59648d995894711f070f62">avformat_alloc_context()</a>. Exports (de)muxer private options if they exist. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l01349">1349</a></p>
+
+</div>
+</div>
+<a id="a5111ee0a5f5022475a7769e7c029223b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5111ee0a5f5022475a7769e7c029223b">&#9670;&nbsp;</a></span>iformat</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ff_const59 struct <a class="el" href="../../d8/dcc/struct_a_v_input_format.html">AVInputFormat</a>* AVFormatContext::iformat</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The input container format.</p>
+<p>Demuxing only, set by <a class="el" href="../../dc/d2c/group__lavf__decoding.html#gaff468dcc45289542f4c30d311bc2a201">avformat_open_input()</a>. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l01356">1356</a></p>
+
+</div>
+</div>
+<a id="a7ea46e61c666f21e7e770dc14e7e36e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ea46e61c666f21e7e770dc14e7e36e5">&#9670;&nbsp;</a></span>oformat</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ff_const59 struct <a class="el" href="../../d9/d35/struct_a_v_output_format.html">AVOutputFormat</a>* AVFormatContext::oformat</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The output container format.</p>
+<p>Muxing only, must be set by the caller before <a class="el" href="../../d2/d95/group__lavf__encoding.html#ga18b7b10bb5b94c4842de18166bc677cb">avformat_write_header()</a>. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l01363">1363</a></p>
+
+</div>
+</div>
+<a id="ac4c0777e54085af2f3f1b27130e2b21b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4c0777e54085af2f3f1b27130e2b21b">&#9670;&nbsp;</a></span>priv_data</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>* AVFormatContext::priv_data</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><a class="el" href="../../d3/dbf/struct_format.html">Format</a> private data. This is an AVOptions-enabled struct if and only if iformat/oformat.priv_class is not NULL.</p>
+<ul>
+<li>muxing: set by <a class="el" href="../../d2/d95/group__lavf__encoding.html#ga18b7b10bb5b94c4842de18166bc677cb">avformat_write_header()</a></li>
+<li>demuxing: set by <a class="el" href="../../dc/d2c/group__lavf__decoding.html#gaff468dcc45289542f4c30d311bc2a201">avformat_open_input()</a> </li>
+</ul>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l01372">1372</a></p>
+
+</div>
+</div>
+<a id="a1e7324262b6b78522e52064daaa7bc87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e7324262b6b78522e52064daaa7bc87">&#9670;&nbsp;</a></span>pb</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d7/dcc/struct_a_v_i_o_context.html">AVIOContext</a>* AVFormatContext::pb</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>I/O context.</p>
+<ul>
+<li>demuxing: either set by the user before <a class="el" href="../../dc/d2c/group__lavf__decoding.html#gaff468dcc45289542f4c30d311bc2a201">avformat_open_input()</a> (then the user must close it manually) or set by <a class="el" href="../../dc/d2c/group__lavf__decoding.html#gaff468dcc45289542f4c30d311bc2a201">avformat_open_input()</a>.</li>
+<li>muxing: set by the user before <a class="el" href="../../d2/d95/group__lavf__encoding.html#ga18b7b10bb5b94c4842de18166bc677cb">avformat_write_header()</a>. The caller must take care of closing / freeing the IO context.</li>
+</ul>
+<p>Do NOT set this field if AVFMT_NOFILE flag is set in iformat/oformat.flags. In such a case, the (de)muxer will handle I/O in some other way and this field will be NULL. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l01386">1386</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00352">Movie::LoadFromLOD()</a> и <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l01112">AudioBufferDataSource::Open()</a>.</p>
+
+</div>
+</div>
+<a id="a4e6076343df1ffc2e16cedbba3f3f397"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e6076343df1ffc2e16cedbba3f3f397">&#9670;&nbsp;</a></span>ctx_flags</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int AVFormatContext::ctx_flags</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Flags signalling stream properties. A combination of AVFMTCTX_*. Set by libavformat. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l01393">1393</a></p>
+
+</div>
+</div>
+<a id="a0b748d924898b08b89ff4974afd17285"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b748d924898b08b89ff4974afd17285">&#9670;&nbsp;</a></span>nb_streams</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int AVFormatContext::nb_streams</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Number of elements in <a class="el" href="../../de/d85/struct_a_v_format_context.html#acfefb6b6cf21e87a0dcbd1a547ba2348">AVFormatContext.streams</a>.</p>
+<p>Set by <a class="el" href="../../dd/dab/group__lavf__core.html#gadcb0fd3e507d9b58fe78f61f8ad39827">avformat_new_stream()</a>, must not be modified by any other code. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l01400">1400</a></p>
+
+</div>
+</div>
+<a id="acfefb6b6cf21e87a0dcbd1a547ba2348"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfefb6b6cf21e87a0dcbd1a547ba2348">&#9670;&nbsp;</a></span>streams</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d4/d6c/struct_a_v_stream.html">AVStream</a>** AVFormatContext::streams</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A list of all streams in the file. New streams are created with <a class="el" href="../../dd/dab/group__lavf__core.html#gadcb0fd3e507d9b58fe78f61f8ad39827">avformat_new_stream()</a>.</p>
+<ul>
+<li>demuxing: streams are created by libavformat in <a class="el" href="../../dc/d2c/group__lavf__decoding.html#gaff468dcc45289542f4c30d311bc2a201">avformat_open_input()</a>. If AVFMTCTX_NOHEADER is set in ctx_flags, then new streams may also appear in <a class="el" href="../../dc/d2c/group__lavf__decoding.html#ga4fdb3084415a82e3810de6ee60e46a61">av_read_frame()</a>.</li>
+<li>muxing: streams are created by the user before <a class="el" href="../../d2/d95/group__lavf__encoding.html#ga18b7b10bb5b94c4842de18166bc677cb">avformat_write_header()</a>.</li>
+</ul>
+<p>Freed by libavformat in <a class="el" href="../../dd/dab/group__lavf__core.html#gac2990b13b68e831a408fce8e1d0d6445">avformat_free_context()</a>. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l01412">1412</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00081">AVStreamWrapper::open()</a> и <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00913">AudioBaseDataSource::Open()</a>.</p>
+
+</div>
+</div>
+<a id="a7ba487d69c36685e55522811455b34b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ba487d69c36685e55522811455b34b2">&#9670;&nbsp;</a></span>filename</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">attribute_deprecated char AVFormatContext::filename[1024]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>input or output filename</p>
+<ul>
+<li>demuxing: set by <a class="el" href="../../dc/d2c/group__lavf__decoding.html#gaff468dcc45289542f4c30d311bc2a201">avformat_open_input()</a></li>
+<li><p class="startli">muxing: may be set by the caller before <a class="el" href="../../d2/d95/group__lavf__encoding.html#ga18b7b10bb5b94c4842de18166bc677cb">avformat_write_header()</a></p>
+<dl class="deprecated"><dt><b><a class="el" href="../../da/d58/deprecated.html#_deprecated000068">Уст.:</a></b></dt><dd>Use url instead. </dd></dl>
+</li>
+</ul>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l01424">1424</a></p>
+
+</div>
+</div>
+<a id="a651c97cb2dcd2241d42f0062a0bbd4e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a651c97cb2dcd2241d42f0062a0bbd4e3">&#9670;&nbsp;</a></span>url</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* AVFormatContext::url</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>input or output URL. Unlike the old filename field, this field has no length restriction.</p>
+<ul>
+<li>demuxing: set by <a class="el" href="../../dc/d2c/group__lavf__decoding.html#gaff468dcc45289542f4c30d311bc2a201">avformat_open_input()</a>, initialized to an empty string if url parameter was NULL in <a class="el" href="../../dc/d2c/group__lavf__decoding.html#gaff468dcc45289542f4c30d311bc2a201">avformat_open_input()</a>.</li>
+<li>muxing: may be set by the caller before calling <a class="el" href="../../d2/d95/group__lavf__encoding.html#ga18b7b10bb5b94c4842de18166bc677cb">avformat_write_header()</a> (or <a class="el" href="../../d2/d95/group__lavf__encoding.html#ga169cfa28508e22e138c5b99be8517ea4">avformat_init_output()</a> if that is called first) to a string which is freeable by <a class="el" href="../../db/d76/group__lavu__mem__funcs.html#ga0c9096f498624c525aa2315b8a20c411">av_free()</a>. Set to an empty string if it was NULL in <a class="el" href="../../d2/d95/group__lavf__encoding.html#ga169cfa28508e22e138c5b99be8517ea4">avformat_init_output()</a>.</li>
+</ul>
+<p>Freed by libavformat in <a class="el" href="../../dd/dab/group__lavf__core.html#gac2990b13b68e831a408fce8e1d0d6445">avformat_free_context()</a>. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l01440">1440</a></p>
+
+</div>
+</div>
+<a id="a2590129e00adfa726ab2033a10e905e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2590129e00adfa726ab2033a10e905e9">&#9670;&nbsp;</a></span>start_time</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dd/df4/alext_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a> AVFormatContext::start_time</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Position of the first frame of the component, in AV_TIME_BASE fractional seconds. NEVER set this value directly: It is deduced from the <a class="el" href="../../d4/d6c/struct_a_v_stream.html">AVStream</a> values.</p>
+<p>Demuxing only, set by libavformat. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l01449">1449</a></p>
+
+</div>
+</div>
+<a id="ad0ea78ac48f5bb0a15a15c1c472744d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0ea78ac48f5bb0a15a15c1c472744d9">&#9670;&nbsp;</a></span>duration</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dd/df4/alext_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a> AVFormatContext::duration</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Duration of the stream, in AV_TIME_BASE fractional seconds. Only set this value if you know none of the individual stream durations and also do not set any of them. This is deduced from the <a class="el" href="../../d4/d6c/struct_a_v_stream.html">AVStream</a> values if not set.</p>
+<p>Demuxing only, set by libavformat. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l01459">1459</a></p>
+
+</div>
+</div>
+<a id="a972a02b9e3b542a426e323a8f8e3ea41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a972a02b9e3b542a426e323a8f8e3ea41">&#9670;&nbsp;</a></span>bit_rate</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dd/df4/alext_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a> AVFormatContext::bit_rate</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Total stream bitrate in bit/s, 0 if not available. Never set it directly if the file_size and the duration are known as FFmpeg can compute it automatically. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l01466">1466</a></p>
+
+</div>
+</div>
+<a id="a0739c2952969d3c67788f02ea829f549"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0739c2952969d3c67788f02ea829f549">&#9670;&nbsp;</a></span>packet_size</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int AVFormatContext::packet_size</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l01468">1468</a></p>
+
+</div>
+</div>
+<a id="a58422ed3d461b3440a15cf057ac5f5b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58422ed3d461b3440a15cf057ac5f5b7">&#9670;&nbsp;</a></span>max_delay</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int AVFormatContext::max_delay</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l01469">1469</a></p>
+
+</div>
+</div>
+<a id="a32379cc371463b235d54235d4af06a15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32379cc371463b235d54235d4af06a15">&#9670;&nbsp;</a></span>flags</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int AVFormatContext::flags</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Flags modifying the (de)muxer behaviour. A combination of AVFMT_FLAG_*. Set by the user before <a class="el" href="../../dc/d2c/group__lavf__decoding.html#gaff468dcc45289542f4c30d311bc2a201">avformat_open_input()</a> / <a class="el" href="../../d2/d95/group__lavf__encoding.html#ga18b7b10bb5b94c4842de18166bc677cb">avformat_write_header()</a>. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l01475">1475</a></p>
+
+</div>
+</div>
+<a id="acb47a2a7362ac575b4986e0028786a41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb47a2a7362ac575b4986e0028786a41">&#9670;&nbsp;</a></span>probesize</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dd/df4/alext_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a> AVFormatContext::probesize</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Maximum size of the data read from input for determining the input container format. Demuxing only, set by the caller before <a class="el" href="../../dc/d2c/group__lavf__decoding.html#gaff468dcc45289542f4c30d311bc2a201">avformat_open_input()</a>. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l01510">1510</a></p>
+
+</div>
+</div>
+<a id="a4d860662c014f88277c8f20e238fa694"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d860662c014f88277c8f20e238fa694">&#9670;&nbsp;</a></span>max_analyze_duration</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dd/df4/alext_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a> AVFormatContext::max_analyze_duration</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Maximum duration (in AV_TIME_BASE units) of the data read from input in <a class="el" href="../../dc/d2c/group__lavf__decoding.html#gad42172e27cddafb81096939783b157bb">avformat_find_stream_info()</a>. Demuxing only, set by the caller before <a class="el" href="../../dc/d2c/group__lavf__decoding.html#gad42172e27cddafb81096939783b157bb">avformat_find_stream_info()</a>. Can be set to 0 to let avformat choose using a heuristic. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l01518">1518</a></p>
+
+</div>
+</div>
+<a id="a19cb4471ba011fc7adc5e17344c608f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19cb4471ba011fc7adc5e17344c608f5">&#9670;&nbsp;</a></span>key</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>* AVFormatContext::key</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l01520">1520</a></p>
+
+</div>
+</div>
+<a id="a1f2c1db3070cc100938eaed81ff3767d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f2c1db3070cc100938eaed81ff3767d">&#9670;&nbsp;</a></span>keylen</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int AVFormatContext::keylen</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l01521">1521</a></p>
+
+</div>
+</div>
+<a id="a58c8c4d0ea974e0fcb0ce06fb1174f9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58c8c4d0ea974e0fcb0ce06fb1174f9f">&#9670;&nbsp;</a></span>nb_programs</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int AVFormatContext::nb_programs</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l01523">1523</a></p>
+
+</div>
+</div>
+<a id="a4c2c5a4c758966349ff513e95154d062"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c2c5a4c758966349ff513e95154d062">&#9670;&nbsp;</a></span>programs</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d56/struct_a_v_program.html">AVProgram</a>** AVFormatContext::programs</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l01524">1524</a></p>
+
+</div>
+</div>
+<a id="ab179ade0dbe905ab2867b7001bf618ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab179ade0dbe905ab2867b7001bf618ec">&#9670;&nbsp;</a></span>video_codec_id</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="../../d5/d44/group__lavc__core.html#gaadca229ad2c20e060a14fec08a5cc7ce">AVCodecID</a> AVFormatContext::video_codec_id</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Forced video codec_id. Demuxing: Set by user. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l01530">1530</a></p>
+
+</div>
+</div>
+<a id="a1c99fc118bf047959a0284bffc2c1a9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c99fc118bf047959a0284bffc2c1a9a">&#9670;&nbsp;</a></span>audio_codec_id</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="../../d5/d44/group__lavc__core.html#gaadca229ad2c20e060a14fec08a5cc7ce">AVCodecID</a> AVFormatContext::audio_codec_id</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Forced audio codec_id. Demuxing: Set by user. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l01536">1536</a></p>
+
+</div>
+</div>
+<a id="acca61846d663b15e5a56b35c903e4d3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acca61846d663b15e5a56b35c903e4d3b">&#9670;&nbsp;</a></span>subtitle_codec_id</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="../../d5/d44/group__lavc__core.html#gaadca229ad2c20e060a14fec08a5cc7ce">AVCodecID</a> AVFormatContext::subtitle_codec_id</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Forced subtitle codec_id. Demuxing: Set by user. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l01542">1542</a></p>
+
+</div>
+</div>
+<a id="ab0470d586a71d4f356194d202591617d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0470d586a71d4f356194d202591617d">&#9670;&nbsp;</a></span>max_index_size</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int AVFormatContext::max_index_size</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Maximum amount of memory in bytes to use for the index of each stream. If the index exceeds this size, entries will be discarded as needed to maintain a smaller size. This can lead to slower or less accurate seeking (depends on demuxer). Demuxers for which a full in-memory index is mandatory will ignore this.</p><ul>
+<li>muxing: unused</li>
+<li>demuxing: set by user </li>
+</ul>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l01554">1554</a></p>
+
+</div>
+</div>
+<a id="ae188350a3838a14a233bf272d68998be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae188350a3838a14a233bf272d68998be">&#9670;&nbsp;</a></span>max_picture_buffer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int AVFormatContext::max_picture_buffer</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Maximum amount of memory in bytes to use for buffering frames obtained from realtime capture devices. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l01560">1560</a></p>
+
+</div>
+</div>
+<a id="a6f60043baf4abd0d201ccefc27bb4306"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f60043baf4abd0d201ccefc27bb4306">&#9670;&nbsp;</a></span>nb_chapters</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int AVFormatContext::nb_chapters</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Number of chapters in <a class="el" href="../../d0/d87/struct_a_v_chapter.html">AVChapter</a> array. When muxing, chapters are normally written in the file header, so nb_chapters should normally be initialized before write_header is called. Some muxers (e.g. mov and mkv) can also write chapters in the trailer. To write chapters in the trailer, nb_chapters must be zero when write_header is called and non-zero when write_trailer is called.</p><ul>
+<li>muxing: set by user</li>
+<li>demuxing: set by libavformat </li>
+</ul>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l01573">1573</a></p>
+
+</div>
+</div>
+<a id="ac17d5fc2dcdb00806cc83b02d9f940f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac17d5fc2dcdb00806cc83b02d9f940f3">&#9670;&nbsp;</a></span>chapters</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d87/struct_a_v_chapter.html">AVChapter</a>** AVFormatContext::chapters</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l01574">1574</a></p>
+
+</div>
+</div>
+<a id="a3019a56080ed2e3297ff25bc2ff88adf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3019a56080ed2e3297ff25bc2ff88adf">&#9670;&nbsp;</a></span>metadata</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d2/db0/group__lavu__dict.html#ga1d7cc0833bee918994a600556410315f">AVDictionary</a>* AVFormatContext::metadata</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Metadata that applies to the whole file.</p>
+<ul>
+<li>demuxing: set by libavformat in <a class="el" href="../../dc/d2c/group__lavf__decoding.html#gaff468dcc45289542f4c30d311bc2a201">avformat_open_input()</a></li>
+<li>muxing: may be set by the caller before <a class="el" href="../../d2/d95/group__lavf__encoding.html#ga18b7b10bb5b94c4842de18166bc677cb">avformat_write_header()</a></li>
+</ul>
+<p>Freed by libavformat in <a class="el" href="../../dd/dab/group__lavf__core.html#gac2990b13b68e831a408fce8e1d0d6445">avformat_free_context()</a>. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l01584">1584</a></p>
+
+</div>
+</div>
+<a id="aa5ddb5cee1df28f21739133f2e37f1c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5ddb5cee1df28f21739133f2e37f1c5">&#9670;&nbsp;</a></span>start_time_realtime</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dd/df4/alext_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a> AVFormatContext::start_time_realtime</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Start time of the stream in real world time, in microseconds since the Unix epoch (00:00 1st January 1970). That is, pts=0 in the stream was captured at this real world time.</p><ul>
+<li>muxing: Set by the caller before <a class="el" href="../../d2/d95/group__lavf__encoding.html#ga18b7b10bb5b94c4842de18166bc677cb">avformat_write_header()</a>. If set to either 0 or AV_NOPTS_VALUE, then the current wall-time will be used.</li>
+<li>demuxing: Set by libavformat. AV_NOPTS_VALUE if unknown. Note that the value may become known after some number of frames have been received. </li>
+</ul>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l01597">1597</a></p>
+
+</div>
+</div>
+<a id="a517e6b5dcada506a49ef413d4d8d477a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a517e6b5dcada506a49ef413d4d8d477a">&#9670;&nbsp;</a></span>fps_probe_size</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int AVFormatContext::fps_probe_size</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The number of frames used for determining the framerate in <a class="el" href="../../dc/d2c/group__lavf__decoding.html#gad42172e27cddafb81096939783b157bb">avformat_find_stream_info()</a>. Demuxing only, set by the caller before <a class="el" href="../../dc/d2c/group__lavf__decoding.html#gad42172e27cddafb81096939783b157bb">avformat_find_stream_info()</a>. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l01604">1604</a></p>
+
+</div>
+</div>
+<a id="aeebb15a72d1503e641b633aeb3be0bf0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeebb15a72d1503e641b633aeb3be0bf0">&#9670;&nbsp;</a></span>error_recognition</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int AVFormatContext::error_recognition</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Error recognition; higher values will detect more errors but may misdetect some more or less valid parts as errors. Demuxing only, set by the caller before <a class="el" href="../../dc/d2c/group__lavf__decoding.html#gaff468dcc45289542f4c30d311bc2a201">avformat_open_input()</a>. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l01611">1611</a></p>
+
+</div>
+</div>
+<a id="a5b37acfe4024d92ee510064e80920b40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b37acfe4024d92ee510064e80920b40">&#9670;&nbsp;</a></span>interrupt_callback</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../da/dc9/struct_a_v_i_o_interrupt_c_b.html">AVIOInterruptCB</a> AVFormatContext::interrupt_callback</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Custom interrupt callbacks for the I/O layer.</p>
+<p>demuxing: set by the user before <a class="el" href="../../dc/d2c/group__lavf__decoding.html#gaff468dcc45289542f4c30d311bc2a201">avformat_open_input()</a>. muxing: set by the user before <a class="el" href="../../d2/d95/group__lavf__encoding.html#ga18b7b10bb5b94c4842de18166bc677cb">avformat_write_header()</a> (mainly useful for AVFMT_NOFILE formats). The callback should also be passed to <a class="el" href="../../d8/d8c/avio_8h.html#ade8a63980569494c99593ebf0d1e891b">avio_open2()</a> if it's used to open the file. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l01622">1622</a></p>
+
+</div>
+</div>
+<a id="ab4478e9742f661800cf7e0af84136cae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4478e9742f661800cf7e0af84136cae">&#9670;&nbsp;</a></span>debug</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int AVFormatContext::debug</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Flags to enable debugging. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l01627">1627</a></p>
+
+</div>
+</div>
+<a id="a00edb6b7a31f8dabfa668334ca1f92d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00edb6b7a31f8dabfa668334ca1f92d7">&#9670;&nbsp;</a></span>max_interleave_delta</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dd/df4/alext_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a> AVFormatContext::max_interleave_delta</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Maximum buffering duration for interleaving.</p>
+<p>To ensure all the streams are interleaved correctly, <a class="el" href="../../d2/d95/group__lavf__encoding.html#ga37352ed2c63493c38219d935e71db6c1">av_interleaved_write_frame()</a> will wait until it has at least one packet for each stream before actually writing any packets to the output file. When some streams are "sparse" (i.e. there are large gaps between successive packets), this can result in excessive buffering.</p>
+<p>This field specifies the maximum difference between the timestamps of the first and the last packet in the muxing queue, above which libavformat will output a packet regardless of whether it has queued a packet for all the streams.</p>
+<p>Muxing only, set by the caller before <a class="el" href="../../d2/d95/group__lavf__encoding.html#ga18b7b10bb5b94c4842de18166bc677cb">avformat_write_header()</a>. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l01646">1646</a></p>
+
+</div>
+</div>
+<a id="a5017684cf0a84c990f60c8d50adec144"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5017684cf0a84c990f60c8d50adec144">&#9670;&nbsp;</a></span>strict_std_compliance</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int AVFormatContext::strict_std_compliance</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Allow non-standard and experimental extension </p><dl class="section see"><dt>См. также</dt><dd><a class="el" href="../../de/d1f/struct_a_v_codec_context.html#a3090804569341ca235e3adbdc03318d2">AVCodecContext.strict_std_compliance</a> </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l01652">1652</a></p>
+
+</div>
+</div>
+<a id="a0302506d4b3434da77b8b3db43821aa0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0302506d4b3434da77b8b3db43821aa0">&#9670;&nbsp;</a></span>event_flags</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int AVFormatContext::event_flags</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Flags for the user to detect events happening on the file. Flags must be cleared by the user once the event has been handled. A combination of AVFMT_EVENT_FLAG_*. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l01659">1659</a></p>
+
+</div>
+</div>
+<a id="ad7854e5186dd14ce91dea1dfd0bb826f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7854e5186dd14ce91dea1dfd0bb826f">&#9670;&nbsp;</a></span>max_ts_probe</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int AVFormatContext::max_ts_probe</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Maximum number of packets to read while waiting for the first timestamp. Decoding only. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l01666">1666</a></p>
+
+</div>
+</div>
+<a id="a032c7d859883eddc9d87a9e3b2cc3853"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a032c7d859883eddc9d87a9e3b2cc3853">&#9670;&nbsp;</a></span>avoid_negative_ts</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int AVFormatContext::avoid_negative_ts</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Avoid negative timestamps during muxing. Any value of the AVFMT_AVOID_NEG_TS_* constants. Note, this only works when using av_interleaved_write_frame. (interleave_packet_per_dts is in use)</p><ul>
+<li>muxing: Set by user</li>
+<li>demuxing: unused </li>
+</ul>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l01675">1675</a></p>
+
+</div>
+</div>
+<a id="a5d331e9a0609a93dd4593af6c118cc4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d331e9a0609a93dd4593af6c118cc4b">&#9670;&nbsp;</a></span>ts_id</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int AVFormatContext::ts_id</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Transport stream id. This will be moved into demuxer private options. Thus no API/ABI compatibility </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l01684">1684</a></p>
+
+</div>
+</div>
+<a id="ac02383c2106cca8022f8a293399aed58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac02383c2106cca8022f8a293399aed58">&#9670;&nbsp;</a></span>audio_preload</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int AVFormatContext::audio_preload</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Audio preload in microseconds. Note, not all formats support this and unpredictable things may happen if it is used when not supported.</p><ul>
+<li>encoding: Set by user</li>
+<li>decoding: unused </li>
+</ul>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l01692">1692</a></p>
+
+</div>
+</div>
+<a id="ae20c589e20f22f74f1687702de6d2e8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae20c589e20f22f74f1687702de6d2e8e">&#9670;&nbsp;</a></span>max_chunk_duration</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int AVFormatContext::max_chunk_duration</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Max chunk time in microseconds. Note, not all formats support this and unpredictable things may happen if it is used when not supported.</p><ul>
+<li>encoding: Set by user</li>
+<li>decoding: unused </li>
+</ul>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l01700">1700</a></p>
+
+</div>
+</div>
+<a id="a3d8cfff712c81d1cbc725b40ce02f7e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d8cfff712c81d1cbc725b40ce02f7e7">&#9670;&nbsp;</a></span>max_chunk_size</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int AVFormatContext::max_chunk_size</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Max chunk size in bytes Note, not all formats support this and unpredictable things may happen if it is used when not supported.</p><ul>
+<li>encoding: Set by user</li>
+<li>decoding: unused </li>
+</ul>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l01708">1708</a></p>
+
+</div>
+</div>
+<a id="a90251622aa2b78badbb846274aff4633"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90251622aa2b78badbb846274aff4633">&#9670;&nbsp;</a></span>use_wallclock_as_timestamps</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int AVFormatContext::use_wallclock_as_timestamps</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>forces the use of wallclock timestamps as pts/dts of packets This has undefined results in the presence of B frames.</p><ul>
+<li>encoding: unused</li>
+<li>decoding: Set by user </li>
+</ul>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l01716">1716</a></p>
+
+</div>
+</div>
+<a id="a5e6814c9de3c272396f07e2ff18c7b27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e6814c9de3c272396f07e2ff18c7b27">&#9670;&nbsp;</a></span>avio_flags</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int AVFormatContext::avio_flags</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>avio flags, used to force AVIO_FLAG_DIRECT.</p><ul>
+<li>encoding: unused</li>
+<li>decoding: Set by user </li>
+</ul>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l01723">1723</a></p>
+
+</div>
+</div>
+<a id="a95035552afae17c1b7cd701ad72e67b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95035552afae17c1b7cd701ad72e67b5">&#9670;&nbsp;</a></span>duration_estimation_method</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="../../dc/df2/avformat_8h.html#a7c2692ffa20d3e888e40e79eeda6d73b">AVDurationEstimationMethod</a> AVFormatContext::duration_estimation_method</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The duration field can be estimated through various ways, and this field can be used to know how the duration was estimated.</p><ul>
+<li>encoding: unused</li>
+<li>decoding: Read by user </li>
+</ul>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l01731">1731</a></p>
+
+</div>
+</div>
+<a id="ad9042cdda3a644e4ef46bfeffa34e4f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9042cdda3a644e4ef46bfeffa34e4f3">&#9670;&nbsp;</a></span>skip_initial_bytes</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dd/df4/alext_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a> AVFormatContext::skip_initial_bytes</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Skip initial bytes when opening stream</p><ul>
+<li>encoding: unused</li>
+<li>decoding: Set by user </li>
+</ul>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l01738">1738</a></p>
+
+</div>
+</div>
+<a id="afe4c7f02033d4b58b3636b9e42db25de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe4c7f02033d4b58b3636b9e42db25de">&#9670;&nbsp;</a></span>correct_ts_overflow</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int AVFormatContext::correct_ts_overflow</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Correct single timestamp overflows</p><ul>
+<li>encoding: unused</li>
+<li>decoding: Set by user </li>
+</ul>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l01745">1745</a></p>
+
+</div>
+</div>
+<a id="a41a1f108aa38e851f65ff4f0a70ce5a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41a1f108aa38e851f65ff4f0a70ce5a5">&#9670;&nbsp;</a></span>seek2any</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int AVFormatContext::seek2any</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Force seeking to any (also non key) frames.</p><ul>
+<li>encoding: unused</li>
+<li>decoding: Set by user </li>
+</ul>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l01752">1752</a></p>
+
+</div>
+</div>
+<a id="a1fdd77fff4c7df1e30ce1d42e10922e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fdd77fff4c7df1e30ce1d42e10922e9">&#9670;&nbsp;</a></span>flush_packets</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int AVFormatContext::flush_packets</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Flush the I/O context after each packet.</p><ul>
+<li>encoding: Set by user</li>
+<li>decoding: unused </li>
+</ul>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l01759">1759</a></p>
+
+</div>
+</div>
+<a id="a65f11f94f40f83866ebe651c8ae111cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65f11f94f40f83866ebe651c8ae111cf">&#9670;&nbsp;</a></span>probe_score</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int AVFormatContext::probe_score</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>format probing score. The maximal score is AVPROBE_SCORE_MAX, its set when the demuxer probes the format.</p><ul>
+<li>encoding: unused</li>
+<li>decoding: set by avformat, read by user </li>
+</ul>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l01768">1768</a></p>
+
+</div>
+</div>
+<a id="a7d1f665ecabe03e3d18accbb1ebb32b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d1f665ecabe03e3d18accbb1ebb32b1">&#9670;&nbsp;</a></span>format_probesize</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int AVFormatContext::format_probesize</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>number of bytes to read maximally to identify format.</p><ul>
+<li>encoding: unused</li>
+<li>decoding: set by user </li>
+</ul>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l01775">1775</a></p>
+
+</div>
+</div>
+<a id="aa3b43e2a040a3ce658620711a8345234"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3b43e2a040a3ce658620711a8345234">&#9670;&nbsp;</a></span>codec_whitelist</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* AVFormatContext::codec_whitelist</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>',' separated list of allowed decoders. If NULL then all are allowed</p><ul>
+<li>encoding: unused</li>
+<li>decoding: set by user </li>
+</ul>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l01783">1783</a></p>
+
+</div>
+</div>
+<a id="abcaa5a7c53d4b0224a5fc2d23e88ea03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcaa5a7c53d4b0224a5fc2d23e88ea03">&#9670;&nbsp;</a></span>format_whitelist</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* AVFormatContext::format_whitelist</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>',' separated list of allowed demuxers. If NULL then all are allowed</p><ul>
+<li>encoding: unused</li>
+<li>decoding: set by user </li>
+</ul>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l01791">1791</a></p>
+
+</div>
+</div>
+<a id="a8a8bec51da36db65ff864f88a85805d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a8bec51da36db65ff864f88a85805d9">&#9670;&nbsp;</a></span>internal</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/df2/avformat_8h.html#a7bec8d592652431045d81a02fef74f28">AVFormatInternal</a>* AVFormatContext::internal</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>An opaque field for libavformat internal usage. Must not be accessed in any way by callers. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l01797">1797</a></p>
+
+</div>
+</div>
+<a id="a45afe89c377463a1b9446ac94b3c513b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45afe89c377463a1b9446ac94b3c513b">&#9670;&nbsp;</a></span>io_repositioned</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int AVFormatContext::io_repositioned</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>IO repositioned flag. This is set by avformat when the underlaying IO context read pointer is repositioned, for example when doing byte based seeking. Demuxers can use the flag to detect such changes. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l01805">1805</a></p>
+
+</div>
+</div>
+<a id="a1891d82f7f853a16ebcba7cae939c4f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1891d82f7f853a16ebcba7cae939c4f0">&#9670;&nbsp;</a></span>video_codec</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../df/d2a/struct_a_v_codec.html">AVCodec</a>* AVFormatContext::video_codec</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Forced video codec. This allows forcing a specific decoder, even when there are multiple with the same codec_id. Demuxing: Set by user </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l01813">1813</a></p>
+
+</div>
+</div>
+<a id="ab73f76ceac8ed711c56decc2d64456f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab73f76ceac8ed711c56decc2d64456f0">&#9670;&nbsp;</a></span>audio_codec</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../df/d2a/struct_a_v_codec.html">AVCodec</a>* AVFormatContext::audio_codec</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Forced audio codec. This allows forcing a specific decoder, even when there are multiple with the same codec_id. Demuxing: Set by user </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l01821">1821</a></p>
+
+</div>
+</div>
+<a id="a9cc6a317755fa4f65b0bab36bcb18c87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cc6a317755fa4f65b0bab36bcb18c87">&#9670;&nbsp;</a></span>subtitle_codec</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../df/d2a/struct_a_v_codec.html">AVCodec</a>* AVFormatContext::subtitle_codec</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Forced subtitle codec. This allows forcing a specific decoder, even when there are multiple with the same codec_id. Demuxing: Set by user </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l01829">1829</a></p>
+
+</div>
+</div>
+<a id="a6f39359931d266a5cd68223ca68dd3a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f39359931d266a5cd68223ca68dd3a1">&#9670;&nbsp;</a></span>data_codec</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../df/d2a/struct_a_v_codec.html">AVCodec</a>* AVFormatContext::data_codec</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Forced data codec. This allows forcing a specific decoder, even when there are multiple with the same codec_id. Demuxing: Set by user </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l01837">1837</a></p>
+
+</div>
+</div>
+<a id="a6fc5a51cf62b6e8ad379c1ac57d4a0c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fc5a51cf62b6e8ad379c1ac57d4a0c4">&#9670;&nbsp;</a></span>metadata_header_padding</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int AVFormatContext::metadata_header_padding</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Number of bytes to be written as padding in a metadata header. Demuxing: Unused. Muxing: Set by user via av_format_set_metadata_header_padding. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l01844">1844</a></p>
+
+</div>
+</div>
+<a id="a71797838db59ca0682dd2d18b149134e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71797838db59ca0682dd2d18b149134e">&#9670;&nbsp;</a></span>opaque</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>* AVFormatContext::opaque</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>User data. This is a place for some private data of the user. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l01850">1850</a></p>
+
+</div>
+</div>
+<a id="ab569e23a4966ca1f708fb498dd6b3d5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab569e23a4966ca1f708fb498dd6b3d5f">&#9670;&nbsp;</a></span>control_message_cb</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/df2/avformat_8h.html#a80856b99bcf4373936fb4fba028b11ca">av_format_control_message</a> AVFormatContext::control_message_cb</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Callback used by devices to communicate with application. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l01855">1855</a></p>
+
+</div>
+</div>
+<a id="a711dc3e6159c44dc31843f915b893a12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a711dc3e6159c44dc31843f915b893a12">&#9670;&nbsp;</a></span>output_ts_offset</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dd/df4/alext_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a> AVFormatContext::output_ts_offset</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Output timestamp offset, in microseconds. Muxing: set by user </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l01861">1861</a></p>
+
+</div>
+</div>
+<a id="afeccb79eb120b1c79d7d269e8049237a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afeccb79eb120b1c79d7d269e8049237a">&#9670;&nbsp;</a></span>dump_separator</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>* AVFormatContext::dump_separator</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>dump format separator. can be ", " or "\n      " or anything else</p><ul>
+<li>muxing: Set by user.</li>
+<li>demuxing: Set by user. </li>
+</ul>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l01869">1869</a></p>
+
+</div>
+</div>
+<a id="a2112b67f2f7a58bde5b6d13dc353b58d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2112b67f2f7a58bde5b6d13dc353b58d">&#9670;&nbsp;</a></span>data_codec_id</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="../../d5/d44/group__lavc__core.html#gaadca229ad2c20e060a14fec08a5cc7ce">AVCodecID</a> AVFormatContext::data_codec_id</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Forced Data codec_id. Demuxing: Set by user. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l01875">1875</a></p>
+
+</div>
+</div>
+<a id="ad9c10b010a81a6a4700b675ee915d93c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9c10b010a81a6a4700b675ee915d93c">&#9670;&nbsp;</a></span>open_cb</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">attribute_deprecated int(* AVFormatContext::open_cb) (struct <a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>, <a class="el" href="../../d7/dcc/struct_a_v_i_o_context.html">AVIOContext</a> **<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>, const char *<a class="el" href="../../de/d85/struct_a_v_format_context.html#a651c97cb2dcd2241d42f0062a0bbd4e3">url</a>, int <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#ac7ba7d3cce3d19ca020e056b37231289">flags</a>, const <a class="el" href="../../da/dc9/struct_a_v_i_o_interrupt_c_b.html">AVIOInterruptCB</a> *int_cb, <a class="el" href="../../d2/db0/group__lavu__dict.html#ga1d7cc0833bee918994a600556410315f">AVDictionary</a> **options)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Called to open further IO contexts when needed for demuxing.</p>
+<p>This can be set by the user application to perform security checks on the URLs before opening them. The function should behave like <a class="el" href="../../d8/d8c/avio_8h.html#ade8a63980569494c99593ebf0d1e891b">avio_open2()</a>, <a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> is provided as contextual information and to reach <a class="el" href="../../de/d85/struct_a_v_format_context.html#a71797838db59ca0682dd2d18b149134e">AVFormatContext.opaque</a>.</p>
+<p>If NULL then some simple checks are used together with <a class="el" href="../../d8/d8c/avio_8h.html#ade8a63980569494c99593ebf0d1e891b">avio_open2()</a>.</p>
+<p>Must not be accessed directly from outside avformat. @See <a class="el" href="../../dc/df2/avformat_8h.html#ae478cd46bff6bcb0164a34e86cdedb40">av_format_set_open_cb()</a></p>
+<p>Demuxing: Set by user.</p>
+<dl class="deprecated"><dt><b><a class="el" href="../../da/d58/deprecated.html#_deprecated000069">Уст.:</a></b></dt><dd>Use io_open and io_close. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l01896">1896</a></p>
+
+</div>
+</div>
+<a id="adfa686249f83379ee2e3d5b295d9f442"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfa686249f83379ee2e3d5b295d9f442">&#9670;&nbsp;</a></span>protocol_whitelist</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* AVFormatContext::protocol_whitelist</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>',' separated list of allowed protocols.</p><ul>
+<li>encoding: unused</li>
+<li>decoding: set by user </li>
+</ul>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l01904">1904</a></p>
+
+</div>
+</div>
+<a id="af3f615ad9ff79fb90f4eb136a1f58065"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3f615ad9ff79fb90f4eb136a1f58065">&#9670;&nbsp;</a></span>io_open</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int(* AVFormatContext::io_open) (struct <a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>, <a class="el" href="../../d7/dcc/struct_a_v_i_o_context.html">AVIOContext</a> **<a class="el" href="../../de/d85/struct_a_v_format_context.html#a1e7324262b6b78522e52064daaa7bc87">pb</a>, const char *<a class="el" href="../../de/d85/struct_a_v_format_context.html#a651c97cb2dcd2241d42f0062a0bbd4e3">url</a>, int <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#ac7ba7d3cce3d19ca020e056b37231289">flags</a>, <a class="el" href="../../d2/db0/group__lavu__dict.html#ga1d7cc0833bee918994a600556410315f">AVDictionary</a> **options)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A callback for opening new IO streams.</p>
+<p>Whenever a muxer or a demuxer needs to open an IO stream (typically from <a class="el" href="../../dc/d2c/group__lavf__decoding.html#gaff468dcc45289542f4c30d311bc2a201">avformat_open_input()</a> for demuxers, but for certain formats can happen at other times as well), it will call this callback to obtain an IO context.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">s</td><td>the format context </td></tr>
+    <tr><td class="paramname">pb</td><td>on success, the newly opened IO context should be returned here </td></tr>
+    <tr><td class="paramname">url</td><td>the url to open </td></tr>
+    <tr><td class="paramname">flags</td><td>a combination of AVIO_FLAG_* </td></tr>
+    <tr><td class="paramname">options</td><td>a dictionary of additional options, with the same semantics as in <a class="el" href="../../d8/d8c/avio_8h.html#ade8a63980569494c99593ebf0d1e891b">avio_open2()</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>0 on success, a negative AVERROR code on failure</dd></dl>
+<dl class="section note"><dt>Заметки</dt><dd>Certain muxers and demuxers do nesting, i.e. they open one or more additional internal format contexts. Thus the <a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> pointer passed to this callback may be different from the one facing the caller. It will, however, have the same 'opaque' field. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l01926">1926</a></p>
+
+</div>
+</div>
+<a id="a88077ea47abd7cd3fefe7828f778a686"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88077ea47abd7cd3fefe7828f778a686">&#9670;&nbsp;</a></span>io_close</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>(* AVFormatContext::io_close) (struct <a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>, <a class="el" href="../../d7/dcc/struct_a_v_i_o_context.html">AVIOContext</a> *<a class="el" href="../../de/d85/struct_a_v_format_context.html#a1e7324262b6b78522e52064daaa7bc87">pb</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A callback for closing the streams opened with <a class="el" href="../../de/d85/struct_a_v_format_context.html#af3f615ad9ff79fb90f4eb136a1f58065">AVFormatContext.io_open()</a>. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l01932">1932</a></p>
+
+</div>
+</div>
+<a id="ae06bb84162881843504ecd870c328690"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae06bb84162881843504ecd870c328690">&#9670;&nbsp;</a></span>protocol_blacklist</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* AVFormatContext::protocol_blacklist</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>',' separated list of disallowed protocols.</p><ul>
+<li>encoding: unused</li>
+<li>decoding: set by user </li>
+</ul>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l01939">1939</a></p>
+
+</div>
+</div>
+<a id="a11bf0a9a1ba16bc402c6a237b58b4da1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11bf0a9a1ba16bc402c6a237b58b4da1">&#9670;&nbsp;</a></span>max_streams</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int AVFormatContext::max_streams</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The maximum number of streams.</p><ul>
+<li>encoding: unused</li>
+<li>decoding: set by user </li>
+</ul>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l01946">1946</a></p>
+
+</div>
+</div>
+<a id="ae9896cb7089991b18c5e7acb4f17f6b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9896cb7089991b18c5e7acb4f17f6b2">&#9670;&nbsp;</a></span>skip_estimate_duration_from_pts</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int AVFormatContext::skip_estimate_duration_from_pts</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Skip duration calcuation in estimate_timings_from_pts.</p><ul>
+<li>encoding: unused</li>
+<li>decoding: set by user </li>
+</ul>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l01953">1953</a></p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов структуры находятся в файле:<ul>
+<li>C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavformat/<a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:04:35. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

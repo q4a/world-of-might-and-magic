@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Исходный файл C:/git/world-of-might-and-magic/Engine/Point.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d1/d18/_point_8h_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Point.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d1/d18/_point_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="../../d8/dc8/struct_point.html">    3</a></span>&#160;<span class="keyword">struct </span><a class="code" href="../../d8/dc8/struct_point.html">Point</a> {</div>
+<div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="../../d8/dc8/struct_point.html#ad92f2337b839a94ce97dcdb439b4325a">    4</a></span>&#160;    <span class="keyword">inline</span> <a class="code" href="../../d8/dc8/struct_point.html#ad92f2337b839a94ce97dcdb439b4325a">Point</a>() : <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ad0e63d0edcdbd3d79554076bf309fd47">x</a>(0), <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a1675d9d7bb68e1657ff028643b4037e3">y</a>(0) {}</div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="../../d8/dc8/struct_point.html#acf2d96a374f9b7c9c636ba1a2ad42f02">    5</a></span>&#160;    <span class="keyword">inline</span> <a class="code" href="../../d8/dc8/struct_point.html#acf2d96a374f9b7c9c636ba1a2ad42f02">Point</a>(<span class="keywordtype">int</span> _x, <span class="keywordtype">int</span> _y) : <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ad0e63d0edcdbd3d79554076bf309fd47">x</a>(_x), <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a1675d9d7bb68e1657ff028643b4037e3">y</a>(_y) {}</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="../../d8/dc8/struct_point.html#a81bb3d87085a9672879cfe4e58f7bff3">    7</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../d8/dc8/struct_point.html#a81bb3d87085a9672879cfe4e58f7bff3">x</a>;</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="../../d8/dc8/struct_point.html#aafc3278398083cef91e29bf68c7d6c87">    8</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../d8/dc8/struct_point.html#aafc3278398083cef91e29bf68c7d6c87">y</a>;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;};</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="../../dc/d34/structs_point.html">   11</a></span>&#160;<span class="keyword">struct </span><a class="code" href="../../dc/d34/structs_point.html">sPoint</a> {</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="../../dc/d34/structs_point.html#a503c7ea51aadf2d7fd8981c3461e8e46">   12</a></span>&#160;    <span class="keyword">inline</span> <a class="code" href="../../dc/d34/structs_point.html#a503c7ea51aadf2d7fd8981c3461e8e46">sPoint</a>() : <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ad0e63d0edcdbd3d79554076bf309fd47">x</a>(0), <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a1675d9d7bb68e1657ff028643b4037e3">y</a>(0) {}</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="../../dc/d34/structs_point.html#a351ebefd2f49e25f48c9b3cf7b0f7ada">   13</a></span>&#160;    <span class="keyword">inline</span> <a class="code" href="../../dc/d34/structs_point.html#a351ebefd2f49e25f48c9b3cf7b0f7ada">sPoint</a>(<span class="keywordtype">int</span> _x, <span class="keywordtype">int</span> _y) : <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ad0e63d0edcdbd3d79554076bf309fd47">x</a>(_x), <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a1675d9d7bb68e1657ff028643b4037e3">y</a>(_y) {}</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="../../dc/d34/structs_point.html#a7ac940143d5670fafd53b709b059498b">   15</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../dc/d34/structs_point.html#a7ac940143d5670fafd53b709b059498b">x</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="../../dc/d34/structs_point.html#a12cd79546bea6a1f4ff8209e204be6ce">   16</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../dc/d34/structs_point.html#a12cd79546bea6a1f4ff8209e204be6ce">y</a>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;};</div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="astructs_point_html_a503c7ea51aadf2d7fd8981c3461e8e46"><div class="ttname"><a href="../../dc/d34/structs_point.html#a503c7ea51aadf2d7fd8981c3461e8e46">sPoint::sPoint</a></div><div class="ttdeci">sPoint()</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d18/_point_8h_source.html#l00012">Point.h:12</a></div></div>
+<div class="ttc" id="astructs_point_html_a12cd79546bea6a1f4ff8209e204be6ce"><div class="ttname"><a href="../../dc/d34/structs_point.html#a12cd79546bea6a1f4ff8209e204be6ce">sPoint::y</a></div><div class="ttdeci">int y</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d18/_point_8h_source.html#l00016">Point.h:16</a></div></div>
+<div class="ttc" id="astruct_point_html_a81bb3d87085a9672879cfe4e58f7bff3"><div class="ttname"><a href="../../d8/dc8/struct_point.html#a81bb3d87085a9672879cfe4e58f7bff3">Point::x</a></div><div class="ttdeci">unsigned int x</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d18/_point_8h_source.html#l00007">Point.h:7</a></div></div>
+<div class="ttc" id="astructs_point_html"><div class="ttname"><a href="../../dc/d34/structs_point.html">sPoint</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d18/_point_8h_source.html#l00011">Point.h:11</a></div></div>
+<div class="ttc" id="astructs_point_html_a351ebefd2f49e25f48c9b3cf7b0f7ada"><div class="ttname"><a href="../../dc/d34/structs_point.html#a351ebefd2f49e25f48c9b3cf7b0f7ada">sPoint::sPoint</a></div><div class="ttdeci">sPoint(int _x, int _y)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d18/_point_8h_source.html#l00013">Point.h:13</a></div></div>
+<div class="ttc" id="a_s_d_l__egl_8h_html_a1675d9d7bb68e1657ff028643b4037e3"><div class="ttname"><a href="../../df/d32/_s_d_l__egl_8h.html#a1675d9d7bb68e1657ff028643b4037e3">y</a></div><div class="ttdeci">EGLSurface EGLint EGLint y</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/_s_d_l__egl_8h_source.html#l01596">SDL_egl.h:1596</a></div></div>
+<div class="ttc" id="a_s_d_l__egl_8h_html_ad0e63d0edcdbd3d79554076bf309fd47"><div class="ttname"><a href="../../df/d32/_s_d_l__egl_8h.html#ad0e63d0edcdbd3d79554076bf309fd47">x</a></div><div class="ttdeci">EGLSurface EGLint x</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/_s_d_l__egl_8h_source.html#l01596">SDL_egl.h:1596</a></div></div>
+<div class="ttc" id="astructs_point_html_a7ac940143d5670fafd53b709b059498b"><div class="ttname"><a href="../../dc/d34/structs_point.html#a7ac940143d5670fafd53b709b059498b">sPoint::x</a></div><div class="ttdeci">int x</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d18/_point_8h_source.html#l00015">Point.h:15</a></div></div>
+<div class="ttc" id="astruct_point_html_ad92f2337b839a94ce97dcdb439b4325a"><div class="ttname"><a href="../../d8/dc8/struct_point.html#ad92f2337b839a94ce97dcdb439b4325a">Point::Point</a></div><div class="ttdeci">Point()</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d18/_point_8h_source.html#l00004">Point.h:4</a></div></div>
+<div class="ttc" id="astruct_point_html_aafc3278398083cef91e29bf68c7d6c87"><div class="ttname"><a href="../../d8/dc8/struct_point.html#aafc3278398083cef91e29bf68c7d6c87">Point::y</a></div><div class="ttdeci">unsigned int y</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d18/_point_8h_source.html#l00008">Point.h:8</a></div></div>
+<div class="ttc" id="astruct_point_html_acf2d96a374f9b7c9c636ba1a2ad42f02"><div class="ttname"><a href="../../d8/dc8/struct_point.html#acf2d96a374f9b7c9c636ba1a2ad42f02">Point::Point</a></div><div class="ttdeci">Point(int _x, int _y)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d18/_point_8h_source.html#l00005">Point.h:5</a></div></div>
+<div class="ttc" id="astruct_point_html"><div class="ttname"><a href="../../d8/dc8/struct_point.html">Point</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d18/_point_8h_source.html#l00003">Point.h:3</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_0b6ee6e7e9547e675db4add2e5de97da.html">Engine</a></li><li class="navelem"><a class="el" href="../../d1/d18/_point_8h.html">Point.h</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:03:33. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

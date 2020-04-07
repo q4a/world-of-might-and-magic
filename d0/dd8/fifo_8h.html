@@ -1,0 +1,725 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Файл C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavutil/fifo.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d0/dd8/fifo_8h.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#typedef-members">Определения типов</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл fifo.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><a href="../../d0/dd8/fifo_8h_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd7/struct_a_v_fifo_buffer.html">AVFifoBuffer</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Определения типов</h2></td></tr>
+<tr class="memitem:a31bf9be06ded9098c07f7c6b83f0bc6b"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="../../d6/dd7/struct_a_v_fifo_buffer.html">AVFifoBuffer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dd8/fifo_8h.html#a31bf9be06ded9098c07f7c6b83f0bc6b">AVFifoBuffer</a></td></tr>
+<tr class="separator:a31bf9be06ded9098c07f7c6b83f0bc6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:adae9b18c5eed14fe851c5bb984ce374b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/dd7/struct_a_v_fifo_buffer.html">AVFifoBuffer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dd8/fifo_8h.html#adae9b18c5eed14fe851c5bb984ce374b">av_fifo_alloc</a> (unsigned int <a class="el" href="../../db/d76/group__lavu__mem__funcs.html#ga3d1e3edfcf61ca2d831883e1afbad89e">size</a>)</td></tr>
+<tr class="separator:adae9b18c5eed14fe851c5bb984ce374b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada874c149988db27a46f8f5447cef478"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/dd7/struct_a_v_fifo_buffer.html">AVFifoBuffer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dd8/fifo_8h.html#ada874c149988db27a46f8f5447cef478">av_fifo_alloc_array</a> (<a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a7c94ea6f8948649f8d181ae55911eeaf">size_t</a> <a class="el" href="../../db/d76/group__lavu__mem__funcs.html#ga79fd723df92f68cf8a6207a1d98b4c01">nmemb</a>, <a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a7c94ea6f8948649f8d181ae55911eeaf">size_t</a> <a class="el" href="../../db/d76/group__lavu__mem__funcs.html#ga3d1e3edfcf61ca2d831883e1afbad89e">size</a>)</td></tr>
+<tr class="separator:ada874c149988db27a46f8f5447cef478"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac41532c140aacb9ad12a22c859f944aa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dd8/fifo_8h.html#ac41532c140aacb9ad12a22c859f944aa">av_fifo_free</a> (<a class="el" href="../../d6/dd7/struct_a_v_fifo_buffer.html">AVFifoBuffer</a> *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a>)</td></tr>
+<tr class="separator:ac41532c140aacb9ad12a22c859f944aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a612be59edb6ab388a82d1487d1bd0c4d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dd8/fifo_8h.html#a612be59edb6ab388a82d1487d1bd0c4d">av_fifo_freep</a> (<a class="el" href="../../d6/dd7/struct_a_v_fifo_buffer.html">AVFifoBuffer</a> **<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a>)</td></tr>
+<tr class="separator:a612be59edb6ab388a82d1487d1bd0c4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f257d5cd93686b047c9b29ef6493e51"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dd8/fifo_8h.html#a2f257d5cd93686b047c9b29ef6493e51">av_fifo_reset</a> (<a class="el" href="../../d6/dd7/struct_a_v_fifo_buffer.html">AVFifoBuffer</a> *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a>)</td></tr>
+<tr class="separator:a2f257d5cd93686b047c9b29ef6493e51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81f4cea70d96846df7111daccc5ecce2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dd8/fifo_8h.html#a81f4cea70d96846df7111daccc5ecce2">av_fifo_size</a> (const <a class="el" href="../../d6/dd7/struct_a_v_fifo_buffer.html">AVFifoBuffer</a> *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a>)</td></tr>
+<tr class="separator:a81f4cea70d96846df7111daccc5ecce2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1e0d8ee7f1568cb40fa95a740c60f13"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dd8/fifo_8h.html#ac1e0d8ee7f1568cb40fa95a740c60f13">av_fifo_space</a> (const <a class="el" href="../../d6/dd7/struct_a_v_fifo_buffer.html">AVFifoBuffer</a> *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a>)</td></tr>
+<tr class="separator:ac1e0d8ee7f1568cb40fa95a740c60f13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae44de4980b66c0695a4cf7808c140181"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dd8/fifo_8h.html#ae44de4980b66c0695a4cf7808c140181">av_fifo_generic_peek_at</a> (<a class="el" href="../../d6/dd7/struct_a_v_fifo_buffer.html">AVFifoBuffer</a> *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a>, <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *dest, int <a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#ac915cd848f42b26af51745f204a3b9af">offset</a>, int buf_size, <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>(*<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a18ae3ab36a07e388833b568cfdfa90c8">func</a>)(<a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *, <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *, int))</td></tr>
+<tr class="separator:ae44de4980b66c0695a4cf7808c140181"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fbc6be8766f3389eda0e37ca92cee65"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dd8/fifo_8h.html#a9fbc6be8766f3389eda0e37ca92cee65">av_fifo_generic_peek</a> (<a class="el" href="../../d6/dd7/struct_a_v_fifo_buffer.html">AVFifoBuffer</a> *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a>, <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *dest, int buf_size, <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>(*<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a18ae3ab36a07e388833b568cfdfa90c8">func</a>)(<a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *, <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *, int))</td></tr>
+<tr class="separator:a9fbc6be8766f3389eda0e37ca92cee65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab708d2f19b7a9592caa278256787adb6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dd8/fifo_8h.html#ab708d2f19b7a9592caa278256787adb6">av_fifo_generic_read</a> (<a class="el" href="../../d6/dd7/struct_a_v_fifo_buffer.html">AVFifoBuffer</a> *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a>, <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *dest, int buf_size, <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>(*<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a18ae3ab36a07e388833b568cfdfa90c8">func</a>)(<a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *, <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *, int))</td></tr>
+<tr class="separator:ab708d2f19b7a9592caa278256787adb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae95c15dcdd266b4005f8919e4f571180"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dd8/fifo_8h.html#ae95c15dcdd266b4005f8919e4f571180">av_fifo_generic_write</a> (<a class="el" href="../../d6/dd7/struct_a_v_fifo_buffer.html">AVFifoBuffer</a> *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a>, <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a72e0fdf0f845ded60b1fada9e9195cd7">src</a>, int <a class="el" href="../../db/d76/group__lavu__mem__funcs.html#ga3d1e3edfcf61ca2d831883e1afbad89e">size</a>, int(*<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a18ae3ab36a07e388833b568cfdfa90c8">func</a>)(<a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *, <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *, int))</td></tr>
+<tr class="separator:ae95c15dcdd266b4005f8919e4f571180"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af50c043864cf09925aa4986e00a57067"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dd8/fifo_8h.html#af50c043864cf09925aa4986e00a57067">av_fifo_realloc2</a> (<a class="el" href="../../d6/dd7/struct_a_v_fifo_buffer.html">AVFifoBuffer</a> *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a>, unsigned int <a class="el" href="../../db/d76/group__lavu__mem__funcs.html#ga3d1e3edfcf61ca2d831883e1afbad89e">size</a>)</td></tr>
+<tr class="separator:af50c043864cf09925aa4986e00a57067"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44a36b44adf5b278eeea1cb6d5b7033b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dd8/fifo_8h.html#a44a36b44adf5b278eeea1cb6d5b7033b">av_fifo_grow</a> (<a class="el" href="../../d6/dd7/struct_a_v_fifo_buffer.html">AVFifoBuffer</a> *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a>, unsigned int additional_space)</td></tr>
+<tr class="separator:a44a36b44adf5b278eeea1cb6d5b7033b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a037f66cc2b92aebbc363617387d39f6f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dd8/fifo_8h.html#a037f66cc2b92aebbc363617387d39f6f">av_fifo_drain</a> (<a class="el" href="../../d6/dd7/struct_a_v_fifo_buffer.html">AVFifoBuffer</a> *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a>, int <a class="el" href="../../db/d76/group__lavu__mem__funcs.html#ga3d1e3edfcf61ca2d831883e1afbad89e">size</a>)</td></tr>
+<tr class="separator:a037f66cc2b92aebbc363617387d39f6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0212ac6ff8feab8846b9cc6df49149c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dd8/fifo_8h.html#aa0212ac6ff8feab8846b9cc6df49149c">av_fifo_peek2</a> (const <a class="el" href="../../d6/dd7/struct_a_v_fifo_buffer.html">AVFifoBuffer</a> *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a>, int offs)</td></tr>
+<tr class="separator:aa0212ac6ff8feab8846b9cc6df49149c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>a very simple circular buffer FIFO implementation </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d0/dd8/fifo_8h_source.html">fifo.h</a></p>
+</div><h2 class="groupheader">Типы</h2>
+<a id="a31bf9be06ded9098c07f7c6b83f0bc6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31bf9be06ded9098c07f7c6b83f0bc6b">&#9670;&nbsp;</a></span>AVFifoBuffer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="../../d6/dd7/struct_a_v_fifo_buffer.html">AVFifoBuffer</a> <a class="el" href="../../d6/dd7/struct_a_v_fifo_buffer.html">AVFifoBuffer</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Функции</h2>
+<a id="adae9b18c5eed14fe851c5bb984ce374b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adae9b18c5eed14fe851c5bb984ce374b">&#9670;&nbsp;</a></span>av_fifo_alloc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d6/dd7/struct_a_v_fifo_buffer.html">AVFifoBuffer</a>* av_fifo_alloc </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>size</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Initialize an <a class="el" href="../../d6/dd7/struct_a_v_fifo_buffer.html">AVFifoBuffer</a>. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">size</td><td>of FIFO </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd><a class="el" href="../../d6/dd7/struct_a_v_fifo_buffer.html">AVFifoBuffer</a> or NULL in case of memory allocation failure </dd></dl>
+
+</div>
+</div>
+<a id="ada874c149988db27a46f8f5447cef478"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada874c149988db27a46f8f5447cef478">&#9670;&nbsp;</a></span>av_fifo_alloc_array()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d6/dd7/struct_a_v_fifo_buffer.html">AVFifoBuffer</a>* av_fifo_alloc_array </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a7c94ea6f8948649f8d181ae55911eeaf">size_t</a>&#160;</td>
+          <td class="paramname"><em>nmemb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a7c94ea6f8948649f8d181ae55911eeaf">size_t</a>&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Initialize an <a class="el" href="../../d6/dd7/struct_a_v_fifo_buffer.html">AVFifoBuffer</a>. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nmemb</td><td>number of elements </td></tr>
+    <tr><td class="paramname">size</td><td>size of the single element </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd><a class="el" href="../../d6/dd7/struct_a_v_fifo_buffer.html">AVFifoBuffer</a> or NULL in case of memory allocation failure </dd></dl>
+
+</div>
+</div>
+<a id="ac41532c140aacb9ad12a22c859f944aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac41532c140aacb9ad12a22c859f944aa">&#9670;&nbsp;</a></span>av_fifo_free()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> av_fifo_free </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d6/dd7/struct_a_v_fifo_buffer.html">AVFifoBuffer</a> *&#160;</td>
+          <td class="paramname"><em>f</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Free an <a class="el" href="../../d6/dd7/struct_a_v_fifo_buffer.html">AVFifoBuffer</a>. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">f</td><td><a class="el" href="../../d6/dd7/struct_a_v_fifo_buffer.html">AVFifoBuffer</a> to free </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a612be59edb6ab388a82d1487d1bd0c4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a612be59edb6ab388a82d1487d1bd0c4d">&#9670;&nbsp;</a></span>av_fifo_freep()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> av_fifo_freep </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d6/dd7/struct_a_v_fifo_buffer.html">AVFifoBuffer</a> **&#160;</td>
+          <td class="paramname"><em>f</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Free an <a class="el" href="../../d6/dd7/struct_a_v_fifo_buffer.html">AVFifoBuffer</a> and reset pointer to NULL. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">f</td><td><a class="el" href="../../d6/dd7/struct_a_v_fifo_buffer.html">AVFifoBuffer</a> to free </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2f257d5cd93686b047c9b29ef6493e51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f257d5cd93686b047c9b29ef6493e51">&#9670;&nbsp;</a></span>av_fifo_reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> av_fifo_reset </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d6/dd7/struct_a_v_fifo_buffer.html">AVFifoBuffer</a> *&#160;</td>
+          <td class="paramname"><em>f</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Reset the <a class="el" href="../../d6/dd7/struct_a_v_fifo_buffer.html">AVFifoBuffer</a> to the state right after av_fifo_alloc, in particular it is emptied. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">f</td><td><a class="el" href="../../d6/dd7/struct_a_v_fifo_buffer.html">AVFifoBuffer</a> to reset </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a81f4cea70d96846df7111daccc5ecce2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81f4cea70d96846df7111daccc5ecce2">&#9670;&nbsp;</a></span>av_fifo_size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int av_fifo_size </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d6/dd7/struct_a_v_fifo_buffer.html">AVFifoBuffer</a> *&#160;</td>
+          <td class="paramname"><em>f</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Return the amount of data in bytes in the <a class="el" href="../../d6/dd7/struct_a_v_fifo_buffer.html">AVFifoBuffer</a>, that is the amount of data you can read from it. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">f</td><td><a class="el" href="../../d6/dd7/struct_a_v_fifo_buffer.html">AVFifoBuffer</a> to read from </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>size </dd></dl>
+
+</div>
+</div>
+<a id="ac1e0d8ee7f1568cb40fa95a740c60f13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1e0d8ee7f1568cb40fa95a740c60f13">&#9670;&nbsp;</a></span>av_fifo_space()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int av_fifo_space </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d6/dd7/struct_a_v_fifo_buffer.html">AVFifoBuffer</a> *&#160;</td>
+          <td class="paramname"><em>f</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Return the amount of space in bytes in the <a class="el" href="../../d6/dd7/struct_a_v_fifo_buffer.html">AVFifoBuffer</a>, that is the amount of data you can write into it. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">f</td><td><a class="el" href="../../d6/dd7/struct_a_v_fifo_buffer.html">AVFifoBuffer</a> to write into </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>size </dd></dl>
+
+</div>
+</div>
+<a id="ae44de4980b66c0695a4cf7808c140181"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae44de4980b66c0695a4cf7808c140181">&#9670;&nbsp;</a></span>av_fifo_generic_peek_at()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int av_fifo_generic_peek_at </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d6/dd7/struct_a_v_fifo_buffer.html">AVFifoBuffer</a> *&#160;</td>
+          <td class="paramname"><em>f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *&#160;</td>
+          <td class="paramname"><em>dest</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>buf_size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>(*)(<a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *, <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *, int)&#160;</td>
+          <td class="paramname"><em>func</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Feed data at specific position from an <a class="el" href="../../d6/dd7/struct_a_v_fifo_buffer.html">AVFifoBuffer</a> to a user-supplied callback. Similar as av_fifo_gereric_read but without discarding data. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">f</td><td><a class="el" href="../../d6/dd7/struct_a_v_fifo_buffer.html">AVFifoBuffer</a> to read from </td></tr>
+    <tr><td class="paramname">offset</td><td>offset from current read position </td></tr>
+    <tr><td class="paramname">buf_size</td><td>number of bytes to read </td></tr>
+    <tr><td class="paramname">func</td><td>generic read function </td></tr>
+    <tr><td class="paramname">dest</td><td>data destination </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9fbc6be8766f3389eda0e37ca92cee65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fbc6be8766f3389eda0e37ca92cee65">&#9670;&nbsp;</a></span>av_fifo_generic_peek()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int av_fifo_generic_peek </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d6/dd7/struct_a_v_fifo_buffer.html">AVFifoBuffer</a> *&#160;</td>
+          <td class="paramname"><em>f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *&#160;</td>
+          <td class="paramname"><em>dest</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>buf_size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>(*)(<a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *, <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *, int)&#160;</td>
+          <td class="paramname"><em>func</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Feed data from an <a class="el" href="../../d6/dd7/struct_a_v_fifo_buffer.html">AVFifoBuffer</a> to a user-supplied callback. Similar as av_fifo_gereric_read but without discarding data. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">f</td><td><a class="el" href="../../d6/dd7/struct_a_v_fifo_buffer.html">AVFifoBuffer</a> to read from </td></tr>
+    <tr><td class="paramname">buf_size</td><td>number of bytes to read </td></tr>
+    <tr><td class="paramname">func</td><td>generic read function </td></tr>
+    <tr><td class="paramname">dest</td><td>data destination </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab708d2f19b7a9592caa278256787adb6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab708d2f19b7a9592caa278256787adb6">&#9670;&nbsp;</a></span>av_fifo_generic_read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int av_fifo_generic_read </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d6/dd7/struct_a_v_fifo_buffer.html">AVFifoBuffer</a> *&#160;</td>
+          <td class="paramname"><em>f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *&#160;</td>
+          <td class="paramname"><em>dest</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>buf_size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>(*)(<a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *, <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *, int)&#160;</td>
+          <td class="paramname"><em>func</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Feed data from an <a class="el" href="../../d6/dd7/struct_a_v_fifo_buffer.html">AVFifoBuffer</a> to a user-supplied callback. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">f</td><td><a class="el" href="../../d6/dd7/struct_a_v_fifo_buffer.html">AVFifoBuffer</a> to read from </td></tr>
+    <tr><td class="paramname">buf_size</td><td>number of bytes to read </td></tr>
+    <tr><td class="paramname">func</td><td>generic read function </td></tr>
+    <tr><td class="paramname">dest</td><td>data destination </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae95c15dcdd266b4005f8919e4f571180"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae95c15dcdd266b4005f8919e4f571180">&#9670;&nbsp;</a></span>av_fifo_generic_write()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int av_fifo_generic_write </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d6/dd7/struct_a_v_fifo_buffer.html">AVFifoBuffer</a> *&#160;</td>
+          <td class="paramname"><em>f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int(*)(<a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *, <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *, int)&#160;</td>
+          <td class="paramname"><em>func</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Feed data from a user-supplied callback to an <a class="el" href="../../d6/dd7/struct_a_v_fifo_buffer.html">AVFifoBuffer</a>. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">f</td><td><a class="el" href="../../d6/dd7/struct_a_v_fifo_buffer.html">AVFifoBuffer</a> to write to </td></tr>
+    <tr><td class="paramname">src</td><td>data source; non-const since it may be used as a modifiable context by the function defined in func </td></tr>
+    <tr><td class="paramname">size</td><td>number of bytes to write </td></tr>
+    <tr><td class="paramname">func</td><td>generic write function; the first parameter is src, the second is dest_buf, the third is dest_buf_size. func must return the number of bytes written to dest_buf, or &lt;= 0 to indicate no more data available to write. If func is NULL, src is interpreted as a simple byte array for source data. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>the number of bytes written to the FIFO </dd></dl>
+
+</div>
+</div>
+<a id="af50c043864cf09925aa4986e00a57067"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af50c043864cf09925aa4986e00a57067">&#9670;&nbsp;</a></span>av_fifo_realloc2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int av_fifo_realloc2 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d6/dd7/struct_a_v_fifo_buffer.html">AVFifoBuffer</a> *&#160;</td>
+          <td class="paramname"><em>f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Resize an <a class="el" href="../../d6/dd7/struct_a_v_fifo_buffer.html">AVFifoBuffer</a>. In case of reallocation failure, the old FIFO is kept unchanged.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">f</td><td><a class="el" href="../../d6/dd7/struct_a_v_fifo_buffer.html">AVFifoBuffer</a> to resize </td></tr>
+    <tr><td class="paramname">size</td><td>new <a class="el" href="../../d6/dd7/struct_a_v_fifo_buffer.html">AVFifoBuffer</a> size in bytes </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>&lt;0 for failure, &gt;=0 otherwise </dd></dl>
+
+</div>
+</div>
+<a id="a44a36b44adf5b278eeea1cb6d5b7033b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44a36b44adf5b278eeea1cb6d5b7033b">&#9670;&nbsp;</a></span>av_fifo_grow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int av_fifo_grow </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d6/dd7/struct_a_v_fifo_buffer.html">AVFifoBuffer</a> *&#160;</td>
+          <td class="paramname"><em>f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>additional_space</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Enlarge an <a class="el" href="../../d6/dd7/struct_a_v_fifo_buffer.html">AVFifoBuffer</a>. In case of reallocation failure, the old FIFO is kept unchanged. The new fifo size may be larger than the requested size.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">f</td><td><a class="el" href="../../d6/dd7/struct_a_v_fifo_buffer.html">AVFifoBuffer</a> to resize </td></tr>
+    <tr><td class="paramname">additional_space</td><td>the amount of space in bytes to allocate in addition to <a class="el" href="../../d0/dd8/fifo_8h.html#a81f4cea70d96846df7111daccc5ecce2">av_fifo_size()</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>&lt;0 for failure, &gt;=0 otherwise </dd></dl>
+
+</div>
+</div>
+<a id="a037f66cc2b92aebbc363617387d39f6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a037f66cc2b92aebbc363617387d39f6f">&#9670;&nbsp;</a></span>av_fifo_drain()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> av_fifo_drain </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d6/dd7/struct_a_v_fifo_buffer.html">AVFifoBuffer</a> *&#160;</td>
+          <td class="paramname"><em>f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Read and discard the specified amount of data from an <a class="el" href="../../d6/dd7/struct_a_v_fifo_buffer.html">AVFifoBuffer</a>. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">f</td><td><a class="el" href="../../d6/dd7/struct_a_v_fifo_buffer.html">AVFifoBuffer</a> to read from </td></tr>
+    <tr><td class="paramname">size</td><td>amount of data to read in bytes </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa0212ac6ff8feab8846b9cc6df49149c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0212ac6ff8feab8846b9cc6df49149c">&#9670;&nbsp;</a></span>av_fifo_peek2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>* av_fifo_peek2 </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d6/dd7/struct_a_v_fifo_buffer.html">AVFifoBuffer</a> *&#160;</td>
+          <td class="paramname"><em>f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>offs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Return a pointer to the data stored in a FIFO buffer at a certain offset. The FIFO buffer is not modified.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">f</td><td><a class="el" href="../../d6/dd7/struct_a_v_fifo_buffer.html">AVFifoBuffer</a> to peek at, f must be non-NULL </td></tr>
+    <tr><td class="paramname">offs</td><td>an offset in bytes, its absolute value must be less than the used buffer size or the returned pointer will point outside to the buffer data. The used buffer size can be checked with <a class="el" href="../../d0/dd8/fifo_8h.html#a81f4cea70d96846df7111daccc5ecce2">av_fifo_size()</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d0/dd8/fifo_8h_source.html">fifo.h</a> строка <a class="el" href="../../d0/dd8/fifo_8h_source.html#l00169">169</a></p>
+<div class="fragment"><div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;{</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *ptr = <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a>-&gt;rptr + offs;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="keywordflow">if</span> (ptr &gt;= <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a>-&gt;end)</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        ptr = <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a>-&gt;buffer + (ptr - <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a>-&gt;end);</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (ptr &lt; f-&gt;<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a76461e97a098d2c9ae20ac193d3825ae">buffer</a>)</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        ptr = <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a>-&gt;end - (<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a>-&gt;buffer - ptr);</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="keywordflow">return</span> ptr;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="a_s_d_l__egl_8h_html_a76461e97a098d2c9ae20ac193d3825ae"><div class="ttname"><a href="../../df/d32/_s_d_l__egl_8h.html#a76461e97a098d2c9ae20ac193d3825ae">buffer</a></div><div class="ttdeci">EGLContext EGLenum EGLClientBuffer buffer</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/_s_d_l__egl_8h_source.html#l00952">SDL_egl.h:952</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a691492ec0bd6383f91200e49f6ae40ed"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a></div><div class="ttdeci">GLfloat f</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l01873">SDL_opengl_glext.h:1873</a></div></div>
+<div class="ttc" id="a_s_d_l__config_8h_html_aba7bc1797add20fe3efdf37ced1182c5"><div class="ttname"><a href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a></div><div class="ttdeci">unsigned __int8 uint8_t</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d8f/_s_d_l__config_8h_source.html#l00035">SDL_config.h:35</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_97aefd0d527b934f1d99a682da8fe6a9.html">lib</a></li><li class="navelem"><a class="el" href="../../dir_da53678e933bc13c5b44fc9f96ac81aa.html">win32</a></li><li class="navelem"><a class="el" href="../../dir_7ac189985cec0e073b46d34a5d96bfc1.html">x86</a></li><li class="navelem"><a class="el" href="../../dir_e3469dbcd8a5e63a5540df758d989c34.html">ffmpeg-4.2.2</a></li><li class="navelem"><a class="el" href="../../dir_880368755e1ee5b32b1864dac7163836.html">include</a></li><li class="navelem"><a class="el" href="../../dir_e95abcf8ca274311b94b0e3a5da6ed50.html">libavutil</a></li><li class="navelem"><a class="el" href="../../d0/dd8/fifo_8h.html">fifo.h</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:04:15. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

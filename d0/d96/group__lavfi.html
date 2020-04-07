@@ -1,0 +1,1880 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: libavfilter</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d0/d96/group__lavfi.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#groups">Группы</a> &#124;
+<a href="#files">Файлы</a> &#124;
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#typedef-members">Определения типов</a> &#124;
+<a href="#enum-members">Перечисления</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">libavfilter</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Graph-based frame editing library.  
+<a href="#details">Подробнее...</a></p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Граф связей класса libavfilter:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/d96/group__lavfi.svg" width="252" height="86"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="groups"></a>
+Группы</h2></td></tr>
+<tr class="memitem:d9/d34/group__lavfi__buffersink"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d34/group__lavfi__buffersink.html">Buffer sink API</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:dc/dbc/group__lavfi__buffersrc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dbc/group__lavfi__buffersrc.html">Buffer source API</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="files"></a>
+Файлы</h2></td></tr>
+<tr class="memitem:d8/da0/avfilter_8h"><td class="memItemLeft" align="right" valign="top">файл &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da0/avfilter_8h.html">avfilter.h</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d0/d69/libavfilter_2version_8h"><td class="memItemLeft" align="right" valign="top">файл &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d69/libavfilter_2version_8h.html">version.h</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/db5/struct_a_v_filter.html">AVFilter</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d74/struct_a_v_filter_context.html">AVFilterContext</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d1a/struct_a_v_filter_link.html">AVFilterLink</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d5e/struct_a_v_filter_graph.html">AVFilterGraph</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d4a/struct_a_v_filter_in_out.html">AVFilterInOut</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Определения типов</h2></td></tr>
+<tr class="memitem:ga7df813052b320829fb91b6e84acf5c84"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="../../db/d74/struct_a_v_filter_context.html">AVFilterContext</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d96/group__lavfi.html#ga7df813052b320829fb91b6e84acf5c84">AVFilterContext</a></td></tr>
+<tr class="separator:ga7df813052b320829fb91b6e84acf5c84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3eb02002abaa0341437d3127658fe04e"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="../../d6/d1a/struct_a_v_filter_link.html">AVFilterLink</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d96/group__lavfi.html#ga3eb02002abaa0341437d3127658fe04e">AVFilterLink</a></td></tr>
+<tr class="separator:ga3eb02002abaa0341437d3127658fe04e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga067d805667c8575b55712d728a16ce7f"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="../../d0/d96/group__lavfi.html#ga067d805667c8575b55712d728a16ce7f">AVFilterPad</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d96/group__lavfi.html#ga067d805667c8575b55712d728a16ce7f">AVFilterPad</a></td></tr>
+<tr class="separator:ga067d805667c8575b55712d728a16ce7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac71769d0eb79494d0cc095ac2ad0914b"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="../../d0/d96/group__lavfi.html#gac71769d0eb79494d0cc095ac2ad0914b">AVFilterFormats</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d96/group__lavfi.html#gac71769d0eb79494d0cc095ac2ad0914b">AVFilterFormats</a></td></tr>
+<tr class="separator:gac71769d0eb79494d0cc095ac2ad0914b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5fc066e5b4c8900f7b8560295026127c"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="../../de/db5/struct_a_v_filter.html">AVFilter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d96/group__lavfi.html#ga5fc066e5b4c8900f7b8560295026127c">AVFilter</a></td></tr>
+<tr class="separator:ga5fc066e5b4c8900f7b8560295026127c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga740cb7cf0f6f69e142b89163b0691708"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="../../d0/d96/group__lavfi.html#ga740cb7cf0f6f69e142b89163b0691708">AVFilterInternal</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d96/group__lavfi.html#ga740cb7cf0f6f69e142b89163b0691708">AVFilterInternal</a></td></tr>
+<tr class="separator:ga740cb7cf0f6f69e142b89163b0691708"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa34cc0f3d5e4d49806c6c40aac97a963"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="../../d0/d96/group__lavfi.html#gaa34cc0f3d5e4d49806c6c40aac97a963">AVFilterGraphInternal</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d96/group__lavfi.html#gaa34cc0f3d5e4d49806c6c40aac97a963">AVFilterGraphInternal</a></td></tr>
+<tr class="separator:gaa34cc0f3d5e4d49806c6c40aac97a963"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga93b8de1d06c5d83c1a287babe32e59d4"><td class="memItemLeft" align="right" valign="top">typedef int()&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d96/group__lavfi.html#ga93b8de1d06c5d83c1a287babe32e59d4">avfilter_action_func</a>(<a class="el" href="../../db/d74/struct_a_v_filter_context.html">AVFilterContext</a> *<a class="el" href="../../df/d32/_s_d_l__egl_8h.html#a209c8e51e11ce41075280eea53ad018c">ctx</a>, <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *arg, int jobnr, int nb_jobs)</td></tr>
+<tr class="separator:ga93b8de1d06c5d83c1a287babe32e59d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa110ebfed4a342f88cd86da1b0037ab7"><td class="memItemLeft" align="right" valign="top">typedef int()&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d96/group__lavfi.html#gaa110ebfed4a342f88cd86da1b0037ab7">avfilter_execute_func</a>(<a class="el" href="../../db/d74/struct_a_v_filter_context.html">AVFilterContext</a> *<a class="el" href="../../df/d32/_s_d_l__egl_8h.html#a209c8e51e11ce41075280eea53ad018c">ctx</a>, <a class="el" href="../../d0/d96/group__lavfi.html#ga93b8de1d06c5d83c1a287babe32e59d4">avfilter_action_func</a> *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a18ae3ab36a07e388833b568cfdfa90c8">func</a>, <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *arg, int *ret, int nb_jobs)</td></tr>
+<tr class="separator:gaa110ebfed4a342f88cd86da1b0037ab7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5a0140a4e3ca1302b2f840fb7b211da7"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="../../d4/d5e/struct_a_v_filter_graph.html">AVFilterGraph</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d96/group__lavfi.html#ga5a0140a4e3ca1302b2f840fb7b211da7">AVFilterGraph</a></td></tr>
+<tr class="separator:ga5a0140a4e3ca1302b2f840fb7b211da7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacf57904eefa8300377f2199acbfdd920"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="../../d6/d4a/struct_a_v_filter_in_out.html">AVFilterInOut</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d96/group__lavfi.html#gacf57904eefa8300377f2199acbfdd920">AVFilterInOut</a></td></tr>
+<tr class="separator:gacf57904eefa8300377f2199acbfdd920"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Перечисления</h2></td></tr>
+<tr class="memitem:gaa491173a6b1628f4ff82067b2e1ceaa9"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="../../d0/d96/group__lavfi.html#ggaa491173a6b1628f4ff82067b2e1ceaa9a385b5a02cfa6899d888c996309cb82ed">AVFILTER_AUTO_CONVERT_ALL</a> = 0, 
+<a class="el" href="../../d0/d96/group__lavfi.html#ggaa491173a6b1628f4ff82067b2e1ceaa9a065142be87c3afee01ef498654fde0b4">AVFILTER_AUTO_CONVERT_NONE</a> = -1
+ }</td></tr>
+<tr class="separator:gaa491173a6b1628f4ff82067b2e1ceaa9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:gab2e80a6bf5de47a81f64471e73524a6a"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d96/group__lavfi.html#gab2e80a6bf5de47a81f64471e73524a6a">avfilter_version</a> (<a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>)</td></tr>
+<tr class="separator:gab2e80a6bf5de47a81f64471e73524a6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaeda0e16f48d137db0ef762259603cb06"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d96/group__lavfi.html#gaeda0e16f48d137db0ef762259603cb06">avfilter_configuration</a> (<a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>)</td></tr>
+<tr class="separator:gaeda0e16f48d137db0ef762259603cb06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadc149473598907e3db669018abb11e6e"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d96/group__lavfi.html#gadc149473598907e3db669018abb11e6e">avfilter_license</a> (<a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>)</td></tr>
+<tr class="separator:gadc149473598907e3db669018abb11e6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae13acb5396b0204c3641502677db2f49"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d96/group__lavfi.html#gae13acb5396b0204c3641502677db2f49">avfilter_pad_count</a> (const <a class="el" href="../../d0/d96/group__lavfi.html#ga067d805667c8575b55712d728a16ce7f">AVFilterPad</a> *pads)</td></tr>
+<tr class="separator:gae13acb5396b0204c3641502677db2f49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2d69631bb24a0a2b7ac0e00fe1dfab3b"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d96/group__lavfi.html#ga2d69631bb24a0a2b7ac0e00fe1dfab3b">avfilter_pad_get_name</a> (const <a class="el" href="../../d0/d96/group__lavfi.html#ga067d805667c8575b55712d728a16ce7f">AVFilterPad</a> *pads, int pad_idx)</td></tr>
+<tr class="separator:ga2d69631bb24a0a2b7ac0e00fe1dfab3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2d241a0066fc3724ec3335e25bc3912e"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="../../d7/d83/group__lavu__misc.html#ga9a84bba4713dfced21a1a56163be1f48">AVMediaType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d96/group__lavfi.html#ga2d241a0066fc3724ec3335e25bc3912e">avfilter_pad_get_type</a> (const <a class="el" href="../../d0/d96/group__lavfi.html#ga067d805667c8575b55712d728a16ce7f">AVFilterPad</a> *pads, int pad_idx)</td></tr>
+<tr class="separator:ga2d241a0066fc3724ec3335e25bc3912e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabc6247ebae2c591e768c8555174402f1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d96/group__lavfi.html#gabc6247ebae2c591e768c8555174402f1">avfilter_link</a> (<a class="el" href="../../db/d74/struct_a_v_filter_context.html">AVFilterContext</a> *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a72e0fdf0f845ded60b1fada9e9195cd7">src</a>, unsigned srcpad, <a class="el" href="../../db/d74/struct_a_v_filter_context.html">AVFilterContext</a> *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a92034251bfd455d524a9b5610cddba00">dst</a>, unsigned dstpad)</td></tr>
+<tr class="separator:gabc6247ebae2c591e768c8555174402f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacb88c44589fa57729637817f26826193"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d96/group__lavfi.html#gacb88c44589fa57729637817f26826193">avfilter_link_free</a> (<a class="el" href="../../d6/d1a/struct_a_v_filter_link.html">AVFilterLink</a> **link)</td></tr>
+<tr class="separator:gacb88c44589fa57729637817f26826193"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8cd578feda77da59d2ea140943e5ba0f"><td class="memItemLeft" align="right" valign="top">attribute_deprecated int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d96/group__lavfi.html#ga8cd578feda77da59d2ea140943e5ba0f">avfilter_link_get_channels</a> (<a class="el" href="../../d6/d1a/struct_a_v_filter_link.html">AVFilterLink</a> *link)</td></tr>
+<tr class="separator:ga8cd578feda77da59d2ea140943e5ba0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0f20a579fb5853f55fe17443a2dfea41"><td class="memItemLeft" align="right" valign="top">attribute_deprecated <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d96/group__lavfi.html#ga0f20a579fb5853f55fe17443a2dfea41">avfilter_link_set_closed</a> (<a class="el" href="../../d6/d1a/struct_a_v_filter_link.html">AVFilterLink</a> *link, int closed)</td></tr>
+<tr class="separator:ga0f20a579fb5853f55fe17443a2dfea41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab06aaeb012cc4fed64620c0e8064e002"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d96/group__lavfi.html#gab06aaeb012cc4fed64620c0e8064e002">avfilter_config_links</a> (<a class="el" href="../../db/d74/struct_a_v_filter_context.html">AVFilterContext</a> *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a8bed50656d87c3eeed9d8f5e539c6b3e">filter</a>)</td></tr>
+<tr class="separator:gab06aaeb012cc4fed64620c0e8064e002"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7265908e69b4eaa69a4947a093743f26"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d96/group__lavfi.html#ga7265908e69b4eaa69a4947a093743f26">avfilter_process_command</a> (<a class="el" href="../../db/d74/struct_a_v_filter_context.html">AVFilterContext</a> *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a8bed50656d87c3eeed9d8f5e539c6b3e">filter</a>, const char *cmd, const char *arg, char *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1dbb21208b9047cc8031ca9c840d3c2f">res</a>, int res_len, int <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#ac7ba7d3cce3d19ca020e056b37231289">flags</a>)</td></tr>
+<tr class="separator:ga7265908e69b4eaa69a4947a093743f26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0c16e2a461d31be328dfd21d2763533e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../de/db5/struct_a_v_filter.html">AVFilter</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d96/group__lavfi.html#ga0c16e2a461d31be328dfd21d2763533e">av_filter_iterate</a> (<a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> **opaque)</td></tr>
+<tr class="separator:ga0c16e2a461d31be328dfd21d2763533e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga97b5e3aad6c117abf67a3b8f4c9c8ce6"><td class="memItemLeft" align="right" valign="top">attribute_deprecated <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d96/group__lavfi.html#ga97b5e3aad6c117abf67a3b8f4c9c8ce6">avfilter_register_all</a> (<a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>)</td></tr>
+<tr class="separator:ga97b5e3aad6c117abf67a3b8f4c9c8ce6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1418a7377be0b09bc1f06539f810a09a"><td class="memItemLeft" align="right" valign="top">attribute_deprecated int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d96/group__lavfi.html#ga1418a7377be0b09bc1f06539f810a09a">avfilter_register</a> (<a class="el" href="../../de/db5/struct_a_v_filter.html">AVFilter</a> *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a8bed50656d87c3eeed9d8f5e539c6b3e">filter</a>)</td></tr>
+<tr class="separator:ga1418a7377be0b09bc1f06539f810a09a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5f7f38cabef6fb599f3be202a2bf382b"><td class="memItemLeft" align="right" valign="top">const attribute_deprecated <a class="el" href="../../de/db5/struct_a_v_filter.html">AVFilter</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d96/group__lavfi.html#ga5f7f38cabef6fb599f3be202a2bf382b">avfilter_next</a> (const <a class="el" href="../../de/db5/struct_a_v_filter.html">AVFilter</a> *prev)</td></tr>
+<tr class="separator:ga5f7f38cabef6fb599f3be202a2bf382b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadd774ec49e50edf00158248e1bfe4ae6"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../de/db5/struct_a_v_filter.html">AVFilter</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d96/group__lavfi.html#gadd774ec49e50edf00158248e1bfe4ae6">avfilter_get_by_name</a> (const char *<a class="el" href="../../df/d32/_s_d_l__egl_8h.html#aaced7cfc21e7d37775d6921bb8177239">name</a>)</td></tr>
+<tr class="separator:gadd774ec49e50edf00158248e1bfe4ae6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0d21eb00b9f24213bd7c5775393a09fd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d96/group__lavfi.html#ga0d21eb00b9f24213bd7c5775393a09fd">avfilter_init_str</a> (<a class="el" href="../../db/d74/struct_a_v_filter_context.html">AVFilterContext</a> *<a class="el" href="../../df/d32/_s_d_l__egl_8h.html#a209c8e51e11ce41075280eea53ad018c">ctx</a>, const char *args)</td></tr>
+<tr class="separator:ga0d21eb00b9f24213bd7c5775393a09fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8c15af28902395399fe455f6f8236848"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d96/group__lavfi.html#ga8c15af28902395399fe455f6f8236848">avfilter_init_dict</a> (<a class="el" href="../../db/d74/struct_a_v_filter_context.html">AVFilterContext</a> *<a class="el" href="../../df/d32/_s_d_l__egl_8h.html#a209c8e51e11ce41075280eea53ad018c">ctx</a>, <a class="el" href="../../d2/db0/group__lavu__dict.html#ga1d7cc0833bee918994a600556410315f">AVDictionary</a> **options)</td></tr>
+<tr class="separator:ga8c15af28902395399fe455f6f8236848"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0ea7664a3ce6bb677a830698d358a179"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d96/group__lavfi.html#ga0ea7664a3ce6bb677a830698d358a179">avfilter_free</a> (<a class="el" href="../../db/d74/struct_a_v_filter_context.html">AVFilterContext</a> *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a8bed50656d87c3eeed9d8f5e539c6b3e">filter</a>)</td></tr>
+<tr class="separator:ga0ea7664a3ce6bb677a830698d358a179"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0d2740a8679ff5086f680547eb0a08e0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d96/group__lavfi.html#ga0d2740a8679ff5086f680547eb0a08e0">avfilter_insert_filter</a> (<a class="el" href="../../d6/d1a/struct_a_v_filter_link.html">AVFilterLink</a> *link, <a class="el" href="../../db/d74/struct_a_v_filter_context.html">AVFilterContext</a> *filt, unsigned filt_srcpad_idx, unsigned filt_dstpad_idx)</td></tr>
+<tr class="separator:ga0d2740a8679ff5086f680547eb0a08e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga47ab3c56888ecc8ced403cbf39c35a4d"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d2/de1/struct_a_v_class.html">AVClass</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d96/group__lavfi.html#ga47ab3c56888ecc8ced403cbf39c35a4d">avfilter_get_class</a> (<a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>)</td></tr>
+<tr class="separator:ga47ab3c56888ecc8ced403cbf39c35a4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6c778454b86f845805ffd814b4ce51d4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d4/d5e/struct_a_v_filter_graph.html">AVFilterGraph</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d96/group__lavfi.html#ga6c778454b86f845805ffd814b4ce51d4">avfilter_graph_alloc</a> (<a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>)</td></tr>
+<tr class="separator:ga6c778454b86f845805ffd814b4ce51d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa9af17ecf4c5c87307b57cf08411088b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d74/struct_a_v_filter_context.html">AVFilterContext</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d96/group__lavfi.html#gaa9af17ecf4c5c87307b57cf08411088b">avfilter_graph_alloc_filter</a> (<a class="el" href="../../d4/d5e/struct_a_v_filter_graph.html">AVFilterGraph</a> *graph, const <a class="el" href="../../de/db5/struct_a_v_filter.html">AVFilter</a> *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a8bed50656d87c3eeed9d8f5e539c6b3e">filter</a>, const char *<a class="el" href="../../df/d32/_s_d_l__egl_8h.html#aaced7cfc21e7d37775d6921bb8177239">name</a>)</td></tr>
+<tr class="separator:gaa9af17ecf4c5c87307b57cf08411088b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafdc2bad47c8b477a4baed6a37c61edfc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d74/struct_a_v_filter_context.html">AVFilterContext</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d96/group__lavfi.html#gafdc2bad47c8b477a4baed6a37c61edfc">avfilter_graph_get_filter</a> (<a class="el" href="../../d4/d5e/struct_a_v_filter_graph.html">AVFilterGraph</a> *graph, const char *<a class="el" href="../../df/d32/_s_d_l__egl_8h.html#aaced7cfc21e7d37775d6921bb8177239">name</a>)</td></tr>
+<tr class="separator:gafdc2bad47c8b477a4baed6a37c61edfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac0788a9ab6966dba9318b5d5c7524fea"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d96/group__lavfi.html#gac0788a9ab6966dba9318b5d5c7524fea">avfilter_graph_create_filter</a> (<a class="el" href="../../db/d74/struct_a_v_filter_context.html">AVFilterContext</a> **filt_ctx, const <a class="el" href="../../de/db5/struct_a_v_filter.html">AVFilter</a> *filt, const char *<a class="el" href="../../df/d32/_s_d_l__egl_8h.html#aaced7cfc21e7d37775d6921bb8177239">name</a>, const char *args, <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *opaque, <a class="el" href="../../d4/d5e/struct_a_v_filter_graph.html">AVFilterGraph</a> *graph_ctx)</td></tr>
+<tr class="separator:gac0788a9ab6966dba9318b5d5c7524fea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae7e75e3df70de53fae2cf7950c1247a8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d96/group__lavfi.html#gae7e75e3df70de53fae2cf7950c1247a8">avfilter_graph_set_auto_convert</a> (<a class="el" href="../../d4/d5e/struct_a_v_filter_graph.html">AVFilterGraph</a> *graph, unsigned <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#ac7ba7d3cce3d19ca020e056b37231289">flags</a>)</td></tr>
+<tr class="separator:gae7e75e3df70de53fae2cf7950c1247a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1896c46b7bc6ff1bdb1a4815faa9ad07"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d96/group__lavfi.html#ga1896c46b7bc6ff1bdb1a4815faa9ad07">avfilter_graph_config</a> (<a class="el" href="../../d4/d5e/struct_a_v_filter_graph.html">AVFilterGraph</a> *graphctx, <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *log_ctx)</td></tr>
+<tr class="separator:ga1896c46b7bc6ff1bdb1a4815faa9ad07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga871684449dac05050df238a18d0d493b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d96/group__lavfi.html#ga871684449dac05050df238a18d0d493b">avfilter_graph_free</a> (<a class="el" href="../../d4/d5e/struct_a_v_filter_graph.html">AVFilterGraph</a> **graph)</td></tr>
+<tr class="separator:ga871684449dac05050df238a18d0d493b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6e1c2931e15eb4283c59c6ccc8b83919"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d4a/struct_a_v_filter_in_out.html">AVFilterInOut</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d96/group__lavfi.html#ga6e1c2931e15eb4283c59c6ccc8b83919">avfilter_inout_alloc</a> (<a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>)</td></tr>
+<tr class="separator:ga6e1c2931e15eb4283c59c6ccc8b83919"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga294500a9856260eb1552354fd9d9a6c4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d96/group__lavfi.html#ga294500a9856260eb1552354fd9d9a6c4">avfilter_inout_free</a> (<a class="el" href="../../d6/d4a/struct_a_v_filter_in_out.html">AVFilterInOut</a> **inout)</td></tr>
+<tr class="separator:ga294500a9856260eb1552354fd9d9a6c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab4718e1716c0a0d9343d49ff10d542cb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d96/group__lavfi.html#gab4718e1716c0a0d9343d49ff10d542cb">avfilter_graph_parse</a> (<a class="el" href="../../d4/d5e/struct_a_v_filter_graph.html">AVFilterGraph</a> *graph, const char *filters, <a class="el" href="../../d6/d4a/struct_a_v_filter_in_out.html">AVFilterInOut</a> *inputs, <a class="el" href="../../d6/d4a/struct_a_v_filter_in_out.html">AVFilterInOut</a> *outputs, <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *log_ctx)</td></tr>
+<tr class="separator:gab4718e1716c0a0d9343d49ff10d542cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga34f4ff420bd58da6747a3ff1fbedd001"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d96/group__lavfi.html#ga34f4ff420bd58da6747a3ff1fbedd001">avfilter_graph_parse_ptr</a> (<a class="el" href="../../d4/d5e/struct_a_v_filter_graph.html">AVFilterGraph</a> *graph, const char *filters, <a class="el" href="../../d6/d4a/struct_a_v_filter_in_out.html">AVFilterInOut</a> **inputs, <a class="el" href="../../d6/d4a/struct_a_v_filter_in_out.html">AVFilterInOut</a> **outputs, <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *log_ctx)</td></tr>
+<tr class="separator:ga34f4ff420bd58da6747a3ff1fbedd001"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6c3c39e0861653c71a23f90d1397239d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d96/group__lavfi.html#ga6c3c39e0861653c71a23f90d1397239d">avfilter_graph_parse2</a> (<a class="el" href="../../d4/d5e/struct_a_v_filter_graph.html">AVFilterGraph</a> *graph, const char *filters, <a class="el" href="../../d6/d4a/struct_a_v_filter_in_out.html">AVFilterInOut</a> **inputs, <a class="el" href="../../d6/d4a/struct_a_v_filter_in_out.html">AVFilterInOut</a> **outputs)</td></tr>
+<tr class="separator:ga6c3c39e0861653c71a23f90d1397239d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaaad7850fb5fe26d35e5d371ca75b79e1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d96/group__lavfi.html#gaaad7850fb5fe26d35e5d371ca75b79e1">avfilter_graph_send_command</a> (<a class="el" href="../../d4/d5e/struct_a_v_filter_graph.html">AVFilterGraph</a> *graph, const char *<a class="el" href="../../df/d32/_s_d_l__egl_8h.html#af9d0cbbbeb7414e786c41899e5a856d7">target</a>, const char *cmd, const char *arg, char *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1dbb21208b9047cc8031ca9c840d3c2f">res</a>, int res_len, int <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#ac7ba7d3cce3d19ca020e056b37231289">flags</a>)</td></tr>
+<tr class="separator:gaaad7850fb5fe26d35e5d371ca75b79e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3140b3cd7bf9a80c2dfa868dcf7ac541"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d96/group__lavfi.html#ga3140b3cd7bf9a80c2dfa868dcf7ac541">avfilter_graph_queue_command</a> (<a class="el" href="../../d4/d5e/struct_a_v_filter_graph.html">AVFilterGraph</a> *graph, const char *<a class="el" href="../../df/d32/_s_d_l__egl_8h.html#af9d0cbbbeb7414e786c41899e5a856d7">target</a>, const char *cmd, const char *arg, int <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#ac7ba7d3cce3d19ca020e056b37231289">flags</a>, double ts)</td></tr>
+<tr class="separator:ga3140b3cd7bf9a80c2dfa868dcf7ac541"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadb442aca4e5a8c3ba740f6049f0a288b"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d96/group__lavfi.html#gadb442aca4e5a8c3ba740f6049f0a288b">avfilter_graph_dump</a> (<a class="el" href="../../d4/d5e/struct_a_v_filter_graph.html">AVFilterGraph</a> *graph, const char *options)</td></tr>
+<tr class="separator:gadb442aca4e5a8c3ba740f6049f0a288b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab20535e0685fb5f9b4f02e436412c3f0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d96/group__lavfi.html#gab20535e0685fb5f9b4f02e436412c3f0">avfilter_graph_request_oldest</a> (<a class="el" href="../../d4/d5e/struct_a_v_filter_graph.html">AVFilterGraph</a> *graph)</td></tr>
+<tr class="separator:gab20535e0685fb5f9b4f02e436412c3f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<p>Graph-based frame editing library. </p>
+<h2 class="groupheader">Типы</h2>
+<a id="ga7df813052b320829fb91b6e84acf5c84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7df813052b320829fb91b6e84acf5c84">&#9670;&nbsp;</a></span>AVFilterContext</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="../../db/d74/struct_a_v_filter_context.html">AVFilterContext</a> <a class="el" href="../../db/d74/struct_a_v_filter_context.html">AVFilterContext</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../d8/da0/avfilter_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavfilter/avfilter.h</a>&gt;</code></p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/da0/avfilter_8h_source.html">avfilter.h</a> строка <a class="el" href="../../d8/da0/avfilter_8h_source.html#l00067">67</a></p>
+
+</div>
+</div>
+<a id="ga3eb02002abaa0341437d3127658fe04e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3eb02002abaa0341437d3127658fe04e">&#9670;&nbsp;</a></span>AVFilterLink</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="../../d6/d1a/struct_a_v_filter_link.html">AVFilterLink</a> <a class="el" href="../../d6/d1a/struct_a_v_filter_link.html">AVFilterLink</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../d8/da0/avfilter_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavfilter/avfilter.h</a>&gt;</code></p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/da0/avfilter_8h_source.html">avfilter.h</a> строка <a class="el" href="../../d8/da0/avfilter_8h_source.html#l00068">68</a></p>
+
+</div>
+</div>
+<a id="ga067d805667c8575b55712d728a16ce7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga067d805667c8575b55712d728a16ce7f">&#9670;&nbsp;</a></span>AVFilterPad</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="../../d0/d96/group__lavfi.html#ga067d805667c8575b55712d728a16ce7f">AVFilterPad</a> <a class="el" href="../../d0/d96/group__lavfi.html#ga067d805667c8575b55712d728a16ce7f">AVFilterPad</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../d8/da0/avfilter_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavfilter/avfilter.h</a>&gt;</code></p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/da0/avfilter_8h_source.html">avfilter.h</a> строка <a class="el" href="../../d8/da0/avfilter_8h_source.html#l00069">69</a></p>
+
+</div>
+</div>
+<a id="gac71769d0eb79494d0cc095ac2ad0914b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac71769d0eb79494d0cc095ac2ad0914b">&#9670;&nbsp;</a></span>AVFilterFormats</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="../../d0/d96/group__lavfi.html#gac71769d0eb79494d0cc095ac2ad0914b">AVFilterFormats</a> <a class="el" href="../../d0/d96/group__lavfi.html#gac71769d0eb79494d0cc095ac2ad0914b">AVFilterFormats</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../d8/da0/avfilter_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavfilter/avfilter.h</a>&gt;</code></p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/da0/avfilter_8h_source.html">avfilter.h</a> строка <a class="el" href="../../d8/da0/avfilter_8h_source.html#l00070">70</a></p>
+
+</div>
+</div>
+<a id="ga5fc066e5b4c8900f7b8560295026127c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5fc066e5b4c8900f7b8560295026127c">&#9670;&nbsp;</a></span>AVFilter</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="../../de/db5/struct_a_v_filter.html">AVFilter</a> <a class="el" href="../../de/db5/struct_a_v_filter.html">AVFilter</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../d8/da0/avfilter_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavfilter/avfilter.h</a>&gt;</code></p>
+<p>Filter definition. This defines the pads a filter contains, and all the callback functions used to interact with the filter. </p>
+
+</div>
+</div>
+<a id="ga740cb7cf0f6f69e142b89163b0691708"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga740cb7cf0f6f69e142b89163b0691708">&#9670;&nbsp;</a></span>AVFilterInternal</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="../../d0/d96/group__lavfi.html#ga740cb7cf0f6f69e142b89163b0691708">AVFilterInternal</a> <a class="el" href="../../d0/d96/group__lavfi.html#ga740cb7cf0f6f69e142b89163b0691708">AVFilterInternal</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../d8/da0/avfilter_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavfilter/avfilter.h</a>&gt;</code></p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/da0/avfilter_8h_source.html">avfilter.h</a> строка <a class="el" href="../../d8/da0/avfilter_8h_source.html#l00335">335</a></p>
+
+</div>
+</div>
+<a id="gaa34cc0f3d5e4d49806c6c40aac97a963"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa34cc0f3d5e4d49806c6c40aac97a963">&#9670;&nbsp;</a></span>AVFilterGraphInternal</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="../../d0/d96/group__lavfi.html#gaa34cc0f3d5e4d49806c6c40aac97a963">AVFilterGraphInternal</a> <a class="el" href="../../d0/d96/group__lavfi.html#gaa34cc0f3d5e4d49806c6c40aac97a963">AVFilterGraphInternal</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../d8/da0/avfilter_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavfilter/avfilter.h</a>&gt;</code></p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/da0/avfilter_8h_source.html">avfilter.h</a> строка <a class="el" href="../../d8/da0/avfilter_8h_source.html#l00809">809</a></p>
+
+</div>
+</div>
+<a id="ga93b8de1d06c5d83c1a287babe32e59d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga93b8de1d06c5d83c1a287babe32e59d4">&#9670;&nbsp;</a></span>avfilter_action_func</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef int() avfilter_action_func(<a class="el" href="../../db/d74/struct_a_v_filter_context.html">AVFilterContext</a> *<a class="el" href="../../df/d32/_s_d_l__egl_8h.html#a209c8e51e11ce41075280eea53ad018c">ctx</a>, <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *arg, int jobnr, int nb_jobs)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../d8/da0/avfilter_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavfilter/avfilter.h</a>&gt;</code></p>
+<p>A function pointer passed to the <a class="el" href="../../d4/d5e/struct_a_v_filter_graph.html#abbabdacc9b11e239ec24c969549d62ec">AVFilterGraph::execute</a> callback to be executed multiple times, possibly in parallel.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ctx</td><td>the filter context the job belongs to </td></tr>
+    <tr><td class="paramname">arg</td><td>an opaque parameter passed through from <a class="el" href="../../d4/d5e/struct_a_v_filter_graph.html#abbabdacc9b11e239ec24c969549d62ec">AVFilterGraph::execute</a> </td></tr>
+    <tr><td class="paramname">jobnr</td><td>the index of the job being executed </td></tr>
+    <tr><td class="paramname">nb_jobs</td><td>the total number of jobs</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>0 on success, a negative AVERROR on error </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/da0/avfilter_8h_source.html">avfilter.h</a> строка <a class="el" href="../../d8/da0/avfilter_8h_source.html#l00823">823</a></p>
+
+</div>
+</div>
+<a id="gaa110ebfed4a342f88cd86da1b0037ab7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa110ebfed4a342f88cd86da1b0037ab7">&#9670;&nbsp;</a></span>avfilter_execute_func</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef int() avfilter_execute_func(<a class="el" href="../../db/d74/struct_a_v_filter_context.html">AVFilterContext</a> *<a class="el" href="../../df/d32/_s_d_l__egl_8h.html#a209c8e51e11ce41075280eea53ad018c">ctx</a>, <a class="el" href="../../d0/d96/group__lavfi.html#ga93b8de1d06c5d83c1a287babe32e59d4">avfilter_action_func</a> *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a18ae3ab36a07e388833b568cfdfa90c8">func</a>, <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *arg, int *ret, int nb_jobs)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../d8/da0/avfilter_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavfilter/avfilter.h</a>&gt;</code></p>
+<p>A function executing multiple jobs, possibly in parallel.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ctx</td><td>the filter context to which the jobs belong </td></tr>
+    <tr><td class="paramname">func</td><td>the function to be called multiple times </td></tr>
+    <tr><td class="paramname">arg</td><td>the argument to be passed to func </td></tr>
+    <tr><td class="paramname">ret</td><td>a nb_jobs-sized array to be filled with return values from each invocation of func </td></tr>
+    <tr><td class="paramname">nb_jobs</td><td>the number of jobs to execute</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>0 on success, a negative AVERROR on error </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/da0/avfilter_8h_source.html">avfilter.h</a> строка <a class="el" href="../../d8/da0/avfilter_8h_source.html#l00837">837</a></p>
+
+</div>
+</div>
+<a id="ga5a0140a4e3ca1302b2f840fb7b211da7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5a0140a4e3ca1302b2f840fb7b211da7">&#9670;&nbsp;</a></span>AVFilterGraph</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="../../d4/d5e/struct_a_v_filter_graph.html">AVFilterGraph</a> <a class="el" href="../../d4/d5e/struct_a_v_filter_graph.html">AVFilterGraph</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../d8/da0/avfilter_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavfilter/avfilter.h</a>&gt;</code></p>
+
+</div>
+</div>
+<a id="gacf57904eefa8300377f2199acbfdd920"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gacf57904eefa8300377f2199acbfdd920">&#9670;&nbsp;</a></span>AVFilterInOut</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="../../d6/d4a/struct_a_v_filter_in_out.html">AVFilterInOut</a> <a class="el" href="../../d6/d4a/struct_a_v_filter_in_out.html">AVFilterInOut</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../d8/da0/avfilter_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavfilter/avfilter.h</a>&gt;</code></p>
+<p>A linked-list of the inputs/outputs of the filter chain.</p>
+<p>This is mainly useful for <a class="el" href="../../d0/d96/group__lavfi.html#gab4718e1716c0a0d9343d49ff10d542cb">avfilter_graph_parse()</a> / <a class="el" href="../../d0/d96/group__lavfi.html#ga6c3c39e0861653c71a23f90d1397239d">avfilter_graph_parse2()</a>, where it is used to communicate open (unlinked) inputs and outputs from and to the caller. This struct specifies, per each not connected pad contained in the graph, the filter context and the pad index required for establishing a link. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Перечисления</h2>
+<a id="gaa491173a6b1628f4ff82067b2e1ceaa9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa491173a6b1628f4ff82067b2e1ceaa9">&#9670;&nbsp;</a></span>anonymous enum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../d8/da0/avfilter_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavfilter/avfilter.h</a>&gt;</code></p>
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="ggaa491173a6b1628f4ff82067b2e1ceaa9a385b5a02cfa6899d888c996309cb82ed"></a>AVFILTER_AUTO_CONVERT_ALL&#160;</td><td class="fielddoc"><p>all automatic conversions enabled </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaa491173a6b1628f4ff82067b2e1ceaa9a065142be87c3afee01ef498654fde0b4"></a>AVFILTER_AUTO_CONVERT_NONE&#160;</td><td class="fielddoc"><p>all automatic conversions disabled </p>
+</td></tr>
+</table>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/da0/avfilter_8h_source.html">avfilter.h</a> строка <a class="el" href="../../d8/da0/avfilter_8h_source.html#l00974">974</a></p>
+<div class="fragment"><div class="line"><a name="l00974"></a><span class="lineno">  974</span>&#160;     {</div>
+<div class="line"><a name="l00975"></a><span class="lineno">  975</span>&#160;    <a class="code" href="../../d0/d96/group__lavfi.html#ggaa491173a6b1628f4ff82067b2e1ceaa9a385b5a02cfa6899d888c996309cb82ed">AVFILTER_AUTO_CONVERT_ALL</a>  =  0, </div>
+<div class="line"><a name="l00976"></a><span class="lineno">  976</span>&#160;    <a class="code" href="../../d0/d96/group__lavfi.html#ggaa491173a6b1628f4ff82067b2e1ceaa9a065142be87c3afee01ef498654fde0b4">AVFILTER_AUTO_CONVERT_NONE</a> = -1, </div>
+<div class="line"><a name="l00977"></a><span class="lineno">  977</span>&#160;};</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Функции</h2>
+<a id="gab2e80a6bf5de47a81f64471e73524a6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab2e80a6bf5de47a81f64471e73524a6a">&#9670;&nbsp;</a></span>avfilter_version()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned avfilter_version </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../d8/da0/avfilter_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavfilter/avfilter.h</a>&gt;</code></p>
+<p>Return the LIBAVFILTER_VERSION_INT constant. </p>
+
+</div>
+</div>
+<a id="gaeda0e16f48d137db0ef762259603cb06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaeda0e16f48d137db0ef762259603cb06">&#9670;&nbsp;</a></span>avfilter_configuration()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* avfilter_configuration </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../d8/da0/avfilter_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavfilter/avfilter.h</a>&gt;</code></p>
+<p>Return the libavfilter build-time configuration. </p>
+
+</div>
+</div>
+<a id="gadc149473598907e3db669018abb11e6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadc149473598907e3db669018abb11e6e">&#9670;&nbsp;</a></span>avfilter_license()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* avfilter_license </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../d8/da0/avfilter_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavfilter/avfilter.h</a>&gt;</code></p>
+<p>Return the libavfilter license. </p>
+
+</div>
+</div>
+<a id="gae13acb5396b0204c3641502677db2f49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae13acb5396b0204c3641502677db2f49">&#9670;&nbsp;</a></span>avfilter_pad_count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int avfilter_pad_count </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d0/d96/group__lavfi.html#ga067d805667c8575b55712d728a16ce7f">AVFilterPad</a> *&#160;</td>
+          <td class="paramname"><em>pads</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../d8/da0/avfilter_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavfilter/avfilter.h</a>&gt;</code></p>
+<p>Get the number of elements in a NULL-terminated array of AVFilterPads (e.g. <a class="el" href="../../de/db5/struct_a_v_filter.html#ad311151fe6e8c87a89f895bef7c8b98b">AVFilter.inputs</a>/outputs). </p>
+
+</div>
+</div>
+<a id="ga2d69631bb24a0a2b7ac0e00fe1dfab3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2d69631bb24a0a2b7ac0e00fe1dfab3b">&#9670;&nbsp;</a></span>avfilter_pad_get_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* avfilter_pad_get_name </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d0/d96/group__lavfi.html#ga067d805667c8575b55712d728a16ce7f">AVFilterPad</a> *&#160;</td>
+          <td class="paramname"><em>pads</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>pad_idx</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../d8/da0/avfilter_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavfilter/avfilter.h</a>&gt;</code></p>
+<p>Get the name of an AVFilterPad.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pads</td><td>an array of AVFilterPads </td></tr>
+    <tr><td class="paramname">pad_idx</td><td>index of the pad in the array it; is the caller's responsibility to ensure the index is valid</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>name of the pad_idx'th pad in pads </dd></dl>
+
+</div>
+</div>
+<a id="ga2d241a0066fc3724ec3335e25bc3912e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2d241a0066fc3724ec3335e25bc3912e">&#9670;&nbsp;</a></span>avfilter_pad_get_type()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="../../d7/d83/group__lavu__misc.html#ga9a84bba4713dfced21a1a56163be1f48">AVMediaType</a> avfilter_pad_get_type </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d0/d96/group__lavfi.html#ga067d805667c8575b55712d728a16ce7f">AVFilterPad</a> *&#160;</td>
+          <td class="paramname"><em>pads</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>pad_idx</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../d8/da0/avfilter_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavfilter/avfilter.h</a>&gt;</code></p>
+<p>Get the type of an AVFilterPad.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pads</td><td>an array of AVFilterPads </td></tr>
+    <tr><td class="paramname">pad_idx</td><td>index of the pad in the array; it is the caller's responsibility to ensure the index is valid</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>type of the pad_idx'th pad in pads </dd></dl>
+
+</div>
+</div>
+<a id="gabc6247ebae2c591e768c8555174402f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabc6247ebae2c591e768c8555174402f1">&#9670;&nbsp;</a></span>avfilter_link()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int avfilter_link </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../db/d74/struct_a_v_filter_context.html">AVFilterContext</a> *&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>srcpad</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../db/d74/struct_a_v_filter_context.html">AVFilterContext</a> *&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>dstpad</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../d8/da0/avfilter_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavfilter/avfilter.h</a>&gt;</code></p>
+<p>Link two filters together.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>the source filter </td></tr>
+    <tr><td class="paramname">srcpad</td><td>index of the output pad on the source filter </td></tr>
+    <tr><td class="paramname">dst</td><td>the destination filter </td></tr>
+    <tr><td class="paramname">dstpad</td><td>index of the input pad on the destination filter </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>zero on success </dd></dl>
+
+</div>
+</div>
+<a id="gacb88c44589fa57729637817f26826193"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gacb88c44589fa57729637817f26826193">&#9670;&nbsp;</a></span>avfilter_link_free()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> avfilter_link_free </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d6/d1a/struct_a_v_filter_link.html">AVFilterLink</a> **&#160;</td>
+          <td class="paramname"><em>link</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../d8/da0/avfilter_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavfilter/avfilter.h</a>&gt;</code></p>
+<p>Free the link in *link, and set its pointer to NULL. </p>
+
+</div>
+</div>
+<a id="ga8cd578feda77da59d2ea140943e5ba0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8cd578feda77da59d2ea140943e5ba0f">&#9670;&nbsp;</a></span>avfilter_link_get_channels()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">attribute_deprecated int avfilter_link_get_channels </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d6/d1a/struct_a_v_filter_link.html">AVFilterLink</a> *&#160;</td>
+          <td class="paramname"><em>link</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../d8/da0/avfilter_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavfilter/avfilter.h</a>&gt;</code></p>
+<p>Get the number of channels of a link. </p><dl class="deprecated"><dt><b><a class="el" href="../../da/d58/deprecated.html#_deprecated000064">Уст.:</a></b></dt><dd>Use <a class="el" href="../../da/dc6/group__lavfi__buffersink__accessors.html#gace78881c41bf449527826b95d21279a2">av_buffersink_get_channels()</a> </dd></dl>
+
+</div>
+</div>
+<a id="ga0f20a579fb5853f55fe17443a2dfea41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0f20a579fb5853f55fe17443a2dfea41">&#9670;&nbsp;</a></span>avfilter_link_set_closed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">attribute_deprecated <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> avfilter_link_set_closed </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d6/d1a/struct_a_v_filter_link.html">AVFilterLink</a> *&#160;</td>
+          <td class="paramname"><em>link</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>closed</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../d8/da0/avfilter_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavfilter/avfilter.h</a>&gt;</code></p>
+<p>Set the closed field of a link. </p><dl class="deprecated"><dt><b><a class="el" href="../../da/d58/deprecated.html#_deprecated000065">Уст.:</a></b></dt><dd>applications are not supposed to mess with links, they should close the sinks. </dd></dl>
+
+</div>
+</div>
+<a id="gab06aaeb012cc4fed64620c0e8064e002"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab06aaeb012cc4fed64620c0e8064e002">&#9670;&nbsp;</a></span>avfilter_config_links()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int avfilter_config_links </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../db/d74/struct_a_v_filter_context.html">AVFilterContext</a> *&#160;</td>
+          <td class="paramname"><em>filter</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../d8/da0/avfilter_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavfilter/avfilter.h</a>&gt;</code></p>
+<p>Negotiate the media format, dimensions, etc of all inputs to a filter.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filter</td><td>the filter to negotiate the properties for its inputs </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>zero on successful negotiation </dd></dl>
+
+</div>
+</div>
+<a id="ga7265908e69b4eaa69a4947a093743f26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7265908e69b4eaa69a4947a093743f26">&#9670;&nbsp;</a></span>avfilter_process_command()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int avfilter_process_command </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../db/d74/struct_a_v_filter_context.html">AVFilterContext</a> *&#160;</td>
+          <td class="paramname"><em>filter</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>cmd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>arg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>res</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>res_len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>flags</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../d8/da0/avfilter_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavfilter/avfilter.h</a>&gt;</code></p>
+<p>Make the filter instance process a command. It is recommended to use <a class="el" href="../../d0/d96/group__lavfi.html#gaaad7850fb5fe26d35e5d371ca75b79e1">avfilter_graph_send_command()</a>. </p>
+
+</div>
+</div>
+<a id="ga0c16e2a461d31be328dfd21d2763533e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0c16e2a461d31be328dfd21d2763533e">&#9670;&nbsp;</a></span>av_filter_iterate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="../../de/db5/struct_a_v_filter.html">AVFilter</a>* av_filter_iterate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> **&#160;</td>
+          <td class="paramname"><em>opaque</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../d8/da0/avfilter_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavfilter/avfilter.h</a>&gt;</code></p>
+<p>Iterate over all registered filters.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">opaque</td><td>a pointer where libavfilter will store the iteration state. Must point to NULL to start the iteration.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>the next registered filter or NULL when the iteration is finished </dd></dl>
+
+</div>
+</div>
+<a id="ga97b5e3aad6c117abf67a3b8f4c9c8ce6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga97b5e3aad6c117abf67a3b8f4c9c8ce6">&#9670;&nbsp;</a></span>avfilter_register_all()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">attribute_deprecated <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> avfilter_register_all </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../d8/da0/avfilter_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavfilter/avfilter.h</a>&gt;</code></p>
+<p>Initialize the filter system. Register all builtin filters. </p>
+
+</div>
+</div>
+<a id="ga1418a7377be0b09bc1f06539f810a09a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1418a7377be0b09bc1f06539f810a09a">&#9670;&nbsp;</a></span>avfilter_register()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">attribute_deprecated int avfilter_register </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../de/db5/struct_a_v_filter.html">AVFilter</a> *&#160;</td>
+          <td class="paramname"><em>filter</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../d8/da0/avfilter_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavfilter/avfilter.h</a>&gt;</code></p>
+<p>Register a filter. This is only needed if you plan to use avfilter_get_by_name later to lookup the <a class="el" href="../../de/db5/struct_a_v_filter.html">AVFilter</a> structure by name. A filter can still by instantiated with avfilter_graph_alloc_filter even if it is not registered.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filter</td><td>the filter to register </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>0 if the registration was successful, a negative value otherwise </dd></dl>
+
+</div>
+</div>
+<a id="ga5f7f38cabef6fb599f3be202a2bf382b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5f7f38cabef6fb599f3be202a2bf382b">&#9670;&nbsp;</a></span>avfilter_next()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const attribute_deprecated <a class="el" href="../../de/db5/struct_a_v_filter.html">AVFilter</a>* avfilter_next </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../de/db5/struct_a_v_filter.html">AVFilter</a> *&#160;</td>
+          <td class="paramname"><em>prev</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../d8/da0/avfilter_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavfilter/avfilter.h</a>&gt;</code></p>
+<p>Iterate over all registered filters. </p><dl class="section return"><dt>Возвращает</dt><dd>If prev is non-NULL, next registered filter after prev or NULL if prev is the last filter. If prev is NULL, return the first registered filter. </dd></dl>
+
+</div>
+</div>
+<a id="gadd774ec49e50edf00158248e1bfe4ae6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadd774ec49e50edf00158248e1bfe4ae6">&#9670;&nbsp;</a></span>avfilter_get_by_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="../../de/db5/struct_a_v_filter.html">AVFilter</a>* avfilter_get_by_name </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../d8/da0/avfilter_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavfilter/avfilter.h</a>&gt;</code></p>
+<p>Get a filter definition matching the given name.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>the filter name to find </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>the filter definition, if any matching one is registered. NULL if none found. </dd></dl>
+
+</div>
+</div>
+<a id="ga0d21eb00b9f24213bd7c5775393a09fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0d21eb00b9f24213bd7c5775393a09fd">&#9670;&nbsp;</a></span>avfilter_init_str()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int avfilter_init_str </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../db/d74/struct_a_v_filter_context.html">AVFilterContext</a> *&#160;</td>
+          <td class="paramname"><em>ctx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../d8/da0/avfilter_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavfilter/avfilter.h</a>&gt;</code></p>
+<p>Initialize a filter with the supplied parameters.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ctx</td><td>uninitialized filter context to initialize </td></tr>
+    <tr><td class="paramname">args</td><td>Options to initialize the filter with. This must be a ':'-separated list of options in the 'key=value' form. May be NULL if the options have been set directly using the AVOptions API or there are no options that need to be set. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>0 on success, a negative AVERROR on failure </dd></dl>
+
+</div>
+</div>
+<a id="ga8c15af28902395399fe455f6f8236848"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8c15af28902395399fe455f6f8236848">&#9670;&nbsp;</a></span>avfilter_init_dict()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int avfilter_init_dict </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../db/d74/struct_a_v_filter_context.html">AVFilterContext</a> *&#160;</td>
+          <td class="paramname"><em>ctx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d2/db0/group__lavu__dict.html#ga1d7cc0833bee918994a600556410315f">AVDictionary</a> **&#160;</td>
+          <td class="paramname"><em>options</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../d8/da0/avfilter_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavfilter/avfilter.h</a>&gt;</code></p>
+<p>Initialize a filter with the supplied dictionary of options.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ctx</td><td>uninitialized filter context to initialize </td></tr>
+    <tr><td class="paramname">options</td><td>An AVDictionary filled with options for this filter. On return this parameter will be destroyed and replaced with a dict containing options that were not found. This dictionary must be freed by the caller. May be NULL, then this function is equivalent to <a class="el" href="../../d0/d96/group__lavfi.html#ga0d21eb00b9f24213bd7c5775393a09fd">avfilter_init_str()</a> with the second parameter set to NULL. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>0 on success, a negative AVERROR on failure</dd></dl>
+<dl class="section note"><dt>Заметки</dt><dd>This function and <a class="el" href="../../d0/d96/group__lavfi.html#ga0d21eb00b9f24213bd7c5775393a09fd">avfilter_init_str()</a> do essentially the same thing, the difference is in manner in which the options are passed. It is up to the calling code to choose whichever is more preferable. The two functions also behave differently when some of the provided options are not declared as supported by the filter. In such a case, <a class="el" href="../../d0/d96/group__lavfi.html#ga0d21eb00b9f24213bd7c5775393a09fd">avfilter_init_str()</a> will fail, but this function will leave those extra options in the options AVDictionary and continue as usual. </dd></dl>
+
+</div>
+</div>
+<a id="ga0ea7664a3ce6bb677a830698d358a179"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0ea7664a3ce6bb677a830698d358a179">&#9670;&nbsp;</a></span>avfilter_free()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> avfilter_free </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../db/d74/struct_a_v_filter_context.html">AVFilterContext</a> *&#160;</td>
+          <td class="paramname"><em>filter</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../d8/da0/avfilter_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavfilter/avfilter.h</a>&gt;</code></p>
+<p>Free a filter context. This will also remove the filter from its filtergraph's list of filters.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filter</td><td>the filter to free </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga0d2740a8679ff5086f680547eb0a08e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0d2740a8679ff5086f680547eb0a08e0">&#9670;&nbsp;</a></span>avfilter_insert_filter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int avfilter_insert_filter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d6/d1a/struct_a_v_filter_link.html">AVFilterLink</a> *&#160;</td>
+          <td class="paramname"><em>link</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../db/d74/struct_a_v_filter_context.html">AVFilterContext</a> *&#160;</td>
+          <td class="paramname"><em>filt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>filt_srcpad_idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>filt_dstpad_idx</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../d8/da0/avfilter_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavfilter/avfilter.h</a>&gt;</code></p>
+<p>Insert a filter in the middle of an existing link.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">link</td><td>the link into which the filter should be inserted </td></tr>
+    <tr><td class="paramname">filt</td><td>the filter to be inserted </td></tr>
+    <tr><td class="paramname">filt_srcpad_idx</td><td>the input pad on the filter to connect </td></tr>
+    <tr><td class="paramname">filt_dstpad_idx</td><td>the output pad on the filter to connect </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>zero on success </dd></dl>
+
+</div>
+</div>
+<a id="ga47ab3c56888ecc8ced403cbf39c35a4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga47ab3c56888ecc8ced403cbf39c35a4d">&#9670;&nbsp;</a></span>avfilter_get_class()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="../../d2/de1/struct_a_v_class.html">AVClass</a>* avfilter_get_class </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../d8/da0/avfilter_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavfilter/avfilter.h</a>&gt;</code></p>
+<dl class="section return"><dt>Возвращает</dt><dd><a class="el" href="../../d2/de1/struct_a_v_class.html">AVClass</a> for <a class="el" href="../../db/d74/struct_a_v_filter_context.html">AVFilterContext</a>.</dd></dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="../../da/da1/group__avoptions.html#gae31ae7fb20113b00108d0ecf53f25664">av_opt_find()</a>. </dd></dl>
+
+</div>
+</div>
+<a id="ga6c778454b86f845805ffd814b4ce51d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6c778454b86f845805ffd814b4ce51d4">&#9670;&nbsp;</a></span>avfilter_graph_alloc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d4/d5e/struct_a_v_filter_graph.html">AVFilterGraph</a>* avfilter_graph_alloc </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../d8/da0/avfilter_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavfilter/avfilter.h</a>&gt;</code></p>
+<p>Allocate a filter graph.</p>
+<dl class="section return"><dt>Возвращает</dt><dd>the allocated filter graph on success or NULL. </dd></dl>
+
+</div>
+</div>
+<a id="gaa9af17ecf4c5c87307b57cf08411088b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa9af17ecf4c5c87307b57cf08411088b">&#9670;&nbsp;</a></span>avfilter_graph_alloc_filter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/d74/struct_a_v_filter_context.html">AVFilterContext</a>* avfilter_graph_alloc_filter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d4/d5e/struct_a_v_filter_graph.html">AVFilterGraph</a> *&#160;</td>
+          <td class="paramname"><em>graph</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../de/db5/struct_a_v_filter.html">AVFilter</a> *&#160;</td>
+          <td class="paramname"><em>filter</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../d8/da0/avfilter_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavfilter/avfilter.h</a>&gt;</code></p>
+<p>Create a new filter instance in a filter graph.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">graph</td><td>graph in which the new filter will be used </td></tr>
+    <tr><td class="paramname">filter</td><td>the filter to create an instance of </td></tr>
+    <tr><td class="paramname">name</td><td>Name to give to the new instance (will be copied to <a class="el" href="../../db/d74/struct_a_v_filter_context.html#a5b22332d8ddb242c54e19cbfc4b4d353" title="name of this filter instance">AVFilterContext.name</a>). This may be used by the caller to identify different filters, libavfilter itself assigns no semantics to this parameter. May be NULL.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>the context of the newly created filter instance (note that it is also retrievable directly through <a class="el" href="../../d4/d5e/struct_a_v_filter_graph.html#a1dafd3d239f7c2f5e3ac109578ef926d">AVFilterGraph.filters</a> or with <a class="el" href="../../d0/d96/group__lavfi.html#gafdc2bad47c8b477a4baed6a37c61edfc">avfilter_graph_get_filter()</a>) on success or NULL on failure. </dd></dl>
+
+</div>
+</div>
+<a id="gafdc2bad47c8b477a4baed6a37c61edfc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafdc2bad47c8b477a4baed6a37c61edfc">&#9670;&nbsp;</a></span>avfilter_graph_get_filter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/d74/struct_a_v_filter_context.html">AVFilterContext</a>* avfilter_graph_get_filter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d4/d5e/struct_a_v_filter_graph.html">AVFilterGraph</a> *&#160;</td>
+          <td class="paramname"><em>graph</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../d8/da0/avfilter_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavfilter/avfilter.h</a>&gt;</code></p>
+<p>Get a filter instance identified by instance name from graph.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">graph</td><td>filter graph to search through. </td></tr>
+    <tr><td class="paramname">name</td><td>filter instance name (should be unique in the graph). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>the pointer to the found filter instance or NULL if it cannot be found. </dd></dl>
+
+</div>
+</div>
+<a id="gac0788a9ab6966dba9318b5d5c7524fea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac0788a9ab6966dba9318b5d5c7524fea">&#9670;&nbsp;</a></span>avfilter_graph_create_filter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int avfilter_graph_create_filter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../db/d74/struct_a_v_filter_context.html">AVFilterContext</a> **&#160;</td>
+          <td class="paramname"><em>filt_ctx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../de/db5/struct_a_v_filter.html">AVFilter</a> *&#160;</td>
+          <td class="paramname"><em>filt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>args</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *&#160;</td>
+          <td class="paramname"><em>opaque</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d4/d5e/struct_a_v_filter_graph.html">AVFilterGraph</a> *&#160;</td>
+          <td class="paramname"><em>graph_ctx</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../d8/da0/avfilter_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavfilter/avfilter.h</a>&gt;</code></p>
+<p>Create and add a filter instance into an existing graph. The filter instance is created from the filter filt and inited with the parameters args and opaque.</p>
+<p>In case of success put in *filt_ctx the pointer to the created filter instance, otherwise set *filt_ctx to NULL.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>the instance name to give to the created filter instance </td></tr>
+    <tr><td class="paramname">graph_ctx</td><td>the filter graph </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>a negative AVERROR error code in case of failure, a non negative value otherwise </dd></dl>
+
+</div>
+</div>
+<a id="gae7e75e3df70de53fae2cf7950c1247a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae7e75e3df70de53fae2cf7950c1247a8">&#9670;&nbsp;</a></span>avfilter_graph_set_auto_convert()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> avfilter_graph_set_auto_convert </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d4/d5e/struct_a_v_filter_graph.html">AVFilterGraph</a> *&#160;</td>
+          <td class="paramname"><em>graph</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>flags</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../d8/da0/avfilter_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavfilter/avfilter.h</a>&gt;</code></p>
+<p>Enable or disable automatic format conversion inside the graph.</p>
+<p>Note that format conversion can still happen inside explicitly inserted scale and aresample filters.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">flags</td><td>any of the AVFILTER_AUTO_CONVERT_* constants </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga1896c46b7bc6ff1bdb1a4815faa9ad07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1896c46b7bc6ff1bdb1a4815faa9ad07">&#9670;&nbsp;</a></span>avfilter_graph_config()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int avfilter_graph_config </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d4/d5e/struct_a_v_filter_graph.html">AVFilterGraph</a> *&#160;</td>
+          <td class="paramname"><em>graphctx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *&#160;</td>
+          <td class="paramname"><em>log_ctx</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../d8/da0/avfilter_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavfilter/avfilter.h</a>&gt;</code></p>
+<p>Check validity and configure all the links and formats in the graph.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">graphctx</td><td>the filter graph </td></tr>
+    <tr><td class="paramname">log_ctx</td><td>context used for logging </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>&gt;= 0 in case of success, a negative AVERROR code otherwise </dd></dl>
+
+</div>
+</div>
+<a id="ga871684449dac05050df238a18d0d493b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga871684449dac05050df238a18d0d493b">&#9670;&nbsp;</a></span>avfilter_graph_free()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> avfilter_graph_free </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d4/d5e/struct_a_v_filter_graph.html">AVFilterGraph</a> **&#160;</td>
+          <td class="paramname"><em>graph</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../d8/da0/avfilter_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavfilter/avfilter.h</a>&gt;</code></p>
+<p>Free a graph, destroy its links, and set *graph to NULL. If *graph is NULL, do nothing. </p>
+
+</div>
+</div>
+<a id="ga6e1c2931e15eb4283c59c6ccc8b83919"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6e1c2931e15eb4283c59c6ccc8b83919">&#9670;&nbsp;</a></span>avfilter_inout_alloc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d6/d4a/struct_a_v_filter_in_out.html">AVFilterInOut</a>* avfilter_inout_alloc </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../d8/da0/avfilter_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavfilter/avfilter.h</a>&gt;</code></p>
+<p>Allocate a single <a class="el" href="../../d6/d4a/struct_a_v_filter_in_out.html">AVFilterInOut</a> entry. Must be freed with <a class="el" href="../../d0/d96/group__lavfi.html#ga294500a9856260eb1552354fd9d9a6c4">avfilter_inout_free()</a>. </p><dl class="section return"><dt>Возвращает</dt><dd>allocated <a class="el" href="../../d6/d4a/struct_a_v_filter_in_out.html">AVFilterInOut</a> on success, NULL on failure. </dd></dl>
+
+</div>
+</div>
+<a id="ga294500a9856260eb1552354fd9d9a6c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga294500a9856260eb1552354fd9d9a6c4">&#9670;&nbsp;</a></span>avfilter_inout_free()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> avfilter_inout_free </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d6/d4a/struct_a_v_filter_in_out.html">AVFilterInOut</a> **&#160;</td>
+          <td class="paramname"><em>inout</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../d8/da0/avfilter_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavfilter/avfilter.h</a>&gt;</code></p>
+<p>Free the supplied list of <a class="el" href="../../d6/d4a/struct_a_v_filter_in_out.html">AVFilterInOut</a> and set *inout to NULL. If *inout is NULL, do nothing. </p>
+
+</div>
+</div>
+<a id="gab4718e1716c0a0d9343d49ff10d542cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab4718e1716c0a0d9343d49ff10d542cb">&#9670;&nbsp;</a></span>avfilter_graph_parse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int avfilter_graph_parse </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d4/d5e/struct_a_v_filter_graph.html">AVFilterGraph</a> *&#160;</td>
+          <td class="paramname"><em>graph</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>filters</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d6/d4a/struct_a_v_filter_in_out.html">AVFilterInOut</a> *&#160;</td>
+          <td class="paramname"><em>inputs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d6/d4a/struct_a_v_filter_in_out.html">AVFilterInOut</a> *&#160;</td>
+          <td class="paramname"><em>outputs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *&#160;</td>
+          <td class="paramname"><em>log_ctx</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../d8/da0/avfilter_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavfilter/avfilter.h</a>&gt;</code></p>
+<p>Add a graph described by a string to a graph.</p>
+<dl class="section note"><dt>Заметки</dt><dd>The caller must provide the lists of inputs and outputs, which therefore must be known before calling the function.</dd>
+<dd>
+The inputs parameter describes inputs of the already existing part of the graph; i.e. from the point of view of the newly created part, they are outputs. Similarly the outputs parameter describes outputs of the already existing filters, which are provided as inputs to the parsed filters.</dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">graph</td><td>the filter graph where to link the parsed graph context </td></tr>
+    <tr><td class="paramname">filters</td><td>string to be parsed </td></tr>
+    <tr><td class="paramname">inputs</td><td>linked list to the inputs of the graph </td></tr>
+    <tr><td class="paramname">outputs</td><td>linked list to the outputs of the graph </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>zero on success, a negative AVERROR code on error </dd></dl>
+
+</div>
+</div>
+<a id="ga34f4ff420bd58da6747a3ff1fbedd001"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga34f4ff420bd58da6747a3ff1fbedd001">&#9670;&nbsp;</a></span>avfilter_graph_parse_ptr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int avfilter_graph_parse_ptr </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d4/d5e/struct_a_v_filter_graph.html">AVFilterGraph</a> *&#160;</td>
+          <td class="paramname"><em>graph</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>filters</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d6/d4a/struct_a_v_filter_in_out.html">AVFilterInOut</a> **&#160;</td>
+          <td class="paramname"><em>inputs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d6/d4a/struct_a_v_filter_in_out.html">AVFilterInOut</a> **&#160;</td>
+          <td class="paramname"><em>outputs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *&#160;</td>
+          <td class="paramname"><em>log_ctx</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../d8/da0/avfilter_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavfilter/avfilter.h</a>&gt;</code></p>
+<p>Add a graph described by a string to a graph.</p>
+<p>In the graph filters description, if the input label of the first filter is not specified, "in" is assumed; if the output label of the last filter is not specified, "out" is assumed.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">graph</td><td>the filter graph where to link the parsed graph context </td></tr>
+    <tr><td class="paramname">filters</td><td>string to be parsed </td></tr>
+    <tr><td class="paramname">inputs</td><td>pointer to a linked list to the inputs of the graph, may be NULL. If non-NULL, *inputs is updated to contain the list of open inputs after the parsing, should be freed with <a class="el" href="../../d0/d96/group__lavfi.html#ga294500a9856260eb1552354fd9d9a6c4">avfilter_inout_free()</a>. </td></tr>
+    <tr><td class="paramname">outputs</td><td>pointer to a linked list to the outputs of the graph, may be NULL. If non-NULL, *outputs is updated to contain the list of open outputs after the parsing, should be freed with <a class="el" href="../../d0/d96/group__lavfi.html#ga294500a9856260eb1552354fd9d9a6c4">avfilter_inout_free()</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>non negative on success, a negative AVERROR code on error </dd></dl>
+
+</div>
+</div>
+<a id="ga6c3c39e0861653c71a23f90d1397239d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6c3c39e0861653c71a23f90d1397239d">&#9670;&nbsp;</a></span>avfilter_graph_parse2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int avfilter_graph_parse2 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d4/d5e/struct_a_v_filter_graph.html">AVFilterGraph</a> *&#160;</td>
+          <td class="paramname"><em>graph</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>filters</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d6/d4a/struct_a_v_filter_in_out.html">AVFilterInOut</a> **&#160;</td>
+          <td class="paramname"><em>inputs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d6/d4a/struct_a_v_filter_in_out.html">AVFilterInOut</a> **&#160;</td>
+          <td class="paramname"><em>outputs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../d8/da0/avfilter_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavfilter/avfilter.h</a>&gt;</code></p>
+<p>Add a graph described by a string to a graph.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">graph</td><td>the filter graph where to link the parsed graph context </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">filters</td><td>string to be parsed </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">inputs</td><td>a linked list of all free (unlinked) inputs of the parsed graph will be returned here. It is to be freed by the caller using <a class="el" href="../../d0/d96/group__lavfi.html#ga294500a9856260eb1552354fd9d9a6c4">avfilter_inout_free()</a>. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">outputs</td><td>a linked list of all free (unlinked) outputs of the parsed graph will be returned here. It is to be freed by the caller using <a class="el" href="../../d0/d96/group__lavfi.html#ga294500a9856260eb1552354fd9d9a6c4">avfilter_inout_free()</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>zero on success, a negative AVERROR code on error</dd></dl>
+<dl class="section note"><dt>Заметки</dt><dd>This function returns the inputs and outputs that are left unlinked after parsing the graph and the caller then deals with them. </dd>
+<dd>
+This function makes no reference whatsoever to already existing parts of the graph and the inputs parameter will on return contain inputs of the newly parsed part of the graph. Analogously the outputs parameter will contain outputs of the newly created filters. </dd></dl>
+
+</div>
+</div>
+<a id="gaaad7850fb5fe26d35e5d371ca75b79e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaaad7850fb5fe26d35e5d371ca75b79e1">&#9670;&nbsp;</a></span>avfilter_graph_send_command()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int avfilter_graph_send_command </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d4/d5e/struct_a_v_filter_graph.html">AVFilterGraph</a> *&#160;</td>
+          <td class="paramname"><em>graph</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>target</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>cmd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>arg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>res</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>res_len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>flags</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../d8/da0/avfilter_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavfilter/avfilter.h</a>&gt;</code></p>
+<p>Send a command to one or more filter instances.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">graph</td><td>the filter graph </td></tr>
+    <tr><td class="paramname">target</td><td>the filter(s) to which the command should be sent "all" sends to all filters otherwise it can be a filter or filter instance name which will send the command to all matching filters. </td></tr>
+    <tr><td class="paramname">cmd</td><td>the command to send, for handling simplicity all commands must be alphanumeric only </td></tr>
+    <tr><td class="paramname">arg</td><td>the argument for the command </td></tr>
+    <tr><td class="paramname">res</td><td>a buffer with size res_size where the filter(s) can return a response.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>&gt;=0 on success otherwise an error code. AVERROR(ENOSYS) on unsupported commands </dd></dl>
+
+</div>
+</div>
+<a id="ga3140b3cd7bf9a80c2dfa868dcf7ac541"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3140b3cd7bf9a80c2dfa868dcf7ac541">&#9670;&nbsp;</a></span>avfilter_graph_queue_command()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int avfilter_graph_queue_command </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d4/d5e/struct_a_v_filter_graph.html">AVFilterGraph</a> *&#160;</td>
+          <td class="paramname"><em>graph</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>target</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>cmd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>arg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>flags</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>ts</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../d8/da0/avfilter_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavfilter/avfilter.h</a>&gt;</code></p>
+<p>Queue a command for one or more filter instances.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">graph</td><td>the filter graph </td></tr>
+    <tr><td class="paramname">target</td><td>the filter(s) to which the command should be sent "all" sends to all filters otherwise it can be a filter or filter instance name which will send the command to all matching filters. </td></tr>
+    <tr><td class="paramname">cmd</td><td>the command to sent, for handling simplicity all commands must be alphanumeric only </td></tr>
+    <tr><td class="paramname">arg</td><td>the argument for the command </td></tr>
+    <tr><td class="paramname">ts</td><td>time at which the command should be sent to the filter</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>As this executes commands after this function returns, no return code from the filter is provided, also AVFILTER_CMD_FLAG_ONE is not supported. </dd></dl>
+
+</div>
+</div>
+<a id="gadb442aca4e5a8c3ba740f6049f0a288b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadb442aca4e5a8c3ba740f6049f0a288b">&#9670;&nbsp;</a></span>avfilter_graph_dump()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* avfilter_graph_dump </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d4/d5e/struct_a_v_filter_graph.html">AVFilterGraph</a> *&#160;</td>
+          <td class="paramname"><em>graph</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>options</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../d8/da0/avfilter_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavfilter/avfilter.h</a>&gt;</code></p>
+<p>Dump a graph into a human-readable string representation.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">graph</td><td>the graph to dump </td></tr>
+    <tr><td class="paramname">options</td><td>formatting options; currently ignored </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>a string, or NULL in case of memory allocation failure; the string must be freed using av_free </dd></dl>
+
+</div>
+</div>
+<a id="gab20535e0685fb5f9b4f02e436412c3f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab20535e0685fb5f9b4f02e436412c3f0">&#9670;&nbsp;</a></span>avfilter_graph_request_oldest()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int avfilter_graph_request_oldest </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d4/d5e/struct_a_v_filter_graph.html">AVFilterGraph</a> *&#160;</td>
+          <td class="paramname"><em>graph</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../d8/da0/avfilter_8h.html">C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavfilter/avfilter.h</a>&gt;</code></p>
+<p>Request a frame on the oldest sink link.</p>
+<p>If the request returns AVERROR_EOF, try the next.</p>
+<p>Note that this function is not meant to be the sole scheduling mechanism of a filtergraph, only a convenience function to help drain a filtergraph in a balanced way under normal circumstances.</p>
+<p>Also note that AVERROR_EOF does not mean that frames did not arrive on some of the sinks during the process. When there are multiple sink links, in case the requested link returns an EOF, this may cause a filter to flush pending frames which are sent to another sink link, although unrequested.</p>
+<dl class="section return"><dt>Возвращает</dt><dd>the return value of ff_request_frame(), or AVERROR_EOF if all links returned AVERROR_EOF </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="agroup__lavfi_html_ggaa491173a6b1628f4ff82067b2e1ceaa9a385b5a02cfa6899d888c996309cb82ed"><div class="ttname"><a href="../../d0/d96/group__lavfi.html#ggaa491173a6b1628f4ff82067b2e1ceaa9a385b5a02cfa6899d888c996309cb82ed">AVFILTER_AUTO_CONVERT_ALL</a></div><div class="ttdeci">@ AVFILTER_AUTO_CONVERT_ALL</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/da0/avfilter_8h_source.html#l00975">avfilter.h:975</a></div></div>
+<div class="ttc" id="agroup__lavfi_html_ggaa491173a6b1628f4ff82067b2e1ceaa9a065142be87c3afee01ef498654fde0b4"><div class="ttname"><a href="../../d0/d96/group__lavfi.html#ggaa491173a6b1628f4ff82067b2e1ceaa9a065142be87c3afee01ef498654fde0b4">AVFILTER_AUTO_CONVERT_NONE</a></div><div class="ttdeci">@ AVFILTER_AUTO_CONVERT_NONE</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/da0/avfilter_8h_source.html#l00976">avfilter.h:976</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:04:23. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

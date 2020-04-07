@@ -1,0 +1,664 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Класс BSPModel</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('db/dd9/class_b_s_p_model.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="../../dc/d16/class_b_s_p_model-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс BSPModel</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="../../d7/dbc/_b_s_p_model_8h_source.html">BSPModel.h</a>&gt;</code></p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Граф связей класса BSPModel:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d3/d25/class_b_s_p_model__coll__graph.svg" width="131" height="127"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a6d6733a3e06b098d8ad238cc7b977417"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dd9/class_b_s_p_model.html#a6d6733a3e06b098d8ad238cc7b977417">Release</a> ()</td></tr>
+<tr class="separator:a6d6733a3e06b098d8ad238cc7b977417"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:aafec7418e22bb0447ad7b06d6e52cba4"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dd9/class_b_s_p_model.html#aafec7418e22bb0447ad7b06d6e52cba4">index</a></td></tr>
+<tr class="separator:aafec7418e22bb0447ad7b06d6e52cba4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7060098522be80802a3b5625e1654400"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dd9/class_b_s_p_model.html#a7060098522be80802a3b5625e1654400">pModelName</a></td></tr>
+<tr class="separator:a7060098522be80802a3b5625e1654400"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af106bba024519a989262074fa1afcce4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dd9/class_b_s_p_model.html#af106bba024519a989262074fa1afcce4">pModelName2</a></td></tr>
+<tr class="separator:af106bba024519a989262074fa1afcce4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84c08b882d7bfac426ab115337202be6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a37994e3b11c72957c6f454c6ec96d43d">int32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dd9/class_b_s_p_model.html#a84c08b882d7bfac426ab115337202be6">field_40</a></td></tr>
+<tr class="separator:a84c08b882d7bfac426ab115337202be6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a02d56d56848c269b8256329638dfcf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a37994e3b11c72957c6f454c6ec96d43d">int32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dd9/class_b_s_p_model.html#a8a02d56d56848c269b8256329638dfcf">sCenterX</a></td></tr>
+<tr class="separator:a8a02d56d56848c269b8256329638dfcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cb6dc37de7d3d75f070eaf37860aeb4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a37994e3b11c72957c6f454c6ec96d43d">int32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dd9/class_b_s_p_model.html#a1cb6dc37de7d3d75f070eaf37860aeb4">sCenterY</a></td></tr>
+<tr class="separator:a1cb6dc37de7d3d75f070eaf37860aeb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d530c44a391565808c986b912a5dd8d"><td class="memItemLeft" align="right" valign="top">Vec3_int_&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dd9/class_b_s_p_model.html#a9d530c44a391565808c986b912a5dd8d">vPosition</a></td></tr>
+<tr class="separator:a9d530c44a391565808c986b912a5dd8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9294bc92256ff8dd2f87e6723e1c38aa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a37994e3b11c72957c6f454c6ec96d43d">int32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dd9/class_b_s_p_model.html#a9294bc92256ff8dd2f87e6723e1c38aa">sMinX</a></td></tr>
+<tr class="separator:a9294bc92256ff8dd2f87e6723e1c38aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2d3bd848d431f846193c3ad98e9755b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a37994e3b11c72957c6f454c6ec96d43d">int32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dd9/class_b_s_p_model.html#aa2d3bd848d431f846193c3ad98e9755b">sMinY</a></td></tr>
+<tr class="separator:aa2d3bd848d431f846193c3ad98e9755b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd1d9ca066ecf15cf22ea653fa31948d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a37994e3b11c72957c6f454c6ec96d43d">int32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dd9/class_b_s_p_model.html#abd1d9ca066ecf15cf22ea653fa31948d">sMinZ</a></td></tr>
+<tr class="separator:abd1d9ca066ecf15cf22ea653fa31948d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6b557decd984b5b6beec0d1734c9f49"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a37994e3b11c72957c6f454c6ec96d43d">int32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dd9/class_b_s_p_model.html#ad6b557decd984b5b6beec0d1734c9f49">sMaxX</a></td></tr>
+<tr class="separator:ad6b557decd984b5b6beec0d1734c9f49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae46a2cfb0fab658dfbdf7d7a45ff8bff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a37994e3b11c72957c6f454c6ec96d43d">int32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dd9/class_b_s_p_model.html#ae46a2cfb0fab658dfbdf7d7a45ff8bff">sMaxY</a></td></tr>
+<tr class="separator:ae46a2cfb0fab658dfbdf7d7a45ff8bff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1b3ad75d8c801910eb14f944b08a9db"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a37994e3b11c72957c6f454c6ec96d43d">int32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dd9/class_b_s_p_model.html#aa1b3ad75d8c801910eb14f944b08a9db">sMaxZ</a></td></tr>
+<tr class="separator:aa1b3ad75d8c801910eb14f944b08a9db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2da4c801f17c69e7fc940482b9cda0b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a37994e3b11c72957c6f454c6ec96d43d">int32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dd9/class_b_s_p_model.html#af2da4c801f17c69e7fc940482b9cda0b">sSomeOtherMinX</a></td></tr>
+<tr class="separator:af2da4c801f17c69e7fc940482b9cda0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac34f81c0d32fdbe7c9d7de92248be99"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a37994e3b11c72957c6f454c6ec96d43d">int32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dd9/class_b_s_p_model.html#aac34f81c0d32fdbe7c9d7de92248be99">sSomeOtherMinY</a></td></tr>
+<tr class="separator:aac34f81c0d32fdbe7c9d7de92248be99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3698fe3a6ea7d08b5aed828aa25e4eec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a37994e3b11c72957c6f454c6ec96d43d">int32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dd9/class_b_s_p_model.html#a3698fe3a6ea7d08b5aed828aa25e4eec">sSomeOtherMinZ</a></td></tr>
+<tr class="separator:a3698fe3a6ea7d08b5aed828aa25e4eec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adef7d75196e3dd821a0b5ebb1d9f56b7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a37994e3b11c72957c6f454c6ec96d43d">int32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dd9/class_b_s_p_model.html#adef7d75196e3dd821a0b5ebb1d9f56b7">sSomeOtherMaxX</a></td></tr>
+<tr class="separator:adef7d75196e3dd821a0b5ebb1d9f56b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0562c9a80f78bbae98164091c2e5bf53"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a37994e3b11c72957c6f454c6ec96d43d">int32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dd9/class_b_s_p_model.html#a0562c9a80f78bbae98164091c2e5bf53">sSomeOtherMaxY</a></td></tr>
+<tr class="separator:a0562c9a80f78bbae98164091c2e5bf53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08889401b1522045d762b986cf0f47c8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a37994e3b11c72957c6f454c6ec96d43d">int32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dd9/class_b_s_p_model.html#a08889401b1522045d762b986cf0f47c8">sSomeOtherMaxZ</a></td></tr>
+<tr class="separator:a08889401b1522045d762b986cf0f47c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1c016f1976500eb7756a9f8d4cd144b"><td class="memItemLeft" align="right" valign="top">Vec3_int_&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dd9/class_b_s_p_model.html#ae1c016f1976500eb7756a9f8d4cd144b">vBoundingCenter</a></td></tr>
+<tr class="separator:ae1c016f1976500eb7756a9f8d4cd144b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa536d18ca7ebf270aa12002436b1d586"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a37994e3b11c72957c6f454c6ec96d43d">int32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dd9/class_b_s_p_model.html#aa536d18ca7ebf270aa12002436b1d586">sBoundingRadius</a></td></tr>
+<tr class="separator:aa536d18ca7ebf270aa12002436b1d586"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6bf1c096d6ef1650913eb0303965f65"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="../../dc/d29/struct_b_s_p_vertex_buffer.html">BSPVertexBuffer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dd9/class_b_s_p_model.html#ac6bf1c096d6ef1650913eb0303965f65">pVertices</a></td></tr>
+<tr class="separator:ac6bf1c096d6ef1650913eb0303965f65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a054a4c6bb89e654f8de85ba8bf61ba85"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../d3/df8/struct_o_d_m_face.html">ODMFace</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dd9/class_b_s_p_model.html#a054a4c6bb89e654f8de85ba8bf61ba85">pFaces</a></td></tr>
+<tr class="separator:a054a4c6bb89e654f8de85ba8bf61ba85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d50aedf219c021bf70cc0ce842ce994"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dd9/class_b_s_p_model.html#a8d50aedf219c021bf70cc0ce842ce994">pFacesOrdering</a></td></tr>
+<tr class="separator:a8d50aedf219c021bf70cc0ce842ce994"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30a7fcf1f61c1263a098e79e5fd70469"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../db/dfc/struct_b_s_p_node.html">BSPNode</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dd9/class_b_s_p_model.html#a30a7fcf1f61c1263a098e79e5fd70469">pNodes</a></td></tr>
+<tr class="separator:a30a7fcf1f61c1263a098e79e5fd70469"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock">
+<p class="definition">См. определение в файле <a class="el" href="../../d7/dbc/_b_s_p_model_8h_source.html">BSPModel.h</a> строка <a class="el" href="../../d7/dbc/_b_s_p_model_8h_source.html#l00163">163</a></p>
+</div><h2 class="groupheader">Методы</h2>
+<a id="a6d6733a3e06b098d8ad238cc7b977417"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d6733a3e06b098d8ad238cc7b977417">&#9670;&nbsp;</a></span>Release()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> BSPModel::Release </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d8a/_b_s_p_model_8cpp_source.html">BSPModel.cpp</a> строка <a class="el" href="../../dc/d8a/_b_s_p_model_8cpp_source.html#l00137">137</a></p>
+<div class="fragment"><div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;                       {</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    free(this-&gt;<a class="code" href="../../db/dd9/class_b_s_p_model.html#ac6bf1c096d6ef1650913eb0303965f65">pVertices</a>.<a class="code" href="../../dc/d29/struct_b_s_p_vertex_buffer.html#a2950f91951ed50886300155ec89ee80c">pVertices</a>);</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    this-&gt;<a class="code" href="../../db/dd9/class_b_s_p_model.html#ac6bf1c096d6ef1650913eb0303965f65">pVertices</a>.<a class="code" href="../../dc/d29/struct_b_s_p_vertex_buffer.html#a2950f91951ed50886300155ec89ee80c">pVertices</a> = 0;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    free(this-&gt;<a class="code" href="../../db/dd9/class_b_s_p_model.html#a8d50aedf219c021bf70cc0ce842ce994">pFacesOrdering</a>);</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    this-&gt;<a class="code" href="../../db/dd9/class_b_s_p_model.html#a8d50aedf219c021bf70cc0ce842ce994">pFacesOrdering</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d7/dbc/_b_s_p_model_8h_source.html#l00191">pFacesOrdering</a>, <a class="el" href="../../d7/dbc/_b_s_p_model_8h_source.html#l00053">BSPVertexBuffer::pVertices</a> и <a class="el" href="../../d7/dbc/_b_s_p_model_8h_source.html#l00189">pVertices</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="aafec7418e22bb0447ad7b06d6e52cba4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafec7418e22bb0447ad7b06d6e52cba4">&#9670;&nbsp;</a></span>index</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int BSPModel::index</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d7/dbc/_b_s_p_model_8h_source.html">BSPModel.h</a> строка <a class="el" href="../../d7/dbc/_b_s_p_model_8h_source.html#l00167">167</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l04516">_46E889_collide_against_bmodels()</a>, <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l02018">RenderOpenGL::DrawBuildingsD3D()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l03510">Render::DrawBuildingsD3D()</a>, <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l03254">GetCeilingHeight()</a>, <a class="el" href="../../dc/d8a/_b_s_p_model_8cpp_source.html#l00045">BSPModelList::Load()</a>, <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l01877">ODM_GetFloorLevel()</a>, <a class="el" href="../../de/dd4/_vis_8cpp_source.html#l01601">Vis::PickOutdoorFaces_Keyboard()</a> и <a class="el" href="../../de/dd4/_vis_8cpp_source.html#l00359">Vis::PickOutdoorFaces_Mouse()</a>.</p>
+
+</div>
+</div>
+<a id="a7060098522be80802a3b5625e1654400"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7060098522be80802a3b5625e1654400">&#9670;&nbsp;</a></span>pModelName</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> BSPModel::pModelName</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d7/dbc/_b_s_p_model_8h_source.html">BSPModel.h</a> строка <a class="el" href="../../d7/dbc/_b_s_p_model_8h_source.html#l00168">168</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../dc/d8a/_b_s_p_model_8cpp_source.html#l00045">BSPModelList::Load()</a>.</p>
+
+</div>
+</div>
+<a id="af106bba024519a989262074fa1afcce4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af106bba024519a989262074fa1afcce4">&#9670;&nbsp;</a></span>pModelName2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> BSPModel::pModelName2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d7/dbc/_b_s_p_model_8h_source.html">BSPModel.h</a> строка <a class="el" href="../../d7/dbc/_b_s_p_model_8h_source.html#l00169">169</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../dc/d8a/_b_s_p_model_8cpp_source.html#l00045">BSPModelList::Load()</a>.</p>
+
+</div>
+</div>
+<a id="a84c08b882d7bfac426ab115337202be6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84c08b882d7bfac426ab115337202be6">&#9670;&nbsp;</a></span>field_40</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a37994e3b11c72957c6f454c6ec96d43d">int32_t</a> BSPModel::field_40</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d7/dbc/_b_s_p_model_8h_source.html">BSPModel.h</a> строка <a class="el" href="../../d7/dbc/_b_s_p_model_8h_source.html#l00170">170</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l02018">RenderOpenGL::DrawBuildingsD3D()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l03510">Render::DrawBuildingsD3D()</a> и <a class="el" href="../../dc/d8a/_b_s_p_model_8cpp_source.html#l00045">BSPModelList::Load()</a>.</p>
+
+</div>
+</div>
+<a id="a8a02d56d56848c269b8256329638dfcf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a02d56d56848c269b8256329638dfcf">&#9670;&nbsp;</a></span>sCenterX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a37994e3b11c72957c6f454c6ec96d43d">int32_t</a> BSPModel::sCenterX</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d7/dbc/_b_s_p_model_8h_source.html">BSPModel.h</a> строка <a class="el" href="../../d7/dbc/_b_s_p_model_8h_source.html#l00171">171</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../dc/d8a/_b_s_p_model_8cpp_source.html#l00045">BSPModelList::Load()</a>.</p>
+
+</div>
+</div>
+<a id="a1cb6dc37de7d3d75f070eaf37860aeb4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cb6dc37de7d3d75f070eaf37860aeb4">&#9670;&nbsp;</a></span>sCenterY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a37994e3b11c72957c6f454c6ec96d43d">int32_t</a> BSPModel::sCenterY</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d7/dbc/_b_s_p_model_8h_source.html">BSPModel.h</a> строка <a class="el" href="../../d7/dbc/_b_s_p_model_8h_source.html#l00172">172</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../dc/d8a/_b_s_p_model_8cpp_source.html#l00045">BSPModelList::Load()</a>.</p>
+
+</div>
+</div>
+<a id="a9d530c44a391565808c986b912a5dd8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d530c44a391565808c986b912a5dd8d">&#9670;&nbsp;</a></span>vPosition</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vec3_int_ BSPModel::vPosition</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d7/dbc/_b_s_p_model_8h_source.html">BSPModel.h</a> строка <a class="el" href="../../d7/dbc/_b_s_p_model_8h_source.html#l00173">173</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../dc/d8a/_b_s_p_model_8cpp_source.html#l00045">BSPModelList::Load()</a> и <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l03199">sub_407A1C()</a>.</p>
+
+</div>
+</div>
+<a id="a9294bc92256ff8dd2f87e6723e1c38aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9294bc92256ff8dd2f87e6723e1c38aa">&#9670;&nbsp;</a></span>sMinX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a37994e3b11c72957c6f454c6ec96d43d">int32_t</a> BSPModel::sMinX</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d7/dbc/_b_s_p_model_8h_source.html">BSPModel.h</a> строка <a class="el" href="../../d7/dbc/_b_s_p_model_8h_source.html#l00174">174</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l04516">_46E889_collide_against_bmodels()</a>, <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l03254">GetCeilingHeight()</a>, <a class="el" href="../../dc/d8a/_b_s_p_model_8cpp_source.html#l00045">BSPModelList::Load()</a> и <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l01877">ODM_GetFloorLevel()</a>.</p>
+
+</div>
+</div>
+<a id="aa2d3bd848d431f846193c3ad98e9755b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2d3bd848d431f846193c3ad98e9755b">&#9670;&nbsp;</a></span>sMinY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a37994e3b11c72957c6f454c6ec96d43d">int32_t</a> BSPModel::sMinY</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d7/dbc/_b_s_p_model_8h_source.html">BSPModel.h</a> строка <a class="el" href="../../d7/dbc/_b_s_p_model_8h_source.html#l00175">175</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l04516">_46E889_collide_against_bmodels()</a>, <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l03254">GetCeilingHeight()</a>, <a class="el" href="../../dc/d8a/_b_s_p_model_8cpp_source.html#l00045">BSPModelList::Load()</a> и <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l01877">ODM_GetFloorLevel()</a>.</p>
+
+</div>
+</div>
+<a id="abd1d9ca066ecf15cf22ea653fa31948d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd1d9ca066ecf15cf22ea653fa31948d">&#9670;&nbsp;</a></span>sMinZ</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a37994e3b11c72957c6f454c6ec96d43d">int32_t</a> BSPModel::sMinZ</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d7/dbc/_b_s_p_model_8h_source.html">BSPModel.h</a> строка <a class="el" href="../../d7/dbc/_b_s_p_model_8h_source.html#l00176">176</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l04516">_46E889_collide_against_bmodels()</a> и <a class="el" href="../../dc/d8a/_b_s_p_model_8cpp_source.html#l00045">BSPModelList::Load()</a>.</p>
+
+</div>
+</div>
+<a id="ad6b557decd984b5b6beec0d1734c9f49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6b557decd984b5b6beec0d1734c9f49">&#9670;&nbsp;</a></span>sMaxX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a37994e3b11c72957c6f454c6ec96d43d">int32_t</a> BSPModel::sMaxX</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d7/dbc/_b_s_p_model_8h_source.html">BSPModel.h</a> строка <a class="el" href="../../d7/dbc/_b_s_p_model_8h_source.html#l00177">177</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l04516">_46E889_collide_against_bmodels()</a> и <a class="el" href="../../dc/d8a/_b_s_p_model_8cpp_source.html#l00045">BSPModelList::Load()</a>.</p>
+
+</div>
+</div>
+<a id="ae46a2cfb0fab658dfbdf7d7a45ff8bff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae46a2cfb0fab658dfbdf7d7a45ff8bff">&#9670;&nbsp;</a></span>sMaxY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a37994e3b11c72957c6f454c6ec96d43d">int32_t</a> BSPModel::sMaxY</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d7/dbc/_b_s_p_model_8h_source.html">BSPModel.h</a> строка <a class="el" href="../../d7/dbc/_b_s_p_model_8h_source.html#l00178">178</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l04516">_46E889_collide_against_bmodels()</a>, <a class="el" href="../../dc/d8a/_b_s_p_model_8cpp_source.html#l00045">BSPModelList::Load()</a> и <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l01877">ODM_GetFloorLevel()</a>.</p>
+
+</div>
+</div>
+<a id="aa1b3ad75d8c801910eb14f944b08a9db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1b3ad75d8c801910eb14f944b08a9db">&#9670;&nbsp;</a></span>sMaxZ</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a37994e3b11c72957c6f454c6ec96d43d">int32_t</a> BSPModel::sMaxZ</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d7/dbc/_b_s_p_model_8h_source.html">BSPModel.h</a> строка <a class="el" href="../../d7/dbc/_b_s_p_model_8h_source.html#l00179">179</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l04516">_46E889_collide_against_bmodels()</a> и <a class="el" href="../../dc/d8a/_b_s_p_model_8cpp_source.html#l00045">BSPModelList::Load()</a>.</p>
+
+</div>
+</div>
+<a id="af2da4c801f17c69e7fc940482b9cda0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2da4c801f17c69e7fc940482b9cda0b">&#9670;&nbsp;</a></span>sSomeOtherMinX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a37994e3b11c72957c6f454c6ec96d43d">int32_t</a> BSPModel::sSomeOtherMinX</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d7/dbc/_b_s_p_model_8h_source.html">BSPModel.h</a> строка <a class="el" href="../../d7/dbc/_b_s_p_model_8h_source.html#l00180">180</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../dc/d8a/_b_s_p_model_8cpp_source.html#l00045">BSPModelList::Load()</a>.</p>
+
+</div>
+</div>
+<a id="aac34f81c0d32fdbe7c9d7de92248be99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac34f81c0d32fdbe7c9d7de92248be99">&#9670;&nbsp;</a></span>sSomeOtherMinY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a37994e3b11c72957c6f454c6ec96d43d">int32_t</a> BSPModel::sSomeOtherMinY</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d7/dbc/_b_s_p_model_8h_source.html">BSPModel.h</a> строка <a class="el" href="../../d7/dbc/_b_s_p_model_8h_source.html#l00181">181</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../dc/d8a/_b_s_p_model_8cpp_source.html#l00045">BSPModelList::Load()</a>.</p>
+
+</div>
+</div>
+<a id="a3698fe3a6ea7d08b5aed828aa25e4eec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3698fe3a6ea7d08b5aed828aa25e4eec">&#9670;&nbsp;</a></span>sSomeOtherMinZ</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a37994e3b11c72957c6f454c6ec96d43d">int32_t</a> BSPModel::sSomeOtherMinZ</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d7/dbc/_b_s_p_model_8h_source.html">BSPModel.h</a> строка <a class="el" href="../../d7/dbc/_b_s_p_model_8h_source.html#l00182">182</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../dc/d8a/_b_s_p_model_8cpp_source.html#l00045">BSPModelList::Load()</a>.</p>
+
+</div>
+</div>
+<a id="adef7d75196e3dd821a0b5ebb1d9f56b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adef7d75196e3dd821a0b5ebb1d9f56b7">&#9670;&nbsp;</a></span>sSomeOtherMaxX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a37994e3b11c72957c6f454c6ec96d43d">int32_t</a> BSPModel::sSomeOtherMaxX</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d7/dbc/_b_s_p_model_8h_source.html">BSPModel.h</a> строка <a class="el" href="../../d7/dbc/_b_s_p_model_8h_source.html#l00183">183</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../dc/d8a/_b_s_p_model_8cpp_source.html#l00045">BSPModelList::Load()</a>.</p>
+
+</div>
+</div>
+<a id="a0562c9a80f78bbae98164091c2e5bf53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0562c9a80f78bbae98164091c2e5bf53">&#9670;&nbsp;</a></span>sSomeOtherMaxY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a37994e3b11c72957c6f454c6ec96d43d">int32_t</a> BSPModel::sSomeOtherMaxY</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d7/dbc/_b_s_p_model_8h_source.html">BSPModel.h</a> строка <a class="el" href="../../d7/dbc/_b_s_p_model_8h_source.html#l00184">184</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../dc/d8a/_b_s_p_model_8cpp_source.html#l00045">BSPModelList::Load()</a>.</p>
+
+</div>
+</div>
+<a id="a08889401b1522045d762b986cf0f47c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08889401b1522045d762b986cf0f47c8">&#9670;&nbsp;</a></span>sSomeOtherMaxZ</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a37994e3b11c72957c6f454c6ec96d43d">int32_t</a> BSPModel::sSomeOtherMaxZ</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d7/dbc/_b_s_p_model_8h_source.html">BSPModel.h</a> строка <a class="el" href="../../d7/dbc/_b_s_p_model_8h_source.html#l00185">185</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../dc/d8a/_b_s_p_model_8cpp_source.html#l00045">BSPModelList::Load()</a>.</p>
+
+</div>
+</div>
+<a id="ae1c016f1976500eb7756a9f8d4cd144b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1c016f1976500eb7756a9f8d4cd144b">&#9670;&nbsp;</a></span>vBoundingCenter</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vec3_int_ BSPModel::vBoundingCenter</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d7/dbc/_b_s_p_model_8h_source.html">BSPModel.h</a> строка <a class="el" href="../../d7/dbc/_b_s_p_model_8h_source.html#l00186">186</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l05298">_45063B_spawn_some_monster()</a>, <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l01001">GameUI_GetMinimapHintText()</a>, <a class="el" href="../../d0/d67/_map_book_8cpp_source.html#l00337">GetMapBookHintText()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l05516">IsBModelVisible()</a> и <a class="el" href="../../dc/d8a/_b_s_p_model_8cpp_source.html#l00045">BSPModelList::Load()</a>.</p>
+
+</div>
+</div>
+<a id="aa536d18ca7ebf270aa12002436b1d586"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa536d18ca7ebf270aa12002436b1d586">&#9670;&nbsp;</a></span>sBoundingRadius</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a37994e3b11c72957c6f454c6ec96d43d">int32_t</a> BSPModel::sBoundingRadius</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d7/dbc/_b_s_p_model_8h_source.html">BSPModel.h</a> строка <a class="el" href="../../d7/dbc/_b_s_p_model_8h_source.html#l00187">187</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l05298">_45063B_spawn_some_monster()</a>, <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l01001">GameUI_GetMinimapHintText()</a>, <a class="el" href="../../d0/d67/_map_book_8cpp_source.html#l00337">GetMapBookHintText()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l05516">IsBModelVisible()</a>, <a class="el" href="../../dc/d8a/_b_s_p_model_8cpp_source.html#l00045">BSPModelList::Load()</a> и <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l03199">sub_407A1C()</a>.</p>
+
+</div>
+</div>
+<a id="ac6bf1c096d6ef1650913eb0303965f65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6bf1c096d6ef1650913eb0303965f65">&#9670;&nbsp;</a></span>pVertices</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="../../dc/d29/struct_b_s_p_vertex_buffer.html">BSPVertexBuffer</a> BSPModel::pVertices</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d7/dbc/_b_s_p_model_8h_source.html">BSPModel.h</a> строка <a class="el" href="../../d7/dbc/_b_s_p_model_8h_source.html#l00189">189</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l02018">RenderOpenGL::DrawBuildingsD3D()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l03510">Render::DrawBuildingsD3D()</a>, <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l03254">GetCeilingHeight()</a>, <a class="el" href="../../dc/d8a/_b_s_p_model_8cpp_source.html#l00045">BSPModelList::Load()</a>, <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l01877">ODM_GetFloorLevel()</a>, <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l02221">ODM_ProcessPartyActions()</a>, <a class="el" href="../../dc/d8a/_b_s_p_model_8cpp_source.html#l00137">Release()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l03199">sub_407A1C()</a> и <a class="el" href="../../d9/ded/_sprite_object_8cpp_source.html#l00130">SpriteObject::UpdateObject_fn0_ODM()</a>.</p>
+
+</div>
+</div>
+<a id="a054a4c6bb89e654f8de85ba8bf61ba85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a054a4c6bb89e654f8de85ba8bf61ba85">&#9670;&nbsp;</a></span>pFaces</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="../../d3/df8/struct_o_d_m_face.html">ODMFace</a>&gt; BSPModel::pFaces</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d7/dbc/_b_s_p_model_8h_source.html">BSPModel.h</a> строка <a class="el" href="../../d7/dbc/_b_s_p_model_8h_source.html#l00190">190</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l04516">_46E889_collide_against_bmodels()</a>, <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l02018">RenderOpenGL::DrawBuildingsD3D()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l03510">Render::DrawBuildingsD3D()</a>, <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l01001">GameUI_GetMinimapHintText()</a>, <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l03254">GetCeilingHeight()</a>, <a class="el" href="../../d0/d67/_map_book_8cpp_source.html#l00337">GetMapBookHintText()</a>, <a class="el" href="../../dc/d8a/_b_s_p_model_8cpp_source.html#l00045">BSPModelList::Load()</a>, <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l01877">ODM_GetFloorLevel()</a>, <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l02221">ODM_ProcessPartyActions()</a>, <a class="el" href="../../de/dd4/_vis_8cpp_source.html#l01601">Vis::PickOutdoorFaces_Keyboard()</a>, <a class="el" href="../../de/dd4/_vis_8cpp_source.html#l00359">Vis::PickOutdoorFaces_Mouse()</a>, <a class="el" href="../../d4/d9d/_save_load_8cpp_source.html#l00238">SaveGame()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l03199">sub_407A1C()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l01526">sub_44861E_set_texture_outdoor()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l01558">sub_44892E_set_faces_bit()</a> и <a class="el" href="../../d9/ded/_sprite_object_8cpp_source.html#l00130">SpriteObject::UpdateObject_fn0_ODM()</a>.</p>
+
+</div>
+</div>
+<a id="a8d50aedf219c021bf70cc0ce842ce994"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d50aedf219c021bf70cc0ce842ce994">&#9670;&nbsp;</a></span>pFacesOrdering</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>* BSPModel::pFacesOrdering</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d7/dbc/_b_s_p_model_8h_source.html">BSPModel.h</a> строка <a class="el" href="../../d7/dbc/_b_s_p_model_8h_source.html#l00191">191</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../dc/d8a/_b_s_p_model_8cpp_source.html#l00045">BSPModelList::Load()</a> и <a class="el" href="../../dc/d8a/_b_s_p_model_8cpp_source.html#l00137">Release()</a>.</p>
+
+</div>
+</div>
+<a id="a30a7fcf1f61c1263a098e79e5fd70469"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30a7fcf1f61c1263a098e79e5fd70469">&#9670;&nbsp;</a></span>pNodes</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="../../db/dfc/struct_b_s_p_node.html">BSPNode</a>&gt; BSPModel::pNodes</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d7/dbc/_b_s_p_model_8h_source.html">BSPModel.h</a> строка <a class="el" href="../../d7/dbc/_b_s_p_model_8h_source.html#l00192">192</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../dc/d8a/_b_s_p_model_8cpp_source.html#l00045">BSPModelList::Load()</a>.</p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>C:/git/world-of-might-and-magic/Engine/Graphics/<a class="el" href="../../d7/dbc/_b_s_p_model_8h_source.html">BSPModel.h</a></li>
+<li>C:/git/world-of-might-and-magic/Engine/Graphics/<a class="el" href="../../dc/d8a/_b_s_p_model_8cpp_source.html">BSPModel.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aclass_b_s_p_model_html_ac6bf1c096d6ef1650913eb0303965f65"><div class="ttname"><a href="../../db/dd9/class_b_s_p_model.html#ac6bf1c096d6ef1650913eb0303965f65">BSPModel::pVertices</a></div><div class="ttdeci">struct BSPVertexBuffer pVertices</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dbc/_b_s_p_model_8h_source.html#l00189">BSPModel.h:189</a></div></div>
+<div class="ttc" id="aclass_b_s_p_model_html_a8d50aedf219c021bf70cc0ce842ce994"><div class="ttname"><a href="../../db/dd9/class_b_s_p_model.html#a8d50aedf219c021bf70cc0ce842ce994">BSPModel::pFacesOrdering</a></div><div class="ttdeci">uint16_t * pFacesOrdering</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dbc/_b_s_p_model_8h_source.html#l00191">BSPModel.h:191</a></div></div>
+<div class="ttc" id="astruct_b_s_p_vertex_buffer_html_a2950f91951ed50886300155ec89ee80c"><div class="ttname"><a href="../../dc/d29/struct_b_s_p_vertex_buffer.html#a2950f91951ed50886300155ec89ee80c">BSPVertexBuffer::pVertices</a></div><div class="ttdeci">Vec3_int_ * pVertices</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dbc/_b_s_p_model_8h_source.html#l00053">BSPModel.h:53</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../db/dd9/class_b_s_p_model.html">BSPModel</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:04:39. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

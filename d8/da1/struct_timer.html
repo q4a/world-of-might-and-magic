@@ -1,0 +1,934 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Структура Timer</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d8/da1/struct_timer.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-static-methods">Открытые статические члены</a> &#124;
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="#pub-static-attribs">Статические открытые данные</a> &#124;
+<a href="../../d3/d6b/struct_timer-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Структура Timer</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html">Time.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a5f16e8da27d2a5a5242dead46de05d97"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da1/struct_timer.html#a5f16e8da27d2a5a5242dead46de05d97">Timer</a> ()</td></tr>
+<tr class="separator:a5f16e8da27d2a5a5242dead46de05d97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96ab325fdf29a1aa5090d862f27953a1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da1/struct_timer.html#a96ab325fdf29a1aa5090d862f27953a1">Initialize</a> ()</td></tr>
+<tr class="separator:a96ab325fdf29a1aa5090d862f27953a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af11deea7dde51d637aec54587820f92b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/df4/alext_8h.html#aec6fcb673ff035718c238c8c9d544c47">uint64_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da1/struct_timer.html#af11deea7dde51d637aec54587820f92b">Time</a> ()</td></tr>
+<tr class="separator:af11deea7dde51d637aec54587820f92b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77a6595649759e7236d1b43c2c10e16b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da1/struct_timer.html#a77a6595649759e7236d1b43c2c10e16b">Update</a> ()</td></tr>
+<tr class="separator:a77a6595649759e7236d1b43c2c10e16b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b8c57bf9675da635a82d68d9b4d05e5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da1/struct_timer.html#a9b8c57bf9675da635a82d68d9b4d05e5">Pause</a> ()</td></tr>
+<tr class="separator:a9b8c57bf9675da635a82d68d9b4d05e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3b4e386f8ebb885fa2ef6fcac8d9ca3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da1/struct_timer.html#ad3b4e386f8ebb885fa2ef6fcac8d9ca3">Resume</a> ()</td></tr>
+<tr class="separator:ad3b4e386f8ebb885fa2ef6fcac8d9ca3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fe85f11146f340c53db4daa08077ae4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da1/struct_timer.html#a4fe85f11146f340c53db4daa08077ae4">TrackGameTime</a> ()</td></tr>
+<tr class="separator:a4fe85f11146f340c53db4daa08077ae4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea7d51a94464d7581670110ba03492a4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da1/struct_timer.html#aea7d51a94464d7581670110ba03492a4">StopGameTime</a> ()</td></tr>
+<tr class="separator:aea7d51a94464d7581670110ba03492a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Открытые статические члены</h2></td></tr>
+<tr class="memitem:a3457141210a4090641a097f4081d23ad"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d8/da1/struct_timer.html">Timer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da1/struct_timer.html#a3457141210a4090641a097f4081d23ad">Create</a> ()</td></tr>
+<tr class="separator:a3457141210a4090641a097f4081d23ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:afed0e4cbf853b3747e5ff8179216d9d6"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da1/struct_timer.html#afed0e4cbf853b3747e5ff8179216d9d6">bReady</a></td></tr>
+<tr class="separator:afed0e4cbf853b3747e5ff8179216d9d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b68b304c41fe966c42e0614ad00d08d"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da1/struct_timer.html#a2b68b304c41fe966c42e0614ad00d08d">bPaused</a></td></tr>
+<tr class="separator:a2b68b304c41fe966c42e0614ad00d08d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa57a599b7df0d93c3b83c98e1eea183"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da1/struct_timer.html#afa57a599b7df0d93c3b83c98e1eea183">bTackGameTime</a></td></tr>
+<tr class="separator:afa57a599b7df0d93c3b83c98e1eea183"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59e65805294ddec48a64b0bbfa837b82"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da1/struct_timer.html#a59e65805294ddec48a64b0bbfa837b82">uStartTime</a></td></tr>
+<tr class="separator:a59e65805294ddec48a64b0bbfa837b82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5858fe1ea0d94ac0ac95a4813e851eea"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da1/struct_timer.html#a5858fe1ea0d94ac0ac95a4813e851eea">uStopTime</a></td></tr>
+<tr class="separator:a5858fe1ea0d94ac0ac95a4813e851eea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56dd2dcc29cb68f340e6105e8e96eb0e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da1/struct_timer.html#a56dd2dcc29cb68f340e6105e8e96eb0e">uGameTimeStart</a></td></tr>
+<tr class="separator:a56dd2dcc29cb68f340e6105e8e96eb0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affcdb0733625cc3fc8e52dcbbf4e5ae5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da1/struct_timer.html#affcdb0733625cc3fc8e52dcbbf4e5ae5">field_18</a></td></tr>
+<tr class="separator:affcdb0733625cc3fc8e52dcbbf4e5ae5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1468b3bbde22d1dcfbe40bdd9396e15f"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da1/struct_timer.html#a1468b3bbde22d1dcfbe40bdd9396e15f">uTimeElapsed</a></td></tr>
+<tr class="separator:a1468b3bbde22d1dcfbe40bdd9396e15f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae549872d1c8069ba733b2070ccd3cff7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da1/struct_timer.html#ae549872d1c8069ba733b2070ccd3cff7">dt_in_some_format</a></td></tr>
+<tr class="separator:ae549872d1c8069ba733b2070ccd3cff7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39bcdbbf505226a791a2c181697cfcea"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da1/struct_timer.html#a39bcdbbf505226a791a2c181697cfcea">uTotalGameTimeElapsed</a></td></tr>
+<tr class="separator:a39bcdbbf505226a791a2c181697cfcea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Статические открытые данные</h2></td></tr>
+<tr class="memitem:ac12655f9a2040143f8a2c8b7aeef47ae"><td class="memItemLeft" align="right" valign="top">static const unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da1/struct_timer.html#ac12655f9a2040143f8a2c8b7aeef47ae">Minute</a> = 2 * TIME_QUANT</td></tr>
+<tr class="separator:ac12655f9a2040143f8a2c8b7aeef47ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aece83d6a9db76b82a8d36c92666fead2"><td class="memItemLeft" align="right" valign="top">static const unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da1/struct_timer.html#aece83d6a9db76b82a8d36c92666fead2">Hour</a> = 60 * <a class="el" href="../../d8/da1/struct_timer.html#ac12655f9a2040143f8a2c8b7aeef47ae">Minute</a></td></tr>
+<tr class="separator:aece83d6a9db76b82a8d36c92666fead2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7128a0af817ac53c9394f4078520426"><td class="memItemLeft" align="right" valign="top">static const unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da1/struct_timer.html#aa7128a0af817ac53c9394f4078520426">Day</a> = 24 * <a class="el" href="../../d8/da1/struct_timer.html#aece83d6a9db76b82a8d36c92666fead2">Hour</a></td></tr>
+<tr class="separator:aa7128a0af817ac53c9394f4078520426"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a461ac0630f6e2079646eaff29fa75943"><td class="memItemLeft" align="right" valign="top">static const unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da1/struct_timer.html#a461ac0630f6e2079646eaff29fa75943">Week</a> = 7 * <a class="el" href="../../d8/da1/struct_timer.html#aa7128a0af817ac53c9394f4078520426">Day</a></td></tr>
+<tr class="separator:a461ac0630f6e2079646eaff29fa75943"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf910ba51441d104643da637160b6204"><td class="memItemLeft" align="right" valign="top">static const unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da1/struct_timer.html#acf910ba51441d104643da637160b6204">Month</a> = 4 * <a class="el" href="../../d8/da1/struct_timer.html#a461ac0630f6e2079646eaff29fa75943">Week</a></td></tr>
+<tr class="separator:acf910ba51441d104643da637160b6204"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76bb48b6203de577f40aa66cfbbad656"><td class="memItemLeft" align="right" valign="top">static const unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da1/struct_timer.html#a76bb48b6203de577f40aa66cfbbad656">Year</a> = 12 * <a class="el" href="../../d8/da1/struct_timer.html#acf910ba51441d104643da637160b6204">Month</a></td></tr>
+<tr class="separator:a76bb48b6203de577f40aa66cfbbad656"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock">
+<p class="definition">См. определение в файле <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html">Time.h</a> строка <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00104">104</a></p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a5f16e8da27d2a5a5242dead46de05d97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f16e8da27d2a5a5242dead46de05d97">&#9670;&nbsp;</a></span>Timer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Timer::Timer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html">Time.h</a> строка <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00107">107</a></p>
+<div class="fragment"><div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            : <a class="code" href="../../d8/da1/struct_timer.html#afed0e4cbf853b3747e5ff8179216d9d6">bReady</a>(<span class="keyword">false</span>), <a class="code" href="../../d8/da1/struct_timer.html#a2b68b304c41fe966c42e0614ad00d08d">bPaused</a>(<span class="keyword">false</span>) {</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <a class="code" href="../../d8/da1/struct_timer.html#afa57a599b7df0d93c3b83c98e1eea183">bTackGameTime</a> = 0;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <a class="code" href="../../d8/da1/struct_timer.html#a59e65805294ddec48a64b0bbfa837b82">uStartTime</a> = 0;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <a class="code" href="../../d8/da1/struct_timer.html#a5858fe1ea0d94ac0ac95a4813e851eea">uStopTime</a> = 0;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <a class="code" href="../../d8/da1/struct_timer.html#a56dd2dcc29cb68f340e6105e8e96eb0e">uGameTimeStart</a> = 0;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <a class="code" href="../../d8/da1/struct_timer.html#affcdb0733625cc3fc8e52dcbbf4e5ae5">field_18</a> = 0;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        <a class="code" href="../../d8/da1/struct_timer.html#a1468b3bbde22d1dcfbe40bdd9396e15f">uTimeElapsed</a> = 0;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <a class="code" href="../../d8/da1/struct_timer.html#ae549872d1c8069ba733b2070ccd3cff7">dt_in_some_format</a> = 0;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <a class="code" href="../../d8/da1/struct_timer.html#a39bcdbbf505226a791a2c181697cfcea">uTotalGameTimeElapsed</a> = 0;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    }</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00128">bTackGameTime</a>, <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00134">dt_in_some_format</a>, <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00132">field_18</a>, <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00131">uGameTimeStart</a>, <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00129">uStartTime</a>, <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00130">uStopTime</a>, <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00133">uTimeElapsed</a> и <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00135">uTotalGameTimeElapsed</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00105">Create()</a>.</p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d8/da1/struct_timer_a5f16e8da27d2a5a5242dead46de05d97_icgraph.svg" width="620" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a3457141210a4090641a097f4081d23ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3457141210a4090641a097f4081d23ad">&#9670;&nbsp;</a></span>Create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="../../d8/da1/struct_timer.html">Timer</a>* Timer::Create </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html">Time.h</a> строка <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00105">105</a></p>
+<div class="fragment"><div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;{ <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="../../d8/da1/struct_timer.html#a5f16e8da27d2a5a5242dead46de05d97">Timer</a>; }</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00107">Timer()</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l00903">Engine::MM7_Initialize()</a>.</p>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d8/da1/struct_timer_a3457141210a4090641a097f4081d23ad_cgraph.svg" width="254" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d8/da1/struct_timer_a3457141210a4090641a097f4081d23ad_icgraph.svg" width="478" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a96ab325fdf29a1aa5090d862f27953a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96ab325fdf29a1aa5090d862f27953a1">&#9670;&nbsp;</a></span>Initialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> Timer::Initialize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/d84/_time_8cpp_source.html">Time.cpp</a> строка <a class="el" href="../../db/d84/_time_8cpp_source.html#l00072">72</a></p>
+<div class="fragment"><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                       {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <a class="code" href="../../d8/da1/struct_timer.html#a39bcdbbf505226a791a2c181697cfcea">uTotalGameTimeElapsed</a> = 0;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <a class="code" href="../../d8/da1/struct_timer.html#afed0e4cbf853b3747e5ff8179216d9d6">bReady</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00126">bReady</a> и <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00135">uTotalGameTimeElapsed</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l00903">Engine::MM7_Initialize()</a>.</p>
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d8/da1/struct_timer_a96ab325fdf29a1aa5090d862f27953a1_icgraph.svg" width="487" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="af11deea7dde51d637aec54587820f92b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af11deea7dde51d637aec54587820f92b">&#9670;&nbsp;</a></span>Time()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dd/df4/alext_8h.html#aec6fcb673ff035718c238c8c9d544c47">uint64_t</a> Timer::Time </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/d84/_time_8cpp_source.html">Time.cpp</a> строка <a class="el" href="../../db/d84/_time_8cpp_source.html#l00011">11</a></p>
+<div class="fragment"><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;                     {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    std::chrono::milliseconds ms = std::chrono::duration_cast&lt;std::chrono::milliseconds&gt;(std::chrono::system_clock::now().time_since_epoch());</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="../../dd/df4/alext_8h.html#aec6fcb673ff035718c238c8c9d544c47">uint64_t</a> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0928f6d0f0f794ba000a21dfae422136">v2</a> = TIME_QUANT * ms.count() / 1000;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0928f6d0f0f794ba000a21dfae422136">v2</a> &lt; <a class="code" href="../../d8/da1/struct_timer.html#a59e65805294ddec48a64b0bbfa837b82">uStartTime</a>) <a class="code" href="../../d8/da1/struct_timer.html#a59e65805294ddec48a64b0bbfa837b82">uStartTime</a> = 0;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0928f6d0f0f794ba000a21dfae422136">v2</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00129">uStartTime</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d5/da1/_decal_builder_8cpp_source.html#l00017">DecalBuilder_stru0::_43B570_get_color_mult_by_time()</a>, <a class="el" href="../../d5/da1/_decal_builder_8cpp_source.html#l00392">DecalBuilder::ApplyBloodSplatToTerrain()</a>, <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l01057">GameUI_CharacterQuickRecord_Draw()</a>, <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l02205">GameUI_DrawTorchlightAndWizardEye()</a>, <a class="el" href="../../d3/d70/_arcomage_2_arcomage_8cpp_source.html#l00896">ArcomageGame::Loop()</a>, <a class="el" href="../../db/d84/_time_8cpp_source.html#l00019">Pause()</a>, <a class="el" href="../../d3/d70/_arcomage_2_arcomage_8cpp_source.html#l01271">PlayerTurn()</a>, <a class="el" href="../../db/d84/_time_8cpp_source.html#l00027">Resume()</a>, <a class="el" href="../../db/d84/_time_8cpp_source.html#l00045">StopGameTime()</a>, <a class="el" href="../../db/d84/_time_8cpp_source.html#l00037">TrackGameTime()</a> и <a class="el" href="../../db/d84/_time_8cpp_source.html#l00053">Update()</a>.</p>
+<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d8/da1/struct_timer_af11deea7dde51d637aec54587820f92b_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a77a6595649759e7236d1b43c2c10e16b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77a6595649759e7236d1b43c2c10e16b">&#9670;&nbsp;</a></span>Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> Timer::Update </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/d84/_time_8cpp_source.html">Time.cpp</a> строка <a class="el" href="../../db/d84/_time_8cpp_source.html#l00053">53</a></p>
+<div class="fragment"><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                   {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="comment">// Timer *v1; // esi@1</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="comment">// unsigned int v2; // eax@2</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="comment">// signed int v3; // eax@3</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="comment">// char v4; // zf@5</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="../../dd/df4/alext_8h.html#aec6fcb673ff035718c238c8c9d544c47">uint64_t</a> new_time = <a class="code" href="../../d8/da1/struct_timer.html#af11deea7dde51d637aec54587820f92b">Time</a>();</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">while</span> (new_time &lt;= <a class="code" href="../../d8/da1/struct_timer.html#a59e65805294ddec48a64b0bbfa837b82">uStartTime</a>) new_time = <a class="code" href="../../d8/da1/struct_timer.html#af11deea7dde51d637aec54587820f92b">Time</a>();</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="../../d8/da1/struct_timer.html#a1468b3bbde22d1dcfbe40bdd9396e15f">uTimeElapsed</a> = new_time - <a class="code" href="../../d8/da1/struct_timer.html#a59e65805294ddec48a64b0bbfa837b82">uStartTime</a>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="../../d8/da1/struct_timer.html#a59e65805294ddec48a64b0bbfa837b82">uStartTime</a> = new_time;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../d8/da1/struct_timer.html#a1468b3bbde22d1dcfbe40bdd9396e15f">uTimeElapsed</a> &gt; 32) <a class="code" href="../../d8/da1/struct_timer.html#a1468b3bbde22d1dcfbe40bdd9396e15f">uTimeElapsed</a> = 32;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="../../d8/da1/struct_timer.html#a2b68b304c41fe966c42e0614ad00d08d">bPaused</a> &amp;&amp; !<a class="code" href="../../d8/da1/struct_timer.html#afa57a599b7df0d93c3b83c98e1eea183">bTackGameTime</a>) <a class="code" href="../../d8/da1/struct_timer.html#a39bcdbbf505226a791a2c181697cfcea">uTotalGameTimeElapsed</a> += <a class="code" href="../../d8/da1/struct_timer.html#a1468b3bbde22d1dcfbe40bdd9396e15f">uTimeElapsed</a>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <a class="code" href="../../d8/da1/struct_timer.html#ae549872d1c8069ba733b2070ccd3cff7">dt_in_some_format</a> = (<a class="code" href="../../d8/da1/struct_timer.html#a1468b3bbde22d1dcfbe40bdd9396e15f">uTimeElapsed</a> &lt;&lt; 16) / 128;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00127">bPaused</a>, <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00128">bTackGameTime</a>, <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00134">dt_in_some_format</a>, <a class="el" href="../../db/d84/_time_8cpp_source.html#l00011">Time()</a>, <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00129">uStartTime</a>, <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00133">uTimeElapsed</a> и <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00135">uTotalGameTimeElapsed</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d7/db5/_game_8cpp_source.html#l02704">Application::Game::GameLoop()</a>.</p>
+<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d8/da1/struct_timer_a77a6595649759e7236d1b43c2c10e16b_cgraph.svg" width="252" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d8/da1/struct_timer_a77a6595649759e7236d1b43c2c10e16b_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a9b8c57bf9675da635a82d68d9b4d05e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b8c57bf9675da635a82d68d9b4d05e5">&#9670;&nbsp;</a></span>Pause()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> Timer::Pause </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/d84/_time_8cpp_source.html">Time.cpp</a> строка <a class="el" href="../../db/d84/_time_8cpp_source.html#l00019">19</a></p>
+<div class="fragment"><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                  {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="../../d8/da1/struct_timer.html#a2b68b304c41fe966c42e0614ad00d08d">bPaused</a>) {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <a class="code" href="../../d8/da1/struct_timer.html#a5858fe1ea0d94ac0ac95a4813e851eea">uStopTime</a> = <a class="code" href="../../d8/da1/struct_timer.html#af11deea7dde51d637aec54587820f92b">Time</a>();</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <a class="code" href="../../d8/da1/struct_timer.html#a2b68b304c41fe966c42e0614ad00d08d">bPaused</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    }</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00127">bPaused</a>, <a class="el" href="../../db/d84/_time_8cpp_source.html#l00011">Time()</a> и <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00130">uStopTime</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d9/dd3/_cast_spell_info_8cpp_source.html#l00046">CastSpellInfoHelpers::_427E01_cast_spell()</a>, <a class="el" href="../../d7/db5/_game_8cpp_source.html#l00322">Application::Game::EventLoop()</a>, <a class="el" href="../../d7/db5/_game_8cpp_source.html#l02704">Application::Game::GameLoop()</a>, <a class="el" href="../../dd/d76/_u_i_dialogue_8cpp_source.html#l00025">GameUI_InitializeDialogue()</a>, <a class="el" href="../../db/dd5/_u_i_character_8cpp_source.html#l00660">CastSpellInfo::GetCastSpellInInventoryWindow()</a>, <a class="el" href="../../dc/d90/_autonotes_book_8cpp_source.html#l00021">GUIWindow_AutonotesBook::GUIWindow_AutonotesBook()</a>, <a class="el" href="../../df/d8d/_calendar_book_8cpp_source.html#l00025">GUIWindow_CalendarBook::GUIWindow_CalendarBook()</a>, <a class="el" href="../../db/dd5/_u_i_character_8cpp_source.html#l00466">GUIWindow_CharacterRecord::GUIWindow_CharacterRecord()</a>, <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l02449">GUIWindow_DebugMenu::GUIWindow_DebugMenu()</a>, <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l04349">GUIWindow_House::GUIWindow_House()</a>, <a class="el" href="../../dd/d41/_journal_book_8cpp_source.html#l00022">GUIWindow_JournalBook::GUIWindow_JournalBook()</a>, <a class="el" href="../../d0/d67/_map_book_8cpp_source.html#l00029">GUIWindow_MapBook::GUIWindow_MapBook()</a>, <a class="el" href="../../d4/d40/_u_i_modal_8cpp_source.html#l00011">GUIWindow_Modal::GUIWindow_Modal()</a>, <a class="el" href="../../d3/d20/_quest_book_8cpp_source.html#l00020">GUIWindow_QuestBook::GUIWindow_QuestBook()</a>, <a class="el" href="../../dc/dda/_u_i_quick_reference_8cpp_source.html#l00019">GUIWindow_QuickReference::GUIWindow_QuickReference()</a>, <a class="el" href="../../d1/d3f/_spellbook_8cpp_source.html#l00053">GUIWindow_Spellbook::GUIWindow_Spellbook()</a>, <a class="el" href="../../de/d09/_u_i_transition_8cpp_source.html#l00070">GUIWindow_Transition::GUIWindow_Transition()</a>, <a class="el" href="../../de/d09/_u_i_transition_8cpp_source.html#l00183">GUIWindow_Travel::GUIWindow_Travel()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l01209">Engine::Initialize()</a>, <a class="el" href="../../df/d21/_game_menu_8cpp_source.html#l00512">Application::Menu::MenuLoop()</a>, <a class="el" href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00147">OnCastTargetedSpell::OnCastTargetedSpell()</a>, <a class="el" href="../../dc/da3/_game_window_handler_8cpp_source.html#l00232">Application::GameWindowHandler::OnDeactivated()</a>, <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00633">MPlayer::OpenHouseMovie()</a>, <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00705">MPlayer::PlayFullscreenMovie()</a>, <a class="el" href="../../d1/d10/_u_i_rest_8cpp_source.html#l00054">PrepareToLoadRestUI()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l00781">PrepareWorld()</a>, <a class="el" href="../../da/db4/_party_8cpp_source.html#l00507">Party::Reset()</a>, <a class="el" href="../../dd/d76/_u_i_dialogue_8cpp_source.html#l00615">sub_4451A8_press_any_key()</a> и <a class="el" href="../../d6/ded/_u_i_popup_8cpp_source.html#l01459">UI_OnMouseRightClick()</a>.</p>
+<div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-7-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-7-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d8/da1/struct_timer_a9b8c57bf9675da635a82d68d9b4d05e5_cgraph.svg" width="248" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-8-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-8-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d8/da1/struct_timer_a9b8c57bf9675da635a82d68d9b4d05e5_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ad3b4e386f8ebb885fa2ef6fcac8d9ca3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3b4e386f8ebb885fa2ef6fcac8d9ca3">&#9670;&nbsp;</a></span>Resume()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> Timer::Resume </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/d84/_time_8cpp_source.html">Time.cpp</a> строка <a class="el" href="../../db/d84/_time_8cpp_source.html#l00027">27</a></p>
+<div class="fragment"><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                   {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../d8/da1/struct_timer.html#a2b68b304c41fe966c42e0614ad00d08d">bPaused</a>) {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <a class="code" href="../../d9/d5c/_keyboard_8cpp.html#a34b4e1537c7fd357f860b68adb8ec1d5">pKeyActionMap</a>-&gt;<a class="code" href="../../d3/d10/struct_keyboard_action_mapping.html#ad6ae2db00bf12d5c2913a62b33e6eb87">ResetKeys</a>();  <span class="comment">// Unhandled application exception</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <a class="code" href="../../d8/da1/struct_timer.html#a2b68b304c41fe966c42e0614ad00d08d">bPaused</a> = 0;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <a class="code" href="../../d8/da1/struct_timer.html#a59e65805294ddec48a64b0bbfa837b82">uStartTime</a> = <a class="code" href="../../d8/da1/struct_timer.html#af11deea7dde51d637aec54587820f92b">Time</a>();</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    }</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00127">bPaused</a>, <a class="el" href="../../d9/d5c/_keyboard_8cpp_source.html#l00035">pKeyActionMap</a>, <a class="el" href="../../d9/d5c/_keyboard_8cpp_source.html#l00176">KeyboardActionMapping::ResetKeys()</a>, <a class="el" href="../../db/d84/_time_8cpp_source.html#l00011">Time()</a> и <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00129">uStartTime</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l01609">back_to_game()</a>, <a class="el" href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00812">DialogueEnding()</a>, <a class="el" href="../../d4/d9d/_save_load_8cpp_source.html#l00514">DoSavegame()</a>, <a class="el" href="../../df/d21/_game_menu_8cpp_source.html#l00070">Application::Menu::EventLoop()</a>, <a class="el" href="../../d7/db5/_game_8cpp_source.html#l00322">Application::Game::EventLoop()</a>, <a class="el" href="../../d7/db5/_game_8cpp_source.html#l02704">Application::Game::GameLoop()</a>, <a class="el" href="../../d4/d9d/_save_load_8cpp_source.html#l00077">LoadGame()</a>, <a class="el" href="../../d9/d68/_u_i_save_load_8cpp_source.html#l00323">MainMenuLoad_EventLoop()</a>, <a class="el" href="../../dc/da3/_game_window_handler_8cpp_source.html#l00196">Application::GameWindowHandler::OnActivated()</a>, <a class="el" href="../../d7/db5/_game_8cpp_source.html#l00300">Application::Game::OnEscape()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l00781">PrepareWorld()</a>, <a class="el" href="../../d4/d40/_u_i_modal_8cpp_source.html#l00033">GUIWindow_Modal::Release()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l02445">sub_4452BB()</a>, <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00826">MPlayer::Unload()</a> и <a class="el" href="../../dd/df9/_u_i_inventory_8cpp_source.html#l00017">GUIWindow_Inventory::Update()</a>.</p>
+<div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-9-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-9-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d8/da1/struct_timer_ad3b4e386f8ebb885fa2ef6fcac8d9ca3_cgraph.svg" width="100%" height="378"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-10-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-10-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-10-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d8/da1/struct_timer_ad3b4e386f8ebb885fa2ef6fcac8d9ca3_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a4fe85f11146f340c53db4daa08077ae4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fe85f11146f340c53db4daa08077ae4">&#9670;&nbsp;</a></span>TrackGameTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> Timer::TrackGameTime </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/d84/_time_8cpp_source.html">Time.cpp</a> строка <a class="el" href="../../db/d84/_time_8cpp_source.html#l00037">37</a></p>
+<div class="fragment"><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                          {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="../../d8/da1/struct_timer.html#afa57a599b7df0d93c3b83c98e1eea183">bTackGameTime</a>) {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <a class="code" href="../../d8/da1/struct_timer.html#a56dd2dcc29cb68f340e6105e8e96eb0e">uGameTimeStart</a> = <a class="code" href="../../d8/da1/struct_timer.html#af11deea7dde51d637aec54587820f92b">Time</a>();</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <a class="code" href="../../d8/da1/struct_timer.html#afa57a599b7df0d93c3b83c98e1eea183">bTackGameTime</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00128">bTackGameTime</a>, <a class="el" href="../../db/d84/_time_8cpp_source.html#l00011">Time()</a> и <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00131">uGameTimeStart</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../dc/d5b/_turn_engine_8cpp_source.html#l00108">stru262_TurnBased::Start()</a>.</p>
+<div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-11-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-11-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-11-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d8/da1/struct_timer_a4fe85f11146f340c53db4daa08077ae4_cgraph.svg" width="307" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-12" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-12-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-12-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-12-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d8/da1/struct_timer_a4fe85f11146f340c53db4daa08077ae4_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="aea7d51a94464d7581670110ba03492a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea7d51a94464d7581670110ba03492a4">&#9670;&nbsp;</a></span>StopGameTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> Timer::StopGameTime </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/d84/_time_8cpp_source.html">Time.cpp</a> строка <a class="el" href="../../db/d84/_time_8cpp_source.html#l00045">45</a></p>
+<div class="fragment"><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                         {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../d8/da1/struct_timer.html#afa57a599b7df0d93c3b83c98e1eea183">bTackGameTime</a>) {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <a class="code" href="../../d8/da1/struct_timer.html#afa57a599b7df0d93c3b83c98e1eea183">bTackGameTime</a> = 0;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <a class="code" href="../../d8/da1/struct_timer.html#a59e65805294ddec48a64b0bbfa837b82">uStartTime</a> = <a class="code" href="../../d8/da1/struct_timer.html#af11deea7dde51d637aec54587820f92b">Time</a>();</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00128">bTackGameTime</a>, <a class="el" href="../../db/d84/_time_8cpp_source.html#l00011">Time()</a> и <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00129">uStartTime</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../dc/d5b/_turn_engine_8cpp_source.html#l00220">stru262_TurnBased::End()</a> и <a class="el" href="../../d4/d9d/_save_load_8cpp_source.html#l00077">LoadGame()</a>.</p>
+<div id="dynsection-13" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-13-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-13-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-13-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d8/da1/struct_timer_aea7d51a94464d7581670110ba03492a4_cgraph.svg" width="302" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-14" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-14-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-14-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-14-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d8/da1/struct_timer_aea7d51a94464d7581670110ba03492a4_icgraph.svg" width="100%" height="432"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="afed0e4cbf853b3747e5ff8179216d9d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afed0e4cbf853b3747e5ff8179216d9d6">&#9670;&nbsp;</a></span>bReady</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int Timer::bReady</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html">Time.h</a> строка <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00126">126</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d9/d4f/_legacy_images_8cpp_source.html#l00110">Timer_Image_MM7::Deserialize()</a>, <a class="el" href="../../db/d84/_time_8cpp_source.html#l00072">Initialize()</a> и <a class="el" href="../../d9/d4f/_legacy_images_8cpp_source.html#l00095">Timer_Image_MM7::Serialize()</a>.</p>
+
+</div>
+</div>
+<a id="a2b68b304c41fe966c42e0614ad00d08d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b68b304c41fe966c42e0614ad00d08d">&#9670;&nbsp;</a></span>bPaused</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int Timer::bPaused</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html">Time.h</a> строка <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00127">127</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../dc/d46/_particle_engine_8cpp_source.html#l00065">ParticleEngine::AddParticle()</a>, <a class="el" href="../../d9/d4f/_legacy_images_8cpp_source.html#l00110">Timer_Image_MM7::Deserialize()</a>, <a class="el" href="../../d7/db5/_game_8cpp_source.html#l00322">Application::Game::EventLoop()</a>, <a class="el" href="../../d7/db5/_game_8cpp_source.html#l02704">Application::Game::GameLoop()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l01507">GameUI_StatusBar_Update()</a>, <a class="el" href="../../dc/da3/_game_window_handler_8cpp_source.html#l00232">Application::GameWindowHandler::OnDeactivated()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l02479">OnTimer()</a>, <a class="el" href="../../db/d84/_time_8cpp_source.html#l00019">Pause()</a>, <a class="el" href="../../d9/d5c/_keyboard_8cpp_source.html#l00332">Keyboard::ProcessInputActions()</a>, <a class="el" href="../../db/d84/_time_8cpp_source.html#l00027">Resume()</a>, <a class="el" href="../../d9/d4f/_legacy_images_8cpp_source.html#l00095">Timer_Image_MM7::Serialize()</a>, <a class="el" href="../../db/d84/_time_8cpp_source.html#l00053">Update()</a> и <a class="el" href="../../dc/d46/_particle_engine_8cpp_source.html#l00134">ParticleEngine::UpdateParticles()</a>.</p>
+
+</div>
+</div>
+<a id="afa57a599b7df0d93c3b83c98e1eea183"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa57a599b7df0d93c3b83c98e1eea183">&#9670;&nbsp;</a></span>bTackGameTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Timer::bTackGameTime</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html">Time.h</a> строка <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00128">128</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d9/d4f/_legacy_images_8cpp_source.html#l00110">Timer_Image_MM7::Deserialize()</a>, <a class="el" href="../../d7/db5/_game_8cpp_source.html#l02704">Application::Game::GameLoop()</a>, <a class="el" href="../../d9/d4f/_legacy_images_8cpp_source.html#l00095">Timer_Image_MM7::Serialize()</a>, <a class="el" href="../../db/d84/_time_8cpp_source.html#l00045">StopGameTime()</a>, <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00107">Timer()</a>, <a class="el" href="../../db/d84/_time_8cpp_source.html#l00037">TrackGameTime()</a> и <a class="el" href="../../db/d84/_time_8cpp_source.html#l00053">Update()</a>.</p>
+
+</div>
+</div>
+<a id="a59e65805294ddec48a64b0bbfa837b82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59e65805294ddec48a64b0bbfa837b82">&#9670;&nbsp;</a></span>uStartTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int Timer::uStartTime</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html">Time.h</a> строка <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00129">129</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d9/d4f/_legacy_images_8cpp_source.html#l00110">Timer_Image_MM7::Deserialize()</a>, <a class="el" href="../../de/d68/_overlays_8cpp_source.html#l00067">OtherOverlayList::DrawTurnBasedIcon()</a>, <a class="el" href="../../db/d84/_time_8cpp_source.html#l00027">Resume()</a>, <a class="el" href="../../d9/d4f/_legacy_images_8cpp_source.html#l00095">Timer_Image_MM7::Serialize()</a>, <a class="el" href="../../db/d84/_time_8cpp_source.html#l00045">StopGameTime()</a>, <a class="el" href="../../db/d84/_time_8cpp_source.html#l00011">Time()</a>, <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00107">Timer()</a>, <a class="el" href="../../de/da8/_u_i_party_creation_8cpp_source.html#l00303">GUIWindow_PartyCreation::Update()</a> и <a class="el" href="../../db/d84/_time_8cpp_source.html#l00053">Update()</a>.</p>
+
+</div>
+</div>
+<a id="a5858fe1ea0d94ac0ac95a4813e851eea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5858fe1ea0d94ac0ac95a4813e851eea">&#9670;&nbsp;</a></span>uStopTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int Timer::uStopTime</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html">Time.h</a> строка <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00130">130</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d9/d4f/_legacy_images_8cpp_source.html#l00110">Timer_Image_MM7::Deserialize()</a>, <a class="el" href="../../db/d84/_time_8cpp_source.html#l00019">Pause()</a>, <a class="el" href="../../d9/d4f/_legacy_images_8cpp_source.html#l00095">Timer_Image_MM7::Serialize()</a> и <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00107">Timer()</a>.</p>
+
+</div>
+</div>
+<a id="a56dd2dcc29cb68f340e6105e8e96eb0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56dd2dcc29cb68f340e6105e8e96eb0e">&#9670;&nbsp;</a></span>uGameTimeStart</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Timer::uGameTimeStart</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html">Time.h</a> строка <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00131">131</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d9/d4f/_legacy_images_8cpp_source.html#l00110">Timer_Image_MM7::Deserialize()</a>, <a class="el" href="../../d9/d4f/_legacy_images_8cpp_source.html#l00095">Timer_Image_MM7::Serialize()</a>, <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00107">Timer()</a> и <a class="el" href="../../db/d84/_time_8cpp_source.html#l00037">TrackGameTime()</a>.</p>
+
+</div>
+</div>
+<a id="affcdb0733625cc3fc8e52dcbbf4e5ae5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affcdb0733625cc3fc8e52dcbbf4e5ae5">&#9670;&nbsp;</a></span>field_18</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Timer::field_18</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html">Time.h</a> строка <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00132">132</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d9/d4f/_legacy_images_8cpp_source.html#l00110">Timer_Image_MM7::Deserialize()</a>, <a class="el" href="../../d9/d4f/_legacy_images_8cpp_source.html#l00095">Timer_Image_MM7::Serialize()</a> и <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00107">Timer()</a>.</p>
+
+</div>
+</div>
+<a id="a1468b3bbde22d1dcfbe40bdd9396e15f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1468b3bbde22d1dcfbe40bdd9396e15f">&#9670;&nbsp;</a></span>uTimeElapsed</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int Timer::uTimeElapsed</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html">Time.h</a> строка <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00133">133</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l01623">_494035_timed_effects__water_walking_damage__etc()</a>, <a class="el" href="../../dc/d5b/_turn_engine_8cpp_source.html#l01084">stru262_TurnBased::ActorAIChooseNewTargets()</a>, <a class="el" href="../../dc/d5b/_turn_engine_8cpp_source.html#l00874">stru262_TurnBased::ActorAIDoAdditionalMove()</a>, <a class="el" href="../../dc/d5b/_turn_engine_8cpp_source.html#l00599">stru262_TurnBased::AIAttacks()</a>, <a class="el" href="../../dc/d5b/_turn_engine_8cpp_source.html#l00260">stru262_TurnBased::AITurnBasedAction()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l04655">BLV_ProcessPartyActions()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l01506">BLV_UpdateDoors()</a>, <a class="el" href="../../db/dd5/_u_i_character_8cpp_source.html#l01867">CharacterUI_DrawItem()</a>, <a class="el" href="../../db/dd5/_u_i_character_8cpp_source.html#l00930">CharacterUI_DrawPaperdoll()</a>, <a class="el" href="../../d9/d4f/_legacy_images_8cpp_source.html#l00110">Timer_Image_MM7::Deserialize()</a>, <a class="el" href="../../dc/d46/_particle_engine_8cpp_source.html#l00113">ParticleEngine::Draw()</a>, <a class="el" href="../../de/d6c/_spell_fx_renderer_8cpp_source.html#l01317">SpellFxRenderer::DrawPlayerBuffAnims()</a>, <a class="el" href="../../de/d68/_overlays_8cpp_source.html#l00067">OtherOverlayList::DrawTurnBasedIcon()</a>, <a class="el" href="../../d7/db5/_game_8cpp_source.html#l00322">Application::Game::EventLoop()</a>, <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l01057">GameUI_CharacterQuickRecord_Draw()</a>, <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l01766">GameUI_DrawPortraits()</a>, <a class="el" href="../../d6/ded/_u_i_popup_8cpp_source.html#l00563">MonsterPopup_Draw()</a>, <a class="el" href="../../dc/d5b/_turn_engine_8cpp_source.html#l00395">stru262_TurnBased::NextTurn()</a>, <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l02221">ODM_ProcessPartyActions()</a>, <a class="el" href="../../de/d6c/_spell_fx_renderer_8cpp_source.html#l01239">SpellFxRenderer::RenderSpecialEffects()</a>, <a class="el" href="../../d9/d4f/_legacy_images_8cpp_source.html#l00095">Timer_Image_MM7::Serialize()</a>, <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00107">Timer()</a>, <a class="el" href="../../d1/d10/_u_i_rest_8cpp_source.html#l00123">GUIWindow_Rest::Update()</a>, <a class="el" href="../../db/d84/_time_8cpp_source.html#l00053">Update()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l02745">Actor::UpdateActorAI()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l01718">UpdateActors_BLV()</a>, <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l03393">UpdateActors_ODM()</a>, <a class="el" href="../../d9/ded/_sprite_object_8cpp_source.html#l00463">SpriteObject::UpdateObject_fn0_BLV()</a>, <a class="el" href="../../d9/ded/_sprite_object_8cpp_source.html#l00130">SpriteObject::UpdateObject_fn0_ODM()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l04955">UpdateObjects()</a>, <a class="el" href="../../dc/d46/_particle_engine_8cpp_source.html#l00134">ParticleEngine::UpdateParticles()</a>, <a class="el" href="../../dc/d46/_particle_engine_8cpp_source.html#l00037">TrailParticleGenerator::UpdateParticles()</a> и <a class="el" href="../../da/db4/_party_8cpp_source.html#l00657">Party::UpdatePlayersAndHirelingsEmotions()</a>.</p>
+
+</div>
+</div>
+<a id="ae549872d1c8069ba733b2070ccd3cff7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae549872d1c8069ba733b2070ccd3cff7">&#9670;&nbsp;</a></span>dt_in_some_format</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Timer::dt_in_some_format</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html">Time.h</a> строка <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00134">134</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l04655">BLV_ProcessPartyActions()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l05697">stru141_actor_collision_object::CalcMovementExtents()</a>, <a class="el" href="../../d9/d4f/_legacy_images_8cpp_source.html#l00110">Timer_Image_MM7::Deserialize()</a>, <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l02221">ODM_ProcessPartyActions()</a>, <a class="el" href="../../d9/d4f/_legacy_images_8cpp_source.html#l00095">Timer_Image_MM7::Serialize()</a>, <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00107">Timer()</a> и <a class="el" href="../../db/d84/_time_8cpp_source.html#l00053">Update()</a>.</p>
+
+</div>
+</div>
+<a id="a39bcdbbf505226a791a2c181697cfcea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39bcdbbf505226a791a2c181697cfcea">&#9670;&nbsp;</a></span>uTotalGameTimeElapsed</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int Timer::uTotalGameTimeElapsed</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html">Time.h</a> строка <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00135">135</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d9/dd3/_cast_spell_info_8cpp_source.html#l00046">CastSpellInfoHelpers::_427E01_cast_spell()</a>, <a class="el" href="../../de/d6c/_spell_fx_renderer_8cpp_source.html#l00648">SpellFxRenderer::_4A806F_get_mass_distortion_value()</a>, <a class="el" href="../../d9/d4f/_legacy_images_8cpp_source.html#l00110">Timer_Image_MM7::Deserialize()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l00166">Engine::Draw()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l05795">Render::DrawIndoorSky()</a>, <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l01378">RenderOpenGL::DrawOutdoorSkyD3D()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l05613">Render::DrawOutdoorSkyD3D()</a>, <a class="el" href="../../dc/d8a/_b_s_p_model_8cpp_source.html#l00146">ODMFace::GetTexture()</a>, <a class="el" href="../../db/d84/_time_8cpp_source.html#l00072">Initialize()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l02739">IndoorLocation::PrepareActorRenderList_BLV()</a>, <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l01722">OutdoorLocation::PrepareActorsDrawList()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l03042">IndoorLocation::PrepareDecorationsRenderList_BLV()</a>, <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l00695">RenderOpenGL::PrepareDecorationsRenderList_ODM()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l00713">Render::PrepareDecorationsRenderList_ODM()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00163">BLVRenderParams::Reset()</a>, <a class="el" href="../../d9/d4f/_legacy_images_8cpp_source.html#l00095">Timer_Image_MM7::Serialize()</a>, <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00107">Timer()</a> и <a class="el" href="../../db/d84/_time_8cpp_source.html#l00053">Update()</a>.</p>
+
+</div>
+</div>
+<a id="ac12655f9a2040143f8a2c8b7aeef47ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac12655f9a2040143f8a2c8b7aeef47ae">&#9670;&nbsp;</a></span>Minute</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const unsigned int Timer::Minute = 2 * TIME_QUANT</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html">Time.h</a> строка <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00137">137</a></p>
+
+</div>
+</div>
+<a id="aece83d6a9db76b82a8d36c92666fead2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aece83d6a9db76b82a8d36c92666fead2">&#9670;&nbsp;</a></span>Hour</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const unsigned int Timer::Hour = 60 * <a class="el" href="../../d8/da1/struct_timer.html#ac12655f9a2040143f8a2c8b7aeef47ae">Minute</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html">Time.h</a> строка <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00138">138</a></p>
+
+</div>
+</div>
+<a id="aa7128a0af817ac53c9394f4078520426"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7128a0af817ac53c9394f4078520426">&#9670;&nbsp;</a></span>Day</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const unsigned int Timer::Day = 24 * <a class="el" href="../../d8/da1/struct_timer.html#aece83d6a9db76b82a8d36c92666fead2">Hour</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html">Time.h</a> строка <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00139">139</a></p>
+
+</div>
+</div>
+<a id="a461ac0630f6e2079646eaff29fa75943"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a461ac0630f6e2079646eaff29fa75943">&#9670;&nbsp;</a></span>Week</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const unsigned int Timer::Week = 7 * <a class="el" href="../../d8/da1/struct_timer.html#aa7128a0af817ac53c9394f4078520426">Day</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html">Time.h</a> строка <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00140">140</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/dff/_win_api_window_8cpp_source.html#l00565">WinApiWindow::OnOSMenu()</a>.</p>
+
+</div>
+</div>
+<a id="acf910ba51441d104643da637160b6204"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf910ba51441d104643da637160b6204">&#9670;&nbsp;</a></span>Month</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const unsigned int Timer::Month = 4 * <a class="el" href="../../d8/da1/struct_timer.html#a461ac0630f6e2079646eaff29fa75943">Week</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html">Time.h</a> строка <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00141">141</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/dff/_win_api_window_8cpp_source.html#l00565">WinApiWindow::OnOSMenu()</a>.</p>
+
+</div>
+</div>
+<a id="a76bb48b6203de577f40aa66cfbbad656"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76bb48b6203de577f40aa66cfbbad656">&#9670;&nbsp;</a></span>Year</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const unsigned int Timer::Year = 12 * <a class="el" href="../../d8/da1/struct_timer.html#acf910ba51441d104643da637160b6204">Month</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html">Time.h</a> строка <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00142">142</a></p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов структур находятся в файлах:<ul>
+<li>C:/git/world-of-might-and-magic/Engine/<a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html">Time.h</a></li>
+<li>C:/git/world-of-might-and-magic/Engine/<a class="el" href="../../db/d84/_time_8cpp_source.html">Time.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="astruct_timer_html_af11deea7dde51d637aec54587820f92b"><div class="ttname"><a href="../../d8/da1/struct_timer.html#af11deea7dde51d637aec54587820f92b">Timer::Time</a></div><div class="ttdeci">uint64_t Time()</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d84/_time_8cpp_source.html#l00011">Time.cpp:11</a></div></div>
+<div class="ttc" id="astruct_timer_html_a1468b3bbde22d1dcfbe40bdd9396e15f"><div class="ttname"><a href="../../d8/da1/struct_timer.html#a1468b3bbde22d1dcfbe40bdd9396e15f">Timer::uTimeElapsed</a></div><div class="ttdeci">unsigned int uTimeElapsed</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d0e/_engine_2_time_8h_source.html#l00133">Time.h:133</a></div></div>
+<div class="ttc" id="astruct_timer_html_affcdb0733625cc3fc8e52dcbbf4e5ae5"><div class="ttname"><a href="../../d8/da1/struct_timer.html#affcdb0733625cc3fc8e52dcbbf4e5ae5">Timer::field_18</a></div><div class="ttdeci">int field_18</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d0e/_engine_2_time_8h_source.html#l00132">Time.h:132</a></div></div>
+<div class="ttc" id="astruct_timer_html_a2b68b304c41fe966c42e0614ad00d08d"><div class="ttname"><a href="../../d8/da1/struct_timer.html#a2b68b304c41fe966c42e0614ad00d08d">Timer::bPaused</a></div><div class="ttdeci">unsigned int bPaused</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d0e/_engine_2_time_8h_source.html#l00127">Time.h:127</a></div></div>
+<div class="ttc" id="aalext_8h_html_aec6fcb673ff035718c238c8c9d544c47"><div class="ttname"><a href="../../dd/df4/alext_8h.html#aec6fcb673ff035718c238c8c9d544c47">uint64_t</a></div><div class="ttdeci">unsigned __int64 uint64_t</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/df4/alext_8h_source.html#l00032">alext.h:32</a></div></div>
+<div class="ttc" id="astruct_timer_html_afa57a599b7df0d93c3b83c98e1eea183"><div class="ttname"><a href="../../d8/da1/struct_timer.html#afa57a599b7df0d93c3b83c98e1eea183">Timer::bTackGameTime</a></div><div class="ttdeci">int bTackGameTime</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d0e/_engine_2_time_8h_source.html#l00128">Time.h:128</a></div></div>
+<div class="ttc" id="astruct_timer_html_a5858fe1ea0d94ac0ac95a4813e851eea"><div class="ttname"><a href="../../d8/da1/struct_timer.html#a5858fe1ea0d94ac0ac95a4813e851eea">Timer::uStopTime</a></div><div class="ttdeci">unsigned int uStopTime</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d0e/_engine_2_time_8h_source.html#l00130">Time.h:130</a></div></div>
+<div class="ttc" id="astruct_timer_html_ae549872d1c8069ba733b2070ccd3cff7"><div class="ttname"><a href="../../d8/da1/struct_timer.html#ae549872d1c8069ba733b2070ccd3cff7">Timer::dt_in_some_format</a></div><div class="ttdeci">int dt_in_some_format</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d0e/_engine_2_time_8h_source.html#l00134">Time.h:134</a></div></div>
+<div class="ttc" id="astruct_timer_html_a56dd2dcc29cb68f340e6105e8e96eb0e"><div class="ttname"><a href="../../d8/da1/struct_timer.html#a56dd2dcc29cb68f340e6105e8e96eb0e">Timer::uGameTimeStart</a></div><div class="ttdeci">int uGameTimeStart</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d0e/_engine_2_time_8h_source.html#l00131">Time.h:131</a></div></div>
+<div class="ttc" id="astruct_keyboard_action_mapping_html_ad6ae2db00bf12d5c2913a62b33e6eb87"><div class="ttname"><a href="../../d3/d10/struct_keyboard_action_mapping.html#ad6ae2db00bf12d5c2913a62b33e6eb87">KeyboardActionMapping::ResetKeys</a></div><div class="ttdeci">void ResetKeys()</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d5c/_keyboard_8cpp_source.html#l00176">Keyboard.cpp:176</a></div></div>
+<div class="ttc" id="astruct_timer_html_afed0e4cbf853b3747e5ff8179216d9d6"><div class="ttname"><a href="../../d8/da1/struct_timer.html#afed0e4cbf853b3747e5ff8179216d9d6">Timer::bReady</a></div><div class="ttdeci">unsigned int bReady</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d0e/_engine_2_time_8h_source.html#l00126">Time.h:126</a></div></div>
+<div class="ttc" id="a_keyboard_8cpp_html_a34b4e1537c7fd357f860b68adb8ec1d5"><div class="ttname"><a href="../../d9/d5c/_keyboard_8cpp.html#a34b4e1537c7fd357f860b68adb8ec1d5">pKeyActionMap</a></div><div class="ttdeci">struct KeyboardActionMapping * pKeyActionMap</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d5c/_keyboard_8cpp_source.html#l00035">Keyboard.cpp:35</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a0928f6d0f0f794ba000a21dfae422136"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0928f6d0f0f794ba000a21dfae422136">v2</a></div><div class="ttdeci">GLfloat GLfloat GLfloat v2</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l00695">SDL_opengl_glext.h:695</a></div></div>
+<div class="ttc" id="astruct_timer_html_a5f16e8da27d2a5a5242dead46de05d97"><div class="ttname"><a href="../../d8/da1/struct_timer.html#a5f16e8da27d2a5a5242dead46de05d97">Timer::Timer</a></div><div class="ttdeci">Timer()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d0e/_engine_2_time_8h_source.html#l00107">Time.h:107</a></div></div>
+<div class="ttc" id="astruct_timer_html_a59e65805294ddec48a64b0bbfa837b82"><div class="ttname"><a href="../../d8/da1/struct_timer.html#a59e65805294ddec48a64b0bbfa837b82">Timer::uStartTime</a></div><div class="ttdeci">unsigned int uStartTime</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d0e/_engine_2_time_8h_source.html#l00129">Time.h:129</a></div></div>
+<div class="ttc" id="astruct_timer_html_a39bcdbbf505226a791a2c181697cfcea"><div class="ttname"><a href="../../d8/da1/struct_timer.html#a39bcdbbf505226a791a2c181697cfcea">Timer::uTotalGameTimeElapsed</a></div><div class="ttdeci">unsigned int uTotalGameTimeElapsed</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d0e/_engine_2_time_8h_source.html#l00135">Time.h:135</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../d8/da1/struct_timer.html">Timer</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:05:23. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

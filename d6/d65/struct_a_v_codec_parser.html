@@ -1,0 +1,252 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Структура AVCodecParser</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d6/d65/struct_a_v_codec_parser.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="../../dc/d9d/struct_a_v_codec_parser-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Структура AVCodecParser<div class="ingroups"><a class="el" href="../../d5/de3/group__libavc.html">libavcodec</a> &raquo; <a class="el" href="../../d0/d0c/group__lavc__decoding.html">Decoding</a> &raquo; <a class="el" href="../../d7/d4e/group__lavc__parsing.html">Frame parsing</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="../../d4/d02/avcodec_8h_source.html">avcodec.h</a>&gt;</code></p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Граф связей класса AVCodecParser:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d2/d65/struct_a_v_codec_parser__coll__graph.svg" width="179" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:a283585b212b3fe90f5872119d7c604b2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d65/struct_a_v_codec_parser.html#a283585b212b3fe90f5872119d7c604b2">codec_ids</a> [5]</td></tr>
+<tr class="separator:a283585b212b3fe90f5872119d7c604b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33c342399b903fe66ee3560003346ce1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d65/struct_a_v_codec_parser.html#a33c342399b903fe66ee3560003346ce1">priv_data_size</a></td></tr>
+<tr class="separator:a33c342399b903fe66ee3560003346ce1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ab163d5b9fa3f1901e96809acd7ed20"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d65/struct_a_v_codec_parser.html#a5ab163d5b9fa3f1901e96809acd7ed20">parser_init</a> )(<a class="el" href="../../d7/da5/struct_a_v_codec_parser_context.html">AVCodecParserContext</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>)</td></tr>
+<tr class="separator:a5ab163d5b9fa3f1901e96809acd7ed20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5699fb20c9a821c827a74322ccd529ef"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d65/struct_a_v_codec_parser.html#a5699fb20c9a821c827a74322ccd529ef">parser_parse</a> )(<a class="el" href="../../d7/da5/struct_a_v_codec_parser_context.html">AVCodecParserContext</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>, <a class="el" href="../../de/d1f/struct_a_v_codec_context.html">AVCodecContext</a> *avctx, const <a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> **poutbuf, int *poutbuf_size, const <a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa3b73d9ca9f2e2396cbeae1ce6ce14be">buf</a>, int buf_size)</td></tr>
+<tr class="separator:a5699fb20c9a821c827a74322ccd529ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52ff1b3d42b0fc2e9c7982212f8e6c29"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d65/struct_a_v_codec_parser.html#a52ff1b3d42b0fc2e9c7982212f8e6c29">parser_close</a> )(<a class="el" href="../../d7/da5/struct_a_v_codec_parser_context.html">AVCodecParserContext</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>)</td></tr>
+<tr class="separator:a52ff1b3d42b0fc2e9c7982212f8e6c29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3892ba0125d96730e73b88393752468b"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d65/struct_a_v_codec_parser.html#a3892ba0125d96730e73b88393752468b">split</a> )(<a class="el" href="../../de/d1f/struct_a_v_codec_context.html">AVCodecContext</a> *avctx, const <a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa3b73d9ca9f2e2396cbeae1ce6ce14be">buf</a>, int buf_size)</td></tr>
+<tr class="separator:a3892ba0125d96730e73b88393752468b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf3b49847ee71f00868c5b32a214dfa3"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="../../d6/d65/struct_a_v_codec_parser.html">AVCodecParser</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d65/struct_a_v_codec_parser.html#adf3b49847ee71f00868c5b32a214dfa3">next</a></td></tr>
+<tr class="separator:adf3b49847ee71f00868c5b32a214dfa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock">
+<p class="definition">См. определение в файле <a class="el" href="../../d4/d02/avcodec_8h_source.html">avcodec.h</a> строка <a class="el" href="../../d4/d02/avcodec_8h_source.html#l05275">5275</a></p>
+</div><h2 class="groupheader">Данные класса</h2>
+<a id="a283585b212b3fe90f5872119d7c604b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a283585b212b3fe90f5872119d7c604b2">&#9670;&nbsp;</a></span>codec_ids</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int AVCodecParser::codec_ids[5]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d4/d02/avcodec_8h_source.html">avcodec.h</a> строка <a class="el" href="../../d4/d02/avcodec_8h_source.html#l05276">5276</a></p>
+
+</div>
+</div>
+<a id="a33c342399b903fe66ee3560003346ce1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33c342399b903fe66ee3560003346ce1">&#9670;&nbsp;</a></span>priv_data_size</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int AVCodecParser::priv_data_size</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d4/d02/avcodec_8h_source.html">avcodec.h</a> строка <a class="el" href="../../d4/d02/avcodec_8h_source.html#l05277">5277</a></p>
+
+</div>
+</div>
+<a id="a5ab163d5b9fa3f1901e96809acd7ed20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ab163d5b9fa3f1901e96809acd7ed20">&#9670;&nbsp;</a></span>parser_init</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int(* AVCodecParser::parser_init) (<a class="el" href="../../d7/da5/struct_a_v_codec_parser_context.html">AVCodecParserContext</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d4/d02/avcodec_8h_source.html">avcodec.h</a> строка <a class="el" href="../../d4/d02/avcodec_8h_source.html#l05278">5278</a></p>
+
+</div>
+</div>
+<a id="a5699fb20c9a821c827a74322ccd529ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5699fb20c9a821c827a74322ccd529ef">&#9670;&nbsp;</a></span>parser_parse</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int(* AVCodecParser::parser_parse) (<a class="el" href="../../d7/da5/struct_a_v_codec_parser_context.html">AVCodecParserContext</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>, <a class="el" href="../../de/d1f/struct_a_v_codec_context.html">AVCodecContext</a> *avctx, const <a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> **poutbuf, int *poutbuf_size, const <a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa3b73d9ca9f2e2396cbeae1ce6ce14be">buf</a>, int buf_size)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d4/d02/avcodec_8h_source.html">avcodec.h</a> строка <a class="el" href="../../d4/d02/avcodec_8h_source.html#l05281">5281</a></p>
+
+</div>
+</div>
+<a id="a52ff1b3d42b0fc2e9c7982212f8e6c29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52ff1b3d42b0fc2e9c7982212f8e6c29">&#9670;&nbsp;</a></span>parser_close</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>(* AVCodecParser::parser_close) (<a class="el" href="../../d7/da5/struct_a_v_codec_parser_context.html">AVCodecParserContext</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d4/d02/avcodec_8h_source.html">avcodec.h</a> строка <a class="el" href="../../d4/d02/avcodec_8h_source.html#l05285">5285</a></p>
+
+</div>
+</div>
+<a id="a3892ba0125d96730e73b88393752468b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3892ba0125d96730e73b88393752468b">&#9670;&nbsp;</a></span>split</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int(* AVCodecParser::split) (<a class="el" href="../../de/d1f/struct_a_v_codec_context.html">AVCodecContext</a> *avctx, const <a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa3b73d9ca9f2e2396cbeae1ce6ce14be">buf</a>, int buf_size)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d4/d02/avcodec_8h_source.html">avcodec.h</a> строка <a class="el" href="../../d4/d02/avcodec_8h_source.html#l05286">5286</a></p>
+
+</div>
+</div>
+<a id="adf3b49847ee71f00868c5b32a214dfa3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf3b49847ee71f00868c5b32a214dfa3">&#9670;&nbsp;</a></span>next</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="../../d6/d65/struct_a_v_codec_parser.html">AVCodecParser</a>* AVCodecParser::next</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d4/d02/avcodec_8h_source.html">avcodec.h</a> строка <a class="el" href="../../d4/d02/avcodec_8h_source.html#l05287">5287</a></p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов структуры находятся в файле:<ul>
+<li>C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavcodec/<a class="el" href="../../d4/d02/avcodec_8h_source.html">avcodec.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../d6/d65/struct_a_v_codec_parser.html">AVCodecParser</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:04:34. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

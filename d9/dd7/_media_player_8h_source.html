@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Исходный файл C:/git/world-of-might-and-magic/Media/MediaPlayer.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d9/dd7/_media_player_8h_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">MediaPlayer.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d9/dd7/_media_player_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../da/def/_media_8h.html">Media/Media.h</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">// MOVIE_3DOLogo  &quot;3dologo&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">// MOVIE_NWCLogo  &quot;new world logo&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">// MOVIE_JVC      &quot;jvc&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">// MOVIE_Intro    &quot;Intro&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">// MOVIE_Emerald  &quot;Intro Post&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">// MOVIE_Death    &quot;losegame&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">// MOVIE_Outro    &quot;end_seq1&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">class </span><a class="code" href="../../d3/dfa/class_video_list.html">VideoList</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="../../d0/db7/class_m_player.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d0/db7/class_m_player.html">MPlayer</a> {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="../../d0/db7/class_m_player.html#a505e4bd268a9b786b2913a887c9c5173">MPlayer</a>();</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="../../d0/db7/class_m_player.html#adf51783d0338dc376365ae8b30a0f5c3">~MPlayer</a>();</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d0/db7/class_m_player.html#a7e6551567a9855f5b0387523c8785a49">Initialize</a>();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d0/db7/class_m_player.html#a35aab4aa56993e73186e484b87ef0a20">Unload</a>();</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d0/db7/class_m_player.html#a75a0afd464002129f6917027248b6f1f">PlayFullscreenMovie</a>(<span class="keyword">const</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#ae84541b4f3d8e1ea24ec0f466a8c568b">std::string</a> &amp;pMovieName);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d0/db7/class_m_player.html#a72ca6e9e44d537123cc4faca5c4db72c">OpenHouseMovie</a>(<span class="keyword">const</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#ae84541b4f3d8e1ea24ec0f466a8c568b">std::string</a> &amp;pMovieName, <span class="keywordtype">bool</span> bLoop);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d0/db7/class_m_player.html#aa41b1781944783f7519de023de637e12">HouseMovieLoop</a>();</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d0/db7/class_m_player.html#af036106f96bbf78ce24b3f8b575423c3">IsMoviePlaying</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d0/db7/class_m_player.html#a6606e4c205df305bafd70a4829e14a7c">StopMovie</a>();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="../../d0/db7/class_m_player.html#a2a6fde3cadf71de54ddc8d4ee0951f8e">   34</a></span>&#160;    <a class="code" href="../../d3/dfa/class_video_list.html">VideoList</a> *<a class="code" href="../../d0/db7/class_m_player.html#a2a6fde3cadf71de54ddc8d4ee0951f8e">might_list</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="../../d0/db7/class_m_player.html#a380a2d6b1d67c5e42e5c397aea9186b3">   35</a></span>&#160;    <a class="code" href="../../d3/dfa/class_video_list.html">VideoList</a> *<a class="code" href="../../d0/db7/class_m_player.html#a380a2d6b1d67c5e42e5c397aea9186b3">magic_list</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="../../d0/db7/class_m_player.html#aebdbf05d86996c900497f8a648fa7f4f">   36</a></span>&#160;    <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#ae84541b4f3d8e1ea24ec0f466a8c568b">std::string</a> <a class="code" href="../../d0/db7/class_m_player.html#aebdbf05d86996c900497f8a648fa7f4f">sInHouseMovie</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    FILE *<a class="code" href="../../d0/db7/class_m_player.html#a8b5309dbae4ad8e6db5fdbd6996963e2">LoadMovie</a>(<span class="keyword">const</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#ae84541b4f3d8e1ea24ec0f466a8c568b">std::string</a> &amp;video_name, <span class="keywordtype">size_t</span> &amp;<a class="code" href="../../db/d76/group__lavu__mem__funcs.html#ga3d1e3edfcf61ca2d831883e1afbad89e">size</a>,</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                    <span class="keywordtype">size_t</span> &amp;<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#ac915cd848f42b26af51745f204a3b9af">offset</a>);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;};</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">extern</span> <a class="code" href="../../d0/db7/class_m_player.html">MPlayer</a> *<a class="code" href="../../d9/dd7/_media_player_8h.html#adf8c80364a0b3242d22a7e8cc23362b5">pMediaPlayer</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">extern</span> <a class="code" href="../../da/def/_media_8h.html#a6a20c0b91ed94a979f220e4e1d767616">PMovie</a> <a class="code" href="../../d9/dd7/_media_player_8h.html#aaf9ee4055f87a9e3ee8fca85a5226b08">pMovie_Track</a>;</div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aclass_m_player_html_aebdbf05d86996c900497f8a648fa7f4f"><div class="ttname"><a href="../../d0/db7/class_m_player.html#aebdbf05d86996c900497f8a648fa7f4f">MPlayer::sInHouseMovie</a></div><div class="ttdeci">std::string sInHouseMovie</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dd7/_media_player_8h_source.html#l00036">MediaPlayer.h:36</a></div></div>
+<div class="ttc" id="aclass_m_player_html_a75a0afd464002129f6917027248b6f1f"><div class="ttname"><a href="../../d0/db7/class_m_player.html#a75a0afd464002129f6917027248b6f1f">MPlayer::PlayFullscreenMovie</a></div><div class="ttdeci">void PlayFullscreenMovie(const std::string &amp;pMovieName)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d56/_media_player_8cpp_source.html#l00705">MediaPlayer.cpp:705</a></div></div>
+<div class="ttc" id="aclass_m_player_html_a6606e4c205df305bafd70a4829e14a7c"><div class="ttname"><a href="../../d0/db7/class_m_player.html#a6606e4c205df305bafd70a4829e14a7c">MPlayer::StopMovie</a></div><div class="ttdeci">bool StopMovie()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d56/_media_player_8cpp_source.html#l00785">MediaPlayer.cpp:785</a></div></div>
+<div class="ttc" id="aclass_m_player_html_a505e4bd268a9b786b2913a887c9c5173"><div class="ttname"><a href="../../d0/db7/class_m_player.html#a505e4bd268a9b786b2913a887c9c5173">MPlayer::MPlayer</a></div><div class="ttdeci">MPlayer()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d56/_media_player_8cpp_source.html#l00846">MediaPlayer.cpp:846</a></div></div>
+<div class="ttc" id="aclass_video_list_html"><div class="ttname"><a href="../../d3/dfa/class_video_list.html">VideoList</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d56/_media_player_8cpp_source.html#l00530">MediaPlayer.cpp:530</a></div></div>
+<div class="ttc" id="aclass_m_player_html_a2a6fde3cadf71de54ddc8d4ee0951f8e"><div class="ttname"><a href="../../d0/db7/class_m_player.html#a2a6fde3cadf71de54ddc8d4ee0951f8e">MPlayer::might_list</a></div><div class="ttdeci">VideoList * might_list</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dd7/_media_player_8h_source.html#l00034">MediaPlayer.h:34</a></div></div>
+<div class="ttc" id="aclass_m_player_html_adf51783d0338dc376365ae8b30a0f5c3"><div class="ttname"><a href="../../d0/db7/class_m_player.html#adf51783d0338dc376365ae8b30a0f5c3">MPlayer::~MPlayer</a></div><div class="ttdeci">virtual ~MPlayer()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d56/_media_player_8cpp_source.html#l00868">MediaPlayer.cpp:868</a></div></div>
+<div class="ttc" id="aclass_m_player_html_a72ca6e9e44d537123cc4faca5c4db72c"><div class="ttname"><a href="../../d0/db7/class_m_player.html#a72ca6e9e44d537123cc4faca5c4db72c">MPlayer::OpenHouseMovie</a></div><div class="ttdeci">void OpenHouseMovie(const std::string &amp;pMovieName, bool bLoop)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d56/_media_player_8cpp_source.html#l00633">MediaPlayer.cpp:633</a></div></div>
+<div class="ttc" id="aclass_m_player_html_a8b5309dbae4ad8e6db5fdbd6996963e2"><div class="ttname"><a href="../../d0/db7/class_m_player.html#a8b5309dbae4ad8e6db5fdbd6996963e2">MPlayer::LoadMovie</a></div><div class="ttdeci">FILE * LoadMovie(const std::string &amp;video_name, size_t &amp;size, size_t &amp;offset)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d56/_media_player_8cpp_source.html#l00792">MediaPlayer.cpp:792</a></div></div>
+<div class="ttc" id="aclass_m_player_html_a35aab4aa56993e73186e484b87ef0a20"><div class="ttname"><a href="../../d0/db7/class_m_player.html#a35aab4aa56993e73186e484b87ef0a20">MPlayer::Unload</a></div><div class="ttdeci">void Unload()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d56/_media_player_8cpp_source.html#l00826">MediaPlayer.cpp:826</a></div></div>
+<div class="ttc" id="a_media_player_8h_html_aaf9ee4055f87a9e3ee8fca85a5226b08"><div class="ttname"><a href="../../d9/dd7/_media_player_8h.html#aaf9ee4055f87a9e3ee8fca85a5226b08">pMovie_Track</a></div><div class="ttdeci">PMovie pMovie_Track</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d56/_media_player_8cpp_source.html#l00044">MediaPlayer.cpp:44</a></div></div>
+<div class="ttc" id="a_media_8h_html"><div class="ttname"><a href="../../da/def/_media_8h.html">Media.h</a></div></div>
+<div class="ttc" id="aclass_m_player_html_aa41b1781944783f7519de023de637e12"><div class="ttname"><a href="../../d0/db7/class_m_player.html#aa41b1781944783f7519de023de637e12">MPlayer::HouseMovieLoop</a></div><div class="ttdeci">void HouseMovieLoop()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d56/_media_player_8cpp_source.html#l00653">MediaPlayer.cpp:653</a></div></div>
+<div class="ttc" id="aclass_m_player_html_a380a2d6b1d67c5e42e5c397aea9186b3"><div class="ttname"><a href="../../d0/db7/class_m_player.html#a380a2d6b1d67c5e42e5c397aea9186b3">MPlayer::magic_list</a></div><div class="ttdeci">VideoList * magic_list</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dd7/_media_player_8h_source.html#l00035">MediaPlayer.h:35</a></div></div>
+<div class="ttc" id="aclass_m_player_html"><div class="ttname"><a href="../../d0/db7/class_m_player.html">MPlayer</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dd7/_media_player_8h_source.html#l00017">MediaPlayer.h:17</a></div></div>
+<div class="ttc" id="aclass_m_player_html_a7e6551567a9855f5b0387523c8785a49"><div class="ttname"><a href="../../d0/db7/class_m_player.html#a7e6551567a9855f5b0387523c8785a49">MPlayer::Initialize</a></div><div class="ttdeci">void Initialize()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d56/_media_player_8cpp_source.html#l00623">MediaPlayer.cpp:623</a></div></div>
+<div class="ttc" id="a_media_8h_html_a6a20c0b91ed94a979f220e4e1d767616"><div class="ttname"><a href="../../da/def/_media_8h.html#a6a20c0b91ed94a979f220e4e1d767616">PMovie</a></div><div class="ttdeci">std::shared_ptr&lt; IMovie &gt; PMovie</div><div class="ttdef"><b>Definition:</b> <a href="../../da/def/_media_8h_source.html#l00089">Media.h:89</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_ae84541b4f3d8e1ea24ec0f466a8c568b"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#ae84541b4f3d8e1ea24ec0f466a8c568b">string</a></div><div class="ttdeci">GLsizei const GLchar *const  * string</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l00691">SDL_opengl_glext.h:691</a></div></div>
+<div class="ttc" id="agroup__lavu__mem__funcs_html_ga3d1e3edfcf61ca2d831883e1afbad89e"><div class="ttname"><a href="../../db/d76/group__lavu__mem__funcs.html#ga3d1e3edfcf61ca2d831883e1afbad89e">size</a></div><div class="ttdeci">GLsizeiptr size</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l00540">SDL_opengl_glext.h:540</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_ac915cd848f42b26af51745f204a3b9af"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#ac915cd848f42b26af51745f204a3b9af">offset</a></div><div class="ttdeci">GLintptr offset</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l00541">SDL_opengl_glext.h:541</a></div></div>
+<div class="ttc" id="aclass_m_player_html_af036106f96bbf78ce24b3f8b575423c3"><div class="ttname"><a href="../../d0/db7/class_m_player.html#af036106f96bbf78ce24b3f8b575423c3">MPlayer::IsMoviePlaying</a></div><div class="ttdeci">bool IsMoviePlaying() const</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d56/_media_player_8cpp_source.html#l00777">MediaPlayer.cpp:777</a></div></div>
+<div class="ttc" id="a_media_player_8h_html_adf8c80364a0b3242d22a7e8cc23362b5"><div class="ttname"><a href="../../d9/dd7/_media_player_8h.html#adf8c80364a0b3242d22a7e8cc23362b5">pMediaPlayer</a></div><div class="ttdeci">MPlayer * pMediaPlayer</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d56/_media_player_8cpp_source.html#l00043">MediaPlayer.cpp:43</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_3974871bf467d5376b8307ffe9ef875e.html">Media</a></li><li class="navelem"><a class="el" href="../../d9/dd7/_media_player_8h.html">MediaPlayer.h</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:03:44. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

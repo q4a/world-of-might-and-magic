@@ -1,0 +1,536 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Класс GUIWindow_Travel</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('de/d21/class_g_u_i_window___travel.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="../../d1/df4/class_g_u_i_window___travel-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс GUIWindow_Travel</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="../../df/d80/_u_i_transition_8h_source.html">UITransition.h</a>&gt;</code></p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Граф наследования:GUIWindow_Travel:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d8/d20/class_g_u_i_window___travel__inherit__graph.svg" width="142" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">см. легенду</a>]</span></center></div>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="../../closed.png" alt="+"/> Граф связей класса GUIWindow_Travel:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d5/d4d/class_g_u_i_window___travel__coll__graph.svg" width="524" height="499"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a1f3b9024a3c831df4cb83c043ab8e725"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d21/class_g_u_i_window___travel.html#a1f3b9024a3c831df4cb83c043ab8e725">GUIWindow_Travel</a> ()</td></tr>
+<tr class="separator:a1f3b9024a3c831df4cb83c043ab8e725"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a370dc5bacaa493819a8a450f729a704b"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d21/class_g_u_i_window___travel.html#a370dc5bacaa493819a8a450f729a704b">~GUIWindow_Travel</a> ()</td></tr>
+<tr class="separator:a370dc5bacaa493819a8a450f729a704b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6e5a74f3b8b4cd62b7af51d40e28a90"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d21/class_g_u_i_window___travel.html#ad6e5a74f3b8b4cd62b7af51d40e28a90">Update</a> ()</td></tr>
+<tr class="separator:ad6e5a74f3b8b4cd62b7af51d40e28a90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab5072b5d87c22b7907a25633671d48f"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d21/class_g_u_i_window___travel.html#aab5072b5d87c22b7907a25633671d48f">Release</a> ()</td></tr>
+<tr class="separator:aab5072b5d87c22b7907a25633671d48f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_g_u_i_window"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_g_u_i_window')"><img src="../../closed.png" alt="-"/>&#160;Открытые члены унаследованные от <a class="el" href="../../d4/d38/class_g_u_i_window.html">GUIWindow</a></td></tr>
+<tr class="memitem:a1d5f55e836dbe199acf6c6226d3793ec inherit pub_methods_class_g_u_i_window"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/class_g_u_i_window.html#a1d5f55e836dbe199acf6c6226d3793ec">GUIWindow</a> ()</td></tr>
+<tr class="separator:a1d5f55e836dbe199acf6c6226d3793ec inherit pub_methods_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33ce0a6c8dcca1658eb55c6c2ff065f1 inherit pub_methods_class_g_u_i_window"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/class_g_u_i_window.html#a33ce0a6c8dcca1658eb55c6c2ff065f1">GUIWindow</a> (<a class="el" href="../../d5/d0b/_g_u_i_window_8h.html#a476342970f954b62d70552bcbb5ee509">WindowType</a> windowType, unsigned int uX, unsigned int uY, unsigned int uWidth, unsigned int uHeight, int pButton, const <a class="el" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> &amp;hint=<a class="el" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a>())</td></tr>
+<tr class="separator:a33ce0a6c8dcca1658eb55c6c2ff065f1 inherit pub_methods_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5d79b7f3de28308cb6b44a12aad9fbc inherit pub_methods_class_g_u_i_window"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/class_g_u_i_window.html#ab5d79b7f3de28308cb6b44a12aad9fbc">~GUIWindow</a> ()</td></tr>
+<tr class="separator:ab5d79b7f3de28308cb6b44a12aad9fbc inherit pub_methods_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29f96468b54f142995e3b1890cb7e45e inherit pub_methods_class_g_u_i_window"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d66/class_g_u_i_button.html">GUIButton</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/class_g_u_i_window.html#a29f96468b54f142995e3b1890cb7e45e">CreateButton</a> (int <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#ad0e63d0edcdbd3d79554076bf309fd47">x</a>, int <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#a1675d9d7bb68e1657ff028643b4037e3">y</a>, int <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#a9a82cf3caff84cabc4598e2619faac17">width</a>, int <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#aa352f2804b9902ac30769c00dde75d5f">height</a>, int a6, int a7, <a class="el" href="../../d5/d0b/_g_u_i_window_8h.html#a2519966952faeb9397447ce89e9bcb02">UIMessageType</a> msg, unsigned int msg_param, <a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> hotkey, const <a class="el" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> &amp;<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a9371a1f53f8067997cd15aaf657c62d0">label</a>, const std::vector&lt; <a class="el" href="../../de/d73/class_image.html">Image</a> * &gt; &amp;<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a450062c0770127a605331b58382bfa3b">textures</a>=std::vector&lt; <a class="el" href="../../de/d73/class_image.html">Image</a> * &gt;())</td></tr>
+<tr class="separator:a29f96468b54f142995e3b1890cb7e45e inherit pub_methods_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed98162e5c6901baae6fcc8974ccc13e inherit pub_methods_class_g_u_i_window"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/class_g_u_i_window.html#aed98162e5c6901baae6fcc8974ccc13e">Contains</a> (unsigned int <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#ad0e63d0edcdbd3d79554076bf309fd47">x</a>, unsigned int <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#a1675d9d7bb68e1657ff028643b4037e3">y</a>)</td></tr>
+<tr class="separator:aed98162e5c6901baae6fcc8974ccc13e inherit pub_methods_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46c5c28caa64ad3f9c5c6b84c5974ccb inherit pub_methods_class_g_u_i_window"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/class_g_u_i_window.html#a46c5c28caa64ad3f9c5c6b84c5974ccb">DrawFlashingInputCursor</a> (int uX, int uY, <a class="el" href="../../d3/d39/class_g_u_i_font.html">GUIFont</a> *a2)</td></tr>
+<tr class="separator:a46c5c28caa64ad3f9c5c6b84c5974ccb inherit pub_methods_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2df1e3e343be45b971fe805dad3cb2fd inherit pub_methods_class_g_u_i_window"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/class_g_u_i_window.html#a2df1e3e343be45b971fe805dad3cb2fd">DrawTextInRect</a> (<a class="el" href="../../d3/d39/class_g_u_i_font.html">GUIFont</a> *font, unsigned int <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#ad0e63d0edcdbd3d79554076bf309fd47">x</a>, unsigned int <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#a1675d9d7bb68e1657ff028643b4037e3">y</a>, unsigned int <a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a3ea846f998d64f079b86052b6c4193a8">color</a>, const char *text, int rect_width, int reverse_text)</td></tr>
+<tr class="separator:a2df1e3e343be45b971fe805dad3cb2fd inherit pub_methods_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad4cfc07a750f5e0b42474975b616dd5 inherit pub_methods_class_g_u_i_window"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/class_g_u_i_window.html#aad4cfc07a750f5e0b42474975b616dd5">DrawTextInRect</a> (<a class="el" href="../../d3/d39/class_g_u_i_font.html">GUIFont</a> *font, unsigned int <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#ad0e63d0edcdbd3d79554076bf309fd47">x</a>, unsigned int <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#a1675d9d7bb68e1657ff028643b4037e3">y</a>, unsigned int <a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a3ea846f998d64f079b86052b6c4193a8">color</a>, <a class="el" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> &amp;str, int rect_width, int reverse_text)</td></tr>
+<tr class="separator:aad4cfc07a750f5e0b42474975b616dd5 inherit pub_methods_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a009aad05d919c42979eebb93d8b4354c inherit pub_methods_class_g_u_i_window"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/class_g_u_i_window.html#a009aad05d919c42979eebb93d8b4354c">DrawText</a> (<a class="el" href="../../d3/d39/class_g_u_i_font.html">GUIFont</a> *font, int <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#ad0e63d0edcdbd3d79554076bf309fd47">x</a>, int <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#a1675d9d7bb68e1657ff028643b4037e3">y</a>, unsigned short uFontColor, const char *str, bool present_time_transparency=false, int max_text_height=0, int uFontShadowColor=0)</td></tr>
+<tr class="separator:a009aad05d919c42979eebb93d8b4354c inherit pub_methods_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6711ab1500d10f32f8af44a349f4e0f3 inherit pub_methods_class_g_u_i_window"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/class_g_u_i_window.html#a6711ab1500d10f32f8af44a349f4e0f3">DrawText</a> (<a class="el" href="../../d3/d39/class_g_u_i_font.html">GUIFont</a> *font, int <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#ad0e63d0edcdbd3d79554076bf309fd47">x</a>, int <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#a1675d9d7bb68e1657ff028643b4037e3">y</a>, unsigned short uFontColor, const <a class="el" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> &amp;str, bool present_time_transparency=false, int max_text_height=0, int uFontShadowColor=0)</td></tr>
+<tr class="separator:a6711ab1500d10f32f8af44a349f4e0f3 inherit pub_methods_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae805c92b9242bc94cf18c7a702433f7 inherit pub_methods_class_g_u_i_window"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/class_g_u_i_window.html#aae805c92b9242bc94cf18c7a702433f7">DrawTitleText</a> (<a class="el" href="../../d3/d39/class_g_u_i_font.html">GUIFont</a> *font, int horizontal_margin, int vertical_margin, unsigned __int16 uDefaultColor, const char *pInString, int line_spacing)</td></tr>
+<tr class="separator:aae805c92b9242bc94cf18c7a702433f7 inherit pub_methods_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c7d25197afc3bed61eef6ccc4e5e67d inherit pub_methods_class_g_u_i_window"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/class_g_u_i_window.html#a5c7d25197afc3bed61eef6ccc4e5e67d">DrawTitleText</a> (<a class="el" href="../../d3/d39/class_g_u_i_font.html">GUIFont</a> *font, int horizontal_margin, int vertical_margin, unsigned __int16 uDefaultColor, const <a class="el" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> &amp;str, int line_spacing)</td></tr>
+<tr class="separator:a5c7d25197afc3bed61eef6ccc4e5e67d inherit pub_methods_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e8028e1c992d833f13b7dd33edc8cf6 inherit pub_methods_class_g_u_i_window"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/class_g_u_i_window.html#a8e8028e1c992d833f13b7dd33edc8cf6">DrawShops_next_generation_time_string</a> (<a class="el" href="../../df/dc2/struct_game_time.html">GameTime</a> time)</td></tr>
+<tr class="separator:a8e8028e1c992d833f13b7dd33edc8cf6 inherit pub_methods_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4310ff80f340b9a9c9b3249564a0960 inherit pub_methods_class_g_u_i_window"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/class_g_u_i_window.html#af4310ff80f340b9a9c9b3249564a0960">HouseDialogManager</a> ()</td></tr>
+<tr class="separator:af4310ff80f340b9a9c9b3249564a0960 inherit pub_methods_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0c28c954e40c6f2c7feb7022ece8052 inherit pub_methods_class_g_u_i_window"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/class_g_u_i_window.html#ac0c28c954e40c6f2c7feb7022ece8052">DrawMessageBox</a> (bool inside_game_viewport)</td></tr>
+<tr class="separator:ac0c28c954e40c6f2c7feb7022ece8052 inherit pub_methods_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c0ea7873e9e250b3bce8f4bd5db60b3 inherit pub_methods_class_g_u_i_window"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d66/class_g_u_i_button.html">GUIButton</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/class_g_u_i_window.html#a0c0ea7873e9e250b3bce8f4bd5db60b3">GetControl</a> (unsigned int uID)</td></tr>
+<tr class="separator:a0c0ea7873e9e250b3bce8f4bd5db60b3 inherit pub_methods_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1601b14fd14172585c6793565a30e7d inherit pub_methods_class_g_u_i_window"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/class_g_u_i_window.html#af1601b14fd14172585c6793565a30e7d">_41D08F_set_keyboard_control_group</a> (int num_buttons, int a3, int a4, int a5)</td></tr>
+<tr class="separator:af1601b14fd14172585c6793565a30e7d inherit pub_methods_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb1aed077e95deae983b0b005f57f07c inherit pub_methods_class_g_u_i_window"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/class_g_u_i_window.html#afb1aed077e95deae983b0b005f57f07c">_41D73D_draw_buff_tooltip</a> ()</td></tr>
+<tr class="separator:afb1aed077e95deae983b0b005f57f07c inherit pub_methods_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c8bcc74ea8cc23cc666aa869e5a5d7d inherit pub_methods_class_g_u_i_window"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/class_g_u_i_window.html#a7c8bcc74ea8cc23cc666aa869e5a5d7d">DeleteButtons</a> ()</td></tr>
+<tr class="separator:a7c8bcc74ea8cc23cc666aa869e5a5d7d inherit pub_methods_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Дополнительные унаследованные члены</h2></td></tr>
+<tr class="inherit_header pub_static_methods_class_g_u_i_window"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_class_g_u_i_window')"><img src="../../closed.png" alt="-"/>&#160;Открытые статические члены унаследованные от <a class="el" href="../../d4/d38/class_g_u_i_window.html">GUIWindow</a></td></tr>
+<tr class="memitem:a5c1f1a3ef130e92819f280b3824cecb9 inherit pub_static_methods_class_g_u_i_window"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/class_g_u_i_window.html#a5c1f1a3ef130e92819f280b3824cecb9">InitializeGUI</a> ()</td></tr>
+<tr class="separator:a5c1f1a3ef130e92819f280b3824cecb9 inherit pub_static_methods_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_class_g_u_i_window"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_class_g_u_i_window')"><img src="../../closed.png" alt="-"/>&#160;Открытые атрибуты унаследованные от <a class="el" href="../../d4/d38/class_g_u_i_window.html">GUIWindow</a></td></tr>
+<tr class="memitem:a92e763aa688b9d554715836694f023e9 inherit pub_attribs_class_g_u_i_window"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/class_g_u_i_window.html#a92e763aa688b9d554715836694f023e9">uFrameX</a></td></tr>
+<tr class="separator:a92e763aa688b9d554715836694f023e9 inherit pub_attribs_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5eba45cbdf813ec1b4b334ed1bbfeb9d inherit pub_attribs_class_g_u_i_window"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/class_g_u_i_window.html#a5eba45cbdf813ec1b4b334ed1bbfeb9d">uFrameY</a></td></tr>
+<tr class="separator:a5eba45cbdf813ec1b4b334ed1bbfeb9d inherit pub_attribs_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36480568ae6ed6155ae0d71f93fc3c92 inherit pub_attribs_class_g_u_i_window"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/class_g_u_i_window.html#a36480568ae6ed6155ae0d71f93fc3c92">uFrameWidth</a></td></tr>
+<tr class="separator:a36480568ae6ed6155ae0d71f93fc3c92 inherit pub_attribs_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9e6065d99ff9aedeca483120af26de7 inherit pub_attribs_class_g_u_i_window"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/class_g_u_i_window.html#aa9e6065d99ff9aedeca483120af26de7">uFrameHeight</a></td></tr>
+<tr class="separator:aa9e6065d99ff9aedeca483120af26de7 inherit pub_attribs_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bf7540e43e3304046ea150677adf6c1 inherit pub_attribs_class_g_u_i_window"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/class_g_u_i_window.html#a9bf7540e43e3304046ea150677adf6c1">uFrameZ</a></td></tr>
+<tr class="separator:a9bf7540e43e3304046ea150677adf6c1 inherit pub_attribs_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31ed78cd9b07ce62ae05112acadb1891 inherit pub_attribs_class_g_u_i_window"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/class_g_u_i_window.html#a31ed78cd9b07ce62ae05112acadb1891">uFrameW</a></td></tr>
+<tr class="separator:a31ed78cd9b07ce62ae05112acadb1891 inherit pub_attribs_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5adc8764b56a57e63dd87f7ee75e24f inherit pub_attribs_class_g_u_i_window"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/d0b/_g_u_i_window_8h.html#a476342970f954b62d70552bcbb5ee509">WindowType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/class_g_u_i_window.html#ad5adc8764b56a57e63dd87f7ee75e24f">eWindowType</a></td></tr>
+<tr class="separator:ad5adc8764b56a57e63dd87f7ee75e24f inherit pub_attribs_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62df59631349ff0ede71a3c78af06259 inherit pub_attribs_class_g_u_i_window"><td class="memItemLeft" >union {</td></tr>
+<tr class="memitem:af9a25927aa6151d07c05859087cfd4e4 inherit pub_attribs_class_g_u_i_window"><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *&#160;&#160;&#160;<a class="el" href="../../d4/d38/class_g_u_i_window.html#a29f272f9ea1f73c568bdb8a2e6d25a32">ptr_1C</a></td></tr>
+<tr class="separator:af9a25927aa6151d07c05859087cfd4e4 inherit pub_attribs_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3bd67bb100c4e0eeb18a0f44b770890 inherit pub_attribs_class_g_u_i_window"><td class="memItemLeft" >&#160;&#160;&#160;unsigned int&#160;&#160;&#160;<a class="el" href="../../d4/d38/class_g_u_i_window.html#ac4d410e32a7dd71d0f1a16cc9f5c095a">par1C</a></td></tr>
+<tr class="separator:af3bd67bb100c4e0eeb18a0f44b770890 inherit pub_attribs_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62df59631349ff0ede71a3c78af06259 inherit pub_attribs_class_g_u_i_window"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:a62df59631349ff0ede71a3c78af06259 inherit pub_attribs_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a910d98ccde00fea22f0d6c1053998d4c inherit pub_attribs_class_g_u_i_window"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/class_g_u_i_window.html#a910d98ccde00fea22f0d6c1053998d4c">field_24</a></td></tr>
+<tr class="separator:a910d98ccde00fea22f0d6c1053998d4c inherit pub_attribs_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6741558a76d239c814ec81e7564ee8a5 inherit pub_attribs_class_g_u_i_window"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/class_g_u_i_window.html#a6741558a76d239c814ec81e7564ee8a5">pNumPresenceButton</a></td></tr>
+<tr class="separator:a6741558a76d239c814ec81e7564ee8a5 inherit pub_attribs_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a031ef0d3d30376a21eaf1d2ee842d339 inherit pub_attribs_class_g_u_i_window"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/class_g_u_i_window.html#a031ef0d3d30376a21eaf1d2ee842d339">pCurrentPosActiveItem</a></td></tr>
+<tr class="separator:a031ef0d3d30376a21eaf1d2ee842d339 inherit pub_attribs_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6988d3c00d0a52d29339daee8cd2ec55 inherit pub_attribs_class_g_u_i_window"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/class_g_u_i_window.html#a6988d3c00d0a52d29339daee8cd2ec55">field_30</a></td></tr>
+<tr class="separator:a6988d3c00d0a52d29339daee8cd2ec55 inherit pub_attribs_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9d25b9959da20bab38103cc18118e9e inherit pub_attribs_class_g_u_i_window"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/class_g_u_i_window.html#ab9d25b9959da20bab38103cc18118e9e">field_34</a></td></tr>
+<tr class="separator:ab9d25b9959da20bab38103cc18118e9e inherit pub_attribs_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88374b8722c65762079d5726239146b8 inherit pub_attribs_class_g_u_i_window"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/class_g_u_i_window.html#a88374b8722c65762079d5726239146b8">pStartingPosActiveItem</a></td></tr>
+<tr class="separator:a88374b8722c65762079d5726239146b8 inherit pub_attribs_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d17910c9a8bc7226302b16ccd85d918 inherit pub_attribs_class_g_u_i_window"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/class_g_u_i_window.html#a7d17910c9a8bc7226302b16ccd85d918">receives_keyboard_input_2</a></td></tr>
+<tr class="separator:a7d17910c9a8bc7226302b16ccd85d918 inherit pub_attribs_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaedaee57b8df9772e3d7a1a19d2b02e8 inherit pub_attribs_class_g_u_i_window"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/class_g_u_i_window.html#aaedaee57b8df9772e3d7a1a19d2b02e8">receives_keyboard_input</a></td></tr>
+<tr class="separator:aaedaee57b8df9772e3d7a1a19d2b02e8 inherit pub_attribs_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0dd208f005854966061dadedd7916367 inherit pub_attribs_class_g_u_i_window"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/class_g_u_i_window.html#a0dd208f005854966061dadedd7916367">sHint</a></td></tr>
+<tr class="separator:a0dd208f005854966061dadedd7916367 inherit pub_attribs_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba80b69979e2d28049eb073dde019f82 inherit pub_attribs_class_g_u_i_window"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../db/d66/class_g_u_i_button.html">GUIButton</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/class_g_u_i_window.html#aba80b69979e2d28049eb073dde019f82">vButtons</a></td></tr>
+<tr class="separator:aba80b69979e2d28049eb073dde019f82 inherit pub_attribs_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d84c25b1493b00f1f5eb5e27a45c309 inherit pub_attribs_class_g_u_i_window"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/dc5/class_mouse.html">Mouse</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/class_g_u_i_window.html#a3d84c25b1493b00f1f5eb5e27a45c309">mouse</a> = nullptr</td></tr>
+<tr class="separator:a3d84c25b1493b00f1f5eb5e27a45c309 inherit pub_attribs_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f1b282cf9a6e02a8a8cebbae786b7ab inherit pub_attribs_class_g_u_i_window"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d70/class_log.html">Log</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/class_g_u_i_window.html#a2f1b282cf9a6e02a8a8cebbae786b7ab">log</a> = nullptr</td></tr>
+<tr class="separator:a2f1b282cf9a6e02a8a8cebbae786b7ab inherit pub_attribs_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock">
+<p class="definition">См. определение в файле <a class="el" href="../../df/d80/_u_i_transition_8h_source.html">UITransition.h</a> строка <a class="el" href="../../df/d80/_u_i_transition_8h_source.html#l00005">5</a></p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a1f3b9024a3c831df4cb83c043ab8e725"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f3b9024a3c831df4cb83c043ab8e725">&#9670;&nbsp;</a></span>GUIWindow_Travel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GUIWindow_Travel::GUIWindow_Travel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/d09/_u_i_transition_8cpp_source.html">UITransition.cpp</a> строка <a class="el" href="../../de/d09/_u_i_transition_8cpp_source.html#l00183">183</a></p>
+<div class="fragment"><div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    : <a class="code" href="../../d4/d38/class_g_u_i_window.html#a1d5f55e836dbe199acf6c6226d3793ec">GUIWindow</a>(<a class="code" href="../../d5/d0b/_g_u_i_window_8h.html#a476342970f954b62d70552bcbb5ee509a5fc5eff5be98373504604952ebcbcf41">WINDOW_ChangeLocation</a>, 0, 0, <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a92dbce8e3247f6a78126c99877caacb6">window</a>-&gt;GetWidth(), <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a92dbce8e3247f6a78126c99877caacb6">window</a>-&gt;GetHeight(), 0) {</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <a class="code" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> pContainer;  <span class="comment">// [sp+0h] [bp-28h]@1</span></div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160; </div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <a class="code" href="../../db/d84/_time_8cpp.html#a9b16df08347bd1a24e9e426848ffca3c">pEventTimer</a>-&gt;<a class="code" href="../../d8/da1/struct_timer.html#a9b8c57bf9675da635a82d68d9b4d05e5">Pause</a>();</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160; </div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <span class="keywordflow">switch</span> (<a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a0333a828cb051d9f86e142230644cce3">alignment</a>) {</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="../../db/d38/_party_8h.html#a8bd3eeda5ec3780afeff00593e27b6f2a138a01d401a68aab61b07b596bb532a7">PartyAlignment::PartyAlignment_Good</a>:</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;            pContainer = <span class="stringliteral">&quot;evt02-b&quot;</span>;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="../../db/d38/_party_8h.html#a8bd3eeda5ec3780afeff00593e27b6f2af9794c109d91984889aa4427dd2b45b9">PartyAlignment::PartyAlignment_Neutral</a>:</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;            pContainer = <span class="stringliteral">&quot;evt02&quot;</span>;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="../../db/d38/_party_8h.html#a8bd3eeda5ec3780afeff00593e27b6f2a5a3e1b0ba1793049451900a1e065630d">PartyAlignment::PartyAlignment_Evil</a>:</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;            pContainer = <span class="stringliteral">&quot;evt02-c&quot;</span>;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;            Error(<span class="stringliteral">&quot;Invalid alignment: %u&quot;</span>, <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a0333a828cb051d9f86e142230644cce3">alignment</a>);</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    }</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    <a class="code" href="../../da/db4/_u_i_game_8cpp.html#a7073c9e3b8b551bb39e0ddaba6680d1f">game_ui_dialogue_background</a> = <a class="code" href="../../d3/d93/_assets_manager_8cpp.html#a645270130330d2d99964c967b7d33cd8">assets</a>-&gt;<a class="code" href="../../db/dd6/class_assets_manager.html#aa6b54bf3eebb770dc30767d13c436ce0">GetImage_Solid</a>(pContainer);</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160; </div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <a class="code" href="../../de/d09/_u_i_transition_8cpp.html#ae46c40711830fa158c1df92cdebe0629">transition_ui_icon</a> = <a class="code" href="../../d3/d93/_assets_manager_8cpp.html#a645270130330d2d99964c967b7d33cd8">assets</a>-&gt;<a class="code" href="../../db/dd6/class_assets_manager.html#aa6b54bf3eebb770dc30767d13c436ce0">GetImage_Solid</a>(<span class="stringliteral">&quot;outside&quot;</span>);</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../d9/dce/_map_info_8h.html#a8e6404cd1a25e9f070d2918e8bb541c3">pMapStats</a>-&gt;<a class="code" href="../../d0/d23/struct_map_stats.html#ad630f43cd5e7e239cd8a3c363ccdd605">GetMapInfo</a>(<a class="code" href="../../d6/d5b/mm7__data_8cpp.html#a88ebc50ce00b0ed9170a4da4a7d99ce2">pCurrentMapName</a>))</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        <a class="code" href="../../de/d09/_u_i_transition_8cpp.html#ac03b46e4b055c5b6ba3b13a3fe12a148">transition_button_label</a> = <a class="code" href="../../dd/d8c/_localization_8cpp.html#acce22610cffe19ad6cc8f577cd611b8b">localization</a>-&gt;<a class="code" href="../../dd/d88/class_localization.html#aa585c1180dc1a338b5822de8e413d2d6">FormatString</a>(</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;            410, <a class="code" href="../../d9/dce/_map_info_8h.html#a8e6404cd1a25e9f070d2918e8bb541c3">pMapStats</a>-&gt;<a class="code" href="../../d0/d23/struct_map_stats.html#a85e3c91a79bfc115b6303212366163e3">pInfos</a>[<a class="code" href="../../d9/dce/_map_info_8h.html#a8e6404cd1a25e9f070d2918e8bb541c3">pMapStats</a>-&gt;<a class="code" href="../../d0/d23/struct_map_stats.html#ad630f43cd5e7e239cd8a3c363ccdd605">GetMapInfo</a>(<a class="code" href="../../d6/d5b/mm7__data_8cpp.html#a88ebc50ce00b0ed9170a4da4a7d99ce2">pCurrentMapName</a>)]</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;                     .<a class="code" href="../../db/ddb/struct_map_info.html#a9b30502c76ff7e3d3cf0c42065635a00">pName</a>.c_str());  <span class="comment">// &quot;Leave %s&quot;</span></div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        <a class="code" href="../../de/d09/_u_i_transition_8cpp.html#ac03b46e4b055c5b6ba3b13a3fe12a148">transition_button_label</a> = <a class="code" href="../../dd/d8c/_localization_8cpp.html#acce22610cffe19ad6cc8f577cd611b8b">localization</a>-&gt;<a class="code" href="../../dd/d88/class_localization.html#a0eb0a17fdf90f6a420eeac65bf62436f">GetString</a>(79);  <span class="comment">// Exit</span></div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160; </div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    <a class="code" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> hint = this-&gt;<a class="code" href="../../d4/d38/class_g_u_i_window.html#a0dd208f005854966061dadedd7916367">sHint</a> = <a class="code" href="../../de/d09/_u_i_transition_8cpp.html#ac03b46e4b055c5b6ba3b13a3fe12a148">transition_button_label</a>;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160; </div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    <a class="code" href="../../dc/dce/_g_u_i_window_8cpp.html#a5023a0cbd3467c1ea375ffcfc7ef690e">prev_screen_type</a> = <a class="code" href="../../dc/dce/_g_u_i_window_8cpp.html#a9cf585dbf96fdd1acbe15981837ebdb2">current_screen_type</a>;</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    <a class="code" href="../../dc/dce/_g_u_i_window_8cpp.html#a9cf585dbf96fdd1acbe15981837ebdb2">current_screen_type</a> = <a class="code" href="../../d5/d0b/_g_u_i_window_8h.html#af188298480c77be8835d6760fa6edfd7a740b539cc3ef8738ee52a93457e569b1">CURRENT_SCREEN::SCREEN_CHANGE_LOCATION</a>;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    <a class="code" href="../../d9/d1d/_g_u_i_button_8cpp.html#a305dcb7434a2d97990b2fb3c2a897f8b">pBtn_ExitCancel</a> = <a class="code" href="../../d4/d38/class_g_u_i_window.html#a29f96468b54f142995e3b1890cb7e45e">CreateButton</a>(</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        566, 445, 75, 33, 1, 0, <a class="code" href="../../d5/d0b/_g_u_i_window_8h.html#a2519966952faeb9397447ce89e9bcb02a9ba8d4295c63e2f27fdc92f1939121c8">UIMSG_CHANGE_LOCATION_ClickCencelBtn</a>, 0, <span class="charliteral">&#39;N&#39;</span>,</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        <a class="code" href="../../dd/d8c/_localization_8cpp.html#acce22610cffe19ad6cc8f577cd611b8b">localization</a>-&gt;<a class="code" href="../../dd/d88/class_localization.html#a0eb0a17fdf90f6a420eeac65bf62436f">GetString</a>(156),</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        {{ui_buttdesc2}});  <span class="comment">// Stay in this area / Остаться в этой области</span></div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    <a class="code" href="../../d9/d1d/_g_u_i_button_8cpp.html#a8fb40559d4283a41a43bdef6e352ac42">pBtn_YES</a> = <a class="code" href="../../d4/d38/class_g_u_i_window.html#a29f96468b54f142995e3b1890cb7e45e">CreateButton</a>(486, 445, 75, 33, 1, 0, <a class="code" href="../../d5/d0b/_g_u_i_window_8h.html#a2519966952faeb9397447ce89e9bcb02a4e16166bbe02f843c39b28931384706c">UIMSG_OnTravelByFoot</a>, 0,</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;                            <span class="charliteral">&#39;Y&#39;</span>, hint, {{<a class="code" href="../../dc/dce/_g_u_i_window_8cpp.html#a64c60ac206b610eb042ac693ed87b9c0">ui_buttyes2</a>}});</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    <a class="code" href="../../d4/d38/class_g_u_i_window.html#a29f96468b54f142995e3b1890cb7e45e">CreateButton</a>(<a class="code" href="../../d6/d5b/mm7__data_8cpp.html#ac779a3d730a6700bf1170f6461a4244d">pNPCPortraits_x</a>[0][0], <a class="code" href="../../d6/d5b/mm7__data_8cpp.html#a759f510599ca1c1ce3f330293c9ce19f">pNPCPortraits_y</a>[0][0], 63, 73, 1, 0,</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;                 <a class="code" href="../../d5/d0b/_g_u_i_window_8h.html#a2519966952faeb9397447ce89e9bcb02a4e16166bbe02f843c39b28931384706c">UIMSG_OnTravelByFoot</a>, 1, <span class="charliteral">&#39; &#39;</span>, hint);</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    <a class="code" href="../../d4/d38/class_g_u_i_window.html#a29f96468b54f142995e3b1890cb7e45e">CreateButton</a>(8, 8, 460, 344, 1, 0, <a class="code" href="../../d5/d0b/_g_u_i_window_8h.html#a2519966952faeb9397447ce89e9bcb02a4e16166bbe02f843c39b28931384706c">UIMSG_OnTravelByFoot</a>, 1, 0, hint);</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../db/d38/_party_8h_source.html#l00308">Party::alignment</a>, <a class="el" href="../../d3/d93/_assets_manager_8cpp_source.html#l00012">assets</a>, <a class="el" href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00717">GUIWindow::CreateButton()</a>, <a class="el" href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00083">current_screen_type</a>, <a class="el" href="../../dd/d8c/_localization_8cpp_source.html#l00017">Localization::FormatString()</a>, <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l00093">game_ui_dialogue_background</a>, <a class="el" href="../../d3/d93/_assets_manager_8cpp_source.html#l00051">AssetsManager::GetImage_Solid()</a>, <a class="el" href="../../dd/d31/_map_info_8cpp_source.html#l00225">MapStats::GetMapInfo()</a>, <a class="el" href="../../dd/d8c/_localization_8cpp_source.html#l00013">Localization::GetString()</a>, <a class="el" href="../../dd/d8c/_localization_8cpp_source.html#l00011">localization</a>, <a class="el" href="../../db/d38/_party_8h.html#a8bd3eeda5ec3780afeff00593e27b6f2a5a3e1b0ba1793049451900a1e065630d">PartyAlignment_Evil</a>, <a class="el" href="../../db/d38/_party_8h.html#a8bd3eeda5ec3780afeff00593e27b6f2a138a01d401a68aab61b07b596bb532a7">PartyAlignment_Good</a>, <a class="el" href="../../db/d38/_party_8h.html#a8bd3eeda5ec3780afeff00593e27b6f2af9794c109d91984889aa4427dd2b45b9">PartyAlignment_Neutral</a>, <a class="el" href="../../db/d84/_time_8cpp_source.html#l00019">Timer::Pause()</a>, <a class="el" href="../../d9/d1d/_g_u_i_button_8cpp_source.html#l00028">pBtn_ExitCancel</a>, <a class="el" href="../../d6/d5b/mm7__data_8cpp_source.html#l00712">pCurrentMapName</a>, <a class="el" href="../../db/d84/_time_8cpp_source.html#l00008">pEventTimer</a>, <a class="el" href="../../d9/dce/_map_info_8h_source.html#l00079">MapStats::pInfos</a>, <a class="el" href="../../d6/d5b/mm7__data_8cpp_source.html#l00020">pMapStats</a>, <a class="el" href="../../d9/dce/_map_info_8h_source.html#l00038">MapInfo::pName</a>, <a class="el" href="../../da/db4/_party_8cpp_source.html#l00030">pParty</a>, <a class="el" href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00084">prev_screen_type</a>, <a class="el" href="../../d5/d0b/_g_u_i_window_8h.html#af188298480c77be8835d6760fa6edfd7a740b539cc3ef8738ee52a93457e569b1">SCREEN_CHANGE_LOCATION</a>, <a class="el" href="../../d5/d0b/_g_u_i_window_8h_source.html#l00488">GUIWindow::sHint</a>, <a class="el" href="../../de/d09/_u_i_transition_8cpp_source.html#l00030">transition_button_label</a>, <a class="el" href="../../de/d09/_u_i_transition_8cpp_source.html#l00028">transition_ui_icon</a> и <a class="el" href="../../d5/d0b/_g_u_i_window_8h_source.html#l00076">UIMSG_CHANGE_LOCATION_ClickCencelBtn</a>.</p>
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../de/d21/class_g_u_i_window___travel_a1f3b9024a3c831df4cb83c043ab8e725_cgraph.svg" width="100%" height="530"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a370dc5bacaa493819a8a450f729a704b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a370dc5bacaa493819a8a450f729a704b">&#9670;&nbsp;</a></span>~GUIWindow_Travel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual GUIWindow_Travel::~GUIWindow_Travel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../df/d80/_u_i_transition_8h_source.html">UITransition.h</a> строка <a class="el" href="../../df/d80/_u_i_transition_8h_source.html#l00008">8</a></p>
+<div class="fragment"><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="ad6e5a74f3b8b4cd62b7af51d40e28a90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6e5a74f3b8b4cd62b7af51d40e28a90">&#9670;&nbsp;</a></span>Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> GUIWindow_Travel::Update </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Переопределяет метод предка <a class="el" href="../../d4/d38/class_g_u_i_window.html#afe1bc204d71ec7dbce72fc1c84638c5c">GUIWindow</a>.</p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/d09/_u_i_transition_8cpp_source.html">UITransition.cpp</a> строка <a class="el" href="../../de/d09/_u_i_transition_8cpp_source.html#l00227">227</a></p>
+<div class="fragment"><div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;                              {</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    <span class="keywordtype">char</span> pDestinationMapName[32];</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160; </div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    <a class="code" href="../../d1/d03/_outdoor_8cpp.html#af1ccdd58891375c26aa795fcdd97aa32">pOutdoor</a>-&gt;<a class="code" href="../../d1/d55/struct_outdoor_location.html#afa32764595d901fa9dd5b44ff9da5c56">GetTravelDestination</a>(<a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a9131ac68bf00fcaf956e6b6d2dde7a6d">vPosition</a>.x, <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a9131ac68bf00fcaf956e6b6d2dde7a6d">vPosition</a>.y,</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;                                   pDestinationMapName, 20);</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    <a class="code" href="../../da/d20/_i_render_8h.html#a21d31464313b2c66ff88d4aa97b66143">render</a>-&gt;DrawTextureNew(477 / 640.0<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a>, 0, <a class="code" href="../../da/db4/_u_i_game_8cpp.html#a7073c9e3b8b551bb39e0ddaba6680d1f">game_ui_dialogue_background</a>);</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    <a class="code" href="../../da/d20/_i_render_8h.html#a21d31464313b2c66ff88d4aa97b66143">render</a>-&gt;DrawTextureAlphaNew(468 / 640.0<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a>, 0, <a class="code" href="../../dc/dce/_g_u_i_window_8cpp.html#a8ebd6fe26b30ca1b1459b07d35cefc08">game_ui_right_panel_frame</a>);</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    <a class="code" href="../../da/d20/_i_render_8h.html#a21d31464313b2c66ff88d4aa97b66143">render</a>-&gt;DrawTextureNew(<a class="code" href="../../d6/d5b/mm7__data_8cpp.html#ac779a3d730a6700bf1170f6461a4244d">pNPCPortraits_x</a>[0][0] / 640.0<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a>,</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;                           <a class="code" href="../../d6/d5b/mm7__data_8cpp.html#a759f510599ca1c1ce3f330293c9ce19f">pNPCPortraits_y</a>[0][0] / 480.0<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a>, <a class="code" href="../../de/d09/_u_i_transition_8cpp.html#ae46c40711830fa158c1df92cdebe0629">transition_ui_icon</a>);</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    <a class="code" href="../../da/d20/_i_render_8h.html#a21d31464313b2c66ff88d4aa97b66143">render</a>-&gt;DrawTextureAlphaNew(556 / 640.0<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a>, 451 / 480.0<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a>, <a class="code" href="../../dc/dce/_g_u_i_window_8cpp.html#adc76c81fc8b01b2c9cb31aa955f326c5">dialogue_ui_x_x_u</a>);</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    <a class="code" href="../../da/d20/_i_render_8h.html#a21d31464313b2c66ff88d4aa97b66143">render</a>-&gt;DrawTextureAlphaNew(476 / 640.0<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a>, 451 / 480.0<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a>, <a class="code" href="../../dc/dce/_g_u_i_window_8cpp.html#a9be66d658a0666e25935923cf19aeb2b">dialogue_ui_x_ok_u</a>);</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../d9/dce/_map_info_8h.html#a8e6404cd1a25e9f070d2918e8bb541c3">pMapStats</a>-&gt;<a class="code" href="../../d0/d23/struct_map_stats.html#ad630f43cd5e7e239cd8a3c363ccdd605">GetMapInfo</a>(pDestinationMapName)) {</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        <a class="code" href="../../d4/d38/class_g_u_i_window.html">GUIWindow</a> travel_window = *<a class="code" href="../../dc/dce/_g_u_i_window_8cpp.html#ae2c9c502485c7db2c74ad737e3c5bd97">pPrimaryWindow</a>;</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        travel_window.<a class="code" href="../../d4/d38/class_g_u_i_window.html#a92e763aa688b9d554715836694f023e9">uFrameX</a> = 493;</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        travel_window.<a class="code" href="../../d4/d38/class_g_u_i_window.html#a36480568ae6ed6155ae0d71f93fc3c92">uFrameWidth</a> = 126;</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        travel_window.<a class="code" href="../../d4/d38/class_g_u_i_window.html#a9bf7540e43e3304046ea150677adf6c1">uFrameZ</a> = 366;</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        travel_window.<a class="code" href="../../d4/d38/class_g_u_i_window.html#aae805c92b9242bc94cf18c7a702433f7">DrawTitleText</a>(</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;            <a class="code" href="../../d4/d5e/_g_u_i_font_8cpp.html#a58be15783993a5541a86ecc68a74fb89">pFontCreate</a>, 0, 4, 0,</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;            <a class="code" href="../../d9/dce/_map_info_8h.html#a8e6404cd1a25e9f070d2918e8bb541c3">pMapStats</a>-&gt;<a class="code" href="../../d0/d23/struct_map_stats.html#a85e3c91a79bfc115b6303212366163e3">pInfos</a>[<a class="code" href="../../d9/dce/_map_info_8h.html#a8e6404cd1a25e9f070d2918e8bb541c3">pMapStats</a>-&gt;<a class="code" href="../../d0/d23/struct_map_stats.html#ad630f43cd5e7e239cd8a3c363ccdd605">GetMapInfo</a>(pDestinationMapName)].<a class="code" href="../../db/ddb/struct_map_info.html#a9b30502c76ff7e3d3cf0c42065635a00">pName</a>,</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;            3);</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        travel_window.<a class="code" href="../../d4/d38/class_g_u_i_window.html#a92e763aa688b9d554715836694f023e9">uFrameX</a> = 483;</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;        travel_window.<a class="code" href="../../d4/d38/class_g_u_i_window.html#a36480568ae6ed6155ae0d71f93fc3c92">uFrameWidth</a> = 148;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        travel_window.<a class="code" href="../../d4/d38/class_g_u_i_window.html#a9bf7540e43e3304046ea150677adf6c1">uFrameZ</a> = 334;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160; </div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        <a class="code" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> str;</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../da/db4/_party_8cpp.html#a6b4bc5b810c765998d778c19b917eb52">GetTravelTime</a>() == 1) {</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;            str = <a class="code" href="../../dd/d8c/_localization_8cpp.html#acce22610cffe19ad6cc8f577cd611b8b">localization</a>-&gt;<a class="code" href="../../dd/d88/class_localization.html#aa585c1180dc1a338b5822de8e413d2d6">FormatString</a>(</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;                663, 1,</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;                <a class="code" href="../../d9/dce/_map_info_8h.html#a8e6404cd1a25e9f070d2918e8bb541c3">pMapStats</a>-&gt;<a class="code" href="../../d0/d23/struct_map_stats.html#a85e3c91a79bfc115b6303212366163e3">pInfos</a>[<a class="code" href="../../d9/dce/_map_info_8h.html#a8e6404cd1a25e9f070d2918e8bb541c3">pMapStats</a>-&gt;<a class="code" href="../../d0/d23/struct_map_stats.html#ad630f43cd5e7e239cd8a3c363ccdd605">GetMapInfo</a>(pDestinationMapName)]</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;                    .<a class="code" href="../../db/ddb/struct_map_info.html#a9b30502c76ff7e3d3cf0c42065635a00">pName</a>.c_str());  <span class="comment">// It will take %d day to cross to %s.</span></div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;            str = <a class="code" href="../../dd/d8c/_localization_8cpp.html#acce22610cffe19ad6cc8f577cd611b8b">localization</a>-&gt;<a class="code" href="../../dd/d88/class_localization.html#aa585c1180dc1a338b5822de8e413d2d6">FormatString</a>(</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;                128, <a class="code" href="../../da/db4/_party_8cpp.html#a6b4bc5b810c765998d778c19b917eb52">GetTravelTime</a>(),</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;                <a class="code" href="../../d9/dce/_map_info_8h.html#a8e6404cd1a25e9f070d2918e8bb541c3">pMapStats</a>-&gt;<a class="code" href="../../d0/d23/struct_map_stats.html#a85e3c91a79bfc115b6303212366163e3">pInfos</a>[<a class="code" href="../../d9/dce/_map_info_8h.html#a8e6404cd1a25e9f070d2918e8bb541c3">pMapStats</a>-&gt;<a class="code" href="../../d0/d23/struct_map_stats.html#ad630f43cd5e7e239cd8a3c363ccdd605">GetMapInfo</a>(pDestinationMapName)]</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;                    .<a class="code" href="../../db/ddb/struct_map_info.html#a9b30502c76ff7e3d3cf0c42065635a00">pName</a>.c_str());  <span class="comment">// It will take %d days to travel to %s.</span></div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        }</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        str += <span class="stringliteral">&quot;\n \n&quot;</span>;</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;        str += <a class="code" href="../../dd/d8c/_localization_8cpp.html#acce22610cffe19ad6cc8f577cd611b8b">localization</a>-&gt;<a class="code" href="../../dd/d88/class_localization.html#aa585c1180dc1a338b5822de8e413d2d6">FormatString</a>(</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;            126,</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;            <a class="code" href="../../d9/dce/_map_info_8h.html#a8e6404cd1a25e9f070d2918e8bb541c3">pMapStats</a>-&gt;<a class="code" href="../../d0/d23/struct_map_stats.html#a85e3c91a79bfc115b6303212366163e3">pInfos</a>[<a class="code" href="../../d9/dce/_map_info_8h.html#a8e6404cd1a25e9f070d2918e8bb541c3">pMapStats</a>-&gt;<a class="code" href="../../d0/d23/struct_map_stats.html#ad630f43cd5e7e239cd8a3c363ccdd605">GetMapInfo</a>(<a class="code" href="../../d6/d5b/mm7__data_8cpp.html#a88ebc50ce00b0ed9170a4da4a7d99ce2">pCurrentMapName</a>)].<a class="code" href="../../db/ddb/struct_map_info.html#a9b30502c76ff7e3d3cf0c42065635a00">pName</a>.c_str());</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160; </div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;        travel_window.<a class="code" href="../../d4/d38/class_g_u_i_window.html#aae805c92b9242bc94cf18c7a702433f7">DrawTitleText</a>(</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;            <a class="code" href="../../d4/d5e/_g_u_i_font_8cpp.html#a58be15783993a5541a86ecc68a74fb89">pFontCreate</a>, 0,</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;            (212 -</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;             <a class="code" href="../../d4/d5e/_g_u_i_font_8cpp.html#a58be15783993a5541a86ecc68a74fb89">pFontCreate</a>-&gt;<a class="code" href="../../d3/d39/class_g_u_i_font.html#a08b74df638b5c055d9f18f5ce4d8ee11">CalcTextHeight</a>(str, travel_window.<a class="code" href="../../d4/d38/class_g_u_i_window.html#a36480568ae6ed6155ae0d71f93fc3c92">uFrameWidth</a>, 0)) /</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;                    2 +</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;                101,</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;            0, str, 3);</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;        <a class="code" href="../../d6/d5b/mm7__data_8cpp.html#a38d7c90471863b57612861aea4f431fa">_unused_5B5924_is_travel_ui_drawn</a> = 1;</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    }</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d6/d5b/mm7__data_8cpp_source.html#l00621">_unused_5B5924_is_travel_ui_drawn</a>, <a class="el" href="../../d4/d5e/_g_u_i_font_8cpp_source.html#l00246">GUIFont::CalcTextHeight()</a>, <a class="el" href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00091">dialogue_ui_x_ok_u</a>, <a class="el" href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00092">dialogue_ui_x_x_u</a>, <a class="el" href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00665">GUIWindow::DrawTitleText()</a>, <a class="el" href="../../dd/d8c/_localization_8cpp_source.html#l00017">Localization::FormatString()</a>, <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l00093">game_ui_dialogue_background</a>, <a class="el" href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00090">game_ui_right_panel_frame</a>, <a class="el" href="../../dd/d31/_map_info_8cpp_source.html#l00225">MapStats::GetMapInfo()</a>, <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l00330">OutdoorLocation::GetTravelDestination()</a>, <a class="el" href="../../da/db4/_party_8cpp_source.html#l01171">GetTravelTime()</a>, <a class="el" href="../../dd/d8c/_localization_8cpp_source.html#l00011">localization</a>, <a class="el" href="../../d6/d5b/mm7__data_8cpp_source.html#l00712">pCurrentMapName</a>, <a class="el" href="../../d4/d5e/_g_u_i_font_8cpp_source.html#l00022">pFontCreate</a>, <a class="el" href="../../d9/dce/_map_info_8h_source.html#l00079">MapStats::pInfos</a>, <a class="el" href="../../d6/d5b/mm7__data_8cpp_source.html#l00020">pMapStats</a>, <a class="el" href="../../d9/dce/_map_info_8h_source.html#l00038">MapInfo::pName</a>, <a class="el" href="../../d6/d5b/mm7__data_8cpp_source.html#l00282">pNPCPortraits_x</a>, <a class="el" href="../../d6/d5b/mm7__data_8cpp_source.html#l00290">pNPCPortraits_y</a>, <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l00048">pOutdoor</a>, <a class="el" href="../../da/db4/_party_8cpp_source.html#l00030">pParty</a>, <a class="el" href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00048">pPrimaryWindow</a>, <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l00052">render</a>, <a class="el" href="../../de/d09/_u_i_transition_8cpp_source.html#l00028">transition_ui_icon</a>, <a class="el" href="../../d5/d0b/_g_u_i_window_8h_source.html#l00470">GUIWindow::uFrameWidth</a>, <a class="el" href="../../d5/d0b/_g_u_i_window_8h_source.html#l00468">GUIWindow::uFrameX</a>, <a class="el" href="../../d5/d0b/_g_u_i_window_8h_source.html#l00472">GUIWindow::uFrameZ</a> и <a class="el" href="../../db/d38/_party_8h_source.html#l00250">Party::vPosition</a>.</p>
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../de/d21/class_g_u_i_window___travel_ad6e5a74f3b8b4cd62b7af51d40e28a90_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="aab5072b5d87c22b7907a25633671d48f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab5072b5d87c22b7907a25633671d48f">&#9670;&nbsp;</a></span>Release()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> GUIWindow_Travel::Release </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Переопределяет метод предка <a class="el" href="../../d4/d38/class_g_u_i_window.html#aaf2e6a2022904abc2d253e9d4acd5d99">GUIWindow</a>.</p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/d09/_u_i_transition_8cpp_source.html">UITransition.cpp</a> строка <a class="el" href="../../de/d09/_u_i_transition_8cpp_source.html#l00032">32</a></p>
+<div class="fragment"><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                               {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="comment">// -----------------------------------------</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="comment">// 0041C26A void GUIWindow::Release --- part</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../de/d09/_u_i_transition_8cpp.html#ae46c40711830fa158c1df92cdebe0629">transition_ui_icon</a>) {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <a class="code" href="../../de/d09/_u_i_transition_8cpp.html#ae46c40711830fa158c1df92cdebe0629">transition_ui_icon</a>-&gt;<a class="code" href="../../de/d73/class_image.html#a79e0e96332914caa0816c7d34822b9bf">Release</a>();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <a class="code" href="../../de/d09/_u_i_transition_8cpp.html#ae46c40711830fa158c1df92cdebe0629">transition_ui_icon</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    }</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../da/db4/_u_i_game_8cpp.html#a7073c9e3b8b551bb39e0ddaba6680d1f">game_ui_dialogue_background</a>) {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <a class="code" href="../../da/db4/_u_i_game_8cpp.html#a7073c9e3b8b551bb39e0ddaba6680d1f">game_ui_dialogue_background</a>-&gt;<a class="code" href="../../de/d73/class_image.html#a79e0e96332914caa0816c7d34822b9bf">Release</a>();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <a class="code" href="../../da/db4/_u_i_game_8cpp.html#a7073c9e3b8b551bb39e0ddaba6680d1f">game_ui_dialogue_background</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    }</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="../../dc/dce/_g_u_i_window_8cpp.html#a9cf585dbf96fdd1acbe15981837ebdb2">current_screen_type</a> = <a class="code" href="../../dc/dce/_g_u_i_window_8cpp.html#a5023a0cbd3467c1ea375ffcfc7ef690e">prev_screen_type</a>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="../../d4/d38/class_g_u_i_window.html#aaf2e6a2022904abc2d253e9d4acd5d99">GUIWindow::Release</a>();</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00083">current_screen_type</a>, <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l00093">game_ui_dialogue_background</a>, <a class="el" href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00084">prev_screen_type</a>, <a class="el" href="../../d0/dac/_image_8cpp_source.html#l00335">Image::Release()</a>, <a class="el" href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00292">GUIWindow::Release()</a> и <a class="el" href="../../de/d09/_u_i_transition_8cpp_source.html#l00028">transition_ui_icon</a>.</p>
+<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../de/d21/class_g_u_i_window___travel_aab5072b5d87c22b7907a25633671d48f_cgraph.svg" width="652" height="240"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>C:/git/world-of-might-and-magic/GUI/UI/<a class="el" href="../../df/d80/_u_i_transition_8h_source.html">UITransition.h</a></li>
+<li>C:/git/world-of-might-and-magic/GUI/UI/<a class="el" href="../../de/d09/_u_i_transition_8cpp_source.html">UITransition.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="a_party_8h_html_a8bd3eeda5ec3780afeff00593e27b6f2a138a01d401a68aab61b07b596bb532a7"><div class="ttname"><a href="../../db/d38/_party_8h.html#a8bd3eeda5ec3780afeff00593e27b6f2a138a01d401a68aab61b07b596bb532a7">PartyAlignment::PartyAlignment_Good</a></div><div class="ttdeci">@ PartyAlignment_Good</div></div>
+<div class="ttc" id="a_u_i_transition_8cpp_html_ac03b46e4b055c5b6ba3b13a3fe12a148"><div class="ttname"><a href="../../de/d09/_u_i_transition_8cpp.html#ac03b46e4b055c5b6ba3b13a3fe12a148">transition_button_label</a></div><div class="ttdeci">String transition_button_label</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d09/_u_i_transition_8cpp_source.html#l00030">UITransition.cpp:30</a></div></div>
+<div class="ttc" id="astruct_party_html_a9131ac68bf00fcaf956e6b6d2dde7a6d"><div class="ttname"><a href="../../d0/d14/struct_party.html#a9131ac68bf00fcaf956e6b6d2dde7a6d">Party::vPosition</a></div><div class="ttdeci">Vec3_int_ vPosition</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00250">Party.h:250</a></div></div>
+<div class="ttc" id="aclass_localization_html_a0eb0a17fdf90f6a420eeac65bf62436f"><div class="ttname"><a href="../../dd/d88/class_localization.html#a0eb0a17fdf90f6a420eeac65bf62436f">Localization::GetString</a></div><div class="ttdeci">const char * GetString(unsigned int index) const</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d8c/_localization_8cpp_source.html#l00013">Localization.cpp:13</a></div></div>
+<div class="ttc" id="a_party_8h_html_a8bd3eeda5ec3780afeff00593e27b6f2af9794c109d91984889aa4427dd2b45b9"><div class="ttname"><a href="../../db/d38/_party_8h.html#a8bd3eeda5ec3780afeff00593e27b6f2af9794c109d91984889aa4427dd2b45b9">PartyAlignment::PartyAlignment_Neutral</a></div><div class="ttdeci">@ PartyAlignment_Neutral</div></div>
+<div class="ttc" id="astruct_map_stats_html_a85e3c91a79bfc115b6303212366163e3"><div class="ttname"><a href="../../d0/d23/struct_map_stats.html#a85e3c91a79bfc115b6303212366163e3">MapStats::pInfos</a></div><div class="ttdeci">MapInfo pInfos[77]</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dce/_map_info_8h_source.html#l00079">MapInfo.h:79</a></div></div>
+<div class="ttc" id="aclass_g_u_i_window_html"><div class="ttname"><a href="../../d4/d38/class_g_u_i_window.html">GUIWindow</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d0b/_g_u_i_window_8h_source.html#l00433">GUIWindow.h:433</a></div></div>
+<div class="ttc" id="aclass_assets_manager_html_aa6b54bf3eebb770dc30767d13c436ce0"><div class="ttname"><a href="../../db/dd6/class_assets_manager.html#aa6b54bf3eebb770dc30767d13c436ce0">AssetsManager::GetImage_Solid</a></div><div class="ttdeci">Texture * GetImage_Solid(const String &amp;name)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d93/_assets_manager_8cpp_source.html#l00051">AssetsManager.cpp:51</a></div></div>
+<div class="ttc" id="a_g_u_i_window_8h_html_a476342970f954b62d70552bcbb5ee509a5fc5eff5be98373504604952ebcbcf41"><div class="ttname"><a href="../../d5/d0b/_g_u_i_window_8h.html#a476342970f954b62d70552bcbb5ee509a5fc5eff5be98373504604952ebcbcf41">WINDOW_ChangeLocation</a></div><div class="ttdeci">@ WINDOW_ChangeLocation</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d0b/_g_u_i_window_8h_source.html#l00302">GUIWindow.h:302</a></div></div>
+<div class="ttc" id="aclass_g_u_i_window_html_a29f96468b54f142995e3b1890cb7e45e"><div class="ttname"><a href="../../d4/d38/class_g_u_i_window.html#a29f96468b54f142995e3b1890cb7e45e">GUIWindow::CreateButton</a></div><div class="ttdeci">GUIButton * CreateButton(int x, int y, int width, int height, int a6, int a7, UIMessageType msg, unsigned int msg_param, uint8_t hotkey, const String &amp;label, const std::vector&lt; Image * &gt; &amp;textures=std::vector&lt; Image * &gt;())</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00717">GUIWindow.cpp:717</a></div></div>
+<div class="ttc" id="astruct_map_stats_html_ad630f43cd5e7e239cd8a3c363ccdd605"><div class="ttname"><a href="../../d0/d23/struct_map_stats.html#ad630f43cd5e7e239cd8a3c363ccdd605">MapStats::GetMapInfo</a></div><div class="ttdeci">MAP_TYPE GetMapInfo(const String &amp;Str2)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d31/_map_info_8cpp_source.html#l00225">MapInfo.cpp:225</a></div></div>
+<div class="ttc" id="a_party_8h_html_a8bd3eeda5ec3780afeff00593e27b6f2a5a3e1b0ba1793049451900a1e065630d"><div class="ttname"><a href="../../db/d38/_party_8h.html#a8bd3eeda5ec3780afeff00593e27b6f2a5a3e1b0ba1793049451900a1e065630d">PartyAlignment::PartyAlignment_Evil</a></div><div class="ttdeci">@ PartyAlignment_Evil</div></div>
+<div class="ttc" id="aclass_g_u_i_window_html_a1d5f55e836dbe199acf6c6226d3793ec"><div class="ttname"><a href="../../d4/d38/class_g_u_i_window.html#a1d5f55e836dbe199acf6c6226d3793ec">GUIWindow::GUIWindow</a></div><div class="ttdeci">GUIWindow()</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00765">GUIWindow.cpp:765</a></div></div>
+<div class="ttc" id="a_localization_8cpp_html_acce22610cffe19ad6cc8f577cd611b8b"><div class="ttname"><a href="../../dd/d8c/_localization_8cpp.html#acce22610cffe19ad6cc8f577cd611b8b">localization</a></div><div class="ttdeci">Localization * localization</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d8c/_localization_8cpp_source.html#l00011">Localization.cpp:11</a></div></div>
+<div class="ttc" id="a_g_u_i_window_8cpp_html_adc76c81fc8b01b2c9cb31aa955f326c5"><div class="ttname"><a href="../../dc/dce/_g_u_i_window_8cpp.html#adc76c81fc8b01b2c9cb31aa955f326c5">dialogue_ui_x_x_u</a></div><div class="ttdeci">Image * dialogue_ui_x_x_u</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00092">GUIWindow.cpp:92</a></div></div>
+<div class="ttc" id="amm7__data_8cpp_html_a759f510599ca1c1ce3f330293c9ce19f"><div class="ttname"><a href="../../d6/d5b/mm7__data_8cpp.html#a759f510599ca1c1ce3f330293c9ce19f">pNPCPortraits_y</a></div><div class="ttdeci">std::array&lt; std::array&lt; int, 6 &gt;, 6 &gt; pNPCPortraits_y</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d5b/mm7__data_8cpp_source.html#l00290">mm7_data.cpp:290</a></div></div>
+<div class="ttc" id="amm7__data_8cpp_html_ac779a3d730a6700bf1170f6461a4244d"><div class="ttname"><a href="../../d6/d5b/mm7__data_8cpp.html#ac779a3d730a6700bf1170f6461a4244d">pNPCPortraits_x</a></div><div class="ttdeci">std::array&lt; std::array&lt; int, 6 &gt;, 6 &gt; pNPCPortraits_x</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d5b/mm7__data_8cpp_source.html#l00282">mm7_data.cpp:282</a></div></div>
+<div class="ttc" id="aclass_g_u_i_window_html_aae805c92b9242bc94cf18c7a702433f7"><div class="ttname"><a href="../../d4/d38/class_g_u_i_window.html#aae805c92b9242bc94cf18c7a702433f7">GUIWindow::DrawTitleText</a></div><div class="ttdeci">void DrawTitleText(GUIFont *font, int horizontal_margin, int vertical_margin, unsigned __int16 uDefaultColor, const char *pInString, int line_spacing)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00665">GUIWindow.cpp:665</a></div></div>
+<div class="ttc" id="aclass_g_u_i_window_html_aaf2e6a2022904abc2d253e9d4acd5d99"><div class="ttname"><a href="../../d4/d38/class_g_u_i_window.html#aaf2e6a2022904abc2d253e9d4acd5d99">GUIWindow::Release</a></div><div class="ttdeci">virtual void Release()</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00292">GUIWindow.cpp:292</a></div></div>
+<div class="ttc" id="a_g_u_i_font_8cpp_html_a58be15783993a5541a86ecc68a74fb89"><div class="ttname"><a href="../../d4/d5e/_g_u_i_font_8cpp.html#a58be15783993a5541a86ecc68a74fb89">pFontCreate</a></div><div class="ttdeci">GUIFont * pFontCreate</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d5e/_g_u_i_font_8cpp_source.html#l00022">GUIFont.cpp:22</a></div></div>
+<div class="ttc" id="aclass_g_u_i_window_html_a36480568ae6ed6155ae0d71f93fc3c92"><div class="ttname"><a href="../../d4/d38/class_g_u_i_window.html#a36480568ae6ed6155ae0d71f93fc3c92">GUIWindow::uFrameWidth</a></div><div class="ttdeci">unsigned int uFrameWidth</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d0b/_g_u_i_window_8h_source.html#l00470">GUIWindow.h:470</a></div></div>
+<div class="ttc" id="aclass_g_u_i_window_html_a9bf7540e43e3304046ea150677adf6c1"><div class="ttname"><a href="../../d4/d38/class_g_u_i_window.html#a9bf7540e43e3304046ea150677adf6c1">GUIWindow::uFrameZ</a></div><div class="ttdeci">unsigned int uFrameZ</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d0b/_g_u_i_window_8h_source.html#l00472">GUIWindow.h:472</a></div></div>
+<div class="ttc" id="a_g_u_i_window_8cpp_html_a9cf585dbf96fdd1acbe15981837ebdb2"><div class="ttname"><a href="../../dc/dce/_g_u_i_window_8cpp.html#a9cf585dbf96fdd1acbe15981837ebdb2">current_screen_type</a></div><div class="ttdeci">enum CURRENT_SCREEN current_screen_type</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00083">GUIWindow.cpp:83</a></div></div>
+<div class="ttc" id="a_map_info_8h_html_a8e6404cd1a25e9f070d2918e8bb541c3"><div class="ttname"><a href="../../d9/dce/_map_info_8h.html#a8e6404cd1a25e9f070d2918e8bb541c3">pMapStats</a></div><div class="ttdeci">struct MapStats * pMapStats</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d5b/mm7__data_8cpp_source.html#l00020">mm7_data.cpp:20</a></div></div>
+<div class="ttc" id="a_g_u_i_button_8cpp_html_a305dcb7434a2d97990b2fb3c2a897f8b"><div class="ttname"><a href="../../d9/d1d/_g_u_i_button_8cpp.html#a305dcb7434a2d97990b2fb3c2a897f8b">pBtn_ExitCancel</a></div><div class="ttdeci">GUIButton * pBtn_ExitCancel</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d1d/_g_u_i_button_8cpp_source.html#l00028">GUIButton.cpp:28</a></div></div>
+<div class="ttc" id="a_g_u_i_button_8cpp_html_a8fb40559d4283a41a43bdef6e352ac42"><div class="ttname"><a href="../../d9/d1d/_g_u_i_button_8cpp.html#a8fb40559d4283a41a43bdef6e352ac42">pBtn_YES</a></div><div class="ttdeci">GUIButton * pBtn_YES</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d1d/_g_u_i_button_8cpp_source.html#l00029">GUIButton.cpp:29</a></div></div>
+<div class="ttc" id="a_party_8cpp_html_a638b1d8b985f1c7f8b69f2d81286f98e"><div class="ttname"><a href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a></div><div class="ttdeci">Party * pParty</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db4/_party_8cpp_source.html#l00030">Party.cpp:30</a></div></div>
+<div class="ttc" id="a_g_u_i_window_8cpp_html_a5023a0cbd3467c1ea375ffcfc7ef690e"><div class="ttname"><a href="../../dc/dce/_g_u_i_window_8cpp.html#a5023a0cbd3467c1ea375ffcfc7ef690e">prev_screen_type</a></div><div class="ttdeci">enum CURRENT_SCREEN prev_screen_type</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00084">GUIWindow.cpp:84</a></div></div>
+<div class="ttc" id="a_u_i_transition_8cpp_html_ae46c40711830fa158c1df92cdebe0629"><div class="ttname"><a href="../../de/d09/_u_i_transition_8cpp.html#ae46c40711830fa158c1df92cdebe0629">transition_ui_icon</a></div><div class="ttdeci">Image * transition_ui_icon</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d09/_u_i_transition_8cpp_source.html#l00028">UITransition.cpp:28</a></div></div>
+<div class="ttc" id="a_g_u_i_window_8cpp_html_a8ebd6fe26b30ca1b1459b07d35cefc08"><div class="ttname"><a href="../../dc/dce/_g_u_i_window_8cpp.html#a8ebd6fe26b30ca1b1459b07d35cefc08">game_ui_right_panel_frame</a></div><div class="ttdeci">Image * game_ui_right_panel_frame</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00090">GUIWindow.cpp:90</a></div></div>
+<div class="ttc" id="a_g_u_i_window_8h_html_a2519966952faeb9397447ce89e9bcb02a9ba8d4295c63e2f27fdc92f1939121c8"><div class="ttname"><a href="../../d5/d0b/_g_u_i_window_8h.html#a2519966952faeb9397447ce89e9bcb02a9ba8d4295c63e2f27fdc92f1939121c8">UIMSG_CHANGE_LOCATION_ClickCencelBtn</a></div><div class="ttdeci">@ UIMSG_CHANGE_LOCATION_ClickCencelBtn</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d0b/_g_u_i_window_8h_source.html#l00076">GUIWindow.h:76</a></div></div>
+<div class="ttc" id="aclass_g_u_i_font_html_a08b74df638b5c055d9f18f5ce4d8ee11"><div class="ttname"><a href="../../d3/d39/class_g_u_i_font.html#a08b74df638b5c055d9f18f5ce4d8ee11">GUIFont::CalcTextHeight</a></div><div class="ttdeci">unsigned int CalcTextHeight(const String &amp;str, unsigned int width, int x_offset, bool return_on_carriage=false)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d5e/_g_u_i_font_8cpp_source.html#l00246">GUIFont.cpp:246</a></div></div>
+<div class="ttc" id="a_g_u_i_window_8h_html_a2519966952faeb9397447ce89e9bcb02a4e16166bbe02f843c39b28931384706c"><div class="ttname"><a href="../../d5/d0b/_g_u_i_window_8h.html#a2519966952faeb9397447ce89e9bcb02a4e16166bbe02f843c39b28931384706c">UIMSG_OnTravelByFoot</a></div><div class="ttdeci">@ UIMSG_OnTravelByFoot</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d0b/_g_u_i_window_8h_source.html#l00075">GUIWindow.h:75</a></div></div>
+<div class="ttc" id="a_s_d_l__egl_8h_html_a92dbce8e3247f6a78126c99877caacb6"><div class="ttname"><a href="../../df/d32/_s_d_l__egl_8h.html#a92dbce8e3247f6a78126c99877caacb6">window</a></div><div class="ttdeci">EGLSurface EGLNativeWindowType * window</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/_s_d_l__egl_8h_source.html#l01580">SDL_egl.h:1580</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a691492ec0bd6383f91200e49f6ae40ed"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a></div><div class="ttdeci">GLfloat f</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l01873">SDL_opengl_glext.h:1873</a></div></div>
+<div class="ttc" id="astruct_map_info_html_a9b30502c76ff7e3d3cf0c42065635a00"><div class="ttname"><a href="../../db/ddb/struct_map_info.html#a9b30502c76ff7e3d3cf0c42065635a00">MapInfo::pName</a></div><div class="ttdeci">String pName</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dce/_map_info_8h_source.html#l00038">MapInfo.h:38</a></div></div>
+<div class="ttc" id="astruct_timer_html_a9b8c57bf9675da635a82d68d9b4d05e5"><div class="ttname"><a href="../../d8/da1/struct_timer.html#a9b8c57bf9675da635a82d68d9b4d05e5">Timer::Pause</a></div><div class="ttdeci">void Pause()</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d84/_time_8cpp_source.html#l00019">Time.cpp:19</a></div></div>
+<div class="ttc" id="amm7__data_8cpp_html_a88ebc50ce00b0ed9170a4da4a7d99ce2"><div class="ttname"><a href="../../d6/d5b/mm7__data_8cpp.html#a88ebc50ce00b0ed9170a4da4a7d99ce2">pCurrentMapName</a></div><div class="ttdeci">String pCurrentMapName</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d5b/mm7__data_8cpp_source.html#l00712">mm7_data.cpp:712</a></div></div>
+<div class="ttc" id="a_g_u_i_window_8h_html_af188298480c77be8835d6760fa6edfd7a740b539cc3ef8738ee52a93457e569b1"><div class="ttname"><a href="../../d5/d0b/_g_u_i_window_8h.html#af188298480c77be8835d6760fa6edfd7a740b539cc3ef8738ee52a93457e569b1">CURRENT_SCREEN::SCREEN_CHANGE_LOCATION</a></div><div class="ttdeci">@ SCREEN_CHANGE_LOCATION</div></div>
+<div class="ttc" id="a_party_8cpp_html_a6b4bc5b810c765998d778c19b917eb52"><div class="ttname"><a href="../../da/db4/_party_8cpp.html#a6b4bc5b810c765998d778c19b917eb52">GetTravelTime</a></div><div class="ttdeci">int GetTravelTime()</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db4/_party_8cpp_source.html#l01171">Party.cpp:1171</a></div></div>
+<div class="ttc" id="a_assets_manager_8cpp_html_a645270130330d2d99964c967b7d33cd8"><div class="ttname"><a href="../../d3/d93/_assets_manager_8cpp.html#a645270130330d2d99964c967b7d33cd8">assets</a></div><div class="ttdeci">AssetsManager * assets</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d93/_assets_manager_8cpp_source.html#l00012">AssetsManager.cpp:12</a></div></div>
+<div class="ttc" id="a_g_u_i_window_8cpp_html_a64c60ac206b610eb042ac693ed87b9c0"><div class="ttname"><a href="../../dc/dce/_g_u_i_window_8cpp.html#a64c60ac206b610eb042ac693ed87b9c0">ui_buttyes2</a></div><div class="ttdeci">Image * ui_buttyes2</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00095">GUIWindow.cpp:95</a></div></div>
+<div class="ttc" id="aclass_localization_html_aa585c1180dc1a338b5822de8e413d2d6"><div class="ttname"><a href="../../dd/d88/class_localization.html#aa585c1180dc1a338b5822de8e413d2d6">Localization::FormatString</a></div><div class="ttdeci">String FormatString(unsigned int index,...) const</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d8c/_localization_8cpp_source.html#l00017">Localization.cpp:17</a></div></div>
+<div class="ttc" id="astruct_outdoor_location_html_afa32764595d901fa9dd5b44ff9da5c56"><div class="ttname"><a href="../../d1/d55/struct_outdoor_location.html#afa32764595d901fa9dd5b44ff9da5c56">OutdoorLocation::GetTravelDestination</a></div><div class="ttdeci">bool GetTravelDestination(signed int sPartyX, signed int sPartyZ, char *pOut, signed int a5)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d03/_outdoor_8cpp_source.html#l00330">Outdoor.cpp:330</a></div></div>
+<div class="ttc" id="a_u_i_game_8cpp_html_a7073c9e3b8b551bb39e0ddaba6680d1f"><div class="ttname"><a href="../../da/db4/_u_i_game_8cpp.html#a7073c9e3b8b551bb39e0ddaba6680d1f">game_ui_dialogue_background</a></div><div class="ttdeci">Image * game_ui_dialogue_background</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db4/_u_i_game_8cpp_source.html#l00093">UIGame.cpp:93</a></div></div>
+<div class="ttc" id="a_g_u_i_window_8cpp_html_ae2c9c502485c7db2c74ad737e3c5bd97"><div class="ttname"><a href="../../dc/dce/_g_u_i_window_8cpp.html#ae2c9c502485c7db2c74ad737e3c5bd97">pPrimaryWindow</a></div><div class="ttdeci">GUIWindow * pPrimaryWindow</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00048">GUIWindow.cpp:48</a></div></div>
+<div class="ttc" id="aclass_g_u_i_window_html_a92e763aa688b9d554715836694f023e9"><div class="ttname"><a href="../../d4/d38/class_g_u_i_window.html#a92e763aa688b9d554715836694f023e9">GUIWindow::uFrameX</a></div><div class="ttdeci">unsigned int uFrameX</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d0b/_g_u_i_window_8h_source.html#l00468">GUIWindow.h:468</a></div></div>
+<div class="ttc" id="aclass_g_u_i_window_html_a0dd208f005854966061dadedd7916367"><div class="ttname"><a href="../../d4/d38/class_g_u_i_window.html#a0dd208f005854966061dadedd7916367">GUIWindow::sHint</a></div><div class="ttdeci">String sHint</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d0b/_g_u_i_window_8h_source.html#l00488">GUIWindow.h:488</a></div></div>
+<div class="ttc" id="a_outdoor_8cpp_html_af1ccdd58891375c26aa795fcdd97aa32"><div class="ttname"><a href="../../d1/d03/_outdoor_8cpp.html#af1ccdd58891375c26aa795fcdd97aa32">pOutdoor</a></div><div class="ttdeci">OutdoorLocation * pOutdoor</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d03/_outdoor_8cpp_source.html#l00048">Outdoor.cpp:48</a></div></div>
+<div class="ttc" id="a_strings_8h_html_afbeda3fd1bdc8c37d01bdf9f5c8274ff"><div class="ttname"><a href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a></div><div class="ttdeci">std::string String</div><div class="ttdef"><b>Definition:</b> <a href="../../de/df7/_strings_8h_source.html#l00010">Strings.h:10</a></div></div>
+<div class="ttc" id="amm7__data_8cpp_html_a38d7c90471863b57612861aea4f431fa"><div class="ttname"><a href="../../d6/d5b/mm7__data_8cpp.html#a38d7c90471863b57612861aea4f431fa">_unused_5B5924_is_travel_ui_drawn</a></div><div class="ttdeci">int _unused_5B5924_is_travel_ui_drawn</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d5b/mm7__data_8cpp_source.html#l00621">mm7_data.cpp:621</a></div></div>
+<div class="ttc" id="a_time_8cpp_html_a9b16df08347bd1a24e9e426848ffca3c"><div class="ttname"><a href="../../db/d84/_time_8cpp.html#a9b16df08347bd1a24e9e426848ffca3c">pEventTimer</a></div><div class="ttdeci">Timer * pEventTimer</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d84/_time_8cpp_source.html#l00008">Time.cpp:8</a></div></div>
+<div class="ttc" id="aclass_image_html_a79e0e96332914caa0816c7d34822b9bf"><div class="ttname"><a href="../../de/d73/class_image.html#a79e0e96332914caa0816c7d34822b9bf">Image::Release</a></div><div class="ttdeci">bool Release()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dac/_image_8cpp_source.html#l00335">Image.cpp:335</a></div></div>
+<div class="ttc" id="a_g_u_i_window_8cpp_html_a9be66d658a0666e25935923cf19aeb2b"><div class="ttname"><a href="../../dc/dce/_g_u_i_window_8cpp.html#a9be66d658a0666e25935923cf19aeb2b">dialogue_ui_x_ok_u</a></div><div class="ttdeci">Image * dialogue_ui_x_ok_u</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00091">GUIWindow.cpp:91</a></div></div>
+<div class="ttc" id="astruct_party_html_a0333a828cb051d9f86e142230644cce3"><div class="ttname"><a href="../../d0/d14/struct_party.html#a0333a828cb051d9f86e142230644cce3">Party::alignment</a></div><div class="ttdeci">PartyAlignment alignment</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00308">Party.h:308</a></div></div>
+<div class="ttc" id="a_i_render_8h_html_a21d31464313b2c66ff88d4aa97b66143"><div class="ttname"><a href="../../da/d20/_i_render_8h.html#a21d31464313b2c66ff88d4aa97b66143">render</a></div><div class="ttdeci">std::shared_ptr&lt; IRender &gt; render</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d79/_render_open_g_l_8cpp_source.html#l00052">RenderOpenGL.cpp:52</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../de/d21/class_g_u_i_window___travel.html">GUIWindow_Travel</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:04:50. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

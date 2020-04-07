@@ -1,0 +1,427 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Исходный файл C:/git/world-of-might-and-magic/Engine/IocContainer.cpp</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('de/d8c/_engine_2_ioc_container_8cpp_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">IocContainer.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../de/d8c/_engine_2_ioc_container_8cpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d6/de4/_engine_2_ioc_container_8h.html">Engine/IocContainer.h</a>&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d7/d50/_arcomage_8h.html">Arcomage/Arcomage.h</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../df/d62/_events_8h.html">Engine/Events.h</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d4/dd7/_events2_d_8h.html">Engine/Events2D.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d3/db2/_l_o_d_8h.html">Engine/LOD.h</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../dc/d1a/_maps_long_timer_8h.html">Engine/MapsLongTimer.h</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../db/d38/_party_8h.html">Engine/Party.h</a>&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../dd/de7/_save_load_8h.html">Engine/SaveLoad.h</a>&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../db/d7e/_spell_fx_renderer_8h.html">Engine/SpellFxRenderer.h</a>&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d2/d7a/stru123_8h.html">Engine/stru123.h</a>&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d8/d87/_decal_builder_8h.html">Engine/Graphics/DecalBuilder.h</a>&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../df/dd7/_decoration_list_8h.html">Engine/Graphics/DecorationList.h</a>&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../da/dc7/_indoor_8h.html">Engine/Graphics/Indoor.h</a>&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../da/d20/_i_render_8h.html">Engine/Graphics/IRender.h</a>&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d0/d88/_lightmap_builder_8h.html">Engine/Graphics/LightmapBuilder.h</a>&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d5/d31/_lights_8h.html">Engine/Graphics/Lights.h</a>&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../db/dac/_overlays_8h.html">Engine/Graphics/Overlays.h</a>&quot;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../da/ddf/_particle_engine_8h.html">Engine/Graphics/ParticleEngine.h</a>&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d3/dc4/_palette_manager_8h.html">Engine/Graphics/PaletteManager.h</a>&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d7/d19/_viewport_8h.html">Engine/Graphics/Viewport.h</a>&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../de/d6e/_vis_8h.html">Engine/Graphics/Vis.h</a>&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../dd/dbf/_decoration_8h.html">Engine/Graphics/Level/Decoration.h</a>&quot;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../de/deb/_actor_8h.html">Engine/Objects/Actor.h</a>&quot;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d7/d0e/_chest_8h.html">Engine/Objects/Chest.h</a>&quot;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../dd/db7/_monsters_8h.html">Engine/Objects/Monsters.h</a>&quot;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d9/dbc/_n_p_c_8h.html">Engine/Objects/NPC.h</a>&quot;</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d7/dd2/_object_list_8h.html">Engine/Objects/ObjectList.h</a>&quot;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d1/d39/_player_8h.html">Engine/Objects/Player.h</a>&quot;</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d2/da1/_cast_spell_info_8h.html">Engine/Spells/CastSpellInfo.h</a>&quot;</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d7/d08/_faction_table_8h.html">Engine/Tables/FactionTable.h</a>&quot;</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d5/d52/_player_frame_table_8h.html">Engine/Tables/PlayerFrameTable.h</a>&quot;</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../db/dab/_storyline_text_table_8h.html">Engine/Tables/StorylineTextTable.h</a>&quot;</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d2/de3/_mouse_8h.html">IO/Mouse.h</a>&quot;</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../df/d85/_keyboard_8h.html">IO/Keyboard.h</a>&quot;</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keyword">using</span> <a class="code" href="../../d1/d12/class_engine___1_1_ioc_container.html">Engine_::IocContainer</a>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="../../d6/de4/_engine_2_ioc_container_8h.html#a9be76595edb968c5dfb165ec86ba2959">   47</a></span>&#160;<a class="code" href="../../d6/d70/class_log.html">Log</a> *<a class="code" href="../../de/d8c/_engine_2_ioc_container_8cpp.html#a9be76595edb968c5dfb165ec86ba2959">logger</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="../../d1/d12/class_engine___1_1_ioc_container.html#a095a16a5af8d2d49ae6445b823332256">   51</a></span>&#160;<a class="code" href="../../d6/d70/class_log.html">Log</a> *IocContainer::ResolveLogger() {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="../../de/d8c/_engine_2_ioc_container_8cpp.html#a9be76595edb968c5dfb165ec86ba2959">logger</a>) {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <a class="code" href="../../de/d8c/_engine_2_ioc_container_8cpp.html#a9be76595edb968c5dfb165ec86ba2959">logger</a> = <span class="keyword">new</span> <a class="code" href="../../d6/d70/class_log.html">Log</a>();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <a class="code" href="../../de/d8c/_engine_2_ioc_container_8cpp.html#a9be76595edb968c5dfb165ec86ba2959">logger</a>-&gt;<a class="code" href="../../d6/d70/class_log.html#ad9612fc4cd0f7350a0ae2a0a0fcad55e">Initialize</a>();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <a class="code" href="../../de/d8c/_engine_2_ioc_container_8cpp.html#a9be76595edb968c5dfb165ec86ba2959">logger</a>-&gt;<a class="code" href="../../d6/d70/class_log.html#a9962588a107d3b4aa927cf12284e0fc7">Info</a>(L<span class="stringliteral">&quot;World of Might and Magic build %S %S&quot;</span>, __DATE__, __TIME__);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../de/d8c/_engine_2_ioc_container_8cpp.html#a9be76595edb968c5dfb165ec86ba2959">logger</a>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;}</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="../../d1/d12/class_engine___1_1_ioc_container.html#a2d38b23552ec4a6244d4154107b9c981">   60</a></span>&#160;<a class="code" href="../../d9/d57/struct_decal_builder.html">DecalBuilder</a> *<a class="code" href="../../d1/d12/class_engine___1_1_ioc_container.html#a2d38b23552ec4a6244d4154107b9c981">IocContainer::ResolveDecalBuilder</a>() {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="../../d1/d12/class_engine___1_1_ioc_container.html#a163c96a2499343ea6beadaad1ca9e9d4">decal_builder</a>) {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <a class="code" href="../../d1/d12/class_engine___1_1_ioc_container.html#a163c96a2499343ea6beadaad1ca9e9d4">decal_builder</a> = <span class="keyword">new</span> <a class="code" href="../../d9/d57/struct_decal_builder.html">DecalBuilder</a>();</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d1/d12/class_engine___1_1_ioc_container.html#a163c96a2499343ea6beadaad1ca9e9d4">decal_builder</a>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;}</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="../../d1/d12/class_engine___1_1_ioc_container.html#af0075c8c96db4dc2e3465138b8b03dcf">   67</a></span>&#160;<a class="code" href="../../da/df2/struct_bloodsplat_container.html">BloodsplatContainer</a> *<a class="code" href="../../d1/d12/class_engine___1_1_ioc_container.html#af0075c8c96db4dc2e3465138b8b03dcf">IocContainer::ResolveBloodsplatContainer</a>() {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="../../d1/d12/class_engine___1_1_ioc_container.html#a81221713eb9f3973123536937e96dcec">bloodspalt_container</a>) {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <a class="code" href="../../d1/d12/class_engine___1_1_ioc_container.html#a81221713eb9f3973123536937e96dcec">bloodspalt_container</a> = <span class="keyword">new</span> <a class="code" href="../../da/df2/struct_bloodsplat_container.html">BloodsplatContainer</a>();</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d1/d12/class_engine___1_1_ioc_container.html#a81221713eb9f3973123536937e96dcec">bloodspalt_container</a>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;}</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="../../d1/d12/class_engine___1_1_ioc_container.html#a29d34163cc9c0b9585b4f2440918de8f">   74</a></span>&#160;<a class="code" href="../../db/d64/struct_spell_fx_renderer.html">SpellFxRenderer</a> *<a class="code" href="../../d1/d12/class_engine___1_1_ioc_container.html#a29d34163cc9c0b9585b4f2440918de8f">IocContainer::ResolveSpellFxRenderer</a>() {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="../../d1/d12/class_engine___1_1_ioc_container.html#af49a0f2b69889f873d7485f2d2e9f89a">spell_fx_renderer</a>) {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <a class="code" href="../../d1/d12/class_engine___1_1_ioc_container.html#af49a0f2b69889f873d7485f2d2e9f89a">spell_fx_renderer</a> = <span class="keyword">new</span> <a class="code" href="../../db/d64/struct_spell_fx_renderer.html">SpellFxRenderer</a>();</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    }</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d1/d12/class_engine___1_1_ioc_container.html#af49a0f2b69889f873d7485f2d2e9f89a">spell_fx_renderer</a>;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;}</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="../../d1/d12/class_engine___1_1_ioc_container.html#a10adf21b7f2dcd027b3c576982ffbc1e">   81</a></span>&#160;<a class="code" href="../../d8/d95/class_lightmap_builder.html">LightmapBuilder</a> *<a class="code" href="../../d1/d12/class_engine___1_1_ioc_container.html#a10adf21b7f2dcd027b3c576982ffbc1e">IocContainer::ResolveLightmapBuilder</a>() {</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="../../d1/d12/class_engine___1_1_ioc_container.html#a176ecedcc22ef4a1976c0ed21dd1feec">lightmap_builder</a>) {</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <a class="code" href="../../d1/d12/class_engine___1_1_ioc_container.html#a176ecedcc22ef4a1976c0ed21dd1feec">lightmap_builder</a> = <span class="keyword">new</span> <a class="code" href="../../d8/d95/class_lightmap_builder.html">LightmapBuilder</a>();</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    }</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d1/d12/class_engine___1_1_ioc_container.html#a176ecedcc22ef4a1976c0ed21dd1feec">lightmap_builder</a>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;}</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="../../d1/d12/class_engine___1_1_ioc_container.html#ad92ce5cee27f4415ef48d49dea4ec074">   88</a></span>&#160;<a class="code" href="../../d7/dc5/class_mouse.html">Mouse</a> *<a class="code" href="../../d1/d12/class_engine___1_1_ioc_container.html#ad92ce5cee27f4415ef48d49dea4ec074">IocContainer::ResolveMouse</a>() {</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="../../d1/d12/class_engine___1_1_ioc_container.html#ac02e16bb4ecd0c58d54575a0e9951c8c">mouse</a>) {</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <a class="code" href="../../d1/d12/class_engine___1_1_ioc_container.html#ac02e16bb4ecd0c58d54575a0e9951c8c">mouse</a> = <span class="keyword">new</span> <a class="code" href="../../d7/dc5/class_mouse.html">Mouse</a>();</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    }</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d1/d12/class_engine___1_1_ioc_container.html#ac02e16bb4ecd0c58d54575a0e9951c8c">mouse</a>;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;}</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<a class="code" href="../../d6/d7e/class_keyboard.html">Keyboard</a> *<a class="code" href="../../d1/d12/class_engine___1_1_ioc_container.html#afec2cedb69548689a9cbba6e6a80c2b7">IocContainer::keyboard</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="../../d1/d12/class_engine___1_1_ioc_container.html#ac3f47d02b62814ff7d9a2743a81799b0">   96</a></span>&#160;<a class="code" href="../../d6/d7e/class_keyboard.html">Keyboard</a> *<a class="code" href="../../d1/d12/class_engine___1_1_ioc_container.html#ac3f47d02b62814ff7d9a2743a81799b0">IocContainer::ResolveKeyboard</a>() {</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="../../d1/d12/class_engine___1_1_ioc_container.html#afec2cedb69548689a9cbba6e6a80c2b7">keyboard</a>) {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <a class="code" href="../../d1/d12/class_engine___1_1_ioc_container.html#afec2cedb69548689a9cbba6e6a80c2b7">keyboard</a> = <span class="keyword">new</span> <a class="code" href="../../d6/d7e/class_keyboard.html">Keyboard</a>();</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    }</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d1/d12/class_engine___1_1_ioc_container.html#afec2cedb69548689a9cbba6e6a80c2b7">keyboard</a>;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;}</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="../../d1/d12/class_engine___1_1_ioc_container.html#aca371cf233bf02cc142d84c1e4b3a23b">  103</a></span>&#160;<a class="code" href="../../dd/d2d/class_particle_engine.html">ParticleEngine</a> *<a class="code" href="../../d1/d12/class_engine___1_1_ioc_container.html#aca371cf233bf02cc142d84c1e4b3a23b">IocContainer::ResolveParticleEngine</a>() {</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="../../d1/d12/class_engine___1_1_ioc_container.html#a04ec9102586cc19d61c7308c2eed688f">particle_engine</a>) {</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <a class="code" href="../../d1/d12/class_engine___1_1_ioc_container.html#a04ec9102586cc19d61c7308c2eed688f">particle_engine</a> = <span class="keyword">new</span> <a class="code" href="../../dd/d2d/class_particle_engine.html">ParticleEngine</a>();</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    }</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d1/d12/class_engine___1_1_ioc_container.html#a04ec9102586cc19d61c7308c2eed688f">particle_engine</a>;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;}</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="../../d1/d12/class_engine___1_1_ioc_container.html#a201a6dee8928c65a2577af08596b8c18">  110</a></span>&#160;<a class="code" href="../../d0/def/class_vis.html">Vis</a> *<a class="code" href="../../d1/d12/class_engine___1_1_ioc_container.html#a201a6dee8928c65a2577af08596b8c18">IocContainer::ResolveVis</a>() {</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="../../d1/d12/class_engine___1_1_ioc_container.html#a58d7824cd01e934556d8e6f676a68666">vis</a>) {</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <a class="code" href="../../d1/d12/class_engine___1_1_ioc_container.html#a58d7824cd01e934556d8e6f676a68666">vis</a> = <span class="keyword">new</span> <a class="code" href="../../d0/def/class_vis.html">Vis</a>();</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    }</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d1/d12/class_engine___1_1_ioc_container.html#a58d7824cd01e934556d8e6f676a68666">vis</a>;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;}</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<a class="code" href="../../d9/d57/struct_decal_builder.html">DecalBuilder</a> *<a class="code" href="../../d1/d12/class_engine___1_1_ioc_container.html#a163c96a2499343ea6beadaad1ca9e9d4">IocContainer::decal_builder</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<a class="code" href="../../da/df2/struct_bloodsplat_container.html">BloodsplatContainer</a> *<a class="code" href="../../d1/d12/class_engine___1_1_ioc_container.html#a81221713eb9f3973123536937e96dcec">IocContainer::bloodspalt_container</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<a class="code" href="../../db/d64/struct_spell_fx_renderer.html">SpellFxRenderer</a> *<a class="code" href="../../d1/d12/class_engine___1_1_ioc_container.html#af49a0f2b69889f873d7485f2d2e9f89a">IocContainer::spell_fx_renderer</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<a class="code" href="../../d8/d95/class_lightmap_builder.html">LightmapBuilder</a> *<a class="code" href="../../d1/d12/class_engine___1_1_ioc_container.html#a176ecedcc22ef4a1976c0ed21dd1feec">IocContainer::lightmap_builder</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<a class="code" href="../../d7/dc5/class_mouse.html">Mouse</a> *<a class="code" href="../../d1/d12/class_engine___1_1_ioc_container.html#ac02e16bb4ecd0c58d54575a0e9951c8c">IocContainer::mouse</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<a class="code" href="../../dd/d2d/class_particle_engine.html">ParticleEngine</a> *<a class="code" href="../../d1/d12/class_engine___1_1_ioc_container.html#a04ec9102586cc19d61c7308c2eed688f">IocContainer::particle_engine</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<a class="code" href="../../d0/def/class_vis.html">Vis</a> *<a class="code" href="../../d1/d12/class_engine___1_1_ioc_container.html#a58d7824cd01e934556d8e6f676a68666">IocContainer::vis</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
+<div class="line"><a name="l00127"></a><span class="lineno"><a class="line" href="../../d7/db5/_game_8cpp.html#a4abb8c97bdb6942d1b80dd97acb5f872">  127</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../de/d8c/_engine_2_ioc_container_8cpp.html#a4abb8c97bdb6942d1b80dd97acb5f872">IntegrityTest</a>() {</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="comment">// ToDo(_): make platform independent</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    static_assert(<span class="keyword">sizeof</span>(<a class="code" href="../../d7/d78/struct_b_l_v_sector.html">BLVSector</a>) == 0x74, <span class="stringliteral">&quot;Wrong type size&quot;</span>);</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    static_assert(<span class="keyword">sizeof</span>(<a class="code" href="../../d1/dcf/struct_b_l_v_door.html">BLVDoor</a>) == 0x50, <span class="stringliteral">&quot;Wrong type size&quot;</span>);</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    static_assert(<span class="keyword">sizeof</span>(<a class="code" href="../../d8/d4e/struct_particle__sw.html">Particle_sw</a>) == 0x68, <span class="stringliteral">&quot;Wrong type size&quot;</span>);</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    static_assert(<span class="keyword">sizeof</span>(<a class="code" href="../../dd/d47/struct_particle.html">Particle</a>) == 0x68, <span class="stringliteral">&quot;Wrong type size&quot;</span>);</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    static_assert(<span class="keyword">sizeof</span>(<a class="code" href="../../dd/d2d/class_particle_engine.html">ParticleEngine</a>) == 0xE430, <span class="stringliteral">&quot;Wrong type size&quot;</span>);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    static_assert(<span class="keyword">sizeof</span>(<a class="code" href="../../d2/da9/struct_lightmap.html">Lightmap</a>) == 0xC1C, <span class="stringliteral">&quot;Wrong type size&quot;</span>);</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    static_assert(<span class="keyword">sizeof</span>(<a class="code" href="../../de/d0c/struct_vis___selection_list.html">Vis_SelectionList</a>) == 0x2008, <span class="stringliteral">&quot;Wrong type size&quot;</span>);</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="comment">// static_assert(sizeof(Vis) == 0x20D0, &quot;Wrong type size&quot;);</span></div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    static_assert(<span class="keyword">sizeof</span>(<a class="code" href="../../df/d28/struct_projectile_anim.html">ProjectileAnim</a>) == 0x1C, <span class="stringliteral">&quot;Wrong type size&quot;</span>);</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    static_assert(<span class="keyword">sizeof</span>(<a class="code" href="../../d8/deb/struct_indoor_camera_d3_d___vec3.html">IndoorCameraD3D_Vec3</a>) == 0x10, <span class="stringliteral">&quot;Wrong type size&quot;</span>);</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    static_assert(<span class="keyword">sizeof</span>(<a class="code" href="../../da/d76/struct_indoor_camera_d3_d___vec4.html">IndoorCameraD3D_Vec4</a>) == 0x18, <span class="stringliteral">&quot;Wrong type size&quot;</span>);  <span class="comment">// should be 14 (10 vec3 + 4 vdtor)  but 18 coz of</span></div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;                                                                             <span class="comment">// his +4 from own vdtor, but it is odd since vdtor</span></div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;                                                                             <span class="comment">// already present from vec3</span></div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    static_assert(<span class="keyword">sizeof</span>(<a class="code" href="../../d8/dc1/struct_n_p_c_data.html">NPCData</a>) == 0x4C, <span class="stringliteral">&quot;Wrong type size&quot;</span>);</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    static_assert(<span class="keyword">sizeof</span>(<a class="code" href="../../d5/d11/struct_n_p_c_stats.html">NPCStats</a>) == 0x17FFC, <span class="stringliteral">&quot;Wrong type size&quot;</span>);</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    static_assert(<span class="keyword">sizeof</span>(<a class="code" href="../../da/deb/struct_bsp_renderer.html">BspRenderer</a>) == 0x53740, <span class="stringliteral">&quot;Wrong type size&quot;</span>);</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    static_assert(<span class="keyword">sizeof</span>(<a class="code" href="../../d4/d10/struct_viewing_params.html">ViewingParams</a>) == 0x26C, <span class="stringliteral">&quot;Wrong type size&quot;</span>);</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    static_assert(<span class="keyword">sizeof</span>(<a class="code" href="../../db/d5a/struct_bloodsplat.html">Bloodsplat</a>) == 0x28, <span class="stringliteral">&quot;Wrong type size&quot;</span>);</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    static_assert(<span class="keyword">sizeof</span>(<a class="code" href="../../da/df2/struct_bloodsplat_container.html">BloodsplatContainer</a>) == 0xA0C, <span class="stringliteral">&quot;Wrong type size&quot;</span>);</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    static_assert(<span class="keyword">sizeof</span>(<a class="code" href="../../d7/dff/struct__2devent.html">_2devent</a>) == 0x34, <span class="stringliteral">&quot;Wrong type size&quot;</span>);</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    static_assert(<span class="keyword">sizeof</span>(<a class="code" href="../../d8/db2/struct_storyline_text.html">StorylineText</a>) == 0x160, <span class="stringliteral">&quot;Wrong type size&quot;</span>);</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    static_assert(<span class="keyword">sizeof</span>(<a class="code" href="../../d9/d43/struct_decal.html">Decal</a>) == 0xC20, <span class="stringliteral">&quot;Wrong type size&quot;</span>);</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    static_assert(<span class="keyword">sizeof</span>(<a class="code" href="../../d4/dff/struct_monster_info.html">MonsterInfo</a>) == 0x58, <span class="stringliteral">&quot;Wrong type size&quot;</span>);</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    static_assert(<span class="keyword">sizeof</span>(<a class="code" href="../../d3/df5/struct_monster_stats.html">MonsterStats</a>) == 0x5BA0, <span class="stringliteral">&quot;Wrong type size&quot;</span>);</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    static_assert(<span class="keyword">sizeof</span>(<a class="code" href="../../d7/d78/struct_b_l_v_sector.html">BLVSector</a>) == 116, <span class="stringliteral">&quot;Wrong type size&quot;</span>);</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    static_assert(<span class="keyword">sizeof</span>(<a class="code" href="../../da/d35/struct_actor.html">Actor</a>) == 836, <span class="stringliteral">&quot;Wrong type size&quot;</span>);</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160; </div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="comment">// ToDo(_): move to usage place</span></div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    static_assert(<span class="keyword">sizeof</span>(<a class="code" href="../../d1/d39/struct_overlay_desc.html">OverlayDesc</a>) == 8, <span class="stringliteral">&quot;Wrong type size&quot;</span>);</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    static_assert(<span class="keyword">sizeof</span>(<a class="code" href="../../dd/dac/struct_decoration_desc.html">DecorationDesc</a>) == 84, <span class="stringliteral">&quot;Wrong type size&quot;</span>);</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    static_assert(<span class="keyword">sizeof</span>(<a class="code" href="../../d2/d3b/struct_player_frame.html">PlayerFrame</a>) == 10, <span class="stringliteral">&quot;Wrong type size&quot;</span>);</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    static_assert(<span class="keyword">sizeof</span>(<a class="code" href="../../db/d1a/struct_render_vertex_soft.html">RenderVertexSoft</a>) == 0x30, <span class="stringliteral">&quot;Wrong type size&quot;</span>);</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    static_assert(<span class="keyword">sizeof</span>(<a class="code" href="../../d8/d7a/struct_monster_desc__mm6.html">MonsterDesc_mm6</a>) == 148, <span class="stringliteral">&quot;Wrong type size&quot;</span>);</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    static_assert(<span class="keyword">sizeof</span>(<a class="code" href="../../d3/db3/struct_monster_desc.html">MonsterDesc</a>) == 152, <span class="stringliteral">&quot;Wrong type size&quot;</span>);</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    static_assert(<span class="keyword">sizeof</span>(<a class="code" href="../../d8/da1/struct_timer.html">Timer</a>) == 0x28, <span class="stringliteral">&quot;Wrong type size&quot;</span>);</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    static_assert(<span class="keyword">sizeof</span>(<a class="code" href="../../db/dca/struct_other_overlay.html">OtherOverlay</a>) == 0x14, <span class="stringliteral">&quot;Wrong type size&quot;</span>);</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    static_assert(<span class="keyword">sizeof</span>(<a class="code" href="../../d7/d9c/struct_item_gen.html">ItemGen</a>) == 0x24, <span class="stringliteral">&quot;Wrong type size&quot;</span>);</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    static_assert(<span class="keyword">sizeof</span>(<a class="code" href="../../d0/d5a/struct_sprite_object.html">SpriteObject</a>) == 0x70, <span class="stringliteral">&quot;Wrong type size&quot;</span>);</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    static_assert(<span class="keyword">sizeof</span>(<a class="code" href="../../db/d0a/struct_chest.html">Chest</a>) == 0x14CC, <span class="stringliteral">&quot;Wrong type size&quot;</span>);</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    static_assert(<span class="keyword">sizeof</span>(<a class="code" href="../../d0/d82/class_spell_data.html">SpellData</a>) == 0x14, <span class="stringliteral">&quot;Wrong type size&quot;</span>);</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    static_assert(<span class="keyword">sizeof</span>(<a class="code" href="../../db/d1e/struct_spell_buff.html">SpellBuff</a>) == 0x10, <span class="stringliteral">&quot;Wrong type size&quot;</span>);</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    static_assert(<span class="keyword">sizeof</span>(<a class="code" href="../../df/da0/struct_a_i_direction.html">AIDirection</a>) == 0x1C, <span class="stringliteral">&quot;Wrong type size&quot;</span>);</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    static_assert(<span class="keyword">sizeof</span>(<a class="code" href="../../d8/d31/struct_actor_job.html">ActorJob</a>) == 0xC, <span class="stringliteral">&quot;Wrong type size&quot;</span>);</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    static_assert(<span class="keyword">sizeof</span>(<a class="code" href="../../dd/d88/struct_level_decoration.html">LevelDecoration</a>) == 0x20, <span class="stringliteral">&quot;Wrong type size&quot;</span>);</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    static_assert(<span class="keyword">sizeof</span>(<a class="code" href="../../d2/d5f/struct_b_l_v_face_extra.html">BLVFaceExtra</a>) == 0x24, <span class="stringliteral">&quot;Wrong type size&quot;</span>);</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    static_assert(<span class="keyword">sizeof</span>(<a class="code" href="../../d1/dbb/struct_b_l_v_light_m_m7.html">BLVLightMM7</a>) == 0x10, <span class="stringliteral">&quot;Wrong type size&quot;</span>);</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    static_assert(<span class="keyword">sizeof</span>(<a class="code" href="../../d1/d66/struct_player_buff_anim.html">PlayerBuffAnim</a>) == 0x10, <span class="stringliteral">&quot;Wrong type size&quot;</span>);</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    static_assert(<span class="keyword">sizeof</span>(<a class="code" href="../../d5/ddc/struct_stationary_light.html">StationaryLight</a>) == 0xC, <span class="stringliteral">&quot;Wrong type size&quot;</span>);</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    static_assert(<span class="keyword">sizeof</span>(<a class="code" href="../../d2/d53/struct_mobile_light.html">MobileLight</a>) == 0x12, <span class="stringliteral">&quot;Wrong type size&quot;</span>);</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    static_assert(<span class="keyword">sizeof</span>(<a class="code" href="../../df/d2b/structstru141__actor__collision__object.html">stru141_actor_collision_object</a>) == 0xA8, <span class="stringliteral">&quot;Wrong type size&quot;</span>);</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    static_assert(<span class="keyword">sizeof</span>(<a class="code" href="../../da/d47/struct_action_queue.html">ActionQueue</a>) == 0x7C, <span class="stringliteral">&quot;Wrong type size&quot;</span>);</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    static_assert(<span class="keyword">sizeof</span>(<a class="code" href="../../d3/db3/struct_palette_manager.html">PaletteManager</a>) == 0x267AF0, <span class="stringliteral">&quot;Wrong type size&quot;</span>);</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    static_assert(<span class="keyword">sizeof</span>(<a class="code" href="../../d9/dad/struct_trail_particle.html">TrailParticle</a>) == 0x18, <span class="stringliteral">&quot;Wrong type size&quot;</span>);</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    static_assert(<span class="keyword">sizeof</span>(<a class="code" href="../../d7/d21/struct_event_index.html">EventIndex</a>) == 0xC, <span class="stringliteral">&quot;Wrong type size&quot;</span>);</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    static_assert(<span class="keyword">sizeof</span>(<a class="code" href="../../da/d77/struct_maps_long_timer.html">MapsLongTimer</a>) == 0x20, <span class="stringliteral">&quot;Wrong type size&quot;</span>);</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    static_assert(<span class="keyword">sizeof</span>(<a class="code" href="../../d1/d2a/struct_savegame_header.html">SavegameHeader</a>) == 0x64, <span class="stringliteral">&quot;Wrong type size&quot;</span>);</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    static_assert(<span class="keyword">sizeof</span>(<a class="code" href="../../d2/dbc/struct_faction_table.html">FactionTable</a>) == 0x1EF1, <span class="stringliteral">&quot;Wrong type size&quot;</span>);</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    static_assert(<span class="keyword">sizeof</span>(<a class="code" href="../../d5/dfa/struct_party_time_struct.html">PartyTimeStruct</a>) == 0x678, <span class="stringliteral">&quot;Wrong type size&quot;</span>);</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    static_assert(<span class="keyword">sizeof</span>(<a class="code" href="../../db/d9d/struct_cast_spell_info.html">CastSpellInfo</a>) == 0x14, <span class="stringliteral">&quot;Wrong type size&quot;</span>);</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    static_assert(<span class="keyword">sizeof</span>(<a class="code" href="../../db/def/struct_arcomage_card.html">ArcomageCard</a>) == 0x6C, <span class="stringliteral">&quot;Wrong type size&quot;</span>);</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    static_assert(<span class="keyword">sizeof</span>(<a class="code" href="../../d7/d97/struct_lights_data.html">LightsData</a>) == 0x3FC, <span class="stringliteral">&quot;Wrong type size&quot;</span>);</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    static_assert(<span class="keyword">sizeof</span>(<a class="code" href="../../db/d9e/struct_travel_info.html">TravelInfo</a>) == 0x20, <span class="stringliteral">&quot;Wrong type size&quot;</span>);</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    static_assert(<span class="keyword">sizeof</span>(<a class="code" href="../../de/d2a/structstru336.html">stru336</a>) == 0x798, <span class="stringliteral">&quot;Wrong type size&quot;</span>);</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    static_assert(<span class="keyword">sizeof</span>(Vec3_short_) == 6, <span class="stringliteral">&quot;Wrong type size&quot;</span>);</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    static_assert(<span class="keyword">sizeof</span>(<a class="code" href="../../d2/d5f/struct_b_l_v_face_extra.html">BLVFaceExtra</a>) == 36, <span class="stringliteral">&quot;Wrong type size&quot;</span>);</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    static_assert(<span class="keyword">sizeof</span>(<a class="code" href="../../dd/d88/struct_level_decoration.html">LevelDecoration</a>) == 32, <span class="stringliteral">&quot;Wrong type size&quot;</span>);</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    static_assert(<span class="keyword">sizeof</span>(<a class="code" href="../../d1/dbb/struct_b_l_v_light_m_m7.html">BLVLightMM7</a>) == 16, <span class="stringliteral">&quot;Wrong type size&quot;</span>);</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    static_assert(<span class="keyword">sizeof</span>(<a class="code" href="../../db/dfc/struct_b_s_p_node.html">BSPNode</a>) == 8, <span class="stringliteral">&quot;Wrong type size&quot;</span>);</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    static_assert(<span class="keyword">sizeof</span>(<a class="code" href="../../db/df7/struct_d_d_m___d_l_v___header.html">DDM_DLV_Header</a>) == 40, <span class="stringliteral">&quot;Wrong type size&quot;</span>);</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    static_assert(<span class="keyword">sizeof</span>(<a class="code" href="../../d0/d5a/struct_sprite_object.html">SpriteObject</a>) == 112, <span class="stringliteral">&quot;Wrong type size&quot;</span>);</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    static_assert(<span class="keyword">sizeof</span>(<a class="code" href="../../db/d0a/struct_chest.html">Chest</a>) == 5324, <span class="stringliteral">&quot;Wrong type size&quot;</span>);</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    static_assert(<span class="keyword">sizeof</span>(<a class="code" href="../../d1/dd8/structstru123.html">stru123</a>) == 0xC8, <span class="stringliteral">&quot;Wrong type size&quot;</span>);</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    static_assert(<span class="keyword">sizeof</span>(<a class="code" href="../../db/d47/struct_b_l_v_map_outline.html">BLVMapOutline</a>) == 12, <span class="stringliteral">&quot;Wrong type size&quot;</span>);</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="astruct_bsp_renderer_html"><div class="ttname"><a href="../../da/deb/struct_bsp_renderer.html">BspRenderer</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/dc7/_indoor_8h_source.html#l00800">Indoor.h:800</a></div></div>
+<div class="ttc" id="astruct_sprite_object_html"><div class="ttname"><a href="../../d0/d5a/struct_sprite_object.html">SpriteObject</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dd4/_sprite_object_8h_source.html#l00189">SpriteObject.h:189</a></div></div>
+<div class="ttc" id="a_particle_engine_8h_html"><div class="ttname"><a href="../../da/ddf/_particle_engine_8h.html">ParticleEngine.h</a></div></div>
+<div class="ttc" id="astruct_mobile_light_html"><div class="ttname"><a href="../../d2/d53/struct_mobile_light.html">MobileLight</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d31/_lights_8h_source.html#l00021">Lights.h:21</a></div></div>
+<div class="ttc" id="aclass_engine___1_1_ioc_container_html"><div class="ttname"><a href="../../d1/d12/class_engine___1_1_ioc_container.html">Engine_::IocContainer</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/de4/_engine_2_ioc_container_8h_source.html#l00015">IocContainer.h:15</a></div></div>
+<div class="ttc" id="a_engine_2_ioc_container_8h_html"><div class="ttname"><a href="../../d6/de4/_engine_2_ioc_container_8h.html">IocContainer.h</a></div></div>
+<div class="ttc" id="astruct_player_frame_html"><div class="ttname"><a href="../../d2/d3b/struct_player_frame.html">PlayerFrame</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d52/_player_frame_table_8h_source.html#l00007">PlayerFrameTable.h:7</a></div></div>
+<div class="ttc" id="a_viewport_8h_html"><div class="ttname"><a href="../../d7/d19/_viewport_8h.html">Viewport.h</a></div></div>
+<div class="ttc" id="astructstru141__actor__collision__object_html"><div class="ttname"><a href="../../df/d2b/structstru141__actor__collision__object.html">stru141_actor_collision_object</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/dc7/_indoor_8h_source.html#l00148">Indoor.h:148</a></div></div>
+<div class="ttc" id="astruct_b_l_v_face_extra_html"><div class="ttname"><a href="../../d2/d5f/struct_b_l_v_face_extra.html">BLVFaceExtra</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/dc7/_indoor_8h_source.html#l00496">Indoor.h:496</a></div></div>
+<div class="ttc" id="a_l_o_d_8h_html"><div class="ttname"><a href="../../d3/db2/_l_o_d_8h.html">LOD.h</a></div></div>
+<div class="ttc" id="astruct_overlay_desc_html"><div class="ttname"><a href="../../d1/d39/struct_overlay_desc.html">OverlayDesc</a></div><div class="ttdef"><b>Definition:</b> <a href="../../db/dac/_overlays_8h_source.html#l00044">Overlays.h:44</a></div></div>
+<div class="ttc" id="a_decoration_list_8h_html"><div class="ttname"><a href="../../df/dd7/_decoration_list_8h.html">DecorationList.h</a></div></div>
+<div class="ttc" id="aclass_mouse_html"><div class="ttname"><a href="../../d7/dc5/class_mouse.html">Mouse</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de3/_mouse_8h_source.html#l00279">Mouse.h:279</a></div></div>
+<div class="ttc" id="astruct_palette_manager_html"><div class="ttname"><a href="../../d3/db3/struct_palette_manager.html">PaletteManager</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dc4/_palette_manager_8h_source.html#l00007">PaletteManager.h:7</a></div></div>
+<div class="ttc" id="astruct_cast_spell_info_html"><div class="ttname"><a href="../../db/d9d/struct_cast_spell_info.html">CastSpellInfo</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/da1/_cast_spell_info_8h_source.html#l00017">CastSpellInfo.h:17</a></div></div>
+<div class="ttc" id="a_monsters_8h_html"><div class="ttname"><a href="../../dd/db7/_monsters_8h.html">Monsters.h</a></div></div>
+<div class="ttc" id="astruct__2devent_html"><div class="ttname"><a href="../../d7/dff/struct__2devent.html">_2devent</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dd7/_events2_d_8h_source.html#l00040">Events2D.h:40</a></div></div>
+<div class="ttc" id="aclass_engine___1_1_ioc_container_html_a58d7824cd01e934556d8e6f676a68666"><div class="ttname"><a href="../../d1/d12/class_engine___1_1_ioc_container.html#a58d7824cd01e934556d8e6f676a68666">Engine_::IocContainer::vis</a></div><div class="ttdeci">static Vis * vis</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/de4/_engine_2_ioc_container_8h_source.html#l00035">IocContainer.h:35</a></div></div>
+<div class="ttc" id="aclass_engine___1_1_ioc_container_html_af0075c8c96db4dc2e3465138b8b03dcf"><div class="ttname"><a href="../../d1/d12/class_engine___1_1_ioc_container.html#af0075c8c96db4dc2e3465138b8b03dcf">Engine_::IocContainer::ResolveBloodsplatContainer</a></div><div class="ttdeci">static BloodsplatContainer * ResolveBloodsplatContainer()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d8c/_engine_2_ioc_container_8cpp_source.html#l00067">IocContainer.cpp:67</a></div></div>
+<div class="ttc" id="astruct_spell_buff_html"><div class="ttname"><a href="../../db/d1e/struct_spell_buff.html">SpellBuff</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00147">Spells.h:147</a></div></div>
+<div class="ttc" id="aclass_engine___1_1_ioc_container_html_ac02e16bb4ecd0c58d54575a0e9951c8c"><div class="ttname"><a href="../../d1/d12/class_engine___1_1_ioc_container.html#ac02e16bb4ecd0c58d54575a0e9951c8c">Engine_::IocContainer::mouse</a></div><div class="ttdeci">static Mouse * mouse</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/de4/_engine_2_ioc_container_8h_source.html#l00032">IocContainer.h:32</a></div></div>
+<div class="ttc" id="astruct_actor_html"><div class="ttname"><a href="../../da/d35/struct_actor.html">Actor</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/deb/_actor_8h_source.html#l00151">Actor.h:151</a></div></div>
+<div class="ttc" id="astruct_decal_html"><div class="ttname"><a href="../../d9/d43/struct_decal.html">Decal</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d87/_decal_builder_8h_source.html#l00098">DecalBuilder.h:98</a></div></div>
+<div class="ttc" id="astruct_arcomage_card_html"><div class="ttname"><a href="../../db/def/struct_arcomage_card.html">ArcomageCard</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d50/_arcomage_8h_source.html#l00009">Arcomage.h:9</a></div></div>
+<div class="ttc" id="astruct_travel_info_html"><div class="ttname"><a href="../../db/d9e/struct_travel_info.html">TravelInfo</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d83/_m_m7_8h_source.html#l00264">MM7.h:264</a></div></div>
+<div class="ttc" id="a_faction_table_8h_html"><div class="ttname"><a href="../../d7/d08/_faction_table_8h.html">FactionTable.h</a></div></div>
+<div class="ttc" id="astruct_projectile_anim_html"><div class="ttname"><a href="../../df/d28/struct_projectile_anim.html">ProjectileAnim</a></div><div class="ttdef"><b>Definition:</b> <a href="../../db/d7e/_spell_fx_renderer_8h_source.html#l00073">SpellFxRenderer.h:73</a></div></div>
+<div class="ttc" id="a_maps_long_timer_8h_html"><div class="ttname"><a href="../../dc/d1a/_maps_long_timer_8h.html">MapsLongTimer.h</a></div></div>
+<div class="ttc" id="a_overlays_8h_html"><div class="ttname"><a href="../../db/dac/_overlays_8h.html">Overlays.h</a></div></div>
+<div class="ttc" id="a_palette_manager_8h_html"><div class="ttname"><a href="../../d3/dc4/_palette_manager_8h.html">PaletteManager.h</a></div></div>
+<div class="ttc" id="a_lightmap_builder_8h_html"><div class="ttname"><a href="../../d0/d88/_lightmap_builder_8h.html">LightmapBuilder.h</a></div></div>
+<div class="ttc" id="a_player_frame_table_8h_html"><div class="ttname"><a href="../../d5/d52/_player_frame_table_8h.html">PlayerFrameTable.h</a></div></div>
+<div class="ttc" id="astruct_indoor_camera_d3_d___vec4_html"><div class="ttname"><a href="../../da/d76/struct_indoor_camera_d3_d___vec4.html">IndoorCameraD3D_Vec4</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcf/_indoor_camera_d3_d_8h_source.html#l00032">IndoorCameraD3D.h:32</a></div></div>
+<div class="ttc" id="a_spell_fx_renderer_8h_html"><div class="ttname"><a href="../../db/d7e/_spell_fx_renderer_8h.html">SpellFxRenderer.h</a></div></div>
+<div class="ttc" id="aclass_spell_data_html"><div class="ttname"><a href="../../d0/d82/class_spell_data.html">SpellData</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00206">Spells.h:206</a></div></div>
+<div class="ttc" id="aclass_log_html"><div class="ttname"><a href="../../d6/d70/class_log.html">Log</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d3a/_engine_2_log_8h_source.html#l00003">Log.h:3</a></div></div>
+<div class="ttc" id="astruct_monster_desc__mm6_html"><div class="ttname"><a href="../../d8/d7a/struct_monster_desc__mm6.html">MonsterDesc_mm6</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/db7/_monsters_8h_source.html#l00203">Monsters.h:203</a></div></div>
+<div class="ttc" id="astruct_lightmap_html"><div class="ttname"><a href="../../d2/da9/struct_lightmap.html">Lightmap</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d88/_lightmap_builder_8h_source.html#l00012">LightmapBuilder.h:12</a></div></div>
+<div class="ttc" id="astruct_b_s_p_node_html"><div class="ttname"><a href="../../db/dfc/struct_b_s_p_node.html">BSPNode</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dbc/_b_s_p_model_8h_source.html#l00042">BSPModel.h:42</a></div></div>
+<div class="ttc" id="astruct_storyline_text_html"><div class="ttname"><a href="../../d8/db2/struct_storyline_text.html">StorylineText</a></div><div class="ttdef"><b>Definition:</b> <a href="../../db/dab/_storyline_text_table_8h_source.html#l00018">StorylineTextTable.h:18</a></div></div>
+<div class="ttc" id="astruct_b_l_v_map_outline_html"><div class="ttname"><a href="../../db/d47/struct_b_l_v_map_outline.html">BLVMapOutline</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/dc7/_indoor_8h_source.html#l00412">Indoor.h:412</a></div></div>
+<div class="ttc" id="a_chest_8h_html"><div class="ttname"><a href="../../d7/d0e/_chest_8h.html">Chest.h</a></div></div>
+<div class="ttc" id="astructstru336_html"><div class="ttname"><a href="../../de/d2a/structstru336.html">stru336</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d83/_m_m7_8h_source.html#l00290">MM7.h:290</a></div></div>
+<div class="ttc" id="a_lights_8h_html"><div class="ttname"><a href="../../d5/d31/_lights_8h.html">Lights.h</a></div></div>
+<div class="ttc" id="astruct_event_index_html"><div class="ttname"><a href="../../d7/d21/struct_event_index.html">EventIndex</a></div><div class="ttdef"><b>Definition:</b> <a href="../../df/d62/_events_8h_source.html#l00006">Events.h:6</a></div></div>
+<div class="ttc" id="astruct_a_i_direction_html"><div class="ttname"><a href="../../df/da0/struct_a_i_direction.html">AIDirection</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/deb/_actor_8h_source.html#l00126">Actor.h:126</a></div></div>
+<div class="ttc" id="aclass_particle_engine_html"><div class="ttname"><a href="../../dd/d2d/class_particle_engine.html">ParticleEngine</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/ddf/_particle_engine_8h_source.html#l00093">ParticleEngine.h:93</a></div></div>
+<div class="ttc" id="a_n_p_c_8h_html"><div class="ttname"><a href="../../d9/dbc/_n_p_c_8h.html">NPC.h</a></div></div>
+<div class="ttc" id="a_events_8h_html"><div class="ttname"><a href="../../df/d62/_events_8h.html">Events.h</a></div></div>
+<div class="ttc" id="a_actor_8h_html"><div class="ttname"><a href="../../de/deb/_actor_8h.html">Actor.h</a></div></div>
+<div class="ttc" id="aclass_engine___1_1_ioc_container_html_a81221713eb9f3973123536937e96dcec"><div class="ttname"><a href="../../d1/d12/class_engine___1_1_ioc_container.html#a81221713eb9f3973123536937e96dcec">Engine_::IocContainer::bloodspalt_container</a></div><div class="ttdeci">static BloodsplatContainer * bloodspalt_container</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/de4/_engine_2_ioc_container_8h_source.html#l00029">IocContainer.h:29</a></div></div>
+<div class="ttc" id="astruct_stationary_light_html"><div class="ttname"><a href="../../d5/ddc/struct_stationary_light.html">StationaryLight</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d31/_lights_8h_source.html#l00010">Lights.h:10</a></div></div>
+<div class="ttc" id="astruct_particle_html"><div class="ttname"><a href="../../dd/d47/struct_particle.html">Particle</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/ddf/_particle_engine_8h_source.html#l00040">ParticleEngine.h:40</a></div></div>
+<div class="ttc" id="aclass_engine___1_1_ioc_container_html_a201a6dee8928c65a2577af08596b8c18"><div class="ttname"><a href="../../d1/d12/class_engine___1_1_ioc_container.html#a201a6dee8928c65a2577af08596b8c18">Engine_::IocContainer::ResolveVis</a></div><div class="ttdeci">static Vis * ResolveVis()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d8c/_engine_2_ioc_container_8cpp_source.html#l00110">IocContainer.cpp:110</a></div></div>
+<div class="ttc" id="aclass_lightmap_builder_html"><div class="ttname"><a href="../../d8/d95/class_lightmap_builder.html">LightmapBuilder</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d88/_lightmap_builder_8h_source.html#l00033">LightmapBuilder.h:33</a></div></div>
+<div class="ttc" id="aclass_engine___1_1_ioc_container_html_aca371cf233bf02cc142d84c1e4b3a23b"><div class="ttname"><a href="../../d1/d12/class_engine___1_1_ioc_container.html#aca371cf233bf02cc142d84c1e4b3a23b">Engine_::IocContainer::ResolveParticleEngine</a></div><div class="ttdeci">static ParticleEngine * ResolveParticleEngine()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d8c/_engine_2_ioc_container_8cpp_source.html#l00103">IocContainer.cpp:103</a></div></div>
+<div class="ttc" id="a_i_render_8h_html"><div class="ttname"><a href="../../da/d20/_i_render_8h.html">IRender.h</a></div></div>
+<div class="ttc" id="aclass_vis_html"><div class="ttname"><a href="../../d0/def/class_vis.html">Vis</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d6e/_vis_8h_source.html#l00069">Vis.h:69</a></div></div>
+<div class="ttc" id="astruct_other_overlay_html"><div class="ttname"><a href="../../db/dca/struct_other_overlay.html">OtherOverlay</a></div><div class="ttdef"><b>Definition:</b> <a href="../../db/dac/_overlays_8h_source.html#l00007">Overlays.h:7</a></div></div>
+<div class="ttc" id="aclass_log_html_a9962588a107d3b4aa927cf12284e0fc7"><div class="ttname"><a href="../../d6/d70/class_log.html#a9962588a107d3b4aa927cf12284e0fc7">Log::Info</a></div><div class="ttdeci">void Info(const wchar_t *pFormat,...)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/da7/_log_8cpp_source.html#l00011">Log.cpp:11</a></div></div>
+<div class="ttc" id="astruct_viewing_params_html"><div class="ttname"><a href="../../d4/d10/struct_viewing_params.html">ViewingParams</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d19/_viewport_8h_source.html#l00038">Viewport.h:38</a></div></div>
+<div class="ttc" id="aclass_log_html_ad9612fc4cd0f7350a0ae2a0a0fcad55e"><div class="ttname"><a href="../../d6/d70/class_log.html#ad9612fc4cd0f7350a0ae2a0a0fcad55e">Log::Initialize</a></div><div class="ttdeci">bool Initialize()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/da7/_log_8cpp_source.html#l00009">Log.cpp:9</a></div></div>
+<div class="ttc" id="astruct_indoor_camera_d3_d___vec3_html"><div class="ttname"><a href="../../d8/deb/struct_indoor_camera_d3_d___vec3.html">IndoorCameraD3D_Vec3</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcf/_indoor_camera_d3_d_8h_source.html#l00009">IndoorCameraD3D.h:9</a></div></div>
+<div class="ttc" id="astru123_8h_html"><div class="ttname"><a href="../../d2/d7a/stru123_8h.html">stru123.h</a></div></div>
+<div class="ttc" id="a_save_load_8h_html"><div class="ttname"><a href="../../dd/de7/_save_load_8h.html">SaveLoad.h</a></div></div>
+<div class="ttc" id="astruct_b_l_v_door_html"><div class="ttname"><a href="../../d1/dcf/struct_b_l_v_door.html">BLVDoor</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/dc7/_indoor_8h_source.html#l00378">Indoor.h:378</a></div></div>
+<div class="ttc" id="astruct_monster_stats_html"><div class="ttname"><a href="../../d3/df5/struct_monster_stats.html">MonsterStats</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/db7/_monsters_8h_source.html#l00186">Monsters.h:186</a></div></div>
+<div class="ttc" id="a_indoor_8h_html"><div class="ttname"><a href="../../da/dc7/_indoor_8h.html">Indoor.h</a></div></div>
+<div class="ttc" id="aclass_engine___1_1_ioc_container_html_a2d38b23552ec4a6244d4154107b9c981"><div class="ttname"><a href="../../d1/d12/class_engine___1_1_ioc_container.html#a2d38b23552ec4a6244d4154107b9c981">Engine_::IocContainer::ResolveDecalBuilder</a></div><div class="ttdeci">static DecalBuilder * ResolveDecalBuilder()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d8c/_engine_2_ioc_container_8cpp_source.html#l00060">IocContainer.cpp:60</a></div></div>
+<div class="ttc" id="astructstru123_html"><div class="ttname"><a href="../../d1/dd8/structstru123.html">stru123</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d7a/stru123_8h_source.html#l00006">stru123.h:6</a></div></div>
+<div class="ttc" id="aclass_engine___1_1_ioc_container_html_ad92ce5cee27f4415ef48d49dea4ec074"><div class="ttname"><a href="../../d1/d12/class_engine___1_1_ioc_container.html#ad92ce5cee27f4415ef48d49dea4ec074">Engine_::IocContainer::ResolveMouse</a></div><div class="ttdeci">static Mouse * ResolveMouse()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d8c/_engine_2_ioc_container_8cpp_source.html#l00088">IocContainer.cpp:88</a></div></div>
+<div class="ttc" id="a_arcomage_8h_html"><div class="ttname"><a href="../../d7/d50/_arcomage_8h.html">Arcomage.h</a></div></div>
+<div class="ttc" id="a_party_8h_html"><div class="ttname"><a href="../../db/d38/_party_8h.html">Party.h</a></div></div>
+<div class="ttc" id="astruct_particle__sw_html"><div class="ttname"><a href="../../d8/d4e/struct_particle__sw.html">Particle_sw</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/ddf/_particle_engine_8h_source.html#l00018">ParticleEngine.h:18</a></div></div>
+<div class="ttc" id="astruct_faction_table_html"><div class="ttname"><a href="../../d2/dbc/struct_faction_table.html">FactionTable</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d08/_faction_table_8h_source.html#l00005">FactionTable.h:5</a></div></div>
+<div class="ttc" id="a_engine_2_ioc_container_8cpp_html_a4abb8c97bdb6942d1b80dd97acb5f872"><div class="ttname"><a href="../../de/d8c/_engine_2_ioc_container_8cpp.html#a4abb8c97bdb6942d1b80dd97acb5f872">IntegrityTest</a></div><div class="ttdeci">void IntegrityTest()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d8c/_engine_2_ioc_container_8cpp_source.html#l00127">IocContainer.cpp:127</a></div></div>
+<div class="ttc" id="astruct_bloodsplat_html"><div class="ttname"><a href="../../db/d5a/struct_bloodsplat.html">Bloodsplat</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d87/_decal_builder_8h_source.html#l00013">DecalBuilder.h:13</a></div></div>
+<div class="ttc" id="astruct_d_d_m___d_l_v___header_html"><div class="ttname"><a href="../../db/df7/struct_d_d_m___d_l_v___header.html">DDM_DLV_Header</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/dc7/_indoor_8h_source.html#l00082">Indoor.h:82</a></div></div>
+<div class="ttc" id="astruct_n_p_c_data_html"><div class="ttname"><a href="../../d8/dc1/struct_n_p_c_data.html">NPCData</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dbc/_n_p_c_8h_source.html#l00079">NPC.h:79</a></div></div>
+<div class="ttc" id="a_events2_d_8h_html"><div class="ttname"><a href="../../d4/dd7/_events2_d_8h.html">Events2D.h</a></div></div>
+<div class="ttc" id="astruct_level_decoration_html"><div class="ttname"><a href="../../dd/d88/struct_level_decoration.html">LevelDecoration</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dbf/_decoration_8h_source.html#l00020">Decoration.h:20</a></div></div>
+<div class="ttc" id="astruct_monster_desc_html"><div class="ttname"><a href="../../d3/db3/struct_monster_desc.html">MonsterDesc</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/db7/_monsters_8h_source.html#l00213">Monsters.h:213</a></div></div>
+<div class="ttc" id="astruct_player_buff_anim_html"><div class="ttname"><a href="../../d1/d66/struct_player_buff_anim.html">PlayerBuffAnim</a></div><div class="ttdef"><b>Definition:</b> <a href="../../db/d7e/_spell_fx_renderer_8h_source.html#l00059">SpellFxRenderer.h:59</a></div></div>
+<div class="ttc" id="astruct_bloodsplat_container_html"><div class="ttname"><a href="../../da/df2/struct_bloodsplat_container.html">BloodsplatContainer</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d87/_decal_builder_8h_source.html#l00050">DecalBuilder.h:50</a></div></div>
+<div class="ttc" id="astruct_lights_data_html"><div class="ttname"><a href="../../d7/d97/struct_lights_data.html">LightsData</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/dc7/_indoor_8h_source.html#l00016">Indoor.h:16</a></div></div>
+<div class="ttc" id="astruct_spell_fx_renderer_html"><div class="ttname"><a href="../../db/d64/struct_spell_fx_renderer.html">SpellFxRenderer</a></div><div class="ttdef"><b>Definition:</b> <a href="../../db/d7e/_spell_fx_renderer_8h_source.html#l00097">SpellFxRenderer.h:97</a></div></div>
+<div class="ttc" id="a_player_8h_html"><div class="ttname"><a href="../../d1/d39/_player_8h.html">Player.h</a></div></div>
+<div class="ttc" id="astruct_timer_html"><div class="ttname"><a href="../../d8/da1/struct_timer.html">Timer</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d0e/_engine_2_time_8h_source.html#l00104">Time.h:104</a></div></div>
+<div class="ttc" id="astruct_maps_long_timer_html"><div class="ttname"><a href="../../da/d77/struct_maps_long_timer.html">MapsLongTimer</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d1a/_maps_long_timer_8h_source.html#l00006">MapsLongTimer.h:6</a></div></div>
+<div class="ttc" id="aclass_engine___1_1_ioc_container_html_af49a0f2b69889f873d7485f2d2e9f89a"><div class="ttname"><a href="../../d1/d12/class_engine___1_1_ioc_container.html#af49a0f2b69889f873d7485f2d2e9f89a">Engine_::IocContainer::spell_fx_renderer</a></div><div class="ttdeci">static SpellFxRenderer * spell_fx_renderer</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/de4/_engine_2_ioc_container_8h_source.html#l00030">IocContainer.h:30</a></div></div>
+<div class="ttc" id="astruct_trail_particle_html"><div class="ttname"><a href="../../d9/dad/struct_trail_particle.html">TrailParticle</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/ddf/_particle_engine_8h_source.html#l00116">ParticleEngine.h:116</a></div></div>
+<div class="ttc" id="a_decoration_8h_html"><div class="ttname"><a href="../../dd/dbf/_decoration_8h.html">Decoration.h</a></div></div>
+<div class="ttc" id="astruct_b_l_v_light_m_m7_html"><div class="ttname"><a href="../../d1/dbb/struct_b_l_v_light_m_m7.html">BLVLightMM7</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/dc7/_indoor_8h_source.html#l00357">Indoor.h:357</a></div></div>
+<div class="ttc" id="aclass_engine___1_1_ioc_container_html_afec2cedb69548689a9cbba6e6a80c2b7"><div class="ttname"><a href="../../d1/d12/class_engine___1_1_ioc_container.html#afec2cedb69548689a9cbba6e6a80c2b7">Engine_::IocContainer::keyboard</a></div><div class="ttdeci">static Keyboard * keyboard</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/de4/_engine_2_ioc_container_8h_source.html#l00033">IocContainer.h:33</a></div></div>
+<div class="ttc" id="astruct_decoration_desc_html"><div class="ttname"><a href="../../dd/dac/struct_decoration_desc.html">DecorationDesc</a></div><div class="ttdef"><b>Definition:</b> <a href="../../df/dd7/_decoration_list_8h_source.html#l00049">DecorationList.h:49</a></div></div>
+<div class="ttc" id="astruct_action_queue_html"><div class="ttname"><a href="../../da/d47/struct_action_queue.html">ActionQueue</a></div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00121">Party.h:121</a></div></div>
+<div class="ttc" id="astruct_savegame_header_html"><div class="ttname"><a href="../../d1/d2a/struct_savegame_header.html">SavegameHeader</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de7/_save_load_8h_source.html#l00018">SaveLoad.h:18</a></div></div>
+<div class="ttc" id="astruct_party_time_struct_html"><div class="ttname"><a href="../../d5/dfa/struct_party_time_struct.html">PartyTimeStruct</a></div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00141">Party.h:141</a></div></div>
+<div class="ttc" id="astruct_chest_html"><div class="ttname"><a href="../../db/d0a/struct_chest.html">Chest</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d0e/_chest_8h_source.html#l00035">Chest.h:35</a></div></div>
+<div class="ttc" id="astruct_b_l_v_sector_html"><div class="ttname"><a href="../../d7/d78/struct_b_l_v_sector.html">BLVSector</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/dc7/_indoor_8h_source.html#l00522">Indoor.h:522</a></div></div>
+<div class="ttc" id="astruct_item_gen_html"><div class="ttname"><a href="../../d7/d9c/struct_item_gen.html">ItemGen</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d5/da4/_items_8h_source.html#l00263">Items.h:263</a></div></div>
+<div class="ttc" id="astruct_render_vertex_soft_html"><div class="ttname"><a href="../../db/d1a/struct_render_vertex_soft.html">RenderVertexSoft</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/d20/_i_render_8h_source.html#l00113">IRender.h:113</a></div></div>
+<div class="ttc" id="a_object_list_8h_html"><div class="ttname"><a href="../../d7/dd2/_object_list_8h.html">ObjectList.h</a></div></div>
+<div class="ttc" id="a_engine_2_ioc_container_8cpp_html_a9be76595edb968c5dfb165ec86ba2959"><div class="ttname"><a href="../../de/d8c/_engine_2_ioc_container_8cpp.html#a9be76595edb968c5dfb165ec86ba2959">logger</a></div><div class="ttdeci">Log * logger</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d8c/_engine_2_ioc_container_8cpp_source.html#l00047">IocContainer.cpp:47</a></div></div>
+<div class="ttc" id="astruct_vis___selection_list_html"><div class="ttname"><a href="../../de/d0c/struct_vis___selection_list.html">Vis_SelectionList</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d6e/_vis_8h_source.html#l00042">Vis.h:42</a></div></div>
+<div class="ttc" id="aclass_engine___1_1_ioc_container_html_a29d34163cc9c0b9585b4f2440918de8f"><div class="ttname"><a href="../../d1/d12/class_engine___1_1_ioc_container.html#a29d34163cc9c0b9585b4f2440918de8f">Engine_::IocContainer::ResolveSpellFxRenderer</a></div><div class="ttdeci">static SpellFxRenderer * ResolveSpellFxRenderer()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d8c/_engine_2_ioc_container_8cpp_source.html#l00074">IocContainer.cpp:74</a></div></div>
+<div class="ttc" id="aclass_engine___1_1_ioc_container_html_a10adf21b7f2dcd027b3c576982ffbc1e"><div class="ttname"><a href="../../d1/d12/class_engine___1_1_ioc_container.html#a10adf21b7f2dcd027b3c576982ffbc1e">Engine_::IocContainer::ResolveLightmapBuilder</a></div><div class="ttdeci">static LightmapBuilder * ResolveLightmapBuilder()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d8c/_engine_2_ioc_container_8cpp_source.html#l00081">IocContainer.cpp:81</a></div></div>
+<div class="ttc" id="aclass_engine___1_1_ioc_container_html_a176ecedcc22ef4a1976c0ed21dd1feec"><div class="ttname"><a href="../../d1/d12/class_engine___1_1_ioc_container.html#a176ecedcc22ef4a1976c0ed21dd1feec">Engine_::IocContainer::lightmap_builder</a></div><div class="ttdeci">static LightmapBuilder * lightmap_builder</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/de4/_engine_2_ioc_container_8h_source.html#l00031">IocContainer.h:31</a></div></div>
+<div class="ttc" id="astruct_monster_info_html"><div class="ttname"><a href="../../d4/dff/struct_monster_info.html">MonsterInfo</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/db7/_monsters_8h_source.html#l00109">Monsters.h:109</a></div></div>
+<div class="ttc" id="a_decal_builder_8h_html"><div class="ttname"><a href="../../d8/d87/_decal_builder_8h.html">DecalBuilder.h</a></div></div>
+<div class="ttc" id="a_storyline_text_table_8h_html"><div class="ttname"><a href="../../db/dab/_storyline_text_table_8h.html">StorylineTextTable.h</a></div></div>
+<div class="ttc" id="a_keyboard_8h_html"><div class="ttname"><a href="../../df/d85/_keyboard_8h.html">Keyboard.h</a></div></div>
+<div class="ttc" id="aclass_engine___1_1_ioc_container_html_ac3f47d02b62814ff7d9a2743a81799b0"><div class="ttname"><a href="../../d1/d12/class_engine___1_1_ioc_container.html#ac3f47d02b62814ff7d9a2743a81799b0">Engine_::IocContainer::ResolveKeyboard</a></div><div class="ttdeci">static Keyboard * ResolveKeyboard()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d8c/_engine_2_ioc_container_8cpp_source.html#l00096">IocContainer.cpp:96</a></div></div>
+<div class="ttc" id="aclass_engine___1_1_ioc_container_html_a04ec9102586cc19d61c7308c2eed688f"><div class="ttname"><a href="../../d1/d12/class_engine___1_1_ioc_container.html#a04ec9102586cc19d61c7308c2eed688f">Engine_::IocContainer::particle_engine</a></div><div class="ttdeci">static ParticleEngine * particle_engine</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/de4/_engine_2_ioc_container_8h_source.html#l00034">IocContainer.h:34</a></div></div>
+<div class="ttc" id="aclass_engine___1_1_ioc_container_html_a163c96a2499343ea6beadaad1ca9e9d4"><div class="ttname"><a href="../../d1/d12/class_engine___1_1_ioc_container.html#a163c96a2499343ea6beadaad1ca9e9d4">Engine_::IocContainer::decal_builder</a></div><div class="ttdeci">static DecalBuilder * decal_builder</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/de4/_engine_2_ioc_container_8h_source.html#l00028">IocContainer.h:28</a></div></div>
+<div class="ttc" id="aclass_keyboard_html"><div class="ttname"><a href="../../d6/d7e/class_keyboard.html">Keyboard</a></div><div class="ttdef"><b>Definition:</b> <a href="../../df/d85/_keyboard_8h_source.html#l00076">Keyboard.h:76</a></div></div>
+<div class="ttc" id="a_mouse_8h_html"><div class="ttname"><a href="../../d2/de3/_mouse_8h.html">Mouse.h</a></div></div>
+<div class="ttc" id="a_cast_spell_info_8h_html"><div class="ttname"><a href="../../d2/da1/_cast_spell_info_8h.html">CastSpellInfo.h</a></div></div>
+<div class="ttc" id="astruct_decal_builder_html"><div class="ttname"><a href="../../d9/d57/struct_decal_builder.html">DecalBuilder</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d87/_decal_builder_8h_source.html#l00123">DecalBuilder.h:123</a></div></div>
+<div class="ttc" id="astruct_actor_job_html"><div class="ttname"><a href="../../d8/d31/struct_actor_job.html">ActorJob</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/deb/_actor_8h_source.html#l00137">Actor.h:137</a></div></div>
+<div class="ttc" id="a_vis_8h_html"><div class="ttname"><a href="../../de/d6e/_vis_8h.html">Vis.h</a></div></div>
+<div class="ttc" id="astruct_n_p_c_stats_html"><div class="ttname"><a href="../../d5/d11/struct_n_p_c_stats.html">NPCStats</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dbc/_n_p_c_8h_source.html#l00146">NPC.h:146</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_0b6ee6e7e9547e675db4add2e5de97da.html">Engine</a></li><li class="navelem"><a class="el" href="../../de/d8c/_engine_2_ioc_container_8cpp.html">IocContainer.cpp</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:03:30. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

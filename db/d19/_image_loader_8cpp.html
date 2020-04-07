@@ -1,0 +1,375 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Файл C:/git/world-of-might-and-magic/Engine/Graphics/ImageLoader.cpp</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('db/d19/_image_loader_8cpp.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл ImageLoader.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><a href="../../db/d19/_image_loader_8cpp_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:aa9a644f4bf74d8daa0392668b1c7046d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d19/_image_loader_8cpp.html#aa9a644f4bf74d8daa0392668b1c7046d">MakeImageSolid</a> (unsigned int <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#a9a82cf3caff84cabc4598e2619faac17">width</a>, unsigned int <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#aa352f2804b9902ac30769c00dde75d5f">height</a>, <a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#ada7ad693ea2e311b8103f4693fc35f80">pixels</a>, <a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *palette)</td></tr>
+<tr class="separator:aa9a644f4bf74d8daa0392668b1c7046d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa42662566db3a11da97012d526e5d443"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d19/_image_loader_8cpp.html#aa42662566db3a11da97012d526e5d443">MakeImageAlpha</a> (unsigned int <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#a9a82cf3caff84cabc4598e2619faac17">width</a>, unsigned int <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#aa352f2804b9902ac30769c00dde75d5f">height</a>, <a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#ada7ad693ea2e311b8103f4693fc35f80">pixels</a>, <a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *palette)</td></tr>
+<tr class="separator:aa42662566db3a11da97012d526e5d443"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ea0ddc8afc3b8ffbde39036c3c4bf16"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d19/_image_loader_8cpp.html#a6ea0ddc8afc3b8ffbde39036c3c4bf16">MakeImageColorKey</a> (unsigned int <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#a9a82cf3caff84cabc4598e2619faac17">width</a>, unsigned int <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#aa352f2804b9902ac30769c00dde75d5f">height</a>, <a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#ada7ad693ea2e311b8103f4693fc35f80">pixels</a>, <a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *palette, <a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> color_key)</td></tr>
+<tr class="separator:a6ea0ddc8afc3b8ffbde39036c3c4bf16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Функции</h2>
+<a id="aa9a644f4bf74d8daa0392668b1c7046d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9a644f4bf74d8daa0392668b1c7046d">&#9670;&nbsp;</a></span>MakeImageSolid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>* MakeImageSolid </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *&#160;</td>
+          <td class="paramname"><em>pixels</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *&#160;</td>
+          <td class="paramname"><em>palette</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/d19/_image_loader_8cpp_source.html">ImageLoader.cpp</a> строка <a class="el" href="../../db/d19/_image_loader_8cpp_source.html#l00012">12</a></p>
+<div class="fragment"><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;                                                            {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> *<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1dbb21208b9047cc8031ca9c840d3c2f">res</a> = <span class="keyword">new</span> <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>[<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a9a82cf3caff84cabc4598e2619faac17">width</a> * <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#aa352f2804b9902ac30769c00dde75d5f">height</a>];</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a1675d9d7bb68e1657ff028643b4037e3">y</a> = 0; <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a1675d9d7bb68e1657ff028643b4037e3">y</a> &lt; <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#aa352f2804b9902ac30769c00dde75d5f">height</a>; ++<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a1675d9d7bb68e1657ff028643b4037e3">y</a>) {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ad0e63d0edcdbd3d79554076bf309fd47">x</a> = 0; <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ad0e63d0edcdbd3d79554076bf309fd47">x</a> &lt; <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a9a82cf3caff84cabc4598e2619faac17">width</a>; ++<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ad0e63d0edcdbd3d79554076bf309fd47">x</a>) {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            <span class="keywordtype">int</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a57f14e05b1900f16a2da82ade47d0c6d">index</a> = <a class="code" href="../../df/dc4/_s_d_l__opengl_8h.html#ada7ad693ea2e311b8103f4693fc35f80">pixels</a>[<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a1675d9d7bb68e1657ff028643b4037e3">y</a> * <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a9a82cf3caff84cabc4598e2619faac17">width</a> + <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ad0e63d0edcdbd3d79554076bf309fd47">x</a>];</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            <span class="keyword">auto</span> <a class="code" href="../../df/dc4/_s_d_l__opengl_8h.html#a42ce7cdc612e53abee15043f80220d97">r</a> = palette[(<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a57f14e05b1900f16a2da82ade47d0c6d">index</a> * 3) + 0];</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            <span class="keyword">auto</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#acaceb3a655ff28b75259860bcb868f9f">g</a> = palette[(<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a57f14e05b1900f16a2da82ade47d0c6d">index</a> * 3) + 1];</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            <span class="keyword">auto</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0f71581a41fd2264c8944126dabbd010">b</a> = palette[(<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a57f14e05b1900f16a2da82ade47d0c6d">index</a> * 3) + 2];</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1dbb21208b9047cc8031ca9c840d3c2f">res</a>[<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a1675d9d7bb68e1657ff028643b4037e3">y</a> * <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a9a82cf3caff84cabc4598e2619faac17">width</a> + <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ad0e63d0edcdbd3d79554076bf309fd47">x</a>] = <a class="code" href="../../d4/d68/_engine_8cpp.html#a3fa4621a9002451f0e3066f2e027bfd3">Color32</a>(<a class="code" href="../../df/dc4/_s_d_l__opengl_8h.html#a42ce7cdc612e53abee15043f80220d97">r</a>, <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#acaceb3a655ff28b75259860bcb868f9f">g</a>, <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0f71581a41fd2264c8944126dabbd010">b</a>);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        }</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    }</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1dbb21208b9047cc8031ca9c840d3c2f">res</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l00135">Color32()</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../db/d19/_image_loader_8cpp_source.html#l00108">Image16bit_LOD_Loader::Load()</a>.</p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../db/d19/_image_loader_8cpp_aa9a644f4bf74d8daa0392668b1c7046d_cgraph.svg" width="244" height="62"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../db/d19/_image_loader_8cpp_aa9a644f4bf74d8daa0392668b1c7046d_icgraph.svg" width="342" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="aa42662566db3a11da97012d526e5d443"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa42662566db3a11da97012d526e5d443">&#9670;&nbsp;</a></span>MakeImageAlpha()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>* MakeImageAlpha </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *&#160;</td>
+          <td class="paramname"><em>pixels</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *&#160;</td>
+          <td class="paramname"><em>palette</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/d19/_image_loader_8cpp_source.html">ImageLoader.cpp</a> строка <a class="el" href="../../db/d19/_image_loader_8cpp_source.html#l00029">29</a></p>
+<div class="fragment"><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                                                            {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> *<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1dbb21208b9047cc8031ca9c840d3c2f">res</a> = <span class="keyword">new</span> <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>[<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a9a82cf3caff84cabc4598e2619faac17">width</a> * <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#aa352f2804b9902ac30769c00dde75d5f">height</a>];</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a1675d9d7bb68e1657ff028643b4037e3">y</a> = 0; <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a1675d9d7bb68e1657ff028643b4037e3">y</a> &lt; <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#aa352f2804b9902ac30769c00dde75d5f">height</a>; ++<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a1675d9d7bb68e1657ff028643b4037e3">y</a>) {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ad0e63d0edcdbd3d79554076bf309fd47">x</a> = 0; <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ad0e63d0edcdbd3d79554076bf309fd47">x</a> &lt; <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a9a82cf3caff84cabc4598e2619faac17">width</a>; ++<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ad0e63d0edcdbd3d79554076bf309fd47">x</a>) {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <span class="keywordtype">int</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a57f14e05b1900f16a2da82ade47d0c6d">index</a> = <a class="code" href="../../df/dc4/_s_d_l__opengl_8h.html#ada7ad693ea2e311b8103f4693fc35f80">pixels</a>[<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a1675d9d7bb68e1657ff028643b4037e3">y</a> * <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a9a82cf3caff84cabc4598e2619faac17">width</a> + <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ad0e63d0edcdbd3d79554076bf309fd47">x</a>];</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            <span class="keyword">auto</span> <a class="code" href="../../df/dc4/_s_d_l__opengl_8h.html#a42ce7cdc612e53abee15043f80220d97">r</a> = palette[(<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a57f14e05b1900f16a2da82ade47d0c6d">index</a> * 3) + 0];</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <span class="keyword">auto</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#acaceb3a655ff28b75259860bcb868f9f">g</a> = palette[(<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a57f14e05b1900f16a2da82ade47d0c6d">index</a> * 3) + 1];</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            <span class="keyword">auto</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0f71581a41fd2264c8944126dabbd010">b</a> = palette[(<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a57f14e05b1900f16a2da82ade47d0c6d">index</a> * 3) + 2];</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a57f14e05b1900f16a2da82ade47d0c6d">index</a> == 0) {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1dbb21208b9047cc8031ca9c840d3c2f">res</a>[<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a1675d9d7bb68e1657ff028643b4037e3">y</a> * <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a9a82cf3caff84cabc4598e2619faac17">width</a> + <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ad0e63d0edcdbd3d79554076bf309fd47">x</a>] = 0x00000000;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1dbb21208b9047cc8031ca9c840d3c2f">res</a>[<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a1675d9d7bb68e1657ff028643b4037e3">y</a> * <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a9a82cf3caff84cabc4598e2619faac17">width</a> + <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ad0e63d0edcdbd3d79554076bf309fd47">x</a>] = <a class="code" href="../../d4/d68/_engine_8cpp.html#a3fa4621a9002451f0e3066f2e027bfd3">Color32</a>(<a class="code" href="../../df/dc4/_s_d_l__opengl_8h.html#a42ce7cdc612e53abee15043f80220d97">r</a>, <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#acaceb3a655ff28b75259860bcb868f9f">g</a>, <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0f71581a41fd2264c8944126dabbd010">b</a>);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            }</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1dbb21208b9047cc8031ca9c840d3c2f">res</a>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l00135">Color32()</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../db/d19/_image_loader_8cpp_source.html#l00072">ColorKey_LOD_Loader::Load()</a>, <a class="el" href="../../db/d19/_image_loader_8cpp_source.html#l00108">Image16bit_LOD_Loader::Load()</a> и <a class="el" href="../../db/d19/_image_loader_8cpp_source.html#l00144">Alpha_LOD_Loader::Load()</a>.</p>
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../db/d19/_image_loader_8cpp_aa42662566db3a11da97012d526e5d443_cgraph.svg" width="248" height="62"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../db/d19/_image_loader_8cpp_aa42662566db3a11da97012d526e5d443_icgraph.svg" width="352" height="170"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a6ea0ddc8afc3b8ffbde39036c3c4bf16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ea0ddc8afc3b8ffbde39036c3c4bf16">&#9670;&nbsp;</a></span>MakeImageColorKey()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>* MakeImageColorKey </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *&#160;</td>
+          <td class="paramname"><em>pixels</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *&#160;</td>
+          <td class="paramname"><em>palette</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td>
+          <td class="paramname"><em>color_key</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/d19/_image_loader_8cpp_source.html">ImageLoader.cpp</a> строка <a class="el" href="../../db/d19/_image_loader_8cpp_source.html#l00050">50</a></p>
+<div class="fragment"><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                                                {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> *<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1dbb21208b9047cc8031ca9c840d3c2f">res</a> = <span class="keyword">new</span> <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>[<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a9a82cf3caff84cabc4598e2619faac17">width</a> * <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#aa352f2804b9902ac30769c00dde75d5f">height</a>];</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a1675d9d7bb68e1657ff028643b4037e3">y</a> = 0; <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a1675d9d7bb68e1657ff028643b4037e3">y</a> &lt; <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#aa352f2804b9902ac30769c00dde75d5f">height</a>; ++<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a1675d9d7bb68e1657ff028643b4037e3">y</a>) {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ad0e63d0edcdbd3d79554076bf309fd47">x</a> = 0; <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ad0e63d0edcdbd3d79554076bf309fd47">x</a> &lt; <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a9a82cf3caff84cabc4598e2619faac17">width</a>; ++<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ad0e63d0edcdbd3d79554076bf309fd47">x</a>) {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <span class="keywordtype">int</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a57f14e05b1900f16a2da82ade47d0c6d">index</a> = <a class="code" href="../../df/dc4/_s_d_l__opengl_8h.html#ada7ad693ea2e311b8103f4693fc35f80">pixels</a>[<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a1675d9d7bb68e1657ff028643b4037e3">y</a> * <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a9a82cf3caff84cabc4598e2619faac17">width</a> + <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ad0e63d0edcdbd3d79554076bf309fd47">x</a>];</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <span class="keyword">auto</span> <a class="code" href="../../df/dc4/_s_d_l__opengl_8h.html#a42ce7cdc612e53abee15043f80220d97">r</a> = palette[(<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a57f14e05b1900f16a2da82ade47d0c6d">index</a> * 3) + 0];</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <span class="keyword">auto</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#acaceb3a655ff28b75259860bcb868f9f">g</a> = palette[(<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a57f14e05b1900f16a2da82ade47d0c6d">index</a> * 3) + 1];</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <span class="keyword">auto</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0f71581a41fd2264c8944126dabbd010">b</a> = palette[(<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a57f14e05b1900f16a2da82ade47d0c6d">index</a> * 3) + 2];</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="../../d4/d68/_engine_8cpp.html#a08aa5a1574881457a84b6365c8899183">Color16</a>(<a class="code" href="../../df/dc4/_s_d_l__opengl_8h.html#a42ce7cdc612e53abee15043f80220d97">r</a>, <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#acaceb3a655ff28b75259860bcb868f9f">g</a>, <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0f71581a41fd2264c8944126dabbd010">b</a>) == color_key) {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1dbb21208b9047cc8031ca9c840d3c2f">res</a>[<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a1675d9d7bb68e1657ff028643b4037e3">y</a> * <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a9a82cf3caff84cabc4598e2619faac17">width</a> + <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ad0e63d0edcdbd3d79554076bf309fd47">x</a>] = 0x00000000;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1dbb21208b9047cc8031ca9c840d3c2f">res</a>[<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a1675d9d7bb68e1657ff028643b4037e3">y</a> * <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a9a82cf3caff84cabc4598e2619faac17">width</a> + <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ad0e63d0edcdbd3d79554076bf309fd47">x</a>] = <a class="code" href="../../d4/d68/_engine_8cpp.html#a3fa4621a9002451f0e3066f2e027bfd3">Color32</a>(<a class="code" href="../../df/dc4/_s_d_l__opengl_8h.html#a42ce7cdc612e53abee15043f80220d97">r</a>, <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#acaceb3a655ff28b75259860bcb868f9f">g</a>, <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0f71581a41fd2264c8944126dabbd010">b</a>);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    }</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1dbb21208b9047cc8031ca9c840d3c2f">res</a>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l00148">Color16()</a> и <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l00135">Color32()</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../db/d19/_image_loader_8cpp_source.html#l00072">ColorKey_LOD_Loader::Load()</a> и <a class="el" href="../../db/d19/_image_loader_8cpp_source.html#l00144">Alpha_LOD_Loader::Load()</a>.</p>
+<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../db/d19/_image_loader_8cpp_a6ea0ddc8afc3b8ffbde39036c3c4bf16_cgraph.svg" width="268" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../db/d19/_image_loader_8cpp_a6ea0ddc8afc3b8ffbde39036c3c4bf16_icgraph.svg" width="372" height="104"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="a_s_d_l__egl_8h_html_aa352f2804b9902ac30769c00dde75d5f"><div class="ttname"><a href="../../df/d32/_s_d_l__egl_8h.html#aa352f2804b9902ac30769c00dde75d5f">height</a></div><div class="ttdeci">EGLSurface EGLint EGLint EGLint EGLint height</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/_s_d_l__egl_8h_source.html#l01596">SDL_egl.h:1596</a></div></div>
+<div class="ttc" id="a_engine_8cpp_html_a3fa4621a9002451f0e3066f2e027bfd3"><div class="ttname"><a href="../../d4/d68/_engine_8cpp.html#a3fa4621a9002451f0e3066f2e027bfd3">Color32</a></div><div class="ttdeci">uint32_t Color32(uint16_t color16)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d68/_engine_8cpp_source.html#l00135">Engine.cpp:135</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a57f14e05b1900f16a2da82ade47d0c6d"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a57f14e05b1900f16a2da82ade47d0c6d">index</a></div><div class="ttdeci">GLuint index</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l00663">SDL_opengl_glext.h:663</a></div></div>
+<div class="ttc" id="a_s_d_l__egl_8h_html_a1675d9d7bb68e1657ff028643b4037e3"><div class="ttname"><a href="../../df/d32/_s_d_l__egl_8h.html#a1675d9d7bb68e1657ff028643b4037e3">y</a></div><div class="ttdeci">EGLSurface EGLint EGLint y</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/_s_d_l__egl_8h_source.html#l01596">SDL_egl.h:1596</a></div></div>
+<div class="ttc" id="a_s_d_l__egl_8h_html_ad0e63d0edcdbd3d79554076bf309fd47"><div class="ttname"><a href="../../df/d32/_s_d_l__egl_8h.html#ad0e63d0edcdbd3d79554076bf309fd47">x</a></div><div class="ttdeci">EGLSurface EGLint x</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/_s_d_l__egl_8h_source.html#l01596">SDL_egl.h:1596</a></div></div>
+<div class="ttc" id="a_s_d_l__egl_8h_html_a9a82cf3caff84cabc4598e2619faac17"><div class="ttname"><a href="../../df/d32/_s_d_l__egl_8h.html#a9a82cf3caff84cabc4598e2619faac17">width</a></div><div class="ttdeci">EGLSurface EGLint EGLint EGLint width</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/_s_d_l__egl_8h_source.html#l01596">SDL_egl.h:1596</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a0f71581a41fd2264c8944126dabbd010"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0f71581a41fd2264c8944126dabbd010">b</a></div><div class="ttdeci">GLboolean GLboolean GLboolean b</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l01112">SDL_opengl_glext.h:1112</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl_8h_html_a42ce7cdc612e53abee15043f80220d97"><div class="ttname"><a href="../../df/dc4/_s_d_l__opengl_8h.html#a42ce7cdc612e53abee15043f80220d97">r</a></div><div class="ttdeci">GLdouble GLdouble GLdouble r</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dc4/_s_d_l__opengl_8h_source.html#l02079">SDL_opengl.h:2079</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a1dbb21208b9047cc8031ca9c840d3c2f"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1dbb21208b9047cc8031ca9c840d3c2f">res</a></div><div class="ttdeci">GLuint res</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l07940">SDL_opengl_glext.h:7940</a></div></div>
+<div class="ttc" id="a_engine_8cpp_html_a08aa5a1574881457a84b6365c8899183"><div class="ttname"><a href="../../d4/d68/_engine_8cpp.html#a08aa5a1574881457a84b6365c8899183">Color16</a></div><div class="ttdeci">uint16_t Color16(uint32_t r, uint32_t g, uint32_t b)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d68/_engine_8cpp_source.html#l00148">Engine.cpp:148</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_acaceb3a655ff28b75259860bcb868f9f"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#acaceb3a655ff28b75259860bcb868f9f">g</a></div><div class="ttdeci">GLboolean GLboolean g</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l01112">SDL_opengl_glext.h:1112</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl_8h_html_ada7ad693ea2e311b8103f4693fc35f80"><div class="ttname"><a href="../../df/dc4/_s_d_l__opengl_8h.html#ada7ad693ea2e311b8103f4693fc35f80">pixels</a></div><div class="ttdeci">GLint GLint GLsizei GLsizei GLsizei GLint GLenum GLenum const GLvoid * pixels</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dc4/_s_d_l__opengl_8h_source.html#l01572">SDL_opengl.h:1572</a></div></div>
+<div class="ttc" id="a_s_d_l__config_8h_html_a435d1572bf3f880d55459d9805097f62"><div class="ttname"><a href="../../d1/d8f/_s_d_l__config_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a></div><div class="ttdeci">unsigned __int32 uint32_t</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d8f/_s_d_l__config_8h_source.html#l00039">SDL_config.h:39</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_0b6ee6e7e9547e675db4add2e5de97da.html">Engine</a></li><li class="navelem"><a class="el" href="../../dir_bb84c1711d8a00602a64a24ea462155a.html">Graphics</a></li><li class="navelem"><a class="el" href="../../db/d19/_image_loader_8cpp.html">ImageLoader.cpp</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:03:53. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

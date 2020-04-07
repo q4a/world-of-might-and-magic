@@ -1,0 +1,724 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Файл C:/git/world-of-might-and-magic/Media/Audio/AudioPlayer.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('dd/d7b/_audio_player_8h.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#enum-members">Перечисления</a> &#124;
+<a href="#func-members">Функции</a> &#124;
+<a href="#var-members">Переменные</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл AudioPlayer.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><a href="../../dd/d7b/_audio_player_8h_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dc2/class_audio_player.html">AudioPlayer</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d01/struct_audio_player_1_1_sound_header.html">AudioPlayer::SoundHeader</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d39/class_sound_list.html">SoundList</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Перечисления</h2></td></tr>
+<tr class="memitem:aa4689ee7c9a692044aebd36cb0915e61"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61">SoundID</a> { <br />
+&#160;&#160;<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a957af16b1cf261c6e64516f563b3ef61">SOUND_Invalid</a> = 0, 
+<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a587c0c496cd8c945f392551239c9469b">SOUND_enter</a> = 6, 
+<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61aad80e5893e38e47e1012060cf3841833">SOUND_WoodDoorClosing</a> = 7, 
+<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a4a84f5e32dbc3b168efc37591e200d3f">SOUND_fireBall</a> = 8, 
+<br />
+&#160;&#160;<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a402dd2ff4e2da7f5a6ba63a4dbf41eec">SOUND_ClickMinus</a> = 20, 
+<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a5612c2c8eb93f59313924c12dcab35c5">SOUND_ClickMovingSelector</a> = 21, 
+<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a2495502b052acad65fd5a45d10666342">SOUND_ClickPlus</a> = 23, 
+<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61acace095de5eeec3b2f877027f8760b8f">SOUND_ClickSkill</a> = 24, 
+<br />
+&#160;&#160;<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a123c1f950456a478ca87f718b9f8d30d">SOUND_error</a> = 27, 
+<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61aa2c6ea7d20db90bc41ea2d4aec3c3485">SOUND_metal_vs_metal03h</a> = 47, 
+<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a41461b28d014d14c94c063650b936c38">SOUND_48</a> = 0x30, 
+<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a4a62329846737ca5d1bb5793277cb09e">SOUND_RunBadlands</a> = 49, 
+<br />
+&#160;&#160;<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61ad10bd00063f539e4a99b46ac50965cd0">SOUND_RunCarpet</a> = 50, 
+<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61af2794790c7592da5894ce4b75448fe3e">SOUND_RunCooledLava</a> = 51, 
+<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61ac4562b03c9699789f8ce08c8696afb03">SOUND_RunDesert</a> = 52, 
+<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a41579285540aa933b7a35bb3fde8cc2f">SOUND_RunDirt</a> = 53, 
+<br />
+&#160;&#160;<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a82bba4848fe87dfc14acdff16814200c">SOUND_RunGrass</a> = 54, 
+<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61aae71d43f18d542b3523e6d8b67fb1e71">SOUND_RunRoad</a> = 57, 
+<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a55a1129d82bb831a5d2f7f85d8368d45">SOUND_RunSnow</a> = 58, 
+<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a531356dd034b11b734b7655f3e2b7cc5">SOUND_RunSwamp</a> = 61, 
+<br />
+&#160;&#160;<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a24e5bb89da7e8f92f5724c803caf6adf">SOUND_RunWater</a> = 62, 
+<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a992650571cce50b2e67375dac9e8d989">SOUND_RunWaterIndoor</a> = 63, 
+<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61ac871b127019dcdefedc743b126fbc158">SOUND_RunWood</a> = 64, 
+<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a89f017851d34127302dcfc2c3faca7e7">SOUND_SelectingANewCharacter</a> = 66, 
+<br />
+&#160;&#160;<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61abd9a51c95cf4afb7eec4dc6d6c7d6173">SOUND_shoot_blaster01</a> = 67, 
+<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61aa8e0b07c2448de74cf1d4201c8ada051">SOUND_shoot_bow01</a> = 71, 
+<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a74f8ece2a8e0b10581ede7fde7acc2fa">SOUND_StartMainChoice02</a> = 75, 
+<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61adc55c8b506168f6ba0de42bf69fb9690">SOUND_swing_with_axe01</a> = 78, 
+<br />
+&#160;&#160;<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a26c03892e38b9a8ee4e33d18179f8abc">SOUND_swing_with_axe03</a> = 80, 
+<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61af5a3e3904e60ec3114b8ea096681997b">SOUND_swing_with_blunt_weapon01</a> = 81, 
+<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a58d039c1e801b9111d3a0ae423aa9cf4">SOUND_swing_with_blunt_weapon03</a> = 83, 
+<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a75478e2f5e092b8dab7a111be5c4dd69">SOUND_swing_with_sword01</a> = 84, 
+<br />
+&#160;&#160;<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61adfbecab53fa1da3a41668a7fed478622">SOUND_swing_with_sword02</a> = 85, 
+<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a11a8f73a06597e9ad035a06062562c7c">SOUND_WalkBadlands</a> = 88, 
+<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61ac8d9433db1f3366f5b02835c3a5b95b7">SOUND_WalkCarpet</a> = 89, 
+<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a575c8944f3e23deb7cbe2c38dfa4571e">SOUND_WalkCooledLava</a> = 90, 
+<br />
+&#160;&#160;<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a76ff1aaa3d279049cc00dd1c63901e1b">SOUND_WalkDesert</a> = 91, 
+<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61ad8ddac7f0c4847f75376164bafd530ea">SOUND_WalkDirt</a> = 92, 
+<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a6f43483b354b831ac1be4c8ff8886cd5">SOUND_WalkGrass</a> = 93, 
+<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a2daa8d6f4e95550b2511629c721d8300">SOUND_WalkRoad</a> = 96, 
+<br />
+&#160;&#160;<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a9dae0a472f74534e1235bcdcaff7f664">SOUND_WalkSnow</a> = 97, 
+<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a16ae763a7a3cdac6155543997d12ed63">SOUND_WalkSwamp</a> = 100, 
+<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a7fd1ea293ca5ef5e7b86f7233dd3a6a6">SOUND_WalkWater</a> = 101, 
+<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61aa2579bf884c7010517a2d2f449fddfe4">SOUND_WalkWaterIndoor</a> = 102, 
+<br />
+&#160;&#160;<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61ad90ba2dee9dbf6f92233f02b7ef7a3ad">SOUND_WalkWood</a> = 103, 
+<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a9404ebedad4fa750c7bfd34520aa7d7f">SOUND_bricks_down</a> = 120, 
+<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61af96c2287fed72f19388d4db4d1e8494c">SOUND_bricks_up</a> = 121, 
+<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61afa5c057c247c192336cc9bd9625fe281">SOUND_damage</a> = 0x7A, 
+<br />
+&#160;&#160;<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a1f555599e1b7f5cd6101b918f8e2980e">SOUND_deal</a> = 0x7B, 
+<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61adc9147375fe6f74d40f6f0af8f475674">SOUND_defeat</a> = 0x7C, 
+<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a968eff04d0df5acf3def573afb02241c">SOUND_querry_up</a> = 0x7D, 
+<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61afdf923afe44db5b2a9df90898b11d7be">SOUND_querry_down</a> = 0x7E, 
+<br />
+&#160;&#160;<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a53a67ea7e705e50c736c3448c0247d40">SOUND_shuffle</a> = 0x7F, 
+<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a493767c719accd7b86613c039120c14e">SOUND_title</a> = 0x80, 
+<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61ac6df391733420d74a5654152e0041ab4">SOUND_tower_up</a> = 0x81, 
+<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61ac0defd5b904ae1014d2a2a9274fcf377">SOUND_typing</a> = 0x82, 
+<br />
+&#160;&#160;<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a654955769b2a68408fa6ecc4a12f7497">SOUND_victory</a> = 0x83, 
+<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a30b30a9669b68b7c8efa9b13edcac9d6">SOUND_wall_up</a> = 0x84, 
+<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61abc7d482b5d3c265ee4833b0636c3f474">SOUND_luteguitar</a> = 133, 
+<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a9453b32244eeaad818c06de370f7d9ef">SOUND_panflute</a> = 134, 
+<br />
+&#160;&#160;<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61aab9c72de7c2a8ab7cf162ff5b7621e58">SOUND_trumpet</a> = 135, 
+<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a1a82833cbeebfed9a1be0487ddcaa6a3">SOUND_gold01</a> = 200, 
+<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a4f6aedfd41128d694ca579262d7fc2a6">SOUND_heal</a> = 202, 
+<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61af07db3cc2cc59ddaee0a06e28145b0be">SOUND_fizzle</a> = 203, 
+<br />
+&#160;&#160;<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61add197396be0564435f4a7d82360ad88a">SOUND_TurnPageU</a> = 204, 
+<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61aab8a4100649a4e9efd792ee3b7afe789">SOUND_batlleen</a> = 206, 
+<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a66d768e26028fe797c882e031c753b32">SOUND_batllest</a> = 207, 
+<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61adfc8d8c56f7f73bd3b8860a0b17bddef">SOUND_openchest0101</a> = 208, 
+<br />
+&#160;&#160;<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a99fa7c601a457e134532993d524498bb">SOUND_spellfail0201</a> = 0xD1, 
+<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a4478731636cef490e43a25cda86fb7e0">SOUND_drink</a> = 0xD2, 
+<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a1d3fd9e6a7380cb50a4bc5a9ee79f2b7">SOUND_eat</a> = 211, 
+<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a89abb52f1a6d757c82922d3eba5168ee">SOUND_gong</a> = 0xD7, 
+<br />
+&#160;&#160;<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61afd391370a69192496e230efc58151577">SOUND_hurp</a> = 0xD9, 
+<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a2e6eb54a49e49b31e59044f4324605ca">SOUND_church</a> = 218, 
+<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a1a94e0270cf634e04c76f6e47e10b59a">SOUND_chimes</a> = 0xDB, 
+<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61ad519ce6fe934b75aeef17c574d1bf67d">SOUND_splash</a> = 220, 
+<br />
+&#160;&#160;<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a45810b08f693d5ae1fdfd05b0a4a6639">SOUND_star1</a> = 0xDD, 
+<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61ad4c7c20c3cf479e338fc0075d232c391">SOUND_star2</a> = 0xDE, 
+<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a3b10c618764b7d0a22bc00735296462f">SOUND_star4</a> = 0xE0, 
+<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61ac17804d22431009fd88d401c5a24fd56">SOUND_eradicate</a> = 0xE1, 
+<br />
+&#160;&#160;<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61af70edaceb158975558b1f67ec057e61c">SOUND_eleccircle</a> = 0xE2, 
+<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61aa9f9f7d846f351669013857134a63f97">SOUND_encounter</a> = 0xE3, 
+<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a60ac9b7e329660b3b285d456eef27872">SOUND_openbook</a> = 230, 
+<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61acf4f776cd5f8ee48a0183672f0d0d71d">SOUND_closebook</a> = 231, 
+<br />
+&#160;&#160;<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61aa6ca61d062d98ef188f6b68de03294b7">SOUND_hf445a</a> = 5788, 
+<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61aae0fbc479a1d64501c562f5c8e4c41c0">SOUND_Haste</a> = 10040, 
+<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61af80b8c2e4eb1e6db50b0624efa08f1ed">SOUND_21fly03</a> = 11090, 
+<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a775c37c64972e6c7e91e053a586b7024">SOUND_WaterWalk</a> = 12040, 
+<br />
+&#160;&#160;<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a75131ad7c5ee7eba7a12bddafa83b4e1">SOUND_Stoneskin</a> = 13040, 
+<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61ad9d5c64043dc2800a5f607bab9b2e32a">SOUND_Bless</a> = 14010, 
+<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a1a0381dcd7c89311d944f86c951b0399">SOUND_Fate</a> = 14020, 
+<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a5f6bf49070f31220e0dea58b50397e19">SOUND_51heroism03</a> = 14060, 
+<br />
+&#160;&#160;<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61ae854961444bd7c9f5a45da54fb0a2c18">SOUND_94dayofprotection03</a> = 17070, 
+<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a368b05f98e26a7997410f3db51dccd08">SOUND_9armageddon01</a> = 17080, 
+<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61ada29734e0f89ebd9509cb7a5b173ce18">SOUND_Sacrifice2</a> = 18060, 
+<a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a85dd506da7a5743cb2a950d577648822">SOUND_quest</a> = 20001
+<br />
+ }</td></tr>
+<tr class="separator:aa4689ee7c9a692044aebd36cb0915e61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68946471db0c45b6ce503ef14572f078"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d7b/_audio_player_8h.html#a68946471db0c45b6ce503ef14572f078">MusicID</a> { <a class="el" href="../../dd/d7b/_audio_player_8h.html#a68946471db0c45b6ce503ef14572f078a56b078091103d2c6a626a8bdef7bc595">MUSIC_MainMenu</a> = 14, 
+<a class="el" href="../../dd/d7b/_audio_player_8h.html#a68946471db0c45b6ce503ef14572f078ac8fa77ddc75ad59d7541dd78916ad82a">MUSIC_Credits</a> = 15
+ }</td></tr>
+<tr class="separator:a68946471db0c45b6ce503ef14572f078"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a399a2dbccaebe8b1df3b23880a593470"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d7b/_audio_player_8h.html#a399a2dbccaebe8b1df3b23880a593470">PlayLevelMusic</a> ()</td></tr>
+<tr class="separator:a399a2dbccaebe8b1df3b23880a593470"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:aae14636771c7eaca9a52b212649494ec"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d7b/_audio_player_8h.html#aae14636771c7eaca9a52b212649494ec">sLastTrackLengthMS</a></td></tr>
+<tr class="separator:aae14636771c7eaca9a52b212649494ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ee6d655d35b46ebac53ef678255f75b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/dc2/class_audio_player.html">AudioPlayer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d7b/_audio_player_8h.html#a3ee6d655d35b46ebac53ef678255f75b">pAudioPlayer</a></td></tr>
+<tr class="separator:a3ee6d655d35b46ebac53ef678255f75b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad69469921c052e5df1d760da80a0139e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d39/class_sound_list.html">SoundList</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d7b/_audio_player_8h.html#ad69469921c052e5df1d760da80a0139e">pSoundList</a></td></tr>
+<tr class="separator:ad69469921c052e5df1d760da80a0139e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7511d5bb243d68d6e9216c71d021b7d3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a52f38e7d822a46377fde7a02708eedb1">std::array</a>&lt; float, 10 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d7b/_audio_player_8h.html#a7511d5bb243d68d6e9216c71d021b7d3">pSoundVolumeLevels</a></td></tr>
+<tr class="separator:a7511d5bb243d68d6e9216c71d021b7d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Перечисления</h2>
+<a id="aa4689ee7c9a692044aebd36cb0915e61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4689ee7c9a692044aebd36cb0915e61">&#9670;&nbsp;</a></span>SoundID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61">SoundID</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61a957af16b1cf261c6e64516f563b3ef61"></a>SOUND_Invalid&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61a587c0c496cd8c945f392551239c9469b"></a>SOUND_enter&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61aad80e5893e38e47e1012060cf3841833"></a>SOUND_WoodDoorClosing&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61a4a84f5e32dbc3b168efc37591e200d3f"></a>SOUND_fireBall&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61a402dd2ff4e2da7f5a6ba63a4dbf41eec"></a>SOUND_ClickMinus&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61a5612c2c8eb93f59313924c12dcab35c5"></a>SOUND_ClickMovingSelector&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61a2495502b052acad65fd5a45d10666342"></a>SOUND_ClickPlus&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61acace095de5eeec3b2f877027f8760b8f"></a>SOUND_ClickSkill&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61a123c1f950456a478ca87f718b9f8d30d"></a>SOUND_error&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61aa2c6ea7d20db90bc41ea2d4aec3c3485"></a>SOUND_metal_vs_metal03h&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61a41461b28d014d14c94c063650b936c38"></a>SOUND_48&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61a4a62329846737ca5d1bb5793277cb09e"></a>SOUND_RunBadlands&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61ad10bd00063f539e4a99b46ac50965cd0"></a>SOUND_RunCarpet&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61af2794790c7592da5894ce4b75448fe3e"></a>SOUND_RunCooledLava&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61ac4562b03c9699789f8ce08c8696afb03"></a>SOUND_RunDesert&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61a41579285540aa933b7a35bb3fde8cc2f"></a>SOUND_RunDirt&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61a82bba4848fe87dfc14acdff16814200c"></a>SOUND_RunGrass&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61aae71d43f18d542b3523e6d8b67fb1e71"></a>SOUND_RunRoad&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61a55a1129d82bb831a5d2f7f85d8368d45"></a>SOUND_RunSnow&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61a531356dd034b11b734b7655f3e2b7cc5"></a>SOUND_RunSwamp&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61a24e5bb89da7e8f92f5724c803caf6adf"></a>SOUND_RunWater&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61a992650571cce50b2e67375dac9e8d989"></a>SOUND_RunWaterIndoor&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61ac871b127019dcdefedc743b126fbc158"></a>SOUND_RunWood&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61a89f017851d34127302dcfc2c3faca7e7"></a>SOUND_SelectingANewCharacter&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61abd9a51c95cf4afb7eec4dc6d6c7d6173"></a>SOUND_shoot_blaster01&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61aa8e0b07c2448de74cf1d4201c8ada051"></a>SOUND_shoot_bow01&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61a74f8ece2a8e0b10581ede7fde7acc2fa"></a>SOUND_StartMainChoice02&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61adc55c8b506168f6ba0de42bf69fb9690"></a>SOUND_swing_with_axe01&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61a26c03892e38b9a8ee4e33d18179f8abc"></a>SOUND_swing_with_axe03&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61af5a3e3904e60ec3114b8ea096681997b"></a>SOUND_swing_with_blunt_weapon01&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61a58d039c1e801b9111d3a0ae423aa9cf4"></a>SOUND_swing_with_blunt_weapon03&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61a75478e2f5e092b8dab7a111be5c4dd69"></a>SOUND_swing_with_sword01&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61adfbecab53fa1da3a41668a7fed478622"></a>SOUND_swing_with_sword02&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61a11a8f73a06597e9ad035a06062562c7c"></a>SOUND_WalkBadlands&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61ac8d9433db1f3366f5b02835c3a5b95b7"></a>SOUND_WalkCarpet&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61a575c8944f3e23deb7cbe2c38dfa4571e"></a>SOUND_WalkCooledLava&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61a76ff1aaa3d279049cc00dd1c63901e1b"></a>SOUND_WalkDesert&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61ad8ddac7f0c4847f75376164bafd530ea"></a>SOUND_WalkDirt&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61a6f43483b354b831ac1be4c8ff8886cd5"></a>SOUND_WalkGrass&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61a2daa8d6f4e95550b2511629c721d8300"></a>SOUND_WalkRoad&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61a9dae0a472f74534e1235bcdcaff7f664"></a>SOUND_WalkSnow&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61a16ae763a7a3cdac6155543997d12ed63"></a>SOUND_WalkSwamp&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61a7fd1ea293ca5ef5e7b86f7233dd3a6a6"></a>SOUND_WalkWater&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61aa2579bf884c7010517a2d2f449fddfe4"></a>SOUND_WalkWaterIndoor&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61ad90ba2dee9dbf6f92233f02b7ef7a3ad"></a>SOUND_WalkWood&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61a9404ebedad4fa750c7bfd34520aa7d7f"></a>SOUND_bricks_down&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61af96c2287fed72f19388d4db4d1e8494c"></a>SOUND_bricks_up&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61afa5c057c247c192336cc9bd9625fe281"></a>SOUND_damage&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61a1f555599e1b7f5cd6101b918f8e2980e"></a>SOUND_deal&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61adc9147375fe6f74d40f6f0af8f475674"></a>SOUND_defeat&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61a968eff04d0df5acf3def573afb02241c"></a>SOUND_querry_up&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61afdf923afe44db5b2a9df90898b11d7be"></a>SOUND_querry_down&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61a53a67ea7e705e50c736c3448c0247d40"></a>SOUND_shuffle&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61a493767c719accd7b86613c039120c14e"></a>SOUND_title&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61ac6df391733420d74a5654152e0041ab4"></a>SOUND_tower_up&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61ac0defd5b904ae1014d2a2a9274fcf377"></a>SOUND_typing&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61a654955769b2a68408fa6ecc4a12f7497"></a>SOUND_victory&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61a30b30a9669b68b7c8efa9b13edcac9d6"></a>SOUND_wall_up&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61abc7d482b5d3c265ee4833b0636c3f474"></a>SOUND_luteguitar&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61a9453b32244eeaad818c06de370f7d9ef"></a>SOUND_panflute&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61aab9c72de7c2a8ab7cf162ff5b7621e58"></a>SOUND_trumpet&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61a1a82833cbeebfed9a1be0487ddcaa6a3"></a>SOUND_gold01&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61a4f6aedfd41128d694ca579262d7fc2a6"></a>SOUND_heal&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61af07db3cc2cc59ddaee0a06e28145b0be"></a>SOUND_fizzle&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61add197396be0564435f4a7d82360ad88a"></a>SOUND_TurnPageU&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61aab8a4100649a4e9efd792ee3b7afe789"></a>SOUND_batlleen&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61a66d768e26028fe797c882e031c753b32"></a>SOUND_batllest&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61adfc8d8c56f7f73bd3b8860a0b17bddef"></a>SOUND_openchest0101&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61a99fa7c601a457e134532993d524498bb"></a>SOUND_spellfail0201&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61a4478731636cef490e43a25cda86fb7e0"></a>SOUND_drink&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61a1d3fd9e6a7380cb50a4bc5a9ee79f2b7"></a>SOUND_eat&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61a89abb52f1a6d757c82922d3eba5168ee"></a>SOUND_gong&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61afd391370a69192496e230efc58151577"></a>SOUND_hurp&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61a2e6eb54a49e49b31e59044f4324605ca"></a>SOUND_church&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61a1a94e0270cf634e04c76f6e47e10b59a"></a>SOUND_chimes&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61ad519ce6fe934b75aeef17c574d1bf67d"></a>SOUND_splash&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61a45810b08f693d5ae1fdfd05b0a4a6639"></a>SOUND_star1&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61ad4c7c20c3cf479e338fc0075d232c391"></a>SOUND_star2&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61a3b10c618764b7d0a22bc00735296462f"></a>SOUND_star4&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61ac17804d22431009fd88d401c5a24fd56"></a>SOUND_eradicate&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61af70edaceb158975558b1f67ec057e61c"></a>SOUND_eleccircle&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61aa9f9f7d846f351669013857134a63f97"></a>SOUND_encounter&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61a60ac9b7e329660b3b285d456eef27872"></a>SOUND_openbook&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61acf4f776cd5f8ee48a0183672f0d0d71d"></a>SOUND_closebook&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61aa6ca61d062d98ef188f6b68de03294b7"></a>SOUND_hf445a&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61aae0fbc479a1d64501c562f5c8e4c41c0"></a>SOUND_Haste&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61af80b8c2e4eb1e6db50b0624efa08f1ed"></a>SOUND_21fly03&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61a775c37c64972e6c7e91e053a586b7024"></a>SOUND_WaterWalk&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61a75131ad7c5ee7eba7a12bddafa83b4e1"></a>SOUND_Stoneskin&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61ad9d5c64043dc2800a5f607bab9b2e32a"></a>SOUND_Bless&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61a1a0381dcd7c89311d944f86c951b0399"></a>SOUND_Fate&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61a5f6bf49070f31220e0dea58b50397e19"></a>SOUND_51heroism03&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61ae854961444bd7c9f5a45da54fb0a2c18"></a>SOUND_94dayofprotection03&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61a368b05f98e26a7997410f3db51dccd08"></a>SOUND_9armageddon01&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61ada29734e0f89ebd9509cb7a5b173ce18"></a>SOUND_Sacrifice2&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa4689ee7c9a692044aebd36cb0915e61a85dd506da7a5743cb2a950d577648822"></a>SOUND_quest&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dd/d7b/_audio_player_8h_source.html">AudioPlayer.h</a> строка <a class="el" href="../../dd/d7b/_audio_player_8h_source.html#l00010">10</a></p>
+<div class="fragment"><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;             {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a957af16b1cf261c6e64516f563b3ef61">SOUND_Invalid</a> = 0,</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a587c0c496cd8c945f392551239c9469b">SOUND_enter</a> = 6,</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61aad80e5893e38e47e1012060cf3841833">SOUND_WoodDoorClosing</a> = 7,</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a4a84f5e32dbc3b168efc37591e200d3f">SOUND_fireBall</a> = 8,</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a402dd2ff4e2da7f5a6ba63a4dbf41eec">SOUND_ClickMinus</a> = 20,</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a5612c2c8eb93f59313924c12dcab35c5">SOUND_ClickMovingSelector</a> = 21,</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a2495502b052acad65fd5a45d10666342">SOUND_ClickPlus</a> = 23,</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61acace095de5eeec3b2f877027f8760b8f">SOUND_ClickSkill</a> = 24,</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a123c1f950456a478ca87f718b9f8d30d">SOUND_error</a> = 27,</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61aa2c6ea7d20db90bc41ea2d4aec3c3485">SOUND_metal_vs_metal03h</a> = 47,</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a41461b28d014d14c94c063650b936c38">SOUND_48</a> = 0x30,</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a4a62329846737ca5d1bb5793277cb09e">SOUND_RunBadlands</a> = 49,</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61ad10bd00063f539e4a99b46ac50965cd0">SOUND_RunCarpet</a> = 50,</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61af2794790c7592da5894ce4b75448fe3e">SOUND_RunCooledLava</a> = 51,</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61ac4562b03c9699789f8ce08c8696afb03">SOUND_RunDesert</a> = 52,</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a41579285540aa933b7a35bb3fde8cc2f">SOUND_RunDirt</a> = 53,</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a82bba4848fe87dfc14acdff16814200c">SOUND_RunGrass</a> = 54,</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61aae71d43f18d542b3523e6d8b67fb1e71">SOUND_RunRoad</a> = 57,</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a55a1129d82bb831a5d2f7f85d8368d45">SOUND_RunSnow</a> = 58,</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a531356dd034b11b734b7655f3e2b7cc5">SOUND_RunSwamp</a> = 61,</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a24e5bb89da7e8f92f5724c803caf6adf">SOUND_RunWater</a> = 62,</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a992650571cce50b2e67375dac9e8d989">SOUND_RunWaterIndoor</a> = 63,</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61ac871b127019dcdefedc743b126fbc158">SOUND_RunWood</a> = 64,</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a89f017851d34127302dcfc2c3faca7e7">SOUND_SelectingANewCharacter</a> = 66,</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61abd9a51c95cf4afb7eec4dc6d6c7d6173">SOUND_shoot_blaster01</a> = 67,</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61aa8e0b07c2448de74cf1d4201c8ada051">SOUND_shoot_bow01</a> = 71,</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a74f8ece2a8e0b10581ede7fde7acc2fa">SOUND_StartMainChoice02</a> = 75,</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61adc55c8b506168f6ba0de42bf69fb9690">SOUND_swing_with_axe01</a> = 78,</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a26c03892e38b9a8ee4e33d18179f8abc">SOUND_swing_with_axe03</a> = 80,</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61af5a3e3904e60ec3114b8ea096681997b">SOUND_swing_with_blunt_weapon01</a> = 81,</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a58d039c1e801b9111d3a0ae423aa9cf4">SOUND_swing_with_blunt_weapon03</a> = 83,</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a75478e2f5e092b8dab7a111be5c4dd69">SOUND_swing_with_sword01</a> = 84,</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61adfbecab53fa1da3a41668a7fed478622">SOUND_swing_with_sword02</a> = 85,</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a11a8f73a06597e9ad035a06062562c7c">SOUND_WalkBadlands</a> = 88,</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61ac8d9433db1f3366f5b02835c3a5b95b7">SOUND_WalkCarpet</a> = 89,</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a575c8944f3e23deb7cbe2c38dfa4571e">SOUND_WalkCooledLava</a> = 90,</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a76ff1aaa3d279049cc00dd1c63901e1b">SOUND_WalkDesert</a> = 91,</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61ad8ddac7f0c4847f75376164bafd530ea">SOUND_WalkDirt</a> = 92,</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a6f43483b354b831ac1be4c8ff8886cd5">SOUND_WalkGrass</a> = 93,</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a2daa8d6f4e95550b2511629c721d8300">SOUND_WalkRoad</a> = 96,</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a9dae0a472f74534e1235bcdcaff7f664">SOUND_WalkSnow</a> = 97,</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a16ae763a7a3cdac6155543997d12ed63">SOUND_WalkSwamp</a> = 100,</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a7fd1ea293ca5ef5e7b86f7233dd3a6a6">SOUND_WalkWater</a> = 101,</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61aa2579bf884c7010517a2d2f449fddfe4">SOUND_WalkWaterIndoor</a> = 102,</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61ad90ba2dee9dbf6f92233f02b7ef7a3ad">SOUND_WalkWood</a> = 103,</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a9404ebedad4fa750c7bfd34520aa7d7f">SOUND_bricks_down</a> = 120,</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61af96c2287fed72f19388d4db4d1e8494c">SOUND_bricks_up</a> = 121,</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61afa5c057c247c192336cc9bd9625fe281">SOUND_damage</a> = 0x7A,</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a1f555599e1b7f5cd6101b918f8e2980e">SOUND_deal</a> = 0x7B,</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61adc9147375fe6f74d40f6f0af8f475674">SOUND_defeat</a> = 0x7C,</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a968eff04d0df5acf3def573afb02241c">SOUND_querry_up</a> = 0x7D,</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61afdf923afe44db5b2a9df90898b11d7be">SOUND_querry_down</a> = 0x7E,</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a53a67ea7e705e50c736c3448c0247d40">SOUND_shuffle</a> = 0x7F,</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a493767c719accd7b86613c039120c14e">SOUND_title</a> = 0x80,</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61ac6df391733420d74a5654152e0041ab4">SOUND_tower_up</a> = 0x81,</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61ac0defd5b904ae1014d2a2a9274fcf377">SOUND_typing</a> = 0x82,</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a654955769b2a68408fa6ecc4a12f7497">SOUND_victory</a> = 0x83,</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a30b30a9669b68b7c8efa9b13edcac9d6">SOUND_wall_up</a> = 0x84,</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61abc7d482b5d3c265ee4833b0636c3f474">SOUND_luteguitar</a> = 133,</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a9453b32244eeaad818c06de370f7d9ef">SOUND_panflute</a> = 134,</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61aab9c72de7c2a8ab7cf162ff5b7621e58">SOUND_trumpet</a> = 135,</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a1a82833cbeebfed9a1be0487ddcaa6a3">SOUND_gold01</a> = 200,</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a4f6aedfd41128d694ca579262d7fc2a6">SOUND_heal</a> = 202,</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61af07db3cc2cc59ddaee0a06e28145b0be">SOUND_fizzle</a> = 203,</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61add197396be0564435f4a7d82360ad88a">SOUND_TurnPageU</a> = 204,</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61aab8a4100649a4e9efd792ee3b7afe789">SOUND_batlleen</a> = 206,</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a66d768e26028fe797c882e031c753b32">SOUND_batllest</a> = 207,</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61adfc8d8c56f7f73bd3b8860a0b17bddef">SOUND_openchest0101</a> = 208,</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a99fa7c601a457e134532993d524498bb">SOUND_spellfail0201</a> = 0xD1,</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a4478731636cef490e43a25cda86fb7e0">SOUND_drink</a> = 0xD2,</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a1d3fd9e6a7380cb50a4bc5a9ee79f2b7">SOUND_eat</a> = 211,</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a89abb52f1a6d757c82922d3eba5168ee">SOUND_gong</a> = 0xD7,</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61afd391370a69192496e230efc58151577">SOUND_hurp</a> = 0xD9,</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a2e6eb54a49e49b31e59044f4324605ca">SOUND_church</a> = 218,</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a1a94e0270cf634e04c76f6e47e10b59a">SOUND_chimes</a> = 0xDB,</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61ad519ce6fe934b75aeef17c574d1bf67d">SOUND_splash</a> = 220,</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a45810b08f693d5ae1fdfd05b0a4a6639">SOUND_star1</a> = 0xDD,</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61ad4c7c20c3cf479e338fc0075d232c391">SOUND_star2</a> = 0xDE,</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a3b10c618764b7d0a22bc00735296462f">SOUND_star4</a> = 0xE0,</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61ac17804d22431009fd88d401c5a24fd56">SOUND_eradicate</a> = 0xE1,</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61af70edaceb158975558b1f67ec057e61c">SOUND_eleccircle</a> = 0xE2,</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61aa9f9f7d846f351669013857134a63f97">SOUND_encounter</a> = 0xE3,</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a60ac9b7e329660b3b285d456eef27872">SOUND_openbook</a> = 230,</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61acf4f776cd5f8ee48a0183672f0d0d71d">SOUND_closebook</a> = 231,</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61aa6ca61d062d98ef188f6b68de03294b7">SOUND_hf445a</a> = 5788,</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61aae0fbc479a1d64501c562f5c8e4c41c0">SOUND_Haste</a> = 10040,</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61af80b8c2e4eb1e6db50b0624efa08f1ed">SOUND_21fly03</a> = 11090,</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a775c37c64972e6c7e91e053a586b7024">SOUND_WaterWalk</a> = 12040,</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a75131ad7c5ee7eba7a12bddafa83b4e1">SOUND_Stoneskin</a> = 13040,</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61ad9d5c64043dc2800a5f607bab9b2e32a">SOUND_Bless</a> = 14010,</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a1a0381dcd7c89311d944f86c951b0399">SOUND_Fate</a> = 14020,</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a5f6bf49070f31220e0dea58b50397e19">SOUND_51heroism03</a> = 14060,</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61ae854961444bd7c9f5a45da54fb0a2c18">SOUND_94dayofprotection03</a> = 17070,</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a368b05f98e26a7997410f3db51dccd08">SOUND_9armageddon01</a> = 17080,</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61ada29734e0f89ebd9509cb7a5b173ce18">SOUND_Sacrifice2</a> = 18060,</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a85dd506da7a5743cb2a950d577648822">SOUND_quest</a> = 20001,</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;};</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a68946471db0c45b6ce503ef14572f078"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68946471db0c45b6ce503ef14572f078">&#9670;&nbsp;</a></span>MusicID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="../../dd/d7b/_audio_player_8h.html#a68946471db0c45b6ce503ef14572f078">MusicID</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="a68946471db0c45b6ce503ef14572f078a56b078091103d2c6a626a8bdef7bc595"></a>MUSIC_MainMenu&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a68946471db0c45b6ce503ef14572f078ac8fa77ddc75ad59d7541dd78916ad82a"></a>MUSIC_Credits&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dd/d7b/_audio_player_8h_source.html">AudioPlayer.h</a> строка <a class="el" href="../../dd/d7b/_audio_player_8h_source.html#l00109">109</a></p>
+<div class="fragment"><div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;{ <a class="code" href="../../dd/d7b/_audio_player_8h.html#a68946471db0c45b6ce503ef14572f078a56b078091103d2c6a626a8bdef7bc595">MUSIC_MainMenu</a> = 14, <a class="code" href="../../dd/d7b/_audio_player_8h.html#a68946471db0c45b6ce503ef14572f078ac8fa77ddc75ad59d7541dd78916ad82a">MUSIC_Credits</a> = 15 };</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Функции</h2>
+<a id="a399a2dbccaebe8b1df3b23880a593470"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a399a2dbccaebe8b1df3b23880a593470">&#9670;&nbsp;</a></span>PlayLevelMusic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> PlayLevelMusic </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d3/df2/_audio_player_8cpp_source.html">AudioPlayer.cpp</a> строка <a class="el" href="../../d3/df2/_audio_player_8cpp_source.html#l00377">377</a></p>
+<div class="fragment"><div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;                      {</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> map_id = <a class="code" href="../../d9/dce/_map_info_8h.html#a8e6404cd1a25e9f070d2918e8bb541c3">pMapStats</a>-&gt;<a class="code" href="../../d0/d23/struct_map_stats.html#ad630f43cd5e7e239cd8a3c363ccdd605">GetMapInfo</a>(<a class="code" href="../../d6/d5b/mm7__data_8cpp.html#a88ebc50ce00b0ed9170a4da4a7d99ce2">pCurrentMapName</a>);</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;    <span class="keywordflow">if</span> (map_id) {</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;        <a class="code" href="../../d3/df2/_audio_player_8cpp.html#a3ee6d655d35b46ebac53ef678255f75b">pAudioPlayer</a>-&gt;<a class="code" href="../../d7/dc2/class_audio_player.html#a8ba0c68b98cc02edd75fa3226d7aba0a">MusicPlayTrack</a>((<a class="code" href="../../dd/d7b/_audio_player_8h.html#a68946471db0c45b6ce503ef14572f078">MusicID</a>)<a class="code" href="../../d9/dce/_map_info_8h.html#a8e6404cd1a25e9f070d2918e8bb541c3">pMapStats</a>-&gt;<a class="code" href="../../d0/d23/struct_map_stats.html#a85e3c91a79bfc115b6303212366163e3">pInfos</a>[map_id].<a class="code" href="../../db/ddb/struct_map_info.html#a2ae6ac1638da1eba6bdd15f233159776">uRedbookTrackID</a>);</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;    }</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../dd/d31/_map_info_8cpp_source.html#l00225">MapStats::GetMapInfo()</a>, <a class="el" href="../../d3/df2/_audio_player_8cpp_source.html#l00109">AudioPlayer::MusicPlayTrack()</a>, <a class="el" href="../../d3/df2/_audio_player_8cpp_source.html#l00020">pAudioPlayer</a>, <a class="el" href="../../d6/d5b/mm7__data_8cpp_source.html#l00712">pCurrentMapName</a>, <a class="el" href="../../d9/dce/_map_info_8h_source.html#l00079">MapStats::pInfos</a>, <a class="el" href="../../d6/d5b/mm7__data_8cpp_source.html#l00020">pMapStats</a> и <a class="el" href="../../d9/dce/_map_info_8h_source.html#l00069">MapInfo::uRedbookTrackID</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l02310">PrepareToLoadBLV()</a> и <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l01319">PrepareToLoadODM()</a>.</p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../dd/d7b/_audio_player_8h_a399a2dbccaebe8b1df3b23880a593470_cgraph.svg" width="100%" height="518"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../dd/d7b/_audio_player_8h_a399a2dbccaebe8b1df3b23880a593470_icgraph.svg" width="100%" height="390"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Переменные</h2>
+<a id="aae14636771c7eaca9a52b212649494ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae14636771c7eaca9a52b212649494ec">&#9670;&nbsp;</a></span>sLastTrackLengthMS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int sLastTrackLengthMS</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d3/df2/_audio_player_8cpp_source.html">AudioPlayer.cpp</a> строка <a class="el" href="../../d3/df2/_audio_player_8cpp_source.html#l00019">19</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d2/d82/_player_8cpp_source.html#l07874">Player::PlaySound()</a>.</p>
+
+</div>
+</div>
+<a id="a3ee6d655d35b46ebac53ef678255f75b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ee6d655d35b46ebac53ef678255f75b">&#9670;&nbsp;</a></span>pAudioPlayer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d7/dc2/class_audio_player.html">AudioPlayer</a>* pAudioPlayer</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d3/df2/_audio_player_8cpp_source.html">AudioPlayer.cpp</a> строка <a class="el" href="../../d3/df2/_audio_player_8cpp_source.html#l00020">20</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d9/dd3/_cast_spell_info_8cpp_source.html#l00046">CastSpellInfoHelpers::_427E01_cast_spell()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l07643">Player::_42ECB5_PlayerAttacksActor()</a>, <a class="el" href="../../d9/ded/_sprite_object_8cpp_source.html#l01017">_46BFFA_update_spell_fx()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l00803">Player::AddItem()</a>, <a class="el" href="../../da/db4/_party_8cpp_source.html#l01096">Party::AddItemToParty()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l00199">Actor::AI_SpellAttack()</a>, <a class="el" href="../../da/deb/_u_i_arena_8cpp_source.html#l00034">Arena_SelectionFightLevel()</a>, <a class="el" href="../../da/deb/_u_i_arena_8cpp_source.html#l00095">ArenaFight()</a>, <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l03991">BackToHouseMenu()</a>, <a class="el" href="../../d5/d76/_u_i_books_8cpp_source.html#l00067">GUIWindow_Book::BasicBookInitialization()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l04655">BLV_ProcessPartyActions()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l01506">BLV_UpdateDoors()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l00280">Player::CanCastSpell()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l00761">CloseWindowBackground()</a>, <a class="el" href="../../d9/ded/_sprite_object_8cpp_source.html#l00993">SpriteObject::Create_Splash_Object()</a>, <a class="el" href="../../de/da8/_u_i_party_creation_8cpp_source.html#l00066">CreateParty_EventLoop()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l06928">DamagePlayerFromMonster()</a>, <a class="el" href="../../dc/d5b/_turn_engine_8cpp_source.html#l00220">stru262_TurnBased::End()</a>, <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l00826">EnterHouse()</a>, <a class="el" href="../../da/df3/_spells_8cpp_source.html#l00429">EventCastSpell()</a>, <a class="el" href="../../df/d21/_game_menu_8cpp_source.html#l00070">Application::Menu::EventLoop()</a>, <a class="el" href="../../d7/db5/_game_8cpp_source.html#l00322">Application::Game::EventLoop()</a>, <a class="el" href="../../df/d5c/_events_8cpp_source.html#l00260">EventProcessor()</a>, <a class="el" href="../../db/d8c/_u_i_credits_8cpp_source.html#l00095">GUICredits::ExecuteCredits()</a>, <a class="el" href="../../df/d21/_game_menu_8cpp_source.html#l00044">Game_QuitGameWhilePlaying()</a>, <a class="el" href="../../df/d21/_game_menu_8cpp_source.html#l00029">Game_StartNewGameWhilePlaying()</a>, <a class="el" href="../../d7/db5/_game_8cpp_source.html#l02704">Application::Game::GameLoop()</a>, <a class="el" href="../../dd/d76/_u_i_dialogue_8cpp_source.html#l00025">GameUI_InitializeDialogue()</a>, <a class="el" href="../../db/dd5/_u_i_character_8cpp_source.html#l00660">CastSpellInfo::GetCastSpellInInventoryWindow()</a>, <a class="el" href="../../d4/d5b/_u_i_guilds_8cpp_source.html#l00027">GuildDialog()</a>, <a class="el" href="../../dc/d90/_autonotes_book_8cpp_source.html#l00021">GUIWindow_AutonotesBook::GUIWindow_AutonotesBook()</a>, <a class="el" href="../../df/d8d/_calendar_book_8cpp_source.html#l00025">GUIWindow_CalendarBook::GUIWindow_CalendarBook()</a>, <a class="el" href="../../db/dd5/_u_i_character_8cpp_source.html#l00466">GUIWindow_CharacterRecord::GUIWindow_CharacterRecord()</a>, <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l04349">GUIWindow_House::GUIWindow_House()</a>, <a class="el" href="../../dd/d41/_journal_book_8cpp_source.html#l00022">GUIWindow_JournalBook::GUIWindow_JournalBook()</a>, <a class="el" href="../../d0/d67/_map_book_8cpp_source.html#l00029">GUIWindow_MapBook::GUIWindow_MapBook()</a>, <a class="el" href="../../d3/d20/_quest_book_8cpp_source.html#l00020">GUIWindow_QuestBook::GUIWindow_QuestBook()</a>, <a class="el" href="../../dc/dda/_u_i_quick_reference_8cpp_source.html#l00019">GUIWindow_QuickReference::GUIWindow_QuickReference()</a>, <a class="el" href="../../d1/d3f/_spellbook_8cpp_source.html#l00053">GUIWindow_Spellbook::GUIWindow_Spellbook()</a>, <a class="el" href="../../de/d09/_u_i_transition_8cpp_source.html#l00070">GUIWindow_Transition::GUIWindow_Transition()</a>, <a class="el" href="../../d3/df2/_audio_player_8cpp_source.html#l00364">AudioPlayer::Initialize()</a>, <a class="el" href="../../d5/d76/_u_i_books_8cpp_source.html#l00080">GUIWindow_Book::InitializeFonts()</a>, <a class="el" href="../../d1/d3f/_spellbook_8cpp_source.html#l00321">InitializeSpellBookTextures()</a>, <a class="el" href="../../d6/ded/_u_i_popup_8cpp_source.html#l01817">Inventory_ItemPopupAndAlchemy()</a>, <a class="el" href="../../d4/d9d/_save_load_8cpp_source.html#l00077">LoadGame()</a>, <a class="el" href="../../d7/dc5/_u_i_main_menu_8cpp_source.html#l00118">GUIWindow_MainMenu::Loop()</a>, <a class="el" href="../../d7/db5/_game_8cpp_source.html#l00134">Application::Game::Loop()</a>, <a class="el" href="../../df/d21/_game_menu_8cpp_source.html#l00512">Application::Menu::MenuLoop()</a>, <a class="el" href="../../d3/df2/_audio_player_8cpp_source.html#l00320">AudioPlayer::MessWithChannels()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l01228">MM6_Initialize()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l00903">Engine::MM7_Initialize()</a>, <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l02221">ODM_ProcessPartyActions()</a>, <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l02115">ODM_UpdateUserInputAndOther()</a>, <a class="el" href="../../dc/da3/_game_window_handler_8cpp_source.html#l00196">Application::GameWindowHandler::OnActivated()</a>, <a class="el" href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00147">OnCastTargetedSpell::OnCastTargetedSpell()</a>, <a class="el" href="../../d1/d3f/_spellbook_8cpp_source.html#l00344">OnCloseSpellBook()</a>, <a class="el" href="../../dc/da3/_game_window_handler_8cpp_source.html#l00232">Application::GameWindowHandler::OnDeactivated()</a>, <a class="el" href="../../db/dd5/_u_i_character_8cpp_source.html#l02712">OnPaperdollLeftClick()</a>, <a class="el" href="../../d8/d67/_chest_8cpp_source.html#l00041">Chest::Open()</a>, <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00633">MPlayer::OpenHouseMovie()</a>, <a class="el" href="../../d1/d3f/_spellbook_8cpp_source.html#l00065">GUIWindow_Spellbook::OpenSpellbookPage()</a>, <a class="el" href="../../de/da8/_u_i_party_creation_8cpp_source.html#l00274">PartyCreationUI_Loop()</a>, <a class="el" href="../../de/da8/_u_i_party_creation_8cpp_source.html#l00856">PartyCreationUI_LoopInternal()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l05623">Player::PlayAwardSound()</a>, <a class="el" href="../../d3/d70/_arcomage_2_arcomage_8cpp_source.html#l01271">PlayerTurn()</a>, <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00705">MPlayer::PlayFullscreenMovie()</a>, <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l01036">PlayHouseSound()</a>, <a class="el" href="../../d3/df2/_audio_player_8cpp_source.html#l00377">PlayLevelMusic()</a>, <a class="el" href="../../d3/d70/_arcomage_2_arcomage_8cpp_source.html#l00493">ArcomageGame::PlaySound()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l01974">Actor::PlaySound()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l07874">Player::PlaySound()</a>, <a class="el" href="../../d3/d70/_arcomage_2_arcomage_8cpp_source.html#l02982">ArcomageGame::PrepareArcomage()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l01319">PrepareToLoadODM()</a>, <a class="el" href="../../d1/d10/_u_i_rest_8cpp_source.html#l00054">PrepareToLoadRestUI()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l01851">Player::ReceiveSpecialAttackEffect()</a>, <a class="el" href="../../d5/d76/_u_i_books_8cpp_source.html#l00041">GUIWindow_Book::Release()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l01342">Engine::ResetCursor_Palettes_LODs_Level_Audio_SFT_Windows()</a>, <a class="el" href="../../dc/d5b/_turn_engine_8cpp_source.html#l00108">stru262_TurnBased::Start()</a>, <a class="el" href="../../dd/d76/_u_i_dialogue_8cpp_source.html#l00615">sub_4451A8_press_any_key()</a>, <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l03266">sub_4B6478()</a>, <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l02599">TempleDialog()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l02464">Transition_StopSound_Autosave()</a>, <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l01673">TravelByTransport()</a>, <a class="el" href="../../d6/ded/_u_i_popup_8cpp_source.html#l01459">UI_OnMouseRightClick()</a>, <a class="el" href="../../d7/d54/_mouse_8cpp_source.html#l00336">UI_OnVkKeyDown()</a>, <a class="el" href="../../da/db4/_party_8cpp_source.html#l00226">ui_play_gold_anim()</a>, <a class="el" href="../../d9/d21/_u_i_shops_8cpp_source.html#l00874">UIShop_Buy_Identify_Repair()</a>, <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00826">MPlayer::Unload()</a>, <a class="el" href="../../dc/d90/_autonotes_book_8cpp_source.html#l00106">GUIWindow_AutonotesBook::Update()</a>, <a class="el" href="../../dd/d41/_journal_book_8cpp_source.html#l00093">GUIWindow_JournalBook::Update()</a>, <a class="el" href="../../d3/d20/_quest_book_8cpp_source.html#l00067">GUIWindow_QuestBook::Update()</a>, <a class="el" href="../../d0/d67/_map_book_8cpp_source.html#l00081">GUIWindow_MapBook::Update()</a>, <a class="el" href="../../d1/d10/_u_i_rest_8cpp_source.html#l00034">GUIWindow_RestWindow::Update()</a>, <a class="el" href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00833">OnButtonClick::Update()</a>, <a class="el" href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00846">OnButtonClick2::Update()</a>, <a class="el" href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00863">OnButtonClick3::Update()</a>, <a class="el" href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00877">OnButtonClick4::Update()</a>, <a class="el" href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00889">OnSaveLoad::Update()</a>, <a class="el" href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00909">OnCancel::Update()</a>, <a class="el" href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00925">OnCancel2::Update()</a>, <a class="el" href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00940">OnCancel3::Update()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l03850">Player::UseItem_DrinkPotion_etc()</a> и <a class="el" href="../../d1/d6c/_n_p_c_8cpp_source.html#l01378">UseNPCSkill()</a>.</p>
+
+</div>
+</div>
+<a id="ad69469921c052e5df1d760da80a0139e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad69469921c052e5df1d760da80a0139e">&#9670;&nbsp;</a></span>pSoundList</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/d39/class_sound_list.html">SoundList</a>* pSoundList</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d3/df2/_audio_player_8cpp_source.html">AudioPlayer.cpp</a> строка <a class="el" href="../../d3/df2/_audio_player_8cpp_source.html#l00021">21</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l00903">Engine::MM7_Initialize()</a> и <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l01082">Engine::SecondaryInitialization()</a>.</p>
+
+</div>
+</div>
+<a id="a7511d5bb243d68d6e9216c71d021b7d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7511d5bb243d68d6e9216c71d021b7d3">&#9670;&nbsp;</a></span>pSoundVolumeLevels</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a52f38e7d822a46377fde7a02708eedb1">std::array</a>&lt;float, 10&gt; pSoundVolumeLevels</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d3/df2/_audio_player_8cpp_source.html">AudioPlayer.cpp</a> строка <a class="el" href="../../d3/df2/_audio_player_8cpp_source.html#l00023">23</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d3/df2/_audio_player_8cpp_source.html#l00109">AudioPlayer::MusicPlayTrack()</a>, <a class="el" href="../../d3/df2/_audio_player_8cpp_source.html#l00195">AudioPlayer::PlaySound()</a>, <a class="el" href="../../d3/df2/_audio_player_8cpp_source.html#l00183">AudioPlayer::SetMasterVolume()</a> и <a class="el" href="../../d3/df2/_audio_player_8cpp_source.html#l00165">AudioPlayer::SetMusicVolume()</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61af2794790c7592da5894ce4b75448fe3e"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61af2794790c7592da5894ce4b75448fe3e">SOUND_RunCooledLava</a></div><div class="ttdeci">@ SOUND_RunCooledLava</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00024">AudioPlayer.h:24</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61a2495502b052acad65fd5a45d10666342"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a2495502b052acad65fd5a45d10666342">SOUND_ClickPlus</a></div><div class="ttdeci">@ SOUND_ClickPlus</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00017">AudioPlayer.h:17</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61ad8ddac7f0c4847f75376164bafd530ea"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61ad8ddac7f0c4847f75376164bafd530ea">SOUND_WalkDirt</a></div><div class="ttdeci">@ SOUND_WalkDirt</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00048">AudioPlayer.h:48</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61a99fa7c601a457e134532993d524498bb"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a99fa7c601a457e134532993d524498bb">SOUND_spellfail0201</a></div><div class="ttdeci">@ SOUND_spellfail0201</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00079">AudioPlayer.h:79</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61af07db3cc2cc59ddaee0a06e28145b0be"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61af07db3cc2cc59ddaee0a06e28145b0be">SOUND_fizzle</a></div><div class="ttdeci">@ SOUND_fizzle</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00074">AudioPlayer.h:74</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61a531356dd034b11b734b7655f3e2b7cc5"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a531356dd034b11b734b7655f3e2b7cc5">SOUND_RunSwamp</a></div><div class="ttdeci">@ SOUND_RunSwamp</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00030">AudioPlayer.h:30</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61a4a84f5e32dbc3b168efc37591e200d3f"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a4a84f5e32dbc3b168efc37591e200d3f">SOUND_fireBall</a></div><div class="ttdeci">@ SOUND_fireBall</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00014">AudioPlayer.h:14</a></div></div>
+<div class="ttc" id="astruct_map_stats_html_a85e3c91a79bfc115b6303212366163e3"><div class="ttname"><a href="../../d0/d23/struct_map_stats.html#a85e3c91a79bfc115b6303212366163e3">MapStats::pInfos</a></div><div class="ttdeci">MapInfo pInfos[77]</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dce/_map_info_8h_source.html#l00079">MapInfo.h:79</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61add197396be0564435f4a7d82360ad88a"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61add197396be0564435f4a7d82360ad88a">SOUND_TurnPageU</a></div><div class="ttdeci">@ SOUND_TurnPageU</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00075">AudioPlayer.h:75</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61a24e5bb89da7e8f92f5724c803caf6adf"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a24e5bb89da7e8f92f5724c803caf6adf">SOUND_RunWater</a></div><div class="ttdeci">@ SOUND_RunWater</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00031">AudioPlayer.h:31</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61acf4f776cd5f8ee48a0183672f0d0d71d"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61acf4f776cd5f8ee48a0183672f0d0d71d">SOUND_closebook</a></div><div class="ttdeci">@ SOUND_closebook</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00094">AudioPlayer.h:94</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61a1a82833cbeebfed9a1be0487ddcaa6a3"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a1a82833cbeebfed9a1be0487ddcaa6a3">SOUND_gold01</a></div><div class="ttdeci">@ SOUND_gold01</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00072">AudioPlayer.h:72</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61ac0defd5b904ae1014d2a2a9274fcf377"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61ac0defd5b904ae1014d2a2a9274fcf377">SOUND_typing</a></div><div class="ttdeci">@ SOUND_typing</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00066">AudioPlayer.h:66</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61aab9c72de7c2a8ab7cf162ff5b7621e58"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61aab9c72de7c2a8ab7cf162ff5b7621e58">SOUND_trumpet</a></div><div class="ttdeci">@ SOUND_trumpet</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00071">AudioPlayer.h:71</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61a2daa8d6f4e95550b2511629c721d8300"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a2daa8d6f4e95550b2511629c721d8300">SOUND_WalkRoad</a></div><div class="ttdeci">@ SOUND_WalkRoad</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00050">AudioPlayer.h:50</a></div></div>
+<div class="ttc" id="astruct_map_stats_html_ad630f43cd5e7e239cd8a3c363ccdd605"><div class="ttname"><a href="../../d0/d23/struct_map_stats.html#ad630f43cd5e7e239cd8a3c363ccdd605">MapStats::GetMapInfo</a></div><div class="ttdeci">MAP_TYPE GetMapInfo(const String &amp;Str2)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d31/_map_info_8cpp_source.html#l00225">MapInfo.cpp:225</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61a66d768e26028fe797c882e031c753b32"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a66d768e26028fe797c882e031c753b32">SOUND_batllest</a></div><div class="ttdeci">@ SOUND_batllest</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00077">AudioPlayer.h:77</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61abd9a51c95cf4afb7eec4dc6d6c7d6173"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61abd9a51c95cf4afb7eec4dc6d6c7d6173">SOUND_shoot_blaster01</a></div><div class="ttdeci">@ SOUND_shoot_blaster01</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00035">AudioPlayer.h:35</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61a26c03892e38b9a8ee4e33d18179f8abc"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a26c03892e38b9a8ee4e33d18179f8abc">SOUND_swing_with_axe03</a></div><div class="ttdeci">@ SOUND_swing_with_axe03</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00039">AudioPlayer.h:39</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61aa8e0b07c2448de74cf1d4201c8ada051"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61aa8e0b07c2448de74cf1d4201c8ada051">SOUND_shoot_bow01</a></div><div class="ttdeci">@ SOUND_shoot_bow01</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00036">AudioPlayer.h:36</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61a123c1f950456a478ca87f718b9f8d30d"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a123c1f950456a478ca87f718b9f8d30d">SOUND_error</a></div><div class="ttdeci">@ SOUND_error</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00019">AudioPlayer.h:19</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61a4478731636cef490e43a25cda86fb7e0"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a4478731636cef490e43a25cda86fb7e0">SOUND_drink</a></div><div class="ttdeci">@ SOUND_drink</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00080">AudioPlayer.h:80</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61a82bba4848fe87dfc14acdff16814200c"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a82bba4848fe87dfc14acdff16814200c">SOUND_RunGrass</a></div><div class="ttdeci">@ SOUND_RunGrass</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00027">AudioPlayer.h:27</a></div></div>
+<div class="ttc" id="aclass_audio_player_html_a8ba0c68b98cc02edd75fa3226d7aba0a"><div class="ttname"><a href="../../d7/dc2/class_audio_player.html#a8ba0c68b98cc02edd75fa3226d7aba0a">AudioPlayer::MusicPlayTrack</a></div><div class="ttdeci">void MusicPlayTrack(enum MusicID eTrack)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/df2/_audio_player_8cpp_source.html#l00109">AudioPlayer.cpp:109</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61a53a67ea7e705e50c736c3448c0247d40"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a53a67ea7e705e50c736c3448c0247d40">SOUND_shuffle</a></div><div class="ttdeci">@ SOUND_shuffle</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00063">AudioPlayer.h:63</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61a9dae0a472f74534e1235bcdcaff7f664"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a9dae0a472f74534e1235bcdcaff7f664">SOUND_WalkSnow</a></div><div class="ttdeci">@ SOUND_WalkSnow</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00051">AudioPlayer.h:51</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61aa9f9f7d846f351669013857134a63f97"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61aa9f9f7d846f351669013857134a63f97">SOUND_encounter</a></div><div class="ttdeci">@ SOUND_encounter</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00092">AudioPlayer.h:92</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61a9453b32244eeaad818c06de370f7d9ef"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a9453b32244eeaad818c06de370f7d9ef">SOUND_panflute</a></div><div class="ttdeci">@ SOUND_panflute</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00070">AudioPlayer.h:70</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61a1a94e0270cf634e04c76f6e47e10b59a"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a1a94e0270cf634e04c76f6e47e10b59a">SOUND_chimes</a></div><div class="ttdeci">@ SOUND_chimes</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00085">AudioPlayer.h:85</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61abc7d482b5d3c265ee4833b0636c3f474"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61abc7d482b5d3c265ee4833b0636c3f474">SOUND_luteguitar</a></div><div class="ttdeci">@ SOUND_luteguitar</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00069">AudioPlayer.h:69</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61ad9d5c64043dc2800a5f607bab9b2e32a"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61ad9d5c64043dc2800a5f607bab9b2e32a">SOUND_Bless</a></div><div class="ttdeci">@ SOUND_Bless</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00100">AudioPlayer.h:100</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61aad80e5893e38e47e1012060cf3841833"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61aad80e5893e38e47e1012060cf3841833">SOUND_WoodDoorClosing</a></div><div class="ttdeci">@ SOUND_WoodDoorClosing</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00013">AudioPlayer.h:13</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61a992650571cce50b2e67375dac9e8d989"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a992650571cce50b2e67375dac9e8d989">SOUND_RunWaterIndoor</a></div><div class="ttdeci">@ SOUND_RunWaterIndoor</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00032">AudioPlayer.h:32</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61adfbecab53fa1da3a41668a7fed478622"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61adfbecab53fa1da3a41668a7fed478622">SOUND_swing_with_sword02</a></div><div class="ttdeci">@ SOUND_swing_with_sword02</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00043">AudioPlayer.h:43</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61a30b30a9669b68b7c8efa9b13edcac9d6"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a30b30a9669b68b7c8efa9b13edcac9d6">SOUND_wall_up</a></div><div class="ttdeci">@ SOUND_wall_up</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00068">AudioPlayer.h:68</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61aa2579bf884c7010517a2d2f449fddfe4"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61aa2579bf884c7010517a2d2f449fddfe4">SOUND_WalkWaterIndoor</a></div><div class="ttdeci">@ SOUND_WalkWaterIndoor</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00054">AudioPlayer.h:54</a></div></div>
+<div class="ttc" id="a_map_info_8h_html_a8e6404cd1a25e9f070d2918e8bb541c3"><div class="ttname"><a href="../../d9/dce/_map_info_8h.html#a8e6404cd1a25e9f070d2918e8bb541c3">pMapStats</a></div><div class="ttdeci">struct MapStats * pMapStats</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d5b/mm7__data_8cpp_source.html#l00020">mm7_data.cpp:20</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61a89abb52f1a6d757c82922d3eba5168ee"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a89abb52f1a6d757c82922d3eba5168ee">SOUND_gong</a></div><div class="ttdeci">@ SOUND_gong</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00082">AudioPlayer.h:82</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61af80b8c2e4eb1e6db50b0624efa08f1ed"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61af80b8c2e4eb1e6db50b0624efa08f1ed">SOUND_21fly03</a></div><div class="ttdeci">@ SOUND_21fly03</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00097">AudioPlayer.h:97</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61a1f555599e1b7f5cd6101b918f8e2980e"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a1f555599e1b7f5cd6101b918f8e2980e">SOUND_deal</a></div><div class="ttdeci">@ SOUND_deal</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00059">AudioPlayer.h:59</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61a775c37c64972e6c7e91e053a586b7024"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a775c37c64972e6c7e91e053a586b7024">SOUND_WaterWalk</a></div><div class="ttdeci">@ SOUND_WaterWalk</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00098">AudioPlayer.h:98</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61a41579285540aa933b7a35bb3fde8cc2f"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a41579285540aa933b7a35bb3fde8cc2f">SOUND_RunDirt</a></div><div class="ttdeci">@ SOUND_RunDirt</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00026">AudioPlayer.h:26</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61aa6ca61d062d98ef188f6b68de03294b7"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61aa6ca61d062d98ef188f6b68de03294b7">SOUND_hf445a</a></div><div class="ttdeci">@ SOUND_hf445a</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00095">AudioPlayer.h:95</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61ac6df391733420d74a5654152e0041ab4"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61ac6df391733420d74a5654152e0041ab4">SOUND_tower_up</a></div><div class="ttdeci">@ SOUND_tower_up</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00065">AudioPlayer.h:65</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61a75478e2f5e092b8dab7a111be5c4dd69"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a75478e2f5e092b8dab7a111be5c4dd69">SOUND_swing_with_sword01</a></div><div class="ttdeci">@ SOUND_swing_with_sword01</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00042">AudioPlayer.h:42</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61a5612c2c8eb93f59313924c12dcab35c5"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a5612c2c8eb93f59313924c12dcab35c5">SOUND_ClickMovingSelector</a></div><div class="ttdeci">@ SOUND_ClickMovingSelector</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00016">AudioPlayer.h:16</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61af5a3e3904e60ec3114b8ea096681997b"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61af5a3e3904e60ec3114b8ea096681997b">SOUND_swing_with_blunt_weapon01</a></div><div class="ttdeci">@ SOUND_swing_with_blunt_weapon01</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00040">AudioPlayer.h:40</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61afa5c057c247c192336cc9bd9625fe281"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61afa5c057c247c192336cc9bd9625fe281">SOUND_damage</a></div><div class="ttdeci">@ SOUND_damage</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00058">AudioPlayer.h:58</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61acace095de5eeec3b2f877027f8760b8f"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61acace095de5eeec3b2f877027f8760b8f">SOUND_ClickSkill</a></div><div class="ttdeci">@ SOUND_ClickSkill</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00018">AudioPlayer.h:18</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61aa2c6ea7d20db90bc41ea2d4aec3c3485"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61aa2c6ea7d20db90bc41ea2d4aec3c3485">SOUND_metal_vs_metal03h</a></div><div class="ttdeci">@ SOUND_metal_vs_metal03h</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00020">AudioPlayer.h:20</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61a575c8944f3e23deb7cbe2c38dfa4571e"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a575c8944f3e23deb7cbe2c38dfa4571e">SOUND_WalkCooledLava</a></div><div class="ttdeci">@ SOUND_WalkCooledLava</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00046">AudioPlayer.h:46</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_a68946471db0c45b6ce503ef14572f078a56b078091103d2c6a626a8bdef7bc595"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#a68946471db0c45b6ce503ef14572f078a56b078091103d2c6a626a8bdef7bc595">MUSIC_MainMenu</a></div><div class="ttdeci">@ MUSIC_MainMenu</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00109">AudioPlayer.h:109</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61a11a8f73a06597e9ad035a06062562c7c"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a11a8f73a06597e9ad035a06062562c7c">SOUND_WalkBadlands</a></div><div class="ttdeci">@ SOUND_WalkBadlands</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00044">AudioPlayer.h:44</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61a55a1129d82bb831a5d2f7f85d8368d45"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a55a1129d82bb831a5d2f7f85d8368d45">SOUND_RunSnow</a></div><div class="ttdeci">@ SOUND_RunSnow</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00029">AudioPlayer.h:29</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61a85dd506da7a5743cb2a950d577648822"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a85dd506da7a5743cb2a950d577648822">SOUND_quest</a></div><div class="ttdeci">@ SOUND_quest</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00106">AudioPlayer.h:106</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61a89f017851d34127302dcfc2c3faca7e7"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a89f017851d34127302dcfc2c3faca7e7">SOUND_SelectingANewCharacter</a></div><div class="ttdeci">@ SOUND_SelectingANewCharacter</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00034">AudioPlayer.h:34</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61a654955769b2a68408fa6ecc4a12f7497"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a654955769b2a68408fa6ecc4a12f7497">SOUND_victory</a></div><div class="ttdeci">@ SOUND_victory</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00067">AudioPlayer.h:67</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61a368b05f98e26a7997410f3db51dccd08"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a368b05f98e26a7997410f3db51dccd08">SOUND_9armageddon01</a></div><div class="ttdeci">@ SOUND_9armageddon01</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00104">AudioPlayer.h:104</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61af70edaceb158975558b1f67ec057e61c"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61af70edaceb158975558b1f67ec057e61c">SOUND_eleccircle</a></div><div class="ttdeci">@ SOUND_eleccircle</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00091">AudioPlayer.h:91</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61ad4c7c20c3cf479e338fc0075d232c391"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61ad4c7c20c3cf479e338fc0075d232c391">SOUND_star2</a></div><div class="ttdeci">@ SOUND_star2</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00088">AudioPlayer.h:88</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_a68946471db0c45b6ce503ef14572f078ac8fa77ddc75ad59d7541dd78916ad82a"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#a68946471db0c45b6ce503ef14572f078ac8fa77ddc75ad59d7541dd78916ad82a">MUSIC_Credits</a></div><div class="ttdeci">@ MUSIC_Credits</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00109">AudioPlayer.h:109</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61ac17804d22431009fd88d401c5a24fd56"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61ac17804d22431009fd88d401c5a24fd56">SOUND_eradicate</a></div><div class="ttdeci">@ SOUND_eradicate</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00090">AudioPlayer.h:90</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61af96c2287fed72f19388d4db4d1e8494c"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61af96c2287fed72f19388d4db4d1e8494c">SOUND_bricks_up</a></div><div class="ttdeci">@ SOUND_bricks_up</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00057">AudioPlayer.h:57</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61adc55c8b506168f6ba0de42bf69fb9690"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61adc55c8b506168f6ba0de42bf69fb9690">SOUND_swing_with_axe01</a></div><div class="ttdeci">@ SOUND_swing_with_axe01</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00038">AudioPlayer.h:38</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61a957af16b1cf261c6e64516f563b3ef61"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a957af16b1cf261c6e64516f563b3ef61">SOUND_Invalid</a></div><div class="ttdeci">@ SOUND_Invalid</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00011">AudioPlayer.h:11</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61a1a0381dcd7c89311d944f86c951b0399"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a1a0381dcd7c89311d944f86c951b0399">SOUND_Fate</a></div><div class="ttdeci">@ SOUND_Fate</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00101">AudioPlayer.h:101</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61a587c0c496cd8c945f392551239c9469b"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a587c0c496cd8c945f392551239c9469b">SOUND_enter</a></div><div class="ttdeci">@ SOUND_enter</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00012">AudioPlayer.h:12</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61adc9147375fe6f74d40f6f0af8f475674"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61adc9147375fe6f74d40f6f0af8f475674">SOUND_defeat</a></div><div class="ttdeci">@ SOUND_defeat</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00060">AudioPlayer.h:60</a></div></div>
+<div class="ttc" id="amm7__data_8cpp_html_a88ebc50ce00b0ed9170a4da4a7d99ce2"><div class="ttname"><a href="../../d6/d5b/mm7__data_8cpp.html#a88ebc50ce00b0ed9170a4da4a7d99ce2">pCurrentMapName</a></div><div class="ttdeci">String pCurrentMapName</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d5b/mm7__data_8cpp_source.html#l00712">mm7_data.cpp:712</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61aae71d43f18d542b3523e6d8b67fb1e71"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61aae71d43f18d542b3523e6d8b67fb1e71">SOUND_RunRoad</a></div><div class="ttdeci">@ SOUND_RunRoad</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00028">AudioPlayer.h:28</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61a402dd2ff4e2da7f5a6ba63a4dbf41eec"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a402dd2ff4e2da7f5a6ba63a4dbf41eec">SOUND_ClickMinus</a></div><div class="ttdeci">@ SOUND_ClickMinus</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00015">AudioPlayer.h:15</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61a493767c719accd7b86613c039120c14e"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a493767c719accd7b86613c039120c14e">SOUND_title</a></div><div class="ttdeci">@ SOUND_title</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00064">AudioPlayer.h:64</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61a7fd1ea293ca5ef5e7b86f7233dd3a6a6"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a7fd1ea293ca5ef5e7b86f7233dd3a6a6">SOUND_WalkWater</a></div><div class="ttdeci">@ SOUND_WalkWater</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00053">AudioPlayer.h:53</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61a4a62329846737ca5d1bb5793277cb09e"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a4a62329846737ca5d1bb5793277cb09e">SOUND_RunBadlands</a></div><div class="ttdeci">@ SOUND_RunBadlands</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00022">AudioPlayer.h:22</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61a968eff04d0df5acf3def573afb02241c"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a968eff04d0df5acf3def573afb02241c">SOUND_querry_up</a></div><div class="ttdeci">@ SOUND_querry_up</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00061">AudioPlayer.h:61</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61ad10bd00063f539e4a99b46ac50965cd0"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61ad10bd00063f539e4a99b46ac50965cd0">SOUND_RunCarpet</a></div><div class="ttdeci">@ SOUND_RunCarpet</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00023">AudioPlayer.h:23</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_a68946471db0c45b6ce503ef14572f078"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#a68946471db0c45b6ce503ef14572f078">MusicID</a></div><div class="ttdeci">MusicID</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00109">AudioPlayer.h:109</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61ac8d9433db1f3366f5b02835c3a5b95b7"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61ac8d9433db1f3366f5b02835c3a5b95b7">SOUND_WalkCarpet</a></div><div class="ttdeci">@ SOUND_WalkCarpet</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00045">AudioPlayer.h:45</a></div></div>
+<div class="ttc" id="astruct_map_info_html_a2ae6ac1638da1eba6bdd15f233159776"><div class="ttname"><a href="../../db/ddb/struct_map_info.html#a2ae6ac1638da1eba6bdd15f233159776">MapInfo::uRedbookTrackID</a></div><div class="ttdeci">uint8_t uRedbookTrackID</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dce/_map_info_8h_source.html#l00069">MapInfo.h:69</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61a9404ebedad4fa750c7bfd34520aa7d7f"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a9404ebedad4fa750c7bfd34520aa7d7f">SOUND_bricks_down</a></div><div class="ttdeci">@ SOUND_bricks_down</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00056">AudioPlayer.h:56</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61a75131ad7c5ee7eba7a12bddafa83b4e1"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a75131ad7c5ee7eba7a12bddafa83b4e1">SOUND_Stoneskin</a></div><div class="ttdeci">@ SOUND_Stoneskin</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00099">AudioPlayer.h:99</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61a6f43483b354b831ac1be4c8ff8886cd5"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a6f43483b354b831ac1be4c8ff8886cd5">SOUND_WalkGrass</a></div><div class="ttdeci">@ SOUND_WalkGrass</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00049">AudioPlayer.h:49</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61a1d3fd9e6a7380cb50a4bc5a9ee79f2b7"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a1d3fd9e6a7380cb50a4bc5a9ee79f2b7">SOUND_eat</a></div><div class="ttdeci">@ SOUND_eat</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00081">AudioPlayer.h:81</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61ac871b127019dcdefedc743b126fbc158"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61ac871b127019dcdefedc743b126fbc158">SOUND_RunWood</a></div><div class="ttdeci">@ SOUND_RunWood</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00033">AudioPlayer.h:33</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61adfc8d8c56f7f73bd3b8860a0b17bddef"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61adfc8d8c56f7f73bd3b8860a0b17bddef">SOUND_openchest0101</a></div><div class="ttdeci">@ SOUND_openchest0101</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00078">AudioPlayer.h:78</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61ae854961444bd7c9f5a45da54fb0a2c18"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61ae854961444bd7c9f5a45da54fb0a2c18">SOUND_94dayofprotection03</a></div><div class="ttdeci">@ SOUND_94dayofprotection03</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00103">AudioPlayer.h:103</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61a4f6aedfd41128d694ca579262d7fc2a6"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a4f6aedfd41128d694ca579262d7fc2a6">SOUND_heal</a></div><div class="ttdeci">@ SOUND_heal</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00073">AudioPlayer.h:73</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61afd391370a69192496e230efc58151577"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61afd391370a69192496e230efc58151577">SOUND_hurp</a></div><div class="ttdeci">@ SOUND_hurp</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00083">AudioPlayer.h:83</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61a3b10c618764b7d0a22bc00735296462f"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a3b10c618764b7d0a22bc00735296462f">SOUND_star4</a></div><div class="ttdeci">@ SOUND_star4</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00089">AudioPlayer.h:89</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61ac4562b03c9699789f8ce08c8696afb03"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61ac4562b03c9699789f8ce08c8696afb03">SOUND_RunDesert</a></div><div class="ttdeci">@ SOUND_RunDesert</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00025">AudioPlayer.h:25</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61a5f6bf49070f31220e0dea58b50397e19"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a5f6bf49070f31220e0dea58b50397e19">SOUND_51heroism03</a></div><div class="ttdeci">@ SOUND_51heroism03</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00102">AudioPlayer.h:102</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61aab8a4100649a4e9efd792ee3b7afe789"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61aab8a4100649a4e9efd792ee3b7afe789">SOUND_batlleen</a></div><div class="ttdeci">@ SOUND_batlleen</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00076">AudioPlayer.h:76</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61a16ae763a7a3cdac6155543997d12ed63"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a16ae763a7a3cdac6155543997d12ed63">SOUND_WalkSwamp</a></div><div class="ttdeci">@ SOUND_WalkSwamp</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00052">AudioPlayer.h:52</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61a60ac9b7e329660b3b285d456eef27872"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a60ac9b7e329660b3b285d456eef27872">SOUND_openbook</a></div><div class="ttdeci">@ SOUND_openbook</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00093">AudioPlayer.h:93</a></div></div>
+<div class="ttc" id="a_audio_player_8cpp_html_a3ee6d655d35b46ebac53ef678255f75b"><div class="ttname"><a href="../../d3/df2/_audio_player_8cpp.html#a3ee6d655d35b46ebac53ef678255f75b">pAudioPlayer</a></div><div class="ttdeci">AudioPlayer * pAudioPlayer</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/df2/_audio_player_8cpp_source.html#l00020">AudioPlayer.cpp:20</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61a74f8ece2a8e0b10581ede7fde7acc2fa"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a74f8ece2a8e0b10581ede7fde7acc2fa">SOUND_StartMainChoice02</a></div><div class="ttdeci">@ SOUND_StartMainChoice02</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00037">AudioPlayer.h:37</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61a76ff1aaa3d279049cc00dd1c63901e1b"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a76ff1aaa3d279049cc00dd1c63901e1b">SOUND_WalkDesert</a></div><div class="ttdeci">@ SOUND_WalkDesert</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00047">AudioPlayer.h:47</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61a58d039c1e801b9111d3a0ae423aa9cf4"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a58d039c1e801b9111d3a0ae423aa9cf4">SOUND_swing_with_blunt_weapon03</a></div><div class="ttdeci">@ SOUND_swing_with_blunt_weapon03</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00041">AudioPlayer.h:41</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61a2e6eb54a49e49b31e59044f4324605ca"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a2e6eb54a49e49b31e59044f4324605ca">SOUND_church</a></div><div class="ttdeci">@ SOUND_church</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00084">AudioPlayer.h:84</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61ada29734e0f89ebd9509cb7a5b173ce18"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61ada29734e0f89ebd9509cb7a5b173ce18">SOUND_Sacrifice2</a></div><div class="ttdeci">@ SOUND_Sacrifice2</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00105">AudioPlayer.h:105</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61ad90ba2dee9dbf6f92233f02b7ef7a3ad"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61ad90ba2dee9dbf6f92233f02b7ef7a3ad">SOUND_WalkWood</a></div><div class="ttdeci">@ SOUND_WalkWood</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00055">AudioPlayer.h:55</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61afdf923afe44db5b2a9df90898b11d7be"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61afdf923afe44db5b2a9df90898b11d7be">SOUND_querry_down</a></div><div class="ttdeci">@ SOUND_querry_down</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00062">AudioPlayer.h:62</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61a41461b28d014d14c94c063650b936c38"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a41461b28d014d14c94c063650b936c38">SOUND_48</a></div><div class="ttdeci">@ SOUND_48</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00021">AudioPlayer.h:21</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61a45810b08f693d5ae1fdfd05b0a4a6639"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a45810b08f693d5ae1fdfd05b0a4a6639">SOUND_star1</a></div><div class="ttdeci">@ SOUND_star1</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00087">AudioPlayer.h:87</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61aae0fbc479a1d64501c562f5c8e4c41c0"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61aae0fbc479a1d64501c562f5c8e4c41c0">SOUND_Haste</a></div><div class="ttdeci">@ SOUND_Haste</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00096">AudioPlayer.h:96</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61ad519ce6fe934b75aeef17c574d1bf67d"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61ad519ce6fe934b75aeef17c574d1bf67d">SOUND_splash</a></div><div class="ttdeci">@ SOUND_splash</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00086">AudioPlayer.h:86</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_3974871bf467d5376b8307ffe9ef875e.html">Media</a></li><li class="navelem"><a class="el" href="../../dir_1bd8ddbedbd74a30e08a039cf6e2b679.html">Audio</a></li><li class="navelem"><a class="el" href="../../dd/d7b/_audio_player_8h.html">AudioPlayer.h</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:04:21. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

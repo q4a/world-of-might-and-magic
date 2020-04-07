@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Исходный файл C:/git/world-of-might-and-magic/Media/Audio/OpenALSoundProvider.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d2/d7a/_open_a_l_sound_provider_8h_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">OpenALSoundProvider.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d2/d7a/_open_a_l_sound_provider_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="../../d1/d20/al_8h.html">AL/al.h</a>&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="../../d6/d57/alc_8h.html">AL/alc.h</a>&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../da/def/_media_8h.html">Media/Media.h</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d2/d7a/_open_a_l_sound_provider_8h.html#a5ed8e2adc6340d877478a62cc1d448c9">log</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code" href="../../d3/d78/_s_d_l__audio_8h.html#a71a65ffd977afe9c3fef116a5bc9ee27">format</a>, ...);</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="../../d9/d98/class_open_a_l_sound_provider.html">   12</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d9/d98/class_open_a_l_sound_provider.html">OpenALSoundProvider</a> {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="../../d3/d12/struct_open_a_l_sound_provider_1_1_track_buffer.html">   14</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="../../d3/d12/struct_open_a_l_sound_provider_1_1_track_buffer.html">TrackBuffer</a> {</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="../../d3/d12/struct_open_a_l_sound_provider_1_1_track_buffer.html#a5b983c73ea42e480929c8c0408c1804f">   15</a></span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../d3/d12/struct_open_a_l_sound_provider_1_1_track_buffer.html#a5b983c73ea42e480929c8c0408c1804f">source_id</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="../../d3/d12/struct_open_a_l_sound_provider_1_1_track_buffer.html#a60101057a142ed24fe52159c5c69ac5e">   16</a></span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../d3/d12/struct_open_a_l_sound_provider_1_1_track_buffer.html#a60101057a142ed24fe52159c5c69ac5e">buffer_id</a>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    };</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="../../d6/d42/struct_open_a_l_sound_provider_1_1_streaming_track_buffer.html">   19</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="../../d6/d42/struct_open_a_l_sound_provider_1_1_streaming_track_buffer.html">StreamingTrackBuffer</a> {</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="../../d6/d42/struct_open_a_l_sound_provider_1_1_streaming_track_buffer.html#aa50efa56b61c04d0fefff969afd301c0">   20</a></span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../d6/d42/struct_open_a_l_sound_provider_1_1_streaming_track_buffer.html#aa50efa56b61c04d0fefff969afd301c0">source_id</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="../../d6/d42/struct_open_a_l_sound_provider_1_1_streaming_track_buffer.html#af1cc76b82776f31ff596f54d1ebd06d8">   21</a></span>&#160;        <a class="code" href="../../d1/d20/al_8h.html#a715098c13211f3570a9288a27f87fdfa">ALenum</a> <a class="code" href="../../d6/d42/struct_open_a_l_sound_provider_1_1_streaming_track_buffer.html#af1cc76b82776f31ff596f54d1ebd06d8">sample_format</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="../../d6/d42/struct_open_a_l_sound_provider_1_1_streaming_track_buffer.html#aefbf785c2afc5f4fdc626f468bcb5a7e">   22</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="../../d6/d42/struct_open_a_l_sound_provider_1_1_streaming_track_buffer.html#aefbf785c2afc5f4fdc626f468bcb5a7e">sample_rate</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    };</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="../../d9/d98/class_open_a_l_sound_provider.html#ae62f25bd470c17c15c0e192d4bed8a34">OpenALSoundProvider</a>();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="../../d9/d98/class_open_a_l_sound_provider.html#ad1fcaf82d18c358b702c3b3c4aefcf81">~OpenALSoundProvider</a>();</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d9/d98/class_open_a_l_sound_provider.html#adbef721538eac354ac07a378ceee2fa1">Initialize</a>();</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d9/d98/class_open_a_l_sound_provider.html#a090f65e443548e5323217f46feeaf1ac">Release</a>();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d9/d98/class_open_a_l_sound_provider.html#a4fd17b245c58b1b7384ea18983bf8b22">DeleteStreamingTrack</a>(<a class="code" href="../../d6/d42/struct_open_a_l_sound_provider_1_1_streaming_track_buffer.html">StreamingTrackBuffer</a> **<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a76461e97a098d2c9ae20ac193d3825ae">buffer</a>);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d9/d98/class_open_a_l_sound_provider.html#a2f4f37f252d7734e8e2ac6dba293269f">DeleteBuffer16</a>(<a class="code" href="../../d3/d12/struct_open_a_l_sound_provider_1_1_track_buffer.html">TrackBuffer</a> **<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a76461e97a098d2c9ae20ac193d3825ae">buffer</a>);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">float</span> <a class="code" href="../../d9/d98/class_open_a_l_sound_provider.html#a38b3e262cf2d0df63670e3fe17397d5e">alBufferLength</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a76461e97a098d2c9ae20ac193d3825ae">buffer</a>);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="../../d6/d42/struct_open_a_l_sound_provider_1_1_streaming_track_buffer.html">StreamingTrackBuffer</a> *<a class="code" href="../../d9/d98/class_open_a_l_sound_provider.html#aa7d5291e06841fdd103e29a3f296cb8f">CreateStreamingTrack16</a>(<span class="keywordtype">int</span> num_channels,</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                                                 <span class="keywordtype">int</span> sample_rate,</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                                                 <span class="keywordtype">int</span> bytes_per_sample);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d9/d98/class_open_a_l_sound_provider.html#ab3935fb475fe6b027403c526d8a07aca">Stream16</a>(<a class="code" href="../../d6/d42/struct_open_a_l_sound_provider_1_1_streaming_track_buffer.html">StreamingTrackBuffer</a> *<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a76461e97a098d2c9ae20ac193d3825ae">buffer</a>, <span class="keywordtype">int</span> num_samples,</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                  <span class="keyword">const</span> <span class="keywordtype">void</span> *<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aba70cd077c2c52c15358c231c6d293aa">samples</a>, <span class="keywordtype">bool</span> wait = <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="../../d3/d12/struct_open_a_l_sound_provider_1_1_track_buffer.html">TrackBuffer</a> *<a class="code" href="../../d9/d98/class_open_a_l_sound_provider.html#a49aa919073483797eb84b7a0f446e188">CreateTrack16</a>(<span class="keywordtype">int</span> num_channels, <span class="keywordtype">int</span> sample_rate,</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                               <span class="keyword">const</span> <span class="keywordtype">void</span> *<a class="code" href="../../df/dc4/_s_d_l__opengl_8h.html#a2e335d56e2846b0fea47eed068b2d34a">data</a>, <span class="keywordtype">size_t</span> <a class="code" href="../../db/d76/group__lavu__mem__funcs.html#ga3d1e3edfcf61ca2d831883e1afbad89e">size</a>);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d9/d98/class_open_a_l_sound_provider.html#af4c6cd587fca7a1022757e1c79ceec4f">PlayTrack16</a>(<a class="code" href="../../d3/d12/struct_open_a_l_sound_provider_1_1_track_buffer.html">TrackBuffer</a> *<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a76461e97a098d2c9ae20ac193d3825ae">buffer</a>, <span class="keywordtype">bool</span> loop = <span class="keyword">false</span>, <span class="keywordtype">bool</span> wait = <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d9/d98/class_open_a_l_sound_provider.html#a25ac61cd13253bb659672a1cc29ef22c">SetListenerPosition</a>(<span class="keywordtype">float</span> <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ad0e63d0edcdbd3d79554076bf309fd47">x</a>, <span class="keywordtype">float</span> <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a1675d9d7bb68e1657ff028643b4037e3">y</a>, <span class="keywordtype">float</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a5e74030ebb3297ce1b37ff716fedd68f">z</a>);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d9/d98/class_open_a_l_sound_provider.html#aa38841b67d881fafdb84cddce5972a42">SetOrientation</a>(<span class="keywordtype">float</span> yaw, <span class="keywordtype">float</span> pitch);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="../../d9/d98/class_open_a_l_sound_provider.html#a70b5a880cb95701b8277775215cbf9aa">   46</a></span>&#160;    <a class="code" href="../../d6/d57/alc_8h.html#aab0cf6e64e3c1dc844cc7467ae0b46ed">ALCdevice</a> *<a class="code" href="../../d9/d98/class_open_a_l_sound_provider.html#a70b5a880cb95701b8277775215cbf9aa">device</a>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="../../d9/d98/class_open_a_l_sound_provider.html#a4ca9f15b097a3fc380cdaba31f440886">   47</a></span>&#160;    <a class="code" href="../../d6/d57/alc_8h.html#a34b6b0f77949d6c09723405d62c25659">ALCcontext</a> *<a class="code" href="../../d9/d98/class_open_a_l_sound_provider.html#a4ca9f15b097a3fc380cdaba31f440886">context</a>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;};</div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aclass_open_a_l_sound_provider_html_a49aa919073483797eb84b7a0f446e188"><div class="ttname"><a href="../../d9/d98/class_open_a_l_sound_provider.html#a49aa919073483797eb84b7a0f446e188">OpenALSoundProvider::CreateTrack16</a></div><div class="ttdeci">TrackBuffer * CreateTrack16(int num_channels, int sample_rate, const void *data, size_t size)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db9/_open_a_l_sound_provider_8cpp_source.html#l00286">OpenALSoundProvider.cpp:286</a></div></div>
+<div class="ttc" id="aclass_open_a_l_sound_provider_html_a4ca9f15b097a3fc380cdaba31f440886"><div class="ttname"><a href="../../d9/d98/class_open_a_l_sound_provider.html#a4ca9f15b097a3fc380cdaba31f440886">OpenALSoundProvider::context</a></div><div class="ttdeci">ALCcontext * context</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d7a/_open_a_l_sound_provider_8h_source.html#l00047">OpenALSoundProvider.h:47</a></div></div>
+<div class="ttc" id="aclass_open_a_l_sound_provider_html_ad1fcaf82d18c358b702c3b3c4aefcf81"><div class="ttname"><a href="../../d9/d98/class_open_a_l_sound_provider.html#ad1fcaf82d18c358b702c3b3c4aefcf81">OpenALSoundProvider::~OpenALSoundProvider</a></div><div class="ttdeci">virtual ~OpenALSoundProvider()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db9/_open_a_l_sound_provider_8cpp_source.html#l00048">OpenALSoundProvider.cpp:48</a></div></div>
+<div class="ttc" id="aal_8h_html_a715098c13211f3570a9288a27f87fdfa"><div class="ttname"><a href="../../d1/d20/al_8h.html#a715098c13211f3570a9288a27f87fdfa">ALenum</a></div><div class="ttdeci">int ALenum</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d20/al_8h_source.html#l00065">al.h:65</a></div></div>
+<div class="ttc" id="astruct_open_a_l_sound_provider_1_1_streaming_track_buffer_html"><div class="ttname"><a href="../../d6/d42/struct_open_a_l_sound_provider_1_1_streaming_track_buffer.html">OpenALSoundProvider::StreamingTrackBuffer</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d7a/_open_a_l_sound_provider_8h_source.html#l00019">OpenALSoundProvider.h:19</a></div></div>
+<div class="ttc" id="aclass_open_a_l_sound_provider_html_aa38841b67d881fafdb84cddce5972a42"><div class="ttname"><a href="../../d9/d98/class_open_a_l_sound_provider.html#aa38841b67d881fafdb84cddce5972a42">OpenALSoundProvider::SetOrientation</a></div><div class="ttdeci">void SetOrientation(float yaw, float pitch)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db9/_open_a_l_sound_provider_8cpp_source.html#l00097">OpenALSoundProvider.cpp:97</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a5e74030ebb3297ce1b37ff716fedd68f"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a5e74030ebb3297ce1b37ff716fedd68f">z</a></div><div class="ttdeci">GLdouble GLdouble z</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l00407">SDL_opengl_glext.h:407</a></div></div>
+<div class="ttc" id="aclass_open_a_l_sound_provider_html_adbef721538eac354ac07a378ceee2fa1"><div class="ttname"><a href="../../d9/d98/class_open_a_l_sound_provider.html#adbef721538eac354ac07a378ceee2fa1">OpenALSoundProvider::Initialize</a></div><div class="ttdeci">bool Initialize()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db9/_open_a_l_sound_provider_8cpp_source.html#l00050">OpenALSoundProvider.cpp:50</a></div></div>
+<div class="ttc" id="aal_8h_html"><div class="ttname"><a href="../../d1/d20/al_8h.html">al.h</a></div></div>
+<div class="ttc" id="aclass_open_a_l_sound_provider_html_a2f4f37f252d7734e8e2ac6dba293269f"><div class="ttname"><a href="../../d9/d98/class_open_a_l_sound_provider.html#a2f4f37f252d7734e8e2ac6dba293269f">OpenALSoundProvider::DeleteBuffer16</a></div><div class="ttdeci">void DeleteBuffer16(TrackBuffer **buffer)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db9/_open_a_l_sound_provider_8cpp_source.html#l00150">OpenALSoundProvider.cpp:150</a></div></div>
+<div class="ttc" id="a_s_d_l__audio_8h_html_a71a65ffd977afe9c3fef116a5bc9ee27"><div class="ttname"><a href="../../d3/d78/_s_d_l__audio_8h.html#a71a65ffd977afe9c3fef116a5bc9ee27">format</a></div><div class="ttdeci">SDL_AudioFormat format</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d78/_s_d_l__audio_8h_source.html#l00194">SDL_audio.h:194</a></div></div>
+<div class="ttc" id="a_s_d_l__egl_8h_html_a76461e97a098d2c9ae20ac193d3825ae"><div class="ttname"><a href="../../df/d32/_s_d_l__egl_8h.html#a76461e97a098d2c9ae20ac193d3825ae">buffer</a></div><div class="ttdeci">EGLContext EGLenum EGLClientBuffer buffer</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/_s_d_l__egl_8h_source.html#l00952">SDL_egl.h:952</a></div></div>
+<div class="ttc" id="astruct_open_a_l_sound_provider_1_1_streaming_track_buffer_html_af1cc76b82776f31ff596f54d1ebd06d8"><div class="ttname"><a href="../../d6/d42/struct_open_a_l_sound_provider_1_1_streaming_track_buffer.html#af1cc76b82776f31ff596f54d1ebd06d8">OpenALSoundProvider::StreamingTrackBuffer::sample_format</a></div><div class="ttdeci">ALenum sample_format</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d7a/_open_a_l_sound_provider_8h_source.html#l00021">OpenALSoundProvider.h:21</a></div></div>
+<div class="ttc" id="a_s_d_l__egl_8h_html_a1675d9d7bb68e1657ff028643b4037e3"><div class="ttname"><a href="../../df/d32/_s_d_l__egl_8h.html#a1675d9d7bb68e1657ff028643b4037e3">y</a></div><div class="ttdeci">EGLSurface EGLint EGLint y</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/_s_d_l__egl_8h_source.html#l01596">SDL_egl.h:1596</a></div></div>
+<div class="ttc" id="aclass_open_a_l_sound_provider_html_aa7d5291e06841fdd103e29a3f296cb8f"><div class="ttname"><a href="../../d9/d98/class_open_a_l_sound_provider.html#aa7d5291e06841fdd103e29a3f296cb8f">OpenALSoundProvider::CreateStreamingTrack16</a></div><div class="ttdeci">StreamingTrackBuffer * CreateStreamingTrack16(int num_channels, int sample_rate, int bytes_per_sample)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db9/_open_a_l_sound_provider_8cpp_source.html#l00173">OpenALSoundProvider.cpp:173</a></div></div>
+<div class="ttc" id="a_s_d_l__egl_8h_html_ad0e63d0edcdbd3d79554076bf309fd47"><div class="ttname"><a href="../../df/d32/_s_d_l__egl_8h.html#ad0e63d0edcdbd3d79554076bf309fd47">x</a></div><div class="ttdeci">EGLSurface EGLint x</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/_s_d_l__egl_8h_source.html#l01596">SDL_egl.h:1596</a></div></div>
+<div class="ttc" id="astruct_open_a_l_sound_provider_1_1_track_buffer_html_a5b983c73ea42e480929c8c0408c1804f"><div class="ttname"><a href="../../d3/d12/struct_open_a_l_sound_provider_1_1_track_buffer.html#a5b983c73ea42e480929c8c0408c1804f">OpenALSoundProvider::TrackBuffer::source_id</a></div><div class="ttdeci">unsigned int source_id</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d7a/_open_a_l_sound_provider_8h_source.html#l00015">OpenALSoundProvider.h:15</a></div></div>
+<div class="ttc" id="a_open_a_l_sound_provider_8h_html_a5ed8e2adc6340d877478a62cc1d448c9"><div class="ttname"><a href="../../d2/d7a/_open_a_l_sound_provider_8h.html#a5ed8e2adc6340d877478a62cc1d448c9">log</a></div><div class="ttdeci">void log(const char *format,...)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db9/_open_a_l_sound_provider_8cpp_source.html#l00024">OpenALSoundProvider.cpp:24</a></div></div>
+<div class="ttc" id="aclass_open_a_l_sound_provider_html_a4fd17b245c58b1b7384ea18983bf8b22"><div class="ttname"><a href="../../d9/d98/class_open_a_l_sound_provider.html#a4fd17b245c58b1b7384ea18983bf8b22">OpenALSoundProvider::DeleteStreamingTrack</a></div><div class="ttdeci">void DeleteStreamingTrack(StreamingTrackBuffer **buffer)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db9/_open_a_l_sound_provider_8cpp_source.html#l00116">OpenALSoundProvider.cpp:116</a></div></div>
+<div class="ttc" id="astruct_open_a_l_sound_provider_1_1_streaming_track_buffer_html_aefbf785c2afc5f4fdc626f468bcb5a7e"><div class="ttname"><a href="../../d6/d42/struct_open_a_l_sound_provider_1_1_streaming_track_buffer.html#aefbf785c2afc5f4fdc626f468bcb5a7e">OpenALSoundProvider::StreamingTrackBuffer::sample_rate</a></div><div class="ttdeci">int sample_rate</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d7a/_open_a_l_sound_provider_8h_source.html#l00022">OpenALSoundProvider.h:22</a></div></div>
+<div class="ttc" id="a_media_8h_html"><div class="ttname"><a href="../../da/def/_media_8h.html">Media.h</a></div></div>
+<div class="ttc" id="aalc_8h_html"><div class="ttname"><a href="../../d6/d57/alc_8h.html">alc.h</a></div></div>
+<div class="ttc" id="astruct_open_a_l_sound_provider_1_1_track_buffer_html_a60101057a142ed24fe52159c5c69ac5e"><div class="ttname"><a href="../../d3/d12/struct_open_a_l_sound_provider_1_1_track_buffer.html#a60101057a142ed24fe52159c5c69ac5e">OpenALSoundProvider::TrackBuffer::buffer_id</a></div><div class="ttdeci">unsigned int buffer_id</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d7a/_open_a_l_sound_provider_8h_source.html#l00016">OpenALSoundProvider.h:16</a></div></div>
+<div class="ttc" id="aclass_open_a_l_sound_provider_html_a38b3e262cf2d0df63670e3fe17397d5e"><div class="ttname"><a href="../../d9/d98/class_open_a_l_sound_provider.html#a38b3e262cf2d0df63670e3fe17397d5e">OpenALSoundProvider::alBufferLength</a></div><div class="ttdeci">float alBufferLength(unsigned int buffer)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db9/_open_a_l_sound_provider_8cpp_source.html#l00158">OpenALSoundProvider.cpp:158</a></div></div>
+<div class="ttc" id="aclass_open_a_l_sound_provider_html_ab3935fb475fe6b027403c526d8a07aca"><div class="ttname"><a href="../../d9/d98/class_open_a_l_sound_provider.html#ab3935fb475fe6b027403c526d8a07aca">OpenALSoundProvider::Stream16</a></div><div class="ttdeci">void Stream16(StreamingTrackBuffer *buffer, int num_samples, const void *samples, bool wait=false)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db9/_open_a_l_sound_provider_8cpp_source.html#l00226">OpenALSoundProvider.cpp:226</a></div></div>
+<div class="ttc" id="aalc_8h_html_a34b6b0f77949d6c09723405d62c25659"><div class="ttname"><a href="../../d6/d57/alc_8h.html#a34b6b0f77949d6c09723405d62c25659">ALCcontext</a></div><div class="ttdeci">struct ALCcontext ALCcontext</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d57/alc_8h_source.html#l00036">alc.h:36</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl_8h_html_a2e335d56e2846b0fea47eed068b2d34a"><div class="ttname"><a href="../../df/dc4/_s_d_l__opengl_8h.html#a2e335d56e2846b0fea47eed068b2d34a">data</a></div><div class="ttdeci">GLint GLenum GLsizei GLsizei GLsizei GLint GLsizei const GLvoid * data</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dc4/_s_d_l__opengl_8h_source.html#l01974">SDL_opengl.h:1974</a></div></div>
+<div class="ttc" id="aclass_open_a_l_sound_provider_html_a090f65e443548e5323217f46feeaf1ac"><div class="ttname"><a href="../../d9/d98/class_open_a_l_sound_provider.html#a090f65e443548e5323217f46feeaf1ac">OpenALSoundProvider::Release</a></div><div class="ttdeci">void Release()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db9/_open_a_l_sound_provider_8cpp_source.html#l00106">OpenALSoundProvider.cpp:106</a></div></div>
+<div class="ttc" id="aclass_open_a_l_sound_provider_html"><div class="ttname"><a href="../../d9/d98/class_open_a_l_sound_provider.html">OpenALSoundProvider</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d7a/_open_a_l_sound_provider_8h_source.html#l00012">OpenALSoundProvider.h:12</a></div></div>
+<div class="ttc" id="aclass_open_a_l_sound_provider_html_af4c6cd587fca7a1022757e1c79ceec4f"><div class="ttname"><a href="../../d9/d98/class_open_a_l_sound_provider.html#af4c6cd587fca7a1022757e1c79ceec4f">OpenALSoundProvider::PlayTrack16</a></div><div class="ttdeci">void PlayTrack16(TrackBuffer *buffer, bool loop=false, bool wait=false)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db9/_open_a_l_sound_provider_8cpp_source.html#l00358">OpenALSoundProvider.cpp:358</a></div></div>
+<div class="ttc" id="agroup__lavu__mem__funcs_html_ga3d1e3edfcf61ca2d831883e1afbad89e"><div class="ttname"><a href="../../db/d76/group__lavu__mem__funcs.html#ga3d1e3edfcf61ca2d831883e1afbad89e">size</a></div><div class="ttdeci">GLsizeiptr size</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l00540">SDL_opengl_glext.h:540</a></div></div>
+<div class="ttc" id="aclass_open_a_l_sound_provider_html_a25ac61cd13253bb659672a1cc29ef22c"><div class="ttname"><a href="../../d9/d98/class_open_a_l_sound_provider.html#a25ac61cd13253bb659672a1cc29ef22c">OpenALSoundProvider::SetListenerPosition</a></div><div class="ttdeci">void SetListenerPosition(float x, float y, float z)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db9/_open_a_l_sound_provider_8cpp_source.html#l00093">OpenALSoundProvider.cpp:93</a></div></div>
+<div class="ttc" id="astruct_open_a_l_sound_provider_1_1_streaming_track_buffer_html_aa50efa56b61c04d0fefff969afd301c0"><div class="ttname"><a href="../../d6/d42/struct_open_a_l_sound_provider_1_1_streaming_track_buffer.html#aa50efa56b61c04d0fefff969afd301c0">OpenALSoundProvider::StreamingTrackBuffer::source_id</a></div><div class="ttdeci">unsigned int source_id</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d7a/_open_a_l_sound_provider_8h_source.html#l00020">OpenALSoundProvider.h:20</a></div></div>
+<div class="ttc" id="aalc_8h_html_aab0cf6e64e3c1dc844cc7467ae0b46ed"><div class="ttname"><a href="../../d6/d57/alc_8h.html#aab0cf6e64e3c1dc844cc7467ae0b46ed">ALCdevice</a></div><div class="ttdeci">struct ALCdevice ALCdevice</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d57/alc_8h_source.html#l00034">alc.h:34</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_aba70cd077c2c52c15358c231c6d293aa"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aba70cd077c2c52c15358c231c6d293aa">samples</a></div><div class="ttdeci">GLsizei samples</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l01188">SDL_opengl_glext.h:1188</a></div></div>
+<div class="ttc" id="aclass_open_a_l_sound_provider_html_a70b5a880cb95701b8277775215cbf9aa"><div class="ttname"><a href="../../d9/d98/class_open_a_l_sound_provider.html#a70b5a880cb95701b8277775215cbf9aa">OpenALSoundProvider::device</a></div><div class="ttdeci">ALCdevice * device</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d7a/_open_a_l_sound_provider_8h_source.html#l00046">OpenALSoundProvider.h:46</a></div></div>
+<div class="ttc" id="aclass_open_a_l_sound_provider_html_ae62f25bd470c17c15c0e192d4bed8a34"><div class="ttname"><a href="../../d9/d98/class_open_a_l_sound_provider.html#ae62f25bd470c17c15c0e192d4bed8a34">OpenALSoundProvider::OpenALSoundProvider</a></div><div class="ttdeci">OpenALSoundProvider()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db9/_open_a_l_sound_provider_8cpp_source.html#l00043">OpenALSoundProvider.cpp:43</a></div></div>
+<div class="ttc" id="astruct_open_a_l_sound_provider_1_1_track_buffer_html"><div class="ttname"><a href="../../d3/d12/struct_open_a_l_sound_provider_1_1_track_buffer.html">OpenALSoundProvider::TrackBuffer</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d7a/_open_a_l_sound_provider_8h_source.html#l00014">OpenALSoundProvider.h:14</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_3974871bf467d5376b8307ffe9ef875e.html">Media</a></li><li class="navelem"><a class="el" href="../../dir_1bd8ddbedbd74a30e08a039cf6e2b679.html">Audio</a></li><li class="navelem"><a class="el" href="../../d2/d7a/_open_a_l_sound_provider_8h.html">OpenALSoundProvider.h</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:03:44. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,557 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Исходный файл C:/git/world-of-might-and-magic/IO/Mouse.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d2/de3/_mouse_8h_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Mouse.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d2/de3/_mouse_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d1/d18/_point_8h.html">Engine/Point.h</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d4/ddd/_api_8h.html">Platform/Api.h</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#ifndef VK_LBUTTON  // should replace win32 defines with custom enums</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> * Virtual Keys, Standard Set</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#define VK_LBUTTON 0x01</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define VK_RBUTTON 0x02</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#define VK_CANCEL 0x03</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#define VK_MBUTTON 0x04 </span><span class="comment">/* NOT contiguous with L &amp; RBUTTON */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#if (_WIN32_WINNT &gt;= 0x0500)</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#define VK_XBUTTON1 0x05 </span><span class="comment">/* NOT contiguous with L &amp; RBUTTON */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#define VK_XBUTTON2 0x06 </span><span class="comment">/* NOT contiguous with L &amp; RBUTTON */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#endif                   </span><span class="comment">/* _WIN32_WINNT &gt;= 0x0500 */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"> * 0x07 : unassigned</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#define VK_BACK 0x08</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#define VK_TAB 0x09</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment"> * 0x0A - 0x0B : reserved</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#define VK_CLEAR 0x0C</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#define VK_RETURN 0x0D</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#define VK_SHIFT 0x10</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#define VK_CONTROL 0x11</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#define VK_MENU 0x12</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#define VK_PAUSE 0x13</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#define VK_CAPITAL 0x14</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#define VK_KANA 0x15</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#define VK_HANGEUL 0x15 </span><span class="comment">/* old name - should be here for compatibility */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#define VK_HANGUL 0x15</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#define VK_JUNJA 0x17</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#define VK_FINAL 0x18</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#define VK_HANJA 0x19</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#define VK_KANJI 0x19</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#define VK_ESCAPE 0x1B</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#define VK_CONVERT 0x1C</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#define VK_NONCONVERT 0x1D</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#define VK_ACCEPT 0x1E</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#define VK_MODECHANGE 0x1F</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#define VK_SPACE 0x20</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#define VK_PRIOR 0x21</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">#define VK_NEXT 0x22</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">#define VK_END 0x23</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">#define VK_HOME 0x24</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">#define VK_LEFT 0x25</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor">#define VK_UP 0x26</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">#define VK_RIGHT 0x27</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor">#define VK_DOWN 0x28</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">#define VK_SELECT 0x29</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor">#define VK_PRINT 0x2A</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">#define VK_EXECUTE 0x2B</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor">#define VK_SNAPSHOT 0x2C</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor">#define VK_INSERT 0x2D</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">#define VK_DELETE 0x2E</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">#define VK_HELP 0x2F</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment"> * VK_0 - VK_9 are the same as ASCII &#39;0&#39; - &#39;9&#39; (0x30 - 0x39)</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment"> * 0x40 : unassigned</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment"> * VK_A - VK_Z are the same as ASCII &#39;A&#39; - &#39;Z&#39; (0x41 - 0x5A)</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="preprocessor">#define VK_LWIN 0x5B</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="preprocessor">#define VK_RWIN 0x5C</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="preprocessor">#define VK_APPS 0x5D</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment"> * 0x5E : reserved</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="preprocessor">#define VK_SLEEP 0x5F</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="preprocessor">#define VK_NUMPAD0 0x60</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="preprocessor">#define VK_NUMPAD1 0x61</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="preprocessor">#define VK_NUMPAD2 0x62</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="preprocessor">#define VK_NUMPAD3 0x63</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="preprocessor">#define VK_NUMPAD4 0x64</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor">#define VK_NUMPAD5 0x65</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="preprocessor">#define VK_NUMPAD6 0x66</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="preprocessor">#define VK_NUMPAD7 0x67</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="preprocessor">#define VK_NUMPAD8 0x68</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="preprocessor">#define VK_NUMPAD9 0x69</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="preprocessor">#define VK_MULTIPLY 0x6A</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="preprocessor">#define VK_ADD 0x6B</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="preprocessor">#define VK_SEPARATOR 0x6C</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="preprocessor">#define VK_SUBTRACT 0x6D</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="preprocessor">#define VK_DECIMAL 0x6E</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="preprocessor">#define VK_DIVIDE 0x6F</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="preprocessor">#define VK_F1 0x70</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="preprocessor">#define VK_F2 0x71</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="preprocessor">#define VK_F3 0x72</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="preprocessor">#define VK_F4 0x73</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="preprocessor">#define VK_F5 0x74</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="preprocessor">#define VK_F6 0x75</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="preprocessor">#define VK_F7 0x76</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="preprocessor">#define VK_F8 0x77</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="preprocessor">#define VK_F9 0x78</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="preprocessor">#define VK_F10 0x79</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="preprocessor">#define VK_F11 0x7A</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="preprocessor">#define VK_F12 0x7B</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="preprocessor">#define VK_F13 0x7C</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="preprocessor">#define VK_F14 0x7D</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="preprocessor">#define VK_F15 0x7E</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="preprocessor">#define VK_F16 0x7F</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="preprocessor">#define VK_F17 0x80</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="preprocessor">#define VK_F18 0x81</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="preprocessor">#define VK_F19 0x82</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="preprocessor">#define VK_F20 0x83</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="preprocessor">#define VK_F21 0x84</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="preprocessor">#define VK_F22 0x85</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="preprocessor">#define VK_F23 0x86</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="preprocessor">#define VK_F24 0x87</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="comment"> * 0x88 - 0x8F : unassigned</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="preprocessor">#define VK_NUMLOCK 0x90</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="preprocessor">#define VK_SCROLL 0x91</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="comment"> * NEC PC-9800 kbd definitions</span></div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;<span class="preprocessor">#define VK_OEM_NEC_EQUAL 0x92  // &#39;=&#39; key on numpad</span></div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160; </div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<span class="comment"> * Fujitsu/OASYS kbd definitions</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="preprocessor">#define VK_OEM_FJ_JISHO 0x92    // &#39;Dictionary&#39; key</span></div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="preprocessor">#define VK_OEM_FJ_MASSHOU 0x93  // &#39;Unregister word&#39; key</span></div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="preprocessor">#define VK_OEM_FJ_TOUROKU 0x94  // &#39;Register word&#39; key</span></div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<span class="preprocessor">#define VK_OEM_FJ_LOYA 0x95     // &#39;Left OYAYUBI&#39; key</span></div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span class="preprocessor">#define VK_OEM_FJ_ROYA 0x96     // &#39;Right OYAYUBI&#39; key</span></div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="comment"> * 0x97 - 0x9F : unassigned</span></div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160; </div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="comment"> * VK_L* &amp; VK_R* - left and right Alt, Ctrl and Shift virtual keys.</span></div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="comment"> * Used only as parameters to GetAsyncKeyState() and GetKeyState().</span></div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;<span class="comment"> * No other API or message will distinguish left and right keys in this way.</span></div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="preprocessor">#define VK_LSHIFT 0xA0</span></div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;<span class="preprocessor">#define VK_RSHIFT 0xA1</span></div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="preprocessor">#define VK_LCONTROL 0xA2</span></div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="preprocessor">#define VK_RCONTROL 0xA3</span></div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;<span class="preprocessor">#define VK_LMENU 0xA4</span></div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;<span class="preprocessor">#define VK_RMENU 0xA5</span></div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160; </div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;<span class="preprocessor">#if (_WIN32_WINNT &gt;= 0x0500)</span></div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;<span class="preprocessor">#define VK_BROWSER_BACK 0xA6</span></div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;<span class="preprocessor">#define VK_BROWSER_FORWARD 0xA7</span></div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;<span class="preprocessor">#define VK_BROWSER_REFRESH 0xA8</span></div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;<span class="preprocessor">#define VK_BROWSER_STOP 0xA9</span></div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;<span class="preprocessor">#define VK_BROWSER_SEARCH 0xAA</span></div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;<span class="preprocessor">#define VK_BROWSER_FAVORITES 0xAB</span></div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;<span class="preprocessor">#define VK_BROWSER_HOME 0xAC</span></div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160; </div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;<span class="preprocessor">#define VK_VOLUME_MUTE 0xAD</span></div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;<span class="preprocessor">#define VK_VOLUME_DOWN 0xAE</span></div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;<span class="preprocessor">#define VK_VOLUME_UP 0xAF</span></div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;<span class="preprocessor">#define VK_MEDIA_NEXT_TRACK 0xB0</span></div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;<span class="preprocessor">#define VK_MEDIA_PREV_TRACK 0xB1</span></div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;<span class="preprocessor">#define VK_MEDIA_STOP 0xB2</span></div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;<span class="preprocessor">#define VK_MEDIA_PLAY_PAUSE 0xB3</span></div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;<span class="preprocessor">#define VK_LAUNCH_MAIL 0xB4</span></div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;<span class="preprocessor">#define VK_LAUNCH_MEDIA_SELECT 0xB5</span></div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;<span class="preprocessor">#define VK_LAUNCH_APP1 0xB6</span></div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;<span class="preprocessor">#define VK_LAUNCH_APP2 0xB7</span></div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160; </div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* _WIN32_WINNT &gt;= 0x0500 */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160; </div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;<span class="comment"> * 0xB8 - 0xB9 : reserved</span></div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160; </div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;<span class="preprocessor">#define VK_OEM_1 0xBA       // &#39;;:&#39; for US</span></div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;<span class="preprocessor">#define VK_OEM_PLUS 0xBB    // &#39;+&#39; any country</span></div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;<span class="preprocessor">#define VK_OEM_COMMA 0xBC   // &#39;,&#39; any country</span></div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;<span class="preprocessor">#define VK_OEM_MINUS 0xBD   // &#39;-&#39; any country</span></div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;<span class="preprocessor">#define VK_OEM_PERIOD 0xBE  // &#39;.&#39; any country</span></div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;<span class="preprocessor">#define VK_OEM_2 0xBF       // &#39;/?&#39; for US</span></div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;<span class="preprocessor">#define VK_OEM_3 0xC0       // &#39;`~&#39; for US</span></div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160; </div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;<span class="comment"> * 0xC1 - 0xD7 : reserved</span></div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160; </div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;<span class="comment"> * 0xD8 - 0xDA : unassigned</span></div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160; </div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;<span class="preprocessor">#define VK_OEM_4 0xDB  //  &#39;[{&#39; for US</span></div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;<span class="preprocessor">#define VK_OEM_5 0xDC  //  &#39;\|&#39; for US</span></div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;<span class="preprocessor">#define VK_OEM_6 0xDD  //  &#39;]}&#39; for US</span></div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;<span class="preprocessor">#define VK_OEM_7 0xDE  //  &#39;&#39;&quot;&#39; for US</span></div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;<span class="preprocessor">#define VK_OEM_8 0xDF</span></div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160; </div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;<span class="comment"> * 0xE0 : reserved</span></div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160; </div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;<span class="comment"> * Various extended or enhanced keyboards</span></div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;<span class="preprocessor">#define VK_OEM_AX 0xE1    //  &#39;AX&#39; key on Japanese AX kbd</span></div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;<span class="preprocessor">#define VK_OEM_102 0xE2   //  &quot;&lt;&gt;&quot; or &quot;\|&quot; on RT 102-key kbd.</span></div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;<span class="preprocessor">#define VK_ICO_HELP 0xE3  //  Help key on ICO</span></div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;<span class="preprocessor">#define VK_ICO_00 0xE4    //  00 key on ICO</span></div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160; </div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;<span class="preprocessor">#if (WINVER &gt;= 0x0400)</span></div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;<span class="preprocessor">#define VK_PROCESSKEY 0xE5</span></div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* WINVER &gt;= 0x0400 */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160; </div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;<span class="preprocessor">#define VK_ICO_CLEAR 0xE6</span></div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160; </div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;<span class="preprocessor">#if (_WIN32_WINNT &gt;= 0x0500)</span></div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;<span class="preprocessor">#define VK_PACKET 0xE7</span></div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* _WIN32_WINNT &gt;= 0x0500 */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160; </div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;<span class="comment"> * 0xE8 : unassigned</span></div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160; </div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;<span class="comment"> * Nokia/Ericsson definitions</span></div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;<span class="preprocessor">#define VK_OEM_RESET 0xE9</span></div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;<span class="preprocessor">#define VK_OEM_JUMP 0xEA</span></div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;<span class="preprocessor">#define VK_OEM_PA1 0xEB</span></div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;<span class="preprocessor">#define VK_OEM_PA2 0xEC</span></div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;<span class="preprocessor">#define VK_OEM_PA3 0xED</span></div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;<span class="preprocessor">#define VK_OEM_WSCTRL 0xEE</span></div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;<span class="preprocessor">#define VK_OEM_CUSEL 0xEF</span></div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;<span class="preprocessor">#define VK_OEM_ATTN 0xF0</span></div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;<span class="preprocessor">#define VK_OEM_FINISH 0xF1</span></div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;<span class="preprocessor">#define VK_OEM_COPY 0xF2</span></div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;<span class="preprocessor">#define VK_OEM_AUTO 0xF3</span></div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;<span class="preprocessor">#define VK_OEM_ENLW 0xF4</span></div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;<span class="preprocessor">#define VK_OEM_BACKTAB 0xF5</span></div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160; </div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;<span class="preprocessor">#define VK_ATTN 0xF6</span></div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;<span class="preprocessor">#define VK_CRSEL 0xF7</span></div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;<span class="preprocessor">#define VK_EXSEL 0xF8</span></div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;<span class="preprocessor">#define VK_EREOF 0xF9</span></div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;<span class="preprocessor">#define VK_PLAY 0xFA</span></div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;<span class="preprocessor">#define VK_ZOOM 0xFB</span></div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;<span class="preprocessor">#define VK_NONAME 0xFC</span></div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;<span class="preprocessor">#define VK_PA1 0xFD</span></div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;<span class="preprocessor">#define VK_OEM_CLEAR 0xFE</span></div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160; </div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;<span class="comment"> * 0xFF : reserved</span></div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160; </div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="../../d2/de3/_mouse_8h.html#ab0bb8576dc34234ad0b40210f8d0b39d">UI_OnVkKeyDown</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> vkKey);</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160; </div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;<span class="keyword">class </span><a class="code" href="../../de/d73/class_image.html">Image</a>;</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;<span class="keyword">class </span><a class="code" href="../../db/da4/class_o_s_window.html">OSWindow</a>;</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160; </div>
+<div class="line"><a name="l00279"></a><span class="lineno"><a class="line" href="../../d7/dc5/class_mouse.html">  279</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d7/dc5/class_mouse.html">Mouse</a> {</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00281"></a><span class="lineno"><a class="line" href="../../d7/dc5/class_mouse.html#a99024d3700d649ae19c1537b42a3e86d">  281</a></span>&#160;    <span class="keyword">inline</span> <a class="code" href="../../d7/dc5/class_mouse.html#a99024d3700d649ae19c1537b42a3e86d">Mouse</a>() : <a class="code" href="../../d7/dc5/class_mouse.html#a87e59cbd93d8cce7d1dd75d2aef0bb57">cursor_img</a>(nullptr), <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a92dbce8e3247f6a78126c99877caacb6">window</a>(nullptr) {</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        <a class="code" href="../../d7/dc5/class_mouse.html#a9254f42dacea408294f4d4f3a3f2f567">pCursorBitmap_sysmem</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;        <a class="code" href="../../d7/dc5/class_mouse.html#a78ff550c3f607ed9fc5383409c7a9b33">field_34</a> = 0;</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;        <a class="code" href="../../d7/dc5/class_mouse.html#a4cba87a74392c9308181ab6cba9d7e34">pCursorBitmap2_sysmem</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;        <a class="code" href="../../d7/dc5/class_mouse.html#af877bc47682186a8cee015c41cb19cf4">pPickedItem</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;        <a class="code" href="../../d7/dc5/class_mouse.html#a4c5c12e84bf971a5290b36acf19115c3">ptr_90</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;        <a class="code" href="../../d7/dc5/class_mouse.html#af807caab54c9519709fc7b109b591920">pWard</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;        <a class="code" href="../../d7/dc5/class_mouse.html#a6d8ac4d5f414228c9d74570beee553ed">uMouseClickX</a> = 0;</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;        <a class="code" href="../../d7/dc5/class_mouse.html#ad5456a95a75f1153afdf055f986eabb3">uMouseClickY</a> = 0;</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    }</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160; </div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d7/dc5/class_mouse.html#afa81266131b1dadeee8e4bfd8b810265">GetClickPos</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> *pX, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> *pY);</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d7/dc5/class_mouse.html#a3e7df01835f0ec8a3459dcd2f9a4dfa3">RemoveHoldingItem</a>();</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d7/dc5/class_mouse.html#a344fc4dea2c59a9b57f7124b5ab6b0eb">SetCursorBitmapFromItemID</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> uItemID);</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d7/dc5/class_mouse.html#a38f9d69297dbaf8b76e9374842ba0365">SetCurrentCursorBitmap</a>();</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d7/dc5/class_mouse.html#a6c1329c4dec99e3c72b20087d95ea91d">SetCursorImage</a>(<span class="keyword">const</span> <a class="code" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> &amp;<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#aaced7cfc21e7d37775d6921bb8177239">name</a>);</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d7/dc5/class_mouse.html#a991886141bf37d49b52a4704a51f8631">_469AE4</a>();</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d7/dc5/class_mouse.html#a455021707dcb042f6e58821cef234311">ClearCursor</a>();</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d7/dc5/class_mouse.html#a34379441f427a47f1e767e0d93bf0ee8">AllocCursorSystemMem</a>();</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    <span class="keywordtype">void</span> *<a class="code" href="../../d7/dc5/class_mouse.html#a6f27132399a757994d0f9689f526d54d">DoAllocCursorMem</a>();</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    <a class="code" href="../../d8/dc8/struct_point.html">Point</a> <a class="code" href="../../d7/dc5/class_mouse.html#a8900246ba042b33090b8dc8e377fbb3a">GetCursorPos</a>();</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d7/dc5/class_mouse.html#ae8d50380e35a93e9664e16b63ff2df1b">Initialize</a>(<a class="code" href="../../db/da4/class_o_s_window.html">OSWindow</a> *<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a92dbce8e3247f6a78126c99877caacb6">window</a>);</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d7/dc5/class_mouse.html#a505f5585600a840b7c9b676c6703fe91">SetActive</a>(<span class="keywordtype">bool</span> active);</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d7/dc5/class_mouse.html#a898bae847fde35c6a133a267b6a2f618">Deactivate</a>();</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d7/dc5/class_mouse.html#a78e291e974ebab761c7b9f74977ad08c">DrawCursor</a>();</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d7/dc5/class_mouse.html#a2a77cc464638ac7eba7185af8e1bfbc7">Activate</a>();</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d7/dc5/class_mouse.html#aaa74086ce98743203f1a0f017f73529c">ClearPickedItem</a>();</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d7/dc5/class_mouse.html#a2765ce2b4c549e40861346da3cafaf68">DrawCursorToTarget</a>();</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d7/dc5/class_mouse.html#a3c89d72f138d857d5636e640d07ae9b7">ReadCursorWithItem</a>();</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d7/dc5/class_mouse.html#adc305cd4fe5635fe8b060a2eae857e2a">ChangeActivation</a>(<span class="keywordtype">int</span> a1);</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d7/dc5/class_mouse.html#abda06ea391562027d409a0d3aaf7a8ee">SetMouseClick</a>(<span class="keywordtype">int</span> <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ad0e63d0edcdbd3d79554076bf309fd47">x</a>, <span class="keywordtype">int</span> <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a1675d9d7bb68e1657ff028643b4037e3">y</a>);</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160; </div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d7/dc5/class_mouse.html#ae90d9b5b37b0f4612f6225982e1da13e">UI_OnMouseLeftClick</a>();</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160; </div>
+<div class="line"><a name="l00315"></a><span class="lineno"><a class="line" href="../../d7/dc5/class_mouse.html#a8200f36de0a6aa77f1c2a2a7e64a0233">  315</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../d7/dc5/class_mouse.html#a8200f36de0a6aa77f1c2a2a7e64a0233">uPointingObjectID</a>;</div>
+<div class="line"><a name="l00316"></a><span class="lineno"><a class="line" href="../../d7/dc5/class_mouse.html#a52ede8729491f953895ba3139164dfdb">  316</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../d7/dc5/class_mouse.html#a52ede8729491f953895ba3139164dfdb">bActive</a> = 0;</div>
+<div class="line"><a name="l00317"></a><span class="lineno"><a class="line" href="../../d7/dc5/class_mouse.html#aeeb9c76970fa7d1887fbeb6c603c4325">  317</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d7/dc5/class_mouse.html#aeeb9c76970fa7d1887fbeb6c603c4325">field_8</a>;</div>
+<div class="line"><a name="l00318"></a><span class="lineno"><a class="line" href="../../d7/dc5/class_mouse.html#ac3b56ada56f60c5498bc86bda718c164">  318</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d7/dc5/class_mouse.html#ac3b56ada56f60c5498bc86bda718c164">field_C</a>;</div>
+<div class="line"><a name="l00319"></a><span class="lineno"><a class="line" href="../../d7/dc5/class_mouse.html#a0d3be2e2c92b73dba8f9a19d87965798">  319</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../d7/dc5/class_mouse.html#a0d3be2e2c92b73dba8f9a19d87965798">bInitialized</a> = 0;</div>
+<div class="line"><a name="l00320"></a><span class="lineno"><a class="line" href="../../d7/dc5/class_mouse.html#a271a3a30c5508de29ce4628c211e6bfe">  320</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../d7/dc5/class_mouse.html#a271a3a30c5508de29ce4628c211e6bfe">bRedraw</a> = 0;</div>
+<div class="line"><a name="l00321"></a><span class="lineno"><a class="line" href="../../d7/dc5/class_mouse.html#ae7941f1b33febb22eb19102ad8bd3edf">  321</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d7/dc5/class_mouse.html#ae7941f1b33febb22eb19102ad8bd3edf">field_18</a> = 0;</div>
+<div class="line"><a name="l00322"></a><span class="lineno"><a class="line" href="../../d7/dc5/class_mouse.html#a396d3d3a6509578d58a283ecf4390499">  322</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d7/dc5/class_mouse.html#a396d3d3a6509578d58a283ecf4390499">field_1C</a> = 0;</div>
+<div class="line"><a name="l00323"></a><span class="lineno"><a class="line" href="../../d7/dc5/class_mouse.html#a4008ac6b497379ca3b89be4bbc2637fa">  323</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d7/dc5/class_mouse.html#a4008ac6b497379ca3b89be4bbc2637fa">field_20</a> = 0;</div>
+<div class="line"><a name="l00324"></a><span class="lineno"><a class="line" href="../../d7/dc5/class_mouse.html#a87e59cbd93d8cce7d1dd75d2aef0bb57">  324</a></span>&#160;    <a class="code" href="../../de/d73/class_image.html">Image</a> *<a class="code" href="../../d7/dc5/class_mouse.html#a87e59cbd93d8cce7d1dd75d2aef0bb57">cursor_img</a>;</div>
+<div class="line"><a name="l00325"></a><span class="lineno"><a class="line" href="../../d7/dc5/class_mouse.html#aa72a2ec052c895e4772b707d6891445f">  325</a></span>&#160;    <a class="code" href="../../db/da4/class_o_s_window.html">OSWindow</a> *<a class="code" href="../../d7/dc5/class_mouse.html#aa72a2ec052c895e4772b707d6891445f">window</a>;  <span class="comment">// HWND hWnd;</span></div>
+<div class="line"><a name="l00326"></a><span class="lineno"><a class="line" href="../../d7/dc5/class_mouse.html#a9254f42dacea408294f4d4f3a3f2f567">  326</a></span>&#160;    <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> *<a class="code" href="../../d7/dc5/class_mouse.html#a9254f42dacea408294f4d4f3a3f2f567">pCursorBitmap_sysmem</a>;</div>
+<div class="line"><a name="l00327"></a><span class="lineno"><a class="line" href="../../d7/dc5/class_mouse.html#a78ff550c3f607ed9fc5383409c7a9b33">  327</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d7/dc5/class_mouse.html#a78ff550c3f607ed9fc5383409c7a9b33">field_34</a>;</div>
+<div class="line"><a name="l00328"></a><span class="lineno"><a class="line" href="../../d7/dc5/class_mouse.html#a4cba87a74392c9308181ab6cba9d7e34">  328</a></span>&#160;    <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *<a class="code" href="../../d7/dc5/class_mouse.html#a4cba87a74392c9308181ab6cba9d7e34">pCursorBitmap2_sysmem</a>;</div>
+<div class="line"><a name="l00329"></a><span class="lineno"><a class="line" href="../../d7/dc5/class_mouse.html#af877bc47682186a8cee015c41cb19cf4">  329</a></span>&#160;    <a class="code" href="../../de/d73/class_image.html">Image</a> *<a class="code" href="../../d7/dc5/class_mouse.html#af877bc47682186a8cee015c41cb19cf4">pPickedItem</a>;</div>
+<div class="line"><a name="l00330"></a><span class="lineno"><a class="line" href="../../d7/dc5/class_mouse.html#a798b50ea32b6e2817f3d8de9a9f65efb">  330</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d7/dc5/class_mouse.html#a798b50ea32b6e2817f3d8de9a9f65efb">uCursorWithItemX</a>;</div>
+<div class="line"><a name="l00331"></a><span class="lineno"><a class="line" href="../../d7/dc5/class_mouse.html#a8ab774d006413bb38e8b934067eb3e1b">  331</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d7/dc5/class_mouse.html#a8ab774d006413bb38e8b934067eb3e1b">uCursorWithItemY</a>;</div>
+<div class="line"><a name="l00332"></a><span class="lineno"><a class="line" href="../../d7/dc5/class_mouse.html#af60d3949ce832e6c6716446ac9e30c51">  332</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d7/dc5/class_mouse.html#af60d3949ce832e6c6716446ac9e30c51">field_50</a> = 0;</div>
+<div class="line"><a name="l00333"></a><span class="lineno"><a class="line" href="../../d7/dc5/class_mouse.html#a4e91b25859363f6066daab8bfddcc642">  333</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d7/dc5/class_mouse.html#a4e91b25859363f6066daab8bfddcc642">field_54</a> = 0;</div>
+<div class="line"><a name="l00334"></a><span class="lineno"><a class="line" href="../../d7/dc5/class_mouse.html#a6001632ac7dd40becfb8f2735dac3824">  334</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d7/dc5/class_mouse.html#a6001632ac7dd40becfb8f2735dac3824">uCursorBitmapPitch</a>;</div>
+<div class="line"><a name="l00335"></a><span class="lineno"><a class="line" href="../../d7/dc5/class_mouse.html#a2f09403f64775ad9b94a2a4634a3ad55">  335</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d7/dc5/class_mouse.html#a2f09403f64775ad9b94a2a4634a3ad55">field_5C</a>[13];</div>
+<div class="line"><a name="l00336"></a><span class="lineno"><a class="line" href="../../d7/dc5/class_mouse.html#a4c5c12e84bf971a5290b36acf19115c3">  336</a></span>&#160;    <span class="keywordtype">void</span> *<a class="code" href="../../d7/dc5/class_mouse.html#a4c5c12e84bf971a5290b36acf19115c3">ptr_90</a>;</div>
+<div class="line"><a name="l00337"></a><span class="lineno"><a class="line" href="../../d7/dc5/class_mouse.html#a8a2dd74333456eb79f1b95580832973f">  337</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d7/dc5/class_mouse.html#a8a2dd74333456eb79f1b95580832973f">field_94</a>;</div>
+<div class="line"><a name="l00338"></a><span class="lineno"><a class="line" href="../../d7/dc5/class_mouse.html#a5aa44a2291ad5888a97ddc895eff18ec">  338</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d7/dc5/class_mouse.html#a5aa44a2291ad5888a97ddc895eff18ec">field_98</a> = 0;</div>
+<div class="line"><a name="l00339"></a><span class="lineno"><a class="line" href="../../d7/dc5/class_mouse.html#a8d2a51a63f94a8eb1bb89e6f7e8c842d">  339</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d7/dc5/class_mouse.html#a8d2a51a63f94a8eb1bb89e6f7e8c842d">field_9C</a> = 0;</div>
+<div class="line"><a name="l00340"></a><span class="lineno"><a class="line" href="../../d7/dc5/class_mouse.html#a06fe01ee63272b11f33962baf4c063b2">  340</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d7/dc5/class_mouse.html#a06fe01ee63272b11f33962baf4c063b2">field_A0</a> = 0;</div>
+<div class="line"><a name="l00341"></a><span class="lineno"><a class="line" href="../../d7/dc5/class_mouse.html#aafdf5412bd12b6a38e68f996e4d5d96a">  341</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d7/dc5/class_mouse.html#aafdf5412bd12b6a38e68f996e4d5d96a">field_A4</a> = 0;</div>
+<div class="line"><a name="l00342"></a><span class="lineno"><a class="line" href="../../d7/dc5/class_mouse.html#af1b13384dbc9b78ae7e4ca3bb1c7c343">  342</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d7/dc5/class_mouse.html#af1b13384dbc9b78ae7e4ca3bb1c7c343">field_A8</a> = 0;</div>
+<div class="line"><a name="l00343"></a><span class="lineno"><a class="line" href="../../d7/dc5/class_mouse.html#a4e6ba09a40bbae0cb9b765335a865474">  343</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d7/dc5/class_mouse.html#a4e6ba09a40bbae0cb9b765335a865474">field_AC</a> = 0;</div>
+<div class="line"><a name="l00344"></a><span class="lineno"><a class="line" href="../../d7/dc5/class_mouse.html#a83a855d6ba52dfcd284f106a9e971e62">  344</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d7/dc5/class_mouse.html#a83a855d6ba52dfcd284f106a9e971e62">field_B0</a>;</div>
+<div class="line"><a name="l00345"></a><span class="lineno"><a class="line" href="../../d7/dc5/class_mouse.html#a3dbb47585ea1d658dc42b3569ac942c9">  345</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d7/dc5/class_mouse.html#a3dbb47585ea1d658dc42b3569ac942c9">field_B4</a>;</div>
+<div class="line"><a name="l00346"></a><span class="lineno"><a class="line" href="../../d7/dc5/class_mouse.html#ae61e186b6c13aae7fafbd90cddaeda05">  346</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d7/dc5/class_mouse.html#ae61e186b6c13aae7fafbd90cddaeda05">field_B8</a>;</div>
+<div class="line"><a name="l00347"></a><span class="lineno"><a class="line" href="../../d7/dc5/class_mouse.html#a3fd507f4e6a33547a76d8ff7534c9764">  347</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d7/dc5/class_mouse.html#a3fd507f4e6a33547a76d8ff7534c9764">field_BC</a>;</div>
+<div class="line"><a name="l00348"></a><span class="lineno"><a class="line" href="../../d7/dc5/class_mouse.html#aa6603a975505caedb7c9559514cc1835">  348</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d7/dc5/class_mouse.html#aa6603a975505caedb7c9559514cc1835">field_C0</a>;</div>
+<div class="line"><a name="l00349"></a><span class="lineno"><a class="line" href="../../d7/dc5/class_mouse.html#ae3dcaeecbef54e710b6fa8222fc79f45">  349</a></span>&#160;    <a class="code" href="../../d8/dc8/struct_point.html">Point</a> <a class="code" href="../../d7/dc5/class_mouse.html#ae3dcaeecbef54e710b6fa8222fc79f45">pCursorBitmapPos</a>;</div>
+<div class="line"><a name="l00350"></a><span class="lineno"><a class="line" href="../../d7/dc5/class_mouse.html#ace69a78dae5ad357368608cf0f1b3523">  350</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d7/dc5/class_mouse.html#ace69a78dae5ad357368608cf0f1b3523">uCursorBitmapWidth</a>;</div>
+<div class="line"><a name="l00351"></a><span class="lineno"><a class="line" href="../../d7/dc5/class_mouse.html#a046131acd48ce0e1e486c3736feb7be8">  351</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d7/dc5/class_mouse.html#a046131acd48ce0e1e486c3736feb7be8">uCursorBitmapHeight</a>;</div>
+<div class="line"><a name="l00352"></a><span class="lineno"><a class="line" href="../../d7/dc5/class_mouse.html#adfce323e284721b3a53cf3de4cbdbcd7">  352</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d7/dc5/class_mouse.html#adfce323e284721b3a53cf3de4cbdbcd7">field_D4</a>;</div>
+<div class="line"><a name="l00353"></a><span class="lineno"><a class="line" href="../../d7/dc5/class_mouse.html#a742055996a869a714962e7940e4d3565">  353</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d7/dc5/class_mouse.html#a742055996a869a714962e7940e4d3565">field_D8</a>;</div>
+<div class="line"><a name="l00354"></a><span class="lineno"><a class="line" href="../../d7/dc5/class_mouse.html#a3695564eb6d67a6b5273425536da2b74">  354</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d7/dc5/class_mouse.html#a3695564eb6d67a6b5273425536da2b74">field_DC</a>;</div>
+<div class="line"><a name="l00355"></a><span class="lineno"><a class="line" href="../../d7/dc5/class_mouse.html#a7a90b1132bd7bdb344ad2c7a36d69199">  355</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d7/dc5/class_mouse.html#a7a90b1132bd7bdb344ad2c7a36d69199">field_E0</a>;</div>
+<div class="line"><a name="l00356"></a><span class="lineno"><a class="line" href="../../d7/dc5/class_mouse.html#a55013af6bdb36a6bd569df4690a7c79e">  356</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d7/dc5/class_mouse.html#a55013af6bdb36a6bd569df4690a7c79e">pCursorBitmapRect_x</a>;</div>
+<div class="line"><a name="l00357"></a><span class="lineno"><a class="line" href="../../d7/dc5/class_mouse.html#a4491e761b220db23a3538dd858896bc2">  357</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d7/dc5/class_mouse.html#a4491e761b220db23a3538dd858896bc2">pCursorBitmapRect_y</a>;</div>
+<div class="line"><a name="l00358"></a><span class="lineno"><a class="line" href="../../d7/dc5/class_mouse.html#aeb67955e10d24d094ecabf778415b584">  358</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d7/dc5/class_mouse.html#aeb67955e10d24d094ecabf778415b584">pCursorBitmapRect_w</a>;</div>
+<div class="line"><a name="l00359"></a><span class="lineno"><a class="line" href="../../d7/dc5/class_mouse.html#ad77307ed63d9573710a8ce60db471411">  359</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d7/dc5/class_mouse.html#ad77307ed63d9573710a8ce60db471411">pCursorBitmapRect_z</a>;</div>
+<div class="line"><a name="l00360"></a><span class="lineno"><a class="line" href="../../d7/dc5/class_mouse.html#a1211c85ca9ea7ead788a6aac8bf4d5f2">  360</a></span>&#160;    <span class="keywordtype">char</span> <a class="code" href="../../d7/dc5/class_mouse.html#a1211c85ca9ea7ead788a6aac8bf4d5f2">field_F4</a>;</div>
+<div class="line"><a name="l00361"></a><span class="lineno"><a class="line" href="../../d7/dc5/class_mouse.html#a2e25efbc35bf71633654b75ab345965c">  361</a></span>&#160;    <a class="code" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> <a class="code" href="../../d7/dc5/class_mouse.html#a2e25efbc35bf71633654b75ab345965c">cursor_name</a>;  <span class="comment">// char pCurrentCursorName[11];</span></div>
+<div class="line"><a name="l00362"></a><span class="lineno"><a class="line" href="../../d7/dc5/class_mouse.html#ac77b7a0b5758374f370dac375521f3b5">  362</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d7/dc5/class_mouse.html#ac77b7a0b5758374f370dac375521f3b5">field_100</a> = 0;</div>
+<div class="line"><a name="l00363"></a><span class="lineno"><a class="line" href="../../d7/dc5/class_mouse.html#a6b9d14bb831264945956f723974d8248">  363</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d7/dc5/class_mouse.html#a6b9d14bb831264945956f723974d8248">field_104</a> = 0;</div>
+<div class="line"><a name="l00364"></a><span class="lineno"><a class="line" href="../../d7/dc5/class_mouse.html#a6d8ac4d5f414228c9d74570beee553ed">  364</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../d7/dc5/class_mouse.html#a6d8ac4d5f414228c9d74570beee553ed">uMouseClickX</a>;</div>
+<div class="line"><a name="l00365"></a><span class="lineno"><a class="line" href="../../d7/dc5/class_mouse.html#ad5456a95a75f1153afdf055f986eabb3">  365</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../d7/dc5/class_mouse.html#ad5456a95a75f1153afdf055f986eabb3">uMouseClickY</a>;</div>
+<div class="line"><a name="l00366"></a><span class="lineno"><a class="line" href="../../d7/dc5/class_mouse.html#af807caab54c9519709fc7b109b591920">  366</a></span>&#160;    <span class="keywordtype">void</span> <span class="comment">/*ThreadWard*/</span> *<a class="code" href="../../d7/dc5/class_mouse.html#af807caab54c9519709fc7b109b591920">pWard</a>;</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;};</div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="a_s_d_l__config_8h_html_a273cf69d639a59973b6019625df33e30"><div class="ttname"><a href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a></div><div class="ttdeci">unsigned __int16 uint16_t</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d8f/_s_d_l__config_8h_source.html#l00037">SDL_config.h:37</a></div></div>
+<div class="ttc" id="aclass_mouse_html_a4491e761b220db23a3538dd858896bc2"><div class="ttname"><a href="../../d7/dc5/class_mouse.html#a4491e761b220db23a3538dd858896bc2">Mouse::pCursorBitmapRect_y</a></div><div class="ttdeci">int pCursorBitmapRect_y</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de3/_mouse_8h_source.html#l00357">Mouse.h:357</a></div></div>
+<div class="ttc" id="aclass_mouse_html_a4e91b25859363f6066daab8bfddcc642"><div class="ttname"><a href="../../d7/dc5/class_mouse.html#a4e91b25859363f6066daab8bfddcc642">Mouse::field_54</a></div><div class="ttdeci">int field_54</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de3/_mouse_8h_source.html#l00333">Mouse.h:333</a></div></div>
+<div class="ttc" id="aclass_mouse_html_abda06ea391562027d409a0d3aaf7a8ee"><div class="ttname"><a href="../../d7/dc5/class_mouse.html#abda06ea391562027d409a0d3aaf7a8ee">Mouse::SetMouseClick</a></div><div class="ttdeci">void SetMouseClick(int x, int y)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d54/_mouse_8cpp_source.html#l00251">Mouse.cpp:251</a></div></div>
+<div class="ttc" id="aclass_mouse_html_a8900246ba042b33090b8dc8e377fbb3a"><div class="ttname"><a href="../../d7/dc5/class_mouse.html#a8900246ba042b33090b8dc8e377fbb3a">Mouse::GetCursorPos</a></div><div class="ttdeci">Point GetCursorPos()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d54/_mouse_8cpp_source.html#l00108">Mouse.cpp:108</a></div></div>
+<div class="ttc" id="aclass_mouse_html"><div class="ttname"><a href="../../d7/dc5/class_mouse.html">Mouse</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de3/_mouse_8h_source.html#l00279">Mouse.h:279</a></div></div>
+<div class="ttc" id="aclass_mouse_html_ac3b56ada56f60c5498bc86bda718c164"><div class="ttname"><a href="../../d7/dc5/class_mouse.html#ac3b56ada56f60c5498bc86bda718c164">Mouse::field_C</a></div><div class="ttdeci">int field_C</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de3/_mouse_8h_source.html#l00318">Mouse.h:318</a></div></div>
+<div class="ttc" id="aclass_mouse_html_a34379441f427a47f1e767e0d93bf0ee8"><div class="ttname"><a href="../../d7/dc5/class_mouse.html#a34379441f427a47f1e767e0d93bf0ee8">Mouse::AllocCursorSystemMem</a></div><div class="ttdeci">void AllocCursorSystemMem()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d54/_mouse_8cpp_source.html#l00098">Mouse.cpp:98</a></div></div>
+<div class="ttc" id="aclass_mouse_html_ae7941f1b33febb22eb19102ad8bd3edf"><div class="ttname"><a href="../../d7/dc5/class_mouse.html#ae7941f1b33febb22eb19102ad8bd3edf">Mouse::field_18</a></div><div class="ttdeci">int field_18</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de3/_mouse_8h_source.html#l00321">Mouse.h:321</a></div></div>
+<div class="ttc" id="aclass_mouse_html_ad5456a95a75f1153afdf055f986eabb3"><div class="ttname"><a href="../../d7/dc5/class_mouse.html#ad5456a95a75f1153afdf055f986eabb3">Mouse::uMouseClickY</a></div><div class="ttdeci">unsigned int uMouseClickY</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de3/_mouse_8h_source.html#l00365">Mouse.h:365</a></div></div>
+<div class="ttc" id="aclass_mouse_html_ad77307ed63d9573710a8ce60db471411"><div class="ttname"><a href="../../d7/dc5/class_mouse.html#ad77307ed63d9573710a8ce60db471411">Mouse::pCursorBitmapRect_z</a></div><div class="ttdeci">int pCursorBitmapRect_z</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de3/_mouse_8h_source.html#l00359">Mouse.h:359</a></div></div>
+<div class="ttc" id="aclass_mouse_html_a898bae847fde35c6a133a267b6a2f618"><div class="ttname"><a href="../../d7/dc5/class_mouse.html#a898bae847fde35c6a133a267b6a2f618">Mouse::Deactivate</a></div><div class="ttdeci">void Deactivate()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d54/_mouse_8cpp_source.html#l00137">Mouse.cpp:137</a></div></div>
+<div class="ttc" id="aclass_mouse_html_a99024d3700d649ae19c1537b42a3e86d"><div class="ttname"><a href="../../d7/dc5/class_mouse.html#a99024d3700d649ae19c1537b42a3e86d">Mouse::Mouse</a></div><div class="ttdeci">Mouse()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de3/_mouse_8h_source.html#l00281">Mouse.h:281</a></div></div>
+<div class="ttc" id="aclass_mouse_html_a046131acd48ce0e1e486c3736feb7be8"><div class="ttname"><a href="../../d7/dc5/class_mouse.html#a046131acd48ce0e1e486c3736feb7be8">Mouse::uCursorBitmapHeight</a></div><div class="ttdeci">int uCursorBitmapHeight</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de3/_mouse_8h_source.html#l00351">Mouse.h:351</a></div></div>
+<div class="ttc" id="aclass_mouse_html_a52ede8729491f953895ba3139164dfdb"><div class="ttname"><a href="../../d7/dc5/class_mouse.html#a52ede8729491f953895ba3139164dfdb">Mouse::bActive</a></div><div class="ttdeci">unsigned int bActive</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de3/_mouse_8h_source.html#l00316">Mouse.h:316</a></div></div>
+<div class="ttc" id="aclass_mouse_html_a06fe01ee63272b11f33962baf4c063b2"><div class="ttname"><a href="../../d7/dc5/class_mouse.html#a06fe01ee63272b11f33962baf4c063b2">Mouse::field_A0</a></div><div class="ttdeci">int field_A0</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de3/_mouse_8h_source.html#l00340">Mouse.h:340</a></div></div>
+<div class="ttc" id="a_point_8h_html"><div class="ttname"><a href="../../d1/d18/_point_8h.html">Point.h</a></div></div>
+<div class="ttc" id="aclass_mouse_html_a3695564eb6d67a6b5273425536da2b74"><div class="ttname"><a href="../../d7/dc5/class_mouse.html#a3695564eb6d67a6b5273425536da2b74">Mouse::field_DC</a></div><div class="ttdeci">int field_DC</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de3/_mouse_8h_source.html#l00354">Mouse.h:354</a></div></div>
+<div class="ttc" id="a_mouse_8h_html_ab0bb8576dc34234ad0b40210f8d0b39d"><div class="ttname"><a href="../../d2/de3/_mouse_8h.html#ab0bb8576dc34234ad0b40210f8d0b39d">UI_OnVkKeyDown</a></div><div class="ttdeci">bool UI_OnVkKeyDown(unsigned int vkKey)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d54/_mouse_8cpp_source.html#l00336">Mouse.cpp:336</a></div></div>
+<div class="ttc" id="aclass_mouse_html_aa72a2ec052c895e4772b707d6891445f"><div class="ttname"><a href="../../d7/dc5/class_mouse.html#aa72a2ec052c895e4772b707d6891445f">Mouse::window</a></div><div class="ttdeci">OSWindow * window</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de3/_mouse_8h_source.html#l00325">Mouse.h:325</a></div></div>
+<div class="ttc" id="aclass_mouse_html_a2e25efbc35bf71633654b75ab345965c"><div class="ttname"><a href="../../d7/dc5/class_mouse.html#a2e25efbc35bf71633654b75ab345965c">Mouse::cursor_name</a></div><div class="ttdeci">String cursor_name</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de3/_mouse_8h_source.html#l00361">Mouse.h:361</a></div></div>
+<div class="ttc" id="aclass_mouse_html_a87e59cbd93d8cce7d1dd75d2aef0bb57"><div class="ttname"><a href="../../d7/dc5/class_mouse.html#a87e59cbd93d8cce7d1dd75d2aef0bb57">Mouse::cursor_img</a></div><div class="ttdeci">Image * cursor_img</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de3/_mouse_8h_source.html#l00324">Mouse.h:324</a></div></div>
+<div class="ttc" id="aclass_mouse_html_ae61e186b6c13aae7fafbd90cddaeda05"><div class="ttname"><a href="../../d7/dc5/class_mouse.html#ae61e186b6c13aae7fafbd90cddaeda05">Mouse::field_B8</a></div><div class="ttdeci">int field_B8</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de3/_mouse_8h_source.html#l00346">Mouse.h:346</a></div></div>
+<div class="ttc" id="aclass_mouse_html_a2765ce2b4c549e40861346da3cafaf68"><div class="ttname"><a href="../../d7/dc5/class_mouse.html#a2765ce2b4c549e40861346da3cafaf68">Mouse::DrawCursorToTarget</a></div><div class="ttdeci">void DrawCursorToTarget()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d54/_mouse_8cpp_source.html#l00197">Mouse.cpp:197</a></div></div>
+<div class="ttc" id="aclass_mouse_html_a4008ac6b497379ca3b89be4bbc2637fa"><div class="ttname"><a href="../../d7/dc5/class_mouse.html#a4008ac6b497379ca3b89be4bbc2637fa">Mouse::field_20</a></div><div class="ttdeci">int field_20</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de3/_mouse_8h_source.html#l00323">Mouse.h:323</a></div></div>
+<div class="ttc" id="aclass_mouse_html_a3fd507f4e6a33547a76d8ff7534c9764"><div class="ttname"><a href="../../d7/dc5/class_mouse.html#a3fd507f4e6a33547a76d8ff7534c9764">Mouse::field_BC</a></div><div class="ttdeci">int field_BC</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de3/_mouse_8h_source.html#l00347">Mouse.h:347</a></div></div>
+<div class="ttc" id="aclass_mouse_html_a271a3a30c5508de29ce4628c211e6bfe"><div class="ttname"><a href="../../d7/dc5/class_mouse.html#a271a3a30c5508de29ce4628c211e6bfe">Mouse::bRedraw</a></div><div class="ttdeci">unsigned int bRedraw</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de3/_mouse_8h_source.html#l00320">Mouse.h:320</a></div></div>
+<div class="ttc" id="aclass_mouse_html_a991886141bf37d49b52a4704a51f8631"><div class="ttname"><a href="../../d7/dc5/class_mouse.html#a991886141bf37d49b52a4704a51f8631">Mouse::_469AE4</a></div><div class="ttdeci">void _469AE4()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d54/_mouse_8cpp_source.html#l00062">Mouse.cpp:62</a></div></div>
+<div class="ttc" id="aclass_mouse_html_a2a77cc464638ac7eba7185af8e1bfbc7"><div class="ttname"><a href="../../d7/dc5/class_mouse.html#a2a77cc464638ac7eba7185af8e1bfbc7">Mouse::Activate</a></div><div class="ttdeci">void Activate()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d54/_mouse_8cpp_source.html#l00193">Mouse.cpp:193</a></div></div>
+<div class="ttc" id="aclass_mouse_html_a4c5c12e84bf971a5290b36acf19115c3"><div class="ttname"><a href="../../d7/dc5/class_mouse.html#a4c5c12e84bf971a5290b36acf19115c3">Mouse::ptr_90</a></div><div class="ttdeci">void * ptr_90</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de3/_mouse_8h_source.html#l00336">Mouse.h:336</a></div></div>
+<div class="ttc" id="aclass_mouse_html_a8ab774d006413bb38e8b934067eb3e1b"><div class="ttname"><a href="../../d7/dc5/class_mouse.html#a8ab774d006413bb38e8b934067eb3e1b">Mouse::uCursorWithItemY</a></div><div class="ttdeci">int uCursorWithItemY</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de3/_mouse_8h_source.html#l00331">Mouse.h:331</a></div></div>
+<div class="ttc" id="aclass_mouse_html_ae3dcaeecbef54e710b6fa8222fc79f45"><div class="ttname"><a href="../../d7/dc5/class_mouse.html#ae3dcaeecbef54e710b6fa8222fc79f45">Mouse::pCursorBitmapPos</a></div><div class="ttdeci">Point pCursorBitmapPos</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de3/_mouse_8h_source.html#l00349">Mouse.h:349</a></div></div>
+<div class="ttc" id="aclass_mouse_html_a8a2dd74333456eb79f1b95580832973f"><div class="ttname"><a href="../../d7/dc5/class_mouse.html#a8a2dd74333456eb79f1b95580832973f">Mouse::field_94</a></div><div class="ttdeci">int field_94</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de3/_mouse_8h_source.html#l00337">Mouse.h:337</a></div></div>
+<div class="ttc" id="aclass_mouse_html_a6d8ac4d5f414228c9d74570beee553ed"><div class="ttname"><a href="../../d7/dc5/class_mouse.html#a6d8ac4d5f414228c9d74570beee553ed">Mouse::uMouseClickX</a></div><div class="ttdeci">unsigned int uMouseClickX</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de3/_mouse_8h_source.html#l00364">Mouse.h:364</a></div></div>
+<div class="ttc" id="aclass_mouse_html_af60d3949ce832e6c6716446ac9e30c51"><div class="ttname"><a href="../../d7/dc5/class_mouse.html#af60d3949ce832e6c6716446ac9e30c51">Mouse::field_50</a></div><div class="ttdeci">int field_50</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de3/_mouse_8h_source.html#l00332">Mouse.h:332</a></div></div>
+<div class="ttc" id="aclass_o_s_window_html"><div class="ttname"><a href="../../db/da4/class_o_s_window.html">OSWindow</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/df6/_o_s_window_8h_source.html#l00012">OSWindow.h:12</a></div></div>
+<div class="ttc" id="aclass_mouse_html_a83a855d6ba52dfcd284f106a9e971e62"><div class="ttname"><a href="../../d7/dc5/class_mouse.html#a83a855d6ba52dfcd284f106a9e971e62">Mouse::field_B0</a></div><div class="ttdeci">int field_B0</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de3/_mouse_8h_source.html#l00344">Mouse.h:344</a></div></div>
+<div class="ttc" id="aclass_mouse_html_a78ff550c3f607ed9fc5383409c7a9b33"><div class="ttname"><a href="../../d7/dc5/class_mouse.html#a78ff550c3f607ed9fc5383409c7a9b33">Mouse::field_34</a></div><div class="ttdeci">int field_34</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de3/_mouse_8h_source.html#l00327">Mouse.h:327</a></div></div>
+<div class="ttc" id="a_s_d_l__egl_8h_html_a1675d9d7bb68e1657ff028643b4037e3"><div class="ttname"><a href="../../df/d32/_s_d_l__egl_8h.html#a1675d9d7bb68e1657ff028643b4037e3">y</a></div><div class="ttdeci">EGLSurface EGLint EGLint y</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/_s_d_l__egl_8h_source.html#l01596">SDL_egl.h:1596</a></div></div>
+<div class="ttc" id="aclass_mouse_html_af807caab54c9519709fc7b109b591920"><div class="ttname"><a href="../../d7/dc5/class_mouse.html#af807caab54c9519709fc7b109b591920">Mouse::pWard</a></div><div class="ttdeci">void * pWard</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de3/_mouse_8h_source.html#l00366">Mouse.h:366</a></div></div>
+<div class="ttc" id="aclass_mouse_html_a7a90b1132bd7bdb344ad2c7a36d69199"><div class="ttname"><a href="../../d7/dc5/class_mouse.html#a7a90b1132bd7bdb344ad2c7a36d69199">Mouse::field_E0</a></div><div class="ttdeci">int field_E0</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de3/_mouse_8h_source.html#l00355">Mouse.h:355</a></div></div>
+<div class="ttc" id="aclass_mouse_html_aaa74086ce98743203f1a0f017f73529c"><div class="ttname"><a href="../../d7/dc5/class_mouse.html#aaa74086ce98743203f1a0f017f73529c">Mouse::ClearPickedItem</a></div><div class="ttdeci">void ClearPickedItem()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d54/_mouse_8cpp_source.html#l00195">Mouse.cpp:195</a></div></div>
+<div class="ttc" id="aclass_mouse_html_ae8d50380e35a93e9664e16b63ff2df1b"><div class="ttname"><a href="../../d7/dc5/class_mouse.html#ae8d50380e35a93e9664e16b63ff2df1b">Mouse::Initialize</a></div><div class="ttdeci">void Initialize(OSWindow *window)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d54/_mouse_8cpp_source.html#l00112">Mouse.cpp:112</a></div></div>
+<div class="ttc" id="aclass_image_html"><div class="ttname"><a href="../../de/d73/class_image.html">Image</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/de5/_image_8h_source.html#l00019">Image.h:19</a></div></div>
+<div class="ttc" id="a_s_d_l__egl_8h_html_ad0e63d0edcdbd3d79554076bf309fd47"><div class="ttname"><a href="../../df/d32/_s_d_l__egl_8h.html#ad0e63d0edcdbd3d79554076bf309fd47">x</a></div><div class="ttdeci">EGLSurface EGLint x</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/_s_d_l__egl_8h_source.html#l01596">SDL_egl.h:1596</a></div></div>
+<div class="ttc" id="aclass_mouse_html_af877bc47682186a8cee015c41cb19cf4"><div class="ttname"><a href="../../d7/dc5/class_mouse.html#af877bc47682186a8cee015c41cb19cf4">Mouse::pPickedItem</a></div><div class="ttdeci">Image * pPickedItem</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de3/_mouse_8h_source.html#l00329">Mouse.h:329</a></div></div>
+<div class="ttc" id="aclass_mouse_html_a4cba87a74392c9308181ab6cba9d7e34"><div class="ttname"><a href="../../d7/dc5/class_mouse.html#a4cba87a74392c9308181ab6cba9d7e34">Mouse::pCursorBitmap2_sysmem</a></div><div class="ttdeci">uint8_t * pCursorBitmap2_sysmem</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de3/_mouse_8h_source.html#l00328">Mouse.h:328</a></div></div>
+<div class="ttc" id="aclass_mouse_html_aafdf5412bd12b6a38e68f996e4d5d96a"><div class="ttname"><a href="../../d7/dc5/class_mouse.html#aafdf5412bd12b6a38e68f996e4d5d96a">Mouse::field_A4</a></div><div class="ttdeci">int field_A4</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de3/_mouse_8h_source.html#l00341">Mouse.h:341</a></div></div>
+<div class="ttc" id="aclass_mouse_html_a55013af6bdb36a6bd569df4690a7c79e"><div class="ttname"><a href="../../d7/dc5/class_mouse.html#a55013af6bdb36a6bd569df4690a7c79e">Mouse::pCursorBitmapRect_x</a></div><div class="ttdeci">int pCursorBitmapRect_x</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de3/_mouse_8h_source.html#l00356">Mouse.h:356</a></div></div>
+<div class="ttc" id="aclass_mouse_html_a455021707dcb042f6e58821cef234311"><div class="ttname"><a href="../../d7/dc5/class_mouse.html#a455021707dcb042f6e58821cef234311">Mouse::ClearCursor</a></div><div class="ttdeci">void ClearCursor()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d54/_mouse_8cpp_source.html#l00088">Mouse.cpp:88</a></div></div>
+<div class="ttc" id="aclass_mouse_html_a1211c85ca9ea7ead788a6aac8bf4d5f2"><div class="ttname"><a href="../../d7/dc5/class_mouse.html#a1211c85ca9ea7ead788a6aac8bf4d5f2">Mouse::field_F4</a></div><div class="ttdeci">char field_F4</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de3/_mouse_8h_source.html#l00360">Mouse.h:360</a></div></div>
+<div class="ttc" id="aclass_mouse_html_a8200f36de0a6aa77f1c2a2a7e64a0233"><div class="ttname"><a href="../../d7/dc5/class_mouse.html#a8200f36de0a6aa77f1c2a2a7e64a0233">Mouse::uPointingObjectID</a></div><div class="ttdeci">unsigned int uPointingObjectID</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de3/_mouse_8h_source.html#l00315">Mouse.h:315</a></div></div>
+<div class="ttc" id="aclass_mouse_html_a742055996a869a714962e7940e4d3565"><div class="ttname"><a href="../../d7/dc5/class_mouse.html#a742055996a869a714962e7940e4d3565">Mouse::field_D8</a></div><div class="ttdeci">int field_D8</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de3/_mouse_8h_source.html#l00353">Mouse.h:353</a></div></div>
+<div class="ttc" id="aclass_mouse_html_a6b9d14bb831264945956f723974d8248"><div class="ttname"><a href="../../d7/dc5/class_mouse.html#a6b9d14bb831264945956f723974d8248">Mouse::field_104</a></div><div class="ttdeci">int field_104</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de3/_mouse_8h_source.html#l00363">Mouse.h:363</a></div></div>
+<div class="ttc" id="a_s_d_l__egl_8h_html_a92dbce8e3247f6a78126c99877caacb6"><div class="ttname"><a href="../../df/d32/_s_d_l__egl_8h.html#a92dbce8e3247f6a78126c99877caacb6">window</a></div><div class="ttdeci">EGLSurface EGLNativeWindowType * window</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/_s_d_l__egl_8h_source.html#l01580">SDL_egl.h:1580</a></div></div>
+<div class="ttc" id="aclass_mouse_html_adc305cd4fe5635fe8b060a2eae857e2a"><div class="ttname"><a href="../../d7/dc5/class_mouse.html#adc305cd4fe5635fe8b060a2eae857e2a">Mouse::ChangeActivation</a></div><div class="ttdeci">void ChangeActivation(int a1)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d54/_mouse_8cpp_source.html#l00249">Mouse.cpp:249</a></div></div>
+<div class="ttc" id="aclass_mouse_html_afa81266131b1dadeee8e4bfd8b810265"><div class="ttname"><a href="../../d7/dc5/class_mouse.html#afa81266131b1dadeee8e4bfd8b810265">Mouse::GetClickPos</a></div><div class="ttdeci">void GetClickPos(unsigned int *pX, unsigned int *pY)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d54/_mouse_8cpp_source.html#l00020">Mouse.cpp:20</a></div></div>
+<div class="ttc" id="aclass_mouse_html_a78e291e974ebab761c7b9f74977ad08c"><div class="ttname"><a href="../../d7/dc5/class_mouse.html#a78e291e974ebab761c7b9f74977ad08c">Mouse::DrawCursor</a></div><div class="ttdeci">void DrawCursor()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d54/_mouse_8cpp_source.html#l00143">Mouse.cpp:143</a></div></div>
+<div class="ttc" id="aclass_mouse_html_a5aa44a2291ad5888a97ddc895eff18ec"><div class="ttname"><a href="../../d7/dc5/class_mouse.html#a5aa44a2291ad5888a97ddc895eff18ec">Mouse::field_98</a></div><div class="ttdeci">int field_98</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de3/_mouse_8h_source.html#l00338">Mouse.h:338</a></div></div>
+<div class="ttc" id="aclass_mouse_html_a2f09403f64775ad9b94a2a4634a3ad55"><div class="ttname"><a href="../../d7/dc5/class_mouse.html#a2f09403f64775ad9b94a2a4634a3ad55">Mouse::field_5C</a></div><div class="ttdeci">int field_5C[13]</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de3/_mouse_8h_source.html#l00335">Mouse.h:335</a></div></div>
+<div class="ttc" id="aclass_mouse_html_aeb67955e10d24d094ecabf778415b584"><div class="ttname"><a href="../../d7/dc5/class_mouse.html#aeb67955e10d24d094ecabf778415b584">Mouse::pCursorBitmapRect_w</a></div><div class="ttdeci">int pCursorBitmapRect_w</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de3/_mouse_8h_source.html#l00358">Mouse.h:358</a></div></div>
+<div class="ttc" id="aclass_mouse_html_a3dbb47585ea1d658dc42b3569ac942c9"><div class="ttname"><a href="../../d7/dc5/class_mouse.html#a3dbb47585ea1d658dc42b3569ac942c9">Mouse::field_B4</a></div><div class="ttdeci">int field_B4</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de3/_mouse_8h_source.html#l00345">Mouse.h:345</a></div></div>
+<div class="ttc" id="aclass_mouse_html_a505f5585600a840b7c9b676c6703fe91"><div class="ttname"><a href="../../d7/dc5/class_mouse.html#a505f5585600a840b7c9b676c6703fe91">Mouse::SetActive</a></div><div class="ttdeci">void SetActive(bool active)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d54/_mouse_8cpp_source.html#l00135">Mouse.cpp:135</a></div></div>
+<div class="ttc" id="aclass_mouse_html_a38f9d69297dbaf8b76e9374842ba0365"><div class="ttname"><a href="../../d7/dc5/class_mouse.html#a38f9d69297dbaf8b76e9374842ba0365">Mouse::SetCurrentCursorBitmap</a></div><div class="ttdeci">void SetCurrentCursorBitmap()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d54/_mouse_8cpp_source.html#l00036">Mouse.cpp:36</a></div></div>
+<div class="ttc" id="a_s_d_l__config_8h_html_aba7bc1797add20fe3efdf37ced1182c5"><div class="ttname"><a href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a></div><div class="ttdeci">unsigned __int8 uint8_t</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d8f/_s_d_l__config_8h_source.html#l00035">SDL_config.h:35</a></div></div>
+<div class="ttc" id="aclass_mouse_html_aa6603a975505caedb7c9559514cc1835"><div class="ttname"><a href="../../d7/dc5/class_mouse.html#aa6603a975505caedb7c9559514cc1835">Mouse::field_C0</a></div><div class="ttdeci">int field_C0</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de3/_mouse_8h_source.html#l00348">Mouse.h:348</a></div></div>
+<div class="ttc" id="a_s_d_l__egl_8h_html_aaced7cfc21e7d37775d6921bb8177239"><div class="ttname"><a href="../../df/d32/_s_d_l__egl_8h.html#aaced7cfc21e7d37775d6921bb8177239">name</a></div><div class="ttdeci">EGLImageKHR EGLint * name</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/_s_d_l__egl_8h_source.html#l01497">SDL_egl.h:1497</a></div></div>
+<div class="ttc" id="aclass_mouse_html_a6001632ac7dd40becfb8f2735dac3824"><div class="ttname"><a href="../../d7/dc5/class_mouse.html#a6001632ac7dd40becfb8f2735dac3824">Mouse::uCursorBitmapPitch</a></div><div class="ttdeci">int uCursorBitmapPitch</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de3/_mouse_8h_source.html#l00334">Mouse.h:334</a></div></div>
+<div class="ttc" id="aclass_mouse_html_ace69a78dae5ad357368608cf0f1b3523"><div class="ttname"><a href="../../d7/dc5/class_mouse.html#ace69a78dae5ad357368608cf0f1b3523">Mouse::uCursorBitmapWidth</a></div><div class="ttdeci">int uCursorBitmapWidth</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de3/_mouse_8h_source.html#l00350">Mouse.h:350</a></div></div>
+<div class="ttc" id="aclass_mouse_html_a8d2a51a63f94a8eb1bb89e6f7e8c842d"><div class="ttname"><a href="../../d7/dc5/class_mouse.html#a8d2a51a63f94a8eb1bb89e6f7e8c842d">Mouse::field_9C</a></div><div class="ttdeci">int field_9C</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de3/_mouse_8h_source.html#l00339">Mouse.h:339</a></div></div>
+<div class="ttc" id="aclass_mouse_html_a4e6ba09a40bbae0cb9b765335a865474"><div class="ttname"><a href="../../d7/dc5/class_mouse.html#a4e6ba09a40bbae0cb9b765335a865474">Mouse::field_AC</a></div><div class="ttdeci">int field_AC</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de3/_mouse_8h_source.html#l00343">Mouse.h:343</a></div></div>
+<div class="ttc" id="aclass_mouse_html_a396d3d3a6509578d58a283ecf4390499"><div class="ttname"><a href="../../d7/dc5/class_mouse.html#a396d3d3a6509578d58a283ecf4390499">Mouse::field_1C</a></div><div class="ttdeci">int field_1C</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de3/_mouse_8h_source.html#l00322">Mouse.h:322</a></div></div>
+<div class="ttc" id="aclass_mouse_html_a6f27132399a757994d0f9689f526d54d"><div class="ttname"><a href="../../d7/dc5/class_mouse.html#a6f27132399a757994d0f9689f526d54d">Mouse::DoAllocCursorMem</a></div><div class="ttdeci">void * DoAllocCursorMem()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d54/_mouse_8cpp_source.html#l00106">Mouse.cpp:106</a></div></div>
+<div class="ttc" id="aclass_mouse_html_a344fc4dea2c59a9b57f7124b5ab6b0eb"><div class="ttname"><a href="../../d7/dc5/class_mouse.html#a344fc4dea2c59a9b57f7124b5ab6b0eb">Mouse::SetCursorBitmapFromItemID</a></div><div class="ttdeci">void SetCursorBitmapFromItemID(unsigned int uItemID)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d54/_mouse_8cpp_source.html#l00032">Mouse.cpp:32</a></div></div>
+<div class="ttc" id="aclass_mouse_html_aeeb9c76970fa7d1887fbeb6c603c4325"><div class="ttname"><a href="../../d7/dc5/class_mouse.html#aeeb9c76970fa7d1887fbeb6c603c4325">Mouse::field_8</a></div><div class="ttdeci">int field_8</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de3/_mouse_8h_source.html#l00317">Mouse.h:317</a></div></div>
+<div class="ttc" id="aclass_mouse_html_ac77b7a0b5758374f370dac375521f3b5"><div class="ttname"><a href="../../d7/dc5/class_mouse.html#ac77b7a0b5758374f370dac375521f3b5">Mouse::field_100</a></div><div class="ttdeci">int field_100</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de3/_mouse_8h_source.html#l00362">Mouse.h:362</a></div></div>
+<div class="ttc" id="aclass_mouse_html_a6c1329c4dec99e3c72b20087d95ea91d"><div class="ttname"><a href="../../d7/dc5/class_mouse.html#a6c1329c4dec99e3c72b20087d95ea91d">Mouse::SetCursorImage</a></div><div class="ttdeci">void SetCursorImage(const String &amp;name)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d54/_mouse_8cpp_source.html#l00038">Mouse.cpp:38</a></div></div>
+<div class="ttc" id="astruct_point_html"><div class="ttname"><a href="../../d8/dc8/struct_point.html">Point</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d18/_point_8h_source.html#l00003">Point.h:3</a></div></div>
+<div class="ttc" id="aclass_mouse_html_adfce323e284721b3a53cf3de4cbdbcd7"><div class="ttname"><a href="../../d7/dc5/class_mouse.html#adfce323e284721b3a53cf3de4cbdbcd7">Mouse::field_D4</a></div><div class="ttdeci">int field_D4</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de3/_mouse_8h_source.html#l00352">Mouse.h:352</a></div></div>
+<div class="ttc" id="aclass_mouse_html_af1b13384dbc9b78ae7e4ca3bb1c7c343"><div class="ttname"><a href="../../d7/dc5/class_mouse.html#af1b13384dbc9b78ae7e4ca3bb1c7c343">Mouse::field_A8</a></div><div class="ttdeci">int field_A8</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de3/_mouse_8h_source.html#l00342">Mouse.h:342</a></div></div>
+<div class="ttc" id="aclass_mouse_html_a0d3be2e2c92b73dba8f9a19d87965798"><div class="ttname"><a href="../../d7/dc5/class_mouse.html#a0d3be2e2c92b73dba8f9a19d87965798">Mouse::bInitialized</a></div><div class="ttdeci">unsigned int bInitialized</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de3/_mouse_8h_source.html#l00319">Mouse.h:319</a></div></div>
+<div class="ttc" id="a_strings_8h_html_afbeda3fd1bdc8c37d01bdf9f5c8274ff"><div class="ttname"><a href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a></div><div class="ttdeci">std::string String</div><div class="ttdef"><b>Definition:</b> <a href="../../de/df7/_strings_8h_source.html#l00010">Strings.h:10</a></div></div>
+<div class="ttc" id="aclass_mouse_html_ae90d9b5b37b0f4612f6225982e1da13e"><div class="ttname"><a href="../../d7/dc5/class_mouse.html#ae90d9b5b37b0f4612f6225982e1da13e">Mouse::UI_OnMouseLeftClick</a></div><div class="ttdeci">void UI_OnMouseLeftClick()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d54/_mouse_8cpp_source.html#l00258">Mouse.cpp:258</a></div></div>
+<div class="ttc" id="aclass_mouse_html_a3e7df01835f0ec8a3459dcd2f9a4dfa3"><div class="ttname"><a href="../../d7/dc5/class_mouse.html#a3e7df01835f0ec8a3459dcd2f9a4dfa3">Mouse::RemoveHoldingItem</a></div><div class="ttdeci">void RemoveHoldingItem()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d54/_mouse_8cpp_source.html#l00025">Mouse.cpp:25</a></div></div>
+<div class="ttc" id="aclass_mouse_html_a3c89d72f138d857d5636e640d07ae9b7"><div class="ttname"><a href="../../d7/dc5/class_mouse.html#a3c89d72f138d857d5636e640d07ae9b7">Mouse::ReadCursorWithItem</a></div><div class="ttdeci">void ReadCursorWithItem()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d54/_mouse_8cpp_source.html#l00206">Mouse.cpp:206</a></div></div>
+<div class="ttc" id="a_api_8h_html"><div class="ttname"><a href="../../d4/ddd/_api_8h.html">Api.h</a></div></div>
+<div class="ttc" id="aclass_mouse_html_a798b50ea32b6e2817f3d8de9a9f65efb"><div class="ttname"><a href="../../d7/dc5/class_mouse.html#a798b50ea32b6e2817f3d8de9a9f65efb">Mouse::uCursorWithItemX</a></div><div class="ttdeci">int uCursorWithItemX</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de3/_mouse_8h_source.html#l00330">Mouse.h:330</a></div></div>
+<div class="ttc" id="aclass_mouse_html_a9254f42dacea408294f4d4f3a3f2f567"><div class="ttname"><a href="../../d7/dc5/class_mouse.html#a9254f42dacea408294f4d4f3a3f2f567">Mouse::pCursorBitmap_sysmem</a></div><div class="ttdeci">uint16_t * pCursorBitmap_sysmem</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de3/_mouse_8h_source.html#l00326">Mouse.h:326</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_f0b8d3380d5649deec2d780f35ec3ac5.html">IO</a></li><li class="navelem"><a class="el" href="../../d2/de3/_mouse_8h.html">Mouse.h</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:03:37. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

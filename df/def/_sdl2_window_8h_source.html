@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Исходный файл C:/git/world-of-might-and-magic/Platform/Sdl2Window.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('df/def/_sdl2_window_8h_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Sdl2Window.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../df/def/_sdl2_window_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../de/ddc/_s_d_l_8h.html">SDL.h</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d0/df6/_o_s_window_8h.html">Platform/OSWindow.h</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="../../d4/d57/class_sdl2_window.html">    7</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d4/d57/class_sdl2_window.html">Sdl2Window</a> : <span class="keyword">public</span> <a class="code" href="../../db/da4/class_o_s_window.html">OSWindow</a> {</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="../../d4/d57/class_sdl2_window.html#addb1d9ecad2bc1260176955897c7f5a4">    9</a></span>&#160;    <span class="keyword">inline</span> <a class="code" href="../../d4/d57/class_sdl2_window.html#addb1d9ecad2bc1260176955897c7f5a4">Sdl2Window</a>(<a class="code" href="../../dc/d64/_s_d_l__video_8h.html#a55a196c7d3b8497538632c79ae1e6392">SDL_Window</a> *<a class="code" href="../../d4/d57/class_sdl2_window.html#ab75b7efdeb1e2317fee04b7ddb47ea2b">sdlWindow</a>, <a class="code" href="../../d6/d0f/struct_s_d_l___surface.html">SDL_Surface</a> *<a class="code" href="../../d4/d57/class_sdl2_window.html#ad567958132cd42a0034ae708cf60987c">sdlWindowSurface</a>)</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        : <a class="code" href="../../db/da4/class_o_s_window.html">OSWindow</a>() {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        this-&gt;sdlWindow = <a class="code" href="../../d4/d57/class_sdl2_window.html#ab75b7efdeb1e2317fee04b7ddb47ea2b">sdlWindow</a>;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        this-&gt;sdlWindowSurface = <a class="code" href="../../d4/d57/class_sdl2_window.html#ad567958132cd42a0034ae708cf60987c">sdlWindowSurface</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    }</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d4/d57/class_sdl2_window.html#abbd8e2f42347486b3ce48558e9d2dcfe">SetFullscreenMode</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d4/d57/class_sdl2_window.html#a0273d305e391308bdc0ae8bc36c48609">SetWindowedMode</a>(<span class="keywordtype">int</span> new_window_width, <span class="keywordtype">int</span> new_window_height) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d4/d57/class_sdl2_window.html#ac30dd9445ebf4328334279c2f0d50015">SetCursor</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *cursor_name) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d4/d57/class_sdl2_window.html#aab0e38bad68951c8b41432957cdafc83">GetX</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d4/d57/class_sdl2_window.html#a83afc986e1d5e333da9bc29a20f2f287">GetY</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../d4/d57/class_sdl2_window.html#a16f47136e465da1f74000cfd693e1d42">GetWidth</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../d4/d57/class_sdl2_window.html#a660a2dc37d35ff663fc7476a10a0f0d9">GetHeight</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="../../d8/dc8/struct_point.html">Point</a> <a class="code" href="../../d4/d57/class_sdl2_window.html#a3c6a909a607294e6d66905441cfb0500">TransformCursorPos</a>(<a class="code" href="../../d8/dc8/struct_point.html">Point</a> &amp;pt) <span class="keyword">const override</span>;  <span class="comment">// screen to client</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d4/d57/class_sdl2_window.html#adfe7d305c7f0e50a8cab70d4207e2e9e">OnOSMenu</a>(<span class="keywordtype">int</span> item_id) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d4/d57/class_sdl2_window.html#a0dd6c37030f6dad341aec034d0bff1dd">Show</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d4/d57/class_sdl2_window.html#a1132084f0f2631cc02b43e9ea47c2917">Focused</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d4/d57/class_sdl2_window.html#a9b769335b68750a84afc47d9e010118a">Activate</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d4/d57/class_sdl2_window.html#a025ddd23e30a4cfd14f9361834f51d3c">PeekSingleMessage</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d4/d57/class_sdl2_window.html#ad7e54fb14bc94c3939631a909ec17370">PeekMessageLoop</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">void</span> *<a class="code" href="../../d4/d57/class_sdl2_window.html#a8eaac87bbd4503351ad52d37c6e15050">GetWinApiHandle</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="comment">// window-renderer integration, probably should be a separate class</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d4/d57/class_sdl2_window.html#a7ecb3da7df633650a7bdb9a6fe315986">OpenGlCreate</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d4/d57/class_sdl2_window.html#a8d67346939b1f65cf3efad96830bcf91">OpenGlSwapBuffers</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="../../d4/d57/class_sdl2_window.html#ab75b7efdeb1e2317fee04b7ddb47ea2b">   42</a></span>&#160;    <a class="code" href="../../dc/d64/_s_d_l__video_8h.html#a55a196c7d3b8497538632c79ae1e6392">SDL_Window</a> *<a class="code" href="../../d4/d57/class_sdl2_window.html#ab75b7efdeb1e2317fee04b7ddb47ea2b">sdlWindow</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="../../d4/d57/class_sdl2_window.html#ad567958132cd42a0034ae708cf60987c">   43</a></span>&#160;    <a class="code" href="../../d6/d0f/struct_s_d_l___surface.html">SDL_Surface</a> *<a class="code" href="../../d4/d57/class_sdl2_window.html#ad567958132cd42a0034ae708cf60987c">sdlWindowSurface</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="../../d4/d57/class_sdl2_window.html#ae3225aff912a27cd00b07e448b6b4951">   44</a></span>&#160;    <a class="code" href="../../dc/d64/_s_d_l__video_8h.html#a0d64dcf67c9685d09cbe051448e1b3f3">SDL_GLContext</a> <a class="code" href="../../d4/d57/class_sdl2_window.html#ae3225aff912a27cd00b07e448b6b4951">sdlOpenGlContext</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d4/d57/class_sdl2_window.html#a0740a9d8bb0e5dbfb051d7ae8a1b72a9">MessageProc</a>(<span class="keyword">const</span> <a class="code" href="../../df/d1f/union_s_d_l___event.html">SDL_Event</a> &amp;e);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d4/d57/class_sdl2_window.html#ab4529e15e1d69dad91bb973f867b27e6">SdlkToChar</a>(<a class="code" href="../../d5/df2/_s_d_l__keycode_8h.html#ae9265f064f13f0f74dfca26a67875171">SDL_Keycode</a> key, <span class="keywordtype">bool</span> uppercase) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d4/d57/class_sdl2_window.html#aee4a68885d185a8081f43e09946f0a43">SdlkToVk</a>(<a class="code" href="../../d5/df2/_s_d_l__keycode_8h.html#ae9265f064f13f0f74dfca26a67875171">SDL_Keycode</a> key) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;};</div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aclass_sdl2_window_html_ab75b7efdeb1e2317fee04b7ddb47ea2b"><div class="ttname"><a href="../../d4/d57/class_sdl2_window.html#ab75b7efdeb1e2317fee04b7ddb47ea2b">Sdl2Window::sdlWindow</a></div><div class="ttdeci">SDL_Window * sdlWindow</div><div class="ttdef"><b>Definition:</b> <a href="../../df/def/_sdl2_window_8h_source.html#l00042">Sdl2Window.h:42</a></div></div>
+<div class="ttc" id="a_s_d_l_8h_html"><div class="ttname"><a href="../../de/ddc/_s_d_l_8h.html">SDL.h</a></div></div>
+<div class="ttc" id="a_o_s_window_8h_html"><div class="ttname"><a href="../../d0/df6/_o_s_window_8h.html">OSWindow.h</a></div></div>
+<div class="ttc" id="aclass_sdl2_window_html_a8eaac87bbd4503351ad52d37c6e15050"><div class="ttname"><a href="../../d4/d57/class_sdl2_window.html#a8eaac87bbd4503351ad52d37c6e15050">Sdl2Window::GetWinApiHandle</a></div><div class="ttdeci">void * GetWinApiHandle() override</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d76/_sdl2_window_8cpp_source.html#l00113">Sdl2Window.cpp:113</a></div></div>
+<div class="ttc" id="aclass_sdl2_window_html_a7ecb3da7df633650a7bdb9a6fe315986"><div class="ttname"><a href="../../d4/d57/class_sdl2_window.html#a7ecb3da7df633650a7bdb9a6fe315986">Sdl2Window::OpenGlCreate</a></div><div class="ttdeci">void OpenGlCreate() override</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d76/_sdl2_window_8cpp_source.html#l00242">Sdl2Window.cpp:242</a></div></div>
+<div class="ttc" id="aclass_sdl2_window_html"><div class="ttname"><a href="../../d4/d57/class_sdl2_window.html">Sdl2Window</a></div><div class="ttdef"><b>Definition:</b> <a href="../../df/def/_sdl2_window_8h_source.html#l00007">Sdl2Window.h:7</a></div></div>
+<div class="ttc" id="astruct_s_d_l___surface_html"><div class="ttname"><a href="../../d6/d0f/struct_s_d_l___surface.html">SDL_Surface</a></div><div class="ttdoc">A collection of pixels used in software blitting.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6d/_s_d_l__surface_8h_source.html#l00070">SDL_surface.h:70</a></div></div>
+<div class="ttc" id="aclass_sdl2_window_html_a9b769335b68750a84afc47d9e010118a"><div class="ttname"><a href="../../d4/d57/class_sdl2_window.html#a9b769335b68750a84afc47d9e010118a">Sdl2Window::Activate</a></div><div class="ttdeci">void Activate() override</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d76/_sdl2_window_8cpp_source.html#l00185">Sdl2Window.cpp:185</a></div></div>
+<div class="ttc" id="aclass_sdl2_window_html_a1132084f0f2631cc02b43e9ea47c2917"><div class="ttname"><a href="../../d4/d57/class_sdl2_window.html#a1132084f0f2631cc02b43e9ea47c2917">Sdl2Window::Focused</a></div><div class="ttdeci">bool Focused() override</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d76/_sdl2_window_8cpp_source.html#l00180">Sdl2Window.cpp:180</a></div></div>
+<div class="ttc" id="a_s_d_l__video_8h_html_a0d64dcf67c9685d09cbe051448e1b3f3"><div class="ttname"><a href="../../dc/d64/_s_d_l__video_8h.html#a0d64dcf67c9685d09cbe051448e1b3f3">SDL_GLContext</a></div><div class="ttdeci">void * SDL_GLContext</div><div class="ttdoc">An opaque handle to an OpenGL context.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d64/_s_d_l__video_8h_source.html#l00192">SDL_video.h:192</a></div></div>
+<div class="ttc" id="aclass_sdl2_window_html_ae3225aff912a27cd00b07e448b6b4951"><div class="ttname"><a href="../../d4/d57/class_sdl2_window.html#ae3225aff912a27cd00b07e448b6b4951">Sdl2Window::sdlOpenGlContext</a></div><div class="ttdeci">SDL_GLContext sdlOpenGlContext</div><div class="ttdef"><b>Definition:</b> <a href="../../df/def/_sdl2_window_8h_source.html#l00044">Sdl2Window.h:44</a></div></div>
+<div class="ttc" id="aclass_sdl2_window_html_abbd8e2f42347486b3ce48558e9d2dcfe"><div class="ttname"><a href="../../d4/d57/class_sdl2_window.html#abbd8e2f42347486b3ce48558e9d2dcfe">Sdl2Window::SetFullscreenMode</a></div><div class="ttdeci">void SetFullscreenMode() override</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d76/_sdl2_window_8cpp_source.html#l00126">Sdl2Window.cpp:126</a></div></div>
+<div class="ttc" id="aclass_sdl2_window_html_ab4529e15e1d69dad91bb973f867b27e6"><div class="ttname"><a href="../../d4/d57/class_sdl2_window.html#ab4529e15e1d69dad91bb973f867b27e6">Sdl2Window::SdlkToChar</a></div><div class="ttdeci">int SdlkToChar(SDL_Keycode key, bool uppercase) const</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d76/_sdl2_window_8cpp_source.html#l00192">Sdl2Window.cpp:192</a></div></div>
+<div class="ttc" id="aclass_sdl2_window_html_a3c6a909a607294e6d66905441cfb0500"><div class="ttname"><a href="../../d4/d57/class_sdl2_window.html#a3c6a909a607294e6d66905441cfb0500">Sdl2Window::TransformCursorPos</a></div><div class="ttdeci">Point TransformCursorPos(Point &amp;pt) const override</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d76/_sdl2_window_8cpp_source.html#l00162">Sdl2Window.cpp:162</a></div></div>
+<div class="ttc" id="a_s_d_l__keycode_8h_html_ae9265f064f13f0f74dfca26a67875171"><div class="ttname"><a href="../../d5/df2/_s_d_l__keycode_8h.html#ae9265f064f13f0f74dfca26a67875171">SDL_Keycode</a></div><div class="ttdeci">Sint32 SDL_Keycode</div><div class="ttdoc">The SDL virtual key representation.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df2/_s_d_l__keycode_8h_source.html#l00045">SDL_keycode.h:45</a></div></div>
+<div class="ttc" id="aclass_o_s_window_html"><div class="ttname"><a href="../../db/da4/class_o_s_window.html">OSWindow</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/df6/_o_s_window_8h_source.html#l00012">OSWindow.h:12</a></div></div>
+<div class="ttc" id="aclass_sdl2_window_html_ac30dd9445ebf4328334279c2f0d50015"><div class="ttname"><a href="../../d4/d57/class_sdl2_window.html#ac30dd9445ebf4328334279c2f0d50015">Sdl2Window::SetCursor</a></div><div class="ttdeci">void SetCursor(const char *cursor_name) override</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d76/_sdl2_window_8cpp_source.html#l00132">Sdl2Window.cpp:132</a></div></div>
+<div class="ttc" id="aclass_sdl2_window_html_ad567958132cd42a0034ae708cf60987c"><div class="ttname"><a href="../../d4/d57/class_sdl2_window.html#ad567958132cd42a0034ae708cf60987c">Sdl2Window::sdlWindowSurface</a></div><div class="ttdeci">SDL_Surface * sdlWindowSurface</div><div class="ttdef"><b>Definition:</b> <a href="../../df/def/_sdl2_window_8h_source.html#l00043">Sdl2Window.h:43</a></div></div>
+<div class="ttc" id="aclass_sdl2_window_html_adfe7d305c7f0e50a8cab70d4207e2e9e"><div class="ttname"><a href="../../d4/d57/class_sdl2_window.html#adfe7d305c7f0e50a8cab70d4207e2e9e">Sdl2Window::OnOSMenu</a></div><div class="ttdeci">bool OnOSMenu(int item_id) override</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d76/_sdl2_window_8cpp_source.html#l00169">Sdl2Window.cpp:169</a></div></div>
+<div class="ttc" id="aclass_sdl2_window_html_a0740a9d8bb0e5dbfb051d7ae8a1b72a9"><div class="ttname"><a href="../../d4/d57/class_sdl2_window.html#a0740a9d8bb0e5dbfb051d7ae8a1b72a9">Sdl2Window::MessageProc</a></div><div class="ttdeci">void MessageProc(const SDL_Event &amp;e)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d76/_sdl2_window_8cpp_source.html#l00005">Sdl2Window.cpp:5</a></div></div>
+<div class="ttc" id="aclass_sdl2_window_html_a83afc986e1d5e333da9bc29a20f2f287"><div class="ttname"><a href="../../d4/d57/class_sdl2_window.html#a83afc986e1d5e333da9bc29a20f2f287">Sdl2Window::GetY</a></div><div class="ttdeci">int GetY() const override</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d76/_sdl2_window_8cpp_source.html#l00142">Sdl2Window.cpp:142</a></div></div>
+<div class="ttc" id="aclass_sdl2_window_html_a025ddd23e30a4cfd14f9361834f51d3c"><div class="ttname"><a href="../../d4/d57/class_sdl2_window.html#a025ddd23e30a4cfd14f9361834f51d3c">Sdl2Window::PeekSingleMessage</a></div><div class="ttdeci">void PeekSingleMessage() override</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d76/_sdl2_window_8cpp_source.html#l00106">Sdl2Window.cpp:106</a></div></div>
+<div class="ttc" id="aclass_sdl2_window_html_a16f47136e465da1f74000cfd693e1d42"><div class="ttname"><a href="../../d4/d57/class_sdl2_window.html#a16f47136e465da1f74000cfd693e1d42">Sdl2Window::GetWidth</a></div><div class="ttdeci">unsigned int GetWidth() const override</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d76/_sdl2_window_8cpp_source.html#l00149">Sdl2Window.cpp:149</a></div></div>
+<div class="ttc" id="aclass_sdl2_window_html_a0273d305e391308bdc0ae8bc36c48609"><div class="ttname"><a href="../../d4/d57/class_sdl2_window.html#a0273d305e391308bdc0ae8bc36c48609">Sdl2Window::SetWindowedMode</a></div><div class="ttdeci">void SetWindowedMode(int new_window_width, int new_window_height) override</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d76/_sdl2_window_8cpp_source.html#l00129">Sdl2Window.cpp:129</a></div></div>
+<div class="ttc" id="a_s_d_l__video_8h_html_a55a196c7d3b8497538632c79ae1e6392"><div class="ttname"><a href="../../dc/d64/_s_d_l__video_8h.html#a55a196c7d3b8497538632c79ae1e6392">SDL_Window</a></div><div class="ttdeci">struct SDL_Window SDL_Window</div><div class="ttdoc">The type used to identify a window.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d64/_s_d_l__video_8h_source.html#l00090">SDL_video.h:90</a></div></div>
+<div class="ttc" id="aclass_sdl2_window_html_a8d67346939b1f65cf3efad96830bcf91"><div class="ttname"><a href="../../d4/d57/class_sdl2_window.html#a8d67346939b1f65cf3efad96830bcf91">Sdl2Window::OpenGlSwapBuffers</a></div><div class="ttdeci">void OpenGlSwapBuffers() override</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d76/_sdl2_window_8cpp_source.html#l00266">Sdl2Window.cpp:266</a></div></div>
+<div class="ttc" id="aclass_sdl2_window_html_a0dd6c37030f6dad341aec034d0bff1dd"><div class="ttname"><a href="../../d4/d57/class_sdl2_window.html#a0dd6c37030f6dad341aec034d0bff1dd">Sdl2Window::Show</a></div><div class="ttdeci">void Show() override</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d76/_sdl2_window_8cpp_source.html#l00173">Sdl2Window.cpp:173</a></div></div>
+<div class="ttc" id="aunion_s_d_l___event_html"><div class="ttname"><a href="../../df/d1f/union_s_d_l___event.html">SDL_Event</a></div><div class="ttdoc">General event structure.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d42/_s_d_l__events_8h_source.html#l00558">SDL_events.h:558</a></div></div>
+<div class="ttc" id="aclass_sdl2_window_html_aee4a68885d185a8081f43e09946f0a43"><div class="ttname"><a href="../../d4/d57/class_sdl2_window.html#aee4a68885d185a8081f43e09946f0a43">Sdl2Window::SdlkToVk</a></div><div class="ttdeci">int SdlkToVk(SDL_Keycode key) const</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d76/_sdl2_window_8cpp_source.html#l00206">Sdl2Window.cpp:206</a></div></div>
+<div class="ttc" id="astruct_point_html"><div class="ttname"><a href="../../d8/dc8/struct_point.html">Point</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d18/_point_8h_source.html#l00003">Point.h:3</a></div></div>
+<div class="ttc" id="aclass_sdl2_window_html_addb1d9ecad2bc1260176955897c7f5a4"><div class="ttname"><a href="../../d4/d57/class_sdl2_window.html#addb1d9ecad2bc1260176955897c7f5a4">Sdl2Window::Sdl2Window</a></div><div class="ttdeci">Sdl2Window(SDL_Window *sdlWindow, SDL_Surface *sdlWindowSurface)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/def/_sdl2_window_8h_source.html#l00009">Sdl2Window.h:9</a></div></div>
+<div class="ttc" id="aclass_sdl2_window_html_a660a2dc37d35ff663fc7476a10a0f0d9"><div class="ttname"><a href="../../d4/d57/class_sdl2_window.html#a660a2dc37d35ff663fc7476a10a0f0d9">Sdl2Window::GetHeight</a></div><div class="ttdeci">unsigned int GetHeight() const override</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d76/_sdl2_window_8cpp_source.html#l00155">Sdl2Window.cpp:155</a></div></div>
+<div class="ttc" id="aclass_sdl2_window_html_aab0e38bad68951c8b41432957cdafc83"><div class="ttname"><a href="../../d4/d57/class_sdl2_window.html#aab0e38bad68951c8b41432957cdafc83">Sdl2Window::GetX</a></div><div class="ttdeci">int GetX() const override</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d76/_sdl2_window_8cpp_source.html#l00135">Sdl2Window.cpp:135</a></div></div>
+<div class="ttc" id="aclass_sdl2_window_html_ad7e54fb14bc94c3939631a909ec17370"><div class="ttname"><a href="../../d4/d57/class_sdl2_window.html#ad7e54fb14bc94c3939631a909ec17370">Sdl2Window::PeekMessageLoop</a></div><div class="ttdeci">void PeekMessageLoop() override</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d76/_sdl2_window_8cpp_source.html#l00099">Sdl2Window.cpp:99</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_46f0a310448968fe371c870cd868aa1f.html">Platform</a></li><li class="navelem"><a class="el" href="../../df/def/_sdl2_window_8h.html">Sdl2Window.h</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:03:45. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

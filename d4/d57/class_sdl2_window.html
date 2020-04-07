@@ -1,0 +1,1453 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Класс Sdl2Window</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d4/d57/class_sdl2_window.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pri-methods">Закрытые члены</a> &#124;
+<a href="#pri-attribs">Закрытые данные</a> &#124;
+<a href="../../d8/d5b/class_sdl2_window-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс Sdl2Window</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="../../df/def/_sdl2_window_8h_source.html">Sdl2Window.h</a>&gt;</code></p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Граф наследования:Sdl2Window:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d2/d95/class_sdl2_window__inherit__graph.svg" width="106" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">см. легенду</a>]</span></center></div>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="../../closed.png" alt="+"/> Граф связей класса Sdl2Window:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../de/d4b/class_sdl2_window__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:addb1d9ecad2bc1260176955897c7f5a4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d57/class_sdl2_window.html#addb1d9ecad2bc1260176955897c7f5a4">Sdl2Window</a> (<a class="el" href="../../dc/d64/_s_d_l__video_8h.html#a55a196c7d3b8497538632c79ae1e6392">SDL_Window</a> *<a class="el" href="../../d4/d57/class_sdl2_window.html#ab75b7efdeb1e2317fee04b7ddb47ea2b">sdlWindow</a>, <a class="el" href="../../d6/d0f/struct_s_d_l___surface.html">SDL_Surface</a> *<a class="el" href="../../d4/d57/class_sdl2_window.html#ad567958132cd42a0034ae708cf60987c">sdlWindowSurface</a>)</td></tr>
+<tr class="separator:addb1d9ecad2bc1260176955897c7f5a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbd8e2f42347486b3ce48558e9d2dcfe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d57/class_sdl2_window.html#abbd8e2f42347486b3ce48558e9d2dcfe">SetFullscreenMode</a> () override</td></tr>
+<tr class="separator:abbd8e2f42347486b3ce48558e9d2dcfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0273d305e391308bdc0ae8bc36c48609"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d57/class_sdl2_window.html#a0273d305e391308bdc0ae8bc36c48609">SetWindowedMode</a> (int new_window_width, int new_window_height) override</td></tr>
+<tr class="separator:a0273d305e391308bdc0ae8bc36c48609"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac30dd9445ebf4328334279c2f0d50015"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d57/class_sdl2_window.html#ac30dd9445ebf4328334279c2f0d50015">SetCursor</a> (const char *cursor_name) override</td></tr>
+<tr class="separator:ac30dd9445ebf4328334279c2f0d50015"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab0e38bad68951c8b41432957cdafc83"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d57/class_sdl2_window.html#aab0e38bad68951c8b41432957cdafc83">GetX</a> () const override</td></tr>
+<tr class="separator:aab0e38bad68951c8b41432957cdafc83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83afc986e1d5e333da9bc29a20f2f287"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d57/class_sdl2_window.html#a83afc986e1d5e333da9bc29a20f2f287">GetY</a> () const override</td></tr>
+<tr class="separator:a83afc986e1d5e333da9bc29a20f2f287"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16f47136e465da1f74000cfd693e1d42"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d57/class_sdl2_window.html#a16f47136e465da1f74000cfd693e1d42">GetWidth</a> () const override</td></tr>
+<tr class="separator:a16f47136e465da1f74000cfd693e1d42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a660a2dc37d35ff663fc7476a10a0f0d9"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d57/class_sdl2_window.html#a660a2dc37d35ff663fc7476a10a0f0d9">GetHeight</a> () const override</td></tr>
+<tr class="separator:a660a2dc37d35ff663fc7476a10a0f0d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c6a909a607294e6d66905441cfb0500"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/dc8/struct_point.html">Point</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d57/class_sdl2_window.html#a3c6a909a607294e6d66905441cfb0500">TransformCursorPos</a> (<a class="el" href="../../d8/dc8/struct_point.html">Point</a> &amp;pt) const override</td></tr>
+<tr class="separator:a3c6a909a607294e6d66905441cfb0500"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfe7d305c7f0e50a8cab70d4207e2e9e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d57/class_sdl2_window.html#adfe7d305c7f0e50a8cab70d4207e2e9e">OnOSMenu</a> (int item_id) override</td></tr>
+<tr class="separator:adfe7d305c7f0e50a8cab70d4207e2e9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0dd6c37030f6dad341aec034d0bff1dd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d57/class_sdl2_window.html#a0dd6c37030f6dad341aec034d0bff1dd">Show</a> () override</td></tr>
+<tr class="separator:a0dd6c37030f6dad341aec034d0bff1dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1132084f0f2631cc02b43e9ea47c2917"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d57/class_sdl2_window.html#a1132084f0f2631cc02b43e9ea47c2917">Focused</a> () override</td></tr>
+<tr class="separator:a1132084f0f2631cc02b43e9ea47c2917"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b769335b68750a84afc47d9e010118a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d57/class_sdl2_window.html#a9b769335b68750a84afc47d9e010118a">Activate</a> () override</td></tr>
+<tr class="separator:a9b769335b68750a84afc47d9e010118a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a025ddd23e30a4cfd14f9361834f51d3c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d57/class_sdl2_window.html#a025ddd23e30a4cfd14f9361834f51d3c">PeekSingleMessage</a> () override</td></tr>
+<tr class="separator:a025ddd23e30a4cfd14f9361834f51d3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7e54fb14bc94c3939631a909ec17370"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d57/class_sdl2_window.html#ad7e54fb14bc94c3939631a909ec17370">PeekMessageLoop</a> () override</td></tr>
+<tr class="separator:ad7e54fb14bc94c3939631a909ec17370"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8eaac87bbd4503351ad52d37c6e15050"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d57/class_sdl2_window.html#a8eaac87bbd4503351ad52d37c6e15050">GetWinApiHandle</a> () override</td></tr>
+<tr class="separator:a8eaac87bbd4503351ad52d37c6e15050"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ecb3da7df633650a7bdb9a6fe315986"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d57/class_sdl2_window.html#a7ecb3da7df633650a7bdb9a6fe315986">OpenGlCreate</a> () override</td></tr>
+<tr class="separator:a7ecb3da7df633650a7bdb9a6fe315986"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d67346939b1f65cf3efad96830bcf91"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d57/class_sdl2_window.html#a8d67346939b1f65cf3efad96830bcf91">OpenGlSwapBuffers</a> () override</td></tr>
+<tr class="separator:a8d67346939b1f65cf3efad96830bcf91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_o_s_window"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_o_s_window')"><img src="../../closed.png" alt="-"/>&#160;Открытые члены унаследованные от <a class="el" href="../../db/da4/class_o_s_window.html">OSWindow</a></td></tr>
+<tr class="memitem:a9bc566c58d6d49b638481e00b2d163a6 inherit pub_methods_class_o_s_window"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da4/class_o_s_window.html#a9bc566c58d6d49b638481e00b2d163a6">OSWindow</a> ()</td></tr>
+<tr class="separator:a9bc566c58d6d49b638481e00b2d163a6 inherit pub_methods_class_o_s_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Закрытые члены</h2></td></tr>
+<tr class="memitem:a0740a9d8bb0e5dbfb051d7ae8a1b72a9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d57/class_sdl2_window.html#a0740a9d8bb0e5dbfb051d7ae8a1b72a9">MessageProc</a> (const <a class="el" href="../../df/d1f/union_s_d_l___event.html">SDL_Event</a> &amp;e)</td></tr>
+<tr class="separator:a0740a9d8bb0e5dbfb051d7ae8a1b72a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4529e15e1d69dad91bb973f867b27e6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d57/class_sdl2_window.html#ab4529e15e1d69dad91bb973f867b27e6">SdlkToChar</a> (<a class="el" href="../../d5/df2/_s_d_l__keycode_8h.html#ae9265f064f13f0f74dfca26a67875171">SDL_Keycode</a> key, bool uppercase) const</td></tr>
+<tr class="separator:ab4529e15e1d69dad91bb973f867b27e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee4a68885d185a8081f43e09946f0a43"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d57/class_sdl2_window.html#aee4a68885d185a8081f43e09946f0a43">SdlkToVk</a> (<a class="el" href="../../d5/df2/_s_d_l__keycode_8h.html#ae9265f064f13f0f74dfca26a67875171">SDL_Keycode</a> key) const</td></tr>
+<tr class="separator:aee4a68885d185a8081f43e09946f0a43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Закрытые данные</h2></td></tr>
+<tr class="memitem:ab75b7efdeb1e2317fee04b7ddb47ea2b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d64/_s_d_l__video_8h.html#a55a196c7d3b8497538632c79ae1e6392">SDL_Window</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d57/class_sdl2_window.html#ab75b7efdeb1e2317fee04b7ddb47ea2b">sdlWindow</a> = nullptr</td></tr>
+<tr class="separator:ab75b7efdeb1e2317fee04b7ddb47ea2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad567958132cd42a0034ae708cf60987c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d0f/struct_s_d_l___surface.html">SDL_Surface</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d57/class_sdl2_window.html#ad567958132cd42a0034ae708cf60987c">sdlWindowSurface</a> = nullptr</td></tr>
+<tr class="separator:ad567958132cd42a0034ae708cf60987c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3225aff912a27cd00b07e448b6b4951"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d64/_s_d_l__video_8h.html#a0d64dcf67c9685d09cbe051448e1b3f3">SDL_GLContext</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d57/class_sdl2_window.html#ae3225aff912a27cd00b07e448b6b4951">sdlOpenGlContext</a> = nullptr</td></tr>
+<tr class="separator:ae3225aff912a27cd00b07e448b6b4951"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Дополнительные унаследованные члены</h2></td></tr>
+<tr class="inherit_header pro_attribs_class_o_s_window"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_o_s_window')"><img src="../../closed.png" alt="-"/>&#160;Защищенные данные унаследованные от <a class="el" href="../../db/da4/class_o_s_window.html">OSWindow</a></td></tr>
+<tr class="memitem:adb6df4c86bfd15f3cbed541352eca0fd inherit pro_attribs_class_o_s_window"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d12/class_application_1_1_game_window_handler.html">GameWindowHandler</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da4/class_o_s_window.html#adb6df4c86bfd15f3cbed541352eca0fd">gameCallback</a> = nullptr</td></tr>
+<tr class="separator:adb6df4c86bfd15f3cbed541352eca0fd inherit pro_attribs_class_o_s_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d7ed6d54d9d75d632aecd7bf78c0236 inherit pro_attribs_class_o_s_window"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d70/class_log.html">Log</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da4/class_o_s_window.html#a7d7ed6d54d9d75d632aecd7bf78c0236">log</a> = nullptr</td></tr>
+<tr class="separator:a7d7ed6d54d9d75d632aecd7bf78c0236 inherit pro_attribs_class_o_s_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock">
+<p class="definition">См. определение в файле <a class="el" href="../../df/def/_sdl2_window_8h_source.html">Sdl2Window.h</a> строка <a class="el" href="../../df/def/_sdl2_window_8h_source.html#l00007">7</a></p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="addb1d9ecad2bc1260176955897c7f5a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addb1d9ecad2bc1260176955897c7f5a4">&#9670;&nbsp;</a></span>Sdl2Window()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Sdl2Window::Sdl2Window </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/d64/_s_d_l__video_8h.html#a55a196c7d3b8497538632c79ae1e6392">SDL_Window</a> *&#160;</td>
+          <td class="paramname"><em>sdlWindow</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d6/d0f/struct_s_d_l___surface.html">SDL_Surface</a> *&#160;</td>
+          <td class="paramname"><em>sdlWindowSurface</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../df/def/_sdl2_window_8h_source.html">Sdl2Window.h</a> строка <a class="el" href="../../df/def/_sdl2_window_8h_source.html#l00009">9</a></p>
+<div class="fragment"><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        : <a class="code" href="../../db/da4/class_o_s_window.html#a9bc566c58d6d49b638481e00b2d163a6">OSWindow</a>() {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        this-&gt;<a class="code" href="../../d4/d57/class_sdl2_window.html#ab75b7efdeb1e2317fee04b7ddb47ea2b">sdlWindow</a> = <a class="code" href="../../d4/d57/class_sdl2_window.html#ab75b7efdeb1e2317fee04b7ddb47ea2b">sdlWindow</a>;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        this-&gt;sdlWindowSurface = <a class="code" href="../../d4/d57/class_sdl2_window.html#ad567958132cd42a0034ae708cf60987c">sdlWindowSurface</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    }</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../df/def/_sdl2_window_8h_source.html#l00042">sdlWindow</a> и <a class="el" href="../../df/def/_sdl2_window_8h_source.html#l00043">sdlWindowSurface</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="abbd8e2f42347486b3ce48558e9d2dcfe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbd8e2f42347486b3ce48558e9d2dcfe">&#9670;&nbsp;</a></span>SetFullscreenMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> Sdl2Window::SetFullscreenMode </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещает <a class="el" href="../../db/da4/class_o_s_window.html#a9638d4750a519325c9a8b1440ab734f3">OSWindow</a>.</p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d6/d76/_sdl2_window_8cpp_source.html">Sdl2Window.cpp</a> строка <a class="el" href="../../d6/d76/_sdl2_window_8cpp_source.html#l00126">126</a></p>
+<div class="fragment"><div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                                   {</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a0273d305e391308bdc0ae8bc36c48609"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0273d305e391308bdc0ae8bc36c48609">&#9670;&nbsp;</a></span>SetWindowedMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> Sdl2Window::SetWindowedMode </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>new_window_width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>new_window_height</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещает <a class="el" href="../../db/da4/class_o_s_window.html#a4e2980fc9dacf730e9b402ee23b67fec">OSWindow</a>.</p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d6/d76/_sdl2_window_8cpp_source.html">Sdl2Window.cpp</a> строка <a class="el" href="../../d6/d76/_sdl2_window_8cpp_source.html#l00129">129</a></p>
+<div class="fragment"><div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;                                                                            {</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ac30dd9445ebf4328334279c2f0d50015"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac30dd9445ebf4328334279c2f0d50015">&#9670;&nbsp;</a></span>SetCursor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> Sdl2Window::SetCursor </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>cursor_name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещает <a class="el" href="../../db/da4/class_o_s_window.html#acefdd76200a79ad1a2470ffaba79d931">OSWindow</a>.</p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d6/d76/_sdl2_window_8cpp_source.html">Sdl2Window.cpp</a> строка <a class="el" href="../../d6/d76/_sdl2_window_8cpp_source.html#l00132">132</a></p>
+<div class="fragment"><div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;                                                  {</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aab0e38bad68951c8b41432957cdafc83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab0e38bad68951c8b41432957cdafc83">&#9670;&nbsp;</a></span>GetX()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Sdl2Window::GetX </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещает <a class="el" href="../../db/da4/class_o_s_window.html#a3f227932ce302a7de92f454f2d56e6ff">OSWindow</a>.</p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d6/d76/_sdl2_window_8cpp_source.html">Sdl2Window.cpp</a> строка <a class="el" href="../../d6/d76/_sdl2_window_8cpp_source.html#l00135">135</a></p>
+<div class="fragment"><div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                           {</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ad0e63d0edcdbd3d79554076bf309fd47">x</a>;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <a class="code" href="../../dc/d64/_s_d_l__video_8h.html#a03adfc1ed4aaf57da4af00bd247ac99c">SDL_GetWindowPosition</a>(<a class="code" href="../../d4/d57/class_sdl2_window.html#ab75b7efdeb1e2317fee04b7ddb47ea2b">sdlWindow</a>, &amp;<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ad0e63d0edcdbd3d79554076bf309fd47">x</a>, <span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ad0e63d0edcdbd3d79554076bf309fd47">x</a>;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../dc/d64/_s_d_l__video_8h.html#a03adfc1ed4aaf57da4af00bd247ac99c">SDL_GetWindowPosition()</a> и <a class="el" href="../../df/def/_sdl2_window_8h_source.html#l00042">sdlWindow</a>.</p>
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d4/d57/class_sdl2_window_aab0e38bad68951c8b41432957cdafc83_cgraph.svg" width="358" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a83afc986e1d5e333da9bc29a20f2f287"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83afc986e1d5e333da9bc29a20f2f287">&#9670;&nbsp;</a></span>GetY()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Sdl2Window::GetY </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещает <a class="el" href="../../db/da4/class_o_s_window.html#a2d7eaf4454b4341287b627707272d4b0">OSWindow</a>.</p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d6/d76/_sdl2_window_8cpp_source.html">Sdl2Window.cpp</a> строка <a class="el" href="../../d6/d76/_sdl2_window_8cpp_source.html#l00142">142</a></p>
+<div class="fragment"><div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;                           {</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a1675d9d7bb68e1657ff028643b4037e3">y</a>;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <a class="code" href="../../dc/d64/_s_d_l__video_8h.html#a03adfc1ed4aaf57da4af00bd247ac99c">SDL_GetWindowPosition</a>(<a class="code" href="../../d4/d57/class_sdl2_window.html#ab75b7efdeb1e2317fee04b7ddb47ea2b">sdlWindow</a>, <span class="keyword">nullptr</span>, &amp;<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a1675d9d7bb68e1657ff028643b4037e3">y</a>);</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160; </div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a1675d9d7bb68e1657ff028643b4037e3">y</a>;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../dc/d64/_s_d_l__video_8h.html#a03adfc1ed4aaf57da4af00bd247ac99c">SDL_GetWindowPosition()</a> и <a class="el" href="../../df/def/_sdl2_window_8h_source.html#l00042">sdlWindow</a>.</p>
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d4/d57/class_sdl2_window_a83afc986e1d5e333da9bc29a20f2f287_cgraph.svg" width="359" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a16f47136e465da1f74000cfd693e1d42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16f47136e465da1f74000cfd693e1d42">&#9670;&nbsp;</a></span>GetWidth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int Sdl2Window::GetWidth </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещает <a class="el" href="../../db/da4/class_o_s_window.html#a1a9f8dcf1edbc15b7fe18d961d790058">OSWindow</a>.</p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d6/d76/_sdl2_window_8cpp_source.html">Sdl2Window.cpp</a> строка <a class="el" href="../../d6/d76/_sdl2_window_8cpp_source.html#l00149">149</a></p>
+<div class="fragment"><div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;                                        {</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a6ee8f168a7ab6785a9bb57c6715dad99">w</a>;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <a class="code" href="../../dc/d64/_s_d_l__video_8h.html#a5cbfffcfec91c22a7ca95fd1d5163db5">SDL_GetWindowSize</a>(<a class="code" href="../../d4/d57/class_sdl2_window.html#ab75b7efdeb1e2317fee04b7ddb47ea2b">sdlWindow</a>, &amp;<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a6ee8f168a7ab6785a9bb57c6715dad99">w</a>, <span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160; </div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a6ee8f168a7ab6785a9bb57c6715dad99">w</a>;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../dc/d64/_s_d_l__video_8h.html#a5cbfffcfec91c22a7ca95fd1d5163db5">SDL_GetWindowSize()</a> и <a class="el" href="../../df/def/_sdl2_window_8h_source.html#l00042">sdlWindow</a>.</p>
+<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d4/d57/class_sdl2_window_a16f47136e465da1f74000cfd693e1d42_cgraph.svg" width="363" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a660a2dc37d35ff663fc7476a10a0f0d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a660a2dc37d35ff663fc7476a10a0f0d9">&#9670;&nbsp;</a></span>GetHeight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int Sdl2Window::GetHeight </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещает <a class="el" href="../../db/da4/class_o_s_window.html#af9429736faeacd2622e2b96053d19804">OSWindow</a>.</p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d6/d76/_sdl2_window_8cpp_source.html">Sdl2Window.cpp</a> строка <a class="el" href="../../d6/d76/_sdl2_window_8cpp_source.html#l00155">155</a></p>
+<div class="fragment"><div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;                                         {</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#afa0fb1b5e976920c0abeff2dca3ed774">h</a>;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <a class="code" href="../../dc/d64/_s_d_l__video_8h.html#a5cbfffcfec91c22a7ca95fd1d5163db5">SDL_GetWindowSize</a>(<a class="code" href="../../d4/d57/class_sdl2_window.html#ab75b7efdeb1e2317fee04b7ddb47ea2b">sdlWindow</a>, <span class="keyword">nullptr</span>, &amp;<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#afa0fb1b5e976920c0abeff2dca3ed774">h</a>);</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; </div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#afa0fb1b5e976920c0abeff2dca3ed774">h</a>;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../dc/d64/_s_d_l__video_8h.html#a5cbfffcfec91c22a7ca95fd1d5163db5">SDL_GetWindowSize()</a> и <a class="el" href="../../df/def/_sdl2_window_8h_source.html#l00042">sdlWindow</a>.</p>
+<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d4/d57/class_sdl2_window_a660a2dc37d35ff663fc7476a10a0f0d9_cgraph.svg" width="366" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a3c6a909a607294e6d66905441cfb0500"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c6a909a607294e6d66905441cfb0500">&#9670;&nbsp;</a></span>TransformCursorPos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d8/dc8/struct_point.html">Point</a> Sdl2Window::TransformCursorPos </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d8/dc8/struct_point.html">Point</a> &amp;&#160;</td>
+          <td class="paramname"><em>pt</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещает <a class="el" href="../../db/da4/class_o_s_window.html#ad3bcf249e9160bad317ff3d1e7c579f3">OSWindow</a>.</p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d6/d76/_sdl2_window_8cpp_source.html">Sdl2Window.cpp</a> строка <a class="el" href="../../d6/d76/_sdl2_window_8cpp_source.html#l00162">162</a></p>
+<div class="fragment"><div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;                                                    {</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <a class="code" href="../../dd/d4e/struct_s_d_l___point.html">SDL_Point</a> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <a class="code" href="../../d5/d62/_s_d_l__mouse_8h.html#a1561f413546c0e4f5f44a8f094926575">SDL_GetMouseState</a>(&amp;<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>.x, &amp;<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>.y);</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160; </div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d8/dc8/struct_point.html">Point</a>(<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>.x, <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>.y);</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d5/d62/_s_d_l__mouse_8h.html#a1561f413546c0e4f5f44a8f094926575">SDL_GetMouseState()</a>.</p>
+<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d4/d57/class_sdl2_window_a3c6a909a607294e6d66905441cfb0500_cgraph.svg" width="424" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="adfe7d305c7f0e50a8cab70d4207e2e9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfe7d305c7f0e50a8cab70d4207e2e9e">&#9670;&nbsp;</a></span>OnOSMenu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Sdl2Window::OnOSMenu </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>item_id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещает <a class="el" href="../../db/da4/class_o_s_window.html#ac78b183f9694ce0a27466e9308157017">OSWindow</a>.</p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d6/d76/_sdl2_window_8cpp_source.html">Sdl2Window.cpp</a> строка <a class="el" href="../../d6/d76/_sdl2_window_8cpp_source.html#l00169">169</a></p>
+<div class="fragment"><div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;                                     {</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a0dd6c37030f6dad341aec034d0bff1dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0dd6c37030f6dad341aec034d0bff1dd">&#9670;&nbsp;</a></span>Show()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> Sdl2Window::Show </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещает <a class="el" href="../../db/da4/class_o_s_window.html#ad66e71c73b965cf2f319028236d136b2">OSWindow</a>.</p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d6/d76/_sdl2_window_8cpp_source.html">Sdl2Window.cpp</a> строка <a class="el" href="../../d6/d76/_sdl2_window_8cpp_source.html#l00173">173</a></p>
+<div class="fragment"><div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;                      {</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <a class="code" href="../../dc/d64/_s_d_l__video_8h.html#a6051ce26885b32b80bc7285b4facd0a1">SDL_ShowWindow</a>(<a class="code" href="../../d4/d57/class_sdl2_window.html#ab75b7efdeb1e2317fee04b7ddb47ea2b">sdlWindow</a>);</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <a class="code" href="../../dc/d64/_s_d_l__video_8h.html#a4b66b90f95780276addc14bc573c9f3c">SDL_RaiseWindow</a>(<a class="code" href="../../d4/d57/class_sdl2_window.html#ab75b7efdeb1e2317fee04b7ddb47ea2b">sdlWindow</a>);</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160; </div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <a class="code" href="../../d4/d57/class_sdl2_window.html#ad7e54fb14bc94c3939631a909ec17370">PeekMessageLoop</a>();</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d6/d76/_sdl2_window_8cpp_source.html#l00099">PeekMessageLoop()</a>, <a class="el" href="../../dc/d64/_s_d_l__video_8h.html#a4b66b90f95780276addc14bc573c9f3c">SDL_RaiseWindow()</a>, <a class="el" href="../../dc/d64/_s_d_l__video_8h.html#a6051ce26885b32b80bc7285b4facd0a1">SDL_ShowWindow()</a> и <a class="el" href="../../df/def/_sdl2_window_8h_source.html#l00042">sdlWindow</a>.</p>
+<div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-7-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-7-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d4/d57/class_sdl2_window_a0dd6c37030f6dad341aec034d0bff1dd_cgraph.svg" width="100%" height="461"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a1132084f0f2631cc02b43e9ea47c2917"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1132084f0f2631cc02b43e9ea47c2917">&#9670;&nbsp;</a></span>Focused()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Sdl2Window::Focused </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещает <a class="el" href="../../db/da4/class_o_s_window.html#a385cfb98bf07c7340227b63be0ef56da">OSWindow</a>.</p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d6/d76/_sdl2_window_8cpp_source.html">Sdl2Window.cpp</a> строка <a class="el" href="../../d6/d76/_sdl2_window_8cpp_source.html#l00180">180</a></p>
+<div class="fragment"><div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;                         {</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ac7ba7d3cce3d19ca020e056b37231289">flags</a> = <a class="code" href="../../dc/d64/_s_d_l__video_8h.html#ab10f4fd6a082ef06fcae96860c95fb18a4300d051290adcb71c1b5e82e2553c4d">SDL_WINDOW_SHOWN</a> | <a class="code" href="../../dc/d64/_s_d_l__video_8h.html#ab10f4fd6a082ef06fcae96860c95fb18afcbb682c0942bc106af1474c1d34bb53">SDL_WINDOW_INPUT_FOCUS</a> | <a class="code" href="../../dc/d64/_s_d_l__video_8h.html#ab10f4fd6a082ef06fcae96860c95fb18aa722d0955c297fc60c09b10e1679684c">SDL_WINDOW_MOUSE_FOCUS</a>;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <span class="keywordflow">return</span> (<a class="code" href="../../dc/d64/_s_d_l__video_8h.html#a4445733f04a1a9dd0e063cd4738f285f">SDL_GetWindowFlags</a>(<a class="code" href="../../d4/d57/class_sdl2_window.html#ab75b7efdeb1e2317fee04b7ddb47ea2b">sdlWindow</a>) &amp; <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ac7ba7d3cce3d19ca020e056b37231289">flags</a>) == <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ac7ba7d3cce3d19ca020e056b37231289">flags</a>;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../dc/d64/_s_d_l__video_8h.html#a4445733f04a1a9dd0e063cd4738f285f">SDL_GetWindowFlags()</a>, <a class="el" href="../../dc/d64/_s_d_l__video_8h_source.html#l00108">SDL_WINDOW_INPUT_FOCUS</a>, <a class="el" href="../../dc/d64/_s_d_l__video_8h_source.html#l00109">SDL_WINDOW_MOUSE_FOCUS</a>, <a class="el" href="../../dc/d64/_s_d_l__video_8h_source.html#l00101">SDL_WINDOW_SHOWN</a> и <a class="el" href="../../df/def/_sdl2_window_8h_source.html#l00042">sdlWindow</a>.</p>
+<div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-8-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-8-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d4/d57/class_sdl2_window_a1132084f0f2631cc02b43e9ea47c2917_cgraph.svg" width="364" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a9b769335b68750a84afc47d9e010118a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b769335b68750a84afc47d9e010118a">&#9670;&nbsp;</a></span>Activate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> Sdl2Window::Activate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещает <a class="el" href="../../db/da4/class_o_s_window.html#a113dc175fcf6c5c4ebd3cb80b3ab9ad4">OSWindow</a>.</p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d6/d76/_sdl2_window_8cpp_source.html">Sdl2Window.cpp</a> строка <a class="el" href="../../d6/d76/_sdl2_window_8cpp_source.html#l00185">185</a></p>
+<div class="fragment"><div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;                          {</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    <a class="code" href="../../dc/d64/_s_d_l__video_8h.html#a4b66b90f95780276addc14bc573c9f3c">SDL_RaiseWindow</a>(<a class="code" href="../../d4/d57/class_sdl2_window.html#ab75b7efdeb1e2317fee04b7ddb47ea2b">sdlWindow</a>);</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160; </div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <a class="code" href="../../d4/d57/class_sdl2_window.html#ad7e54fb14bc94c3939631a909ec17370">PeekMessageLoop</a>();</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d6/d76/_sdl2_window_8cpp_source.html#l00099">PeekMessageLoop()</a>, <a class="el" href="../../dc/d64/_s_d_l__video_8h.html#a4b66b90f95780276addc14bc573c9f3c">SDL_RaiseWindow()</a> и <a class="el" href="../../df/def/_sdl2_window_8h_source.html#l00042">sdlWindow</a>.</p>
+<div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-9-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-9-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d4/d57/class_sdl2_window_a9b769335b68750a84afc47d9e010118a_cgraph.svg" width="100%" height="423"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a025ddd23e30a4cfd14f9361834f51d3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a025ddd23e30a4cfd14f9361834f51d3c">&#9670;&nbsp;</a></span>PeekSingleMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> Sdl2Window::PeekSingleMessage </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещает <a class="el" href="../../db/da4/class_o_s_window.html#a20dd22fff43a609ad677ff75e499595e">OSWindow</a>.</p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d6/d76/_sdl2_window_8cpp_source.html">Sdl2Window.cpp</a> строка <a class="el" href="../../d6/d76/_sdl2_window_8cpp_source.html#l00106">106</a></p>
+<div class="fragment"><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                                   {</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <a class="code" href="../../df/d1f/union_s_d_l___event.html">SDL_Event</a> e;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../d9/d42/_s_d_l__events_8h.html#acfa517963c25f8b71acc6b56721c5d9b">SDL_PollEvent</a>(&amp;e)) {</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <a class="code" href="../../d4/d57/class_sdl2_window.html#a0740a9d8bb0e5dbfb051d7ae8a1b72a9">MessageProc</a>(e);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    }</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d6/d76/_sdl2_window_8cpp_source.html#l00005">MessageProc()</a> и <a class="el" href="../../d9/d42/_s_d_l__events_8h.html#acfa517963c25f8b71acc6b56721c5d9b">SDL_PollEvent()</a>.</p>
+<div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-10-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-10-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-10-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d4/d57/class_sdl2_window_a025ddd23e30a4cfd14f9361834f51d3c_cgraph.svg" width="100%" height="404"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ad7e54fb14bc94c3939631a909ec17370"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7e54fb14bc94c3939631a909ec17370">&#9670;&nbsp;</a></span>PeekMessageLoop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> Sdl2Window::PeekMessageLoop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещает <a class="el" href="../../db/da4/class_o_s_window.html#a6f74522fd3e4b3290db2b663f73ab572">OSWindow</a>.</p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d6/d76/_sdl2_window_8cpp_source.html">Sdl2Window.cpp</a> строка <a class="el" href="../../d6/d76/_sdl2_window_8cpp_source.html#l00099">99</a></p>
+<div class="fragment"><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                                 {</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <a class="code" href="../../df/d1f/union_s_d_l___event.html">SDL_Event</a> e;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordflow">while</span> (<a class="code" href="../../d9/d42/_s_d_l__events_8h.html#acfa517963c25f8b71acc6b56721c5d9b">SDL_PollEvent</a>(&amp;e)) {</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <a class="code" href="../../d4/d57/class_sdl2_window.html#a0740a9d8bb0e5dbfb051d7ae8a1b72a9">MessageProc</a>(e);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    }</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d6/d76/_sdl2_window_8cpp_source.html#l00005">MessageProc()</a> и <a class="el" href="../../d9/d42/_s_d_l__events_8h.html#acfa517963c25f8b71acc6b56721c5d9b">SDL_PollEvent()</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d6/d76/_sdl2_window_8cpp_source.html#l00185">Activate()</a> и <a class="el" href="../../d6/d76/_sdl2_window_8cpp_source.html#l00173">Show()</a>.</p>
+<div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-11-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-11-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-11-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d4/d57/class_sdl2_window_ad7e54fb14bc94c3939631a909ec17370_cgraph.svg" width="100%" height="404"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div id="dynsection-12" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-12-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-12-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-12-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d4/d57/class_sdl2_window_ad7e54fb14bc94c3939631a909ec17370_icgraph.svg" width="420" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a8eaac87bbd4503351ad52d37c6e15050"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8eaac87bbd4503351ad52d37c6e15050">&#9670;&nbsp;</a></span>GetWinApiHandle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> * Sdl2Window::GetWinApiHandle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещает <a class="el" href="../../db/da4/class_o_s_window.html#a14ecc929f299d6a1079ad6db9a5560aa">OSWindow</a>.</p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d6/d76/_sdl2_window_8cpp_source.html">Sdl2Window.cpp</a> строка <a class="el" href="../../d6/d76/_sdl2_window_8cpp_source.html#l00113">113</a></p>
+<div class="fragment"><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                                  {</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <a class="code" href="../../d1/d59/struct_s_d_l___sys_w_minfo.html">SDL_SysWMinfo</a> wmInfo;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    SDL_VERSION(&amp;wmInfo.<a class="code" href="../../d1/d59/struct_s_d_l___sys_w_minfo.html#ac3a70af022d4849e9ff546595e94627f">version</a>);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <a class="code" href="../../de/df3/_s_d_l__syswm_8h.html#ad6e40121a96c88af20d9469a04706fef">SDL_GetWindowWMInfo</a>(<a class="code" href="../../d4/d57/class_sdl2_window.html#ab75b7efdeb1e2317fee04b7ddb47ea2b">sdlWindow</a>, &amp;wmInfo);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="preprocessor">#ifdef _WINDOWS</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keywordflow">return</span> (<span class="keywordtype">void</span> *)wmInfo.<a class="code" href="../../d1/d59/struct_s_d_l___sys_w_minfo.html#ad4433c0ff6e9faf723d8a775259d020f">info</a>.<a class="code" href="../../d1/d59/struct_s_d_l___sys_w_minfo.html#a2d85e43774cbdafc76c490f13af89607">win</a>.window;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keywordflow">return</span> (<span class="keywordtype">void</span> *)wmInfo.<a class="code" href="../../d1/d59/struct_s_d_l___sys_w_minfo.html#ad4433c0ff6e9faf723d8a775259d020f">info</a>.<a class="code" href="../../d1/d59/struct_s_d_l___sys_w_minfo.html#a5175e05fe7ce53835601b15816d79940">x11</a>.window;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d1/d59/struct_s_d_l___sys_w_minfo.html#ad4433c0ff6e9faf723d8a775259d020f">SDL_SysWMinfo::info</a>, <a class="el" href="../../de/df3/_s_d_l__syswm_8h.html#ad6e40121a96c88af20d9469a04706fef">SDL_GetWindowWMInfo()</a>, <a class="el" href="../../df/def/_sdl2_window_8h_source.html#l00042">sdlWindow</a>, <a class="el" href="../../de/df3/_s_d_l__syswm_8h_source.html#l00203">SDL_SysWMinfo::version</a>, <a class="el" href="../../d1/d59/struct_s_d_l___sys_w_minfo.html#a2d85e43774cbdafc76c490f13af89607">SDL_SysWMinfo::win</a> и <a class="el" href="../../d1/d59/struct_s_d_l___sys_w_minfo.html#a5175e05fe7ce53835601b15816d79940">SDL_SysWMinfo::x11</a>.</p>
+<div id="dynsection-13" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-13-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-13-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-13-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d4/d57/class_sdl2_window_a8eaac87bbd4503351ad52d37c6e15050_cgraph.svg" width="430" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a7ecb3da7df633650a7bdb9a6fe315986"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ecb3da7df633650a7bdb9a6fe315986">&#9670;&nbsp;</a></span>OpenGlCreate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> Sdl2Window::OpenGlCreate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещает <a class="el" href="../../db/da4/class_o_s_window.html#aca09e1554c96e0102f6bc445e9c60a51">OSWindow</a>.</p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d6/d76/_sdl2_window_8cpp_source.html">Sdl2Window.cpp</a> строка <a class="el" href="../../d6/d76/_sdl2_window_8cpp_source.html#l00242">242</a></p>
+<div class="fragment"><div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;                              {</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    <span class="comment">//  Use OpenGL 3.3 core - requires all fixed pipeline code to be modernised</span></div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    <span class="comment">//  SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 3);</span></div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <span class="comment">//  SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 3);</span></div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <span class="comment">//  SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_CORE);</span></div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160; </div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160; </div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160; </div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    <span class="comment">//  Turn on double buffering with a 24bit Z buffer.</span></div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    <span class="comment">//  You may need to change this to 16 or 32 for your system</span></div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    <a class="code" href="../../dc/d64/_s_d_l__video_8h.html#aed4d4347f2d5def1532bc22893e0e0d9">SDL_GL_SetAttribute</a>(<a class="code" href="../../dc/d64/_s_d_l__video_8h.html#a2de24951bbc6626dc259ec0db5ae8ed4a28c3841afe3b66ab86a267bf5d0a28e0">SDL_GL_DOUBLEBUFFER</a>, 1);</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    <a class="code" href="../../dc/d64/_s_d_l__video_8h.html#aed4d4347f2d5def1532bc22893e0e0d9">SDL_GL_SetAttribute</a>(<a class="code" href="../../dc/d64/_s_d_l__video_8h.html#a2de24951bbc6626dc259ec0db5ae8ed4addf8f9d5c6d217954b14ece543dcbf17">SDL_GL_DEPTH_SIZE</a>, 24);</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160; </div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    <a class="code" href="../../d4/d57/class_sdl2_window.html#ae3225aff912a27cd00b07e448b6b4951">sdlOpenGlContext</a> = <a class="code" href="../../dc/d64/_s_d_l__video_8h.html#a0e14c935cf304133278893bf6c1d2691">SDL_GL_CreateContext</a>(<a class="code" href="../../d4/d57/class_sdl2_window.html#ab75b7efdeb1e2317fee04b7ddb47ea2b">sdlWindow</a>);</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="../../d4/d57/class_sdl2_window.html#ae3225aff912a27cd00b07e448b6b4951">sdlOpenGlContext</a>) {</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;        <a class="code" href="../../db/da4/class_o_s_window.html#a7d7ed6d54d9d75d632aecd7bf78c0236">log</a>-&gt;<a class="code" href="../../d6/d70/class_log.html#ac0de2621497ca3b2fbf208624c08bcdf">Warning</a>(L<span class="stringliteral">&quot;OpenGL failed: %S&quot;</span>, <a class="code" href="../../df/d2d/_s_d_l__error_8h.html#af3cc615dad0d5ed6b36cb84cab15ecb6">SDL_GetError</a>());</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    }</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160; </div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <span class="comment">//  Use Vsync</span></div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../dc/d64/_s_d_l__video_8h.html#a68b0d06595d086d9244fd49afe3e8360">SDL_GL_SetSwapInterval</a>(1) &lt; 0) {</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        <a class="code" href="../../db/da4/class_o_s_window.html#a7d7ed6d54d9d75d632aecd7bf78c0236">log</a>-&gt;<a class="code" href="../../d6/d70/class_log.html#a9962588a107d3b4aa927cf12284e0fc7">Info</a>(L<span class="stringliteral">&quot;Unable to set VSync! SDL Error: %S\n&quot;</span>, <a class="code" href="../../df/d2d/_s_d_l__error_8h.html#af3cc615dad0d5ed6b36cb84cab15ecb6">SDL_GetError</a>());</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    }</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00011">Log::Info()</a>, <a class="el" href="../../d0/df6/_o_s_window_8h_source.html#l00044">OSWindow::log</a>, <a class="el" href="../../df/d2d/_s_d_l__error_8h.html#af3cc615dad0d5ed6b36cb84cab15ecb6">SDL_GetError()</a>, <a class="el" href="../../dc/d64/_s_d_l__video_8h.html#a0e14c935cf304133278893bf6c1d2691">SDL_GL_CreateContext()</a>, <a class="el" href="../../dc/d64/_s_d_l__video_8h_source.html#l00205">SDL_GL_DEPTH_SIZE</a>, <a class="el" href="../../dc/d64/_s_d_l__video_8h_source.html#l00204">SDL_GL_DOUBLEBUFFER</a>, <a class="el" href="../../dc/d64/_s_d_l__video_8h.html#aed4d4347f2d5def1532bc22893e0e0d9">SDL_GL_SetAttribute()</a>, <a class="el" href="../../dc/d64/_s_d_l__video_8h.html#a68b0d06595d086d9244fd49afe3e8360">SDL_GL_SetSwapInterval()</a>, <a class="el" href="../../df/def/_sdl2_window_8h_source.html#l00044">sdlOpenGlContext</a>, <a class="el" href="../../df/def/_sdl2_window_8h_source.html#l00042">sdlWindow</a> и <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00028">Log::Warning()</a>.</p>
+<div id="dynsection-14" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-14-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-14-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-14-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d4/d57/class_sdl2_window_a7ecb3da7df633650a7bdb9a6fe315986_cgraph.svg" width="414" height="291"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a8d67346939b1f65cf3efad96830bcf91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d67346939b1f65cf3efad96830bcf91">&#9670;&nbsp;</a></span>OpenGlSwapBuffers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> Sdl2Window::OpenGlSwapBuffers </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещает <a class="el" href="../../db/da4/class_o_s_window.html#a0c6ef7297e6265bbd26ba12caa021a10">OSWindow</a>.</p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d6/d76/_sdl2_window_8cpp_source.html">Sdl2Window.cpp</a> строка <a class="el" href="../../d6/d76/_sdl2_window_8cpp_source.html#l00266">266</a></p>
+<div class="fragment"><div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;                                   {</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    <a class="code" href="../../dc/d64/_s_d_l__video_8h.html#a11d1245662f49f6af257627119f22835">SDL_GL_SwapWindow</a>(<a class="code" href="../../d4/d57/class_sdl2_window.html#ab75b7efdeb1e2317fee04b7ddb47ea2b">sdlWindow</a>);</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../dc/d64/_s_d_l__video_8h.html#a11d1245662f49f6af257627119f22835">SDL_GL_SwapWindow()</a> и <a class="el" href="../../df/def/_sdl2_window_8h_source.html#l00042">sdlWindow</a>.</p>
+<div id="dynsection-15" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-15-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-15-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-15-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d4/d57/class_sdl2_window_a8d67346939b1f65cf3efad96830bcf91_cgraph.svg" width="434" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a0740a9d8bb0e5dbfb051d7ae8a1b72a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0740a9d8bb0e5dbfb051d7ae8a1b72a9">&#9670;&nbsp;</a></span>MessageProc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> Sdl2Window::MessageProc </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../df/d1f/union_s_d_l___event.html">SDL_Event</a> &amp;&#160;</td>
+          <td class="paramname"><em>e</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d6/d76/_sdl2_window_8cpp_source.html">Sdl2Window.cpp</a> строка <a class="el" href="../../d6/d76/_sdl2_window_8cpp_source.html#l00005">5</a></p>
+<div class="fragment"><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;                                               {</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <span class="keywordflow">switch</span> (e.<a class="code" href="../../df/d1f/union_s_d_l___event.html#a237648bec242d2d5835f1a4250ddfa46">type</a>) {</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="../../d9/d42/_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaa31acc5fdafc86ebe2c1f5c3cae48d603">SDL_QUIT</a>: {</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;            <span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="../../d4/d68/_engine_8cpp.html#a1cd3528b0bd43ba7c76cceb5ad5a568b">Engine_DeinitializeAndTerminate</a>(<span class="keywordtype">int</span> exit_code);</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;            <a class="code" href="../../d4/d68/_engine_8cpp.html#a1cd3528b0bd43ba7c76cceb5ad5a568b">Engine_DeinitializeAndTerminate</a>(0);</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        } <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="../../d9/d42/_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaaa0c6280f19f3c307fd2e0c7b1d5f5461">SDL_APP_WILLENTERBACKGROUND</a>: {  <span class="comment">// this is for mobile apps wrong event</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;            <a class="code" href="../../db/da4/class_o_s_window.html#adb6df4c86bfd15f3cbed541352eca0fd">gameCallback</a>-&gt;OnDeactivated();</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        } <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="../../d9/d42/_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaa406151c433bc968c46591bde396c987f">SDL_APP_WILLENTERFOREGROUND</a>: {  <span class="comment">// this is for mobile apps wrong event</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            <a class="code" href="../../db/da4/class_o_s_window.html#adb6df4c86bfd15f3cbed541352eca0fd">gameCallback</a>-&gt;OnActivated();</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        } <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="../../d9/d42/_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaadefb8866b9d28be21c2c33c35cc66c4b">SDL_KEYUP</a>: {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            <span class="keywordflow">if</span> (e.<a class="code" href="../../df/d1f/union_s_d_l___event.html#ab99927835cc77a9b6bb50b419b4a27df">key</a>.<a class="code" href="../../d8/db8/struct_s_d_l___keyboard_event.html#a2a57ba820a298f2c02ad5d41fd2b1aa8">keysym</a>.<a class="code" href="../../d4/de7/struct_s_d_l___keysym.html#a082ff1fd787b79fa6c3a445deb225f08">sym</a> == <a class="code" href="../../d5/df2/_s_d_l__keycode_8h.html#a179ce01fa41d35408f06b4b3d1cd9d3da95a48d56f776924d2d3b21552eb3860f">SDLK_LCTRL</a> || e.<a class="code" href="../../df/d1f/union_s_d_l___event.html#ab99927835cc77a9b6bb50b419b4a27df">key</a>.<a class="code" href="../../d8/db8/struct_s_d_l___keyboard_event.html#a2a57ba820a298f2c02ad5d41fd2b1aa8">keysym</a>.<a class="code" href="../../d4/de7/struct_s_d_l___keysym.html#a082ff1fd787b79fa6c3a445deb225f08">sym</a> == <a class="code" href="../../d5/df2/_s_d_l__keycode_8h.html#a179ce01fa41d35408f06b4b3d1cd9d3dae19150bda868459b26e2fed234e236d8">SDLK_RCTRL</a>) {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                <span class="keyword">extern</span> <span class="keywordtype">bool</span> <a class="code" href="../../d7/d54/_mouse_8cpp.html#a87ea0d89e858bd74e1d223e05049a7e5">_507B98_ctrl_pressed</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                <a class="code" href="../../d7/d54/_mouse_8cpp.html#a87ea0d89e858bd74e1d223e05049a7e5">_507B98_ctrl_pressed</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (e.<a class="code" href="../../df/d1f/union_s_d_l___event.html#ab99927835cc77a9b6bb50b419b4a27df">key</a>.<a class="code" href="../../d8/db8/struct_s_d_l___keyboard_event.html#a2a57ba820a298f2c02ad5d41fd2b1aa8">keysym</a>.<a class="code" href="../../d4/de7/struct_s_d_l___keysym.html#a082ff1fd787b79fa6c3a445deb225f08">sym</a> == <a class="code" href="../../d5/df2/_s_d_l__keycode_8h.html#a179ce01fa41d35408f06b4b3d1cd9d3da635c4122c4945689eb97287fd7b97088">SDLK_PRINTSCREEN</a>) {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                <a class="code" href="../../db/da4/class_o_s_window.html#adb6df4c86bfd15f3cbed541352eca0fd">gameCallback</a>-&gt;OnScreenshot();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            }</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        } <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="../../d9/d42/_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaacaf8cfd53c985cdbf6a90c811d51a1fc">SDL_KEYDOWN</a>: {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            <span class="keyword">auto</span> key = e.<a class="code" href="../../df/d1f/union_s_d_l___event.html#ab99927835cc77a9b6bb50b419b4a27df">key</a>.<a class="code" href="../../d8/db8/struct_s_d_l___keyboard_event.html#a2a57ba820a298f2c02ad5d41fd2b1aa8">keysym</a>.<a class="code" href="../../d4/de7/struct_s_d_l___keysym.html#a082ff1fd787b79fa6c3a445deb225f08">sym</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            <span class="keyword">auto</span> mods = e.<a class="code" href="../../df/d1f/union_s_d_l___event.html#ab99927835cc77a9b6bb50b419b4a27df">key</a>.<a class="code" href="../../d8/db8/struct_s_d_l___keyboard_event.html#a2a57ba820a298f2c02ad5d41fd2b1aa8">keysym</a>.<a class="code" href="../../d4/de7/struct_s_d_l___keysym.html#ab519d1b8a9939d3d035f7103f3208291">mod</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            <span class="keyword">auto</span> ch = <a class="code" href="../../d4/d57/class_sdl2_window.html#ab4529e15e1d69dad91bb973f867b27e6">SdlkToChar</a>(key, (mods &amp; <a class="code" href="../../d5/df2/_s_d_l__keycode_8h.html#afa050ad71f0a5b86aa05cb13f542d747a8a721ee962efe0d065457991568f2db6">KMOD_CAPS</a>) != (mods &amp; KMOD_SHIFT));</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            <span class="keyword">auto</span> vkkey = <a class="code" href="../../d4/d57/class_sdl2_window.html#aee4a68885d185a8081f43e09946f0a43">SdlkToVk</a>(key);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <span class="keywordflow">if</span> (ch != -1) {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                <a class="code" href="../../db/da4/class_o_s_window.html#adb6df4c86bfd15f3cbed541352eca0fd">gameCallback</a>-&gt;OnChar(ch);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( key == <a class="code" href="../../d5/df2/_s_d_l__keycode_8h.html#a179ce01fa41d35408f06b4b3d1cd9d3dafb38b5a4ab44e7f9493f0ebdf5e908ed">SDLK_RETURN</a> || key == <a class="code" href="../../d5/df2/_s_d_l__keycode_8h.html#a179ce01fa41d35408f06b4b3d1cd9d3dab050f8c23b43c76246a93e599b7b411f">SDLK_ESCAPE</a> || key == <a class="code" href="../../d5/df2/_s_d_l__keycode_8h.html#a179ce01fa41d35408f06b4b3d1cd9d3da4869f810e4f3fbf9225e9c7e1ab92aec">SDLK_TAB</a> || key == <a class="code" href="../../d5/df2/_s_d_l__keycode_8h.html#a179ce01fa41d35408f06b4b3d1cd9d3da17720a5936f7a8207e32f52e2856470f">SDLK_BACKSPACE</a> ) {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                <span class="keywordflow">if</span> (!<a class="code" href="../../db/da4/class_o_s_window.html#adb6df4c86bfd15f3cbed541352eca0fd">gameCallback</a>-&gt;OnChar(vkkey))</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                    <a class="code" href="../../db/da4/class_o_s_window.html#adb6df4c86bfd15f3cbed541352eca0fd">gameCallback</a>-&gt;OnVkDown(vkkey, 0);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                <a class="code" href="../../db/da4/class_o_s_window.html#adb6df4c86bfd15f3cbed541352eca0fd">gameCallback</a>-&gt;OnVkDown(vkkey, 0);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            }</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        }</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="../../d9/d42/_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaa04c436ef80fef38fb77a89e0e9124c30">SDL_MOUSEMOTION</a>: {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            <a class="code" href="../../db/da4/class_o_s_window.html#adb6df4c86bfd15f3cbed541352eca0fd">gameCallback</a>-&gt;OnMouseMove(</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                e.<a class="code" href="../../df/d1f/union_s_d_l___event.html#ac3c89e190faacbe84280cd539453bab6">motion</a>.<a class="code" href="../../d2/d18/struct_s_d_l___mouse_motion_event.html#a36398bb4a5308446a262b0bfc8baa80a">x</a>, e.<a class="code" href="../../df/d1f/union_s_d_l___event.html#ac3c89e190faacbe84280cd539453bab6">motion</a>.<a class="code" href="../../d2/d18/struct_s_d_l___mouse_motion_event.html#a7e6a7b1f8713d1968dc913908e8ea448">y</a>,</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                e.<a class="code" href="../../df/d1f/union_s_d_l___event.html#ac3c89e190faacbe84280cd539453bab6">motion</a>.<a class="code" href="../../d2/d18/struct_s_d_l___mouse_motion_event.html#a3f6e9bad9d959b824881ba09e05b7024">state</a> &amp; SDL_BUTTON_LMASK, e.<a class="code" href="../../df/d1f/union_s_d_l___event.html#ac3c89e190faacbe84280cd539453bab6">motion</a>.<a class="code" href="../../d2/d18/struct_s_d_l___mouse_motion_event.html#a3f6e9bad9d959b824881ba09e05b7024">state</a> &amp; SDL_BUTTON_RMASK);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="../../d9/d42/_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaa9267166e1536dfa8b0daa98c0afa9052">SDL_MOUSEBUTTONDOWN</a>: {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <span class="keywordtype">int</span> <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ad0e63d0edcdbd3d79554076bf309fd47">x</a> = e.<a class="code" href="../../df/d1f/union_s_d_l___event.html#ab6da2fa2687e5f849f270adecc64785f">button</a>.<a class="code" href="../../d9/d8f/struct_s_d_l___mouse_button_event.html#a5bb9c61b86e999f58637511e32e3a076">x</a>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <span class="keywordtype">int</span> <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a1675d9d7bb68e1657ff028643b4037e3">y</a> = e.<a class="code" href="../../df/d1f/union_s_d_l___event.html#ab6da2fa2687e5f849f270adecc64785f">button</a>.<a class="code" href="../../d9/d8f/struct_s_d_l___mouse_button_event.html#a7ccb5c55a7ddadce723f4ea6d5269540">y</a>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <span class="keywordtype">int</span> clicks = e.<a class="code" href="../../df/d1f/union_s_d_l___event.html#ab6da2fa2687e5f849f270adecc64785f">button</a>.<a class="code" href="../../d9/d8f/struct_s_d_l___mouse_button_event.html#aa606bebcbc3ffc7e932016039c2a36a1">clicks</a>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <span class="comment">// if (e.button.state == SDL_PRESSED) {</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                <span class="keywordflow">if</span> (e.<a class="code" href="../../df/d1f/union_s_d_l___event.html#ab6da2fa2687e5f849f270adecc64785f">button</a>.<a class="code" href="../../d9/d8f/struct_s_d_l___mouse_button_event.html#a1a4680e19ae06d02d2093f0bcba1b24c">button</a> == SDL_BUTTON_LEFT) {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                    <span class="keywordflow">if</span> (clicks == 1) {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                        <a class="code" href="../../db/da4/class_o_s_window.html#adb6df4c86bfd15f3cbed541352eca0fd">gameCallback</a>-&gt;OnMouseLeftClick(<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ad0e63d0edcdbd3d79554076bf309fd47">x</a>, <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a1675d9d7bb68e1657ff028643b4037e3">y</a>);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (clicks &gt;= 2) {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                        <a class="code" href="../../db/da4/class_o_s_window.html#adb6df4c86bfd15f3cbed541352eca0fd">gameCallback</a>-&gt;OnMouseLeftDoubleClick(<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ad0e63d0edcdbd3d79554076bf309fd47">x</a>, <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a1675d9d7bb68e1657ff028643b4037e3">y</a>);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                    }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (e.<a class="code" href="../../df/d1f/union_s_d_l___event.html#ab6da2fa2687e5f849f270adecc64785f">button</a>.<a class="code" href="../../d9/d8f/struct_s_d_l___mouse_button_event.html#a1a4680e19ae06d02d2093f0bcba1b24c">button</a> == SDL_BUTTON_RIGHT) {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                    <span class="keywordflow">if</span> (clicks == 1) {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                        <a class="code" href="../../db/da4/class_o_s_window.html#adb6df4c86bfd15f3cbed541352eca0fd">gameCallback</a>-&gt;OnMouseRightClick(<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ad0e63d0edcdbd3d79554076bf309fd47">x</a>, <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a1675d9d7bb68e1657ff028643b4037e3">y</a>);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (clicks &gt;= 2) {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                        <a class="code" href="../../db/da4/class_o_s_window.html#adb6df4c86bfd15f3cbed541352eca0fd">gameCallback</a>-&gt;OnMouseRightDoubleClick(<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ad0e63d0edcdbd3d79554076bf309fd47">x</a>, <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a1675d9d7bb68e1657ff028643b4037e3">y</a>);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                    }</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            <span class="comment">// }</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        } <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="../../d9/d42/_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaa4ab85278398d29b9e50f500aad2b952b">SDL_MOUSEBUTTONUP</a>: {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            <span class="comment">// if (e.button.state == SDL_RELEASED) {</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                <span class="keywordflow">if</span> (e.<a class="code" href="../../df/d1f/union_s_d_l___event.html#ab6da2fa2687e5f849f270adecc64785f">button</a>.<a class="code" href="../../d9/d8f/struct_s_d_l___mouse_button_event.html#a1a4680e19ae06d02d2093f0bcba1b24c">button</a> == SDL_BUTTON_LEFT) {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                    <a class="code" href="../../db/da4/class_o_s_window.html#adb6df4c86bfd15f3cbed541352eca0fd">gameCallback</a>-&gt;OnMouseLeftUp();</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (e.<a class="code" href="../../df/d1f/union_s_d_l___event.html#ab6da2fa2687e5f849f270adecc64785f">button</a>.<a class="code" href="../../d9/d8f/struct_s_d_l___mouse_button_event.html#a1a4680e19ae06d02d2093f0bcba1b24c">button</a> == SDL_BUTTON_RIGHT) {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                    <a class="code" href="../../db/da4/class_o_s_window.html#adb6df4c86bfd15f3cbed541352eca0fd">gameCallback</a>-&gt;OnMouseRightUp();</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            <span class="comment">// }</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        } <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="../../d9/d42/_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaa5ff4e41f0d8b5def11cfe6a69ec0b698">SDL_WINDOWEVENT</a>: {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <span class="keywordflow">switch</span> (e.<a class="code" href="../../df/d1f/union_s_d_l___event.html#a826936b3275406d857bc6654669fae71">window</a>.<a class="code" href="../../d1/d00/struct_s_d_l___window_event.html#a485cd1f07f0f22fdb9f4c4bf214011dc">event</a>) {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                <span class="keywordflow">case</span> <a class="code" href="../../dc/d64/_s_d_l__video_8h.html#ac486b40a4860d980dbc74d0b4adf3babac37af5c3ce56fe0956bc310821d59489">SDL_WINDOWEVENT_EXPOSED</a>: {</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                    <a class="code" href="../../db/da4/class_o_s_window.html#adb6df4c86bfd15f3cbed541352eca0fd">gameCallback</a>-&gt;OnPaint();</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                } <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                <span class="keywordflow">case</span> <a class="code" href="../../dc/d64/_s_d_l__video_8h.html#ac486b40a4860d980dbc74d0b4adf3baba239e734c6ba478fb2f694fc7cde30c31">SDL_WINDOWEVENT_FOCUS_LOST</a>: {</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                    <a class="code" href="../../db/da4/class_o_s_window.html#adb6df4c86bfd15f3cbed541352eca0fd">gameCallback</a>-&gt;OnDeactivated();</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                } <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                <span class="keywordflow">case</span> <a class="code" href="../../dc/d64/_s_d_l__video_8h.html#ac486b40a4860d980dbc74d0b4adf3baba529d1b574e559ee46892024e1c2e6c92">SDL_WINDOWEVENT_FOCUS_GAINED</a>: {</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                    <a class="code" href="../../db/da4/class_o_s_window.html#adb6df4c86bfd15f3cbed541352eca0fd">gameCallback</a>-&gt;OnActivated();</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                } <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            }</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        } <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    }</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d7/d54/_mouse_8cpp_source.html#l00256">_507B98_ctrl_pressed</a>, <a class="el" href="../../d9/d42/_s_d_l__events_8h_source.html#l00275">SDL_MouseButtonEvent::button</a>, <a class="el" href="../../d9/d42/_s_d_l__events_8h_source.html#l00568">SDL_Event::button</a>, <a class="el" href="../../d9/d42/_s_d_l__events_8h_source.html#l00277">SDL_MouseButtonEvent::clicks</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l00157">Engine_DeinitializeAndTerminate()</a>, <a class="el" href="../../d9/d42/_s_d_l__events_8h_source.html#l00200">SDL_WindowEvent::event</a>, <a class="el" href="../../d0/df6/_o_s_window_8h_source.html#l00043">OSWindow::gameCallback</a>, <a class="el" href="../../d9/d42/_s_d_l__events_8h_source.html#l00564">SDL_Event::key</a>, <a class="el" href="../../d9/d42/_s_d_l__events_8h_source.html#l00220">SDL_KeyboardEvent::keysym</a>, <a class="el" href="../../d5/df2/_s_d_l__keycode_8h_source.html#l00337">KMOD_CAPS</a>, <a class="el" href="../../d3/d07/_s_d_l__keyboard_8h_source.html#l00051">SDL_Keysym::mod</a>, <a class="el" href="../../d9/d42/_s_d_l__events_8h_source.html#l00567">SDL_Event::motion</a>, <a class="el" href="../../d9/d42/_s_d_l__events_8h_source.html#l00071">SDL_APP_WILLENTERBACKGROUND</a>, <a class="el" href="../../d9/d42/_s_d_l__events_8h_source.html#l00079">SDL_APP_WILLENTERFOREGROUND</a>, <a class="el" href="../../d9/d42/_s_d_l__events_8h_source.html#l00096">SDL_KEYDOWN</a>, <a class="el" href="../../d9/d42/_s_d_l__events_8h_source.html#l00097">SDL_KEYUP</a>, <a class="el" href="../../d9/d42/_s_d_l__events_8h_source.html#l00106">SDL_MOUSEBUTTONDOWN</a>, <a class="el" href="../../d9/d42/_s_d_l__events_8h_source.html#l00107">SDL_MOUSEBUTTONUP</a>, <a class="el" href="../../d9/d42/_s_d_l__events_8h_source.html#l00105">SDL_MOUSEMOTION</a>, <a class="el" href="../../d9/d42/_s_d_l__events_8h_source.html#l00060">SDL_QUIT</a>, <a class="el" href="../../d9/d42/_s_d_l__events_8h_source.html#l00092">SDL_WINDOWEVENT</a>, <a class="el" href="../../dc/d64/_s_d_l__video_8h_source.html#l00150">SDL_WINDOWEVENT_EXPOSED</a>, <a class="el" href="../../dc/d64/_s_d_l__video_8h_source.html#l00164">SDL_WINDOWEVENT_FOCUS_GAINED</a>, <a class="el" href="../../dc/d64/_s_d_l__video_8h_source.html#l00165">SDL_WINDOWEVENT_FOCUS_LOST</a>, <a class="el" href="../../d5/df2/_s_d_l__keycode_8h_source.html#l00056">SDLK_BACKSPACE</a>, <a class="el" href="../../d5/df2/_s_d_l__keycode_8h_source.html#l00055">SDLK_ESCAPE</a>, <a class="el" href="../../d5/df2/_s_d_l__keycode_8h_source.html#l00276">SDLK_LCTRL</a>, <a class="el" href="../../d5/df2/_s_d_l__keycode_8h_source.html#l00142">SDLK_PRINTSCREEN</a>, <a class="el" href="../../d5/df2/_s_d_l__keycode_8h_source.html#l00280">SDLK_RCTRL</a>, <a class="el" href="../../d5/df2/_s_d_l__keycode_8h_source.html#l00054">SDLK_RETURN</a>, <a class="el" href="../../d5/df2/_s_d_l__keycode_8h_source.html#l00057">SDLK_TAB</a>, <a class="el" href="../../d6/d76/_sdl2_window_8cpp_source.html#l00192">SdlkToChar()</a>, <a class="el" href="../../d6/d76/_sdl2_window_8cpp_source.html#l00206">SdlkToVk()</a>, <a class="el" href="../../d9/d42/_s_d_l__events_8h_source.html#l00259">SDL_MouseMotionEvent::state</a>, <a class="el" href="../../d3/d07/_s_d_l__keyboard_8h_source.html#l00050">SDL_Keysym::sym</a>, <a class="el" href="../../d9/d42/_s_d_l__events_8h_source.html#l00560">SDL_Event::type</a>, <a class="el" href="../../d9/d42/_s_d_l__events_8h_source.html#l00563">SDL_Event::window</a>, <a class="el" href="../../d9/d42/_s_d_l__events_8h_source.html#l00260">SDL_MouseMotionEvent::x</a>, <a class="el" href="../../d9/d42/_s_d_l__events_8h_source.html#l00279">SDL_MouseButtonEvent::x</a>, <a class="el" href="../../d9/d42/_s_d_l__events_8h_source.html#l00261">SDL_MouseMotionEvent::y</a> и <a class="el" href="../../d9/d42/_s_d_l__events_8h_source.html#l00280">SDL_MouseButtonEvent::y</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d6/d76/_sdl2_window_8cpp_source.html#l00099">PeekMessageLoop()</a> и <a class="el" href="../../d6/d76/_sdl2_window_8cpp_source.html#l00106">PeekSingleMessage()</a>.</p>
+<div id="dynsection-16" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-16-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-16-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-16-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d4/d57/class_sdl2_window_a0740a9d8bb0e5dbfb051d7ae8a1b72a9_cgraph.svg" width="454" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-17" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-17-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-17-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-17-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d4/d57/class_sdl2_window_a0740a9d8bb0e5dbfb051d7ae8a1b72a9_icgraph.svg" width="659" height="114"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ab4529e15e1d69dad91bb973f867b27e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4529e15e1d69dad91bb973f867b27e6">&#9670;&nbsp;</a></span>SdlkToChar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Sdl2Window::SdlkToChar </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d5/df2/_s_d_l__keycode_8h.html#ae9265f064f13f0f74dfca26a67875171">SDL_Keycode</a>&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>uppercase</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d6/d76/_sdl2_window_8cpp_source.html">Sdl2Window.cpp</a> строка <a class="el" href="../../d6/d76/_sdl2_window_8cpp_source.html#l00192">192</a></p>
+<div class="fragment"><div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;                                                                {</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    <span class="keywordflow">if</span> (key &gt;= <a class="code" href="../../d5/df2/_s_d_l__keycode_8h.html#a179ce01fa41d35408f06b4b3d1cd9d3da094c29259f3614270bbf2cbefde4a61a">SDLK_0</a> &amp;&amp; key &lt;= <a class="code" href="../../d5/df2/_s_d_l__keycode_8h.html#a179ce01fa41d35408f06b4b3d1cd9d3da4129286b6c26edac4a6fc3186ea7ab35">SDLK_9</a>) {</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        <span class="keywordflow">return</span> <span class="charliteral">&#39;0&#39;</span> + (key - <a class="code" href="../../d5/df2/_s_d_l__keycode_8h.html#a179ce01fa41d35408f06b4b3d1cd9d3da094c29259f3614270bbf2cbefde4a61a">SDLK_0</a>);</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    }</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <span class="keywordflow">if</span> (key &gt;= <a class="code" href="../../d5/df2/_s_d_l__keycode_8h.html#a179ce01fa41d35408f06b4b3d1cd9d3da19fefa6b0a5ecc11084a6e0a1bb76b1e">SDLK_a</a> &amp;&amp; key &lt;= <a class="code" href="../../d5/df2/_s_d_l__keycode_8h.html#a179ce01fa41d35408f06b4b3d1cd9d3da5a6434ef304b4bba07f4bea41a14f6b5">SDLK_z</a>) {</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        <span class="keywordflow">if</span> (uppercase) {</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;            <span class="keywordflow">return</span> <span class="charliteral">&#39;A&#39;</span> + (key - <a class="code" href="../../d5/df2/_s_d_l__keycode_8h.html#a179ce01fa41d35408f06b4b3d1cd9d3da19fefa6b0a5ecc11084a6e0a1bb76b1e">SDLK_a</a>);</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;            <span class="keywordflow">return</span> <span class="charliteral">&#39;a&#39;</span> + (key - <a class="code" href="../../d5/df2/_s_d_l__keycode_8h.html#a179ce01fa41d35408f06b4b3d1cd9d3da19fefa6b0a5ecc11084a6e0a1bb76b1e">SDLK_a</a>);</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        }</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    }</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d5/df2/_s_d_l__keycode_8h_source.html#l00074">SDLK_0</a>, <a class="el" href="../../d5/df2/_s_d_l__keycode_8h_source.html#l00083">SDLK_9</a>, <a class="el" href="../../d5/df2/_s_d_l__keycode_8h_source.html#l00100">SDLK_a</a> и <a class="el" href="../../d5/df2/_s_d_l__keycode_8h_source.html#l00125">SDLK_z</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d6/d76/_sdl2_window_8cpp_source.html#l00005">MessageProc()</a>.</p>
+<div id="dynsection-18" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-18-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-18-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-18-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d4/d57/class_sdl2_window_ab4529e15e1d69dad91bb973f867b27e6_icgraph.svg" width="100%" height="385"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="aee4a68885d185a8081f43e09946f0a43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee4a68885d185a8081f43e09946f0a43">&#9670;&nbsp;</a></span>SdlkToVk()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Sdl2Window::SdlkToVk </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d5/df2/_s_d_l__keycode_8h.html#ae9265f064f13f0f74dfca26a67875171">SDL_Keycode</a>&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d6/d76/_sdl2_window_8cpp_source.html">Sdl2Window.cpp</a> строка <a class="el" href="../../d6/d76/_sdl2_window_8cpp_source.html#l00206">206</a></p>
+<div class="fragment"><div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;                                              {</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;<span class="preprocessor">#ifdef _WINDOWS</span></div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    <span class="comment">// &quot;Will be removed later&quot;</span></div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <span class="keywordflow">if</span> (key &gt;= <a class="code" href="../../d5/df2/_s_d_l__keycode_8h.html#a179ce01fa41d35408f06b4b3d1cd9d3da3229f8fa5f97f84702cd79cbc316acc9">SDLK_F1</a> &amp;&amp; key &lt;= <a class="code" href="../../d5/df2/_s_d_l__keycode_8h.html#a179ce01fa41d35408f06b4b3d1cd9d3da21bed536a4450caea3a6d1f7eaa3279c">SDLK_F12</a>) {</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        <span class="keywordflow">return</span> VK_F1 + (key - <a class="code" href="../../d5/df2/_s_d_l__keycode_8h.html#a179ce01fa41d35408f06b4b3d1cd9d3da3229f8fa5f97f84702cd79cbc316acc9">SDLK_F1</a>);</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    }</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160; </div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    <span class="keyword">static</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        <a class="code" href="../../d5/df2/_s_d_l__keycode_8h.html#ae9265f064f13f0f74dfca26a67875171">SDL_Keycode</a> sdlk;</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        <span class="keywordtype">int</span> vk;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    }</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    sdlk2vk[] = {</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        { <a class="code" href="../../d5/df2/_s_d_l__keycode_8h.html#a179ce01fa41d35408f06b4b3d1cd9d3dabbc670ea5255b47f240f18486f1b392a">SDLK_LEFT</a>, VK_LEFT },</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        { <a class="code" href="../../d5/df2/_s_d_l__keycode_8h.html#a179ce01fa41d35408f06b4b3d1cd9d3dae86d4dd9dfa9fb623c16180e1d041d45">SDLK_RIGHT</a>, VK_RIGHT },</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        { <a class="code" href="../../d5/df2/_s_d_l__keycode_8h.html#a179ce01fa41d35408f06b4b3d1cd9d3da340386bcedcc83e77b5c6ce98e2551c0">SDLK_UP</a>, VK_UP },</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        { <a class="code" href="../../d5/df2/_s_d_l__keycode_8h.html#a179ce01fa41d35408f06b4b3d1cd9d3da3ebc3d79795b4748a4f5c6133d9f9e8b">SDLK_DOWN</a>, VK_DOWN },</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        { <a class="code" href="../../d5/df2/_s_d_l__keycode_8h.html#a179ce01fa41d35408f06b4b3d1cd9d3da635c4122c4945689eb97287fd7b97088">SDLK_PRINTSCREEN</a>, VK_PRINT },</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        { <a class="code" href="../../d5/df2/_s_d_l__keycode_8h.html#a179ce01fa41d35408f06b4b3d1cd9d3dad37c85d87edbed526c1d45cf01ca11d9">SDLK_INSERT</a>, VK_INSERT },</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        { <a class="code" href="../../d5/df2/_s_d_l__keycode_8h.html#a179ce01fa41d35408f06b4b3d1cd9d3daa2ca78811e847bcc6be1b5f30340338b">SDLK_HOME</a>, VK_HOME },</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        { <a class="code" href="../../d5/df2/_s_d_l__keycode_8h.html#a179ce01fa41d35408f06b4b3d1cd9d3dacc6e09d8fbcd102b97af24219ed079ad">SDLK_PAGEUP</a>, VK_PRIOR },</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        { <a class="code" href="../../d5/df2/_s_d_l__keycode_8h.html#a179ce01fa41d35408f06b4b3d1cd9d3dabf4996aa2b79791c8080d62b0bc264c9">SDLK_DELETE</a>, VK_DELETE },</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        { <a class="code" href="../../d5/df2/_s_d_l__keycode_8h.html#a179ce01fa41d35408f06b4b3d1cd9d3da3bc1cbe02d3b1513a42b9958b35c7fbc">SDLK_END</a>, VK_END },</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        { <a class="code" href="../../d5/df2/_s_d_l__keycode_8h.html#a179ce01fa41d35408f06b4b3d1cd9d3dae5506343b2f7045b775834ed50528d36">SDLK_PAGEDOWN</a>, VK_NEXT },</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    };</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160; </div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <span class="keyword">sizeof</span>(sdlk2vk) / <span class="keyword">sizeof</span>(*sdlk2vk); ++i) {</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        <span class="keywordflow">if</span> (sdlk2vk[i].sdlk == key) {</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;            <span class="keywordflow">return</span> sdlk2vk[i].vk;</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        }</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    }</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160; </div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <span class="keywordflow">return</span> key &amp; 0xFFFF;</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d5/df2/_s_d_l__keycode_8h_source.html#l00148">SDLK_DELETE</a>, <a class="el" href="../../d5/df2/_s_d_l__keycode_8h_source.html#l00153">SDLK_DOWN</a>, <a class="el" href="../../d5/df2/_s_d_l__keycode_8h_source.html#l00149">SDLK_END</a>, <a class="el" href="../../d5/df2/_s_d_l__keycode_8h_source.html#l00129">SDLK_F1</a>, <a class="el" href="../../d5/df2/_s_d_l__keycode_8h_source.html#l00140">SDLK_F12</a>, <a class="el" href="../../d5/df2/_s_d_l__keycode_8h_source.html#l00146">SDLK_HOME</a>, <a class="el" href="../../d5/df2/_s_d_l__keycode_8h_source.html#l00145">SDLK_INSERT</a>, <a class="el" href="../../d5/df2/_s_d_l__keycode_8h_source.html#l00152">SDLK_LEFT</a>, <a class="el" href="../../d5/df2/_s_d_l__keycode_8h_source.html#l00150">SDLK_PAGEDOWN</a>, <a class="el" href="../../d5/df2/_s_d_l__keycode_8h_source.html#l00147">SDLK_PAGEUP</a>, <a class="el" href="../../d5/df2/_s_d_l__keycode_8h_source.html#l00142">SDLK_PRINTSCREEN</a>, <a class="el" href="../../d5/df2/_s_d_l__keycode_8h_source.html#l00151">SDLK_RIGHT</a> и <a class="el" href="../../d5/df2/_s_d_l__keycode_8h_source.html#l00154">SDLK_UP</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d6/d76/_sdl2_window_8cpp_source.html#l00005">MessageProc()</a>.</p>
+<div id="dynsection-19" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-19-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-19-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-19-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d4/d57/class_sdl2_window_aee4a68885d185a8081f43e09946f0a43_icgraph.svg" width="100%" height="385"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="ab75b7efdeb1e2317fee04b7ddb47ea2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab75b7efdeb1e2317fee04b7ddb47ea2b">&#9670;&nbsp;</a></span>sdlWindow</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/d64/_s_d_l__video_8h.html#a55a196c7d3b8497538632c79ae1e6392">SDL_Window</a>* Sdl2Window::sdlWindow = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../df/def/_sdl2_window_8h_source.html">Sdl2Window.h</a> строка <a class="el" href="../../df/def/_sdl2_window_8h_source.html#l00042">42</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d6/d76/_sdl2_window_8cpp_source.html#l00185">Activate()</a>, <a class="el" href="../../d6/d76/_sdl2_window_8cpp_source.html#l00180">Focused()</a>, <a class="el" href="../../d6/d76/_sdl2_window_8cpp_source.html#l00155">GetHeight()</a>, <a class="el" href="../../d6/d76/_sdl2_window_8cpp_source.html#l00149">GetWidth()</a>, <a class="el" href="../../d6/d76/_sdl2_window_8cpp_source.html#l00113">GetWinApiHandle()</a>, <a class="el" href="../../d6/d76/_sdl2_window_8cpp_source.html#l00135">GetX()</a>, <a class="el" href="../../d6/d76/_sdl2_window_8cpp_source.html#l00142">GetY()</a>, <a class="el" href="../../d6/d76/_sdl2_window_8cpp_source.html#l00242">OpenGlCreate()</a>, <a class="el" href="../../d6/d76/_sdl2_window_8cpp_source.html#l00266">OpenGlSwapBuffers()</a>, <a class="el" href="../../df/def/_sdl2_window_8h_source.html#l00009">Sdl2Window()</a> и <a class="el" href="../../d6/d76/_sdl2_window_8cpp_source.html#l00173">Show()</a>.</p>
+
+</div>
+</div>
+<a id="ad567958132cd42a0034ae708cf60987c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad567958132cd42a0034ae708cf60987c">&#9670;&nbsp;</a></span>sdlWindowSurface</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d6/d0f/struct_s_d_l___surface.html">SDL_Surface</a>* Sdl2Window::sdlWindowSurface = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../df/def/_sdl2_window_8h_source.html">Sdl2Window.h</a> строка <a class="el" href="../../df/def/_sdl2_window_8h_source.html#l00043">43</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../df/def/_sdl2_window_8h_source.html#l00009">Sdl2Window()</a>.</p>
+
+</div>
+</div>
+<a id="ae3225aff912a27cd00b07e448b6b4951"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3225aff912a27cd00b07e448b6b4951">&#9670;&nbsp;</a></span>sdlOpenGlContext</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/d64/_s_d_l__video_8h.html#a0d64dcf67c9685d09cbe051448e1b3f3">SDL_GLContext</a> Sdl2Window::sdlOpenGlContext = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../df/def/_sdl2_window_8h_source.html">Sdl2Window.h</a> строка <a class="el" href="../../df/def/_sdl2_window_8h_source.html#l00044">44</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d6/d76/_sdl2_window_8cpp_source.html#l00242">OpenGlCreate()</a>.</p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>C:/git/world-of-might-and-magic/Platform/<a class="el" href="../../df/def/_sdl2_window_8h_source.html">Sdl2Window.h</a></li>
+<li>C:/git/world-of-might-and-magic/Platform/<a class="el" href="../../d6/d76/_sdl2_window_8cpp_source.html">Sdl2Window.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aclass_sdl2_window_html_ab75b7efdeb1e2317fee04b7ddb47ea2b"><div class="ttname"><a href="../../d4/d57/class_sdl2_window.html#ab75b7efdeb1e2317fee04b7ddb47ea2b">Sdl2Window::sdlWindow</a></div><div class="ttdeci">SDL_Window * sdlWindow</div><div class="ttdef"><b>Definition:</b> <a href="../../df/def/_sdl2_window_8h_source.html#l00042">Sdl2Window.h:42</a></div></div>
+<div class="ttc" id="aunion_s_d_l___event_html_a237648bec242d2d5835f1a4250ddfa46"><div class="ttname"><a href="../../df/d1f/union_s_d_l___event.html#a237648bec242d2d5835f1a4250ddfa46">SDL_Event::type</a></div><div class="ttdeci">Uint32 type</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d42/_s_d_l__events_8h_source.html#l00560">SDL_events.h:560</a></div></div>
+<div class="ttc" id="a_s_d_l__video_8h_html_a2de24951bbc6626dc259ec0db5ae8ed4addf8f9d5c6d217954b14ece543dcbf17"><div class="ttname"><a href="../../dc/d64/_s_d_l__video_8h.html#a2de24951bbc6626dc259ec0db5ae8ed4addf8f9d5c6d217954b14ece543dcbf17">SDL_GL_DEPTH_SIZE</a></div><div class="ttdeci">@ SDL_GL_DEPTH_SIZE</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d64/_s_d_l__video_8h_source.html#l00205">SDL_video.h:205</a></div></div>
+<div class="ttc" id="astruct_s_d_l___sys_w_minfo_html_a2d85e43774cbdafc76c490f13af89607"><div class="ttname"><a href="../../d1/d59/struct_s_d_l___sys_w_minfo.html#a2d85e43774cbdafc76c490f13af89607">SDL_SysWMinfo::win</a></div><div class="ttdeci">struct SDL_SysWMinfo::@107::@108 win</div></div>
+<div class="ttc" id="astruct_s_d_l___mouse_motion_event_html_a7e6a7b1f8713d1968dc913908e8ea448"><div class="ttname"><a href="../../d2/d18/struct_s_d_l___mouse_motion_event.html#a7e6a7b1f8713d1968dc913908e8ea448">SDL_MouseMotionEvent::y</a></div><div class="ttdeci">Sint32 y</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d42/_s_d_l__events_8h_source.html#l00261">SDL_events.h:261</a></div></div>
+<div class="ttc" id="a_s_d_l__keycode_8h_html_a179ce01fa41d35408f06b4b3d1cd9d3daa2ca78811e847bcc6be1b5f30340338b"><div class="ttname"><a href="../../d5/df2/_s_d_l__keycode_8h.html#a179ce01fa41d35408f06b4b3d1cd9d3daa2ca78811e847bcc6be1b5f30340338b">SDLK_HOME</a></div><div class="ttdeci">@ SDLK_HOME</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df2/_s_d_l__keycode_8h_source.html#l00146">SDL_keycode.h:146</a></div></div>
+<div class="ttc" id="a_s_d_l__keycode_8h_html_a179ce01fa41d35408f06b4b3d1cd9d3dad37c85d87edbed526c1d45cf01ca11d9"><div class="ttname"><a href="../../d5/df2/_s_d_l__keycode_8h.html#a179ce01fa41d35408f06b4b3d1cd9d3dad37c85d87edbed526c1d45cf01ca11d9">SDLK_INSERT</a></div><div class="ttdeci">@ SDLK_INSERT</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df2/_s_d_l__keycode_8h_source.html#l00145">SDL_keycode.h:145</a></div></div>
+<div class="ttc" id="a_s_d_l__error_8h_html_af3cc615dad0d5ed6b36cb84cab15ecb6"><div class="ttname"><a href="../../df/d2d/_s_d_l__error_8h.html#af3cc615dad0d5ed6b36cb84cab15ecb6">SDL_GetError</a></div><div class="ttdeci">const DECLSPEC char *SDLCALL SDL_GetError(void)</div></div>
+<div class="ttc" id="a_s_d_l__keycode_8h_html_a179ce01fa41d35408f06b4b3d1cd9d3dabf4996aa2b79791c8080d62b0bc264c9"><div class="ttname"><a href="../../d5/df2/_s_d_l__keycode_8h.html#a179ce01fa41d35408f06b4b3d1cd9d3dabf4996aa2b79791c8080d62b0bc264c9">SDLK_DELETE</a></div><div class="ttdeci">@ SDLK_DELETE</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df2/_s_d_l__keycode_8h_source.html#l00148">SDL_keycode.h:148</a></div></div>
+<div class="ttc" id="aunion_s_d_l___event_html_ac3c89e190faacbe84280cd539453bab6"><div class="ttname"><a href="../../df/d1f/union_s_d_l___event.html#ac3c89e190faacbe84280cd539453bab6">SDL_Event::motion</a></div><div class="ttdeci">SDL_MouseMotionEvent motion</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d42/_s_d_l__events_8h_source.html#l00567">SDL_events.h:567</a></div></div>
+<div class="ttc" id="aunion_s_d_l___event_html_ab6da2fa2687e5f849f270adecc64785f"><div class="ttname"><a href="../../df/d1f/union_s_d_l___event.html#ab6da2fa2687e5f849f270adecc64785f">SDL_Event::button</a></div><div class="ttdeci">SDL_MouseButtonEvent button</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d42/_s_d_l__events_8h_source.html#l00568">SDL_events.h:568</a></div></div>
+<div class="ttc" id="astruct_s_d_l___mouse_button_event_html_a5bb9c61b86e999f58637511e32e3a076"><div class="ttname"><a href="../../d9/d8f/struct_s_d_l___mouse_button_event.html#a5bb9c61b86e999f58637511e32e3a076">SDL_MouseButtonEvent::x</a></div><div class="ttdeci">Sint32 x</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d42/_s_d_l__events_8h_source.html#l00279">SDL_events.h:279</a></div></div>
+<div class="ttc" id="a_s_d_l__keycode_8h_html_a179ce01fa41d35408f06b4b3d1cd9d3da17720a5936f7a8207e32f52e2856470f"><div class="ttname"><a href="../../d5/df2/_s_d_l__keycode_8h.html#a179ce01fa41d35408f06b4b3d1cd9d3da17720a5936f7a8207e32f52e2856470f">SDLK_BACKSPACE</a></div><div class="ttdeci">@ SDLK_BACKSPACE</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df2/_s_d_l__keycode_8h_source.html#l00056">SDL_keycode.h:56</a></div></div>
+<div class="ttc" id="a_s_d_l__video_8h_html_ac486b40a4860d980dbc74d0b4adf3baba239e734c6ba478fb2f694fc7cde30c31"><div class="ttname"><a href="../../dc/d64/_s_d_l__video_8h.html#ac486b40a4860d980dbc74d0b4adf3baba239e734c6ba478fb2f694fc7cde30c31">SDL_WINDOWEVENT_FOCUS_LOST</a></div><div class="ttdeci">@ SDL_WINDOWEVENT_FOCUS_LOST</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d64/_s_d_l__video_8h_source.html#l00165">SDL_video.h:165</a></div></div>
+<div class="ttc" id="a_s_d_l__events_8h_html_a3b589e89be6b35c02e0dd34a55f3fccaadefb8866b9d28be21c2c33c35cc66c4b"><div class="ttname"><a href="../../d9/d42/_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaadefb8866b9d28be21c2c33c35cc66c4b">SDL_KEYUP</a></div><div class="ttdeci">@ SDL_KEYUP</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d42/_s_d_l__events_8h_source.html#l00097">SDL_events.h:97</a></div></div>
+<div class="ttc" id="astruct_s_d_l___sys_w_minfo_html"><div class="ttname"><a href="../../d1/d59/struct_s_d_l___sys_w_minfo.html">SDL_SysWMinfo</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/df3/_s_d_l__syswm_8h_source.html#l00201">SDL_syswm.h:201</a></div></div>
+<div class="ttc" id="a_s_d_l__keycode_8h_html_a179ce01fa41d35408f06b4b3d1cd9d3dab050f8c23b43c76246a93e599b7b411f"><div class="ttname"><a href="../../d5/df2/_s_d_l__keycode_8h.html#a179ce01fa41d35408f06b4b3d1cd9d3dab050f8c23b43c76246a93e599b7b411f">SDLK_ESCAPE</a></div><div class="ttdeci">@ SDLK_ESCAPE</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df2/_s_d_l__keycode_8h_source.html#l00055">SDL_keycode.h:55</a></div></div>
+<div class="ttc" id="aclass_sdl2_window_html_ae3225aff912a27cd00b07e448b6b4951"><div class="ttname"><a href="../../d4/d57/class_sdl2_window.html#ae3225aff912a27cd00b07e448b6b4951">Sdl2Window::sdlOpenGlContext</a></div><div class="ttdeci">SDL_GLContext sdlOpenGlContext</div><div class="ttdef"><b>Definition:</b> <a href="../../df/def/_sdl2_window_8h_source.html#l00044">Sdl2Window.h:44</a></div></div>
+<div class="ttc" id="a_s_d_l__video_8h_html_a5cbfffcfec91c22a7ca95fd1d5163db5"><div class="ttname"><a href="../../dc/d64/_s_d_l__video_8h.html#a5cbfffcfec91c22a7ca95fd1d5163db5">SDL_GetWindowSize</a></div><div class="ttdeci">DECLSPEC void SDLCALL SDL_GetWindowSize(SDL_Window *window, int *w, int *h)</div><div class="ttdoc">Get the size of a window's client area.</div></div>
+<div class="ttc" id="astruct_s_d_l___mouse_button_event_html_aa606bebcbc3ffc7e932016039c2a36a1"><div class="ttname"><a href="../../d9/d8f/struct_s_d_l___mouse_button_event.html#aa606bebcbc3ffc7e932016039c2a36a1">SDL_MouseButtonEvent::clicks</a></div><div class="ttdeci">Uint8 clicks</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d42/_s_d_l__events_8h_source.html#l00277">SDL_events.h:277</a></div></div>
+<div class="ttc" id="a_s_d_l__video_8h_html_a0e14c935cf304133278893bf6c1d2691"><div class="ttname"><a href="../../dc/d64/_s_d_l__video_8h.html#a0e14c935cf304133278893bf6c1d2691">SDL_GL_CreateContext</a></div><div class="ttdeci">DECLSPEC SDL_GLContext SDLCALL SDL_GL_CreateContext(SDL_Window *window)</div><div class="ttdoc">Create an OpenGL context for use with an OpenGL window, and make it current.</div></div>
+<div class="ttc" id="a_s_d_l__events_8h_html_a3b589e89be6b35c02e0dd34a55f3fccaa4ab85278398d29b9e50f500aad2b952b"><div class="ttname"><a href="../../d9/d42/_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaa4ab85278398d29b9e50f500aad2b952b">SDL_MOUSEBUTTONUP</a></div><div class="ttdeci">@ SDL_MOUSEBUTTONUP</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d42/_s_d_l__events_8h_source.html#l00107">SDL_events.h:107</a></div></div>
+<div class="ttc" id="a_s_d_l__keycode_8h_html_a179ce01fa41d35408f06b4b3d1cd9d3da3bc1cbe02d3b1513a42b9958b35c7fbc"><div class="ttname"><a href="../../d5/df2/_s_d_l__keycode_8h.html#a179ce01fa41d35408f06b4b3d1cd9d3da3bc1cbe02d3b1513a42b9958b35c7fbc">SDLK_END</a></div><div class="ttdeci">@ SDLK_END</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df2/_s_d_l__keycode_8h_source.html#l00149">SDL_keycode.h:149</a></div></div>
+<div class="ttc" id="aclass_sdl2_window_html_ab4529e15e1d69dad91bb973f867b27e6"><div class="ttname"><a href="../../d4/d57/class_sdl2_window.html#ab4529e15e1d69dad91bb973f867b27e6">Sdl2Window::SdlkToChar</a></div><div class="ttdeci">int SdlkToChar(SDL_Keycode key, bool uppercase) const</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d76/_sdl2_window_8cpp_source.html#l00192">Sdl2Window.cpp:192</a></div></div>
+<div class="ttc" id="astruct_s_d_l___mouse_motion_event_html_a3f6e9bad9d959b824881ba09e05b7024"><div class="ttname"><a href="../../d2/d18/struct_s_d_l___mouse_motion_event.html#a3f6e9bad9d959b824881ba09e05b7024">SDL_MouseMotionEvent::state</a></div><div class="ttdeci">Uint32 state</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d42/_s_d_l__events_8h_source.html#l00259">SDL_events.h:259</a></div></div>
+<div class="ttc" id="a_s_d_l__keycode_8h_html_a179ce01fa41d35408f06b4b3d1cd9d3da5a6434ef304b4bba07f4bea41a14f6b5"><div class="ttname"><a href="../../d5/df2/_s_d_l__keycode_8h.html#a179ce01fa41d35408f06b4b3d1cd9d3da5a6434ef304b4bba07f4bea41a14f6b5">SDLK_z</a></div><div class="ttdeci">@ SDLK_z</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df2/_s_d_l__keycode_8h_source.html#l00125">SDL_keycode.h:125</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a6ee8f168a7ab6785a9bb57c6715dad99"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a6ee8f168a7ab6785a9bb57c6715dad99">w</a></div><div class="ttdeci">GLubyte GLubyte GLubyte GLubyte w</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l00734">SDL_opengl_glext.h:734</a></div></div>
+<div class="ttc" id="a_s_d_l__events_8h_html_a3b589e89be6b35c02e0dd34a55f3fccaacaf8cfd53c985cdbf6a90c811d51a1fc"><div class="ttname"><a href="../../d9/d42/_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaacaf8cfd53c985cdbf6a90c811d51a1fc">SDL_KEYDOWN</a></div><div class="ttdeci">@ SDL_KEYDOWN</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d42/_s_d_l__events_8h_source.html#l00096">SDL_events.h:96</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_afa0fb1b5e976920c0abeff2dca3ed774"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#afa0fb1b5e976920c0abeff2dca3ed774">h</a></div><div class="ttdeci">GLfloat GLfloat GLfloat GLfloat h</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l01949">SDL_opengl_glext.h:1949</a></div></div>
+<div class="ttc" id="a_s_d_l__keycode_8h_html_ae9265f064f13f0f74dfca26a67875171"><div class="ttname"><a href="../../d5/df2/_s_d_l__keycode_8h.html#ae9265f064f13f0f74dfca26a67875171">SDL_Keycode</a></div><div class="ttdeci">Sint32 SDL_Keycode</div><div class="ttdoc">The SDL virtual key representation.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df2/_s_d_l__keycode_8h_source.html#l00045">SDL_keycode.h:45</a></div></div>
+<div class="ttc" id="aclass_o_s_window_html_a7d7ed6d54d9d75d632aecd7bf78c0236"><div class="ttname"><a href="../../db/da4/class_o_s_window.html#a7d7ed6d54d9d75d632aecd7bf78c0236">OSWindow::log</a></div><div class="ttdeci">Log * log</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/df6/_o_s_window_8h_source.html#l00044">OSWindow.h:44</a></div></div>
+<div class="ttc" id="a_s_d_l__keycode_8h_html_a179ce01fa41d35408f06b4b3d1cd9d3dae5506343b2f7045b775834ed50528d36"><div class="ttname"><a href="../../d5/df2/_s_d_l__keycode_8h.html#a179ce01fa41d35408f06b4b3d1cd9d3dae5506343b2f7045b775834ed50528d36">SDLK_PAGEDOWN</a></div><div class="ttdeci">@ SDLK_PAGEDOWN</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df2/_s_d_l__keycode_8h_source.html#l00150">SDL_keycode.h:150</a></div></div>
+<div class="ttc" id="a_s_d_l__video_8h_html_ab10f4fd6a082ef06fcae96860c95fb18afcbb682c0942bc106af1474c1d34bb53"><div class="ttname"><a href="../../dc/d64/_s_d_l__video_8h.html#ab10f4fd6a082ef06fcae96860c95fb18afcbb682c0942bc106af1474c1d34bb53">SDL_WINDOW_INPUT_FOCUS</a></div><div class="ttdeci">@ SDL_WINDOW_INPUT_FOCUS</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d64/_s_d_l__video_8h_source.html#l00108">SDL_video.h:108</a></div></div>
+<div class="ttc" id="a_s_d_l__events_8h_html_a3b589e89be6b35c02e0dd34a55f3fccaa406151c433bc968c46591bde396c987f"><div class="ttname"><a href="../../d9/d42/_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaa406151c433bc968c46591bde396c987f">SDL_APP_WILLENTERFOREGROUND</a></div><div class="ttdeci">@ SDL_APP_WILLENTERFOREGROUND</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d42/_s_d_l__events_8h_source.html#l00079">SDL_events.h:79</a></div></div>
+<div class="ttc" id="a_s_d_l__keycode_8h_html_a179ce01fa41d35408f06b4b3d1cd9d3da21bed536a4450caea3a6d1f7eaa3279c"><div class="ttname"><a href="../../d5/df2/_s_d_l__keycode_8h.html#a179ce01fa41d35408f06b4b3d1cd9d3da21bed536a4450caea3a6d1f7eaa3279c">SDLK_F12</a></div><div class="ttdeci">@ SDLK_F12</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df2/_s_d_l__keycode_8h_source.html#l00140">SDL_keycode.h:140</a></div></div>
+<div class="ttc" id="a_s_d_l__egl_8h_html_a1675d9d7bb68e1657ff028643b4037e3"><div class="ttname"><a href="../../df/d32/_s_d_l__egl_8h.html#a1675d9d7bb68e1657ff028643b4037e3">y</a></div><div class="ttdeci">EGLSurface EGLint EGLint y</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/_s_d_l__egl_8h_source.html#l01596">SDL_egl.h:1596</a></div></div>
+<div class="ttc" id="aclass_o_s_window_html_adb6df4c86bfd15f3cbed541352eca0fd"><div class="ttname"><a href="../../db/da4/class_o_s_window.html#adb6df4c86bfd15f3cbed541352eca0fd">OSWindow::gameCallback</a></div><div class="ttdeci">GameWindowHandler * gameCallback</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/df6/_o_s_window_8h_source.html#l00043">OSWindow.h:43</a></div></div>
+<div class="ttc" id="a_s_d_l__video_8h_html_a68b0d06595d086d9244fd49afe3e8360"><div class="ttname"><a href="../../dc/d64/_s_d_l__video_8h.html#a68b0d06595d086d9244fd49afe3e8360">SDL_GL_SetSwapInterval</a></div><div class="ttdeci">DECLSPEC int SDLCALL SDL_GL_SetSwapInterval(int interval)</div><div class="ttdoc">Set the swap interval for the current OpenGL context.</div></div>
+<div class="ttc" id="astruct_s_d_l___mouse_button_event_html_a1a4680e19ae06d02d2093f0bcba1b24c"><div class="ttname"><a href="../../d9/d8f/struct_s_d_l___mouse_button_event.html#a1a4680e19ae06d02d2093f0bcba1b24c">SDL_MouseButtonEvent::button</a></div><div class="ttdeci">Uint8 button</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d42/_s_d_l__events_8h_source.html#l00275">SDL_events.h:275</a></div></div>
+<div class="ttc" id="a_s_d_l__events_8h_html_a3b589e89be6b35c02e0dd34a55f3fccaa04c436ef80fef38fb77a89e0e9124c30"><div class="ttname"><a href="../../d9/d42/_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaa04c436ef80fef38fb77a89e0e9124c30">SDL_MOUSEMOTION</a></div><div class="ttdeci">@ SDL_MOUSEMOTION</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d42/_s_d_l__events_8h_source.html#l00105">SDL_events.h:105</a></div></div>
+<div class="ttc" id="astruct_s_d_l___sys_w_minfo_html_ad4433c0ff6e9faf723d8a775259d020f"><div class="ttname"><a href="../../d1/d59/struct_s_d_l___sys_w_minfo.html#ad4433c0ff6e9faf723d8a775259d020f">SDL_SysWMinfo::info</a></div><div class="ttdeci">union SDL_SysWMinfo::@107 info</div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_aa5367c14d90f462230c2611b81b41d23"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a></div><div class="ttdeci">GLfloat GLfloat p</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l11093">SDL_opengl_glext.h:11093</a></div></div>
+<div class="ttc" id="a_s_d_l__video_8h_html_a6051ce26885b32b80bc7285b4facd0a1"><div class="ttname"><a href="../../dc/d64/_s_d_l__video_8h.html#a6051ce26885b32b80bc7285b4facd0a1">SDL_ShowWindow</a></div><div class="ttdeci">DECLSPEC void SDLCALL SDL_ShowWindow(SDL_Window *window)</div><div class="ttdoc">Show a window.</div></div>
+<div class="ttc" id="a_s_d_l__egl_8h_html_ad0e63d0edcdbd3d79554076bf309fd47"><div class="ttname"><a href="../../df/d32/_s_d_l__egl_8h.html#ad0e63d0edcdbd3d79554076bf309fd47">x</a></div><div class="ttdeci">EGLSurface EGLint x</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/_s_d_l__egl_8h_source.html#l01596">SDL_egl.h:1596</a></div></div>
+<div class="ttc" id="a_s_d_l__mouse_8h_html_a1561f413546c0e4f5f44a8f094926575"><div class="ttname"><a href="../../d5/d62/_s_d_l__mouse_8h.html#a1561f413546c0e4f5f44a8f094926575">SDL_GetMouseState</a></div><div class="ttdeci">DECLSPEC Uint32 SDLCALL SDL_GetMouseState(int *x, int *y)</div><div class="ttdoc">Retrieve the current state of the mouse.</div></div>
+<div class="ttc" id="aclass_o_s_window_html_a9bc566c58d6d49b638481e00b2d163a6"><div class="ttname"><a href="../../db/da4/class_o_s_window.html#a9bc566c58d6d49b638481e00b2d163a6">OSWindow::OSWindow</a></div><div class="ttdeci">OSWindow()</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/db3/_o_s_window_8cpp_source.html#l00012">OSWindow.cpp:12</a></div></div>
+<div class="ttc" id="aclass_log_html_a9962588a107d3b4aa927cf12284e0fc7"><div class="ttname"><a href="../../d6/d70/class_log.html#a9962588a107d3b4aa927cf12284e0fc7">Log::Info</a></div><div class="ttdeci">void Info(const wchar_t *pFormat,...)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/da7/_log_8cpp_source.html#l00011">Log.cpp:11</a></div></div>
+<div class="ttc" id="a_s_d_l__video_8h_html_aed4d4347f2d5def1532bc22893e0e0d9"><div class="ttname"><a href="../../dc/d64/_s_d_l__video_8h.html#aed4d4347f2d5def1532bc22893e0e0d9">SDL_GL_SetAttribute</a></div><div class="ttdeci">DECLSPEC int SDLCALL SDL_GL_SetAttribute(SDL_GLattr attr, int value)</div><div class="ttdoc">Set an OpenGL window attribute before window creation.</div></div>
+<div class="ttc" id="a_s_d_l__keycode_8h_html_a179ce01fa41d35408f06b4b3d1cd9d3da3229f8fa5f97f84702cd79cbc316acc9"><div class="ttname"><a href="../../d5/df2/_s_d_l__keycode_8h.html#a179ce01fa41d35408f06b4b3d1cd9d3da3229f8fa5f97f84702cd79cbc316acc9">SDLK_F1</a></div><div class="ttdeci">@ SDLK_F1</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df2/_s_d_l__keycode_8h_source.html#l00129">SDL_keycode.h:129</a></div></div>
+<div class="ttc" id="a_s_d_l__events_8h_html_a3b589e89be6b35c02e0dd34a55f3fccaa31acc5fdafc86ebe2c1f5c3cae48d603"><div class="ttname"><a href="../../d9/d42/_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaa31acc5fdafc86ebe2c1f5c3cae48d603">SDL_QUIT</a></div><div class="ttdeci">@ SDL_QUIT</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d42/_s_d_l__events_8h_source.html#l00060">SDL_events.h:60</a></div></div>
+<div class="ttc" id="a_s_d_l__keycode_8h_html_a179ce01fa41d35408f06b4b3d1cd9d3da635c4122c4945689eb97287fd7b97088"><div class="ttname"><a href="../../d5/df2/_s_d_l__keycode_8h.html#a179ce01fa41d35408f06b4b3d1cd9d3da635c4122c4945689eb97287fd7b97088">SDLK_PRINTSCREEN</a></div><div class="ttdeci">@ SDLK_PRINTSCREEN</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df2/_s_d_l__keycode_8h_source.html#l00142">SDL_keycode.h:142</a></div></div>
+<div class="ttc" id="aclass_log_html_ac0de2621497ca3b2fbf208624c08bcdf"><div class="ttname"><a href="../../d6/d70/class_log.html#ac0de2621497ca3b2fbf208624c08bcdf">Log::Warning</a></div><div class="ttdeci">void Warning(const wchar_t *pFormat,...)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/da7/_log_8cpp_source.html#l00028">Log.cpp:28</a></div></div>
+<div class="ttc" id="aclass_sdl2_window_html_ad567958132cd42a0034ae708cf60987c"><div class="ttname"><a href="../../d4/d57/class_sdl2_window.html#ad567958132cd42a0034ae708cf60987c">Sdl2Window::sdlWindowSurface</a></div><div class="ttdeci">SDL_Surface * sdlWindowSurface</div><div class="ttdef"><b>Definition:</b> <a href="../../df/def/_sdl2_window_8h_source.html#l00043">Sdl2Window.h:43</a></div></div>
+<div class="ttc" id="a_s_d_l__video_8h_html_ac486b40a4860d980dbc74d0b4adf3babac37af5c3ce56fe0956bc310821d59489"><div class="ttname"><a href="../../dc/d64/_s_d_l__video_8h.html#ac486b40a4860d980dbc74d0b4adf3babac37af5c3ce56fe0956bc310821d59489">SDL_WINDOWEVENT_EXPOSED</a></div><div class="ttdeci">@ SDL_WINDOWEVENT_EXPOSED</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d64/_s_d_l__video_8h_source.html#l00150">SDL_video.h:150</a></div></div>
+<div class="ttc" id="aunion_s_d_l___event_html_a826936b3275406d857bc6654669fae71"><div class="ttname"><a href="../../df/d1f/union_s_d_l___event.html#a826936b3275406d857bc6654669fae71">SDL_Event::window</a></div><div class="ttdeci">SDL_WindowEvent window</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d42/_s_d_l__events_8h_source.html#l00563">SDL_events.h:563</a></div></div>
+<div class="ttc" id="a_s_d_l__keycode_8h_html_a179ce01fa41d35408f06b4b3d1cd9d3da19fefa6b0a5ecc11084a6e0a1bb76b1e"><div class="ttname"><a href="../../d5/df2/_s_d_l__keycode_8h.html#a179ce01fa41d35408f06b4b3d1cd9d3da19fefa6b0a5ecc11084a6e0a1bb76b1e">SDLK_a</a></div><div class="ttdeci">@ SDLK_a</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df2/_s_d_l__keycode_8h_source.html#l00100">SDL_keycode.h:100</a></div></div>
+<div class="ttc" id="astruct_s_d_l___sys_w_minfo_html_a5175e05fe7ce53835601b15816d79940"><div class="ttname"><a href="../../d1/d59/struct_s_d_l___sys_w_minfo.html#a5175e05fe7ce53835601b15816d79940">SDL_SysWMinfo::x11</a></div><div class="ttdeci">struct SDL_SysWMinfo::@107::@110 x11</div></div>
+<div class="ttc" id="a_s_d_l__video_8h_html_a03adfc1ed4aaf57da4af00bd247ac99c"><div class="ttname"><a href="../../dc/d64/_s_d_l__video_8h.html#a03adfc1ed4aaf57da4af00bd247ac99c">SDL_GetWindowPosition</a></div><div class="ttdeci">DECLSPEC void SDLCALL SDL_GetWindowPosition(SDL_Window *window, int *x, int *y)</div><div class="ttdoc">Get the position of a window.</div></div>
+<div class="ttc" id="aunion_s_d_l___event_html_ab99927835cc77a9b6bb50b419b4a27df"><div class="ttname"><a href="../../df/d1f/union_s_d_l___event.html#ab99927835cc77a9b6bb50b419b4a27df">SDL_Event::key</a></div><div class="ttdeci">SDL_KeyboardEvent key</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d42/_s_d_l__events_8h_source.html#l00564">SDL_events.h:564</a></div></div>
+<div class="ttc" id="a_s_d_l__events_8h_html_a3b589e89be6b35c02e0dd34a55f3fccaaa0c6280f19f3c307fd2e0c7b1d5f5461"><div class="ttname"><a href="../../d9/d42/_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaaa0c6280f19f3c307fd2e0c7b1d5f5461">SDL_APP_WILLENTERBACKGROUND</a></div><div class="ttdeci">@ SDL_APP_WILLENTERBACKGROUND</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d42/_s_d_l__events_8h_source.html#l00071">SDL_events.h:71</a></div></div>
+<div class="ttc" id="a_mouse_8cpp_html_a87ea0d89e858bd74e1d223e05049a7e5"><div class="ttname"><a href="../../d7/d54/_mouse_8cpp.html#a87ea0d89e858bd74e1d223e05049a7e5">_507B98_ctrl_pressed</a></div><div class="ttdeci">bool _507B98_ctrl_pressed</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d54/_mouse_8cpp_source.html#l00256">Mouse.cpp:256</a></div></div>
+<div class="ttc" id="aclass_sdl2_window_html_a0740a9d8bb0e5dbfb051d7ae8a1b72a9"><div class="ttname"><a href="../../d4/d57/class_sdl2_window.html#a0740a9d8bb0e5dbfb051d7ae8a1b72a9">Sdl2Window::MessageProc</a></div><div class="ttdeci">void MessageProc(const SDL_Event &amp;e)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d76/_sdl2_window_8cpp_source.html#l00005">Sdl2Window.cpp:5</a></div></div>
+<div class="ttc" id="a_s_d_l__video_8h_html_ab10f4fd6a082ef06fcae96860c95fb18a4300d051290adcb71c1b5e82e2553c4d"><div class="ttname"><a href="../../dc/d64/_s_d_l__video_8h.html#ab10f4fd6a082ef06fcae96860c95fb18a4300d051290adcb71c1b5e82e2553c4d">SDL_WINDOW_SHOWN</a></div><div class="ttdeci">@ SDL_WINDOW_SHOWN</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d64/_s_d_l__video_8h_source.html#l00101">SDL_video.h:101</a></div></div>
+<div class="ttc" id="a_s_d_l__keycode_8h_html_a179ce01fa41d35408f06b4b3d1cd9d3da094c29259f3614270bbf2cbefde4a61a"><div class="ttname"><a href="../../d5/df2/_s_d_l__keycode_8h.html#a179ce01fa41d35408f06b4b3d1cd9d3da094c29259f3614270bbf2cbefde4a61a">SDLK_0</a></div><div class="ttdeci">@ SDLK_0</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df2/_s_d_l__keycode_8h_source.html#l00074">SDL_keycode.h:74</a></div></div>
+<div class="ttc" id="a_s_d_l__video_8h_html_a4445733f04a1a9dd0e063cd4738f285f"><div class="ttname"><a href="../../dc/d64/_s_d_l__video_8h.html#a4445733f04a1a9dd0e063cd4738f285f">SDL_GetWindowFlags</a></div><div class="ttdeci">DECLSPEC Uint32 SDLCALL SDL_GetWindowFlags(SDL_Window *window)</div><div class="ttdoc">Get the window flags.</div></div>
+<div class="ttc" id="a_s_d_l__keycode_8h_html_a179ce01fa41d35408f06b4b3d1cd9d3dabbc670ea5255b47f240f18486f1b392a"><div class="ttname"><a href="../../d5/df2/_s_d_l__keycode_8h.html#a179ce01fa41d35408f06b4b3d1cd9d3dabbc670ea5255b47f240f18486f1b392a">SDLK_LEFT</a></div><div class="ttdeci">@ SDLK_LEFT</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df2/_s_d_l__keycode_8h_source.html#l00152">SDL_keycode.h:152</a></div></div>
+<div class="ttc" id="a_engine_8cpp_html_a1cd3528b0bd43ba7c76cceb5ad5a568b"><div class="ttname"><a href="../../d4/d68/_engine_8cpp.html#a1cd3528b0bd43ba7c76cceb5ad5a568b">Engine_DeinitializeAndTerminate</a></div><div class="ttdeci">void Engine_DeinitializeAndTerminate(int exitCode)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d68/_engine_8cpp_source.html#l00157">Engine.cpp:157</a></div></div>
+<div class="ttc" id="a_s_d_l__keycode_8h_html_a179ce01fa41d35408f06b4b3d1cd9d3da4129286b6c26edac4a6fc3186ea7ab35"><div class="ttname"><a href="../../d5/df2/_s_d_l__keycode_8h.html#a179ce01fa41d35408f06b4b3d1cd9d3da4129286b6c26edac4a6fc3186ea7ab35">SDLK_9</a></div><div class="ttdeci">@ SDLK_9</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df2/_s_d_l__keycode_8h_source.html#l00083">SDL_keycode.h:83</a></div></div>
+<div class="ttc" id="a_s_d_l__video_8h_html_a4b66b90f95780276addc14bc573c9f3c"><div class="ttname"><a href="../../dc/d64/_s_d_l__video_8h.html#a4b66b90f95780276addc14bc573c9f3c">SDL_RaiseWindow</a></div><div class="ttdeci">DECLSPEC void SDLCALL SDL_RaiseWindow(SDL_Window *window)</div><div class="ttdoc">Raise a window above other windows and set the input focus.</div></div>
+<div class="ttc" id="a_s_d_l__video_8h_html_a2de24951bbc6626dc259ec0db5ae8ed4a28c3841afe3b66ab86a267bf5d0a28e0"><div class="ttname"><a href="../../dc/d64/_s_d_l__video_8h.html#a2de24951bbc6626dc259ec0db5ae8ed4a28c3841afe3b66ab86a267bf5d0a28e0">SDL_GL_DOUBLEBUFFER</a></div><div class="ttdeci">@ SDL_GL_DOUBLEBUFFER</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d64/_s_d_l__video_8h_source.html#l00204">SDL_video.h:204</a></div></div>
+<div class="ttc" id="a_s_d_l__keycode_8h_html_a179ce01fa41d35408f06b4b3d1cd9d3dae19150bda868459b26e2fed234e236d8"><div class="ttname"><a href="../../d5/df2/_s_d_l__keycode_8h.html#a179ce01fa41d35408f06b4b3d1cd9d3dae19150bda868459b26e2fed234e236d8">SDLK_RCTRL</a></div><div class="ttdeci">@ SDLK_RCTRL</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df2/_s_d_l__keycode_8h_source.html#l00280">SDL_keycode.h:280</a></div></div>
+<div class="ttc" id="astruct_s_d_l___mouse_motion_event_html_a36398bb4a5308446a262b0bfc8baa80a"><div class="ttname"><a href="../../d2/d18/struct_s_d_l___mouse_motion_event.html#a36398bb4a5308446a262b0bfc8baa80a">SDL_MouseMotionEvent::x</a></div><div class="ttdeci">Sint32 x</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d42/_s_d_l__events_8h_source.html#l00260">SDL_events.h:260</a></div></div>
+<div class="ttc" id="astruct_s_d_l___point_html"><div class="ttname"><a href="../../dd/d4e/struct_s_d_l___point.html">SDL_Point</a></div><div class="ttdoc">The structure that defines a point (integer)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d41/_s_d_l__rect_8h_source.html#l00048">SDL_rect.h:48</a></div></div>
+<div class="ttc" id="astruct_s_d_l___sys_w_minfo_html_ac3a70af022d4849e9ff546595e94627f"><div class="ttname"><a href="../../d1/d59/struct_s_d_l___sys_w_minfo.html#ac3a70af022d4849e9ff546595e94627f">SDL_SysWMinfo::version</a></div><div class="ttdeci">SDL_version version</div><div class="ttdef"><b>Definition:</b> <a href="../../de/df3/_s_d_l__syswm_8h_source.html#l00203">SDL_syswm.h:203</a></div></div>
+<div class="ttc" id="a_s_d_l__keycode_8h_html_a179ce01fa41d35408f06b4b3d1cd9d3dafb38b5a4ab44e7f9493f0ebdf5e908ed"><div class="ttname"><a href="../../d5/df2/_s_d_l__keycode_8h.html#a179ce01fa41d35408f06b4b3d1cd9d3dafb38b5a4ab44e7f9493f0ebdf5e908ed">SDLK_RETURN</a></div><div class="ttdeci">@ SDLK_RETURN</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df2/_s_d_l__keycode_8h_source.html#l00054">SDL_keycode.h:54</a></div></div>
+<div class="ttc" id="a_s_d_l__keycode_8h_html_a179ce01fa41d35408f06b4b3d1cd9d3dacc6e09d8fbcd102b97af24219ed079ad"><div class="ttname"><a href="../../d5/df2/_s_d_l__keycode_8h.html#a179ce01fa41d35408f06b4b3d1cd9d3dacc6e09d8fbcd102b97af24219ed079ad">SDLK_PAGEUP</a></div><div class="ttdeci">@ SDLK_PAGEUP</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df2/_s_d_l__keycode_8h_source.html#l00147">SDL_keycode.h:147</a></div></div>
+<div class="ttc" id="astruct_s_d_l___keysym_html_a082ff1fd787b79fa6c3a445deb225f08"><div class="ttname"><a href="../../d4/de7/struct_s_d_l___keysym.html#a082ff1fd787b79fa6c3a445deb225f08">SDL_Keysym::sym</a></div><div class="ttdeci">SDL_Keycode sym</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d07/_s_d_l__keyboard_8h_source.html#l00050">SDL_keyboard.h:50</a></div></div>
+<div class="ttc" id="a_s_d_l__egl_8h_html_ac7ba7d3cce3d19ca020e056b37231289"><div class="ttname"><a href="../../df/d32/_s_d_l__egl_8h.html#ac7ba7d3cce3d19ca020e056b37231289">flags</a></div><div class="ttdeci">EGLSyncKHR EGLint flags</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/_s_d_l__egl_8h_source.html#l00898">SDL_egl.h:898</a></div></div>
+<div class="ttc" id="a_s_d_l__events_8h_html_a3b589e89be6b35c02e0dd34a55f3fccaa9267166e1536dfa8b0daa98c0afa9052"><div class="ttname"><a href="../../d9/d42/_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaa9267166e1536dfa8b0daa98c0afa9052">SDL_MOUSEBUTTONDOWN</a></div><div class="ttdeci">@ SDL_MOUSEBUTTONDOWN</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d42/_s_d_l__events_8h_source.html#l00106">SDL_events.h:106</a></div></div>
+<div class="ttc" id="a_s_d_l__keycode_8h_html_a179ce01fa41d35408f06b4b3d1cd9d3dae86d4dd9dfa9fb623c16180e1d041d45"><div class="ttname"><a href="../../d5/df2/_s_d_l__keycode_8h.html#a179ce01fa41d35408f06b4b3d1cd9d3dae86d4dd9dfa9fb623c16180e1d041d45">SDLK_RIGHT</a></div><div class="ttdeci">@ SDLK_RIGHT</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df2/_s_d_l__keycode_8h_source.html#l00151">SDL_keycode.h:151</a></div></div>
+<div class="ttc" id="astruct_s_d_l___keysym_html_ab519d1b8a9939d3d035f7103f3208291"><div class="ttname"><a href="../../d4/de7/struct_s_d_l___keysym.html#ab519d1b8a9939d3d035f7103f3208291">SDL_Keysym::mod</a></div><div class="ttdeci">Uint16 mod</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d07/_s_d_l__keyboard_8h_source.html#l00051">SDL_keyboard.h:51</a></div></div>
+<div class="ttc" id="a_s_d_l__video_8h_html_ab10f4fd6a082ef06fcae96860c95fb18aa722d0955c297fc60c09b10e1679684c"><div class="ttname"><a href="../../dc/d64/_s_d_l__video_8h.html#ab10f4fd6a082ef06fcae96860c95fb18aa722d0955c297fc60c09b10e1679684c">SDL_WINDOW_MOUSE_FOCUS</a></div><div class="ttdeci">@ SDL_WINDOW_MOUSE_FOCUS</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d64/_s_d_l__video_8h_source.html#l00109">SDL_video.h:109</a></div></div>
+<div class="ttc" id="astruct_s_d_l___window_event_html_a485cd1f07f0f22fdb9f4c4bf214011dc"><div class="ttname"><a href="../../d1/d00/struct_s_d_l___window_event.html#a485cd1f07f0f22fdb9f4c4bf214011dc">SDL_WindowEvent::event</a></div><div class="ttdeci">Uint8 event</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d42/_s_d_l__events_8h_source.html#l00200">SDL_events.h:200</a></div></div>
+<div class="ttc" id="aunion_s_d_l___event_html"><div class="ttname"><a href="../../df/d1f/union_s_d_l___event.html">SDL_Event</a></div><div class="ttdoc">General event structure.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d42/_s_d_l__events_8h_source.html#l00558">SDL_events.h:558</a></div></div>
+<div class="ttc" id="a_s_d_l__events_8h_html_a3b589e89be6b35c02e0dd34a55f3fccaa5ff4e41f0d8b5def11cfe6a69ec0b698"><div class="ttname"><a href="../../d9/d42/_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaa5ff4e41f0d8b5def11cfe6a69ec0b698">SDL_WINDOWEVENT</a></div><div class="ttdeci">@ SDL_WINDOWEVENT</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d42/_s_d_l__events_8h_source.html#l00092">SDL_events.h:92</a></div></div>
+<div class="ttc" id="a_s_d_l__events_8h_html_acfa517963c25f8b71acc6b56721c5d9b"><div class="ttname"><a href="../../d9/d42/_s_d_l__events_8h.html#acfa517963c25f8b71acc6b56721c5d9b">SDL_PollEvent</a></div><div class="ttdeci">DECLSPEC int SDLCALL SDL_PollEvent(SDL_Event *event)</div><div class="ttdoc">Polls for currently pending events.</div></div>
+<div class="ttc" id="aclass_sdl2_window_html_aee4a68885d185a8081f43e09946f0a43"><div class="ttname"><a href="../../d4/d57/class_sdl2_window.html#aee4a68885d185a8081f43e09946f0a43">Sdl2Window::SdlkToVk</a></div><div class="ttdeci">int SdlkToVk(SDL_Keycode key) const</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d76/_sdl2_window_8cpp_source.html#l00206">Sdl2Window.cpp:206</a></div></div>
+<div class="ttc" id="a_s_d_l__keycode_8h_html_a179ce01fa41d35408f06b4b3d1cd9d3da95a48d56f776924d2d3b21552eb3860f"><div class="ttname"><a href="../../d5/df2/_s_d_l__keycode_8h.html#a179ce01fa41d35408f06b4b3d1cd9d3da95a48d56f776924d2d3b21552eb3860f">SDLK_LCTRL</a></div><div class="ttdeci">@ SDLK_LCTRL</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df2/_s_d_l__keycode_8h_source.html#l00276">SDL_keycode.h:276</a></div></div>
+<div class="ttc" id="astruct_point_html"><div class="ttname"><a href="../../d8/dc8/struct_point.html">Point</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d18/_point_8h_source.html#l00003">Point.h:3</a></div></div>
+<div class="ttc" id="a_s_d_l__keycode_8h_html_a179ce01fa41d35408f06b4b3d1cd9d3da340386bcedcc83e77b5c6ce98e2551c0"><div class="ttname"><a href="../../d5/df2/_s_d_l__keycode_8h.html#a179ce01fa41d35408f06b4b3d1cd9d3da340386bcedcc83e77b5c6ce98e2551c0">SDLK_UP</a></div><div class="ttdeci">@ SDLK_UP</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df2/_s_d_l__keycode_8h_source.html#l00154">SDL_keycode.h:154</a></div></div>
+<div class="ttc" id="astruct_s_d_l___mouse_button_event_html_a7ccb5c55a7ddadce723f4ea6d5269540"><div class="ttname"><a href="../../d9/d8f/struct_s_d_l___mouse_button_event.html#a7ccb5c55a7ddadce723f4ea6d5269540">SDL_MouseButtonEvent::y</a></div><div class="ttdeci">Sint32 y</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d42/_s_d_l__events_8h_source.html#l00280">SDL_events.h:280</a></div></div>
+<div class="ttc" id="a_s_d_l__video_8h_html_ac486b40a4860d980dbc74d0b4adf3baba529d1b574e559ee46892024e1c2e6c92"><div class="ttname"><a href="../../dc/d64/_s_d_l__video_8h.html#ac486b40a4860d980dbc74d0b4adf3baba529d1b574e559ee46892024e1c2e6c92">SDL_WINDOWEVENT_FOCUS_GAINED</a></div><div class="ttdeci">@ SDL_WINDOWEVENT_FOCUS_GAINED</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d64/_s_d_l__video_8h_source.html#l00164">SDL_video.h:164</a></div></div>
+<div class="ttc" id="a_s_d_l__video_8h_html_a11d1245662f49f6af257627119f22835"><div class="ttname"><a href="../../dc/d64/_s_d_l__video_8h.html#a11d1245662f49f6af257627119f22835">SDL_GL_SwapWindow</a></div><div class="ttdeci">DECLSPEC void SDLCALL SDL_GL_SwapWindow(SDL_Window *window)</div><div class="ttdoc">Swap the OpenGL buffers for a window, if double-buffering is supported.</div></div>
+<div class="ttc" id="a_s_d_l__keycode_8h_html_afa050ad71f0a5b86aa05cb13f542d747a8a721ee962efe0d065457991568f2db6"><div class="ttname"><a href="../../d5/df2/_s_d_l__keycode_8h.html#afa050ad71f0a5b86aa05cb13f542d747a8a721ee962efe0d065457991568f2db6">KMOD_CAPS</a></div><div class="ttdeci">@ KMOD_CAPS</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df2/_s_d_l__keycode_8h_source.html#l00337">SDL_keycode.h:337</a></div></div>
+<div class="ttc" id="astruct_s_d_l___keyboard_event_html_a2a57ba820a298f2c02ad5d41fd2b1aa8"><div class="ttname"><a href="../../d8/db8/struct_s_d_l___keyboard_event.html#a2a57ba820a298f2c02ad5d41fd2b1aa8">SDL_KeyboardEvent::keysym</a></div><div class="ttdeci">SDL_Keysym keysym</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d42/_s_d_l__events_8h_source.html#l00220">SDL_events.h:220</a></div></div>
+<div class="ttc" id="a_s_d_l__syswm_8h_html_ad6e40121a96c88af20d9469a04706fef"><div class="ttname"><a href="../../de/df3/_s_d_l__syswm_8h.html#ad6e40121a96c88af20d9469a04706fef">SDL_GetWindowWMInfo</a></div><div class="ttdeci">DECLSPEC SDL_bool SDLCALL SDL_GetWindowWMInfo(SDL_Window *window, SDL_SysWMinfo *info)</div><div class="ttdoc">This function allows access to driver-dependent window information.</div></div>
+<div class="ttc" id="a_s_d_l__keycode_8h_html_a179ce01fa41d35408f06b4b3d1cd9d3da3ebc3d79795b4748a4f5c6133d9f9e8b"><div class="ttname"><a href="../../d5/df2/_s_d_l__keycode_8h.html#a179ce01fa41d35408f06b4b3d1cd9d3da3ebc3d79795b4748a4f5c6133d9f9e8b">SDLK_DOWN</a></div><div class="ttdeci">@ SDLK_DOWN</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df2/_s_d_l__keycode_8h_source.html#l00153">SDL_keycode.h:153</a></div></div>
+<div class="ttc" id="aclass_sdl2_window_html_ad7e54fb14bc94c3939631a909ec17370"><div class="ttname"><a href="../../d4/d57/class_sdl2_window.html#ad7e54fb14bc94c3939631a909ec17370">Sdl2Window::PeekMessageLoop</a></div><div class="ttdeci">void PeekMessageLoop() override</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d76/_sdl2_window_8cpp_source.html#l00099">Sdl2Window.cpp:99</a></div></div>
+<div class="ttc" id="a_s_d_l__keycode_8h_html_a179ce01fa41d35408f06b4b3d1cd9d3da4869f810e4f3fbf9225e9c7e1ab92aec"><div class="ttname"><a href="../../d5/df2/_s_d_l__keycode_8h.html#a179ce01fa41d35408f06b4b3d1cd9d3da4869f810e4f3fbf9225e9c7e1ab92aec">SDLK_TAB</a></div><div class="ttdeci">@ SDLK_TAB</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df2/_s_d_l__keycode_8h_source.html#l00057">SDL_keycode.h:57</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../d4/d57/class_sdl2_window.html">Sdl2Window</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:05:13. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+var struct_n_p_c_data___image___m_m7 =
+[
+    [ "NPCData_Image_MM7", "da/d9d/struct_n_p_c_data___image___m_m7.html#a5a9db63bad9984945183904ce81828ab", null ],
+    [ "Serialize", "da/d9d/struct_n_p_c_data___image___m_m7.html#a21a7364805270a638e2d10bca9c3912d", null ],
+    [ "Deserialize", "da/d9d/struct_n_p_c_data___image___m_m7.html#a1b65cf38ec745766701f4418edbad95d", null ],
+    [ "pName", "da/d9d/struct_n_p_c_data___image___m_m7.html#ae5518537340c66ae810e8403cf51751d", null ],
+    [ "uPortraitID", "da/d9d/struct_n_p_c_data___image___m_m7.html#aa55b438f414f2a11d4d666da105278fb", null ],
+    [ "uFlags", "da/d9d/struct_n_p_c_data___image___m_m7.html#a6edd8d929caa7cdfd5d163cd08cabbb7", null ],
+    [ "fame", "da/d9d/struct_n_p_c_data___image___m_m7.html#a3f867fdb9005a65603672d541f319c20", null ],
+    [ "rep", "da/d9d/struct_n_p_c_data___image___m_m7.html#aaba551872015cb4d66cfef11a7b2ee11", null ],
+    [ "Location2D", "da/d9d/struct_n_p_c_data___image___m_m7.html#a861397d399134c6b0ac2c3b234f8fb8f", null ],
+    [ "uProfession", "da/d9d/struct_n_p_c_data___image___m_m7.html#a19a8299cdcc33c3ef5d1a6c1a8ccf591", null ],
+    [ "greet", "da/d9d/struct_n_p_c_data___image___m_m7.html#ade1402563dfbcd52572d325466925494", null ],
+    [ "joins", "da/d9d/struct_n_p_c_data___image___m_m7.html#a139f5b91e1fc31ec2b481d78c5a5e1f4", null ],
+    [ "field_24", "da/d9d/struct_n_p_c_data___image___m_m7.html#a95835e2e177a98c7eecceb3b81c24ff8", null ],
+    [ "evt_A", "da/d9d/struct_n_p_c_data___image___m_m7.html#a1c5f10d91546fed314831f1e44d06915", null ],
+    [ "evt_B", "da/d9d/struct_n_p_c_data___image___m_m7.html#afe502c2135b338376937eb6c280616c1", null ],
+    [ "evt_C", "da/d9d/struct_n_p_c_data___image___m_m7.html#ab8d83a4108fc19bf70fa0ee70d898d74", null ],
+    [ "evt_D", "da/d9d/struct_n_p_c_data___image___m_m7.html#ac730fab762ee484241d2af021ccabaad", null ],
+    [ "evt_E", "da/d9d/struct_n_p_c_data___image___m_m7.html#aad5f86fceef2ec70eaf73221141df113", null ],
+    [ "evt_F", "da/d9d/struct_n_p_c_data___image___m_m7.html#aef5be67b289cbcf0b82e54079d48407c", null ],
+    [ "uSex", "da/d9d/struct_n_p_c_data___image___m_m7.html#a5b2273ba8d017637dd386d3d07d5cd91", null ],
+    [ "bHasUsedTheAbility", "da/d9d/struct_n_p_c_data___image___m_m7.html#a7405da87613e988bea9c87ce50032045", null ],
+    [ "news_topic", "da/d9d/struct_n_p_c_data___image___m_m7.html#a45e5034c7c37f7328aa7da92a0b86982", null ]
+];

@@ -1,0 +1,766 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Класс AudioBaseDataSource</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('da/dfd/class_audio_base_data_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pro-attribs">Защищенные данные</a> &#124;
+<a href="../../d3/da9/class_audio_base_data_source-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс AudioBaseDataSource</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Граф наследования:AudioBaseDataSource:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/df2/class_audio_base_data_source__inherit__graph.svg" width="336" height="187"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">см. легенду</a>]</span></center></div>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="../../closed.png" alt="+"/> Граф связей класса AudioBaseDataSource:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../da/d74/class_audio_base_data_source__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a0b5232f33b0c0b8b1c5593337c40b950"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dfd/class_audio_base_data_source.html#a0b5232f33b0c0b8b1c5593337c40b950">AudioBaseDataSource</a> ()</td></tr>
+<tr class="separator:a0b5232f33b0c0b8b1c5593337c40b950"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad43a6ea2a3adf5381bcaef398bba80c3"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dfd/class_audio_base_data_source.html#ad43a6ea2a3adf5381bcaef398bba80c3">~AudioBaseDataSource</a> ()</td></tr>
+<tr class="separator:ad43a6ea2a3adf5381bcaef398bba80c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70c5309340c769cdb690e2afe79a3c74"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dfd/class_audio_base_data_source.html#a70c5309340c769cdb690e2afe79a3c74">Open</a> ()</td></tr>
+<tr class="separator:a70c5309340c769cdb690e2afe79a3c74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae810f4bf456410a7f34556dac7a72096"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dfd/class_audio_base_data_source.html#ae810f4bf456410a7f34556dac7a72096">Close</a> ()</td></tr>
+<tr class="separator:ae810f4bf456410a7f34556dac7a72096"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac069c1362f22e33cdd89d713180d87f9"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a7c94ea6f8948649f8d181ae55911eeaf">size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dfd/class_audio_base_data_source.html#ac069c1362f22e33cdd89d713180d87f9">GetSampleRate</a> ()</td></tr>
+<tr class="separator:ac069c1362f22e33cdd89d713180d87f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fb7ac3a5736b7e1dda5477c3520f6a5"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a7c94ea6f8948649f8d181ae55911eeaf">size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dfd/class_audio_base_data_source.html#a1fb7ac3a5736b7e1dda5477c3520f6a5">GetChannelCount</a> ()</td></tr>
+<tr class="separator:a1fb7ac3a5736b7e1dda5477c3520f6a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30b77f7fdec9b97ad5306b30f27a060e"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../de/d13/_mem_buffer_8h.html#a8722c69b0b425d6a28bc23839396f8f5">PMemBuffer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dfd/class_audio_base_data_source.html#a30b77f7fdec9b97ad5306b30f27a060e">GetNextBuffer</a> ()</td></tr>
+<tr class="separator:a30b77f7fdec9b97ad5306b30f27a060e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_i_audio_data_source"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_i_audio_data_source')"><img src="../../closed.png" alt="-"/>&#160;Открытые члены унаследованные от <a class="el" href="../../d0/df5/class_i_audio_data_source.html">IAudioDataSource</a></td></tr>
+<tr class="memitem:a834ca9be6f29be2aa03b9f6679afc089 inherit pub_methods_class_i_audio_data_source"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/df5/class_i_audio_data_source.html#a834ca9be6f29be2aa03b9f6679afc089">IAudioDataSource</a> ()</td></tr>
+<tr class="separator:a834ca9be6f29be2aa03b9f6679afc089 inherit pub_methods_class_i_audio_data_source"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdfba368bebc2b34beeabce9f68b2caa inherit pub_methods_class_i_audio_data_source"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/df5/class_i_audio_data_source.html#afdfba368bebc2b34beeabce9f68b2caa">~IAudioDataSource</a> ()</td></tr>
+<tr class="separator:afdfba368bebc2b34beeabce9f68b2caa inherit pub_methods_class_i_audio_data_source"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Защищенные данные</h2></td></tr>
+<tr class="memitem:aa07891dd382ea3490b1b019515429c50"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dfd/class_audio_base_data_source.html#aa07891dd382ea3490b1b019515429c50">pFormatContext</a></td></tr>
+<tr class="separator:aa07891dd382ea3490b1b019515429c50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a975642e6b538e7407a2ce15b380e44cd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dfd/class_audio_base_data_source.html#a975642e6b538e7407a2ce15b380e44cd">iStreamIndex</a></td></tr>
+<tr class="separator:a975642e6b538e7407a2ce15b380e44cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42636e56d57ce36f515449edd1922385"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/d1f/struct_a_v_codec_context.html">AVCodecContext</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dfd/class_audio_base_data_source.html#a42636e56d57ce36f515449edd1922385">pCodecContext</a></td></tr>
+<tr class="separator:a42636e56d57ce36f515449edd1922385"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ce167a9663f4832fcea452039b9d774"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/dcb/group__lswr.html#ga4aa775b7fba31d2c8dc14c7b7e282863">SwrContext</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dfd/class_audio_base_data_source.html#a3ce167a9663f4832fcea452039b9d774">pConverter</a></td></tr>
+<tr class="separator:a3ce167a9663f4832fcea452039b9d774"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6300c7739d5d86ebb0867df5dd7d840"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dfd/class_audio_base_data_source.html#aa6300c7739d5d86ebb0867df5dd7d840">bOpened</a></td></tr>
+<tr class="separator:aa6300c7739d5d86ebb0867df5dd7d840"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5883d3206c5500485d5ff825caf67a73"><td class="memItemLeft" align="right" valign="top">std::queue&lt; <a class="el" href="../../de/d13/_mem_buffer_8h.html#a8722c69b0b425d6a28bc23839396f8f5">PMemBuffer</a>, std::deque&lt; <a class="el" href="../../de/d13/_mem_buffer_8h.html#a8722c69b0b425d6a28bc23839396f8f5">PMemBuffer</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dfd/class_audio_base_data_source.html#a5883d3206c5500485d5ff825caf67a73">queue</a></td></tr>
+<tr class="separator:a5883d3206c5500485d5ff825caf67a73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock">
+<p class="definition">См. определение в файле <a class="el" href="../../de/d56/_media_player_8cpp_source.html">MediaPlayer.cpp</a> строка <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00884">884</a></p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a0b5232f33b0c0b8b1c5593337c40b950"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b5232f33b0c0b8b1c5593337c40b950">&#9670;&nbsp;</a></span>AudioBaseDataSource()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AudioBaseDataSource::AudioBaseDataSource </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/d56/_media_player_8cpp_source.html">MediaPlayer.cpp</a> строка <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00905">905</a></p>
+<div class="fragment"><div class="line"><a name="l00905"></a><span class="lineno">  905</span>&#160;                                         {</div>
+<div class="line"><a name="l00906"></a><span class="lineno">  906</span>&#160;    <a class="code" href="../../da/dfd/class_audio_base_data_source.html#aa07891dd382ea3490b1b019515429c50">pFormatContext</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00907"></a><span class="lineno">  907</span>&#160;    <a class="code" href="../../da/dfd/class_audio_base_data_source.html#a975642e6b538e7407a2ce15b380e44cd">iStreamIndex</a> = -1;</div>
+<div class="line"><a name="l00908"></a><span class="lineno">  908</span>&#160;    <a class="code" href="../../da/dfd/class_audio_base_data_source.html#a42636e56d57ce36f515449edd1922385">pCodecContext</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00909"></a><span class="lineno">  909</span>&#160;    <a class="code" href="../../da/dfd/class_audio_base_data_source.html#a3ce167a9663f4832fcea452039b9d774">pConverter</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00910"></a><span class="lineno">  910</span>&#160;    <a class="code" href="../../da/dfd/class_audio_base_data_source.html#aa6300c7739d5d86ebb0867df5dd7d840">bOpened</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00911"></a><span class="lineno">  911</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00901">bOpened</a>, <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00898">iStreamIndex</a>, <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00899">pCodecContext</a>, <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00900">pConverter</a> и <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00897">pFormatContext</a>.</p>
+
+</div>
+</div>
+<a id="ad43a6ea2a3adf5381bcaef398bba80c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad43a6ea2a3adf5381bcaef398bba80c3">&#9670;&nbsp;</a></span>~AudioBaseDataSource()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual AudioBaseDataSource::~AudioBaseDataSource </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/d56/_media_player_8cpp_source.html">MediaPlayer.cpp</a> строка <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00887">887</a></p>
+<div class="fragment"><div class="line"><a name="l00887"></a><span class="lineno">  887</span>&#160;{ <a class="code" href="../../da/dfd/class_audio_base_data_source.html#ae810f4bf456410a7f34556dac7a72096">Close</a>(); }</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00965">Close()</a>.</p>
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../da/dfd/class_audio_base_data_source_ad43a6ea2a3adf5381bcaef398bba80c3_cgraph.svg" width="572" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a70c5309340c769cdb690e2afe79a3c74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70c5309340c769cdb690e2afe79a3c74">&#9670;&nbsp;</a></span>Open()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool AudioBaseDataSource::Open </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещает <a class="el" href="../../d0/df5/class_i_audio_data_source.html#a17b54a33e10bc293b0f4b941169768c7">IAudioDataSource</a>.</p>
+
+<p>Переопределяется в <a class="el" href="../../d0/de5/class_audio_buffer_data_source.html#af3355c6bb925e3a5968e594668f8c6b6">AudioBufferDataSource</a> и <a class="el" href="../../d6/dd4/class_audio_file_data_source.html#ac200a49a8fdc19da4e0d0a5c451e1fab">AudioFileDataSource</a>.</p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/d56/_media_player_8cpp_source.html">MediaPlayer.cpp</a> строка <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00913">913</a></p>
+<div class="fragment"><div class="line"><a name="l00913"></a><span class="lineno">  913</span>&#160;                               {</div>
+<div class="line"><a name="l00914"></a><span class="lineno">  914</span>&#160;    <span class="comment">// Retrieve stream information</span></div>
+<div class="line"><a name="l00915"></a><span class="lineno">  915</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../dc/d2c/group__lavf__decoding.html#gad42172e27cddafb81096939783b157bb">avformat_find_stream_info</a>(<a class="code" href="../../da/dfd/class_audio_base_data_source.html#aa07891dd382ea3490b1b019515429c50">pFormatContext</a>, <span class="keyword">nullptr</span>) &lt; 0) {</div>
+<div class="line"><a name="l00916"></a><span class="lineno">  916</span>&#160;        <a class="code" href="../../da/dfd/class_audio_base_data_source.html#ae810f4bf456410a7f34556dac7a72096">Close</a>();</div>
+<div class="line"><a name="l00917"></a><span class="lineno">  917</span>&#160;        fprintf(stderr, <span class="stringliteral">&quot;ffmpeg: Unable to find stream info\n&quot;</span>);</div>
+<div class="line"><a name="l00918"></a><span class="lineno">  918</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00919"></a><span class="lineno">  919</span>&#160;    }</div>
+<div class="line"><a name="l00920"></a><span class="lineno">  920</span>&#160; </div>
+<div class="line"><a name="l00921"></a><span class="lineno">  921</span>&#160;    <a class="code" href="../../df/d2a/struct_a_v_codec.html">AVCodec</a> *codec = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00922"></a><span class="lineno">  922</span>&#160;    <a class="code" href="../../da/dfd/class_audio_base_data_source.html#a975642e6b538e7407a2ce15b380e44cd">iStreamIndex</a> = <a class="code" href="../../dc/d2c/group__lavf__decoding.html#gaa6fa468c922ff5c60a6021dcac09aff9">av_find_best_stream</a>(<a class="code" href="../../da/dfd/class_audio_base_data_source.html#aa07891dd382ea3490b1b019515429c50">pFormatContext</a>, <a class="code" href="../../d7/d83/group__lavu__misc.html#gga9a84bba4713dfced21a1a56163be1f48a7b4e33b8f30ac94d34ce8d9f7c33927a">AVMEDIA_TYPE_AUDIO</a>, -1,</div>
+<div class="line"><a name="l00923"></a><span class="lineno">  923</span>&#160;                                       -1, &amp;codec, 0);</div>
+<div class="line"><a name="l00924"></a><span class="lineno">  924</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../da/dfd/class_audio_base_data_source.html#a975642e6b538e7407a2ce15b380e44cd">iStreamIndex</a> &lt; 0) {</div>
+<div class="line"><a name="l00925"></a><span class="lineno">  925</span>&#160;        <a class="code" href="../../da/dfd/class_audio_base_data_source.html#ae810f4bf456410a7f34556dac7a72096">Close</a>();</div>
+<div class="line"><a name="l00926"></a><span class="lineno">  926</span>&#160;        fprintf(stderr, <span class="stringliteral">&quot;ffmpeg: Unable to find audio stream\n&quot;</span>);</div>
+<div class="line"><a name="l00927"></a><span class="lineno">  927</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00928"></a><span class="lineno">  928</span>&#160;    }</div>
+<div class="line"><a name="l00929"></a><span class="lineno">  929</span>&#160; </div>
+<div class="line"><a name="l00930"></a><span class="lineno">  930</span>&#160;    <a class="code" href="../../d4/d6c/struct_a_v_stream.html">AVStream</a> *<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a10d3bc96cdfc1d478f52c13d5ffd9316">stream</a> = <a class="code" href="../../da/dfd/class_audio_base_data_source.html#aa07891dd382ea3490b1b019515429c50">pFormatContext</a>-&gt;<a class="code" href="../../de/d85/struct_a_v_format_context.html#acfefb6b6cf21e87a0dcbd1a547ba2348">streams</a>[<a class="code" href="../../da/dfd/class_audio_base_data_source.html#a975642e6b538e7407a2ce15b380e44cd">iStreamIndex</a>];</div>
+<div class="line"><a name="l00931"></a><span class="lineno">  931</span>&#160;    <a class="code" href="../../da/dfd/class_audio_base_data_source.html#a42636e56d57ce36f515449edd1922385">pCodecContext</a> = <a class="code" href="../../d5/d44/group__lavc__core.html#gae80afec6f26df6607eaacf39b561c315">avcodec_alloc_context3</a>(codec);</div>
+<div class="line"><a name="l00932"></a><span class="lineno">  932</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../da/dfd/class_audio_base_data_source.html#a42636e56d57ce36f515449edd1922385">pCodecContext</a> == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00933"></a><span class="lineno">  933</span>&#160;        <a class="code" href="../../da/dfd/class_audio_base_data_source.html#ae810f4bf456410a7f34556dac7a72096">Close</a>();</div>
+<div class="line"><a name="l00934"></a><span class="lineno">  934</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00935"></a><span class="lineno">  935</span>&#160;    }</div>
+<div class="line"><a name="l00936"></a><span class="lineno">  936</span>&#160; </div>
+<div class="line"><a name="l00937"></a><span class="lineno">  937</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../d5/d44/group__lavc__core.html#gac7b282f51540ca7a99416a3ba6ee0d16">avcodec_parameters_to_context</a>(<a class="code" href="../../da/dfd/class_audio_base_data_source.html#a42636e56d57ce36f515449edd1922385">pCodecContext</a>, <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a10d3bc96cdfc1d478f52c13d5ffd9316">stream</a>-&gt;codecpar) &lt; 0) {</div>
+<div class="line"><a name="l00938"></a><span class="lineno">  938</span>&#160;        <a class="code" href="../../da/dfd/class_audio_base_data_source.html#ae810f4bf456410a7f34556dac7a72096">Close</a>();</div>
+<div class="line"><a name="l00939"></a><span class="lineno">  939</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00940"></a><span class="lineno">  940</span>&#160;    }</div>
+<div class="line"><a name="l00941"></a><span class="lineno">  941</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../d5/d44/group__lavc__core.html#ga11f785a188d7d9df71621001465b0f1d">avcodec_open2</a>(<a class="code" href="../../da/dfd/class_audio_base_data_source.html#a42636e56d57ce36f515449edd1922385">pCodecContext</a>, codec, <span class="keyword">nullptr</span>) &lt; 0) {</div>
+<div class="line"><a name="l00942"></a><span class="lineno">  942</span>&#160;        <a class="code" href="../../da/dfd/class_audio_base_data_source.html#ae810f4bf456410a7f34556dac7a72096">Close</a>();</div>
+<div class="line"><a name="l00943"></a><span class="lineno">  943</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00944"></a><span class="lineno">  944</span>&#160;    }</div>
+<div class="line"><a name="l00945"></a><span class="lineno">  945</span>&#160; </div>
+<div class="line"><a name="l00946"></a><span class="lineno">  946</span>&#160;    <a class="code" href="../../da/dfd/class_audio_base_data_source.html#a3ce167a9663f4832fcea452039b9d774">pConverter</a> = <a class="code" href="../../df/dcb/group__lswr.html#gad7f29022726c871aadf935281a9813bc">swr_alloc_set_opts</a>(</div>
+<div class="line"><a name="l00947"></a><span class="lineno">  947</span>&#160;        <a class="code" href="../../da/dfd/class_audio_base_data_source.html#a3ce167a9663f4832fcea452039b9d774">pConverter</a>,</div>
+<div class="line"><a name="l00948"></a><span class="lineno">  948</span>&#160;        <a class="code" href="../../da/dfd/class_audio_base_data_source.html#a42636e56d57ce36f515449edd1922385">pCodecContext</a>-&gt;<a class="code" href="../../de/d1f/struct_a_v_codec_context.html#aeb08c575a79eb84fc4155dda88f46c06">channel_layout</a> ? <a class="code" href="../../da/dfd/class_audio_base_data_source.html#a42636e56d57ce36f515449edd1922385">pCodecContext</a>-&gt;<a class="code" href="../../de/d1f/struct_a_v_codec_context.html#aeb08c575a79eb84fc4155dda88f46c06">channel_layout</a></div>
+<div class="line"><a name="l00949"></a><span class="lineno">  949</span>&#160;                                      : AV_CH_LAYOUT_MONO,</div>
+<div class="line"><a name="l00950"></a><span class="lineno">  950</span>&#160;        <a class="code" href="../../da/d54/group__lavu__sampfmts.html#ggaf9a51ca15301871723577c730b5865c5aea6132df57aebc3f76e10665395c46af">AV_SAMPLE_FMT_S16</a>, <a class="code" href="../../da/dfd/class_audio_base_data_source.html#a42636e56d57ce36f515449edd1922385">pCodecContext</a>-&gt;<a class="code" href="../../de/d1f/struct_a_v_codec_context.html#a8ff0b000c463361e234af48d03aadfc0">sample_rate</a>,</div>
+<div class="line"><a name="l00951"></a><span class="lineno">  951</span>&#160;        <a class="code" href="../../da/dfd/class_audio_base_data_source.html#a42636e56d57ce36f515449edd1922385">pCodecContext</a>-&gt;<a class="code" href="../../de/d1f/struct_a_v_codec_context.html#aeb08c575a79eb84fc4155dda88f46c06">channel_layout</a> ? <a class="code" href="../../da/dfd/class_audio_base_data_source.html#a42636e56d57ce36f515449edd1922385">pCodecContext</a>-&gt;<a class="code" href="../../de/d1f/struct_a_v_codec_context.html#aeb08c575a79eb84fc4155dda88f46c06">channel_layout</a></div>
+<div class="line"><a name="l00952"></a><span class="lineno">  952</span>&#160;                                      : AV_CH_LAYOUT_MONO,</div>
+<div class="line"><a name="l00953"></a><span class="lineno">  953</span>&#160;        <a class="code" href="../../da/dfd/class_audio_base_data_source.html#a42636e56d57ce36f515449edd1922385">pCodecContext</a>-&gt;<a class="code" href="../../de/d1f/struct_a_v_codec_context.html#a1bdba69ea111e2a9d03fdaa7a46a4c45">sample_fmt</a>, <a class="code" href="../../da/dfd/class_audio_base_data_source.html#a42636e56d57ce36f515449edd1922385">pCodecContext</a>-&gt;<a class="code" href="../../de/d1f/struct_a_v_codec_context.html#a8ff0b000c463361e234af48d03aadfc0">sample_rate</a>, 0, <span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00954"></a><span class="lineno">  954</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../df/dcb/group__lswr.html#gae173e8ed91717700471a1dcd06f00f67">swr_init</a>(<a class="code" href="../../da/dfd/class_audio_base_data_source.html#a3ce167a9663f4832fcea452039b9d774">pConverter</a>) &lt; 0) {</div>
+<div class="line"><a name="l00955"></a><span class="lineno">  955</span>&#160;        <a class="code" href="../../da/dfd/class_audio_base_data_source.html#ae810f4bf456410a7f34556dac7a72096">Close</a>();</div>
+<div class="line"><a name="l00956"></a><span class="lineno">  956</span>&#160;        fprintf(stderr, <span class="stringliteral">&quot;ffmpeg: Failed to create converter\n&quot;</span>);</div>
+<div class="line"><a name="l00957"></a><span class="lineno">  957</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00958"></a><span class="lineno">  958</span>&#160;    }</div>
+<div class="line"><a name="l00959"></a><span class="lineno">  959</span>&#160; </div>
+<div class="line"><a name="l00960"></a><span class="lineno">  960</span>&#160;    <a class="code" href="../../da/dfd/class_audio_base_data_source.html#aa6300c7739d5d86ebb0867df5dd7d840">bOpened</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00961"></a><span class="lineno">  961</span>&#160; </div>
+<div class="line"><a name="l00962"></a><span class="lineno">  962</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00963"></a><span class="lineno">  963</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../dc/d2c/group__lavf__decoding.html#gaa6fa468c922ff5c60a6021dcac09aff9">av_find_best_stream()</a>, <a class="el" href="../../de/d7e/samplefmt_8h_source.html#l00061">AV_SAMPLE_FMT_S16</a>, <a class="el" href="../../d5/d44/group__lavc__core.html#gae80afec6f26df6607eaacf39b561c315">avcodec_alloc_context3()</a>, <a class="el" href="../../d5/d44/group__lavc__core.html#ga11f785a188d7d9df71621001465b0f1d">avcodec_open2()</a>, <a class="el" href="../../d5/d44/group__lavc__core.html#gac7b282f51540ca7a99416a3ba6ee0d16">avcodec_parameters_to_context()</a>, <a class="el" href="../../dc/d2c/group__lavf__decoding.html#gad42172e27cddafb81096939783b157bb">avformat_find_stream_info()</a>, <a class="el" href="../../d7/d93/avutil_8h_source.html#l00202">AVMEDIA_TYPE_AUDIO</a>, <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00901">bOpened</a>, <a class="el" href="../../d4/d02/avcodec_8h_source.html#l02276">AVCodecContext::channel_layout</a>, <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00965">Close()</a>, <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00898">iStreamIndex</a>, <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00899">pCodecContext</a>, <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00900">pConverter</a>, <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00897">pFormatContext</a>, <a class="el" href="../../d4/d02/avcodec_8h_source.html#l02233">AVCodecContext::sample_fmt</a>, <a class="el" href="../../d4/d02/avcodec_8h_source.html#l02225">AVCodecContext::sample_rate</a>, <a class="el" href="../../dc/df2/avformat_8h_source.html#l01412">AVFormatContext::streams</a>, <a class="el" href="../../df/dcb/group__lswr.html#gad7f29022726c871aadf935281a9813bc">swr_alloc_set_opts()</a> и <a class="el" href="../../df/dcb/group__lswr.html#gae173e8ed91717700471a1dcd06f00f67">swr_init()</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l01064">AudioFileDataSource::Open()</a> и <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l01112">AudioBufferDataSource::Open()</a>.</p>
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../da/dfd/class_audio_base_data_source_a70c5309340c769cdb690e2afe79a3c74_cgraph.svg" width="574" height="424"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../da/dfd/class_audio_base_data_source_a70c5309340c769cdb690e2afe79a3c74_icgraph.svg" width="368" height="118"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ae810f4bf456410a7f34556dac7a72096"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae810f4bf456410a7f34556dac7a72096">&#9670;&nbsp;</a></span>Close()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> AudioBaseDataSource::Close </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещает <a class="el" href="../../d0/df5/class_i_audio_data_source.html#a896ccf54e89b56a96adaff1b70af1e08">IAudioDataSource</a>.</p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/d56/_media_player_8cpp_source.html">MediaPlayer.cpp</a> строка <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00965">965</a></p>
+<div class="fragment"><div class="line"><a name="l00965"></a><span class="lineno">  965</span>&#160;                                {</div>
+<div class="line"><a name="l00966"></a><span class="lineno">  966</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../da/dfd/class_audio_base_data_source.html#a3ce167a9663f4832fcea452039b9d774">pConverter</a> != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00967"></a><span class="lineno">  967</span>&#160;        <a class="code" href="../../df/dcb/group__lswr.html#ga818f7d78b1ad7d8d5b70de374b668c34">swr_free</a>(&amp;<a class="code" href="../../da/dfd/class_audio_base_data_source.html#a3ce167a9663f4832fcea452039b9d774">pConverter</a>);</div>
+<div class="line"><a name="l00968"></a><span class="lineno">  968</span>&#160;        <a class="code" href="../../da/dfd/class_audio_base_data_source.html#a3ce167a9663f4832fcea452039b9d774">pConverter</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00969"></a><span class="lineno">  969</span>&#160;    }</div>
+<div class="line"><a name="l00970"></a><span class="lineno">  970</span>&#160; </div>
+<div class="line"><a name="l00971"></a><span class="lineno">  971</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../da/dfd/class_audio_base_data_source.html#a42636e56d57ce36f515449edd1922385">pCodecContext</a>) {</div>
+<div class="line"><a name="l00972"></a><span class="lineno">  972</span>&#160;        <a class="code" href="../../d5/d44/group__lavc__core.html#gaf4daa92361efb3523ef5afeb0b54077f">avcodec_close</a>(<a class="code" href="../../da/dfd/class_audio_base_data_source.html#a42636e56d57ce36f515449edd1922385">pCodecContext</a>);</div>
+<div class="line"><a name="l00973"></a><span class="lineno">  973</span>&#160;        <a class="code" href="../../da/dfd/class_audio_base_data_source.html#a42636e56d57ce36f515449edd1922385">pCodecContext</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00974"></a><span class="lineno">  974</span>&#160;    }</div>
+<div class="line"><a name="l00975"></a><span class="lineno">  975</span>&#160; </div>
+<div class="line"><a name="l00976"></a><span class="lineno">  976</span>&#160;    <a class="code" href="../../da/dfd/class_audio_base_data_source.html#a975642e6b538e7407a2ce15b380e44cd">iStreamIndex</a> = -1;</div>
+<div class="line"><a name="l00977"></a><span class="lineno">  977</span>&#160; </div>
+<div class="line"><a name="l00978"></a><span class="lineno">  978</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../da/dfd/class_audio_base_data_source.html#aa07891dd382ea3490b1b019515429c50">pFormatContext</a> != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00979"></a><span class="lineno">  979</span>&#160;        <a class="code" href="../../dc/d2c/group__lavf__decoding.html#gae804b99aec044690162b8b9b110236a4">avformat_close_input</a>(&amp;<a class="code" href="../../da/dfd/class_audio_base_data_source.html#aa07891dd382ea3490b1b019515429c50">pFormatContext</a>);</div>
+<div class="line"><a name="l00980"></a><span class="lineno">  980</span>&#160;        <a class="code" href="../../da/dfd/class_audio_base_data_source.html#aa07891dd382ea3490b1b019515429c50">pFormatContext</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00981"></a><span class="lineno">  981</span>&#160;    }</div>
+<div class="line"><a name="l00982"></a><span class="lineno">  982</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d5/d44/group__lavc__core.html#gaf4daa92361efb3523ef5afeb0b54077f">avcodec_close()</a>, <a class="el" href="../../dc/d2c/group__lavf__decoding.html#gae804b99aec044690162b8b9b110236a4">avformat_close_input()</a>, <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00898">iStreamIndex</a>, <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00899">pCodecContext</a>, <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00900">pConverter</a>, <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00897">pFormatContext</a> и <a class="el" href="../../df/dcb/group__lswr.html#ga818f7d78b1ad7d8d5b70de374b668c34">swr_free()</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00913">Open()</a>, <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l01112">AudioBufferDataSource::Open()</a> и <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00887">~AudioBaseDataSource()</a>.</p>
+<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../da/dfd/class_audio_base_data_source_ae810f4bf456410a7f34556dac7a72096_cgraph.svg" width="355" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../da/dfd/class_audio_base_data_source_ae810f4bf456410a7f34556dac7a72096_icgraph.svg" width="586" height="176"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ac069c1362f22e33cdd89d713180d87f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac069c1362f22e33cdd89d713180d87f9">&#9670;&nbsp;</a></span>GetSampleRate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a7c94ea6f8948649f8d181ae55911eeaf">size_t</a> AudioBaseDataSource::GetSampleRate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещает <a class="el" href="../../d0/df5/class_i_audio_data_source.html#ad87ff02b7f6c1d19a816e37f93be1cc0">IAudioDataSource</a>.</p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/d56/_media_player_8cpp_source.html">MediaPlayer.cpp</a> строка <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00984">984</a></p>
+<div class="fragment"><div class="line"><a name="l00984"></a><span class="lineno">  984</span>&#160;                                          {</div>
+<div class="line"><a name="l00985"></a><span class="lineno">  985</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../da/dfd/class_audio_base_data_source.html#a42636e56d57ce36f515449edd1922385">pCodecContext</a> == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00986"></a><span class="lineno">  986</span>&#160;        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00987"></a><span class="lineno">  987</span>&#160;    }</div>
+<div class="line"><a name="l00988"></a><span class="lineno">  988</span>&#160; </div>
+<div class="line"><a name="l00989"></a><span class="lineno">  989</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../da/dfd/class_audio_base_data_source.html#a42636e56d57ce36f515449edd1922385">pCodecContext</a>-&gt;<a class="code" href="../../de/d1f/struct_a_v_codec_context.html#a8ff0b000c463361e234af48d03aadfc0">sample_rate</a>;</div>
+<div class="line"><a name="l00990"></a><span class="lineno">  990</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00899">pCodecContext</a> и <a class="el" href="../../d4/d02/avcodec_8h_source.html#l02225">AVCodecContext::sample_rate</a>.</p>
+
+</div>
+</div>
+<a id="a1fb7ac3a5736b7e1dda5477c3520f6a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fb7ac3a5736b7e1dda5477c3520f6a5">&#9670;&nbsp;</a></span>GetChannelCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a7c94ea6f8948649f8d181ae55911eeaf">size_t</a> AudioBaseDataSource::GetChannelCount </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещает <a class="el" href="../../d0/df5/class_i_audio_data_source.html#a5680714e900e8ee861c9a4bd10313c40">IAudioDataSource</a>.</p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/d56/_media_player_8cpp_source.html">MediaPlayer.cpp</a> строка <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00992">992</a></p>
+<div class="fragment"><div class="line"><a name="l00992"></a><span class="lineno">  992</span>&#160;                                            {</div>
+<div class="line"><a name="l00993"></a><span class="lineno">  993</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../da/dfd/class_audio_base_data_source.html#a42636e56d57ce36f515449edd1922385">pCodecContext</a> == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00994"></a><span class="lineno">  994</span>&#160;        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00995"></a><span class="lineno">  995</span>&#160;    }</div>
+<div class="line"><a name="l00996"></a><span class="lineno">  996</span>&#160; </div>
+<div class="line"><a name="l00997"></a><span class="lineno">  997</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../da/dfd/class_audio_base_data_source.html#a42636e56d57ce36f515449edd1922385">pCodecContext</a>-&gt;<a class="code" href="../../de/d1f/struct_a_v_codec_context.html#ac1e6c2cd1269caa7570575725c682a49">channels</a>;</div>
+<div class="line"><a name="l00998"></a><span class="lineno">  998</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d4/d02/avcodec_8h_source.html#l02226">AVCodecContext::channels</a> и <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00899">pCodecContext</a>.</p>
+
+</div>
+</div>
+<a id="a30b77f7fdec9b97ad5306b30f27a060e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30b77f7fdec9b97ad5306b30f27a060e">&#9670;&nbsp;</a></span>GetNextBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../de/d13/_mem_buffer_8h.html#a8722c69b0b425d6a28bc23839396f8f5">PMemBuffer</a> AudioBaseDataSource::GetNextBuffer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещает <a class="el" href="../../d0/df5/class_i_audio_data_source.html#abc2d490b7caa7b4f9ad53a9f4d3c37aa">IAudioDataSource</a>.</p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/d56/_media_player_8cpp_source.html">MediaPlayer.cpp</a> строка <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l01000">1000</a></p>
+<div class="fragment"><div class="line"><a name="l01000"></a><span class="lineno"> 1000</span>&#160;                                              {</div>
+<div class="line"><a name="l01001"></a><span class="lineno"> 1001</span>&#160;    <a class="code" href="../../de/d13/_mem_buffer_8h.html#a8722c69b0b425d6a28bc23839396f8f5">PMemBuffer</a> <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a76461e97a098d2c9ae20ac193d3825ae">buffer</a>;</div>
+<div class="line"><a name="l01002"></a><span class="lineno"> 1002</span>&#160; </div>
+<div class="line"><a name="l01003"></a><span class="lineno"> 1003</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="../../da/dfd/class_audio_base_data_source.html#a5883d3206c5500485d5ff825caf67a73">queue</a>.empty()) {</div>
+<div class="line"><a name="l01004"></a><span class="lineno"> 1004</span>&#160;        <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a76461e97a098d2c9ae20ac193d3825ae">buffer</a> = <a class="code" href="../../da/dfd/class_audio_base_data_source.html#a5883d3206c5500485d5ff825caf67a73">queue</a>.front();</div>
+<div class="line"><a name="l01005"></a><span class="lineno"> 1005</span>&#160;        <a class="code" href="../../da/dfd/class_audio_base_data_source.html#a5883d3206c5500485d5ff825caf67a73">queue</a>.pop();</div>
+<div class="line"><a name="l01006"></a><span class="lineno"> 1006</span>&#160;    }</div>
+<div class="line"><a name="l01007"></a><span class="lineno"> 1007</span>&#160; </div>
+<div class="line"><a name="l01008"></a><span class="lineno"> 1008</span>&#160;    <a class="code" href="../../d4/d31/struct_a_v_packet.html">AVPacket</a> *packet = <a class="code" href="../../de/d4a/group__lavc__packet.html#gaaf85aa950695631e0217a16062289b66">av_packet_alloc</a>();</div>
+<div class="line"><a name="l01009"></a><span class="lineno"> 1009</span>&#160; </div>
+<div class="line"><a name="l01010"></a><span class="lineno"> 1010</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../dc/d2c/group__lavf__decoding.html#ga4fdb3084415a82e3810de6ee60e46a61">av_read_frame</a>(<a class="code" href="../../da/dfd/class_audio_base_data_source.html#aa07891dd382ea3490b1b019515429c50">pFormatContext</a>, packet) &gt;= 0) {</div>
+<div class="line"><a name="l01011"></a><span class="lineno"> 1011</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../d0/d0c/group__lavc__decoding.html#ga58bc4bf1e0ac59e27362597e467efff3">avcodec_send_packet</a>(<a class="code" href="../../da/dfd/class_audio_base_data_source.html#a42636e56d57ce36f515449edd1922385">pCodecContext</a>, packet) &gt;= 0) {</div>
+<div class="line"><a name="l01012"></a><span class="lineno"> 1012</span>&#160;            <a class="code" href="../../de/d13/_mem_buffer_8h.html#a8722c69b0b425d6a28bc23839396f8f5">PMemBuffer</a> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a321ff419cd5252e54cf95e64dc6687ee">result</a>;</div>
+<div class="line"><a name="l01013"></a><span class="lineno"> 1013</span>&#160;            <a class="code" href="../../d6/d03/struct_a_v_frame.html">AVFrame</a> *frame = <a class="code" href="../../d5/de8/group__lavu__frame.html#gac700017c5270c79c1e1befdeeb008b2f">av_frame_alloc</a>();</div>
+<div class="line"><a name="l01014"></a><span class="lineno"> 1014</span>&#160;            <span class="keywordtype">int</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1dbb21208b9047cc8031ca9c840d3c2f">res</a> = 0;</div>
+<div class="line"><a name="l01015"></a><span class="lineno"> 1015</span>&#160;            <span class="keywordflow">while</span> (<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1dbb21208b9047cc8031ca9c840d3c2f">res</a> &gt;= 0) {</div>
+<div class="line"><a name="l01016"></a><span class="lineno"> 1016</span>&#160;                <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1dbb21208b9047cc8031ca9c840d3c2f">res</a> = <a class="code" href="../../d0/d0c/group__lavc__decoding.html#ga11e6542c4e66d3028668788a1a74217c">avcodec_receive_frame</a>(<a class="code" href="../../da/dfd/class_audio_base_data_source.html#a42636e56d57ce36f515449edd1922385">pCodecContext</a>, frame);</div>
+<div class="line"><a name="l01017"></a><span class="lineno"> 1017</span>&#160;                <span class="keywordflow">if</span> (<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1dbb21208b9047cc8031ca9c840d3c2f">res</a> == AVERROR(EAGAIN) || <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1dbb21208b9047cc8031ca9c840d3c2f">res</a> == AVERROR_EOF) {</div>
+<div class="line"><a name="l01018"></a><span class="lineno"> 1018</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l01019"></a><span class="lineno"> 1019</span>&#160;                }</div>
+<div class="line"><a name="l01020"></a><span class="lineno"> 1020</span>&#160;                <span class="keywordflow">if</span> (<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1dbb21208b9047cc8031ca9c840d3c2f">res</a> &lt; 0) {</div>
+<div class="line"><a name="l01021"></a><span class="lineno"> 1021</span>&#160;                    <span class="keywordflow">return</span> <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a76461e97a098d2c9ae20ac193d3825ae">buffer</a>;</div>
+<div class="line"><a name="l01022"></a><span class="lineno"> 1022</span>&#160;                }</div>
+<div class="line"><a name="l01023"></a><span class="lineno"> 1023</span>&#160;                <a class="code" href="../../de/d13/_mem_buffer_8h.html#a8722c69b0b425d6a28bc23839396f8f5">PMemBuffer</a> tmp_buf = <a class="code" href="../../da/d6a/_mem_buffer_8cpp.html#a685632d9cd2b61b24a9bfc649d54937e">AllocMemBuffer</a>(</div>
+<div class="line"><a name="l01024"></a><span class="lineno"> 1024</span>&#160;                    frame-&gt;<a class="code" href="../../d6/d03/struct_a_v_frame.html#a02f45ab8191aea1660159f1e464237ea">nb_samples</a> * <a class="code" href="../../da/dfd/class_audio_base_data_source.html#a42636e56d57ce36f515449edd1922385">pCodecContext</a>-&gt;<a class="code" href="../../de/d1f/struct_a_v_codec_context.html#ac1e6c2cd1269caa7570575725c682a49">channels</a> * 2);</div>
+<div class="line"><a name="l01025"></a><span class="lineno"> 1025</span>&#160;                <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *dst_channels[8] = {0};</div>
+<div class="line"><a name="l01026"></a><span class="lineno"> 1026</span>&#160;                dst_channels[0] = (<a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *)tmp_buf-&gt;GetData();</div>
+<div class="line"><a name="l01027"></a><span class="lineno"> 1027</span>&#160;                <span class="keywordtype">int</span> got_samples = <a class="code" href="../../df/dcb/group__lswr.html#gaa5bb6cab830146efa8c760fa66ee582a">swr_convert</a>(</div>
+<div class="line"><a name="l01028"></a><span class="lineno"> 1028</span>&#160;                    <a class="code" href="../../da/dfd/class_audio_base_data_source.html#a3ce167a9663f4832fcea452039b9d774">pConverter</a>, dst_channels, frame-&gt;<a class="code" href="../../d6/d03/struct_a_v_frame.html#a02f45ab8191aea1660159f1e464237ea">nb_samples</a>,</div>
+<div class="line"><a name="l01029"></a><span class="lineno"> 1029</span>&#160;                    (<span class="keyword">const</span> <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> **)frame-&gt;<a class="code" href="../../d6/d03/struct_a_v_frame.html#a1d0f65014a8d1bf78cec8cbed2304992">data</a>, frame-&gt;<a class="code" href="../../d6/d03/struct_a_v_frame.html#a02f45ab8191aea1660159f1e464237ea">nb_samples</a>);</div>
+<div class="line"><a name="l01030"></a><span class="lineno"> 1030</span>&#160;                <span class="keywordflow">if</span> (got_samples &gt; 0) {</div>
+<div class="line"><a name="l01031"></a><span class="lineno"> 1031</span>&#160;                    <span class="keywordflow">if</span> (!<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a76461e97a098d2c9ae20ac193d3825ae">buffer</a>) {</div>
+<div class="line"><a name="l01032"></a><span class="lineno"> 1032</span>&#160;                        <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a76461e97a098d2c9ae20ac193d3825ae">buffer</a> = tmp_buf;</div>
+<div class="line"><a name="l01033"></a><span class="lineno"> 1033</span>&#160;                    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l01034"></a><span class="lineno"> 1034</span>&#160;                        <a class="code" href="../../da/dfd/class_audio_base_data_source.html#a5883d3206c5500485d5ff825caf67a73">queue</a>.push(tmp_buf);</div>
+<div class="line"><a name="l01035"></a><span class="lineno"> 1035</span>&#160;                    }</div>
+<div class="line"><a name="l01036"></a><span class="lineno"> 1036</span>&#160;                }</div>
+<div class="line"><a name="l01037"></a><span class="lineno"> 1037</span>&#160;            }</div>
+<div class="line"><a name="l01038"></a><span class="lineno"> 1038</span>&#160;            <a class="code" href="../../d5/de8/group__lavu__frame.html#ga979d73f3228814aee56aeca0636e37cc">av_frame_free</a>(&amp;frame);</div>
+<div class="line"><a name="l01039"></a><span class="lineno"> 1039</span>&#160;        }</div>
+<div class="line"><a name="l01040"></a><span class="lineno"> 1040</span>&#160;    }</div>
+<div class="line"><a name="l01041"></a><span class="lineno"> 1041</span>&#160; </div>
+<div class="line"><a name="l01042"></a><span class="lineno"> 1042</span>&#160;    <a class="code" href="../../de/d4a/group__lavc__packet.html#ga1066464e7cdd1f215df6940db94e5d8e">av_packet_free</a>(&amp;packet);</div>
+<div class="line"><a name="l01043"></a><span class="lineno"> 1043</span>&#160; </div>
+<div class="line"><a name="l01044"></a><span class="lineno"> 1044</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a76461e97a098d2c9ae20ac193d3825ae">buffer</a>;</div>
+<div class="line"><a name="l01045"></a><span class="lineno"> 1045</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../da/d6a/_mem_buffer_8cpp_source.html#l00020">AllocMemBuffer()</a>, <a class="el" href="../../d5/de8/group__lavu__frame.html#gac700017c5270c79c1e1befdeeb008b2f">av_frame_alloc()</a>, <a class="el" href="../../d5/de8/group__lavu__frame.html#ga979d73f3228814aee56aeca0636e37cc">av_frame_free()</a>, <a class="el" href="../../de/d4a/group__lavc__packet.html#gaaf85aa950695631e0217a16062289b66">av_packet_alloc()</a>, <a class="el" href="../../de/d4a/group__lavc__packet.html#ga1066464e7cdd1f215df6940db94e5d8e">av_packet_free()</a>, <a class="el" href="../../dc/d2c/group__lavf__decoding.html#ga4fdb3084415a82e3810de6ee60e46a61">av_read_frame()</a>, <a class="el" href="../../d0/d0c/group__lavc__decoding.html#ga11e6542c4e66d3028668788a1a74217c">avcodec_receive_frame()</a>, <a class="el" href="../../d0/d0c/group__lavc__decoding.html#ga58bc4bf1e0ac59e27362597e467efff3">avcodec_send_packet()</a>, <a class="el" href="../../d4/d02/avcodec_8h_source.html#l02226">AVCodecContext::channels</a>, <a class="el" href="../../df/d7d/frame_8h_source.html#l00309">AVFrame::data</a>, <a class="el" href="../../df/d7d/frame_8h_source.html#l00361">AVFrame::nb_samples</a>, <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00899">pCodecContext</a>, <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00900">pConverter</a>, <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00897">pFormatContext</a>, <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00902">queue</a> и <a class="el" href="../../df/dcb/group__lswr.html#gaa5bb6cab830146efa8c760fa66ee582a">swr_convert()</a>.</p>
+<div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-7-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-7-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../da/dfd/class_audio_base_data_source_a30b77f7fdec9b97ad5306b30f27a060e_cgraph.svg" width="367" height="443"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="aa07891dd382ea3490b1b019515429c50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa07891dd382ea3490b1b019515429c50">&#9670;&nbsp;</a></span>pFormatContext</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a>* AudioBaseDataSource::pFormatContext</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/d56/_media_player_8cpp_source.html">MediaPlayer.cpp</a> строка <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00897">897</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00905">AudioBaseDataSource()</a>, <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00965">Close()</a>, <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l01000">GetNextBuffer()</a>, <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00913">Open()</a>, <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l01064">AudioFileDataSource::Open()</a> и <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l01112">AudioBufferDataSource::Open()</a>.</p>
+
+</div>
+</div>
+<a id="a975642e6b538e7407a2ce15b380e44cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a975642e6b538e7407a2ce15b380e44cd">&#9670;&nbsp;</a></span>iStreamIndex</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int AudioBaseDataSource::iStreamIndex</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/d56/_media_player_8cpp_source.html">MediaPlayer.cpp</a> строка <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00898">898</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00905">AudioBaseDataSource()</a>, <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00965">Close()</a> и <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00913">Open()</a>.</p>
+
+</div>
+</div>
+<a id="a42636e56d57ce36f515449edd1922385"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42636e56d57ce36f515449edd1922385">&#9670;&nbsp;</a></span>pCodecContext</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../de/d1f/struct_a_v_codec_context.html">AVCodecContext</a>* AudioBaseDataSource::pCodecContext</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/d56/_media_player_8cpp_source.html">MediaPlayer.cpp</a> строка <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00899">899</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00905">AudioBaseDataSource()</a>, <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00965">Close()</a>, <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00992">GetChannelCount()</a>, <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l01000">GetNextBuffer()</a>, <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00984">GetSampleRate()</a> и <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00913">Open()</a>.</p>
+
+</div>
+</div>
+<a id="a3ce167a9663f4832fcea452039b9d774"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ce167a9663f4832fcea452039b9d774">&#9670;&nbsp;</a></span>pConverter</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../df/dcb/group__lswr.html#ga4aa775b7fba31d2c8dc14c7b7e282863">SwrContext</a>* AudioBaseDataSource::pConverter</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/d56/_media_player_8cpp_source.html">MediaPlayer.cpp</a> строка <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00900">900</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00905">AudioBaseDataSource()</a>, <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00965">Close()</a>, <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l01000">GetNextBuffer()</a> и <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00913">Open()</a>.</p>
+
+</div>
+</div>
+<a id="aa6300c7739d5d86ebb0867df5dd7d840"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6300c7739d5d86ebb0867df5dd7d840">&#9670;&nbsp;</a></span>bOpened</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool AudioBaseDataSource::bOpened</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/d56/_media_player_8cpp_source.html">MediaPlayer.cpp</a> строка <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00901">901</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00905">AudioBaseDataSource()</a>, <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00913">Open()</a>, <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l01064">AudioFileDataSource::Open()</a> и <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l01112">AudioBufferDataSource::Open()</a>.</p>
+
+</div>
+</div>
+<a id="a5883d3206c5500485d5ff825caf67a73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5883d3206c5500485d5ff825caf67a73">&#9670;&nbsp;</a></span>queue</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::queue&lt;<a class="el" href="../../de/d13/_mem_buffer_8h.html#a8722c69b0b425d6a28bc23839396f8f5">PMemBuffer</a>, std::deque&lt;<a class="el" href="../../de/d13/_mem_buffer_8h.html#a8722c69b0b425d6a28bc23839396f8f5">PMemBuffer</a>&gt; &gt; AudioBaseDataSource::queue</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/d56/_media_player_8cpp_source.html">MediaPlayer.cpp</a> строка <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00902">902</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l01000">GetNextBuffer()</a>.</p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>C:/git/world-of-might-and-magic/Media/<a class="el" href="../../de/d56/_media_player_8cpp_source.html">MediaPlayer.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="agroup__lavc__core_html_gaf4daa92361efb3523ef5afeb0b54077f"><div class="ttname"><a href="../../d5/d44/group__lavc__core.html#gaf4daa92361efb3523ef5afeb0b54077f">avcodec_close</a></div><div class="ttdeci">int avcodec_close(AVCodecContext *avctx)</div></div>
+<div class="ttc" id="agroup__lavu__frame_html_ga979d73f3228814aee56aeca0636e37cc"><div class="ttname"><a href="../../d5/de8/group__lavu__frame.html#ga979d73f3228814aee56aeca0636e37cc">av_frame_free</a></div><div class="ttdeci">void av_frame_free(AVFrame **frame)</div></div>
+<div class="ttc" id="aclass_audio_base_data_source_html_a975642e6b538e7407a2ce15b380e44cd"><div class="ttname"><a href="../../da/dfd/class_audio_base_data_source.html#a975642e6b538e7407a2ce15b380e44cd">AudioBaseDataSource::iStreamIndex</a></div><div class="ttdeci">int iStreamIndex</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d56/_media_player_8cpp_source.html#l00898">MediaPlayer.cpp:898</a></div></div>
+<div class="ttc" id="agroup__lavf__decoding_html_ga4fdb3084415a82e3810de6ee60e46a61"><div class="ttname"><a href="../../dc/d2c/group__lavf__decoding.html#ga4fdb3084415a82e3810de6ee60e46a61">av_read_frame</a></div><div class="ttdeci">int av_read_frame(AVFormatContext *s, AVPacket *pkt)</div></div>
+<div class="ttc" id="agroup__lavc__packet_html_ga1066464e7cdd1f215df6940db94e5d8e"><div class="ttname"><a href="../../de/d4a/group__lavc__packet.html#ga1066464e7cdd1f215df6940db94e5d8e">av_packet_free</a></div><div class="ttdeci">void av_packet_free(AVPacket **pkt)</div></div>
+<div class="ttc" id="agroup__lavf__decoding_html_gae804b99aec044690162b8b9b110236a4"><div class="ttname"><a href="../../dc/d2c/group__lavf__decoding.html#gae804b99aec044690162b8b9b110236a4">avformat_close_input</a></div><div class="ttdeci">void avformat_close_input(AVFormatContext **s)</div></div>
+<div class="ttc" id="agroup__lavu__frame_html_gac700017c5270c79c1e1befdeeb008b2f"><div class="ttname"><a href="../../d5/de8/group__lavu__frame.html#gac700017c5270c79c1e1befdeeb008b2f">av_frame_alloc</a></div><div class="ttdeci">AVFrame * av_frame_alloc(void)</div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a321ff419cd5252e54cf95e64dc6687ee"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a321ff419cd5252e54cf95e64dc6687ee">result</a></div><div class="ttdeci">GLuint64EXT * result</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l09435">SDL_opengl_glext.h:9435</a></div></div>
+<div class="ttc" id="agroup__lswr_html_gae173e8ed91717700471a1dcd06f00f67"><div class="ttname"><a href="../../df/dcb/group__lswr.html#gae173e8ed91717700471a1dcd06f00f67">swr_init</a></div><div class="ttdeci">int swr_init(struct SwrContext *s)</div></div>
+<div class="ttc" id="agroup__lavc__core_html_gae80afec6f26df6607eaacf39b561c315"><div class="ttname"><a href="../../d5/d44/group__lavc__core.html#gae80afec6f26df6607eaacf39b561c315">avcodec_alloc_context3</a></div><div class="ttdeci">AVCodecContext * avcodec_alloc_context3(const AVCodec *codec)</div></div>
+<div class="ttc" id="agroup__lavu__misc_html_gga9a84bba4713dfced21a1a56163be1f48a7b4e33b8f30ac94d34ce8d9f7c33927a"><div class="ttname"><a href="../../d7/d83/group__lavu__misc.html#gga9a84bba4713dfced21a1a56163be1f48a7b4e33b8f30ac94d34ce8d9f7c33927a">AVMEDIA_TYPE_AUDIO</a></div><div class="ttdeci">@ AVMEDIA_TYPE_AUDIO</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d93/avutil_8h_source.html#l00202">avutil.h:202</a></div></div>
+<div class="ttc" id="a_s_d_l__egl_8h_html_a76461e97a098d2c9ae20ac193d3825ae"><div class="ttname"><a href="../../df/d32/_s_d_l__egl_8h.html#a76461e97a098d2c9ae20ac193d3825ae">buffer</a></div><div class="ttdeci">EGLContext EGLenum EGLClientBuffer buffer</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/_s_d_l__egl_8h_source.html#l00952">SDL_egl.h:952</a></div></div>
+<div class="ttc" id="agroup__lavc__decoding_html_ga11e6542c4e66d3028668788a1a74217c"><div class="ttname"><a href="../../d0/d0c/group__lavc__decoding.html#ga11e6542c4e66d3028668788a1a74217c">avcodec_receive_frame</a></div><div class="ttdeci">int avcodec_receive_frame(AVCodecContext *avctx, AVFrame *frame)</div></div>
+<div class="ttc" id="a_mem_buffer_8cpp_html_a685632d9cd2b61b24a9bfc649d54937e"><div class="ttname"><a href="../../da/d6a/_mem_buffer_8cpp.html#a685632d9cd2b61b24a9bfc649d54937e">AllocMemBuffer</a></div><div class="ttdeci">PMemBuffer AllocMemBuffer(size_t size)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d6a/_mem_buffer_8cpp_source.html#l00020">MemBuffer.cpp:20</a></div></div>
+<div class="ttc" id="aclass_audio_base_data_source_html_aa6300c7739d5d86ebb0867df5dd7d840"><div class="ttname"><a href="../../da/dfd/class_audio_base_data_source.html#aa6300c7739d5d86ebb0867df5dd7d840">AudioBaseDataSource::bOpened</a></div><div class="ttdeci">bool bOpened</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d56/_media_player_8cpp_source.html#l00901">MediaPlayer.cpp:901</a></div></div>
+<div class="ttc" id="agroup__lswr_html_gad7f29022726c871aadf935281a9813bc"><div class="ttname"><a href="../../df/dcb/group__lswr.html#gad7f29022726c871aadf935281a9813bc">swr_alloc_set_opts</a></div><div class="ttdeci">struct SwrContext * swr_alloc_set_opts(struct SwrContext *s, int64_t out_ch_layout, enum AVSampleFormat out_sample_fmt, int out_sample_rate, int64_t in_ch_layout, enum AVSampleFormat in_sample_fmt, int in_sample_rate, int log_offset, void *log_ctx)</div></div>
+<div class="ttc" id="agroup__lavc__core_html_ga11f785a188d7d9df71621001465b0f1d"><div class="ttname"><a href="../../d5/d44/group__lavc__core.html#ga11f785a188d7d9df71621001465b0f1d">avcodec_open2</a></div><div class="ttdeci">int avcodec_open2(AVCodecContext *avctx, const AVCodec *codec, AVDictionary **options)</div></div>
+<div class="ttc" id="aclass_audio_base_data_source_html_aa07891dd382ea3490b1b019515429c50"><div class="ttname"><a href="../../da/dfd/class_audio_base_data_source.html#aa07891dd382ea3490b1b019515429c50">AudioBaseDataSource::pFormatContext</a></div><div class="ttdeci">AVFormatContext * pFormatContext</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d56/_media_player_8cpp_source.html#l00897">MediaPlayer.cpp:897</a></div></div>
+<div class="ttc" id="agroup__lavf__decoding_html_gad42172e27cddafb81096939783b157bb"><div class="ttname"><a href="../../dc/d2c/group__lavf__decoding.html#gad42172e27cddafb81096939783b157bb">avformat_find_stream_info</a></div><div class="ttdeci">int avformat_find_stream_info(AVFormatContext *ic, AVDictionary **options)</div></div>
+<div class="ttc" id="agroup__lswr_html_ga818f7d78b1ad7d8d5b70de374b668c34"><div class="ttname"><a href="../../df/dcb/group__lswr.html#ga818f7d78b1ad7d8d5b70de374b668c34">swr_free</a></div><div class="ttdeci">void swr_free(struct SwrContext **s)</div></div>
+<div class="ttc" id="agroup__lswr_html_gaa5bb6cab830146efa8c760fa66ee582a"><div class="ttname"><a href="../../df/dcb/group__lswr.html#gaa5bb6cab830146efa8c760fa66ee582a">swr_convert</a></div><div class="ttdeci">int swr_convert(struct SwrContext *s, uint8_t **out, int out_count, const uint8_t **in, int in_count)</div></div>
+<div class="ttc" id="agroup__lavc__packet_html_gaaf85aa950695631e0217a16062289b66"><div class="ttname"><a href="../../de/d4a/group__lavc__packet.html#gaaf85aa950695631e0217a16062289b66">av_packet_alloc</a></div><div class="ttdeci">AVPacket * av_packet_alloc(void)</div></div>
+<div class="ttc" id="astruct_a_v_codec_context_html_a1bdba69ea111e2a9d03fdaa7a46a4c45"><div class="ttname"><a href="../../de/d1f/struct_a_v_codec_context.html#a1bdba69ea111e2a9d03fdaa7a46a4c45">AVCodecContext::sample_fmt</a></div><div class="ttdeci">enum AVSampleFormat sample_fmt</div><div class="ttdoc">sample format</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d02/avcodec_8h_source.html#l02233">avcodec.h:2233</a></div></div>
+<div class="ttc" id="a_s_d_l__egl_8h_html_a10d3bc96cdfc1d478f52c13d5ffd9316"><div class="ttname"><a href="../../df/d32/_s_d_l__egl_8h.html#a10d3bc96cdfc1d478f52c13d5ffd9316">stream</a></div><div class="ttdeci">EGLStreamKHR stream</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/_s_d_l__egl_8h_source.html#l01082">SDL_egl.h:1082</a></div></div>
+<div class="ttc" id="agroup__lavc__decoding_html_ga58bc4bf1e0ac59e27362597e467efff3"><div class="ttname"><a href="../../d0/d0c/group__lavc__decoding.html#ga58bc4bf1e0ac59e27362597e467efff3">avcodec_send_packet</a></div><div class="ttdeci">int avcodec_send_packet(AVCodecContext *avctx, const AVPacket *avpkt)</div></div>
+<div class="ttc" id="astruct_a_v_format_context_html_acfefb6b6cf21e87a0dcbd1a547ba2348"><div class="ttname"><a href="../../de/d85/struct_a_v_format_context.html#acfefb6b6cf21e87a0dcbd1a547ba2348">AVFormatContext::streams</a></div><div class="ttdeci">AVStream ** streams</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/df2/avformat_8h_source.html#l01412">avformat.h:1412</a></div></div>
+<div class="ttc" id="aclass_audio_base_data_source_html_a3ce167a9663f4832fcea452039b9d774"><div class="ttname"><a href="../../da/dfd/class_audio_base_data_source.html#a3ce167a9663f4832fcea452039b9d774">AudioBaseDataSource::pConverter</a></div><div class="ttdeci">SwrContext * pConverter</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d56/_media_player_8cpp_source.html#l00900">MediaPlayer.cpp:900</a></div></div>
+<div class="ttc" id="agroup__lavc__core_html_gac7b282f51540ca7a99416a3ba6ee0d16"><div class="ttname"><a href="../../d5/d44/group__lavc__core.html#gac7b282f51540ca7a99416a3ba6ee0d16">avcodec_parameters_to_context</a></div><div class="ttdeci">int avcodec_parameters_to_context(AVCodecContext *codec, const AVCodecParameters *par)</div></div>
+<div class="ttc" id="astruct_a_v_frame_html_a02f45ab8191aea1660159f1e464237ea"><div class="ttname"><a href="../../d6/d03/struct_a_v_frame.html#a02f45ab8191aea1660159f1e464237ea">AVFrame::nb_samples</a></div><div class="ttdeci">int nb_samples</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d7d/frame_8h_source.html#l00361">frame.h:361</a></div></div>
+<div class="ttc" id="a_s_d_l__config_8h_html_aba7bc1797add20fe3efdf37ced1182c5"><div class="ttname"><a href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a></div><div class="ttdeci">unsigned __int8 uint8_t</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d8f/_s_d_l__config_8h_source.html#l00035">SDL_config.h:35</a></div></div>
+<div class="ttc" id="agroup__lavu__sampfmts_html_ggaf9a51ca15301871723577c730b5865c5aea6132df57aebc3f76e10665395c46af"><div class="ttname"><a href="../../da/d54/group__lavu__sampfmts.html#ggaf9a51ca15301871723577c730b5865c5aea6132df57aebc3f76e10665395c46af">AV_SAMPLE_FMT_S16</a></div><div class="ttdeci">@ AV_SAMPLE_FMT_S16</div><div class="ttdoc">signed 16 bits</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d7e/samplefmt_8h_source.html#l00061">samplefmt.h:61</a></div></div>
+<div class="ttc" id="aclass_audio_base_data_source_html_a5883d3206c5500485d5ff825caf67a73"><div class="ttname"><a href="../../da/dfd/class_audio_base_data_source.html#a5883d3206c5500485d5ff825caf67a73">AudioBaseDataSource::queue</a></div><div class="ttdeci">std::queue&lt; PMemBuffer, std::deque&lt; PMemBuffer &gt; &gt; queue</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d56/_media_player_8cpp_source.html#l00902">MediaPlayer.cpp:902</a></div></div>
+<div class="ttc" id="astruct_a_v_packet_html"><div class="ttname"><a href="../../d4/d31/struct_a_v_packet.html">AVPacket</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d02/avcodec_8h_source.html#l01454">avcodec.h:1454</a></div></div>
+<div class="ttc" id="astruct_a_v_frame_html_a1d0f65014a8d1bf78cec8cbed2304992"><div class="ttname"><a href="../../d6/d03/struct_a_v_frame.html#a1d0f65014a8d1bf78cec8cbed2304992">AVFrame::data</a></div><div class="ttdeci">uint8_t * data[AV_NUM_DATA_POINTERS]</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d7d/frame_8h_source.html#l00309">frame.h:309</a></div></div>
+<div class="ttc" id="aclass_audio_base_data_source_html_ae810f4bf456410a7f34556dac7a72096"><div class="ttname"><a href="../../da/dfd/class_audio_base_data_source.html#ae810f4bf456410a7f34556dac7a72096">AudioBaseDataSource::Close</a></div><div class="ttdeci">virtual void Close()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d56/_media_player_8cpp_source.html#l00965">MediaPlayer.cpp:965</a></div></div>
+<div class="ttc" id="astruct_a_v_stream_html"><div class="ttname"><a href="../../d4/d6c/struct_a_v_stream.html">AVStream</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dc/df2/avformat_8h_source.html#l00872">avformat.h:872</a></div></div>
+<div class="ttc" id="astruct_a_v_codec_html"><div class="ttname"><a href="../../df/d2a/struct_a_v_codec.html">AVCodec</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d02/avcodec_8h_source.html#l03481">avcodec.h:3481</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a1dbb21208b9047cc8031ca9c840d3c2f"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1dbb21208b9047cc8031ca9c840d3c2f">res</a></div><div class="ttdeci">GLuint res</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l07940">SDL_opengl_glext.h:7940</a></div></div>
+<div class="ttc" id="a_mem_buffer_8h_html_a8722c69b0b425d6a28bc23839396f8f5"><div class="ttname"><a href="../../de/d13/_mem_buffer_8h.html#a8722c69b0b425d6a28bc23839396f8f5">PMemBuffer</a></div><div class="ttdeci">std::shared_ptr&lt; IMemBuffer &gt; PMemBuffer</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d13/_mem_buffer_8h_source.html#l00013">MemBuffer.h:13</a></div></div>
+<div class="ttc" id="astruct_a_v_codec_context_html_ac1e6c2cd1269caa7570575725c682a49"><div class="ttname"><a href="../../de/d1f/struct_a_v_codec_context.html#ac1e6c2cd1269caa7570575725c682a49">AVCodecContext::channels</a></div><div class="ttdeci">int channels</div><div class="ttdoc">number of audio channels</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d02/avcodec_8h_source.html#l02226">avcodec.h:2226</a></div></div>
+<div class="ttc" id="aclass_audio_base_data_source_html_a42636e56d57ce36f515449edd1922385"><div class="ttname"><a href="../../da/dfd/class_audio_base_data_source.html#a42636e56d57ce36f515449edd1922385">AudioBaseDataSource::pCodecContext</a></div><div class="ttdeci">AVCodecContext * pCodecContext</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d56/_media_player_8cpp_source.html#l00899">MediaPlayer.cpp:899</a></div></div>
+<div class="ttc" id="astruct_a_v_frame_html"><div class="ttname"><a href="../../d6/d03/struct_a_v_frame.html">AVFrame</a></div><div class="ttdef"><b>Definition:</b> <a href="../../df/d7d/frame_8h_source.html#l00295">frame.h:295</a></div></div>
+<div class="ttc" id="astruct_a_v_codec_context_html_aeb08c575a79eb84fc4155dda88f46c06"><div class="ttname"><a href="../../de/d1f/struct_a_v_codec_context.html#aeb08c575a79eb84fc4155dda88f46c06">AVCodecContext::channel_layout</a></div><div class="ttdeci">uint64_t channel_layout</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d02/avcodec_8h_source.html#l02276">avcodec.h:2276</a></div></div>
+<div class="ttc" id="astruct_a_v_codec_context_html_a8ff0b000c463361e234af48d03aadfc0"><div class="ttname"><a href="../../de/d1f/struct_a_v_codec_context.html#a8ff0b000c463361e234af48d03aadfc0">AVCodecContext::sample_rate</a></div><div class="ttdeci">int sample_rate</div><div class="ttdoc">samples per second</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d02/avcodec_8h_source.html#l02225">avcodec.h:2225</a></div></div>
+<div class="ttc" id="agroup__lavf__decoding_html_gaa6fa468c922ff5c60a6021dcac09aff9"><div class="ttname"><a href="../../dc/d2c/group__lavf__decoding.html#gaa6fa468c922ff5c60a6021dcac09aff9">av_find_best_stream</a></div><div class="ttdeci">int av_find_best_stream(AVFormatContext *ic, enum AVMediaType type, int wanted_stream_nb, int related_stream, AVCodec **decoder_ret, int flags)</div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../da/dfd/class_audio_base_data_source.html">AudioBaseDataSource</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:04:31. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

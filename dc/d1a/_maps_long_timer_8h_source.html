@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Исходный файл C:/git/world-of-might-and-magic/Engine/MapsLongTimer.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('dc/d1a/_maps_long_timer_8h_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">MapsLongTimer.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../dc/d1a/_maps_long_timer_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d0/d0e/_engine_2_time_8h.html">Engine/Time.h</a>&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">/*  169 */</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#pragma pack(push, 1)</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="../../da/d77/struct_maps_long_timer.html">    6</a></span>&#160;<span class="keyword">struct </span><a class="code" href="../../da/d77/struct_maps_long_timer.html">MapsLongTimer</a> {</div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="../../da/d77/struct_maps_long_timer.html#ab2d7ce8d91514d18c211d7a9c3fe986a">    7</a></span>&#160;    <a class="code" href="../../df/dc2/struct_game_time.html">GameTime</a> <a class="code" href="../../da/d77/struct_maps_long_timer.html#ab2d7ce8d91514d18c211d7a9c3fe986a">NextStartTime</a>;  <span class="comment">// timer will either fire event at this time (type</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;                             <span class="comment">// 2, field_C == 0)</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="../../da/d77/struct_maps_long_timer.html#a38d249af0ee60454264ffae164bc3c71">    9</a></span>&#160;    <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> <a class="code" href="../../da/d77/struct_maps_long_timer.html#a38d249af0ee60454264ffae164bc3c71">timer_evt_ID</a>;</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="../../da/d77/struct_maps_long_timer.html#a6358fe46498c27adb95edf1a4b183834">   10</a></span>&#160;    <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> <a class="code" href="../../da/d77/struct_maps_long_timer.html#a6358fe46498c27adb95edf1a4b183834">timer_evt_seq_num</a>;</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="../../da/d77/struct_maps_long_timer.html#ac0c2670ac24e2f2080a279a69bd2beba">   11</a></span>&#160;    <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> <a class="code" href="../../da/d77/struct_maps_long_timer.html#ac0c2670ac24e2f2080a279a69bd2beba">time_left_to_fire</a>;</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="../../da/d77/struct_maps_long_timer.html#a44806ff5a27866f339a46dd0df71588a">   12</a></span>&#160;    <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> <a class="code" href="../../da/d77/struct_maps_long_timer.html#a44806ff5a27866f339a46dd0df71588a">IntervalHalfMins</a>;  <span class="comment">// or fire on these intervals (type 1)</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="../../da/d77/struct_maps_long_timer.html#ae965e3d47e3755882fd194c7e9e2e9a5">   13</a></span>&#160;    <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> <a class="code" href="../../da/d77/struct_maps_long_timer.html#ae965e3d47e3755882fd194c7e9e2e9a5">YearsInterval</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="../../da/d77/struct_maps_long_timer.html#a9eb4c80fa51b6d6efa916bfeee34b273">   14</a></span>&#160;    <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> <a class="code" href="../../da/d77/struct_maps_long_timer.html#a9eb4c80fa51b6d6efa916bfeee34b273">MonthsInterval</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="../../da/d77/struct_maps_long_timer.html#a068a67edb9d92cf8c5dd959dc6b3edf6">   15</a></span>&#160;    <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> <a class="code" href="../../da/d77/struct_maps_long_timer.html#a068a67edb9d92cf8c5dd959dc6b3edf6">WeeksInterval</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="../../da/d77/struct_maps_long_timer.html#a21a0861ae15efb367e095ce0acd24fd2">   16</a></span>&#160;    <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> <a class="code" href="../../da/d77/struct_maps_long_timer.html#a21a0861ae15efb367e095ce0acd24fd2">HoursInterval</a>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="../../da/d77/struct_maps_long_timer.html#ac172d1860c98fbf5f5491c9f2c72ab87">   17</a></span>&#160;    <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> <a class="code" href="../../da/d77/struct_maps_long_timer.html#ac172d1860c98fbf5f5491c9f2c72ab87">MinutesInterval</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="../../da/d77/struct_maps_long_timer.html#a99e201b35bc320a529d44feb9dabdfce">   18</a></span>&#160;    <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> <a class="code" href="../../da/d77/struct_maps_long_timer.html#a99e201b35bc320a529d44feb9dabdfce">SecondsInterval</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="../../da/d77/struct_maps_long_timer.html#a9e0df481f8e94fe7e85aab19ce2e9099">   19</a></span>&#160;    <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> <a class="code" href="../../da/d77/struct_maps_long_timer.html#a9e0df481f8e94fe7e85aab19ce2e9099">timer_evt_type</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="../../da/d77/struct_maps_long_timer.html#a5678d2705593698fb790a700e9a52667">   20</a></span>&#160;    <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> <a class="code" href="../../da/d77/struct_maps_long_timer.html#a5678d2705593698fb790a700e9a52667">field_1E</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;};</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#pragma pack(pop)</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">extern</span> <a class="code" href="../../da/d77/struct_maps_long_timer.html">MapsLongTimer</a> <a class="code" href="../../dc/d1a/_maps_long_timer_8h.html#a84c7acfc2ef134d420252a6f96423f86">MapsLongTimersList</a>[100];  <span class="comment">// 5B5928</span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="a_s_d_l__config_8h_html_a269259c924dce846340ddbb810db2e3c"><div class="ttname"><a href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a></div><div class="ttdeci">signed __int16 int16_t</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d8f/_s_d_l__config_8h_source.html#l00036">SDL_config.h:36</a></div></div>
+<div class="ttc" id="astruct_maps_long_timer_html_ac172d1860c98fbf5f5491c9f2c72ab87"><div class="ttname"><a href="../../da/d77/struct_maps_long_timer.html#ac172d1860c98fbf5f5491c9f2c72ab87">MapsLongTimer::MinutesInterval</a></div><div class="ttdeci">int16_t MinutesInterval</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d1a/_maps_long_timer_8h_source.html#l00017">MapsLongTimer.h:17</a></div></div>
+<div class="ttc" id="astruct_maps_long_timer_html_a068a67edb9d92cf8c5dd959dc6b3edf6"><div class="ttname"><a href="../../da/d77/struct_maps_long_timer.html#a068a67edb9d92cf8c5dd959dc6b3edf6">MapsLongTimer::WeeksInterval</a></div><div class="ttdeci">int16_t WeeksInterval</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d1a/_maps_long_timer_8h_source.html#l00015">MapsLongTimer.h:15</a></div></div>
+<div class="ttc" id="astruct_maps_long_timer_html_a99e201b35bc320a529d44feb9dabdfce"><div class="ttname"><a href="../../da/d77/struct_maps_long_timer.html#a99e201b35bc320a529d44feb9dabdfce">MapsLongTimer::SecondsInterval</a></div><div class="ttdeci">int16_t SecondsInterval</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d1a/_maps_long_timer_8h_source.html#l00018">MapsLongTimer.h:18</a></div></div>
+<div class="ttc" id="astruct_maps_long_timer_html_a9eb4c80fa51b6d6efa916bfeee34b273"><div class="ttname"><a href="../../da/d77/struct_maps_long_timer.html#a9eb4c80fa51b6d6efa916bfeee34b273">MapsLongTimer::MonthsInterval</a></div><div class="ttdeci">int16_t MonthsInterval</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d1a/_maps_long_timer_8h_source.html#l00014">MapsLongTimer.h:14</a></div></div>
+<div class="ttc" id="astruct_maps_long_timer_html_ae965e3d47e3755882fd194c7e9e2e9a5"><div class="ttname"><a href="../../da/d77/struct_maps_long_timer.html#ae965e3d47e3755882fd194c7e9e2e9a5">MapsLongTimer::YearsInterval</a></div><div class="ttdeci">int16_t YearsInterval</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d1a/_maps_long_timer_8h_source.html#l00013">MapsLongTimer.h:13</a></div></div>
+<div class="ttc" id="astruct_maps_long_timer_html_ac0c2670ac24e2f2080a279a69bd2beba"><div class="ttname"><a href="../../da/d77/struct_maps_long_timer.html#ac0c2670ac24e2f2080a279a69bd2beba">MapsLongTimer::time_left_to_fire</a></div><div class="ttdeci">int16_t time_left_to_fire</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d1a/_maps_long_timer_8h_source.html#l00011">MapsLongTimer.h:11</a></div></div>
+<div class="ttc" id="astruct_maps_long_timer_html_a44806ff5a27866f339a46dd0df71588a"><div class="ttname"><a href="../../da/d77/struct_maps_long_timer.html#a44806ff5a27866f339a46dd0df71588a">MapsLongTimer::IntervalHalfMins</a></div><div class="ttdeci">int16_t IntervalHalfMins</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d1a/_maps_long_timer_8h_source.html#l00012">MapsLongTimer.h:12</a></div></div>
+<div class="ttc" id="astruct_maps_long_timer_html_a9e0df481f8e94fe7e85aab19ce2e9099"><div class="ttname"><a href="../../da/d77/struct_maps_long_timer.html#a9e0df481f8e94fe7e85aab19ce2e9099">MapsLongTimer::timer_evt_type</a></div><div class="ttdeci">int16_t timer_evt_type</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d1a/_maps_long_timer_8h_source.html#l00019">MapsLongTimer.h:19</a></div></div>
+<div class="ttc" id="astruct_maps_long_timer_html"><div class="ttname"><a href="../../da/d77/struct_maps_long_timer.html">MapsLongTimer</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d1a/_maps_long_timer_8h_source.html#l00006">MapsLongTimer.h:6</a></div></div>
+<div class="ttc" id="a_maps_long_timer_8h_html_a84c7acfc2ef134d420252a6f96423f86"><div class="ttname"><a href="../../dc/d1a/_maps_long_timer_8h.html#a84c7acfc2ef134d420252a6f96423f86">MapsLongTimersList</a></div><div class="ttdeci">MapsLongTimer MapsLongTimersList[100]</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d5b/mm7__data_8cpp_source.html#l00165">mm7_data.cpp:165</a></div></div>
+<div class="ttc" id="astruct_maps_long_timer_html_a38d249af0ee60454264ffae164bc3c71"><div class="ttname"><a href="../../da/d77/struct_maps_long_timer.html#a38d249af0ee60454264ffae164bc3c71">MapsLongTimer::timer_evt_ID</a></div><div class="ttdeci">int16_t timer_evt_ID</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d1a/_maps_long_timer_8h_source.html#l00009">MapsLongTimer.h:9</a></div></div>
+<div class="ttc" id="astruct_maps_long_timer_html_a21a0861ae15efb367e095ce0acd24fd2"><div class="ttname"><a href="../../da/d77/struct_maps_long_timer.html#a21a0861ae15efb367e095ce0acd24fd2">MapsLongTimer::HoursInterval</a></div><div class="ttdeci">int16_t HoursInterval</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d1a/_maps_long_timer_8h_source.html#l00016">MapsLongTimer.h:16</a></div></div>
+<div class="ttc" id="astruct_maps_long_timer_html_a5678d2705593698fb790a700e9a52667"><div class="ttname"><a href="../../da/d77/struct_maps_long_timer.html#a5678d2705593698fb790a700e9a52667">MapsLongTimer::field_1E</a></div><div class="ttdeci">int16_t field_1E</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d1a/_maps_long_timer_8h_source.html#l00020">MapsLongTimer.h:20</a></div></div>
+<div class="ttc" id="astruct_maps_long_timer_html_a6358fe46498c27adb95edf1a4b183834"><div class="ttname"><a href="../../da/d77/struct_maps_long_timer.html#a6358fe46498c27adb95edf1a4b183834">MapsLongTimer::timer_evt_seq_num</a></div><div class="ttdeci">int16_t timer_evt_seq_num</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d1a/_maps_long_timer_8h_source.html#l00010">MapsLongTimer.h:10</a></div></div>
+<div class="ttc" id="astruct_game_time_html"><div class="ttname"><a href="../../df/dc2/struct_game_time.html">GameTime</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d0e/_engine_2_time_8h_source.html#l00014">Time.h:14</a></div></div>
+<div class="ttc" id="astruct_maps_long_timer_html_ab2d7ce8d91514d18c211d7a9c3fe986a"><div class="ttname"><a href="../../da/d77/struct_maps_long_timer.html#ab2d7ce8d91514d18c211d7a9c3fe986a">MapsLongTimer::NextStartTime</a></div><div class="ttdeci">GameTime NextStartTime</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d1a/_maps_long_timer_8h_source.html#l00007">MapsLongTimer.h:7</a></div></div>
+<div class="ttc" id="a_engine_2_time_8h_html"><div class="ttname"><a href="../../d0/d0e/_engine_2_time_8h.html">Time.h</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_0b6ee6e7e9547e675db4add2e5de97da.html">Engine</a></li><li class="navelem"><a class="el" href="../../dc/d1a/_maps_long_timer_8h.html">MapsLongTimer.h</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:03:31. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

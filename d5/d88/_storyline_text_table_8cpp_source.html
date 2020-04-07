@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Исходный файл C:/git/world-of-might-and-magic/Engine/Tables/StorylineTextTable.cpp</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d5/d88/_storyline_text_table_8cpp_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">StorylineTextTable.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d5/d88/_storyline_text_table_8cpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../db/dab/_storyline_text_table_8h.html">Engine/Tables/StorylineTextTable.h</a>&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;../LOD.h&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="../../db/dab/_storyline_text_table_8h.html#abb3a8f29c860c45d3b29d0a948a7b328">    7</a></span>&#160;<span class="keywordtype">char</span> *<a class="code" href="../../d5/d88/_storyline_text_table_8cpp.html#abb3a8f29c860c45d3b29d0a948a7b328">pHistoryTXT_Raw</a>;</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="../../db/dab/_storyline_text_table_8h.html#acb91251261edc3496e212dd30dbf7c61">    8</a></span>&#160;<span class="keyword">struct </span><a class="code" href="../../d8/db2/struct_storyline_text.html">StorylineText</a> *<a class="code" href="../../d5/d88/_storyline_text_table_8cpp.html#acb91251261edc3496e212dd30dbf7c61">pStorylineText</a>;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">extern</span> std::vector&lt;char *&gt; <a class="code" href="../../d5/d88/_storyline_text_table_8cpp.html#ae146e86f2bb99e255b31df22155b2d79">Tokenize</a>(<span class="keywordtype">char</span> *<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#ad3c78daa7d8673f71649d4840c641779">input</a>, <span class="keyword">const</span> <span class="keywordtype">char</span> separator);</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">//----- (00453E6D) --------------------------------------------------------</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="../../d8/db2/struct_storyline_text.html#a2a9a8a7d53a9e725bb1f0a6e092b0218">   13</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d8/db2/struct_storyline_text.html#a2a9a8a7d53a9e725bb1f0a6e092b0218">StorylineText::Initialize</a>() {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordtype">char</span> *test_string;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    free(<a class="code" href="../../d5/d88/_storyline_text_table_8cpp.html#abb3a8f29c860c45d3b29d0a948a7b328">pHistoryTXT_Raw</a>);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="../../d5/d88/_storyline_text_table_8cpp.html#abb3a8f29c860c45d3b29d0a948a7b328">pHistoryTXT_Raw</a> = (<span class="keywordtype">char</span>*)<a class="code" href="../../de/d42/_l_o_d_8cpp.html#a0658cabda1f3f14fa5dc2f10a9b5d6ec">pEvents_LOD</a>-&gt;<a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#af2af972a90784bbcfa975ccd0346385d">LoadCompressedTexture</a>(<span class="stringliteral">&quot;history.txt&quot;</span>);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    strtok(<a class="code" href="../../d5/d88/_storyline_text_table_8cpp.html#abb3a8f29c860c45d3b29d0a948a7b328">pHistoryTXT_Raw</a>, <span class="stringliteral">&quot;\r&quot;</span>);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="../../d8/db2/struct_storyline_text.html#ad7d540870d3564378305bfc75e842f57">StoreLine</a>[0].<a class="code" href="../../d2/d28/struct_storyline_record.html#abae9a0979310798aa67977051ba1af86">pText</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="../../d8/db2/struct_storyline_text.html#ad7d540870d3564378305bfc75e842f57">StoreLine</a>[0].<a class="code" href="../../d2/d28/struct_storyline_record.html#a6b61afae21238fe5e9ca5823aca9b4c0">pPageTitle</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="../../d8/db2/struct_storyline_text.html#ad7d540870d3564378305bfc75e842f57">StoreLine</a>[0].<a class="code" href="../../d2/d28/struct_storyline_record.html#a9726c420cdd77ac00b0411febf2e10c3">uTime</a> = 0;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="../../d8/db2/struct_storyline_text.html#ad7d540870d3564378305bfc75e842f57">StoreLine</a>[0].<a class="code" href="../../d2/d28/struct_storyline_record.html#aef38920800493e228f1b62e4a11d7711">f_9</a> = 0;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="../../d8/db2/struct_storyline_text.html#ad7d540870d3564378305bfc75e842f57">StoreLine</a>[0].<a class="code" href="../../d2/d28/struct_storyline_record.html#aa950ff470104b8be275c148bd5b9925b">f_A</a> = 0;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="../../d8/db2/struct_storyline_text.html#ad7d540870d3564378305bfc75e842f57">StoreLine</a>[0].<a class="code" href="../../d2/d28/struct_storyline_record.html#a7c885e4061b7b52b957b6781aa02533c">f_B</a> = 0;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 28; ++i) {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        test_string = strtok(NULL, <span class="stringliteral">&quot;\r&quot;</span>) + 1;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keyword">auto</span> tokens = <a class="code" href="../../d5/d88/_storyline_text_table_8cpp.html#ae146e86f2bb99e255b31df22155b2d79">Tokenize</a>(test_string, <span class="charliteral">&#39;\t&#39;</span>);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <a class="code" href="../../d8/db2/struct_storyline_text.html#ad7d540870d3564378305bfc75e842f57">StoreLine</a>[i + 1].<a class="code" href="../../d2/d28/struct_storyline_record.html#abae9a0979310798aa67977051ba1af86">pText</a> = <a class="code" href="../../de/df7/_strings_8h.html#a789f57a6ffe0251d575c135969eb35fa">RemoveQuotes</a>(tokens[1]);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <a class="code" href="../../d8/db2/struct_storyline_text.html#ad7d540870d3564378305bfc75e842f57">StoreLine</a>[i + 1].<a class="code" href="../../d2/d28/struct_storyline_record.html#a9726c420cdd77ac00b0411febf2e10c3">uTime</a> =</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            atoi(tokens[2]);  <span class="comment">// strange but in text here string not digit</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <a class="code" href="../../d8/db2/struct_storyline_text.html#ad7d540870d3564378305bfc75e842f57">StoreLine</a>[i + 1].<a class="code" href="../../d2/d28/struct_storyline_record.html#a6b61afae21238fe5e9ca5823aca9b4c0">pPageTitle</a> = <a class="code" href="../../de/df7/_strings_8h.html#a789f57a6ffe0251d575c135969eb35fa">RemoveQuotes</a>(tokens[3]);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    }</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="a_strings_8h_html_a789f57a6ffe0251d575c135969eb35fa"><div class="ttname"><a href="../../de/df7/_strings_8h.html#a789f57a6ffe0251d575c135969eb35fa">RemoveQuotes</a></div><div class="ttdeci">char * RemoveQuotes(char *str)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/df7/_strings_8h_source.html#l00017">Strings.h:17</a></div></div>
+<div class="ttc" id="a_storyline_text_table_8cpp_html_ae146e86f2bb99e255b31df22155b2d79"><div class="ttname"><a href="../../d5/d88/_storyline_text_table_8cpp.html#ae146e86f2bb99e255b31df22155b2d79">Tokenize</a></div><div class="ttdeci">std::vector&lt; char * &gt; Tokenize(char *input, const char separator)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d44/_strings_8cpp_source.html#l00030">Strings.cpp:30</a></div></div>
+<div class="ttc" id="aclass_l_o_d_1_1_file_html_af2af972a90784bbcfa975ccd0346385d"><div class="ttname"><a href="../../dd/da7/class_l_o_d_1_1_file.html#af2af972a90784bbcfa975ccd0346385d">LOD::File::LoadCompressedTexture</a></div><div class="ttdeci">void * LoadCompressedTexture(const String &amp;pContainer, size_t *data_size=nullptr)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d42/_l_o_d_8cpp_source.html#l00921">LOD.cpp:921</a></div></div>
+<div class="ttc" id="astruct_storyline_record_html_abae9a0979310798aa67977051ba1af86"><div class="ttname"><a href="../../d2/d28/struct_storyline_record.html#abae9a0979310798aa67977051ba1af86">StorylineRecord::pText</a></div><div class="ttdeci">char * pText</div><div class="ttdef"><b>Definition:</b> <a href="../../db/dab/_storyline_text_table_8h_source.html#l00007">StorylineTextTable.h:7</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_ad3c78daa7d8673f71649d4840c641779"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#ad3c78daa7d8673f71649d4840c641779">input</a></div><div class="ttdeci">GLenum GLenum GLenum input</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l09377">SDL_opengl_glext.h:9377</a></div></div>
+<div class="ttc" id="astruct_storyline_text_html"><div class="ttname"><a href="../../d8/db2/struct_storyline_text.html">StorylineText</a></div><div class="ttdef"><b>Definition:</b> <a href="../../db/dab/_storyline_text_table_8h_source.html#l00018">StorylineTextTable.h:18</a></div></div>
+<div class="ttc" id="astruct_storyline_record_html_aa950ff470104b8be275c148bd5b9925b"><div class="ttname"><a href="../../d2/d28/struct_storyline_record.html#aa950ff470104b8be275c148bd5b9925b">StorylineRecord::f_A</a></div><div class="ttdeci">char f_A</div><div class="ttdef"><b>Definition:</b> <a href="../../db/dab/_storyline_text_table_8h_source.html#l00011">StorylineTextTable.h:11</a></div></div>
+<div class="ttc" id="astruct_storyline_record_html_a7c885e4061b7b52b957b6781aa02533c"><div class="ttname"><a href="../../d2/d28/struct_storyline_record.html#a7c885e4061b7b52b957b6781aa02533c">StorylineRecord::f_B</a></div><div class="ttdeci">char f_B</div><div class="ttdef"><b>Definition:</b> <a href="../../db/dab/_storyline_text_table_8h_source.html#l00012">StorylineTextTable.h:12</a></div></div>
+<div class="ttc" id="astruct_storyline_record_html_a6b61afae21238fe5e9ca5823aca9b4c0"><div class="ttname"><a href="../../d2/d28/struct_storyline_record.html#a6b61afae21238fe5e9ca5823aca9b4c0">StorylineRecord::pPageTitle</a></div><div class="ttdeci">char * pPageTitle</div><div class="ttdef"><b>Definition:</b> <a href="../../db/dab/_storyline_text_table_8h_source.html#l00008">StorylineTextTable.h:8</a></div></div>
+<div class="ttc" id="astruct_storyline_text_html_a2a9a8a7d53a9e725bb1f0a6e092b0218"><div class="ttname"><a href="../../d8/db2/struct_storyline_text.html#a2a9a8a7d53a9e725bb1f0a6e092b0218">StorylineText::Initialize</a></div><div class="ttdeci">void Initialize()</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d88/_storyline_text_table_8cpp_source.html#l00013">StorylineTextTable.cpp:13</a></div></div>
+<div class="ttc" id="astruct_storyline_text_html_ad7d540870d3564378305bfc75e842f57"><div class="ttname"><a href="../../d8/db2/struct_storyline_text.html#ad7d540870d3564378305bfc75e842f57">StorylineText::StoreLine</a></div><div class="ttdeci">StorylineRecord StoreLine[29]</div><div class="ttdef"><b>Definition:</b> <a href="../../db/dab/_storyline_text_table_8h_source.html#l00020">StorylineTextTable.h:20</a></div></div>
+<div class="ttc" id="a_storyline_text_table_8cpp_html_acb91251261edc3496e212dd30dbf7c61"><div class="ttname"><a href="../../d5/d88/_storyline_text_table_8cpp.html#acb91251261edc3496e212dd30dbf7c61">pStorylineText</a></div><div class="ttdeci">struct StorylineText * pStorylineText</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d88/_storyline_text_table_8cpp_source.html#l00008">StorylineTextTable.cpp:8</a></div></div>
+<div class="ttc" id="a_l_o_d_8cpp_html_a0658cabda1f3f14fa5dc2f10a9b5d6ec"><div class="ttname"><a href="../../de/d42/_l_o_d_8cpp.html#a0658cabda1f3f14fa5dc2f10a9b5d6ec">pEvents_LOD</a></div><div class="ttdeci">LODFile_IconsBitmaps * pEvents_LOD</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d42/_l_o_d_8cpp_source.html#l00010">LOD.cpp:10</a></div></div>
+<div class="ttc" id="a_storyline_text_table_8cpp_html_abb3a8f29c860c45d3b29d0a948a7b328"><div class="ttname"><a href="../../d5/d88/_storyline_text_table_8cpp.html#abb3a8f29c860c45d3b29d0a948a7b328">pHistoryTXT_Raw</a></div><div class="ttdeci">char * pHistoryTXT_Raw</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d88/_storyline_text_table_8cpp_source.html#l00007">StorylineTextTable.cpp:7</a></div></div>
+<div class="ttc" id="astruct_storyline_record_html_aef38920800493e228f1b62e4a11d7711"><div class="ttname"><a href="../../d2/d28/struct_storyline_record.html#aef38920800493e228f1b62e4a11d7711">StorylineRecord::f_9</a></div><div class="ttdeci">char f_9</div><div class="ttdef"><b>Definition:</b> <a href="../../db/dab/_storyline_text_table_8h_source.html#l00010">StorylineTextTable.h:10</a></div></div>
+<div class="ttc" id="astruct_storyline_record_html_a9726c420cdd77ac00b0411febf2e10c3"><div class="ttname"><a href="../../d2/d28/struct_storyline_record.html#a9726c420cdd77ac00b0411febf2e10c3">StorylineRecord::uTime</a></div><div class="ttdeci">uint8_t uTime</div><div class="ttdef"><b>Definition:</b> <a href="../../db/dab/_storyline_text_table_8h_source.html#l00009">StorylineTextTable.h:9</a></div></div>
+<div class="ttc" id="a_storyline_text_table_8h_html"><div class="ttname"><a href="../../db/dab/_storyline_text_table_8h.html">StorylineTextTable.h</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_0b6ee6e7e9547e675db4add2e5de97da.html">Engine</a></li><li class="navelem"><a class="el" href="../../dir_a267bb7e9e28e8470e1377bdc086a64c.html">Tables</a></li><li class="navelem"><a class="el" href="../../d5/d88/_storyline_text_table_8cpp.html">StorylineTextTable.cpp</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:03:34. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

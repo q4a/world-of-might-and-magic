@@ -1,0 +1,231 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Исходный файл C:/git/world-of-might-and-magic/Engine/Tables/IconFrameTable.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d7/d5e/_icon_frame_table_8h_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">IconFrameTable.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d7/d5e/_icon_frame_table_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;array&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;cstring&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">class </span><a class="code" href="../../d2/d7f/class_texture.html">Texture</a>;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="../../db/d60/class_icon.html">    8</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../db/d60/class_icon.html">Icon</a> {</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="../../db/d60/class_icon.html#a2c06009b9034912dea464e9f3c3791f9">   10</a></span>&#160;    <span class="keyword">inline</span> <a class="code" href="../../db/d60/class_icon.html#a2c06009b9034912dea464e9f3c3791f9">Icon</a>() : <a class="code" href="../../df/dc4/_s_d_l__opengl_8h.html#a3455aaa12cecc35ac4a42a9bf1273da8">img</a>(nullptr) {}</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="../../db/d60/class_icon.html#a19daa9964a552303803ded0f8d1b5385">   12</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="../../db/d60/class_icon.html#a19daa9964a552303803ded0f8d1b5385">SetAnimationName</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#aaced7cfc21e7d37775d6921bb8177239">name</a>) {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        strcpy(this-&gt;<a class="code" href="../../db/d60/class_icon.html#ae3043014f6925eff6351c80399103ba8">anim_name</a>, name);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    }</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="../../db/d60/class_icon.html#a124929b557245ff875fd4d56440bb1b2">   15</a></span>&#160;    <span class="keyword">inline</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code" href="../../db/d60/class_icon.html#a124929b557245ff875fd4d56440bb1b2">GetAnimationName</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="../../db/d60/class_icon.html#ae3043014f6925eff6351c80399103ba8">anim_name</a>; }</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="../../db/d60/class_icon.html#a6146d607fd23a696a67a49a393271e53">   17</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="../../db/d60/class_icon.html#a6146d607fd23a696a67a49a393271e53">SetAnimLength</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../db/d60/class_icon.html#ab3dc1256090721fdd9d9321b7c8592e6">anim_length</a>) {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        this-&gt;anim_length = <a class="code" href="../../db/d60/class_icon.html#ab3dc1256090721fdd9d9321b7c8592e6">anim_length</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    }</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="../../db/d60/class_icon.html#a725397bfa1ff9e1666855d210653b379">   20</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../db/d60/class_icon.html#a725397bfa1ff9e1666855d210653b379">GetAnimLength</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> this-&gt;<a class="code" href="../../db/d60/class_icon.html#ab3dc1256090721fdd9d9321b7c8592e6">anim_length</a>; }</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="../../db/d60/class_icon.html#a554dd50cdfbf4672f92852985fe784f3">   22</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="../../db/d60/class_icon.html#a554dd50cdfbf4672f92852985fe784f3">SetAnimTime</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../db/d60/class_icon.html#a5f0fe7eb9754695d993a87b6f9f06148">anim_time</a>) {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        this-&gt;anim_time = <a class="code" href="../../db/d60/class_icon.html#a5f0fe7eb9754695d993a87b6f9f06148">anim_time</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    }</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="../../db/d60/class_icon.html#aaef29d07c9b4ab50fa81b281f203a959">   25</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../db/d60/class_icon.html#aaef29d07c9b4ab50fa81b281f203a959">GetAnimTime</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> this-&gt;<a class="code" href="../../db/d60/class_icon.html#a5f0fe7eb9754695d993a87b6f9f06148">anim_time</a>; }</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="../../d2/d7f/class_texture.html">Texture</a> *<a class="code" href="../../db/d60/class_icon.html#ae643cd22b6d76d7cfdccf8f7b2a572b2">GetTexture</a>();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="../../db/d60/class_icon.html#a9c60e6cdaecf837c262e7d965bb4e410">   30</a></span>&#160;    <span class="comment">/* 00C */</span> <span class="keywordtype">char</span> <a class="code" href="../../db/d60/class_icon.html#a9c60e6cdaecf837c262e7d965bb4e410">pTextureName</a>[12];</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="../../db/d60/class_icon.html#a497df0dd0e72876d6c2295a58a78cfe3">   33</a></span>&#160;    <span class="comment">/* 01C */</span> <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> <a class="code" href="../../db/d60/class_icon.html#a497df0dd0e72876d6c2295a58a78cfe3">uFlags</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="../../db/d60/class_icon.html#a5df8df867f5e2d240d9c1bff2633a8ab">   35</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../db/d60/class_icon.html#a5df8df867f5e2d240d9c1bff2633a8ab">id</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="../../db/d60/class_icon.html#ae3043014f6925eff6351c80399103ba8">   38</a></span>&#160;    <span class="keywordtype">char</span> <a class="code" href="../../db/d60/class_icon.html#ae3043014f6925eff6351c80399103ba8">anim_name</a>[64];</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="comment">// char texture_name[64];</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="comment">// unsigned int anim_time;</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="../../db/d60/class_icon.html#ab3dc1256090721fdd9d9321b7c8592e6">   41</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../db/d60/class_icon.html#ab3dc1256090721fdd9d9321b7c8592e6">anim_length</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="../../db/d60/class_icon.html#a5f0fe7eb9754695d993a87b6f9f06148">   42</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../db/d60/class_icon.html#a5f0fe7eb9754695d993a87b6f9f06148">anim_time</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="comment">// unsigned int flags;</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="comment">// unsigned int texture_id;</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="../../db/d60/class_icon.html#a61e5ba96ce0ed08c698a6fe872ba95be">   46</a></span>&#160;    <a class="code" href="../../d2/d7f/class_texture.html">Texture</a> *<a class="code" href="../../db/d60/class_icon.html#a61e5ba96ce0ed08c698a6fe872ba95be">img</a>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;};</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">/*   45 */</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#pragma pack(push, 1)</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="../../d8/dc5/struct_icon_frame_table.html">   51</a></span>&#160;<span class="keyword">struct </span><a class="code" href="../../d8/dc5/struct_icon_frame_table.html">IconFrameTable</a> {</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="../../d8/dc5/struct_icon_frame_table.html#a4a6b5125f0753890ddb9998580712938">   52</a></span>&#160;    <span class="keyword">inline</span> <a class="code" href="../../d8/dc5/struct_icon_frame_table.html#a4a6b5125f0753890ddb9998580712938">IconFrameTable</a>() : <a class="code" href="../../d8/dc5/struct_icon_frame_table.html#a136de1c5f845f54c9bdffe83a79f81e3">uNumIcons</a>(0), <a class="code" href="../../d8/dc5/struct_icon_frame_table.html#ac01203bfb6c2148aea7f98136c7ba894">pIcons</a>(nullptr) {}</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <a class="code" href="../../db/d60/class_icon.html">Icon</a> *<a class="code" href="../../d8/dc5/struct_icon_frame_table.html#a731446052ef2802faf67a4a838626e8a">GetIcon</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> idx);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="../../db/d60/class_icon.html">Icon</a> *<a class="code" href="../../d8/dc5/struct_icon_frame_table.html#a731446052ef2802faf67a4a838626e8a">GetIcon</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *pIconName);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../d8/dc5/struct_icon_frame_table.html#a54fe662106564367c584c401dd2e2b36">FindIcon</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *pIconName);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="../../db/d60/class_icon.html">Icon</a> *<a class="code" href="../../d8/dc5/struct_icon_frame_table.html#ab9a3de4cf322157a8d38e352489bd7b8">GetFrame</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> uIconID, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> frame_time);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d8/dc5/struct_icon_frame_table.html#acfb0219e8ff236adbcb5dd63fb3a6596">InitializeAnimation</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> uIconID);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d8/dc5/struct_icon_frame_table.html#aacc0e6de625a1b4439e2e93a777c235d">ToFile</a>();</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d8/dc5/struct_icon_frame_table.html#a222a7716c20cdc5018f2a15db03a48fe">FromFile</a>(<span class="keywordtype">void</span> *data_mm6, <span class="keywordtype">void</span> *data_mm7, <span class="keywordtype">void</span> *data_mm8);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d8/dc5/struct_icon_frame_table.html#a8ef1d29209b47ede815868a771db3a47">FromFileTxt</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *Args);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="comment">// int GetIconAnimLength(unsigned int uIconID);</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="../../d8/dc5/struct_icon_frame_table.html#a136de1c5f845f54c9bdffe83a79f81e3">   64</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../d8/dc5/struct_icon_frame_table.html#a136de1c5f845f54c9bdffe83a79f81e3">uNumIcons</a>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="../../d8/dc5/struct_icon_frame_table.html#ac01203bfb6c2148aea7f98136c7ba894">   65</a></span>&#160;    <a class="code" href="../../db/d60/class_icon.html">Icon</a> *<a class="code" href="../../d8/dc5/struct_icon_frame_table.html#ac01203bfb6c2148aea7f98136c7ba894">pIcons</a>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;};</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">#pragma pack(pop)</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="../../d0/d6f/class_u_i_animation.html">   69</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d0/d6f/class_u_i_animation.html">UIAnimation</a> {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="../../d0/d6f/class_u_i_animation.html#af6287bb806d40192b476cab940e98cca">   71</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../db/d60/class_icon.html">Icon</a> *<a class="code" href="../../d0/d6f/class_u_i_animation.html#af6287bb806d40192b476cab940e98cca">icon</a>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="../../d0/d6f/class_u_i_animation.html#a5e07d6950ea790a13f1ef3a93c056c8f">   73</a></span>&#160;    <span class="comment">/* 002 */</span> <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> <a class="code" href="../../d0/d6f/class_u_i_animation.html#a5e07d6950ea790a13f1ef3a93c056c8f">field_2</a>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="../../d0/d6f/class_u_i_animation.html#a4826a6893144f3898177d1fe68262323">   74</a></span>&#160;    <span class="comment">/* 004 */</span> <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> <a class="code" href="../../d0/d6f/class_u_i_animation.html#a4826a6893144f3898177d1fe68262323">uAnimTime</a>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="../../d0/d6f/class_u_i_animation.html#a8acfbce3c16dd94e434004ba3cd2163c">   75</a></span>&#160;    <span class="comment">/* 006 */</span> <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> <a class="code" href="../../d0/d6f/class_u_i_animation.html#a8acfbce3c16dd94e434004ba3cd2163c">uAnimLength</a>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="../../d0/d6f/class_u_i_animation.html#a069127aaccc32d92bca609d432cb4b55">   76</a></span>&#160;    <span class="comment">/* 008 */</span> <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> <a class="code" href="../../d0/d6f/class_u_i_animation.html#a069127aaccc32d92bca609d432cb4b55">x</a>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="../../d0/d6f/class_u_i_animation.html#a6bd616d4cd5df5aaa93a5f4ae6011e4a">   77</a></span>&#160;    <span class="comment">/* 00A */</span> <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> <a class="code" href="../../d0/d6f/class_u_i_animation.html#a6bd616d4cd5df5aaa93a5f4ae6011e4a">y</a>;</div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="../../d0/d6f/class_u_i_animation.html#a7ded996b3af2aa273d318f471ea7bcb0">   78</a></span>&#160;    <span class="comment">/* 00C */</span> <span class="keywordtype">char</span> <a class="code" href="../../d0/d6f/class_u_i_animation.html#a7ded996b3af2aa273d318f471ea7bcb0">field_C</a>;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;};</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="keyword">extern</span> <span class="keyword">struct </span><a class="code" href="../../d8/dc5/struct_icon_frame_table.html">IconFrameTable</a> *<a class="code" href="../../d7/d5e/_icon_frame_table_8h.html#ac5392690688386be528779080a603519">pIconsFrameTable</a>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="keyword">extern</span> <a class="code" href="../../d0/d6f/class_u_i_animation.html">UIAnimation</a> *<a class="code" href="../../d7/d5e/_icon_frame_table_8h.html#a57736ab9d5b15bd203ce973183301961">pUIAnim_Food</a>;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="keyword">extern</span> <a class="code" href="../../d0/d6f/class_u_i_animation.html">UIAnimation</a> *<a class="code" href="../../d7/d5e/_icon_frame_table_8h.html#a3fc24d2defbdaca88cb1e52031353d97">pUIAnim_Gold</a>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="keyword">extern</span> <a class="code" href="../../d0/d6f/class_u_i_animation.html">UIAnimation</a> *<a class="code" href="../../d7/d5e/_icon_frame_table_8h.html#af7108d8bc1c81e6faee850552e5cde9a">pUIAnum_Torchlight</a>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="keyword">extern</span> <a class="code" href="../../d0/d6f/class_u_i_animation.html">UIAnimation</a> *<a class="code" href="../../d7/d5e/_icon_frame_table_8h.html#a88cac2bf9581758898e327c744463b91">pUIAnim_WizardEye</a>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="keyword">extern</span> std::array&lt;UIAnimation *, 4&gt; <a class="code" href="../../d7/d5e/_icon_frame_table_8h.html#a4e43b372f0a95b2340869d2d773aef33">pUIAnims</a>;</div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aclass_icon_html_a19daa9964a552303803ded0f8d1b5385"><div class="ttname"><a href="../../db/d60/class_icon.html#a19daa9964a552303803ded0f8d1b5385">Icon::SetAnimationName</a></div><div class="ttdeci">void SetAnimationName(const char *name)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d5e/_icon_frame_table_8h_source.html#l00012">IconFrameTable.h:12</a></div></div>
+<div class="ttc" id="a_s_d_l__config_8h_html_a269259c924dce846340ddbb810db2e3c"><div class="ttname"><a href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a></div><div class="ttdeci">signed __int16 int16_t</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d8f/_s_d_l__config_8h_source.html#l00036">SDL_config.h:36</a></div></div>
+<div class="ttc" id="astruct_icon_frame_table_html_acfb0219e8ff236adbcb5dd63fb3a6596"><div class="ttname"><a href="../../d8/dc5/struct_icon_frame_table.html#acfb0219e8ff236adbcb5dd63fb3a6596">IconFrameTable::InitializeAnimation</a></div><div class="ttdeci">void InitializeAnimation(unsigned int uIconID)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d1b/_icon_frame_table_8cpp_source.html#l00059">IconFrameTable.cpp:59</a></div></div>
+<div class="ttc" id="aclass_icon_html_a124929b557245ff875fd4d56440bb1b2"><div class="ttname"><a href="../../db/d60/class_icon.html#a124929b557245ff875fd4d56440bb1b2">Icon::GetAnimationName</a></div><div class="ttdeci">const char * GetAnimationName() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d5e/_icon_frame_table_8h_source.html#l00015">IconFrameTable.h:15</a></div></div>
+<div class="ttc" id="astruct_icon_frame_table_html_a222a7716c20cdc5018f2a15db03a48fe"><div class="ttname"><a href="../../d8/dc5/struct_icon_frame_table.html#a222a7716c20cdc5018f2a15db03a48fe">IconFrameTable::FromFile</a></div><div class="ttdeci">void FromFile(void *data_mm6, void *data_mm7, void *data_mm8)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d1b/_icon_frame_table_8cpp_source.html#l00087">IconFrameTable.cpp:87</a></div></div>
+<div class="ttc" id="aclass_icon_html_a725397bfa1ff9e1666855d210653b379"><div class="ttname"><a href="../../db/d60/class_icon.html#a725397bfa1ff9e1666855d210653b379">Icon::GetAnimLength</a></div><div class="ttdeci">unsigned int GetAnimLength() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d5e/_icon_frame_table_8h_source.html#l00020">IconFrameTable.h:20</a></div></div>
+<div class="ttc" id="aclass_texture_html"><div class="ttname"><a href="../../d2/d7f/class_texture.html">Texture</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/dbf/_texture_8h_source.html#l00004">Texture.h:4</a></div></div>
+<div class="ttc" id="a_icon_frame_table_8h_html_af7108d8bc1c81e6faee850552e5cde9a"><div class="ttname"><a href="../../d7/d5e/_icon_frame_table_8h.html#af7108d8bc1c81e6faee850552e5cde9a">pUIAnum_Torchlight</a></div><div class="ttdeci">UIAnimation * pUIAnum_Torchlight</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db4/_party_8cpp_source.html#l00048">Party.cpp:48</a></div></div>
+<div class="ttc" id="aclass_icon_html_a5df8df867f5e2d240d9c1bff2633a8ab"><div class="ttname"><a href="../../db/d60/class_icon.html#a5df8df867f5e2d240d9c1bff2633a8ab">Icon::id</a></div><div class="ttdeci">int id</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d5e/_icon_frame_table_8h_source.html#l00035">IconFrameTable.h:35</a></div></div>
+<div class="ttc" id="aclass_icon_html_a6146d607fd23a696a67a49a393271e53"><div class="ttname"><a href="../../db/d60/class_icon.html#a6146d607fd23a696a67a49a393271e53">Icon::SetAnimLength</a></div><div class="ttdeci">void SetAnimLength(unsigned int anim_length)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d5e/_icon_frame_table_8h_source.html#l00017">IconFrameTable.h:17</a></div></div>
+<div class="ttc" id="astruct_icon_frame_table_html"><div class="ttname"><a href="../../d8/dc5/struct_icon_frame_table.html">IconFrameTable</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d5e/_icon_frame_table_8h_source.html#l00051">IconFrameTable.h:51</a></div></div>
+<div class="ttc" id="a_icon_frame_table_8h_html_a3fc24d2defbdaca88cb1e52031353d97"><div class="ttname"><a href="../../d7/d5e/_icon_frame_table_8h.html#a3fc24d2defbdaca88cb1e52031353d97">pUIAnim_Gold</a></div><div class="ttdeci">UIAnimation * pUIAnim_Gold</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db4/_party_8cpp_source.html#l00047">Party.cpp:47</a></div></div>
+<div class="ttc" id="aclass_icon_html_ae643cd22b6d76d7cfdccf8f7b2a572b2"><div class="ttname"><a href="../../db/d60/class_icon.html#ae643cd22b6d76d7cfdccf8f7b2a572b2">Icon::GetTexture</a></div><div class="ttdeci">Texture * GetTexture()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d1b/_icon_frame_table_8cpp_source.html#l00009">IconFrameTable.cpp:9</a></div></div>
+<div class="ttc" id="aclass_icon_html_a497df0dd0e72876d6c2295a58a78cfe3"><div class="ttname"><a href="../../db/d60/class_icon.html#a497df0dd0e72876d6c2295a58a78cfe3">Icon::uFlags</a></div><div class="ttdeci">int16_t uFlags</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d5e/_icon_frame_table_8h_source.html#l00033">IconFrameTable.h:33</a></div></div>
+<div class="ttc" id="a_icon_frame_table_8h_html_a57736ab9d5b15bd203ce973183301961"><div class="ttname"><a href="../../d7/d5e/_icon_frame_table_8h.html#a57736ab9d5b15bd203ce973183301961">pUIAnim_Food</a></div><div class="ttdeci">UIAnimation * pUIAnim_Food</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db4/_party_8cpp_source.html#l00046">Party.cpp:46</a></div></div>
+<div class="ttc" id="astruct_icon_frame_table_html_a136de1c5f845f54c9bdffe83a79f81e3"><div class="ttname"><a href="../../d8/dc5/struct_icon_frame_table.html#a136de1c5f845f54c9bdffe83a79f81e3">IconFrameTable::uNumIcons</a></div><div class="ttdeci">unsigned int uNumIcons</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d5e/_icon_frame_table_8h_source.html#l00064">IconFrameTable.h:64</a></div></div>
+<div class="ttc" id="a_icon_frame_table_8h_html_ac5392690688386be528779080a603519"><div class="ttname"><a href="../../d7/d5e/_icon_frame_table_8h.html#ac5392690688386be528779080a603519">pIconsFrameTable</a></div><div class="ttdeci">struct IconFrameTable * pIconsFrameTable</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d5b/mm7__data_8cpp_source.html#l00168">mm7_data.cpp:168</a></div></div>
+<div class="ttc" id="astruct_icon_frame_table_html_aacc0e6de625a1b4439e2e93a777c235d"><div class="ttname"><a href="../../d8/dc5/struct_icon_frame_table.html#aacc0e6de625a1b4439e2e93a777c235d">IconFrameTable::ToFile</a></div><div class="ttdeci">void ToFile()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d1b/_icon_frame_table_8cpp_source.html#l00070">IconFrameTable.cpp:70</a></div></div>
+<div class="ttc" id="aclass_u_i_animation_html_a7ded996b3af2aa273d318f471ea7bcb0"><div class="ttname"><a href="../../d0/d6f/class_u_i_animation.html#a7ded996b3af2aa273d318f471ea7bcb0">UIAnimation::field_C</a></div><div class="ttdeci">char field_C</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d5e/_icon_frame_table_8h_source.html#l00078">IconFrameTable.h:78</a></div></div>
+<div class="ttc" id="aclass_u_i_animation_html_a5e07d6950ea790a13f1ef3a93c056c8f"><div class="ttname"><a href="../../d0/d6f/class_u_i_animation.html#a5e07d6950ea790a13f1ef3a93c056c8f">UIAnimation::field_2</a></div><div class="ttdeci">int16_t field_2</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d5e/_icon_frame_table_8h_source.html#l00073">IconFrameTable.h:73</a></div></div>
+<div class="ttc" id="astruct_icon_frame_table_html_a731446052ef2802faf67a4a838626e8a"><div class="ttname"><a href="../../d8/dc5/struct_icon_frame_table.html#a731446052ef2802faf67a4a838626e8a">IconFrameTable::GetIcon</a></div><div class="ttdeci">Icon * GetIcon(unsigned int idx)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d1b/_icon_frame_table_8cpp_source.html#l00017">IconFrameTable.cpp:17</a></div></div>
+<div class="ttc" id="aclass_icon_html_ab3dc1256090721fdd9d9321b7c8592e6"><div class="ttname"><a href="../../db/d60/class_icon.html#ab3dc1256090721fdd9d9321b7c8592e6">Icon::anim_length</a></div><div class="ttdeci">unsigned int anim_length</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d5e/_icon_frame_table_8h_source.html#l00041">IconFrameTable.h:41</a></div></div>
+<div class="ttc" id="aclass_u_i_animation_html_a8acfbce3c16dd94e434004ba3cd2163c"><div class="ttname"><a href="../../d0/d6f/class_u_i_animation.html#a8acfbce3c16dd94e434004ba3cd2163c">UIAnimation::uAnimLength</a></div><div class="ttdeci">int16_t uAnimLength</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d5e/_icon_frame_table_8h_source.html#l00075">IconFrameTable.h:75</a></div></div>
+<div class="ttc" id="aclass_icon_html_a5f0fe7eb9754695d993a87b6f9f06148"><div class="ttname"><a href="../../db/d60/class_icon.html#a5f0fe7eb9754695d993a87b6f9f06148">Icon::anim_time</a></div><div class="ttdeci">unsigned int anim_time</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d5e/_icon_frame_table_8h_source.html#l00042">IconFrameTable.h:42</a></div></div>
+<div class="ttc" id="aclass_u_i_animation_html_af6287bb806d40192b476cab940e98cca"><div class="ttname"><a href="../../d0/d6f/class_u_i_animation.html#af6287bb806d40192b476cab940e98cca">UIAnimation::icon</a></div><div class="ttdeci">class Icon * icon</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d5e/_icon_frame_table_8h_source.html#l00071">IconFrameTable.h:71</a></div></div>
+<div class="ttc" id="astruct_icon_frame_table_html_ac01203bfb6c2148aea7f98136c7ba894"><div class="ttname"><a href="../../d8/dc5/struct_icon_frame_table.html#ac01203bfb6c2148aea7f98136c7ba894">IconFrameTable::pIcons</a></div><div class="ttdeci">Icon * pIcons</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d5e/_icon_frame_table_8h_source.html#l00065">IconFrameTable.h:65</a></div></div>
+<div class="ttc" id="aclass_icon_html_a9c60e6cdaecf837c262e7d965bb4e410"><div class="ttname"><a href="../../db/d60/class_icon.html#a9c60e6cdaecf837c262e7d965bb4e410">Icon::pTextureName</a></div><div class="ttdeci">char pTextureName[12]</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d5e/_icon_frame_table_8h_source.html#l00030">IconFrameTable.h:30</a></div></div>
+<div class="ttc" id="aclass_icon_html_a554dd50cdfbf4672f92852985fe784f3"><div class="ttname"><a href="../../db/d60/class_icon.html#a554dd50cdfbf4672f92852985fe784f3">Icon::SetAnimTime</a></div><div class="ttdeci">void SetAnimTime(unsigned int anim_time)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d5e/_icon_frame_table_8h_source.html#l00022">IconFrameTable.h:22</a></div></div>
+<div class="ttc" id="astruct_icon_frame_table_html_a54fe662106564367c584c401dd2e2b36"><div class="ttname"><a href="../../d8/dc5/struct_icon_frame_table.html#a54fe662106564367c584c401dd2e2b36">IconFrameTable::FindIcon</a></div><div class="ttdeci">unsigned int FindIcon(const char *pIconName)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d1b/_icon_frame_table_8cpp_source.html#l00031">IconFrameTable.cpp:31</a></div></div>
+<div class="ttc" id="aclass_u_i_animation_html_a4826a6893144f3898177d1fe68262323"><div class="ttname"><a href="../../d0/d6f/class_u_i_animation.html#a4826a6893144f3898177d1fe68262323">UIAnimation::uAnimTime</a></div><div class="ttdeci">int16_t uAnimTime</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d5e/_icon_frame_table_8h_source.html#l00074">IconFrameTable.h:74</a></div></div>
+<div class="ttc" id="aclass_u_i_animation_html_a069127aaccc32d92bca609d432cb4b55"><div class="ttname"><a href="../../d0/d6f/class_u_i_animation.html#a069127aaccc32d92bca609d432cb4b55">UIAnimation::x</a></div><div class="ttdeci">int16_t x</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d5e/_icon_frame_table_8h_source.html#l00076">IconFrameTable.h:76</a></div></div>
+<div class="ttc" id="astruct_icon_frame_table_html_ab9a3de4cf322157a8d38e352489bd7b8"><div class="ttname"><a href="../../d8/dc5/struct_icon_frame_table.html#ab9a3de4cf322157a8d38e352489bd7b8">IconFrameTable::GetFrame</a></div><div class="ttdeci">Icon * GetFrame(unsigned int uIconID, unsigned int frame_time)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d1b/_icon_frame_table_8cpp_source.html#l00039">IconFrameTable.cpp:39</a></div></div>
+<div class="ttc" id="aclass_icon_html_a2c06009b9034912dea464e9f3c3791f9"><div class="ttname"><a href="../../db/d60/class_icon.html#a2c06009b9034912dea464e9f3c3791f9">Icon::Icon</a></div><div class="ttdeci">Icon()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d5e/_icon_frame_table_8h_source.html#l00010">IconFrameTable.h:10</a></div></div>
+<div class="ttc" id="aclass_u_i_animation_html"><div class="ttname"><a href="../../d0/d6f/class_u_i_animation.html">UIAnimation</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d5e/_icon_frame_table_8h_source.html#l00069">IconFrameTable.h:69</a></div></div>
+<div class="ttc" id="a_s_d_l__egl_8h_html_aaced7cfc21e7d37775d6921bb8177239"><div class="ttname"><a href="../../df/d32/_s_d_l__egl_8h.html#aaced7cfc21e7d37775d6921bb8177239">name</a></div><div class="ttdeci">EGLImageKHR EGLint * name</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/_s_d_l__egl_8h_source.html#l01497">SDL_egl.h:1497</a></div></div>
+<div class="ttc" id="aclass_icon_html"><div class="ttname"><a href="../../db/d60/class_icon.html">Icon</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d5e/_icon_frame_table_8h_source.html#l00008">IconFrameTable.h:8</a></div></div>
+<div class="ttc" id="aclass_u_i_animation_html_a6bd616d4cd5df5aaa93a5f4ae6011e4a"><div class="ttname"><a href="../../d0/d6f/class_u_i_animation.html#a6bd616d4cd5df5aaa93a5f4ae6011e4a">UIAnimation::y</a></div><div class="ttdeci">int16_t y</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d5e/_icon_frame_table_8h_source.html#l00077">IconFrameTable.h:77</a></div></div>
+<div class="ttc" id="aclass_icon_html_ae3043014f6925eff6351c80399103ba8"><div class="ttname"><a href="../../db/d60/class_icon.html#ae3043014f6925eff6351c80399103ba8">Icon::anim_name</a></div><div class="ttdeci">char anim_name[64]</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d5e/_icon_frame_table_8h_source.html#l00038">IconFrameTable.h:38</a></div></div>
+<div class="ttc" id="aclass_icon_html_aaef29d07c9b4ab50fa81b281f203a959"><div class="ttname"><a href="../../db/d60/class_icon.html#aaef29d07c9b4ab50fa81b281f203a959">Icon::GetAnimTime</a></div><div class="ttdeci">unsigned int GetAnimTime() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d5e/_icon_frame_table_8h_source.html#l00025">IconFrameTable.h:25</a></div></div>
+<div class="ttc" id="astruct_icon_frame_table_html_a4a6b5125f0753890ddb9998580712938"><div class="ttname"><a href="../../d8/dc5/struct_icon_frame_table.html#a4a6b5125f0753890ddb9998580712938">IconFrameTable::IconFrameTable</a></div><div class="ttdeci">IconFrameTable()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d5e/_icon_frame_table_8h_source.html#l00052">IconFrameTable.h:52</a></div></div>
+<div class="ttc" id="astruct_icon_frame_table_html_a8ef1d29209b47ede815868a771db3a47"><div class="ttname"><a href="../../d8/dc5/struct_icon_frame_table.html#a8ef1d29209b47ede815868a771db3a47">IconFrameTable::FromFileTxt</a></div><div class="ttdeci">int FromFileTxt(const char *Args)</div></div>
+<div class="ttc" id="aclass_icon_html_a61e5ba96ce0ed08c698a6fe872ba95be"><div class="ttname"><a href="../../db/d60/class_icon.html#a61e5ba96ce0ed08c698a6fe872ba95be">Icon::img</a></div><div class="ttdeci">Texture * img</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d5e/_icon_frame_table_8h_source.html#l00046">IconFrameTable.h:46</a></div></div>
+<div class="ttc" id="a_icon_frame_table_8h_html_a4e43b372f0a95b2340869d2d773aef33"><div class="ttname"><a href="../../d7/d5e/_icon_frame_table_8h.html#a4e43b372f0a95b2340869d2d773aef33">pUIAnims</a></div><div class="ttdeci">std::array&lt; UIAnimation *, 4 &gt; pUIAnims</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db4/_party_8cpp_source.html#l00052">Party.cpp:52</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl_8h_html_a3455aaa12cecc35ac4a42a9bf1273da8"><div class="ttname"><a href="../../df/dc4/_s_d_l__opengl_8h.html#a3455aaa12cecc35ac4a42a9bf1273da8">img</a></div><div class="ttdeci">GLint GLvoid * img</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dc4/_s_d_l__opengl_8h_source.html#l01980">SDL_opengl.h:1980</a></div></div>
+<div class="ttc" id="a_icon_frame_table_8h_html_a88cac2bf9581758898e327c744463b91"><div class="ttname"><a href="../../d7/d5e/_icon_frame_table_8h.html#a88cac2bf9581758898e327c744463b91">pUIAnim_WizardEye</a></div><div class="ttdeci">UIAnimation * pUIAnim_WizardEye</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db4/_party_8cpp_source.html#l00049">Party.cpp:49</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_0b6ee6e7e9547e675db4add2e5de97da.html">Engine</a></li><li class="navelem"><a class="el" href="../../dir_a267bb7e9e28e8470e1377bdc086a64c.html">Tables</a></li><li class="navelem"><a class="el" href="../../d7/d5e/_icon_frame_table_8h.html">IconFrameTable.h</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:03:34. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

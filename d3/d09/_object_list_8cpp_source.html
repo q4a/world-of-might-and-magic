@@ -1,0 +1,229 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Исходный файл C:/git/world-of-might-and-magic/Engine/Objects/ObjectList.cpp</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d3/d09/_object_list_8cpp_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">ObjectList.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d3/d09/_object_list_8cpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d7/dd2/_object_list_8h.html">Engine/Objects/ObjectList.h</a>&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../dd/d23/_sprites_8h.html">Engine/Graphics/Sprites.h</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="../../d7/dd2/_object_list_8h.html#a0b91df255bc51eae5cd33214f5972f97">    5</a></span>&#160;<span class="keyword">struct </span><a class="code" href="../../dc/d41/class_object_list.html">ObjectList</a> *<a class="code" href="../../d3/d09/_object_list_8cpp.html#a9f89e58bc05824c5e9f0f79b533781cf">pObjectList</a>;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="../../dc/d41/class_object_list.html#a9b403a9566abade0fcb2161a1510756d">    7</a></span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../dc/d41/class_object_list.html#a9b403a9566abade0fcb2161a1510756d">ObjectList::ObjectIDByItemID</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> uItemID) {</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1dbb21208b9047cc8031ca9c840d3c2f">res</a> = 0;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="../../dc/d41/class_object_list.html#aec92e323af0feebe4d58b91ad0065653">uNumObjects</a>; i++) {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <span class="keywordflow">if</span> (uItemID == <a class="code" href="../../dc/d41/class_object_list.html#af04d1d3f616aaf9a2ceb87ca6299f1e9">pObjects</a>[i].uObjectID) {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;            <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1dbb21208b9047cc8031ca9c840d3c2f">res</a> = i;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        }</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    }</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1dbb21208b9047cc8031ca9c840d3c2f">res</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="../../dc/d41/class_object_list.html#ad470358f54e8c5bd77cc2d2c644cf4c3">   20</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../dc/d41/class_object_list.html#ad470358f54e8c5bd77cc2d2c644cf4c3">ObjectList::InitializeSprites</a>() {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="../../dc/d41/class_object_list.html#aec92e323af0feebe4d58b91ad0065653">uNumObjects</a>; ++i) {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <a class="code" href="../../db/d87/_sprites_8cpp.html#a24875b3e3df466428121a86748c8c09a">pSpriteFrameTable</a>-&gt;<a class="code" href="../../de/da7/struct_sprite_frame_table.html#a1d390b4fbe5985c715439289d806b3c4">InitializeSprite</a>(<a class="code" href="../../dc/d41/class_object_list.html#af04d1d3f616aaf9a2ceb87ca6299f1e9">pObjects</a>[i].uSpriteID);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    }</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="../../dc/d41/class_object_list.html#a62ca9f442a9fef379f2b86cd9a004e0b">   26</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../dc/d41/class_object_list.html#a62ca9f442a9fef379f2b86cd9a004e0b">ObjectList::InitializeColors</a>() {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="../../d3/d09/_object_list_8cpp.html#a9f89e58bc05824c5e9f0f79b533781cf">pObjectList</a>-&gt;<a class="code" href="../../dc/d41/class_object_list.html#aec92e323af0feebe4d58b91ad0065653">uNumObjects</a>; ++i) {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <a class="code" href="../../d3/d09/_object_list_8cpp.html#a9f89e58bc05824c5e9f0f79b533781cf">pObjectList</a>-&gt;<a class="code" href="../../dc/d41/class_object_list.html#af04d1d3f616aaf9a2ceb87ca6299f1e9">pObjects</a>[i].<a class="code" href="../../d9/d88/struct_object_desc.html#a86fc5f7eba970a471cc7e0096c061cc9">uParticleTrailColor</a> =</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            ((<span class="keywordtype">unsigned</span> int)<a class="code" href="../../d3/d09/_object_list_8cpp.html#a9f89e58bc05824c5e9f0f79b533781cf">pObjectList</a>-&gt;<a class="code" href="../../dc/d41/class_object_list.html#af04d1d3f616aaf9a2ceb87ca6299f1e9">pObjects</a>[i].<a class="code" href="../../d9/d88/struct_object_desc.html#a1326530b137b28aacfb8c06c5da7a456">uParticleTrailColorB</a>) |</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            ((<span class="keywordtype">unsigned</span> int)<a class="code" href="../../d3/d09/_object_list_8cpp.html#a9f89e58bc05824c5e9f0f79b533781cf">pObjectList</a>-&gt;<a class="code" href="../../dc/d41/class_object_list.html#af04d1d3f616aaf9a2ceb87ca6299f1e9">pObjects</a>[i].<a class="code" href="../../d9/d88/struct_object_desc.html#a4f049deae5d6d6add0ddc6412e13fa3f">uParticleTrailColorG</a> &lt;&lt; 8) |</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            ((<span class="keywordtype">unsigned</span> int)<a class="code" href="../../d3/d09/_object_list_8cpp.html#a9f89e58bc05824c5e9f0f79b533781cf">pObjectList</a>-&gt;<a class="code" href="../../dc/d41/class_object_list.html#af04d1d3f616aaf9a2ceb87ca6299f1e9">pObjects</a>[i].<a class="code" href="../../d9/d88/struct_object_desc.html#ab8728cb8ee7aad31e09fdc048644c62c">uParticleTrailColorR</a> &lt;&lt; 16);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    }</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#pragma pack(push, 1)</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="../../d8/d76/struct_object_desc__mm6.html">   36</a></span>&#160;<span class="keyword">struct </span><a class="code" href="../../d8/d76/struct_object_desc__mm6.html">ObjectDesc_mm6</a> {</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="../../d8/d76/struct_object_desc__mm6.html#abfb6288b5a86db3105ada1f7fb87dd61">   37</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="../../d8/d76/struct_object_desc__mm6.html#abfb6288b5a86db3105ada1f7fb87dd61">NoSprite</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="../../d8/d76/struct_object_desc__mm6.html#ac5475682a004ef2bd40a6738a8230e1f">uFlags</a> &amp; <a class="code" href="../../d7/dd2/_object_list_8h.html#a3453b9c5c6fab738c48dd85943f8ff63a42f0bb29a48747a80df9352f867ada9e">OBJECT_DESC_NO_SPRITE</a>; }</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="../../d8/d76/struct_object_desc__mm6.html#a05cd8bc3582d9853161dfeeef57973ef">   39</a></span>&#160;    <span class="keywordtype">char</span> <a class="code" href="../../d8/d76/struct_object_desc__mm6.html#a05cd8bc3582d9853161dfeeef57973ef">field_0</a>[32];</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="../../d8/d76/struct_object_desc__mm6.html#ad5bc8913152063ced379d8603edb26a2">   40</a></span>&#160;    <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> <a class="code" href="../../d8/d76/struct_object_desc__mm6.html#ad5bc8913152063ced379d8603edb26a2">uObjectID</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="../../d8/d76/struct_object_desc__mm6.html#a30826c2f7a28ef9fc2fe457f583b57db">   41</a></span>&#160;    <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> <a class="code" href="../../d8/d76/struct_object_desc__mm6.html#a30826c2f7a28ef9fc2fe457f583b57db">uRadius</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="../../d8/d76/struct_object_desc__mm6.html#ae95baadb424d23e5703dc0aa26421116">   42</a></span>&#160;    <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> <a class="code" href="../../d8/d76/struct_object_desc__mm6.html#ae95baadb424d23e5703dc0aa26421116">uHeight</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="../../d8/d76/struct_object_desc__mm6.html#ac5475682a004ef2bd40a6738a8230e1f">   43</a></span>&#160;    <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> <a class="code" href="../../d8/d76/struct_object_desc__mm6.html#ac5475682a004ef2bd40a6738a8230e1f">uFlags</a>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="../../d8/d76/struct_object_desc__mm6.html#abb9346aff57e9a95ac76eff741791ec5">   44</a></span>&#160;    <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> <a class="code" href="../../d8/d76/struct_object_desc__mm6.html#abb9346aff57e9a95ac76eff741791ec5">uSpriteID</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="../../d8/d76/struct_object_desc__mm6.html#acfdac916cdf24b5773f3cc5fced9d629">   45</a></span>&#160;    <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> <a class="code" href="../../d8/d76/struct_object_desc__mm6.html#acfdac916cdf24b5773f3cc5fced9d629">uLifetime</a>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="../../d8/d76/struct_object_desc__mm6.html#adf4d67b67f4d840574af7fa9792ab52a">   46</a></span>&#160;    <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> <a class="code" href="../../d8/d76/struct_object_desc__mm6.html#adf4d67b67f4d840574af7fa9792ab52a">uParticleTrailColor</a>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="../../d8/d76/struct_object_desc__mm6.html#afe1f4fbd7bbd3a3068e5438e27e6ba4f">   47</a></span>&#160;    <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> <a class="code" href="../../d8/d76/struct_object_desc__mm6.html#afe1f4fbd7bbd3a3068e5438e27e6ba4f">uSpeed</a>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="../../d8/d76/struct_object_desc__mm6.html#a8fea7ff7a799b3daf06a775dbab46d32">   48</a></span>&#160;    <span class="keywordtype">char</span> <a class="code" href="../../d8/d76/struct_object_desc__mm6.html#a8fea7ff7a799b3daf06a775dbab46d32">uParticleTrailColorR</a>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="../../d8/d76/struct_object_desc__mm6.html#a3332eb871c1133558147bdf572c34b93">   49</a></span>&#160;    <span class="keywordtype">char</span> <a class="code" href="../../d8/d76/struct_object_desc__mm6.html#a3332eb871c1133558147bdf572c34b93">uParticleTrailColorG</a>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="../../d8/d76/struct_object_desc__mm6.html#a4d220cfa09928ac7d8d718285bc84bd0">   50</a></span>&#160;    <span class="keywordtype">char</span> <a class="code" href="../../d8/d76/struct_object_desc__mm6.html#a4d220cfa09928ac7d8d718285bc84bd0">uParticleTrailColorB</a>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="../../d8/d76/struct_object_desc__mm6.html#a2ee86e41c9ddaad8782535d93e6b1aad">   51</a></span>&#160;    <span class="keywordtype">char</span> <a class="code" href="../../d8/d76/struct_object_desc__mm6.html#a2ee86e41c9ddaad8782535d93e6b1aad">field_35_clr</a>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;};</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#pragma pack(pop)</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="../../dc/d41/class_object_list.html#a07b2382e4604f934d1bd24aea39fe2ce">   55</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../dc/d41/class_object_list.html#a07b2382e4604f934d1bd24aea39fe2ce">ObjectList::FromFile</a>(<span class="keywordtype">void</span> *data_mm6, <span class="keywordtype">void</span> *data_mm7, <span class="keywordtype">void</span> *data_mm8) {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    static_assert(<span class="keyword">sizeof</span>(<a class="code" href="../../d8/d76/struct_object_desc__mm6.html">ObjectDesc_mm6</a>) == 52, <span class="stringliteral">&quot;Wrong type size&quot;</span>);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    static_assert(<span class="keyword">sizeof</span>(<a class="code" href="../../d9/d88/struct_object_desc.html">ObjectDesc</a>) == 56, <span class="stringliteral">&quot;Wrong type size&quot;</span>);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> num_mm6_objs = data_mm6 ? *(<a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>*)data_mm6 : 0;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> num_mm7_objs = data_mm7 ? *(<a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>*)data_mm7 : 0;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> num_mm8_objs = data_mm8 ? *(<a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>*)data_mm8 : 0;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="../../dc/d41/class_object_list.html#aec92e323af0feebe4d58b91ad0065653">uNumObjects</a> = num_mm6_objs + num_mm7_objs + num_mm8_objs;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    assert(<a class="code" href="../../dc/d41/class_object_list.html#aec92e323af0feebe4d58b91ad0065653">uNumObjects</a> != 0);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    assert(num_mm8_objs == 0);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <a class="code" href="../../dc/d41/class_object_list.html#af04d1d3f616aaf9a2ceb87ca6299f1e9">pObjects</a> = (<a class="code" href="../../d9/d88/struct_object_desc.html">ObjectDesc</a>*)malloc(<a class="code" href="../../dc/d41/class_object_list.html#aec92e323af0feebe4d58b91ad0065653">uNumObjects</a> * <span class="keyword">sizeof</span>(<a class="code" href="../../d9/d88/struct_object_desc.html">ObjectDesc</a>));</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    memcpy(<a class="code" href="../../dc/d41/class_object_list.html#af04d1d3f616aaf9a2ceb87ca6299f1e9">pObjects</a>, (<span class="keywordtype">char</span>*)data_mm7 + 4, num_mm7_objs * <span class="keyword">sizeof</span>(<a class="code" href="../../d9/d88/struct_object_desc.html">ObjectDesc</a>));</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; num_mm6_objs; ++i) {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keyword">auto</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a72e0fdf0f845ded60b1fada9e9195cd7">src</a> = (<a class="code" href="../../d8/d76/struct_object_desc__mm6.html">ObjectDesc_mm6</a> *)((<span class="keywordtype">char</span> *)data_mm6 + 4) + i;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <a class="code" href="../../d9/d88/struct_object_desc.html">ObjectDesc</a> *<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a92034251bfd455d524a9b5610cddba00">dst</a> = &amp;<a class="code" href="../../dc/d41/class_object_list.html#af04d1d3f616aaf9a2ceb87ca6299f1e9">pObjects</a>[num_mm7_objs + i];</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        memcpy(<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a92034251bfd455d524a9b5610cddba00">dst</a>-&gt;field_0, <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a72e0fdf0f845ded60b1fada9e9195cd7">src</a>-&gt;field_0, <span class="keyword">sizeof</span>(<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a92034251bfd455d524a9b5610cddba00">dst</a>-&gt;field_0));</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a92034251bfd455d524a9b5610cddba00">dst</a>-&gt;uObjectID = <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a72e0fdf0f845ded60b1fada9e9195cd7">src</a>-&gt;uObjectID;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a92034251bfd455d524a9b5610cddba00">dst</a>-&gt;uRadius = <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a72e0fdf0f845ded60b1fada9e9195cd7">src</a>-&gt;uRadius;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a92034251bfd455d524a9b5610cddba00">dst</a>-&gt;uHeight = <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a72e0fdf0f845ded60b1fada9e9195cd7">src</a>-&gt;uHeight;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a92034251bfd455d524a9b5610cddba00">dst</a>-&gt;uFlags = <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a72e0fdf0f845ded60b1fada9e9195cd7">src</a>-&gt;uFlags;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a92034251bfd455d524a9b5610cddba00">dst</a>-&gt;uSpriteID = <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a72e0fdf0f845ded60b1fada9e9195cd7">src</a>-&gt;uSpriteID;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a92034251bfd455d524a9b5610cddba00">dst</a>-&gt;uLifetime = <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a72e0fdf0f845ded60b1fada9e9195cd7">src</a>-&gt;uLifetime;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a92034251bfd455d524a9b5610cddba00">dst</a>-&gt;uParticleTrailColor = <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a72e0fdf0f845ded60b1fada9e9195cd7">src</a>-&gt;uParticleTrailColor;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a92034251bfd455d524a9b5610cddba00">dst</a>-&gt;uSpeed = <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a72e0fdf0f845ded60b1fada9e9195cd7">src</a>-&gt;uSpeed;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a92034251bfd455d524a9b5610cddba00">dst</a>-&gt;uParticleTrailColorR = <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a72e0fdf0f845ded60b1fada9e9195cd7">src</a>-&gt;uParticleTrailColorR;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a92034251bfd455d524a9b5610cddba00">dst</a>-&gt;uParticleTrailColorG = <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a72e0fdf0f845ded60b1fada9e9195cd7">src</a>-&gt;uParticleTrailColorG;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a92034251bfd455d524a9b5610cddba00">dst</a>-&gt;uParticleTrailColorB = <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a72e0fdf0f845ded60b1fada9e9195cd7">src</a>-&gt;uParticleTrailColorB;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a92034251bfd455d524a9b5610cddba00">dst</a>-&gt;field_35_clr = <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a72e0fdf0f845ded60b1fada9e9195cd7">src</a>-&gt;field_35_clr;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a92034251bfd455d524a9b5610cddba00">dst</a>-&gt;field_36_clr = 0;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a92034251bfd455d524a9b5610cddba00">dst</a>-&gt;field_37_clr = 0;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="a_s_d_l__config_8h_html_a273cf69d639a59973b6019625df33e30"><div class="ttname"><a href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a></div><div class="ttdeci">unsigned __int16 uint16_t</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d8f/_s_d_l__config_8h_source.html#l00037">SDL_config.h:37</a></div></div>
+<div class="ttc" id="astruct_object_desc__mm6_html_a30826c2f7a28ef9fc2fe457f583b57db"><div class="ttname"><a href="../../d8/d76/struct_object_desc__mm6.html#a30826c2f7a28ef9fc2fe457f583b57db">ObjectDesc_mm6::uRadius</a></div><div class="ttdeci">int16_t uRadius</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d09/_object_list_8cpp_source.html#l00041">ObjectList.cpp:41</a></div></div>
+<div class="ttc" id="a_s_d_l__config_8h_html_a269259c924dce846340ddbb810db2e3c"><div class="ttname"><a href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a></div><div class="ttdeci">signed __int16 int16_t</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d8f/_s_d_l__config_8h_source.html#l00036">SDL_config.h:36</a></div></div>
+<div class="ttc" id="astruct_object_desc__mm6_html_acfdac916cdf24b5773f3cc5fced9d629"><div class="ttname"><a href="../../d8/d76/struct_object_desc__mm6.html#acfdac916cdf24b5773f3cc5fced9d629">ObjectDesc_mm6::uLifetime</a></div><div class="ttdeci">int16_t uLifetime</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d09/_object_list_8cpp_source.html#l00045">ObjectList.cpp:45</a></div></div>
+<div class="ttc" id="a_sprites_8cpp_html_a24875b3e3df466428121a86748c8c09a"><div class="ttname"><a href="../../db/d87/_sprites_8cpp.html#a24875b3e3df466428121a86748c8c09a">pSpriteFrameTable</a></div><div class="ttdeci">struct SpriteFrameTable * pSpriteFrameTable</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d87/_sprites_8cpp_source.html#l00022">Sprites.cpp:22</a></div></div>
+<div class="ttc" id="astruct_object_desc__mm6_html_a05cd8bc3582d9853161dfeeef57973ef"><div class="ttname"><a href="../../d8/d76/struct_object_desc__mm6.html#a05cd8bc3582d9853161dfeeef57973ef">ObjectDesc_mm6::field_0</a></div><div class="ttdeci">char field_0[32]</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d09/_object_list_8cpp_source.html#l00039">ObjectList.cpp:39</a></div></div>
+<div class="ttc" id="aclass_object_list_html_a62ca9f442a9fef379f2b86cd9a004e0b"><div class="ttname"><a href="../../dc/d41/class_object_list.html#a62ca9f442a9fef379f2b86cd9a004e0b">ObjectList::InitializeColors</a></div><div class="ttdeci">void InitializeColors()</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d09/_object_list_8cpp_source.html#l00026">ObjectList.cpp:26</a></div></div>
+<div class="ttc" id="astruct_object_desc_html"><div class="ttname"><a href="../../d9/d88/struct_object_desc.html">ObjectDesc</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dd2/_object_list_8h_source.html#l00020">ObjectList.h:20</a></div></div>
+<div class="ttc" id="aclass_object_list_html_a9b403a9566abade0fcb2161a1510756d"><div class="ttname"><a href="../../dc/d41/class_object_list.html#a9b403a9566abade0fcb2161a1510756d">ObjectList::ObjectIDByItemID</a></div><div class="ttdeci">unsigned int ObjectIDByItemID(unsigned int uItemID)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d09/_object_list_8cpp_source.html#l00007">ObjectList.cpp:7</a></div></div>
+<div class="ttc" id="astruct_object_desc__mm6_html_a4d220cfa09928ac7d8d718285bc84bd0"><div class="ttname"><a href="../../d8/d76/struct_object_desc__mm6.html#a4d220cfa09928ac7d8d718285bc84bd0">ObjectDesc_mm6::uParticleTrailColorB</a></div><div class="ttdeci">char uParticleTrailColorB</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d09/_object_list_8cpp_source.html#l00050">ObjectList.cpp:50</a></div></div>
+<div class="ttc" id="astruct_object_desc__mm6_html_ad5bc8913152063ced379d8603edb26a2"><div class="ttname"><a href="../../d8/d76/struct_object_desc__mm6.html#ad5bc8913152063ced379d8603edb26a2">ObjectDesc_mm6::uObjectID</a></div><div class="ttdeci">int16_t uObjectID</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d09/_object_list_8cpp_source.html#l00040">ObjectList.cpp:40</a></div></div>
+<div class="ttc" id="astruct_object_desc__mm6_html_a8fea7ff7a799b3daf06a775dbab46d32"><div class="ttname"><a href="../../d8/d76/struct_object_desc__mm6.html#a8fea7ff7a799b3daf06a775dbab46d32">ObjectDesc_mm6::uParticleTrailColorR</a></div><div class="ttdeci">char uParticleTrailColorR</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d09/_object_list_8cpp_source.html#l00048">ObjectList.cpp:48</a></div></div>
+<div class="ttc" id="astruct_object_desc__mm6_html_abfb6288b5a86db3105ada1f7fb87dd61"><div class="ttname"><a href="../../d8/d76/struct_object_desc__mm6.html#abfb6288b5a86db3105ada1f7fb87dd61">ObjectDesc_mm6::NoSprite</a></div><div class="ttdeci">bool NoSprite() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d09/_object_list_8cpp_source.html#l00037">ObjectList.cpp:37</a></div></div>
+<div class="ttc" id="astruct_object_desc__mm6_html_a2ee86e41c9ddaad8782535d93e6b1aad"><div class="ttname"><a href="../../d8/d76/struct_object_desc__mm6.html#a2ee86e41c9ddaad8782535d93e6b1aad">ObjectDesc_mm6::field_35_clr</a></div><div class="ttdeci">char field_35_clr</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d09/_object_list_8cpp_source.html#l00051">ObjectList.cpp:51</a></div></div>
+<div class="ttc" id="astruct_object_desc_html_a86fc5f7eba970a471cc7e0096c061cc9"><div class="ttname"><a href="../../d9/d88/struct_object_desc.html#a86fc5f7eba970a471cc7e0096c061cc9">ObjectDesc::uParticleTrailColor</a></div><div class="ttdeci">uint32_t uParticleTrailColor</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dd2/_object_list_8h_source.html#l00030">ObjectList.h:30</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a72e0fdf0f845ded60b1fada9e9195cd7"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a72e0fdf0f845ded60b1fada9e9195cd7">src</a></div><div class="ttdeci">GLenum src</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l01740">SDL_opengl_glext.h:1740</a></div></div>
+<div class="ttc" id="astruct_object_desc__mm6_html_afe1f4fbd7bbd3a3068e5438e27e6ba4f"><div class="ttname"><a href="../../d8/d76/struct_object_desc__mm6.html#afe1f4fbd7bbd3a3068e5438e27e6ba4f">ObjectDesc_mm6::uSpeed</a></div><div class="ttdeci">int16_t uSpeed</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d09/_object_list_8cpp_source.html#l00047">ObjectList.cpp:47</a></div></div>
+<div class="ttc" id="astruct_object_desc__mm6_html_abb9346aff57e9a95ac76eff741791ec5"><div class="ttname"><a href="../../d8/d76/struct_object_desc__mm6.html#abb9346aff57e9a95ac76eff741791ec5">ObjectDesc_mm6::uSpriteID</a></div><div class="ttdeci">uint16_t uSpriteID</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d09/_object_list_8cpp_source.html#l00044">ObjectList.cpp:44</a></div></div>
+<div class="ttc" id="astruct_object_desc__mm6_html"><div class="ttname"><a href="../../d8/d76/struct_object_desc__mm6.html">ObjectDesc_mm6</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d09/_object_list_8cpp_source.html#l00036">ObjectList.cpp:36</a></div></div>
+<div class="ttc" id="a_object_list_8h_html_a3453b9c5c6fab738c48dd85943f8ff63a42f0bb29a48747a80df9352f867ada9e"><div class="ttname"><a href="../../d7/dd2/_object_list_8h.html#a3453b9c5c6fab738c48dd85943f8ff63a42f0bb29a48747a80df9352f867ada9e">OBJECT_DESC_NO_SPRITE</a></div><div class="ttdeci">@ OBJECT_DESC_NO_SPRITE</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dd2/_object_list_8h_source.html#l00006">ObjectList.h:6</a></div></div>
+<div class="ttc" id="aclass_object_list_html"><div class="ttname"><a href="../../dc/d41/class_object_list.html">ObjectList</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dd2/_object_list_8h_source.html#l00041">ObjectList.h:41</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a92034251bfd455d524a9b5610cddba00"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a92034251bfd455d524a9b5610cddba00">dst</a></div><div class="ttdeci">GLenum GLenum dst</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l01740">SDL_opengl_glext.h:1740</a></div></div>
+<div class="ttc" id="aclass_object_list_html_ad470358f54e8c5bd77cc2d2c644cf4c3"><div class="ttname"><a href="../../dc/d41/class_object_list.html#ad470358f54e8c5bd77cc2d2c644cf4c3">ObjectList::InitializeSprites</a></div><div class="ttdeci">void InitializeSprites()</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d09/_object_list_8cpp_source.html#l00020">ObjectList.cpp:20</a></div></div>
+<div class="ttc" id="astruct_object_desc__mm6_html_adf4d67b67f4d840574af7fa9792ab52a"><div class="ttname"><a href="../../d8/d76/struct_object_desc__mm6.html#adf4d67b67f4d840574af7fa9792ab52a">ObjectDesc_mm6::uParticleTrailColor</a></div><div class="ttdeci">uint16_t uParticleTrailColor</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d09/_object_list_8cpp_source.html#l00046">ObjectList.cpp:46</a></div></div>
+<div class="ttc" id="astruct_object_desc__mm6_html_ae95baadb424d23e5703dc0aa26421116"><div class="ttname"><a href="../../d8/d76/struct_object_desc__mm6.html#ae95baadb424d23e5703dc0aa26421116">ObjectDesc_mm6::uHeight</a></div><div class="ttdeci">int16_t uHeight</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d09/_object_list_8cpp_source.html#l00042">ObjectList.cpp:42</a></div></div>
+<div class="ttc" id="astruct_sprite_frame_table_html_a1d390b4fbe5985c715439289d806b3c4"><div class="ttname"><a href="../../de/da7/struct_sprite_frame_table.html#a1d390b4fbe5985c715439289d806b3c4">SpriteFrameTable::InitializeSprite</a></div><div class="ttdeci">void InitializeSprite(signed int uSpriteID)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d87/_sprites_8cpp_source.html#l00046">Sprites.cpp:46</a></div></div>
+<div class="ttc" id="astruct_object_desc_html_a1326530b137b28aacfb8c06c5da7a456"><div class="ttname"><a href="../../d9/d88/struct_object_desc.html#a1326530b137b28aacfb8c06c5da7a456">ObjectDesc::uParticleTrailColorB</a></div><div class="ttdeci">uint8_t uParticleTrailColorB</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dd2/_object_list_8h_source.html#l00034">ObjectList.h:34</a></div></div>
+<div class="ttc" id="astruct_object_desc__mm6_html_ac5475682a004ef2bd40a6738a8230e1f"><div class="ttname"><a href="../../d8/d76/struct_object_desc__mm6.html#ac5475682a004ef2bd40a6738a8230e1f">ObjectDesc_mm6::uFlags</a></div><div class="ttdeci">int16_t uFlags</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d09/_object_list_8cpp_source.html#l00043">ObjectList.cpp:43</a></div></div>
+<div class="ttc" id="astruct_object_desc_html_a4f049deae5d6d6add0ddc6412e13fa3f"><div class="ttname"><a href="../../d9/d88/struct_object_desc.html#a4f049deae5d6d6add0ddc6412e13fa3f">ObjectDesc::uParticleTrailColorG</a></div><div class="ttdeci">uint8_t uParticleTrailColorG</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dd2/_object_list_8h_source.html#l00033">ObjectList.h:33</a></div></div>
+<div class="ttc" id="aclass_object_list_html_aec92e323af0feebe4d58b91ad0065653"><div class="ttname"><a href="../../dc/d41/class_object_list.html#aec92e323af0feebe4d58b91ad0065653">ObjectList::uNumObjects</a></div><div class="ttdeci">unsigned int uNumObjects</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dd2/_object_list_8h_source.html#l00051">ObjectList.h:51</a></div></div>
+<div class="ttc" id="aclass_object_list_html_af04d1d3f616aaf9a2ceb87ca6299f1e9"><div class="ttname"><a href="../../dc/d41/class_object_list.html#af04d1d3f616aaf9a2ceb87ca6299f1e9">ObjectList::pObjects</a></div><div class="ttdeci">struct ObjectDesc * pObjects</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dd2/_object_list_8h_source.html#l00054">ObjectList.h:54</a></div></div>
+<div class="ttc" id="astruct_object_desc_html_ab8728cb8ee7aad31e09fdc048644c62c"><div class="ttname"><a href="../../d9/d88/struct_object_desc.html#ab8728cb8ee7aad31e09fdc048644c62c">ObjectDesc::uParticleTrailColorR</a></div><div class="ttdeci">uint8_t uParticleTrailColorR</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dd2/_object_list_8h_source.html#l00032">ObjectList.h:32</a></div></div>
+<div class="ttc" id="a_object_list_8h_html"><div class="ttname"><a href="../../d7/dd2/_object_list_8h.html">ObjectList.h</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a1dbb21208b9047cc8031ca9c840d3c2f"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1dbb21208b9047cc8031ca9c840d3c2f">res</a></div><div class="ttdeci">GLuint res</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l07940">SDL_opengl_glext.h:7940</a></div></div>
+<div class="ttc" id="a_s_d_l__config_8h_html_a435d1572bf3f880d55459d9805097f62"><div class="ttname"><a href="../../d1/d8f/_s_d_l__config_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a></div><div class="ttdeci">unsigned __int32 uint32_t</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d8f/_s_d_l__config_8h_source.html#l00039">SDL_config.h:39</a></div></div>
+<div class="ttc" id="astruct_object_desc__mm6_html_a3332eb871c1133558147bdf572c34b93"><div class="ttname"><a href="../../d8/d76/struct_object_desc__mm6.html#a3332eb871c1133558147bdf572c34b93">ObjectDesc_mm6::uParticleTrailColorG</a></div><div class="ttdeci">char uParticleTrailColorG</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d09/_object_list_8cpp_source.html#l00049">ObjectList.cpp:49</a></div></div>
+<div class="ttc" id="a_sprites_8h_html"><div class="ttname"><a href="../../dd/d23/_sprites_8h.html">Sprites.h</a></div></div>
+<div class="ttc" id="a_object_list_8cpp_html_a9f89e58bc05824c5e9f0f79b533781cf"><div class="ttname"><a href="../../d3/d09/_object_list_8cpp.html#a9f89e58bc05824c5e9f0f79b533781cf">pObjectList</a></div><div class="ttdeci">struct ObjectList * pObjectList</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d09/_object_list_8cpp_source.html#l00005">ObjectList.cpp:5</a></div></div>
+<div class="ttc" id="aclass_object_list_html_a07b2382e4604f934d1bd24aea39fe2ce"><div class="ttname"><a href="../../dc/d41/class_object_list.html#a07b2382e4604f934d1bd24aea39fe2ce">ObjectList::FromFile</a></div><div class="ttdeci">void FromFile(void *data_mm6, void *data_mm7, void *data_mm8)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d09/_object_list_8cpp_source.html#l00055">ObjectList.cpp:55</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_0b6ee6e7e9547e675db4add2e5de97da.html">Engine</a></li><li class="navelem"><a class="el" href="../../dir_6408a7ac1a5e313e0a4448b1ca2d7416.html">Objects</a></li><li class="navelem"><a class="el" href="../../d3/d09/_object_list_8cpp.html">ObjectList.cpp</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:03:32. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

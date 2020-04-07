@@ -1,0 +1,211 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Исходный файл C:/git/world-of-might-and-magic/GUI/UI/UIInventory.cpp</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('dd/df9/_u_i_inventory_8cpp_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">UIInventory.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../dd/df9/_u_i_inventory_8cpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d4/d80/_u_i_inventory_8h.html">GUI/UI/UIInventory.h</a>&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d3/d03/_localization_8h.html">Engine/Localization.h</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d7/d19/_viewport_8h.html">Engine/Graphics/Viewport.h</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../da/d20/_i_render_8h.html">Engine/Graphics/IRender.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../de/deb/_actor_8h.html">Engine/Objects/Actor.h</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d0/d34/_g_u_i_font_8h.html">GUI/GUIFont.h</a>&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d7/db9/_g_u_i_button_8h.html">GUI/GUIButton.h</a>&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../df/d16/_u_i_status_bar_8h.html">GUI/UI/UIStatusBar.h</a>&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../df/d85/_keyboard_8h.html">IO/Keyboard.h</a>&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d2/de3/_mouse_8h.html">IO/Mouse.h</a>&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="../../d0/d4e/class_g_u_i_window___inventory.html#ad45dddaea4ea0a832ba53653b1d7ccf1">   17</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d0/d4e/class_g_u_i_window___inventory.html#ad45dddaea4ea0a832ba53653b1d7ccf1">GUIWindow_Inventory::Update</a>() {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="../../d4/d38/class_g_u_i_window.html#ac0c28c954e40c6f2c7feb7022ece8052">DrawMessageBox</a>(0);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="../../d4/d38/class_g_u_i_window.html#a009aad05d919c42979eebb93d8b4354c">DrawText</a>(<a class="code" href="../../d4/d5e/_g_u_i_font_8cpp.html#a20125354aa9f9043e5405fc5c9a4898c">pFontLucida</a>, 10, 20, 0, <span class="stringliteral">&quot;Making item number&quot;</span>, 0, 0, 0);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="../../d4/d38/class_g_u_i_window.html#a009aad05d919c42979eebb93d8b4354c">DrawText</a>(<a class="code" href="../../d4/d5e/_g_u_i_font_8cpp.html#a20125354aa9f9043e5405fc5c9a4898c">pFontLucida</a>, 10, 40, 0, <a class="code" href="../../d9/d5c/_keyboard_8cpp.html#a34b4e1537c7fd357f860b68adb8ec1d5">pKeyActionMap</a>-&gt;<a class="code" href="../../d3/d10/struct_keyboard_action_mapping.html#a15266ca37a2e4e03dcffb1d1302b0a3b">pPressedKeysBuffer</a>, 0, 0, 0);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="../../d9/d5c/_keyboard_8cpp.html#a34b4e1537c7fd357f860b68adb8ec1d5">pKeyActionMap</a>-&gt;<a class="code" href="../../d3/d10/struct_keyboard_action_mapping.html#ad1bda342b200f7329564da71ae86478f">field_204</a>) {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <a class="code" href="../../d7/d9c/struct_item_gen.html">ItemGen</a> ItemGen2;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        ItemGen2.<a class="code" href="../../d7/d9c/struct_item_gen.html#a1e9fb8b4d5efcc3dc012888383570b49">Reset</a>();</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <a class="code" href="../../d4/d38/class_g_u_i_window.html#aaf2e6a2022904abc2d253e9d4acd5d99">Release</a>();</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <a class="code" href="../../db/d84/_time_8cpp.html#a9b16df08347bd1a24e9e426848ffca3c">pEventTimer</a>-&gt;<a class="code" href="../../d8/da1/struct_timer.html#ad3b4e386f8ebb885fa2ef6fcac8d9ca3">Resume</a>();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <a class="code" href="../../dc/dce/_g_u_i_window_8cpp.html#a9cf585dbf96fdd1acbe15981837ebdb2">current_screen_type</a> = <a class="code" href="../../d5/d0b/_g_u_i_window_8h.html#af188298480c77be8835d6760fa6edfd7a1b14f33469f90b26e5f73747bcbd62f8">CURRENT_SCREEN::SCREEN_GAME</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <a class="code" href="../../d7/d19/_viewport_8h.html#a3728133a9af71bc7d784f76d49025ec0">viewparams</a>-&gt;<a class="code" href="../../d4/d10/struct_viewing_params.html#a0bb88f953083fe55c27db34b5b774956">bRedrawGameUI</a> = 1;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordtype">int</span> v39 = atoi(<a class="code" href="../../d9/d5c/_keyboard_8cpp.html#a34b4e1537c7fd357f860b68adb8ec1d5">pKeyActionMap</a>-&gt;<a class="code" href="../../d3/d10/struct_keyboard_action_mapping.html#a15266ca37a2e4e03dcffb1d1302b0a3b">pPressedKeysBuffer</a>);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordflow">if</span> (v39 &gt; 0 &amp;&amp; v39 &lt; 800) {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            <a class="code" href="../../d4/d59/_actor_8cpp.html#a57b7705f43a1e465a9aef921d9d68b05">SpawnActor</a>(v39);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        }</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    }</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">// GUIWindow_Inventory_CastSpell</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="../../d0/d91/class_g_u_i_window___inventory___cast_spell.html#a4a9b6564a6f5b147d0b4d19e73318769">   37</a></span>&#160;<a class="code" href="../../d0/d91/class_g_u_i_window___inventory___cast_spell.html#a4a9b6564a6f5b147d0b4d19e73318769">GUIWindow_Inventory_CastSpell::GUIWindow_Inventory_CastSpell</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ad0e63d0edcdbd3d79554076bf309fd47">x</a>, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a1675d9d7bb68e1657ff028643b4037e3">y</a>, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a9a82cf3caff84cabc4598e2619faac17">width</a>, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#aa352f2804b9902ac30769c00dde75d5f">height</a>, <span class="keywordtype">int</span> button, <span class="keyword">const</span> <a class="code" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> &amp;hint) :</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="../../d4/d38/class_g_u_i_window.html">GUIWindow</a>(<a class="code" href="../../d5/d0b/_g_u_i_window_8h.html#a476342970f954b62d70552bcbb5ee509a9c05e5a474712ae2dec90f5d94e2b7a5">WINDOW_CastSpell_InInventory</a>, <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ad0e63d0edcdbd3d79554076bf309fd47">x</a>, <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a1675d9d7bb68e1657ff028643b4037e3">y</a>, <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a9a82cf3caff84cabc4598e2619faac17">width</a>, <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#aa352f2804b9902ac30769c00dde75d5f">height</a>, button, hint) {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="../../d4/d38/class_g_u_i_window.html#a3d84c25b1493b00f1f5eb5e27a45c309">mouse</a>-&gt;<a class="code" href="../../d7/dc5/class_mouse.html#a6c1329c4dec99e3c72b20087d95ea91d">SetCursorImage</a>(<span class="stringliteral">&quot;MICON2&quot;</span>);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="../../d9/d1d/_g_u_i_button_8cpp.html#a305dcb7434a2d97990b2fb3c2a897f8b">pBtn_ExitCancel</a> = <a class="code" href="../../d4/d38/class_g_u_i_window.html#a29f96468b54f142995e3b1890cb7e45e">CreateButton</a>(392, 318, 75, 33, 1, 0, <a class="code" href="../../d5/d0b/_g_u_i_window_8h.html#a2519966952faeb9397447ce89e9bcb02a24d840050a214d0a4588287fdf0619a6">UIMSG_Escape</a>, 0, 0, <a class="code" href="../../dd/d8c/_localization_8cpp.html#acce22610cffe19ad6cc8f577cd611b8b">localization</a>-&gt;<a class="code" href="../../dd/d88/class_localization.html#a0eb0a17fdf90f6a420eeac65bf62436f">GetString</a>(34),  <span class="comment">// Cancel</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        { { ui_buttdesc2 } });</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="../../d4/dca/_u_i_status_bar_8cpp.html#abe7a1f2130faa2a0a455965241061a8c">GameUI_StatusBar_OnEvent</a>(<a class="code" href="../../dd/d8c/_localization_8cpp.html#acce22610cffe19ad6cc8f577cd611b8b">localization</a>-&gt;<a class="code" href="../../dd/d88/class_localization.html#a0eb0a17fdf90f6a420eeac65bf62436f">GetString</a>(39), 2);  <span class="comment">// Choose target</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="../../dc/dce/_g_u_i_window_8cpp.html#a64f57b4f8081e247d7363918e79f74f5">current_character_screen_window</a> = <a class="code" href="../../d5/d0b/_g_u_i_window_8h.html#a476342970f954b62d70552bcbb5ee509addf1dceedd11ea3f940df28f0e0bca20">WINDOW_CharacterWindow_Inventory</a>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="../../dc/dce/_g_u_i_window_8cpp.html#a9cf585dbf96fdd1acbe15981837ebdb2">current_screen_type</a> = <a class="code" href="../../d5/d0b/_g_u_i_window_8h.html#af188298480c77be8835d6760fa6edfd7a470a23fa2afcb1036ecbec032d6e838c">CURRENT_SCREEN::SCREEN_CASTING</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="../../d0/d91/class_g_u_i_window___inventory___cast_spell.html#a373228c4a9230f499cf71796a185f581">   47</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d0/d91/class_g_u_i_window___inventory___cast_spell.html#a373228c4a9230f499cf71796a185f581">GUIWindow_Inventory_CastSpell::Update</a>() {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="../../da/d20/_i_render_8h.html#a21d31464313b2c66ff88d4aa97b66143">render</a>-&gt;ClearZBuffer(0, 479);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="../../d5/d0b/_g_u_i_window_8h.html#af6151e5c72717e701f7f8a645e231cb7">draw_leather</a>();</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="../../d5/d0b/_g_u_i_window_8h.html#a1a5d18a80c0288f110ddfef767f6aca1">CharacterUI_InventoryTab_Draw</a>(<a class="code" href="../../d2/d82/_player_8cpp.html#abac7ac837ed00fe097135a9a7573347a">pPlayers</a>[<a class="code" href="../../d6/d5b/mm7__data_8cpp.html#aea2cd445c717797ec38d3ac259b5f20b">uActiveCharacter</a>], <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="../../d5/d0b/_g_u_i_window_8h.html#a31b43ffab2f0c6b49f5e7d643a956169">CharacterUI_DrawPaperdoll</a>(<a class="code" href="../../d2/d82/_player_8cpp.html#abac7ac837ed00fe097135a9a7573347a">pPlayers</a>[<a class="code" href="../../d6/d5b/mm7__data_8cpp.html#aea2cd445c717797ec38d3ac259b5f20b">uActiveCharacter</a>]);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <a class="code" href="../../da/d20/_i_render_8h.html#a21d31464313b2c66ff88d4aa97b66143">render</a>-&gt;DrawTextureAlphaNew(<a class="code" href="../../d9/d1d/_g_u_i_button_8cpp.html#a305dcb7434a2d97990b2fb3c2a897f8b">pBtn_ExitCancel</a>-&gt;<a class="code" href="../../db/d66/class_g_u_i_button.html#aca8ce2a5b073223866f61f5b7a2912ce">uX</a> / 640.0f, <a class="code" href="../../d9/d1d/_g_u_i_button_8cpp.html#a305dcb7434a2d97990b2fb3c2a897f8b">pBtn_ExitCancel</a>-&gt;<a class="code" href="../../db/d66/class_g_u_i_button.html#a9ffa6e46d9c69136d833c8e823a4d79f">uY</a> / 480.0f, <a class="code" href="../../dc/dce/_g_u_i_window_8cpp.html#adc76c81fc8b01b2c9cb31aa955f326c5">dialogue_ui_x_x_u</a>);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aclass_g_u_i_window_html_a009aad05d919c42979eebb93d8b4354c"><div class="ttname"><a href="../../d4/d38/class_g_u_i_window.html#a009aad05d919c42979eebb93d8b4354c">GUIWindow::DrawText</a></div><div class="ttdeci">void DrawText(GUIFont *font, int x, int y, unsigned short uFontColor, const char *str, bool present_time_transparency=false, int max_text_height=0, int uFontShadowColor=0)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00694">GUIWindow.cpp:694</a></div></div>
+<div class="ttc" id="aclass_localization_html_a0eb0a17fdf90f6a420eeac65bf62436f"><div class="ttname"><a href="../../dd/d88/class_localization.html#a0eb0a17fdf90f6a420eeac65bf62436f">Localization::GetString</a></div><div class="ttdeci">const char * GetString(unsigned int index) const</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d8c/_localization_8cpp_source.html#l00013">Localization.cpp:13</a></div></div>
+<div class="ttc" id="a_u_i_inventory_8h_html"><div class="ttname"><a href="../../d4/d80/_u_i_inventory_8h.html">UIInventory.h</a></div></div>
+<div class="ttc" id="a_g_u_i_window_8h_html_a2519966952faeb9397447ce89e9bcb02a24d840050a214d0a4588287fdf0619a6"><div class="ttname"><a href="../../d5/d0b/_g_u_i_window_8h.html#a2519966952faeb9397447ce89e9bcb02a24d840050a214d0a4588287fdf0619a6">UIMSG_Escape</a></div><div class="ttdeci">@ UIMSG_Escape</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d0b/_g_u_i_window_8h_source.html#l00096">GUIWindow.h:96</a></div></div>
+<div class="ttc" id="a_viewport_8h_html"><div class="ttname"><a href="../../d7/d19/_viewport_8h.html">Viewport.h</a></div></div>
+<div class="ttc" id="aclass_g_u_i_window_html"><div class="ttname"><a href="../../d4/d38/class_g_u_i_window.html">GUIWindow</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d0b/_g_u_i_window_8h_source.html#l00433">GUIWindow.h:433</a></div></div>
+<div class="ttc" id="astruct_timer_html_ad3b4e386f8ebb885fa2ef6fcac8d9ca3"><div class="ttname"><a href="../../d8/da1/struct_timer.html#ad3b4e386f8ebb885fa2ef6fcac8d9ca3">Timer::Resume</a></div><div class="ttdeci">void Resume()</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d84/_time_8cpp_source.html#l00027">Time.cpp:27</a></div></div>
+<div class="ttc" id="a_actor_8cpp_html_a57b7705f43a1e465a9aef921d9d68b05"><div class="ttname"><a href="../../d4/d59/_actor_8cpp.html#a57b7705f43a1e465a9aef921d9d68b05">SpawnActor</a></div><div class="ttdeci">bool SpawnActor(unsigned int uMonsterID)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d59/_actor_8cpp_source.html#l04922">Actor.cpp:4922</a></div></div>
+<div class="ttc" id="aclass_g_u_i_window_html_a29f96468b54f142995e3b1890cb7e45e"><div class="ttname"><a href="../../d4/d38/class_g_u_i_window.html#a29f96468b54f142995e3b1890cb7e45e">GUIWindow::CreateButton</a></div><div class="ttdeci">GUIButton * CreateButton(int x, int y, int width, int height, int a6, int a7, UIMessageType msg, unsigned int msg_param, uint8_t hotkey, const String &amp;label, const std::vector&lt; Image * &gt; &amp;textures=std::vector&lt; Image * &gt;())</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00717">GUIWindow.cpp:717</a></div></div>
+<div class="ttc" id="a_s_d_l__egl_8h_html_aa352f2804b9902ac30769c00dde75d5f"><div class="ttname"><a href="../../df/d32/_s_d_l__egl_8h.html#aa352f2804b9902ac30769c00dde75d5f">height</a></div><div class="ttdeci">EGLSurface EGLint EGLint EGLint EGLint height</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/_s_d_l__egl_8h_source.html#l01596">SDL_egl.h:1596</a></div></div>
+<div class="ttc" id="a_g_u_i_window_8h_html_af188298480c77be8835d6760fa6edfd7a470a23fa2afcb1036ecbec032d6e838c"><div class="ttname"><a href="../../d5/d0b/_g_u_i_window_8h.html#af188298480c77be8835d6760fa6edfd7a470a23fa2afcb1036ecbec032d6e838c">CURRENT_SCREEN::SCREEN_CASTING</a></div><div class="ttdeci">@ SCREEN_CASTING</div></div>
+<div class="ttc" id="a_g_u_i_window_8h_html_a476342970f954b62d70552bcbb5ee509a9c05e5a474712ae2dec90f5d94e2b7a5"><div class="ttname"><a href="../../d5/d0b/_g_u_i_window_8h.html#a476342970f954b62d70552bcbb5ee509a9c05e5a474712ae2dec90f5d94e2b7a5">WINDOW_CastSpell_InInventory</a></div><div class="ttdeci">@ WINDOW_CastSpell_InInventory</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d0b/_g_u_i_window_8h_source.html#l00313">GUIWindow.h:313</a></div></div>
+<div class="ttc" id="a_localization_8cpp_html_acce22610cffe19ad6cc8f577cd611b8b"><div class="ttname"><a href="../../dd/d8c/_localization_8cpp.html#acce22610cffe19ad6cc8f577cd611b8b">localization</a></div><div class="ttdeci">Localization * localization</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d8c/_localization_8cpp_source.html#l00011">Localization.cpp:11</a></div></div>
+<div class="ttc" id="a_g_u_i_window_8cpp_html_adc76c81fc8b01b2c9cb31aa955f326c5"><div class="ttname"><a href="../../dc/dce/_g_u_i_window_8cpp.html#adc76c81fc8b01b2c9cb31aa955f326c5">dialogue_ui_x_x_u</a></div><div class="ttdeci">Image * dialogue_ui_x_x_u</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00092">GUIWindow.cpp:92</a></div></div>
+<div class="ttc" id="aclass_g_u_i_window_html_aaf2e6a2022904abc2d253e9d4acd5d99"><div class="ttname"><a href="../../d4/d38/class_g_u_i_window.html#aaf2e6a2022904abc2d253e9d4acd5d99">GUIWindow::Release</a></div><div class="ttdeci">virtual void Release()</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00292">GUIWindow.cpp:292</a></div></div>
+<div class="ttc" id="a_g_u_i_font_8h_html"><div class="ttname"><a href="../../d0/d34/_g_u_i_font_8h.html">GUIFont.h</a></div></div>
+<div class="ttc" id="a_g_u_i_window_8h_html_a31b43ffab2f0c6b49f5e7d643a956169"><div class="ttname"><a href="../../d5/d0b/_g_u_i_window_8h.html#a31b43ffab2f0c6b49f5e7d643a956169">CharacterUI_DrawPaperdoll</a></div><div class="ttdeci">void CharacterUI_DrawPaperdoll(Player *player)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/dd5/_u_i_character_8cpp_source.html#l00930">UICharacter.cpp:930</a></div></div>
+<div class="ttc" id="astruct_item_gen_html_a1e9fb8b4d5efcc3dc012888383570b49"><div class="ttname"><a href="../../d7/d9c/struct_item_gen.html#a1e9fb8b4d5efcc3dc012888383570b49">ItemGen::Reset</a></div><div class="ttdeci">void Reset()</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d99/_items_8cpp_source.html#l00133">Items.cpp:133</a></div></div>
+<div class="ttc" id="a_player_8cpp_html_abac7ac837ed00fe097135a9a7573347a"><div class="ttname"><a href="../../d2/d82/_player_8cpp.html#abac7ac837ed00fe097135a9a7573347a">pPlayers</a></div><div class="ttdeci">NZIArray&lt; struct Player *, 5 &gt; pPlayers</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d82/_player_8cpp_source.html#l00046">Player.cpp:46</a></div></div>
+<div class="ttc" id="a_g_u_i_window_8cpp_html_a9cf585dbf96fdd1acbe15981837ebdb2"><div class="ttname"><a href="../../dc/dce/_g_u_i_window_8cpp.html#a9cf585dbf96fdd1acbe15981837ebdb2">current_screen_type</a></div><div class="ttdeci">enum CURRENT_SCREEN current_screen_type</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00083">GUIWindow.cpp:83</a></div></div>
+<div class="ttc" id="a_g_u_i_window_8h_html_a1a5d18a80c0288f110ddfef767f6aca1"><div class="ttname"><a href="../../d5/d0b/_g_u_i_window_8h.html#a1a5d18a80c0288f110ddfef767f6aca1">CharacterUI_InventoryTab_Draw</a></div><div class="ttdeci">void CharacterUI_InventoryTab_Draw(Player *player, bool a2)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/dd5/_u_i_character_8cpp_source.html#l01829">UICharacter.cpp:1829</a></div></div>
+<div class="ttc" id="a_actor_8h_html"><div class="ttname"><a href="../../de/deb/_actor_8h.html">Actor.h</a></div></div>
+<div class="ttc" id="a_g_u_i_window_8cpp_html_a64f57b4f8081e247d7363918e79f74f5"><div class="ttname"><a href="../../dc/dce/_g_u_i_window_8cpp.html#a64f57b4f8081e247d7363918e79f74f5">current_character_screen_window</a></div><div class="ttdeci">enum WindowType current_character_screen_window</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00078">GUIWindow.cpp:78</a></div></div>
+<div class="ttc" id="a_localization_8h_html"><div class="ttname"><a href="../../d3/d03/_localization_8h.html">Localization.h</a></div></div>
+<div class="ttc" id="a_s_d_l__egl_8h_html_a1675d9d7bb68e1657ff028643b4037e3"><div class="ttname"><a href="../../df/d32/_s_d_l__egl_8h.html#a1675d9d7bb68e1657ff028643b4037e3">y</a></div><div class="ttdeci">EGLSurface EGLint EGLint y</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/_s_d_l__egl_8h_source.html#l01596">SDL_egl.h:1596</a></div></div>
+<div class="ttc" id="aclass_g_u_i_window___inventory___cast_spell_html_a4a9b6564a6f5b147d0b4d19e73318769"><div class="ttname"><a href="../../d0/d91/class_g_u_i_window___inventory___cast_spell.html#a4a9b6564a6f5b147d0b4d19e73318769">GUIWindow_Inventory_CastSpell::GUIWindow_Inventory_CastSpell</a></div><div class="ttdeci">GUIWindow_Inventory_CastSpell(unsigned int x, unsigned int y, unsigned int width, unsigned int height, int button, const String &amp;hint=String())</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/df9/_u_i_inventory_8cpp_source.html#l00037">UIInventory.cpp:37</a></div></div>
+<div class="ttc" id="a_g_u_i_button_8h_html"><div class="ttname"><a href="../../d7/db9/_g_u_i_button_8h.html">GUIButton.h</a></div></div>
+<div class="ttc" id="a_g_u_i_button_8cpp_html_a305dcb7434a2d97990b2fb3c2a897f8b"><div class="ttname"><a href="../../d9/d1d/_g_u_i_button_8cpp.html#a305dcb7434a2d97990b2fb3c2a897f8b">pBtn_ExitCancel</a></div><div class="ttdeci">GUIButton * pBtn_ExitCancel</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d1d/_g_u_i_button_8cpp_source.html#l00028">GUIButton.cpp:28</a></div></div>
+<div class="ttc" id="a_i_render_8h_html"><div class="ttname"><a href="../../da/d20/_i_render_8h.html">IRender.h</a></div></div>
+<div class="ttc" id="a_s_d_l__egl_8h_html_ad0e63d0edcdbd3d79554076bf309fd47"><div class="ttname"><a href="../../df/d32/_s_d_l__egl_8h.html#ad0e63d0edcdbd3d79554076bf309fd47">x</a></div><div class="ttdeci">EGLSurface EGLint x</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/_s_d_l__egl_8h_source.html#l01596">SDL_egl.h:1596</a></div></div>
+<div class="ttc" id="a_g_u_i_window_8h_html_a476342970f954b62d70552bcbb5ee509addf1dceedd11ea3f940df28f0e0bca20"><div class="ttname"><a href="../../d5/d0b/_g_u_i_window_8h.html#a476342970f954b62d70552bcbb5ee509addf1dceedd11ea3f940df28f0e0bca20">WINDOW_CharacterWindow_Inventory</a></div><div class="ttdeci">@ WINDOW_CharacterWindow_Inventory</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d0b/_g_u_i_window_8h_source.html#l00330">GUIWindow.h:330</a></div></div>
+<div class="ttc" id="a_viewport_8h_html_a3728133a9af71bc7d784f76d49025ec0"><div class="ttname"><a href="../../d7/d19/_viewport_8h.html#a3728133a9af71bc7d784f76d49025ec0">viewparams</a></div><div class="ttdeci">struct ViewingParams * viewparams</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d5b/mm7__data_8cpp_source.html#l00022">mm7_data.cpp:22</a></div></div>
+<div class="ttc" id="aclass_g_u_i_window_html_ac0c28c954e40c6f2c7feb7022ece8052"><div class="ttname"><a href="../../d4/d38/class_g_u_i_window.html#ac0c28c954e40c6f2c7feb7022ece8052">GUIWindow::DrawMessageBox</a></div><div class="ttdeci">void DrawMessageBox(bool inside_game_viewport)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00319">GUIWindow.cpp:319</a></div></div>
+<div class="ttc" id="astruct_keyboard_action_mapping_html_a15266ca37a2e4e03dcffb1d1302b0a3b"><div class="ttname"><a href="../../d3/d10/struct_keyboard_action_mapping.html#a15266ca37a2e4e03dcffb1d1302b0a3b">KeyboardActionMapping::pPressedKeysBuffer</a></div><div class="ttdeci">char pPressedKeysBuffer[257]</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d85/_keyboard_8h_source.html#l00066">Keyboard.h:66</a></div></div>
+<div class="ttc" id="a_s_d_l__egl_8h_html_a9a82cf3caff84cabc4598e2619faac17"><div class="ttname"><a href="../../df/d32/_s_d_l__egl_8h.html#a9a82cf3caff84cabc4598e2619faac17">width</a></div><div class="ttdeci">EGLSurface EGLint EGLint EGLint width</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/_s_d_l__egl_8h_source.html#l01596">SDL_egl.h:1596</a></div></div>
+<div class="ttc" id="astruct_keyboard_action_mapping_html_ad1bda342b200f7329564da71ae86478f"><div class="ttname"><a href="../../d3/d10/struct_keyboard_action_mapping.html#ad1bda342b200f7329564da71ae86478f">KeyboardActionMapping::field_204</a></div><div class="ttdeci">int field_204</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d85/_keyboard_8h_source.html#l00070">Keyboard.h:70</a></div></div>
+<div class="ttc" id="aclass_g_u_i_button_html_aca8ce2a5b073223866f61f5b7a2912ce"><div class="ttname"><a href="../../db/d66/class_g_u_i_button.html#aca8ce2a5b073223866f61f5b7a2912ce">GUIButton::uX</a></div><div class="ttdeci">unsigned int uX</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/db9/_g_u_i_button_8h_source.html#l00021">GUIButton.h:21</a></div></div>
+<div class="ttc" id="aclass_g_u_i_window___inventory___cast_spell_html_a373228c4a9230f499cf71796a185f581"><div class="ttname"><a href="../../d0/d91/class_g_u_i_window___inventory___cast_spell.html#a373228c4a9230f499cf71796a185f581">GUIWindow_Inventory_CastSpell::Update</a></div><div class="ttdeci">virtual void Update()</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/df9/_u_i_inventory_8cpp_source.html#l00047">UIInventory.cpp:47</a></div></div>
+<div class="ttc" id="a_g_u_i_window_8h_html_af188298480c77be8835d6760fa6edfd7a1b14f33469f90b26e5f73747bcbd62f8"><div class="ttname"><a href="../../d5/d0b/_g_u_i_window_8h.html#af188298480c77be8835d6760fa6edfd7a1b14f33469f90b26e5f73747bcbd62f8">CURRENT_SCREEN::SCREEN_GAME</a></div><div class="ttdeci">@ SCREEN_GAME</div></div>
+<div class="ttc" id="a_g_u_i_window_8h_html_af6151e5c72717e701f7f8a645e231cb7"><div class="ttname"><a href="../../d5/d0b/_g_u_i_window_8h.html#af6151e5c72717e701f7f8a645e231cb7">draw_leather</a></div><div class="ttdeci">void draw_leather()</div><div class="ttdef"><b>Definition:</b> <a href="../../db/dd5/_u_i_character_8cpp_source.html#l00925">UICharacter.cpp:925</a></div></div>
+<div class="ttc" id="a_u_i_status_bar_8h_html"><div class="ttname"><a href="../../df/d16/_u_i_status_bar_8h.html">UIStatusBar.h</a></div></div>
+<div class="ttc" id="a_keyboard_8cpp_html_a34b4e1537c7fd357f860b68adb8ec1d5"><div class="ttname"><a href="../../d9/d5c/_keyboard_8cpp.html#a34b4e1537c7fd357f860b68adb8ec1d5">pKeyActionMap</a></div><div class="ttdeci">struct KeyboardActionMapping * pKeyActionMap</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d5c/_keyboard_8cpp_source.html#l00035">Keyboard.cpp:35</a></div></div>
+<div class="ttc" id="aclass_g_u_i_window_html_a3d84c25b1493b00f1f5eb5e27a45c309"><div class="ttname"><a href="../../d4/d38/class_g_u_i_window.html#a3d84c25b1493b00f1f5eb5e27a45c309">GUIWindow::mouse</a></div><div class="ttdeci">Mouse * mouse</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d0b/_g_u_i_window_8h_source.html#l00491">GUIWindow.h:491</a></div></div>
+<div class="ttc" id="amm7__data_8cpp_html_aea2cd445c717797ec38d3ac259b5f20b"><div class="ttname"><a href="../../d6/d5b/mm7__data_8cpp.html#aea2cd445c717797ec38d3ac259b5f20b">uActiveCharacter</a></div><div class="ttdeci">unsigned int uActiveCharacter</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d5b/mm7__data_8cpp_source.html#l00555">mm7_data.cpp:555</a></div></div>
+<div class="ttc" id="aclass_g_u_i_button_html_a9ffa6e46d9c69136d833c8e823a4d79f"><div class="ttname"><a href="../../db/d66/class_g_u_i_button.html#a9ffa6e46d9c69136d833c8e823a4d79f">GUIButton::uY</a></div><div class="ttdeci">unsigned int uY</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/db9/_g_u_i_button_8h_source.html#l00022">GUIButton.h:22</a></div></div>
+<div class="ttc" id="a_u_i_status_bar_8cpp_html_abe7a1f2130faa2a0a455965241061a8c"><div class="ttname"><a href="../../d4/dca/_u_i_status_bar_8cpp.html#abe7a1f2130faa2a0a455965241061a8c">GameUI_StatusBar_OnEvent</a></div><div class="ttdeci">void GameUI_StatusBar_OnEvent(const String &amp;str, unsigned int num_seconds)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dca/_u_i_status_bar_8cpp_source.html#l00033">UIStatusBar.cpp:33</a></div></div>
+<div class="ttc" id="astruct_viewing_params_html_a0bb88f953083fe55c27db34b5b774956"><div class="ttname"><a href="../../d4/d10/struct_viewing_params.html#a0bb88f953083fe55c27db34b5b774956">ViewingParams::bRedrawGameUI</a></div><div class="ttdeci">int bRedrawGameUI</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d19/_viewport_8h_source.html#l00074">Viewport.h:74</a></div></div>
+<div class="ttc" id="aclass_mouse_html_a6c1329c4dec99e3c72b20087d95ea91d"><div class="ttname"><a href="../../d7/dc5/class_mouse.html#a6c1329c4dec99e3c72b20087d95ea91d">Mouse::SetCursorImage</a></div><div class="ttdeci">void SetCursorImage(const String &amp;name)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d54/_mouse_8cpp_source.html#l00038">Mouse.cpp:38</a></div></div>
+<div class="ttc" id="aclass_g_u_i_window___inventory_html_ad45dddaea4ea0a832ba53653b1d7ccf1"><div class="ttname"><a href="../../d0/d4e/class_g_u_i_window___inventory.html#ad45dddaea4ea0a832ba53653b1d7ccf1">GUIWindow_Inventory::Update</a></div><div class="ttdeci">virtual void Update()</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/df9/_u_i_inventory_8cpp_source.html#l00017">UIInventory.cpp:17</a></div></div>
+<div class="ttc" id="astruct_item_gen_html"><div class="ttname"><a href="../../d7/d9c/struct_item_gen.html">ItemGen</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d5/da4/_items_8h_source.html#l00263">Items.h:263</a></div></div>
+<div class="ttc" id="a_g_u_i_font_8cpp_html_a20125354aa9f9043e5405fc5c9a4898c"><div class="ttname"><a href="../../d4/d5e/_g_u_i_font_8cpp.html#a20125354aa9f9043e5405fc5c9a4898c">pFontLucida</a></div><div class="ttdeci">GUIFont * pFontLucida</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d5e/_g_u_i_font_8cpp_source.html#l00019">GUIFont.cpp:19</a></div></div>
+<div class="ttc" id="a_strings_8h_html_afbeda3fd1bdc8c37d01bdf9f5c8274ff"><div class="ttname"><a href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a></div><div class="ttdeci">std::string String</div><div class="ttdef"><b>Definition:</b> <a href="../../de/df7/_strings_8h_source.html#l00010">Strings.h:10</a></div></div>
+<div class="ttc" id="a_keyboard_8h_html"><div class="ttname"><a href="../../df/d85/_keyboard_8h.html">Keyboard.h</a></div></div>
+<div class="ttc" id="a_time_8cpp_html_a9b16df08347bd1a24e9e426848ffca3c"><div class="ttname"><a href="../../db/d84/_time_8cpp.html#a9b16df08347bd1a24e9e426848ffca3c">pEventTimer</a></div><div class="ttdeci">Timer * pEventTimer</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d84/_time_8cpp_source.html#l00008">Time.cpp:8</a></div></div>
+<div class="ttc" id="a_mouse_8h_html"><div class="ttname"><a href="../../d2/de3/_mouse_8h.html">Mouse.h</a></div></div>
+<div class="ttc" id="a_i_render_8h_html_a21d31464313b2c66ff88d4aa97b66143"><div class="ttname"><a href="../../da/d20/_i_render_8h.html#a21d31464313b2c66ff88d4aa97b66143">render</a></div><div class="ttdeci">std::shared_ptr&lt; IRender &gt; render</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d79/_render_open_g_l_8cpp_source.html#l00052">RenderOpenGL.cpp:52</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_171b764decf33d63a7df2fab4f4bc6d8.html">GUI</a></li><li class="navelem"><a class="el" href="../../dir_008f70fed27c4008afe49ab10279d8cb.html">UI</a></li><li class="navelem"><a class="el" href="../../dd/df9/_u_i_inventory_8cpp.html">UIInventory.cpp</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:03:36. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,1349 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Файл C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavformat/avformat.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('dc/df2/avformat_8h.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#typedef-members">Определения типов</a> &#124;
+<a href="#enum-members">Перечисления</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл avformat.h<div class="ingroups"><a class="el" href="../../d3/d1c/group__libavf.html">libavformat</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><a href="../../dc/df2/avformat_8h_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d91/struct_a_v_probe_data.html">AVProbeData</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d35/struct_a_v_output_format.html">AVOutputFormat</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dcc/struct_a_v_input_format.html">AVInputFormat</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dc6/struct_a_v_index_entry.html">AVIndexEntry</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d6c/struct_a_v_stream.html">AVStream</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d56/struct_a_v_program.html">AVProgram</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d87/struct_a_v_chapter.html">AVChapter</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d7b/struct_a_v_packet_list.html">AVPacketList</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Определения типов</h2></td></tr>
+<tr class="memitem:a52b5c22528bfd3597c076a97cf98383c"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="../../da/d91/struct_a_v_probe_data.html">AVProbeData</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/df2/avformat_8h.html#a52b5c22528bfd3597c076a97cf98383c">AVProbeData</a></td></tr>
+<tr class="separator:a52b5c22528bfd3597c076a97cf98383c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf31ccdb28224d5bc7e23e308e0dadc0b"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="../../d9/d35/struct_a_v_output_format.html">AVOutputFormat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d95/group__lavf__encoding.html#gaf31ccdb28224d5bc7e23e308e0dadc0b">AVOutputFormat</a></td></tr>
+<tr class="separator:gaf31ccdb28224d5bc7e23e308e0dadc0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaac37282bf7806f242e2d593c3dea3c9f"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="../../d8/dcc/struct_a_v_input_format.html">AVInputFormat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d2c/group__lavf__decoding.html#gaac37282bf7806f242e2d593c3dea3c9f">AVInputFormat</a></td></tr>
+<tr class="separator:gaac37282bf7806f242e2d593c3dea3c9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26c94891b37de95d520e67c2d3dbe0aa"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="../../d2/dc6/struct_a_v_index_entry.html">AVIndexEntry</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/df2/avformat_8h.html#a26c94891b37de95d520e67c2d3dbe0aa">AVIndexEntry</a></td></tr>
+<tr class="separator:a26c94891b37de95d520e67c2d3dbe0aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5989dd9dc73f1e05d7cce92a056180bd"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="../../dc/df2/avformat_8h.html#a5989dd9dc73f1e05d7cce92a056180bd">AVStreamInternal</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/df2/avformat_8h.html#a5989dd9dc73f1e05d7cce92a056180bd">AVStreamInternal</a></td></tr>
+<tr class="separator:a5989dd9dc73f1e05d7cce92a056180bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c325af5e80f6b7dbe17a09f6383d63b"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="../../d4/d6c/struct_a_v_stream.html">AVStream</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/df2/avformat_8h.html#a2c325af5e80f6b7dbe17a09f6383d63b">AVStream</a></td></tr>
+<tr class="separator:a2c325af5e80f6b7dbe17a09f6383d63b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11e9013f860bb03dfd25229a0eede08b"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="../../d0/d56/struct_a_v_program.html">AVProgram</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/df2/avformat_8h.html#a11e9013f860bb03dfd25229a0eede08b">AVProgram</a></td></tr>
+<tr class="separator:a11e9013f860bb03dfd25229a0eede08b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9f4caa7f49fafb6a1a1415a61db2538"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="../../d0/d87/struct_a_v_chapter.html">AVChapter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/df2/avformat_8h.html#ab9f4caa7f49fafb6a1a1415a61db2538">AVChapter</a></td></tr>
+<tr class="separator:ab9f4caa7f49fafb6a1a1415a61db2538"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80856b99bcf4373936fb4fba028b11ca"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/df2/avformat_8h.html#a80856b99bcf4373936fb4fba028b11ca">av_format_control_message</a>) (struct <a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>, int <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#ad5ddf6fca7b585646515660e810e0188">type</a>, <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a2e335d56e2846b0fea47eed068b2d34a">data</a>, <a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a7c94ea6f8948649f8d181ae55911eeaf">size_t</a> data_size)</td></tr>
+<tr class="separator:a80856b99bcf4373936fb4fba028b11ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f7cab62acdf2bce2883a3c82cf1a27c"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/df2/avformat_8h.html#a6f7cab62acdf2bce2883a3c82cf1a27c">AVOpenCallback</a>) (struct <a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>, <a class="el" href="../../d7/dcc/struct_a_v_i_o_context.html">AVIOContext</a> **pb, const char *url, int <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#ac7ba7d3cce3d19ca020e056b37231289">flags</a>, const <a class="el" href="../../da/dc9/struct_a_v_i_o_interrupt_c_b.html">AVIOInterruptCB</a> *int_cb, <a class="el" href="../../d2/db0/group__lavu__dict.html#ga1d7cc0833bee918994a600556410315f">AVDictionary</a> **options)</td></tr>
+<tr class="separator:a6f7cab62acdf2bce2883a3c82cf1a27c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bec8d592652431045d81a02fef74f28"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="../../dc/df2/avformat_8h.html#a7bec8d592652431045d81a02fef74f28">AVFormatInternal</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/df2/avformat_8h.html#a7bec8d592652431045d81a02fef74f28">AVFormatInternal</a></td></tr>
+<tr class="separator:a7bec8d592652431045d81a02fef74f28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88eb691f3ba26b11b9421470a0f8b359"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/df2/avformat_8h.html#a88eb691f3ba26b11b9421470a0f8b359">AVFormatContext</a></td></tr>
+<tr class="separator:a88eb691f3ba26b11b9421470a0f8b359"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae326a9474c32a42fdaa9c0757fe3b576"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="../../de/d7b/struct_a_v_packet_list.html">AVPacketList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/df2/avformat_8h.html#ae326a9474c32a42fdaa9c0757fe3b576">AVPacketList</a></td></tr>
+<tr class="separator:ae326a9474c32a42fdaa9c0757fe3b576"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Перечисления</h2></td></tr>
+<tr class="memitem:afacbc85f23a50771e3801bda0a353d91"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/df2/avformat_8h.html#afacbc85f23a50771e3801bda0a353d91">AVStreamParseType</a> { <br />
+&#160;&#160;<a class="el" href="../../dc/df2/avformat_8h.html#afacbc85f23a50771e3801bda0a353d91ac715de62daa60e31ce01b9671bd35f9e">AVSTREAM_PARSE_NONE</a>, 
+<a class="el" href="../../dc/df2/avformat_8h.html#afacbc85f23a50771e3801bda0a353d91ac21d15a27dac74ca0730b4dace71d883">AVSTREAM_PARSE_FULL</a>, 
+<a class="el" href="../../dc/df2/avformat_8h.html#afacbc85f23a50771e3801bda0a353d91a67bc09fcdeb0e05754f344fbc80856ca">AVSTREAM_PARSE_HEADERS</a>, 
+<a class="el" href="../../dc/df2/avformat_8h.html#afacbc85f23a50771e3801bda0a353d91a10f8e7a9d88b7b5e2010ffb496b6cf1a">AVSTREAM_PARSE_TIMESTAMPS</a>, 
+<br />
+&#160;&#160;<a class="el" href="../../dc/df2/avformat_8h.html#afacbc85f23a50771e3801bda0a353d91a41eb176dd7cfc095b5ea66816a75c56a">AVSTREAM_PARSE_FULL_ONCE</a>, 
+<a class="el" href="../../dc/df2/avformat_8h.html#afacbc85f23a50771e3801bda0a353d91a4a4190f226593e92724285f8bfef9c2e">AVSTREAM_PARSE_FULL_RAW</a>
+<br />
+ }</td></tr>
+<tr class="separator:afacbc85f23a50771e3801bda0a353d91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c2692ffa20d3e888e40e79eeda6d73b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/df2/avformat_8h.html#a7c2692ffa20d3e888e40e79eeda6d73b">AVDurationEstimationMethod</a> { <a class="el" href="../../dc/df2/avformat_8h.html#a7c2692ffa20d3e888e40e79eeda6d73bac94465d3290399477775fe094ab8f75a">AVFMT_DURATION_FROM_PTS</a>, 
+<a class="el" href="../../dc/df2/avformat_8h.html#a7c2692ffa20d3e888e40e79eeda6d73bae92edb9576c3d6dd68f49a849a2ec6c0">AVFMT_DURATION_FROM_STREAM</a>, 
+<a class="el" href="../../dc/df2/avformat_8h.html#a7c2692ffa20d3e888e40e79eeda6d73ba6185e1e7f8dfae85596779408ef496b2">AVFMT_DURATION_FROM_BITRATE</a>
+ }</td></tr>
+<tr class="separator:a7c2692ffa20d3e888e40e79eeda6d73b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga67f84bb8799c8da41194f046f4b970c4"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d44/group__lavf__misc.html#ga67f84bb8799c8da41194f046f4b970c4">AVTimebaseSource</a> { <a class="el" href="../../d7/d44/group__lavf__misc.html#gga67f84bb8799c8da41194f046f4b970c4a925300170a86b606dbe4b2b2a18ad12a">AVFMT_TBCF_AUTO</a> = -1, 
+<a class="el" href="../../d7/d44/group__lavf__misc.html#gga67f84bb8799c8da41194f046f4b970c4ae6bd8e936313feda91adedd2501ca90b">AVFMT_TBCF_DECODER</a>, 
+<a class="el" href="../../d7/d44/group__lavf__misc.html#gga67f84bb8799c8da41194f046f4b970c4a4b894ad271e07df75e1b8121455ea4ee">AVFMT_TBCF_DEMUXER</a>, 
+<a class="el" href="../../d7/d44/group__lavf__misc.html#gga67f84bb8799c8da41194f046f4b970c4a6b54fbd5193e969530dd00f49a903cef">AVFMT_TBCF_R_FRAMERATE</a>
+ }</td></tr>
+<tr class="separator:ga67f84bb8799c8da41194f046f4b970c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a9d2e6f22150d98c36dcc2c6c49318019"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/df2/avformat_8h.html#a9d2e6f22150d98c36dcc2c6c49318019">av_get_packet</a> (<a class="el" href="../../d7/dcc/struct_a_v_i_o_context.html">AVIOContext</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>, <a class="el" href="../../d4/d31/struct_a_v_packet.html">AVPacket</a> *pkt, int <a class="el" href="../../db/d76/group__lavu__mem__funcs.html#ga3d1e3edfcf61ca2d831883e1afbad89e">size</a>)</td></tr>
+<tr class="separator:a9d2e6f22150d98c36dcc2c6c49318019"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e991213ccc3d642972b57a1decb797b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/df2/avformat_8h.html#a0e991213ccc3d642972b57a1decb797b">av_append_packet</a> (<a class="el" href="../../d7/dcc/struct_a_v_i_o_context.html">AVIOContext</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>, <a class="el" href="../../d4/d31/struct_a_v_packet.html">AVPacket</a> *pkt, int <a class="el" href="../../db/d76/group__lavu__mem__funcs.html#ga3d1e3edfcf61ca2d831883e1afbad89e">size</a>)</td></tr>
+<tr class="separator:a0e991213ccc3d642972b57a1decb797b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9357d05004b6f933795acaf929634c1e"><td class="memItemLeft" align="right" valign="top">attribute_deprecated <a class="el" href="../../d7/d28/struct_a_v_rational.html">AVRational</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/df2/avformat_8h.html#a9357d05004b6f933795acaf929634c1e">av_stream_get_r_frame_rate</a> (const <a class="el" href="../../d4/d6c/struct_a_v_stream.html">AVStream</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>)</td></tr>
+<tr class="separator:a9357d05004b6f933795acaf929634c1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae06f63924505b02f962eaca4b1de19f3"><td class="memItemLeft" align="right" valign="top">attribute_deprecated <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/df2/avformat_8h.html#ae06f63924505b02f962eaca4b1de19f3">av_stream_set_r_frame_rate</a> (<a class="el" href="../../d4/d6c/struct_a_v_stream.html">AVStream</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>, <a class="el" href="../../d7/d28/struct_a_v_rational.html">AVRational</a> <a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a42ce7cdc612e53abee15043f80220d97">r</a>)</td></tr>
+<tr class="separator:ae06f63924505b02f962eaca4b1de19f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17ab64a0049180a8a5046260c6d5ce81"><td class="memItemLeft" align="right" valign="top">attribute_deprecated char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/df2/avformat_8h.html#a17ab64a0049180a8a5046260c6d5ce81">av_stream_get_recommended_encoder_configuration</a> (const <a class="el" href="../../d4/d6c/struct_a_v_stream.html">AVStream</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>)</td></tr>
+<tr class="separator:a17ab64a0049180a8a5046260c6d5ce81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38a4a871fa64da9da4036cb7d95096e1"><td class="memItemLeft" align="right" valign="top">attribute_deprecated <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/df2/avformat_8h.html#a38a4a871fa64da9da4036cb7d95096e1">av_stream_set_recommended_encoder_configuration</a> (<a class="el" href="../../d4/d6c/struct_a_v_stream.html">AVStream</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>, char *configuration)</td></tr>
+<tr class="separator:a38a4a871fa64da9da4036cb7d95096e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a125e78a8250557501479986fead28a43"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="../../d7/da5/struct_a_v_codec_parser_context.html">AVCodecParserContext</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/df2/avformat_8h.html#a125e78a8250557501479986fead28a43">av_stream_get_parser</a> (const <a class="el" href="../../d4/d6c/struct_a_v_stream.html">AVStream</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>)</td></tr>
+<tr class="separator:a125e78a8250557501479986fead28a43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea2211b21ee4a9a443886c2e0a63be1c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/df4/alext_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/df2/avformat_8h.html#aea2211b21ee4a9a443886c2e0a63be1c">av_stream_get_end_pts</a> (const <a class="el" href="../../d4/d6c/struct_a_v_stream.html">AVStream</a> *st)</td></tr>
+<tr class="separator:aea2211b21ee4a9a443886c2e0a63be1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72855bcf0bdfb1195817a7c68f4a70dc"><td class="memItemLeft" align="right" valign="top">attribute_deprecated int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/df2/avformat_8h.html#a72855bcf0bdfb1195817a7c68f4a70dc">av_format_get_probe_score</a> (const <a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>)</td></tr>
+<tr class="separator:a72855bcf0bdfb1195817a7c68f4a70dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0473ff5b077a9139a1bdc5bdb41b371"><td class="memItemLeft" align="right" valign="top">attribute_deprecated <a class="el" href="../../df/d2a/struct_a_v_codec.html">AVCodec</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/df2/avformat_8h.html#af0473ff5b077a9139a1bdc5bdb41b371">av_format_get_video_codec</a> (const <a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>)</td></tr>
+<tr class="separator:af0473ff5b077a9139a1bdc5bdb41b371"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9ed73c3d024aa2e393bbeed676559cf"><td class="memItemLeft" align="right" valign="top">attribute_deprecated <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/df2/avformat_8h.html#aa9ed73c3d024aa2e393bbeed676559cf">av_format_set_video_codec</a> (<a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>, <a class="el" href="../../df/d2a/struct_a_v_codec.html">AVCodec</a> *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1f2d7f8147412c43ba2303a56f97ee73">c</a>)</td></tr>
+<tr class="separator:aa9ed73c3d024aa2e393bbeed676559cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1056bc91c45a047b379e84caeff90e9b"><td class="memItemLeft" align="right" valign="top">attribute_deprecated <a class="el" href="../../df/d2a/struct_a_v_codec.html">AVCodec</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/df2/avformat_8h.html#a1056bc91c45a047b379e84caeff90e9b">av_format_get_audio_codec</a> (const <a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>)</td></tr>
+<tr class="separator:a1056bc91c45a047b379e84caeff90e9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada5e40fc081e6583b94019dbef4e61f7"><td class="memItemLeft" align="right" valign="top">attribute_deprecated <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/df2/avformat_8h.html#ada5e40fc081e6583b94019dbef4e61f7">av_format_set_audio_codec</a> (<a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>, <a class="el" href="../../df/d2a/struct_a_v_codec.html">AVCodec</a> *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1f2d7f8147412c43ba2303a56f97ee73">c</a>)</td></tr>
+<tr class="separator:ada5e40fc081e6583b94019dbef4e61f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a544e92ac08825f59adf6774096badf3c"><td class="memItemLeft" align="right" valign="top">attribute_deprecated <a class="el" href="../../df/d2a/struct_a_v_codec.html">AVCodec</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/df2/avformat_8h.html#a544e92ac08825f59adf6774096badf3c">av_format_get_subtitle_codec</a> (const <a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>)</td></tr>
+<tr class="separator:a544e92ac08825f59adf6774096badf3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0969dc38b4a7635219544c243f8d3b6"><td class="memItemLeft" align="right" valign="top">attribute_deprecated <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/df2/avformat_8h.html#ad0969dc38b4a7635219544c243f8d3b6">av_format_set_subtitle_codec</a> (<a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>, <a class="el" href="../../df/d2a/struct_a_v_codec.html">AVCodec</a> *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1f2d7f8147412c43ba2303a56f97ee73">c</a>)</td></tr>
+<tr class="separator:ad0969dc38b4a7635219544c243f8d3b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a314956ebefc507ef8fdb4b0e5d72d999"><td class="memItemLeft" align="right" valign="top">attribute_deprecated <a class="el" href="../../df/d2a/struct_a_v_codec.html">AVCodec</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/df2/avformat_8h.html#a314956ebefc507ef8fdb4b0e5d72d999">av_format_get_data_codec</a> (const <a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>)</td></tr>
+<tr class="separator:a314956ebefc507ef8fdb4b0e5d72d999"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55bd0a1321fef545f1eeb7aac1eaae78"><td class="memItemLeft" align="right" valign="top">attribute_deprecated <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/df2/avformat_8h.html#a55bd0a1321fef545f1eeb7aac1eaae78">av_format_set_data_codec</a> (<a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>, <a class="el" href="../../df/d2a/struct_a_v_codec.html">AVCodec</a> *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1f2d7f8147412c43ba2303a56f97ee73">c</a>)</td></tr>
+<tr class="separator:a55bd0a1321fef545f1eeb7aac1eaae78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d687b364d44c474a84ada17c6cd6cad"><td class="memItemLeft" align="right" valign="top">attribute_deprecated int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/df2/avformat_8h.html#a2d687b364d44c474a84ada17c6cd6cad">av_format_get_metadata_header_padding</a> (const <a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>)</td></tr>
+<tr class="separator:a2d687b364d44c474a84ada17c6cd6cad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f742d32e9fdfd9744ccae4b1fe22acf"><td class="memItemLeft" align="right" valign="top">attribute_deprecated <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/df2/avformat_8h.html#a0f742d32e9fdfd9744ccae4b1fe22acf">av_format_set_metadata_header_padding</a> (<a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>, int <a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1f2d7f8147412c43ba2303a56f97ee73">c</a>)</td></tr>
+<tr class="separator:a0f742d32e9fdfd9744ccae4b1fe22acf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4714d61708a6f639e3289f44977371a"><td class="memItemLeft" align="right" valign="top">attribute_deprecated <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/df2/avformat_8h.html#af4714d61708a6f639e3289f44977371a">av_format_get_opaque</a> (const <a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>)</td></tr>
+<tr class="separator:af4714d61708a6f639e3289f44977371a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9dda1ca64f0be8545751ef678a78bef9"><td class="memItemLeft" align="right" valign="top">attribute_deprecated <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/df2/avformat_8h.html#a9dda1ca64f0be8545751ef678a78bef9">av_format_set_opaque</a> (<a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>, <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *opaque)</td></tr>
+<tr class="separator:a9dda1ca64f0be8545751ef678a78bef9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04fb8009bcd3c311bdf2462c0bf5d064"><td class="memItemLeft" align="right" valign="top">attribute_deprecated <a class="el" href="../../dc/df2/avformat_8h.html#a80856b99bcf4373936fb4fba028b11ca">av_format_control_message</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/df2/avformat_8h.html#a04fb8009bcd3c311bdf2462c0bf5d064">av_format_get_control_message_cb</a> (const <a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>)</td></tr>
+<tr class="separator:a04fb8009bcd3c311bdf2462c0bf5d064"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe62b3938a627886481b240c38f1d755"><td class="memItemLeft" align="right" valign="top">attribute_deprecated <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/df2/avformat_8h.html#abe62b3938a627886481b240c38f1d755">av_format_set_control_message_cb</a> (<a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>, <a class="el" href="../../dc/df2/avformat_8h.html#a80856b99bcf4373936fb4fba028b11ca">av_format_control_message</a> callback)</td></tr>
+<tr class="separator:abe62b3938a627886481b240c38f1d755"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2eb3bd1085e08a22629c5145fab7e2a"><td class="memItemLeft" align="right" valign="top">attribute_deprecated <a class="el" href="../../dc/df2/avformat_8h.html#a6f7cab62acdf2bce2883a3c82cf1a27c">AVOpenCallback</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/df2/avformat_8h.html#ae2eb3bd1085e08a22629c5145fab7e2a">av_format_get_open_cb</a> (const <a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>)</td></tr>
+<tr class="separator:ae2eb3bd1085e08a22629c5145fab7e2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae478cd46bff6bcb0164a34e86cdedb40"><td class="memItemLeft" align="right" valign="top">attribute_deprecated <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/df2/avformat_8h.html#ae478cd46bff6bcb0164a34e86cdedb40">av_format_set_open_cb</a> (<a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>, <a class="el" href="../../dc/df2/avformat_8h.html#a6f7cab62acdf2bce2883a3c82cf1a27c">AVOpenCallback</a> callback)</td></tr>
+<tr class="separator:ae478cd46bff6bcb0164a34e86cdedb40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3a096ee52bc6b1e0f31278d26996777"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/df2/avformat_8h.html#aa3a096ee52bc6b1e0f31278d26996777">av_format_inject_global_side_data</a> (<a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>)</td></tr>
+<tr class="separator:aa3a096ee52bc6b1e0f31278d26996777"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7070b68d7ca5fd577f9f835556ebeff"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="../../dc/df2/avformat_8h.html#a7c2692ffa20d3e888e40e79eeda6d73b">AVDurationEstimationMethod</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/df2/avformat_8h.html#ac7070b68d7ca5fd577f9f835556ebeff">av_fmt_ctx_get_duration_estimation_method</a> (const <a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *<a class="el" href="../../df/d32/_s_d_l__egl_8h.html#a209c8e51e11ce41075280eea53ad018c">ctx</a>)</td></tr>
+<tr class="separator:ac7070b68d7ca5fd577f9f835556ebeff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf2d4e0fee66cef99dea2153933e6b907"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dab/group__lavf__core.html#gaf2d4e0fee66cef99dea2153933e6b907">avformat_version</a> (<a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>)</td></tr>
+<tr class="separator:gaf2d4e0fee66cef99dea2153933e6b907"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5f48b0398d77d8eeb45d6c649e4e3404"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dab/group__lavf__core.html#ga5f48b0398d77d8eeb45d6c649e4e3404">avformat_configuration</a> (<a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>)</td></tr>
+<tr class="separator:ga5f48b0398d77d8eeb45d6c649e4e3404"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga160fef784175409f945c70e8931accc8"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dab/group__lavf__core.html#ga160fef784175409f945c70e8931accc8">avformat_license</a> (<a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>)</td></tr>
+<tr class="separator:ga160fef784175409f945c70e8931accc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5e6f90f2fd70697b830ffc0782fb0550"><td class="memItemLeft" align="right" valign="top">attribute_deprecated <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dab/group__lavf__core.html#ga5e6f90f2fd70697b830ffc0782fb0550">av_register_all</a> (<a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>)</td></tr>
+<tr class="separator:ga5e6f90f2fd70697b830ffc0782fb0550"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga545fb9d9983873fdc6d0beb085a0312a"><td class="memItemLeft" align="right" valign="top">attribute_deprecated <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dab/group__lavf__core.html#ga545fb9d9983873fdc6d0beb085a0312a">av_register_input_format</a> (<a class="el" href="../../d8/dcc/struct_a_v_input_format.html">AVInputFormat</a> *<a class="el" href="../../d3/d78/_s_d_l__audio_8h.html#a71a65ffd977afe9c3fef116a5bc9ee27">format</a>)</td></tr>
+<tr class="separator:ga545fb9d9983873fdc6d0beb085a0312a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad3195669790990f6a569a93849214cf3"><td class="memItemLeft" align="right" valign="top">attribute_deprecated <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dab/group__lavf__core.html#gad3195669790990f6a569a93849214cf3">av_register_output_format</a> (<a class="el" href="../../d9/d35/struct_a_v_output_format.html">AVOutputFormat</a> *<a class="el" href="../../d3/d78/_s_d_l__audio_8h.html#a71a65ffd977afe9c3fef116a5bc9ee27">format</a>)</td></tr>
+<tr class="separator:gad3195669790990f6a569a93849214cf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga84542023693d61e8564c5d457979c932"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dab/group__lavf__core.html#ga84542023693d61e8564c5d457979c932">avformat_network_init</a> (<a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>)</td></tr>
+<tr class="separator:ga84542023693d61e8564c5d457979c932"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga245f2875f80ce67ec3d1e0f54dacf2c4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dab/group__lavf__core.html#ga245f2875f80ce67ec3d1e0f54dacf2c4">avformat_network_deinit</a> (<a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>)</td></tr>
+<tr class="separator:ga245f2875f80ce67ec3d1e0f54dacf2c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad6c8c1d1de83198ab223949068e81b69"><td class="memItemLeft" align="right" valign="top">attribute_deprecated <a class="el" href="../../d8/dcc/struct_a_v_input_format.html">AVInputFormat</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dab/group__lavf__core.html#gad6c8c1d1de83198ab223949068e81b69">av_iformat_next</a> (const <a class="el" href="../../d8/dcc/struct_a_v_input_format.html">AVInputFormat</a> *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a>)</td></tr>
+<tr class="separator:gad6c8c1d1de83198ab223949068e81b69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga77d8c8bba44b986dcf0e9ac06fd9c4b1"><td class="memItemLeft" align="right" valign="top">attribute_deprecated <a class="el" href="../../d9/d35/struct_a_v_output_format.html">AVOutputFormat</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dab/group__lavf__core.html#ga77d8c8bba44b986dcf0e9ac06fd9c4b1">av_oformat_next</a> (const <a class="el" href="../../d9/d35/struct_a_v_output_format.html">AVOutputFormat</a> *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a>)</td></tr>
+<tr class="separator:ga77d8c8bba44b986dcf0e9ac06fd9c4b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1a0f4b562917ad7d627f252ad64cc952"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d9/d35/struct_a_v_output_format.html">AVOutputFormat</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dab/group__lavf__core.html#ga1a0f4b562917ad7d627f252ad64cc952">av_muxer_iterate</a> (<a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> **opaque)</td></tr>
+<tr class="separator:ga1a0f4b562917ad7d627f252ad64cc952"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaddf8c11818a124e96109ad5eeed0d51b"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d8/dcc/struct_a_v_input_format.html">AVInputFormat</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dab/group__lavf__core.html#gaddf8c11818a124e96109ad5eeed0d51b">av_demuxer_iterate</a> (<a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> **opaque)</td></tr>
+<tr class="separator:gaddf8c11818a124e96109ad5eeed0d51b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac7a91abf2f59648d995894711f070f62"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dab/group__lavf__core.html#gac7a91abf2f59648d995894711f070f62">avformat_alloc_context</a> (<a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>)</td></tr>
+<tr class="separator:gac7a91abf2f59648d995894711f070f62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac2990b13b68e831a408fce8e1d0d6445"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dab/group__lavf__core.html#gac2990b13b68e831a408fce8e1d0d6445">avformat_free_context</a> (<a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>)</td></tr>
+<tr class="separator:gac2990b13b68e831a408fce8e1d0d6445"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6030789ce395ef543306bbe933619749"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d2/de1/struct_a_v_class.html">AVClass</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dab/group__lavf__core.html#ga6030789ce395ef543306bbe933619749">avformat_get_class</a> (<a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>)</td></tr>
+<tr class="separator:ga6030789ce395ef543306bbe933619749"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadcb0fd3e507d9b58fe78f61f8ad39827"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d4/d6c/struct_a_v_stream.html">AVStream</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dab/group__lavf__core.html#gadcb0fd3e507d9b58fe78f61f8ad39827">avformat_new_stream</a> (<a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>, const <a class="el" href="../../df/d2a/struct_a_v_codec.html">AVCodec</a> *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1f2d7f8147412c43ba2303a56f97ee73">c</a>)</td></tr>
+<tr class="separator:gadcb0fd3e507d9b58fe78f61f8ad39827"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5c8d715704c153cb645982444063cc2b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dab/group__lavf__core.html#ga5c8d715704c153cb645982444063cc2b">av_stream_add_side_data</a> (<a class="el" href="../../d4/d6c/struct_a_v_stream.html">AVStream</a> *st, enum <a class="el" href="../../de/d4a/group__lavc__packet.html#ga9a80bfcacc586b483a973272800edb97">AVPacketSideDataType</a> <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#ad5ddf6fca7b585646515660e810e0188">type</a>, <a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a2e335d56e2846b0fea47eed068b2d34a">data</a>, <a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a7c94ea6f8948649f8d181ae55911eeaf">size_t</a> <a class="el" href="../../db/d76/group__lavu__mem__funcs.html#ga3d1e3edfcf61ca2d831883e1afbad89e">size</a>)</td></tr>
+<tr class="separator:ga5c8d715704c153cb645982444063cc2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae324697cedd36e7b47a1e142dc24b805"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dab/group__lavf__core.html#gae324697cedd36e7b47a1e142dc24b805">av_stream_new_side_data</a> (<a class="el" href="../../d4/d6c/struct_a_v_stream.html">AVStream</a> *<a class="el" href="../../df/d32/_s_d_l__egl_8h.html#a10d3bc96cdfc1d478f52c13d5ffd9316">stream</a>, enum <a class="el" href="../../de/d4a/group__lavc__packet.html#ga9a80bfcacc586b483a973272800edb97">AVPacketSideDataType</a> <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#ad5ddf6fca7b585646515660e810e0188">type</a>, int <a class="el" href="../../db/d76/group__lavu__mem__funcs.html#ga3d1e3edfcf61ca2d831883e1afbad89e">size</a>)</td></tr>
+<tr class="separator:gae324697cedd36e7b47a1e142dc24b805"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2c3404067d7e9bc7b8443e3f58cf8e65"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dab/group__lavf__core.html#ga2c3404067d7e9bc7b8443e3f58cf8e65">av_stream_get_side_data</a> (const <a class="el" href="../../d4/d6c/struct_a_v_stream.html">AVStream</a> *<a class="el" href="../../df/d32/_s_d_l__egl_8h.html#a10d3bc96cdfc1d478f52c13d5ffd9316">stream</a>, enum <a class="el" href="../../de/d4a/group__lavc__packet.html#ga9a80bfcacc586b483a973272800edb97">AVPacketSideDataType</a> <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#ad5ddf6fca7b585646515660e810e0188">type</a>, int *<a class="el" href="../../db/d76/group__lavu__mem__funcs.html#ga3d1e3edfcf61ca2d831883e1afbad89e">size</a>)</td></tr>
+<tr class="separator:ga2c3404067d7e9bc7b8443e3f58cf8e65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab31f7c7c99dcadead38e8e83e0fdb828"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d56/struct_a_v_program.html">AVProgram</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dab/group__lavf__core.html#gab31f7c7c99dcadead38e8e83e0fdb828">av_new_program</a> (<a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>, int <a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a58c2a664503e14ffb8f21012aabff3e9">id</a>)</td></tr>
+<tr class="separator:gab31f7c7c99dcadead38e8e83e0fdb828"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0234fa1116af3c0a72edaa08a2ba304f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/df2/avformat_8h.html#a0234fa1116af3c0a72edaa08a2ba304f">avformat_alloc_output_context2</a> (<a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> **<a class="el" href="../../df/d32/_s_d_l__egl_8h.html#a209c8e51e11ce41075280eea53ad018c">ctx</a>, ff_const59 <a class="el" href="../../d9/d35/struct_a_v_output_format.html">AVOutputFormat</a> *oformat, const char *format_name, const char *filename)</td></tr>
+<tr class="separator:a0234fa1116af3c0a72edaa08a2ba304f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga24fd4328b5739240f937f47380b8c254"><td class="memItemLeft" align="right" valign="top">ff_const59 <a class="el" href="../../d8/dcc/struct_a_v_input_format.html">AVInputFormat</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d2c/group__lavf__decoding.html#ga24fd4328b5739240f937f47380b8c254">av_find_input_format</a> (const char *short_name)</td></tr>
+<tr class="separator:ga24fd4328b5739240f937f47380b8c254"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga89ff4889f36f7c7d2031054a8ea2beb9"><td class="memItemLeft" align="right" valign="top">ff_const59 <a class="el" href="../../d8/dcc/struct_a_v_input_format.html">AVInputFormat</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d2c/group__lavf__decoding.html#ga89ff4889f36f7c7d2031054a8ea2beb9">av_probe_input_format</a> (ff_const59 <a class="el" href="../../da/d91/struct_a_v_probe_data.html">AVProbeData</a> *pd, int is_opened)</td></tr>
+<tr class="separator:ga89ff4889f36f7c7d2031054a8ea2beb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac06e7fbf645af01eac6ad4d82a78a438"><td class="memItemLeft" align="right" valign="top">ff_const59 <a class="el" href="../../d8/dcc/struct_a_v_input_format.html">AVInputFormat</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d2c/group__lavf__decoding.html#gac06e7fbf645af01eac6ad4d82a78a438">av_probe_input_format2</a> (ff_const59 <a class="el" href="../../da/d91/struct_a_v_probe_data.html">AVProbeData</a> *pd, int is_opened, int *score_max)</td></tr>
+<tr class="separator:gac06e7fbf645af01eac6ad4d82a78a438"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab76418ad1108455c760965b55934e7ee"><td class="memItemLeft" align="right" valign="top">ff_const59 <a class="el" href="../../d8/dcc/struct_a_v_input_format.html">AVInputFormat</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d2c/group__lavf__decoding.html#gab76418ad1108455c760965b55934e7ee">av_probe_input_format3</a> (ff_const59 <a class="el" href="../../da/d91/struct_a_v_probe_data.html">AVProbeData</a> *pd, int is_opened, int *score_ret)</td></tr>
+<tr class="separator:gab76418ad1108455c760965b55934e7ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7d48d4b4441eec04635a7e4644b5505f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d2c/group__lavf__decoding.html#ga7d48d4b4441eec04635a7e4644b5505f">av_probe_input_buffer2</a> (<a class="el" href="../../d7/dcc/struct_a_v_i_o_context.html">AVIOContext</a> *pb, ff_const59 <a class="el" href="../../d8/dcc/struct_a_v_input_format.html">AVInputFormat</a> **fmt, const char *url, <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *logctx, unsigned int <a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#ac915cd848f42b26af51745f204a3b9af">offset</a>, unsigned int max_probe_size)</td></tr>
+<tr class="separator:ga7d48d4b4441eec04635a7e4644b5505f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga03926bbf60e7698c45417dfc71b7ebe7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d2c/group__lavf__decoding.html#ga03926bbf60e7698c45417dfc71b7ebe7">av_probe_input_buffer</a> (<a class="el" href="../../d7/dcc/struct_a_v_i_o_context.html">AVIOContext</a> *pb, ff_const59 <a class="el" href="../../d8/dcc/struct_a_v_input_format.html">AVInputFormat</a> **fmt, const char *url, <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *logctx, unsigned int <a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#ac915cd848f42b26af51745f204a3b9af">offset</a>, unsigned int max_probe_size)</td></tr>
+<tr class="separator:ga03926bbf60e7698c45417dfc71b7ebe7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaff468dcc45289542f4c30d311bc2a201"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d2c/group__lavf__decoding.html#gaff468dcc45289542f4c30d311bc2a201">avformat_open_input</a> (<a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> **ps, const char *url, ff_const59 <a class="el" href="../../d8/dcc/struct_a_v_input_format.html">AVInputFormat</a> *fmt, <a class="el" href="../../d2/db0/group__lavu__dict.html#ga1d7cc0833bee918994a600556410315f">AVDictionary</a> **options)</td></tr>
+<tr class="separator:gaff468dcc45289542f4c30d311bc2a201"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga71091e146791c4d181635485447c2830"><td class="memItemLeft" align="right" valign="top">attribute_deprecated int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d2c/group__lavf__decoding.html#ga71091e146791c4d181635485447c2830">av_demuxer_open</a> (<a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *ic)</td></tr>
+<tr class="separator:ga71091e146791c4d181635485447c2830"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad42172e27cddafb81096939783b157bb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d2c/group__lavf__decoding.html#gad42172e27cddafb81096939783b157bb">avformat_find_stream_info</a> (<a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *ic, <a class="el" href="../../d2/db0/group__lavu__dict.html#ga1d7cc0833bee918994a600556410315f">AVDictionary</a> **options)</td></tr>
+<tr class="separator:gad42172e27cddafb81096939783b157bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9edb9ac206ed05dc5baa9d168f31de48"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d56/struct_a_v_program.html">AVProgram</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d2c/group__lavf__decoding.html#ga9edb9ac206ed05dc5baa9d168f31de48">av_find_program_from_stream</a> (<a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *ic, <a class="el" href="../../d0/d56/struct_a_v_program.html">AVProgram</a> *last, int <a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>)</td></tr>
+<tr class="separator:ga9edb9ac206ed05dc5baa9d168f31de48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa59b7800da8ec11457c1e5b3fc295a20"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d2c/group__lavf__decoding.html#gaa59b7800da8ec11457c1e5b3fc295a20">av_program_add_stream_index</a> (<a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *ac, int progid, unsigned int idx)</td></tr>
+<tr class="separator:gaa59b7800da8ec11457c1e5b3fc295a20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa6fa468c922ff5c60a6021dcac09aff9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d2c/group__lavf__decoding.html#gaa6fa468c922ff5c60a6021dcac09aff9">av_find_best_stream</a> (<a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *ic, enum <a class="el" href="../../d7/d83/group__lavu__misc.html#ga9a84bba4713dfced21a1a56163be1f48">AVMediaType</a> <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#ad5ddf6fca7b585646515660e810e0188">type</a>, int wanted_stream_nb, int related_stream, <a class="el" href="../../df/d2a/struct_a_v_codec.html">AVCodec</a> **decoder_ret, int <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#ac7ba7d3cce3d19ca020e056b37231289">flags</a>)</td></tr>
+<tr class="separator:gaa6fa468c922ff5c60a6021dcac09aff9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4fdb3084415a82e3810de6ee60e46a61"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d2c/group__lavf__decoding.html#ga4fdb3084415a82e3810de6ee60e46a61">av_read_frame</a> (<a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>, <a class="el" href="../../d4/d31/struct_a_v_packet.html">AVPacket</a> *pkt)</td></tr>
+<tr class="separator:ga4fdb3084415a82e3810de6ee60e46a61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa23f7619d8d4ea0857065d9979c75ac8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d2c/group__lavf__decoding.html#gaa23f7619d8d4ea0857065d9979c75ac8">av_seek_frame</a> (<a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>, int stream_index, <a class="el" href="../../dd/df4/alext_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a> timestamp, int <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#ac7ba7d3cce3d19ca020e056b37231289">flags</a>)</td></tr>
+<tr class="separator:gaa23f7619d8d4ea0857065d9979c75ac8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3b40fc8d2fda6992ae6ea2567d71ba30"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d2c/group__lavf__decoding.html#ga3b40fc8d2fda6992ae6ea2567d71ba30">avformat_seek_file</a> (<a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>, int stream_index, <a class="el" href="../../dd/df4/alext_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a> min_ts, <a class="el" href="../../dd/df4/alext_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a> ts, <a class="el" href="../../dd/df4/alext_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a> max_ts, int <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#ac7ba7d3cce3d19ca020e056b37231289">flags</a>)</td></tr>
+<tr class="separator:ga3b40fc8d2fda6992ae6ea2567d71ba30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa03a82c5fd4fe3af312d229ca94cd6f3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d2c/group__lavf__decoding.html#gaa03a82c5fd4fe3af312d229ca94cd6f3">avformat_flush</a> (<a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>)</td></tr>
+<tr class="separator:gaa03a82c5fd4fe3af312d229ca94cd6f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7494bb63a59e79e9fe88eb1682d4d7b3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d2c/group__lavf__decoding.html#ga7494bb63a59e79e9fe88eb1682d4d7b3">av_read_play</a> (<a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>)</td></tr>
+<tr class="separator:ga7494bb63a59e79e9fe88eb1682d4d7b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga27db687592d99f25ccf81a3b3ee8da9c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d2c/group__lavf__decoding.html#ga27db687592d99f25ccf81a3b3ee8da9c">av_read_pause</a> (<a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>)</td></tr>
+<tr class="separator:ga27db687592d99f25ccf81a3b3ee8da9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae804b99aec044690162b8b9b110236a4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d2c/group__lavf__decoding.html#gae804b99aec044690162b8b9b110236a4">avformat_close_input</a> (<a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> **<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>)</td></tr>
+<tr class="separator:gae804b99aec044690162b8b9b110236a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga18b7b10bb5b94c4842de18166bc677cb"><td class="memItemLeft" align="right" valign="top">av_warn_unused_result int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d95/group__lavf__encoding.html#ga18b7b10bb5b94c4842de18166bc677cb">avformat_write_header</a> (<a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>, <a class="el" href="../../d2/db0/group__lavu__dict.html#ga1d7cc0833bee918994a600556410315f">AVDictionary</a> **options)</td></tr>
+<tr class="separator:ga18b7b10bb5b94c4842de18166bc677cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga169cfa28508e22e138c5b99be8517ea4"><td class="memItemLeft" align="right" valign="top">av_warn_unused_result int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d95/group__lavf__encoding.html#ga169cfa28508e22e138c5b99be8517ea4">avformat_init_output</a> (<a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>, <a class="el" href="../../d2/db0/group__lavu__dict.html#ga1d7cc0833bee918994a600556410315f">AVDictionary</a> **options)</td></tr>
+<tr class="separator:ga169cfa28508e22e138c5b99be8517ea4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa85cc1774f18f306cd20a40fc50d0b36"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d95/group__lavf__encoding.html#gaa85cc1774f18f306cd20a40fc50d0b36">av_write_frame</a> (<a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>, <a class="el" href="../../d4/d31/struct_a_v_packet.html">AVPacket</a> *pkt)</td></tr>
+<tr class="separator:gaa85cc1774f18f306cd20a40fc50d0b36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga37352ed2c63493c38219d935e71db6c1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d95/group__lavf__encoding.html#ga37352ed2c63493c38219d935e71db6c1">av_interleaved_write_frame</a> (<a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>, <a class="el" href="../../d4/d31/struct_a_v_packet.html">AVPacket</a> *pkt)</td></tr>
+<tr class="separator:ga37352ed2c63493c38219d935e71db6c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaab766dccdff1bf323a2fc604e723b441"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d95/group__lavf__encoding.html#gaab766dccdff1bf323a2fc604e723b441">av_write_uncoded_frame</a> (<a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>, int stream_index, <a class="el" href="../../d6/d03/struct_a_v_frame.html">AVFrame</a> *frame)</td></tr>
+<tr class="separator:gaab766dccdff1bf323a2fc604e723b441"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafe9916c601bba6827d6f9271a61260e4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d95/group__lavf__encoding.html#gafe9916c601bba6827d6f9271a61260e4">av_interleaved_write_uncoded_frame</a> (<a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>, int stream_index, <a class="el" href="../../d6/d03/struct_a_v_frame.html">AVFrame</a> *frame)</td></tr>
+<tr class="separator:gafe9916c601bba6827d6f9271a61260e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5f6bebdc8c234a5ad9740de89acb15e6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d95/group__lavf__encoding.html#ga5f6bebdc8c234a5ad9740de89acb15e6">av_write_uncoded_frame_query</a> (<a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>, int stream_index)</td></tr>
+<tr class="separator:ga5f6bebdc8c234a5ad9740de89acb15e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7f14007e7dc8f481f054b21614dfec13"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d95/group__lavf__encoding.html#ga7f14007e7dc8f481f054b21614dfec13">av_write_trailer</a> (<a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>)</td></tr>
+<tr class="separator:ga7f14007e7dc8f481f054b21614dfec13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2020642d84f919764eed55848c9e69da"><td class="memItemLeft" align="right" valign="top">ff_const59 <a class="el" href="../../d9/d35/struct_a_v_output_format.html">AVOutputFormat</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d95/group__lavf__encoding.html#ga2020642d84f919764eed55848c9e69da">av_guess_format</a> (const char *short_name, const char *filename, const char *mime_type)</td></tr>
+<tr class="separator:ga2020642d84f919764eed55848c9e69da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab17c140709d6bad4ec0f7b9b89b165ec"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="../../d5/d44/group__lavc__core.html#gaadca229ad2c20e060a14fec08a5cc7ce">AVCodecID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d95/group__lavf__encoding.html#gab17c140709d6bad4ec0f7b9b89b165ec">av_guess_codec</a> (ff_const59 <a class="el" href="../../d9/d35/struct_a_v_output_format.html">AVOutputFormat</a> *fmt, const char *short_name, const char *filename, const char *mime_type, enum <a class="el" href="../../d7/d83/group__lavu__misc.html#ga9a84bba4713dfced21a1a56163be1f48">AVMediaType</a> <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#ad5ddf6fca7b585646515660e810e0188">type</a>)</td></tr>
+<tr class="separator:gab17c140709d6bad4ec0f7b9b89b165ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga661ee0b2f3dbcaaef5d68f2f5d75e2d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d95/group__lavf__encoding.html#ga661ee0b2f3dbcaaef5d68f2f5d75e2d4">av_get_output_timestamp</a> (struct <a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>, int <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#a10d3bc96cdfc1d478f52c13d5ffd9316">stream</a>, <a class="el" href="../../dd/df4/alext_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a> *dts, <a class="el" href="../../dd/df4/alext_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a> *wall)</td></tr>
+<tr class="separator:ga661ee0b2f3dbcaaef5d68f2f5d75e2d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab533a6d5d830ab90573dd035002c5bca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d44/group__lavf__misc.html#gab533a6d5d830ab90573dd035002c5bca">av_hex_dump</a> (FILE *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a>, const <a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa3b73d9ca9f2e2396cbeae1ce6ce14be">buf</a>, int <a class="el" href="../../db/d76/group__lavu__mem__funcs.html#ga3d1e3edfcf61ca2d831883e1afbad89e">size</a>)</td></tr>
+<tr class="separator:gab533a6d5d830ab90573dd035002c5bca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga56f93dbd118ff5fe833a2e39b685974c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d44/group__lavf__misc.html#ga56f93dbd118ff5fe833a2e39b685974c">av_hex_dump_log</a> (<a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *avcl, int <a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a2b536fca24f51d6a849aed325793e661">level</a>, const <a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa3b73d9ca9f2e2396cbeae1ce6ce14be">buf</a>, int <a class="el" href="../../db/d76/group__lavu__mem__funcs.html#ga3d1e3edfcf61ca2d831883e1afbad89e">size</a>)</td></tr>
+<tr class="separator:ga56f93dbd118ff5fe833a2e39b685974c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga46720b0bb28ca455246805be8969ff9e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d44/group__lavf__misc.html#ga46720b0bb28ca455246805be8969ff9e">av_pkt_dump2</a> (FILE *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a>, const <a class="el" href="../../d4/d31/struct_a_v_packet.html">AVPacket</a> *pkt, int dump_payload, const <a class="el" href="../../d4/d6c/struct_a_v_stream.html">AVStream</a> *st)</td></tr>
+<tr class="separator:ga46720b0bb28ca455246805be8969ff9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaab9fad988c28cc1c4dcbba24a36b6113"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d44/group__lavf__misc.html#gaab9fad988c28cc1c4dcbba24a36b6113">av_pkt_dump_log2</a> (<a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *avcl, int <a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a2b536fca24f51d6a849aed325793e661">level</a>, const <a class="el" href="../../d4/d31/struct_a_v_packet.html">AVPacket</a> *pkt, int dump_payload, const <a class="el" href="../../d4/d6c/struct_a_v_stream.html">AVStream</a> *st)</td></tr>
+<tr class="separator:gaab9fad988c28cc1c4dcbba24a36b6113"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga27b89fa8286af6efb5a69e8db4033b09"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="../../d5/d44/group__lavc__core.html#gaadca229ad2c20e060a14fec08a5cc7ce">AVCodecID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d44/group__lavf__misc.html#ga27b89fa8286af6efb5a69e8db4033b09">av_codec_get_id</a> (const struct AVCodecTag *const *tags, unsigned int tag)</td></tr>
+<tr class="separator:ga27b89fa8286af6efb5a69e8db4033b09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga126917b7ce8b4f05505098b72f4997de"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d44/group__lavf__misc.html#ga126917b7ce8b4f05505098b72f4997de">av_codec_get_tag</a> (const struct AVCodecTag *const *tags, enum <a class="el" href="../../d5/d44/group__lavc__core.html#gaadca229ad2c20e060a14fec08a5cc7ce">AVCodecID</a> <a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a58c2a664503e14ffb8f21012aabff3e9">id</a>)</td></tr>
+<tr class="separator:ga126917b7ce8b4f05505098b72f4997de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabe1a7b6824078229c69b75c71053c035"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d44/group__lavf__misc.html#gabe1a7b6824078229c69b75c71053c035">av_codec_get_tag2</a> (const struct AVCodecTag *const *tags, enum <a class="el" href="../../d5/d44/group__lavc__core.html#gaadca229ad2c20e060a14fec08a5cc7ce">AVCodecID</a> <a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a58c2a664503e14ffb8f21012aabff3e9">id</a>, unsigned int *tag)</td></tr>
+<tr class="separator:gabe1a7b6824078229c69b75c71053c035"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaad9737492bb66aeeec37b7c7d8d90f2a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d44/group__lavf__misc.html#gaad9737492bb66aeeec37b7c7d8d90f2a">av_find_default_stream_index</a> (<a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>)</td></tr>
+<tr class="separator:gaad9737492bb66aeeec37b7c7d8d90f2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac4cabc0d681c34b2e2c6a87a55877f0d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d44/group__lavf__misc.html#gac4cabc0d681c34b2e2c6a87a55877f0d">av_index_search_timestamp</a> (<a class="el" href="../../d4/d6c/struct_a_v_stream.html">AVStream</a> *st, <a class="el" href="../../dd/df4/alext_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a> timestamp, int <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#ac7ba7d3cce3d19ca020e056b37231289">flags</a>)</td></tr>
+<tr class="separator:gac4cabc0d681c34b2e2c6a87a55877f0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3ed7441cb4af0bdd65a4cf51bf35088e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d44/group__lavf__misc.html#ga3ed7441cb4af0bdd65a4cf51bf35088e">av_add_index_entry</a> (<a class="el" href="../../d4/d6c/struct_a_v_stream.html">AVStream</a> *st, <a class="el" href="../../dd/df4/alext_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a> pos, <a class="el" href="../../dd/df4/alext_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a> timestamp, int <a class="el" href="../../db/d76/group__lavu__mem__funcs.html#ga3d1e3edfcf61ca2d831883e1afbad89e">size</a>, int <a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a744fbed01658cb96bb8ba7e85a86d1dc">distance</a>, int <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#ac7ba7d3cce3d19ca020e056b37231289">flags</a>)</td></tr>
+<tr class="separator:ga3ed7441cb4af0bdd65a4cf51bf35088e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga63a0579d6c2aa72470ac742bbbc1205d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d44/group__lavf__misc.html#ga63a0579d6c2aa72470ac742bbbc1205d">av_url_split</a> (char *proto, int proto_size, char *authorization, int authorization_size, char *hostname, int hostname_size, int *port_ptr, char *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#ab25d8cd967ccbd19b630d7100ff8f67e">path</a>, int path_size, const char *url)</td></tr>
+<tr class="separator:ga63a0579d6c2aa72470ac742bbbc1205d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae2645941f2dc779c307eb6314fd39f10"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d44/group__lavf__misc.html#gae2645941f2dc779c307eb6314fd39f10">av_dump_format</a> (<a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *ic, int <a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a57f14e05b1900f16a2da82ade47d0c6d">index</a>, const char *url, int is_output)</td></tr>
+<tr class="separator:gae2645941f2dc779c307eb6314fd39f10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga05f17637161cd79506f67b20ea8149c9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d44/group__lavf__misc.html#ga05f17637161cd79506f67b20ea8149c9">av_get_frame_filename2</a> (char *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa3b73d9ca9f2e2396cbeae1ce6ce14be">buf</a>, int buf_size, const char *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#ab25d8cd967ccbd19b630d7100ff8f67e">path</a>, int number, int <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#ac7ba7d3cce3d19ca020e056b37231289">flags</a>)</td></tr>
+<tr class="separator:ga05f17637161cd79506f67b20ea8149c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga90e027a5d9006148413a1387c506cd40"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d44/group__lavf__misc.html#ga90e027a5d9006148413a1387c506cd40">av_get_frame_filename</a> (char *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa3b73d9ca9f2e2396cbeae1ce6ce14be">buf</a>, int buf_size, const char *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#ab25d8cd967ccbd19b630d7100ff8f67e">path</a>, int number)</td></tr>
+<tr class="separator:ga90e027a5d9006148413a1387c506cd40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac20eb319c6c46f581b5d08f5c25e763e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d44/group__lavf__misc.html#gac20eb319c6c46f581b5d08f5c25e763e">av_filename_number_test</a> (const char *filename)</td></tr>
+<tr class="separator:gac20eb319c6c46f581b5d08f5c25e763e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa2a7353a6bb0c8726797abd56b176af0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d44/group__lavf__misc.html#gaa2a7353a6bb0c8726797abd56b176af0">av_sdp_create</a> (<a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *ac[], int n_files, char *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa3b73d9ca9f2e2396cbeae1ce6ce14be">buf</a>, int <a class="el" href="../../db/d76/group__lavu__mem__funcs.html#ga3d1e3edfcf61ca2d831883e1afbad89e">size</a>)</td></tr>
+<tr class="separator:gaa2a7353a6bb0c8726797abd56b176af0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8247f49e5642dd3bd20ce6ba5a7f6466"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d44/group__lavf__misc.html#ga8247f49e5642dd3bd20ce6ba5a7f6466">av_match_ext</a> (const char *filename, const char *extensions)</td></tr>
+<tr class="separator:ga8247f49e5642dd3bd20ce6ba5a7f6466"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa90b4c72d1bbb298e11096d3a09ec7db"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d44/group__lavf__misc.html#gaa90b4c72d1bbb298e11096d3a09ec7db">avformat_query_codec</a> (const <a class="el" href="../../d9/d35/struct_a_v_output_format.html">AVOutputFormat</a> *ofmt, enum <a class="el" href="../../d5/d44/group__lavc__core.html#gaadca229ad2c20e060a14fec08a5cc7ce">AVCodecID</a> codec_id, int std_compliance)</td></tr>
+<tr class="separator:gaa90b4c72d1bbb298e11096d3a09ec7db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga036cfb1a22e899179f932df0cfc6c415"><td class="memItemLeft" align="right" valign="top">const struct AVCodecTag *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/da1/group__riff__fourcc.html#ga036cfb1a22e899179f932df0cfc6c415">avformat_get_riff_video_tags</a> (<a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>)</td></tr>
+<tr class="separator:ga036cfb1a22e899179f932df0cfc6c415"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8b9668cfd684804ebe7ab14b05aa3ba0"><td class="memItemLeft" align="right" valign="top">const struct AVCodecTag *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/da1/group__riff__fourcc.html#ga8b9668cfd684804ebe7ab14b05aa3ba0">avformat_get_riff_audio_tags</a> (<a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>)</td></tr>
+<tr class="separator:ga8b9668cfd684804ebe7ab14b05aa3ba0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga36261b12dba43e0cba5a753ecb3d0e54"><td class="memItemLeft" align="right" valign="top">const struct AVCodecTag *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/da1/group__riff__fourcc.html#ga36261b12dba43e0cba5a753ecb3d0e54">avformat_get_mov_video_tags</a> (<a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>)</td></tr>
+<tr class="separator:ga36261b12dba43e0cba5a753ecb3d0e54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac389e7f9cd19570bd599a61fd1884a4a"><td class="memItemLeft" align="right" valign="top">const struct AVCodecTag *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/da1/group__riff__fourcc.html#gac389e7f9cd19570bd599a61fd1884a4a">avformat_get_mov_audio_tags</a> (<a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>)</td></tr>
+<tr class="separator:gac389e7f9cd19570bd599a61fd1884a4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0f62da0e809045bb21166013c404ce43"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/d28/struct_a_v_rational.html">AVRational</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d44/group__lavf__misc.html#ga0f62da0e809045bb21166013c404ce43">av_guess_sample_aspect_ratio</a> (<a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *<a class="el" href="../../d3/d78/_s_d_l__audio_8h.html#a71a65ffd977afe9c3fef116a5bc9ee27">format</a>, <a class="el" href="../../d4/d6c/struct_a_v_stream.html">AVStream</a> *<a class="el" href="../../df/d32/_s_d_l__egl_8h.html#a10d3bc96cdfc1d478f52c13d5ffd9316">stream</a>, <a class="el" href="../../d6/d03/struct_a_v_frame.html">AVFrame</a> *frame)</td></tr>
+<tr class="separator:ga0f62da0e809045bb21166013c404ce43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga12c049178414cc221dfafd4e7f836dea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/d28/struct_a_v_rational.html">AVRational</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d44/group__lavf__misc.html#ga12c049178414cc221dfafd4e7f836dea">av_guess_frame_rate</a> (<a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *<a class="el" href="../../df/d32/_s_d_l__egl_8h.html#a209c8e51e11ce41075280eea53ad018c">ctx</a>, <a class="el" href="../../d4/d6c/struct_a_v_stream.html">AVStream</a> *<a class="el" href="../../df/d32/_s_d_l__egl_8h.html#a10d3bc96cdfc1d478f52c13d5ffd9316">stream</a>, <a class="el" href="../../d6/d03/struct_a_v_frame.html">AVFrame</a> *frame)</td></tr>
+<tr class="separator:ga12c049178414cc221dfafd4e7f836dea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7e45597834e9ef3098ddb74bc5e1550c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d44/group__lavf__misc.html#ga7e45597834e9ef3098ddb74bc5e1550c">avformat_match_stream_specifier</a> (<a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>, <a class="el" href="../../d4/d6c/struct_a_v_stream.html">AVStream</a> *st, const char *spec)</td></tr>
+<tr class="separator:ga7e45597834e9ef3098ddb74bc5e1550c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga501ff1b3aa357c09da90c0effb356e45"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d44/group__lavf__misc.html#ga501ff1b3aa357c09da90c0effb356e45">avformat_queue_attached_pictures</a> (<a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>)</td></tr>
+<tr class="separator:ga501ff1b3aa357c09da90c0effb356e45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga50b5ced3d9c3cc67879b4ac68eee0990"><td class="memItemLeft" align="right" valign="top">attribute_deprecated int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d44/group__lavf__misc.html#ga50b5ced3d9c3cc67879b4ac68eee0990">av_apply_bitstream_filters</a> (<a class="el" href="../../de/d1f/struct_a_v_codec_context.html">AVCodecContext</a> *codec, <a class="el" href="../../d4/d31/struct_a_v_packet.html">AVPacket</a> *pkt, <a class="el" href="../../d6/dbd/struct_a_v_bit_stream_filter_context.html">AVBitStreamFilterContext</a> *bsfc)</td></tr>
+<tr class="separator:ga50b5ced3d9c3cc67879b4ac68eee0990"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae35832b110d26ffa3e8805b3d55e8f36"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d44/group__lavf__misc.html#gae35832b110d26ffa3e8805b3d55e8f36">avformat_transfer_internal_stream_timing_info</a> (const <a class="el" href="../../d9/d35/struct_a_v_output_format.html">AVOutputFormat</a> *ofmt, <a class="el" href="../../d4/d6c/struct_a_v_stream.html">AVStream</a> *ost, const <a class="el" href="../../d4/d6c/struct_a_v_stream.html">AVStream</a> *ist, enum <a class="el" href="../../d7/d44/group__lavf__misc.html#ga67f84bb8799c8da41194f046f4b970c4">AVTimebaseSource</a> copy_tb)</td></tr>
+<tr class="separator:gae35832b110d26ffa3e8805b3d55e8f36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga64b609bbdda09ec7b29534a30656eb1a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/d28/struct_a_v_rational.html">AVRational</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d44/group__lavf__misc.html#ga64b609bbdda09ec7b29534a30656eb1a">av_stream_get_codec_timebase</a> (const <a class="el" href="../../d4/d6c/struct_a_v_stream.html">AVStream</a> *st)</td></tr>
+<tr class="separator:ga64b609bbdda09ec7b29534a30656eb1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Main libavformat public API header </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a></p>
+</div><h2 class="groupheader">Типы</h2>
+<a id="a52b5c22528bfd3597c076a97cf98383c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52b5c22528bfd3597c076a97cf98383c">&#9670;&nbsp;</a></span>AVProbeData</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="../../da/d91/struct_a_v_probe_data.html">AVProbeData</a> <a class="el" href="../../da/d91/struct_a_v_probe_data.html">AVProbeData</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This structure contains the data a format has to probe a file. </p>
+
+</div>
+</div>
+<a id="a26c94891b37de95d520e67c2d3dbe0aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26c94891b37de95d520e67c2d3dbe0aa">&#9670;&nbsp;</a></span>AVIndexEntry</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="../../d2/dc6/struct_a_v_index_entry.html">AVIndexEntry</a> <a class="el" href="../../d2/dc6/struct_a_v_index_entry.html">AVIndexEntry</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5989dd9dc73f1e05d7cce92a056180bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5989dd9dc73f1e05d7cce92a056180bd">&#9670;&nbsp;</a></span>AVStreamInternal</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="../../dc/df2/avformat_8h.html#a5989dd9dc73f1e05d7cce92a056180bd">AVStreamInternal</a> <a class="el" href="../../dc/df2/avformat_8h.html#a5989dd9dc73f1e05d7cce92a056180bd">AVStreamInternal</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l00847">847</a></p>
+
+</div>
+</div>
+<a id="a2c325af5e80f6b7dbe17a09f6383d63b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c325af5e80f6b7dbe17a09f6383d63b">&#9670;&nbsp;</a></span>AVStream</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="../../d4/d6c/struct_a_v_stream.html">AVStream</a> <a class="el" href="../../d4/d6c/struct_a_v_stream.html">AVStream</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Stream structure. New fields can be added to the end with minor version bumps. Removal, reordering and changes to existing fields require a major version bump. sizeof(AVStream) must not be used outside libav*. </p>
+
+</div>
+</div>
+<a id="a11e9013f860bb03dfd25229a0eede08b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11e9013f860bb03dfd25229a0eede08b">&#9670;&nbsp;</a></span>AVProgram</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="../../d0/d56/struct_a_v_program.html">AVProgram</a> <a class="el" href="../../d0/d56/struct_a_v_program.html">AVProgram</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>New fields can be added to the end with minor version bumps. Removal, reordering and changes to existing fields require a major version bump. sizeof(AVProgram) must not be used outside libav*. </p>
+
+</div>
+</div>
+<a id="ab9f4caa7f49fafb6a1a1415a61db2538"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9f4caa7f49fafb6a1a1415a61db2538">&#9670;&nbsp;</a></span>AVChapter</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="../../d0/d87/struct_a_v_chapter.html">AVChapter</a> <a class="el" href="../../d0/d87/struct_a_v_chapter.html">AVChapter</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a80856b99bcf4373936fb4fba028b11ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80856b99bcf4373936fb4fba028b11ca">&#9670;&nbsp;</a></span>av_format_control_message</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef int(* av_format_control_message) (struct <a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>, int <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#ad5ddf6fca7b585646515660e810e0188">type</a>, <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a2e335d56e2846b0fea47eed068b2d34a">data</a>, <a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a7c94ea6f8948649f8d181ae55911eeaf">size_t</a> data_size)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Callback used by devices to communicate with application. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l01312">1312</a></p>
+
+</div>
+</div>
+<a id="a6f7cab62acdf2bce2883a3c82cf1a27c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f7cab62acdf2bce2883a3c82cf1a27c">&#9670;&nbsp;</a></span>AVOpenCallback</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef int(* AVOpenCallback) (struct <a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>, <a class="el" href="../../d7/dcc/struct_a_v_i_o_context.html">AVIOContext</a> **pb, const char *url, int <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#ac7ba7d3cce3d19ca020e056b37231289">flags</a>, const <a class="el" href="../../da/dc9/struct_a_v_i_o_interrupt_c_b.html">AVIOInterruptCB</a> *int_cb, <a class="el" href="../../d2/db0/group__lavu__dict.html#ga1d7cc0833bee918994a600556410315f">AVDictionary</a> **options)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l01315">1315</a></p>
+
+</div>
+</div>
+<a id="a7bec8d592652431045d81a02fef74f28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7bec8d592652431045d81a02fef74f28">&#9670;&nbsp;</a></span>AVFormatInternal</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="../../dc/df2/avformat_8h.html#a7bec8d592652431045d81a02fef74f28">AVFormatInternal</a> <a class="el" href="../../dc/df2/avformat_8h.html#a7bec8d592652431045d81a02fef74f28">AVFormatInternal</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l01328">1328</a></p>
+
+</div>
+</div>
+<a id="a88eb691f3ba26b11b9421470a0f8b359"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88eb691f3ba26b11b9421470a0f8b359">&#9670;&nbsp;</a></span>AVFormatContext</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> <a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><a class="el" href="../../d3/dbf/struct_format.html">Format</a> I/O context. New fields can be added to the end with minor version bumps. Removal, reordering and changes to existing fields require a major version bump. sizeof(AVFormatContext) must not be used outside libav*, use <a class="el" href="../../dd/dab/group__lavf__core.html#gac7a91abf2f59648d995894711f070f62">avformat_alloc_context()</a> to create an <a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a>.</p>
+<p>Fields can be accessed through AVOptions (av_opt*), the name string used matches the associated command line parameter name and can be found in libavformat/options_table.h. The AVOption/command line parameter names differ in some cases from the C structure field names for historic reasons or brevity. </p>
+
+</div>
+</div>
+<a id="ae326a9474c32a42fdaa9c0757fe3b576"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae326a9474c32a42fdaa9c0757fe3b576">&#9670;&nbsp;</a></span>AVPacketList</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="../../de/d7b/struct_a_v_packet_list.html">AVPacketList</a> <a class="el" href="../../de/d7b/struct_a_v_packet_list.html">AVPacketList</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Перечисления</h2>
+<a id="afacbc85f23a50771e3801bda0a353d91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afacbc85f23a50771e3801bda0a353d91">&#9670;&nbsp;</a></span>AVStreamParseType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="../../dc/df2/avformat_8h.html#afacbc85f23a50771e3801bda0a353d91">AVStreamParseType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="afacbc85f23a50771e3801bda0a353d91ac715de62daa60e31ce01b9671bd35f9e"></a>AVSTREAM_PARSE_NONE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="afacbc85f23a50771e3801bda0a353d91ac21d15a27dac74ca0730b4dace71d883"></a>AVSTREAM_PARSE_FULL&#160;</td><td class="fielddoc"><p>full parsing and repack </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afacbc85f23a50771e3801bda0a353d91a67bc09fcdeb0e05754f344fbc80856ca"></a>AVSTREAM_PARSE_HEADERS&#160;</td><td class="fielddoc"><p>Only parse headers, do not repack. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afacbc85f23a50771e3801bda0a353d91a10f8e7a9d88b7b5e2010ffb496b6cf1a"></a>AVSTREAM_PARSE_TIMESTAMPS&#160;</td><td class="fielddoc"><p>full parsing and interpolation of timestamps for frames not starting on a packet boundary </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afacbc85f23a50771e3801bda0a353d91a41eb176dd7cfc095b5ea66816a75c56a"></a>AVSTREAM_PARSE_FULL_ONCE&#160;</td><td class="fielddoc"><p>full parsing and repack of the first frame only, only implemented for H.264 currently </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afacbc85f23a50771e3801bda0a353d91a4a4190f226593e92724285f8bfef9c2e"></a>AVSTREAM_PARSE_FULL_RAW&#160;</td><td class="fielddoc"><p>full parsing and repack with timestamp and position generation by parser for raw this assumes that each packet in the file contains no demuxer level headers and just codec level data, otherwise position generation would fail </p>
+</td></tr>
+</table>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l00789">789</a></p>
+<div class="fragment"><div class="line"><a name="l00789"></a><span class="lineno">  789</span>&#160;                       {</div>
+<div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160;    <a class="code" href="../../dc/df2/avformat_8h.html#afacbc85f23a50771e3801bda0a353d91ac715de62daa60e31ce01b9671bd35f9e">AVSTREAM_PARSE_NONE</a>,</div>
+<div class="line"><a name="l00791"></a><span class="lineno">  791</span>&#160;    <a class="code" href="../../dc/df2/avformat_8h.html#afacbc85f23a50771e3801bda0a353d91ac21d15a27dac74ca0730b4dace71d883">AVSTREAM_PARSE_FULL</a>,       </div>
+<div class="line"><a name="l00792"></a><span class="lineno">  792</span>&#160;    <a class="code" href="../../dc/df2/avformat_8h.html#afacbc85f23a50771e3801bda0a353d91a67bc09fcdeb0e05754f344fbc80856ca">AVSTREAM_PARSE_HEADERS</a>,    </div>
+<div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160;    <a class="code" href="../../dc/df2/avformat_8h.html#afacbc85f23a50771e3801bda0a353d91a10f8e7a9d88b7b5e2010ffb496b6cf1a">AVSTREAM_PARSE_TIMESTAMPS</a>, </div>
+<div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160;    <a class="code" href="../../dc/df2/avformat_8h.html#afacbc85f23a50771e3801bda0a353d91a41eb176dd7cfc095b5ea66816a75c56a">AVSTREAM_PARSE_FULL_ONCE</a>,  </div>
+<div class="line"><a name="l00795"></a><span class="lineno">  795</span>&#160;    <a class="code" href="../../dc/df2/avformat_8h.html#afacbc85f23a50771e3801bda0a353d91a4a4190f226593e92724285f8bfef9c2e">AVSTREAM_PARSE_FULL_RAW</a>,   </div>
+<div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160;};</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a7c2692ffa20d3e888e40e79eeda6d73b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c2692ffa20d3e888e40e79eeda6d73b">&#9670;&nbsp;</a></span>AVDurationEstimationMethod</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="../../dc/df2/avformat_8h.html#a7c2692ffa20d3e888e40e79eeda6d73b">AVDurationEstimationMethod</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The duration of a video can be estimated through various ways, and this enum can be used to know how the duration was estimated. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="a7c2692ffa20d3e888e40e79eeda6d73bac94465d3290399477775fe094ab8f75a"></a>AVFMT_DURATION_FROM_PTS&#160;</td><td class="fielddoc"><p>Duration accurately estimated from PTSes. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a7c2692ffa20d3e888e40e79eeda6d73bae92edb9576c3d6dd68f49a849a2ec6c0"></a>AVFMT_DURATION_FROM_STREAM&#160;</td><td class="fielddoc"><p>Duration estimated from a stream with a known duration. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a7c2692ffa20d3e888e40e79eeda6d73ba6185e1e7f8dfae85596779408ef496b2"></a>AVFMT_DURATION_FROM_BITRATE&#160;</td><td class="fielddoc"><p>Duration estimated from bitrate (less accurate) </p>
+</td></tr>
+</table>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/df2/avformat_8h_source.html">avformat.h</a> строка <a class="el" href="../../dc/df2/avformat_8h_source.html#l01322">1322</a></p>
+<div class="fragment"><div class="line"><a name="l01322"></a><span class="lineno"> 1322</span>&#160;                                {</div>
+<div class="line"><a name="l01323"></a><span class="lineno"> 1323</span>&#160;    <a class="code" href="../../dc/df2/avformat_8h.html#a7c2692ffa20d3e888e40e79eeda6d73bac94465d3290399477775fe094ab8f75a">AVFMT_DURATION_FROM_PTS</a>,    </div>
+<div class="line"><a name="l01324"></a><span class="lineno"> 1324</span>&#160;    <a class="code" href="../../dc/df2/avformat_8h.html#a7c2692ffa20d3e888e40e79eeda6d73bae92edb9576c3d6dd68f49a849a2ec6c0">AVFMT_DURATION_FROM_STREAM</a>, </div>
+<div class="line"><a name="l01325"></a><span class="lineno"> 1325</span>&#160;    <a class="code" href="../../dc/df2/avformat_8h.html#a7c2692ffa20d3e888e40e79eeda6d73ba6185e1e7f8dfae85596779408ef496b2">AVFMT_DURATION_FROM_BITRATE</a> </div>
+<div class="line"><a name="l01326"></a><span class="lineno"> 1326</span>&#160;};</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Функции</h2>
+<a id="a9d2e6f22150d98c36dcc2c6c49318019"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d2e6f22150d98c36dcc2c6c49318019">&#9670;&nbsp;</a></span>av_get_packet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int av_get_packet </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d7/dcc/struct_a_v_i_o_context.html">AVIOContext</a> *&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d4/d31/struct_a_v_packet.html">AVPacket</a> *&#160;</td>
+          <td class="paramname"><em>pkt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Allocate and read the payload of a packet and initialize its fields with default values.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">s</td><td>associated IO context </td></tr>
+    <tr><td class="paramname">pkt</td><td>packet </td></tr>
+    <tr><td class="paramname">size</td><td>desired payload size </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>&gt;0 (read size) if OK, AVERROR_xxx otherwise </dd></dl>
+
+</div>
+</div>
+<a id="a0e991213ccc3d642972b57a1decb797b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e991213ccc3d642972b57a1decb797b">&#9670;&nbsp;</a></span>av_append_packet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int av_append_packet </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d7/dcc/struct_a_v_i_o_context.html">AVIOContext</a> *&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d4/d31/struct_a_v_packet.html">AVPacket</a> *&#160;</td>
+          <td class="paramname"><em>pkt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Read data and append it to the current content of the <a class="el" href="../../d4/d31/struct_a_v_packet.html">AVPacket</a>. If pkt-&gt;size is 0 this is identical to av_get_packet. Note that this uses av_grow_packet and thus involves a realloc which is inefficient. Thus this function should only be used when there is no reasonable way to know (an upper bound of) the final size.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">s</td><td>associated IO context </td></tr>
+    <tr><td class="paramname">pkt</td><td>packet </td></tr>
+    <tr><td class="paramname">size</td><td>amount of data to read </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>&gt;0 (read size) if OK, AVERROR_xxx otherwise, previous data will not be lost even if an error occurs. </dd></dl>
+
+</div>
+</div>
+<a id="a9357d05004b6f933795acaf929634c1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9357d05004b6f933795acaf929634c1e">&#9670;&nbsp;</a></span>av_stream_get_r_frame_rate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">attribute_deprecated <a class="el" href="../../d7/d28/struct_a_v_rational.html">AVRational</a> av_stream_get_r_frame_rate </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d4/d6c/struct_a_v_stream.html">AVStream</a> *&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Accessors for some <a class="el" href="../../d4/d6c/struct_a_v_stream.html">AVStream</a> fields. These used to be provided for ABI compatibility, and do not need to be used anymore. </p>
+
+</div>
+</div>
+<a id="ae06f63924505b02f962eaca4b1de19f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae06f63924505b02f962eaca4b1de19f3">&#9670;&nbsp;</a></span>av_stream_set_r_frame_rate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">attribute_deprecated <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> av_stream_set_r_frame_rate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d4/d6c/struct_a_v_stream.html">AVStream</a> *&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d7/d28/struct_a_v_rational.html">AVRational</a>&#160;</td>
+          <td class="paramname"><em>r</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a17ab64a0049180a8a5046260c6d5ce81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17ab64a0049180a8a5046260c6d5ce81">&#9670;&nbsp;</a></span>av_stream_get_recommended_encoder_configuration()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">attribute_deprecated char* av_stream_get_recommended_encoder_configuration </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d4/d6c/struct_a_v_stream.html">AVStream</a> *&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a38a4a871fa64da9da4036cb7d95096e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38a4a871fa64da9da4036cb7d95096e1">&#9670;&nbsp;</a></span>av_stream_set_recommended_encoder_configuration()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">attribute_deprecated <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> av_stream_set_recommended_encoder_configuration </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d4/d6c/struct_a_v_stream.html">AVStream</a> *&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>configuration</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a125e78a8250557501479986fead28a43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a125e78a8250557501479986fead28a43">&#9670;&nbsp;</a></span>av_stream_get_parser()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="../../d7/da5/struct_a_v_codec_parser_context.html">AVCodecParserContext</a>* av_stream_get_parser </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d4/d6c/struct_a_v_stream.html">AVStream</a> *&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aea2211b21ee4a9a443886c2e0a63be1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea2211b21ee4a9a443886c2e0a63be1c">&#9670;&nbsp;</a></span>av_stream_get_end_pts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dd/df4/alext_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a> av_stream_get_end_pts </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d4/d6c/struct_a_v_stream.html">AVStream</a> *&#160;</td>
+          <td class="paramname"><em>st</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the pts of the last muxed packet + its duration</p>
+<p>the retuned value is undefined when used with a demuxer. </p>
+
+</div>
+</div>
+<a id="a72855bcf0bdfb1195817a7c68f4a70dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72855bcf0bdfb1195817a7c68f4a70dc">&#9670;&nbsp;</a></span>av_format_get_probe_score()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">attribute_deprecated int av_format_get_probe_score </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Accessors for some <a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> fields. These used to be provided for ABI compatibility, and do not need to be used anymore. </p>
+
+</div>
+</div>
+<a id="af0473ff5b077a9139a1bdc5bdb41b371"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0473ff5b077a9139a1bdc5bdb41b371">&#9670;&nbsp;</a></span>av_format_get_video_codec()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">attribute_deprecated <a class="el" href="../../df/d2a/struct_a_v_codec.html">AVCodec</a>* av_format_get_video_codec </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa9ed73c3d024aa2e393bbeed676559cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9ed73c3d024aa2e393bbeed676559cf">&#9670;&nbsp;</a></span>av_format_set_video_codec()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">attribute_deprecated <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> av_format_set_video_codec </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../df/d2a/struct_a_v_codec.html">AVCodec</a> *&#160;</td>
+          <td class="paramname"><em>c</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1056bc91c45a047b379e84caeff90e9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1056bc91c45a047b379e84caeff90e9b">&#9670;&nbsp;</a></span>av_format_get_audio_codec()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">attribute_deprecated <a class="el" href="../../df/d2a/struct_a_v_codec.html">AVCodec</a>* av_format_get_audio_codec </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ada5e40fc081e6583b94019dbef4e61f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada5e40fc081e6583b94019dbef4e61f7">&#9670;&nbsp;</a></span>av_format_set_audio_codec()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">attribute_deprecated <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> av_format_set_audio_codec </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../df/d2a/struct_a_v_codec.html">AVCodec</a> *&#160;</td>
+          <td class="paramname"><em>c</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a544e92ac08825f59adf6774096badf3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a544e92ac08825f59adf6774096badf3c">&#9670;&nbsp;</a></span>av_format_get_subtitle_codec()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">attribute_deprecated <a class="el" href="../../df/d2a/struct_a_v_codec.html">AVCodec</a>* av_format_get_subtitle_codec </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad0969dc38b4a7635219544c243f8d3b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0969dc38b4a7635219544c243f8d3b6">&#9670;&nbsp;</a></span>av_format_set_subtitle_codec()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">attribute_deprecated <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> av_format_set_subtitle_codec </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../df/d2a/struct_a_v_codec.html">AVCodec</a> *&#160;</td>
+          <td class="paramname"><em>c</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a314956ebefc507ef8fdb4b0e5d72d999"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a314956ebefc507ef8fdb4b0e5d72d999">&#9670;&nbsp;</a></span>av_format_get_data_codec()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">attribute_deprecated <a class="el" href="../../df/d2a/struct_a_v_codec.html">AVCodec</a>* av_format_get_data_codec </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a55bd0a1321fef545f1eeb7aac1eaae78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55bd0a1321fef545f1eeb7aac1eaae78">&#9670;&nbsp;</a></span>av_format_set_data_codec()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">attribute_deprecated <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> av_format_set_data_codec </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../df/d2a/struct_a_v_codec.html">AVCodec</a> *&#160;</td>
+          <td class="paramname"><em>c</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2d687b364d44c474a84ada17c6cd6cad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d687b364d44c474a84ada17c6cd6cad">&#9670;&nbsp;</a></span>av_format_get_metadata_header_padding()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">attribute_deprecated int av_format_get_metadata_header_padding </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0f742d32e9fdfd9744ccae4b1fe22acf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f742d32e9fdfd9744ccae4b1fe22acf">&#9670;&nbsp;</a></span>av_format_set_metadata_header_padding()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">attribute_deprecated <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> av_format_set_metadata_header_padding </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>c</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af4714d61708a6f639e3289f44977371a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4714d61708a6f639e3289f44977371a">&#9670;&nbsp;</a></span>av_format_get_opaque()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">attribute_deprecated <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>* av_format_get_opaque </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9dda1ca64f0be8545751ef678a78bef9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9dda1ca64f0be8545751ef678a78bef9">&#9670;&nbsp;</a></span>av_format_set_opaque()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">attribute_deprecated <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> av_format_set_opaque </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *&#160;</td>
+          <td class="paramname"><em>opaque</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a04fb8009bcd3c311bdf2462c0bf5d064"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04fb8009bcd3c311bdf2462c0bf5d064">&#9670;&nbsp;</a></span>av_format_get_control_message_cb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">attribute_deprecated <a class="el" href="../../dc/df2/avformat_8h.html#a80856b99bcf4373936fb4fba028b11ca">av_format_control_message</a> av_format_get_control_message_cb </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abe62b3938a627886481b240c38f1d755"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe62b3938a627886481b240c38f1d755">&#9670;&nbsp;</a></span>av_format_set_control_message_cb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">attribute_deprecated <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> av_format_set_control_message_cb </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dc/df2/avformat_8h.html#a80856b99bcf4373936fb4fba028b11ca">av_format_control_message</a>&#160;</td>
+          <td class="paramname"><em>callback</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae2eb3bd1085e08a22629c5145fab7e2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2eb3bd1085e08a22629c5145fab7e2a">&#9670;&nbsp;</a></span>av_format_get_open_cb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">attribute_deprecated <a class="el" href="../../dc/df2/avformat_8h.html#a6f7cab62acdf2bce2883a3c82cf1a27c">AVOpenCallback</a> av_format_get_open_cb </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae478cd46bff6bcb0164a34e86cdedb40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae478cd46bff6bcb0164a34e86cdedb40">&#9670;&nbsp;</a></span>av_format_set_open_cb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">attribute_deprecated <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> av_format_set_open_cb </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dc/df2/avformat_8h.html#a6f7cab62acdf2bce2883a3c82cf1a27c">AVOpenCallback</a>&#160;</td>
+          <td class="paramname"><em>callback</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa3a096ee52bc6b1e0f31278d26996777"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3a096ee52bc6b1e0f31278d26996777">&#9670;&nbsp;</a></span>av_format_inject_global_side_data()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> av_format_inject_global_side_data </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This function will cause global side data to be injected in the next packet of each stream as well as after any subsequent seek. </p>
+
+</div>
+</div>
+<a id="ac7070b68d7ca5fd577f9f835556ebeff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7070b68d7ca5fd577f9f835556ebeff">&#9670;&nbsp;</a></span>av_fmt_ctx_get_duration_estimation_method()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="../../dc/df2/avformat_8h.html#a7c2692ffa20d3e888e40e79eeda6d73b">AVDurationEstimationMethod</a> av_fmt_ctx_get_duration_estimation_method </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> *&#160;</td>
+          <td class="paramname"><em>ctx</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the method used to set ctx-&gt;duration.</p>
+<dl class="section return"><dt>Возвращает</dt><dd>AVFMT_DURATION_FROM_PTS, AVFMT_DURATION_FROM_STREAM, or AVFMT_DURATION_FROM_BITRATE. </dd></dl>
+
+</div>
+</div>
+<a id="a0234fa1116af3c0a72edaa08a2ba304f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0234fa1116af3c0a72edaa08a2ba304f">&#9670;&nbsp;</a></span>avformat_alloc_output_context2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int avformat_alloc_output_context2 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> **&#160;</td>
+          <td class="paramname"><em>ctx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ff_const59 <a class="el" href="../../d9/d35/struct_a_v_output_format.html">AVOutputFormat</a> *&#160;</td>
+          <td class="paramname"><em>oformat</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>format_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>filename</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Allocate an <a class="el" href="../../de/d85/struct_a_v_format_context.html">AVFormatContext</a> for an output format. <a class="el" href="../../dd/dab/group__lavf__core.html#gac2990b13b68e831a408fce8e1d0d6445">avformat_free_context()</a> can be used to free the context and everything allocated by the framework within it.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*ctx</td><td>is set to the created format context, or to NULL in case of failure </td></tr>
+    <tr><td class="paramname">oformat</td><td>format to use for allocating the context, if NULL format_name and filename are used instead </td></tr>
+    <tr><td class="paramname">format_name</td><td>the name of output format to use for allocating the context, if NULL filename is used instead </td></tr>
+    <tr><td class="paramname">filename</td><td>the name of the filename to use for allocating the context, may be NULL </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>&gt;= 0 in case of success, a negative AVERROR code in case of failure </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aavformat_8h_html_a7c2692ffa20d3e888e40e79eeda6d73ba6185e1e7f8dfae85596779408ef496b2"><div class="ttname"><a href="../../dc/df2/avformat_8h.html#a7c2692ffa20d3e888e40e79eeda6d73ba6185e1e7f8dfae85596779408ef496b2">AVFMT_DURATION_FROM_BITRATE</a></div><div class="ttdeci">@ AVFMT_DURATION_FROM_BITRATE</div><div class="ttdoc">Duration estimated from bitrate (less accurate)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/df2/avformat_8h_source.html#l01325">avformat.h:1325</a></div></div>
+<div class="ttc" id="aavformat_8h_html_afacbc85f23a50771e3801bda0a353d91a41eb176dd7cfc095b5ea66816a75c56a"><div class="ttname"><a href="../../dc/df2/avformat_8h.html#afacbc85f23a50771e3801bda0a353d91a41eb176dd7cfc095b5ea66816a75c56a">AVSTREAM_PARSE_FULL_ONCE</a></div><div class="ttdeci">@ AVSTREAM_PARSE_FULL_ONCE</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/df2/avformat_8h_source.html#l00794">avformat.h:794</a></div></div>
+<div class="ttc" id="aavformat_8h_html_a7c2692ffa20d3e888e40e79eeda6d73bac94465d3290399477775fe094ab8f75a"><div class="ttname"><a href="../../dc/df2/avformat_8h.html#a7c2692ffa20d3e888e40e79eeda6d73bac94465d3290399477775fe094ab8f75a">AVFMT_DURATION_FROM_PTS</a></div><div class="ttdeci">@ AVFMT_DURATION_FROM_PTS</div><div class="ttdoc">Duration accurately estimated from PTSes.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/df2/avformat_8h_source.html#l01323">avformat.h:1323</a></div></div>
+<div class="ttc" id="aavformat_8h_html_a7c2692ffa20d3e888e40e79eeda6d73bae92edb9576c3d6dd68f49a849a2ec6c0"><div class="ttname"><a href="../../dc/df2/avformat_8h.html#a7c2692ffa20d3e888e40e79eeda6d73bae92edb9576c3d6dd68f49a849a2ec6c0">AVFMT_DURATION_FROM_STREAM</a></div><div class="ttdeci">@ AVFMT_DURATION_FROM_STREAM</div><div class="ttdoc">Duration estimated from a stream with a known duration.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/df2/avformat_8h_source.html#l01324">avformat.h:1324</a></div></div>
+<div class="ttc" id="aavformat_8h_html_afacbc85f23a50771e3801bda0a353d91ac715de62daa60e31ce01b9671bd35f9e"><div class="ttname"><a href="../../dc/df2/avformat_8h.html#afacbc85f23a50771e3801bda0a353d91ac715de62daa60e31ce01b9671bd35f9e">AVSTREAM_PARSE_NONE</a></div><div class="ttdeci">@ AVSTREAM_PARSE_NONE</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/df2/avformat_8h_source.html#l00790">avformat.h:790</a></div></div>
+<div class="ttc" id="aavformat_8h_html_afacbc85f23a50771e3801bda0a353d91a67bc09fcdeb0e05754f344fbc80856ca"><div class="ttname"><a href="../../dc/df2/avformat_8h.html#afacbc85f23a50771e3801bda0a353d91a67bc09fcdeb0e05754f344fbc80856ca">AVSTREAM_PARSE_HEADERS</a></div><div class="ttdeci">@ AVSTREAM_PARSE_HEADERS</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/df2/avformat_8h_source.html#l00792">avformat.h:792</a></div></div>
+<div class="ttc" id="aavformat_8h_html_afacbc85f23a50771e3801bda0a353d91a4a4190f226593e92724285f8bfef9c2e"><div class="ttname"><a href="../../dc/df2/avformat_8h.html#afacbc85f23a50771e3801bda0a353d91a4a4190f226593e92724285f8bfef9c2e">AVSTREAM_PARSE_FULL_RAW</a></div><div class="ttdeci">@ AVSTREAM_PARSE_FULL_RAW</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/df2/avformat_8h_source.html#l00795">avformat.h:795</a></div></div>
+<div class="ttc" id="aavformat_8h_html_afacbc85f23a50771e3801bda0a353d91ac21d15a27dac74ca0730b4dace71d883"><div class="ttname"><a href="../../dc/df2/avformat_8h.html#afacbc85f23a50771e3801bda0a353d91ac21d15a27dac74ca0730b4dace71d883">AVSTREAM_PARSE_FULL</a></div><div class="ttdeci">@ AVSTREAM_PARSE_FULL</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/df2/avformat_8h_source.html#l00791">avformat.h:791</a></div></div>
+<div class="ttc" id="aavformat_8h_html_afacbc85f23a50771e3801bda0a353d91a10f8e7a9d88b7b5e2010ffb496b6cf1a"><div class="ttname"><a href="../../dc/df2/avformat_8h.html#afacbc85f23a50771e3801bda0a353d91a10f8e7a9d88b7b5e2010ffb496b6cf1a">AVSTREAM_PARSE_TIMESTAMPS</a></div><div class="ttdeci">@ AVSTREAM_PARSE_TIMESTAMPS</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/df2/avformat_8h_source.html#l00793">avformat.h:793</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_97aefd0d527b934f1d99a682da8fe6a9.html">lib</a></li><li class="navelem"><a class="el" href="../../dir_da53678e933bc13c5b44fc9f96ac81aa.html">win32</a></li><li class="navelem"><a class="el" href="../../dir_7ac189985cec0e073b46d34a5d96bfc1.html">x86</a></li><li class="navelem"><a class="el" href="../../dir_e3469dbcd8a5e63a5540df758d989c34.html">ffmpeg-4.2.2</a></li><li class="navelem"><a class="el" href="../../dir_880368755e1ee5b32b1864dac7163836.html">include</a></li><li class="navelem"><a class="el" href="../../dir_8ec1f08c44181f50c14798cdb843a200.html">libavformat</a></li><li class="navelem"><a class="el" href="../../dc/df2/avformat_8h.html">avformat.h</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:04:14. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

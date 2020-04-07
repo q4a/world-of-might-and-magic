@@ -1,0 +1,916 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Класс GUIWindow_MainMenu</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d1/d86/class_g_u_i_window___main_menu.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-static-methods">Открытые статические члены</a> &#124;
+<a href="#pro-attribs">Защищенные данные</a> &#124;
+<a href="../../d2/d69/class_g_u_i_window___main_menu-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс GUIWindow_MainMenu</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="../../dc/d24/_u_i_main_menu_8h_source.html">UIMainMenu.h</a>&gt;</code></p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Граф наследования:GUIWindow_MainMenu:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d4/d50/class_g_u_i_window___main_menu__inherit__graph.svg" width="168" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">см. легенду</a>]</span></center></div>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="../../closed.png" alt="+"/> Граф связей класса GUIWindow_MainMenu:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d7/d94/class_g_u_i_window___main_menu__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a04bbaee5c3a564b2a8dee8cd0028811a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d86/class_g_u_i_window___main_menu.html#a04bbaee5c3a564b2a8dee8cd0028811a">GUIWindow_MainMenu</a> ()</td></tr>
+<tr class="separator:a04bbaee5c3a564b2a8dee8cd0028811a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91cc48669f3f50bc2350443c68d1b3f9"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d86/class_g_u_i_window___main_menu.html#a91cc48669f3f50bc2350443c68d1b3f9">~GUIWindow_MainMenu</a> ()</td></tr>
+<tr class="separator:a91cc48669f3f50bc2350443c68d1b3f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2e61545378dc3ca46b1aba52d1f2734"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d86/class_g_u_i_window___main_menu.html#ad2e61545378dc3ca46b1aba52d1f2734">Update</a> ()</td></tr>
+<tr class="separator:ad2e61545378dc3ca46b1aba52d1f2734"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a60ce7f0e258d5cf1d17037b19bc9a1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d86/class_g_u_i_window___main_menu.html#a3a60ce7f0e258d5cf1d17037b19bc9a1">EventLoop</a> ()</td></tr>
+<tr class="separator:a3a60ce7f0e258d5cf1d17037b19bc9a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_g_u_i_window"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_g_u_i_window')"><img src="../../closed.png" alt="-"/>&#160;Открытые члены унаследованные от <a class="el" href="../../d4/d38/class_g_u_i_window.html">GUIWindow</a></td></tr>
+<tr class="memitem:a1d5f55e836dbe199acf6c6226d3793ec inherit pub_methods_class_g_u_i_window"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/class_g_u_i_window.html#a1d5f55e836dbe199acf6c6226d3793ec">GUIWindow</a> ()</td></tr>
+<tr class="separator:a1d5f55e836dbe199acf6c6226d3793ec inherit pub_methods_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33ce0a6c8dcca1658eb55c6c2ff065f1 inherit pub_methods_class_g_u_i_window"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/class_g_u_i_window.html#a33ce0a6c8dcca1658eb55c6c2ff065f1">GUIWindow</a> (<a class="el" href="../../d5/d0b/_g_u_i_window_8h.html#a476342970f954b62d70552bcbb5ee509">WindowType</a> windowType, unsigned int uX, unsigned int uY, unsigned int uWidth, unsigned int uHeight, int pButton, const <a class="el" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> &amp;hint=<a class="el" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a>())</td></tr>
+<tr class="separator:a33ce0a6c8dcca1658eb55c6c2ff065f1 inherit pub_methods_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5d79b7f3de28308cb6b44a12aad9fbc inherit pub_methods_class_g_u_i_window"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/class_g_u_i_window.html#ab5d79b7f3de28308cb6b44a12aad9fbc">~GUIWindow</a> ()</td></tr>
+<tr class="separator:ab5d79b7f3de28308cb6b44a12aad9fbc inherit pub_methods_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29f96468b54f142995e3b1890cb7e45e inherit pub_methods_class_g_u_i_window"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d66/class_g_u_i_button.html">GUIButton</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/class_g_u_i_window.html#a29f96468b54f142995e3b1890cb7e45e">CreateButton</a> (int <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#ad0e63d0edcdbd3d79554076bf309fd47">x</a>, int <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#a1675d9d7bb68e1657ff028643b4037e3">y</a>, int <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#a9a82cf3caff84cabc4598e2619faac17">width</a>, int <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#aa352f2804b9902ac30769c00dde75d5f">height</a>, int a6, int a7, <a class="el" href="../../d5/d0b/_g_u_i_window_8h.html#a2519966952faeb9397447ce89e9bcb02">UIMessageType</a> msg, unsigned int msg_param, <a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> hotkey, const <a class="el" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> &amp;<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a9371a1f53f8067997cd15aaf657c62d0">label</a>, const std::vector&lt; <a class="el" href="../../de/d73/class_image.html">Image</a> * &gt; &amp;<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a450062c0770127a605331b58382bfa3b">textures</a>=std::vector&lt; <a class="el" href="../../de/d73/class_image.html">Image</a> * &gt;())</td></tr>
+<tr class="separator:a29f96468b54f142995e3b1890cb7e45e inherit pub_methods_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed98162e5c6901baae6fcc8974ccc13e inherit pub_methods_class_g_u_i_window"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/class_g_u_i_window.html#aed98162e5c6901baae6fcc8974ccc13e">Contains</a> (unsigned int <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#ad0e63d0edcdbd3d79554076bf309fd47">x</a>, unsigned int <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#a1675d9d7bb68e1657ff028643b4037e3">y</a>)</td></tr>
+<tr class="separator:aed98162e5c6901baae6fcc8974ccc13e inherit pub_methods_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46c5c28caa64ad3f9c5c6b84c5974ccb inherit pub_methods_class_g_u_i_window"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/class_g_u_i_window.html#a46c5c28caa64ad3f9c5c6b84c5974ccb">DrawFlashingInputCursor</a> (int uX, int uY, <a class="el" href="../../d3/d39/class_g_u_i_font.html">GUIFont</a> *a2)</td></tr>
+<tr class="separator:a46c5c28caa64ad3f9c5c6b84c5974ccb inherit pub_methods_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2df1e3e343be45b971fe805dad3cb2fd inherit pub_methods_class_g_u_i_window"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/class_g_u_i_window.html#a2df1e3e343be45b971fe805dad3cb2fd">DrawTextInRect</a> (<a class="el" href="../../d3/d39/class_g_u_i_font.html">GUIFont</a> *font, unsigned int <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#ad0e63d0edcdbd3d79554076bf309fd47">x</a>, unsigned int <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#a1675d9d7bb68e1657ff028643b4037e3">y</a>, unsigned int <a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a3ea846f998d64f079b86052b6c4193a8">color</a>, const char *text, int rect_width, int reverse_text)</td></tr>
+<tr class="separator:a2df1e3e343be45b971fe805dad3cb2fd inherit pub_methods_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad4cfc07a750f5e0b42474975b616dd5 inherit pub_methods_class_g_u_i_window"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/class_g_u_i_window.html#aad4cfc07a750f5e0b42474975b616dd5">DrawTextInRect</a> (<a class="el" href="../../d3/d39/class_g_u_i_font.html">GUIFont</a> *font, unsigned int <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#ad0e63d0edcdbd3d79554076bf309fd47">x</a>, unsigned int <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#a1675d9d7bb68e1657ff028643b4037e3">y</a>, unsigned int <a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a3ea846f998d64f079b86052b6c4193a8">color</a>, <a class="el" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> &amp;str, int rect_width, int reverse_text)</td></tr>
+<tr class="separator:aad4cfc07a750f5e0b42474975b616dd5 inherit pub_methods_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a009aad05d919c42979eebb93d8b4354c inherit pub_methods_class_g_u_i_window"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/class_g_u_i_window.html#a009aad05d919c42979eebb93d8b4354c">DrawText</a> (<a class="el" href="../../d3/d39/class_g_u_i_font.html">GUIFont</a> *font, int <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#ad0e63d0edcdbd3d79554076bf309fd47">x</a>, int <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#a1675d9d7bb68e1657ff028643b4037e3">y</a>, unsigned short uFontColor, const char *str, bool present_time_transparency=false, int max_text_height=0, int uFontShadowColor=0)</td></tr>
+<tr class="separator:a009aad05d919c42979eebb93d8b4354c inherit pub_methods_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6711ab1500d10f32f8af44a349f4e0f3 inherit pub_methods_class_g_u_i_window"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/class_g_u_i_window.html#a6711ab1500d10f32f8af44a349f4e0f3">DrawText</a> (<a class="el" href="../../d3/d39/class_g_u_i_font.html">GUIFont</a> *font, int <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#ad0e63d0edcdbd3d79554076bf309fd47">x</a>, int <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#a1675d9d7bb68e1657ff028643b4037e3">y</a>, unsigned short uFontColor, const <a class="el" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> &amp;str, bool present_time_transparency=false, int max_text_height=0, int uFontShadowColor=0)</td></tr>
+<tr class="separator:a6711ab1500d10f32f8af44a349f4e0f3 inherit pub_methods_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae805c92b9242bc94cf18c7a702433f7 inherit pub_methods_class_g_u_i_window"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/class_g_u_i_window.html#aae805c92b9242bc94cf18c7a702433f7">DrawTitleText</a> (<a class="el" href="../../d3/d39/class_g_u_i_font.html">GUIFont</a> *font, int horizontal_margin, int vertical_margin, unsigned __int16 uDefaultColor, const char *pInString, int line_spacing)</td></tr>
+<tr class="separator:aae805c92b9242bc94cf18c7a702433f7 inherit pub_methods_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c7d25197afc3bed61eef6ccc4e5e67d inherit pub_methods_class_g_u_i_window"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/class_g_u_i_window.html#a5c7d25197afc3bed61eef6ccc4e5e67d">DrawTitleText</a> (<a class="el" href="../../d3/d39/class_g_u_i_font.html">GUIFont</a> *font, int horizontal_margin, int vertical_margin, unsigned __int16 uDefaultColor, const <a class="el" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> &amp;str, int line_spacing)</td></tr>
+<tr class="separator:a5c7d25197afc3bed61eef6ccc4e5e67d inherit pub_methods_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e8028e1c992d833f13b7dd33edc8cf6 inherit pub_methods_class_g_u_i_window"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/class_g_u_i_window.html#a8e8028e1c992d833f13b7dd33edc8cf6">DrawShops_next_generation_time_string</a> (<a class="el" href="../../df/dc2/struct_game_time.html">GameTime</a> time)</td></tr>
+<tr class="separator:a8e8028e1c992d833f13b7dd33edc8cf6 inherit pub_methods_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4310ff80f340b9a9c9b3249564a0960 inherit pub_methods_class_g_u_i_window"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/class_g_u_i_window.html#af4310ff80f340b9a9c9b3249564a0960">HouseDialogManager</a> ()</td></tr>
+<tr class="separator:af4310ff80f340b9a9c9b3249564a0960 inherit pub_methods_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0c28c954e40c6f2c7feb7022ece8052 inherit pub_methods_class_g_u_i_window"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/class_g_u_i_window.html#ac0c28c954e40c6f2c7feb7022ece8052">DrawMessageBox</a> (bool inside_game_viewport)</td></tr>
+<tr class="separator:ac0c28c954e40c6f2c7feb7022ece8052 inherit pub_methods_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c0ea7873e9e250b3bce8f4bd5db60b3 inherit pub_methods_class_g_u_i_window"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d66/class_g_u_i_button.html">GUIButton</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/class_g_u_i_window.html#a0c0ea7873e9e250b3bce8f4bd5db60b3">GetControl</a> (unsigned int uID)</td></tr>
+<tr class="separator:a0c0ea7873e9e250b3bce8f4bd5db60b3 inherit pub_methods_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1601b14fd14172585c6793565a30e7d inherit pub_methods_class_g_u_i_window"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/class_g_u_i_window.html#af1601b14fd14172585c6793565a30e7d">_41D08F_set_keyboard_control_group</a> (int num_buttons, int a3, int a4, int a5)</td></tr>
+<tr class="separator:af1601b14fd14172585c6793565a30e7d inherit pub_methods_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb1aed077e95deae983b0b005f57f07c inherit pub_methods_class_g_u_i_window"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/class_g_u_i_window.html#afb1aed077e95deae983b0b005f57f07c">_41D73D_draw_buff_tooltip</a> ()</td></tr>
+<tr class="separator:afb1aed077e95deae983b0b005f57f07c inherit pub_methods_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf2e6a2022904abc2d253e9d4acd5d99 inherit pub_methods_class_g_u_i_window"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/class_g_u_i_window.html#aaf2e6a2022904abc2d253e9d4acd5d99">Release</a> ()</td></tr>
+<tr class="separator:aaf2e6a2022904abc2d253e9d4acd5d99 inherit pub_methods_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c8bcc74ea8cc23cc666aa869e5a5d7d inherit pub_methods_class_g_u_i_window"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/class_g_u_i_window.html#a7c8bcc74ea8cc23cc666aa869e5a5d7d">DeleteButtons</a> ()</td></tr>
+<tr class="separator:a7c8bcc74ea8cc23cc666aa869e5a5d7d inherit pub_methods_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Открытые статические члены</h2></td></tr>
+<tr class="memitem:ad12c43bc3078a3dbdab21a148ba71b64"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d86/class_g_u_i_window___main_menu.html#ad12c43bc3078a3dbdab21a148ba71b64">Loop</a> ()</td></tr>
+<tr class="separator:ad12c43bc3078a3dbdab21a148ba71b64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_static_methods_class_g_u_i_window"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_class_g_u_i_window')"><img src="../../closed.png" alt="-"/>&#160;Открытые статические члены унаследованные от <a class="el" href="../../d4/d38/class_g_u_i_window.html">GUIWindow</a></td></tr>
+<tr class="memitem:a5c1f1a3ef130e92819f280b3824cecb9 inherit pub_static_methods_class_g_u_i_window"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/class_g_u_i_window.html#a5c1f1a3ef130e92819f280b3824cecb9">InitializeGUI</a> ()</td></tr>
+<tr class="separator:a5c1f1a3ef130e92819f280b3824cecb9 inherit pub_static_methods_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Защищенные данные</h2></td></tr>
+<tr class="memitem:a7881f72c2ef88250266d588549b79aab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d66/class_g_u_i_button.html">GUIButton</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d86/class_g_u_i_window___main_menu.html#a7881f72c2ef88250266d588549b79aab">pBtnExit</a></td></tr>
+<tr class="separator:a7881f72c2ef88250266d588549b79aab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aede9cecaf3be59edf123cdce1120052f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d66/class_g_u_i_button.html">GUIButton</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d86/class_g_u_i_window___main_menu.html#aede9cecaf3be59edf123cdce1120052f">pBtnCredits</a></td></tr>
+<tr class="separator:aede9cecaf3be59edf123cdce1120052f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a120426b4654cc47b9ad0c9d4d27c4991"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d66/class_g_u_i_button.html">GUIButton</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d86/class_g_u_i_window___main_menu.html#a120426b4654cc47b9ad0c9d4d27c4991">pBtnLoad</a></td></tr>
+<tr class="separator:a120426b4654cc47b9ad0c9d4d27c4991"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43b04458a2ffadf04dae485ae8b93ce2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d66/class_g_u_i_button.html">GUIButton</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d86/class_g_u_i_window___main_menu.html#a43b04458a2ffadf04dae485ae8b93ce2">pBtnNew</a></td></tr>
+<tr class="separator:a43b04458a2ffadf04dae485ae8b93ce2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06d7ca1a7d25f33ecdb95954497f5205"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/d73/class_image.html">Image</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d86/class_g_u_i_window___main_menu.html#a06d7ca1a7d25f33ecdb95954497f5205">main_menu_background</a></td></tr>
+<tr class="separator:a06d7ca1a7d25f33ecdb95954497f5205"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad041d3289b30f1cc984485ef231d0d3e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/d73/class_image.html">Image</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d86/class_g_u_i_window___main_menu.html#ad041d3289b30f1cc984485ef231d0d3e">ui_mainmenu_new</a></td></tr>
+<tr class="separator:ad041d3289b30f1cc984485ef231d0d3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a137b56856d65b7c86c039265e69cd662"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/d73/class_image.html">Image</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d86/class_g_u_i_window___main_menu.html#a137b56856d65b7c86c039265e69cd662">ui_mainmenu_load</a></td></tr>
+<tr class="separator:a137b56856d65b7c86c039265e69cd662"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7c3a378749d727b9c3797f91503a6dd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/d73/class_image.html">Image</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d86/class_g_u_i_window___main_menu.html#ac7c3a378749d727b9c3797f91503a6dd">ui_mainmenu_credits</a></td></tr>
+<tr class="separator:ac7c3a378749d727b9c3797f91503a6dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a878bc1ca15edeca248ada4fcb9453ee8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/d73/class_image.html">Image</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d86/class_g_u_i_window___main_menu.html#a878bc1ca15edeca248ada4fcb9453ee8">ui_mainmenu_exit</a></td></tr>
+<tr class="separator:a878bc1ca15edeca248ada4fcb9453ee8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Дополнительные унаследованные члены</h2></td></tr>
+<tr class="inherit_header pub_attribs_class_g_u_i_window"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_class_g_u_i_window')"><img src="../../closed.png" alt="-"/>&#160;Открытые атрибуты унаследованные от <a class="el" href="../../d4/d38/class_g_u_i_window.html">GUIWindow</a></td></tr>
+<tr class="memitem:a92e763aa688b9d554715836694f023e9 inherit pub_attribs_class_g_u_i_window"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/class_g_u_i_window.html#a92e763aa688b9d554715836694f023e9">uFrameX</a></td></tr>
+<tr class="separator:a92e763aa688b9d554715836694f023e9 inherit pub_attribs_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5eba45cbdf813ec1b4b334ed1bbfeb9d inherit pub_attribs_class_g_u_i_window"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/class_g_u_i_window.html#a5eba45cbdf813ec1b4b334ed1bbfeb9d">uFrameY</a></td></tr>
+<tr class="separator:a5eba45cbdf813ec1b4b334ed1bbfeb9d inherit pub_attribs_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36480568ae6ed6155ae0d71f93fc3c92 inherit pub_attribs_class_g_u_i_window"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/class_g_u_i_window.html#a36480568ae6ed6155ae0d71f93fc3c92">uFrameWidth</a></td></tr>
+<tr class="separator:a36480568ae6ed6155ae0d71f93fc3c92 inherit pub_attribs_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9e6065d99ff9aedeca483120af26de7 inherit pub_attribs_class_g_u_i_window"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/class_g_u_i_window.html#aa9e6065d99ff9aedeca483120af26de7">uFrameHeight</a></td></tr>
+<tr class="separator:aa9e6065d99ff9aedeca483120af26de7 inherit pub_attribs_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bf7540e43e3304046ea150677adf6c1 inherit pub_attribs_class_g_u_i_window"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/class_g_u_i_window.html#a9bf7540e43e3304046ea150677adf6c1">uFrameZ</a></td></tr>
+<tr class="separator:a9bf7540e43e3304046ea150677adf6c1 inherit pub_attribs_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31ed78cd9b07ce62ae05112acadb1891 inherit pub_attribs_class_g_u_i_window"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/class_g_u_i_window.html#a31ed78cd9b07ce62ae05112acadb1891">uFrameW</a></td></tr>
+<tr class="separator:a31ed78cd9b07ce62ae05112acadb1891 inherit pub_attribs_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5adc8764b56a57e63dd87f7ee75e24f inherit pub_attribs_class_g_u_i_window"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/d0b/_g_u_i_window_8h.html#a476342970f954b62d70552bcbb5ee509">WindowType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/class_g_u_i_window.html#ad5adc8764b56a57e63dd87f7ee75e24f">eWindowType</a></td></tr>
+<tr class="separator:ad5adc8764b56a57e63dd87f7ee75e24f inherit pub_attribs_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62df59631349ff0ede71a3c78af06259 inherit pub_attribs_class_g_u_i_window"><td class="memItemLeft" >union {</td></tr>
+<tr class="memitem:af9a25927aa6151d07c05859087cfd4e4 inherit pub_attribs_class_g_u_i_window"><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *&#160;&#160;&#160;<a class="el" href="../../d4/d38/class_g_u_i_window.html#a29f272f9ea1f73c568bdb8a2e6d25a32">ptr_1C</a></td></tr>
+<tr class="separator:af9a25927aa6151d07c05859087cfd4e4 inherit pub_attribs_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3bd67bb100c4e0eeb18a0f44b770890 inherit pub_attribs_class_g_u_i_window"><td class="memItemLeft" >&#160;&#160;&#160;unsigned int&#160;&#160;&#160;<a class="el" href="../../d4/d38/class_g_u_i_window.html#ac4d410e32a7dd71d0f1a16cc9f5c095a">par1C</a></td></tr>
+<tr class="separator:af3bd67bb100c4e0eeb18a0f44b770890 inherit pub_attribs_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62df59631349ff0ede71a3c78af06259 inherit pub_attribs_class_g_u_i_window"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:a62df59631349ff0ede71a3c78af06259 inherit pub_attribs_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a910d98ccde00fea22f0d6c1053998d4c inherit pub_attribs_class_g_u_i_window"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/class_g_u_i_window.html#a910d98ccde00fea22f0d6c1053998d4c">field_24</a></td></tr>
+<tr class="separator:a910d98ccde00fea22f0d6c1053998d4c inherit pub_attribs_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6741558a76d239c814ec81e7564ee8a5 inherit pub_attribs_class_g_u_i_window"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/class_g_u_i_window.html#a6741558a76d239c814ec81e7564ee8a5">pNumPresenceButton</a></td></tr>
+<tr class="separator:a6741558a76d239c814ec81e7564ee8a5 inherit pub_attribs_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a031ef0d3d30376a21eaf1d2ee842d339 inherit pub_attribs_class_g_u_i_window"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/class_g_u_i_window.html#a031ef0d3d30376a21eaf1d2ee842d339">pCurrentPosActiveItem</a></td></tr>
+<tr class="separator:a031ef0d3d30376a21eaf1d2ee842d339 inherit pub_attribs_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6988d3c00d0a52d29339daee8cd2ec55 inherit pub_attribs_class_g_u_i_window"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/class_g_u_i_window.html#a6988d3c00d0a52d29339daee8cd2ec55">field_30</a></td></tr>
+<tr class="separator:a6988d3c00d0a52d29339daee8cd2ec55 inherit pub_attribs_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9d25b9959da20bab38103cc18118e9e inherit pub_attribs_class_g_u_i_window"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/class_g_u_i_window.html#ab9d25b9959da20bab38103cc18118e9e">field_34</a></td></tr>
+<tr class="separator:ab9d25b9959da20bab38103cc18118e9e inherit pub_attribs_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88374b8722c65762079d5726239146b8 inherit pub_attribs_class_g_u_i_window"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/class_g_u_i_window.html#a88374b8722c65762079d5726239146b8">pStartingPosActiveItem</a></td></tr>
+<tr class="separator:a88374b8722c65762079d5726239146b8 inherit pub_attribs_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d17910c9a8bc7226302b16ccd85d918 inherit pub_attribs_class_g_u_i_window"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/class_g_u_i_window.html#a7d17910c9a8bc7226302b16ccd85d918">receives_keyboard_input_2</a></td></tr>
+<tr class="separator:a7d17910c9a8bc7226302b16ccd85d918 inherit pub_attribs_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaedaee57b8df9772e3d7a1a19d2b02e8 inherit pub_attribs_class_g_u_i_window"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/class_g_u_i_window.html#aaedaee57b8df9772e3d7a1a19d2b02e8">receives_keyboard_input</a></td></tr>
+<tr class="separator:aaedaee57b8df9772e3d7a1a19d2b02e8 inherit pub_attribs_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0dd208f005854966061dadedd7916367 inherit pub_attribs_class_g_u_i_window"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/class_g_u_i_window.html#a0dd208f005854966061dadedd7916367">sHint</a></td></tr>
+<tr class="separator:a0dd208f005854966061dadedd7916367 inherit pub_attribs_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba80b69979e2d28049eb073dde019f82 inherit pub_attribs_class_g_u_i_window"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../db/d66/class_g_u_i_button.html">GUIButton</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/class_g_u_i_window.html#aba80b69979e2d28049eb073dde019f82">vButtons</a></td></tr>
+<tr class="separator:aba80b69979e2d28049eb073dde019f82 inherit pub_attribs_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d84c25b1493b00f1f5eb5e27a45c309 inherit pub_attribs_class_g_u_i_window"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/dc5/class_mouse.html">Mouse</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/class_g_u_i_window.html#a3d84c25b1493b00f1f5eb5e27a45c309">mouse</a> = nullptr</td></tr>
+<tr class="separator:a3d84c25b1493b00f1f5eb5e27a45c309 inherit pub_attribs_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f1b282cf9a6e02a8a8cebbae786b7ab inherit pub_attribs_class_g_u_i_window"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d70/class_log.html">Log</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/class_g_u_i_window.html#a2f1b282cf9a6e02a8a8cebbae786b7ab">log</a> = nullptr</td></tr>
+<tr class="separator:a2f1b282cf9a6e02a8a8cebbae786b7ab inherit pub_attribs_class_g_u_i_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock">
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d24/_u_i_main_menu_8h_source.html">UIMainMenu.h</a> строка <a class="el" href="../../dc/d24/_u_i_main_menu_8h_source.html#l00005">5</a></p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a04bbaee5c3a564b2a8dee8cd0028811a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04bbaee5c3a564b2a8dee8cd0028811a">&#9670;&nbsp;</a></span>GUIWindow_MainMenu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GUIWindow_MainMenu::GUIWindow_MainMenu </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d7/dc5/_u_i_main_menu_8cpp_source.html">UIMainMenu.cpp</a> строка <a class="el" href="../../d7/dc5/_u_i_main_menu_8cpp_source.html#l00020">20</a></p>
+<div class="fragment"><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;                                       :</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="../../d4/d38/class_g_u_i_window.html#a1d5f55e836dbe199acf6c6226d3793ec">GUIWindow</a>(<a class="code" href="../../d5/d0b/_g_u_i_window_8h.html#a476342970f954b62d70552bcbb5ee509a7342258dc3c05458684e8bea94729025">WINDOW_MainMenu</a>, 0, 0, <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a92dbce8e3247f6a78126c99877caacb6">window</a>-&gt;GetWidth(), <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a92dbce8e3247f6a78126c99877caacb6">window</a>-&gt;GetHeight(), 0) {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="../../d1/d86/class_g_u_i_window___main_menu.html#a06d7ca1a7d25f33ecdb95954497f5205">main_menu_background</a> = <a class="code" href="../../d3/d93/_assets_manager_8cpp.html#a645270130330d2d99964c967b7d33cd8">assets</a>-&gt;<a class="code" href="../../db/dd6/class_assets_manager.html#a20f956b4c71c3e07404ca137d572b97f">GetImage_PCXFromIconsLOD</a>(<span class="stringliteral">&quot;title.pcx&quot;</span>);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="../../d1/d86/class_g_u_i_window___main_menu.html#ad041d3289b30f1cc984485ef231d0d3e">ui_mainmenu_new</a> = <a class="code" href="../../d3/d93/_assets_manager_8cpp.html#a645270130330d2d99964c967b7d33cd8">assets</a>-&gt;<a class="code" href="../../db/dd6/class_assets_manager.html#ad4ab70fc004c8c5a54756f3d358a8383">GetImage_ColorKey</a>(<span class="stringliteral">&quot;title_new&quot;</span>, 0x7FF);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="../../d1/d86/class_g_u_i_window___main_menu.html#a137b56856d65b7c86c039265e69cd662">ui_mainmenu_load</a> = <a class="code" href="../../d3/d93/_assets_manager_8cpp.html#a645270130330d2d99964c967b7d33cd8">assets</a>-&gt;<a class="code" href="../../db/dd6/class_assets_manager.html#ad4ab70fc004c8c5a54756f3d358a8383">GetImage_ColorKey</a>(<span class="stringliteral">&quot;title_load&quot;</span>, 0x7FF);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="../../d1/d86/class_g_u_i_window___main_menu.html#ac7c3a378749d727b9c3797f91503a6dd">ui_mainmenu_credits</a> = <a class="code" href="../../d3/d93/_assets_manager_8cpp.html#a645270130330d2d99964c967b7d33cd8">assets</a>-&gt;<a class="code" href="../../db/dd6/class_assets_manager.html#ad4ab70fc004c8c5a54756f3d358a8383">GetImage_ColorKey</a>(<span class="stringliteral">&quot;title_cred&quot;</span>, 0x7FF);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="../../d1/d86/class_g_u_i_window___main_menu.html#a878bc1ca15edeca248ada4fcb9453ee8">ui_mainmenu_exit</a> = <a class="code" href="../../d3/d93/_assets_manager_8cpp.html#a645270130330d2d99964c967b7d33cd8">assets</a>-&gt;<a class="code" href="../../db/dd6/class_assets_manager.html#ad4ab70fc004c8c5a54756f3d358a8383">GetImage_ColorKey</a>(<span class="stringliteral">&quot;title_exit&quot;</span>, 0x7FF);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="../../d1/d86/class_g_u_i_window___main_menu.html#a43b04458a2ffadf04dae485ae8b93ce2">pBtnNew</a> = <a class="code" href="../../d4/d38/class_g_u_i_window.html#a29f96468b54f142995e3b1890cb7e45e">CreateButton</a>(495, 172, <a class="code" href="../../d1/d86/class_g_u_i_window___main_menu.html#ad041d3289b30f1cc984485ef231d0d3e">ui_mainmenu_new</a>-&gt;<a class="code" href="../../de/d73/class_image.html#a9241b1c53141c78273e4060a91634d47">GetWidth</a>(), <a class="code" href="../../d1/d86/class_g_u_i_window___main_menu.html#ad041d3289b30f1cc984485ef231d0d3e">ui_mainmenu_new</a>-&gt;<a class="code" href="../../de/d73/class_image.html#a5093fa64598a4d7e0c70d43fe67e35cd">GetHeight</a>(),</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        1, 0, <a class="code" href="../../d5/d0b/_g_u_i_window_8h.html#a2519966952faeb9397447ce89e9bcb02a3d1accf62c1487bbef3a649de4463ce8">UIMSG_MainMenu_ShowPartyCreationWnd</a>, 0, <span class="charliteral">&#39;N&#39;</span>, <span class="stringliteral">&quot;&quot;</span>, { { ui_mainmenu_new } });</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="../../d1/d86/class_g_u_i_window___main_menu.html#a120426b4654cc47b9ad0c9d4d27c4991">pBtnLoad</a> = <a class="code" href="../../d4/d38/class_g_u_i_window.html#a29f96468b54f142995e3b1890cb7e45e">CreateButton</a>(495, 227, <a class="code" href="../../d1/d86/class_g_u_i_window___main_menu.html#a137b56856d65b7c86c039265e69cd662">ui_mainmenu_load</a>-&gt;<a class="code" href="../../de/d73/class_image.html#a9241b1c53141c78273e4060a91634d47">GetWidth</a>(), <a class="code" href="../../d1/d86/class_g_u_i_window___main_menu.html#a137b56856d65b7c86c039265e69cd662">ui_mainmenu_load</a>-&gt;<a class="code" href="../../de/d73/class_image.html#a5093fa64598a4d7e0c70d43fe67e35cd">GetHeight</a>(),</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        1, 0, <a class="code" href="../../d5/d0b/_g_u_i_window_8h.html#a2519966952faeb9397447ce89e9bcb02a31e60ac7dda28d73816beda5bfd276b5">UIMSG_MainMenu_ShowLoadWindow</a>, 1, <span class="charliteral">&#39;L&#39;</span>, <span class="stringliteral">&quot;&quot;</span>, { { ui_mainmenu_load } });</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="../../d1/d86/class_g_u_i_window___main_menu.html#aede9cecaf3be59edf123cdce1120052f">pBtnCredits</a> = <a class="code" href="../../d4/d38/class_g_u_i_window.html#a29f96468b54f142995e3b1890cb7e45e">CreateButton</a>(495, 282, <a class="code" href="../../d1/d86/class_g_u_i_window___main_menu.html#ac7c3a378749d727b9c3797f91503a6dd">ui_mainmenu_credits</a>-&gt;<a class="code" href="../../de/d73/class_image.html#a9241b1c53141c78273e4060a91634d47">GetWidth</a>(), <a class="code" href="../../d1/d86/class_g_u_i_window___main_menu.html#ac7c3a378749d727b9c3797f91503a6dd">ui_mainmenu_credits</a>-&gt;<a class="code" href="../../de/d73/class_image.html#a5093fa64598a4d7e0c70d43fe67e35cd">GetHeight</a>(),</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        1, 0, <a class="code" href="../../d5/d0b/_g_u_i_window_8h.html#a2519966952faeb9397447ce89e9bcb02ac337635bbc2b0a2fbcf1f10d5befccc5">UIMSG_ShowCredits</a>, 2, <span class="charliteral">&#39;C&#39;</span>, <span class="stringliteral">&quot;&quot;</span>, { { ui_mainmenu_credits } });</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="../../d1/d86/class_g_u_i_window___main_menu.html#a7881f72c2ef88250266d588549b79aab">pBtnExit</a> = <a class="code" href="../../d4/d38/class_g_u_i_window.html#a29f96468b54f142995e3b1890cb7e45e">CreateButton</a>(495, 337, <a class="code" href="../../d1/d86/class_g_u_i_window___main_menu.html#a878bc1ca15edeca248ada4fcb9453ee8">ui_mainmenu_exit</a>-&gt;<a class="code" href="../../de/d73/class_image.html#a9241b1c53141c78273e4060a91634d47">GetWidth</a>(), <a class="code" href="../../d1/d86/class_g_u_i_window___main_menu.html#a878bc1ca15edeca248ada4fcb9453ee8">ui_mainmenu_exit</a>-&gt;<a class="code" href="../../de/d73/class_image.html#a5093fa64598a4d7e0c70d43fe67e35cd">GetHeight</a>(),</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        1, 0, <a class="code" href="../../d5/d0b/_g_u_i_window_8h.html#a2519966952faeb9397447ce89e9bcb02ab8119fd86a35b1fa09408dd041b552a7">UIMSG_ExitToWindows</a>, 3, 0, <span class="stringliteral">&quot;&quot;</span>, { { ui_mainmenu_exit } });</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d3/d93/_assets_manager_8cpp_source.html#l00012">assets</a>, <a class="el" href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00717">GUIWindow::CreateButton()</a>, <a class="el" href="../../d0/dac/_image_8cpp_source.html#l00230">Image::GetHeight()</a>, <a class="el" href="../../d3/d93/_assets_manager_8cpp_source.html#l00034">AssetsManager::GetImage_ColorKey()</a>, <a class="el" href="../../d3/d93/_assets_manager_8cpp_source.html#l00081">AssetsManager::GetImage_PCXFromIconsLOD()</a>, <a class="el" href="../../d0/dac/_image_8cpp_source.html#l00217">Image::GetWidth()</a>, <a class="el" href="../../dc/d24/_u_i_main_menu_8h_source.html#l00021">main_menu_background</a>, <a class="el" href="../../dc/d24/_u_i_main_menu_8h_source.html#l00019">pBtnNew</a>, <a class="el" href="../../dc/d24/_u_i_main_menu_8h_source.html#l00025">ui_mainmenu_credits</a>, <a class="el" href="../../dc/d24/_u_i_main_menu_8h_source.html#l00026">ui_mainmenu_exit</a>, <a class="el" href="../../dc/d24/_u_i_main_menu_8h_source.html#l00024">ui_mainmenu_load</a>, <a class="el" href="../../dc/d24/_u_i_main_menu_8h_source.html#l00023">ui_mainmenu_new</a> и <a class="el" href="../../d5/d0b/_g_u_i_window_8h_source.html#l00040">UIMSG_MainMenu_ShowPartyCreationWnd</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d7/dc5/_u_i_main_menu_8cpp_source.html#l00118">Loop()</a>.</p>
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d1/d86/class_g_u_i_window___main_menu_a04bbaee5c3a564b2a8dee8cd0028811a_cgraph.svg" width="100%" height="503"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d1/d86/class_g_u_i_window___main_menu_a04bbaee5c3a564b2a8dee8cd0028811a_icgraph.svg" width="590" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a91cc48669f3f50bc2350443c68d1b3f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91cc48669f3f50bc2350443c68d1b3f9">&#9670;&nbsp;</a></span>~GUIWindow_MainMenu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GUIWindow_MainMenu::~GUIWindow_MainMenu </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d7/dc5/_u_i_main_menu_8cpp_source.html">UIMainMenu.cpp</a> строка <a class="el" href="../../d7/dc5/_u_i_main_menu_8cpp_source.html#l00039">39</a></p>
+<div class="fragment"><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                                        {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="../../d1/d86/class_g_u_i_window___main_menu.html#ad041d3289b30f1cc984485ef231d0d3e">ui_mainmenu_new</a>-&gt;<a class="code" href="../../de/d73/class_image.html#a79e0e96332914caa0816c7d34822b9bf">Release</a>();</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="../../d1/d86/class_g_u_i_window___main_menu.html#a137b56856d65b7c86c039265e69cd662">ui_mainmenu_load</a>-&gt;<a class="code" href="../../de/d73/class_image.html#a79e0e96332914caa0816c7d34822b9bf">Release</a>();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="../../d1/d86/class_g_u_i_window___main_menu.html#ac7c3a378749d727b9c3797f91503a6dd">ui_mainmenu_credits</a>-&gt;<a class="code" href="../../de/d73/class_image.html#a79e0e96332914caa0816c7d34822b9bf">Release</a>();</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="../../d1/d86/class_g_u_i_window___main_menu.html#a878bc1ca15edeca248ada4fcb9453ee8">ui_mainmenu_exit</a>-&gt;<a class="code" href="../../de/d73/class_image.html#a79e0e96332914caa0816c7d34822b9bf">Release</a>();</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="../../d1/d86/class_g_u_i_window___main_menu.html#a06d7ca1a7d25f33ecdb95954497f5205">main_menu_background</a>-&gt;<a class="code" href="../../de/d73/class_image.html#a79e0e96332914caa0816c7d34822b9bf">Release</a>();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../dc/d24/_u_i_main_menu_8h_source.html#l00021">main_menu_background</a>, <a class="el" href="../../d0/dac/_image_8cpp_source.html#l00335">Image::Release()</a>, <a class="el" href="../../dc/d24/_u_i_main_menu_8h_source.html#l00025">ui_mainmenu_credits</a>, <a class="el" href="../../dc/d24/_u_i_main_menu_8h_source.html#l00026">ui_mainmenu_exit</a>, <a class="el" href="../../dc/d24/_u_i_main_menu_8h_source.html#l00024">ui_mainmenu_load</a> и <a class="el" href="../../dc/d24/_u_i_main_menu_8h_source.html#l00023">ui_mainmenu_new</a>.</p>
+<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d1/d86/class_g_u_i_window___main_menu_a91cc48669f3f50bc2350443c68d1b3f9_cgraph.svg" width="607" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="ad2e61545378dc3ca46b1aba52d1f2734"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2e61545378dc3ca46b1aba52d1f2734">&#9670;&nbsp;</a></span>Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> GUIWindow_MainMenu::Update </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Переопределяет метод предка <a class="el" href="../../d4/d38/class_g_u_i_window.html#afe1bc204d71ec7dbce72fc1c84638c5c">GUIWindow</a>.</p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d7/dc5/_u_i_main_menu_8cpp_source.html">UIMainMenu.cpp</a> строка <a class="el" href="../../d7/dc5/_u_i_main_menu_8cpp_source.html#l00047">47</a></p>
+<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                                {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="../../da/d20/_i_render_8h.html#a21d31464313b2c66ff88d4aa97b66143">render</a>-&gt;DrawTextureNew(0, 0, <a class="code" href="../../d1/d86/class_g_u_i_window___main_menu.html#a06d7ca1a7d25f33ecdb95954497f5205">main_menu_background</a>);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="../../d8/dc8/struct_point.html">Point</a> pt = <a class="code" href="../../d4/d38/class_g_u_i_window.html#a3d84c25b1493b00f1f5eb5e27a45c309">mouse</a>-&gt;<a class="code" href="../../d7/dc5/class_mouse.html#a8900246ba042b33090b8dc8e377fbb3a">GetCursorPos</a>();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="../../d4/d38/class_g_u_i_window.html">GUIWindow</a> *pWindow = <span class="keyword">this</span>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <a class="code" href="../../de/d73/class_image.html">Image</a> *pTexture = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="../../dc/dce/_g_u_i_window_8cpp.html#acac1e9e9490f5f2ff0b7a507000f368e">pModalWindow</a>) {  <span class="comment">// ???</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="../../db/d66/class_g_u_i_button.html">GUIButton</a> *pButton : pWindow-&gt;<a class="code" href="../../d4/d38/class_g_u_i_window.html#aba80b69979e2d28049eb073dde019f82">vButtons</a>) {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <span class="keywordflow">if</span> (pButton-&gt;<a class="code" href="../../db/d66/class_g_u_i_button.html#ac934451bf1b335dd0568ea624ed7d08f">Contains</a>(pt.<a class="code" href="../../d8/dc8/struct_point.html#a81bb3d87085a9672879cfe4e58f7bff3">x</a>, pt.<a class="code" href="../../d8/dc8/struct_point.html#aafc3278398083cef91e29bf68c7d6c87">y</a>) &amp;&amp; pWindow == <a class="code" href="../../d7/dc5/_u_i_main_menu_8cpp.html#ae47014943010414348656892fc2bb473">pWindow_MainMenu</a>) {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                <span class="keyword">auto</span> pControlParam = pButton-&gt;<a class="code" href="../../db/d66/class_g_u_i_button.html#a8db3a590c89f17a48c3ed8b68221be23">msg_param</a>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                <span class="keywordtype">int</span> pY = 0;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                <span class="keywordflow">switch</span> (pControlParam) {  <span class="comment">// backlight for buttons</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                    <span class="keywordflow">case</span> 0:</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                        pTexture = <a class="code" href="../../d3/d93/_assets_manager_8cpp.html#a645270130330d2d99964c967b7d33cd8">assets</a>-&gt;<a class="code" href="../../db/dd6/class_assets_manager.html#ad4ab70fc004c8c5a54756f3d358a8383">GetImage_ColorKey</a>(<span class="stringliteral">&quot;title_new&quot;</span>, 0x7FF);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                        pY = 172;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                    <span class="keywordflow">case</span> 1:</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                        pTexture = <a class="code" href="../../d3/d93/_assets_manager_8cpp.html#a645270130330d2d99964c967b7d33cd8">assets</a>-&gt;<a class="code" href="../../db/dd6/class_assets_manager.html#ad4ab70fc004c8c5a54756f3d358a8383">GetImage_ColorKey</a>(<span class="stringliteral">&quot;title_load&quot;</span>, 0x7FF);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                        pY = 227;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                    <span class="keywordflow">case</span> 2:</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                        pTexture = <a class="code" href="../../d3/d93/_assets_manager_8cpp.html#a645270130330d2d99964c967b7d33cd8">assets</a>-&gt;<a class="code" href="../../db/dd6/class_assets_manager.html#ad4ab70fc004c8c5a54756f3d358a8383">GetImage_ColorKey</a>(<span class="stringliteral">&quot;title_cred&quot;</span>, 0x7FF);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                        pY = 282;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                    <span class="keywordflow">case</span> 3:</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                        pTexture = <a class="code" href="../../d3/d93/_assets_manager_8cpp.html#a645270130330d2d99964c967b7d33cd8">assets</a>-&gt;<a class="code" href="../../db/dd6/class_assets_manager.html#ad4ab70fc004c8c5a54756f3d358a8383">GetImage_ColorKey</a>(<span class="stringliteral">&quot;title_exit&quot;</span>, 0x7FF);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                        pY = 337;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                <a class="code" href="../../da/d20/_i_render_8h.html#a21d31464313b2c66ff88d4aa97b66143">render</a>-&gt;DrawTextureAlphaNew(495 / 640.0<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a>, pY / 480.0<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a>, pTexture);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d3/d93/_assets_manager_8cpp_source.html#l00012">assets</a>, <a class="el" href="../../d9/d1d/_g_u_i_button_8cpp_source.html#l00113">GUIButton::Contains()</a>, <a class="el" href="../../d7/d54/_mouse_8cpp_source.html#l00108">Mouse::GetCursorPos()</a>, <a class="el" href="../../d3/d93/_assets_manager_8cpp_source.html#l00034">AssetsManager::GetImage_ColorKey()</a>, <a class="el" href="../../dc/d24/_u_i_main_menu_8h_source.html#l00021">main_menu_background</a>, <a class="el" href="../../d5/d0b/_g_u_i_window_8h_source.html#l00491">GUIWindow::mouse</a>, <a class="el" href="../../d7/db9/_g_u_i_button_8h_source.html#l00030">GUIButton::msg_param</a>, <a class="el" href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00057">pModalWindow</a>, <a class="el" href="../../d7/dc5/_u_i_main_menu_8cpp_source.html#l00018">pWindow_MainMenu</a>, <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l00052">render</a>, <a class="el" href="../../d5/d0b/_g_u_i_window_8h_source.html#l00489">GUIWindow::vButtons</a>, <a class="el" href="../../d1/d18/_point_8h_source.html#l00007">Point::x</a> и <a class="el" href="../../d1/d18/_point_8h_source.html#l00008">Point::y</a>.</p>
+<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d1/d86/class_g_u_i_window___main_menu_ad2e61545378dc3ca46b1aba52d1f2734_cgraph.svg" width="394" height="155"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ad12c43bc3078a3dbdab21a148ba71b64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad12c43bc3078a3dbdab21a148ba71b64">&#9670;&nbsp;</a></span>Loop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> GUIWindow_MainMenu::Loop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d7/dc5/_u_i_main_menu_8cpp_source.html">UIMainMenu.cpp</a> строка <a class="el" href="../../d7/dc5/_u_i_main_menu_8cpp_source.html#l00118">118</a></p>
+<div class="fragment"><div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                              {</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <a class="code" href="../../d3/df2/_audio_player_8cpp.html#a3ee6d655d35b46ebac53ef678255f75b">pAudioPlayer</a>-&gt;<a class="code" href="../../d7/dc2/class_audio_player.html#a222380497b8558ff7d16fa71f8680a46">StopChannels</a>(-1, -1);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <a class="code" href="../../d3/df2/_audio_player_8cpp.html#a3ee6d655d35b46ebac53ef678255f75b">pAudioPlayer</a>-&gt;<a class="code" href="../../d7/dc2/class_audio_player.html#a8ba0c68b98cc02edd75fa3226d7aba0a">MusicPlayTrack</a>(<a class="code" href="../../dd/d7b/_audio_player_8h.html#a68946471db0c45b6ce503ef14572f078a56b078091103d2c6a626a8bdef7bc595">MUSIC_MainMenu</a>);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../d7/dc5/_u_i_main_menu_8cpp.html#a4eaa5d14dee1de73efaff92ece9fae9a">first_initialization</a>) {</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <a class="code" href="../../d7/dc5/_u_i_main_menu_8cpp.html#a4eaa5d14dee1de73efaff92ece9fae9a">first_initialization</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        <a class="code" href="../../de/d73/class_image.html">Image</a> *tex = <a class="code" href="../../d3/d93/_assets_manager_8cpp.html#a645270130330d2d99964c967b7d33cd8">assets</a>-&gt;<a class="code" href="../../db/dd6/class_assets_manager.html#a20f956b4c71c3e07404ca137d572b97f">GetImage_PCXFromIconsLOD</a>(<span class="stringliteral">&quot;mm6title.pcx&quot;</span>);</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <a class="code" href="../../da/d20/_i_render_8h.html#a21d31464313b2c66ff88d4aa97b66143">render</a>-&gt;ResetUIClipRect();</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <a class="code" href="../../da/d20/_i_render_8h.html#a21d31464313b2c66ff88d4aa97b66143">render</a>-&gt;BeginScene();</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        {</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;            <a class="code" href="../../da/d20/_i_render_8h.html#a21d31464313b2c66ff88d4aa97b66143">render</a>-&gt;DrawTextureNew(0, 0, tex);</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            <a class="code" href="../../d7/dc5/_u_i_main_menu_8cpp.html#a900f40e5e05f1c73c3f24ee99cfa6ce0">DrawMM7CopyrightWindow</a>();</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        }</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <a class="code" href="../../da/d20/_i_render_8h.html#a21d31464313b2c66ff88d4aa97b66143">render</a>-&gt;EndScene();</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <a class="code" href="../../da/d20/_i_render_8h.html#a21d31464313b2c66ff88d4aa97b66143">render</a>-&gt;Present();</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160; </div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        <a class="code" href="../../d4/d68/_engine_8cpp.html#a911c866a46f710d4f1b358efcfb2604a">engine</a>-&gt;SecondaryInitialization();</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        <a class="code" href="../../d4/d68/_engine_8cpp.html#a265e1720d11ca6f175d7adbb3410597e">FinalInitialization</a>();</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        tex-&gt;<a class="code" href="../../de/d73/class_image.html#a79e0e96332914caa0816c7d34822b9bf">Release</a>();</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    }</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160; </div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <a class="code" href="../../dc/dce/_g_u_i_window_8cpp.html#a9cf585dbf96fdd1acbe15981837ebdb2">current_screen_type</a> = <a class="code" href="../../d5/d0b/_g_u_i_window_8h.html#af188298480c77be8835d6760fa6edfd7a1b14f33469f90b26e5f73747bcbd62f8">CURRENT_SCREEN::SCREEN_GAME</a>;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160; </div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <a class="code" href="../../dc/dce/_g_u_i_window_8cpp.html#acd5bd26b78148acea4f290d86b1535cd">pGUIWindow2</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160; </div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <a class="code" href="../../d7/dc5/_u_i_main_menu_8cpp.html#ae47014943010414348656892fc2bb473">pWindow_MainMenu</a> = <span class="keyword">new</span> <a class="code" href="../../d1/d86/class_g_u_i_window___main_menu.html#a04bbaee5c3a564b2a8dee8cd0028811a">GUIWindow_MainMenu</a>();</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160; </div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <a class="code" href="../../dc/dce/_g_u_i_window_8cpp.html#aca0ff8541e8260e43b99836c51395283">SetCurrentMenuID</a>(<a class="code" href="../../d5/d0b/_g_u_i_window_8h.html#ae3ad6ef2afe43c2e4bd1454810d934eaa1ffe14584858fba0fb59c4098ed9d30e">MENU_MAIN</a>);</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="comment">// window-&gt;Activate();</span></div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="keywordflow">while</span> (<a class="code" href="../../dc/dce/_g_u_i_window_8cpp.html#a839bc8361ffe7444793beceebebcb228">GetCurrentMenuID</a>() == <a class="code" href="../../d5/d0b/_g_u_i_window_8h.html#ae3ad6ef2afe43c2e4bd1454810d934eaa1ffe14584858fba0fb59c4098ed9d30e">MENU_MAIN</a>) {</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a92dbce8e3247f6a78126c99877caacb6">window</a>-&gt;PeekMessageLoop();</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../d6/d5b/mm7__data_8cpp.html#a26a3f7145319f5176397704ba8ea67e7">dword_6BE364_game_settings_1</a> &amp; GAME_SETTINGS_APP_INACTIVE) {</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;            <a class="code" href="../../d4/ddd/_api_8h.html#a5cef487a72338601ca50cf631f126329">OS_WaitMessage</a>();</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        }</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160; </div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        <a class="code" href="../../da/d20/_i_render_8h.html#a21d31464313b2c66ff88d4aa97b66143">render</a>-&gt;BeginScene();</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        {</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;            <a class="code" href="../../d7/dc5/_u_i_main_menu_8cpp.html#ae47014943010414348656892fc2bb473">pWindow_MainMenu</a>-&gt;<a class="code" href="../../d1/d86/class_g_u_i_window___main_menu.html#a3a60ce7f0e258d5cf1d17037b19bc9a1">EventLoop</a>();</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;            <a class="code" href="../../dc/dce/_g_u_i_window_8cpp.html#a9cafb995f3f6b03139380e5fb4fee184">GUI_UpdateWindows</a>();</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        }</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        <a class="code" href="../../da/d20/_i_render_8h.html#a21d31464313b2c66ff88d4aa97b66143">render</a>-&gt;EndScene();</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <a class="code" href="../../da/d20/_i_render_8h.html#a21d31464313b2c66ff88d4aa97b66143">render</a>-&gt;Present();</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    }</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160; </div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <a class="code" href="../../d7/dc5/_u_i_main_menu_8cpp.html#ae47014943010414348656892fc2bb473">pWindow_MainMenu</a>-&gt;<a class="code" href="../../d4/d38/class_g_u_i_window.html#aaf2e6a2022904abc2d253e9d4acd5d99">Release</a>();</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <span class="keyword">delete</span> <a class="code" href="../../d7/dc5/_u_i_main_menu_8cpp.html#ae47014943010414348656892fc2bb473">pWindow_MainMenu</a>;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <a class="code" href="../../d7/dc5/_u_i_main_menu_8cpp.html#ae47014943010414348656892fc2bb473">pWindow_MainMenu</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d3/d93/_assets_manager_8cpp_source.html#l00012">assets</a>, <a class="el" href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00083">current_screen_type</a>, <a class="el" href="../../d7/dc5/_u_i_main_menu_8cpp_source.html#l00172">DrawMM7CopyrightWindow()</a>, <a class="el" href="../../d6/d5b/mm7__data_8cpp_source.html#l00714">dword_6BE364_game_settings_1</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l00130">engine</a>, <a class="el" href="../../d7/dc5/_u_i_main_menu_8cpp_source.html#l00083">EventLoop()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l00852">FinalInitialization()</a>, <a class="el" href="../../d7/dc5/_u_i_main_menu_8cpp_source.html#l00116">first_initialization</a>, <a class="el" href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00133">GetCurrentMenuID()</a>, <a class="el" href="../../d3/d93/_assets_manager_8cpp_source.html#l00081">AssetsManager::GetImage_PCXFromIconsLOD()</a>, <a class="el" href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00956">GUI_UpdateWindows()</a>, <a class="el" href="../../d7/dc5/_u_i_main_menu_8cpp_source.html#l00020">GUIWindow_MainMenu()</a>, <a class="el" href="../../d5/d0b/_g_u_i_window_8h_source.html#l00251">MENU_MAIN</a>, <a class="el" href="../../dd/d7b/_audio_player_8h_source.html#l00109">MUSIC_MainMenu</a>, <a class="el" href="../../d3/df2/_audio_player_8cpp_source.html#l00109">AudioPlayer::MusicPlayTrack()</a>, <a class="el" href="../../de/d84/_lin_8cpp_source.html#l00032">OS_WaitMessage()</a>, <a class="el" href="../../d3/df2/_audio_player_8cpp_source.html#l00020">pAudioPlayer</a>, <a class="el" href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00060">pGUIWindow2</a>, <a class="el" href="../../d7/dc5/_u_i_main_menu_8cpp_source.html#l00018">pWindow_MainMenu</a>, <a class="el" href="../../d0/dac/_image_8cpp_source.html#l00335">Image::Release()</a>, <a class="el" href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00292">GUIWindow::Release()</a>, <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l00052">render</a>, <a class="el" href="../../d5/d0b/_g_u_i_window_8h.html#af188298480c77be8835d6760fa6edfd7a1b14f33469f90b26e5f73747bcbd62f8">SCREEN_GAME</a>, <a class="el" href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00128">SetCurrentMenuID()</a> и <a class="el" href="../../d3/df2/_audio_player_8cpp_source.html#l00331">AudioPlayer::StopChannels()</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d7/db5/_game_8cpp_source.html#l00100">Application::Game::Run()</a>.</p>
+<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d1/d86/class_g_u_i_window___main_menu_ad12c43bc3078a3dbdab21a148ba71b64_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-7-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-7-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d1/d86/class_g_u_i_window___main_menu_ad12c43bc3078a3dbdab21a148ba71b64_icgraph.svg" width="376" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a3a60ce7f0e258d5cf1d17037b19bc9a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a60ce7f0e258d5cf1d17037b19bc9a1">&#9670;&nbsp;</a></span>EventLoop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> GUIWindow_MainMenu::EventLoop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d7/dc5/_u_i_main_menu_8cpp_source.html">UIMainMenu.cpp</a> строка <a class="el" href="../../d7/dc5/_u_i_main_menu_8cpp_source.html#l00083">83</a></p>
+<div class="fragment"><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                                   {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordflow">while</span> (!<a class="code" href="../../dc/dce/_g_u_i_window_8cpp.html#a67ca5f2a4757601de2f69711ee287539">pMessageQueue_50CBD0</a>-&gt;<a class="code" href="../../db/dc9/struct_g_u_i_message_queue.html#a7c71ce717335eeb08baed38ddaf6f049">Empty</a>()) {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <a class="code" href="../../d5/d0b/_g_u_i_window_8h.html#a2519966952faeb9397447ce89e9bcb02">UIMessageType</a> pUIMessageType;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordtype">int</span> pParam;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keywordtype">int</span> param2;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <a class="code" href="../../dc/dce/_g_u_i_window_8cpp.html#a67ca5f2a4757601de2f69711ee287539">pMessageQueue_50CBD0</a>-&gt;<a class="code" href="../../db/dc9/struct_g_u_i_message_queue.html#a489cd7d7b4d555652da03ff2b783ecdb">PopMessage</a>(&amp;pUIMessageType, &amp;pParam, &amp;param2);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keywordflow">switch</span> (pUIMessageType) {  <span class="comment">// For buttons of window MainMenu</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="../../d5/d0b/_g_u_i_window_8h.html#a2519966952faeb9397447ce89e9bcb02a3d1accf62c1487bbef3a649de4463ce8">UIMSG_MainMenu_ShowPartyCreationWnd</a>:</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            <span class="keyword">new</span> <a class="code" href="../../d5/dea/class_on_button_click2.html">OnButtonClick2</a>(495, 172, 0, 0, (<span class="keywordtype">int</span>)<a class="code" href="../../d1/d86/class_g_u_i_window___main_menu.html#a43b04458a2ffadf04dae485ae8b93ce2">pBtnNew</a>);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            <a class="code" href="../../dc/dce/_g_u_i_window_8cpp.html#aca0ff8541e8260e43b99836c51395283">SetCurrentMenuID</a>(<a class="code" href="../../d5/d0b/_g_u_i_window_8h.html#ae3ad6ef2afe43c2e4bd1454810d934eaa25ddf60aabb79cd1f00f009b8fece4a8">MENU_NEWGAME</a>);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="../../d5/d0b/_g_u_i_window_8h.html#a2519966952faeb9397447ce89e9bcb02a31e60ac7dda28d73816beda5bfd276b5">UIMSG_MainMenu_ShowLoadWindow</a>:</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            <span class="keyword">new</span> <a class="code" href="../../d5/dea/class_on_button_click2.html">OnButtonClick2</a>(495, 227, 0, 0, (<span class="keywordtype">int</span>)<a class="code" href="../../d1/d86/class_g_u_i_window___main_menu.html#a120426b4654cc47b9ad0c9d4d27c4991">pBtnLoad</a>);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            <a class="code" href="../../dc/dce/_g_u_i_window_8cpp.html#aca0ff8541e8260e43b99836c51395283">SetCurrentMenuID</a>(<a class="code" href="../../d5/d0b/_g_u_i_window_8h.html#ae3ad6ef2afe43c2e4bd1454810d934eaacd4e00175a372be9c851d7aeec05a3bb">MENU_SAVELOAD</a>);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="../../d5/d0b/_g_u_i_window_8h.html#a2519966952faeb9397447ce89e9bcb02ac337635bbc2b0a2fbcf1f10d5befccc5">UIMSG_ShowCredits</a>:</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            <span class="keyword">new</span> <a class="code" href="../../d5/dea/class_on_button_click2.html">OnButtonClick2</a>(495, 282, 0, 0, (<span class="keywordtype">int</span>)<a class="code" href="../../d1/d86/class_g_u_i_window___main_menu.html#aede9cecaf3be59edf123cdce1120052f">pBtnCredits</a>);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            <a class="code" href="../../dc/dce/_g_u_i_window_8cpp.html#aca0ff8541e8260e43b99836c51395283">SetCurrentMenuID</a>(<a class="code" href="../../d5/d0b/_g_u_i_window_8h.html#ae3ad6ef2afe43c2e4bd1454810d934eaabbbf0f52cc3e4d1f51d31ba712a4dc27">MENU_CREDITS</a>);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="../../d5/d0b/_g_u_i_window_8h.html#a2519966952faeb9397447ce89e9bcb02ab8119fd86a35b1fa09408dd041b552a7">UIMSG_ExitToWindows</a>:</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            <span class="keyword">new</span> <a class="code" href="../../d5/dea/class_on_button_click2.html">OnButtonClick2</a>(495, 337, 0, 0, (<span class="keywordtype">int</span>)<a class="code" href="../../d1/d86/class_g_u_i_window___main_menu.html#a7881f72c2ef88250266d588549b79aab">pBtnExit</a>);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            <a class="code" href="../../dc/dce/_g_u_i_window_8cpp.html#aca0ff8541e8260e43b99836c51395283">SetCurrentMenuID</a>(<a class="code" href="../../d5/d0b/_g_u_i_window_8h.html#ae3ad6ef2afe43c2e4bd1454810d934eaabea126ac972315cc22ab345bb7601065">MENU_EXIT_GAME</a>);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="../../d5/d0b/_g_u_i_window_8h.html#a2519966952faeb9397447ce89e9bcb02acf7ef26b65ff56f8ff9cea5ef9b77124">UIMSG_ChangeGameState</a>:</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            <a class="code" href="../../d6/d5b/mm7__data_8cpp.html#ad1ff13391996d2a07139ab81b3b94647">uGameState</a> = <a class="code" href="../../de/dcf/_engine_8h.html#a4cc39f049df62b331976f9a4482bd3eaa0914d22579558ba67b13c241beeb04fe">GAME_FINISHED</a>;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        }</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    }</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d5/d0b/_g_u_i_window_8h_source.html#l00659">GUIMessageQueue::Empty()</a>, <a class="el" href="../../de/dcf/_engine_8h_source.html#l00033">GAME_FINISHED</a>, <a class="el" href="../../d5/d0b/_g_u_i_window_8h_source.html#l00253">MENU_CREDITS</a>, <a class="el" href="../../d5/d0b/_g_u_i_window_8h_source.html#l00255">MENU_EXIT_GAME</a>, <a class="el" href="../../d5/d0b/_g_u_i_window_8h_source.html#l00252">MENU_NEWGAME</a>, <a class="el" href="../../d5/d0b/_g_u_i_window_8h_source.html#l00254">MENU_SAVELOAD</a>, <a class="el" href="../../dc/d24/_u_i_main_menu_8h_source.html#l00017">pBtnCredits</a>, <a class="el" href="../../dc/d24/_u_i_main_menu_8h_source.html#l00016">pBtnExit</a>, <a class="el" href="../../dc/d24/_u_i_main_menu_8h_source.html#l00018">pBtnLoad</a>, <a class="el" href="../../dc/d24/_u_i_main_menu_8h_source.html#l00019">pBtnNew</a>, <a class="el" href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00086">pMessageQueue_50CBD0</a>, <a class="el" href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00174">GUIMessageQueue::PopMessage()</a>, <a class="el" href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00128">SetCurrentMenuID()</a>, <a class="el" href="../../d6/d5b/mm7__data_8cpp_source.html#l00695">uGameState</a>, <a class="el" href="../../d5/d0b/_g_u_i_window_8h_source.html#l00016">UIMSG_ChangeGameState</a>, <a class="el" href="../../d5/d0b/_g_u_i_window_8h_source.html#l00043">UIMSG_ExitToWindows</a>, <a class="el" href="../../d5/d0b/_g_u_i_window_8h_source.html#l00041">UIMSG_MainMenu_ShowLoadWindow</a>, <a class="el" href="../../d5/d0b/_g_u_i_window_8h_source.html#l00040">UIMSG_MainMenu_ShowPartyCreationWnd</a> и <a class="el" href="../../d5/d0b/_g_u_i_window_8h_source.html#l00042">UIMSG_ShowCredits</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d7/dc5/_u_i_main_menu_8cpp_source.html#l00118">Loop()</a>.</p>
+<div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-8-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-8-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d1/d86/class_g_u_i_window___main_menu_a3a60ce7f0e258d5cf1d17037b19bc9a1_cgraph.svg" width="648" height="164"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-9-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-9-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d1/d86/class_g_u_i_window___main_menu_a3a60ce7f0e258d5cf1d17037b19bc9a1_icgraph.svg" width="582" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="a7881f72c2ef88250266d588549b79aab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7881f72c2ef88250266d588549b79aab">&#9670;&nbsp;</a></span>pBtnExit</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/d66/class_g_u_i_button.html">GUIButton</a>* GUIWindow_MainMenu::pBtnExit</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d24/_u_i_main_menu_8h_source.html">UIMainMenu.h</a> строка <a class="el" href="../../dc/d24/_u_i_main_menu_8h_source.html#l00016">16</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d7/dc5/_u_i_main_menu_8cpp_source.html#l00083">EventLoop()</a>.</p>
+
+</div>
+</div>
+<a id="aede9cecaf3be59edf123cdce1120052f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aede9cecaf3be59edf123cdce1120052f">&#9670;&nbsp;</a></span>pBtnCredits</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/d66/class_g_u_i_button.html">GUIButton</a>* GUIWindow_MainMenu::pBtnCredits</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d24/_u_i_main_menu_8h_source.html">UIMainMenu.h</a> строка <a class="el" href="../../dc/d24/_u_i_main_menu_8h_source.html#l00017">17</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d7/dc5/_u_i_main_menu_8cpp_source.html#l00083">EventLoop()</a>.</p>
+
+</div>
+</div>
+<a id="a120426b4654cc47b9ad0c9d4d27c4991"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a120426b4654cc47b9ad0c9d4d27c4991">&#9670;&nbsp;</a></span>pBtnLoad</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/d66/class_g_u_i_button.html">GUIButton</a>* GUIWindow_MainMenu::pBtnLoad</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d24/_u_i_main_menu_8h_source.html">UIMainMenu.h</a> строка <a class="el" href="../../dc/d24/_u_i_main_menu_8h_source.html#l00018">18</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d7/dc5/_u_i_main_menu_8cpp_source.html#l00083">EventLoop()</a>.</p>
+
+</div>
+</div>
+<a id="a43b04458a2ffadf04dae485ae8b93ce2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43b04458a2ffadf04dae485ae8b93ce2">&#9670;&nbsp;</a></span>pBtnNew</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/d66/class_g_u_i_button.html">GUIButton</a>* GUIWindow_MainMenu::pBtnNew</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d24/_u_i_main_menu_8h_source.html">UIMainMenu.h</a> строка <a class="el" href="../../dc/d24/_u_i_main_menu_8h_source.html#l00019">19</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d7/dc5/_u_i_main_menu_8cpp_source.html#l00083">EventLoop()</a> и <a class="el" href="../../d7/dc5/_u_i_main_menu_8cpp_source.html#l00020">GUIWindow_MainMenu()</a>.</p>
+
+</div>
+</div>
+<a id="a06d7ca1a7d25f33ecdb95954497f5205"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06d7ca1a7d25f33ecdb95954497f5205">&#9670;&nbsp;</a></span>main_menu_background</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../de/d73/class_image.html">Image</a>* GUIWindow_MainMenu::main_menu_background</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d24/_u_i_main_menu_8h_source.html">UIMainMenu.h</a> строка <a class="el" href="../../dc/d24/_u_i_main_menu_8h_source.html#l00021">21</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d7/dc5/_u_i_main_menu_8cpp_source.html#l00020">GUIWindow_MainMenu()</a>, <a class="el" href="../../d7/dc5/_u_i_main_menu_8cpp_source.html#l00047">Update()</a> и <a class="el" href="../../d7/dc5/_u_i_main_menu_8cpp_source.html#l00039">~GUIWindow_MainMenu()</a>.</p>
+
+</div>
+</div>
+<a id="ad041d3289b30f1cc984485ef231d0d3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad041d3289b30f1cc984485ef231d0d3e">&#9670;&nbsp;</a></span>ui_mainmenu_new</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../de/d73/class_image.html">Image</a>* GUIWindow_MainMenu::ui_mainmenu_new</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d24/_u_i_main_menu_8h_source.html">UIMainMenu.h</a> строка <a class="el" href="../../dc/d24/_u_i_main_menu_8h_source.html#l00023">23</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d7/dc5/_u_i_main_menu_8cpp_source.html#l00020">GUIWindow_MainMenu()</a> и <a class="el" href="../../d7/dc5/_u_i_main_menu_8cpp_source.html#l00039">~GUIWindow_MainMenu()</a>.</p>
+
+</div>
+</div>
+<a id="a137b56856d65b7c86c039265e69cd662"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a137b56856d65b7c86c039265e69cd662">&#9670;&nbsp;</a></span>ui_mainmenu_load</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../de/d73/class_image.html">Image</a>* GUIWindow_MainMenu::ui_mainmenu_load</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d24/_u_i_main_menu_8h_source.html">UIMainMenu.h</a> строка <a class="el" href="../../dc/d24/_u_i_main_menu_8h_source.html#l00024">24</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d7/dc5/_u_i_main_menu_8cpp_source.html#l00020">GUIWindow_MainMenu()</a> и <a class="el" href="../../d7/dc5/_u_i_main_menu_8cpp_source.html#l00039">~GUIWindow_MainMenu()</a>.</p>
+
+</div>
+</div>
+<a id="ac7c3a378749d727b9c3797f91503a6dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7c3a378749d727b9c3797f91503a6dd">&#9670;&nbsp;</a></span>ui_mainmenu_credits</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../de/d73/class_image.html">Image</a>* GUIWindow_MainMenu::ui_mainmenu_credits</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d24/_u_i_main_menu_8h_source.html">UIMainMenu.h</a> строка <a class="el" href="../../dc/d24/_u_i_main_menu_8h_source.html#l00025">25</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d7/dc5/_u_i_main_menu_8cpp_source.html#l00020">GUIWindow_MainMenu()</a> и <a class="el" href="../../d7/dc5/_u_i_main_menu_8cpp_source.html#l00039">~GUIWindow_MainMenu()</a>.</p>
+
+</div>
+</div>
+<a id="a878bc1ca15edeca248ada4fcb9453ee8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a878bc1ca15edeca248ada4fcb9453ee8">&#9670;&nbsp;</a></span>ui_mainmenu_exit</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../de/d73/class_image.html">Image</a>* GUIWindow_MainMenu::ui_mainmenu_exit</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d24/_u_i_main_menu_8h_source.html">UIMainMenu.h</a> строка <a class="el" href="../../dc/d24/_u_i_main_menu_8h_source.html#l00026">26</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d7/dc5/_u_i_main_menu_8cpp_source.html#l00020">GUIWindow_MainMenu()</a> и <a class="el" href="../../d7/dc5/_u_i_main_menu_8cpp_source.html#l00039">~GUIWindow_MainMenu()</a>.</p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>C:/git/world-of-might-and-magic/GUI/UI/<a class="el" href="../../dc/d24/_u_i_main_menu_8h_source.html">UIMainMenu.h</a></li>
+<li>C:/git/world-of-might-and-magic/GUI/UI/<a class="el" href="../../d7/dc5/_u_i_main_menu_8cpp_source.html">UIMainMenu.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="a_g_u_i_window_8h_html_ae3ad6ef2afe43c2e4bd1454810d934eaacd4e00175a372be9c851d7aeec05a3bb"><div class="ttname"><a href="../../d5/d0b/_g_u_i_window_8h.html#ae3ad6ef2afe43c2e4bd1454810d934eaacd4e00175a372be9c851d7aeec05a3bb">MENU_SAVELOAD</a></div><div class="ttdeci">@ MENU_SAVELOAD</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d0b/_g_u_i_window_8h_source.html#l00254">GUIWindow.h:254</a></div></div>
+<div class="ttc" id="a_u_i_main_menu_8cpp_html_ae47014943010414348656892fc2bb473"><div class="ttname"><a href="../../d7/dc5/_u_i_main_menu_8cpp.html#ae47014943010414348656892fc2bb473">pWindow_MainMenu</a></div><div class="ttdeci">GUIWindow_MainMenu * pWindow_MainMenu</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dc5/_u_i_main_menu_8cpp_source.html#l00018">UIMainMenu.cpp:18</a></div></div>
+<div class="ttc" id="aclass_on_button_click2_html"><div class="ttname"><a href="../../d5/dea/class_on_button_click2.html">OnButtonClick2</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d0b/_g_u_i_window_8h_source.html#l00523">GUIWindow.h:523</a></div></div>
+<div class="ttc" id="aclass_g_u_i_window___main_menu_html_a04bbaee5c3a564b2a8dee8cd0028811a"><div class="ttname"><a href="../../d1/d86/class_g_u_i_window___main_menu.html#a04bbaee5c3a564b2a8dee8cd0028811a">GUIWindow_MainMenu::GUIWindow_MainMenu</a></div><div class="ttdeci">GUIWindow_MainMenu()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dc5/_u_i_main_menu_8cpp_source.html#l00020">UIMainMenu.cpp:20</a></div></div>
+<div class="ttc" id="a_g_u_i_window_8h_html_a2519966952faeb9397447ce89e9bcb02"><div class="ttname"><a href="../../d5/d0b/_g_u_i_window_8h.html#a2519966952faeb9397447ce89e9bcb02">UIMessageType</a></div><div class="ttdeci">UIMessageType</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d0b/_g_u_i_window_8h_source.html#l00013">GUIWindow.h:13</a></div></div>
+<div class="ttc" id="astruct_g_u_i_message_queue_html_a7c71ce717335eeb08baed38ddaf6f049"><div class="ttname"><a href="../../db/dc9/struct_g_u_i_message_queue.html#a7c71ce717335eeb08baed38ddaf6f049">GUIMessageQueue::Empty</a></div><div class="ttdeci">bool Empty()</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d0b/_g_u_i_window_8h_source.html#l00659">GUIWindow.h:659</a></div></div>
+<div class="ttc" id="aclass_g_u_i_window___main_menu_html_a878bc1ca15edeca248ada4fcb9453ee8"><div class="ttname"><a href="../../d1/d86/class_g_u_i_window___main_menu.html#a878bc1ca15edeca248ada4fcb9453ee8">GUIWindow_MainMenu::ui_mainmenu_exit</a></div><div class="ttdeci">Image * ui_mainmenu_exit</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d24/_u_i_main_menu_8h_source.html#l00026">UIMainMenu.h:26</a></div></div>
+<div class="ttc" id="aclass_image_html_a5093fa64598a4d7e0c70d43fe67e35cd"><div class="ttname"><a href="../../de/d73/class_image.html#a5093fa64598a4d7e0c70d43fe67e35cd">Image::GetHeight</a></div><div class="ttdeci">unsigned int GetHeight()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dac/_image_8cpp_source.html#l00230">Image.cpp:230</a></div></div>
+<div class="ttc" id="a_engine_8cpp_html_a265e1720d11ca6f175d7adbb3410597e"><div class="ttname"><a href="../../d4/d68/_engine_8cpp.html#a265e1720d11ca6f175d7adbb3410597e">FinalInitialization</a></div><div class="ttdeci">void FinalInitialization()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d68/_engine_8cpp_source.html#l00852">Engine.cpp:852</a></div></div>
+<div class="ttc" id="aclass_mouse_html_a8900246ba042b33090b8dc8e377fbb3a"><div class="ttname"><a href="../../d7/dc5/class_mouse.html#a8900246ba042b33090b8dc8e377fbb3a">Mouse::GetCursorPos</a></div><div class="ttdeci">Point GetCursorPos()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d54/_mouse_8cpp_source.html#l00108">Mouse.cpp:108</a></div></div>
+<div class="ttc" id="aclass_g_u_i_window_html"><div class="ttname"><a href="../../d4/d38/class_g_u_i_window.html">GUIWindow</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d0b/_g_u_i_window_8h_source.html#l00433">GUIWindow.h:433</a></div></div>
+<div class="ttc" id="amm7__data_8cpp_html_ad1ff13391996d2a07139ab81b3b94647"><div class="ttname"><a href="../../d6/d5b/mm7__data_8cpp.html#ad1ff13391996d2a07139ab81b3b94647">uGameState</a></div><div class="ttdeci">unsigned int uGameState</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d5b/mm7__data_8cpp_source.html#l00695">mm7_data.cpp:695</a></div></div>
+<div class="ttc" id="aclass_g_u_i_window___main_menu_html_a3a60ce7f0e258d5cf1d17037b19bc9a1"><div class="ttname"><a href="../../d1/d86/class_g_u_i_window___main_menu.html#a3a60ce7f0e258d5cf1d17037b19bc9a1">GUIWindow_MainMenu::EventLoop</a></div><div class="ttdeci">void EventLoop()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dc5/_u_i_main_menu_8cpp_source.html#l00083">UIMainMenu.cpp:83</a></div></div>
+<div class="ttc" id="aclass_g_u_i_window_html_a29f96468b54f142995e3b1890cb7e45e"><div class="ttname"><a href="../../d4/d38/class_g_u_i_window.html#a29f96468b54f142995e3b1890cb7e45e">GUIWindow::CreateButton</a></div><div class="ttdeci">GUIButton * CreateButton(int x, int y, int width, int height, int a6, int a7, UIMessageType msg, unsigned int msg_param, uint8_t hotkey, const String &amp;label, const std::vector&lt; Image * &gt; &amp;textures=std::vector&lt; Image * &gt;())</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00717">GUIWindow.cpp:717</a></div></div>
+<div class="ttc" id="a_g_u_i_window_8cpp_html_aca0ff8541e8260e43b99836c51395283"><div class="ttname"><a href="../../dc/dce/_g_u_i_window_8cpp.html#aca0ff8541e8260e43b99836c51395283">SetCurrentMenuID</a></div><div class="ttdeci">void SetCurrentMenuID(MENU_STATE uMenu)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00128">GUIWindow.cpp:128</a></div></div>
+<div class="ttc" id="a_engine_8h_html_a4cc39f049df62b331976f9a4482bd3eaa0914d22579558ba67b13c241beeb04fe"><div class="ttname"><a href="../../de/dcf/_engine_8h.html#a4cc39f049df62b331976f9a4482bd3eaa0914d22579558ba67b13c241beeb04fe">GAME_FINISHED</a></div><div class="ttdeci">@ GAME_FINISHED</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dcf/_engine_8h_source.html#l00033">Engine.h:33</a></div></div>
+<div class="ttc" id="a_engine_8cpp_html_a911c866a46f710d4f1b358efcfb2604a"><div class="ttname"><a href="../../d4/d68/_engine_8cpp.html#a911c866a46f710d4f1b358efcfb2604a">engine</a></div><div class="ttdeci">std::shared_ptr&lt; Engine &gt; engine</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d68/_engine_8cpp_source.html#l00130">Engine.cpp:130</a></div></div>
+<div class="ttc" id="aclass_g_u_i_window_html_a1d5f55e836dbe199acf6c6226d3793ec"><div class="ttname"><a href="../../d4/d38/class_g_u_i_window.html#a1d5f55e836dbe199acf6c6226d3793ec">GUIWindow::GUIWindow</a></div><div class="ttdeci">GUIWindow()</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00765">GUIWindow.cpp:765</a></div></div>
+<div class="ttc" id="aclass_audio_player_html_a8ba0c68b98cc02edd75fa3226d7aba0a"><div class="ttname"><a href="../../d7/dc2/class_audio_player.html#a8ba0c68b98cc02edd75fa3226d7aba0a">AudioPlayer::MusicPlayTrack</a></div><div class="ttdeci">void MusicPlayTrack(enum MusicID eTrack)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/df2/_audio_player_8cpp_source.html#l00109">AudioPlayer.cpp:109</a></div></div>
+<div class="ttc" id="astruct_point_html_a81bb3d87085a9672879cfe4e58f7bff3"><div class="ttname"><a href="../../d8/dc8/struct_point.html#a81bb3d87085a9672879cfe4e58f7bff3">Point::x</a></div><div class="ttdeci">unsigned int x</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d18/_point_8h_source.html#l00007">Point.h:7</a></div></div>
+<div class="ttc" id="a_g_u_i_window_8h_html_ae3ad6ef2afe43c2e4bd1454810d934eaa1ffe14584858fba0fb59c4098ed9d30e"><div class="ttname"><a href="../../d5/d0b/_g_u_i_window_8h.html#ae3ad6ef2afe43c2e4bd1454810d934eaa1ffe14584858fba0fb59c4098ed9d30e">MENU_MAIN</a></div><div class="ttdeci">@ MENU_MAIN</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d0b/_g_u_i_window_8h_source.html#l00251">GUIWindow.h:251</a></div></div>
+<div class="ttc" id="a_g_u_i_window_8h_html_a2519966952faeb9397447ce89e9bcb02ab8119fd86a35b1fa09408dd041b552a7"><div class="ttname"><a href="../../d5/d0b/_g_u_i_window_8h.html#a2519966952faeb9397447ce89e9bcb02ab8119fd86a35b1fa09408dd041b552a7">UIMSG_ExitToWindows</a></div><div class="ttdeci">@ UIMSG_ExitToWindows</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d0b/_g_u_i_window_8h_source.html#l00043">GUIWindow.h:43</a></div></div>
+<div class="ttc" id="aclass_assets_manager_html_a20f956b4c71c3e07404ca137d572b97f"><div class="ttname"><a href="../../db/dd6/class_assets_manager.html#a20f956b4c71c3e07404ca137d572b97f">AssetsManager::GetImage_PCXFromIconsLOD</a></div><div class="ttdeci">Texture * GetImage_PCXFromIconsLOD(const String &amp;name)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d93/_assets_manager_8cpp_source.html#l00081">AssetsManager.cpp:81</a></div></div>
+<div class="ttc" id="aclass_g_u_i_window_html_aaf2e6a2022904abc2d253e9d4acd5d99"><div class="ttname"><a href="../../d4/d38/class_g_u_i_window.html#aaf2e6a2022904abc2d253e9d4acd5d99">GUIWindow::Release</a></div><div class="ttdeci">virtual void Release()</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00292">GUIWindow.cpp:292</a></div></div>
+<div class="ttc" id="a_u_i_main_menu_8cpp_html_a900f40e5e05f1c73c3f24ee99cfa6ce0"><div class="ttname"><a href="../../d7/dc5/_u_i_main_menu_8cpp.html#a900f40e5e05f1c73c3f24ee99cfa6ce0">DrawMM7CopyrightWindow</a></div><div class="ttdeci">void DrawMM7CopyrightWindow()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dc5/_u_i_main_menu_8cpp_source.html#l00172">UIMainMenu.cpp:172</a></div></div>
+<div class="ttc" id="aclass_g_u_i_button_html"><div class="ttname"><a href="../../db/d66/class_g_u_i_button.html">GUIButton</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d7/db9/_g_u_i_button_8h_source.html#l00011">GUIButton.h:11</a></div></div>
+<div class="ttc" id="a_g_u_i_window_8cpp_html_a9cf585dbf96fdd1acbe15981837ebdb2"><div class="ttname"><a href="../../dc/dce/_g_u_i_window_8cpp.html#a9cf585dbf96fdd1acbe15981837ebdb2">current_screen_type</a></div><div class="ttdeci">enum CURRENT_SCREEN current_screen_type</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00083">GUIWindow.cpp:83</a></div></div>
+<div class="ttc" id="aclass_g_u_i_window_html_aba80b69979e2d28049eb073dde019f82"><div class="ttname"><a href="../../d4/d38/class_g_u_i_window.html#aba80b69979e2d28049eb073dde019f82">GUIWindow::vButtons</a></div><div class="ttdeci">std::vector&lt; GUIButton * &gt; vButtons</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d0b/_g_u_i_window_8h_source.html#l00489">GUIWindow.h:489</a></div></div>
+<div class="ttc" id="aclass_g_u_i_window___main_menu_html_a7881f72c2ef88250266d588549b79aab"><div class="ttname"><a href="../../d1/d86/class_g_u_i_window___main_menu.html#a7881f72c2ef88250266d588549b79aab">GUIWindow_MainMenu::pBtnExit</a></div><div class="ttdeci">GUIButton * pBtnExit</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d24/_u_i_main_menu_8h_source.html#l00016">UIMainMenu.h:16</a></div></div>
+<div class="ttc" id="a_g_u_i_window_8cpp_html_a839bc8361ffe7444793beceebebcb228"><div class="ttname"><a href="../../dc/dce/_g_u_i_window_8cpp.html#a839bc8361ffe7444793beceebebcb228">GetCurrentMenuID</a></div><div class="ttdeci">MENU_STATE GetCurrentMenuID()</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00133">GUIWindow.cpp:133</a></div></div>
+<div class="ttc" id="aclass_g_u_i_button_html_ac934451bf1b335dd0568ea624ed7d08f"><div class="ttname"><a href="../../db/d66/class_g_u_i_button.html#ac934451bf1b335dd0568ea624ed7d08f">GUIButton::Contains</a></div><div class="ttdeci">bool Contains(unsigned int x, unsigned int y)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d1d/_g_u_i_button_8cpp_source.html#l00113">GUIButton.cpp:113</a></div></div>
+<div class="ttc" id="a_g_u_i_window_8h_html_ae3ad6ef2afe43c2e4bd1454810d934eaa25ddf60aabb79cd1f00f009b8fece4a8"><div class="ttname"><a href="../../d5/d0b/_g_u_i_window_8h.html#ae3ad6ef2afe43c2e4bd1454810d934eaa25ddf60aabb79cd1f00f009b8fece4a8">MENU_NEWGAME</a></div><div class="ttdeci">@ MENU_NEWGAME</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d0b/_g_u_i_window_8h_source.html#l00252">GUIWindow.h:252</a></div></div>
+<div class="ttc" id="a_g_u_i_window_8h_html_ae3ad6ef2afe43c2e4bd1454810d934eaabea126ac972315cc22ab345bb7601065"><div class="ttname"><a href="../../d5/d0b/_g_u_i_window_8h.html#ae3ad6ef2afe43c2e4bd1454810d934eaabea126ac972315cc22ab345bb7601065">MENU_EXIT_GAME</a></div><div class="ttdeci">@ MENU_EXIT_GAME</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d0b/_g_u_i_window_8h_source.html#l00255">GUIWindow.h:255</a></div></div>
+<div class="ttc" id="aclass_image_html_a9241b1c53141c78273e4060a91634d47"><div class="ttname"><a href="../../de/d73/class_image.html#a9241b1c53141c78273e4060a91634d47">Image::GetWidth</a></div><div class="ttdeci">unsigned int GetWidth()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dac/_image_8cpp_source.html#l00217">Image.cpp:217</a></div></div>
+<div class="ttc" id="a_g_u_i_window_8cpp_html_acd5bd26b78148acea4f290d86b1535cd"><div class="ttname"><a href="../../dc/dce/_g_u_i_window_8cpp.html#acd5bd26b78148acea4f290d86b1535cd">pGUIWindow2</a></div><div class="ttdeci">GUIWindow * pGUIWindow2</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00060">GUIWindow.cpp:60</a></div></div>
+<div class="ttc" id="aclass_image_html"><div class="ttname"><a href="../../de/d73/class_image.html">Image</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/de5/_image_8h_source.html#l00019">Image.h:19</a></div></div>
+<div class="ttc" id="a_g_u_i_window_8h_html_a2519966952faeb9397447ce89e9bcb02a31e60ac7dda28d73816beda5bfd276b5"><div class="ttname"><a href="../../d5/d0b/_g_u_i_window_8h.html#a2519966952faeb9397447ce89e9bcb02a31e60ac7dda28d73816beda5bfd276b5">UIMSG_MainMenu_ShowLoadWindow</a></div><div class="ttdeci">@ UIMSG_MainMenu_ShowLoadWindow</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d0b/_g_u_i_window_8h_source.html#l00041">GUIWindow.h:41</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_a68946471db0c45b6ce503ef14572f078a56b078091103d2c6a626a8bdef7bc595"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#a68946471db0c45b6ce503ef14572f078a56b078091103d2c6a626a8bdef7bc595">MUSIC_MainMenu</a></div><div class="ttdeci">@ MUSIC_MainMenu</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00109">AudioPlayer.h:109</a></div></div>
+<div class="ttc" id="a_g_u_i_window_8h_html_a2519966952faeb9397447ce89e9bcb02ac337635bbc2b0a2fbcf1f10d5befccc5"><div class="ttname"><a href="../../d5/d0b/_g_u_i_window_8h.html#a2519966952faeb9397447ce89e9bcb02ac337635bbc2b0a2fbcf1f10d5befccc5">UIMSG_ShowCredits</a></div><div class="ttdeci">@ UIMSG_ShowCredits</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d0b/_g_u_i_window_8h_source.html#l00042">GUIWindow.h:42</a></div></div>
+<div class="ttc" id="aclass_assets_manager_html_ad4ab70fc004c8c5a54756f3d358a8383"><div class="ttname"><a href="../../db/dd6/class_assets_manager.html#ad4ab70fc004c8c5a54756f3d358a8383">AssetsManager::GetImage_ColorKey</a></div><div class="ttdeci">Texture * GetImage_ColorKey(const String &amp;name, uint16_t colorkey)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d93/_assets_manager_8cpp_source.html#l00034">AssetsManager.cpp:34</a></div></div>
+<div class="ttc" id="aclass_g_u_i_window___main_menu_html_ad041d3289b30f1cc984485ef231d0d3e"><div class="ttname"><a href="../../d1/d86/class_g_u_i_window___main_menu.html#ad041d3289b30f1cc984485ef231d0d3e">GUIWindow_MainMenu::ui_mainmenu_new</a></div><div class="ttdeci">Image * ui_mainmenu_new</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d24/_u_i_main_menu_8h_source.html#l00023">UIMainMenu.h:23</a></div></div>
+<div class="ttc" id="aclass_audio_player_html_a222380497b8558ff7d16fa71f8680a46"><div class="ttname"><a href="../../d7/dc2/class_audio_player.html#a222380497b8558ff7d16fa71f8680a46">AudioPlayer::StopChannels</a></div><div class="ttdeci">void StopChannels(int uStartChannel, int uEndChannel)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/df2/_audio_player_8cpp_source.html#l00331">AudioPlayer.cpp:331</a></div></div>
+<div class="ttc" id="a_s_d_l__egl_8h_html_a92dbce8e3247f6a78126c99877caacb6"><div class="ttname"><a href="../../df/d32/_s_d_l__egl_8h.html#a92dbce8e3247f6a78126c99877caacb6">window</a></div><div class="ttdeci">EGLSurface EGLNativeWindowType * window</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/_s_d_l__egl_8h_source.html#l01580">SDL_egl.h:1580</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a691492ec0bd6383f91200e49f6ae40ed"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a></div><div class="ttdeci">GLfloat f</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l01873">SDL_opengl_glext.h:1873</a></div></div>
+<div class="ttc" id="a_g_u_i_window_8cpp_html_a9cafb995f3f6b03139380e5fb4fee184"><div class="ttname"><a href="../../dc/dce/_g_u_i_window_8cpp.html#a9cafb995f3f6b03139380e5fb4fee184">GUI_UpdateWindows</a></div><div class="ttdeci">void GUI_UpdateWindows()</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00956">GUIWindow.cpp:956</a></div></div>
+<div class="ttc" id="a_g_u_i_window_8h_html_a2519966952faeb9397447ce89e9bcb02a3d1accf62c1487bbef3a649de4463ce8"><div class="ttname"><a href="../../d5/d0b/_g_u_i_window_8h.html#a2519966952faeb9397447ce89e9bcb02a3d1accf62c1487bbef3a649de4463ce8">UIMSG_MainMenu_ShowPartyCreationWnd</a></div><div class="ttdeci">@ UIMSG_MainMenu_ShowPartyCreationWnd</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d0b/_g_u_i_window_8h_source.html#l00040">GUIWindow.h:40</a></div></div>
+<div class="ttc" id="aclass_g_u_i_window___main_menu_html_a137b56856d65b7c86c039265e69cd662"><div class="ttname"><a href="../../d1/d86/class_g_u_i_window___main_menu.html#a137b56856d65b7c86c039265e69cd662">GUIWindow_MainMenu::ui_mainmenu_load</a></div><div class="ttdeci">Image * ui_mainmenu_load</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d24/_u_i_main_menu_8h_source.html#l00024">UIMainMenu.h:24</a></div></div>
+<div class="ttc" id="astruct_g_u_i_message_queue_html_a489cd7d7b4d555652da03ff2b783ecdb"><div class="ttname"><a href="../../db/dc9/struct_g_u_i_message_queue.html#a489cd7d7b4d555652da03ff2b783ecdb">GUIMessageQueue::PopMessage</a></div><div class="ttdeci">void PopMessage(UIMessageType *pMsg, int *pParam, int *a4)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00174">GUIWindow.cpp:174</a></div></div>
+<div class="ttc" id="a_u_i_main_menu_8cpp_html_a4eaa5d14dee1de73efaff92ece9fae9a"><div class="ttname"><a href="../../d7/dc5/_u_i_main_menu_8cpp.html#a4eaa5d14dee1de73efaff92ece9fae9a">first_initialization</a></div><div class="ttdeci">static bool first_initialization</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dc5/_u_i_main_menu_8cpp_source.html#l00116">UIMainMenu.cpp:116</a></div></div>
+<div class="ttc" id="aclass_g_u_i_window___main_menu_html_a120426b4654cc47b9ad0c9d4d27c4991"><div class="ttname"><a href="../../d1/d86/class_g_u_i_window___main_menu.html#a120426b4654cc47b9ad0c9d4d27c4991">GUIWindow_MainMenu::pBtnLoad</a></div><div class="ttdeci">GUIButton * pBtnLoad</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d24/_u_i_main_menu_8h_source.html#l00018">UIMainMenu.h:18</a></div></div>
+<div class="ttc" id="a_g_u_i_window_8h_html_af188298480c77be8835d6760fa6edfd7a1b14f33469f90b26e5f73747bcbd62f8"><div class="ttname"><a href="../../d5/d0b/_g_u_i_window_8h.html#af188298480c77be8835d6760fa6edfd7a1b14f33469f90b26e5f73747bcbd62f8">CURRENT_SCREEN::SCREEN_GAME</a></div><div class="ttdeci">@ SCREEN_GAME</div></div>
+<div class="ttc" id="aclass_g_u_i_window___main_menu_html_a43b04458a2ffadf04dae485ae8b93ce2"><div class="ttname"><a href="../../d1/d86/class_g_u_i_window___main_menu.html#a43b04458a2ffadf04dae485ae8b93ce2">GUIWindow_MainMenu::pBtnNew</a></div><div class="ttdeci">GUIButton * pBtnNew</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d24/_u_i_main_menu_8h_source.html#l00019">UIMainMenu.h:19</a></div></div>
+<div class="ttc" id="aclass_g_u_i_window___main_menu_html_ac7c3a378749d727b9c3797f91503a6dd"><div class="ttname"><a href="../../d1/d86/class_g_u_i_window___main_menu.html#ac7c3a378749d727b9c3797f91503a6dd">GUIWindow_MainMenu::ui_mainmenu_credits</a></div><div class="ttdeci">Image * ui_mainmenu_credits</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d24/_u_i_main_menu_8h_source.html#l00025">UIMainMenu.h:25</a></div></div>
+<div class="ttc" id="astruct_point_html_aafc3278398083cef91e29bf68c7d6c87"><div class="ttname"><a href="../../d8/dc8/struct_point.html#aafc3278398083cef91e29bf68c7d6c87">Point::y</a></div><div class="ttdeci">unsigned int y</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d18/_point_8h_source.html#l00008">Point.h:8</a></div></div>
+<div class="ttc" id="aclass_g_u_i_button_html_a8db3a590c89f17a48c3ed8b68221be23"><div class="ttname"><a href="../../db/d66/class_g_u_i_button.html#a8db3a590c89f17a48c3ed8b68221be23">GUIButton::msg_param</a></div><div class="ttdeci">unsigned int msg_param</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/db9/_g_u_i_button_8h_source.html#l00030">GUIButton.h:30</a></div></div>
+<div class="ttc" id="a_g_u_i_window_8h_html_a476342970f954b62d70552bcbb5ee509a7342258dc3c05458684e8bea94729025"><div class="ttname"><a href="../../d5/d0b/_g_u_i_window_8h.html#a476342970f954b62d70552bcbb5ee509a7342258dc3c05458684e8bea94729025">WINDOW_MainMenu</a></div><div class="ttdeci">@ WINDOW_MainMenu</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d0b/_g_u_i_window_8h_source.html#l00292">GUIWindow.h:292</a></div></div>
+<div class="ttc" id="aclass_g_u_i_window_html_a3d84c25b1493b00f1f5eb5e27a45c309"><div class="ttname"><a href="../../d4/d38/class_g_u_i_window.html#a3d84c25b1493b00f1f5eb5e27a45c309">GUIWindow::mouse</a></div><div class="ttdeci">Mouse * mouse</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d0b/_g_u_i_window_8h_source.html#l00491">GUIWindow.h:491</a></div></div>
+<div class="ttc" id="a_g_u_i_window_8h_html_ae3ad6ef2afe43c2e4bd1454810d934eaabbbf0f52cc3e4d1f51d31ba712a4dc27"><div class="ttname"><a href="../../d5/d0b/_g_u_i_window_8h.html#ae3ad6ef2afe43c2e4bd1454810d934eaabbbf0f52cc3e4d1f51d31ba712a4dc27">MENU_CREDITS</a></div><div class="ttdeci">@ MENU_CREDITS</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d0b/_g_u_i_window_8h_source.html#l00253">GUIWindow.h:253</a></div></div>
+<div class="ttc" id="a_assets_manager_8cpp_html_a645270130330d2d99964c967b7d33cd8"><div class="ttname"><a href="../../d3/d93/_assets_manager_8cpp.html#a645270130330d2d99964c967b7d33cd8">assets</a></div><div class="ttdeci">AssetsManager * assets</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d93/_assets_manager_8cpp_source.html#l00012">AssetsManager.cpp:12</a></div></div>
+<div class="ttc" id="a_g_u_i_window_8h_html_a2519966952faeb9397447ce89e9bcb02acf7ef26b65ff56f8ff9cea5ef9b77124"><div class="ttname"><a href="../../d5/d0b/_g_u_i_window_8h.html#a2519966952faeb9397447ce89e9bcb02acf7ef26b65ff56f8ff9cea5ef9b77124">UIMSG_ChangeGameState</a></div><div class="ttdeci">@ UIMSG_ChangeGameState</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d0b/_g_u_i_window_8h_source.html#l00016">GUIWindow.h:16</a></div></div>
+<div class="ttc" id="amm7__data_8cpp_html_a26a3f7145319f5176397704ba8ea67e7"><div class="ttname"><a href="../../d6/d5b/mm7__data_8cpp.html#a26a3f7145319f5176397704ba8ea67e7">dword_6BE364_game_settings_1</a></div><div class="ttdeci">int dword_6BE364_game_settings_1</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d5b/mm7__data_8cpp_source.html#l00714">mm7_data.cpp:714</a></div></div>
+<div class="ttc" id="aclass_g_u_i_window___main_menu_html_aede9cecaf3be59edf123cdce1120052f"><div class="ttname"><a href="../../d1/d86/class_g_u_i_window___main_menu.html#aede9cecaf3be59edf123cdce1120052f">GUIWindow_MainMenu::pBtnCredits</a></div><div class="ttdeci">GUIButton * pBtnCredits</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d24/_u_i_main_menu_8h_source.html#l00017">UIMainMenu.h:17</a></div></div>
+<div class="ttc" id="a_audio_player_8cpp_html_a3ee6d655d35b46ebac53ef678255f75b"><div class="ttname"><a href="../../d3/df2/_audio_player_8cpp.html#a3ee6d655d35b46ebac53ef678255f75b">pAudioPlayer</a></div><div class="ttdeci">AudioPlayer * pAudioPlayer</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/df2/_audio_player_8cpp_source.html#l00020">AudioPlayer.cpp:20</a></div></div>
+<div class="ttc" id="a_g_u_i_window_8cpp_html_acac1e9e9490f5f2ff0b7a507000f368e"><div class="ttname"><a href="../../dc/dce/_g_u_i_window_8cpp.html#acac1e9e9490f5f2ff0b7a507000f368e">pModalWindow</a></div><div class="ttdeci">GUIWindow * pModalWindow</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00057">GUIWindow.cpp:57</a></div></div>
+<div class="ttc" id="astruct_point_html"><div class="ttname"><a href="../../d8/dc8/struct_point.html">Point</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d18/_point_8h_source.html#l00003">Point.h:3</a></div></div>
+<div class="ttc" id="a_g_u_i_window_8cpp_html_a67ca5f2a4757601de2f69711ee287539"><div class="ttname"><a href="../../dc/dce/_g_u_i_window_8cpp.html#a67ca5f2a4757601de2f69711ee287539">pMessageQueue_50CBD0</a></div><div class="ttdeci">struct GUIMessageQueue * pMessageQueue_50CBD0</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00086">GUIWindow.cpp:86</a></div></div>
+<div class="ttc" id="a_api_8h_html_a5cef487a72338601ca50cf631f126329"><div class="ttname"><a href="../../d4/ddd/_api_8h.html#a5cef487a72338601ca50cf631f126329">OS_WaitMessage</a></div><div class="ttdeci">void OS_WaitMessage()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d84/_lin_8cpp_source.html#l00032">Lin.cpp:32</a></div></div>
+<div class="ttc" id="aclass_image_html_a79e0e96332914caa0816c7d34822b9bf"><div class="ttname"><a href="../../de/d73/class_image.html#a79e0e96332914caa0816c7d34822b9bf">Image::Release</a></div><div class="ttdeci">bool Release()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dac/_image_8cpp_source.html#l00335">Image.cpp:335</a></div></div>
+<div class="ttc" id="aclass_g_u_i_window___main_menu_html_a06d7ca1a7d25f33ecdb95954497f5205"><div class="ttname"><a href="../../d1/d86/class_g_u_i_window___main_menu.html#a06d7ca1a7d25f33ecdb95954497f5205">GUIWindow_MainMenu::main_menu_background</a></div><div class="ttdeci">Image * main_menu_background</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d24/_u_i_main_menu_8h_source.html#l00021">UIMainMenu.h:21</a></div></div>
+<div class="ttc" id="a_i_render_8h_html_a21d31464313b2c66ff88d4aa97b66143"><div class="ttname"><a href="../../da/d20/_i_render_8h.html#a21d31464313b2c66ff88d4aa97b66143">render</a></div><div class="ttdeci">std::shared_ptr&lt; IRender &gt; render</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d79/_render_open_g_l_8cpp_source.html#l00052">RenderOpenGL.cpp:52</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../d1/d86/class_g_u_i_window___main_menu.html">GUIWindow_MainMenu</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:04:48. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

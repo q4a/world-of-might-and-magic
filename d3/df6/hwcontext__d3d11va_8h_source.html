@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Исходный файл C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavutil/hwcontext_d3d11va.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d3/df6/hwcontext__d3d11va_8h_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">hwcontext_d3d11va.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d3/df6/hwcontext__d3d11va_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * This file is part of FFmpeg.</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * FFmpeg is free software; you can redistribute it and/or</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * modify it under the terms of the GNU Lesser General Public</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * License as published by the Free Software Foundation; either</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> * version 2.1 of the License, or (at your option) any later version.</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> * FFmpeg is distributed in the hope that it will be useful,</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> * but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> * Lesser General Public License for more details.</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> * You should have received a copy of the GNU Lesser General Public</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> * License along with FFmpeg; if not, write to the Free Software</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#ifndef AVUTIL_HWCONTEXT_D3D11VA_H</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#define AVUTIL_HWCONTEXT_D3D11VA_H</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#include &lt;d3d11.h&gt;</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="../../d0/dce/struct_a_v_d3_d11_v_a_device_context.html">   45</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="../../d0/dce/struct_a_v_d3_d11_v_a_device_context.html">AVD3D11VADeviceContext</a> {</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="../../d0/dce/struct_a_v_d3_d11_v_a_device_context.html#a846ae4cb1f91302845776cc843dc2808">   56</a></span>&#160;    ID3D11Device        *<a class="code" href="../../d0/dce/struct_a_v_d3_d11_v_a_device_context.html#a846ae4cb1f91302845776cc843dc2808">device</a>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="../../d0/dce/struct_a_v_d3_d11_v_a_device_context.html#a895db1e8e6a1178000baae147afbd5ca">   64</a></span>&#160;    ID3D11DeviceContext *<a class="code" href="../../d0/dce/struct_a_v_d3_d11_v_a_device_context.html#a895db1e8e6a1178000baae147afbd5ca">device_context</a>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="../../d0/dce/struct_a_v_d3_d11_v_a_device_context.html#ad5d8ffc06a83aa1dab48d6d2fe314718">   72</a></span>&#160;    ID3D11VideoDevice   *<a class="code" href="../../d0/dce/struct_a_v_d3_d11_v_a_device_context.html#ad5d8ffc06a83aa1dab48d6d2fe314718">video_device</a>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="../../d0/dce/struct_a_v_d3_d11_v_a_device_context.html#a6f7ad9f3193e51307a158a4c02d9241d">   80</a></span>&#160;    ID3D11VideoContext  *<a class="code" href="../../d0/dce/struct_a_v_d3_d11_v_a_device_context.html#a6f7ad9f3193e51307a158a4c02d9241d">video_context</a>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="../../d0/dce/struct_a_v_d3_d11_v_a_device_context.html#a39fcd941aac702ab4733374d2377757f">   94</a></span>&#160;    <a class="code" href="../../d3/d78/_s_d_l__audio_8h.html#aa5cb90967788ada2711894ca158ece01">void</a> (*<a class="code" href="../../d0/dce/struct_a_v_d3_d11_v_a_device_context.html#a39fcd941aac702ab4733374d2377757f">lock</a>)(<span class="keywordtype">void</span> *<a class="code" href="../../d0/dce/struct_a_v_d3_d11_v_a_device_context.html#abb2a51b8df82bf9ddba852b41fe32170">lock_ctx</a>);</div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="../../d0/dce/struct_a_v_d3_d11_v_a_device_context.html#a646c40b40f9faeacb10245586d0f129b">   95</a></span>&#160;    <a class="code" href="../../d3/d78/_s_d_l__audio_8h.html#aa5cb90967788ada2711894ca158ece01">void</a> (*<a class="code" href="../../d0/dce/struct_a_v_d3_d11_v_a_device_context.html#a646c40b40f9faeacb10245586d0f129b">unlock</a>)(<span class="keywordtype">void</span> *<a class="code" href="../../d0/dce/struct_a_v_d3_d11_v_a_device_context.html#abb2a51b8df82bf9ddba852b41fe32170">lock_ctx</a>);</div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="../../d0/dce/struct_a_v_d3_d11_v_a_device_context.html#abb2a51b8df82bf9ddba852b41fe32170">   96</a></span>&#160;    <span class="keywordtype">void</span> *<a class="code" href="../../d0/dce/struct_a_v_d3_d11_v_a_device_context.html#abb2a51b8df82bf9ddba852b41fe32170">lock_ctx</a>;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;} <a class="code" href="../../d3/df6/hwcontext__d3d11va_8h.html#a6a418691d5199f723ff6d37548edf963">AVD3D11VADeviceContext</a>;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="../../da/d52/struct_a_v_d3_d11_frame_descriptor.html">  109</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="../../da/d52/struct_a_v_d3_d11_frame_descriptor.html">AVD3D11FrameDescriptor</a> {</div>
+<div class="line"><a name="l00117"></a><span class="lineno"><a class="line" href="../../da/d52/struct_a_v_d3_d11_frame_descriptor.html#a30434ef069883c1de0a54b8ca250d850">  117</a></span>&#160;    ID3D11Texture2D *<a class="code" href="../../da/d52/struct_a_v_d3_d11_frame_descriptor.html#a30434ef069883c1de0a54b8ca250d850">texture</a>;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
+<div class="line"><a name="l00125"></a><span class="lineno"><a class="line" href="../../da/d52/struct_a_v_d3_d11_frame_descriptor.html#a6051f3c25136efeec43b2a62abb10126">  125</a></span>&#160;    intptr_t <a class="code" href="../../da/d52/struct_a_v_d3_d11_frame_descriptor.html#a6051f3c25136efeec43b2a62abb10126">index</a>;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;} <a class="code" href="../../d3/df6/hwcontext__d3d11va_8h.html#abb2493d379eaf8c033b6613515815ebd">AVD3D11FrameDescriptor</a>;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
+<div class="line"><a name="l00131"></a><span class="lineno"><a class="line" href="../../d0/d8b/struct_a_v_d3_d11_v_a_frames_context.html">  131</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="../../d0/d8b/struct_a_v_d3_d11_v_a_frames_context.html">AVD3D11VAFramesContext</a> {</div>
+<div class="line"><a name="l00152"></a><span class="lineno"><a class="line" href="../../d0/d8b/struct_a_v_d3_d11_v_a_frames_context.html#a359e4ccfa46c05a225947aea7ce7ac17">  152</a></span>&#160;    ID3D11Texture2D *<a class="code" href="../../d0/d8b/struct_a_v_d3_d11_v_a_frames_context.html#a359e4ccfa46c05a225947aea7ce7ac17">texture</a>;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160; </div>
+<div class="line"><a name="l00160"></a><span class="lineno"><a class="line" href="../../d0/d8b/struct_a_v_d3_d11_v_a_frames_context.html#aec047f8d786efadffc38c558e8792884">  160</a></span>&#160;    UINT <a class="code" href="../../d0/d8b/struct_a_v_d3_d11_v_a_frames_context.html#aec047f8d786efadffc38c558e8792884">BindFlags</a>;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160; </div>
+<div class="line"><a name="l00166"></a><span class="lineno"><a class="line" href="../../d0/d8b/struct_a_v_d3_d11_v_a_frames_context.html#a0dd15f99a1112be3fa04d08b57775bd6">  166</a></span>&#160;    UINT <a class="code" href="../../d0/d8b/struct_a_v_d3_d11_v_a_frames_context.html#a0dd15f99a1112be3fa04d08b57775bd6">MiscFlags</a>;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;} <a class="code" href="../../d3/df6/hwcontext__d3d11va_8h.html#ae67b6969c9db7ba357d2394bd726299b">AVD3D11VAFramesContext</a>;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160; </div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* AVUTIL_HWCONTEXT_D3D11VA_H */</span><span class="preprocessor"></span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="astruct_a_v_d3_d11_v_a_device_context_html_a646c40b40f9faeacb10245586d0f129b"><div class="ttname"><a href="../../d0/dce/struct_a_v_d3_d11_v_a_device_context.html#a646c40b40f9faeacb10245586d0f129b">AVD3D11VADeviceContext::unlock</a></div><div class="ttdeci">void(* unlock)(void *lock_ctx)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/df6/hwcontext__d3d11va_8h_source.html#l00095">hwcontext_d3d11va.h:95</a></div></div>
+<div class="ttc" id="astruct_a_v_d3_d11_v_a_frames_context_html_a359e4ccfa46c05a225947aea7ce7ac17"><div class="ttname"><a href="../../d0/d8b/struct_a_v_d3_d11_v_a_frames_context.html#a359e4ccfa46c05a225947aea7ce7ac17">AVD3D11VAFramesContext::texture</a></div><div class="ttdeci">ID3D11Texture2D * texture</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/df6/hwcontext__d3d11va_8h_source.html#l00152">hwcontext_d3d11va.h:152</a></div></div>
+<div class="ttc" id="astruct_a_v_d3_d11_v_a_device_context_html_abb2a51b8df82bf9ddba852b41fe32170"><div class="ttname"><a href="../../d0/dce/struct_a_v_d3_d11_v_a_device_context.html#abb2a51b8df82bf9ddba852b41fe32170">AVD3D11VADeviceContext::lock_ctx</a></div><div class="ttdeci">void * lock_ctx</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/df6/hwcontext__d3d11va_8h_source.html#l00096">hwcontext_d3d11va.h:96</a></div></div>
+<div class="ttc" id="astruct_a_v_d3_d11_v_a_frames_context_html"><div class="ttname"><a href="../../d0/d8b/struct_a_v_d3_d11_v_a_frames_context.html">AVD3D11VAFramesContext</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d3/df6/hwcontext__d3d11va_8h_source.html#l00131">hwcontext_d3d11va.h:131</a></div></div>
+<div class="ttc" id="ahwcontext__d3d11va_8h_html_ae67b6969c9db7ba357d2394bd726299b"><div class="ttname"><a href="../../d3/df6/hwcontext__d3d11va_8h.html#ae67b6969c9db7ba357d2394bd726299b">AVD3D11VAFramesContext</a></div><div class="ttdeci">struct AVD3D11VAFramesContext AVD3D11VAFramesContext</div></div>
+<div class="ttc" id="astruct_a_v_d3_d11_v_a_device_context_html_a846ae4cb1f91302845776cc843dc2808"><div class="ttname"><a href="../../d0/dce/struct_a_v_d3_d11_v_a_device_context.html#a846ae4cb1f91302845776cc843dc2808">AVD3D11VADeviceContext::device</a></div><div class="ttdeci">ID3D11Device * device</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/df6/hwcontext__d3d11va_8h_source.html#l00056">hwcontext_d3d11va.h:56</a></div></div>
+<div class="ttc" id="ahwcontext__d3d11va_8h_html_a6a418691d5199f723ff6d37548edf963"><div class="ttname"><a href="../../d3/df6/hwcontext__d3d11va_8h.html#a6a418691d5199f723ff6d37548edf963">AVD3D11VADeviceContext</a></div><div class="ttdeci">struct AVD3D11VADeviceContext AVD3D11VADeviceContext</div></div>
+<div class="ttc" id="astruct_a_v_d3_d11_v_a_device_context_html_a6f7ad9f3193e51307a158a4c02d9241d"><div class="ttname"><a href="../../d0/dce/struct_a_v_d3_d11_v_a_device_context.html#a6f7ad9f3193e51307a158a4c02d9241d">AVD3D11VADeviceContext::video_context</a></div><div class="ttdeci">ID3D11VideoContext * video_context</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/df6/hwcontext__d3d11va_8h_source.html#l00080">hwcontext_d3d11va.h:80</a></div></div>
+<div class="ttc" id="astruct_a_v_d3_d11_v_a_device_context_html"><div class="ttname"><a href="../../d0/dce/struct_a_v_d3_d11_v_a_device_context.html">AVD3D11VADeviceContext</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d3/df6/hwcontext__d3d11va_8h_source.html#l00045">hwcontext_d3d11va.h:45</a></div></div>
+<div class="ttc" id="astruct_a_v_d3_d11_v_a_device_context_html_a895db1e8e6a1178000baae147afbd5ca"><div class="ttname"><a href="../../d0/dce/struct_a_v_d3_d11_v_a_device_context.html#a895db1e8e6a1178000baae147afbd5ca">AVD3D11VADeviceContext::device_context</a></div><div class="ttdeci">ID3D11DeviceContext * device_context</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/df6/hwcontext__d3d11va_8h_source.html#l00064">hwcontext_d3d11va.h:64</a></div></div>
+<div class="ttc" id="a_s_d_l__audio_8h_html_aa5cb90967788ada2711894ca158ece01"><div class="ttname"><a href="../../d3/d78/_s_d_l__audio_8h.html#aa5cb90967788ada2711894ca158ece01">void</a></div><div class="ttdeci">typedef void(SDLCALL *SDL_AudioFilter)(struct SDL_AudioCVT *cvt</div></div>
+<div class="ttc" id="astruct_a_v_d3_d11_v_a_device_context_html_ad5d8ffc06a83aa1dab48d6d2fe314718"><div class="ttname"><a href="../../d0/dce/struct_a_v_d3_d11_v_a_device_context.html#ad5d8ffc06a83aa1dab48d6d2fe314718">AVD3D11VADeviceContext::video_device</a></div><div class="ttdeci">ID3D11VideoDevice * video_device</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/df6/hwcontext__d3d11va_8h_source.html#l00072">hwcontext_d3d11va.h:72</a></div></div>
+<div class="ttc" id="astruct_a_v_d3_d11_v_a_device_context_html_a39fcd941aac702ab4733374d2377757f"><div class="ttname"><a href="../../d0/dce/struct_a_v_d3_d11_v_a_device_context.html#a39fcd941aac702ab4733374d2377757f">AVD3D11VADeviceContext::lock</a></div><div class="ttdeci">void(* lock)(void *lock_ctx)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/df6/hwcontext__d3d11va_8h_source.html#l00094">hwcontext_d3d11va.h:94</a></div></div>
+<div class="ttc" id="astruct_a_v_d3_d11_frame_descriptor_html_a30434ef069883c1de0a54b8ca250d850"><div class="ttname"><a href="../../da/d52/struct_a_v_d3_d11_frame_descriptor.html#a30434ef069883c1de0a54b8ca250d850">AVD3D11FrameDescriptor::texture</a></div><div class="ttdeci">ID3D11Texture2D * texture</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/df6/hwcontext__d3d11va_8h_source.html#l00117">hwcontext_d3d11va.h:117</a></div></div>
+<div class="ttc" id="astruct_a_v_d3_d11_v_a_frames_context_html_a0dd15f99a1112be3fa04d08b57775bd6"><div class="ttname"><a href="../../d0/d8b/struct_a_v_d3_d11_v_a_frames_context.html#a0dd15f99a1112be3fa04d08b57775bd6">AVD3D11VAFramesContext::MiscFlags</a></div><div class="ttdeci">UINT MiscFlags</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/df6/hwcontext__d3d11va_8h_source.html#l00166">hwcontext_d3d11va.h:166</a></div></div>
+<div class="ttc" id="astruct_a_v_d3_d11_v_a_frames_context_html_aec047f8d786efadffc38c558e8792884"><div class="ttname"><a href="../../d0/d8b/struct_a_v_d3_d11_v_a_frames_context.html#aec047f8d786efadffc38c558e8792884">AVD3D11VAFramesContext::BindFlags</a></div><div class="ttdeci">UINT BindFlags</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/df6/hwcontext__d3d11va_8h_source.html#l00160">hwcontext_d3d11va.h:160</a></div></div>
+<div class="ttc" id="ahwcontext__d3d11va_8h_html_abb2493d379eaf8c033b6613515815ebd"><div class="ttname"><a href="../../d3/df6/hwcontext__d3d11va_8h.html#abb2493d379eaf8c033b6613515815ebd">AVD3D11FrameDescriptor</a></div><div class="ttdeci">struct AVD3D11FrameDescriptor AVD3D11FrameDescriptor</div></div>
+<div class="ttc" id="astruct_a_v_d3_d11_frame_descriptor_html_a6051f3c25136efeec43b2a62abb10126"><div class="ttname"><a href="../../da/d52/struct_a_v_d3_d11_frame_descriptor.html#a6051f3c25136efeec43b2a62abb10126">AVD3D11FrameDescriptor::index</a></div><div class="ttdeci">intptr_t index</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/df6/hwcontext__d3d11va_8h_source.html#l00125">hwcontext_d3d11va.h:125</a></div></div>
+<div class="ttc" id="astruct_a_v_d3_d11_frame_descriptor_html"><div class="ttname"><a href="../../da/d52/struct_a_v_d3_d11_frame_descriptor.html">AVD3D11FrameDescriptor</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d3/df6/hwcontext__d3d11va_8h_source.html#l00109">hwcontext_d3d11va.h:109</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_97aefd0d527b934f1d99a682da8fe6a9.html">lib</a></li><li class="navelem"><a class="el" href="../../dir_da53678e933bc13c5b44fc9f96ac81aa.html">win32</a></li><li class="navelem"><a class="el" href="../../dir_7ac189985cec0e073b46d34a5d96bfc1.html">x86</a></li><li class="navelem"><a class="el" href="../../dir_e3469dbcd8a5e63a5540df758d989c34.html">ffmpeg-4.2.2</a></li><li class="navelem"><a class="el" href="../../dir_880368755e1ee5b32b1864dac7163836.html">include</a></li><li class="navelem"><a class="el" href="../../dir_e95abcf8ca274311b94b0e3a5da6ed50.html">libavutil</a></li><li class="navelem"><a class="el" href="../../d3/df6/hwcontext__d3d11va_8h.html">hwcontext_d3d11va.h</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:03:39. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

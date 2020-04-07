@@ -1,0 +1,219 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Исходный файл C:/git/world-of-might-and-magic/Engine/Graphics/Polygon.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('da/d08/_polygon_8h_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Polygon.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../da/d08/_polygon_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;array&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../dc/d90/_vector_types_8h.html">Engine/VectorTypes.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">class </span><a class="code" href="../../d2/d7f/class_texture.html">Texture</a>;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">struct </span><a class="code" href="../../d3/df8/struct_o_d_m_face.html">ODMFace</a>;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">struct </span>Span;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">struct </span>Edge;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">/*  141 */</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">// stru148</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#pragma pack(push, 1)</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="../../d4/dd7/struct_polygon.html">   14</a></span>&#160;<span class="keyword">struct </span><a class="code" href="../../d4/dd7/struct_polygon.html">Polygon</a> {</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="../../d4/dd7/struct_polygon.html#ac183e712f8be1e13f1c9d5b4d4512ead">   15</a></span>&#160;    <span class="keyword">inline</span> <a class="code" href="../../d4/dd7/struct_polygon.html#ac183e712f8be1e13f1c9d5b4d4512ead">Polygon</a>() { <a class="code" href="../../d4/dd7/struct_polygon.html#a3cbfb8599737bd9dcb6b1a90c649a1cd">uNumVertices</a> = 0; }</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="comment">// int _479295();</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="comment">// void _48276F_sr();</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d4/dd7/struct_polygon.html#ae8b6451a642d0551919cd95f819ba1ad">_normalize_v_18</a>();</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="comment">// void Create_48607B(struct SkyBillboardStruct *a2);</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="../../d4/dd7/struct_polygon.html#aa601ba629b3b2bea029192f1e289c281">   22</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="../../d4/dd7/struct_polygon.html#aa601ba629b3b2bea029192f1e289c281">IsWater</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> this-&gt;<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ac7ba7d3cce3d19ca020e056b37231289">flags</a> &amp; 2; }</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="../../d4/dd7/struct_polygon.html#a77ac583088cb9bdcaac37d1d2f5acec0">   23</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="../../d4/dd7/struct_polygon.html#a77ac583088cb9bdcaac37d1d2f5acec0">IsWaterAnimDisabled</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> this-&gt;<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ac7ba7d3cce3d19ca020e056b37231289">flags</a> &amp; 0x3C00; }</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="../../d4/dd7/struct_polygon.html#a76e86c5f911c3199c314098e570697bd">   25</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="../../d4/dd7/struct_polygon.html#a76e86c5f911c3199c314098e570697bd">field_0</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="../../d4/dd7/struct_polygon.html#af901372ef9d0fd36ba80a31e000de772">   26</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="../../d4/dd7/struct_polygon.html#af901372ef9d0fd36ba80a31e000de772">field_4</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="../../d4/dd7/struct_polygon.html#a7b547cf27405701a830aa29136591163">   27</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="../../d4/dd7/struct_polygon.html#a7b547cf27405701a830aa29136591163">field_8</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="../../d4/dd7/struct_polygon.html#afc4b01ab60aa461ea835654f6ff08e5b">   28</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="../../d4/dd7/struct_polygon.html#afc4b01ab60aa461ea835654f6ff08e5b">field_C</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="../../d4/dd7/struct_polygon.html#a334538460596e81da7201f51e444dd5e">   29</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="../../d4/dd7/struct_polygon.html#a334538460596e81da7201f51e444dd5e">field_10</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="../../d4/dd7/struct_polygon.html#a3cbfb8599737bd9dcb6b1a90c649a1cd">   30</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../d4/dd7/struct_polygon.html#a3cbfb8599737bd9dcb6b1a90c649a1cd">uNumVertices</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="../../d4/dd7/struct_polygon.html#a2730cbb8edd8a914a4f0eb7a94efd1df">   31</a></span>&#160;    Vec3_int_ <a class="code" href="../../d4/dd7/struct_polygon.html#a2730cbb8edd8a914a4f0eb7a94efd1df">v_18</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="../../d4/dd7/struct_polygon.html#a2e091890af3ce2620ac6860b4c492144">   32</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d4/dd7/struct_polygon.html#a2e091890af3ce2620ac6860b4c492144">field_24</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="../../d4/dd7/struct_polygon.html#a91904b16b190a85b3addac04fdd76b6d">   33</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d4/dd7/struct_polygon.html#a91904b16b190a85b3addac04fdd76b6d">sTextureDeltaU</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="../../d4/dd7/struct_polygon.html#ada7bc47599630fdc1cc3cf0991af7a42">   34</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d4/dd7/struct_polygon.html#ada7bc47599630fdc1cc3cf0991af7a42">sTextureDeltaV</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="../../d4/dd7/struct_polygon.html#a9de3b82b6ac71862a32db8b62f5e65fc">   35</a></span>&#160;    __int16 <a class="code" href="../../d4/dd7/struct_polygon.html#a9de3b82b6ac71862a32db8b62f5e65fc">flags</a>;  <span class="comment">// &amp;2 -&gt; Water  &amp;3C00 still water (no anim)</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="../../d4/dd7/struct_polygon.html#a61ee2516f7436e285284b31e30849abd">   36</a></span>&#160;    __int16 <a class="code" href="../../d4/dd7/struct_polygon.html#a61ee2516f7436e285284b31e30849abd">field_32</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="../../d4/dd7/struct_polygon.html#a60a135d6c83b0c2caebab06f8e3bea1e">   37</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d4/dd7/struct_polygon.html#a60a135d6c83b0c2caebab06f8e3bea1e">field_34</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="../../d4/dd7/struct_polygon.html#a7bda51810e7a2c896a47f67d4ec2f498">   38</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="../../da/d8e/struct_sky_billboard_struct.html">SkyBillboardStruct</a> *<a class="code" href="../../d4/dd7/struct_polygon.html#a7bda51810e7a2c896a47f67d4ec2f498">ptr_38</a>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="../../d4/dd7/struct_polygon.html#a2a60cf80c92379d1e786cef7edf16a40">   39</a></span>&#160;    <a class="code" href="../../d2/d7f/class_texture.html">Texture</a> *<a class="code" href="../../d4/dd7/struct_polygon.html#a2a60cf80c92379d1e786cef7edf16a40">texture</a>;  <span class="comment">// struct Texture_MM7 *pTexture;</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="../../d4/dd7/struct_polygon.html#aa91b0838bd3d1e28b1474bfd0c2de11c">   40</a></span>&#160;    Span *<a class="code" href="../../d4/dd7/struct_polygon.html#aa91b0838bd3d1e28b1474bfd0c2de11c">_unused_prolly_head</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="../../d4/dd7/struct_polygon.html#a03b87e3a009679a91c5105dba33cf81c">   41</a></span>&#160;    Span *<a class="code" href="../../d4/dd7/struct_polygon.html#a03b87e3a009679a91c5105dba33cf81c">_unused_prolly_tail</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="../../d4/dd7/struct_polygon.html#a17a7cf7d7127d5dfb390c554d82a718d">   42</a></span>&#160;    <span class="keywordtype">int</span> **<a class="code" href="../../d4/dd7/struct_polygon.html#a17a7cf7d7127d5dfb390c554d82a718d">ptr_48</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="../../d4/dd7/struct_polygon.html#a71d8d1db1042c67bd7f08dda54758491">   43</a></span>&#160;    <span class="keywordtype">unsigned</span> __int16 <a class="code" href="../../d4/dd7/struct_polygon.html#a71d8d1db1042c67bd7f08dda54758491">uTileBitmapID</a>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="../../d4/dd7/struct_polygon.html#a3211199f432575582ccfdf5feaa120be">   44</a></span>&#160;    __int16 <a class="code" href="../../d4/dd7/struct_polygon.html#a3211199f432575582ccfdf5feaa120be">field_4E</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="../../d4/dd7/struct_polygon.html#a5f19fcead8bc81235f7a031bfd70bfd4">   45</a></span>&#160;    __int16 <a class="code" href="../../d4/dd7/struct_polygon.html#a5f19fcead8bc81235f7a031bfd70bfd4">pid</a>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="../../d4/dd7/struct_polygon.html#a0e23b7429b0f585d0738bc54d72c118c">   46</a></span>&#160;    __int16 <a class="code" href="../../d4/dd7/struct_polygon.html#a0e23b7429b0f585d0738bc54d72c118c">field_52</a>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="../../d4/dd7/struct_polygon.html#a8c083faafa6f6486f494c8657e2e3dd5">   47</a></span>&#160;    <a class="code" href="../../d3/df8/struct_o_d_m_face.html">ODMFace</a> *<a class="code" href="../../d4/dd7/struct_polygon.html#a8c083faafa6f6486f494c8657e2e3dd5">pODMFace</a>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="../../d4/dd7/struct_polygon.html#a78f28dadae8d96c1c8b90ed0fb15ee30">   48</a></span>&#160;    <span class="keywordtype">char</span> <a class="code" href="../../d4/dd7/struct_polygon.html#a78f28dadae8d96c1c8b90ed0fb15ee30">dimming_level</a>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="../../d4/dd7/struct_polygon.html#a3a5fc18706efa676e0c0c836422dbc62">   49</a></span>&#160;    <span class="keywordtype">char</span> <a class="code" href="../../d4/dd7/struct_polygon.html#a3a5fc18706efa676e0c0c836422dbc62">field_59</a>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="../../d4/dd7/struct_polygon.html#a10cce6365e649d3d122e10c1580bc41b">   50</a></span>&#160;    <span class="keywordtype">char</span> <a class="code" href="../../d4/dd7/struct_polygon.html#a10cce6365e649d3d122e10c1580bc41b">field_5A</a>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="../../d4/dd7/struct_polygon.html#aabc446cfdff3b9eb68c54478275344b6">   51</a></span>&#160;    <span class="keywordtype">char</span> <a class="code" href="../../d4/dd7/struct_polygon.html#aabc446cfdff3b9eb68c54478275344b6">field_5B</a>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="../../d4/dd7/struct_polygon.html#ac285a12451a9fa7135344be582da6d5a">   52</a></span>&#160;    <span class="keywordtype">char</span> <a class="code" href="../../d4/dd7/struct_polygon.html#ac285a12451a9fa7135344be582da6d5a">terrain_grid_z</a>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="../../d4/dd7/struct_polygon.html#af85bf05a77d450287bd72183a52c8821">   53</a></span>&#160;    <span class="keywordtype">char</span> <a class="code" href="../../d4/dd7/struct_polygon.html#af85bf05a77d450287bd72183a52c8821">terrain_grid_x</a>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="../../d4/dd7/struct_polygon.html#af463ac1cb561843d025e5a2c96e819c4">   54</a></span>&#160;    <span class="keywordtype">unsigned</span> __int8 <a class="code" href="../../d4/dd7/struct_polygon.html#af463ac1cb561843d025e5a2c96e819c4">uBModelID</a>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="../../d4/dd7/struct_polygon.html#a135e1bc5e8e4688da03a3ab6073c7460">   55</a></span>&#160;    <span class="keywordtype">unsigned</span> __int8 <a class="code" href="../../d4/dd7/struct_polygon.html#a135e1bc5e8e4688da03a3ab6073c7460">uBModelFaceID</a>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="../../d4/dd7/struct_polygon.html#a411a336316940246d44e82670a84f9f9">   56</a></span>&#160;    Edge *<a class="code" href="../../d4/dd7/struct_polygon.html#a411a336316940246d44e82670a84f9f9">pEdgeList1</a>[20];</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="../../d4/dd7/struct_polygon.html#aedf70e754c868a554d2eae0a7f285b09">   57</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../d4/dd7/struct_polygon.html#aedf70e754c868a554d2eae0a7f285b09">uEdgeList1Size</a>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="../../d4/dd7/struct_polygon.html#a9643cadec41198b2b69bae106fef712e">   58</a></span>&#160;    Edge *<a class="code" href="../../d4/dd7/struct_polygon.html#a9643cadec41198b2b69bae106fef712e">pEdgeList2</a>[20];</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="../../d4/dd7/struct_polygon.html#afc6d154e01a6e89b6c03ee57957eadcd">   59</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../d4/dd7/struct_polygon.html#afc6d154e01a6e89b6c03ee57957eadcd">uEdgeList2Size</a>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="../../d4/dd7/struct_polygon.html#a65435405636146c2efa678b887e9822b">   60</a></span>&#160;    <span class="keywordtype">char</span> <a class="code" href="../../d4/dd7/struct_polygon.html#a65435405636146c2efa678b887e9822b">field_108</a>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="../../d4/dd7/struct_polygon.html#ae16b0d184499596020abe0caa6ba16ba">   61</a></span>&#160;    <span class="keywordtype">char</span> <a class="code" href="../../d4/dd7/struct_polygon.html#ae16b0d184499596020abe0caa6ba16ba">field_109</a>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="../../d4/dd7/struct_polygon.html#a74a7086ab7843f25affa22f4e2ce6137">   62</a></span>&#160;    <span class="keywordtype">char</span> <a class="code" href="../../d4/dd7/struct_polygon.html#a74a7086ab7843f25affa22f4e2ce6137">field_10A</a>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="../../d4/dd7/struct_polygon.html#aa729f3dc95157a74090f1683e08ab986">   63</a></span>&#160;    <span class="keywordtype">char</span> <a class="code" href="../../d4/dd7/struct_polygon.html#aa729f3dc95157a74090f1683e08ab986">field_10B</a>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;};</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">#pragma pack(pop)</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="keyword">extern</span> std::array&lt;struct Polygon, 2000 + 18000&gt; <a class="code" href="../../da/d08/_polygon_8h.html#a3dd60995d0c0ab4f7ff3b8064535c4fa">array_77EC08</a>;</div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="astruct_polygon_html_a76e86c5f911c3199c314098e570697bd"><div class="ttname"><a href="../../d4/dd7/struct_polygon.html#a76e86c5f911c3199c314098e570697bd">Polygon::field_0</a></div><div class="ttdeci">float field_0</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d08/_polygon_8h_source.html#l00025">Polygon.h:25</a></div></div>
+<div class="ttc" id="astruct_polygon_html_a61ee2516f7436e285284b31e30849abd"><div class="ttname"><a href="../../d4/dd7/struct_polygon.html#a61ee2516f7436e285284b31e30849abd">Polygon::field_32</a></div><div class="ttdeci">__int16 field_32</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d08/_polygon_8h_source.html#l00036">Polygon.h:36</a></div></div>
+<div class="ttc" id="astruct_polygon_html_a0e23b7429b0f585d0738bc54d72c118c"><div class="ttname"><a href="../../d4/dd7/struct_polygon.html#a0e23b7429b0f585d0738bc54d72c118c">Polygon::field_52</a></div><div class="ttdeci">__int16 field_52</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d08/_polygon_8h_source.html#l00046">Polygon.h:46</a></div></div>
+<div class="ttc" id="astruct_polygon_html_a77ac583088cb9bdcaac37d1d2f5acec0"><div class="ttname"><a href="../../d4/dd7/struct_polygon.html#a77ac583088cb9bdcaac37d1d2f5acec0">Polygon::IsWaterAnimDisabled</a></div><div class="ttdeci">bool IsWaterAnimDisabled() const</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d08/_polygon_8h_source.html#l00023">Polygon.h:23</a></div></div>
+<div class="ttc" id="astruct_polygon_html_af85bf05a77d450287bd72183a52c8821"><div class="ttname"><a href="../../d4/dd7/struct_polygon.html#af85bf05a77d450287bd72183a52c8821">Polygon::terrain_grid_x</a></div><div class="ttdeci">char terrain_grid_x</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d08/_polygon_8h_source.html#l00053">Polygon.h:53</a></div></div>
+<div class="ttc" id="astruct_polygon_html_a91904b16b190a85b3addac04fdd76b6d"><div class="ttname"><a href="../../d4/dd7/struct_polygon.html#a91904b16b190a85b3addac04fdd76b6d">Polygon::sTextureDeltaU</a></div><div class="ttdeci">int sTextureDeltaU</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d08/_polygon_8h_source.html#l00033">Polygon.h:33</a></div></div>
+<div class="ttc" id="a_vector_types_8h_html"><div class="ttname"><a href="../../dc/d90/_vector_types_8h.html">VectorTypes.h</a></div></div>
+<div class="ttc" id="astruct_polygon_html_a03b87e3a009679a91c5105dba33cf81c"><div class="ttname"><a href="../../d4/dd7/struct_polygon.html#a03b87e3a009679a91c5105dba33cf81c">Polygon::_unused_prolly_tail</a></div><div class="ttdeci">Span * _unused_prolly_tail</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d08/_polygon_8h_source.html#l00041">Polygon.h:41</a></div></div>
+<div class="ttc" id="astruct_polygon_html_afc4b01ab60aa461ea835654f6ff08e5b"><div class="ttname"><a href="../../d4/dd7/struct_polygon.html#afc4b01ab60aa461ea835654f6ff08e5b">Polygon::field_C</a></div><div class="ttdeci">float field_C</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d08/_polygon_8h_source.html#l00028">Polygon.h:28</a></div></div>
+<div class="ttc" id="astruct_polygon_html_aa729f3dc95157a74090f1683e08ab986"><div class="ttname"><a href="../../d4/dd7/struct_polygon.html#aa729f3dc95157a74090f1683e08ab986">Polygon::field_10B</a></div><div class="ttdeci">char field_10B</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d08/_polygon_8h_source.html#l00063">Polygon.h:63</a></div></div>
+<div class="ttc" id="astruct_polygon_html"><div class="ttname"><a href="../../d4/dd7/struct_polygon.html">Polygon</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/d08/_polygon_8h_source.html#l00014">Polygon.h:14</a></div></div>
+<div class="ttc" id="astruct_sky_billboard_struct_html"><div class="ttname"><a href="../../da/d8e/struct_sky_billboard_struct.html">SkyBillboardStruct</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/d20/_i_render_8h_source.html#l00465">IRender.h:465</a></div></div>
+<div class="ttc" id="astruct_polygon_html_a411a336316940246d44e82670a84f9f9"><div class="ttname"><a href="../../d4/dd7/struct_polygon.html#a411a336316940246d44e82670a84f9f9">Polygon::pEdgeList1</a></div><div class="ttdeci">Edge * pEdgeList1[20]</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d08/_polygon_8h_source.html#l00056">Polygon.h:56</a></div></div>
+<div class="ttc" id="aclass_texture_html"><div class="ttname"><a href="../../d2/d7f/class_texture.html">Texture</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/dbf/_texture_8h_source.html#l00004">Texture.h:4</a></div></div>
+<div class="ttc" id="astruct_polygon_html_a3a5fc18706efa676e0c0c836422dbc62"><div class="ttname"><a href="../../d4/dd7/struct_polygon.html#a3a5fc18706efa676e0c0c836422dbc62">Polygon::field_59</a></div><div class="ttdeci">char field_59</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d08/_polygon_8h_source.html#l00049">Polygon.h:49</a></div></div>
+<div class="ttc" id="astruct_polygon_html_ae16b0d184499596020abe0caa6ba16ba"><div class="ttname"><a href="../../d4/dd7/struct_polygon.html#ae16b0d184499596020abe0caa6ba16ba">Polygon::field_109</a></div><div class="ttdeci">char field_109</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d08/_polygon_8h_source.html#l00061">Polygon.h:61</a></div></div>
+<div class="ttc" id="a_polygon_8h_html_a3dd60995d0c0ab4f7ff3b8064535c4fa"><div class="ttname"><a href="../../da/d08/_polygon_8h.html#a3dd60995d0c0ab4f7ff3b8064535c4fa">array_77EC08</a></div><div class="ttdeci">std::array&lt; struct Polygon, 2000+18000 &gt; array_77EC08</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d03/_outdoor_8cpp_source.html#l00052">Outdoor.cpp:52</a></div></div>
+<div class="ttc" id="astruct_polygon_html_a2e091890af3ce2620ac6860b4c492144"><div class="ttname"><a href="../../d4/dd7/struct_polygon.html#a2e091890af3ce2620ac6860b4c492144">Polygon::field_24</a></div><div class="ttdeci">int field_24</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d08/_polygon_8h_source.html#l00032">Polygon.h:32</a></div></div>
+<div class="ttc" id="astruct_polygon_html_a334538460596e81da7201f51e444dd5e"><div class="ttname"><a href="../../d4/dd7/struct_polygon.html#a334538460596e81da7201f51e444dd5e">Polygon::field_10</a></div><div class="ttdeci">float field_10</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d08/_polygon_8h_source.html#l00029">Polygon.h:29</a></div></div>
+<div class="ttc" id="astruct_polygon_html_a17a7cf7d7127d5dfb390c554d82a718d"><div class="ttname"><a href="../../d4/dd7/struct_polygon.html#a17a7cf7d7127d5dfb390c554d82a718d">Polygon::ptr_48</a></div><div class="ttdeci">int ** ptr_48</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d08/_polygon_8h_source.html#l00042">Polygon.h:42</a></div></div>
+<div class="ttc" id="astruct_polygon_html_a3211199f432575582ccfdf5feaa120be"><div class="ttname"><a href="../../d4/dd7/struct_polygon.html#a3211199f432575582ccfdf5feaa120be">Polygon::field_4E</a></div><div class="ttdeci">__int16 field_4E</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d08/_polygon_8h_source.html#l00044">Polygon.h:44</a></div></div>
+<div class="ttc" id="astruct_polygon_html_a78f28dadae8d96c1c8b90ed0fb15ee30"><div class="ttname"><a href="../../d4/dd7/struct_polygon.html#a78f28dadae8d96c1c8b90ed0fb15ee30">Polygon::dimming_level</a></div><div class="ttdeci">char dimming_level</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d08/_polygon_8h_source.html#l00048">Polygon.h:48</a></div></div>
+<div class="ttc" id="astruct_polygon_html_a2a60cf80c92379d1e786cef7edf16a40"><div class="ttname"><a href="../../d4/dd7/struct_polygon.html#a2a60cf80c92379d1e786cef7edf16a40">Polygon::texture</a></div><div class="ttdeci">Texture * texture</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d08/_polygon_8h_source.html#l00039">Polygon.h:39</a></div></div>
+<div class="ttc" id="astruct_polygon_html_ac183e712f8be1e13f1c9d5b4d4512ead"><div class="ttname"><a href="../../d4/dd7/struct_polygon.html#ac183e712f8be1e13f1c9d5b4d4512ead">Polygon::Polygon</a></div><div class="ttdeci">Polygon()</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d08/_polygon_8h_source.html#l00015">Polygon.h:15</a></div></div>
+<div class="ttc" id="astruct_polygon_html_a3cbfb8599737bd9dcb6b1a90c649a1cd"><div class="ttname"><a href="../../d4/dd7/struct_polygon.html#a3cbfb8599737bd9dcb6b1a90c649a1cd">Polygon::uNumVertices</a></div><div class="ttdeci">unsigned int uNumVertices</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d08/_polygon_8h_source.html#l00030">Polygon.h:30</a></div></div>
+<div class="ttc" id="astruct_polygon_html_a10cce6365e649d3d122e10c1580bc41b"><div class="ttname"><a href="../../d4/dd7/struct_polygon.html#a10cce6365e649d3d122e10c1580bc41b">Polygon::field_5A</a></div><div class="ttdeci">char field_5A</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d08/_polygon_8h_source.html#l00050">Polygon.h:50</a></div></div>
+<div class="ttc" id="astruct_polygon_html_a60a135d6c83b0c2caebab06f8e3bea1e"><div class="ttname"><a href="../../d4/dd7/struct_polygon.html#a60a135d6c83b0c2caebab06f8e3bea1e">Polygon::field_34</a></div><div class="ttdeci">int field_34</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d08/_polygon_8h_source.html#l00037">Polygon.h:37</a></div></div>
+<div class="ttc" id="astruct_polygon_html_aa601ba629b3b2bea029192f1e289c281"><div class="ttname"><a href="../../d4/dd7/struct_polygon.html#aa601ba629b3b2bea029192f1e289c281">Polygon::IsWater</a></div><div class="ttdeci">bool IsWater() const</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d08/_polygon_8h_source.html#l00022">Polygon.h:22</a></div></div>
+<div class="ttc" id="astruct_polygon_html_a2730cbb8edd8a914a4f0eb7a94efd1df"><div class="ttname"><a href="../../d4/dd7/struct_polygon.html#a2730cbb8edd8a914a4f0eb7a94efd1df">Polygon::v_18</a></div><div class="ttdeci">Vec3_int_ v_18</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d08/_polygon_8h_source.html#l00031">Polygon.h:31</a></div></div>
+<div class="ttc" id="astruct_polygon_html_ae8b6451a642d0551919cd95f819ba1ad"><div class="ttname"><a href="../../d4/dd7/struct_polygon.html#ae8b6451a642d0551919cd95f819ba1ad">Polygon::_normalize_v_18</a></div><div class="ttdeci">void _normalize_v_18()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dc7/_render_8cpp_source.html#l05598">Render.cpp:5598</a></div></div>
+<div class="ttc" id="astruct_polygon_html_af463ac1cb561843d025e5a2c96e819c4"><div class="ttname"><a href="../../d4/dd7/struct_polygon.html#af463ac1cb561843d025e5a2c96e819c4">Polygon::uBModelID</a></div><div class="ttdeci">unsigned __int8 uBModelID</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d08/_polygon_8h_source.html#l00054">Polygon.h:54</a></div></div>
+<div class="ttc" id="astruct_polygon_html_aa91b0838bd3d1e28b1474bfd0c2de11c"><div class="ttname"><a href="../../d4/dd7/struct_polygon.html#aa91b0838bd3d1e28b1474bfd0c2de11c">Polygon::_unused_prolly_head</a></div><div class="ttdeci">Span * _unused_prolly_head</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d08/_polygon_8h_source.html#l00040">Polygon.h:40</a></div></div>
+<div class="ttc" id="astruct_polygon_html_a7b547cf27405701a830aa29136591163"><div class="ttname"><a href="../../d4/dd7/struct_polygon.html#a7b547cf27405701a830aa29136591163">Polygon::field_8</a></div><div class="ttdeci">float field_8</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d08/_polygon_8h_source.html#l00027">Polygon.h:27</a></div></div>
+<div class="ttc" id="astruct_polygon_html_a65435405636146c2efa678b887e9822b"><div class="ttname"><a href="../../d4/dd7/struct_polygon.html#a65435405636146c2efa678b887e9822b">Polygon::field_108</a></div><div class="ttdeci">char field_108</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d08/_polygon_8h_source.html#l00060">Polygon.h:60</a></div></div>
+<div class="ttc" id="astruct_polygon_html_af901372ef9d0fd36ba80a31e000de772"><div class="ttname"><a href="../../d4/dd7/struct_polygon.html#af901372ef9d0fd36ba80a31e000de772">Polygon::field_4</a></div><div class="ttdeci">float field_4</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d08/_polygon_8h_source.html#l00026">Polygon.h:26</a></div></div>
+<div class="ttc" id="astruct_polygon_html_a9643cadec41198b2b69bae106fef712e"><div class="ttname"><a href="../../d4/dd7/struct_polygon.html#a9643cadec41198b2b69bae106fef712e">Polygon::pEdgeList2</a></div><div class="ttdeci">Edge * pEdgeList2[20]</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d08/_polygon_8h_source.html#l00058">Polygon.h:58</a></div></div>
+<div class="ttc" id="astruct_polygon_html_ac285a12451a9fa7135344be582da6d5a"><div class="ttname"><a href="../../d4/dd7/struct_polygon.html#ac285a12451a9fa7135344be582da6d5a">Polygon::terrain_grid_z</a></div><div class="ttdeci">char terrain_grid_z</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d08/_polygon_8h_source.html#l00052">Polygon.h:52</a></div></div>
+<div class="ttc" id="astruct_polygon_html_a71d8d1db1042c67bd7f08dda54758491"><div class="ttname"><a href="../../d4/dd7/struct_polygon.html#a71d8d1db1042c67bd7f08dda54758491">Polygon::uTileBitmapID</a></div><div class="ttdeci">unsigned __int16 uTileBitmapID</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d08/_polygon_8h_source.html#l00043">Polygon.h:43</a></div></div>
+<div class="ttc" id="astruct_polygon_html_a9de3b82b6ac71862a32db8b62f5e65fc"><div class="ttname"><a href="../../d4/dd7/struct_polygon.html#a9de3b82b6ac71862a32db8b62f5e65fc">Polygon::flags</a></div><div class="ttdeci">__int16 flags</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d08/_polygon_8h_source.html#l00035">Polygon.h:35</a></div></div>
+<div class="ttc" id="astruct_polygon_html_afc6d154e01a6e89b6c03ee57957eadcd"><div class="ttname"><a href="../../d4/dd7/struct_polygon.html#afc6d154e01a6e89b6c03ee57957eadcd">Polygon::uEdgeList2Size</a></div><div class="ttdeci">unsigned int uEdgeList2Size</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d08/_polygon_8h_source.html#l00059">Polygon.h:59</a></div></div>
+<div class="ttc" id="astruct_polygon_html_ada7bc47599630fdc1cc3cf0991af7a42"><div class="ttname"><a href="../../d4/dd7/struct_polygon.html#ada7bc47599630fdc1cc3cf0991af7a42">Polygon::sTextureDeltaV</a></div><div class="ttdeci">int sTextureDeltaV</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d08/_polygon_8h_source.html#l00034">Polygon.h:34</a></div></div>
+<div class="ttc" id="astruct_polygon_html_a8c083faafa6f6486f494c8657e2e3dd5"><div class="ttname"><a href="../../d4/dd7/struct_polygon.html#a8c083faafa6f6486f494c8657e2e3dd5">Polygon::pODMFace</a></div><div class="ttdeci">ODMFace * pODMFace</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d08/_polygon_8h_source.html#l00047">Polygon.h:47</a></div></div>
+<div class="ttc" id="astruct_polygon_html_a74a7086ab7843f25affa22f4e2ce6137"><div class="ttname"><a href="../../d4/dd7/struct_polygon.html#a74a7086ab7843f25affa22f4e2ce6137">Polygon::field_10A</a></div><div class="ttdeci">char field_10A</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d08/_polygon_8h_source.html#l00062">Polygon.h:62</a></div></div>
+<div class="ttc" id="astruct_o_d_m_face_html"><div class="ttname"><a href="../../d3/df8/struct_o_d_m_face.html">ODMFace</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dbc/_b_s_p_model_8h_source.html#l00093">BSPModel.h:93</a></div></div>
+<div class="ttc" id="a_s_d_l__egl_8h_html_ac7ba7d3cce3d19ca020e056b37231289"><div class="ttname"><a href="../../df/d32/_s_d_l__egl_8h.html#ac7ba7d3cce3d19ca020e056b37231289">flags</a></div><div class="ttdeci">EGLSyncKHR EGLint flags</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/_s_d_l__egl_8h_source.html#l00898">SDL_egl.h:898</a></div></div>
+<div class="ttc" id="astruct_polygon_html_a5f19fcead8bc81235f7a031bfd70bfd4"><div class="ttname"><a href="../../d4/dd7/struct_polygon.html#a5f19fcead8bc81235f7a031bfd70bfd4">Polygon::pid</a></div><div class="ttdeci">__int16 pid</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d08/_polygon_8h_source.html#l00045">Polygon.h:45</a></div></div>
+<div class="ttc" id="astruct_polygon_html_a7bda51810e7a2c896a47f67d4ec2f498"><div class="ttname"><a href="../../d4/dd7/struct_polygon.html#a7bda51810e7a2c896a47f67d4ec2f498">Polygon::ptr_38</a></div><div class="ttdeci">struct SkyBillboardStruct * ptr_38</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d08/_polygon_8h_source.html#l00038">Polygon.h:38</a></div></div>
+<div class="ttc" id="astruct_polygon_html_aedf70e754c868a554d2eae0a7f285b09"><div class="ttname"><a href="../../d4/dd7/struct_polygon.html#aedf70e754c868a554d2eae0a7f285b09">Polygon::uEdgeList1Size</a></div><div class="ttdeci">unsigned int uEdgeList1Size</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d08/_polygon_8h_source.html#l00057">Polygon.h:57</a></div></div>
+<div class="ttc" id="astruct_polygon_html_aabc446cfdff3b9eb68c54478275344b6"><div class="ttname"><a href="../../d4/dd7/struct_polygon.html#aabc446cfdff3b9eb68c54478275344b6">Polygon::field_5B</a></div><div class="ttdeci">char field_5B</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d08/_polygon_8h_source.html#l00051">Polygon.h:51</a></div></div>
+<div class="ttc" id="astruct_polygon_html_a135e1bc5e8e4688da03a3ab6073c7460"><div class="ttname"><a href="../../d4/dd7/struct_polygon.html#a135e1bc5e8e4688da03a3ab6073c7460">Polygon::uBModelFaceID</a></div><div class="ttdeci">unsigned __int8 uBModelFaceID</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d08/_polygon_8h_source.html#l00055">Polygon.h:55</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_0b6ee6e7e9547e675db4add2e5de97da.html">Engine</a></li><li class="navelem"><a class="el" href="../../dir_bb84c1711d8a00602a64a24ea462155a.html">Graphics</a></li><li class="navelem"><a class="el" href="../../da/d08/_polygon_8h.html">Polygon.h</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:03:30. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

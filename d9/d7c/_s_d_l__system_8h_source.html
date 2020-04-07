@@ -1,0 +1,314 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Исходный файл C:/git/world-of-might-and-magic/lib/win32/x86/sdl2-2.0.12/include/SDL_system.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d9/d7c/_s_d_l__system_8h_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">SDL_system.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d9/d7c/_s_d_l__system_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">  Simple DirectMedia Layer</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">  Copyright (C) 1997-2020 Sam Lantinga &lt;slouken@libsdl.org&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">  This software is provided &#39;as-is&#39;, without any express or implied</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">  warranty.  In no event will the authors be held liable for any damages</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">  arising from the use of this software.</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">  Permission is granted to anyone to use this software for any purpose,</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">  including commercial applications, and to alter it and redistribute it</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">  freely, subject to the following restrictions:</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">  1. The origin of this software must not be misrepresented; you must not</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">     claim that you wrote the original software. If you use this software</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">     in a product, an acknowledgment in the product documentation would be</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">     appreciated but is not required.</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">  2. Altered source versions must be plainly marked as such, and must not be</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">     misrepresented as being the original software.</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">  3. This notice may not be removed or altered from any source distribution.</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#ifndef SDL_system_h_</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#define SDL_system_h_</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d9/d24/_s_d_l__stdinc_8h.html">SDL_stdinc.h</a>&quot;</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d3/d07/_s_d_l__keyboard_8h.html">SDL_keyboard.h</a>&quot;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d6/d30/_s_d_l__render_8h.html">SDL_render.h</a>&quot;</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../dc/d64/_s_d_l__video_8h.html">SDL_video.h</a>&quot;</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d1/d90/begin__code_8h.html">begin_code.h</a>&quot;</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">/* Set up for C function definitions, even when using C++ */</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">/* Platform specific functions for Windows */</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#ifdef __WIN32__</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    </div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="../../d9/d7c/_s_d_l__system_8h.html#a2893a6e30c95d576736e333237b98bbc">   49</a></span>&#160;<span class="keyword">typedef</span> <a class="code" href="../../d3/d78/_s_d_l__audio_8h.html#aa5cb90967788ada2711894ca158ece01">void</a> (SDLCALL * <a class="code" href="../../d9/d7c/_s_d_l__system_8h.html#a2893a6e30c95d576736e333237b98bbc">SDL_WindowsMessageHook</a>)(<span class="keywordtype">void</span> *<a class="code" href="../../d6/d0f/struct_s_d_l___surface.html#ae66d973dcb9b57cb34815892e1ee1f31">userdata</a>, <span class="keywordtype">void</span> *hWnd, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a7b6161cffb9b8aee272b3b916183d28c">message</a>, <a class="code" href="../../d9/d24/_s_d_l__stdinc_8h.html#ac006cf2bd55a42a9cc8ae9f123aa7e13">Uint64</a> wParam, <a class="code" href="../../d9/d24/_s_d_l__stdinc_8h.html#a2c1a61d5c466bb74680be0a8cc1b455d">Sint64</a> lParam);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">extern</span> DECLSPEC <span class="keywordtype">void</span> SDLCALL <a class="code" href="../../d9/d7c/_s_d_l__system_8h.html#a3ee70959067d938e3a3f80e43f3157a8">SDL_SetWindowsMessageHook</a>(<a class="code" href="../../d9/d7c/_s_d_l__system_8h.html#a2893a6e30c95d576736e333237b98bbc">SDL_WindowsMessageHook</a> callback, <span class="keywordtype">void</span> *<a class="code" href="../../d6/d0f/struct_s_d_l___surface.html#ae66d973dcb9b57cb34815892e1ee1f31">userdata</a>);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword">extern</span> DECLSPEC <span class="keywordtype">int</span> SDLCALL <a class="code" href="../../d9/d7c/_s_d_l__system_8h.html#a6e02336961a1fe8dd27c04733117371a">SDL_Direct3D9GetAdapterIndex</a>( <span class="keywordtype">int</span> displayIndex );</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="../../d9/d7c/_s_d_l__system_8h.html#aa995839c488ceda33ed998bbfa79c2a9">   60</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="../../d9/d7c/_s_d_l__system_8h.html#aa995839c488ceda33ed998bbfa79c2a9">IDirect3DDevice9</a> <a class="code" href="../../d9/d7c/_s_d_l__system_8h.html#aa995839c488ceda33ed998bbfa79c2a9">IDirect3DDevice9</a>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keyword">extern</span> DECLSPEC <a class="code" href="../../d9/d7c/_s_d_l__system_8h.html#aa995839c488ceda33ed998bbfa79c2a9">IDirect3DDevice9</a>* SDLCALL <a class="code" href="../../d9/d7c/_s_d_l__system_8h.html#adcfe0853c55093a8f7ea6d5b9ff41097">SDL_RenderGetD3D9Device</a>(<a class="code" href="../../d6/d30/_s_d_l__render_8h.html#aaf0bf7d020754fc614fe06552ea4d5d4">SDL_Renderer</a> * renderer);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="keyword">extern</span> DECLSPEC <a class="code" href="../../d9/d24/_s_d_l__stdinc_8h.html#a8fca68df0f976765230fe589a7c7733b">SDL_bool</a> SDLCALL <a class="code" href="../../d9/d7c/_s_d_l__system_8h.html#a4d89d5fdbaa443c76856d612739d17c0">SDL_DXGIGetOutputInfo</a>( <span class="keywordtype">int</span> displayIndex, <span class="keywordtype">int</span> *adapterIndex, <span class="keywordtype">int</span> *outputIndex );</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* __WIN32__ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment">/* Platform specific functions for Linux */</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="preprocessor">#ifdef __LINUX__</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="keyword">extern</span> DECLSPEC <span class="keywordtype">int</span> SDLCALL <a class="code" href="../../d9/d7c/_s_d_l__system_8h.html#ad8b089710ddbb2e3133c8b78d687051e">SDL_LinuxSetThreadPriority</a>(<a class="code" href="../../d9/d24/_s_d_l__stdinc_8h.html#a2c1a61d5c466bb74680be0a8cc1b455d">Sint64</a> threadID, <span class="keywordtype">int</span> priority);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* __LINUX__ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="comment">/* Platform specific functions for iOS */</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="preprocessor">#ifdef __IPHONEOS__</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor">#define SDL_iOSSetAnimationCallback(window, interval, callback, callbackParam) SDL_iPhoneSetAnimationCallback(window, interval, callback, callbackParam)</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="keyword">extern</span> DECLSPEC <span class="keywordtype">int</span> SDLCALL <a class="code" href="../../d9/d7c/_s_d_l__system_8h.html#aa39cfd8b255adb42149c7204ecf50823">SDL_iPhoneSetAnimationCallback</a>(<a class="code" href="../../dc/d64/_s_d_l__video_8h.html#a55a196c7d3b8497538632c79ae1e6392">SDL_Window</a> * <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a92dbce8e3247f6a78126c99877caacb6">window</a>, <span class="keywordtype">int</span> interval, <span class="keywordtype">void</span> (*callback)(<span class="keywordtype">void</span>*), <span class="keywordtype">void</span> *callbackParam);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="preprocessor">#define SDL_iOSSetEventPump(enabled) SDL_iPhoneSetEventPump(enabled)</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="keyword">extern</span> DECLSPEC <span class="keywordtype">void</span> SDLCALL <a class="code" href="../../d9/d7c/_s_d_l__system_8h.html#a4b4fb7a09ddb8304b18debf6bfd7ca13">SDL_iPhoneSetEventPump</a>(<a class="code" href="../../d9/d24/_s_d_l__stdinc_8h.html#a8fca68df0f976765230fe589a7c7733b">SDL_bool</a> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0455a397ab5468d21c3021f2efa6dd3c">enabled</a>);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* __IPHONEOS__ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="comment">/* Platform specific functions for Android */</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="preprocessor">#ifdef __ANDROID__</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="keyword">extern</span> DECLSPEC <span class="keywordtype">void</span> * SDLCALL <a class="code" href="../../d9/d7c/_s_d_l__system_8h.html#aae2559eaec8b8239360f629919ded363">SDL_AndroidGetJNIEnv</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="keyword">extern</span> DECLSPEC <span class="keywordtype">void</span> * SDLCALL <a class="code" href="../../d9/d7c/_s_d_l__system_8h.html#a5c8af38268c4bf8a2885d47a2c62e236">SDL_AndroidGetActivity</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="keyword">extern</span> DECLSPEC <span class="keywordtype">int</span> SDLCALL <a class="code" href="../../d9/d7c/_s_d_l__system_8h.html#ab24f21211fa79a76247ba1beab0ef4c7">SDL_GetAndroidSDKVersion</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="keyword">extern</span> DECLSPEC <a class="code" href="../../d9/d24/_s_d_l__stdinc_8h.html#a8fca68df0f976765230fe589a7c7733b">SDL_bool</a> SDLCALL <a class="code" href="../../d9/d7c/_s_d_l__system_8h.html#ad034e62cd98deb37b0407b3ee28ab377">SDL_IsAndroidTV</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160; </div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="keyword">extern</span> DECLSPEC <a class="code" href="../../d9/d24/_s_d_l__stdinc_8h.html#a8fca68df0f976765230fe589a7c7733b">SDL_bool</a> SDLCALL <a class="code" href="../../d9/d7c/_s_d_l__system_8h.html#a85e791b8175f0e81b324a6a974b3abaf">SDL_IsChromebook</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; </div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="keyword">extern</span> DECLSPEC <a class="code" href="../../d9/d24/_s_d_l__stdinc_8h.html#a8fca68df0f976765230fe589a7c7733b">SDL_bool</a> SDLCALL <a class="code" href="../../d9/d7c/_s_d_l__system_8h.html#a353602b01a75bb5a8714db48448edf3d">SDL_IsDeXMode</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160; </div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;<span class="keyword">extern</span> DECLSPEC <span class="keywordtype">void</span> SDLCALL <a class="code" href="../../d9/d7c/_s_d_l__system_8h.html#a763a0616f2892dd995b332f0c4515495">SDL_AndroidBackButton</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160; </div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;<span class="preprocessor">#define SDL_ANDROID_EXTERNAL_STORAGE_READ   0x01</span></div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;<span class="preprocessor">#define SDL_ANDROID_EXTERNAL_STORAGE_WRITE  0x02</span></div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160; </div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;<span class="keyword">extern</span> DECLSPEC <span class="keyword">const</span> <span class="keywordtype">char</span> * SDLCALL <a class="code" href="../../d9/d7c/_s_d_l__system_8h.html#a58501c9ea7e4ccfb1d83f2025540db18">SDL_AndroidGetInternalStoragePath</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160; </div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;<span class="keyword">extern</span> DECLSPEC <span class="keywordtype">int</span> SDLCALL <a class="code" href="../../d9/d7c/_s_d_l__system_8h.html#ad5b0a121988392b39eb1022bd836f571">SDL_AndroidGetExternalStorageState</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160; </div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;<span class="keyword">extern</span> DECLSPEC <span class="keyword">const</span> <span class="keywordtype">char</span> * SDLCALL <a class="code" href="../../d9/d7c/_s_d_l__system_8h.html#a5ca40a20f27902d5e90c42ac3b14a2fe">SDL_AndroidGetExternalStoragePath</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160; </div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* __ANDROID__ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160; </div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;<span class="comment">/* Platform specific functions for WinRT */</span></div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;<span class="preprocessor">#ifdef __WINRT__</span></div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160; </div>
+<div class="line"><a name="l00209"></a><span class="lineno"><a class="line" href="../../d9/d7c/_s_d_l__system_8h.html#a440cc3d867286d8f602805f95a08f1ee">  209</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;{</div>
+<div class="line"><a name="l00213"></a><span class="lineno"><a class="line" href="../../d9/d7c/_s_d_l__system_8h.html#a440cc3d867286d8f602805f95a08f1eeafb74cfaa0edb18afaf46cf9e555ecb40">  213</a></span>&#160;    <a class="code" href="../../d9/d7c/_s_d_l__system_8h.html#a440cc3d867286d8f602805f95a08f1eeafb74cfaa0edb18afaf46cf9e555ecb40">SDL_WINRT_PATH_INSTALLED_LOCATION</a>,</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160; </div>
+<div class="line"><a name="l00216"></a><span class="lineno"><a class="line" href="../../d9/d7c/_s_d_l__system_8h.html#a440cc3d867286d8f602805f95a08f1eeab471aff43442ebb033ba3fbbd3913a1c">  216</a></span>&#160;    <a class="code" href="../../d9/d7c/_s_d_l__system_8h.html#a440cc3d867286d8f602805f95a08f1eeab471aff43442ebb033ba3fbbd3913a1c">SDL_WINRT_PATH_LOCAL_FOLDER</a>,</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160; </div>
+<div class="line"><a name="l00222"></a><span class="lineno"><a class="line" href="../../d9/d7c/_s_d_l__system_8h.html#a440cc3d867286d8f602805f95a08f1eeae0f75b335ea464dde9b168fd1691b48f">  222</a></span>&#160;    <a class="code" href="../../d9/d7c/_s_d_l__system_8h.html#a440cc3d867286d8f602805f95a08f1eeae0f75b335ea464dde9b168fd1691b48f">SDL_WINRT_PATH_ROAMING_FOLDER</a>,</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160; </div>
+<div class="line"><a name="l00226"></a><span class="lineno"><a class="line" href="../../d9/d7c/_s_d_l__system_8h.html#a440cc3d867286d8f602805f95a08f1eea9a451c52f98a046705bdd51257657d23">  226</a></span>&#160;    <a class="code" href="../../d9/d7c/_s_d_l__system_8h.html#a440cc3d867286d8f602805f95a08f1eea9a451c52f98a046705bdd51257657d23">SDL_WINRT_PATH_TEMP_FOLDER</a></div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;} <a class="code" href="../../d9/d7c/_s_d_l__system_8h.html#a440cc3d867286d8f602805f95a08f1ee">SDL_WinRT_Path</a>;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160; </div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160; </div>
+<div class="line"><a name="l00233"></a><span class="lineno"><a class="line" href="../../d9/d7c/_s_d_l__system_8h.html#a08f4191a0cddd95466752fe2238ae810">  233</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;{</div>
+<div class="line"><a name="l00236"></a><span class="lineno"><a class="line" href="../../d9/d7c/_s_d_l__system_8h.html#a08f4191a0cddd95466752fe2238ae810a823f650aee2ecd29f75eb375e1daed08">  236</a></span>&#160;    <a class="code" href="../../d9/d7c/_s_d_l__system_8h.html#a08f4191a0cddd95466752fe2238ae810a823f650aee2ecd29f75eb375e1daed08">SDL_WINRT_DEVICEFAMILY_UNKNOWN</a>,</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160; </div>
+<div class="line"><a name="l00239"></a><span class="lineno"><a class="line" href="../../d9/d7c/_s_d_l__system_8h.html#a08f4191a0cddd95466752fe2238ae810a5bcf9c1dd6e4b919e5846e9311421748">  239</a></span>&#160;    <a class="code" href="../../d9/d7c/_s_d_l__system_8h.html#a08f4191a0cddd95466752fe2238ae810a5bcf9c1dd6e4b919e5846e9311421748">SDL_WINRT_DEVICEFAMILY_DESKTOP</a>,</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160; </div>
+<div class="line"><a name="l00242"></a><span class="lineno"><a class="line" href="../../d9/d7c/_s_d_l__system_8h.html#a08f4191a0cddd95466752fe2238ae810acb5e0dc9d4c9f8cc5138e7314140c490">  242</a></span>&#160;    <a class="code" href="../../d9/d7c/_s_d_l__system_8h.html#a08f4191a0cddd95466752fe2238ae810acb5e0dc9d4c9f8cc5138e7314140c490">SDL_WINRT_DEVICEFAMILY_MOBILE</a>,</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160; </div>
+<div class="line"><a name="l00245"></a><span class="lineno"><a class="line" href="../../d9/d7c/_s_d_l__system_8h.html#a08f4191a0cddd95466752fe2238ae810a10110058700c924bedd3fbe6127dd97e">  245</a></span>&#160;    <a class="code" href="../../d9/d7c/_s_d_l__system_8h.html#a08f4191a0cddd95466752fe2238ae810a10110058700c924bedd3fbe6127dd97e">SDL_WINRT_DEVICEFAMILY_XBOX</a>,</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;} <a class="code" href="../../d9/d7c/_s_d_l__system_8h.html#a08f4191a0cddd95466752fe2238ae810">SDL_WinRT_DeviceFamily</a>;</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160; </div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160; </div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;<span class="keyword">extern</span> DECLSPEC <span class="keyword">const</span> <span class="keywordtype">wchar_t</span> * SDLCALL <a class="code" href="../../d9/d7c/_s_d_l__system_8h.html#a7d7bcf2ef5aee2ba60aefe387d473ab1">SDL_WinRTGetFSPathUNICODE</a>(<a class="code" href="../../d9/d7c/_s_d_l__system_8h.html#a440cc3d867286d8f602805f95a08f1ee">SDL_WinRT_Path</a> pathType);</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160; </div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;<span class="keyword">extern</span> DECLSPEC <span class="keyword">const</span> <span class="keywordtype">char</span> * SDLCALL <a class="code" href="../../d9/d7c/_s_d_l__system_8h.html#a26c195948692ce218bd848b0bc6ed950">SDL_WinRTGetFSPathUTF8</a>(<a class="code" href="../../d9/d7c/_s_d_l__system_8h.html#a440cc3d867286d8f602805f95a08f1ee">SDL_WinRT_Path</a> pathType);</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160; </div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;<span class="keyword">extern</span> DECLSPEC <a class="code" href="../../d9/d7c/_s_d_l__system_8h.html#a08f4191a0cddd95466752fe2238ae810">SDL_WinRT_DeviceFamily</a> SDLCALL <a class="code" href="../../d9/d7c/_s_d_l__system_8h.html#ab3496685286ce4d1c25a57e222dd28f8">SDL_WinRTGetDeviceFamily</a>();</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160; </div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* __WINRT__ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160; </div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;<span class="keyword">extern</span> DECLSPEC <a class="code" href="../../d9/d24/_s_d_l__stdinc_8h.html#a8fca68df0f976765230fe589a7c7733b">SDL_bool</a> SDLCALL <a class="code" href="../../d9/d7c/_s_d_l__system_8h.html#a211a146233e8e37c64185105132e6257">SDL_IsTablet</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160; </div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;<span class="comment">/* Functions used by iOS application delegates to notify SDL about state changes */</span></div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;<span class="keyword">extern</span> DECLSPEC <span class="keywordtype">void</span> SDLCALL <a class="code" href="../../d9/d7c/_s_d_l__system_8h.html#ae3e44a610898157232a49a754fc3ab9a">SDL_OnApplicationWillTerminate</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;<span class="keyword">extern</span> DECLSPEC <span class="keywordtype">void</span> SDLCALL <a class="code" href="../../d9/d7c/_s_d_l__system_8h.html#ae0ff6644972f065a06072426a0f1691f">SDL_OnApplicationDidReceiveMemoryWarning</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;<span class="keyword">extern</span> DECLSPEC <span class="keywordtype">void</span> SDLCALL <a class="code" href="../../d9/d7c/_s_d_l__system_8h.html#ad8e8c246a466b29a84a9018cb0803a55">SDL_OnApplicationWillResignActive</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;<span class="keyword">extern</span> DECLSPEC <span class="keywordtype">void</span> SDLCALL <a class="code" href="../../d9/d7c/_s_d_l__system_8h.html#af10116e8b6a71fb584a0cec7e582f9ec">SDL_OnApplicationDidEnterBackground</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;<span class="keyword">extern</span> DECLSPEC <span class="keywordtype">void</span> SDLCALL <a class="code" href="../../d9/d7c/_s_d_l__system_8h.html#a4292c3354aed782e634ee116d23cfd26">SDL_OnApplicationWillEnterForeground</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;<span class="keyword">extern</span> DECLSPEC <span class="keywordtype">void</span> SDLCALL <a class="code" href="../../d9/d7c/_s_d_l__system_8h.html#a3e224d35ef257b2a7583e02ac9dabe90">SDL_OnApplicationDidBecomeActive</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;<span class="preprocessor">#ifdef __IPHONEOS__</span></div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;<span class="keyword">extern</span> DECLSPEC <span class="keywordtype">void</span> SDLCALL <a class="code" href="../../d9/d7c/_s_d_l__system_8h.html#a28c907d23a5db116b0287d2eb89f2fdb">SDL_OnApplicationDidChangeStatusBarOrientation</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160; </div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;<span class="comment">/* Ends C function definitions when using C++ */</span></div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;}</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d0/d2e/close__code_8h.html">close_code.h</a>&quot;</span></div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160; </div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* SDL_system_h_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160; </div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;<span class="comment">/* vi: set ts=4 sw=4 expandtab: */</span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="a_s_d_l__system_8h_html_a5ca40a20f27902d5e90c42ac3b14a2fe"><div class="ttname"><a href="../../d9/d7c/_s_d_l__system_8h.html#a5ca40a20f27902d5e90c42ac3b14a2fe">SDL_AndroidGetExternalStoragePath</a></div><div class="ttdeci">const DECLSPEC char *SDLCALL SDL_AndroidGetExternalStoragePath(void)</div><div class="ttdoc">Get the path used for external storage for this application.</div></div>
+<div class="ttc" id="a_s_d_l__system_8h_html_ad5b0a121988392b39eb1022bd836f571"><div class="ttname"><a href="../../d9/d7c/_s_d_l__system_8h.html#ad5b0a121988392b39eb1022bd836f571">SDL_AndroidGetExternalStorageState</a></div><div class="ttdeci">DECLSPEC int SDLCALL SDL_AndroidGetExternalStorageState(void)</div><div class="ttdoc">Get the current state of external storage, a bitmask of these values: SDL_ANDROID_EXTERNAL_STORAGE_RE...</div></div>
+<div class="ttc" id="a_s_d_l__system_8h_html_aae2559eaec8b8239360f629919ded363"><div class="ttname"><a href="../../d9/d7c/_s_d_l__system_8h.html#aae2559eaec8b8239360f629919ded363">SDL_AndroidGetJNIEnv</a></div><div class="ttdeci">DECLSPEC void *SDLCALL SDL_AndroidGetJNIEnv(void)</div><div class="ttdoc">Get the JNI environment for the current thread.</div></div>
+<div class="ttc" id="a_s_d_l__render_8h_html"><div class="ttname"><a href="../../d6/d30/_s_d_l__render_8h.html">SDL_render.h</a></div></div>
+<div class="ttc" id="a_s_d_l__system_8h_html_ad8b089710ddbb2e3133c8b78d687051e"><div class="ttname"><a href="../../d9/d7c/_s_d_l__system_8h.html#ad8b089710ddbb2e3133c8b78d687051e">SDL_LinuxSetThreadPriority</a></div><div class="ttdeci">DECLSPEC int SDLCALL SDL_LinuxSetThreadPriority(Sint64 threadID, int priority)</div><div class="ttdoc">Sets the UNIX nice value for a thread, using setpriority() if possible, and RealtimeKit if available.</div></div>
+<div class="ttc" id="a_s_d_l__system_8h_html_a6e02336961a1fe8dd27c04733117371a"><div class="ttname"><a href="../../d9/d7c/_s_d_l__system_8h.html#a6e02336961a1fe8dd27c04733117371a">SDL_Direct3D9GetAdapterIndex</a></div><div class="ttdeci">DECLSPEC int SDLCALL SDL_Direct3D9GetAdapterIndex(int displayIndex)</div><div class="ttdoc">Returns the D3D9 adapter index that matches the specified display index.</div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a7b6161cffb9b8aee272b3b916183d28c"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a7b6161cffb9b8aee272b3b916183d28c">message</a></div><div class="ttdeci">GLuint GLsizei const GLchar * message</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l02486">SDL_opengl_glext.h:2486</a></div></div>
+<div class="ttc" id="a_s_d_l__system_8h_html_a26c195948692ce218bd848b0bc6ed950"><div class="ttname"><a href="../../d9/d7c/_s_d_l__system_8h.html#a26c195948692ce218bd848b0bc6ed950">SDL_WinRTGetFSPathUTF8</a></div><div class="ttdeci">const DECLSPEC char *SDLCALL SDL_WinRTGetFSPathUTF8(SDL_WinRT_Path pathType)</div><div class="ttdoc">Retrieves a WinRT defined path on the local file system.</div></div>
+<div class="ttc" id="a_s_d_l__system_8h_html_a28c907d23a5db116b0287d2eb89f2fdb"><div class="ttname"><a href="../../d9/d7c/_s_d_l__system_8h.html#a28c907d23a5db116b0287d2eb89f2fdb">SDL_OnApplicationDidChangeStatusBarOrientation</a></div><div class="ttdeci">DECLSPEC void SDLCALL SDL_OnApplicationDidChangeStatusBarOrientation(void)</div></div>
+<div class="ttc" id="a_s_d_l__keyboard_8h_html"><div class="ttname"><a href="../../d3/d07/_s_d_l__keyboard_8h.html">SDL_keyboard.h</a></div></div>
+<div class="ttc" id="a_s_d_l__system_8h_html_a5c8af38268c4bf8a2885d47a2c62e236"><div class="ttname"><a href="../../d9/d7c/_s_d_l__system_8h.html#a5c8af38268c4bf8a2885d47a2c62e236">SDL_AndroidGetActivity</a></div><div class="ttdeci">DECLSPEC void *SDLCALL SDL_AndroidGetActivity(void)</div><div class="ttdoc">Get the SDL Activity object for the application.</div></div>
+<div class="ttc" id="a_s_d_l__system_8h_html_ae3e44a610898157232a49a754fc3ab9a"><div class="ttname"><a href="../../d9/d7c/_s_d_l__system_8h.html#ae3e44a610898157232a49a754fc3ab9a">SDL_OnApplicationWillTerminate</a></div><div class="ttdeci">DECLSPEC void SDLCALL SDL_OnApplicationWillTerminate(void)</div></div>
+<div class="ttc" id="a_s_d_l__system_8h_html_aa995839c488ceda33ed998bbfa79c2a9"><div class="ttname"><a href="../../d9/d7c/_s_d_l__system_8h.html#aa995839c488ceda33ed998bbfa79c2a9">IDirect3DDevice9</a></div><div class="ttdeci">struct IDirect3DDevice9 IDirect3DDevice9</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d7c/_s_d_l__system_8h_source.html#l00060">SDL_system.h:60</a></div></div>
+<div class="ttc" id="a_s_d_l__system_8h_html_a4292c3354aed782e634ee116d23cfd26"><div class="ttname"><a href="../../d9/d7c/_s_d_l__system_8h.html#a4292c3354aed782e634ee116d23cfd26">SDL_OnApplicationWillEnterForeground</a></div><div class="ttdeci">DECLSPEC void SDLCALL SDL_OnApplicationWillEnterForeground(void)</div></div>
+<div class="ttc" id="a_s_d_l__system_8h_html_a58501c9ea7e4ccfb1d83f2025540db18"><div class="ttname"><a href="../../d9/d7c/_s_d_l__system_8h.html#a58501c9ea7e4ccfb1d83f2025540db18">SDL_AndroidGetInternalStoragePath</a></div><div class="ttdeci">const DECLSPEC char *SDLCALL SDL_AndroidGetInternalStoragePath(void)</div><div class="ttdoc">Get the path used for internal storage for this application.</div></div>
+<div class="ttc" id="a_s_d_l__system_8h_html_a763a0616f2892dd995b332f0c4515495"><div class="ttname"><a href="../../d9/d7c/_s_d_l__system_8h.html#a763a0616f2892dd995b332f0c4515495">SDL_AndroidBackButton</a></div><div class="ttdeci">DECLSPEC void SDLCALL SDL_AndroidBackButton(void)</div><div class="ttdoc">Trigger the Android system back button behavior.</div></div>
+<div class="ttc" id="a_s_d_l__system_8h_html_af10116e8b6a71fb584a0cec7e582f9ec"><div class="ttname"><a href="../../d9/d7c/_s_d_l__system_8h.html#af10116e8b6a71fb584a0cec7e582f9ec">SDL_OnApplicationDidEnterBackground</a></div><div class="ttdeci">DECLSPEC void SDLCALL SDL_OnApplicationDidEnterBackground(void)</div></div>
+<div class="ttc" id="aclose__code_8h_html"><div class="ttname"><a href="../../d0/d2e/close__code_8h.html">close_code.h</a></div></div>
+<div class="ttc" id="a_s_d_l__system_8h_html_a2893a6e30c95d576736e333237b98bbc"><div class="ttname"><a href="../../d9/d7c/_s_d_l__system_8h.html#a2893a6e30c95d576736e333237b98bbc">SDL_WindowsMessageHook</a></div><div class="ttdeci">void(SDLCALL * SDL_WindowsMessageHook)(void *userdata, void *hWnd, unsigned int message, Uint64 wParam, Sint64 lParam)</div><div class="ttdoc">Set a function that is called for every windows message, before TranslateMessage()</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d7c/_s_d_l__system_8h_source.html#l00049">SDL_system.h:49</a></div></div>
+<div class="ttc" id="a_s_d_l__system_8h_html_a08f4191a0cddd95466752fe2238ae810a10110058700c924bedd3fbe6127dd97e"><div class="ttname"><a href="../../d9/d7c/_s_d_l__system_8h.html#a08f4191a0cddd95466752fe2238ae810a10110058700c924bedd3fbe6127dd97e">SDL_WINRT_DEVICEFAMILY_XBOX</a></div><div class="ttdeci">@ SDL_WINRT_DEVICEFAMILY_XBOX</div><div class="ttdoc">XBox family.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d7c/_s_d_l__system_8h_source.html#l00245">SDL_system.h:245</a></div></div>
+<div class="ttc" id="abegin__code_8h_html"><div class="ttname"><a href="../../d1/d90/begin__code_8h.html">begin_code.h</a></div></div>
+<div class="ttc" id="a_s_d_l__system_8h_html_ad034e62cd98deb37b0407b3ee28ab377"><div class="ttname"><a href="../../d9/d7c/_s_d_l__system_8h.html#ad034e62cd98deb37b0407b3ee28ab377">SDL_IsAndroidTV</a></div><div class="ttdeci">DECLSPEC SDL_bool SDLCALL SDL_IsAndroidTV(void)</div><div class="ttdoc">Return true if the application is running on Android TV.</div></div>
+<div class="ttc" id="a_s_d_l__system_8h_html_aa39cfd8b255adb42149c7204ecf50823"><div class="ttname"><a href="../../d9/d7c/_s_d_l__system_8h.html#aa39cfd8b255adb42149c7204ecf50823">SDL_iPhoneSetAnimationCallback</a></div><div class="ttdeci">DECLSPEC int SDLCALL SDL_iPhoneSetAnimationCallback(SDL_Window *window, int interval, void(*callback)(void *), void *callbackParam)</div></div>
+<div class="ttc" id="a_s_d_l__system_8h_html_a08f4191a0cddd95466752fe2238ae810a5bcf9c1dd6e4b919e5846e9311421748"><div class="ttname"><a href="../../d9/d7c/_s_d_l__system_8h.html#a08f4191a0cddd95466752fe2238ae810a5bcf9c1dd6e4b919e5846e9311421748">SDL_WINRT_DEVICEFAMILY_DESKTOP</a></div><div class="ttdeci">@ SDL_WINRT_DEVICEFAMILY_DESKTOP</div><div class="ttdoc">Desktop family.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d7c/_s_d_l__system_8h_source.html#l00239">SDL_system.h:239</a></div></div>
+<div class="ttc" id="a_s_d_l__system_8h_html_a440cc3d867286d8f602805f95a08f1eeafb74cfaa0edb18afaf46cf9e555ecb40"><div class="ttname"><a href="../../d9/d7c/_s_d_l__system_8h.html#a440cc3d867286d8f602805f95a08f1eeafb74cfaa0edb18afaf46cf9e555ecb40">SDL_WINRT_PATH_INSTALLED_LOCATION</a></div><div class="ttdeci">@ SDL_WINRT_PATH_INSTALLED_LOCATION</div><div class="ttdoc">The installed app's root directory. Files here are likely to be read-only.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d7c/_s_d_l__system_8h_source.html#l00213">SDL_system.h:213</a></div></div>
+<div class="ttc" id="a_s_d_l__system_8h_html_a08f4191a0cddd95466752fe2238ae810"><div class="ttname"><a href="../../d9/d7c/_s_d_l__system_8h.html#a08f4191a0cddd95466752fe2238ae810">SDL_WinRT_DeviceFamily</a></div><div class="ttdeci">SDL_WinRT_DeviceFamily</div><div class="ttdoc">WinRT Device Family.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d7c/_s_d_l__system_8h_source.html#l00233">SDL_system.h:233</a></div></div>
+<div class="ttc" id="astruct_s_d_l___surface_html_ae66d973dcb9b57cb34815892e1ee1f31"><div class="ttname"><a href="../../d6/d0f/struct_s_d_l___surface.html#ae66d973dcb9b57cb34815892e1ee1f31">SDL_Surface::userdata</a></div><div class="ttdeci">void * userdata</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6d/_s_d_l__surface_8h_source.html#l00079">SDL_surface.h:79</a></div></div>
+<div class="ttc" id="a_s_d_l__system_8h_html_a3e224d35ef257b2a7583e02ac9dabe90"><div class="ttname"><a href="../../d9/d7c/_s_d_l__system_8h.html#a3e224d35ef257b2a7583e02ac9dabe90">SDL_OnApplicationDidBecomeActive</a></div><div class="ttdeci">DECLSPEC void SDLCALL SDL_OnApplicationDidBecomeActive(void)</div></div>
+<div class="ttc" id="a_s_d_l__system_8h_html_a85e791b8175f0e81b324a6a974b3abaf"><div class="ttname"><a href="../../d9/d7c/_s_d_l__system_8h.html#a85e791b8175f0e81b324a6a974b3abaf">SDL_IsChromebook</a></div><div class="ttdeci">DECLSPEC SDL_bool SDLCALL SDL_IsChromebook(void)</div><div class="ttdoc">Return true if the application is running on a Chromebook.</div></div>
+<div class="ttc" id="a_s_d_l__system_8h_html_a7d7bcf2ef5aee2ba60aefe387d473ab1"><div class="ttname"><a href="../../d9/d7c/_s_d_l__system_8h.html#a7d7bcf2ef5aee2ba60aefe387d473ab1">SDL_WinRTGetFSPathUNICODE</a></div><div class="ttdeci">const DECLSPEC wchar_t *SDLCALL SDL_WinRTGetFSPathUNICODE(SDL_WinRT_Path pathType)</div><div class="ttdoc">Retrieves a WinRT defined path on the local file system.</div></div>
+<div class="ttc" id="a_s_d_l__egl_8h_html_a92dbce8e3247f6a78126c99877caacb6"><div class="ttname"><a href="../../df/d32/_s_d_l__egl_8h.html#a92dbce8e3247f6a78126c99877caacb6">window</a></div><div class="ttdeci">EGLSurface EGLNativeWindowType * window</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/_s_d_l__egl_8h_source.html#l01580">SDL_egl.h:1580</a></div></div>
+<div class="ttc" id="a_s_d_l__system_8h_html_a211a146233e8e37c64185105132e6257"><div class="ttname"><a href="../../d9/d7c/_s_d_l__system_8h.html#a211a146233e8e37c64185105132e6257">SDL_IsTablet</a></div><div class="ttdeci">DECLSPEC SDL_bool SDLCALL SDL_IsTablet(void)</div><div class="ttdoc">Return true if the current device is a tablet.</div></div>
+<div class="ttc" id="a_s_d_l__system_8h_html_a440cc3d867286d8f602805f95a08f1eea9a451c52f98a046705bdd51257657d23"><div class="ttname"><a href="../../d9/d7c/_s_d_l__system_8h.html#a440cc3d867286d8f602805f95a08f1eea9a451c52f98a046705bdd51257657d23">SDL_WINRT_PATH_TEMP_FOLDER</a></div><div class="ttdeci">@ SDL_WINRT_PATH_TEMP_FOLDER</div><div class="ttdoc">The app's temporary data store. Unsupported on Windows Phone. Files written here may be deleted at an...</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d7c/_s_d_l__system_8h_source.html#l00226">SDL_system.h:226</a></div></div>
+<div class="ttc" id="a_s_d_l__system_8h_html_a440cc3d867286d8f602805f95a08f1ee"><div class="ttname"><a href="../../d9/d7c/_s_d_l__system_8h.html#a440cc3d867286d8f602805f95a08f1ee">SDL_WinRT_Path</a></div><div class="ttdeci">SDL_WinRT_Path</div><div class="ttdoc">WinRT / Windows Phone path types.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d7c/_s_d_l__system_8h_source.html#l00209">SDL_system.h:209</a></div></div>
+<div class="ttc" id="a_s_d_l__system_8h_html_ad8e8c246a466b29a84a9018cb0803a55"><div class="ttname"><a href="../../d9/d7c/_s_d_l__system_8h.html#ad8e8c246a466b29a84a9018cb0803a55">SDL_OnApplicationWillResignActive</a></div><div class="ttdeci">DECLSPEC void SDLCALL SDL_OnApplicationWillResignActive(void)</div></div>
+<div class="ttc" id="a_s_d_l__system_8h_html_ab24f21211fa79a76247ba1beab0ef4c7"><div class="ttname"><a href="../../d9/d7c/_s_d_l__system_8h.html#ab24f21211fa79a76247ba1beab0ef4c7">SDL_GetAndroidSDKVersion</a></div><div class="ttdeci">DECLSPEC int SDLCALL SDL_GetAndroidSDKVersion(void)</div><div class="ttdoc">Return API level of the current device.</div></div>
+<div class="ttc" id="a_s_d_l__system_8h_html_a08f4191a0cddd95466752fe2238ae810a823f650aee2ecd29f75eb375e1daed08"><div class="ttname"><a href="../../d9/d7c/_s_d_l__system_8h.html#a08f4191a0cddd95466752fe2238ae810a823f650aee2ecd29f75eb375e1daed08">SDL_WINRT_DEVICEFAMILY_UNKNOWN</a></div><div class="ttdeci">@ SDL_WINRT_DEVICEFAMILY_UNKNOWN</div><div class="ttdoc">Unknown family</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d7c/_s_d_l__system_8h_source.html#l00236">SDL_system.h:236</a></div></div>
+<div class="ttc" id="a_s_d_l__audio_8h_html_aa5cb90967788ada2711894ca158ece01"><div class="ttname"><a href="../../d3/d78/_s_d_l__audio_8h.html#aa5cb90967788ada2711894ca158ece01">void</a></div><div class="ttdeci">typedef void(SDLCALL *SDL_AudioFilter)(struct SDL_AudioCVT *cvt</div></div>
+<div class="ttc" id="a_s_d_l__stdinc_8h_html_a8fca68df0f976765230fe589a7c7733b"><div class="ttname"><a href="../../d9/d24/_s_d_l__stdinc_8h.html#a8fca68df0f976765230fe589a7c7733b">SDL_bool</a></div><div class="ttdeci">SDL_bool</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d24/_s_d_l__stdinc_8h_source.html#l00161">SDL_stdinc.h:161</a></div></div>
+<div class="ttc" id="a_s_d_l__system_8h_html_a440cc3d867286d8f602805f95a08f1eeab471aff43442ebb033ba3fbbd3913a1c"><div class="ttname"><a href="../../d9/d7c/_s_d_l__system_8h.html#a440cc3d867286d8f602805f95a08f1eeab471aff43442ebb033ba3fbbd3913a1c">SDL_WINRT_PATH_LOCAL_FOLDER</a></div><div class="ttdeci">@ SDL_WINRT_PATH_LOCAL_FOLDER</div><div class="ttdoc">The app's local data store. Files may be written here.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d7c/_s_d_l__system_8h_source.html#l00216">SDL_system.h:216</a></div></div>
+<div class="ttc" id="a_s_d_l__system_8h_html_a353602b01a75bb5a8714db48448edf3d"><div class="ttname"><a href="../../d9/d7c/_s_d_l__system_8h.html#a353602b01a75bb5a8714db48448edf3d">SDL_IsDeXMode</a></div><div class="ttdeci">DECLSPEC SDL_bool SDLCALL SDL_IsDeXMode(void)</div><div class="ttdoc">Return true is the application is running on a Samsung DeX docking station.</div></div>
+<div class="ttc" id="a_s_d_l__video_8h_html_a55a196c7d3b8497538632c79ae1e6392"><div class="ttname"><a href="../../dc/d64/_s_d_l__video_8h.html#a55a196c7d3b8497538632c79ae1e6392">SDL_Window</a></div><div class="ttdeci">struct SDL_Window SDL_Window</div><div class="ttdoc">The type used to identify a window.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d64/_s_d_l__video_8h_source.html#l00090">SDL_video.h:90</a></div></div>
+<div class="ttc" id="a_s_d_l__stdinc_8h_html_ac006cf2bd55a42a9cc8ae9f123aa7e13"><div class="ttname"><a href="../../d9/d24/_s_d_l__stdinc_8h.html#ac006cf2bd55a42a9cc8ae9f123aa7e13">Uint64</a></div><div class="ttdeci">uint64_t Uint64</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d24/_s_d_l__stdinc_8h_source.html#l00216">SDL_stdinc.h:216</a></div></div>
+<div class="ttc" id="a_s_d_l__stdinc_8h_html"><div class="ttname"><a href="../../d9/d24/_s_d_l__stdinc_8h.html">SDL_stdinc.h</a></div></div>
+<div class="ttc" id="a_s_d_l__system_8h_html_a440cc3d867286d8f602805f95a08f1eeae0f75b335ea464dde9b168fd1691b48f"><div class="ttname"><a href="../../d9/d7c/_s_d_l__system_8h.html#a440cc3d867286d8f602805f95a08f1eeae0f75b335ea464dde9b168fd1691b48f">SDL_WINRT_PATH_ROAMING_FOLDER</a></div><div class="ttdeci">@ SDL_WINRT_PATH_ROAMING_FOLDER</div><div class="ttdoc">The app's roaming data store. Unsupported on Windows Phone. Files written here may be copied to other...</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d7c/_s_d_l__system_8h_source.html#l00222">SDL_system.h:222</a></div></div>
+<div class="ttc" id="a_s_d_l__system_8h_html_adcfe0853c55093a8f7ea6d5b9ff41097"><div class="ttname"><a href="../../d9/d7c/_s_d_l__system_8h.html#adcfe0853c55093a8f7ea6d5b9ff41097">SDL_RenderGetD3D9Device</a></div><div class="ttdeci">DECLSPEC IDirect3DDevice9 *SDLCALL SDL_RenderGetD3D9Device(SDL_Renderer *renderer)</div><div class="ttdoc">Returns the D3D device associated with a renderer, or NULL if it's not a D3D renderer.</div></div>
+<div class="ttc" id="a_s_d_l__system_8h_html_ab3496685286ce4d1c25a57e222dd28f8"><div class="ttname"><a href="../../d9/d7c/_s_d_l__system_8h.html#ab3496685286ce4d1c25a57e222dd28f8">SDL_WinRTGetDeviceFamily</a></div><div class="ttdeci">DECLSPEC SDL_WinRT_DeviceFamily SDLCALL SDL_WinRTGetDeviceFamily()</div><div class="ttdoc">Detects the device family of WinRT plattform on runtime.</div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a0455a397ab5468d21c3021f2efa6dd3c"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0455a397ab5468d21c3021f2efa6dd3c">enabled</a></div><div class="ttdeci">GLenum GLenum GLsizei const GLuint GLboolean enabled</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l02482">SDL_opengl_glext.h:2482</a></div></div>
+<div class="ttc" id="a_s_d_l__system_8h_html_a3ee70959067d938e3a3f80e43f3157a8"><div class="ttname"><a href="../../d9/d7c/_s_d_l__system_8h.html#a3ee70959067d938e3a3f80e43f3157a8">SDL_SetWindowsMessageHook</a></div><div class="ttdeci">DECLSPEC void SDLCALL SDL_SetWindowsMessageHook(SDL_WindowsMessageHook callback, void *userdata)</div></div>
+<div class="ttc" id="a_s_d_l__system_8h_html_a08f4191a0cddd95466752fe2238ae810acb5e0dc9d4c9f8cc5138e7314140c490"><div class="ttname"><a href="../../d9/d7c/_s_d_l__system_8h.html#a08f4191a0cddd95466752fe2238ae810acb5e0dc9d4c9f8cc5138e7314140c490">SDL_WINRT_DEVICEFAMILY_MOBILE</a></div><div class="ttdeci">@ SDL_WINRT_DEVICEFAMILY_MOBILE</div><div class="ttdoc">Mobile family (for example smartphone)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d7c/_s_d_l__system_8h_source.html#l00242">SDL_system.h:242</a></div></div>
+<div class="ttc" id="a_s_d_l__video_8h_html"><div class="ttname"><a href="../../dc/d64/_s_d_l__video_8h.html">SDL_video.h</a></div></div>
+<div class="ttc" id="a_s_d_l__render_8h_html_aaf0bf7d020754fc614fe06552ea4d5d4"><div class="ttname"><a href="../../d6/d30/_s_d_l__render_8h.html#aaf0bf7d020754fc614fe06552ea4d5d4">SDL_Renderer</a></div><div class="ttdeci">struct SDL_Renderer SDL_Renderer</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d30/_s_d_l__render_8h_source.html#l00132">SDL_render.h:132</a></div></div>
+<div class="ttc" id="a_s_d_l__system_8h_html_a4b4fb7a09ddb8304b18debf6bfd7ca13"><div class="ttname"><a href="../../d9/d7c/_s_d_l__system_8h.html#a4b4fb7a09ddb8304b18debf6bfd7ca13">SDL_iPhoneSetEventPump</a></div><div class="ttdeci">DECLSPEC void SDLCALL SDL_iPhoneSetEventPump(SDL_bool enabled)</div></div>
+<div class="ttc" id="a_s_d_l__stdinc_8h_html_a2c1a61d5c466bb74680be0a8cc1b455d"><div class="ttname"><a href="../../d9/d24/_s_d_l__stdinc_8h.html#a2c1a61d5c466bb74680be0a8cc1b455d">Sint64</a></div><div class="ttdeci">int64_t Sint64</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d24/_s_d_l__stdinc_8h_source.html#l00210">SDL_stdinc.h:210</a></div></div>
+<div class="ttc" id="a_s_d_l__system_8h_html_a4d89d5fdbaa443c76856d612739d17c0"><div class="ttname"><a href="../../d9/d7c/_s_d_l__system_8h.html#a4d89d5fdbaa443c76856d612739d17c0">SDL_DXGIGetOutputInfo</a></div><div class="ttdeci">DECLSPEC SDL_bool SDLCALL SDL_DXGIGetOutputInfo(int displayIndex, int *adapterIndex, int *outputIndex)</div><div class="ttdoc">Returns the DXGI Adapter and Output indices for the specified display index.</div></div>
+<div class="ttc" id="a_s_d_l__system_8h_html_ae0ff6644972f065a06072426a0f1691f"><div class="ttname"><a href="../../d9/d7c/_s_d_l__system_8h.html#ae0ff6644972f065a06072426a0f1691f">SDL_OnApplicationDidReceiveMemoryWarning</a></div><div class="ttdeci">DECLSPEC void SDLCALL SDL_OnApplicationDidReceiveMemoryWarning(void)</div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_97aefd0d527b934f1d99a682da8fe6a9.html">lib</a></li><li class="navelem"><a class="el" href="../../dir_da53678e933bc13c5b44fc9f96ac81aa.html">win32</a></li><li class="navelem"><a class="el" href="../../dir_7ac189985cec0e073b46d34a5d96bfc1.html">x86</a></li><li class="navelem"><a class="el" href="../../dir_7b0bc3efc80275bf98f373482bc8cca9.html">sdl2-2.0.12</a></li><li class="navelem"><a class="el" href="../../dir_9d91f83a81d35ca44b21a6c37d7d8d02.html">include</a></li><li class="navelem"><a class="el" href="../../d9/d7c/_s_d_l__system_8h.html">SDL_system.h</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:03:43. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

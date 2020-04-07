@@ -1,0 +1,729 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Файл C:/git/world-of-might-and-magic/GUI/UI/UIStatusBar.cpp</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d4/dca/_u_i_status_bar_8cpp.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл UIStatusBar.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><a href="../../d4/dca/_u_i_status_bar_8cpp_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a8ad9e37393859e27c512528b4c1b4b2f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dca/_u_i_status_bar_8cpp.html#a8ad9e37393859e27c512528b4c1b4b2f">GameUI_StatusBar_Set</a> (const <a class="el" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> &amp;str)</td></tr>
+<tr class="separator:a8ad9e37393859e27c512528b4c1b4b2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e726ffc3354113fbc3415e7cb658603"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dca/_u_i_status_bar_8cpp.html#a7e726ffc3354113fbc3415e7cb658603">GameUI_StatusBar_Clear</a> ()</td></tr>
+<tr class="separator:a7e726ffc3354113fbc3415e7cb658603"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9e77ce19b84f27cfb17ed5b8da6e519"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dca/_u_i_status_bar_8cpp.html#aa9e77ce19b84f27cfb17ed5b8da6e519">GameUI_StatusBar_OnEvent_Internal</a> (const <a class="el" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> &amp;str, unsigned int ms)</td></tr>
+<tr class="separator:aa9e77ce19b84f27cfb17ed5b8da6e519"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe7a1f2130faa2a0a455965241061a8c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dca/_u_i_status_bar_8cpp.html#abe7a1f2130faa2a0a455965241061a8c">GameUI_StatusBar_OnEvent</a> (const <a class="el" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> &amp;str, unsigned int num_seconds)</td></tr>
+<tr class="separator:abe7a1f2130faa2a0a455965241061a8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45756237f08c467347fc41d30810178c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dca/_u_i_status_bar_8cpp.html#a45756237f08c467347fc41d30810178c">GameUI_StatusBar_OnEvent_128ms</a> (const <a class="el" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> &amp;str)</td></tr>
+<tr class="separator:a45756237f08c467347fc41d30810178c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a127f5066d006717bae55e25121fa782e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dca/_u_i_status_bar_8cpp.html#a127f5066d006717bae55e25121fa782e">GameUI_StatusBar_ClearEventString</a> ()</td></tr>
+<tr class="separator:a127f5066d006717bae55e25121fa782e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a377596845e101c2d665c7e80e53af7bd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dca/_u_i_status_bar_8cpp.html#a377596845e101c2d665c7e80e53af7bd">GameUI_StatusBar_OnInput</a> (const <a class="el" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> &amp;str)</td></tr>
+<tr class="separator:a377596845e101c2d665c7e80e53af7bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13e7e631e9ff481d3b5282fc676b537c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dca/_u_i_status_bar_8cpp.html#a13e7e631e9ff481d3b5282fc676b537c">GameUI_StatusBar_GetInput</a> ()</td></tr>
+<tr class="separator:a13e7e631e9ff481d3b5282fc676b537c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50d78866e6dd14f38f59c0bbb5fe22ff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dca/_u_i_status_bar_8cpp.html#a50d78866e6dd14f38f59c0bbb5fe22ff">GameUI_StatusBar_ClearInputString</a> ()</td></tr>
+<tr class="separator:a50d78866e6dd14f38f59c0bbb5fe22ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f9f821959278c0f7d6d2200c38e247c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dca/_u_i_status_bar_8cpp.html#a2f9f821959278c0f7d6d2200c38e247c">GameUI_StatusBar_NothingHere</a> ()</td></tr>
+<tr class="separator:a2f9f821959278c0f7d6d2200c38e247c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4deffde6a3eb7a758e7b484230094f82"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dca/_u_i_status_bar_8cpp.html#a4deffde6a3eb7a758e7b484230094f82">GameUI_StatusBar_DrawForced</a> ()</td></tr>
+<tr class="separator:a4deffde6a3eb7a758e7b484230094f82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cfc7a24c81a9c29469370a441eec568"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dca/_u_i_status_bar_8cpp.html#a0cfc7a24c81a9c29469370a441eec568">GameUI_StatusBar_Draw</a> ()</td></tr>
+<tr class="separator:a0cfc7a24c81a9c29469370a441eec568"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17bbc7a9910d08427f658850ba3ab7d6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dca/_u_i_status_bar_8cpp.html#a17bbc7a9910d08427f658850ba3ab7d6">GameUI_StatusBar_DrawImmediate</a> (const <a class="el" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> &amp;str, int <a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a3ea846f998d64f079b86052b6c4193a8">color</a>)</td></tr>
+<tr class="separator:a17bbc7a9910d08427f658850ba3ab7d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Функции</h2>
+<a id="a8ad9e37393859e27c512528b4c1b4b2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ad9e37393859e27c512528b4c1b4b2f">&#9670;&nbsp;</a></span>GameUI_StatusBar_Set()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> GameUI_StatusBar_Set </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>str</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d4/dca/_u_i_status_bar_8cpp_source.html">UIStatusBar.cpp</a> строка <a class="el" href="../../d4/dca/_u_i_status_bar_8cpp_source.html#l00015">15</a></p>
+<div class="fragment"><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;                                             {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordflow">if</span> (str.length() &gt; 0) {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="../../d6/d5b/mm7__data_8cpp.html#ad5cf96d15e3f974563fb937bd6d1ab16">game_ui_status_bar_event_string_time_left</a>) {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            <a class="code" href="../../d6/d5b/mm7__data_8cpp.html#adf31739afebc40860a6d2b9e743ecbc6">game_ui_status_bar_string</a> = str;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        }</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    }</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d6/d5b/mm7__data_8cpp_source.html#l00639">game_ui_status_bar_event_string_time_left</a> и <a class="el" href="../../d6/d5b/mm7__data_8cpp_source.html#l00638">game_ui_status_bar_string</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d8/d67/_chest_8cpp_source.html#l00175">Chest::ChestUI_WritePointedObjectStatusString()</a>, <a class="el" href="../../d7/db5/_game_8cpp_source.html#l00322">Application::Game::EventLoop()</a> и <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l01266">GameUI_WritePointedObjectStatusString()</a>.</p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d4/dca/_u_i_status_bar_8cpp_a8ad9e37393859e27c512528b4c1b4b2f_icgraph.svg" width="100%" height="399"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a7e726ffc3354113fbc3415e7cb658603"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e726ffc3354113fbc3415e7cb658603">&#9670;&nbsp;</a></span>GameUI_StatusBar_Clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> GameUI_StatusBar_Clear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d4/dca/_u_i_status_bar_8cpp_source.html">UIStatusBar.cpp</a> строка <a class="el" href="../../d4/dca/_u_i_status_bar_8cpp_source.html#l00023">23</a></p>
+<div class="fragment"><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                              {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="../../d6/d5b/mm7__data_8cpp.html#adf31739afebc40860a6d2b9e743ecbc6">game_ui_status_bar_string</a>.clear();</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="../../d4/dca/_u_i_status_bar_8cpp.html#a127f5066d006717bae55e25121fa782e">GameUI_StatusBar_ClearEventString</a>();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d6/d5b/mm7__data_8cpp_source.html#l00638">game_ui_status_bar_string</a> и <a class="el" href="../../d4/dca/_u_i_status_bar_8cpp_source.html#l00041">GameUI_StatusBar_ClearEventString()</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l00826">EnterHouse()</a> и <a class="el" href="../../d7/db5/_game_8cpp_source.html#l00322">Application::Game::EventLoop()</a>.</p>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d4/dca/_u_i_status_bar_8cpp_a7e726ffc3354113fbc3415e7cb658603_cgraph.svg" width="432" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d4/dca/_u_i_status_bar_8cpp_a7e726ffc3354113fbc3415e7cb658603_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="aa9e77ce19b84f27cfb17ed5b8da6e519"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9e77ce19b84f27cfb17ed5b8da6e519">&#9670;&nbsp;</a></span>GameUI_StatusBar_OnEvent_Internal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> GameUI_StatusBar_OnEvent_Internal </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>ms</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d4/dca/_u_i_status_bar_8cpp_source.html">UIStatusBar.cpp</a> строка <a class="el" href="../../d4/dca/_u_i_status_bar_8cpp_source.html#l00028">28</a></p>
+<div class="fragment"><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                                                                           {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="../../d6/d5b/mm7__data_8cpp.html#aa4d11a1d711c6d54bc2295f19104ddd2">game_ui_status_bar_event_string</a> = str;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="../../d6/d5b/mm7__data_8cpp.html#ad5cf96d15e3f974563fb937bd6d1ab16">game_ui_status_bar_event_string_time_left</a> = <a class="code" href="../../d4/ddd/_api_8h.html#ac0cda4967d55e3ade51d622720b64936">OS_GetTime</a>() + ms;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d6/d5b/mm7__data_8cpp_source.html#l00637">game_ui_status_bar_event_string</a>, <a class="el" href="../../d6/d5b/mm7__data_8cpp_source.html#l00639">game_ui_status_bar_event_string_time_left</a> и <a class="el" href="../../de/d84/_lin_8cpp_source.html#l00012">OS_GetTime()</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/dca/_u_i_status_bar_8cpp_source.html#l00033">GameUI_StatusBar_OnEvent()</a> и <a class="el" href="../../d4/dca/_u_i_status_bar_8cpp_source.html#l00037">GameUI_StatusBar_OnEvent_128ms()</a>.</p>
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d4/dca/_u_i_status_bar_8cpp_aa9e77ce19b84f27cfb17ed5b8da6e519_cgraph.svg" width="347" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d4/dca/_u_i_status_bar_8cpp_aa9e77ce19b84f27cfb17ed5b8da6e519_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="abe7a1f2130faa2a0a455965241061a8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe7a1f2130faa2a0a455965241061a8c">&#9670;&nbsp;</a></span>GameUI_StatusBar_OnEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> GameUI_StatusBar_OnEvent </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>num_seconds</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d4/dca/_u_i_status_bar_8cpp_source.html">UIStatusBar.cpp</a> строка <a class="el" href="../../d4/dca/_u_i_status_bar_8cpp_source.html#l00033">33</a></p>
+<div class="fragment"><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                                                                           {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="../../d4/dca/_u_i_status_bar_8cpp.html#aa9e77ce19b84f27cfb17ed5b8da6e519">GameUI_StatusBar_OnEvent_Internal</a>(str, 1000 * num_seconds);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d4/dca/_u_i_status_bar_8cpp_source.html#l00028">GameUI_StatusBar_OnEvent_Internal()</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d9/dd3/_cast_spell_info_8cpp_source.html#l00046">CastSpellInfoHelpers::_427E01_cast_spell()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l05658">Player::AddVariable()</a>, <a class="el" href="../../dc/dce/_g_u_i_window_8cpp_source.html#l01412">ClickNPCTopic()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l03379">Actor::DamageMonsterFromParty()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l06928">DamagePlayerFromMonster()</a>, <a class="el" href="../../d4/d9d/_save_load_8cpp_source.html#l00514">DoSavegame()</a>, <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l00826">EnterHouse()</a>, <a class="el" href="../../d7/db5/_game_8cpp_source.html#l00322">Application::Game::EventLoop()</a>, <a class="el" href="../../df/d5c/_events_8cpp_source.html#l00260">EventProcessor()</a>, <a class="el" href="../../df/d21/_game_menu_8cpp_source.html#l00044">Game_QuitGameWhilePlaying()</a>, <a class="el" href="../../df/d21/_game_menu_8cpp_source.html#l00029">Game_StartNewGameWhilePlaying()</a>, <a class="el" href="../../d7/db5/_game_8cpp_source.html#l02704">Application::Game::GameLoop()</a>, <a class="el" href="../../d6/ded/_u_i_popup_8cpp_source.html#l00168">GameUI_DrawItemInfo()</a>, <a class="el" href="../../d4/dca/_u_i_status_bar_8cpp_source.html#l00057">GameUI_StatusBar_NothingHere()</a>, <a class="el" href="../../d8/d67/_chest_8cpp_source.html#l00580">Chest::GrabItem()</a>, <a class="el" href="../../d4/d5b/_u_i_guilds_8cpp_source.html#l00027">GuildDialog()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l00778">Player::HasSkill()</a>, <a class="el" href="../../d6/ded/_u_i_popup_8cpp_source.html#l01817">Inventory_ItemPopupAndAlchemy()</a>, <a class="el" href="../../dd/da4/_viewport_8cpp_source.html#l00224">ItemInteraction()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l04064">Actor::LootActor()</a>, <a class="el" href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00147">OnCastTargetedSpell::OnCastTargetedSpell()</a>, <a class="el" href="../../dd/d76/_u_i_dialogue_8cpp_source.html#l00660">OnSelectNPCDialogueOption()</a>, <a class="el" href="../../da/db4/_party_8cpp_source.html#l00976">Party::PartyFindsGold()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l05061">Player::SetVariable()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l01667">Player::StealFromActor()</a>, <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l03266">sub_4B6478()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l06230">Player::SubtractVariable()</a>, <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l02200">TavernDialog()</a>, <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l02599">TempleDialog()</a>, <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l02933">TrainingDialog()</a>, <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l01673">TravelByTransport()</a>, <a class="el" href="../../d9/d21/_u_i_shops_8cpp_source.html#l00874">UIShop_Buy_Identify_Repair()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l03850">Player::UseItem_DrinkPotion_etc()</a> и <a class="el" href="../../d1/d6c/_n_p_c_8cpp_source.html#l01378">UseNPCSkill()</a>.</p>
+<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d4/dca/_u_i_status_bar_8cpp_abe7a1f2130faa2a0a455965241061a8c_cgraph.svg" width="586" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d4/dca/_u_i_status_bar_8cpp_abe7a1f2130faa2a0a455965241061a8c_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a45756237f08c467347fc41d30810178c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45756237f08c467347fc41d30810178c">&#9670;&nbsp;</a></span>GameUI_StatusBar_OnEvent_128ms()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> GameUI_StatusBar_OnEvent_128ms </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>str</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d4/dca/_u_i_status_bar_8cpp_source.html">UIStatusBar.cpp</a> строка <a class="el" href="../../d4/dca/_u_i_status_bar_8cpp_source.html#l00037">37</a></p>
+<div class="fragment"><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                                                       {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="../../d4/dca/_u_i_status_bar_8cpp.html#aa9e77ce19b84f27cfb17ed5b8da6e519">GameUI_StatusBar_OnEvent_Internal</a>(str, 128);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d4/dca/_u_i_status_bar_8cpp_source.html#l00028">GameUI_StatusBar_OnEvent_Internal()</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l01623">_494035_timed_effects__water_walking_damage__etc()</a>.</p>
+<div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-7-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-7-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d4/dca/_u_i_status_bar_8cpp_a45756237f08c467347fc41d30810178c_cgraph.svg" width="586" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-8-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-8-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d4/dca/_u_i_status_bar_8cpp_a45756237f08c467347fc41d30810178c_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a127f5066d006717bae55e25121fa782e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a127f5066d006717bae55e25121fa782e">&#9670;&nbsp;</a></span>GameUI_StatusBar_ClearEventString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> GameUI_StatusBar_ClearEventString </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d4/dca/_u_i_status_bar_8cpp_source.html">UIStatusBar.cpp</a> строка <a class="el" href="../../d4/dca/_u_i_status_bar_8cpp_source.html#l00041">41</a></p>
+<div class="fragment"><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                                         {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="../../d6/d5b/mm7__data_8cpp.html#aa4d11a1d711c6d54bc2295f19104ddd2">game_ui_status_bar_event_string</a>.clear();</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="../../d6/d5b/mm7__data_8cpp.html#ad5cf96d15e3f974563fb937bd6d1ab16">game_ui_status_bar_event_string_time_left</a> = 0;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d6/d5b/mm7__data_8cpp_source.html#l00637">game_ui_status_bar_event_string</a> и <a class="el" href="../../d6/d5b/mm7__data_8cpp_source.html#l00639">game_ui_status_bar_event_string_time_left</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d7/db5/_game_8cpp_source.html#l00322">Application::Game::EventLoop()</a> и <a class="el" href="../../d4/dca/_u_i_status_bar_8cpp_source.html#l00023">GameUI_StatusBar_Clear()</a>.</p>
+<div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-9-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-9-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d4/dca/_u_i_status_bar_8cpp_a127f5066d006717bae55e25121fa782e_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a377596845e101c2d665c7e80e53af7bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a377596845e101c2d665c7e80e53af7bd">&#9670;&nbsp;</a></span>GameUI_StatusBar_OnInput()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> GameUI_StatusBar_OnInput </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>str</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d4/dca/_u_i_status_bar_8cpp_source.html">UIStatusBar.cpp</a> строка <a class="el" href="../../d4/dca/_u_i_status_bar_8cpp_source.html#l00046">46</a></p>
+<div class="fragment"><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                                                 {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="../../d6/d5b/mm7__data_8cpp.html#aa4d11a1d711c6d54bc2295f19104ddd2">game_ui_status_bar_event_string</a> = <a class="code" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a>(str);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d6/d5b/mm7__data_8cpp_source.html#l00637">game_ui_status_bar_event_string</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../dd/d76/_u_i_dialogue_8cpp_source.html#l00552">GUIWindow_GenericDialogue::Update()</a>.</p>
+<div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-10-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-10-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-10-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d4/dca/_u_i_status_bar_8cpp_a377596845e101c2d665c7e80e53af7bd_icgraph.svg" width="438" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a13e7e631e9ff481d3b5282fc676b537c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13e7e631e9ff481d3b5282fc676b537c">&#9670;&nbsp;</a></span>GameUI_StatusBar_GetInput()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> GameUI_StatusBar_GetInput </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d4/dca/_u_i_status_bar_8cpp_source.html">UIStatusBar.cpp</a> строка <a class="el" href="../../d4/dca/_u_i_status_bar_8cpp_source.html#l00050">50</a></p>
+<div class="fragment"><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="../../d6/d5b/mm7__data_8cpp.html#aa4d11a1d711c6d54bc2295f19104ddd2">game_ui_status_bar_event_string</a>; }</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d6/d5b/mm7__data_8cpp_source.html#l00637">game_ui_status_bar_event_string</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../dd/d76/_u_i_dialogue_8cpp_source.html#l00552">GUIWindow_GenericDialogue::Update()</a>.</p>
+<div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-11-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-11-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-11-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d4/dca/_u_i_status_bar_8cpp_a13e7e631e9ff481d3b5282fc676b537c_icgraph.svg" width="442" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a50d78866e6dd14f38f59c0bbb5fe22ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50d78866e6dd14f38f59c0bbb5fe22ff">&#9670;&nbsp;</a></span>GameUI_StatusBar_ClearInputString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> GameUI_StatusBar_ClearInputString </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d4/dca/_u_i_status_bar_8cpp_source.html">UIStatusBar.cpp</a> строка <a class="el" href="../../d4/dca/_u_i_status_bar_8cpp_source.html#l00052">52</a></p>
+<div class="fragment"><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                                         {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <a class="code" href="../../d6/d5b/mm7__data_8cpp.html#aa4d11a1d711c6d54bc2295f19104ddd2">game_ui_status_bar_event_string</a>.clear();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <a class="code" href="../../d6/d5b/mm7__data_8cpp.html#ad5cf96d15e3f974563fb937bd6d1ab16">game_ui_status_bar_event_string_time_left</a> = 0;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d6/d5b/mm7__data_8cpp_source.html#l00637">game_ui_status_bar_event_string</a> и <a class="el" href="../../d6/d5b/mm7__data_8cpp_source.html#l00639">game_ui_status_bar_event_string_time_left</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../dd/d76/_u_i_dialogue_8cpp_source.html#l00552">GUIWindow_GenericDialogue::Update()</a>.</p>
+<div id="dynsection-12" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-12-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-12-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-12-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d4/dca/_u_i_status_bar_8cpp_a50d78866e6dd14f38f59c0bbb5fe22ff_icgraph.svg" width="450" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a2f9f821959278c0f7d6d2200c38e247c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f9f821959278c0f7d6d2200c38e247c">&#9670;&nbsp;</a></span>GameUI_StatusBar_NothingHere()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> GameUI_StatusBar_NothingHere </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d4/dca/_u_i_status_bar_8cpp_source.html">UIStatusBar.cpp</a> строка <a class="el" href="../../d4/dca/_u_i_status_bar_8cpp_source.html#l00057">57</a></p>
+<div class="fragment"><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                                    {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="../../d6/d5b/mm7__data_8cpp.html#ad5cf96d15e3f974563fb937bd6d1ab16">game_ui_status_bar_event_string_time_left</a>) {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <a class="code" href="../../d4/dca/_u_i_status_bar_8cpp.html#abe7a1f2130faa2a0a455965241061a8c">GameUI_StatusBar_OnEvent</a>(<a class="code" href="../../dd/d8c/_localization_8cpp.html#acce22610cffe19ad6cc8f577cd611b8b">localization</a>-&gt;<a class="code" href="../../dd/d88/class_localization.html#a0eb0a17fdf90f6a420eeac65bf62436f">GetString</a>(521));  <span class="comment">// Nothing here</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d6/d5b/mm7__data_8cpp_source.html#l00639">game_ui_status_bar_event_string_time_left</a>, <a class="el" href="../../d4/dca/_u_i_status_bar_8cpp_source.html#l00033">GameUI_StatusBar_OnEvent()</a>, <a class="el" href="../../dd/d8c/_localization_8cpp_source.html#l00013">Localization::GetString()</a> и <a class="el" href="../../dd/d8c/_localization_8cpp_source.html#l00011">localization</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l03716">DoInteractionWithTopmostZObject()</a> и <a class="el" href="../../dd/da4/_viewport_8cpp_source.html#l00315">Engine::OnGameViewportClick()</a>.</p>
+<div id="dynsection-13" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-13-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-13-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-13-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d4/dca/_u_i_status_bar_8cpp_a2f9f821959278c0f7d6d2200c38e247c_cgraph.svg" width="100%" height="372"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div id="dynsection-14" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-14-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-14-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-14-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d4/dca/_u_i_status_bar_8cpp_a2f9f821959278c0f7d6d2200c38e247c_icgraph.svg" width="100%" height="378"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a4deffde6a3eb7a758e7b484230094f82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4deffde6a3eb7a758e7b484230094f82">&#9670;&nbsp;</a></span>GameUI_StatusBar_DrawForced()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> GameUI_StatusBar_DrawForced </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d4/dca/_u_i_status_bar_8cpp_source.html">UIStatusBar.cpp</a> строка <a class="el" href="../../d4/dca/_u_i_status_bar_8cpp_source.html#l00063">63</a></p>
+<div class="fragment"><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                                   {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../d6/d5b/mm7__data_8cpp.html#adf31739afebc40860a6d2b9e743ecbc6">game_ui_status_bar_string</a>.length() &gt; 0 ||</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <a class="code" href="../../d6/d5b/mm7__data_8cpp.html#ad5cf96d15e3f974563fb937bd6d1ab16">game_ui_status_bar_event_string_time_left</a> || <a class="code" href="../../d6/d5b/mm7__data_8cpp.html#ae0451cb4ecfed63eda5aa1401d8acbc0">bForceDrawFooter</a>) {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <a class="code" href="../../d6/d5b/mm7__data_8cpp.html#ae0451cb4ecfed63eda5aa1401d8acbc0">bForceDrawFooter</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <a class="code" href="../../d4/dca/_u_i_status_bar_8cpp.html#a0cfc7a24c81a9c29469370a441eec568">GameUI_StatusBar_Draw</a>();</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    }</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d6/d5b/mm7__data_8cpp_source.html#l00640">bForceDrawFooter</a>, <a class="el" href="../../d6/d5b/mm7__data_8cpp_source.html#l00639">game_ui_status_bar_event_string_time_left</a>, <a class="el" href="../../d6/d5b/mm7__data_8cpp_source.html#l00638">game_ui_status_bar_string</a> и <a class="el" href="../../d4/dca/_u_i_status_bar_8cpp_source.html#l00071">GameUI_StatusBar_Draw()</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l00252">Engine::DrawGUI()</a>.</p>
+<div id="dynsection-15" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-15-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-15-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-15-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d4/dca/_u_i_status_bar_8cpp_a4deffde6a3eb7a758e7b484230094f82_cgraph.svg" width="100%" height="378"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div id="dynsection-16" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-16-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-16-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-16-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d4/dca/_u_i_status_bar_8cpp_a4deffde6a3eb7a758e7b484230094f82_icgraph.svg" width="538" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a0cfc7a24c81a9c29469370a441eec568"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0cfc7a24c81a9c29469370a441eec568">&#9670;&nbsp;</a></span>GameUI_StatusBar_Draw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> GameUI_StatusBar_Draw </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d4/dca/_u_i_status_bar_8cpp_source.html">UIStatusBar.cpp</a> строка <a class="el" href="../../d4/dca/_u_i_status_bar_8cpp_source.html#l00071">71</a></p>
+<div class="fragment"><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                             {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <a class="code" href="../../da/d20/_i_render_8h.html#a21d31464313b2c66ff88d4aa97b66143">render</a>-&gt;DrawTextureNew(0, 352 / 480.0<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a>, <a class="code" href="../../da/db4/_u_i_game_8cpp.html#aaa77e0c6d37e7c96d64c7977186428ce">game_ui_statusbar</a>);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <a class="code" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> status;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../d6/d5b/mm7__data_8cpp.html#ad5cf96d15e3f974563fb937bd6d1ab16">game_ui_status_bar_event_string_time_left</a>) {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        status = <a class="code" href="../../d6/d5b/mm7__data_8cpp.html#aa4d11a1d711c6d54bc2295f19104ddd2">game_ui_status_bar_event_string</a>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        status = <a class="code" href="../../d6/d5b/mm7__data_8cpp.html#adf31739afebc40860a6d2b9e743ecbc6">game_ui_status_bar_string</a>;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordflow">if</span> (status.length() &gt; 0) {</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <a class="code" href="../../dc/dce/_g_u_i_window_8cpp.html#ae2c9c502485c7db2c74ad737e3c5bd97">pPrimaryWindow</a>-&gt;<a class="code" href="../../d4/d38/class_g_u_i_window.html#a009aad05d919c42979eebb93d8b4354c">DrawText</a>(</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            <a class="code" href="../../d4/d5e/_g_u_i_font_8cpp.html#a20125354aa9f9043e5405fc5c9a4898c">pFontLucida</a>, <a class="code" href="../../d4/d5e/_g_u_i_font_8cpp.html#a20125354aa9f9043e5405fc5c9a4898c">pFontLucida</a>-&gt;<a class="code" href="../../d3/d39/class_g_u_i_font.html#a9fa3825419fdf34ded3536e27bccbfdf">AlignText_Center</a>(450, status) + 11, 357,</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <a class="code" href="../../d6/d5b/mm7__data_8cpp.html#a49d85cf24eb1389089d0c3e0aca29e97">uGameUIFontMain</a>, status, 0, 0, <a class="code" href="../../d6/d5b/mm7__data_8cpp.html#a3da76193dd51a8de1a1e9161221101e6">uGameUIFontShadow</a>);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    }</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d4/d5e/_g_u_i_font_8cpp_source.html#l00306">GUIFont::AlignText_Center()</a>, <a class="el" href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00694">GUIWindow::DrawText()</a>, <a class="el" href="../../d6/d5b/mm7__data_8cpp_source.html#l00637">game_ui_status_bar_event_string</a>, <a class="el" href="../../d6/d5b/mm7__data_8cpp_source.html#l00639">game_ui_status_bar_event_string_time_left</a>, <a class="el" href="../../d6/d5b/mm7__data_8cpp_source.html#l00638">game_ui_status_bar_string</a>, <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l00055">game_ui_statusbar</a>, <a class="el" href="../../d4/d5e/_g_u_i_font_8cpp_source.html#l00019">pFontLucida</a>, <a class="el" href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00048">pPrimaryWindow</a>, <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l00052">render</a>, <a class="el" href="../../d6/d5b/mm7__data_8cpp_source.html#l00553">uGameUIFontMain</a> и <a class="el" href="../../d6/d5b/mm7__data_8cpp_source.html#l00552">uGameUIFontShadow</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l00252">Engine::DrawGUI()</a>, <a class="el" href="../../d4/dca/_u_i_status_bar_8cpp_source.html#l00063">GameUI_StatusBar_DrawForced()</a> и <a class="el" href="../../df/d21/_game_menu_8cpp_source.html#l00512">Application::Menu::MenuLoop()</a>.</p>
+<div id="dynsection-17" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-17-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-17-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-17-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d4/dca/_u_i_status_bar_8cpp_a0cfc7a24c81a9c29469370a441eec568_cgraph.svg" width="100%" height="378"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div id="dynsection-18" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-18-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-18-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-18-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d4/dca/_u_i_status_bar_8cpp_a0cfc7a24c81a9c29469370a441eec568_icgraph.svg" width="100%" height="397"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a17bbc7a9910d08427f658850ba3ab7d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17bbc7a9910d08427f658850ba3ab7d6">&#9670;&nbsp;</a></span>GameUI_StatusBar_DrawImmediate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> GameUI_StatusBar_DrawImmediate </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>color</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d4/dca/_u_i_status_bar_8cpp_source.html">UIStatusBar.cpp</a> строка <a class="el" href="../../d4/dca/_u_i_status_bar_8cpp_source.html#l00088">88</a></p>
+<div class="fragment"><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                                                                  {</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <a class="code" href="../../da/d20/_i_render_8h.html#a21d31464313b2c66ff88d4aa97b66143">render</a>-&gt;DrawTextureNew(0, 352 / 480.0<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a>, <a class="code" href="../../da/db4/_u_i_game_8cpp.html#aaa77e0c6d37e7c96d64c7977186428ce">game_ui_statusbar</a>);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <a class="code" href="../../dc/dce/_g_u_i_window_8cpp.html#ae2c9c502485c7db2c74ad737e3c5bd97">pPrimaryWindow</a>-&gt;<a class="code" href="../../d4/d38/class_g_u_i_window.html#a009aad05d919c42979eebb93d8b4354c">DrawText</a>(<a class="code" href="../../d4/d5e/_g_u_i_font_8cpp.html#a20125354aa9f9043e5405fc5c9a4898c">pFontLucida</a>,</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                             <a class="code" href="../../d4/d5e/_g_u_i_font_8cpp.html#a20125354aa9f9043e5405fc5c9a4898c">pFontLucida</a>-&gt;<a class="code" href="../../d3/d39/class_g_u_i_font.html#a9fa3825419fdf34ded3536e27bccbfdf">AlignText_Center</a>(450, str) + 11, 357,</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                             <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a3ea846f998d64f079b86052b6c4193a8">color</a>, str);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d4/d5e/_g_u_i_font_8cpp_source.html#l00306">GUIFont::AlignText_Center()</a>, <a class="el" href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00694">GUIWindow::DrawText()</a>, <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l00055">game_ui_statusbar</a>, <a class="el" href="../../d4/d5e/_g_u_i_font_8cpp_source.html#l00019">pFontLucida</a>, <a class="el" href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00048">pPrimaryWindow</a> и <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l00052">render</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d9/d21/_u_i_shops_8cpp_source.html#l00648">AlchemyMagicShopWares()</a>, <a class="el" href="../../d9/d21/_u_i_shops_8cpp_source.html#l00483">ArmorShopWares()</a>, <a class="el" href="../../d4/d5b/_u_i_guilds_8cpp_source.html#l00027">GuildDialog()</a>, <a class="el" href="../../d9/d21/_u_i_shops_8cpp_source.html#l00165">ShopDialogIdentify()</a>, <a class="el" href="../../d9/d21/_u_i_shops_8cpp_source.html#l00201">ShopDialogRepair()</a>, <a class="el" href="../../d9/d21/_u_i_shops_8cpp_source.html#l00132">ShopDialogSellEquip()</a> и <a class="el" href="../../d9/d21/_u_i_shops_8cpp_source.html#l00327">WeaponShopWares()</a>.</p>
+<div id="dynsection-19" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-19-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-19-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-19-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d4/dca/_u_i_status_bar_8cpp_a17bbc7a9910d08427f658850ba3ab7d6_cgraph.svg" width="100%" height="378"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div id="dynsection-20" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-20-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-20-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-20-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d4/dca/_u_i_status_bar_8cpp_a17bbc7a9910d08427f658850ba3ab7d6_icgraph.svg" width="100%" height="541"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aclass_g_u_i_window_html_a009aad05d919c42979eebb93d8b4354c"><div class="ttname"><a href="../../d4/d38/class_g_u_i_window.html#a009aad05d919c42979eebb93d8b4354c">GUIWindow::DrawText</a></div><div class="ttdeci">void DrawText(GUIFont *font, int x, int y, unsigned short uFontColor, const char *str, bool present_time_transparency=false, int max_text_height=0, int uFontShadowColor=0)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00694">GUIWindow.cpp:694</a></div></div>
+<div class="ttc" id="aclass_localization_html_a0eb0a17fdf90f6a420eeac65bf62436f"><div class="ttname"><a href="../../dd/d88/class_localization.html#a0eb0a17fdf90f6a420eeac65bf62436f">Localization::GetString</a></div><div class="ttdeci">const char * GetString(unsigned int index) const</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d8c/_localization_8cpp_source.html#l00013">Localization.cpp:13</a></div></div>
+<div class="ttc" id="a_localization_8cpp_html_acce22610cffe19ad6cc8f577cd611b8b"><div class="ttname"><a href="../../dd/d8c/_localization_8cpp.html#acce22610cffe19ad6cc8f577cd611b8b">localization</a></div><div class="ttdeci">Localization * localization</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d8c/_localization_8cpp_source.html#l00011">Localization.cpp:11</a></div></div>
+<div class="ttc" id="a_u_i_status_bar_8cpp_html_aa9e77ce19b84f27cfb17ed5b8da6e519"><div class="ttname"><a href="../../d4/dca/_u_i_status_bar_8cpp.html#aa9e77ce19b84f27cfb17ed5b8da6e519">GameUI_StatusBar_OnEvent_Internal</a></div><div class="ttdeci">void GameUI_StatusBar_OnEvent_Internal(const String &amp;str, unsigned int ms)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dca/_u_i_status_bar_8cpp_source.html#l00028">UIStatusBar.cpp:28</a></div></div>
+<div class="ttc" id="amm7__data_8cpp_html_a3da76193dd51a8de1a1e9161221101e6"><div class="ttname"><a href="../../d6/d5b/mm7__data_8cpp.html#a3da76193dd51a8de1a1e9161221101e6">uGameUIFontShadow</a></div><div class="ttdeci">unsigned int uGameUIFontShadow</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d5b/mm7__data_8cpp_source.html#l00552">mm7_data.cpp:552</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a3ea846f998d64f079b86052b6c4193a8"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a3ea846f998d64f079b86052b6c4193a8">color</a></div><div class="ttdeci">GLuint color</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l01151">SDL_opengl_glext.h:1151</a></div></div>
+<div class="ttc" id="aclass_g_u_i_font_html_a9fa3825419fdf34ded3536e27bccbfdf"><div class="ttname"><a href="../../d3/d39/class_g_u_i_font.html#a9fa3825419fdf34ded3536e27bccbfdf">GUIFont::AlignText_Center</a></div><div class="ttdeci">unsigned int AlignText_Center(unsigned int width, const String &amp;str)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d5e/_g_u_i_font_8cpp_source.html#l00306">GUIFont.cpp:306</a></div></div>
+<div class="ttc" id="a_api_8h_html_ac0cda4967d55e3ade51d622720b64936"><div class="ttname"><a href="../../d4/ddd/_api_8h.html#ac0cda4967d55e3ade51d622720b64936">OS_GetTime</a></div><div class="ttdeci">unsigned int OS_GetTime()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d84/_lin_8cpp_source.html#l00012">Lin.cpp:12</a></div></div>
+<div class="ttc" id="a_u_i_status_bar_8cpp_html_a0cfc7a24c81a9c29469370a441eec568"><div class="ttname"><a href="../../d4/dca/_u_i_status_bar_8cpp.html#a0cfc7a24c81a9c29469370a441eec568">GameUI_StatusBar_Draw</a></div><div class="ttdeci">void GameUI_StatusBar_Draw()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dca/_u_i_status_bar_8cpp_source.html#l00071">UIStatusBar.cpp:71</a></div></div>
+<div class="ttc" id="amm7__data_8cpp_html_a49d85cf24eb1389089d0c3e0aca29e97"><div class="ttname"><a href="../../d6/d5b/mm7__data_8cpp.html#a49d85cf24eb1389089d0c3e0aca29e97">uGameUIFontMain</a></div><div class="ttdeci">unsigned int uGameUIFontMain</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d5b/mm7__data_8cpp_source.html#l00553">mm7_data.cpp:553</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a691492ec0bd6383f91200e49f6ae40ed"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a></div><div class="ttdeci">GLfloat f</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l01873">SDL_opengl_glext.h:1873</a></div></div>
+<div class="ttc" id="amm7__data_8cpp_html_adf31739afebc40860a6d2b9e743ecbc6"><div class="ttname"><a href="../../d6/d5b/mm7__data_8cpp.html#adf31739afebc40860a6d2b9e743ecbc6">game_ui_status_bar_string</a></div><div class="ttdeci">String game_ui_status_bar_string</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d5b/mm7__data_8cpp_source.html#l00638">mm7_data.cpp:638</a></div></div>
+<div class="ttc" id="amm7__data_8cpp_html_ad5cf96d15e3f974563fb937bd6d1ab16"><div class="ttname"><a href="../../d6/d5b/mm7__data_8cpp.html#ad5cf96d15e3f974563fb937bd6d1ab16">game_ui_status_bar_event_string_time_left</a></div><div class="ttdeci">unsigned int game_ui_status_bar_event_string_time_left</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d5b/mm7__data_8cpp_source.html#l00639">mm7_data.cpp:639</a></div></div>
+<div class="ttc" id="a_u_i_game_8cpp_html_aaa77e0c6d37e7c96d64c7977186428ce"><div class="ttname"><a href="../../da/db4/_u_i_game_8cpp.html#aaa77e0c6d37e7c96d64c7977186428ce">game_ui_statusbar</a></div><div class="ttdeci">Image * game_ui_statusbar</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db4/_u_i_game_8cpp_source.html#l00055">UIGame.cpp:55</a></div></div>
+<div class="ttc" id="amm7__data_8cpp_html_ae0451cb4ecfed63eda5aa1401d8acbc0"><div class="ttname"><a href="../../d6/d5b/mm7__data_8cpp.html#ae0451cb4ecfed63eda5aa1401d8acbc0">bForceDrawFooter</a></div><div class="ttdeci">int bForceDrawFooter</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d5b/mm7__data_8cpp_source.html#l00640">mm7_data.cpp:640</a></div></div>
+<div class="ttc" id="a_u_i_status_bar_8cpp_html_abe7a1f2130faa2a0a455965241061a8c"><div class="ttname"><a href="../../d4/dca/_u_i_status_bar_8cpp.html#abe7a1f2130faa2a0a455965241061a8c">GameUI_StatusBar_OnEvent</a></div><div class="ttdeci">void GameUI_StatusBar_OnEvent(const String &amp;str, unsigned int num_seconds)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dca/_u_i_status_bar_8cpp_source.html#l00033">UIStatusBar.cpp:33</a></div></div>
+<div class="ttc" id="a_u_i_status_bar_8cpp_html_a127f5066d006717bae55e25121fa782e"><div class="ttname"><a href="../../d4/dca/_u_i_status_bar_8cpp.html#a127f5066d006717bae55e25121fa782e">GameUI_StatusBar_ClearEventString</a></div><div class="ttdeci">void GameUI_StatusBar_ClearEventString()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dca/_u_i_status_bar_8cpp_source.html#l00041">UIStatusBar.cpp:41</a></div></div>
+<div class="ttc" id="a_g_u_i_window_8cpp_html_ae2c9c502485c7db2c74ad737e3c5bd97"><div class="ttname"><a href="../../dc/dce/_g_u_i_window_8cpp.html#ae2c9c502485c7db2c74ad737e3c5bd97">pPrimaryWindow</a></div><div class="ttdeci">GUIWindow * pPrimaryWindow</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00048">GUIWindow.cpp:48</a></div></div>
+<div class="ttc" id="a_g_u_i_font_8cpp_html_a20125354aa9f9043e5405fc5c9a4898c"><div class="ttname"><a href="../../d4/d5e/_g_u_i_font_8cpp.html#a20125354aa9f9043e5405fc5c9a4898c">pFontLucida</a></div><div class="ttdeci">GUIFont * pFontLucida</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d5e/_g_u_i_font_8cpp_source.html#l00019">GUIFont.cpp:19</a></div></div>
+<div class="ttc" id="amm7__data_8cpp_html_aa4d11a1d711c6d54bc2295f19104ddd2"><div class="ttname"><a href="../../d6/d5b/mm7__data_8cpp.html#aa4d11a1d711c6d54bc2295f19104ddd2">game_ui_status_bar_event_string</a></div><div class="ttdeci">String game_ui_status_bar_event_string</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d5b/mm7__data_8cpp_source.html#l00637">mm7_data.cpp:637</a></div></div>
+<div class="ttc" id="a_strings_8h_html_afbeda3fd1bdc8c37d01bdf9f5c8274ff"><div class="ttname"><a href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a></div><div class="ttdeci">std::string String</div><div class="ttdef"><b>Definition:</b> <a href="../../de/df7/_strings_8h_source.html#l00010">Strings.h:10</a></div></div>
+<div class="ttc" id="a_i_render_8h_html_a21d31464313b2c66ff88d4aa97b66143"><div class="ttname"><a href="../../da/d20/_i_render_8h.html#a21d31464313b2c66ff88d4aa97b66143">render</a></div><div class="ttdeci">std::shared_ptr&lt; IRender &gt; render</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d79/_render_open_g_l_8cpp_source.html#l00052">RenderOpenGL.cpp:52</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_171b764decf33d63a7df2fab4f4bc6d8.html">GUI</a></li><li class="navelem"><a class="el" href="../../dir_008f70fed27c4008afe49ab10279d8cb.html">UI</a></li><li class="navelem"><a class="el" href="../../d4/dca/_u_i_status_bar_8cpp.html">UIStatusBar.cpp</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:04:13. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

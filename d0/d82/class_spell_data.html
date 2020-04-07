@@ -1,0 +1,506 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Класс SpellData</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d0/d82/class_spell_data.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="../../da/dfa/class_spell_data-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс SpellData</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="../../d5/d7d/_spells_8h_source.html">Spells.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:ab34ca543878ba6ec039d1f428cdb8edd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d82/class_spell_data.html#ab34ca543878ba6ec039d1f428cdb8edd">SpellData</a> (__int16 innormalMana, __int16 inExpertLevelMana, __int16 inMasterLevelMana, __int16 inMagisterLevelMana, __int16 inNormalLevelRecovery, __int16 inExpertLevelRecovery, __int16 inMasterLevelRecovery, __int16 inMagisterLevelRecovery, __int8 inbaseDamage, __int8 inbonusSkillDamage, __int16 instats)</td></tr>
+<tr class="separator:ab34ca543878ba6ec039d1f428cdb8edd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:aa77c04e65a780e889c8df1fb68271ec5"><td class="memItemLeft" >union {</td></tr>
+<tr class="memitem:a997870d4e488d5acbaf5bd3b097868dc"><td class="memItemLeft" >&#160;&#160;&#160;unsigned __int16&#160;&#160;&#160;<a class="el" href="../../d0/d82/class_spell_data.html#ac4179a530476ec66a14673167cd3f622">mana_per_skill</a> [4]</td></tr>
+<tr class="separator:a997870d4e488d5acbaf5bd3b097868dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5592565d913be6bdd3e60290951192db"><td class="memItemLeft" >&#160;&#160;&#160;struct {</td></tr>
+<tr class="memitem:a078fc85222d2370da008623310557f10"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;unsigned __int16&#160;&#160;&#160;<a class="el" href="../../d0/d82/class_spell_data.html#a051b074617bed49b73e34788fc2c9c36">uNormalLevelMana</a></td></tr>
+<tr class="separator:a078fc85222d2370da008623310557f10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9909736575de7e75e7fcce9f5df09980"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;unsigned __int16&#160;&#160;&#160;<a class="el" href="../../d0/d82/class_spell_data.html#a1d9608bba4f5422d0615bb6a2cb2685c">uExpertLevelMana</a></td></tr>
+<tr class="separator:a9909736575de7e75e7fcce9f5df09980"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2845c926387687e929b92eb6f045340"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;unsigned __int16&#160;&#160;&#160;<a class="el" href="../../d0/d82/class_spell_data.html#a6425233da9a0c6c1338bc9f0a6ecf913">uMasterLevelMana</a></td></tr>
+<tr class="separator:aa2845c926387687e929b92eb6f045340"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c1569ac3948ced2f29ce9f054fb7804"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;unsigned __int16&#160;&#160;&#160;<a class="el" href="../../d0/d82/class_spell_data.html#af23a57c60fe7e8f11d4666c563d56c27">uMagisterLevelMana</a></td></tr>
+<tr class="separator:a2c1569ac3948ced2f29ce9f054fb7804"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5592565d913be6bdd3e60290951192db"><td class="memItemLeft" valign="top">&#160;&#160;&#160;}&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:a5592565d913be6bdd3e60290951192db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa77c04e65a780e889c8df1fb68271ec5"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:aa77c04e65a780e889c8df1fb68271ec5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2133886eba867954a2df8991d32eb60"><td class="memItemLeft" >union {</td></tr>
+<tr class="memitem:a946c51287dc3448f78097c6421d624d1"><td class="memItemLeft" >&#160;&#160;&#160;unsigned __int16&#160;&#160;&#160;<a class="el" href="../../d0/d82/class_spell_data.html#a5fefd46e5cf1c83d72b0310fb49d65cc">recovery_per_skill</a> [4]</td></tr>
+<tr class="separator:a946c51287dc3448f78097c6421d624d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa6ff2642fb38801839f0eb5e1c50e72"><td class="memItemLeft" >&#160;&#160;&#160;struct {</td></tr>
+<tr class="memitem:a48bd24fed40d6c32866497944e006e5c"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;unsigned __int16&#160;&#160;&#160;<a class="el" href="../../d0/d82/class_spell_data.html#a0b68b873521b55803288a7573930a981">uNormalLevelRecovery</a></td></tr>
+<tr class="separator:a48bd24fed40d6c32866497944e006e5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f8258dc92fc5772a08ab4f542812390"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;unsigned __int16&#160;&#160;&#160;<a class="el" href="../../d0/d82/class_spell_data.html#ad94be200108d9397985c74ed3111ba04">uExpertLevelRecovery</a></td></tr>
+<tr class="separator:a8f8258dc92fc5772a08ab4f542812390"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cf26e329e46596509722080cb914a41"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;unsigned __int16&#160;&#160;&#160;<a class="el" href="../../d0/d82/class_spell_data.html#a92df536cd04abc55c20c9405f24605a4">uMasterLevelRecovery</a></td></tr>
+<tr class="separator:a9cf26e329e46596509722080cb914a41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61fe1d816fa2b9a11b59c25e19c02e60"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;unsigned __int16&#160;&#160;&#160;<a class="el" href="../../d0/d82/class_spell_data.html#a5cb12c760ee2325d0f16f51d4eada3ab">uMagisterLevelRecovery</a></td></tr>
+<tr class="separator:a61fe1d816fa2b9a11b59c25e19c02e60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa6ff2642fb38801839f0eb5e1c50e72"><td class="memItemLeft" valign="top">&#160;&#160;&#160;}&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:afa6ff2642fb38801839f0eb5e1c50e72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2133886eba867954a2df8991d32eb60"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:ac2133886eba867954a2df8991d32eb60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e8022ffcbdd77612231289518dae7c8"><td class="memItemLeft" align="right" valign="top">__int8&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d82/class_spell_data.html#a8e8022ffcbdd77612231289518dae7c8">baseDamage</a></td></tr>
+<tr class="separator:a8e8022ffcbdd77612231289518dae7c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ea00708392241f073e7a4227d7f5f7c"><td class="memItemLeft" align="right" valign="top">__int8&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d82/class_spell_data.html#a9ea00708392241f073e7a4227d7f5f7c">bonusSkillDamage</a></td></tr>
+<tr class="separator:a9ea00708392241f073e7a4227d7f5f7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad18d8b214357eb25bdf70035190b3733"><td class="memItemLeft" align="right" valign="top">__int16&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d82/class_spell_data.html#ad18d8b214357eb25bdf70035190b3733">stats</a></td></tr>
+<tr class="separator:ad18d8b214357eb25bdf70035190b3733"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock">
+<p class="definition">См. определение в файле <a class="el" href="../../d5/d7d/_spells_8h_source.html">Spells.h</a> строка <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00206">206</a></p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="ab34ca543878ba6ec039d1f428cdb8edd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab34ca543878ba6ec039d1f428cdb8edd">&#9670;&nbsp;</a></span>SpellData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SpellData::SpellData </td>
+          <td>(</td>
+          <td class="paramtype">__int16&#160;</td>
+          <td class="paramname"><em>innormalMana</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">__int16&#160;</td>
+          <td class="paramname"><em>inExpertLevelMana</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">__int16&#160;</td>
+          <td class="paramname"><em>inMasterLevelMana</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">__int16&#160;</td>
+          <td class="paramname"><em>inMagisterLevelMana</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">__int16&#160;</td>
+          <td class="paramname"><em>inNormalLevelRecovery</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">__int16&#160;</td>
+          <td class="paramname"><em>inExpertLevelRecovery</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">__int16&#160;</td>
+          <td class="paramname"><em>inMasterLevelRecovery</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">__int16&#160;</td>
+          <td class="paramname"><em>inMagisterLevelRecovery</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">__int8&#160;</td>
+          <td class="paramname"><em>inbaseDamage</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">__int8&#160;</td>
+          <td class="paramname"><em>inbonusSkillDamage</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">__int16&#160;</td>
+          <td class="paramname"><em>instats</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/df3/_spells_8cpp_source.html">Spells.cpp</a> строка <a class="el" href="../../da/df3/_spells_8cpp_source.html#l00149">149</a></p>
+<div class="fragment"><div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    : <a class="code" href="../../d0/d82/class_spell_data.html#a051b074617bed49b73e34788fc2c9c36">uNormalLevelMana</a>(innormalMana),</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;      <a class="code" href="../../d0/d82/class_spell_data.html#a1d9608bba4f5422d0615bb6a2cb2685c">uExpertLevelMana</a>(inExpertLevelMana),</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;      <a class="code" href="../../d0/d82/class_spell_data.html#a6425233da9a0c6c1338bc9f0a6ecf913">uMasterLevelMana</a>(inMasterLevelMana),</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;      <a class="code" href="../../d0/d82/class_spell_data.html#af23a57c60fe7e8f11d4666c563d56c27">uMagisterLevelMana</a>(inMagisterLevelMana),</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;      <a class="code" href="../../d0/d82/class_spell_data.html#a0b68b873521b55803288a7573930a981">uNormalLevelRecovery</a>(inNormalLevelRecovery),</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;      <a class="code" href="../../d0/d82/class_spell_data.html#ad94be200108d9397985c74ed3111ba04">uExpertLevelRecovery</a>(inExpertLevelRecovery),</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;      <a class="code" href="../../d0/d82/class_spell_data.html#a92df536cd04abc55c20c9405f24605a4">uMasterLevelRecovery</a>(inMasterLevelRecovery),</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;      <a class="code" href="../../d0/d82/class_spell_data.html#a5cb12c760ee2325d0f16f51d4eada3ab">uMagisterLevelRecovery</a>(inMagisterLevelRecovery),</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;      <a class="code" href="../../d0/d82/class_spell_data.html#a8e8022ffcbdd77612231289518dae7c8">baseDamage</a>(inbaseDamage),</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;      <a class="code" href="../../d0/d82/class_spell_data.html#a9ea00708392241f073e7a4227d7f5f7c">bonusSkillDamage</a>(inbonusSkillDamage),</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;      <a class="code" href="../../d0/d82/class_spell_data.html#ad18d8b214357eb25bdf70035190b3733">stats</a>(instats) {}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="ac4179a530476ec66a14673167cd3f622"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4179a530476ec66a14673167cd3f622">&#9670;&nbsp;</a></span>mana_per_skill</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned __int16 SpellData::mana_per_skill[4]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/d7d/_spells_8h_source.html">Spells.h</a> строка <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00214">214</a></p>
+
+</div>
+</div>
+<a id="a051b074617bed49b73e34788fc2c9c36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a051b074617bed49b73e34788fc2c9c36">&#9670;&nbsp;</a></span>uNormalLevelMana</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned __int16 SpellData::uNormalLevelMana</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/d7d/_spells_8h_source.html">Spells.h</a> строка <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00216">216</a></p>
+
+</div>
+</div>
+<a id="a1d9608bba4f5422d0615bb6a2cb2685c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d9608bba4f5422d0615bb6a2cb2685c">&#9670;&nbsp;</a></span>uExpertLevelMana</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned __int16 SpellData::uExpertLevelMana</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/d7d/_spells_8h_source.html">Spells.h</a> строка <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00217">217</a></p>
+
+</div>
+</div>
+<a id="a6425233da9a0c6c1338bc9f0a6ecf913"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6425233da9a0c6c1338bc9f0a6ecf913">&#9670;&nbsp;</a></span>uMasterLevelMana</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned __int16 SpellData::uMasterLevelMana</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/d7d/_spells_8h_source.html">Spells.h</a> строка <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00218">218</a></p>
+
+</div>
+</div>
+<a id="af23a57c60fe7e8f11d4666c563d56c27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af23a57c60fe7e8f11d4666c563d56c27">&#9670;&nbsp;</a></span>uMagisterLevelMana</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned __int16 SpellData::uMagisterLevelMana</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/d7d/_spells_8h_source.html">Spells.h</a> строка <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00219">219</a></p>
+
+</div>
+</div>
+<a id="aa77c04e65a780e889c8df1fb68271ec5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa77c04e65a780e889c8df1fb68271ec5">&#9670;&nbsp;</a></span>@67</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">union { ... } </td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5fefd46e5cf1c83d72b0310fb49d65cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fefd46e5cf1c83d72b0310fb49d65cc">&#9670;&nbsp;</a></span>recovery_per_skill</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned __int16 SpellData::recovery_per_skill[4]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/d7d/_spells_8h_source.html">Spells.h</a> строка <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00223">223</a></p>
+
+</div>
+</div>
+<a id="a0b68b873521b55803288a7573930a981"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b68b873521b55803288a7573930a981">&#9670;&nbsp;</a></span>uNormalLevelRecovery</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned __int16 SpellData::uNormalLevelRecovery</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/d7d/_spells_8h_source.html">Spells.h</a> строка <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00225">225</a></p>
+
+</div>
+</div>
+<a id="ad94be200108d9397985c74ed3111ba04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad94be200108d9397985c74ed3111ba04">&#9670;&nbsp;</a></span>uExpertLevelRecovery</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned __int16 SpellData::uExpertLevelRecovery</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/d7d/_spells_8h_source.html">Spells.h</a> строка <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00226">226</a></p>
+
+</div>
+</div>
+<a id="a92df536cd04abc55c20c9405f24605a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92df536cd04abc55c20c9405f24605a4">&#9670;&nbsp;</a></span>uMasterLevelRecovery</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned __int16 SpellData::uMasterLevelRecovery</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/d7d/_spells_8h_source.html">Spells.h</a> строка <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00227">227</a></p>
+
+</div>
+</div>
+<a id="a5cb12c760ee2325d0f16f51d4eada3ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cb12c760ee2325d0f16f51d4eada3ab">&#9670;&nbsp;</a></span>uMagisterLevelRecovery</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned __int16 SpellData::uMagisterLevelRecovery</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/d7d/_spells_8h_source.html">Spells.h</a> строка <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00228">228</a></p>
+
+</div>
+</div>
+<a id="ac2133886eba867954a2df8991d32eb60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2133886eba867954a2df8991d32eb60">&#9670;&nbsp;</a></span>@69</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">union { ... } </td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8e8022ffcbdd77612231289518dae7c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e8022ffcbdd77612231289518dae7c8">&#9670;&nbsp;</a></span>baseDamage</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__int8 SpellData::baseDamage</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/d7d/_spells_8h_source.html">Spells.h</a> строка <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00231">231</a></p>
+
+</div>
+</div>
+<a id="a9ea00708392241f073e7a4227d7f5f7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ea00708392241f073e7a4227d7f5f7c">&#9670;&nbsp;</a></span>bonusSkillDamage</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__int8 SpellData::bonusSkillDamage</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/d7d/_spells_8h_source.html">Spells.h</a> строка <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00232">232</a></p>
+
+</div>
+</div>
+<a id="ad18d8b214357eb25bdf70035190b3733"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad18d8b214357eb25bdf70035190b3733">&#9670;&nbsp;</a></span>stats</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__int16 SpellData::stats</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/d7d/_spells_8h_source.html">Spells.h</a> строка <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00233">233</a></p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>C:/git/world-of-might-and-magic/Engine/Spells/<a class="el" href="../../d5/d7d/_spells_8h_source.html">Spells.h</a></li>
+<li>C:/git/world-of-might-and-magic/Engine/Spells/<a class="el" href="../../da/df3/_spells_8cpp_source.html">Spells.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aclass_spell_data_html_a6425233da9a0c6c1338bc9f0a6ecf913"><div class="ttname"><a href="../../d0/d82/class_spell_data.html#a6425233da9a0c6c1338bc9f0a6ecf913">SpellData::uMasterLevelMana</a></div><div class="ttdeci">unsigned __int16 uMasterLevelMana</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00218">Spells.h:218</a></div></div>
+<div class="ttc" id="aclass_spell_data_html_ad94be200108d9397985c74ed3111ba04"><div class="ttname"><a href="../../d0/d82/class_spell_data.html#ad94be200108d9397985c74ed3111ba04">SpellData::uExpertLevelRecovery</a></div><div class="ttdeci">unsigned __int16 uExpertLevelRecovery</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00226">Spells.h:226</a></div></div>
+<div class="ttc" id="aclass_spell_data_html_ad18d8b214357eb25bdf70035190b3733"><div class="ttname"><a href="../../d0/d82/class_spell_data.html#ad18d8b214357eb25bdf70035190b3733">SpellData::stats</a></div><div class="ttdeci">__int16 stats</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00233">Spells.h:233</a></div></div>
+<div class="ttc" id="aclass_spell_data_html_af23a57c60fe7e8f11d4666c563d56c27"><div class="ttname"><a href="../../d0/d82/class_spell_data.html#af23a57c60fe7e8f11d4666c563d56c27">SpellData::uMagisterLevelMana</a></div><div class="ttdeci">unsigned __int16 uMagisterLevelMana</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00219">Spells.h:219</a></div></div>
+<div class="ttc" id="aclass_spell_data_html_a8e8022ffcbdd77612231289518dae7c8"><div class="ttname"><a href="../../d0/d82/class_spell_data.html#a8e8022ffcbdd77612231289518dae7c8">SpellData::baseDamage</a></div><div class="ttdeci">__int8 baseDamage</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00231">Spells.h:231</a></div></div>
+<div class="ttc" id="aclass_spell_data_html_a051b074617bed49b73e34788fc2c9c36"><div class="ttname"><a href="../../d0/d82/class_spell_data.html#a051b074617bed49b73e34788fc2c9c36">SpellData::uNormalLevelMana</a></div><div class="ttdeci">unsigned __int16 uNormalLevelMana</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00216">Spells.h:216</a></div></div>
+<div class="ttc" id="aclass_spell_data_html_a5cb12c760ee2325d0f16f51d4eada3ab"><div class="ttname"><a href="../../d0/d82/class_spell_data.html#a5cb12c760ee2325d0f16f51d4eada3ab">SpellData::uMagisterLevelRecovery</a></div><div class="ttdeci">unsigned __int16 uMagisterLevelRecovery</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00228">Spells.h:228</a></div></div>
+<div class="ttc" id="aclass_spell_data_html_a0b68b873521b55803288a7573930a981"><div class="ttname"><a href="../../d0/d82/class_spell_data.html#a0b68b873521b55803288a7573930a981">SpellData::uNormalLevelRecovery</a></div><div class="ttdeci">unsigned __int16 uNormalLevelRecovery</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00225">Spells.h:225</a></div></div>
+<div class="ttc" id="aclass_spell_data_html_a1d9608bba4f5422d0615bb6a2cb2685c"><div class="ttname"><a href="../../d0/d82/class_spell_data.html#a1d9608bba4f5422d0615bb6a2cb2685c">SpellData::uExpertLevelMana</a></div><div class="ttdeci">unsigned __int16 uExpertLevelMana</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00217">Spells.h:217</a></div></div>
+<div class="ttc" id="aclass_spell_data_html_a9ea00708392241f073e7a4227d7f5f7c"><div class="ttname"><a href="../../d0/d82/class_spell_data.html#a9ea00708392241f073e7a4227d7f5f7c">SpellData::bonusSkillDamage</a></div><div class="ttdeci">__int8 bonusSkillDamage</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00232">Spells.h:232</a></div></div>
+<div class="ttc" id="aclass_spell_data_html_a92df536cd04abc55c20c9405f24605a4"><div class="ttname"><a href="../../d0/d82/class_spell_data.html#a92df536cd04abc55c20c9405f24605a4">SpellData::uMasterLevelRecovery</a></div><div class="ttdeci">unsigned __int16 uMasterLevelRecovery</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00227">Spells.h:227</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../d0/d82/class_spell_data.html">SpellData</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:05:17. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

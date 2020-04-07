@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Исходный файл C:/git/world-of-might-and-magic/Engine/Graphics/LightsStack.cpp</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d3/d58/_lights_stack_8cpp_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">LightsStack.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d3/d58/_lights_stack_8cpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d6/d3a/_engine_2_log_8h.html">Engine/Log.h</a>&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d5/d31/_lights_8h.html">Engine/Graphics/Lights.h</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//----- (00467D88) --------------------------------------------------------</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="../../d1/d36/struct_lights_stack___mobile_light__.html#adae73670ea3bd3fba19fe0c1c1509e46">    6</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="../../d1/d36/struct_lights_stack___mobile_light__.html#adae73670ea3bd3fba19fe0c1c1509e46">LightsStack_MobileLight_::AddLight</a>(<a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ad0e63d0edcdbd3d79554076bf309fd47">x</a>, <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a1675d9d7bb68e1657ff028643b4037e3">y</a>, <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a5e74030ebb3297ce1b37ff716fedd68f">z</a>,</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;                                        <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> uSectorID, <span class="keywordtype">int</span> uRadius,</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;                                        <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> <a class="code" href="../../df/dc4/_s_d_l__opengl_8h.html#a42ce7cdc612e53abee15043f80220d97">r</a>, <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#acaceb3a655ff28b75259860bcb868f9f">g</a>,</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;                                        <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0f71581a41fd2264c8944126dabbd010">b</a>, <span class="keywordtype">char</span> uLightType) {</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../d1/d36/struct_lights_stack___mobile_light__.html#a68dd4d20eee25b9b1d5c14fab144d0e0">uNumLightsActive</a> &gt;= 400) {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <a class="code" href="../../d1/d36/struct_lights_stack___mobile_light__.html#a97308e1e3e638d3439e0314a2ba63287">log</a>-&gt;<a class="code" href="../../d6/d70/class_log.html#ac0de2621497ca3b2fbf208624c08bcdf">Warning</a>(L<span class="stringliteral">&quot;Too many mobile lights!&quot;</span>);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    }</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="../../d1/d36/struct_lights_stack___mobile_light__.html#adc11fdc588d5694d31aecc06ed888599">pLights</a>[<a class="code" href="../../d1/d36/struct_lights_stack___mobile_light__.html#a68dd4d20eee25b9b1d5c14fab144d0e0">uNumLightsActive</a>].<a class="code" href="../../d2/d53/struct_mobile_light.html#a3eddd80a9c1d276a1bb01317e229d65a">vPosition</a>.x = <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ad0e63d0edcdbd3d79554076bf309fd47">x</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="../../d1/d36/struct_lights_stack___mobile_light__.html#adc11fdc588d5694d31aecc06ed888599">pLights</a>[<a class="code" href="../../d1/d36/struct_lights_stack___mobile_light__.html#a68dd4d20eee25b9b1d5c14fab144d0e0">uNumLightsActive</a>].<a class="code" href="../../d2/d53/struct_mobile_light.html#a3eddd80a9c1d276a1bb01317e229d65a">vPosition</a>.y = <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a1675d9d7bb68e1657ff028643b4037e3">y</a>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="../../d1/d36/struct_lights_stack___mobile_light__.html#adc11fdc588d5694d31aecc06ed888599">pLights</a>[<a class="code" href="../../d1/d36/struct_lights_stack___mobile_light__.html#a68dd4d20eee25b9b1d5c14fab144d0e0">uNumLightsActive</a>].<a class="code" href="../../d2/d53/struct_mobile_light.html#a3eddd80a9c1d276a1bb01317e229d65a">vPosition</a>.z = <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a5e74030ebb3297ce1b37ff716fedd68f">z</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="../../d1/d36/struct_lights_stack___mobile_light__.html#adc11fdc588d5694d31aecc06ed888599">pLights</a>[<a class="code" href="../../d1/d36/struct_lights_stack___mobile_light__.html#a68dd4d20eee25b9b1d5c14fab144d0e0">uNumLightsActive</a>].<a class="code" href="../../d2/d53/struct_mobile_light.html#ad58fe70ef03290e2ec0471680386690b">uRadius</a> = uRadius;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="../../d1/d36/struct_lights_stack___mobile_light__.html#adc11fdc588d5694d31aecc06ed888599">pLights</a>[<a class="code" href="../../d1/d36/struct_lights_stack___mobile_light__.html#a68dd4d20eee25b9b1d5c14fab144d0e0">uNumLightsActive</a>].<a class="code" href="../../d2/d53/struct_mobile_light.html#a230fa37344633abde78b4da5b2cd1429">field_C</a> = (((uRadius &lt; 0) - 1) &amp; 0x3E) - 31;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="../../d1/d36/struct_lights_stack___mobile_light__.html#adc11fdc588d5694d31aecc06ed888599">pLights</a>[<a class="code" href="../../d1/d36/struct_lights_stack___mobile_light__.html#a68dd4d20eee25b9b1d5c14fab144d0e0">uNumLightsActive</a>].<a class="code" href="../../d2/d53/struct_mobile_light.html#a48ab0e3b5d6cbf01d533e535beadb1a4">uSectorID</a> = uSectorID;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="../../d1/d36/struct_lights_stack___mobile_light__.html#adc11fdc588d5694d31aecc06ed888599">pLights</a>[<a class="code" href="../../d1/d36/struct_lights_stack___mobile_light__.html#a68dd4d20eee25b9b1d5c14fab144d0e0">uNumLightsActive</a>].<a class="code" href="../../d2/d53/struct_mobile_light.html#a7d6caeb473f986816c8993a840005db3">field_10</a> = uRadius * uRadius &gt;&gt; 5;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="../../d1/d36/struct_lights_stack___mobile_light__.html#adc11fdc588d5694d31aecc06ed888599">pLights</a>[<a class="code" href="../../d1/d36/struct_lights_stack___mobile_light__.html#a68dd4d20eee25b9b1d5c14fab144d0e0">uNumLightsActive</a>].<a class="code" href="../../d2/d53/struct_mobile_light.html#a939053e226f273b746ab6945570776e1">uLightColorR</a> = <a class="code" href="../../df/dc4/_s_d_l__opengl_8h.html#a42ce7cdc612e53abee15043f80220d97">r</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="../../d1/d36/struct_lights_stack___mobile_light__.html#adc11fdc588d5694d31aecc06ed888599">pLights</a>[<a class="code" href="../../d1/d36/struct_lights_stack___mobile_light__.html#a68dd4d20eee25b9b1d5c14fab144d0e0">uNumLightsActive</a>].<a class="code" href="../../d2/d53/struct_mobile_light.html#aa93fb96956ffff0862a3d9c02688f94a">uLightColorG</a> = <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#acaceb3a655ff28b75259860bcb868f9f">g</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="../../d1/d36/struct_lights_stack___mobile_light__.html#adc11fdc588d5694d31aecc06ed888599">pLights</a>[<a class="code" href="../../d1/d36/struct_lights_stack___mobile_light__.html#a68dd4d20eee25b9b1d5c14fab144d0e0">uNumLightsActive</a>].<a class="code" href="../../d2/d53/struct_mobile_light.html#a885d239e02f8aa9112b4edfa38ddd187">uLightColorB</a> = <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0f71581a41fd2264c8944126dabbd010">b</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="../../d1/d36/struct_lights_stack___mobile_light__.html#adc11fdc588d5694d31aecc06ed888599">pLights</a>[<a class="code" href="../../d1/d36/struct_lights_stack___mobile_light__.html#a68dd4d20eee25b9b1d5c14fab144d0e0">uNumLightsActive</a>++].<a class="code" href="../../d2/d53/struct_mobile_light.html#a1e2f9ee005f75e556c3eaacd3063344e">uLightType</a> = uLightType;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="../../d2/d9c/struct_lights_stack___stationary_light__.html#af7e269c710a266117bf52cfe66f1a8e1">   30</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="../../d2/d9c/struct_lights_stack___stationary_light__.html#af7e269c710a266117bf52cfe66f1a8e1">LightsStack_StationaryLight_::AddLight</a>(<a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ad0e63d0edcdbd3d79554076bf309fd47">x</a>, <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a1675d9d7bb68e1657ff028643b4037e3">y</a>, <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a5e74030ebb3297ce1b37ff716fedd68f">z</a>,</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                                            <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> a5, <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="../../df/dc4/_s_d_l__opengl_8h.html#a42ce7cdc612e53abee15043f80220d97">r</a>,</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                                            <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#acaceb3a655ff28b75259860bcb868f9f">g</a>, <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0f71581a41fd2264c8944126dabbd010">b</a>,</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                                            <span class="keywordtype">char</span> uLightType) {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../d2/d9c/struct_lights_stack___stationary_light__.html#a3bfddbf002b20904709c1aeb8797a441">uNumLightsActive</a> &gt;= 400) {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <a class="code" href="../../d2/d9c/struct_lights_stack___stationary_light__.html#acb40a1d71bdd03c2c39a7aff1c28ddfd">log</a>-&gt;<a class="code" href="../../d6/d70/class_log.html#ac0de2621497ca3b2fbf208624c08bcdf">Warning</a>(L<span class="stringliteral">&quot;Too many stationary lights!&quot;</span>);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    }</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="../../d5/ddc/struct_stationary_light.html">StationaryLight</a>* pLight = &amp;<a class="code" href="../../d2/d9c/struct_lights_stack___stationary_light__.html#aec2946a360629ce501ff808ede9f8491">pLights</a>[<a class="code" href="../../d2/d9c/struct_lights_stack___stationary_light__.html#a3bfddbf002b20904709c1aeb8797a441">uNumLightsActive</a>++];</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    pLight-&gt;<a class="code" href="../../d5/ddc/struct_stationary_light.html#ab74f15d0f7c05f0b7571ec9ccbc1d5bf">vPosition</a>.x = <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ad0e63d0edcdbd3d79554076bf309fd47">x</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    pLight-&gt;<a class="code" href="../../d5/ddc/struct_stationary_light.html#ab74f15d0f7c05f0b7571ec9ccbc1d5bf">vPosition</a>.y = <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a1675d9d7bb68e1657ff028643b4037e3">y</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    pLight-&gt;<a class="code" href="../../d5/ddc/struct_stationary_light.html#ab74f15d0f7c05f0b7571ec9ccbc1d5bf">vPosition</a>.z = <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a5e74030ebb3297ce1b37ff716fedd68f">z</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    pLight-&gt;<a class="code" href="../../d5/ddc/struct_stationary_light.html#a991d27bccd40c298fe5a010c83974179">uRadius</a> = a5;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    pLight-&gt;<a class="code" href="../../d5/ddc/struct_stationary_light.html#a068616480fa62f8286351d670857c3dc">uLightColorR</a> = <a class="code" href="../../df/dc4/_s_d_l__opengl_8h.html#a42ce7cdc612e53abee15043f80220d97">r</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    pLight-&gt;<a class="code" href="../../d5/ddc/struct_stationary_light.html#acadcebb9251bee2b00b869323d94e7e4">uLightColorG</a> = <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#acaceb3a655ff28b75259860bcb868f9f">g</a>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    pLight-&gt;<a class="code" href="../../d5/ddc/struct_stationary_light.html#a8d56602c2ca389e1befc7819a14c1661">uLightColorB</a> = <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0f71581a41fd2264c8944126dabbd010">b</a>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    pLight-&gt;<a class="code" href="../../d5/ddc/struct_stationary_light.html#a31b63d6529fe648360ca5fa7922eb63c">uLightType</a> = uLightType;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="astruct_lights_stack___stationary_light___html_a3bfddbf002b20904709c1aeb8797a441"><div class="ttname"><a href="../../d2/d9c/struct_lights_stack___stationary_light__.html#a3bfddbf002b20904709c1aeb8797a441">LightsStack_StationaryLight_::uNumLightsActive</a></div><div class="ttdeci">unsigned int uNumLightsActive</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d31/_lights_8h_source.html#l00065">Lights.h:65</a></div></div>
+<div class="ttc" id="astruct_mobile_light_html_a3eddd80a9c1d276a1bb01317e229d65a"><div class="ttname"><a href="../../d2/d53/struct_mobile_light.html#a3eddd80a9c1d276a1bb01317e229d65a">MobileLight::vPosition</a></div><div class="ttdeci">Vec3_short_ vPosition</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d31/_lights_8h_source.html#l00022">Lights.h:22</a></div></div>
+<div class="ttc" id="astruct_mobile_light_html_a7d6caeb473f986816c8993a840005db3"><div class="ttname"><a href="../../d2/d53/struct_mobile_light.html#a7d6caeb473f986816c8993a840005db3">MobileLight::field_10</a></div><div class="ttdeci">int16_t field_10</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d31/_lights_8h_source.html#l00030">Lights.h:30</a></div></div>
+<div class="ttc" id="a_s_d_l__config_8h_html_a269259c924dce846340ddbb810db2e3c"><div class="ttname"><a href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a></div><div class="ttdeci">signed __int16 int16_t</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d8f/_s_d_l__config_8h_source.html#l00036">SDL_config.h:36</a></div></div>
+<div class="ttc" id="astruct_stationary_light_html_a068616480fa62f8286351d670857c3dc"><div class="ttname"><a href="../../d5/ddc/struct_stationary_light.html#a068616480fa62f8286351d670857c3dc">StationaryLight::uLightColorR</a></div><div class="ttdeci">uint8_t uLightColorR</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d31/_lights_8h_source.html#l00013">Lights.h:13</a></div></div>
+<div class="ttc" id="astruct_mobile_light_html_a939053e226f273b746ab6945570776e1"><div class="ttname"><a href="../../d2/d53/struct_mobile_light.html#a939053e226f273b746ab6945570776e1">MobileLight::uLightColorR</a></div><div class="ttdeci">uint8_t uLightColorR</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d31/_lights_8h_source.html#l00024">Lights.h:24</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a5e74030ebb3297ce1b37ff716fedd68f"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a5e74030ebb3297ce1b37ff716fedd68f">z</a></div><div class="ttdeci">GLdouble GLdouble z</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l00407">SDL_opengl_glext.h:407</a></div></div>
+<div class="ttc" id="a_lights_8h_html"><div class="ttname"><a href="../../d5/d31/_lights_8h.html">Lights.h</a></div></div>
+<div class="ttc" id="astruct_stationary_light_html_a31b63d6529fe648360ca5fa7922eb63c"><div class="ttname"><a href="../../d5/ddc/struct_stationary_light.html#a31b63d6529fe648360ca5fa7922eb63c">StationaryLight::uLightType</a></div><div class="ttdeci">char uLightType</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d31/_lights_8h_source.html#l00016">Lights.h:16</a></div></div>
+<div class="ttc" id="astruct_stationary_light_html"><div class="ttname"><a href="../../d5/ddc/struct_stationary_light.html">StationaryLight</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d31/_lights_8h_source.html#l00010">Lights.h:10</a></div></div>
+<div class="ttc" id="a_s_d_l__egl_8h_html_a1675d9d7bb68e1657ff028643b4037e3"><div class="ttname"><a href="../../df/d32/_s_d_l__egl_8h.html#a1675d9d7bb68e1657ff028643b4037e3">y</a></div><div class="ttdeci">EGLSurface EGLint EGLint y</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/_s_d_l__egl_8h_source.html#l01596">SDL_egl.h:1596</a></div></div>
+<div class="ttc" id="astruct_lights_stack___stationary_light___html_acb40a1d71bdd03c2c39a7aff1c28ddfd"><div class="ttname"><a href="../../d2/d9c/struct_lights_stack___stationary_light__.html#acb40a1d71bdd03c2c39a7aff1c28ddfd">LightsStack_StationaryLight_::log</a></div><div class="ttdeci">Log * log</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d31/_lights_8h_source.html#l00067">Lights.h:67</a></div></div>
+<div class="ttc" id="a_s_d_l__egl_8h_html_ad0e63d0edcdbd3d79554076bf309fd47"><div class="ttname"><a href="../../df/d32/_s_d_l__egl_8h.html#ad0e63d0edcdbd3d79554076bf309fd47">x</a></div><div class="ttdeci">EGLSurface EGLint x</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/_s_d_l__egl_8h_source.html#l01596">SDL_egl.h:1596</a></div></div>
+<div class="ttc" id="astruct_lights_stack___mobile_light___html_a97308e1e3e638d3439e0314a2ba63287"><div class="ttname"><a href="../../d1/d36/struct_lights_stack___mobile_light__.html#a97308e1e3e638d3439e0314a2ba63287">LightsStack_MobileLight_::log</a></div><div class="ttdeci">Log * log</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d31/_lights_8h_source.html#l00089">Lights.h:89</a></div></div>
+<div class="ttc" id="aclass_log_html_ac0de2621497ca3b2fbf208624c08bcdf"><div class="ttname"><a href="../../d6/d70/class_log.html#ac0de2621497ca3b2fbf208624c08bcdf">Log::Warning</a></div><div class="ttdeci">void Warning(const wchar_t *pFormat,...)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/da7/_log_8cpp_source.html#l00028">Log.cpp:28</a></div></div>
+<div class="ttc" id="astruct_lights_stack___mobile_light___html_adc11fdc588d5694d31aecc06ed888599"><div class="ttname"><a href="../../d1/d36/struct_lights_stack___mobile_light__.html#adc11fdc588d5694d31aecc06ed888599">LightsStack_MobileLight_::pLights</a></div><div class="ttdeci">MobileLight pLights[400]</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d31/_lights_8h_source.html#l00087">Lights.h:87</a></div></div>
+<div class="ttc" id="astruct_mobile_light_html_a48ab0e3b5d6cbf01d533e535beadb1a4"><div class="ttname"><a href="../../d2/d53/struct_mobile_light.html#a48ab0e3b5d6cbf01d533e535beadb1a4">MobileLight::uSectorID</a></div><div class="ttdeci">int16_t uSectorID</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d31/_lights_8h_source.html#l00029">Lights.h:29</a></div></div>
+<div class="ttc" id="astruct_mobile_light_html_aa93fb96956ffff0862a3d9c02688f94a"><div class="ttname"><a href="../../d2/d53/struct_mobile_light.html#aa93fb96956ffff0862a3d9c02688f94a">MobileLight::uLightColorG</a></div><div class="ttdeci">uint8_t uLightColorG</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d31/_lights_8h_source.html#l00025">Lights.h:25</a></div></div>
+<div class="ttc" id="astruct_mobile_light_html_a885d239e02f8aa9112b4edfa38ddd187"><div class="ttname"><a href="../../d2/d53/struct_mobile_light.html#a885d239e02f8aa9112b4edfa38ddd187">MobileLight::uLightColorB</a></div><div class="ttdeci">uint8_t uLightColorB</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d31/_lights_8h_source.html#l00026">Lights.h:26</a></div></div>
+<div class="ttc" id="a_s_d_l__config_8h_html_aba7bc1797add20fe3efdf37ced1182c5"><div class="ttname"><a href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a></div><div class="ttdeci">unsigned __int8 uint8_t</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d8f/_s_d_l__config_8h_source.html#l00035">SDL_config.h:35</a></div></div>
+<div class="ttc" id="astruct_lights_stack___mobile_light___html_a68dd4d20eee25b9b1d5c14fab144d0e0"><div class="ttname"><a href="../../d1/d36/struct_lights_stack___mobile_light__.html#a68dd4d20eee25b9b1d5c14fab144d0e0">LightsStack_MobileLight_::uNumLightsActive</a></div><div class="ttdeci">unsigned int uNumLightsActive</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d31/_lights_8h_source.html#l00088">Lights.h:88</a></div></div>
+<div class="ttc" id="astruct_stationary_light_html_ab74f15d0f7c05f0b7571ec9ccbc1d5bf"><div class="ttname"><a href="../../d5/ddc/struct_stationary_light.html#ab74f15d0f7c05f0b7571ec9ccbc1d5bf">StationaryLight::vPosition</a></div><div class="ttdeci">Vec3_short_ vPosition</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d31/_lights_8h_source.html#l00011">Lights.h:11</a></div></div>
+<div class="ttc" id="astruct_stationary_light_html_acadcebb9251bee2b00b869323d94e7e4"><div class="ttname"><a href="../../d5/ddc/struct_stationary_light.html#acadcebb9251bee2b00b869323d94e7e4">StationaryLight::uLightColorG</a></div><div class="ttdeci">uint8_t uLightColorG</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d31/_lights_8h_source.html#l00014">Lights.h:14</a></div></div>
+<div class="ttc" id="astruct_lights_stack___stationary_light___html_aec2946a360629ce501ff808ede9f8491"><div class="ttname"><a href="../../d2/d9c/struct_lights_stack___stationary_light__.html#aec2946a360629ce501ff808ede9f8491">LightsStack_StationaryLight_::pLights</a></div><div class="ttdeci">StationaryLight pLights[400]</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d31/_lights_8h_source.html#l00064">Lights.h:64</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a0f71581a41fd2264c8944126dabbd010"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0f71581a41fd2264c8944126dabbd010">b</a></div><div class="ttdeci">GLboolean GLboolean GLboolean b</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l01112">SDL_opengl_glext.h:1112</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl_8h_html_a42ce7cdc612e53abee15043f80220d97"><div class="ttname"><a href="../../df/dc4/_s_d_l__opengl_8h.html#a42ce7cdc612e53abee15043f80220d97">r</a></div><div class="ttdeci">GLdouble GLdouble GLdouble r</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dc4/_s_d_l__opengl_8h_source.html#l02079">SDL_opengl.h:2079</a></div></div>
+<div class="ttc" id="astruct_stationary_light_html_a991d27bccd40c298fe5a010c83974179"><div class="ttname"><a href="../../d5/ddc/struct_stationary_light.html#a991d27bccd40c298fe5a010c83974179">StationaryLight::uRadius</a></div><div class="ttdeci">int16_t uRadius</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d31/_lights_8h_source.html#l00012">Lights.h:12</a></div></div>
+<div class="ttc" id="astruct_lights_stack___stationary_light___html_af7e269c710a266117bf52cfe66f1a8e1"><div class="ttname"><a href="../../d2/d9c/struct_lights_stack___stationary_light__.html#af7e269c710a266117bf52cfe66f1a8e1">LightsStack_StationaryLight_::AddLight</a></div><div class="ttdeci">bool AddLight(int16_t x, int16_t y, int16_t z, int16_t a5, unsigned char r, unsigned char g, unsigned char b, char uLightType)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d58/_lights_stack_8cpp_source.html#l00030">LightsStack.cpp:30</a></div></div>
+<div class="ttc" id="astruct_stationary_light_html_a8d56602c2ca389e1befc7819a14c1661"><div class="ttname"><a href="../../d5/ddc/struct_stationary_light.html#a8d56602c2ca389e1befc7819a14c1661">StationaryLight::uLightColorB</a></div><div class="ttdeci">uint8_t uLightColorB</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d31/_lights_8h_source.html#l00015">Lights.h:15</a></div></div>
+<div class="ttc" id="astruct_mobile_light_html_a1e2f9ee005f75e556c3eaacd3063344e"><div class="ttname"><a href="../../d2/d53/struct_mobile_light.html#a1e2f9ee005f75e556c3eaacd3063344e">MobileLight::uLightType</a></div><div class="ttdeci">char uLightType</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d31/_lights_8h_source.html#l00027">Lights.h:27</a></div></div>
+<div class="ttc" id="astruct_mobile_light_html_a230fa37344633abde78b4da5b2cd1429"><div class="ttname"><a href="../../d2/d53/struct_mobile_light.html#a230fa37344633abde78b4da5b2cd1429">MobileLight::field_C</a></div><div class="ttdeci">int16_t field_C</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d31/_lights_8h_source.html#l00028">Lights.h:28</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_acaceb3a655ff28b75259860bcb868f9f"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#acaceb3a655ff28b75259860bcb868f9f">g</a></div><div class="ttdeci">GLboolean GLboolean g</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l01112">SDL_opengl_glext.h:1112</a></div></div>
+<div class="ttc" id="astruct_lights_stack___mobile_light___html_adae73670ea3bd3fba19fe0c1c1509e46"><div class="ttname"><a href="../../d1/d36/struct_lights_stack___mobile_light__.html#adae73670ea3bd3fba19fe0c1c1509e46">LightsStack_MobileLight_::AddLight</a></div><div class="ttdeci">bool AddLight(int16_t x, int16_t y, int16_t z, int16_t uSectorID, int uRadius, uint8_t r, uint8_t g, uint8_t b, char a10)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d58/_lights_stack_8cpp_source.html#l00006">LightsStack.cpp:6</a></div></div>
+<div class="ttc" id="a_engine_2_log_8h_html"><div class="ttname"><a href="../../d6/d3a/_engine_2_log_8h.html">Log.h</a></div></div>
+<div class="ttc" id="astruct_mobile_light_html_ad58fe70ef03290e2ec0471680386690b"><div class="ttname"><a href="../../d2/d53/struct_mobile_light.html#ad58fe70ef03290e2ec0471680386690b">MobileLight::uRadius</a></div><div class="ttdeci">int16_t uRadius</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d31/_lights_8h_source.html#l00023">Lights.h:23</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_0b6ee6e7e9547e675db4add2e5de97da.html">Engine</a></li><li class="navelem"><a class="el" href="../../dir_bb84c1711d8a00602a64a24ea462155a.html">Graphics</a></li><li class="navelem"><a class="el" href="../../d3/d58/_lights_stack_8cpp.html">LightsStack.cpp</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:03:29. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

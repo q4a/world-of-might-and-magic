@@ -1,0 +1,513 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Структура SkyBillboardStruct</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('da/d8e/struct_sky_billboard_struct.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="../../db/de2/struct_sky_billboard_struct-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Структура SkyBillboardStruct</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="../../da/d20/_i_render_8h_source.html">IRender.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a47539cd1ae407975e25634a21de225a2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d8e/struct_sky_billboard_struct.html#a47539cd1ae407975e25634a21de225a2">CalcSkyFrustumVec</a> (int a2, int a3, int a4, int a5, int a6, int a7)</td></tr>
+<tr class="separator:a47539cd1ae407975e25634a21de225a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:adbbd78478136a63e84f2376d5d40d978"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d8e/struct_sky_billboard_struct.html#adbbd78478136a63e84f2376d5d40d978">field_0_party_dir_x</a></td></tr>
+<tr class="separator:adbbd78478136a63e84f2376d5d40d978"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8648a8581701ea1d18d109db55b741c2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d8e/struct_sky_billboard_struct.html#a8648a8581701ea1d18d109db55b741c2">field_4_party_dir_y</a></td></tr>
+<tr class="separator:a8648a8581701ea1d18d109db55b741c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32261286ed1dd0ec76d1594e6f27056d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d8e/struct_sky_billboard_struct.html#a32261286ed1dd0ec76d1594e6f27056d">field_8_party_dir_z</a></td></tr>
+<tr class="separator:a32261286ed1dd0ec76d1594e6f27056d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a692b2b47e93454f69bca4425a57f1c52"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d8e/struct_sky_billboard_struct.html#a692b2b47e93454f69bca4425a57f1c52">CamVecLeft_Z</a></td></tr>
+<tr class="separator:a692b2b47e93454f69bca4425a57f1c52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab10a788909db022e7ac465fe62b02f67"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d8e/struct_sky_billboard_struct.html#ab10a788909db022e7ac465fe62b02f67">CamVecLeft_X</a></td></tr>
+<tr class="separator:ab10a788909db022e7ac465fe62b02f67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f5e23a8626b6a92e5d7160967fcf33f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d8e/struct_sky_billboard_struct.html#a5f5e23a8626b6a92e5d7160967fcf33f">CamVecLeft_Y</a></td></tr>
+<tr class="separator:a5f5e23a8626b6a92e5d7160967fcf33f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad010a3d990a77287a2e78d01c33f7213"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d8e/struct_sky_billboard_struct.html#ad010a3d990a77287a2e78d01c33f7213">CamVecFront_Z</a></td></tr>
+<tr class="separator:ad010a3d990a77287a2e78d01c33f7213"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8a0af7be53f59b1541d62d6079267aa"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d8e/struct_sky_billboard_struct.html#aa8a0af7be53f59b1541d62d6079267aa">CamVecFront_X</a></td></tr>
+<tr class="separator:aa8a0af7be53f59b1541d62d6079267aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a814bacf7c76df1503f3b875636e23a57"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d8e/struct_sky_billboard_struct.html#a814bacf7c76df1503f3b875636e23a57">CamVecFront_Y</a></td></tr>
+<tr class="separator:a814bacf7c76df1503f3b875636e23a57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a9a80d1e3b57226f067444b8ad65fde"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d8e/struct_sky_billboard_struct.html#a2a9a80d1e3b57226f067444b8ad65fde">CamLeftDot</a></td></tr>
+<tr class="separator:a2a9a80d1e3b57226f067444b8ad65fde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18c945734790fcf7ac3c6835351de3b0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d8e/struct_sky_billboard_struct.html#a18c945734790fcf7ac3c6835351de3b0">CamFrontDot</a></td></tr>
+<tr class="separator:a18c945734790fcf7ac3c6835351de3b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock">
+<p class="definition">См. определение в файле <a class="el" href="../../da/d20/_i_render_8h_source.html">IRender.h</a> строка <a class="el" href="../../da/d20/_i_render_8h_source.html#l00465">465</a></p>
+</div><h2 class="groupheader">Методы</h2>
+<a id="a47539cd1ae407975e25634a21de225a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47539cd1ae407975e25634a21de225a2">&#9670;&nbsp;</a></span>CalcSkyFrustumVec()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> SkyBillboardStruct::CalcSkyFrustumVec </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>a2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>a3</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>a4</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>a5</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>a6</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>a7</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html">RenderOpenGL.cpp</a> строка <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l00062">62</a></p>
+<div class="fragment"><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                                                                                         {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="comment">// 6 0 0 0 6 0</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">int</span> cosy = <a class="code" href="../../dc/d16/_indoor_camera_d3_d_8cpp.html#adea3dd5475289b8ba2698ac5d77b3d14">pIndoorCameraD3D</a>-&gt;<a class="code" href="../../d9/de5/struct_indoor_camera_d3_d.html#ad50ae56699d3308332c1170d64ea76b3">int_cosine_y</a>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">int</span> cosx = <a class="code" href="../../dc/d16/_indoor_camera_d3_d_8cpp.html#adea3dd5475289b8ba2698ac5d77b3d14">pIndoorCameraD3D</a>-&gt;<a class="code" href="../../d9/de5/struct_indoor_camera_d3_d.html#a30b56101501ced3fd693f9bfbe62e956">int_cosine_x</a>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">int</span> siny = <a class="code" href="../../dc/d16/_indoor_camera_d3_d_8cpp.html#adea3dd5475289b8ba2698ac5d77b3d14">pIndoorCameraD3D</a>-&gt;<a class="code" href="../../d9/de5/struct_indoor_camera_d3_d.html#a2d889f978bc0f5facf95f28771c38d00">int_sine_y</a>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">int</span> sinx = <a class="code" href="../../dc/d16/_indoor_camera_d3_d_8cpp.html#adea3dd5475289b8ba2698ac5d77b3d14">pIndoorCameraD3D</a>-&gt;<a class="code" href="../../d9/de5/struct_indoor_camera_d3_d.html#a3697313109be5765f73a0f5ab91bd0a6">int_sine_x</a>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="comment">// positions all minus ?</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordtype">int</span> v11 = cosy * -<a class="code" href="../../dc/d16/_indoor_camera_d3_d_8cpp.html#adea3dd5475289b8ba2698ac5d77b3d14">pIndoorCameraD3D</a>-&gt;<a class="code" href="../../d9/de5/struct_indoor_camera_d3_d.html#a053afa2a91bbe48068374f4b93be9cd8">vPartyPos</a>.<a class="code" href="../../db/db1/struct_vec2.html#a8ef8f719932c920ac4ce11399c983d53">x</a> +</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        siny * -<a class="code" href="../../dc/d16/_indoor_camera_d3_d_8cpp.html#adea3dd5475289b8ba2698ac5d77b3d14">pIndoorCameraD3D</a>-&gt;<a class="code" href="../../d9/de5/struct_indoor_camera_d3_d.html#a053afa2a91bbe48068374f4b93be9cd8">vPartyPos</a>.<a class="code" href="../../db/db1/struct_vec2.html#a7ea262a941af6b3abd284ab97658806c">y</a>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordtype">int</span> v24 = cosy * -<a class="code" href="../../dc/d16/_indoor_camera_d3_d_8cpp.html#adea3dd5475289b8ba2698ac5d77b3d14">pIndoorCameraD3D</a>-&gt;<a class="code" href="../../d9/de5/struct_indoor_camera_d3_d.html#a053afa2a91bbe48068374f4b93be9cd8">vPartyPos</a>.<a class="code" href="../../db/db1/struct_vec2.html#a7ea262a941af6b3abd284ab97658806c">y</a> -</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        siny * -<a class="code" href="../../dc/d16/_indoor_camera_d3_d_8cpp.html#adea3dd5475289b8ba2698ac5d77b3d14">pIndoorCameraD3D</a>-&gt;<a class="code" href="../../d9/de5/struct_indoor_camera_d3_d.html#a053afa2a91bbe48068374f4b93be9cd8">vPartyPos</a>.<a class="code" href="../../db/db1/struct_vec2.html#a8ef8f719932c920ac4ce11399c983d53">x</a>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="comment">// cam position transform</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../dc/d16/_indoor_camera_d3_d_8cpp.html#adea3dd5475289b8ba2698ac5d77b3d14">pIndoorCameraD3D</a>-&gt;<a class="code" href="../../d9/de5/struct_indoor_camera_d3_d.html#a0c509620164b44897810bd116a4b8458">sRotationX</a>) {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        this-&gt;<a class="code" href="../../da/d8e/struct_sky_billboard_struct.html#adbbd78478136a63e84f2376d5d40d978">field_0_party_dir_x</a> = <a class="code" href="../../de/db6/_our_math_8cpp.html#abc4811d26f9864e00046c39c39d65680">fixpoint_mul</a>(v11, cosx) +</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            <a class="code" href="../../de/db6/_our_math_8cpp.html#abc4811d26f9864e00046c39c39d65680">fixpoint_mul</a>((-<a class="code" href="../../dc/d16/_indoor_camera_d3_d_8cpp.html#adea3dd5475289b8ba2698ac5d77b3d14">pIndoorCameraD3D</a>-&gt;<a class="code" href="../../d9/de5/struct_indoor_camera_d3_d.html#a053afa2a91bbe48068374f4b93be9cd8">vPartyPos</a>.<a class="code" href="../../df/d8a/struct_vec3.html#a0f694311f956380952aee054cbabb8b6">z</a>) &lt;&lt; 16, sinx);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        this-&gt;<a class="code" href="../../da/d8e/struct_sky_billboard_struct.html#a8648a8581701ea1d18d109db55b741c2">field_4_party_dir_y</a> = v24;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        this-&gt;<a class="code" href="../../da/d8e/struct_sky_billboard_struct.html#a32261286ed1dd0ec76d1594e6f27056d">field_8_party_dir_z</a> =</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            <a class="code" href="../../de/db6/_our_math_8cpp.html#abc4811d26f9864e00046c39c39d65680">fixpoint_mul</a>((-<a class="code" href="../../dc/d16/_indoor_camera_d3_d_8cpp.html#adea3dd5475289b8ba2698ac5d77b3d14">pIndoorCameraD3D</a>-&gt;<a class="code" href="../../d9/de5/struct_indoor_camera_d3_d.html#a053afa2a91bbe48068374f4b93be9cd8">vPartyPos</a>.<a class="code" href="../../df/d8a/struct_vec3.html#a0f694311f956380952aee054cbabb8b6">z</a>) &lt;&lt; 16, cosx) <span class="comment">/*-*/</span> +</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            <a class="code" href="../../de/db6/_our_math_8cpp.html#abc4811d26f9864e00046c39c39d65680">fixpoint_mul</a>(v11, sinx);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    }</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        this-&gt;<a class="code" href="../../da/d8e/struct_sky_billboard_struct.html#adbbd78478136a63e84f2376d5d40d978">field_0_party_dir_x</a> = v11;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        this-&gt;<a class="code" href="../../da/d8e/struct_sky_billboard_struct.html#a8648a8581701ea1d18d109db55b741c2">field_4_party_dir_y</a> = v24;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        this-&gt;<a class="code" href="../../da/d8e/struct_sky_billboard_struct.html#a32261286ed1dd0ec76d1594e6f27056d">field_8_party_dir_z</a> = (-<a class="code" href="../../dc/d16/_indoor_camera_d3_d_8cpp.html#adea3dd5475289b8ba2698ac5d77b3d14">pIndoorCameraD3D</a>-&gt;<a class="code" href="../../d9/de5/struct_indoor_camera_d3_d.html#a053afa2a91bbe48068374f4b93be9cd8">vPartyPos</a>.<a class="code" href="../../df/d8a/struct_vec3.html#a0f694311f956380952aee054cbabb8b6">z</a>) &lt;&lt; 16;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    }</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="comment">// set 1 position transfrom (6 0 0) looks like cam left vector</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../dc/d16/_indoor_camera_d3_d_8cpp.html#adea3dd5475289b8ba2698ac5d77b3d14">pIndoorCameraD3D</a>-&gt;<a class="code" href="../../d9/de5/struct_indoor_camera_d3_d.html#a0c509620164b44897810bd116a4b8458">sRotationX</a>) {</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keywordtype">int</span> v17 = <a class="code" href="../../de/db6/_our_math_8cpp.html#abc4811d26f9864e00046c39c39d65680">fixpoint_mul</a>(<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a49825216c96caaeb09237b36651181c5">x1</a>, cosy) + <a class="code" href="../../de/db6/_our_math_8cpp.html#abc4811d26f9864e00046c39c39d65680">fixpoint_mul</a>(<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a3af6c78fcdfccea028a5878bc747ef39">y1</a>, siny);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        this-&gt;<a class="code" href="../../da/d8e/struct_sky_billboard_struct.html#a692b2b47e93454f69bca4425a57f1c52">CamVecLeft_Z</a> = <a class="code" href="../../de/db6/_our_math_8cpp.html#abc4811d26f9864e00046c39c39d65680">fixpoint_mul</a>(v17, cosx) + <a class="code" href="../../de/db6/_our_math_8cpp.html#abc4811d26f9864e00046c39c39d65680">fixpoint_mul</a>(z1, sinx);  <span class="comment">// dz</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        this-&gt;<a class="code" href="../../da/d8e/struct_sky_billboard_struct.html#ab10a788909db022e7ac465fe62b02f67">CamVecLeft_X</a> = <a class="code" href="../../de/db6/_our_math_8cpp.html#abc4811d26f9864e00046c39c39d65680">fixpoint_mul</a>(<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a3af6c78fcdfccea028a5878bc747ef39">y1</a>, cosy) - <a class="code" href="../../de/db6/_our_math_8cpp.html#abc4811d26f9864e00046c39c39d65680">fixpoint_mul</a>(<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a49825216c96caaeb09237b36651181c5">x1</a>, siny);  <span class="comment">// dx</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        this-&gt;<a class="code" href="../../da/d8e/struct_sky_billboard_struct.html#a5f5e23a8626b6a92e5d7160967fcf33f">CamVecLeft_Y</a> = <a class="code" href="../../de/db6/_our_math_8cpp.html#abc4811d26f9864e00046c39c39d65680">fixpoint_mul</a>(z1, cosx) <span class="comment">/*-*/</span> + <a class="code" href="../../de/db6/_our_math_8cpp.html#abc4811d26f9864e00046c39c39d65680">fixpoint_mul</a>(v17, sinx);  <span class="comment">// dy</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    }</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        this-&gt;<a class="code" href="../../da/d8e/struct_sky_billboard_struct.html#a692b2b47e93454f69bca4425a57f1c52">CamVecLeft_Z</a> = <a class="code" href="../../de/db6/_our_math_8cpp.html#abc4811d26f9864e00046c39c39d65680">fixpoint_mul</a>(<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a49825216c96caaeb09237b36651181c5">x1</a>, cosy) + <a class="code" href="../../de/db6/_our_math_8cpp.html#abc4811d26f9864e00046c39c39d65680">fixpoint_mul</a>(<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a3af6c78fcdfccea028a5878bc747ef39">y1</a>, siny);  <span class="comment">// dz</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        this-&gt;<a class="code" href="../../da/d8e/struct_sky_billboard_struct.html#ab10a788909db022e7ac465fe62b02f67">CamVecLeft_X</a> = <a class="code" href="../../de/db6/_our_math_8cpp.html#abc4811d26f9864e00046c39c39d65680">fixpoint_mul</a>(<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a3af6c78fcdfccea028a5878bc747ef39">y1</a>, cosy) - <a class="code" href="../../de/db6/_our_math_8cpp.html#abc4811d26f9864e00046c39c39d65680">fixpoint_mul</a>(<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a49825216c96caaeb09237b36651181c5">x1</a>, siny);  <span class="comment">// dx</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        this-&gt;<a class="code" href="../../da/d8e/struct_sky_billboard_struct.html#a5f5e23a8626b6a92e5d7160967fcf33f">CamVecLeft_Y</a> = z1;  <span class="comment">// dy</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    }</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="comment">// set 2 position transfrom (0 6 0) looks like cam front vector</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../dc/d16/_indoor_camera_d3_d_8cpp.html#adea3dd5475289b8ba2698ac5d77b3d14">pIndoorCameraD3D</a>-&gt;<a class="code" href="../../d9/de5/struct_indoor_camera_d3_d.html#a0c509620164b44897810bd116a4b8458">sRotationX</a>) {</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="keywordtype">int</span> v19 = <a class="code" href="../../de/db6/_our_math_8cpp.html#abc4811d26f9864e00046c39c39d65680">fixpoint_mul</a>(<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a7b907a03236685c534d89d604cff23c8">x2</a>, cosy) + <a class="code" href="../../de/db6/_our_math_8cpp.html#abc4811d26f9864e00046c39c39d65680">fixpoint_mul</a>(<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a2be1135ed68e8d80fa9e130c7814f8c2">y2</a>, siny);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        this-&gt;<a class="code" href="../../da/d8e/struct_sky_billboard_struct.html#ad010a3d990a77287a2e78d01c33f7213">CamVecFront_Z</a> = <a class="code" href="../../de/db6/_our_math_8cpp.html#abc4811d26f9864e00046c39c39d65680">fixpoint_mul</a>(v19, cosx) + <a class="code" href="../../de/db6/_our_math_8cpp.html#abc4811d26f9864e00046c39c39d65680">fixpoint_mul</a>(z2, sinx);  <span class="comment">// dz</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        this-&gt;<a class="code" href="../../da/d8e/struct_sky_billboard_struct.html#aa8a0af7be53f59b1541d62d6079267aa">CamVecFront_X</a> = <a class="code" href="../../de/db6/_our_math_8cpp.html#abc4811d26f9864e00046c39c39d65680">fixpoint_mul</a>(<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a2be1135ed68e8d80fa9e130c7814f8c2">y2</a>, cosy) - <a class="code" href="../../de/db6/_our_math_8cpp.html#abc4811d26f9864e00046c39c39d65680">fixpoint_mul</a>(<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a7b907a03236685c534d89d604cff23c8">x2</a>, siny);  <span class="comment">// dx</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        this-&gt;<a class="code" href="../../da/d8e/struct_sky_billboard_struct.html#a814bacf7c76df1503f3b875636e23a57">CamVecFront_Y</a> = <a class="code" href="../../de/db6/_our_math_8cpp.html#abc4811d26f9864e00046c39c39d65680">fixpoint_mul</a>(z2, cosx) <span class="comment">/*-*/</span> + <a class="code" href="../../de/db6/_our_math_8cpp.html#abc4811d26f9864e00046c39c39d65680">fixpoint_mul</a>(v19, sinx);  <span class="comment">// dy</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    }</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        this-&gt;<a class="code" href="../../da/d8e/struct_sky_billboard_struct.html#ad010a3d990a77287a2e78d01c33f7213">CamVecFront_Z</a> = <a class="code" href="../../de/db6/_our_math_8cpp.html#abc4811d26f9864e00046c39c39d65680">fixpoint_mul</a>(<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a7b907a03236685c534d89d604cff23c8">x2</a>, cosy) + <a class="code" href="../../de/db6/_our_math_8cpp.html#abc4811d26f9864e00046c39c39d65680">fixpoint_mul</a>(<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a2be1135ed68e8d80fa9e130c7814f8c2">y2</a>, siny);  <span class="comment">// dz</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        this-&gt;<a class="code" href="../../da/d8e/struct_sky_billboard_struct.html#aa8a0af7be53f59b1541d62d6079267aa">CamVecFront_X</a> = <a class="code" href="../../de/db6/_our_math_8cpp.html#abc4811d26f9864e00046c39c39d65680">fixpoint_mul</a>(<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a2be1135ed68e8d80fa9e130c7814f8c2">y2</a>, cosy) - <a class="code" href="../../de/db6/_our_math_8cpp.html#abc4811d26f9864e00046c39c39d65680">fixpoint_mul</a>(<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a7b907a03236685c534d89d604cff23c8">x2</a>, siny);  <span class="comment">// dx</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        this-&gt;<a class="code" href="../../da/d8e/struct_sky_billboard_struct.html#a814bacf7c76df1503f3b875636e23a57">CamVecFront_Y</a> = z2;  <span class="comment">// dy</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    }</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    this-&gt;<a class="code" href="../../da/d8e/struct_sky_billboard_struct.html#a2a9a80d1e3b57226f067444b8ad65fde">CamLeftDot</a> = <a class="code" href="../../de/db6/_our_math_8cpp.html#a58862672cc5cd743a746469cb57f63fb">fixpoint_dot</a>(</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        this-&gt;<a class="code" href="../../da/d8e/struct_sky_billboard_struct.html#a692b2b47e93454f69bca4425a57f1c52">CamVecLeft_Z</a>, this-&gt;<a class="code" href="../../da/d8e/struct_sky_billboard_struct.html#adbbd78478136a63e84f2376d5d40d978">field_0_party_dir_x</a>,</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        this-&gt;<a class="code" href="../../da/d8e/struct_sky_billboard_struct.html#ab10a788909db022e7ac465fe62b02f67">CamVecLeft_X</a>, this-&gt;<a class="code" href="../../da/d8e/struct_sky_billboard_struct.html#a8648a8581701ea1d18d109db55b741c2">field_4_party_dir_y</a>,</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        this-&gt;<a class="code" href="../../da/d8e/struct_sky_billboard_struct.html#a5f5e23a8626b6a92e5d7160967fcf33f">CamVecLeft_Y</a>, this-&gt;<a class="code" href="../../da/d8e/struct_sky_billboard_struct.html#a32261286ed1dd0ec76d1594e6f27056d">field_8_party_dir_z</a>);</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    this-&gt;<a class="code" href="../../da/d8e/struct_sky_billboard_struct.html#a18c945734790fcf7ac3c6835351de3b0">CamFrontDot</a> = <a class="code" href="../../de/db6/_our_math_8cpp.html#a58862672cc5cd743a746469cb57f63fb">fixpoint_dot</a>(</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        this-&gt;<a class="code" href="../../da/d8e/struct_sky_billboard_struct.html#ad010a3d990a77287a2e78d01c33f7213">CamVecFront_Z</a>, this-&gt;<a class="code" href="../../da/d8e/struct_sky_billboard_struct.html#adbbd78478136a63e84f2376d5d40d978">field_0_party_dir_x</a>,</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        this-&gt;<a class="code" href="../../da/d8e/struct_sky_billboard_struct.html#aa8a0af7be53f59b1541d62d6079267aa">CamVecFront_X</a>, this-&gt;<a class="code" href="../../da/d8e/struct_sky_billboard_struct.html#a8648a8581701ea1d18d109db55b741c2">field_4_party_dir_y</a>,</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        this-&gt;<a class="code" href="../../da/d8e/struct_sky_billboard_struct.html#a814bacf7c76df1503f3b875636e23a57">CamVecFront_Y</a>, this-&gt;<a class="code" href="../../da/d8e/struct_sky_billboard_struct.html#a32261286ed1dd0ec76d1594e6f27056d">field_8_party_dir_z</a>);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../da/d20/_i_render_8h_source.html#l00478">CamFrontDot</a>, <a class="el" href="../../da/d20/_i_render_8h_source.html#l00477">CamLeftDot</a>, <a class="el" href="../../da/d20/_i_render_8h_source.html#l00475">CamVecFront_X</a>, <a class="el" href="../../da/d20/_i_render_8h_source.html#l00476">CamVecFront_Y</a>, <a class="el" href="../../da/d20/_i_render_8h_source.html#l00474">CamVecFront_Z</a>, <a class="el" href="../../da/d20/_i_render_8h_source.html#l00472">CamVecLeft_X</a>, <a class="el" href="../../da/d20/_i_render_8h_source.html#l00473">CamVecLeft_Y</a>, <a class="el" href="../../da/d20/_i_render_8h_source.html#l00471">CamVecLeft_Z</a>, <a class="el" href="../../da/d20/_i_render_8h_source.html#l00468">field_0_party_dir_x</a>, <a class="el" href="../../da/d20/_i_render_8h_source.html#l00469">field_4_party_dir_y</a>, <a class="el" href="../../da/d20/_i_render_8h_source.html#l00470">field_8_party_dir_z</a>, <a class="el" href="../../de/db6/_our_math_8cpp_source.html#l00142">fixpoint_dot()</a>, <a class="el" href="../../de/db6/_our_math_8cpp_source.html#l00138">fixpoint_mul()</a>, <a class="el" href="../../d4/dcf/_indoor_camera_d3_d_8h_source.html#l00263">IndoorCameraD3D::int_cosine_x</a>, <a class="el" href="../../d4/dcf/_indoor_camera_d3_d_8h_source.html#l00259">IndoorCameraD3D::int_cosine_y</a>, <a class="el" href="../../d4/dcf/_indoor_camera_d3_d_8h_source.html#l00261">IndoorCameraD3D::int_sine_x</a>, <a class="el" href="../../d4/dcf/_indoor_camera_d3_d_8h_source.html#l00257">IndoorCameraD3D::int_sine_y</a>, <a class="el" href="../../dc/d16/_indoor_camera_d3_d_8cpp_source.html#l00021">pIndoorCameraD3D</a>, <a class="el" href="../../d4/dcf/_indoor_camera_d3_d_8h_source.html#l00248">IndoorCameraD3D::sRotationX</a>, <a class="el" href="../../d4/dcf/_indoor_camera_d3_d_8h_source.html#l00253">IndoorCameraD3D::vPartyPos</a>, <a class="el" href="../../dc/d90/_vector_types_8h_source.html#l00012">Vec2&lt; T &gt;::x</a>, <a class="el" href="../../dc/d90/_vector_types_8h_source.html#l00013">Vec2&lt; T &gt;::y</a> и <a class="el" href="../../dc/d90/_vector_types_8h_source.html#l00027">Vec3&lt; T &gt;::z</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l05795">Render::DrawIndoorSky()</a> и <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l00084">OutdoorLocation::ExecDraw()</a>.</p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../da/d8e/struct_sky_billboard_struct_a47539cd1ae407975e25634a21de225a2_cgraph.svg" width="436" height="71"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../da/d8e/struct_sky_billboard_struct_a47539cd1ae407975e25634a21de225a2_icgraph.svg" width="100%" height="448"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="adbbd78478136a63e84f2376d5d40d978"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbbd78478136a63e84f2376d5d40d978">&#9670;&nbsp;</a></span>field_0_party_dir_x</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int SkyBillboardStruct::field_0_party_dir_x</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/d20/_i_render_8h_source.html">IRender.h</a> строка <a class="el" href="../../da/d20/_i_render_8h_source.html#l00468">468</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l00062">CalcSkyFrustumVec()</a>.</p>
+
+</div>
+</div>
+<a id="a8648a8581701ea1d18d109db55b741c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8648a8581701ea1d18d109db55b741c2">&#9670;&nbsp;</a></span>field_4_party_dir_y</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int SkyBillboardStruct::field_4_party_dir_y</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/d20/_i_render_8h_source.html">IRender.h</a> строка <a class="el" href="../../da/d20/_i_render_8h_source.html#l00469">469</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l00062">CalcSkyFrustumVec()</a>.</p>
+
+</div>
+</div>
+<a id="a32261286ed1dd0ec76d1594e6f27056d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32261286ed1dd0ec76d1594e6f27056d">&#9670;&nbsp;</a></span>field_8_party_dir_z</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int SkyBillboardStruct::field_8_party_dir_z</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/d20/_i_render_8h_source.html">IRender.h</a> строка <a class="el" href="../../da/d20/_i_render_8h_source.html#l00470">470</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l00062">CalcSkyFrustumVec()</a>.</p>
+
+</div>
+</div>
+<a id="a692b2b47e93454f69bca4425a57f1c52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a692b2b47e93454f69bca4425a57f1c52">&#9670;&nbsp;</a></span>CamVecLeft_Z</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int SkyBillboardStruct::CamVecLeft_Z</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/d20/_i_render_8h_source.html">IRender.h</a> строка <a class="el" href="../../da/d20/_i_render_8h_source.html#l00471">471</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l00062">CalcSkyFrustumVec()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l05795">Render::DrawIndoorSky()</a>, <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l01378">RenderOpenGL::DrawOutdoorSkyD3D()</a> и <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l05613">Render::DrawOutdoorSkyD3D()</a>.</p>
+
+</div>
+</div>
+<a id="ab10a788909db022e7ac465fe62b02f67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab10a788909db022e7ac465fe62b02f67">&#9670;&nbsp;</a></span>CamVecLeft_X</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int SkyBillboardStruct::CamVecLeft_X</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/d20/_i_render_8h_source.html">IRender.h</a> строка <a class="el" href="../../da/d20/_i_render_8h_source.html#l00472">472</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l00062">CalcSkyFrustumVec()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l05795">Render::DrawIndoorSky()</a>, <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l01378">RenderOpenGL::DrawOutdoorSkyD3D()</a> и <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l05613">Render::DrawOutdoorSkyD3D()</a>.</p>
+
+</div>
+</div>
+<a id="a5f5e23a8626b6a92e5d7160967fcf33f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f5e23a8626b6a92e5d7160967fcf33f">&#9670;&nbsp;</a></span>CamVecLeft_Y</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int SkyBillboardStruct::CamVecLeft_Y</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/d20/_i_render_8h_source.html">IRender.h</a> строка <a class="el" href="../../da/d20/_i_render_8h_source.html#l00473">473</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l00062">CalcSkyFrustumVec()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l05795">Render::DrawIndoorSky()</a>, <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l01378">RenderOpenGL::DrawOutdoorSkyD3D()</a> и <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l05613">Render::DrawOutdoorSkyD3D()</a>.</p>
+
+</div>
+</div>
+<a id="ad010a3d990a77287a2e78d01c33f7213"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad010a3d990a77287a2e78d01c33f7213">&#9670;&nbsp;</a></span>CamVecFront_Z</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int SkyBillboardStruct::CamVecFront_Z</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/d20/_i_render_8h_source.html">IRender.h</a> строка <a class="el" href="../../da/d20/_i_render_8h_source.html#l00474">474</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l00062">CalcSkyFrustumVec()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l05795">Render::DrawIndoorSky()</a>, <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l01378">RenderOpenGL::DrawOutdoorSkyD3D()</a> и <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l05613">Render::DrawOutdoorSkyD3D()</a>.</p>
+
+</div>
+</div>
+<a id="aa8a0af7be53f59b1541d62d6079267aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8a0af7be53f59b1541d62d6079267aa">&#9670;&nbsp;</a></span>CamVecFront_X</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int SkyBillboardStruct::CamVecFront_X</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/d20/_i_render_8h_source.html">IRender.h</a> строка <a class="el" href="../../da/d20/_i_render_8h_source.html#l00475">475</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l00062">CalcSkyFrustumVec()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l05795">Render::DrawIndoorSky()</a>, <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l01378">RenderOpenGL::DrawOutdoorSkyD3D()</a> и <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l05613">Render::DrawOutdoorSkyD3D()</a>.</p>
+
+</div>
+</div>
+<a id="a814bacf7c76df1503f3b875636e23a57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a814bacf7c76df1503f3b875636e23a57">&#9670;&nbsp;</a></span>CamVecFront_Y</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int SkyBillboardStruct::CamVecFront_Y</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/d20/_i_render_8h_source.html">IRender.h</a> строка <a class="el" href="../../da/d20/_i_render_8h_source.html#l00476">476</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l00062">CalcSkyFrustumVec()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l05795">Render::DrawIndoorSky()</a>, <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l01378">RenderOpenGL::DrawOutdoorSkyD3D()</a> и <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l05613">Render::DrawOutdoorSkyD3D()</a>.</p>
+
+</div>
+</div>
+<a id="a2a9a80d1e3b57226f067444b8ad65fde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a9a80d1e3b57226f067444b8ad65fde">&#9670;&nbsp;</a></span>CamLeftDot</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int SkyBillboardStruct::CamLeftDot</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/d20/_i_render_8h_source.html">IRender.h</a> строка <a class="el" href="../../da/d20/_i_render_8h_source.html#l00477">477</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l00062">CalcSkyFrustumVec()</a>.</p>
+
+</div>
+</div>
+<a id="a18c945734790fcf7ac3c6835351de3b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18c945734790fcf7ac3c6835351de3b0">&#9670;&nbsp;</a></span>CamFrontDot</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int SkyBillboardStruct::CamFrontDot</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/d20/_i_render_8h_source.html">IRender.h</a> строка <a class="el" href="../../da/d20/_i_render_8h_source.html#l00478">478</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l00062">CalcSkyFrustumVec()</a>.</p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов структур находятся в файлах:<ul>
+<li>C:/git/world-of-might-and-magic/Engine/Graphics/<a class="el" href="../../da/d20/_i_render_8h_source.html">IRender.h</a></li>
+<li>C:/git/world-of-might-and-magic/Engine/Graphics/OpenGL/<a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html">RenderOpenGL.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="astruct_sky_billboard_struct_html_adbbd78478136a63e84f2376d5d40d978"><div class="ttname"><a href="../../da/d8e/struct_sky_billboard_struct.html#adbbd78478136a63e84f2376d5d40d978">SkyBillboardStruct::field_0_party_dir_x</a></div><div class="ttdeci">int field_0_party_dir_x</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d20/_i_render_8h_source.html#l00468">IRender.h:468</a></div></div>
+<div class="ttc" id="astruct_sky_billboard_struct_html_a5f5e23a8626b6a92e5d7160967fcf33f"><div class="ttname"><a href="../../da/d8e/struct_sky_billboard_struct.html#a5f5e23a8626b6a92e5d7160967fcf33f">SkyBillboardStruct::CamVecLeft_Y</a></div><div class="ttdeci">int CamVecLeft_Y</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d20/_i_render_8h_source.html#l00473">IRender.h:473</a></div></div>
+<div class="ttc" id="astruct_vec2_html_a8ef8f719932c920ac4ce11399c983d53"><div class="ttname"><a href="../../db/db1/struct_vec2.html#a8ef8f719932c920ac4ce11399c983d53">Vec2::x</a></div><div class="ttdeci">T x</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d90/_vector_types_8h_source.html#l00012">VectorTypes.h:12</a></div></div>
+<div class="ttc" id="astruct_indoor_camera_d3_d_html_a0c509620164b44897810bd116a4b8458"><div class="ttname"><a href="../../d9/de5/struct_indoor_camera_d3_d.html#a0c509620164b44897810bd116a4b8458">IndoorCameraD3D::sRotationX</a></div><div class="ttdeci">int sRotationX</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcf/_indoor_camera_d3_d_8h_source.html#l00248">IndoorCameraD3D.h:248</a></div></div>
+<div class="ttc" id="astruct_sky_billboard_struct_html_a8648a8581701ea1d18d109db55b741c2"><div class="ttname"><a href="../../da/d8e/struct_sky_billboard_struct.html#a8648a8581701ea1d18d109db55b741c2">SkyBillboardStruct::field_4_party_dir_y</a></div><div class="ttdeci">int field_4_party_dir_y</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d20/_i_render_8h_source.html#l00469">IRender.h:469</a></div></div>
+<div class="ttc" id="astruct_sky_billboard_struct_html_a692b2b47e93454f69bca4425a57f1c52"><div class="ttname"><a href="../../da/d8e/struct_sky_billboard_struct.html#a692b2b47e93454f69bca4425a57f1c52">SkyBillboardStruct::CamVecLeft_Z</a></div><div class="ttdeci">int CamVecLeft_Z</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d20/_i_render_8h_source.html#l00471">IRender.h:471</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a49825216c96caaeb09237b36651181c5"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a49825216c96caaeb09237b36651181c5">x1</a></div><div class="ttdeci">GLuint GLfloat GLfloat GLfloat x1</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l08586">SDL_opengl_glext.h:8586</a></div></div>
+<div class="ttc" id="astruct_indoor_camera_d3_d_html_a30b56101501ced3fd693f9bfbe62e956"><div class="ttname"><a href="../../d9/de5/struct_indoor_camera_d3_d.html#a30b56101501ced3fd693f9bfbe62e956">IndoorCameraD3D::int_cosine_x</a></div><div class="ttdeci">int int_cosine_x</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcf/_indoor_camera_d3_d_8h_source.html#l00263">IndoorCameraD3D.h:263</a></div></div>
+<div class="ttc" id="astruct_indoor_camera_d3_d_html_a053afa2a91bbe48068374f4b93be9cd8"><div class="ttname"><a href="../../d9/de5/struct_indoor_camera_d3_d.html#a053afa2a91bbe48068374f4b93be9cd8">IndoorCameraD3D::vPartyPos</a></div><div class="ttdeci">Vec3&lt; int &gt; vPartyPos</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcf/_indoor_camera_d3_d_8h_source.html#l00253">IndoorCameraD3D.h:253</a></div></div>
+<div class="ttc" id="astruct_vec2_html_a7ea262a941af6b3abd284ab97658806c"><div class="ttname"><a href="../../db/db1/struct_vec2.html#a7ea262a941af6b3abd284ab97658806c">Vec2::y</a></div><div class="ttdeci">T y</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d90/_vector_types_8h_source.html#l00013">VectorTypes.h:13</a></div></div>
+<div class="ttc" id="a_our_math_8cpp_html_a58862672cc5cd743a746469cb57f63fb"><div class="ttname"><a href="../../de/db6/_our_math_8cpp.html#a58862672cc5cd743a746469cb57f63fb">fixpoint_dot</a></div><div class="ttdeci">__int64 fixpoint_dot(int x1, int x2, int y1, int y2, int z1, int z2)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/db6/_our_math_8cpp_source.html#l00142">OurMath.cpp:142</a></div></div>
+<div class="ttc" id="astruct_indoor_camera_d3_d_html_ad50ae56699d3308332c1170d64ea76b3"><div class="ttname"><a href="../../d9/de5/struct_indoor_camera_d3_d.html#ad50ae56699d3308332c1170d64ea76b3">IndoorCameraD3D::int_cosine_y</a></div><div class="ttdeci">int int_cosine_y</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcf/_indoor_camera_d3_d_8h_source.html#l00259">IndoorCameraD3D.h:259</a></div></div>
+<div class="ttc" id="astruct_sky_billboard_struct_html_a32261286ed1dd0ec76d1594e6f27056d"><div class="ttname"><a href="../../da/d8e/struct_sky_billboard_struct.html#a32261286ed1dd0ec76d1594e6f27056d">SkyBillboardStruct::field_8_party_dir_z</a></div><div class="ttdeci">int field_8_party_dir_z</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d20/_i_render_8h_source.html#l00470">IRender.h:470</a></div></div>
+<div class="ttc" id="a_our_math_8cpp_html_abc4811d26f9864e00046c39c39d65680"><div class="ttname"><a href="../../de/db6/_our_math_8cpp.html#abc4811d26f9864e00046c39c39d65680">fixpoint_mul</a></div><div class="ttdeci">__int64 fixpoint_mul(int a1, int a2)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/db6/_our_math_8cpp_source.html#l00138">OurMath.cpp:138</a></div></div>
+<div class="ttc" id="astruct_sky_billboard_struct_html_ad010a3d990a77287a2e78d01c33f7213"><div class="ttname"><a href="../../da/d8e/struct_sky_billboard_struct.html#ad010a3d990a77287a2e78d01c33f7213">SkyBillboardStruct::CamVecFront_Z</a></div><div class="ttdeci">int CamVecFront_Z</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d20/_i_render_8h_source.html#l00474">IRender.h:474</a></div></div>
+<div class="ttc" id="astruct_indoor_camera_d3_d_html_a3697313109be5765f73a0f5ab91bd0a6"><div class="ttname"><a href="../../d9/de5/struct_indoor_camera_d3_d.html#a3697313109be5765f73a0f5ab91bd0a6">IndoorCameraD3D::int_sine_x</a></div><div class="ttdeci">int int_sine_x</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcf/_indoor_camera_d3_d_8h_source.html#l00261">IndoorCameraD3D.h:261</a></div></div>
+<div class="ttc" id="astruct_sky_billboard_struct_html_a814bacf7c76df1503f3b875636e23a57"><div class="ttname"><a href="../../da/d8e/struct_sky_billboard_struct.html#a814bacf7c76df1503f3b875636e23a57">SkyBillboardStruct::CamVecFront_Y</a></div><div class="ttdeci">int CamVecFront_Y</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d20/_i_render_8h_source.html#l00476">IRender.h:476</a></div></div>
+<div class="ttc" id="astruct_sky_billboard_struct_html_ab10a788909db022e7ac465fe62b02f67"><div class="ttname"><a href="../../da/d8e/struct_sky_billboard_struct.html#ab10a788909db022e7ac465fe62b02f67">SkyBillboardStruct::CamVecLeft_X</a></div><div class="ttdeci">int CamVecLeft_X</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d20/_i_render_8h_source.html#l00472">IRender.h:472</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a7b907a03236685c534d89d604cff23c8"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a7b907a03236685c534d89d604cff23c8">x2</a></div><div class="ttdeci">GLfixed GLfixed x2</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l04586">SDL_opengl_glext.h:4586</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a3af6c78fcdfccea028a5878bc747ef39"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a3af6c78fcdfccea028a5878bc747ef39">y1</a></div><div class="ttdeci">GLfixed y1</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l04586">SDL_opengl_glext.h:4586</a></div></div>
+<div class="ttc" id="astruct_sky_billboard_struct_html_aa8a0af7be53f59b1541d62d6079267aa"><div class="ttname"><a href="../../da/d8e/struct_sky_billboard_struct.html#aa8a0af7be53f59b1541d62d6079267aa">SkyBillboardStruct::CamVecFront_X</a></div><div class="ttdeci">int CamVecFront_X</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d20/_i_render_8h_source.html#l00475">IRender.h:475</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a2be1135ed68e8d80fa9e130c7814f8c2"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a2be1135ed68e8d80fa9e130c7814f8c2">y2</a></div><div class="ttdeci">GLfixed GLfixed GLfixed y2</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l04586">SDL_opengl_glext.h:4586</a></div></div>
+<div class="ttc" id="astruct_sky_billboard_struct_html_a2a9a80d1e3b57226f067444b8ad65fde"><div class="ttname"><a href="../../da/d8e/struct_sky_billboard_struct.html#a2a9a80d1e3b57226f067444b8ad65fde">SkyBillboardStruct::CamLeftDot</a></div><div class="ttdeci">int CamLeftDot</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d20/_i_render_8h_source.html#l00477">IRender.h:477</a></div></div>
+<div class="ttc" id="astruct_sky_billboard_struct_html_a18c945734790fcf7ac3c6835351de3b0"><div class="ttname"><a href="../../da/d8e/struct_sky_billboard_struct.html#a18c945734790fcf7ac3c6835351de3b0">SkyBillboardStruct::CamFrontDot</a></div><div class="ttdeci">int CamFrontDot</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d20/_i_render_8h_source.html#l00478">IRender.h:478</a></div></div>
+<div class="ttc" id="a_indoor_camera_d3_d_8cpp_html_adea3dd5475289b8ba2698ac5d77b3d14"><div class="ttname"><a href="../../dc/d16/_indoor_camera_d3_d_8cpp.html#adea3dd5475289b8ba2698ac5d77b3d14">pIndoorCameraD3D</a></div><div class="ttdeci">IndoorCameraD3D * pIndoorCameraD3D</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d16/_indoor_camera_d3_d_8cpp_source.html#l00021">IndoorCameraD3D.cpp:21</a></div></div>
+<div class="ttc" id="astruct_indoor_camera_d3_d_html_a2d889f978bc0f5facf95f28771c38d00"><div class="ttname"><a href="../../d9/de5/struct_indoor_camera_d3_d.html#a2d889f978bc0f5facf95f28771c38d00">IndoorCameraD3D::int_sine_y</a></div><div class="ttdeci">int int_sine_y</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcf/_indoor_camera_d3_d_8h_source.html#l00257">IndoorCameraD3D.h:257</a></div></div>
+<div class="ttc" id="astruct_vec3_html_a0f694311f956380952aee054cbabb8b6"><div class="ttname"><a href="../../df/d8a/struct_vec3.html#a0f694311f956380952aee054cbabb8b6">Vec3::z</a></div><div class="ttdeci">T z</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d90/_vector_types_8h_source.html#l00027">VectorTypes.h:27</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../da/d8e/struct_sky_billboard_struct.html">SkyBillboardStruct</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:05:17. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

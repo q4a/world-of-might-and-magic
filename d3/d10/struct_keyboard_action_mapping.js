@@ -1,0 +1,27 @@
+var struct_keyboard_action_mapping =
+[
+    [ "KeyboardActionMapping", "d3/d10/struct_keyboard_action_mapping.html#aeb064cc7abb83e385992810a72aa0729", null ],
+    [ "SetKeyMapping", "d3/d10/struct_keyboard_action_mapping.html#acd29a14b6faeea86a4a75c41e3d0ea1c", null ],
+    [ "GetActionVKey", "d3/d10/struct_keyboard_action_mapping.html#a32e8b31a692a3e5b5a6540feef05ab63", null ],
+    [ "GetVKeyDisplayName", "d3/d10/struct_keyboard_action_mapping.html#a8e36b00250fcb4fc376886b7d125aafb", null ],
+    [ "TranslateKeyNameToKeyCode", "d3/d10/struct_keyboard_action_mapping.html#aceeecc60b2cf09b36b450c08330461ec", null ],
+    [ "ReadMappings", "d3/d10/struct_keyboard_action_mapping.html#aed16da5e695ed85e46700767a3b0b950", null ],
+    [ "StoreMappings", "d3/d10/struct_keyboard_action_mapping.html#aac6ff2af56c8a1d81f9c32617cf8606c", null ],
+    [ "ProcessTextInput", "d3/d10/struct_keyboard_action_mapping.html#a09ae9025b86f29832488593e356a9607", null ],
+    [ "SetWindowInputStatus", "d3/d10/struct_keyboard_action_mapping.html#afe2b117e5c12ab2fad03629f9b696640", null ],
+    [ "EnterText", "d3/d10/struct_keyboard_action_mapping.html#a917e9b1ad72a99ff31b4dd3843125b76", null ],
+    [ "ResetKeys", "d3/d10/struct_keyboard_action_mapping.html#ad6ae2db00bf12d5c2913a62b33e6eb87", null ],
+    [ "SetDefaultMapping", "d3/d10/struct_keyboard_action_mapping.html#aecc6c0916f8bd4a2b282db6bc56c5c07", null ],
+    [ "uLastKeyPressed", "d3/d10/struct_keyboard_action_mapping.html#a2203e509b8a40484e8b563d9d85fab1d", null ],
+    [ "field_4", "d3/d10/struct_keyboard_action_mapping.html#a149a29b891854855ce753fcf9bd0677f", null ],
+    [ "field_8", "d3/d10/struct_keyboard_action_mapping.html#a23e12c1281c0582a4e64f2c35ec4c50f", null ],
+    [ "pVirtualKeyCodesMapping", "d3/d10/struct_keyboard_action_mapping.html#a789e2d35af2d52957ba3f280a1edf8e4", null ],
+    [ "pToggleTypes", "d3/d10/struct_keyboard_action_mapping.html#ac805d4229c62beba5864dd9941a9fd4f", null ],
+    [ "max_input_string_len", "d3/d10/struct_keyboard_action_mapping.html#ac646ad4fdaae5bcbe6b2e0d89017cbd5", null ],
+    [ "pPressedKeysBuffer", "d3/d10/struct_keyboard_action_mapping.html#a15266ca37a2e4e03dcffb1d1302b0a3b", null ],
+    [ "uNumKeysPressed", "d3/d10/struct_keyboard_action_mapping.html#a86c8500d919a786e9e661957e62f1511", null ],
+    [ "field_202", "d3/d10/struct_keyboard_action_mapping.html#af70d275f453fcd43850a847051540b56", null ],
+    [ "field_203", "d3/d10/struct_keyboard_action_mapping.html#ae4a59b2e6dc148c63b88209df6d44471", null ],
+    [ "field_204", "d3/d10/struct_keyboard_action_mapping.html#ad1bda342b200f7329564da71ae86478f", null ],
+    [ "pWindow", "d3/d10/struct_keyboard_action_mapping.html#a81382748c0b08a30ea968c2c7aff7cac", null ]
+];

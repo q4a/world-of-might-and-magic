@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Файл C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavutil/mathematics.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d1/dbe/mathematics_8h.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#enum-members">Перечисления</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл mathematics.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><a href="../../d1/dbe/mathematics_8h_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Перечисления</h2></td></tr>
+<tr class="memitem:ga921d656eaf2c4d6800a734a13af021d0"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d56/group__lavu__math.html#ga921d656eaf2c4d6800a734a13af021d0">AVRounding</a> { <br />
+&#160;&#160;<a class="el" href="../../d3/d56/group__lavu__math.html#gga921d656eaf2c4d6800a734a13af021d0a35e291756025351803b97f7522b56eab">AV_ROUND_ZERO</a> = 0, 
+<a class="el" href="../../d3/d56/group__lavu__math.html#gga921d656eaf2c4d6800a734a13af021d0a0ac08aede35de739ec5d0c1ba6217126">AV_ROUND_INF</a> = 1, 
+<a class="el" href="../../d3/d56/group__lavu__math.html#gga921d656eaf2c4d6800a734a13af021d0a4a4b2c2c77b7e20884440f7e57cfdb98">AV_ROUND_DOWN</a> = 2, 
+<a class="el" href="../../d3/d56/group__lavu__math.html#gga921d656eaf2c4d6800a734a13af021d0aa1d28e08e2f8b49b256e056f93038c1a">AV_ROUND_UP</a> = 3, 
+<br />
+&#160;&#160;<a class="el" href="../../d3/d56/group__lavu__math.html#gga921d656eaf2c4d6800a734a13af021d0aea95b00154ff83c740b46376dfa06e11">AV_ROUND_NEAR_INF</a> = 5, 
+<a class="el" href="../../d3/d56/group__lavu__math.html#gga921d656eaf2c4d6800a734a13af021d0a7fcb56631d6898b282d6c78ce6c14a43">AV_ROUND_PASS_MINMAX</a> = 8192
+<br />
+ }</td></tr>
+<tr class="separator:ga921d656eaf2c4d6800a734a13af021d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:ga952147c7a40c48a05c39e918b153ba99"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/df4/alext_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a> av_const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d56/group__lavu__math.html#ga952147c7a40c48a05c39e918b153ba99">av_gcd</a> (<a class="el" href="../../dd/df4/alext_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a> <a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a3309789fc188587d666cda5ece79cf82">a</a>, <a class="el" href="../../dd/df4/alext_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a> <a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0f71581a41fd2264c8944126dabbd010">b</a>)</td></tr>
+<tr class="separator:ga952147c7a40c48a05c39e918b153ba99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3daf97178dd1b08b5e916be381cd33e4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/df4/alext_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d56/group__lavu__math.html#ga3daf97178dd1b08b5e916be381cd33e4">av_rescale</a> (<a class="el" href="../../dd/df4/alext_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a> <a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a3309789fc188587d666cda5ece79cf82">a</a>, <a class="el" href="../../dd/df4/alext_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a> <a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0f71581a41fd2264c8944126dabbd010">b</a>, <a class="el" href="../../dd/df4/alext_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a> <a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1f2d7f8147412c43ba2303a56f97ee73">c</a>) av_const</td></tr>
+<tr class="separator:ga3daf97178dd1b08b5e916be381cd33e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga82d40664213508918093822461cc597e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/df4/alext_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d56/group__lavu__math.html#ga82d40664213508918093822461cc597e">av_rescale_rnd</a> (<a class="el" href="../../dd/df4/alext_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a> <a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a3309789fc188587d666cda5ece79cf82">a</a>, <a class="el" href="../../dd/df4/alext_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a> <a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0f71581a41fd2264c8944126dabbd010">b</a>, <a class="el" href="../../dd/df4/alext_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a> <a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1f2d7f8147412c43ba2303a56f97ee73">c</a>, enum <a class="el" href="../../d3/d56/group__lavu__math.html#ga921d656eaf2c4d6800a734a13af021d0">AVRounding</a> rnd) av_const</td></tr>
+<tr class="separator:ga82d40664213508918093822461cc597e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf02994a8bbeaa91d4757df179cbe567f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/df4/alext_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d56/group__lavu__math.html#gaf02994a8bbeaa91d4757df179cbe567f">av_rescale_q</a> (<a class="el" href="../../dd/df4/alext_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a> <a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a3309789fc188587d666cda5ece79cf82">a</a>, <a class="el" href="../../d7/d28/struct_a_v_rational.html">AVRational</a> bq, <a class="el" href="../../d7/d28/struct_a_v_rational.html">AVRational</a> cq) av_const</td></tr>
+<tr class="separator:gaf02994a8bbeaa91d4757df179cbe567f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab706bfec9bf56534e02ca9564cb968f6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/df4/alext_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d56/group__lavu__math.html#gab706bfec9bf56534e02ca9564cb968f6">av_rescale_q_rnd</a> (<a class="el" href="../../dd/df4/alext_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a> <a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a3309789fc188587d666cda5ece79cf82">a</a>, <a class="el" href="../../d7/d28/struct_a_v_rational.html">AVRational</a> bq, <a class="el" href="../../d7/d28/struct_a_v_rational.html">AVRational</a> cq, enum <a class="el" href="../../d3/d56/group__lavu__math.html#ga921d656eaf2c4d6800a734a13af021d0">AVRounding</a> rnd) av_const</td></tr>
+<tr class="separator:gab706bfec9bf56534e02ca9564cb968f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga151744358fff630942b926e67e67c415"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d56/group__lavu__math.html#ga151744358fff630942b926e67e67c415">av_compare_ts</a> (<a class="el" href="../../dd/df4/alext_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a> ts_a, <a class="el" href="../../d7/d28/struct_a_v_rational.html">AVRational</a> tb_a, <a class="el" href="../../dd/df4/alext_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a> ts_b, <a class="el" href="../../d7/d28/struct_a_v_rational.html">AVRational</a> tb_b)</td></tr>
+<tr class="separator:ga151744358fff630942b926e67e67c415"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf268a1dde957d04da846e026e2ebe6e8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/df4/alext_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d56/group__lavu__math.html#gaf268a1dde957d04da846e026e2ebe6e8">av_compare_mod</a> (<a class="el" href="../../dd/df4/alext_8h.html#aec6fcb673ff035718c238c8c9d544c47">uint64_t</a> <a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a3309789fc188587d666cda5ece79cf82">a</a>, <a class="el" href="../../dd/df4/alext_8h.html#aec6fcb673ff035718c238c8c9d544c47">uint64_t</a> <a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0f71581a41fd2264c8944126dabbd010">b</a>, <a class="el" href="../../dd/df4/alext_8h.html#aec6fcb673ff035718c238c8c9d544c47">uint64_t</a> mod)</td></tr>
+<tr class="separator:gaf268a1dde957d04da846e026e2ebe6e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga29b7c3d60d68ef678ee1f4adc61a25dc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/df4/alext_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d56/group__lavu__math.html#ga29b7c3d60d68ef678ee1f4adc61a25dc">av_rescale_delta</a> (<a class="el" href="../../d7/d28/struct_a_v_rational.html">AVRational</a> in_tb, <a class="el" href="../../dd/df4/alext_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a> in_ts, <a class="el" href="../../d7/d28/struct_a_v_rational.html">AVRational</a> fs_tb, int duration, <a class="el" href="../../dd/df4/alext_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a> *last, <a class="el" href="../../d7/d28/struct_a_v_rational.html">AVRational</a> out_tb)</td></tr>
+<tr class="separator:ga29b7c3d60d68ef678ee1f4adc61a25dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0c4f9ed3f4102125be7451ad4d848a2f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/df4/alext_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d56/group__lavu__math.html#ga0c4f9ed3f4102125be7451ad4d848a2f">av_add_stable</a> (<a class="el" href="../../d7/d28/struct_a_v_rational.html">AVRational</a> ts_tb, <a class="el" href="../../dd/df4/alext_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a> ts, <a class="el" href="../../d7/d28/struct_a_v_rational.html">AVRational</a> inc_tb, <a class="el" href="../../dd/df4/alext_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a> inc)</td></tr>
+<tr class="separator:ga0c4f9ed3f4102125be7451ad4d848a2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_97aefd0d527b934f1d99a682da8fe6a9.html">lib</a></li><li class="navelem"><a class="el" href="../../dir_da53678e933bc13c5b44fc9f96ac81aa.html">win32</a></li><li class="navelem"><a class="el" href="../../dir_7ac189985cec0e073b46d34a5d96bfc1.html">x86</a></li><li class="navelem"><a class="el" href="../../dir_e3469dbcd8a5e63a5540df758d989c34.html">ffmpeg-4.2.2</a></li><li class="navelem"><a class="el" href="../../dir_880368755e1ee5b32b1864dac7163836.html">include</a></li><li class="navelem"><a class="el" href="../../dir_e95abcf8ca274311b94b0e3a5da6ed50.html">libavutil</a></li><li class="navelem"><a class="el" href="../../d1/dbe/mathematics_8h.html">mathematics.h</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:04:16. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

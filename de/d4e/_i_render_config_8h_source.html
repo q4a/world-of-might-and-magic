@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Исходный файл C:/git/world-of-might-and-magic/Engine/Graphics/IRenderConfig.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('de/d4e/_i_render_config_8h_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">IRenderConfig.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../de/d4e/_i_render_config_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="../../d6/d9b/namespace_graphics.html">    5</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="../../d6/d9b/namespace_graphics.html">Graphics</a> {</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="../../d6/d9b/namespace_graphics.html#a5fe6076cce9f4bcfcb56657e82ccc375">    7</a></span>&#160;<span class="keyword">enum class</span> <a class="code" href="../../d6/d9b/namespace_graphics.html#a5fe6076cce9f4bcfcb56657e82ccc375">RendererType</a> {</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <a class="code" href="../../d6/d9b/namespace_graphics.html#a5fe6076cce9f4bcfcb56657e82ccc375aa3ad3cded8219daa47be18264fa03086">DirectDraw</a>,</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <a class="code" href="../../d6/d9b/namespace_graphics.html#a5fe6076cce9f4bcfcb56657e82ccc375ade9f358df343b6e11e16bf04d6c28ba6">OpenGl</a></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;};</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="../../d4/dae/class_graphics_1_1_i_render_config.html">   12</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d4/dae/class_graphics_1_1_i_render_config.html">IRenderConfig</a> {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="../../d4/dae/class_graphics_1_1_i_render_config.html#a4aa9ebc24027173ab567759f7dfc4a50">   14</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="../../d4/dae/class_graphics_1_1_i_render_config.html#a4aa9ebc24027173ab567759f7dfc4a50">IsFullscreen</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="../../d4/dae/class_graphics_1_1_i_render_config.html#a9105b2f346064012b3d94dc8667048f2">is_fullscreen</a>; }</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="../../d4/dae/class_graphics_1_1_i_render_config.html#ac5ac6028282d19d55c918fa7146b0af3">   17</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d4/dae/class_graphics_1_1_i_render_config.html#ac5ac6028282d19d55c918fa7146b0af3">render_width</a> = 640;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="../../d4/dae/class_graphics_1_1_i_render_config.html#ae698566b7fb982f700abd78b83dadbf7">   18</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d4/dae/class_graphics_1_1_i_render_config.html#ae698566b7fb982f700abd78b83dadbf7">render_height</a> = 480;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="../../d4/dae/class_graphics_1_1_i_render_config.html#a9105b2f346064012b3d94dc8667048f2">   20</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d4/dae/class_graphics_1_1_i_render_config.html#a9105b2f346064012b3d94dc8667048f2">is_fullscreen</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="../../d4/dae/class_graphics_1_1_i_render_config.html#a6b54e23e23df01a19d7625ab1ef97a83">   21</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d4/dae/class_graphics_1_1_i_render_config.html#a6b54e23e23df01a19d7625ab1ef97a83">is_tinting</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="../../d4/dae/class_graphics_1_1_i_render_config.html#a8c0167d10ef52f3be30b1d3fe3263610">   22</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d4/dae/class_graphics_1_1_i_render_config.html#a8c0167d10ef52f3be30b1d3fe3263610">is_using_specular</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="../../d4/dae/class_graphics_1_1_i_render_config.html#abbecea70729b0a9d9cd86424f1d22c9e">   23</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d4/dae/class_graphics_1_1_i_render_config.html#abbecea70729b0a9d9cd86424f1d22c9e">is_using_colored_lights</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="../../d4/dae/class_graphics_1_1_i_render_config.html#ac8217dc41f87715993ec1f46b4452039">   24</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d4/dae/class_graphics_1_1_i_render_config.html#ac8217dc41f87715993ec1f46b4452039">is_using_fog</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="../../d4/dae/class_graphics_1_1_i_render_config.html#a8b3032171bcca1c27d7e757f5c2f663d">   26</a></span>&#160;    <a class="code" href="../../d6/d9b/namespace_graphics.html#a5fe6076cce9f4bcfcb56657e82ccc375">RendererType</a> <a class="code" href="../../d4/dae/class_graphics_1_1_i_render_config.html#a8b3032171bcca1c27d7e757f5c2f663d">renderer_type</a> = <a class="code" href="../../d6/d9b/namespace_graphics.html#a5fe6076cce9f4bcfcb56657e82ccc375aa3ad3cded8219daa47be18264fa03086">RendererType::DirectDraw</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;};</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;}  <span class="comment">// namespace Graphics</span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aclass_graphics_1_1_i_render_config_html_abbecea70729b0a9d9cd86424f1d22c9e"><div class="ttname"><a href="../../d4/dae/class_graphics_1_1_i_render_config.html#abbecea70729b0a9d9cd86424f1d22c9e">Graphics::IRenderConfig::is_using_colored_lights</a></div><div class="ttdeci">bool is_using_colored_lights</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d4e/_i_render_config_8h_source.html#l00023">IRenderConfig.h:23</a></div></div>
+<div class="ttc" id="aclass_graphics_1_1_i_render_config_html_ac5ac6028282d19d55c918fa7146b0af3"><div class="ttname"><a href="../../d4/dae/class_graphics_1_1_i_render_config.html#ac5ac6028282d19d55c918fa7146b0af3">Graphics::IRenderConfig::render_width</a></div><div class="ttdeci">int render_width</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d4e/_i_render_config_8h_source.html#l00017">IRenderConfig.h:17</a></div></div>
+<div class="ttc" id="aclass_graphics_1_1_i_render_config_html_a8c0167d10ef52f3be30b1d3fe3263610"><div class="ttname"><a href="../../d4/dae/class_graphics_1_1_i_render_config.html#a8c0167d10ef52f3be30b1d3fe3263610">Graphics::IRenderConfig::is_using_specular</a></div><div class="ttdeci">bool is_using_specular</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d4e/_i_render_config_8h_source.html#l00022">IRenderConfig.h:22</a></div></div>
+<div class="ttc" id="anamespace_graphics_html_a5fe6076cce9f4bcfcb56657e82ccc375ade9f358df343b6e11e16bf04d6c28ba6"><div class="ttname"><a href="../../d6/d9b/namespace_graphics.html#a5fe6076cce9f4bcfcb56657e82ccc375ade9f358df343b6e11e16bf04d6c28ba6">Graphics::RendererType::OpenGl</a></div><div class="ttdeci">@ OpenGl</div></div>
+<div class="ttc" id="aclass_graphics_1_1_i_render_config_html_ae698566b7fb982f700abd78b83dadbf7"><div class="ttname"><a href="../../d4/dae/class_graphics_1_1_i_render_config.html#ae698566b7fb982f700abd78b83dadbf7">Graphics::IRenderConfig::render_height</a></div><div class="ttdeci">int render_height</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d4e/_i_render_config_8h_source.html#l00018">IRenderConfig.h:18</a></div></div>
+<div class="ttc" id="anamespace_graphics_html"><div class="ttname"><a href="../../d6/d9b/namespace_graphics.html">Graphics</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d4e/_i_render_config_8h_source.html#l00005">IRenderConfig.h:5</a></div></div>
+<div class="ttc" id="anamespace_graphics_html_a5fe6076cce9f4bcfcb56657e82ccc375"><div class="ttname"><a href="../../d6/d9b/namespace_graphics.html#a5fe6076cce9f4bcfcb56657e82ccc375">Graphics::RendererType</a></div><div class="ttdeci">RendererType</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d4e/_i_render_config_8h_source.html#l00007">IRenderConfig.h:7</a></div></div>
+<div class="ttc" id="aclass_graphics_1_1_i_render_config_html_a8b3032171bcca1c27d7e757f5c2f663d"><div class="ttname"><a href="../../d4/dae/class_graphics_1_1_i_render_config.html#a8b3032171bcca1c27d7e757f5c2f663d">Graphics::IRenderConfig::renderer_type</a></div><div class="ttdeci">RendererType renderer_type</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d4e/_i_render_config_8h_source.html#l00026">IRenderConfig.h:26</a></div></div>
+<div class="ttc" id="aclass_graphics_1_1_i_render_config_html"><div class="ttname"><a href="../../d4/dae/class_graphics_1_1_i_render_config.html">Graphics::IRenderConfig</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d4e/_i_render_config_8h_source.html#l00012">IRenderConfig.h:12</a></div></div>
+<div class="ttc" id="aclass_graphics_1_1_i_render_config_html_ac8217dc41f87715993ec1f46b4452039"><div class="ttname"><a href="../../d4/dae/class_graphics_1_1_i_render_config.html#ac8217dc41f87715993ec1f46b4452039">Graphics::IRenderConfig::is_using_fog</a></div><div class="ttdeci">bool is_using_fog</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d4e/_i_render_config_8h_source.html#l00024">IRenderConfig.h:24</a></div></div>
+<div class="ttc" id="aclass_graphics_1_1_i_render_config_html_a9105b2f346064012b3d94dc8667048f2"><div class="ttname"><a href="../../d4/dae/class_graphics_1_1_i_render_config.html#a9105b2f346064012b3d94dc8667048f2">Graphics::IRenderConfig::is_fullscreen</a></div><div class="ttdeci">bool is_fullscreen</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d4e/_i_render_config_8h_source.html#l00020">IRenderConfig.h:20</a></div></div>
+<div class="ttc" id="aclass_graphics_1_1_i_render_config_html_a4aa9ebc24027173ab567759f7dfc4a50"><div class="ttname"><a href="../../d4/dae/class_graphics_1_1_i_render_config.html#a4aa9ebc24027173ab567759f7dfc4a50">Graphics::IRenderConfig::IsFullscreen</a></div><div class="ttdeci">bool IsFullscreen() const</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d4e/_i_render_config_8h_source.html#l00014">IRenderConfig.h:14</a></div></div>
+<div class="ttc" id="aclass_graphics_1_1_i_render_config_html_a6b54e23e23df01a19d7625ab1ef97a83"><div class="ttname"><a href="../../d4/dae/class_graphics_1_1_i_render_config.html#a6b54e23e23df01a19d7625ab1ef97a83">Graphics::IRenderConfig::is_tinting</a></div><div class="ttdeci">bool is_tinting</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d4e/_i_render_config_8h_source.html#l00021">IRenderConfig.h:21</a></div></div>
+<div class="ttc" id="anamespace_graphics_html_a5fe6076cce9f4bcfcb56657e82ccc375aa3ad3cded8219daa47be18264fa03086"><div class="ttname"><a href="../../d6/d9b/namespace_graphics.html#a5fe6076cce9f4bcfcb56657e82ccc375aa3ad3cded8219daa47be18264fa03086">Graphics::RendererType::DirectDraw</a></div><div class="ttdeci">@ DirectDraw</div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_0b6ee6e7e9547e675db4add2e5de97da.html">Engine</a></li><li class="navelem"><a class="el" href="../../dir_bb84c1711d8a00602a64a24ea462155a.html">Graphics</a></li><li class="navelem"><a class="el" href="../../de/d4e/_i_render_config_8h.html">IRenderConfig.h</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:03:29. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Исходный файл C:/git/world-of-might-and-magic/GUI/UI/UIPartyCreation.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d6/d6a/_u_i_party_creation_8h_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">UIPartyCreation.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d6/d6a/_u_i_party_creation_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d5/d0b/_g_u_i_window_8h.html">GUI/GUIWindow.h</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">class </span><a class="code" href="../../de/d73/class_image.html">Image</a>;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="../../d6/d6a/_u_i_party_creation_8h.html#ae6fe5aec2826f251f3950e95fd588d79">PartyCreationUI_Loop</a>();</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="../../d8/d1c/class_g_u_i_window___party_creation.html">    9</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d8/d1c/class_g_u_i_window___party_creation.html">GUIWindow_PartyCreation</a> : <span class="keyword">public</span> <a class="code" href="../../d4/d38/class_g_u_i_window.html">GUIWindow</a> {</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <a class="code" href="../../d8/d1c/class_g_u_i_window___party_creation.html#aa09158bfeaf072f7244770ae5c0caf2b">GUIWindow_PartyCreation</a>();</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="../../d8/d1c/class_g_u_i_window___party_creation.html#aade872964828e7ee1948adede4edd1a0">~GUIWindow_PartyCreation</a>();</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d8/d1c/class_g_u_i_window___party_creation.html#a666d9cdf41b2eddb86e18cf412e22b0b">Update</a>();</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="../../d8/d1c/class_g_u_i_window___party_creation.html#a9cdfdd040ae6e97f174660473fcb193d">   17</a></span>&#160;    <a class="code" href="../../de/d73/class_image.html">Image</a> *<a class="code" href="../../d8/d1c/class_g_u_i_window___party_creation.html#a9cdfdd040ae6e97f174660473fcb193d">main_menu_background</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;};</div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aclass_g_u_i_window_html"><div class="ttname"><a href="../../d4/d38/class_g_u_i_window.html">GUIWindow</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d0b/_g_u_i_window_8h_source.html#l00433">GUIWindow.h:433</a></div></div>
+<div class="ttc" id="aclass_g_u_i_window___party_creation_html_aa09158bfeaf072f7244770ae5c0caf2b"><div class="ttname"><a href="../../d8/d1c/class_g_u_i_window___party_creation.html#aa09158bfeaf072f7244770ae5c0caf2b">GUIWindow_PartyCreation::GUIWindow_PartyCreation</a></div><div class="ttdeci">GUIWindow_PartyCreation()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/da8/_u_i_party_creation_8cpp_source.html#l00713">UIPartyCreation.cpp:713</a></div></div>
+<div class="ttc" id="aclass_image_html"><div class="ttname"><a href="../../de/d73/class_image.html">Image</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/de5/_image_8h_source.html#l00019">Image.h:19</a></div></div>
+<div class="ttc" id="aclass_g_u_i_window___party_creation_html"><div class="ttname"><a href="../../d8/d1c/class_g_u_i_window___party_creation.html">GUIWindow_PartyCreation</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d6a/_u_i_party_creation_8h_source.html#l00009">UIPartyCreation.h:9</a></div></div>
+<div class="ttc" id="aclass_g_u_i_window___party_creation_html_a9cdfdd040ae6e97f174660473fcb193d"><div class="ttname"><a href="../../d8/d1c/class_g_u_i_window___party_creation.html#a9cdfdd040ae6e97f174660473fcb193d">GUIWindow_PartyCreation::main_menu_background</a></div><div class="ttdeci">Image * main_menu_background</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d6a/_u_i_party_creation_8h_source.html#l00017">UIPartyCreation.h:17</a></div></div>
+<div class="ttc" id="a_u_i_party_creation_8h_html_ae6fe5aec2826f251f3950e95fd588d79"><div class="ttname"><a href="../../d6/d6a/_u_i_party_creation_8h.html#ae6fe5aec2826f251f3950e95fd588d79">PartyCreationUI_Loop</a></div><div class="ttdeci">bool PartyCreationUI_Loop()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/da8/_u_i_party_creation_8cpp_source.html#l00274">UIPartyCreation.cpp:274</a></div></div>
+<div class="ttc" id="aclass_g_u_i_window___party_creation_html_aade872964828e7ee1948adede4edd1a0"><div class="ttname"><a href="../../d8/d1c/class_g_u_i_window___party_creation.html#aade872964828e7ee1948adede4edd1a0">GUIWindow_PartyCreation::~GUIWindow_PartyCreation</a></div><div class="ttdeci">virtual ~GUIWindow_PartyCreation()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/da8/_u_i_party_creation_8cpp_source.html#l00846">UIPartyCreation.cpp:846</a></div></div>
+<div class="ttc" id="a_g_u_i_window_8h_html"><div class="ttname"><a href="../../d5/d0b/_g_u_i_window_8h.html">GUIWindow.h</a></div></div>
+<div class="ttc" id="aclass_g_u_i_window___party_creation_html_a666d9cdf41b2eddb86e18cf412e22b0b"><div class="ttname"><a href="../../d8/d1c/class_g_u_i_window___party_creation.html#a666d9cdf41b2eddb86e18cf412e22b0b">GUIWindow_PartyCreation::Update</a></div><div class="ttdeci">virtual void Update()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/da8/_u_i_party_creation_8cpp_source.html#l00303">UIPartyCreation.cpp:303</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_171b764decf33d63a7df2fab4f4bc6d8.html">GUI</a></li><li class="navelem"><a class="el" href="../../dir_008f70fed27c4008afe49ab10279d8cb.html">UI</a></li><li class="navelem"><a class="el" href="../../d6/d6a/_u_i_party_creation_8h.html">UIPartyCreation.h</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:03:36. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

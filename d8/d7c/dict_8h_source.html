@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Исходный файл C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavutil/dict.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d8/d7c/dict_8h_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">dict.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d8/d7c/dict_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * This file is part of FFmpeg.</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * FFmpeg is free software; you can redistribute it and/or</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * modify it under the terms of the GNU Lesser General Public</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * License as published by the Free Software Foundation; either</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> * version 2.1 of the License, or (at your option) any later version.</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> * FFmpeg is distributed in the hope that it will be useful,</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> * but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> * Lesser General Public License for more details.</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> * You should have received a copy of the GNU Lesser General Public</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> * License along with FFmpeg; if not, write to the Free Software</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#ifndef AVUTIL_DICT_H</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#define AVUTIL_DICT_H</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#include &quot;version.h&quot;</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor">#define AV_DICT_MATCH_CASE      1   </span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">#define AV_DICT_IGNORE_SUFFIX   2   </span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor">#define AV_DICT_DONT_STRDUP_KEY 4   </span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor">#define AV_DICT_DONT_STRDUP_VAL 8   </span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">#define AV_DICT_DONT_OVERWRITE 16   </span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="preprocessor">#define AV_DICT_APPEND         32   </span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="preprocessor">#define AV_DICT_MULTIKEY       64   </span></div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="../../de/d2f/struct_a_v_dictionary_entry.html">   81</a></span>&#160;<span class="preprocessor">typedef struct AVDictionaryEntry {</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="../../de/d2f/struct_a_v_dictionary_entry.html#a38fc80176f8f839282bb61c03392e194">   82</a></span>&#160;    <span class="keywordtype">char</span> *<a class="code" href="../../de/d2f/struct_a_v_dictionary_entry.html#a38fc80176f8f839282bb61c03392e194">key</a>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="../../de/d2f/struct_a_v_dictionary_entry.html#aa38678f2cad36f120d42e56449c5edb4">   83</a></span>&#160;    <span class="keywordtype">char</span> *<a class="code" href="../../de/d2f/struct_a_v_dictionary_entry.html#aa38678f2cad36f120d42e56449c5edb4">value</a>;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;} <a class="code" href="../../d2/db0/group__lavu__dict.html#ga74b18f99d6a784605ca1db4404dcdac3">AVDictionaryEntry</a>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="../../d2/db0/group__lavu__dict.html#ga1d7cc0833bee918994a600556410315f">   86</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="../../d2/db0/group__lavu__dict.html#ga1d7cc0833bee918994a600556410315f">AVDictionary</a> <a class="code" href="../../d2/db0/group__lavu__dict.html#ga1d7cc0833bee918994a600556410315f">AVDictionary</a>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<a class="code" href="../../de/d2f/struct_a_v_dictionary_entry.html">AVDictionaryEntry</a> *<a class="code" href="../../d2/db0/group__lavu__dict.html#gae67f143237b2cb2936c9b147aa6dfde3">av_dict_get</a>(<span class="keyword">const</span> <a class="code" href="../../d2/db0/group__lavu__dict.html#ga1d7cc0833bee918994a600556410315f">AVDictionary</a> *<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#af593500c283bf1a787a6f947f503a5c2">m</a>, <span class="keyword">const</span> <span class="keywordtype">char</span> *key,</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                               <span class="keyword">const</span> <a class="code" href="../../de/d2f/struct_a_v_dictionary_entry.html">AVDictionaryEntry</a> *prev, <span class="keywordtype">int</span> <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ac7ba7d3cce3d19ca020e056b37231289">flags</a>);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../d2/db0/group__lavu__dict.html#gad21456d6601aa096c7c78dce8848d50a">av_dict_count</a>(<span class="keyword">const</span> <a class="code" href="../../d2/db0/group__lavu__dict.html#ga1d7cc0833bee918994a600556410315f">AVDictionary</a> *<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#af593500c283bf1a787a6f947f503a5c2">m</a>);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../d2/db0/group__lavu__dict.html#ga8d9c2de72b310cef8e6a28c9cd3acbbe">av_dict_set</a>(<a class="code" href="../../d2/db0/group__lavu__dict.html#ga1d7cc0833bee918994a600556410315f">AVDictionary</a> **pm, <span class="keyword">const</span> <span class="keywordtype">char</span> *key, <span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a8ad81492d410ff2ac11f754f4042150f">value</a>, <span class="keywordtype">int</span> <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ac7ba7d3cce3d19ca020e056b37231289">flags</a>);</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../d2/db0/group__lavu__dict.html#gafd013a88620b2da7d497b083f6ea7d29">av_dict_set_int</a>(<a class="code" href="../../d2/db0/group__lavu__dict.html#ga1d7cc0833bee918994a600556410315f">AVDictionary</a> **pm, <span class="keyword">const</span> <span class="keywordtype">char</span> *key, <a class="code" href="../../dd/df4/alext_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a> <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a8ad81492d410ff2ac11f754f4042150f">value</a>, <span class="keywordtype">int</span> <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ac7ba7d3cce3d19ca020e056b37231289">flags</a>);</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160; </div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../d2/db0/group__lavu__dict.html#gaca5ff7c251e60bd13164d13c82f21b79">av_dict_parse_string</a>(<a class="code" href="../../d2/db0/group__lavu__dict.html#ga1d7cc0833bee918994a600556410315f">AVDictionary</a> **pm, <span class="keyword">const</span> <span class="keywordtype">char</span> *str,</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;                         <span class="keyword">const</span> <span class="keywordtype">char</span> *key_val_sep, <span class="keyword">const</span> <span class="keywordtype">char</span> *pairs_sep,</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;                         <span class="keywordtype">int</span> <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ac7ba7d3cce3d19ca020e056b37231289">flags</a>);</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160; </div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../d2/db0/group__lavu__dict.html#ga59a6372b124b306e3a2233723c5cdc78">av_dict_copy</a>(<a class="code" href="../../d2/db0/group__lavu__dict.html#ga1d7cc0833bee918994a600556410315f">AVDictionary</a> **<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a92034251bfd455d524a9b5610cddba00">dst</a>, <span class="keyword">const</span> <a class="code" href="../../d2/db0/group__lavu__dict.html#ga1d7cc0833bee918994a600556410315f">AVDictionary</a> *<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a72e0fdf0f845ded60b1fada9e9195cd7">src</a>, <span class="keywordtype">int</span> <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ac7ba7d3cce3d19ca020e056b37231289">flags</a>);</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160; </div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d2/db0/group__lavu__dict.html#ga1bafd682b1fbb90e48a4cc3814b820f7">av_dict_free</a>(<a class="code" href="../../d2/db0/group__lavu__dict.html#ga1d7cc0833bee918994a600556410315f">AVDictionary</a> **<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#af593500c283bf1a787a6f947f503a5c2">m</a>);</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160; </div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../d2/db0/group__lavu__dict.html#ga480ab3fb3ac6cae8e60e97f58ec30b66">av_dict_get_string</a>(<span class="keyword">const</span> <a class="code" href="../../d2/db0/group__lavu__dict.html#ga1d7cc0833bee918994a600556410315f">AVDictionary</a> *<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#af593500c283bf1a787a6f947f503a5c2">m</a>, <span class="keywordtype">char</span> **<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a76461e97a098d2c9ae20ac193d3825ae">buffer</a>,</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;                       <span class="keyword">const</span> <span class="keywordtype">char</span> key_val_sep, <span class="keyword">const</span> <span class="keywordtype">char</span> pairs_sep);</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160; </div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* AVUTIL_DICT_H */</span><span class="preprocessor"></span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="agroup__lavu__dict_html_gad21456d6601aa096c7c78dce8848d50a"><div class="ttname"><a href="../../d2/db0/group__lavu__dict.html#gad21456d6601aa096c7c78dce8848d50a">av_dict_count</a></div><div class="ttdeci">int av_dict_count(const AVDictionary *m)</div></div>
+<div class="ttc" id="astruct_a_v_dictionary_entry_html"><div class="ttname"><a href="../../de/d2f/struct_a_v_dictionary_entry.html">AVDictionaryEntry</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d7c/dict_8h_source.html#l00081">dict.h:81</a></div></div>
+<div class="ttc" id="aalext_8h_html_a67a9885ef4908cb72ce26d75b694386c"><div class="ttname"><a href="../../dd/df4/alext_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a></div><div class="ttdeci">__int64 int64_t</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/df4/alext_8h_source.html#l00031">alext.h:31</a></div></div>
+<div class="ttc" id="agroup__lavu__dict_html_gae67f143237b2cb2936c9b147aa6dfde3"><div class="ttname"><a href="../../d2/db0/group__lavu__dict.html#gae67f143237b2cb2936c9b147aa6dfde3">av_dict_get</a></div><div class="ttdeci">AVDictionaryEntry * av_dict_get(const AVDictionary *m, const char *key, const AVDictionaryEntry *prev, int flags)</div></div>
+<div class="ttc" id="astruct_a_v_dictionary_entry_html_aa38678f2cad36f120d42e56449c5edb4"><div class="ttname"><a href="../../de/d2f/struct_a_v_dictionary_entry.html#aa38678f2cad36f120d42e56449c5edb4">AVDictionaryEntry::value</a></div><div class="ttdeci">char * value</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d7c/dict_8h_source.html#l00083">dict.h:83</a></div></div>
+<div class="ttc" id="a_s_d_l__egl_8h_html_a76461e97a098d2c9ae20ac193d3825ae"><div class="ttname"><a href="../../df/d32/_s_d_l__egl_8h.html#a76461e97a098d2c9ae20ac193d3825ae">buffer</a></div><div class="ttdeci">EGLContext EGLenum EGLClientBuffer buffer</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/_s_d_l__egl_8h_source.html#l00952">SDL_egl.h:952</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a72e0fdf0f845ded60b1fada9e9195cd7"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a72e0fdf0f845ded60b1fada9e9195cd7">src</a></div><div class="ttdeci">GLenum src</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l01740">SDL_opengl_glext.h:1740</a></div></div>
+<div class="ttc" id="astruct_a_v_dictionary_entry_html_a38fc80176f8f839282bb61c03392e194"><div class="ttname"><a href="../../de/d2f/struct_a_v_dictionary_entry.html#a38fc80176f8f839282bb61c03392e194">AVDictionaryEntry::key</a></div><div class="ttdeci">char * key</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d7c/dict_8h_source.html#l00082">dict.h:82</a></div></div>
+<div class="ttc" id="agroup__lavu__dict_html_ga74b18f99d6a784605ca1db4404dcdac3"><div class="ttname"><a href="../../d2/db0/group__lavu__dict.html#ga74b18f99d6a784605ca1db4404dcdac3">AVDictionaryEntry</a></div><div class="ttdeci">struct AVDictionaryEntry AVDictionaryEntry</div></div>
+<div class="ttc" id="a_s_d_l__egl_8h_html_a8ad81492d410ff2ac11f754f4042150f"><div class="ttname"><a href="../../df/d32/_s_d_l__egl_8h.html#a8ad81492d410ff2ac11f754f4042150f">value</a></div><div class="ttdeci">EGLSyncKHR EGLint EGLint * value</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/_s_d_l__egl_8h_source.html#l00899">SDL_egl.h:899</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a92034251bfd455d524a9b5610cddba00"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a92034251bfd455d524a9b5610cddba00">dst</a></div><div class="ttdeci">GLenum GLenum dst</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l01740">SDL_opengl_glext.h:1740</a></div></div>
+<div class="ttc" id="agroup__lavu__dict_html_ga1bafd682b1fbb90e48a4cc3814b820f7"><div class="ttname"><a href="../../d2/db0/group__lavu__dict.html#ga1bafd682b1fbb90e48a4cc3814b820f7">av_dict_free</a></div><div class="ttdeci">void av_dict_free(AVDictionary **m)</div></div>
+<div class="ttc" id="a_s_d_l__egl_8h_html_ac7ba7d3cce3d19ca020e056b37231289"><div class="ttname"><a href="../../df/d32/_s_d_l__egl_8h.html#ac7ba7d3cce3d19ca020e056b37231289">flags</a></div><div class="ttdeci">EGLSyncKHR EGLint flags</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/_s_d_l__egl_8h_source.html#l00898">SDL_egl.h:898</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_af593500c283bf1a787a6f947f503a5c2"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#af593500c283bf1a787a6f947f503a5c2">m</a></div><div class="ttdeci">const GLfloat * m</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l06095">SDL_opengl_glext.h:6095</a></div></div>
+<div class="ttc" id="agroup__lavu__dict_html_ga1d7cc0833bee918994a600556410315f"><div class="ttname"><a href="../../d2/db0/group__lavu__dict.html#ga1d7cc0833bee918994a600556410315f">AVDictionary</a></div><div class="ttdeci">struct AVDictionary AVDictionary</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d7c/dict_8h_source.html#l00086">dict.h:86</a></div></div>
+<div class="ttc" id="agroup__lavu__dict_html_gaca5ff7c251e60bd13164d13c82f21b79"><div class="ttname"><a href="../../d2/db0/group__lavu__dict.html#gaca5ff7c251e60bd13164d13c82f21b79">av_dict_parse_string</a></div><div class="ttdeci">int av_dict_parse_string(AVDictionary **pm, const char *str, const char *key_val_sep, const char *pairs_sep, int flags)</div></div>
+<div class="ttc" id="agroup__lavu__dict_html_gafd013a88620b2da7d497b083f6ea7d29"><div class="ttname"><a href="../../d2/db0/group__lavu__dict.html#gafd013a88620b2da7d497b083f6ea7d29">av_dict_set_int</a></div><div class="ttdeci">int av_dict_set_int(AVDictionary **pm, const char *key, int64_t value, int flags)</div></div>
+<div class="ttc" id="agroup__lavu__dict_html_ga8d9c2de72b310cef8e6a28c9cd3acbbe"><div class="ttname"><a href="../../d2/db0/group__lavu__dict.html#ga8d9c2de72b310cef8e6a28c9cd3acbbe">av_dict_set</a></div><div class="ttdeci">int av_dict_set(AVDictionary **pm, const char *key, const char *value, int flags)</div></div>
+<div class="ttc" id="agroup__lavu__dict_html_ga480ab3fb3ac6cae8e60e97f58ec30b66"><div class="ttname"><a href="../../d2/db0/group__lavu__dict.html#ga480ab3fb3ac6cae8e60e97f58ec30b66">av_dict_get_string</a></div><div class="ttdeci">int av_dict_get_string(const AVDictionary *m, char **buffer, const char key_val_sep, const char pairs_sep)</div></div>
+<div class="ttc" id="agroup__lavu__dict_html_ga59a6372b124b306e3a2233723c5cdc78"><div class="ttname"><a href="../../d2/db0/group__lavu__dict.html#ga59a6372b124b306e3a2233723c5cdc78">av_dict_copy</a></div><div class="ttdeci">int av_dict_copy(AVDictionary **dst, const AVDictionary *src, int flags)</div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_97aefd0d527b934f1d99a682da8fe6a9.html">lib</a></li><li class="navelem"><a class="el" href="../../dir_da53678e933bc13c5b44fc9f96ac81aa.html">win32</a></li><li class="navelem"><a class="el" href="../../dir_7ac189985cec0e073b46d34a5d96bfc1.html">x86</a></li><li class="navelem"><a class="el" href="../../dir_e3469dbcd8a5e63a5540df758d989c34.html">ffmpeg-4.2.2</a></li><li class="navelem"><a class="el" href="../../dir_880368755e1ee5b32b1864dac7163836.html">include</a></li><li class="navelem"><a class="el" href="../../dir_e95abcf8ca274311b94b0e3a5da6ed50.html">libavutil</a></li><li class="navelem"><a class="el" href="../../d8/d7c/dict_8h.html">dict.h</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:03:39. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

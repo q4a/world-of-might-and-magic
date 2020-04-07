@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Исходный файл C:/git/world-of-might-and-magic/GUI/UI/UIStatusBar.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('df/d16/_u_i_status_bar_8h_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">UIStatusBar.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../df/d16/_u_i_status_bar_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../de/df7/_strings_8h.html">Engine/Strings.h</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../df/d16/_u_i_status_bar_8h.html#a0cfc7a24c81a9c29469370a441eec568">GameUI_StatusBar_Draw</a>();</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../df/d16/_u_i_status_bar_8h.html#a4deffde6a3eb7a758e7b484230094f82">GameUI_StatusBar_DrawForced</a>();</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../df/d16/_u_i_status_bar_8h.html#a8ad9e37393859e27c512528b4c1b4b2f">GameUI_StatusBar_Set</a>(<span class="keyword">const</span> <a class="code" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> &amp;str);</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../df/d16/_u_i_status_bar_8h.html#a7e726ffc3354113fbc3415e7cb658603">GameUI_StatusBar_Clear</a>();</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../df/d16/_u_i_status_bar_8h.html#a189e079b1830bc773efbed061bf30e8a">GameUI_StatusBar_OnEvent</a>(<span class="keyword">const</span> <a class="code" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> &amp;str, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> num_seconds = 2);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../df/d16/_u_i_status_bar_8h.html#a45756237f08c467347fc41d30810178c">GameUI_StatusBar_OnEvent_128ms</a>(<span class="keyword">const</span> <a class="code" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> &amp;str);</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../df/d16/_u_i_status_bar_8h.html#a127f5066d006717bae55e25121fa782e">GameUI_StatusBar_ClearEventString</a>();</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<a class="code" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> <a class="code" href="../../df/d16/_u_i_status_bar_8h.html#a13e7e631e9ff481d3b5282fc676b537c">GameUI_StatusBar_GetInput</a>();</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../df/d16/_u_i_status_bar_8h.html#a377596845e101c2d665c7e80e53af7bd">GameUI_StatusBar_OnInput</a>(<span class="keyword">const</span> <a class="code" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> &amp;str);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../df/d16/_u_i_status_bar_8h.html#a50d78866e6dd14f38f59c0bbb5fe22ff">GameUI_StatusBar_ClearInputString</a>();</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../df/d16/_u_i_status_bar_8h.html#a2f9f821959278c0f7d6d2200c38e247c">GameUI_StatusBar_NothingHere</a>();</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../df/d16/_u_i_status_bar_8h.html#a17bbc7a9910d08427f658850ba3ab7d6">GameUI_StatusBar_DrawImmediate</a>(<span class="keyword">const</span> <a class="code" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> &amp;str, <span class="keywordtype">int</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a3ea846f998d64f079b86052b6c4193a8">color</a>);</div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="a_u_i_status_bar_8h_html_a17bbc7a9910d08427f658850ba3ab7d6"><div class="ttname"><a href="../../df/d16/_u_i_status_bar_8h.html#a17bbc7a9910d08427f658850ba3ab7d6">GameUI_StatusBar_DrawImmediate</a></div><div class="ttdeci">void GameUI_StatusBar_DrawImmediate(const String &amp;str, int color)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dca/_u_i_status_bar_8cpp_source.html#l00088">UIStatusBar.cpp:88</a></div></div>
+<div class="ttc" id="a_u_i_status_bar_8h_html_a8ad9e37393859e27c512528b4c1b4b2f"><div class="ttname"><a href="../../df/d16/_u_i_status_bar_8h.html#a8ad9e37393859e27c512528b4c1b4b2f">GameUI_StatusBar_Set</a></div><div class="ttdeci">void GameUI_StatusBar_Set(const String &amp;str)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dca/_u_i_status_bar_8cpp_source.html#l00015">UIStatusBar.cpp:15</a></div></div>
+<div class="ttc" id="a_u_i_status_bar_8h_html_a189e079b1830bc773efbed061bf30e8a"><div class="ttname"><a href="../../df/d16/_u_i_status_bar_8h.html#a189e079b1830bc773efbed061bf30e8a">GameUI_StatusBar_OnEvent</a></div><div class="ttdeci">void GameUI_StatusBar_OnEvent(const String &amp;str, unsigned int num_seconds=2)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dca/_u_i_status_bar_8cpp_source.html#l00033">UIStatusBar.cpp:33</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a3ea846f998d64f079b86052b6c4193a8"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a3ea846f998d64f079b86052b6c4193a8">color</a></div><div class="ttdeci">GLuint color</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l01151">SDL_opengl_glext.h:1151</a></div></div>
+<div class="ttc" id="a_u_i_status_bar_8h_html_a4deffde6a3eb7a758e7b484230094f82"><div class="ttname"><a href="../../df/d16/_u_i_status_bar_8h.html#a4deffde6a3eb7a758e7b484230094f82">GameUI_StatusBar_DrawForced</a></div><div class="ttdeci">void GameUI_StatusBar_DrawForced()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dca/_u_i_status_bar_8cpp_source.html#l00063">UIStatusBar.cpp:63</a></div></div>
+<div class="ttc" id="a_u_i_status_bar_8h_html_a13e7e631e9ff481d3b5282fc676b537c"><div class="ttname"><a href="../../df/d16/_u_i_status_bar_8h.html#a13e7e631e9ff481d3b5282fc676b537c">GameUI_StatusBar_GetInput</a></div><div class="ttdeci">String GameUI_StatusBar_GetInput()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dca/_u_i_status_bar_8cpp_source.html#l00050">UIStatusBar.cpp:50</a></div></div>
+<div class="ttc" id="a_u_i_status_bar_8h_html_a127f5066d006717bae55e25121fa782e"><div class="ttname"><a href="../../df/d16/_u_i_status_bar_8h.html#a127f5066d006717bae55e25121fa782e">GameUI_StatusBar_ClearEventString</a></div><div class="ttdeci">void GameUI_StatusBar_ClearEventString()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dca/_u_i_status_bar_8cpp_source.html#l00041">UIStatusBar.cpp:41</a></div></div>
+<div class="ttc" id="a_u_i_status_bar_8h_html_a377596845e101c2d665c7e80e53af7bd"><div class="ttname"><a href="../../df/d16/_u_i_status_bar_8h.html#a377596845e101c2d665c7e80e53af7bd">GameUI_StatusBar_OnInput</a></div><div class="ttdeci">void GameUI_StatusBar_OnInput(const String &amp;str)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dca/_u_i_status_bar_8cpp_source.html#l00046">UIStatusBar.cpp:46</a></div></div>
+<div class="ttc" id="a_u_i_status_bar_8h_html_a2f9f821959278c0f7d6d2200c38e247c"><div class="ttname"><a href="../../df/d16/_u_i_status_bar_8h.html#a2f9f821959278c0f7d6d2200c38e247c">GameUI_StatusBar_NothingHere</a></div><div class="ttdeci">void GameUI_StatusBar_NothingHere()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dca/_u_i_status_bar_8cpp_source.html#l00057">UIStatusBar.cpp:57</a></div></div>
+<div class="ttc" id="a_u_i_status_bar_8h_html_a7e726ffc3354113fbc3415e7cb658603"><div class="ttname"><a href="../../df/d16/_u_i_status_bar_8h.html#a7e726ffc3354113fbc3415e7cb658603">GameUI_StatusBar_Clear</a></div><div class="ttdeci">void GameUI_StatusBar_Clear()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dca/_u_i_status_bar_8cpp_source.html#l00023">UIStatusBar.cpp:23</a></div></div>
+<div class="ttc" id="a_u_i_status_bar_8h_html_a50d78866e6dd14f38f59c0bbb5fe22ff"><div class="ttname"><a href="../../df/d16/_u_i_status_bar_8h.html#a50d78866e6dd14f38f59c0bbb5fe22ff">GameUI_StatusBar_ClearInputString</a></div><div class="ttdeci">void GameUI_StatusBar_ClearInputString()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dca/_u_i_status_bar_8cpp_source.html#l00052">UIStatusBar.cpp:52</a></div></div>
+<div class="ttc" id="a_u_i_status_bar_8h_html_a45756237f08c467347fc41d30810178c"><div class="ttname"><a href="../../df/d16/_u_i_status_bar_8h.html#a45756237f08c467347fc41d30810178c">GameUI_StatusBar_OnEvent_128ms</a></div><div class="ttdeci">void GameUI_StatusBar_OnEvent_128ms(const String &amp;str)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dca/_u_i_status_bar_8cpp_source.html#l00037">UIStatusBar.cpp:37</a></div></div>
+<div class="ttc" id="a_strings_8h_html_afbeda3fd1bdc8c37d01bdf9f5c8274ff"><div class="ttname"><a href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a></div><div class="ttdeci">std::string String</div><div class="ttdef"><b>Definition:</b> <a href="../../de/df7/_strings_8h_source.html#l00010">Strings.h:10</a></div></div>
+<div class="ttc" id="a_u_i_status_bar_8h_html_a0cfc7a24c81a9c29469370a441eec568"><div class="ttname"><a href="../../df/d16/_u_i_status_bar_8h.html#a0cfc7a24c81a9c29469370a441eec568">GameUI_StatusBar_Draw</a></div><div class="ttdeci">void GameUI_StatusBar_Draw()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dca/_u_i_status_bar_8cpp_source.html#l00071">UIStatusBar.cpp:71</a></div></div>
+<div class="ttc" id="a_strings_8h_html"><div class="ttname"><a href="../../de/df7/_strings_8h.html">Strings.h</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_171b764decf33d63a7df2fab4f4bc6d8.html">GUI</a></li><li class="navelem"><a class="el" href="../../dir_008f70fed27c4008afe49ab10279d8cb.html">UI</a></li><li class="navelem"><a class="el" href="../../df/d16/_u_i_status_bar_8h.html">UIStatusBar.h</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:03:37. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

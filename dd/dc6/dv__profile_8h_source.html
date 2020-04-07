@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Исходный файл C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavcodec/dv_profile.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('dd/dc6/dv__profile_8h_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">dv_profile.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../dd/dc6/dv__profile_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * This file is part of FFmpeg.</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * FFmpeg is free software; you can redistribute it and/or</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * modify it under the terms of the GNU Lesser General Public</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * License as published by the Free Software Foundation; either</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> * version 2.1 of the License, or (at your option) any later version.</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> * FFmpeg is distributed in the hope that it will be useful,</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> * but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> * Lesser General Public License for more details.</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> * You should have received a copy of the GNU Lesser General Public</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> * License along with FFmpeg; if not, write to the Free Software</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#ifndef AVCODEC_DV_PROFILE_H</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#define AVCODEC_DV_PROFILE_H</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../dd/d6c/pixfmt_8h.html">libavutil/pixfmt.h</a>&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d0/d67/rational_8h.html">libavutil/rational.h</a>&quot;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d4/d02/avcodec_8h.html">avcodec.h</a>&quot;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">/* minimum number of bytes to read from a DV stream in order to</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment"> * determine the profile */</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#define DV_PROFILE_BYTES (6 * 80) </span><span class="comment">/* 6 DIF blocks */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment"> * AVDVProfile is used to express the differences between various</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment"> * DV flavors. For now it&#39;s primarily used for differentiating</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment"> * 525/60 and 625/50, but the plans are to use it for various</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment"> * DV specs as well (e.g. SMPTE314M vs. IEC 61834).</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="../../d2/de3/struct_a_v_d_v_profile.html">   39</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="../../d2/de3/struct_a_v_d_v_profile.html">AVDVProfile</a> {</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="../../d2/de3/struct_a_v_d_v_profile.html#a5a6c419cebc96446eb3833820541bd88">   40</a></span>&#160;    <span class="keywordtype">int</span>              <a class="code" href="../../d2/de3/struct_a_v_d_v_profile.html#a5a6c419cebc96446eb3833820541bd88">dsf</a>;                   <span class="comment">/* value of the dsf in the DV header */</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="../../d2/de3/struct_a_v_d_v_profile.html#ae6fb4ff067a900d3a1a90b488d65260a">   41</a></span>&#160;    <span class="keywordtype">int</span>              <a class="code" href="../../d2/de3/struct_a_v_d_v_profile.html#ae6fb4ff067a900d3a1a90b488d65260a">video_stype</a>;           <span class="comment">/* stype for VAUX source pack */</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="../../d2/de3/struct_a_v_d_v_profile.html#aff2ba558e0f6e771158529b98de59327">   42</a></span>&#160;    <span class="keywordtype">int</span>              <a class="code" href="../../d2/de3/struct_a_v_d_v_profile.html#aff2ba558e0f6e771158529b98de59327">frame_size</a>;            <span class="comment">/* total size of one frame in bytes */</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="../../d2/de3/struct_a_v_d_v_profile.html#af7877449497c21497178b256f86441b9">   43</a></span>&#160;    <span class="keywordtype">int</span>              <a class="code" href="../../d2/de3/struct_a_v_d_v_profile.html#af7877449497c21497178b256f86441b9">difseg_size</a>;           <span class="comment">/* number of DIF segments per DIF channel */</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="../../d2/de3/struct_a_v_d_v_profile.html#ab00eec0771cb43f7739e25dec4cbaaeb">   44</a></span>&#160;    <span class="keywordtype">int</span>              <a class="code" href="../../d2/de3/struct_a_v_d_v_profile.html#ab00eec0771cb43f7739e25dec4cbaaeb">n_difchan</a>;             <span class="comment">/* number of DIF channels per frame */</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="../../d2/de3/struct_a_v_d_v_profile.html#a426cc1d18197649dbee2e0c189661165">   45</a></span>&#160;    <a class="code" href="../../d7/d28/struct_a_v_rational.html">AVRational</a>       <a class="code" href="../../d2/de3/struct_a_v_d_v_profile.html#a426cc1d18197649dbee2e0c189661165">time_base</a>;             <span class="comment">/* 1/framerate */</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="../../d2/de3/struct_a_v_d_v_profile.html#a419641b54a081dae5f7d58bafb0f4442">   46</a></span>&#160;    <span class="keywordtype">int</span>              <a class="code" href="../../d2/de3/struct_a_v_d_v_profile.html#a419641b54a081dae5f7d58bafb0f4442">ltc_divisor</a>;           <span class="comment">/* FPS from the LTS standpoint */</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="../../d2/de3/struct_a_v_d_v_profile.html#ad9e3fd93f735b40850fd78e73f32f7e8">   47</a></span>&#160;    <span class="keywordtype">int</span>              <a class="code" href="../../d2/de3/struct_a_v_d_v_profile.html#ad9e3fd93f735b40850fd78e73f32f7e8">height</a>;                <span class="comment">/* picture height in pixels */</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="../../d2/de3/struct_a_v_d_v_profile.html#a48e101f30f13027992dd02bc3943b744">   48</a></span>&#160;    <span class="keywordtype">int</span>              <a class="code" href="../../d2/de3/struct_a_v_d_v_profile.html#a48e101f30f13027992dd02bc3943b744">width</a>;                 <span class="comment">/* picture width in pixels */</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="../../d2/de3/struct_a_v_d_v_profile.html#adfe152931074cffcb08b96c94477df20">   49</a></span>&#160;    <a class="code" href="../../d7/d28/struct_a_v_rational.html">AVRational</a>       <a class="code" href="../../d2/de3/struct_a_v_d_v_profile.html#adfe152931074cffcb08b96c94477df20">sar</a>[2];                <span class="comment">/* sample aspect ratios for 4:3 and 16:9 */</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="../../d2/de3/struct_a_v_d_v_profile.html#acb71abd1abbda43885f7f978ae70d6ee">   50</a></span>&#160;    <span class="keyword">enum</span> <a class="code" href="../../dd/d6c/pixfmt_8h.html#a9a8e335cf3be472042bc9f0cf80cd4c5">AVPixelFormat</a> <a class="code" href="../../d2/de3/struct_a_v_d_v_profile.html#acb71abd1abbda43885f7f978ae70d6ee">pix_fmt</a>;             <span class="comment">/* picture pixel format */</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="../../d2/de3/struct_a_v_d_v_profile.html#a3cd4328d99eba11fe615123f66ea611b">   51</a></span>&#160;    <span class="keywordtype">int</span>              <a class="code" href="../../d2/de3/struct_a_v_d_v_profile.html#a3cd4328d99eba11fe615123f66ea611b">bpm</a>;                   <span class="comment">/* blocks per macroblock */</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="../../d2/de3/struct_a_v_d_v_profile.html#ab51ec3f0919265dc5ce94a1603b52592">   52</a></span>&#160;    <span class="keyword">const</span> <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>   *<a class="code" href="../../d2/de3/struct_a_v_d_v_profile.html#ab51ec3f0919265dc5ce94a1603b52592">block_sizes</a>;           <span class="comment">/* AC block sizes, in bits */</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="../../d2/de3/struct_a_v_d_v_profile.html#a6343d9fbd12b3f0e36a55986274da885">   53</a></span>&#160;    <span class="keywordtype">int</span>              <a class="code" href="../../d2/de3/struct_a_v_d_v_profile.html#a6343d9fbd12b3f0e36a55986274da885">audio_stride</a>;          <span class="comment">/* size of audio_shuffle table */</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="../../d2/de3/struct_a_v_d_v_profile.html#a67ffd3d76d605bc35a2b2709073bba3c">   54</a></span>&#160;    <span class="keywordtype">int</span>              <a class="code" href="../../d2/de3/struct_a_v_d_v_profile.html#a67ffd3d76d605bc35a2b2709073bba3c">audio_min_samples</a>[3];  <span class="comment">/* min amount of audio samples */</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                                            <span class="comment">/* for 48kHz, 44.1kHz and 32kHz */</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="../../d2/de3/struct_a_v_d_v_profile.html#a0536a35ea2778e81b9f63639179648ce">   56</a></span>&#160;    <span class="keywordtype">int</span>              <a class="code" href="../../d2/de3/struct_a_v_d_v_profile.html#a0536a35ea2778e81b9f63639179648ce">audio_samples_dist</a>[5]; <span class="comment">/* how many samples are supposed to be */</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                                            <span class="comment">/* in each frame in a 5 frames window */</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="../../d2/de3/struct_a_v_d_v_profile.html#a60e69db48ed11fa6b01386dd0816c347">   58</a></span>&#160;    <span class="keyword">const</span> <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>  (*<a class="code" href="../../d2/de3/struct_a_v_d_v_profile.html#a60e69db48ed11fa6b01386dd0816c347">audio_shuffle</a>)[9];     <span class="comment">/* PCM shuffling table */</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;} <a class="code" href="../../dd/dc6/dv__profile_8h.html#a429dbcbff526a8a1da537ec707bdbe84">AVDVProfile</a>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="keyword">const</span> <a class="code" href="../../d2/de3/struct_a_v_d_v_profile.html">AVDVProfile</a> *<a class="code" href="../../dd/dc6/dv__profile_8h.html#a2b14cf1ed2d0416677b300e1f8410ee4">av_dv_frame_profile</a>(<span class="keyword">const</span> <a class="code" href="../../d2/de3/struct_a_v_d_v_profile.html">AVDVProfile</a> *sys,</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                                       <span class="keyword">const</span> <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *frame, <span class="keywordtype">unsigned</span> buf_size);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="keyword">const</span> <a class="code" href="../../d2/de3/struct_a_v_d_v_profile.html">AVDVProfile</a> *<a class="code" href="../../dd/dc6/dv__profile_8h.html#ac0ce11afd1cbfcf0365a56eef2f374c5">av_dv_codec_profile</a>(<span class="keywordtype">int</span> <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a9a82cf3caff84cabc4598e2619faac17">width</a>, <span class="keywordtype">int</span> <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#aa352f2804b9902ac30769c00dde75d5f">height</a>, <span class="keyword">enum</span> <a class="code" href="../../dd/d6c/pixfmt_8h.html#a9a8e335cf3be472042bc9f0cf80cd4c5">AVPixelFormat</a> pix_fmt);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="keyword">const</span> <a class="code" href="../../d2/de3/struct_a_v_d_v_profile.html">AVDVProfile</a> *<a class="code" href="../../dd/dc6/dv__profile_8h.html#a6e6b2532a302003fcd0c35694867eb32">av_dv_codec_profile2</a>(<span class="keywordtype">int</span> <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a9a82cf3caff84cabc4598e2619faac17">width</a>, <span class="keywordtype">int</span> <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#aa352f2804b9902ac30769c00dde75d5f">height</a>, <span class="keyword">enum</span> <a class="code" href="../../dd/d6c/pixfmt_8h.html#a9a8e335cf3be472042bc9f0cf80cd4c5">AVPixelFormat</a> pix_fmt, <a class="code" href="../../d7/d28/struct_a_v_rational.html">AVRational</a> frame_rate);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* AVCODEC_DV_PROFILE_H */</span><span class="preprocessor"></span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="astruct_a_v_d_v_profile_html_a3cd4328d99eba11fe615123f66ea611b"><div class="ttname"><a href="../../d2/de3/struct_a_v_d_v_profile.html#a3cd4328d99eba11fe615123f66ea611b">AVDVProfile::bpm</a></div><div class="ttdeci">int bpm</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dc6/dv__profile_8h_source.html#l00051">dv_profile.h:51</a></div></div>
+<div class="ttc" id="astruct_a_v_d_v_profile_html_acb71abd1abbda43885f7f978ae70d6ee"><div class="ttname"><a href="../../d2/de3/struct_a_v_d_v_profile.html#acb71abd1abbda43885f7f978ae70d6ee">AVDVProfile::pix_fmt</a></div><div class="ttdeci">enum AVPixelFormat pix_fmt</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dc6/dv__profile_8h_source.html#l00050">dv_profile.h:50</a></div></div>
+<div class="ttc" id="astruct_a_v_d_v_profile_html_a6343d9fbd12b3f0e36a55986274da885"><div class="ttname"><a href="../../d2/de3/struct_a_v_d_v_profile.html#a6343d9fbd12b3f0e36a55986274da885">AVDVProfile::audio_stride</a></div><div class="ttdeci">int audio_stride</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dc6/dv__profile_8h_source.html#l00053">dv_profile.h:53</a></div></div>
+<div class="ttc" id="apixfmt_8h_html_a9a8e335cf3be472042bc9f0cf80cd4c5"><div class="ttname"><a href="../../dd/d6c/pixfmt_8h.html#a9a8e335cf3be472042bc9f0cf80cd4c5">AVPixelFormat</a></div><div class="ttdeci">AVPixelFormat</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d6c/pixfmt_8h_source.html#l00064">pixfmt.h:64</a></div></div>
+<div class="ttc" id="astruct_a_v_d_v_profile_html_a48e101f30f13027992dd02bc3943b744"><div class="ttname"><a href="../../d2/de3/struct_a_v_d_v_profile.html#a48e101f30f13027992dd02bc3943b744">AVDVProfile::width</a></div><div class="ttdeci">int width</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dc6/dv__profile_8h_source.html#l00048">dv_profile.h:48</a></div></div>
+<div class="ttc" id="astruct_a_v_d_v_profile_html_a0536a35ea2778e81b9f63639179648ce"><div class="ttname"><a href="../../d2/de3/struct_a_v_d_v_profile.html#a0536a35ea2778e81b9f63639179648ce">AVDVProfile::audio_samples_dist</a></div><div class="ttdeci">int audio_samples_dist[5]</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dc6/dv__profile_8h_source.html#l00056">dv_profile.h:56</a></div></div>
+<div class="ttc" id="arational_8h_html"><div class="ttname"><a href="../../d0/d67/rational_8h.html">rational.h</a></div></div>
+<div class="ttc" id="adv__profile_8h_html_ac0ce11afd1cbfcf0365a56eef2f374c5"><div class="ttname"><a href="../../dd/dc6/dv__profile_8h.html#ac0ce11afd1cbfcf0365a56eef2f374c5">av_dv_codec_profile</a></div><div class="ttdeci">const AVDVProfile * av_dv_codec_profile(int width, int height, enum AVPixelFormat pix_fmt)</div></div>
+<div class="ttc" id="astruct_a_v_d_v_profile_html_af7877449497c21497178b256f86441b9"><div class="ttname"><a href="../../d2/de3/struct_a_v_d_v_profile.html#af7877449497c21497178b256f86441b9">AVDVProfile::difseg_size</a></div><div class="ttdeci">int difseg_size</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dc6/dv__profile_8h_source.html#l00043">dv_profile.h:43</a></div></div>
+<div class="ttc" id="a_s_d_l__egl_8h_html_aa352f2804b9902ac30769c00dde75d5f"><div class="ttname"><a href="../../df/d32/_s_d_l__egl_8h.html#aa352f2804b9902ac30769c00dde75d5f">height</a></div><div class="ttdeci">EGLSurface EGLint EGLint EGLint EGLint height</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/_s_d_l__egl_8h_source.html#l01596">SDL_egl.h:1596</a></div></div>
+<div class="ttc" id="astruct_a_v_d_v_profile_html_aff2ba558e0f6e771158529b98de59327"><div class="ttname"><a href="../../d2/de3/struct_a_v_d_v_profile.html#aff2ba558e0f6e771158529b98de59327">AVDVProfile::frame_size</a></div><div class="ttdeci">int frame_size</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dc6/dv__profile_8h_source.html#l00042">dv_profile.h:42</a></div></div>
+<div class="ttc" id="astruct_a_v_d_v_profile_html_adfe152931074cffcb08b96c94477df20"><div class="ttname"><a href="../../d2/de3/struct_a_v_d_v_profile.html#adfe152931074cffcb08b96c94477df20">AVDVProfile::sar</a></div><div class="ttdeci">AVRational sar[2]</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dc6/dv__profile_8h_source.html#l00049">dv_profile.h:49</a></div></div>
+<div class="ttc" id="astruct_a_v_d_v_profile_html_a60e69db48ed11fa6b01386dd0816c347"><div class="ttname"><a href="../../d2/de3/struct_a_v_d_v_profile.html#a60e69db48ed11fa6b01386dd0816c347">AVDVProfile::audio_shuffle</a></div><div class="ttdeci">const uint8_t(* audio_shuffle)[9]</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dc6/dv__profile_8h_source.html#l00058">dv_profile.h:58</a></div></div>
+<div class="ttc" id="astruct_a_v_d_v_profile_html_a419641b54a081dae5f7d58bafb0f4442"><div class="ttname"><a href="../../d2/de3/struct_a_v_d_v_profile.html#a419641b54a081dae5f7d58bafb0f4442">AVDVProfile::ltc_divisor</a></div><div class="ttdeci">int ltc_divisor</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dc6/dv__profile_8h_source.html#l00046">dv_profile.h:46</a></div></div>
+<div class="ttc" id="astruct_a_v_d_v_profile_html_a426cc1d18197649dbee2e0c189661165"><div class="ttname"><a href="../../d2/de3/struct_a_v_d_v_profile.html#a426cc1d18197649dbee2e0c189661165">AVDVProfile::time_base</a></div><div class="ttdeci">AVRational time_base</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dc6/dv__profile_8h_source.html#l00045">dv_profile.h:45</a></div></div>
+<div class="ttc" id="a_s_d_l__egl_8h_html_a9a82cf3caff84cabc4598e2619faac17"><div class="ttname"><a href="../../df/d32/_s_d_l__egl_8h.html#a9a82cf3caff84cabc4598e2619faac17">width</a></div><div class="ttdeci">EGLSurface EGLint EGLint EGLint width</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/_s_d_l__egl_8h_source.html#l01596">SDL_egl.h:1596</a></div></div>
+<div class="ttc" id="adv__profile_8h_html_a2b14cf1ed2d0416677b300e1f8410ee4"><div class="ttname"><a href="../../dd/dc6/dv__profile_8h.html#a2b14cf1ed2d0416677b300e1f8410ee4">av_dv_frame_profile</a></div><div class="ttdeci">const AVDVProfile * av_dv_frame_profile(const AVDVProfile *sys, const uint8_t *frame, unsigned buf_size)</div></div>
+<div class="ttc" id="astruct_a_v_d_v_profile_html_ae6fb4ff067a900d3a1a90b488d65260a"><div class="ttname"><a href="../../d2/de3/struct_a_v_d_v_profile.html#ae6fb4ff067a900d3a1a90b488d65260a">AVDVProfile::video_stype</a></div><div class="ttdeci">int video_stype</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dc6/dv__profile_8h_source.html#l00041">dv_profile.h:41</a></div></div>
+<div class="ttc" id="adv__profile_8h_html_a429dbcbff526a8a1da537ec707bdbe84"><div class="ttname"><a href="../../dd/dc6/dv__profile_8h.html#a429dbcbff526a8a1da537ec707bdbe84">AVDVProfile</a></div><div class="ttdeci">struct AVDVProfile AVDVProfile</div></div>
+<div class="ttc" id="astruct_a_v_d_v_profile_html_a5a6c419cebc96446eb3833820541bd88"><div class="ttname"><a href="../../d2/de3/struct_a_v_d_v_profile.html#a5a6c419cebc96446eb3833820541bd88">AVDVProfile::dsf</a></div><div class="ttdeci">int dsf</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dc6/dv__profile_8h_source.html#l00040">dv_profile.h:40</a></div></div>
+<div class="ttc" id="astruct_a_v_d_v_profile_html_ab00eec0771cb43f7739e25dec4cbaaeb"><div class="ttname"><a href="../../d2/de3/struct_a_v_d_v_profile.html#ab00eec0771cb43f7739e25dec4cbaaeb">AVDVProfile::n_difchan</a></div><div class="ttdeci">int n_difchan</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dc6/dv__profile_8h_source.html#l00044">dv_profile.h:44</a></div></div>
+<div class="ttc" id="a_s_d_l__config_8h_html_aba7bc1797add20fe3efdf37ced1182c5"><div class="ttname"><a href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a></div><div class="ttdeci">unsigned __int8 uint8_t</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d8f/_s_d_l__config_8h_source.html#l00035">SDL_config.h:35</a></div></div>
+<div class="ttc" id="aavcodec_8h_html"><div class="ttname"><a href="../../d4/d02/avcodec_8h.html">avcodec.h</a></div></div>
+<div class="ttc" id="apixfmt_8h_html"><div class="ttname"><a href="../../dd/d6c/pixfmt_8h.html">pixfmt.h</a></div></div>
+<div class="ttc" id="astruct_a_v_d_v_profile_html_a67ffd3d76d605bc35a2b2709073bba3c"><div class="ttname"><a href="../../d2/de3/struct_a_v_d_v_profile.html#a67ffd3d76d605bc35a2b2709073bba3c">AVDVProfile::audio_min_samples</a></div><div class="ttdeci">int audio_min_samples[3]</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dc6/dv__profile_8h_source.html#l00054">dv_profile.h:54</a></div></div>
+<div class="ttc" id="astruct_a_v_rational_html"><div class="ttname"><a href="../../d7/d28/struct_a_v_rational.html">AVRational</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d67/rational_8h_source.html#l00058">rational.h:58</a></div></div>
+<div class="ttc" id="astruct_a_v_d_v_profile_html_ad9e3fd93f735b40850fd78e73f32f7e8"><div class="ttname"><a href="../../d2/de3/struct_a_v_d_v_profile.html#ad9e3fd93f735b40850fd78e73f32f7e8">AVDVProfile::height</a></div><div class="ttdeci">int height</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dc6/dv__profile_8h_source.html#l00047">dv_profile.h:47</a></div></div>
+<div class="ttc" id="astruct_a_v_d_v_profile_html"><div class="ttname"><a href="../../d2/de3/struct_a_v_d_v_profile.html">AVDVProfile</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dc6/dv__profile_8h_source.html#l00039">dv_profile.h:39</a></div></div>
+<div class="ttc" id="astruct_a_v_d_v_profile_html_ab51ec3f0919265dc5ce94a1603b52592"><div class="ttname"><a href="../../d2/de3/struct_a_v_d_v_profile.html#ab51ec3f0919265dc5ce94a1603b52592">AVDVProfile::block_sizes</a></div><div class="ttdeci">const uint8_t * block_sizes</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dc6/dv__profile_8h_source.html#l00052">dv_profile.h:52</a></div></div>
+<div class="ttc" id="adv__profile_8h_html_a6e6b2532a302003fcd0c35694867eb32"><div class="ttname"><a href="../../dd/dc6/dv__profile_8h.html#a6e6b2532a302003fcd0c35694867eb32">av_dv_codec_profile2</a></div><div class="ttdeci">const AVDVProfile * av_dv_codec_profile2(int width, int height, enum AVPixelFormat pix_fmt, AVRational frame_rate)</div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_97aefd0d527b934f1d99a682da8fe6a9.html">lib</a></li><li class="navelem"><a class="el" href="../../dir_da53678e933bc13c5b44fc9f96ac81aa.html">win32</a></li><li class="navelem"><a class="el" href="../../dir_7ac189985cec0e073b46d34a5d96bfc1.html">x86</a></li><li class="navelem"><a class="el" href="../../dir_e3469dbcd8a5e63a5540df758d989c34.html">ffmpeg-4.2.2</a></li><li class="navelem"><a class="el" href="../../dir_880368755e1ee5b32b1864dac7163836.html">include</a></li><li class="navelem"><a class="el" href="../../dir_cc1240911a46d75e55d7400edd5b0c1d.html">libavcodec</a></li><li class="navelem"><a class="el" href="../../dd/dc6/dv__profile_8h.html">dv_profile.h</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:03:38. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

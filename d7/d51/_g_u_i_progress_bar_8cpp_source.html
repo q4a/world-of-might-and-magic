@@ -1,0 +1,273 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Исходный файл C:/git/world-of-might-and-magic/GUI/GUIProgressBar.cpp</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d7/d51/_g_u_i_progress_bar_8cpp_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">GUIProgressBar.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d7/d51/_g_u_i_progress_bar_8cpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d0/d19/_g_u_i_progress_bar_8h.html">GUI/GUIProgressBar.h</a>&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;algorithm&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d3/db7/_assets_manager_8h.html">Engine/AssetsManager.h</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../de/dcf/_engine_8h.html">Engine/Engine.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d3/db2/_l_o_d_8h.html">Engine/LOD.h</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../db/d38/_party_8h.html">Engine/Party.h</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../da/d20/_i_render_8h.html">Engine/Graphics/IRender.h</a>&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d7/d5e/_icon_frame_table_8h.html">Engine/Tables/IconFrameTable.h</a>&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="../../d0/d19/_g_u_i_progress_bar_8h.html#aac7aa95bb39e64e90d974b15e1c30845">   14</a></span>&#160;<a class="code" href="../../dd/dc4/class_g_u_i_progress_bar.html">GUIProgressBar</a> *<a class="code" href="../../d7/d51/_g_u_i_progress_bar_8cpp.html#aac7aa95bb39e64e90d974b15e1c30845">pGameLoadingUI_ProgressBar</a> = <span class="keyword">new</span> <a class="code" href="../../dd/dc4/class_g_u_i_progress_bar.html">GUIProgressBar</a>();</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="../../dd/dc4/class_g_u_i_progress_bar.html#a3b654f539226e869cb7a7ca5032b8296">   16</a></span>&#160;<a class="code" href="../../dd/dc4/class_g_u_i_progress_bar.html#a3b654f539226e869cb7a7ca5032b8296">GUIProgressBar::GUIProgressBar</a>() {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="../../dd/dc4/class_g_u_i_progress_bar.html#afa1419d2d28bec1e35d3c710a510fc60">progressbar_dungeon</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="../../dd/dc4/class_g_u_i_progress_bar.html#a508508e227bf1e2c62acf03199eb5116">progressbar_loading</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="../../dd/dc4/class_g_u_i_progress_bar.html#ac1fdedf308bda0ab32637d3e11421510">loading_bg</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;}</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="../../dd/dc4/class_g_u_i_progress_bar.html#a3cbb09078bfe67db13758df7d99f138d">   22</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="../../dd/dc4/class_g_u_i_progress_bar.html#a3cbb09078bfe67db13758df7d99f138d">GUIProgressBar::Initialize</a>(<a class="code" href="../../dd/dc4/class_g_u_i_progress_bar.html#a220a1995f8a01ff3556b5fb2c6ae072b">Type</a> <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ad5ddf6fca7b585646515660e810e0188">type</a>) {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="../../dd/dc4/class_g_u_i_progress_bar.html#a277e21ddf45d43116054a8a667a1f9ff">Release</a>();</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordflow">switch</span> (<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ad5ddf6fca7b585646515660e810e0188">type</a>) {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="../../dd/dc4/class_g_u_i_progress_bar.html#a220a1995f8a01ff3556b5fb2c6ae072ba818af8bd9eceb7740bb08466a7cf4015">TYPE_None</a>:</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="../../dd/dc4/class_g_u_i_progress_bar.html#a220a1995f8a01ff3556b5fb2c6ae072ba9c59acc74de3663121b8fbfd9bfcd043">TYPE_Box</a>:</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="../../dd/dc4/class_g_u_i_progress_bar.html#a220a1995f8a01ff3556b5fb2c6ae072ba7d7f91a7f500ac551bba7eb426d12dce">TYPE_Fullscreen</a>:</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            Error(<span class="stringliteral">&quot;Invalid GUIProgressBar type: %u&quot;</span>, <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ad5ddf6fca7b585646515660e810e0188">type</a>);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    }</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../dd/dc4/class_g_u_i_progress_bar.html#ac1fdedf308bda0ab32637d3e11421510">loading_bg</a>) {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="../../dd/dc4/class_g_u_i_progress_bar.html#ae30b151e76bcc65ee3e6b029c739a076">uType</a> = <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ad5ddf6fca7b585646515660e810e0188">type</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../dd/dc4/class_g_u_i_progress_bar.html#ae30b151e76bcc65ee3e6b029c739a076">uType</a> == <a class="code" href="../../dd/dc4/class_g_u_i_progress_bar.html#a220a1995f8a01ff3556b5fb2c6ae072ba7d7f91a7f500ac551bba7eb426d12dce">TYPE_Fullscreen</a>) {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <a class="code" href="../../dd/dc4/class_g_u_i_progress_bar.html#ac1fdedf308bda0ab32637d3e11421510">loading_bg</a> = <a class="code" href="../../d3/d93/_assets_manager_8cpp.html#a645270130330d2d99964c967b7d33cd8">assets</a>-&gt;<a class="code" href="../../db/dd6/class_assets_manager.html#a20f956b4c71c3e07404ca137d572b97f">GetImage_PCXFromIconsLOD</a>(<a class="code" href="../../d8/d44/_strings_8cpp.html#aebf99e80337d8db0a005aebe8a13fb7f">StringPrintf</a>(<span class="stringliteral">&quot;loading%d.pcx&quot;</span>, rand() % 5 + 1));</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <a class="code" href="../../dd/dc4/class_g_u_i_progress_bar.html#a931a8a1b232945dfa66d55da7925e149">uProgressCurrent</a> = 0;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <a class="code" href="../../dd/dc4/class_g_u_i_progress_bar.html#ae3554acbf20ee4545886953b8b66fe65">uX</a> = 122;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <a class="code" href="../../dd/dc4/class_g_u_i_progress_bar.html#a52536f6ae2ff4d256c574bcd98ea1991">uY</a> = 151;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <a class="code" href="../../dd/dc4/class_g_u_i_progress_bar.html#aa81b87cdfb814a0b7e5230067a466736">uWidth</a> = 449;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <a class="code" href="../../dd/dc4/class_g_u_i_progress_bar.html#af8a1b9be7b3df0034fddadd1b85409a9">uHeight</a> = 56;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <a class="code" href="../../dd/dc4/class_g_u_i_progress_bar.html#a8d1005b1e5dc41e822bb569f0968806b">uProgressMax</a> = 26;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <a class="code" href="../../dd/dc4/class_g_u_i_progress_bar.html#a508508e227bf1e2c62acf03199eb5116">progressbar_loading</a> = <a class="code" href="../../d3/d93/_assets_manager_8cpp.html#a645270130330d2d99964c967b7d33cd8">assets</a>-&gt;<a class="code" href="../../db/dd6/class_assets_manager.html#a1233dda64079e0eba19f8be51386d029">GetImage_Alpha</a>(<span class="stringliteral">&quot;loadprog&quot;</span>);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <a class="code" href="../../dd/dc4/class_g_u_i_progress_bar.html#abcb73c1a445bfaf60909f7145fbb0c2c">Draw</a>();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordflow">switch</span> (<a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a0333a828cb051d9f86e142230644cce3">alignment</a>) {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="../../db/d38/_party_8h.html#a8bd3eeda5ec3780afeff00593e27b6f2a138a01d401a68aab61b07b596bb532a7">PartyAlignment::PartyAlignment_Good</a>:</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                <a class="code" href="../../dd/dc4/class_g_u_i_progress_bar.html#afa1419d2d28bec1e35d3c710a510fc60">progressbar_dungeon</a> = <a class="code" href="../../d3/d93/_assets_manager_8cpp.html#a645270130330d2d99964c967b7d33cd8">assets</a>-&gt;<a class="code" href="../../db/dd6/class_assets_manager.html#ad4ab70fc004c8c5a54756f3d358a8383">GetImage_ColorKey</a>(<span class="stringliteral">&quot;bardata-b&quot;</span>, 0x7FF);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="../../db/d38/_party_8h.html#a8bd3eeda5ec3780afeff00593e27b6f2af9794c109d91984889aa4427dd2b45b9">PartyAlignment::PartyAlignment_Neutral</a>:</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                <a class="code" href="../../dd/dc4/class_g_u_i_progress_bar.html#afa1419d2d28bec1e35d3c710a510fc60">progressbar_dungeon</a> = <a class="code" href="../../d3/d93/_assets_manager_8cpp.html#a645270130330d2d99964c967b7d33cd8">assets</a>-&gt;<a class="code" href="../../db/dd6/class_assets_manager.html#ad4ab70fc004c8c5a54756f3d358a8383">GetImage_ColorKey</a>(<span class="stringliteral">&quot;bardata&quot;</span>, 0x7FF);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="../../db/d38/_party_8h.html#a8bd3eeda5ec3780afeff00593e27b6f2a5a3e1b0ba1793049451900a1e065630d">PartyAlignment::PartyAlignment_Evil</a>:</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                <a class="code" href="../../dd/dc4/class_g_u_i_progress_bar.html#afa1419d2d28bec1e35d3c710a510fc60">progressbar_dungeon</a> = <a class="code" href="../../d3/d93/_assets_manager_8cpp.html#a645270130330d2d99964c967b7d33cd8">assets</a>-&gt;<a class="code" href="../../db/dd6/class_assets_manager.html#ad4ab70fc004c8c5a54756f3d358a8383">GetImage_ColorKey</a>(<span class="stringliteral">&quot;bardata-c&quot;</span>, 0x7FF);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                Error(<span class="stringliteral">&quot;Invalid alignment type: %u&quot;</span>, <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a0333a828cb051d9f86e142230644cce3">alignment</a>);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <a class="code" href="../../dd/dc4/class_g_u_i_progress_bar.html#a931a8a1b232945dfa66d55da7925e149">uProgressCurrent</a> = 0;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <a class="code" href="../../dd/dc4/class_g_u_i_progress_bar.html#a8d1005b1e5dc41e822bb569f0968806b">uProgressMax</a> = 26;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <a class="code" href="../../dd/dc4/class_g_u_i_progress_bar.html#abcb73c1a445bfaf60909f7145fbb0c2c">Draw</a>();</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;}</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="../../dd/dc4/class_g_u_i_progress_bar.html#a7b6bd9e1cb906fb82f6d69ccd2e00c26">   78</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../dd/dc4/class_g_u_i_progress_bar.html#a7b6bd9e1cb906fb82f6d69ccd2e00c26">GUIProgressBar::Reset</a>(<a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> uMaxProgress) {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <a class="code" href="../../dd/dc4/class_g_u_i_progress_bar.html#a931a8a1b232945dfa66d55da7925e149">uProgressCurrent</a> = 0;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <a class="code" href="../../dd/dc4/class_g_u_i_progress_bar.html#a8d1005b1e5dc41e822bb569f0968806b">uProgressMax</a> = uMaxProgress;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="../../dd/dc4/class_g_u_i_progress_bar.html#a8a0d7cdea6661ca839e19289013d4d6f">   83</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../dd/dc4/class_g_u_i_progress_bar.html#a8a0d7cdea6661ca839e19289013d4d6f">GUIProgressBar::Progress</a>() {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <a class="code" href="../../dd/dc4/class_g_u_i_progress_bar.html#a931a8a1b232945dfa66d55da7925e149">uProgressCurrent</a> = std::min((<a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>)(<a class="code" href="../../dd/dc4/class_g_u_i_progress_bar.html#a931a8a1b232945dfa66d55da7925e149">uProgressCurrent</a> + 1), <a class="code" href="../../dd/dc4/class_g_u_i_progress_bar.html#a8d1005b1e5dc41e822bb569f0968806b">uProgressMax</a>);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <a class="code" href="../../dd/dc4/class_g_u_i_progress_bar.html#abcb73c1a445bfaf60909f7145fbb0c2c">Draw</a>();</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;}</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="../../dd/dc4/class_g_u_i_progress_bar.html#a277e21ddf45d43116054a8a667a1f9ff">   88</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../dd/dc4/class_g_u_i_progress_bar.html#a277e21ddf45d43116054a8a667a1f9ff">GUIProgressBar::Release</a>() {</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../dd/dc4/class_g_u_i_progress_bar.html#ac1fdedf308bda0ab32637d3e11421510">loading_bg</a> != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <a class="code" href="../../dd/dc4/class_g_u_i_progress_bar.html#ac1fdedf308bda0ab32637d3e11421510">loading_bg</a>-&gt;<a class="code" href="../../de/d73/class_image.html#a79e0e96332914caa0816c7d34822b9bf">Release</a>();</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <a class="code" href="../../dd/dc4/class_g_u_i_progress_bar.html#ac1fdedf308bda0ab32637d3e11421510">loading_bg</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    }</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../dd/dc4/class_g_u_i_progress_bar.html#a508508e227bf1e2c62acf03199eb5116">progressbar_loading</a> != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <a class="code" href="../../dd/dc4/class_g_u_i_progress_bar.html#a508508e227bf1e2c62acf03199eb5116">progressbar_loading</a>-&gt;<a class="code" href="../../de/d73/class_image.html#a79e0e96332914caa0816c7d34822b9bf">Release</a>();</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <a class="code" href="../../dd/dc4/class_g_u_i_progress_bar.html#a508508e227bf1e2c62acf03199eb5116">progressbar_loading</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    }</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../dd/dc4/class_g_u_i_progress_bar.html#afa1419d2d28bec1e35d3c710a510fc60">progressbar_dungeon</a> != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <a class="code" href="../../dd/dc4/class_g_u_i_progress_bar.html#afa1419d2d28bec1e35d3c710a510fc60">progressbar_dungeon</a>-&gt;<a class="code" href="../../de/d73/class_image.html#a79e0e96332914caa0816c7d34822b9bf">Release</a>();</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <a class="code" href="../../dd/dc4/class_g_u_i_progress_bar.html#afa1419d2d28bec1e35d3c710a510fc60">progressbar_dungeon</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    }</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;}</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="../../dd/dc4/class_g_u_i_progress_bar.html#abcb73c1a445bfaf60909f7145fbb0c2c">  105</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../dd/dc4/class_g_u_i_progress_bar.html#abcb73c1a445bfaf60909f7145fbb0c2c">GUIProgressBar::Draw</a>() {</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <a class="code" href="../../da/d20/_i_render_8h.html#a21d31464313b2c66ff88d4aa97b66143">render</a>-&gt;BeginScene();</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../dd/dc4/class_g_u_i_progress_bar.html#ae30b151e76bcc65ee3e6b029c739a076">uType</a> != <a class="code" href="../../dd/dc4/class_g_u_i_progress_bar.html#a220a1995f8a01ff3556b5fb2c6ae072ba7d7f91a7f500ac551bba7eb426d12dce">TYPE_Fullscreen</a>) {</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <a class="code" href="../../da/d20/_i_render_8h.html#a21d31464313b2c66ff88d4aa97b66143">render</a>-&gt;DrawTextureAlphaNew(80 / 640.0<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a>, 122 / 480.0<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a>, <a class="code" href="../../dd/dc4/class_g_u_i_progress_bar.html#afa1419d2d28bec1e35d3c710a510fc60">progressbar_dungeon</a>);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <a class="code" href="../../da/d20/_i_render_8h.html#a21d31464313b2c66ff88d4aa97b66143">render</a>-&gt;DrawTextureAlphaNew(100 / 640.0<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a>, 146 / 480.0<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a>, <a class="code" href="../../d6/d5b/mm7__data_8cpp.html#ac5392690688386be528779080a603519">pIconsFrameTable</a>-&gt;<a class="code" href="../../d8/dc5/struct_icon_frame_table.html#ab9a3de4cf322157a8d38e352489bd7b8">GetFrame</a>(<a class="code" href="../../d6/d5b/mm7__data_8cpp.html#afd560bf673bd04753d0404ae1280f30c">uIconID_TurnHour</a>, 0)-&gt;<a class="code" href="../../db/d60/class_icon.html#ae643cd22b6d76d7cfdccf8f7b2a572b2">GetTexture</a>());</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <a class="code" href="../../da/d20/_i_render_8h.html#a21d31464313b2c66ff88d4aa97b66143">render</a>-&gt;FillRectFast(174, 164, floorf(((<span class="keywordtype">double</span>)(113 * <a class="code" href="../../dd/dc4/class_g_u_i_progress_bar.html#a931a8a1b232945dfa66d55da7925e149">uProgressCurrent</a>) / (<span class="keywordtype">double</span>)<a class="code" href="../../dd/dc4/class_g_u_i_progress_bar.html#a8d1005b1e5dc41e822bb569f0968806b">uProgressMax</a>) + 0.5<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a>), 16, 0xF800);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../dd/dc4/class_g_u_i_progress_bar.html#ac1fdedf308bda0ab32637d3e11421510">loading_bg</a>) {</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            <a class="code" href="../../da/d20/_i_render_8h.html#a21d31464313b2c66ff88d4aa97b66143">render</a>-&gt;DrawTextureNew(0, 0, <a class="code" href="../../dd/dc4/class_g_u_i_progress_bar.html#ac1fdedf308bda0ab32637d3e11421510">loading_bg</a>);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        }</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        <a class="code" href="../../da/d20/_i_render_8h.html#a21d31464313b2c66ff88d4aa97b66143">render</a>-&gt;SetUIClipRect(172, 459, (<span class="keywordtype">int</span>)((<span class="keywordtype">double</span>)(300 * <a class="code" href="../../dd/dc4/class_g_u_i_progress_bar.html#a931a8a1b232945dfa66d55da7925e149">uProgressCurrent</a>) / (<span class="keywordtype">double</span>)<a class="code" href="../../dd/dc4/class_g_u_i_progress_bar.html#a8d1005b1e5dc41e822bb569f0968806b">uProgressMax</a>) + 172, 471);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        <a class="code" href="../../da/d20/_i_render_8h.html#a21d31464313b2c66ff88d4aa97b66143">render</a>-&gt;DrawTextureAlphaNew(172 / 640.0<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a>, 459 / 480.0<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a>, <a class="code" href="../../dd/dc4/class_g_u_i_progress_bar.html#a508508e227bf1e2c62acf03199eb5116">progressbar_loading</a>);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <a class="code" href="../../da/d20/_i_render_8h.html#a21d31464313b2c66ff88d4aa97b66143">render</a>-&gt;ResetUIClipRect();</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    }</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <a class="code" href="../../da/d20/_i_render_8h.html#a21d31464313b2c66ff88d4aa97b66143">render</a>-&gt;EndScene();</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <a class="code" href="../../da/d20/_i_render_8h.html#a21d31464313b2c66ff88d4aa97b66143">render</a>-&gt;Present();</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aclass_g_u_i_progress_bar_html_afa1419d2d28bec1e35d3c710a510fc60"><div class="ttname"><a href="../../dd/dc4/class_g_u_i_progress_bar.html#afa1419d2d28bec1e35d3c710a510fc60">GUIProgressBar::progressbar_dungeon</a></div><div class="ttdeci">Image * progressbar_dungeon</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d19/_g_u_i_progress_bar_8h_source.html#l00034">GUIProgressBar.h:34</a></div></div>
+<div class="ttc" id="a_icon_frame_table_8h_html"><div class="ttname"><a href="../../d7/d5e/_icon_frame_table_8h.html">IconFrameTable.h</a></div></div>
+<div class="ttc" id="a_party_8h_html_a8bd3eeda5ec3780afeff00593e27b6f2a138a01d401a68aab61b07b596bb532a7"><div class="ttname"><a href="../../db/d38/_party_8h.html#a8bd3eeda5ec3780afeff00593e27b6f2a138a01d401a68aab61b07b596bb532a7">PartyAlignment::PartyAlignment_Good</a></div><div class="ttdeci">@ PartyAlignment_Good</div></div>
+<div class="ttc" id="a_party_8h_html_a8bd3eeda5ec3780afeff00593e27b6f2af9794c109d91984889aa4427dd2b45b9"><div class="ttname"><a href="../../db/d38/_party_8h.html#a8bd3eeda5ec3780afeff00593e27b6f2af9794c109d91984889aa4427dd2b45b9">PartyAlignment::PartyAlignment_Neutral</a></div><div class="ttdeci">@ PartyAlignment_Neutral</div></div>
+<div class="ttc" id="a_l_o_d_8h_html"><div class="ttname"><a href="../../d3/db2/_l_o_d_8h.html">LOD.h</a></div></div>
+<div class="ttc" id="aclass_g_u_i_progress_bar_html_a220a1995f8a01ff3556b5fb2c6ae072ba7d7f91a7f500ac551bba7eb426d12dce"><div class="ttname"><a href="../../dd/dc4/class_g_u_i_progress_bar.html#a220a1995f8a01ff3556b5fb2c6ae072ba7d7f91a7f500ac551bba7eb426d12dce">GUIProgressBar::TYPE_Fullscreen</a></div><div class="ttdeci">@ TYPE_Fullscreen</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d19/_g_u_i_progress_bar_8h_source.html#l00011">GUIProgressBar.h:11</a></div></div>
+<div class="ttc" id="amm7__data_8cpp_html_ac5392690688386be528779080a603519"><div class="ttname"><a href="../../d6/d5b/mm7__data_8cpp.html#ac5392690688386be528779080a603519">pIconsFrameTable</a></div><div class="ttdeci">struct IconFrameTable * pIconsFrameTable</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d5b/mm7__data_8cpp_source.html#l00168">mm7_data.cpp:168</a></div></div>
+<div class="ttc" id="a_party_8h_html_a8bd3eeda5ec3780afeff00593e27b6f2a5a3e1b0ba1793049451900a1e065630d"><div class="ttname"><a href="../../db/d38/_party_8h.html#a8bd3eeda5ec3780afeff00593e27b6f2a5a3e1b0ba1793049451900a1e065630d">PartyAlignment::PartyAlignment_Evil</a></div><div class="ttdeci">@ PartyAlignment_Evil</div></div>
+<div class="ttc" id="aclass_g_u_i_progress_bar_html_a220a1995f8a01ff3556b5fb2c6ae072b"><div class="ttname"><a href="../../dd/dc4/class_g_u_i_progress_bar.html#a220a1995f8a01ff3556b5fb2c6ae072b">GUIProgressBar::Type</a></div><div class="ttdeci">Type</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d19/_g_u_i_progress_bar_8h_source.html#l00009">GUIProgressBar.h:9</a></div></div>
+<div class="ttc" id="aclass_g_u_i_progress_bar_html_ae30b151e76bcc65ee3e6b029c739a076"><div class="ttname"><a href="../../dd/dc4/class_g_u_i_progress_bar.html#ae30b151e76bcc65ee3e6b029c739a076">GUIProgressBar::uType</a></div><div class="ttdeci">Type uType</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d19/_g_u_i_progress_bar_8h_source.html#l00032">GUIProgressBar.h:32</a></div></div>
+<div class="ttc" id="aclass_assets_manager_html_a20f956b4c71c3e07404ca137d572b97f"><div class="ttname"><a href="../../db/dd6/class_assets_manager.html#a20f956b4c71c3e07404ca137d572b97f">AssetsManager::GetImage_PCXFromIconsLOD</a></div><div class="ttdeci">Texture * GetImage_PCXFromIconsLOD(const String &amp;name)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d93/_assets_manager_8cpp_source.html#l00081">AssetsManager.cpp:81</a></div></div>
+<div class="ttc" id="aclass_g_u_i_progress_bar_html_af8a1b9be7b3df0034fddadd1b85409a9"><div class="ttname"><a href="../../dd/dc4/class_g_u_i_progress_bar.html#af8a1b9be7b3df0034fddadd1b85409a9">GUIProgressBar::uHeight</a></div><div class="ttdeci">int uHeight</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d19/_g_u_i_progress_bar_8h_source.html#l00028">GUIProgressBar.h:28</a></div></div>
+<div class="ttc" id="aclass_icon_html_ae643cd22b6d76d7cfdccf8f7b2a572b2"><div class="ttname"><a href="../../db/d60/class_icon.html#ae643cd22b6d76d7cfdccf8f7b2a572b2">Icon::GetTexture</a></div><div class="ttdeci">Texture * GetTexture()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d1b/_icon_frame_table_8cpp_source.html#l00009">IconFrameTable.cpp:9</a></div></div>
+<div class="ttc" id="a_assets_manager_8h_html"><div class="ttname"><a href="../../d3/db7/_assets_manager_8h.html">AssetsManager.h</a></div></div>
+<div class="ttc" id="a_engine_8h_html"><div class="ttname"><a href="../../de/dcf/_engine_8h.html">Engine.h</a></div></div>
+<div class="ttc" id="aclass_g_u_i_progress_bar_html_a3cbb09078bfe67db13758df7d99f138d"><div class="ttname"><a href="../../dd/dc4/class_g_u_i_progress_bar.html#a3cbb09078bfe67db13758df7d99f138d">GUIProgressBar::Initialize</a></div><div class="ttdeci">bool Initialize(Type type)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d51/_g_u_i_progress_bar_8cpp_source.html#l00022">GUIProgressBar.cpp:22</a></div></div>
+<div class="ttc" id="a_party_8cpp_html_a638b1d8b985f1c7f8b69f2d81286f98e"><div class="ttname"><a href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a></div><div class="ttdeci">Party * pParty</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db4/_party_8cpp_source.html#l00030">Party.cpp:30</a></div></div>
+<div class="ttc" id="a_i_render_8h_html"><div class="ttname"><a href="../../da/d20/_i_render_8h.html">IRender.h</a></div></div>
+<div class="ttc" id="a_g_u_i_progress_bar_8cpp_html_aac7aa95bb39e64e90d974b15e1c30845"><div class="ttname"><a href="../../d7/d51/_g_u_i_progress_bar_8cpp.html#aac7aa95bb39e64e90d974b15e1c30845">pGameLoadingUI_ProgressBar</a></div><div class="ttdeci">GUIProgressBar * pGameLoadingUI_ProgressBar</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d51/_g_u_i_progress_bar_8cpp_source.html#l00014">GUIProgressBar.cpp:14</a></div></div>
+<div class="ttc" id="aclass_g_u_i_progress_bar_html_a220a1995f8a01ff3556b5fb2c6ae072ba9c59acc74de3663121b8fbfd9bfcd043"><div class="ttname"><a href="../../dd/dc4/class_g_u_i_progress_bar.html#a220a1995f8a01ff3556b5fb2c6ae072ba9c59acc74de3663121b8fbfd9bfcd043">GUIProgressBar::TYPE_Box</a></div><div class="ttdeci">@ TYPE_Box</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d19/_g_u_i_progress_bar_8h_source.html#l00012">GUIProgressBar.h:12</a></div></div>
+<div class="ttc" id="aclass_assets_manager_html_ad4ab70fc004c8c5a54756f3d358a8383"><div class="ttname"><a href="../../db/dd6/class_assets_manager.html#ad4ab70fc004c8c5a54756f3d358a8383">AssetsManager::GetImage_ColorKey</a></div><div class="ttdeci">Texture * GetImage_ColorKey(const String &amp;name, uint16_t colorkey)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d93/_assets_manager_8cpp_source.html#l00034">AssetsManager.cpp:34</a></div></div>
+<div class="ttc" id="a_party_8h_html"><div class="ttname"><a href="../../db/d38/_party_8h.html">Party.h</a></div></div>
+<div class="ttc" id="aclass_g_u_i_progress_bar_html_a7b6bd9e1cb906fb82f6d69ccd2e00c26"><div class="ttname"><a href="../../dd/dc4/class_g_u_i_progress_bar.html#a7b6bd9e1cb906fb82f6d69ccd2e00c26">GUIProgressBar::Reset</a></div><div class="ttdeci">void Reset(uint8_t uMaxProgress)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d51/_g_u_i_progress_bar_8cpp_source.html#l00078">GUIProgressBar.cpp:78</a></div></div>
+<div class="ttc" id="aclass_g_u_i_progress_bar_html_a52536f6ae2ff4d256c574bcd98ea1991"><div class="ttname"><a href="../../dd/dc4/class_g_u_i_progress_bar.html#a52536f6ae2ff4d256c574bcd98ea1991">GUIProgressBar::uY</a></div><div class="ttdeci">int uY</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d19/_g_u_i_progress_bar_8h_source.html#l00026">GUIProgressBar.h:26</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a691492ec0bd6383f91200e49f6ae40ed"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a></div><div class="ttdeci">GLfloat f</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l01873">SDL_opengl_glext.h:1873</a></div></div>
+<div class="ttc" id="aclass_g_u_i_progress_bar_html_ae3554acbf20ee4545886953b8b66fe65"><div class="ttname"><a href="../../dd/dc4/class_g_u_i_progress_bar.html#ae3554acbf20ee4545886953b8b66fe65">GUIProgressBar::uX</a></div><div class="ttdeci">int uX</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d19/_g_u_i_progress_bar_8h_source.html#l00025">GUIProgressBar.h:25</a></div></div>
+<div class="ttc" id="a_s_d_l__egl_8h_html_ad5ddf6fca7b585646515660e810e0188"><div class="ttname"><a href="../../df/d32/_s_d_l__egl_8h.html#ad5ddf6fca7b585646515660e810e0188">type</a></div><div class="ttdeci">EGLenum type</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/_s_d_l__egl_8h_source.html#l00850">SDL_egl.h:850</a></div></div>
+<div class="ttc" id="aclass_g_u_i_progress_bar_html_abcb73c1a445bfaf60909f7145fbb0c2c"><div class="ttname"><a href="../../dd/dc4/class_g_u_i_progress_bar.html#abcb73c1a445bfaf60909f7145fbb0c2c">GUIProgressBar::Draw</a></div><div class="ttdeci">void Draw()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d51/_g_u_i_progress_bar_8cpp_source.html#l00105">GUIProgressBar.cpp:105</a></div></div>
+<div class="ttc" id="aclass_g_u_i_progress_bar_html_a931a8a1b232945dfa66d55da7925e149"><div class="ttname"><a href="../../dd/dc4/class_g_u_i_progress_bar.html#a931a8a1b232945dfa66d55da7925e149">GUIProgressBar::uProgressCurrent</a></div><div class="ttdeci">uint8_t uProgressCurrent</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d19/_g_u_i_progress_bar_8h_source.html#l00031">GUIProgressBar.h:31</a></div></div>
+<div class="ttc" id="aclass_g_u_i_progress_bar_html_a220a1995f8a01ff3556b5fb2c6ae072ba818af8bd9eceb7740bb08466a7cf4015"><div class="ttname"><a href="../../dd/dc4/class_g_u_i_progress_bar.html#a220a1995f8a01ff3556b5fb2c6ae072ba818af8bd9eceb7740bb08466a7cf4015">GUIProgressBar::TYPE_None</a></div><div class="ttdeci">@ TYPE_None</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d19/_g_u_i_progress_bar_8h_source.html#l00010">GUIProgressBar.h:10</a></div></div>
+<div class="ttc" id="amm7__data_8cpp_html_afd560bf673bd04753d0404ae1280f30c"><div class="ttname"><a href="../../d6/d5b/mm7__data_8cpp.html#afd560bf673bd04753d0404ae1280f30c">uIconID_TurnHour</a></div><div class="ttdeci">unsigned int uIconID_TurnHour</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d5b/mm7__data_8cpp_source.html#l00572">mm7_data.cpp:572</a></div></div>
+<div class="ttc" id="astruct_icon_frame_table_html_ab9a3de4cf322157a8d38e352489bd7b8"><div class="ttname"><a href="../../d8/dc5/struct_icon_frame_table.html#ab9a3de4cf322157a8d38e352489bd7b8">IconFrameTable::GetFrame</a></div><div class="ttdeci">Icon * GetFrame(unsigned int uIconID, unsigned int frame_time)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d1b/_icon_frame_table_8cpp_source.html#l00039">IconFrameTable.cpp:39</a></div></div>
+<div class="ttc" id="aclass_g_u_i_progress_bar_html_a8d1005b1e5dc41e822bb569f0968806b"><div class="ttname"><a href="../../dd/dc4/class_g_u_i_progress_bar.html#a8d1005b1e5dc41e822bb569f0968806b">GUIProgressBar::uProgressMax</a></div><div class="ttdeci">uint8_t uProgressMax</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d19/_g_u_i_progress_bar_8h_source.html#l00030">GUIProgressBar.h:30</a></div></div>
+<div class="ttc" id="a_s_d_l__config_8h_html_aba7bc1797add20fe3efdf37ced1182c5"><div class="ttname"><a href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a></div><div class="ttdeci">unsigned __int8 uint8_t</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d8f/_s_d_l__config_8h_source.html#l00035">SDL_config.h:35</a></div></div>
+<div class="ttc" id="aclass_g_u_i_progress_bar_html_a277e21ddf45d43116054a8a667a1f9ff"><div class="ttname"><a href="../../dd/dc4/class_g_u_i_progress_bar.html#a277e21ddf45d43116054a8a667a1f9ff">GUIProgressBar::Release</a></div><div class="ttdeci">void Release()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d51/_g_u_i_progress_bar_8cpp_source.html#l00088">GUIProgressBar.cpp:88</a></div></div>
+<div class="ttc" id="a_assets_manager_8cpp_html_a645270130330d2d99964c967b7d33cd8"><div class="ttname"><a href="../../d3/d93/_assets_manager_8cpp.html#a645270130330d2d99964c967b7d33cd8">assets</a></div><div class="ttdeci">AssetsManager * assets</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d93/_assets_manager_8cpp_source.html#l00012">AssetsManager.cpp:12</a></div></div>
+<div class="ttc" id="aclass_g_u_i_progress_bar_html_a3b654f539226e869cb7a7ca5032b8296"><div class="ttname"><a href="../../dd/dc4/class_g_u_i_progress_bar.html#a3b654f539226e869cb7a7ca5032b8296">GUIProgressBar::GUIProgressBar</a></div><div class="ttdeci">GUIProgressBar()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d51/_g_u_i_progress_bar_8cpp_source.html#l00016">GUIProgressBar.cpp:16</a></div></div>
+<div class="ttc" id="aclass_assets_manager_html_a1233dda64079e0eba19f8be51386d029"><div class="ttname"><a href="../../db/dd6/class_assets_manager.html#a1233dda64079e0eba19f8be51386d029">AssetsManager::GetImage_Alpha</a></div><div class="ttdeci">Texture * GetImage_Alpha(const String &amp;name)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d93/_assets_manager_8cpp_source.html#l00066">AssetsManager.cpp:66</a></div></div>
+<div class="ttc" id="aclass_g_u_i_progress_bar_html"><div class="ttname"><a href="../../dd/dc4/class_g_u_i_progress_bar.html">GUIProgressBar</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d19/_g_u_i_progress_bar_8h_source.html#l00007">GUIProgressBar.h:7</a></div></div>
+<div class="ttc" id="aclass_g_u_i_progress_bar_html_aa81b87cdfb814a0b7e5230067a466736"><div class="ttname"><a href="../../dd/dc4/class_g_u_i_progress_bar.html#aa81b87cdfb814a0b7e5230067a466736">GUIProgressBar::uWidth</a></div><div class="ttdeci">int uWidth</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d19/_g_u_i_progress_bar_8h_source.html#l00027">GUIProgressBar.h:27</a></div></div>
+<div class="ttc" id="aclass_g_u_i_progress_bar_html_a8a0d7cdea6661ca839e19289013d4d6f"><div class="ttname"><a href="../../dd/dc4/class_g_u_i_progress_bar.html#a8a0d7cdea6661ca839e19289013d4d6f">GUIProgressBar::Progress</a></div><div class="ttdeci">void Progress()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d51/_g_u_i_progress_bar_8cpp_source.html#l00083">GUIProgressBar.cpp:83</a></div></div>
+<div class="ttc" id="a_strings_8cpp_html_aebf99e80337d8db0a005aebe8a13fb7f"><div class="ttname"><a href="../../d8/d44/_strings_8cpp.html#aebf99e80337d8db0a005aebe8a13fb7f">StringPrintf</a></div><div class="ttdeci">String StringPrintf(const char *fmt,...)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d44/_strings_8cpp_source.html#l00009">Strings.cpp:9</a></div></div>
+<div class="ttc" id="a_g_u_i_progress_bar_8h_html"><div class="ttname"><a href="../../d0/d19/_g_u_i_progress_bar_8h.html">GUIProgressBar.h</a></div></div>
+<div class="ttc" id="aclass_g_u_i_progress_bar_html_a508508e227bf1e2c62acf03199eb5116"><div class="ttname"><a href="../../dd/dc4/class_g_u_i_progress_bar.html#a508508e227bf1e2c62acf03199eb5116">GUIProgressBar::progressbar_loading</a></div><div class="ttdeci">Image * progressbar_loading</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d19/_g_u_i_progress_bar_8h_source.html#l00035">GUIProgressBar.h:35</a></div></div>
+<div class="ttc" id="aclass_g_u_i_progress_bar_html_ac1fdedf308bda0ab32637d3e11421510"><div class="ttname"><a href="../../dd/dc4/class_g_u_i_progress_bar.html#ac1fdedf308bda0ab32637d3e11421510">GUIProgressBar::loading_bg</a></div><div class="ttdeci">Image * loading_bg</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d19/_g_u_i_progress_bar_8h_source.html#l00037">GUIProgressBar.h:37</a></div></div>
+<div class="ttc" id="aclass_image_html_a79e0e96332914caa0816c7d34822b9bf"><div class="ttname"><a href="../../de/d73/class_image.html#a79e0e96332914caa0816c7d34822b9bf">Image::Release</a></div><div class="ttdeci">bool Release()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dac/_image_8cpp_source.html#l00335">Image.cpp:335</a></div></div>
+<div class="ttc" id="astruct_party_html_a0333a828cb051d9f86e142230644cce3"><div class="ttname"><a href="../../d0/d14/struct_party.html#a0333a828cb051d9f86e142230644cce3">Party::alignment</a></div><div class="ttdeci">PartyAlignment alignment</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00308">Party.h:308</a></div></div>
+<div class="ttc" id="a_i_render_8h_html_a21d31464313b2c66ff88d4aa97b66143"><div class="ttname"><a href="../../da/d20/_i_render_8h.html#a21d31464313b2c66ff88d4aa97b66143">render</a></div><div class="ttdeci">std::shared_ptr&lt; IRender &gt; render</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d79/_render_open_g_l_8cpp_source.html#l00052">RenderOpenGL.cpp:52</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_171b764decf33d63a7df2fab4f4bc6d8.html">GUI</a></li><li class="navelem"><a class="el" href="../../d7/d51/_g_u_i_progress_bar_8cpp.html">GUIProgressBar.cpp</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:03:34. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

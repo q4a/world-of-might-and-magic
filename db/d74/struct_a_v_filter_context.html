@@ -1,0 +1,579 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Структура AVFilterContext</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('db/d74/struct_a_v_filter_context.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="../../d7/d52/struct_a_v_filter_context-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Структура AVFilterContext<div class="ingroups"><a class="el" href="../../d0/d96/group__lavfi.html">libavfilter</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="../../d8/da0/avfilter_8h_source.html">avfilter.h</a>&gt;</code></p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Граф связей класса AVFilterContext:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../df/d59/struct_a_v_filter_context__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:a00ac82b13bb720349c138310f98874ca"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d2/de1/struct_a_v_class.html">AVClass</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d74/struct_a_v_filter_context.html#a00ac82b13bb720349c138310f98874ca">av_class</a></td></tr>
+<tr class="memdesc:a00ac82b13bb720349c138310f98874ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">needed for <a class="el" href="../../d2/df1/group__lavu__log.html#gabd386ffd4b27637cf34e98d5d1a6e8ae">av_log()</a> and filters common options  <a href="../../db/d74/struct_a_v_filter_context.html#a00ac82b13bb720349c138310f98874ca">Подробнее...</a><br /></td></tr>
+<tr class="separator:a00ac82b13bb720349c138310f98874ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6eee53e57dddfa7cca1cade870c8a44e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../de/db5/struct_a_v_filter.html">AVFilter</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d74/struct_a_v_filter_context.html#a6eee53e57dddfa7cca1cade870c8a44e">filter</a></td></tr>
+<tr class="memdesc:a6eee53e57dddfa7cca1cade870c8a44e"><td class="mdescLeft">&#160;</td><td class="mdescRight">the <a class="el" href="../../de/db5/struct_a_v_filter.html">AVFilter</a> of which this is an instance  <a href="../../db/d74/struct_a_v_filter_context.html#a6eee53e57dddfa7cca1cade870c8a44e">Подробнее...</a><br /></td></tr>
+<tr class="separator:a6eee53e57dddfa7cca1cade870c8a44e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b22332d8ddb242c54e19cbfc4b4d353"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d74/struct_a_v_filter_context.html#a5b22332d8ddb242c54e19cbfc4b4d353">name</a></td></tr>
+<tr class="memdesc:a5b22332d8ddb242c54e19cbfc4b4d353"><td class="mdescLeft">&#160;</td><td class="mdescRight">name of this filter instance  <a href="../../db/d74/struct_a_v_filter_context.html#a5b22332d8ddb242c54e19cbfc4b4d353">Подробнее...</a><br /></td></tr>
+<tr class="separator:a5b22332d8ddb242c54e19cbfc4b4d353"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa10156c5a22ab7ad4f58402d387e8d88"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d96/group__lavfi.html#ga067d805667c8575b55712d728a16ce7f">AVFilterPad</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d74/struct_a_v_filter_context.html#aa10156c5a22ab7ad4f58402d387e8d88">input_pads</a></td></tr>
+<tr class="memdesc:aa10156c5a22ab7ad4f58402d387e8d88"><td class="mdescLeft">&#160;</td><td class="mdescRight">array of input pads  <a href="../../db/d74/struct_a_v_filter_context.html#aa10156c5a22ab7ad4f58402d387e8d88">Подробнее...</a><br /></td></tr>
+<tr class="separator:aa10156c5a22ab7ad4f58402d387e8d88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6837bf4b3d70c0a2bd3122f9daadc0d4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d1a/struct_a_v_filter_link.html">AVFilterLink</a> **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d74/struct_a_v_filter_context.html#a6837bf4b3d70c0a2bd3122f9daadc0d4">inputs</a></td></tr>
+<tr class="memdesc:a6837bf4b3d70c0a2bd3122f9daadc0d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">array of pointers to input links  <a href="../../db/d74/struct_a_v_filter_context.html#a6837bf4b3d70c0a2bd3122f9daadc0d4">Подробнее...</a><br /></td></tr>
+<tr class="separator:a6837bf4b3d70c0a2bd3122f9daadc0d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cf8ccec878e6d90d0b111b79b2340ee"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d74/struct_a_v_filter_context.html#a5cf8ccec878e6d90d0b111b79b2340ee">nb_inputs</a></td></tr>
+<tr class="memdesc:a5cf8ccec878e6d90d0b111b79b2340ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">number of input pads  <a href="../../db/d74/struct_a_v_filter_context.html#a5cf8ccec878e6d90d0b111b79b2340ee">Подробнее...</a><br /></td></tr>
+<tr class="separator:a5cf8ccec878e6d90d0b111b79b2340ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1fbf9d0fa5aaf32b113755ab6ea1d94"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d96/group__lavfi.html#ga067d805667c8575b55712d728a16ce7f">AVFilterPad</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d74/struct_a_v_filter_context.html#ac1fbf9d0fa5aaf32b113755ab6ea1d94">output_pads</a></td></tr>
+<tr class="memdesc:ac1fbf9d0fa5aaf32b113755ab6ea1d94"><td class="mdescLeft">&#160;</td><td class="mdescRight">array of output pads  <a href="../../db/d74/struct_a_v_filter_context.html#ac1fbf9d0fa5aaf32b113755ab6ea1d94">Подробнее...</a><br /></td></tr>
+<tr class="separator:ac1fbf9d0fa5aaf32b113755ab6ea1d94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9e65e98275f789bb5fbb72c52d4f3ad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d1a/struct_a_v_filter_link.html">AVFilterLink</a> **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d74/struct_a_v_filter_context.html#ae9e65e98275f789bb5fbb72c52d4f3ad">outputs</a></td></tr>
+<tr class="memdesc:ae9e65e98275f789bb5fbb72c52d4f3ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">array of pointers to output links  <a href="../../db/d74/struct_a_v_filter_context.html#ae9e65e98275f789bb5fbb72c52d4f3ad">Подробнее...</a><br /></td></tr>
+<tr class="separator:ae9e65e98275f789bb5fbb72c52d4f3ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8c3b9f8513c9faa5e4ce03b51318b6c"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d74/struct_a_v_filter_context.html#ab8c3b9f8513c9faa5e4ce03b51318b6c">nb_outputs</a></td></tr>
+<tr class="memdesc:ab8c3b9f8513c9faa5e4ce03b51318b6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">number of output pads  <a href="../../db/d74/struct_a_v_filter_context.html#ab8c3b9f8513c9faa5e4ce03b51318b6c">Подробнее...</a><br /></td></tr>
+<tr class="separator:ab8c3b9f8513c9faa5e4ce03b51318b6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0858b4059e67889c7f27c5cc9e258eb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d74/struct_a_v_filter_context.html#ab0858b4059e67889c7f27c5cc9e258eb">priv</a></td></tr>
+<tr class="memdesc:ab0858b4059e67889c7f27c5cc9e258eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">private data for use by the filter  <a href="../../db/d74/struct_a_v_filter_context.html#ab0858b4059e67889c7f27c5cc9e258eb">Подробнее...</a><br /></td></tr>
+<tr class="separator:ab0858b4059e67889c7f27c5cc9e258eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9454cf1790adf4f966d0350c3af72aa3"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="../../d4/d5e/struct_a_v_filter_graph.html">AVFilterGraph</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d74/struct_a_v_filter_context.html#a9454cf1790adf4f966d0350c3af72aa3">graph</a></td></tr>
+<tr class="memdesc:a9454cf1790adf4f966d0350c3af72aa3"><td class="mdescLeft">&#160;</td><td class="mdescRight">filtergraph this filter belongs to  <a href="../../db/d74/struct_a_v_filter_context.html#a9454cf1790adf4f966d0350c3af72aa3">Подробнее...</a><br /></td></tr>
+<tr class="separator:a9454cf1790adf4f966d0350c3af72aa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07b5e1a4c3cbde993e54bcc4873401a9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d74/struct_a_v_filter_context.html#a07b5e1a4c3cbde993e54bcc4873401a9">thread_type</a></td></tr>
+<tr class="separator:a07b5e1a4c3cbde993e54bcc4873401a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78840e309fe02add80bdc1cff2dc5526"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d96/group__lavfi.html#ga740cb7cf0f6f69e142b89163b0691708">AVFilterInternal</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d74/struct_a_v_filter_context.html#a78840e309fe02add80bdc1cff2dc5526">internal</a></td></tr>
+<tr class="separator:a78840e309fe02add80bdc1cff2dc5526"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdce68193a52330d40268fb88f8a8490"><td class="memItemLeft" align="right" valign="top">struct AVFilterCommand *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d74/struct_a_v_filter_context.html#abdce68193a52330d40268fb88f8a8490">command_queue</a></td></tr>
+<tr class="separator:abdce68193a52330d40268fb88f8a8490"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e92f7b2af93f405a6b7941fd9779bfc"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d74/struct_a_v_filter_context.html#a6e92f7b2af93f405a6b7941fd9779bfc">enable_str</a></td></tr>
+<tr class="memdesc:a6e92f7b2af93f405a6b7941fd9779bfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">enable expression string  <a href="../../db/d74/struct_a_v_filter_context.html#a6e92f7b2af93f405a6b7941fd9779bfc">Подробнее...</a><br /></td></tr>
+<tr class="separator:a6e92f7b2af93f405a6b7941fd9779bfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b73c080f30f892ecd3a3d8a13f01e19"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d74/struct_a_v_filter_context.html#a5b73c080f30f892ecd3a3d8a13f01e19">enable</a></td></tr>
+<tr class="memdesc:a5b73c080f30f892ecd3a3d8a13f01e19"><td class="mdescLeft">&#160;</td><td class="mdescRight">parsed expression (AVExpr*)  <a href="../../db/d74/struct_a_v_filter_context.html#a5b73c080f30f892ecd3a3d8a13f01e19">Подробнее...</a><br /></td></tr>
+<tr class="separator:a5b73c080f30f892ecd3a3d8a13f01e19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac555125f396f0ff2dfccaa6caccaaedf"><td class="memItemLeft" align="right" valign="top">double *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d74/struct_a_v_filter_context.html#ac555125f396f0ff2dfccaa6caccaaedf">var_values</a></td></tr>
+<tr class="memdesc:ac555125f396f0ff2dfccaa6caccaaedf"><td class="mdescLeft">&#160;</td><td class="mdescRight">variable values for the enable expression  <a href="../../db/d74/struct_a_v_filter_context.html#ac555125f396f0ff2dfccaa6caccaaedf">Подробнее...</a><br /></td></tr>
+<tr class="separator:ac555125f396f0ff2dfccaa6caccaaedf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5665a27f2d17af11027fc9883d103ae"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d74/struct_a_v_filter_context.html#ad5665a27f2d17af11027fc9883d103ae">is_disabled</a></td></tr>
+<tr class="memdesc:ad5665a27f2d17af11027fc9883d103ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">the enabled state from the last expression evaluation  <a href="../../db/d74/struct_a_v_filter_context.html#ad5665a27f2d17af11027fc9883d103ae">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad5665a27f2d17af11027fc9883d103ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addd946fbe5af506a2b19f9ad7cb97c35"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/dc0/struct_a_v_buffer_ref.html">AVBufferRef</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d74/struct_a_v_filter_context.html#addd946fbe5af506a2b19f9ad7cb97c35">hw_device_ctx</a></td></tr>
+<tr class="separator:addd946fbe5af506a2b19f9ad7cb97c35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04d995e44ad6b2a4d700a666b3231697"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d74/struct_a_v_filter_context.html#a04d995e44ad6b2a4d700a666b3231697">nb_threads</a></td></tr>
+<tr class="separator:a04d995e44ad6b2a4d700a666b3231697"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba7f5e2cf834f06af4f578b31c163fc4"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d74/struct_a_v_filter_context.html#aba7f5e2cf834f06af4f578b31c163fc4">ready</a></td></tr>
+<tr class="separator:aba7f5e2cf834f06af4f578b31c163fc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cc5743f8ccbb19f0a79da2e1f65bf79"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d74/struct_a_v_filter_context.html#a0cc5743f8ccbb19f0a79da2e1f65bf79">extra_hw_frames</a></td></tr>
+<tr class="separator:a0cc5743f8ccbb19f0a79da2e1f65bf79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>An instance of a filter </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/da0/avfilter_8h_source.html">avfilter.h</a> строка <a class="el" href="../../d8/da0/avfilter_8h_source.html#l00338">338</a></p>
+</div><h2 class="groupheader">Данные класса</h2>
+<a id="a00ac82b13bb720349c138310f98874ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00ac82b13bb720349c138310f98874ca">&#9670;&nbsp;</a></span>av_class</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="../../d2/de1/struct_a_v_class.html">AVClass</a>* AVFilterContext::av_class</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>needed for <a class="el" href="../../d2/df1/group__lavu__log.html#gabd386ffd4b27637cf34e98d5d1a6e8ae">av_log()</a> and filters common options </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/da0/avfilter_8h_source.html">avfilter.h</a> строка <a class="el" href="../../d8/da0/avfilter_8h_source.html#l00339">339</a></p>
+
+</div>
+</div>
+<a id="a6eee53e57dddfa7cca1cade870c8a44e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6eee53e57dddfa7cca1cade870c8a44e">&#9670;&nbsp;</a></span>filter</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="../../de/db5/struct_a_v_filter.html">AVFilter</a>* AVFilterContext::filter</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>the <a class="el" href="../../de/db5/struct_a_v_filter.html">AVFilter</a> of which this is an instance </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/da0/avfilter_8h_source.html">avfilter.h</a> строка <a class="el" href="../../d8/da0/avfilter_8h_source.html#l00341">341</a></p>
+
+</div>
+</div>
+<a id="a5b22332d8ddb242c54e19cbfc4b4d353"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b22332d8ddb242c54e19cbfc4b4d353">&#9670;&nbsp;</a></span>name</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* AVFilterContext::name</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>name of this filter instance </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/da0/avfilter_8h_source.html">avfilter.h</a> строка <a class="el" href="../../d8/da0/avfilter_8h_source.html#l00343">343</a></p>
+
+</div>
+</div>
+<a id="aa10156c5a22ab7ad4f58402d387e8d88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa10156c5a22ab7ad4f58402d387e8d88">&#9670;&nbsp;</a></span>input_pads</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d96/group__lavfi.html#ga067d805667c8575b55712d728a16ce7f">AVFilterPad</a>* AVFilterContext::input_pads</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>array of input pads </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/da0/avfilter_8h_source.html">avfilter.h</a> строка <a class="el" href="../../d8/da0/avfilter_8h_source.html#l00345">345</a></p>
+
+</div>
+</div>
+<a id="a6837bf4b3d70c0a2bd3122f9daadc0d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6837bf4b3d70c0a2bd3122f9daadc0d4">&#9670;&nbsp;</a></span>inputs</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d6/d1a/struct_a_v_filter_link.html">AVFilterLink</a>** AVFilterContext::inputs</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>array of pointers to input links </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/da0/avfilter_8h_source.html">avfilter.h</a> строка <a class="el" href="../../d8/da0/avfilter_8h_source.html#l00346">346</a></p>
+
+</div>
+</div>
+<a id="a5cf8ccec878e6d90d0b111b79b2340ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cf8ccec878e6d90d0b111b79b2340ee">&#9670;&nbsp;</a></span>nb_inputs</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned AVFilterContext::nb_inputs</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>number of input pads </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/da0/avfilter_8h_source.html">avfilter.h</a> строка <a class="el" href="../../d8/da0/avfilter_8h_source.html#l00347">347</a></p>
+
+</div>
+</div>
+<a id="ac1fbf9d0fa5aaf32b113755ab6ea1d94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1fbf9d0fa5aaf32b113755ab6ea1d94">&#9670;&nbsp;</a></span>output_pads</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d96/group__lavfi.html#ga067d805667c8575b55712d728a16ce7f">AVFilterPad</a>* AVFilterContext::output_pads</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>array of output pads </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/da0/avfilter_8h_source.html">avfilter.h</a> строка <a class="el" href="../../d8/da0/avfilter_8h_source.html#l00349">349</a></p>
+
+</div>
+</div>
+<a id="ae9e65e98275f789bb5fbb72c52d4f3ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9e65e98275f789bb5fbb72c52d4f3ad">&#9670;&nbsp;</a></span>outputs</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d6/d1a/struct_a_v_filter_link.html">AVFilterLink</a>** AVFilterContext::outputs</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>array of pointers to output links </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/da0/avfilter_8h_source.html">avfilter.h</a> строка <a class="el" href="../../d8/da0/avfilter_8h_source.html#l00350">350</a></p>
+
+</div>
+</div>
+<a id="ab8c3b9f8513c9faa5e4ce03b51318b6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8c3b9f8513c9faa5e4ce03b51318b6c">&#9670;&nbsp;</a></span>nb_outputs</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned AVFilterContext::nb_outputs</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>number of output pads </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/da0/avfilter_8h_source.html">avfilter.h</a> строка <a class="el" href="../../d8/da0/avfilter_8h_source.html#l00351">351</a></p>
+
+</div>
+</div>
+<a id="ab0858b4059e67889c7f27c5cc9e258eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0858b4059e67889c7f27c5cc9e258eb">&#9670;&nbsp;</a></span>priv</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>* AVFilterContext::priv</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>private data for use by the filter </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/da0/avfilter_8h_source.html">avfilter.h</a> строка <a class="el" href="../../d8/da0/avfilter_8h_source.html#l00353">353</a></p>
+
+</div>
+</div>
+<a id="a9454cf1790adf4f966d0350c3af72aa3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9454cf1790adf4f966d0350c3af72aa3">&#9670;&nbsp;</a></span>graph</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="../../d4/d5e/struct_a_v_filter_graph.html">AVFilterGraph</a>* AVFilterContext::graph</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>filtergraph this filter belongs to </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/da0/avfilter_8h_source.html">avfilter.h</a> строка <a class="el" href="../../d8/da0/avfilter_8h_source.html#l00355">355</a></p>
+
+</div>
+</div>
+<a id="a07b5e1a4c3cbde993e54bcc4873401a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07b5e1a4c3cbde993e54bcc4873401a9">&#9670;&nbsp;</a></span>thread_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int AVFilterContext::thread_type</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Type of multithreading being allowed/used. A combination of AVFILTER_THREAD_* flags.</p>
+<p>May be set by the caller before initializing the filter to forbid some or all kinds of multithreading for this filter. The default is allowing everything.</p>
+<p>When the filter is initialized, this field is combined using bit AND with <a class="el" href="../../d4/d5e/struct_a_v_filter_graph.html#a7fd96bbd6d1a3b730681dc0bf5107a5e">AVFilterGraph.thread_type</a> to get the final mask used for determining allowed threading types. I.e. a threading type needs to be set in both to be allowed.</p>
+<p>After the filter is initialized, libavfilter sets this field to the threading type that is actually used (0 for no multithreading). </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/da0/avfilter_8h_source.html">avfilter.h</a> строка <a class="el" href="../../d8/da0/avfilter_8h_source.html#l00373">373</a></p>
+
+</div>
+</div>
+<a id="a78840e309fe02add80bdc1cff2dc5526"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78840e309fe02add80bdc1cff2dc5526">&#9670;&nbsp;</a></span>internal</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d96/group__lavfi.html#ga740cb7cf0f6f69e142b89163b0691708">AVFilterInternal</a>* AVFilterContext::internal</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>An opaque struct for libavfilter internal use. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/da0/avfilter_8h_source.html">avfilter.h</a> строка <a class="el" href="../../d8/da0/avfilter_8h_source.html#l00378">378</a></p>
+
+</div>
+</div>
+<a id="abdce68193a52330d40268fb88f8a8490"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abdce68193a52330d40268fb88f8a8490">&#9670;&nbsp;</a></span>command_queue</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct AVFilterCommand* AVFilterContext::command_queue</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/da0/avfilter_8h_source.html">avfilter.h</a> строка <a class="el" href="../../d8/da0/avfilter_8h_source.html#l00380">380</a></p>
+
+</div>
+</div>
+<a id="a6e92f7b2af93f405a6b7941fd9779bfc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e92f7b2af93f405a6b7941fd9779bfc">&#9670;&nbsp;</a></span>enable_str</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* AVFilterContext::enable_str</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>enable expression string </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/da0/avfilter_8h_source.html">avfilter.h</a> строка <a class="el" href="../../d8/da0/avfilter_8h_source.html#l00382">382</a></p>
+
+</div>
+</div>
+<a id="a5b73c080f30f892ecd3a3d8a13f01e19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b73c080f30f892ecd3a3d8a13f01e19">&#9670;&nbsp;</a></span>enable</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>* AVFilterContext::enable</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>parsed expression (AVExpr*) </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/da0/avfilter_8h_source.html">avfilter.h</a> строка <a class="el" href="../../d8/da0/avfilter_8h_source.html#l00383">383</a></p>
+
+</div>
+</div>
+<a id="ac555125f396f0ff2dfccaa6caccaaedf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac555125f396f0ff2dfccaa6caccaaedf">&#9670;&nbsp;</a></span>var_values</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double* AVFilterContext::var_values</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>variable values for the enable expression </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/da0/avfilter_8h_source.html">avfilter.h</a> строка <a class="el" href="../../d8/da0/avfilter_8h_source.html#l00384">384</a></p>
+
+</div>
+</div>
+<a id="ad5665a27f2d17af11027fc9883d103ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5665a27f2d17af11027fc9883d103ae">&#9670;&nbsp;</a></span>is_disabled</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int AVFilterContext::is_disabled</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>the enabled state from the last expression evaluation </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/da0/avfilter_8h_source.html">avfilter.h</a> строка <a class="el" href="../../d8/da0/avfilter_8h_source.html#l00385">385</a></p>
+
+</div>
+</div>
+<a id="addd946fbe5af506a2b19f9ad7cb97c35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addd946fbe5af506a2b19f9ad7cb97c35">&#9670;&nbsp;</a></span>hw_device_ctx</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/dc0/struct_a_v_buffer_ref.html">AVBufferRef</a>* AVFilterContext::hw_device_ctx</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>For filters which will create hardware frames, sets the device the filter should create them in. All other filters will ignore this field: in particular, a filter which consumes or processes hardware frames will instead use the hw_frames_ctx field in <a class="el" href="../../d6/d1a/struct_a_v_filter_link.html">AVFilterLink</a> to carry the hardware context information. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/da0/avfilter_8h_source.html">avfilter.h</a> строка <a class="el" href="../../d8/da0/avfilter_8h_source.html#l00394">394</a></p>
+
+</div>
+</div>
+<a id="a04d995e44ad6b2a4d700a666b3231697"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04d995e44ad6b2a4d700a666b3231697">&#9670;&nbsp;</a></span>nb_threads</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int AVFilterContext::nb_threads</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Max number of threads allowed in this filter instance. If &lt;= 0, its value is ignored. Overrides global number of threads set per filter graph. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/da0/avfilter_8h_source.html">avfilter.h</a> строка <a class="el" href="../../d8/da0/avfilter_8h_source.html#l00401">401</a></p>
+
+</div>
+</div>
+<a id="aba7f5e2cf834f06af4f578b31c163fc4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba7f5e2cf834f06af4f578b31c163fc4">&#9670;&nbsp;</a></span>ready</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned AVFilterContext::ready</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Ready status of the filter. A non-0 value means that the filter needs activating; a higher value suggests a more urgent activation. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/da0/avfilter_8h_source.html">avfilter.h</a> строка <a class="el" href="../../d8/da0/avfilter_8h_source.html#l00408">408</a></p>
+
+</div>
+</div>
+<a id="a0cc5743f8ccbb19f0a79da2e1f65bf79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0cc5743f8ccbb19f0a79da2e1f65bf79">&#9670;&nbsp;</a></span>extra_hw_frames</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int AVFilterContext::extra_hw_frames</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Sets the number of extra hardware frames which the filter will allocate on its output links for use in following filters or by the caller.</p>
+<p>Some hardware filters require all frames that they will use for output to be defined in advance before filtering starts. For such filters, any hardware frame pools used for output must therefore be of fixed size. The extra frames set here are on top of any number that the filter needs internally in order to operate normally.</p>
+<p>This field must be set before the graph containing this filter is configured. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/da0/avfilter_8h_source.html">avfilter.h</a> строка <a class="el" href="../../d8/da0/avfilter_8h_source.html#l00424">424</a></p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов структуры находятся в файле:<ul>
+<li>C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavfilter/<a class="el" href="../../d8/da0/avfilter_8h_source.html">avfilter.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../db/d74/struct_a_v_filter_context.html">AVFilterContext</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:04:35. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

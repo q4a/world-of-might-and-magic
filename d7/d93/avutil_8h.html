@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Файл C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavutil/avutil.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d7/d93/avutil_8h.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#enum-members">Перечисления</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл avutil.h<div class="ingroups"><a class="el" href="../../dd/d8a/group__lavu.html">libavutil</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><a href="../../d7/d93/avutil_8h_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Перечисления</h2></td></tr>
+<tr class="memitem:ga9a84bba4713dfced21a1a56163be1f48"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d83/group__lavu__misc.html#ga9a84bba4713dfced21a1a56163be1f48">AVMediaType</a> { <br />
+&#160;&#160;<a class="el" href="../../d7/d83/group__lavu__misc.html#gga9a84bba4713dfced21a1a56163be1f48afdadbd6c4f612c59f6b6c7c6f84fd347">AVMEDIA_TYPE_UNKNOWN</a> = -1, 
+<a class="el" href="../../d7/d83/group__lavu__misc.html#gga9a84bba4713dfced21a1a56163be1f48ac1a46f59be5c6c2d3412ab172d6b8cf5">AVMEDIA_TYPE_VIDEO</a>, 
+<a class="el" href="../../d7/d83/group__lavu__misc.html#gga9a84bba4713dfced21a1a56163be1f48a7b4e33b8f30ac94d34ce8d9f7c33927a">AVMEDIA_TYPE_AUDIO</a>, 
+<a class="el" href="../../d7/d83/group__lavu__misc.html#gga9a84bba4713dfced21a1a56163be1f48ae3df4d77c6908fb626293c2fed215d52">AVMEDIA_TYPE_DATA</a>, 
+<br />
+&#160;&#160;<a class="el" href="../../d7/d83/group__lavu__misc.html#gga9a84bba4713dfced21a1a56163be1f48aa64a67386a9c53360744b86e4707b831">AVMEDIA_TYPE_SUBTITLE</a>, 
+<a class="el" href="../../d7/d83/group__lavu__misc.html#gga9a84bba4713dfced21a1a56163be1f48a2d09f16df8631e64e8fa566142cdc99d">AVMEDIA_TYPE_ATTACHMENT</a>, 
+<a class="el" href="../../d7/d83/group__lavu__misc.html#gga9a84bba4713dfced21a1a56163be1f48a8e220e09ef38f26963e8e2ec731fb7d9">AVMEDIA_TYPE_NB</a>
+<br />
+ }</td></tr>
+<tr class="separator:ga9a84bba4713dfced21a1a56163be1f48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae6cbcab1f70d8e476757f1c1f5a0a78e"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d46/group__lavu__picture.html#gae6cbcab1f70d8e476757f1c1f5a0a78e">AVPictureType</a> { <br />
+&#160;&#160;<a class="el" href="../../dd/d46/group__lavu__picture.html#ggae6cbcab1f70d8e476757f1c1f5a0a78ea33183189d771e3325ccdd36fa980b6f6">AV_PICTURE_TYPE_NONE</a> = 0, 
+<a class="el" href="../../dd/d46/group__lavu__picture.html#ggae6cbcab1f70d8e476757f1c1f5a0a78ea02be39f151a8ace7a65c86e13053e817">AV_PICTURE_TYPE_I</a>, 
+<a class="el" href="../../dd/d46/group__lavu__picture.html#ggae6cbcab1f70d8e476757f1c1f5a0a78eaa6fc0479507a03f173f07fc75dab2193">AV_PICTURE_TYPE_P</a>, 
+<a class="el" href="../../dd/d46/group__lavu__picture.html#ggae6cbcab1f70d8e476757f1c1f5a0a78ead22f8968e99bc48897c3f4ac29e82dae">AV_PICTURE_TYPE_B</a>, 
+<br />
+&#160;&#160;<a class="el" href="../../dd/d46/group__lavu__picture.html#ggae6cbcab1f70d8e476757f1c1f5a0a78eac279237c3b09bb9f7ece0675658e65ad">AV_PICTURE_TYPE_S</a>, 
+<a class="el" href="../../dd/d46/group__lavu__picture.html#ggae6cbcab1f70d8e476757f1c1f5a0a78eaa7199b8035cf5a076a05a7fcf6dfc7fe">AV_PICTURE_TYPE_SI</a>, 
+<a class="el" href="../../dd/d46/group__lavu__picture.html#ggae6cbcab1f70d8e476757f1c1f5a0a78ea83789bae2515a1ce384a88f074244e4e">AV_PICTURE_TYPE_SP</a>, 
+<a class="el" href="../../dd/d46/group__lavu__picture.html#ggae6cbcab1f70d8e476757f1c1f5a0a78ea71f9f194b0cbe86778cb6df41b867cf3">AV_PICTURE_TYPE_BI</a>
+<br />
+ }</td></tr>
+<tr class="separator:gae6cbcab1f70d8e476757f1c1f5a0a78e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:ga9a979c78d33d8767b51952f7f5c61541"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d0b/group__lavu__ver.html#ga9a979c78d33d8767b51952f7f5c61541">avutil_version</a> (<a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>)</td></tr>
+<tr class="separator:ga9a979c78d33d8767b51952f7f5c61541"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabaea9f86706819534baceeac7ea5818a"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d0b/group__lavu__ver.html#gabaea9f86706819534baceeac7ea5818a">av_version_info</a> (<a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>)</td></tr>
+<tr class="separator:gabaea9f86706819534baceeac7ea5818a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf75e78eac0a55a8c3736f89b018a5687"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d0b/group__lavu__ver.html#gaf75e78eac0a55a8c3736f89b018a5687">avutil_configuration</a> (<a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>)</td></tr>
+<tr class="separator:gaf75e78eac0a55a8c3736f89b018a5687"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga88957e92f27b9d3fca0ec8cf43303b72"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d0b/group__lavu__ver.html#ga88957e92f27b9d3fca0ec8cf43303b72">avutil_license</a> (<a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>)</td></tr>
+<tr class="separator:ga88957e92f27b9d3fca0ec8cf43303b72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf21645cfa855b2caf9699d7dc7b2d08e"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d83/group__lavu__misc.html#gaf21645cfa855b2caf9699d7dc7b2d08e">av_get_media_type_string</a> (enum <a class="el" href="../../d7/d83/group__lavu__misc.html#ga9a84bba4713dfced21a1a56163be1f48">AVMediaType</a> media_type)</td></tr>
+<tr class="separator:gaf21645cfa855b2caf9699d7dc7b2d08e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacbf2ea8b2b89924c890ef8ec10a3d922"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d46/group__lavu__picture.html#gacbf2ea8b2b89924c890ef8ec10a3d922">av_get_picture_type_char</a> (enum <a class="el" href="../../dd/d46/group__lavu__picture.html#gae6cbcab1f70d8e476757f1c1f5a0a78e">AVPictureType</a> pict_type)</td></tr>
+<tr class="separator:gacbf2ea8b2b89924c890ef8ec10a3d922"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga87458dccf9ab1444c363df5fa8a3f28f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d83/group__lavu__misc.html#ga87458dccf9ab1444c363df5fa8a3f28f">av_x_if_null</a> (const <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>, const <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *<a class="el" href="../../df/d32/_s_d_l__egl_8h.html#ad0e63d0edcdbd3d79554076bf309fd47">x</a>)</td></tr>
+<tr class="separator:ga87458dccf9ab1444c363df5fa8a3f28f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7894e9b1ec8844685bc9101779c7d533"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d83/group__lavu__misc.html#ga7894e9b1ec8844685bc9101779c7d533">av_int_list_length_for_size</a> (unsigned elsize, const <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *list, <a class="el" href="../../dd/df4/alext_8h.html#aec6fcb673ff035718c238c8c9d544c47">uint64_t</a> term) av_pure</td></tr>
+<tr class="separator:ga7894e9b1ec8844685bc9101779c7d533"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga553b85a36da32c041738a89aa61f9fbd"><td class="memItemLeft" align="right" valign="top">FILE *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d83/group__lavu__misc.html#ga553b85a36da32c041738a89aa61f9fbd">av_fopen_utf8</a> (const char *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#ab25d8cd967ccbd19b630d7100ff8f67e">path</a>, const char *<a class="el" href="../../df/d32/_s_d_l__egl_8h.html#a1e71d9c196e4683cc06c4b54d53f7ef5">mode</a>)</td></tr>
+<tr class="separator:ga553b85a36da32c041738a89aa61f9fbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab889104afd2e874f9dd2b3b78b04f3f2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/d28/struct_a_v_rational.html">AVRational</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d83/group__lavu__misc.html#gab889104afd2e874f9dd2b3b78b04f3f2">av_get_time_base_q</a> (<a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>)</td></tr>
+<tr class="separator:gab889104afd2e874f9dd2b3b78b04f3f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf3ec42914c8ef8c78a01e8c00191db2f"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d83/group__lavu__misc.html#gaf3ec42914c8ef8c78a01e8c00191db2f">av_fourcc_make_string</a> (char *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa3b73d9ca9f2e2396cbeae1ce6ce14be">buf</a>, <a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#aeff1bc68ebb2a4ff04c419bbc9206614">fourcc</a>)</td></tr>
+<tr class="separator:gaf3ec42914c8ef8c78a01e8c00191db2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Convenience header that includes <a class="el" href="../../dd/d8a/group__lavu.html">libavutil</a>'s core. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d7/d93/avutil_8h_source.html">avutil.h</a></p>
+</div></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_97aefd0d527b934f1d99a682da8fe6a9.html">lib</a></li><li class="navelem"><a class="el" href="../../dir_da53678e933bc13c5b44fc9f96ac81aa.html">win32</a></li><li class="navelem"><a class="el" href="../../dir_7ac189985cec0e073b46d34a5d96bfc1.html">x86</a></li><li class="navelem"><a class="el" href="../../dir_e3469dbcd8a5e63a5540df758d989c34.html">ffmpeg-4.2.2</a></li><li class="navelem"><a class="el" href="../../dir_880368755e1ee5b32b1864dac7163836.html">include</a></li><li class="navelem"><a class="el" href="../../dir_e95abcf8ca274311b94b0e3a5da6ed50.html">libavutil</a></li><li class="navelem"><a class="el" href="../../d7/d93/avutil_8h.html">avutil.h</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:04:15. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

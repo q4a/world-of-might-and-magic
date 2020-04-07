@@ -1,0 +1,934 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Файл C:/git/world-of-might-and-magic/Engine/Party.cpp</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('da/db4/_party_8cpp.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#typedef-members">Определения типов</a> &#124;
+<a href="#func-members">Функции</a> &#124;
+<a href="#var-members">Переменные</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл Party.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><a href="../../da/db4/_party_8cpp_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Определения типов</h2></td></tr>
+<tr class="memitem:a8df51996eaa93ee226542e4ebb9d6f14"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/db4/_party_8cpp.html#a8df51996eaa93ee226542e4ebb9d6f14">EngineIoc</a> = <a class="el" href="../../d1/d12/class_engine___1_1_ioc_container.html">Engine_::IocContainer</a></td></tr>
+<tr class="separator:a8df51996eaa93ee226542e4ebb9d6f14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:ab6af3751607396afcd1745c1a536ae1a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/db4/_party_8cpp.html#ab6af3751607396afcd1745c1a536ae1a">ui_play_gold_anim</a> ()</td></tr>
+<tr class="separator:ab6af3751607396afcd1745c1a536ae1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25dbc18fe908ae3947a833127f1cf9e2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/db4/_party_8cpp.html#a25dbc18fe908ae3947a833127f1cf9e2">ui_play_food_anim</a> ()</td></tr>
+<tr class="separator:a25dbc18fe908ae3947a833127f1cf9e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a717b7f1fb1f8ca29c15744772604573e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/db4/_party_8cpp.html#a717b7f1fb1f8ca29c15744772604573e">Rest</a> (unsigned int uMinsToRest)</td></tr>
+<tr class="separator:a717b7f1fb1f8ca29c15744772604573e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa69c30f86f25894111de80131dcd5f5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/db4/_party_8cpp.html#aaa69c30f86f25894111de80131dcd5f5">RestAndHeal</a> (int minutes)</td></tr>
+<tr class="separator:aaa69c30f86f25894111de80131dcd5f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e3b1773dfc5d7a21fe51039de25d2f9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/db4/_party_8cpp.html#a4e3b1773dfc5d7a21fe51039de25d2f9">TestPartyQuestBit</a> (<a class="el" href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2">PARTY_QUEST_BITS</a> bit)</td></tr>
+<tr class="separator:a4e3b1773dfc5d7a21fe51039de25d2f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b4bc5b810c765998d778c19b917eb52"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/db4/_party_8cpp.html#a6b4bc5b810c765998d778c19b917eb52">GetTravelTime</a> ()</td></tr>
+<tr class="separator:a6b4bc5b810c765998d778c19b917eb52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa98e661066fa419e8f3b18a3fb7c1bb2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/db4/_party_8cpp.html#aa98e661066fa419e8f3b18a3fb7c1bb2">_449B57_test_bit</a> (unsigned __int8 *a1, __int16 a2)</td></tr>
+<tr class="separator:aa98e661066fa419e8f3b18a3fb7c1bb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ef9fde76af050170268e578ef76b6ef"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/db4/_party_8cpp.html#a7ef9fde76af050170268e578ef76b6ef">_449B7E_toggle_bit</a> (unsigned char *pArray, __int16 a2, unsigned __int16 bToggle)</td></tr>
+<tr class="separator:a7ef9fde76af050170268e578ef76b6ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:a2514b83cbae6998a57eae74a24f6faf4"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d7/dc5/class_mouse.html">Mouse</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/db4/_party_8cpp.html#a2514b83cbae6998a57eae74a24f6faf4">mouse</a> = <a class="el" href="../../d1/d12/class_engine___1_1_ioc_container.html#ad92ce5cee27f4415ef48d49dea4ec074">EngineIoc::ResolveMouse</a>()</td></tr>
+<tr class="separator:a2514b83cbae6998a57eae74a24f6faf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a638b1d8b985f1c7f8b69f2d81286f98e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d14/struct_party.html">Party</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a> = nullptr</td></tr>
+<tr class="separator:a638b1d8b985f1c7f8b69f2d81286f98e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac491d2aeba0335bbbe632bdc3c04cffe"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="../../da/d47/struct_action_queue.html">ActionQueue</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/db4/_party_8cpp.html#ac491d2aeba0335bbbe632bdc3c04cffe">pPartyActionQueue</a> = new <a class="el" href="../../da/d47/struct_action_queue.html">ActionQueue</a></td></tr>
+<tr class="separator:ac491d2aeba0335bbbe632bdc3c04cffe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7019f3303c323aa801ec37a9ce02537"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a52f38e7d822a46377fde7a02708eedb1">std::array</a>&lt; bool, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/db4/_party_8cpp.html#aa7019f3303c323aa801ec37a9ce02537">playerAlreadyPicked</a></td></tr>
+<tr class="separator:aa7019f3303c323aa801ec37a9ce02537"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2aef0cae8c5f06417d7ec1ede63ef07b"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/db4/_party_8cpp.html#a2aef0cae8c5f06417d7ec1ede63ef07b">PickedPlayer2_unused</a></td></tr>
+<tr class="separator:a2aef0cae8c5f06417d7ec1ede63ef07b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac681d14e0e678b7569efda8044ec536f"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/db4/_party_8cpp.html#ac681d14e0e678b7569efda8044ec536f">PickedPlayer3_unused</a></td></tr>
+<tr class="separator:ac681d14e0e678b7569efda8044ec536f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46c582c7e908553a896b821f75066a39"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/db4/_party_8cpp.html#a46c582c7e908553a896b821f75066a39">PickedPlayer4_unused</a></td></tr>
+<tr class="separator:a46c582c7e908553a896b821f75066a39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0412412ddbd214f2f2cdddf75b3185b7"><td class="memItemLeft" >struct {</td></tr>
+<tr class="memitem:acb81e3a23afecce15209f30f890eb56b"><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="../../d0/d6f/class_u_i_animation.html">UIAnimation</a>&#160;&#160;&#160;<a class="el" href="../../da/db4/_party_8cpp.html#a814f70dac9f5bfd0ddd689ef48e4ad90">_pUIAnim_Food</a></td></tr>
+<tr class="separator:acb81e3a23afecce15209f30f890eb56b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1da2c171922ba5f289ec62d699a077e3"><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="../../d0/d6f/class_u_i_animation.html">UIAnimation</a>&#160;&#160;&#160;<a class="el" href="../../da/db4/_party_8cpp.html#a262138669f703ab63acc9dcfb15fed57">_pUIAnim_Gold</a></td></tr>
+<tr class="separator:a1da2c171922ba5f289ec62d699a077e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af59c4b7379509acbb055e83ce1a910ec"><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="../../d0/d6f/class_u_i_animation.html">UIAnimation</a>&#160;&#160;&#160;<a class="el" href="../../da/db4/_party_8cpp.html#a175b7af4a0e2125d58d90b043a28b2ff">_pUIAnum_Torchlight</a></td></tr>
+<tr class="separator:af59c4b7379509acbb055e83ce1a910ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9692984cbbd8926eb26c8b8d89984a1"><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="../../d0/d6f/class_u_i_animation.html">UIAnimation</a>&#160;&#160;&#160;<a class="el" href="../../da/db4/_party_8cpp.html#af964b423abb946fcf3ec10babd767823">_pUIAnim_WizardEye</a></td></tr>
+<tr class="separator:ab9692984cbbd8926eb26c8b8d89984a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0412412ddbd214f2f2cdddf75b3185b7"><td class="memItemLeft" valign="top">}&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/db4/_party_8cpp.html#a0412412ddbd214f2f2cdddf75b3185b7">_uianim</a></td></tr>
+<tr class="separator:a0412412ddbd214f2f2cdddf75b3185b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57736ab9d5b15bd203ce973183301961"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d6f/class_u_i_animation.html">UIAnimation</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/db4/_party_8cpp.html#a57736ab9d5b15bd203ce973183301961">pUIAnim_Food</a> = &amp;<a class="el" href="../../da/db4/_party_8cpp.html#a814f70dac9f5bfd0ddd689ef48e4ad90">_uianim._pUIAnim_Food</a></td></tr>
+<tr class="separator:a57736ab9d5b15bd203ce973183301961"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fc24d2defbdaca88cb1e52031353d97"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d6f/class_u_i_animation.html">UIAnimation</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/db4/_party_8cpp.html#a3fc24d2defbdaca88cb1e52031353d97">pUIAnim_Gold</a> = &amp;<a class="el" href="../../da/db4/_party_8cpp.html#a262138669f703ab63acc9dcfb15fed57">_uianim._pUIAnim_Gold</a></td></tr>
+<tr class="separator:a3fc24d2defbdaca88cb1e52031353d97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7108d8bc1c81e6faee850552e5cde9a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d6f/class_u_i_animation.html">UIAnimation</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/db4/_party_8cpp.html#af7108d8bc1c81e6faee850552e5cde9a">pUIAnum_Torchlight</a> = &amp;<a class="el" href="../../da/db4/_party_8cpp.html#a175b7af4a0e2125d58d90b043a28b2ff">_uianim._pUIAnum_Torchlight</a></td></tr>
+<tr class="separator:af7108d8bc1c81e6faee850552e5cde9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88cac2bf9581758898e327c744463b91"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d6f/class_u_i_animation.html">UIAnimation</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/db4/_party_8cpp.html#a88cac2bf9581758898e327c744463b91">pUIAnim_WizardEye</a> = &amp;<a class="el" href="../../da/db4/_party_8cpp.html#af964b423abb946fcf3ec10babd767823">_uianim._pUIAnim_WizardEye</a></td></tr>
+<tr class="separator:a88cac2bf9581758898e327c744463b91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29ea6b4808f5c4a967125acff06db38f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a52f38e7d822a46377fde7a02708eedb1">std::array</a>&lt; class <a class="el" href="../../d0/d6f/class_u_i_animation.html">UIAnimation</a> *, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/db4/_party_8cpp.html#a29ea6b4808f5c4a967125acff06db38f">pUIAnims</a></td></tr>
+<tr class="separator:a29ea6b4808f5c4a967125acff06db38f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Типы</h2>
+<a id="a8df51996eaa93ee226542e4ebb9d6f14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8df51996eaa93ee226542e4ebb9d6f14">&#9670;&nbsp;</a></span>EngineIoc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d4/d68/_engine_8cpp.html#a8df51996eaa93ee226542e4ebb9d6f14">EngineIoc</a> =  <a class="el" href="../../d1/d12/class_engine___1_1_ioc_container.html">Engine_::IocContainer</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/db4/_party_8cpp_source.html">Party.cpp</a> строка <a class="el" href="../../da/db4/_party_8cpp_source.html#l00025">25</a></p>
+
+</div>
+</div>
+<h2 class="groupheader">Функции</h2>
+<a id="ab6af3751607396afcd1745c1a536ae1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6af3751607396afcd1745c1a536ae1a">&#9670;&nbsp;</a></span>ui_play_gold_anim()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> ui_play_gold_anim </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/db4/_party_8cpp_source.html">Party.cpp</a> строка <a class="el" href="../../da/db4/_party_8cpp_source.html#l00226">226</a></p>
+<div class="fragment"><div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;                         {</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <a class="code" href="../../da/db4/_party_8cpp.html#a3fc24d2defbdaca88cb1e52031353d97">pUIAnim_Gold</a>-&gt;<a class="code" href="../../d0/d6f/class_u_i_animation.html#a4826a6893144f3898177d1fe68262323">uAnimTime</a> = 0;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    <a class="code" href="../../da/db4/_party_8cpp.html#a3fc24d2defbdaca88cb1e52031353d97">pUIAnim_Gold</a>-&gt;<a class="code" href="../../d0/d6f/class_u_i_animation.html#a8acfbce3c16dd94e434004ba3cd2163c">uAnimLength</a> = <a class="code" href="../../da/db4/_party_8cpp.html#a3fc24d2defbdaca88cb1e52031353d97">pUIAnim_Gold</a>-&gt;<a class="code" href="../../d0/d6f/class_u_i_animation.html#af6287bb806d40192b476cab940e98cca">icon</a>-&gt;<a class="code" href="../../db/d60/class_icon.html#a725397bfa1ff9e1666855d210653b379">GetAnimLength</a>();</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    <a class="code" href="../../d3/df2/_audio_player_8cpp.html#a3ee6d655d35b46ebac53ef678255f75b">pAudioPlayer</a>-&gt;<a class="code" href="../../d7/dc2/class_audio_player.html#afa0c135f321bd87b4d4ad2dcad3833e3">PlaySound</a>(<a class="code" href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a1a82833cbeebfed9a1be0487ddcaa6a3">SOUND_gold01</a>, 0, 0, -1, 0, 0);</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d7/d5e/_icon_frame_table_8h_source.html#l00020">Icon::GetAnimLength()</a>, <a class="el" href="../../d7/d5e/_icon_frame_table_8h_source.html#l00071">UIAnimation::icon</a>, <a class="el" href="../../d3/df2/_audio_player_8cpp_source.html#l00020">pAudioPlayer</a>, <a class="el" href="../../d3/df2/_audio_player_8cpp_source.html#l00195">AudioPlayer::PlaySound()</a>, <a class="el" href="../../da/db4/_party_8cpp_source.html#l00047">pUIAnim_Gold</a>, <a class="el" href="../../dd/d7b/_audio_player_8h_source.html#l00072">SOUND_gold01</a>, <a class="el" href="../../d7/d5e/_icon_frame_table_8h_source.html#l00075">UIAnimation::uAnimLength</a> и <a class="el" href="../../d7/d5e/_icon_frame_table_8h_source.html#l00074">UIAnimation::uAnimTime</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../da/db4/_party_8cpp_source.html#l00281">Party::SetGold()</a> и <a class="el" href="../../da/db4/_party_8cpp_source.html#l00292">Party::TakeGold()</a>.</p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../da/db4/_party_8cpp_ab6af3751607396afcd1745c1a536ae1a_cgraph.svg" width="100%" height="527"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../da/db4/_party_8cpp_ab6af3751607396afcd1745c1a536ae1a_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a25dbc18fe908ae3947a833127f1cf9e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25dbc18fe908ae3947a833127f1cf9e2">&#9670;&nbsp;</a></span>ui_play_food_anim()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> ui_play_food_anim </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/db4/_party_8cpp_source.html">Party.cpp</a> строка <a class="el" href="../../da/db4/_party_8cpp_source.html#l00232">232</a></p>
+<div class="fragment"><div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;                         {</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    <a class="code" href="../../da/db4/_party_8cpp.html#a57736ab9d5b15bd203ce973183301961">pUIAnim_Food</a>-&gt;<a class="code" href="../../d0/d6f/class_u_i_animation.html#a4826a6893144f3898177d1fe68262323">uAnimTime</a> = 0;</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    <a class="code" href="../../da/db4/_party_8cpp.html#a57736ab9d5b15bd203ce973183301961">pUIAnim_Food</a>-&gt;<a class="code" href="../../d0/d6f/class_u_i_animation.html#a8acfbce3c16dd94e434004ba3cd2163c">uAnimLength</a> = <a class="code" href="../../da/db4/_party_8cpp.html#a57736ab9d5b15bd203ce973183301961">pUIAnim_Food</a>-&gt;<a class="code" href="../../d0/d6f/class_u_i_animation.html#af6287bb806d40192b476cab940e98cca">icon</a>-&gt;<a class="code" href="../../db/d60/class_icon.html#a725397bfa1ff9e1666855d210653b379">GetAnimLength</a>();</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    <span class="comment">// pAudioPlayer-&gt;PlaySound(SOUND_eat, 0, 0, -1, 0, 0);</span></div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d7/d5e/_icon_frame_table_8h_source.html#l00020">Icon::GetAnimLength()</a>, <a class="el" href="../../d7/d5e/_icon_frame_table_8h_source.html#l00071">UIAnimation::icon</a>, <a class="el" href="../../da/db4/_party_8cpp_source.html#l00046">pUIAnim_Food</a>, <a class="el" href="../../d7/d5e/_icon_frame_table_8h_source.html#l00075">UIAnimation::uAnimLength</a> и <a class="el" href="../../d7/d5e/_icon_frame_table_8h_source.html#l00074">UIAnimation::uAnimTime</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../da/db4/_party_8cpp_source.html#l00255">Party::GiveFood()</a>, <a class="el" href="../../da/db4/_party_8cpp_source.html#l00239">Party::SetFood()</a> и <a class="el" href="../../da/db4/_party_8cpp_source.html#l00245">Party::TakeFood()</a>.</p>
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../da/db4/_party_8cpp_a25dbc18fe908ae3947a833127f1cf9e2_cgraph.svg" width="332" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../da/db4/_party_8cpp_a25dbc18fe908ae3947a833127f1cf9e2_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a717b7f1fb1f8ca29c15744772604573e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a717b7f1fb1f8ca29c15744772604573e">&#9670;&nbsp;</a></span>Rest()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> Rest </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>uMinsToRest</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/db4/_party_8cpp_source.html">Party.cpp</a> строка <a class="el" href="../../da/db4/_party_8cpp_source.html#l00857">857</a></p>
+<div class="fragment"><div class="line"><a name="l00857"></a><span class="lineno">  857</span>&#160;                                    {  <span class="comment">// this is passed mins not hours</span></div>
+<div class="line"><a name="l00858"></a><span class="lineno">  858</span>&#160;    <span class="keyword">auto</span> rest_time = <a class="code" href="../../df/dc2/struct_game_time.html">GameTime</a>(0, uMinsToRest);</div>
+<div class="line"><a name="l00859"></a><span class="lineno">  859</span>&#160; </div>
+<div class="line"><a name="l00860"></a><span class="lineno">  860</span>&#160;    <span class="keywordflow">if</span> (uMinsToRest &gt; 240) <a class="code" href="../../da/d35/struct_actor.html#a0cccbcf5491285664669a25726646402">Actor::InitializeActors</a>();</div>
+<div class="line"><a name="l00861"></a><span class="lineno">  861</span>&#160; </div>
+<div class="line"><a name="l00862"></a><span class="lineno">  862</span>&#160;    <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a2e22e5307901cb1acb688185168b6161">GetPlayingTime</a>() += rest_time;</div>
+<div class="line"><a name="l00863"></a><span class="lineno">  863</span>&#160; </div>
+<div class="line"><a name="l00864"></a><span class="lineno">  864</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt;= 4; i++) {</div>
+<div class="line"><a name="l00865"></a><span class="lineno">  865</span>&#160;        <a class="code" href="../../d2/d82/_player_8cpp.html#abac7ac837ed00fe097135a9a7573347a">pPlayers</a>[i]-&gt;Recover(rest_time);  <span class="comment">// ??</span></div>
+<div class="line"><a name="l00866"></a><span class="lineno">  866</span>&#160;    }</div>
+<div class="line"><a name="l00867"></a><span class="lineno">  867</span>&#160; </div>
+<div class="line"><a name="l00868"></a><span class="lineno">  868</span>&#160;    <a class="code" href="../../d4/d68/_engine_8cpp.html#a79dc644d7866ee9c87c3774a8fab9af6">_494035_timed_effects__water_walking_damage__etc</a>();</div>
+<div class="line"><a name="l00869"></a><span class="lineno">  869</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l01623">_494035_timed_effects__water_walking_damage__etc()</a>, <a class="el" href="../../db/d38/_party_8h_source.html#l00230">Party::GetPlayingTime()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l03334">Actor::InitializeActors()</a>, <a class="el" href="../../da/db4/_party_8cpp_source.html#l00030">pParty</a> и <a class="el" href="../../d2/d82/_player_8cpp_source.html#l00046">pPlayers</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d7/db5/_game_8cpp_source.html#l00322">Application::Game::EventLoop()</a> и <a class="el" href="../../da/db4/_party_8cpp_source.html#l00899">Party::Sleep8Hours()</a>.</p>
+<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../da/db4/_party_8cpp_a717b7f1fb1f8ca29c15744772604573e_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../da/db4/_party_8cpp_a717b7f1fb1f8ca29c15744772604573e_icgraph.svg" width="100%" height="378"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="aaa69c30f86f25894111de80131dcd5f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa69c30f86f25894111de80131dcd5f5">&#9670;&nbsp;</a></span>RestAndHeal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> RestAndHeal </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>minutes</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/db4/_party_8cpp_source.html">Party.cpp</a> строка <a class="el" href="../../da/db4/_party_8cpp_source.html#l00872">872</a></p>
+<div class="fragment"><div class="line"><a name="l00872"></a><span class="lineno">  872</span>&#160;                              {</div>
+<div class="line"><a name="l00873"></a><span class="lineno">  873</span>&#160;    <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a2e22e5307901cb1acb688185168b6161">GetPlayingTime</a>().<a class="code" href="../../df/dc2/struct_game_time.html#aeb3a47b5676007549eab9dadfe6d9867">AddMinutes</a>(minutes);</div>
+<div class="line"><a name="l00874"></a><span class="lineno">  874</span>&#160; </div>
+<div class="line"><a name="l00875"></a><span class="lineno">  875</span>&#160;    <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a410e9cc317caf355b1e3572e46c223a2">pHirelings</a>[0].bHasUsedTheAbility = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00876"></a><span class="lineno">  876</span>&#160;    <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a410e9cc317caf355b1e3572e46c223a2">pHirelings</a>[1].bHasUsedTheAbility = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00877"></a><span class="lineno">  877</span>&#160; </div>
+<div class="line"><a name="l00878"></a><span class="lineno">  878</span>&#160;    <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a0987d48199d987b0b87f2eecb29cf425">uCurrentTimeSecond</a> = <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a2e22e5307901cb1acb688185168b6161">GetPlayingTime</a>().<a class="code" href="../../df/dc2/struct_game_time.html#a2b06bc31a7d3a042d1addbcb9a5d3a58">GetSecondsFraction</a>();</div>
+<div class="line"><a name="l00879"></a><span class="lineno">  879</span>&#160;    <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#ab6b693dbf3da05e9c25839152a1ed28d">uCurrentMinute</a> = <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a2e22e5307901cb1acb688185168b6161">GetPlayingTime</a>().<a class="code" href="../../df/dc2/struct_game_time.html#a72d75830ae38cb9176ae7370f0b116a0">GetMinutesFraction</a>();</div>
+<div class="line"><a name="l00880"></a><span class="lineno">  880</span>&#160;    <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#ab1d902911ff77a09014f91157ae89d58">uCurrentHour</a> = <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a2e22e5307901cb1acb688185168b6161">GetPlayingTime</a>().<a class="code" href="../../df/dc2/struct_game_time.html#a52727e9719cc59a2bfedd0b56ee7d2ba">GetHoursOfDay</a>();</div>
+<div class="line"><a name="l00881"></a><span class="lineno">  881</span>&#160;    <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a639ea47a219242efb7eb9e6263e61e12">uCurrentMonthWeek</a> = <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a2e22e5307901cb1acb688185168b6161">GetPlayingTime</a>().<a class="code" href="../../df/dc2/struct_game_time.html#a3d3f93e6db6e0fc0b6c18db39f286551">GetWeeksOfMonth</a>();</div>
+<div class="line"><a name="l00882"></a><span class="lineno">  882</span>&#160;    <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a1e784ecf3cde874aa4c6a319d677cc36">uCurrentDayOfMonth</a> = <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a2e22e5307901cb1acb688185168b6161">GetPlayingTime</a>().<a class="code" href="../../df/dc2/struct_game_time.html#a641f4d3ee68d3353156b0291d1858745">GetDaysOfMonth</a>();</div>
+<div class="line"><a name="l00883"></a><span class="lineno">  883</span>&#160;    <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a09d03b453bb7e40a41e9244a7849e81d">uCurrentMonth</a> = <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a2e22e5307901cb1acb688185168b6161">GetPlayingTime</a>().<a class="code" href="../../df/dc2/struct_game_time.html#aae36e2f49426d2d6b1dae91b85cb45e7">GetMonthsOfYear</a>();</div>
+<div class="line"><a name="l00884"></a><span class="lineno">  884</span>&#160;    <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a1ab94ea5e0d694dbd0af19c41812ccd4">uCurrentYear</a> =</div>
+<div class="line"><a name="l00885"></a><span class="lineno">  885</span>&#160;        <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a2e22e5307901cb1acb688185168b6161">GetPlayingTime</a>().<a class="code" href="../../df/dc2/struct_game_time.html#a00951cb2332c791ffd8142e0e9425875">GetYears</a>() + <a class="code" href="../../d6/d5b/mm7__data_8cpp.html#a31e1cf50975dea688e44df739697248c">game_starting_year</a>;</div>
+<div class="line"><a name="l00886"></a><span class="lineno">  886</span>&#160;    <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a15bb93aa5fc3a568f217700224f4fc30">RestAndHeal</a>();</div>
+<div class="line"><a name="l00887"></a><span class="lineno">  887</span>&#160; </div>
+<div class="line"><a name="l00888"></a><span class="lineno">  888</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 4; i++) {</div>
+<div class="line"><a name="l00889"></a><span class="lineno">  889</span>&#160;        <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a25894a432feab69bcbbff2194bac47dd">pPlayers</a>[i].uTimeToRecovery = 0;</div>
+<div class="line"><a name="l00890"></a><span class="lineno">  890</span>&#160;        <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a25894a432feab69bcbbff2194bac47dd">pPlayers</a>[i].uNumDivineInterventionCastsThisDay = 0;</div>
+<div class="line"><a name="l00891"></a><span class="lineno">  891</span>&#160;        <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a25894a432feab69bcbbff2194bac47dd">pPlayers</a>[i].uNumArmageddonCasts = 0;</div>
+<div class="line"><a name="l00892"></a><span class="lineno">  892</span>&#160;        <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a25894a432feab69bcbbff2194bac47dd">pPlayers</a>[i].uNumFireSpikeCasts = 0;</div>
+<div class="line"><a name="l00893"></a><span class="lineno">  893</span>&#160;        <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a25894a432feab69bcbbff2194bac47dd">pPlayers</a>[i].field_1B3B = 0;</div>
+<div class="line"><a name="l00894"></a><span class="lineno">  894</span>&#160;    }</div>
+<div class="line"><a name="l00895"></a><span class="lineno">  895</span>&#160; </div>
+<div class="line"><a name="l00896"></a><span class="lineno">  896</span>&#160;    <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#ae0e2e8cbee9642f7a915e2d43a86e8c4">UpdatePlayersAndHirelingsEmotions</a>();</div>
+<div class="line"><a name="l00897"></a><span class="lineno">  897</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00045">GameTime::AddMinutes()</a>, <a class="el" href="../../d6/d5b/mm7__data_8cpp_source.html#l00193">game_starting_year</a>, <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00041">GameTime::GetDaysOfMonth()</a>, <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00039">GameTime::GetHoursOfDay()</a>, <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00038">GameTime::GetMinutesFraction()</a>, <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00043">GameTime::GetMonthsOfYear()</a>, <a class="el" href="../../db/d38/_party_8h_source.html#l00230">Party::GetPlayingTime()</a>, <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00037">GameTime::GetSecondsFraction()</a>, <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00042">GameTime::GetWeeksOfMonth()</a>, <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00035">GameTime::GetYears()</a>, <a class="el" href="../../db/d38/_party_8h_source.html#l00311">Party::pHirelings</a>, <a class="el" href="../../da/db4/_party_8cpp_source.html#l00030">pParty</a>, <a class="el" href="../../db/d38/_party_8h_source.html#l00310">Party::pPlayers</a>, <a class="el" href="../../da/db4/_party_8cpp_source.html#l00793">Party::RestAndHeal()</a>, <a class="el" href="../../db/d38/_party_8h_source.html#l00274">Party::uCurrentDayOfMonth</a>, <a class="el" href="../../db/d38/_party_8h_source.html#l00275">Party::uCurrentHour</a>, <a class="el" href="../../db/d38/_party_8h_source.html#l00276">Party::uCurrentMinute</a>, <a class="el" href="../../db/d38/_party_8h_source.html#l00272">Party::uCurrentMonth</a>, <a class="el" href="../../db/d38/_party_8h_source.html#l00273">Party::uCurrentMonthWeek</a>, <a class="el" href="../../db/d38/_party_8h_source.html#l00277">Party::uCurrentTimeSecond</a>, <a class="el" href="../../db/d38/_party_8h_source.html#l00271">Party::uCurrentYear</a> и <a class="el" href="../../da/db4/_party_8cpp_source.html#l00657">Party::UpdatePlayersAndHirelingsEmotions()</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d7/db5/_game_8cpp_source.html#l00322">Application::Game::EventLoop()</a>, <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l02933">TrainingDialog()</a> и <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l01673">TravelByTransport()</a>.</p>
+<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../da/db4/_party_8cpp_aaa69c30f86f25894111de80131dcd5f5_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-7-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-7-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../da/db4/_party_8cpp_aaa69c30f86f25894111de80131dcd5f5_icgraph.svg" width="100%" height="416"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a4e3b1773dfc5d7a21fe51039de25d2f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e3b1773dfc5d7a21fe51039de25d2f9">&#9670;&nbsp;</a></span>TestPartyQuestBit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TestPartyQuestBit </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2">PARTY_QUEST_BITS</a>&#160;</td>
+          <td class="paramname"><em>bit</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/db4/_party_8cpp_source.html">Party.cpp</a> строка <a class="el" href="../../da/db4/_party_8cpp_source.html#l00917">917</a></p>
+<div class="fragment"><div class="line"><a name="l00917"></a><span class="lineno">  917</span>&#160;                                             {</div>
+<div class="line"><a name="l00918"></a><span class="lineno">  918</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../da/db4/_party_8cpp.html#aa98e661066fa419e8f3b18a3fb7c1bb2">_449B57_test_bit</a>(<a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#ab5b1378cc25e8c4deb49847ead3e7187">_quest_bits</a>, bit);</div>
+<div class="line"><a name="l00919"></a><span class="lineno">  919</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../da/db4/_party_8cpp_source.html#l01185">_449B57_test_bit()</a>, <a class="el" href="../../db/d38/_party_8h_source.html#l00291">Party::_quest_bits</a> и <a class="el" href="../../da/db4/_party_8cpp_source.html#l00030">pParty</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d1/d3f/_decoration_8cpp_source.html#l00311">LevelDecoration::IsObeliskChestActive()</a>.</p>
+<div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-8-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-8-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../da/db4/_party_8cpp_a4e3b1773dfc5d7a21fe51039de25d2f9_cgraph.svg" width="311" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-9-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-9-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../da/db4/_party_8cpp_a4e3b1773dfc5d7a21fe51039de25d2f9_icgraph.svg" width="363" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a6b4bc5b810c765998d778c19b917eb52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b4bc5b810c765998d778c19b917eb52">&#9670;&nbsp;</a></span>GetTravelTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GetTravelTime </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/db4/_party_8cpp_source.html">Party.cpp</a> строка <a class="el" href="../../da/db4/_party_8cpp_source.html#l01171">1171</a></p>
+<div class="fragment"><div class="line"><a name="l01171"></a><span class="lineno"> 1171</span>&#160;                    {</div>
+<div class="line"><a name="l01172"></a><span class="lineno"> 1172</span>&#160;    <span class="keywordtype">signed</span> <span class="keywordtype">int</span> new_travel_time;  <span class="comment">// esi@1</span></div>
+<div class="line"><a name="l01173"></a><span class="lineno"> 1173</span>&#160; </div>
+<div class="line"><a name="l01174"></a><span class="lineno"> 1174</span>&#160;    new_travel_time = <a class="code" href="../../d6/d5b/mm7__data_8cpp.html#a16ee6f1a1afac17ced62271983692cd3">uDefaultTravelTime_ByFoot</a>;</div>
+<div class="line"><a name="l01175"></a><span class="lineno"> 1175</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../d1/d6c/_n_p_c_8cpp.html#a40d19895c574dba82a55ee7b3031f20b">CheckHiredNPCSpeciality</a>(<a class="code" href="../../d9/dbc/_n_p_c_8h.html#acaaa8b5b48efcd871d20e4e373884599aa73051e38214e2328e22c482b446defd">Guide</a>)) --new_travel_time;</div>
+<div class="line"><a name="l01176"></a><span class="lineno"> 1176</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../d1/d6c/_n_p_c_8cpp.html#a40d19895c574dba82a55ee7b3031f20b">CheckHiredNPCSpeciality</a>(<a class="code" href="../../d9/dbc/_n_p_c_8h.html#acaaa8b5b48efcd871d20e4e373884599ab0872aa49f608e4e7bc85f08167ac350">Tracker</a>)) new_travel_time -= 2;</div>
+<div class="line"><a name="l01177"></a><span class="lineno"> 1177</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../d1/d6c/_n_p_c_8cpp.html#a40d19895c574dba82a55ee7b3031f20b">CheckHiredNPCSpeciality</a>(<a class="code" href="../../d9/dbc/_n_p_c_8h.html#acaaa8b5b48efcd871d20e4e373884599a2e868c33b66a8999b838783a3eb1a243">Pathfinder</a>)) new_travel_time -= 3;</div>
+<div class="line"><a name="l01178"></a><span class="lineno"> 1178</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../d1/d6c/_n_p_c_8cpp.html#a40d19895c574dba82a55ee7b3031f20b">CheckHiredNPCSpeciality</a>(<a class="code" href="../../d9/dbc/_n_p_c_8h.html#acaaa8b5b48efcd871d20e4e373884599a45f4e61dfb1852d701d865458d61a6ed">Explorer</a>)) --new_travel_time;</div>
+<div class="line"><a name="l01179"></a><span class="lineno"> 1179</span>&#160;    <span class="keywordflow">if</span> (new_travel_time &lt; 1) new_travel_time = 1;</div>
+<div class="line"><a name="l01180"></a><span class="lineno"> 1180</span>&#160;    <span class="keywordflow">return</span> new_travel_time;</div>
+<div class="line"><a name="l01181"></a><span class="lineno"> 1181</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d1/d6c/_n_p_c_8cpp_source.html#l00754">CheckHiredNPCSpeciality()</a>, <a class="el" href="../../d9/dbc/_n_p_c_8h_source.html#l00049">Explorer</a>, <a class="el" href="../../d9/dbc/_n_p_c_8h_source.html#l00010">Guide</a>, <a class="el" href="../../d9/dbc/_n_p_c_8h_source.html#l00012">Pathfinder</a>, <a class="el" href="../../d9/dbc/_n_p_c_8h_source.html#l00011">Tracker</a> и <a class="el" href="../../d6/d5b/mm7__data_8cpp_source.html#l00696">uDefaultTravelTime_ByFoot</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d7/db5/_game_8cpp_source.html#l00322">Application::Game::EventLoop()</a> и <a class="el" href="../../de/d09/_u_i_transition_8cpp_source.html#l00227">GUIWindow_Travel::Update()</a>.</p>
+<div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-10-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-10-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-10-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../da/db4/_party_8cpp_a6b4bc5b810c765998d778c19b917eb52_cgraph.svg" width="336" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-11-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-11-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-11-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../da/db4/_party_8cpp_a6b4bc5b810c765998d778c19b917eb52_icgraph.svg" width="100%" height="378"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="aa98e661066fa419e8f3b18a3fb7c1bb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa98e661066fa419e8f3b18a3fb7c1bb2">&#9670;&nbsp;</a></span>_449B57_test_bit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool _449B57_test_bit </td>
+          <td>(</td>
+          <td class="paramtype">unsigned __int8 *&#160;</td>
+          <td class="paramname"><em>a1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">__int16&#160;</td>
+          <td class="paramname"><em>a2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/db4/_party_8cpp_source.html">Party.cpp</a> строка <a class="el" href="../../da/db4/_party_8cpp_source.html#l01185">1185</a></p>
+<div class="fragment"><div class="line"><a name="l01185"></a><span class="lineno"> 1185</span>&#160;                                                       {</div>
+<div class="line"><a name="l01186"></a><span class="lineno"> 1186</span>&#160;    <span class="keywordflow">return</span> (a1[(a2 - 1) &gt;&gt; 3] &amp; (0x80 &gt;&gt; (a2 - 1) % 8)) != 0;</div>
+<div class="line"><a name="l01187"></a><span class="lineno"> 1187</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Используется в <a class="el" href="../../dc/dce/_g_u_i_window_8cpp_source.html#l01846">_4B254D_SkillMasteryTeacher()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l05658">Player::AddVariable()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l01223">Actor::ApplyFineForKillingPeasant()</a>, <a class="el" href="../../dc/dce/_g_u_i_window_8cpp_source.html#l02196">BuildDialogueString()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l04645">Player::CompareVariable()</a>, <a class="el" href="../../d1/d6c/_n_p_c_8cpp_source.html#l01052">ContractSelectText()</a>, <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l00826">EnterHouse()</a>, <a class="el" href="../../d7/db5/_game_8cpp_source.html#l00322">Application::Game::EventLoop()</a>, <a class="el" href="../../db/dd5/_u_i_character_8cpp_source.html#l02598">FillAwardsData()</a>, <a class="el" href="../../d7/db5/_game_8cpp_source.html#l02704">Application::Game::GameLoop()</a>, <a class="el" href="../../d3/d70/_arcomage_2_arcomage_8cpp_source.html#l02801">GameResultsApply()</a>, <a class="el" href="../../d9/d99/_items_8cpp_source.html#l00680">ItemsTable::GenerateItem()</a>, <a class="el" href="../../d4/d5b/_u_i_guilds_8cpp_source.html#l00027">GuildDialog()</a>, <a class="el" href="../../da/db4/_party_8cpp_source.html#l01139">Party::IsPartyEvil()</a>, <a class="el" href="../../da/db4/_party_8cpp_source.html#l01141">Party::IsPartyGood()</a>, <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l01900">IsTravelAvailable()</a>, <a class="el" href="../../dc/dce/_g_u_i_window_8cpp_source.html#l01693">OracleDialogue()</a>, <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l00978">PrepareHouse()</a>, <a class="el" href="../../d1/d10/_u_i_rest_8cpp_source.html#l00054">PrepareToLoadRestUI()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l07964">Player::ProfessionOrGuildFlagsCorrect()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l05061">Player::SetVariable()</a>, <a class="el" href="../../d4/d5b/_u_i_guilds_8cpp_source.html#l00298">SpellBookGenerator()</a>, <a class="el" href="../../d9/d21/_u_i_shops_8cpp_source.html#l01709">sub_4B1447_party_fine()</a>, <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l03266">sub_4B6478()</a>, <a class="el" href="../../da/db4/_party_8cpp_source.html#l00917">TestPartyQuestBit()</a>, <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l01673">TravelByTransport()</a>, <a class="el" href="../../db/d9f/_town_portal_book_8cpp_source.html#l00048">GUIWindow_TownPortalBook::Update()</a> и <a class="el" href="../../dc/d90/_autonotes_book_8cpp_source.html#l00106">GUIWindow_AutonotesBook::Update()</a>.</p>
+<div id="dynsection-12" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-12-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-12-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-12-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../da/db4/_party_8cpp_aa98e661066fa419e8f3b18a3fb7c1bb2_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a7ef9fde76af050170268e578ef76b6ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ef9fde76af050170268e578ef76b6ef">&#9670;&nbsp;</a></span>_449B7E_toggle_bit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> _449B7E_toggle_bit </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char *&#160;</td>
+          <td class="paramname"><em>pArray</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">__int16&#160;</td>
+          <td class="paramname"><em>a2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned __int16&#160;</td>
+          <td class="paramname"><em>bToggle</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/db4/_party_8cpp_source.html">Party.cpp</a> строка <a class="el" href="../../da/db4/_party_8cpp_source.html#l01190">1190</a></p>
+<div class="fragment"><div class="line"><a name="l01191"></a><span class="lineno"> 1191</span>&#160;                                                  {</div>
+<div class="line"><a name="l01192"></a><span class="lineno"> 1192</span>&#160;    <span class="keywordtype">signed</span> <span class="keywordtype">int</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#acc806b31cbf466ceba6555983d8b814d">v3</a>;          <span class="comment">// esi@1</span></div>
+<div class="line"><a name="l01193"></a><span class="lineno"> 1193</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> set_bit;  <span class="comment">// edx@1</span></div>
+<div class="line"><a name="l01194"></a><span class="lineno"> 1194</span>&#160; </div>
+<div class="line"><a name="l01195"></a><span class="lineno"> 1195</span>&#160;    <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#acc806b31cbf466ceba6555983d8b814d">v3</a> = a2 - 1;</div>
+<div class="line"><a name="l01196"></a><span class="lineno"> 1196</span>&#160;    set_bit = 0x80 &gt;&gt; <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#acc806b31cbf466ceba6555983d8b814d">v3</a> % 8;</div>
+<div class="line"><a name="l01197"></a><span class="lineno"> 1197</span>&#160;    <span class="keywordflow">if</span> (bToggle)</div>
+<div class="line"><a name="l01198"></a><span class="lineno"> 1198</span>&#160;        pArray[<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#acc806b31cbf466ceba6555983d8b814d">v3</a> / 8] |= set_bit;</div>
+<div class="line"><a name="l01199"></a><span class="lineno"> 1199</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l01200"></a><span class="lineno"> 1200</span>&#160;        pArray[<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#acc806b31cbf466ceba6555983d8b814d">v3</a> / 8] &amp;= ~set_bit;</div>
+<div class="line"><a name="l01201"></a><span class="lineno"> 1201</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Используется в <a class="el" href="../../d2/d82/_player_8cpp_source.html#l05658">Player::AddVariable()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l01223">Actor::ApplyFineForKillingPeasant()</a>, <a class="el" href="../../d3/d70/_arcomage_2_arcomage_8cpp_source.html#l02801">GameResultsApply()</a>, <a class="el" href="../../dd/da4/_viewport_8cpp_source.html#l00224">ItemInteraction()</a>, <a class="el" href="../../d7/db5/_game_8cpp_source.html#l00134">Application::Game::Loop()</a>, <a class="el" href="../../de/da8/_u_i_party_creation_8cpp_source.html#l00274">PartyCreationUI_Loop()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l05061">Player::SetVariable()</a>, <a class="el" href="../../d9/d21/_u_i_shops_8cpp_source.html#l01709">sub_4B1447_party_fine()</a> и <a class="el" href="../../d2/d82/_player_8cpp_source.html#l06230">Player::SubtractVariable()</a>.</p>
+<div id="dynsection-13" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-13-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-13-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-13-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../da/db4/_party_8cpp_a7ef9fde76af050170268e578ef76b6ef_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Переменные</h2>
+<a id="a2514b83cbae6998a57eae74a24f6faf4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2514b83cbae6998a57eae74a24f6faf4">&#9670;&nbsp;</a></span>mouse</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d7/dc5/class_mouse.html">Mouse</a>* mouse = <a class="el" href="../../d1/d12/class_engine___1_1_ioc_container.html#ad92ce5cee27f4415ef48d49dea4ec074">EngineIoc::ResolveMouse</a>()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/db4/_party_8cpp_source.html">Party.cpp</a> строка <a class="el" href="../../da/db4/_party_8cpp_source.html#l00028">28</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../da/db4/_party_8cpp_source.html#l00150">Party::SetHoldingItem()</a> и <a class="el" href="../../da/db4/_party_8cpp_source.html#l01048">Party::sub_421B2C_PlaceInInventory_or_DropPickedItem()</a>.</p>
+
+</div>
+</div>
+<a id="a638b1d8b985f1c7f8b69f2d81286f98e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a638b1d8b985f1c7f8b69f2d81286f98e">&#9670;&nbsp;</a></span>pParty</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d14/struct_party.html">Party</a>* pParty = nullptr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/db4/_party_8cpp_source.html">Party.cpp</a> строка <a class="el" href="../../da/db4/_party_8cpp_source.html#l00030">30</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../dc/d5b/_turn_engine_8cpp_source.html#l00513">stru262_TurnBased::_406457()</a>, <a class="el" href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00235">GUIWindow::_41D73D_draw_buff_tooltip()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l04192">Actor::_427102_IsOkToCastSpell()</a>, <a class="el" href="../../d9/dd3/_cast_spell_info_8cpp_source.html#l04369">_42777D_CastSpell_UseWand_ShootArrow()</a>, <a class="el" href="../../d9/dd3/_cast_spell_info_8cpp_source.html#l00046">CastSpellInfoHelpers::_427E01_cast_spell()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l07643">Player::_42ECB5_PlayerAttacksActor()</a>, <a class="el" href="../../d9/d99/_items_8cpp_source.html#l00042">ItemGen::_439DF3_get_additional_damage()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l05298">_45063B_spawn_some_monster()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l01365">Engine::_461103_load_level_sub()</a>, <a class="el" href="../../d9/ded/_sprite_object_8cpp_source.html#l00909">SpriteObject::_46BEF1_apply_spells_aoe()</a>, <a class="el" href="../../d9/ded/_sprite_object_8cpp_source.html#l01017">_46BFFA_update_spell_fx()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l04790">_46EF01_collision_chech_player()</a>, <a class="el" href="../../d1/d6c/_n_p_c_8cpp_source.html#l00273">NPCStats::_476C60_on_load_game()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l01929">_493938_regenerate()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l01623">_494035_timed_effects__water_walking_damage__etc()</a>, <a class="el" href="../../dc/dce/_g_u_i_window_8cpp_source.html#l01846">_4B254D_SkillMasteryTeacher()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l02230">Actor::_SelectTarget()</a>, <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l01077">_set_3d_modelview_matrix()</a>, <a class="el" href="../../dd/da4/_viewport_8cpp_source.html#l00250">ActorInteraction()</a>, <a class="el" href="../../da/db4/_party_8cpp_source.html#l00287">Party::AddGold()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l05658">Player::AddVariable()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l01148">Actor::AI_MeleeAttack()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l01626">Actor::AI_MissileAttack1()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l01561">Actor::AI_MissileAttack2()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l02003">Actor::AI_Pursue1()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l02114">Actor::AI_Pursue2()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l02171">Actor::AI_Pursue3()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l00199">Actor::AI_SpellAttack()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l01486">Actor::AI_SpellAttack1()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l01412">Actor::AI_SpellAttack2()</a>, <a class="el" href="../../dc/d5b/_turn_engine_8cpp_source.html#l00260">stru262_TurnBased::AITurnBasedAction()</a>, <a class="el" href="../../d9/d21/_u_i_shops_8cpp_source.html#l00648">AlchemyMagicShopWares()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l01223">Actor::ApplyFineForKillingPeasant()</a>, <a class="el" href="../../dc/d5b/_turn_engine_8cpp_source.html#l00101">stru262_TurnBased::ApplyPlayerAction()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l05320">area_of_effect__damage_evaluate()</a>, <a class="el" href="../../da/deb/_u_i_arena_8cpp_source.html#l00034">Arena_SelectionFightLevel()</a>, <a class="el" href="../../da/deb/_u_i_arena_8cpp_source.html#l00095">ArenaFight()</a>, <a class="el" href="../../d9/d21/_u_i_shops_8cpp_source.html#l00483">ArmorShopWares()</a>, <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l03991">BackToHouseMenu()</a>, <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l02074">BankDialog()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l04655">BLV_ProcessPartyActions()</a>, <a class="el" href="../../d1/d3f/_spellbook_8cpp_source.html#l00307">BookUI_Spellbook_DrawCurrentSchoolBackground()</a>, <a class="el" href="../../dc/dce/_g_u_i_window_8cpp_source.html#l02196">BuildDialogueString()</a>, <a class="el" href="../../dd/d97/stru10_8cpp_source.html#l00235">stru10::CalcFaceBounding()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l00564">Player::CanEquip_RaceAndAlignmentCheck()</a>, <a class="el" href="../../dd/da4/_viewport_8cpp_source.html#l00127">ViewingParams::CenterOnPartyZoomIn()</a>, <a class="el" href="../../dd/da4/_viewport_8cpp_source.html#l00117">ViewingParams::CenterOnPartyZoomOut()</a>, <a class="el" href="../../db/dd5/_u_i_character_8cpp_source.html#l00812">GUIWindow_CharacterRecord::CharacterUI_AwardsTab_Draw()</a>, <a class="el" href="../../d6/ded/_u_i_popup_8cpp_source.html#l01044">CharacterUI_GetSkillDescText()</a>, <a class="el" href="../../db/dd5/_u_i_character_8cpp_source.html#l01941">CharacterUI_LoadPaperdollTextures()</a>, <a class="el" href="../../db/dd5/_u_i_character_8cpp_source.html#l02217">GUIWindow_CharacterRecord::CharacterUI_SkillsTab_CreateButtons()</a>, <a class="el" href="../../d6/ded/_u_i_popup_8cpp_source.html#l01153">CharacterUI_StatsTab_ShowHint()</a>, <a class="el" href="../../df/d5c/_events_8cpp_source.html#l01215">check_event_triggers()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l04034">CheckActors_proximity()</a>, <a class="el" href="../../d1/d6c/_n_p_c_8cpp_source.html#l00754">CheckHiredNPCSpeciality()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l08177">Player::CleanupBeacons()</a>, <a class="el" href="../../dc/dce/_g_u_i_window_8cpp_source.html#l01412">ClickNPCTopic()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l04645">Player::CompareVariable()</a>, <a class="el" href="../../d1/d6c/_n_p_c_8cpp_source.html#l01052">ContractSelectText()</a>, <a class="el" href="../../da/db4/_party_8cpp_source.html#l00311">Party::CreateDefaultParty()</a>, <a class="el" href="../../de/da8/_u_i_party_creation_8cpp_source.html#l00066">CreateParty_EventLoop()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l03379">Actor::DamageMonsterFromParty()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l06928">DamagePlayerFromMonster()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l01906">Actor::Die()</a>, <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l01389">OutdoorLocation::DoGetTile()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l00796">DoPrepareWorld()</a>, <a class="el" href="../../d4/d9d/_save_load_8cpp_source.html#l00514">DoSavegame()</a>, <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l00160">OutdoorLocation::Draw()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l00166">Engine::Draw()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00322">IndoorLocation::Draw()</a>, <a class="el" href="../../d0/d67/_map_book_8cpp_source.html#l00180">DrawBook_Map_sub()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l00252">Engine::DrawGUI()</a>, <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l01572">RenderOpenGL::DrawOutdoorSkyPolygon()</a>, <a class="el" href="../../de/d68/_overlays_8cpp_source.html#l00067">OtherOverlayList::DrawTurnBasedIcon()</a>, <a class="el" href="../../dd/da4/_viewport_8cpp_source.html#l00289">Engine::DropHeldItem()</a>, <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l00826">EnterHouse()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l06787">Player::EquipBody()</a>, <a class="el" href="../../da/df3/_spells_8cpp_source.html#l00429">EventCastSpell()</a>, <a class="el" href="../../df/d21/_game_menu_8cpp_source.html#l00070">Application::Menu::EventLoop()</a>, <a class="el" href="../../d7/db5/_game_8cpp_source.html#l00322">Application::Game::EventLoop()</a>, <a class="el" href="../../df/d5c/_events_8cpp_source.html#l00260">EventProcessor()</a>, <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l00084">OutdoorLocation::ExecDraw()</a>, <a class="el" href="../../d9/ded/_sprite_object_8cpp_source.html#l00788">SpriteObject::ExplosionTraps()</a>, <a class="el" href="../../d7/db5/_game_8cpp_source.html#l00255">Game_StartHirelingDialogue()</a>, <a class="el" href="../../d7/db5/_game_8cpp_source.html#l02704">Application::Game::GameLoop()</a>, <a class="el" href="../../d3/d70/_arcomage_2_arcomage_8cpp_source.html#l02801">GameResultsApply()</a>, <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l01057">GameUI_CharacterQuickRecord_Draw()</a>, <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l01179">GameUI_DrawFoodAndGold()</a>, <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l02236">GameUI_DrawHiredNPCs()</a>, <a class="el" href="../../d6/ded/_u_i_popup_8cpp_source.html#l00168">GameUI_DrawItemInfo()</a>, <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l01197">GameUI_DrawLifeManaBars()</a>, <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l01916">GameUI_DrawMinimap()</a>, <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l00891">GameUI_DrawNPCPopup()</a>, <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l01699">GameUI_DrawPartySpells()</a>, <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l01766">GameUI_DrawPortraits()</a>, <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l01154">GameUI_DrawRightPanelItems()</a>, <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l02205">GameUI_DrawTorchlightAndWizardEye()</a>, <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l01001">GameUI_GetMinimapHintText()</a>, <a class="el" href="../../dd/d76/_u_i_dialogue_8cpp_source.html#l00025">GameUI_InitializeDialogue()</a>, <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l00170">GameUI_LoadPlayerPortraintsAndVoices()</a>, <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l00796">GameUI_OnPlayerPortraitLeftClick()</a>, <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l01266">GameUI_WritePointedObjectStatusString()</a>, <a class="el" href="../../d9/d99/_items_8cpp_source.html#l00978">ItemGen::GenerateArtifact()</a>, <a class="el" href="../../d9/d99/_items_8cpp_source.html#l00680">ItemsTable::GenerateItem()</a>, <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l04246">GenerateSpecialShopItems()</a>, <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l04298">GenerateStandartShopItems()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l04114">GetActorTintColor()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l02203">Player::GetAttackRecoveryTime()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l02468">Player::GetBaseAge()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l00325">Player::GetConditionDaysPassed()</a>, <a class="el" href="../../df/d8d/_calendar_book_8cpp_source.html#l00049">GetDayPart()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l00890">Actor::GetDirectionInfo()</a>, <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l00172">OutdoorLocation::GetFogDensityByTime()</a>, <a class="el" href="../../d1/d6c/_n_p_c_8cpp_source.html#l01322">GetGreetType()</a>, <a class="el" href="../../d9/d21/_u_i_shops_8cpp_source.html#l01654">GetHouseGoodbyeSpeech()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l02942">Player::GetMagicalBonus()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l00975">Player::GetMerchant()</a>, <a class="el" href="../../d1/d6c/_n_p_c_8cpp_source.html#l00099">GetNewNPCData()</a>, <a class="el" href="../../da/db4/_party_8cpp_source.html#l00166">Party::GetNextActiveCharacter()</a>, <a class="el" href="../../d1/d6c/_n_p_c_8cpp_source.html#l00043">GetNPCData()</a>, <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l00457">OutdoorLocation::GetNumFoodRequiredToRestInCurrentPos()</a>, <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l00330">OutdoorLocation::GetTravelDestination()</a>, <a class="el" href="../../da/db4/_party_8cpp_source.html#l00255">Party::GiveFood()</a>, <a class="el" href="../../da/db4/_party_8cpp_source.html#l00938">Party::GivePartyExp()</a>, <a class="el" href="../../d8/d67/_chest_8cpp_source.html#l00580">Chest::GrabItem()</a>, <a class="el" href="../../d4/d5b/_u_i_guilds_8cpp_source.html#l00027">GuildDialog()</a>, <a class="el" href="../../d3/d59/_lloyds_book_8cpp_source.html#l00023">GUIWindow_LloydsBook::GUIWindow_LloydsBook()</a>, <a class="el" href="../../d0/d67/_map_book_8cpp_source.html#l00029">GUIWindow_MapBook::GUIWindow_MapBook()</a>, <a class="el" href="../../de/d09/_u_i_transition_8cpp_source.html#l00070">GUIWindow_Transition::GUIWindow_Transition()</a>, <a class="el" href="../../de/d09/_u_i_transition_8cpp_source.html#l00183">GUIWindow_Travel::GUIWindow_Travel()</a>, <a class="el" href="../../da/db4/_party_8cpp_source.html#l00216">Party::HasItem()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l06855">Player::HasItem()</a>, <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l00442">InitializaDialogueOptions()</a>, <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l00398">InitializaDialogueOptions_Tavern()</a>, <a class="el" href="../../d7/d51/_g_u_i_progress_bar_8cpp_source.html#l00022">GUIProgressBar::Initialize()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l03334">Actor::InitializeActors()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l01262">Render::InitializeFullscreen()</a>, <a class="el" href="../../d6/ded/_u_i_popup_8cpp_source.html#l01817">Inventory_ItemPopupAndAlchemy()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l06915">IsDwarfPresentInParty()</a>, <a class="el" href="../../d1/d3f/_decoration_8cpp_source.html#l00311">LevelDecoration::IsObeliskChestActive()</a>, <a class="el" href="../../d4/d1c/_conditions_8cpp_source.html#l00050">ConditionProcessor::IsPlayerAffected()</a>, <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l01900">IsTravelAvailable()</a>, <a class="el" href="../../dd/da4/_viewport_8cpp_source.html#l00224">ItemInteraction()</a>, <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l00980">OutdoorLocation::Load()</a>, <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l02143">OutdoorLocation::LoadActualSkyFrame()</a>, <a class="el" href="../../d4/d9d/_save_load_8cpp_source.html#l00077">LoadGame()</a>, <a class="el" href="../../d7/db5/_game_8cpp_source.html#l00134">Application::Game::Loop()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l04064">Actor::LootActor()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l04556">Actor::MakeActorAIList_BLV()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l04457">Actor::MakeActorAIList_ODM()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l00903">Engine::MM7_Initialize()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l01287">MM7Initialization()</a>, <a class="el" href="../../d6/ded/_u_i_popup_8cpp_source.html#l00563">MonsterPopup_Draw()</a>, <a class="el" href="../../dc/d5b/_turn_engine_8cpp_source.html#l00395">stru262_TurnBased::NextTurn()</a>, <a class="el" href="../../d1/d6c/_n_p_c_8cpp_source.html#l01227">NPC_EventProcessor()</a>, <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l03788">ODM_LoadAndInitialize()</a>, <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l02221">ODM_ProcessPartyActions()</a>, <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l02115">ODM_UpdateUserInputAndOther()</a>, <a class="el" href="../../d8/d67/_chest_8cpp_source.html#l00537">Chest::OnChestLeftClick()</a>, <a class="el" href="../../d7/db5/_game_8cpp_source.html#l00300">Application::Game::OnEscape()</a>, <a class="el" href="../../dd/da4/_viewport_8cpp_source.html#l00315">Engine::OnGameViewportClick()</a>, <a class="el" href="../../d9/ded/_sprite_object_8cpp_source.html#l00872">SpriteObject::OnInteraction()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l07294">Player::OnInventoryLeftClick()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l02327">OnMapLoad()</a>, <a class="el" href="../../d4/dff/_win_api_window_8cpp_source.html#l00565">WinApiWindow::OnOSMenu()</a>, <a class="el" href="../../db/dd5/_u_i_character_8cpp_source.html#l02712">OnPaperdollLeftClick()</a>, <a class="el" href="../../dd/d76/_u_i_dialogue_8cpp_source.html#l00660">OnSelectNPCDialogueOption()</a>, <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l01047">OnSelectShopDialogueOption()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l02479">OnTimer()</a>, <a class="el" href="../../d8/d67/_chest_8cpp_source.html#l00041">Chest::Open()</a>, <a class="el" href="../../dc/dce/_g_u_i_window_8cpp_source.html#l01693">OracleDialogue()</a>, <a class="el" href="../../de/da8/_u_i_party_creation_8cpp_source.html#l00274">PartyCreationUI_Loop()</a>, <a class="el" href="../../de/da8/_u_i_party_creation_8cpp_source.html#l00856">PartyCreationUI_LoopInternal()</a>, <a class="el" href="../../de/da8/_u_i_party_creation_8cpp_source.html#l00051">PlayerCreation_Choose4Skills()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l00223">PlayerCreation_GetUnspentAttributePointCount()</a>, <a class="el" href="../../d3/df2/_audio_player_8cpp_source.html#l00195">AudioPlayer::PlaySound()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l02739">IndoorLocation::PrepareActorRenderList_BLV()</a>, <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l01722">OutdoorLocation::PrepareActorsDrawList()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l03042">IndoorLocation::PrepareDecorationsRenderList_BLV()</a>, <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l00695">RenderOpenGL::PrepareDecorationsRenderList_ODM()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l00713">Render::PrepareDecorationsRenderList_ODM()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00102">PrepareDrawLists_BLV()</a>, <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l00978">PrepareHouse()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l02310">PrepareToLoadBLV()</a>, <a class="el" href="../../d1/d10/_u_i_rest_8cpp_source.html#l00054">PrepareToLoadRestUI()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l00781">PrepareWorld()</a>, <a class="el" href="../../d9/d5c/_keyboard_8cpp_source.html#l00332">Keyboard::ProcessInputActions()</a>, <a class="el" href="../../d7/d54/_mouse_8cpp_source.html#l00206">Mouse::ReadCursorWithItem()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l02573">Player::Recover()</a>, <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l04396">GUIWindow_House::Release()</a>, <a class="el" href="../../d7/d54/_mouse_8cpp_source.html#l00025">Mouse::RemoveHoldingItem()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l01342">Engine::ResetCursor_Palettes_LODs_Level_Audio_SFT_Windows()</a>, <a class="el" href="../../da/db4/_party_8cpp_source.html#l00857">Rest()</a>, <a class="el" href="../../da/db4/_party_8cpp_source.html#l00793">Party::RestAndHeal()</a>, <a class="el" href="../../da/db4/_party_8cpp_source.html#l00872">RestAndHeal()</a>, <a class="el" href="../../d4/d9d/_save_load_8cpp_source.html#l00238">SaveGame()</a>, <a class="el" href="../../d4/d9d/_save_load_8cpp_source.html#l00566">SaveNewGame()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l08186">Player::SetBeacon()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l00612">Player::SetCondition()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l01590">SetDecorationSprite()</a>, <a class="el" href="../../da/db4/_party_8cpp_source.html#l00239">Party::SetFood()</a>, <a class="el" href="../../da/db4/_party_8cpp_source.html#l00281">Party::SetGold()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l02593">Player::SetRecoveryTime()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l05061">Player::SetVariable()</a>, <a class="el" href="../../d9/d21/_u_i_shops_8cpp_source.html#l01344">ShowPopupShopItem()</a>, <a class="el" href="../../dc/d5b/_turn_engine_8cpp_source.html#l00024">stru262_TurnBased::SortTurnQueue()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l04922">SpawnActor()</a>, <a class="el" href="../../d4/d5b/_u_i_guilds_8cpp_source.html#l00298">SpellBookGenerator()</a>, <a class="el" href="../../dc/d5b/_turn_engine_8cpp_source.html#l00108">stru262_TurnBased::Start()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l01385">Actor::StealFrom()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l01667">Player::StealFromActor()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l04688">sub_4070EF_prolly_detect_player()</a>, <a class="el" href="../../da/db4/_party_8cpp_source.html#l01048">Party::sub_421B2C_PlaceInInventory_or_DropPickedItem()</a>, <a class="el" href="../../dd/d76/_u_i_dialogue_8cpp_source.html#l00615">sub_4451A8_press_any_key()</a>, <a class="el" href="../../df/d5c/_events_8cpp_source.html#l01247">sub_4465DF_check_season()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l01538">sub_44861E_set_texture()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l01558">sub_44892E_set_faces_bit()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l04969">sub_44FA4C_spawn_light_elemental()</a>, <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l03898">sub_47C3D7_get_fog_specular()</a>, <a class="el" href="../../d9/d21/_u_i_shops_8cpp_source.html#l01709">sub_4B1447_party_fine()</a>, <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l03266">sub_4B6478()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l06230">Player::SubtractVariable()</a>, <a class="el" href="../../da/db4/_party_8cpp_source.html#l00245">Party::TakeFood()</a>, <a class="el" href="../../da/db4/_party_8cpp_source.html#l00292">Party::TakeGold()</a>, <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l02200">TavernDialog()</a>, <a class="el" href="../../dd/d31/_map_info_8cpp_source.html#l00308">TeleportToStartingPoint()</a>, <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l02599">TempleDialog()</a>, <a class="el" href="../../da/db4/_party_8cpp_source.html#l00917">TestPartyQuestBit()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00846">IndoorLocation::ToggleLight()</a>, <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l01915">TownHallDialog()</a>, <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l02933">TrainingDialog()</a>, <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l01673">TravelByTransport()</a>, <a class="el" href="../../d7/d54/_mouse_8cpp_source.html#l00258">Mouse::UI_OnMouseLeftClick()</a>, <a class="el" href="../../d6/ded/_u_i_popup_8cpp_source.html#l01459">UI_OnMouseRightClick()</a>, <a class="el" href="../../d9/d21/_u_i_shops_8cpp_source.html#l00874">UIShop_Buy_Identify_Repair()</a>, <a class="el" href="../../dd/d41/_journal_book_8cpp_source.html#l00093">GUIWindow_JournalBook::Update()</a>, <a class="el" href="../../dc/dda/_u_i_quick_reference_8cpp_source.html#l00038">GUIWindow_QuickReference::Update()</a>, <a class="el" href="../../d3/d59/_lloyds_book_8cpp_source.html#l00060">GUIWindow_LloydsBook::Update()</a>, <a class="el" href="../../df/d8d/_calendar_book_8cpp_source.html#l00060">GUIWindow_CalendarBook::Update()</a>, <a class="el" href="../../dc/d90/_autonotes_book_8cpp_source.html#l00106">GUIWindow_AutonotesBook::Update()</a>, <a class="el" href="../../db/d9f/_town_portal_book_8cpp_source.html#l00048">GUIWindow_TownPortalBook::Update()</a>, <a class="el" href="../../d0/d67/_map_book_8cpp_source.html#l00081">GUIWindow_MapBook::Update()</a>, <a class="el" href="../../dd/d76/_u_i_dialogue_8cpp_source.html#l00238">GUIWindow_Dialogue::Update()</a>, <a class="el" href="../../d1/d10/_u_i_rest_8cpp_source.html#l00123">GUIWindow_Rest::Update()</a>, <a class="el" href="../../de/d09/_u_i_transition_8cpp_source.html#l00227">GUIWindow_Travel::Update()</a>, <a class="el" href="../../de/da8/_u_i_party_creation_8cpp_source.html#l00303">GUIWindow_PartyCreation::Update()</a>, <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l02496">GUIWindow_DebugMenu::Update()</a>, <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l04381">GUIWindow_House::Update()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l02745">Actor::UpdateActorAI()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l01718">UpdateActors_BLV()</a>, <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l03393">UpdateActors_ODM()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l04955">UpdateObjects()</a>, <a class="el" href="../../da/db4/_party_8cpp_source.html#l00657">Party::UpdatePlayersAndHirelingsEmotions()</a>, <a class="el" href="../../d3/df2/_audio_player_8cpp_source.html#l00322">AudioPlayer::UpdateSounds()</a>, <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l00429">OutdoorLocation::UpdateSunlightVectors()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l03850">Player::UseItem_DrinkPotion_etc()</a>, <a class="el" href="../../d1/d6c/_n_p_c_8cpp_source.html#l01378">UseNPCSkill()</a>, <a class="el" href="../../d9/d21/_u_i_shops_8cpp_source.html#l00327">WeaponShopWares()</a> и <a class="el" href="../../da/db4/_party_8cpp_source.html#l00598">Party::Yell()</a>.</p>
+
+</div>
+</div>
+<a id="ac491d2aeba0335bbbe632bdc3c04cffe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac491d2aeba0335bbbe632bdc3c04cffe">&#9670;&nbsp;</a></span>pPartyActionQueue</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="../../da/d47/struct_action_queue.html">ActionQueue</a>* pPartyActionQueue = new <a class="el" href="../../da/d47/struct_action_queue.html">ActionQueue</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/db4/_party_8cpp_source.html">Party.cpp</a> строка <a class="el" href="../../da/db4/_party_8cpp_source.html#l00032">32</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l04655">BLV_ProcessPartyActions()</a>, <a class="el" href="../../d7/db5/_game_8cpp_source.html#l02704">Application::Game::GameLoop()</a>, <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l02221">ODM_ProcessPartyActions()</a> и <a class="el" href="../../d9/d5c/_keyboard_8cpp_source.html#l00332">Keyboard::ProcessInputActions()</a>.</p>
+
+</div>
+</div>
+<a id="aa7019f3303c323aa801ec37a9ce02537"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7019f3303c323aa801ec37a9ce02537">&#9670;&nbsp;</a></span>playerAlreadyPicked</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a52f38e7d822a46377fde7a02708eedb1">std::array</a>&lt;bool, 4&gt; playerAlreadyPicked</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/db4/_party_8cpp_source.html">Party.cpp</a> строка <a class="el" href="../../da/db4/_party_8cpp_source.html#l00034">34</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../da/db4/_party_8cpp_source.html#l00166">Party::GetNextActiveCharacter()</a>.</p>
+
+</div>
+</div>
+<a id="a2aef0cae8c5f06417d7ec1ede63ef07b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2aef0cae8c5f06417d7ec1ede63ef07b">&#9670;&nbsp;</a></span>PickedPlayer2_unused</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char PickedPlayer2_unused</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/db4/_party_8cpp_source.html">Party.cpp</a> строка <a class="el" href="../../da/db4/_party_8cpp_source.html#l00035">35</a></p>
+
+</div>
+</div>
+<a id="ac681d14e0e678b7569efda8044ec536f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac681d14e0e678b7569efda8044ec536f">&#9670;&nbsp;</a></span>PickedPlayer3_unused</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char PickedPlayer3_unused</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/db4/_party_8cpp_source.html">Party.cpp</a> строка <a class="el" href="../../da/db4/_party_8cpp_source.html#l00036">36</a></p>
+
+</div>
+</div>
+<a id="a46c582c7e908553a896b821f75066a39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46c582c7e908553a896b821f75066a39">&#9670;&nbsp;</a></span>PickedPlayer4_unused</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char PickedPlayer4_unused</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/db4/_party_8cpp_source.html">Party.cpp</a> строка <a class="el" href="../../da/db4/_party_8cpp_source.html#l00037">37</a></p>
+
+</div>
+</div>
+<a id="a814f70dac9f5bfd0ddd689ef48e4ad90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a814f70dac9f5bfd0ddd689ef48e4ad90">&#9670;&nbsp;</a></span>_pUIAnim_Food</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d6f/class_u_i_animation.html">UIAnimation</a> _pUIAnim_Food</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/db4/_party_8cpp_source.html">Party.cpp</a> строка <a class="el" href="../../da/db4/_party_8cpp_source.html#l00040">40</a></p>
+
+</div>
+</div>
+<a id="a262138669f703ab63acc9dcfb15fed57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a262138669f703ab63acc9dcfb15fed57">&#9670;&nbsp;</a></span>_pUIAnim_Gold</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d6f/class_u_i_animation.html">UIAnimation</a> _pUIAnim_Gold</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/db4/_party_8cpp_source.html">Party.cpp</a> строка <a class="el" href="../../da/db4/_party_8cpp_source.html#l00041">41</a></p>
+
+</div>
+</div>
+<a id="a175b7af4a0e2125d58d90b043a28b2ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a175b7af4a0e2125d58d90b043a28b2ff">&#9670;&nbsp;</a></span>_pUIAnum_Torchlight</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d6f/class_u_i_animation.html">UIAnimation</a> _pUIAnum_Torchlight</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/db4/_party_8cpp_source.html">Party.cpp</a> строка <a class="el" href="../../da/db4/_party_8cpp_source.html#l00042">42</a></p>
+
+</div>
+</div>
+<a id="af964b423abb946fcf3ec10babd767823"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af964b423abb946fcf3ec10babd767823">&#9670;&nbsp;</a></span>_pUIAnim_WizardEye</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d6f/class_u_i_animation.html">UIAnimation</a> _pUIAnim_WizardEye</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/db4/_party_8cpp_source.html">Party.cpp</a> строка <a class="el" href="../../da/db4/_party_8cpp_source.html#l00043">43</a></p>
+
+</div>
+</div>
+<a id="a0412412ddbd214f2f2cdddf75b3185b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0412412ddbd214f2f2cdddf75b3185b7">&#9670;&nbsp;</a></span>_uianim</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct { ... }  _uianim</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a57736ab9d5b15bd203ce973183301961"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57736ab9d5b15bd203ce973183301961">&#9670;&nbsp;</a></span>pUIAnim_Food</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d6f/class_u_i_animation.html">UIAnimation</a>* pUIAnim_Food = &amp;<a class="el" href="../../da/db4/_party_8cpp.html#a814f70dac9f5bfd0ddd689ef48e4ad90">_uianim._pUIAnim_Food</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/db4/_party_8cpp_source.html">Party.cpp</a> строка <a class="el" href="../../da/db4/_party_8cpp_source.html#l00046">46</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../da/db4/_party_8cpp_source.html#l00232">ui_play_food_anim()</a>.</p>
+
+</div>
+</div>
+<a id="a3fc24d2defbdaca88cb1e52031353d97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fc24d2defbdaca88cb1e52031353d97">&#9670;&nbsp;</a></span>pUIAnim_Gold</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d6f/class_u_i_animation.html">UIAnimation</a>* pUIAnim_Gold = &amp;<a class="el" href="../../da/db4/_party_8cpp.html#a262138669f703ab63acc9dcfb15fed57">_uianim._pUIAnim_Gold</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/db4/_party_8cpp_source.html">Party.cpp</a> строка <a class="el" href="../../da/db4/_party_8cpp_source.html#l00047">47</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../da/db4/_party_8cpp_source.html#l00226">ui_play_gold_anim()</a>.</p>
+
+</div>
+</div>
+<a id="af7108d8bc1c81e6faee850552e5cde9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7108d8bc1c81e6faee850552e5cde9a">&#9670;&nbsp;</a></span>pUIAnum_Torchlight</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d6f/class_u_i_animation.html">UIAnimation</a>* pUIAnum_Torchlight = &amp;<a class="el" href="../../da/db4/_party_8cpp.html#a175b7af4a0e2125d58d90b043a28b2ff">_uianim._pUIAnum_Torchlight</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/db4/_party_8cpp_source.html">Party.cpp</a> строка <a class="el" href="../../da/db4/_party_8cpp_source.html#l00048">48</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l02205">GameUI_DrawTorchlightAndWizardEye()</a> и <a class="el" href="../../dc/dce/_g_u_i_window_8cpp_source.html#l01032">SetUserInterface()</a>.</p>
+
+</div>
+</div>
+<a id="a88cac2bf9581758898e327c744463b91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88cac2bf9581758898e327c744463b91">&#9670;&nbsp;</a></span>pUIAnim_WizardEye</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d6f/class_u_i_animation.html">UIAnimation</a>* pUIAnim_WizardEye = &amp;<a class="el" href="../../da/db4/_party_8cpp.html#af964b423abb946fcf3ec10babd767823">_uianim._pUIAnim_WizardEye</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/db4/_party_8cpp_source.html">Party.cpp</a> строка <a class="el" href="../../da/db4/_party_8cpp_source.html#l00049">49</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l02205">GameUI_DrawTorchlightAndWizardEye()</a> и <a class="el" href="../../dc/dce/_g_u_i_window_8cpp_source.html#l01032">SetUserInterface()</a>.</p>
+
+</div>
+</div>
+<a id="a29ea6b4808f5c4a967125acff06db38f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29ea6b4808f5c4a967125acff06db38f">&#9670;&nbsp;</a></span>pUIAnims</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a52f38e7d822a46377fde7a02708eedb1">std::array</a>&lt;class <a class="el" href="../../d0/d6f/class_u_i_animation.html">UIAnimation</a> *, 4&gt; pUIAnims</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Инициализатор</b><div class="fragment"><div class="line">=  </div>
+<div class="line">    {&amp;<a class="code" href="../../da/db4/_party_8cpp.html#a0412412ddbd214f2f2cdddf75b3185b7">_uianim</a>._pUIAnim_Food, &amp;<a class="code" href="../../da/db4/_party_8cpp.html#a0412412ddbd214f2f2cdddf75b3185b7">_uianim</a>._pUIAnim_Gold,</div>
+<div class="line">     &amp;<a class="code" href="../../da/db4/_party_8cpp.html#a0412412ddbd214f2f2cdddf75b3185b7">_uianim</a>._pUIAnum_Torchlight, &amp;<a class="code" href="../../da/db4/_party_8cpp.html#a0412412ddbd214f2f2cdddf75b3185b7">_uianim</a>._pUIAnim_WizardEye}</div>
+</div><!-- fragment -->
+<p class="definition">См. определение в файле <a class="el" href="../../da/db4/_party_8cpp_source.html">Party.cpp</a> строка <a class="el" href="../../da/db4/_party_8cpp_source.html#l00052">52</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l01082">Engine::SecondaryInitialization()</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="astruct_party_html_a0987d48199d987b0b87f2eecb29cf425"><div class="ttname"><a href="../../d0/d14/struct_party.html#a0987d48199d987b0b87f2eecb29cf425">Party::uCurrentTimeSecond</a></div><div class="ttdeci">unsigned int uCurrentTimeSecond</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00277">Party.h:277</a></div></div>
+<div class="ttc" id="astruct_party_html_a09d03b453bb7e40a41e9244a7849e81d"><div class="ttname"><a href="../../d0/d14/struct_party.html#a09d03b453bb7e40a41e9244a7849e81d">Party::uCurrentMonth</a></div><div class="ttdeci">unsigned int uCurrentMonth</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00272">Party.h:272</a></div></div>
+<div class="ttc" id="astruct_party_html_a2e22e5307901cb1acb688185168b6161"><div class="ttname"><a href="../../d0/d14/struct_party.html#a2e22e5307901cb1acb688185168b6161">Party::GetPlayingTime</a></div><div class="ttdeci">GameTime &amp; GetPlayingTime()</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00230">Party.h:230</a></div></div>
+<div class="ttc" id="astruct_party_html_ab6b693dbf3da05e9c25839152a1ed28d"><div class="ttname"><a href="../../d0/d14/struct_party.html#ab6b693dbf3da05e9c25839152a1ed28d">Party::uCurrentMinute</a></div><div class="ttdeci">unsigned int uCurrentMinute</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00276">Party.h:276</a></div></div>
+<div class="ttc" id="a_audio_player_8h_html_aa4689ee7c9a692044aebd36cb0915e61a1a82833cbeebfed9a1be0487ddcaa6a3"><div class="ttname"><a href="../../dd/d7b/_audio_player_8h.html#aa4689ee7c9a692044aebd36cb0915e61a1a82833cbeebfed9a1be0487ddcaa6a3">SOUND_gold01</a></div><div class="ttdeci">@ SOUND_gold01</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7b/_audio_player_8h_source.html#l00072">AudioPlayer.h:72</a></div></div>
+<div class="ttc" id="a_party_8cpp_html_aa98e661066fa419e8f3b18a3fb7c1bb2"><div class="ttname"><a href="../../da/db4/_party_8cpp.html#aa98e661066fa419e8f3b18a3fb7c1bb2">_449B57_test_bit</a></div><div class="ttdeci">bool _449B57_test_bit(unsigned __int8 *a1, __int16 a2)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db4/_party_8cpp_source.html#l01185">Party.cpp:1185</a></div></div>
+<div class="ttc" id="amm7__data_8cpp_html_a16ee6f1a1afac17ced62271983692cd3"><div class="ttname"><a href="../../d6/d5b/mm7__data_8cpp.html#a16ee6f1a1afac17ced62271983692cd3">uDefaultTravelTime_ByFoot</a></div><div class="ttdeci">int uDefaultTravelTime_ByFoot</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d5b/mm7__data_8cpp_source.html#l00696">mm7_data.cpp:696</a></div></div>
+<div class="ttc" id="aclass_audio_player_html_afa0c135f321bd87b4d4ad2dcad3833e3"><div class="ttname"><a href="../../d7/dc2/class_audio_player.html#afa0c135f321bd87b4d4ad2dcad3833e3">AudioPlayer::PlaySound</a></div><div class="ttdeci">void PlaySound(SoundID eSoundID, int pid, unsigned int uNumRepeats, int x, int y, int a7)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/df2/_audio_player_8cpp_source.html#l00195">AudioPlayer.cpp:195</a></div></div>
+<div class="ttc" id="aclass_icon_html_a725397bfa1ff9e1666855d210653b379"><div class="ttname"><a href="../../db/d60/class_icon.html#a725397bfa1ff9e1666855d210653b379">Icon::GetAnimLength</a></div><div class="ttdeci">unsigned int GetAnimLength() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d5e/_icon_frame_table_8h_source.html#l00020">IconFrameTable.h:20</a></div></div>
+<div class="ttc" id="astruct_game_time_html_a641f4d3ee68d3353156b0291d1858745"><div class="ttname"><a href="../../df/dc2/struct_game_time.html#a641f4d3ee68d3353156b0291d1858745">GameTime::GetDaysOfMonth</a></div><div class="ttdeci">int GetDaysOfMonth() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d0e/_engine_2_time_8h_source.html#l00041">Time.h:41</a></div></div>
+<div class="ttc" id="amm7__data_8cpp_html_a31e1cf50975dea688e44df739697248c"><div class="ttname"><a href="../../d6/d5b/mm7__data_8cpp.html#a31e1cf50975dea688e44df739697248c">game_starting_year</a></div><div class="ttdeci">int game_starting_year</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d5b/mm7__data_8cpp_source.html#l00193">mm7_data.cpp:193</a></div></div>
+<div class="ttc" id="astruct_party_html_ab5b1378cc25e8c4deb49847ead3e7187"><div class="ttname"><a href="../../d0/d14/struct_party.html#ab5b1378cc25e8c4deb49847ead3e7187">Party::_quest_bits</a></div><div class="ttdeci">unsigned __int8 _quest_bits[64]</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00291">Party.h:291</a></div></div>
+<div class="ttc" id="astruct_party_html_ab1d902911ff77a09014f91157ae89d58"><div class="ttname"><a href="../../d0/d14/struct_party.html#ab1d902911ff77a09014f91157ae89d58">Party::uCurrentHour</a></div><div class="ttdeci">unsigned int uCurrentHour</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00275">Party.h:275</a></div></div>
+<div class="ttc" id="astruct_party_html_a25894a432feab69bcbbff2194bac47dd"><div class="ttname"><a href="../../d0/d14/struct_party.html#a25894a432feab69bcbbff2194bac47dd">Party::pPlayers</a></div><div class="ttdeci">std::array&lt; Player, 4 &gt; pPlayers</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00310">Party.h:310</a></div></div>
+<div class="ttc" id="astruct_party_html_ae0e2e8cbee9642f7a915e2d43a86e8c4"><div class="ttname"><a href="../../d0/d14/struct_party.html#ae0e2e8cbee9642f7a915e2d43a86e8c4">Party::UpdatePlayersAndHirelingsEmotions</a></div><div class="ttdeci">void UpdatePlayersAndHirelingsEmotions()</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db4/_party_8cpp_source.html#l00657">Party.cpp:657</a></div></div>
+<div class="ttc" id="astruct_party_html_a639ea47a219242efb7eb9e6263e61e12"><div class="ttname"><a href="../../d0/d14/struct_party.html#a639ea47a219242efb7eb9e6263e61e12">Party::uCurrentMonthWeek</a></div><div class="ttdeci">unsigned int uCurrentMonthWeek</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00273">Party.h:273</a></div></div>
+<div class="ttc" id="a_engine_8cpp_html_a79dc644d7866ee9c87c3774a8fab9af6"><div class="ttname"><a href="../../d4/d68/_engine_8cpp.html#a79dc644d7866ee9c87c3774a8fab9af6">_494035_timed_effects__water_walking_damage__etc</a></div><div class="ttdeci">void _494035_timed_effects__water_walking_damage__etc()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d68/_engine_8cpp_source.html#l01623">Engine.cpp:1623</a></div></div>
+<div class="ttc" id="astruct_game_time_html_a00951cb2332c791ffd8142e0e9425875"><div class="ttname"><a href="../../df/dc2/struct_game_time.html#a00951cb2332c791ffd8142e0e9425875">GameTime::GetYears</a></div><div class="ttdeci">int GetYears() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d0e/_engine_2_time_8h_source.html#l00035">Time.h:35</a></div></div>
+<div class="ttc" id="a_player_8cpp_html_abac7ac837ed00fe097135a9a7573347a"><div class="ttname"><a href="../../d2/d82/_player_8cpp.html#abac7ac837ed00fe097135a9a7573347a">pPlayers</a></div><div class="ttdeci">NZIArray&lt; struct Player *, 5 &gt; pPlayers</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d82/_player_8cpp_source.html#l00046">Player.cpp:46</a></div></div>
+<div class="ttc" id="a_party_8cpp_html_a0412412ddbd214f2f2cdddf75b3185b7"><div class="ttname"><a href="../../da/db4/_party_8cpp.html#a0412412ddbd214f2f2cdddf75b3185b7">_uianim</a></div><div class="ttdeci">struct @45 _uianim</div></div>
+<div class="ttc" id="astruct_game_time_html_a72d75830ae38cb9176ae7370f0b116a0"><div class="ttname"><a href="../../df/dc2/struct_game_time.html#a72d75830ae38cb9176ae7370f0b116a0">GameTime::GetMinutesFraction</a></div><div class="ttdeci">int GetMinutesFraction() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d0e/_engine_2_time_8h_source.html#l00038">Time.h:38</a></div></div>
+<div class="ttc" id="astruct_game_time_html_a2b06bc31a7d3a042d1addbcb9a5d3a58"><div class="ttname"><a href="../../df/dc2/struct_game_time.html#a2b06bc31a7d3a042d1addbcb9a5d3a58">GameTime::GetSecondsFraction</a></div><div class="ttdeci">int GetSecondsFraction() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d0e/_engine_2_time_8h_source.html#l00037">Time.h:37</a></div></div>
+<div class="ttc" id="a_party_8cpp_html_a638b1d8b985f1c7f8b69f2d81286f98e"><div class="ttname"><a href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a></div><div class="ttdeci">Party * pParty</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db4/_party_8cpp_source.html#l00030">Party.cpp:30</a></div></div>
+<div class="ttc" id="aclass_u_i_animation_html_a8acfbce3c16dd94e434004ba3cd2163c"><div class="ttname"><a href="../../d0/d6f/class_u_i_animation.html#a8acfbce3c16dd94e434004ba3cd2163c">UIAnimation::uAnimLength</a></div><div class="ttdeci">int16_t uAnimLength</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d5e/_icon_frame_table_8h_source.html#l00075">IconFrameTable.h:75</a></div></div>
+<div class="ttc" id="aclass_u_i_animation_html_af6287bb806d40192b476cab940e98cca"><div class="ttname"><a href="../../d0/d6f/class_u_i_animation.html#af6287bb806d40192b476cab940e98cca">UIAnimation::icon</a></div><div class="ttdeci">class Icon * icon</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d5e/_icon_frame_table_8h_source.html#l00071">IconFrameTable.h:71</a></div></div>
+<div class="ttc" id="astruct_party_html_a15bb93aa5fc3a568f217700224f4fc30"><div class="ttname"><a href="../../d0/d14/struct_party.html#a15bb93aa5fc3a568f217700224f4fc30">Party::RestAndHeal</a></div><div class="ttdeci">void RestAndHeal()</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db4/_party_8cpp_source.html#l00793">Party.cpp:793</a></div></div>
+<div class="ttc" id="astruct_game_time_html_a52727e9719cc59a2bfedd0b56ee7d2ba"><div class="ttname"><a href="../../df/dc2/struct_game_time.html#a52727e9719cc59a2bfedd0b56ee7d2ba">GameTime::GetHoursOfDay</a></div><div class="ttdeci">int GetHoursOfDay() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d0e/_engine_2_time_8h_source.html#l00039">Time.h:39</a></div></div>
+<div class="ttc" id="a_n_p_c_8h_html_acaaa8b5b48efcd871d20e4e373884599ab0872aa49f608e4e7bc85f08167ac350"><div class="ttname"><a href="../../d9/dbc/_n_p_c_8h.html#acaaa8b5b48efcd871d20e4e373884599ab0872aa49f608e4e7bc85f08167ac350">Tracker</a></div><div class="ttdeci">@ Tracker</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dbc/_n_p_c_8h_source.html#l00011">NPC.h:11</a></div></div>
+<div class="ttc" id="aclass_u_i_animation_html_a4826a6893144f3898177d1fe68262323"><div class="ttname"><a href="../../d0/d6f/class_u_i_animation.html#a4826a6893144f3898177d1fe68262323">UIAnimation::uAnimTime</a></div><div class="ttdeci">int16_t uAnimTime</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d5e/_icon_frame_table_8h_source.html#l00074">IconFrameTable.h:74</a></div></div>
+<div class="ttc" id="astruct_game_time_html_a3d3f93e6db6e0fc0b6c18db39f286551"><div class="ttname"><a href="../../df/dc2/struct_game_time.html#a3d3f93e6db6e0fc0b6c18db39f286551">GameTime::GetWeeksOfMonth</a></div><div class="ttdeci">int GetWeeksOfMonth() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d0e/_engine_2_time_8h_source.html#l00042">Time.h:42</a></div></div>
+<div class="ttc" id="a_party_8cpp_html_a3fc24d2defbdaca88cb1e52031353d97"><div class="ttname"><a href="../../da/db4/_party_8cpp.html#a3fc24d2defbdaca88cb1e52031353d97">pUIAnim_Gold</a></div><div class="ttdeci">UIAnimation * pUIAnim_Gold</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db4/_party_8cpp_source.html#l00047">Party.cpp:47</a></div></div>
+<div class="ttc" id="a_n_p_c_8h_html_acaaa8b5b48efcd871d20e4e373884599a45f4e61dfb1852d701d865458d61a6ed"><div class="ttname"><a href="../../d9/dbc/_n_p_c_8h.html#acaaa8b5b48efcd871d20e4e373884599a45f4e61dfb1852d701d865458d61a6ed">Explorer</a></div><div class="ttdeci">@ Explorer</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dbc/_n_p_c_8h_source.html#l00049">NPC.h:49</a></div></div>
+<div class="ttc" id="astruct_party_html_a410e9cc317caf355b1e3572e46c223a2"><div class="ttname"><a href="../../d0/d14/struct_party.html#a410e9cc317caf355b1e3572e46c223a2">Party::pHirelings</a></div><div class="ttdeci">std::array&lt; NPCData, 2 &gt; pHirelings</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00311">Party.h:311</a></div></div>
+<div class="ttc" id="astruct_game_time_html_aae36e2f49426d2d6b1dae91b85cb45e7"><div class="ttname"><a href="../../df/dc2/struct_game_time.html#aae36e2f49426d2d6b1dae91b85cb45e7">GameTime::GetMonthsOfYear</a></div><div class="ttdeci">int GetMonthsOfYear() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d0e/_engine_2_time_8h_source.html#l00043">Time.h:43</a></div></div>
+<div class="ttc" id="astruct_game_time_html_aeb3a47b5676007549eab9dadfe6d9867"><div class="ttname"><a href="../../df/dc2/struct_game_time.html#aeb3a47b5676007549eab9dadfe6d9867">GameTime::AddMinutes</a></div><div class="ttdeci">void AddMinutes(int minutes)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d0e/_engine_2_time_8h_source.html#l00045">Time.h:45</a></div></div>
+<div class="ttc" id="astruct_party_html_a1e784ecf3cde874aa4c6a319d677cc36"><div class="ttname"><a href="../../d0/d14/struct_party.html#a1e784ecf3cde874aa4c6a319d677cc36">Party::uCurrentDayOfMonth</a></div><div class="ttdeci">unsigned int uCurrentDayOfMonth</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00274">Party.h:274</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_acc806b31cbf466ceba6555983d8b814d"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#acc806b31cbf466ceba6555983d8b814d">v3</a></div><div class="ttdeci">GLfloat GLfloat GLfloat GLfloat v3</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l00696">SDL_opengl_glext.h:696</a></div></div>
+<div class="ttc" id="a_party_8cpp_html_a57736ab9d5b15bd203ce973183301961"><div class="ttname"><a href="../../da/db4/_party_8cpp.html#a57736ab9d5b15bd203ce973183301961">pUIAnim_Food</a></div><div class="ttdeci">UIAnimation * pUIAnim_Food</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db4/_party_8cpp_source.html#l00046">Party.cpp:46</a></div></div>
+<div class="ttc" id="a_n_p_c_8h_html_acaaa8b5b48efcd871d20e4e373884599a2e868c33b66a8999b838783a3eb1a243"><div class="ttname"><a href="../../d9/dbc/_n_p_c_8h.html#acaaa8b5b48efcd871d20e4e373884599a2e868c33b66a8999b838783a3eb1a243">Pathfinder</a></div><div class="ttdeci">@ Pathfinder</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dbc/_n_p_c_8h_source.html#l00012">NPC.h:12</a></div></div>
+<div class="ttc" id="a_n_p_c_8cpp_html_a40d19895c574dba82a55ee7b3031f20b"><div class="ttname"><a href="../../d1/d6c/_n_p_c_8cpp.html#a40d19895c574dba82a55ee7b3031f20b">CheckHiredNPCSpeciality</a></div><div class="ttdeci">bool CheckHiredNPCSpeciality(unsigned int uProfession)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d6c/_n_p_c_8cpp_source.html#l00754">NPC.cpp:754</a></div></div>
+<div class="ttc" id="a_audio_player_8cpp_html_a3ee6d655d35b46ebac53ef678255f75b"><div class="ttname"><a href="../../d3/df2/_audio_player_8cpp.html#a3ee6d655d35b46ebac53ef678255f75b">pAudioPlayer</a></div><div class="ttdeci">AudioPlayer * pAudioPlayer</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/df2/_audio_player_8cpp_source.html#l00020">AudioPlayer.cpp:20</a></div></div>
+<div class="ttc" id="astruct_party_html_a1ab94ea5e0d694dbd0af19c41812ccd4"><div class="ttname"><a href="../../d0/d14/struct_party.html#a1ab94ea5e0d694dbd0af19c41812ccd4">Party::uCurrentYear</a></div><div class="ttdeci">unsigned int uCurrentYear</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00271">Party.h:271</a></div></div>
+<div class="ttc" id="astruct_game_time_html"><div class="ttname"><a href="../../df/dc2/struct_game_time.html">GameTime</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d0e/_engine_2_time_8h_source.html#l00014">Time.h:14</a></div></div>
+<div class="ttc" id="astruct_actor_html_a0cccbcf5491285664669a25726646402"><div class="ttname"><a href="../../da/d35/struct_actor.html#a0cccbcf5491285664669a25726646402">Actor::InitializeActors</a></div><div class="ttdeci">static void InitializeActors()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d59/_actor_8cpp_source.html#l03334">Actor.cpp:3334</a></div></div>
+<div class="ttc" id="a_n_p_c_8h_html_acaaa8b5b48efcd871d20e4e373884599aa73051e38214e2328e22c482b446defd"><div class="ttname"><a href="../../d9/dbc/_n_p_c_8h.html#acaaa8b5b48efcd871d20e4e373884599aa73051e38214e2328e22c482b446defd">Guide</a></div><div class="ttdeci">@ Guide</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dbc/_n_p_c_8h_source.html#l00010">NPC.h:10</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_0b6ee6e7e9547e675db4add2e5de97da.html">Engine</a></li><li class="navelem"><a class="el" href="../../da/db4/_party_8cpp.html">Party.cpp</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:04:02. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

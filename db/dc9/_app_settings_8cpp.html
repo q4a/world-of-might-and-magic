@@ -1,0 +1,611 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Файл C:/git/world-of-might-and-magic/Platform/Win/AppSettings.cpp</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('db/dc9/_app_settings_8cpp.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл AppSettings.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><a href="../../db/dc9/_app_settings_8cpp_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a60a3c5eb77ba41d287ec23b2b95f7746"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dc9/_app_settings_8cpp.html#a60a3c5eb77ba41d287ec23b2b95f7746">OS_GetAppStringRecursive</a> (HKEY parent_key, const char *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#ab25d8cd967ccbd19b630d7100ff8f67e">path</a>, char *out_string, int out_string_size)</td></tr>
+<tr class="separator:a60a3c5eb77ba41d287ec23b2b95f7746"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a830acc9f064bc234e0e87be40be2bf12"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dc9/_app_settings_8cpp.html#a830acc9f064bc234e0e87be40be2bf12">OS_GetAppString</a> (const char *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#ab25d8cd967ccbd19b630d7100ff8f67e">path</a>, char *out_string, int out_string_size)</td></tr>
+<tr class="separator:a830acc9f064bc234e0e87be40be2bf12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa98c64d3d239ead56412b33f374b380"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dc9/_app_settings_8cpp.html#aaa98c64d3d239ead56412b33f374b380">OS_GetAppInt</a> (const char *pKey, int uDefValue)</td></tr>
+<tr class="separator:aaa98c64d3d239ead56412b33f374b380"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a844495f44e2eb6f276fb6d327ddb26be"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dc9/_app_settings_8cpp.html#a844495f44e2eb6f276fb6d327ddb26be">OS_SetAppString</a> (const char *pKey, const char *pString)</td></tr>
+<tr class="separator:a844495f44e2eb6f276fb6d327ddb26be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bdbf3bd25c48674d64546c139e14b19"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dc9/_app_settings_8cpp.html#a2bdbf3bd25c48674d64546c139e14b19">OS_GetAppString</a> (const char *pKeyName, char *pOutString, int uBufLen, const char *pDefaultValue)</td></tr>
+<tr class="separator:a2bdbf3bd25c48674d64546c139e14b19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a716c74cc8645a28cfddb611fdebbe584"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dc9/_app_settings_8cpp.html#a716c74cc8645a28cfddb611fdebbe584">OS_SetAppInt</a> (const char *pKey, int <a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a26942fd2ed566ef553eae82d2c109c8f">val</a>)</td></tr>
+<tr class="separator:a716c74cc8645a28cfddb611fdebbe584"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Функции</h2>
+<a id="a60a3c5eb77ba41d287ec23b2b95f7746"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60a3c5eb77ba41d287ec23b2b95f7746">&#9670;&nbsp;</a></span>OS_GetAppStringRecursive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool OS_GetAppStringRecursive </td>
+          <td>(</td>
+          <td class="paramtype">HKEY&#160;</td>
+          <td class="paramname"><em>parent_key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>out_string</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>out_string_size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/dc9/_app_settings_8cpp_source.html">AppSettings.cpp</a> строка <a class="el" href="../../db/dc9/_app_settings_8cpp_source.html#l00003">3</a></p>
+<div class="fragment"><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;                                                                     {</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    <span class="keywordtype">char</span> current_key[128];</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <span class="keywordtype">char</span> path_tail[1024];</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span> *delimiter = strstr(<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#ab25d8cd967ccbd19b630d7100ff8f67e">path</a>, <span class="stringliteral">&quot;/&quot;</span>);</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keywordflow">if</span> (delimiter) {</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        strncpy(current_key, <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#ab25d8cd967ccbd19b630d7100ff8f67e">path</a>, delimiter - <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#ab25d8cd967ccbd19b630d7100ff8f67e">path</a>);</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        current_key[delimiter - <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#ab25d8cd967ccbd19b630d7100ff8f67e">path</a>] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        strcpy(path_tail, delimiter + 1);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="keywordflow">if</span> (!parent_key) {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            <span class="keywordflow">if</span> (!strcmpi(current_key, <span class="stringliteral">&quot;HKEY_CLASSES_ROOT&quot;</span>))</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;                parent_key = HKEY_CLASSES_ROOT;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!strcmpi(current_key, <span class="stringliteral">&quot;HKEY_CURRENT_CONFIG&quot;</span>))</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                parent_key = HKEY_CURRENT_CONFIG;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!strcmpi(current_key, <span class="stringliteral">&quot;HKEY_CURRENT_USER&quot;</span>))</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                parent_key = HKEY_CURRENT_USER;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!strcmpi(current_key, <span class="stringliteral">&quot;HKEY_LOCAL_MACHINE&quot;</span>))</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                parent_key = HKEY_LOCAL_MACHINE;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!strcmpi(current_key, <span class="stringliteral">&quot;HKEY_USERS&quot;</span>))</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                parent_key = HKEY_USERS;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            delimiter = strstr(path_tail, <span class="stringliteral">&quot;/&quot;</span>);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            <span class="keywordflow">if</span> (delimiter) {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                strncpy(current_key, path_tail, delimiter - path_tail);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                current_key[delimiter - path_tail] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                strcpy(path_tail, delimiter + 1);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            }</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        }</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a321ff419cd5252e54cf95e64dc6687ee">result</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        HKEY key;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordflow">if</span> (!RegOpenKeyExA(parent_key, current_key, 0,</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                           KEY_READ | KEY_WOW64_32KEY, &amp;key)) {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <span class="comment">/*int idx = 0, r;</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">            do {</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">            char value_name[1024];</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">            DWORD value_name_size = sizeof(value_name);</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">            r = RegEnumValueA(key, idx++, value_name, &amp;value_name_size, nullptr,</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">            nullptr, nullptr, nullptr);</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">            __debugbreak();</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment">            } while (r == ERROR_SUCCESS);*/</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a321ff419cd5252e54cf95e64dc6687ee">result</a> = <a class="code" href="../../db/dc9/_app_settings_8cpp.html#a60a3c5eb77ba41d287ec23b2b95f7746">OS_GetAppStringRecursive</a>(key, path_tail, out_string,</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                                              out_string_size);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            RegCloseKey(key);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a321ff419cd5252e54cf95e64dc6687ee">result</a>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        DWORD data_size = out_string_size;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordflow">if</span> (RegQueryValueExA(parent_key, <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#ab25d8cd967ccbd19b630d7100ff8f67e">path</a>, <span class="keyword">nullptr</span>, <span class="keyword">nullptr</span>,</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                             (LPBYTE)out_string, &amp;data_size))</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Используется в <a class="el" href="../../db/dc9/_app_settings_8cpp_source.html#l00068">OS_GetAppString()</a>.</p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../db/dc9/_app_settings_8cpp_a60a3c5eb77ba41d287ec23b2b95f7746_icgraph.svg" width="368" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a830acc9f064bc234e0e87be40be2bf12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a830acc9f064bc234e0e87be40be2bf12">&#9670;&nbsp;</a></span>OS_GetAppString() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool OS_GetAppString </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>out_string</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>out_string_size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/dc9/_app_settings_8cpp_source.html">AppSettings.cpp</a> строка <a class="el" href="../../db/dc9/_app_settings_8cpp_source.html#l00068">68</a></p>
+<div class="fragment"><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                                                                              {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../db/dc9/_app_settings_8cpp.html#a60a3c5eb77ba41d287ec23b2b95f7746">OS_GetAppStringRecursive</a>(<span class="keyword">nullptr</span>, <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#ab25d8cd967ccbd19b630d7100ff8f67e">path</a>, out_string, out_string_size);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d2/dd4/_launcher_8cpp_source.html#l00006">OS_GetAppStringRecursive()</a>.</p>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../db/dc9/_app_settings_8cpp_a830acc9f064bc234e0e87be40be2bf12_cgraph.svg" width="368" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="aaa98c64d3d239ead56412b33f374b380"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa98c64d3d239ead56412b33f374b380">&#9670;&nbsp;</a></span>OS_GetAppInt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int OS_GetAppInt </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pKey</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>uDefValue</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/dc9/_app_settings_8cpp_source.html">AppSettings.cpp</a> строка <a class="el" href="../../db/dc9/_app_settings_8cpp_source.html#l00073">73</a></p>
+<div class="fragment"><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                                                  {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    DWORD cbData;         <span class="comment">// [sp+8h] [bp-20h]@1</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    LPCSTR lpValueName;   <span class="comment">// [sp+Ch] [bp-1Ch]@1</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    DWORD dwDisposition;  <span class="comment">// [sp+10h] [bp-18h]@2</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    BYTE Data[4];         <span class="comment">// [sp+14h] [bp-14h]@5</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    HKEY hKey;            <span class="comment">// [sp+18h] [bp-10h]@1</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    HKEY phkResult;       <span class="comment">// [sp+1Ch] [bp-Ch]@1</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    HKEY v10;             <span class="comment">// [sp+20h] [bp-8h]@1</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    HKEY v11;             <span class="comment">// [sp+24h] [bp-4h]@1</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    lpValueName = pKey;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    v11 = 0;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    v10 = 0;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    hKey = 0;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    phkResult = 0;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    cbData = 4;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    *(<span class="keywordtype">int</span> *)Data = uDefValue;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordflow">if</span> (!RegOpenKeyExA(HKEY_LOCAL_MACHINE, <span class="stringliteral">&quot;SOFTWARE&quot;</span>, 0,</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                       KEY_READ | KEY_WOW64_32KEY, &amp;hKey)) {  <span class="comment">// for 64 bit</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keywordflow">if</span> (!RegCreateKeyExA(hKey, <span class="stringliteral">&quot;New World Computing&quot;</span>, 0, <span class="stringliteral">&quot;&quot;</span>, 0,</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                             KEY_ALL_ACCESS, 0, &amp;phkResult, &amp;dwDisposition)) {</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            <span class="keywordflow">if</span> (!RegCreateKeyExA(phkResult, <span class="stringliteral">&quot;Might and Magic VII&quot;</span>, 0, <span class="stringliteral">&quot;&quot;</span>, 0,</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                                 KEY_ALL_ACCESS, 0, &amp;v10, &amp;dwDisposition)) {</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                <span class="keywordflow">if</span> (!RegCreateKeyExA(v10, <span class="stringliteral">&quot;1.0&quot;</span>, 0, <span class="stringliteral">&quot;&quot;</span>, 0, KEY_ALL_ACCESS, 0,</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                                     &amp;v11, &amp;dwDisposition)) {</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                    LSTATUS status;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                    <span class="keywordflow">if</span> (status = RegQueryValueExA(v11, lpValueName, 0, 0, Data,</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                                                  &amp;cbData)) {</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                        status;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                        GetLastError();</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                        RegSetValueExA(v11, lpValueName, 0, 4, Data, 4);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                    }</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                    RegCloseKey(v11);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                }</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                RegCloseKey(v10);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            }</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            RegCloseKey(phkResult);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        }</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        RegCloseKey(hKey);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    }</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordflow">return</span> *(<span class="keywordtype">int</span> *)Data;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Используется в <a class="el" href="../../d8/dd4/_i_render_config_factory_8cpp_source.html#l00015">Graphics::IRenderConfigFactory::Create()</a>, <a class="el" href="../../d7/d55/_engine_config_factory_8cpp_source.html#l00012">Engine_::EngineConfigFactory::CreateDefaultConfiguration()</a> и <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l01101">Render::Initialize()</a>.</p>
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../db/dc9/_app_settings_8cpp_aaa98c64d3d239ead56412b33f374b380_icgraph.svg" width="100%" height="437"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a844495f44e2eb6f276fb6d327ddb26be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a844495f44e2eb6f276fb6d327ddb26be">&#9670;&nbsp;</a></span>OS_SetAppString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> OS_SetAppString </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pKey</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pString</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/dc9/_app_settings_8cpp_source.html">AppSettings.cpp</a> строка <a class="el" href="../../db/dc9/_app_settings_8cpp_source.html#l00118">118</a></p>
+<div class="fragment"><div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                                                            {</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keywordtype">size_t</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0928f6d0f0f794ba000a21dfae422136">v2</a>;                <span class="comment">// eax@5</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span> *lpValueName;  <span class="comment">// [sp+4h] [bp-1Ch]@1</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span> *Str;          <span class="comment">// [sp+8h] [bp-18h]@1</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    DWORD dwDisposition;      <span class="comment">// [sp+Ch] [bp-14h]@2</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    HKEY hKey;                <span class="comment">// [sp+10h] [bp-10h]@1</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    HKEY phkResult;           <span class="comment">// [sp+14h] [bp-Ch]@1</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    HKEY v8;                  <span class="comment">// [sp+18h] [bp-8h]@1</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    HKEY v9;                  <span class="comment">// [sp+1Ch] [bp-4h]@1</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    Str = pString;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    lpValueName = pKey;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    v9 = 0;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    v8 = 0;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    hKey = 0;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    phkResult = 0;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keywordflow">if</span> (!RegOpenKeyExA(HKEY_LOCAL_MACHINE, <span class="stringliteral">&quot;SOFTWARE&quot;</span>, 0,</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                       KEY_READ | KEY_WOW64_32KEY, &amp;hKey)) {</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        <span class="keywordflow">if</span> (!RegCreateKeyExA(hKey, <span class="stringliteral">&quot;New World Computing&quot;</span>, 0, <span class="stringliteral">&quot;&quot;</span>, 0,</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;                             KEY_ALL_ACCESS, 0, &amp;phkResult, &amp;dwDisposition)) {</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;            <span class="keywordflow">if</span> (!RegCreateKeyExA(phkResult, <span class="stringliteral">&quot;Might and Magic VII&quot;</span>, 0, <span class="stringliteral">&quot;&quot;</span>, 0,</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;                                 KEY_ALL_ACCESS, 0, &amp;v8, &amp;dwDisposition)) {</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;                <span class="keywordflow">if</span> (!RegCreateKeyExA(v8, <span class="stringliteral">&quot;1.0&quot;</span>, 0, <span class="stringliteral">&quot;&quot;</span>, 0, KEY_ALL_ACCESS, 0,</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;                                     &amp;v9, &amp;dwDisposition)) {</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;                    <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0928f6d0f0f794ba000a21dfae422136">v2</a> = strlen(Str);</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;                    RegSetValueExA(v9, lpValueName, 0, 1, (<span class="keyword">const</span> BYTE *)Str,</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;                                   <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0928f6d0f0f794ba000a21dfae422136">v2</a> + 1);</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;                    RegCloseKey(v9);</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;                }</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;                RegCloseKey(v8);</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;            }</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;            RegCloseKey(phkResult);</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        }</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        RegCloseKey(hKey);</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    }</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Используется в <a class="el" href="../../d9/d5c/_keyboard_8cpp_source.html#l00267">KeyboardActionMapping::StoreMappings()</a>.</p>
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../db/dc9/_app_settings_8cpp_a844495f44e2eb6f276fb6d327ddb26be_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a2bdbf3bd25c48674d64546c139e14b19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bdbf3bd25c48674d64546c139e14b19">&#9670;&nbsp;</a></span>OS_GetAppString() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> OS_GetAppString </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pKeyName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>pOutString</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>uBufLen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pDefaultValue</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/dc9/_app_settings_8cpp_source.html">AppSettings.cpp</a> строка <a class="el" href="../../db/dc9/_app_settings_8cpp_source.html#l00156">156</a></p>
+<div class="fragment"><div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;                                                {</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="comment">// LSTATUS (__stdcall *v4)(HKEY); // esi@1</span></div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    LSTATUS <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a321ff419cd5252e54cf95e64dc6687ee">result</a>;       <span class="comment">// eax@7</span></div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    DWORD Type;           <span class="comment">// [sp+Ch] [bp-24h]@5</span></div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    LPCSTR lpValueName;   <span class="comment">// [sp+10h] [bp-20h]@1</span></div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    DWORD cbData;         <span class="comment">// [sp+14h] [bp-1Ch]@1</span></div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    LPBYTE Dest;          <span class="comment">// [sp+18h] [bp-18h]@1</span></div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    DWORD dwDisposition;  <span class="comment">// [sp+1Ch] [bp-14h]@2</span></div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    HKEY phkResult;       <span class="comment">// [sp+20h] [bp-10h]@1</span></div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    HKEY hKey;            <span class="comment">// [sp+24h] [bp-Ch]@1</span></div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    HKEY v13;             <span class="comment">// [sp+28h] [bp-8h]@1</span></div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    HKEY v14;             <span class="comment">// [sp+2Ch] [bp-4h]@1</span></div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    cbData = uBufLen;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    Dest = (LPBYTE)pOutString;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    lpValueName = pKeyName;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    v14 = 0;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    v13 = 0;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    hKey = 0;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    phkResult = 0;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a321ff419cd5252e54cf95e64dc6687ee">result</a> = (LSTATUS)strncpy((<span class="keywordtype">char</span> *)Dest, pDefaultValue, uBufLen);</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <span class="keywordflow">if</span> (!RegOpenKeyExA(HKEY_LOCAL_MACHINE, <span class="stringliteral">&quot;SOFTWARE&quot;</span>, 0,</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;                       KEY_READ | KEY_WOW64_32KEY, &amp;hKey)) {</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        <span class="keywordflow">if</span> (!RegCreateKeyExA(hKey, <span class="stringliteral">&quot;New World Computing&quot;</span>, 0, <span class="stringliteral">&quot;&quot;</span>, 0,</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;                             KEY_ALL_ACCESS, 0, &amp;phkResult, &amp;dwDisposition)) {</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;            <span class="keywordflow">if</span> (!RegCreateKeyExA(phkResult, <span class="stringliteral">&quot;Might and Magic VII&quot;</span>, 0, <span class="stringliteral">&quot;&quot;</span>, 0,</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;                                 KEY_ALL_ACCESS, 0, &amp;v13, &amp;dwDisposition)) {</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;                <span class="keywordflow">if</span> (!RegCreateKeyExA(v13, <span class="stringliteral">&quot;1.0&quot;</span>, 0, <span class="stringliteral">&quot;&quot;</span>, 0, KEY_ALL_ACCESS, 0,</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;                                     &amp;v14, &amp;dwDisposition)) {</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;                    <span class="keywordflow">if</span> (RegQueryValueExA(v14, lpValueName, 0, &amp;Type, Dest,</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;                                         &amp;cbData))</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;                        GetLastError();</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;                    RegCloseKey(v14);</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;                    v14 = NULL;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;                }</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;                RegCloseKey(v13);</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;                v13 = NULL;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;            }</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;            RegCloseKey(phkResult);</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;            phkResult = NULL;</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        }</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        RegCloseKey(hKey);</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        hKey = NULL;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    }</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a716c74cc8645a28cfddb611fdebbe584"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a716c74cc8645a28cfddb611fdebbe584">&#9670;&nbsp;</a></span>OS_SetAppInt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> OS_SetAppInt </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pKey</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>val</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/dc9/_app_settings_8cpp_source.html">AppSettings.cpp</a> строка <a class="el" href="../../db/dc9/_app_settings_8cpp_source.html#l00204">204</a></p>
+<div class="fragment"><div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;                                             {</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span> *lpValueName;  <span class="comment">// [sp+4h] [bp-1Ch]@1</span></div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    BYTE Data[4];             <span class="comment">// [sp+8h] [bp-18h]@1</span></div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    DWORD dwDisposition;      <span class="comment">// [sp+Ch] [bp-14h]@2</span></div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    HKEY hKey;                <span class="comment">// [sp+10h] [bp-10h]@1</span></div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    HKEY phkResult;           <span class="comment">// [sp+14h] [bp-Ch]@1</span></div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    HKEY v7;                  <span class="comment">// [sp+18h] [bp-8h]@1</span></div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    HKEY v8;                  <span class="comment">// [sp+1Ch] [bp-4h]@1</span></div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160; </div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    *(<span class="keywordtype">int</span> *)Data = <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a26942fd2ed566ef553eae82d2c109c8f">val</a>;</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    lpValueName = pKey;</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    v8 = 0;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    v7 = 0;</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    hKey = 0;</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    phkResult = 0;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    <span class="keywordflow">if</span> (!RegOpenKeyExA(HKEY_LOCAL_MACHINE, <span class="stringliteral">&quot;SOFTWARE&quot;</span>, 0,</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;                       KEY_READ | KEY_WOW64_32KEY, &amp;hKey)) {</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        <span class="keywordflow">if</span> (!RegCreateKeyExA(hKey, <span class="stringliteral">&quot;New World Computing&quot;</span>, 0, <span class="stringliteral">&quot;&quot;</span>, 0,</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;                             KEY_ALL_ACCESS, 0, &amp;phkResult, &amp;dwDisposition)) {</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;            <span class="keywordflow">if</span> (!RegCreateKeyExA(phkResult, <span class="stringliteral">&quot;Might and Magic VII&quot;</span>, 0, <span class="stringliteral">&quot;&quot;</span>, 0,</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;                                 KEY_ALL_ACCESS, 0, &amp;v7, &amp;dwDisposition)) {</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;                <span class="keywordflow">if</span> (!RegCreateKeyExA(v7, <span class="stringliteral">&quot;1.0&quot;</span>, 0, <span class="stringliteral">&quot;&quot;</span>, 0, KEY_ALL_ACCESS, 0,</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;                                     &amp;v8, &amp;dwDisposition)) {</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;                    RegSetValueExA(v8, lpValueName, 0, 4, Data, 4);</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;                    RegCloseKey(v8);</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;                }</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;                RegCloseKey(v7);</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;            }</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;            RegCloseKey(phkResult);</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        }</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        RegCloseKey(hKey);</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    }</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Используется в <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l00478">Engine::Deinitialize()</a> и <a class="el" href="../../df/d21/_game_menu_8cpp_source.html#l00070">Application::Menu::EventLoop()</a>.</p>
+<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../db/dc9/_app_settings_8cpp_a716c74cc8645a28cfddb611fdebbe584_icgraph.svg" width="100%" height="378"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_ab25d8cd967ccbd19b630d7100ff8f67e"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#ab25d8cd967ccbd19b630d7100ff8f67e">path</a></div><div class="ttdeci">GLsizei const GLchar *const  * path</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l03733">SDL_opengl_glext.h:3733</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a321ff419cd5252e54cf95e64dc6687ee"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a321ff419cd5252e54cf95e64dc6687ee">result</a></div><div class="ttdeci">GLuint64EXT * result</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l09435">SDL_opengl_glext.h:9435</a></div></div>
+<div class="ttc" id="a_app_settings_8cpp_html_a60a3c5eb77ba41d287ec23b2b95f7746"><div class="ttname"><a href="../../db/dc9/_app_settings_8cpp.html#a60a3c5eb77ba41d287ec23b2b95f7746">OS_GetAppStringRecursive</a></div><div class="ttdeci">bool OS_GetAppStringRecursive(HKEY parent_key, const char *path, char *out_string, int out_string_size)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/dc9/_app_settings_8cpp_source.html#l00003">AppSettings.cpp:3</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a26942fd2ed566ef553eae82d2c109c8f"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a26942fd2ed566ef553eae82d2c109c8f">val</a></div><div class="ttdeci">GLuint GLfloat * val</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l01495">SDL_opengl_glext.h:1495</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a0928f6d0f0f794ba000a21dfae422136"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0928f6d0f0f794ba000a21dfae422136">v2</a></div><div class="ttdeci">GLfloat GLfloat GLfloat v2</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l00695">SDL_opengl_glext.h:695</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_46f0a310448968fe371c870cd868aa1f.html">Platform</a></li><li class="navelem"><a class="el" href="../../dir_eefd6e2a62a64ea65c8cae4eef020b54.html">Win</a></li><li class="navelem"><a class="el" href="../../db/dc9/_app_settings_8cpp.html">AppSettings.cpp</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:04:22. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

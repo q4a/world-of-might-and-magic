@@ -1,0 +1,750 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Класс TextureD3D</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d8/d6b/class_texture_d3_d.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pro-methods">Защищенные члены</a> &#124;
+<a href="#pro-static-methods">Защищенные статические члены</a> &#124;
+<a href="#pro-attribs">Защищенные данные</a> &#124;
+<a href="#friends">Друзья</a> &#124;
+<a href="../../d7/de9/class_texture_d3_d-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс TextureD3D</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="../../d7/dab/_texture_d3_d_8h_source.html">TextureD3D.h</a>&gt;</code></p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Граф наследования:TextureD3D:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d1/d6a/class_texture_d3_d__inherit__graph.svg" width="102" height="187"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">см. легенду</a>]</span></center></div>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="../../closed.png" alt="+"/> Граф связей класса TextureD3D:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d5/d69/class_texture_d3_d__coll__graph.svg" width="107" height="368"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a834274de2907cfbd6debdece230f7ad0"><td class="memItemLeft" align="right" valign="top">IDirectDrawSurface *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d6b/class_texture_d3_d.html#a834274de2907cfbd6debdece230f7ad0">GetDirectDrawSurface</a> ()</td></tr>
+<tr class="separator:a834274de2907cfbd6debdece230f7ad0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1dd80c295e3be854b376e865c937c62"><td class="memItemLeft" align="right" valign="top">IDirect3DTexture2 *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d6b/class_texture_d3_d.html#ae1dd80c295e3be854b376e865c937c62">GetDirect3DTexture</a> ()</td></tr>
+<tr class="separator:ae1dd80c295e3be854b376e865c937c62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_image"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_image')"><img src="../../closed.png" alt="-"/>&#160;Открытые члены унаследованные от <a class="el" href="../../de/d73/class_image.html">Image</a></td></tr>
+<tr class="memitem:acd9726d92935db3c39feda65e93ff54a inherit pub_methods_class_image"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d73/class_image.html#acd9726d92935db3c39feda65e93ff54a">Image</a> (bool <a class="el" href="../../de/d73/class_image.html#a1f1d932d749889931c2bab5f977b1ecf">lazy_initialization</a>=true)</td></tr>
+<tr class="separator:acd9726d92935db3c39feda65e93ff54a inherit pub_methods_class_image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46561cd7dcf7e203e9579737e8ace4eb inherit pub_methods_class_image"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d73/class_image.html#a46561cd7dcf7e203e9579737e8ace4eb">~Image</a> ()</td></tr>
+<tr class="separator:a46561cd7dcf7e203e9579737e8ace4eb inherit pub_methods_class_image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9241b1c53141c78273e4060a91634d47 inherit pub_methods_class_image"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d73/class_image.html#a9241b1c53141c78273e4060a91634d47">GetWidth</a> ()</td></tr>
+<tr class="separator:a9241b1c53141c78273e4060a91634d47 inherit pub_methods_class_image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5093fa64598a4d7e0c70d43fe67e35cd inherit pub_methods_class_image"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d73/class_image.html#a5093fa64598a4d7e0c70d43fe67e35cd">GetHeight</a> ()</td></tr>
+<tr class="separator:a5093fa64598a4d7e0c70d43fe67e35cd inherit pub_methods_class_image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfd22d055cadfeed00655c82f4ffdaa2 inherit pub_methods_class_image"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d73/class_image.html#acfd22d055cadfeed00655c82f4ffdaa2">GetPixels</a> (<a class="el" href="../../d9/de5/_image_8h.html#a9852684147e651e988ed71ddc71426d5">IMAGE_FORMAT</a> <a class="el" href="../../d3/d78/_s_d_l__audio_8h.html#a71a65ffd977afe9c3fef116a5bc9ee27">format</a>)</td></tr>
+<tr class="separator:acfd22d055cadfeed00655c82f4ffdaa2 inherit pub_methods_class_image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1574400dc2891a3d304703738625ac13 inherit pub_methods_class_image"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/de5/_image_8h.html#a9852684147e651e988ed71ddc71426d5">IMAGE_FORMAT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d73/class_image.html#a1574400dc2891a3d304703738625ac13">GetFormat</a> () const</td></tr>
+<tr class="separator:a1574400dc2891a3d304703738625ac13 inherit pub_methods_class_image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79e0e96332914caa0816c7d34822b9bf inherit pub_methods_class_image"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d73/class_image.html#a79e0e96332914caa0816c7d34822b9bf">Release</a> ()</td></tr>
+<tr class="separator:a79e0e96332914caa0816c7d34822b9bf inherit pub_methods_class_image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Защищенные члены</h2></td></tr>
+<tr class="memitem:aa52b211fb8feb453caaa0b65db8c92ab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d6b/class_texture_d3_d.html#aa52b211fb8feb453caaa0b65db8c92ab">SetDirectDrawSurface</a> (IDirectDrawSurface *<a class="el" href="../../d8/d6b/class_texture_d3_d.html#ab5b1327cbccf9b2e75aad48013e0cc2e">dds</a>)</td></tr>
+<tr class="separator:aa52b211fb8feb453caaa0b65db8c92ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab108f92b0f066c12a41999c2d2f18202"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d6b/class_texture_d3_d.html#ab108f92b0f066c12a41999c2d2f18202">SetDirect3DTexture2</a> (IDirect3DTexture2 *<a class="el" href="../../d8/d6b/class_texture_d3_d.html#a07a7fd5f555323a9b95ed80fa356af64">d3dt</a>)</td></tr>
+<tr class="separator:ab108f92b0f066c12a41999c2d2f18202"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7849f168c673faa11b21d11b1c75e63c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d6b/class_texture_d3_d.html#a7849f168c673faa11b21d11b1c75e63c">TextureD3D</a> (bool <a class="el" href="../../de/d73/class_image.html#a1f1d932d749889931c2bab5f977b1ecf">lazy_initialization</a>=true)</td></tr>
+<tr class="separator:a7849f168c673faa11b21d11b1c75e63c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f4c8de34ea03b627e9b6b2211cd02b4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d6b/class_texture_d3_d.html#a1f4c8de34ea03b627e9b6b2211cd02b4">~TextureD3D</a> ()</td></tr>
+<tr class="separator:a1f4c8de34ea03b627e9b6b2211cd02b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9aad5456b3d27e4886155bfd1d87e173"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d6b/class_texture_d3_d.html#a9aad5456b3d27e4886155bfd1d87e173">LoadImageData</a> ()</td></tr>
+<tr class="separator:a9aad5456b3d27e4886155bfd1d87e173"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_class_texture"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_texture')"><img src="../../closed.png" alt="-"/>&#160;Защищенные члены унаследованные от <a class="el" href="../../d2/d7f/class_texture.html">Texture</a></td></tr>
+<tr class="memitem:af6fad6785a33ca3fb5fed571cd038db7 inherit pro_methods_class_texture"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d7f/class_texture.html#af6fad6785a33ca3fb5fed571cd038db7">Texture</a> (bool <a class="el" href="../../de/d73/class_image.html#a1f1d932d749889931c2bab5f977b1ecf">lazy_initialization</a>=true)</td></tr>
+<tr class="separator:af6fad6785a33ca3fb5fed571cd038db7 inherit pro_methods_class_texture"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-methods"></a>
+Защищенные статические члены</h2></td></tr>
+<tr class="memitem:a33370ad1d462caf9b7d563dd03996558"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d2/d7f/class_texture.html">Texture</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d6b/class_texture_d3_d.html#a33370ad1d462caf9b7d563dd03996558">Create</a> (unsigned int <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#a9a82cf3caff84cabc4598e2619faac17">width</a>, unsigned int <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#aa352f2804b9902ac30769c00dde75d5f">height</a>, <a class="el" href="../../d9/de5/_image_8h.html#a9852684147e651e988ed71ddc71426d5">IMAGE_FORMAT</a> <a class="el" href="../../d3/d78/_s_d_l__audio_8h.html#a71a65ffd977afe9c3fef116a5bc9ee27">format</a>, const <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#ada7ad693ea2e311b8103f4693fc35f80">pixels</a>)</td></tr>
+<tr class="separator:a33370ad1d462caf9b7d563dd03996558"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b5f09db025f1a8c3eded0c6a8c79ec8"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d2/d7f/class_texture.html">Texture</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d6b/class_texture_d3_d.html#a9b5f09db025f1a8c3eded0c6a8c79ec8">Create</a> (<a class="el" href="../../d7/d42/class_image_loader.html">ImageLoader</a> *<a class="el" href="../../de/d73/class_image.html#a083f6bbdcfcd7b6f9bb9f16c64406c0f">loader</a>)</td></tr>
+<tr class="separator:a9b5f09db025f1a8c3eded0c6a8c79ec8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Защищенные данные</h2></td></tr>
+<tr class="memitem:ab5b1327cbccf9b2e75aad48013e0cc2e"><td class="memItemLeft" align="right" valign="top">IDirectDrawSurface *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d6b/class_texture_d3_d.html#ab5b1327cbccf9b2e75aad48013e0cc2e">dds</a></td></tr>
+<tr class="separator:ab5b1327cbccf9b2e75aad48013e0cc2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07a7fd5f555323a9b95ed80fa356af64"><td class="memItemLeft" align="right" valign="top">IDirect3DTexture2 *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d6b/class_texture_d3_d.html#a07a7fd5f555323a9b95ed80fa356af64">d3dt</a></td></tr>
+<tr class="separator:a07a7fd5f555323a9b95ed80fa356af64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_class_image"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_image')"><img src="../../closed.png" alt="-"/>&#160;Защищенные данные унаследованные от <a class="el" href="../../de/d73/class_image.html">Image</a></td></tr>
+<tr class="memitem:a1f1d932d749889931c2bab5f977b1ecf inherit pro_attribs_class_image"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d73/class_image.html#a1f1d932d749889931c2bab5f977b1ecf">lazy_initialization</a> = 0</td></tr>
+<tr class="separator:a1f1d932d749889931c2bab5f977b1ecf inherit pro_attribs_class_image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ba777aac6f660d1b28071f99229e132 inherit pro_attribs_class_image"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d73/class_image.html#a0ba777aac6f660d1b28071f99229e132">initialized</a> = 0</td></tr>
+<tr class="separator:a0ba777aac6f660d1b28071f99229e132 inherit pro_attribs_class_image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a083f6bbdcfcd7b6f9bb9f16c64406c0f inherit pro_attribs_class_image"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/d42/class_image_loader.html">ImageLoader</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d73/class_image.html#a083f6bbdcfcd7b6f9bb9f16c64406c0f">loader</a> = NULL</td></tr>
+<tr class="separator:a083f6bbdcfcd7b6f9bb9f16c64406c0f inherit pro_attribs_class_image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa2cc744ff3969ac6cb63ca05a40e5f6 inherit pro_attribs_class_image"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d73/class_image.html#aaa2cc744ff3969ac6cb63ca05a40e5f6">width</a> = 0</td></tr>
+<tr class="separator:aaa2cc744ff3969ac6cb63ca05a40e5f6 inherit pro_attribs_class_image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f4e463326771ddb955ee17032a78d77 inherit pro_attribs_class_image"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d73/class_image.html#a9f4e463326771ddb955ee17032a78d77">height</a> = 0</td></tr>
+<tr class="separator:a9f4e463326771ddb955ee17032a78d77 inherit pro_attribs_class_image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c6b2a8dfc83049e12c972a87039777b inherit pro_attribs_class_image"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/de5/_image_8h.html#a9852684147e651e988ed71ddc71426d5">IMAGE_FORMAT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d73/class_image.html#a7c6b2a8dfc83049e12c972a87039777b">native_format</a> = <a class="el" href="../../d9/de5/_image_8h.html#a9852684147e651e988ed71ddc71426d5a117148770d7556407e3e3d594f13d5c1">IMAGE_INVALID_FORMAT</a></td></tr>
+<tr class="separator:a7c6b2a8dfc83049e12c972a87039777b inherit pro_attribs_class_image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f336e60fe4b333b0fb2dd0a4bb79283 inherit pro_attribs_class_image"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d73/class_image.html#a7f336e60fe4b333b0fb2dd0a4bb79283">pixels</a> [<a class="el" href="../../d9/de5/_image_8h.html#a9852684147e651e988ed71ddc71426d5a790f82d06a241db989ed7c7075655bf9">IMAGE_NUM_FORMATS</a>]</td></tr>
+<tr class="separator:a7f336e60fe4b333b0fb2dd0a4bb79283 inherit pro_attribs_class_image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Друзья</h2></td></tr>
+<tr class="memitem:ad962652a5ca57a062e87b84d43dad6a3"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d6b/class_texture_d3_d.html#ad962652a5ca57a062e87b84d43dad6a3">Render</a></td></tr>
+<tr class="separator:ad962652a5ca57a062e87b84d43dad6a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Дополнительные унаследованные члены</h2></td></tr>
+<tr class="inherit_header pub_static_methods_class_image"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_class_image')"><img src="../../closed.png" alt="-"/>&#160;Открытые статические члены унаследованные от <a class="el" href="../../de/d73/class_image.html">Image</a></td></tr>
+<tr class="memitem:aafa267b1b060db2b6bb76bd36c5812f0 inherit pub_static_methods_class_image"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../de/d73/class_image.html">Image</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d73/class_image.html#aafa267b1b060db2b6bb76bd36c5812f0">Create</a> (unsigned int <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#a9a82cf3caff84cabc4598e2619faac17">width</a>, unsigned int <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#aa352f2804b9902ac30769c00dde75d5f">height</a>, <a class="el" href="../../d9/de5/_image_8h.html#a9852684147e651e988ed71ddc71426d5">IMAGE_FORMAT</a> <a class="el" href="../../d3/d78/_s_d_l__audio_8h.html#a71a65ffd977afe9c3fef116a5bc9ee27">format</a>, const <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#ada7ad693ea2e311b8103f4693fc35f80">pixels</a>=nullptr)</td></tr>
+<tr class="separator:aafa267b1b060db2b6bb76bd36c5812f0 inherit pub_static_methods_class_image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3626651fd888baf35204002a7c7539ca inherit pub_static_methods_class_image"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../de/d73/class_image.html">Image</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d73/class_image.html#a3626651fd888baf35204002a7c7539ca">Create</a> (<a class="el" href="../../d7/d42/class_image_loader.html">ImageLoader</a> *<a class="el" href="../../de/d73/class_image.html#a083f6bbdcfcd7b6f9bb9f16c64406c0f">loader</a>)</td></tr>
+<tr class="separator:a3626651fd888baf35204002a7c7539ca inherit pub_static_methods_class_image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock">
+<p class="definition">См. определение в файле <a class="el" href="../../d7/dab/_texture_d3_d_8h_source.html">TextureD3D.h</a> строка <a class="el" href="../../d7/dab/_texture_d3_d_8h_source.html#l00006">6</a></p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a7849f168c673faa11b21d11b1c75e63c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7849f168c673faa11b21d11b1c75e63c">&#9670;&nbsp;</a></span>TextureD3D()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TextureD3D::TextureD3D </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>lazy_initialization</em> = <code>true</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d7/dab/_texture_d3_d_8h_source.html">TextureD3D.h</a> строка <a class="el" href="../../d7/dab/_texture_d3_d_8h_source.html#l00021">21</a></p>
+<div class="fragment"><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        : <a class="code" href="../../d2/d7f/class_texture.html#af6fad6785a33ca3fb5fed571cd038db7">Texture</a>(<a class="code" href="../../de/d73/class_image.html#a1f1d932d749889931c2bab5f977b1ecf">lazy_initialization</a>), <a class="code" href="../../d8/d6b/class_texture_d3_d.html#ab5b1327cbccf9b2e75aad48013e0cc2e">dds</a>(<span class="keyword">nullptr</span>), <a class="code" href="../../d8/d6b/class_texture_d3_d.html#a07a7fd5f555323a9b95ed80fa356af64">d3dt</a>(<span class="keyword">nullptr</span>) {}</div>
+</div><!-- fragment -->
+<p class="reference">Используется в <a class="el" href="../../d7/d5b/_texture_d3_d_8cpp_source.html#l00006">Create()</a>.</p>
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d8/d6b/class_texture_d3_d_a7849f168c673faa11b21d11b1c75e63c_icgraph.svg" width="562" height="547"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a1f4c8de34ea03b627e9b6b2211cd02b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f4c8de34ea03b627e9b6b2211cd02b4">&#9670;&nbsp;</a></span>~TextureD3D()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TextureD3D::~TextureD3D </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d7/d5b/_texture_d3_d_8cpp_source.html">TextureD3D.cpp</a> строка <a class="el" href="../../d7/d5b/_texture_d3_d_8cpp_source.html#l00087">87</a></p>
+<div class="fragment"><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                        {</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <a class="code" href="../../da/d20/_i_render_8h.html#a21d31464313b2c66ff88d4aa97b66143">render</a>-&gt;RemoveTextureFromDevice(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    this-&gt;<a class="code" href="../../d8/d6b/class_texture_d3_d.html#a07a7fd5f555323a9b95ed80fa356af64">d3dt</a> = NULL;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    this-&gt;<a class="code" href="../../d8/d6b/class_texture_d3_d.html#ab5b1327cbccf9b2e75aad48013e0cc2e">dds</a> = NULL;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d7/dab/_texture_d3_d_8h_source.html#l00025">d3dt</a>, <a class="el" href="../../d7/dab/_texture_d3_d_8h_source.html#l00024">dds</a> и <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l00052">render</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a834274de2907cfbd6debdece230f7ad0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a834274de2907cfbd6debdece230f7ad0">&#9670;&nbsp;</a></span>GetDirectDrawSurface()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IDirectDrawSurface * TextureD3D::GetDirectDrawSurface </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d7/d5b/_texture_d3_d_8cpp_source.html">TextureD3D.cpp</a> строка <a class="el" href="../../d7/d5b/_texture_d3_d_8cpp_source.html#l00049">49</a></p>
+<div class="fragment"><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                                                     {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">if</span> (!this-&gt;<a class="code" href="../../de/d73/class_image.html#a0ba777aac6f660d1b28071f99229e132">initialized</a>) {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        this-&gt;<a class="code" href="../../d8/d6b/class_texture_d3_d.html#a9aad5456b3d27e4886155bfd1d87e173">LoadImageData</a>();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">return</span> this-&gt;<a class="code" href="../../d8/d6b/class_texture_d3_d.html#ab5b1327cbccf9b2e75aad48013e0cc2e">dds</a>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d7/dab/_texture_d3_d_8h_source.html#l00024">dds</a>, <a class="el" href="../../d9/de5/_image_8h_source.html#l00046">Image::initialized</a> и <a class="el" href="../../d7/d5b/_texture_d3_d_8cpp_source.html#l00065">LoadImageData()</a>.</p>
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d8/d6b/class_texture_d3_d_a834274de2907cfbd6debdece230f7ad0_cgraph.svg" width="610" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ae1dd80c295e3be854b376e865c937c62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1dd80c295e3be854b376e865c937c62">&#9670;&nbsp;</a></span>GetDirect3DTexture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IDirect3DTexture2 * TextureD3D::GetDirect3DTexture </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d7/d5b/_texture_d3_d_8cpp_source.html">TextureD3D.cpp</a> строка <a class="el" href="../../d7/d5b/_texture_d3_d_8cpp_source.html#l00057">57</a></p>
+<div class="fragment"><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                                                  {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">if</span> (!this-&gt;<a class="code" href="../../de/d73/class_image.html#a0ba777aac6f660d1b28071f99229e132">initialized</a>) {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        this-&gt;<a class="code" href="../../d8/d6b/class_texture_d3_d.html#a9aad5456b3d27e4886155bfd1d87e173">LoadImageData</a>();</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">return</span> this-&gt;<a class="code" href="../../d8/d6b/class_texture_d3_d.html#a07a7fd5f555323a9b95ed80fa356af64">d3dt</a>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d7/dab/_texture_d3_d_8h_source.html#l00025">d3dt</a>, <a class="el" href="../../d9/de5/_image_8h_source.html#l00046">Image::initialized</a> и <a class="el" href="../../d7/d5b/_texture_d3_d_8cpp_source.html#l00065">LoadImageData()</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l02277">Render::DrawProjectile()</a>.</p>
+<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d8/d6b/class_texture_d3_d_ae1dd80c295e3be854b376e865c937c62_cgraph.svg" width="639" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d8/d6b/class_texture_d3_d_ae1dd80c295e3be854b376e865c937c62_icgraph.svg" width="426" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a33370ad1d462caf9b7d563dd03996558"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33370ad1d462caf9b7d563dd03996558">&#9670;&nbsp;</a></span>Create() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d2/d7f/class_texture.html">Texture</a> * TextureD3D::Create </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d9/de5/_image_8h.html#a9852684147e651e988ed71ddc71426d5">IMAGE_FORMAT</a>&#160;</td>
+          <td class="paramname"><em>format</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *&#160;</td>
+          <td class="paramname"><em>pixels</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d7/d5b/_texture_d3_d_8cpp_source.html">TextureD3D.cpp</a> строка <a class="el" href="../../d7/d5b/_texture_d3_d_8cpp_source.html#l00006">6</a></p>
+<div class="fragment"><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;                                                       {</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a9a82cf3caff84cabc4598e2619faac17">width</a> == 0 || <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#aa352f2804b9902ac30769c00dde75d5f">height</a> == 0) <a class="code" href="../../d9/d30/_s_d_l__assert_8h.html#afedcea68cf85ee469ab1ea390bbe0abb">__debugbreak</a>();</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keyword">auto</span> tex = <span class="keyword">new</span> <a class="code" href="../../d8/d6b/class_texture_d3_d.html#a7849f168c673faa11b21d11b1c75e63c">TextureD3D</a>();</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keywordflow">if</span> (tex) {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        tex-&gt;initialized = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        tex-&gt;width = <a class="code" href="../../de/d73/class_image.html#aaa2cc744ff3969ac6cb63ca05a40e5f6">width</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        tex-&gt;height = <a class="code" href="../../de/d73/class_image.html#a9f4e463326771ddb955ee17032a78d77">height</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        tex-&gt;native_format = <a class="code" href="../../d3/d78/_s_d_l__audio_8h.html#a71a65ffd977afe9c3fef116a5bc9ee27">format</a>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> num_pixels = tex-&gt;GetWidth() * tex-&gt;GetHeight();</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> num_pixels_bytes =</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            num_pixels * <a class="code" href="../../d0/dac/_image_8cpp.html#a2d49a4e268507e69f4afe34f9814b0df">IMAGE_FORMAT_BytesPerPixel</a>(<a class="code" href="../../d3/d78/_s_d_l__audio_8h.html#a71a65ffd977afe9c3fef116a5bc9ee27">format</a>);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        tex-&gt;pixels[<a class="code" href="../../d3/d78/_s_d_l__audio_8h.html#a71a65ffd977afe9c3fef116a5bc9ee27">format</a>] = <span class="keyword">new</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>[num_pixels_bytes];</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../df/dc4/_s_d_l__opengl_8h.html#ada7ad693ea2e311b8103f4693fc35f80">pixels</a>) {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            memcpy(tex-&gt;pixels[<a class="code" href="../../d3/d78/_s_d_l__audio_8h.html#a71a65ffd977afe9c3fef116a5bc9ee27">format</a>], <a class="code" href="../../df/dc4/_s_d_l__opengl_8h.html#ada7ad693ea2e311b8103f4693fc35f80">pixels</a>, num_pixels_bytes);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            memset(tex-&gt;pixels[<a class="code" href="../../d3/d78/_s_d_l__audio_8h.html#a71a65ffd977afe9c3fef116a5bc9ee27">format</a>], 0, num_pixels_bytes);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        }</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordflow">if</span> (tex-&gt;initialized &amp;&amp; tex-&gt;native_format != <a class="code" href="../../d9/de5/_image_8h.html#a9852684147e651e988ed71ddc71426d5a117148770d7556407e3e3d594f13d5c1">IMAGE_INVALID_FORMAT</a>) {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <span class="comment">// tex-&gt;pixels[format] = pixels;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            <span class="comment">// tex-&gt;initialized = render-&gt;MoveTextureToDevice(tex); nope</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            <span class="keywordflow">if</span> (!tex-&gt;initialized) {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                <a class="code" href="../../d9/d30/_s_d_l__assert_8h.html#afedcea68cf85ee469ab1ea390bbe0abb">__debugbreak</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            }</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        }</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    }</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordflow">return</span> tex;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d9/d30/_s_d_l__assert_8h.html#afedcea68cf85ee469ab1ea390bbe0abb">__debugbreak()</a>, <a class="el" href="../../d9/de5/_image_8h_source.html#l00050">Image::height</a>, <a class="el" href="../../d0/dac/_image_8cpp_source.html#l00046">IMAGE_FORMAT_BytesPerPixel()</a>, <a class="el" href="../../d9/de5/_image_8h_source.html#l00012">IMAGE_INVALID_FORMAT</a>, <a class="el" href="../../d7/dab/_texture_d3_d_8h_source.html#l00021">TextureD3D()</a> и <a class="el" href="../../d9/de5/_image_8h_source.html#l00049">Image::width</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l00116">Render::CreateSprite()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l00112">Render::CreateTexture()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l00088">Render::CreateTexture_Alpha()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l00104">Render::CreateTexture_Blank()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l00080">Render::CreateTexture_ColorKey()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l00100">Render::CreateTexture_PCXFromFile()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l00092">Render::CreateTexture_PCXFromIconsLOD()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l00096">Render::CreateTexture_PCXFromNewLOD()</a> и <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l00084">Render::CreateTexture_Solid()</a>.</p>
+<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d8/d6b/class_texture_d3_d_a33370ad1d462caf9b7d563dd03996558_cgraph.svg" width="410" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-7-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-7-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d8/d6b/class_texture_d3_d_a33370ad1d462caf9b7d563dd03996558_icgraph.svg" width="347" height="547"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a9b5f09db025f1a8c3eded0c6a8c79ec8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b5f09db025f1a8c3eded0c6a8c79ec8">&#9670;&nbsp;</a></span>Create() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d2/d7f/class_texture.html">Texture</a> * TextureD3D::Create </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d7/d42/class_image_loader.html">ImageLoader</a> *&#160;</td>
+          <td class="paramname"><em>loader</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d7/d5b/_texture_d3_d_8cpp_source.html">TextureD3D.cpp</a> строка <a class="el" href="../../d7/d5b/_texture_d3_d_8cpp_source.html#l00040">40</a></p>
+<div class="fragment"><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                                               {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">auto</span> tex = <span class="keyword">new</span> <a class="code" href="../../d8/d6b/class_texture_d3_d.html#a7849f168c673faa11b21d11b1c75e63c">TextureD3D</a>();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">if</span> (tex) {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        tex-&gt;loader = <a class="code" href="../../de/d73/class_image.html#a083f6bbdcfcd7b6f9bb9f16c64406c0f">loader</a>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordflow">return</span> tex;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d9/de5/_image_8h_source.html#l00047">Image::loader</a> и <a class="el" href="../../d7/dab/_texture_d3_d_8h_source.html#l00021">TextureD3D()</a>.</p>
+<div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-8-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-8-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d8/d6b/class_texture_d3_d_a9b5f09db025f1a8c3eded0c6a8c79ec8_cgraph.svg" width="362" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="aa52b211fb8feb453caaa0b65db8c92ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa52b211fb8feb453caaa0b65db8c92ab">&#9670;&nbsp;</a></span>SetDirectDrawSurface()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> TextureD3D::SetDirectDrawSurface </td>
+          <td>(</td>
+          <td class="paramtype">IDirectDrawSurface *&#160;</td>
+          <td class="paramname"><em>dds</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d7/dab/_texture_d3_d_8h_source.html">TextureD3D.h</a> строка <a class="el" href="../../d7/dab/_texture_d3_d_8h_source.html#l00018">18</a></p>
+<div class="fragment"><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{ this-&gt;<a class="code" href="../../d8/d6b/class_texture_d3_d.html#ab5b1327cbccf9b2e75aad48013e0cc2e">dds</a> = <a class="code" href="../../d8/d6b/class_texture_d3_d.html#ab5b1327cbccf9b2e75aad48013e0cc2e">dds</a>; }</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d7/dab/_texture_d3_d_8h_source.html#l00024">dds</a>.</p>
+
+</div>
+</div>
+<a id="ab108f92b0f066c12a41999c2d2f18202"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab108f92b0f066c12a41999c2d2f18202">&#9670;&nbsp;</a></span>SetDirect3DTexture2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> TextureD3D::SetDirect3DTexture2 </td>
+          <td>(</td>
+          <td class="paramtype">IDirect3DTexture2 *&#160;</td>
+          <td class="paramname"><em>d3dt</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d7/dab/_texture_d3_d_8h_source.html">TextureD3D.h</a> строка <a class="el" href="../../d7/dab/_texture_d3_d_8h_source.html#l00019">19</a></p>
+<div class="fragment"><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{ this-&gt;<a class="code" href="../../d8/d6b/class_texture_d3_d.html#a07a7fd5f555323a9b95ed80fa356af64">d3dt</a> = <a class="code" href="../../d8/d6b/class_texture_d3_d.html#a07a7fd5f555323a9b95ed80fa356af64">d3dt</a>; }</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d7/dab/_texture_d3_d_8h_source.html#l00025">d3dt</a>.</p>
+
+</div>
+</div>
+<a id="a9aad5456b3d27e4886155bfd1d87e173"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9aad5456b3d27e4886155bfd1d87e173">&#9670;&nbsp;</a></span>LoadImageData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TextureD3D::LoadImageData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Переопределяет метод предка <a class="el" href="../../de/d73/class_image.html#a9b786ec61110907b38dda728bd281c73">Image</a>.</p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d7/d5b/_texture_d3_d_8cpp_source.html">TextureD3D.cpp</a> строка <a class="el" href="../../d7/d5b/_texture_d3_d_8cpp_source.html#l00065">65</a></p>
+<div class="fragment"><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                               {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordflow">if</span> (!this-&gt;<a class="code" href="../../de/d73/class_image.html#a0ba777aac6f660d1b28071f99229e132">initialized</a>) {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordtype">void</span> *<a class="code" href="../../de/d73/class_image.html#a7f336e60fe4b333b0fb2dd0a4bb79283">pixels</a>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        this-&gt;<a class="code" href="../../de/d73/class_image.html#a0ba777aac6f660d1b28071f99229e132">initialized</a> =</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            this-&gt;<a class="code" href="../../de/d73/class_image.html#a083f6bbdcfcd7b6f9bb9f16c64406c0f">loader</a>-&gt;<a class="code" href="../../d7/d42/class_image_loader.html#ad346c7973ae6f1d84a8c1fc655661319">Load</a>(&amp;<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a9a82cf3caff84cabc4598e2619faac17">width</a>, &amp;<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#aa352f2804b9902ac30769c00dde75d5f">height</a>, &amp;<a class="code" href="../../df/dc4/_s_d_l__opengl_8h.html#ada7ad693ea2e311b8103f4693fc35f80">pixels</a>, &amp;<a class="code" href="../../de/d73/class_image.html#a7c6b2a8dfc83049e12c972a87039777b">native_format</a>);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a9a82cf3caff84cabc4598e2619faac17">width</a> == 0 || <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#aa352f2804b9902ac30769c00dde75d5f">height</a> == 0) <a class="code" href="../../d9/d30/_s_d_l__assert_8h.html#afedcea68cf85ee469ab1ea390bbe0abb">__debugbreak</a>();</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keywordflow">if</span> (this-&gt;<a class="code" href="../../de/d73/class_image.html#a0ba777aac6f660d1b28071f99229e132">initialized</a> &amp;&amp; this-&gt;<a class="code" href="../../de/d73/class_image.html#a7c6b2a8dfc83049e12c972a87039777b">native_format</a> != <a class="code" href="../../d9/de5/_image_8h.html#a9852684147e651e988ed71ddc71426d5a117148770d7556407e3e3d594f13d5c1">IMAGE_INVALID_FORMAT</a>) {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            this-&gt;pixels[<a class="code" href="../../de/d73/class_image.html#a7c6b2a8dfc83049e12c972a87039777b">native_format</a>] = <a class="code" href="../../de/d73/class_image.html#a7f336e60fe4b333b0fb2dd0a4bb79283">pixels</a>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            <span class="comment">// check power of two - temporary</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            <span class="keywordflow">if</span> ( (this-&gt;<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a9a82cf3caff84cabc4598e2619faac17">width</a> &amp; (this-&gt;<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a9a82cf3caff84cabc4598e2619faac17">width</a> - 1)) == 0 &amp;&amp; (this-&gt;<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#aa352f2804b9902ac30769c00dde75d5f">height</a> &amp; (this-&gt;<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#aa352f2804b9902ac30769c00dde75d5f">height</a> - 1)) == 0 ) {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                this-&gt;<a class="code" href="../../de/d73/class_image.html#a0ba777aac6f660d1b28071f99229e132">initialized</a> = <a class="code" href="../../da/d20/_i_render_8h.html#a21d31464313b2c66ff88d4aa97b66143">render</a>-&gt;MoveTextureToDevice(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    }</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordflow">return</span> this-&gt;<a class="code" href="../../de/d73/class_image.html#a0ba777aac6f660d1b28071f99229e132">initialized</a>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d9/d30/_s_d_l__assert_8h.html#afedcea68cf85ee469ab1ea390bbe0abb">__debugbreak()</a>, <a class="el" href="../../d9/de5/_image_8h_source.html#l00012">IMAGE_INVALID_FORMAT</a>, <a class="el" href="../../d9/de5/_image_8h_source.html#l00046">Image::initialized</a>, <a class="el" href="../../d7/d42/class_image_loader.html#ad346c7973ae6f1d84a8c1fc655661319">ImageLoader::Load()</a>, <a class="el" href="../../d9/de5/_image_8h_source.html#l00047">Image::loader</a>, <a class="el" href="../../d9/de5/_image_8h_source.html#l00051">Image::native_format</a>, <a class="el" href="../../d9/de5/_image_8h_source.html#l00052">Image::pixels</a> и <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l00052">render</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d7/d5b/_texture_d3_d_8cpp_source.html#l00057">GetDirect3DTexture()</a> и <a class="el" href="../../d7/d5b/_texture_d3_d_8cpp_source.html#l00049">GetDirectDrawSurface()</a>.</p>
+<div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-9-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-9-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d8/d6b/class_texture_d3_d_a9aad5456b3d27e4886155bfd1d87e173_cgraph.svg" width="379" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-10-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-10-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-10-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d8/d6b/class_texture_d3_d_a9aad5456b3d27e4886155bfd1d87e173_icgraph.svg" width="662" height="104"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Документация по друзьям класса и функциям, относящимся к классу</h2>
+<a id="ad962652a5ca57a062e87b84d43dad6a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad962652a5ca57a062e87b84d43dad6a3">&#9670;&nbsp;</a></span>Render</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="../../da/d7f/class_render.html">Render</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d7/dab/_texture_d3_d_8h_source.html">TextureD3D.h</a> строка <a class="el" href="../../d7/dab/_texture_d3_d_8h_source.html#l00012">12</a></p>
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="ab5b1327cbccf9b2e75aad48013e0cc2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5b1327cbccf9b2e75aad48013e0cc2e">&#9670;&nbsp;</a></span>dds</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">IDirectDrawSurface* TextureD3D::dds</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d7/dab/_texture_d3_d_8h_source.html">TextureD3D.h</a> строка <a class="el" href="../../d7/dab/_texture_d3_d_8h_source.html#l00024">24</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d7/d5b/_texture_d3_d_8cpp_source.html#l00049">GetDirectDrawSurface()</a>, <a class="el" href="../../d7/dab/_texture_d3_d_8h_source.html#l00018">SetDirectDrawSurface()</a> и <a class="el" href="../../d7/d5b/_texture_d3_d_8cpp_source.html#l00087">~TextureD3D()</a>.</p>
+
+</div>
+</div>
+<a id="a07a7fd5f555323a9b95ed80fa356af64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07a7fd5f555323a9b95ed80fa356af64">&#9670;&nbsp;</a></span>d3dt</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">IDirect3DTexture2* TextureD3D::d3dt</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d7/dab/_texture_d3_d_8h_source.html">TextureD3D.h</a> строка <a class="el" href="../../d7/dab/_texture_d3_d_8h_source.html#l00025">25</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d7/d5b/_texture_d3_d_8cpp_source.html#l00057">GetDirect3DTexture()</a>, <a class="el" href="../../d7/dab/_texture_d3_d_8h_source.html#l00019">SetDirect3DTexture2()</a> и <a class="el" href="../../d7/d5b/_texture_d3_d_8cpp_source.html#l00087">~TextureD3D()</a>.</p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>C:/git/world-of-might-and-magic/Engine/Graphics/Direct3D/<a class="el" href="../../d7/dab/_texture_d3_d_8h_source.html">TextureD3D.h</a></li>
+<li>C:/git/world-of-might-and-magic/Engine/Graphics/Direct3D/<a class="el" href="../../d7/d5b/_texture_d3_d_8cpp_source.html">TextureD3D.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aclass_image_html_a7c6b2a8dfc83049e12c972a87039777b"><div class="ttname"><a href="../../de/d73/class_image.html#a7c6b2a8dfc83049e12c972a87039777b">Image::native_format</a></div><div class="ttdeci">IMAGE_FORMAT native_format</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/de5/_image_8h_source.html#l00051">Image.h:51</a></div></div>
+<div class="ttc" id="aclass_image_html_aaa2cc744ff3969ac6cb63ca05a40e5f6"><div class="ttname"><a href="../../de/d73/class_image.html#aaa2cc744ff3969ac6cb63ca05a40e5f6">Image::width</a></div><div class="ttdeci">unsigned int width</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/de5/_image_8h_source.html#l00049">Image.h:49</a></div></div>
+<div class="ttc" id="aclass_image_html_a083f6bbdcfcd7b6f9bb9f16c64406c0f"><div class="ttname"><a href="../../de/d73/class_image.html#a083f6bbdcfcd7b6f9bb9f16c64406c0f">Image::loader</a></div><div class="ttdeci">ImageLoader * loader</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/de5/_image_8h_source.html#l00047">Image.h:47</a></div></div>
+<div class="ttc" id="a_s_d_l__egl_8h_html_aa352f2804b9902ac30769c00dde75d5f"><div class="ttname"><a href="../../df/d32/_s_d_l__egl_8h.html#aa352f2804b9902ac30769c00dde75d5f">height</a></div><div class="ttdeci">EGLSurface EGLint EGLint EGLint EGLint height</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/_s_d_l__egl_8h_source.html#l01596">SDL_egl.h:1596</a></div></div>
+<div class="ttc" id="aclass_texture_d3_d_html_a7849f168c673faa11b21d11b1c75e63c"><div class="ttname"><a href="../../d8/d6b/class_texture_d3_d.html#a7849f168c673faa11b21d11b1c75e63c">TextureD3D::TextureD3D</a></div><div class="ttdeci">TextureD3D(bool lazy_initialization=true)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dab/_texture_d3_d_8h_source.html#l00021">TextureD3D.h:21</a></div></div>
+<div class="ttc" id="aclass_texture_d3_d_html_ab5b1327cbccf9b2e75aad48013e0cc2e"><div class="ttname"><a href="../../d8/d6b/class_texture_d3_d.html#ab5b1327cbccf9b2e75aad48013e0cc2e">TextureD3D::dds</a></div><div class="ttdeci">IDirectDrawSurface * dds</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dab/_texture_d3_d_8h_source.html#l00024">TextureD3D.h:24</a></div></div>
+<div class="ttc" id="a_image_8cpp_html_a2d49a4e268507e69f4afe34f9814b0df"><div class="ttname"><a href="../../d0/dac/_image_8cpp.html#a2d49a4e268507e69f4afe34f9814b0df">IMAGE_FORMAT_BytesPerPixel</a></div><div class="ttdeci">unsigned int IMAGE_FORMAT_BytesPerPixel(IMAGE_FORMAT format)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dac/_image_8cpp_source.html#l00046">Image.cpp:46</a></div></div>
+<div class="ttc" id="a_image_8h_html_a9852684147e651e988ed71ddc71426d5a117148770d7556407e3e3d594f13d5c1"><div class="ttname"><a href="../../d9/de5/_image_8h.html#a9852684147e651e988ed71ddc71426d5a117148770d7556407e3e3d594f13d5c1">IMAGE_INVALID_FORMAT</a></div><div class="ttdeci">@ IMAGE_INVALID_FORMAT</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/de5/_image_8h_source.html#l00012">Image.h:12</a></div></div>
+<div class="ttc" id="a_s_d_l__audio_8h_html_a71a65ffd977afe9c3fef116a5bc9ee27"><div class="ttname"><a href="../../d3/d78/_s_d_l__audio_8h.html#a71a65ffd977afe9c3fef116a5bc9ee27">format</a></div><div class="ttdeci">SDL_AudioFormat format</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d78/_s_d_l__audio_8h_source.html#l00194">SDL_audio.h:194</a></div></div>
+<div class="ttc" id="aclass_image_html_a1f1d932d749889931c2bab5f977b1ecf"><div class="ttname"><a href="../../de/d73/class_image.html#a1f1d932d749889931c2bab5f977b1ecf">Image::lazy_initialization</a></div><div class="ttdeci">bool lazy_initialization</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/de5/_image_8h_source.html#l00045">Image.h:45</a></div></div>
+<div class="ttc" id="a_s_d_l__egl_8h_html_a9a82cf3caff84cabc4598e2619faac17"><div class="ttname"><a href="../../df/d32/_s_d_l__egl_8h.html#a9a82cf3caff84cabc4598e2619faac17">width</a></div><div class="ttdeci">EGLSurface EGLint EGLint EGLint width</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/_s_d_l__egl_8h_source.html#l01596">SDL_egl.h:1596</a></div></div>
+<div class="ttc" id="aclass_image_html_a9f4e463326771ddb955ee17032a78d77"><div class="ttname"><a href="../../de/d73/class_image.html#a9f4e463326771ddb955ee17032a78d77">Image::height</a></div><div class="ttdeci">unsigned int height</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/de5/_image_8h_source.html#l00050">Image.h:50</a></div></div>
+<div class="ttc" id="aclass_texture_html_af6fad6785a33ca3fb5fed571cd038db7"><div class="ttname"><a href="../../d2/d7f/class_texture.html#af6fad6785a33ca3fb5fed571cd038db7">Texture::Texture</a></div><div class="ttdeci">Texture(bool lazy_initialization=true)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dbf/_texture_8h_source.html#l00006">Texture.h:6</a></div></div>
+<div class="ttc" id="aclass_texture_d3_d_html_a07a7fd5f555323a9b95ed80fa356af64"><div class="ttname"><a href="../../d8/d6b/class_texture_d3_d.html#a07a7fd5f555323a9b95ed80fa356af64">TextureD3D::d3dt</a></div><div class="ttdeci">IDirect3DTexture2 * d3dt</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dab/_texture_d3_d_8h_source.html#l00025">TextureD3D.h:25</a></div></div>
+<div class="ttc" id="aclass_texture_d3_d_html_a9aad5456b3d27e4886155bfd1d87e173"><div class="ttname"><a href="../../d8/d6b/class_texture_d3_d.html#a9aad5456b3d27e4886155bfd1d87e173">TextureD3D::LoadImageData</a></div><div class="ttdeci">virtual bool LoadImageData()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d5b/_texture_d3_d_8cpp_source.html#l00065">TextureD3D.cpp:65</a></div></div>
+<div class="ttc" id="aclass_image_html_a0ba777aac6f660d1b28071f99229e132"><div class="ttname"><a href="../../de/d73/class_image.html#a0ba777aac6f660d1b28071f99229e132">Image::initialized</a></div><div class="ttdeci">bool initialized</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/de5/_image_8h_source.html#l00046">Image.h:46</a></div></div>
+<div class="ttc" id="aclass_image_loader_html_ad346c7973ae6f1d84a8c1fc655661319"><div class="ttname"><a href="../../d7/d42/class_image_loader.html#ad346c7973ae6f1d84a8c1fc655661319">ImageLoader::Load</a></div><div class="ttdeci">virtual bool Load(unsigned int *width, unsigned int *height, void **pixels, IMAGE_FORMAT *format)=0</div></div>
+<div class="ttc" id="a_s_d_l__assert_8h_html_afedcea68cf85ee469ab1ea390bbe0abb"><div class="ttname"><a href="../../d9/d30/_s_d_l__assert_8h.html#afedcea68cf85ee469ab1ea390bbe0abb">__debugbreak</a></div><div class="ttdeci">void __cdecl __debugbreak(void)</div></div>
+<div class="ttc" id="aclass_image_html_a7f336e60fe4b333b0fb2dd0a4bb79283"><div class="ttname"><a href="../../de/d73/class_image.html#a7f336e60fe4b333b0fb2dd0a4bb79283">Image::pixels</a></div><div class="ttdeci">void * pixels[IMAGE_NUM_FORMATS]</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/de5/_image_8h_source.html#l00052">Image.h:52</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl_8h_html_ada7ad693ea2e311b8103f4693fc35f80"><div class="ttname"><a href="../../df/dc4/_s_d_l__opengl_8h.html#ada7ad693ea2e311b8103f4693fc35f80">pixels</a></div><div class="ttdeci">GLint GLint GLsizei GLsizei GLsizei GLint GLenum GLenum const GLvoid * pixels</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dc4/_s_d_l__opengl_8h_source.html#l01572">SDL_opengl.h:1572</a></div></div>
+<div class="ttc" id="a_i_render_8h_html_a21d31464313b2c66ff88d4aa97b66143"><div class="ttname"><a href="../../da/d20/_i_render_8h.html#a21d31464313b2c66ff88d4aa97b66143">render</a></div><div class="ttdeci">std::shared_ptr&lt; IRender &gt; render</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d79/_render_open_g_l_8cpp_source.html#l00052">RenderOpenGL.cpp:52</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../d8/d6b/class_texture_d3_d.html">TextureD3D</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:05:22. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

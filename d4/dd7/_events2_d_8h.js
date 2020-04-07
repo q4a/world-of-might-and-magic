@@ -1,0 +1,38 @@
+var _events2_d_8h =
+[
+    [ "_2devent", "d7/dff/struct__2devent.html", "d7/dff/struct__2devent" ],
+    [ "BuildingType", "d4/dd7/_events2_d_8h.html#abbf6c6c48c95f410e3c3f44c47fa46fb", [
+      [ "BuildingType_WeaponShop", "d4/dd7/_events2_d_8h.html#abbf6c6c48c95f410e3c3f44c47fa46fba774991f832e126ebf2c9bb2a558d625c", null ],
+      [ "BuildingType_ArmorShop", "d4/dd7/_events2_d_8h.html#abbf6c6c48c95f410e3c3f44c47fa46fba27afdb973cc2e1e311b25995b48ae680", null ],
+      [ "BuildingType_MagicShop", "d4/dd7/_events2_d_8h.html#abbf6c6c48c95f410e3c3f44c47fa46fbac125191a4337d9ada99113c278c88861", null ],
+      [ "BuildingType_AlchemistShop", "d4/dd7/_events2_d_8h.html#abbf6c6c48c95f410e3c3f44c47fa46fba589668a1e3776dba1474fab8340a7867", null ],
+      [ "BuildingType_FireGuild", "d4/dd7/_events2_d_8h.html#abbf6c6c48c95f410e3c3f44c47fa46fba60241990261da3cf375a279037271936", null ],
+      [ "BuildingType_AirGuild", "d4/dd7/_events2_d_8h.html#abbf6c6c48c95f410e3c3f44c47fa46fbab6df29f42344e064336cb393874be2e1", null ],
+      [ "BuildingType_WaterGuild", "d4/dd7/_events2_d_8h.html#abbf6c6c48c95f410e3c3f44c47fa46fbaac934f6a71ca2ec570c31411e37171e7", null ],
+      [ "BuildingType_EarthGuild", "d4/dd7/_events2_d_8h.html#abbf6c6c48c95f410e3c3f44c47fa46fba8c0ea0d5fcf1f2fa93883ceeb57f6906", null ],
+      [ "BuildingType_SpiritGuild", "d4/dd7/_events2_d_8h.html#abbf6c6c48c95f410e3c3f44c47fa46fba3a8403e4ef12e842fbc778b7b0391509", null ],
+      [ "BuildingType_MindGuild", "d4/dd7/_events2_d_8h.html#abbf6c6c48c95f410e3c3f44c47fa46fba3309843100e4b6f93dce7d09e725e578", null ],
+      [ "BuildingType_BodyGuild", "d4/dd7/_events2_d_8h.html#abbf6c6c48c95f410e3c3f44c47fa46fbac0277da54637c3926cd879c1452305fe", null ],
+      [ "BuildingType_LightGuild", "d4/dd7/_events2_d_8h.html#abbf6c6c48c95f410e3c3f44c47fa46fba3ceda4cf8abcf4b6772e1c3a93960efc", null ],
+      [ "BuildingType_DarkGuild", "d4/dd7/_events2_d_8h.html#abbf6c6c48c95f410e3c3f44c47fa46fba1be9fe94ca73dfd89cf44ab9a506d706", null ],
+      [ "BuildingType_ElementalGuild", "d4/dd7/_events2_d_8h.html#abbf6c6c48c95f410e3c3f44c47fa46fbac9da2250585cadf717aadda5019bced1", null ],
+      [ "BuildingType_SelfGuild", "d4/dd7/_events2_d_8h.html#abbf6c6c48c95f410e3c3f44c47fa46fba2315bf04a56f6694392183a82fd9abce", null ],
+      [ "BuildingType_16", "d4/dd7/_events2_d_8h.html#abbf6c6c48c95f410e3c3f44c47fa46fbaad419cb6b7e98ee3c10938d98d3e5045", null ],
+      [ "BuildingType_TownHall", "d4/dd7/_events2_d_8h.html#abbf6c6c48c95f410e3c3f44c47fa46fbac75f648ad9a6195f3a094dd8cb68857e", null ],
+      [ "BuildingType_18", "d4/dd7/_events2_d_8h.html#abbf6c6c48c95f410e3c3f44c47fa46fba8e219279d76353e8444993ba3f012713", null ],
+      [ "BuildingType_19", "d4/dd7/_events2_d_8h.html#abbf6c6c48c95f410e3c3f44c47fa46fba4652ef1b562528afa27be3027fd5fefe", null ],
+      [ "BuildingType_Throne_Room", "d4/dd7/_events2_d_8h.html#abbf6c6c48c95f410e3c3f44c47fa46fbae5a9ddc3469238c8f0c1f7f1b0bc3619", null ],
+      [ "BuildingType_Tavern", "d4/dd7/_events2_d_8h.html#abbf6c6c48c95f410e3c3f44c47fa46fba9ddbe46febd3c5f3056bf3ce45487104", null ],
+      [ "BuildingType_Bank", "d4/dd7/_events2_d_8h.html#abbf6c6c48c95f410e3c3f44c47fa46fbab4d9fa4aff0772881395947610d4d478", null ],
+      [ "BuildingType_Temple", "d4/dd7/_events2_d_8h.html#abbf6c6c48c95f410e3c3f44c47fa46fba09213b48f92661d8f12e130dd511ef6c", null ],
+      [ "BuildingType_24", "d4/dd7/_events2_d_8h.html#abbf6c6c48c95f410e3c3f44c47fa46fbaa05e03804cddc51db5158c42b8ced01b", null ],
+      [ "BuildingType_Unic", "d4/dd7/_events2_d_8h.html#abbf6c6c48c95f410e3c3f44c47fa46fba148ad105946bba60582ee62c0b2f8358", null ],
+      [ "BuildingType_1A", "d4/dd7/_events2_d_8h.html#abbf6c6c48c95f410e3c3f44c47fa46fba1e2b5203fe8d23430d660e3a9a936d1d", null ],
+      [ "BuildingType_Stables", "d4/dd7/_events2_d_8h.html#abbf6c6c48c95f410e3c3f44c47fa46fbac9bed7847f339fe63a5b19535a0bfbf7", null ],
+      [ "BuildingType_Boats", "d4/dd7/_events2_d_8h.html#abbf6c6c48c95f410e3c3f44c47fa46fbae99f3045aa7f87d22591956c62484f8f", null ],
+      [ "BuildingType_House", "d4/dd7/_events2_d_8h.html#abbf6c6c48c95f410e3c3f44c47fa46fbad4a56573df269e82bb2a99d91d09baa7", null ],
+      [ "BuildingType_Training", "d4/dd7/_events2_d_8h.html#abbf6c6c48c95f410e3c3f44c47fa46fba0a854cfdcabb45642a9aeaa1750ec0d3", null ],
+      [ "BuildingType_Jail", "d4/dd7/_events2_d_8h.html#abbf6c6c48c95f410e3c3f44c47fa46fba0eb261a90817b0b0ea3a47f5ebe3837c", null ]
+    ] ],
+    [ "p2DEvents", "d4/dd7/_events2_d_8h.html#a7627c182774622a6eeb97f15766c19c7", null ]
+];

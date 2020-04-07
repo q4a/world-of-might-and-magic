@@ -1,0 +1,1362 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Структура MonsterInfo</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d4/dff/struct_monster_info.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Открытые типы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="../../d9/da2/struct_monster_info-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Структура MonsterInfo</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="../../dd/db7/_monsters_8h_source.html">Monsters.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Открытые типы</h2></td></tr>
+<tr class="memitem:aa38e31e84e9aef458d866aad952baf50"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dff/struct_monster_info.html#aa38e31e84e9aef458d866aad952baf50">HostilityRadius</a> : uint8_t { <br />
+&#160;&#160;<a class="el" href="../../d4/dff/struct_monster_info.html#aa38e31e84e9aef458d866aad952baf50aba95b66025de368cd0a2180c769dc570">Hostility_Friendly</a> = 0, 
+<a class="el" href="../../d4/dff/struct_monster_info.html#aa38e31e84e9aef458d866aad952baf50a37b8d246dbd9fd3fb3c51d5d41e023f7">Hostility_Close</a> = 1, 
+<a class="el" href="../../d4/dff/struct_monster_info.html#aa38e31e84e9aef458d866aad952baf50a3fb8774873de069b108e2ecebd5d4f46">Hostility_Short</a> = 2, 
+<a class="el" href="../../d4/dff/struct_monster_info.html#aa38e31e84e9aef458d866aad952baf50a0105a640258ea3f62577719e72aad263">Hostility_Medium</a> = 3, 
+<br />
+&#160;&#160;<a class="el" href="../../d4/dff/struct_monster_info.html#aa38e31e84e9aef458d866aad952baf50ac8ef6787ec3d5ab5d9ddf8c71cd3047e">Hostility_Long</a> = 4
+<br />
+ }</td></tr>
+<tr class="separator:aa38e31e84e9aef458d866aad952baf50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:af6be1461394a0fdbb83162b88df5e991"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dff/struct_monster_info.html#af6be1461394a0fdbb83162b88df5e991">MonsterInfo</a> ()</td></tr>
+<tr class="separator:af6be1461394a0fdbb83162b88df5e991"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:a83aec73eb9559cc192d0e45b7906f954"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dff/struct_monster_info.html#a83aec73eb9559cc192d0e45b7906f954">pName</a></td></tr>
+<tr class="separator:a83aec73eb9559cc192d0e45b7906f954"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3642591666a60c6fbc90ee9d09d9c82"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dff/struct_monster_info.html#ac3642591666a60c6fbc90ee9d09d9c82">pPictureName</a></td></tr>
+<tr class="separator:ac3642591666a60c6fbc90ee9d09d9c82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1a76ce94fd5fda82ee10e4cfce6ea57"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dff/struct_monster_info.html#af1a76ce94fd5fda82ee10e4cfce6ea57">uLevel</a></td></tr>
+<tr class="separator:af1a76ce94fd5fda82ee10e4cfce6ea57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62897b0858228582e01988cac4a064fb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dff/struct_monster_info.html#a62897b0858228582e01988cac4a064fb">uTreasureDropChance</a></td></tr>
+<tr class="separator:a62897b0858228582e01988cac4a064fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c1cf643e5f3013be982b7d7286b7e3a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dff/struct_monster_info.html#a1c1cf643e5f3013be982b7d7286b7e3a">uTreasureDiceRolls</a></td></tr>
+<tr class="separator:a1c1cf643e5f3013be982b7d7286b7e3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6e4c3ad7b43e193acd7e476c9abff6b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dff/struct_monster_info.html#af6e4c3ad7b43e193acd7e476c9abff6b">uTreasureDiceSides</a></td></tr>
+<tr class="separator:af6e4c3ad7b43e193acd7e476c9abff6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ac0cffff35bbc09c9c479f75b2443ab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dff/struct_monster_info.html#a6ac0cffff35bbc09c9c479f75b2443ab">uTreasureLevel</a></td></tr>
+<tr class="separator:a6ac0cffff35bbc09c9c479f75b2443ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53c169320102f2dd3f4ff2a816935bd0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dff/struct_monster_info.html#a53c169320102f2dd3f4ff2a816935bd0">uTreasureType</a></td></tr>
+<tr class="separator:a53c169320102f2dd3f4ff2a816935bd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7395918ccff2c86e80022aa1e5737cb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dff/struct_monster_info.html#ad7395918ccff2c86e80022aa1e5737cb">uFlying</a></td></tr>
+<tr class="separator:ad7395918ccff2c86e80022aa1e5737cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b0faf28cae7ef3cd1719433c5680c92"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dff/struct_monster_info.html#a4b0faf28cae7ef3cd1719433c5680c92">uMovementType</a></td></tr>
+<tr class="separator:a4b0faf28cae7ef3cd1719433c5680c92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae53780e0ae71964582b884fe94276722"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dff/struct_monster_info.html#ae53780e0ae71964582b884fe94276722">uAIType</a></td></tr>
+<tr class="separator:ae53780e0ae71964582b884fe94276722"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0b8f4806fe3da3fe4b50bd65f2e7fc2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d4/dff/struct_monster_info.html#aa38e31e84e9aef458d866aad952baf50">HostilityRadius</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dff/struct_monster_info.html#ae0b8f4806fe3da3fe4b50bd65f2e7fc2">uHostilityType</a></td></tr>
+<tr class="separator:ae0b8f4806fe3da3fe4b50bd65f2e7fc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada1165e854466a992057717b24af761b"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dff/struct_monster_info.html#ada1165e854466a992057717b24af761b">field_12</a></td></tr>
+<tr class="separator:ada1165e854466a992057717b24af761b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afccd32683ad39b46b032d335fd01bd9b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/db7/_monsters_8h.html#a067f95479d44d0b39da6439a62a06ba1">SPECIAL_ATTACK_TYPE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dff/struct_monster_info.html#afccd32683ad39b46b032d335fd01bd9b">uSpecialAttackType</a></td></tr>
+<tr class="separator:afccd32683ad39b46b032d335fd01bd9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67359837c78d0310856b049a03ca86e7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dff/struct_monster_info.html#a67359837c78d0310856b049a03ca86e7">uSpecialAttackLevel</a></td></tr>
+<tr class="separator:a67359837c78d0310856b049a03ca86e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0466804e2595e19edfd9e739bf4b88e3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dff/struct_monster_info.html#a0466804e2595e19edfd9e739bf4b88e3">uAttack1Type</a></td></tr>
+<tr class="separator:a0466804e2595e19edfd9e739bf4b88e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabd1a3f8429b203f9e7a328ab0f823b6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dff/struct_monster_info.html#aabd1a3f8429b203f9e7a328ab0f823b6">uAttack1DamageDiceRolls</a></td></tr>
+<tr class="separator:aabd1a3f8429b203f9e7a328ab0f823b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae59fe23fc66454b359861ac1429a3234"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dff/struct_monster_info.html#ae59fe23fc66454b359861ac1429a3234">uAttack1DamageDiceSides</a></td></tr>
+<tr class="separator:ae59fe23fc66454b359861ac1429a3234"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b1838f11deceaa1b604c00e83ca5eb5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dff/struct_monster_info.html#a9b1838f11deceaa1b604c00e83ca5eb5">uAttack1DamageBonus</a></td></tr>
+<tr class="separator:a9b1838f11deceaa1b604c00e83ca5eb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74d73782010b3ffbc0cc94df8147cc9f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dff/struct_monster_info.html#a74d73782010b3ffbc0cc94df8147cc9f">uMissleAttack1Type</a></td></tr>
+<tr class="separator:a74d73782010b3ffbc0cc94df8147cc9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1030f1ad99f8a03fe1b818a3eeeb5ad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dff/struct_monster_info.html#ae1030f1ad99f8a03fe1b818a3eeeb5ad">uAttack2Chance</a></td></tr>
+<tr class="separator:ae1030f1ad99f8a03fe1b818a3eeeb5ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2419d55ebc88a70b748b3986ff62489a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dff/struct_monster_info.html#a2419d55ebc88a70b748b3986ff62489a">uAttack2Type</a></td></tr>
+<tr class="separator:a2419d55ebc88a70b748b3986ff62489a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacd0f939d18aff23e5aa6a1ced68f60a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dff/struct_monster_info.html#aacd0f939d18aff23e5aa6a1ced68f60a">uAttack2DamageDiceRolls</a></td></tr>
+<tr class="separator:aacd0f939d18aff23e5aa6a1ced68f60a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76d48d4637df966dcd2e16de81aec5fa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dff/struct_monster_info.html#a76d48d4637df966dcd2e16de81aec5fa">uAttack2DamageDiceSides</a></td></tr>
+<tr class="separator:a76d48d4637df966dcd2e16de81aec5fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85878c97d56cd8d435732fd0a735788d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dff/struct_monster_info.html#a85878c97d56cd8d435732fd0a735788d">uAttack2DamageBonus</a></td></tr>
+<tr class="separator:a85878c97d56cd8d435732fd0a735788d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9b4e421731886ce69f738c26d50a08f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dff/struct_monster_info.html#ae9b4e421731886ce69f738c26d50a08f">uMissleAttack2Type</a></td></tr>
+<tr class="separator:ae9b4e421731886ce69f738c26d50a08f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a175bc461b17e7f75279edc1d8ced2c28"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dff/struct_monster_info.html#a175bc461b17e7f75279edc1d8ced2c28">uSpell1UseChance</a></td></tr>
+<tr class="separator:a175bc461b17e7f75279edc1d8ced2c28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3b07950cee77af99316d0b9effe5b41"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dff/struct_monster_info.html#ab3b07950cee77af99316d0b9effe5b41">uSpell1ID</a></td></tr>
+<tr class="separator:ab3b07950cee77af99316d0b9effe5b41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d64870a669eb5ddfbe591353c76cda9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dff/struct_monster_info.html#a0d64870a669eb5ddfbe591353c76cda9">uSpell2UseChance</a></td></tr>
+<tr class="separator:a0d64870a669eb5ddfbe591353c76cda9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe9fb2e1ff5ae2fb4c6ad53496fd7cdf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dff/struct_monster_info.html#afe9fb2e1ff5ae2fb4c6ad53496fd7cdf">uSpell2ID</a></td></tr>
+<tr class="separator:afe9fb2e1ff5ae2fb4c6ad53496fd7cdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8408cc84b7c6b6e84d77f79087a7b1e8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dff/struct_monster_info.html#a8408cc84b7c6b6e84d77f79087a7b1e8">uResFire</a></td></tr>
+<tr class="separator:a8408cc84b7c6b6e84d77f79087a7b1e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd4408d40021e71c5af43492faf90dbe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dff/struct_monster_info.html#abd4408d40021e71c5af43492faf90dbe">uResAir</a></td></tr>
+<tr class="separator:abd4408d40021e71c5af43492faf90dbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3acb4666d2b7957f79874368c58c81d0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dff/struct_monster_info.html#a3acb4666d2b7957f79874368c58c81d0">uResWater</a></td></tr>
+<tr class="separator:a3acb4666d2b7957f79874368c58c81d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e867f6535832e3b32bc09f5b692e8e3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dff/struct_monster_info.html#a1e867f6535832e3b32bc09f5b692e8e3">uResEarth</a></td></tr>
+<tr class="separator:a1e867f6535832e3b32bc09f5b692e8e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf3ac9c035695bb2cbcaa207844a6a43"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dff/struct_monster_info.html#abf3ac9c035695bb2cbcaa207844a6a43">uResMind</a></td></tr>
+<tr class="separator:abf3ac9c035695bb2cbcaa207844a6a43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a677a2953898cc353322860d1b7580593"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dff/struct_monster_info.html#a677a2953898cc353322860d1b7580593">uResSpirit</a></td></tr>
+<tr class="separator:a677a2953898cc353322860d1b7580593"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a348e3590f642f49bbcb9c3a9ae579853"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dff/struct_monster_info.html#a348e3590f642f49bbcb9c3a9ae579853">uResBody</a></td></tr>
+<tr class="separator:a348e3590f642f49bbcb9c3a9ae579853"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ec8c4e8b79b695e102f37b1f4f54e8d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dff/struct_monster_info.html#a9ec8c4e8b79b695e102f37b1f4f54e8d">uResLight</a></td></tr>
+<tr class="separator:a9ec8c4e8b79b695e102f37b1f4f54e8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d44eed712a4a51671f170358bb809c6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dff/struct_monster_info.html#a0d44eed712a4a51671f170358bb809c6">uResDark</a></td></tr>
+<tr class="separator:a0d44eed712a4a51671f170358bb809c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe9252240158aca731704b7bd93f4137"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dff/struct_monster_info.html#abe9252240158aca731704b7bd93f4137">uResPhysical</a></td></tr>
+<tr class="separator:abe9252240158aca731704b7bd93f4137"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a039709f9c2134ca37eb5865d9bf54183"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dff/struct_monster_info.html#a039709f9c2134ca37eb5865d9bf54183">uSpecialAbilityType</a></td></tr>
+<tr class="separator:a039709f9c2134ca37eb5865d9bf54183"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a027a41d7a04234dc5c4d90e54f0ef62f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dff/struct_monster_info.html#a027a41d7a04234dc5c4d90e54f0ef62f">uSpecialAbilityDamageDiceRolls</a></td></tr>
+<tr class="separator:a027a41d7a04234dc5c4d90e54f0ef62f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add92921bf1d00b3875a36a6263656c5c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dff/struct_monster_info.html#add92921bf1d00b3875a36a6263656c5c">uSpecialAbilityDamageDiceSides</a></td></tr>
+<tr class="separator:add92921bf1d00b3875a36a6263656c5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a120616df9f278e2118885a30c445a104"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dff/struct_monster_info.html#a120616df9f278e2118885a30c445a104">uSpecialAbilityDamageDiceBonus</a></td></tr>
+<tr class="separator:a120616df9f278e2118885a30c445a104"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fd824659626678fab042fbe94701a01"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dff/struct_monster_info.html#a1fd824659626678fab042fbe94701a01">uNumCharactersAttackedPerSpecialAbility</a></td></tr>
+<tr class="separator:a1fd824659626678fab042fbe94701a01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34ef294eab1c963a695141f80fdc0192"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dff/struct_monster_info.html#a34ef294eab1c963a695141f80fdc0192">field_33</a></td></tr>
+<tr class="separator:a34ef294eab1c963a695141f80fdc0192"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6775c586e1ef80b3d480019e16fa3e03"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dff/struct_monster_info.html#a6775c586e1ef80b3d480019e16fa3e03">uID</a></td></tr>
+<tr class="separator:a6775c586e1ef80b3d480019e16fa3e03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57bd3cc0362d763ad86458a2d18fc439"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dff/struct_monster_info.html#a57bd3cc0362d763ad86458a2d18fc439">bQuestMonster</a></td></tr>
+<tr class="separator:a57bd3cc0362d763ad86458a2d18fc439"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a049353d4cc745b4b8f73c1d9e54935e1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dff/struct_monster_info.html#a049353d4cc745b4b8f73c1d9e54935e1">uSpellSkillAndMastery1</a></td></tr>
+<tr class="separator:a049353d4cc745b4b8f73c1d9e54935e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8603e0b047ab0ef5faf1067a461f167f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dff/struct_monster_info.html#a8603e0b047ab0ef5faf1067a461f167f">uSpellSkillAndMastery2</a></td></tr>
+<tr class="separator:a8603e0b047ab0ef5faf1067a461f167f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4d6a01ae3e221e565a8da4cff29f0fa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dff/struct_monster_info.html#ac4d6a01ae3e221e565a8da4cff29f0fa">field_3C_some_special_attack</a></td></tr>
+<tr class="separator:ac4d6a01ae3e221e565a8da4cff29f0fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a489f18052460658fb119091ad1f2f805"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dff/struct_monster_info.html#a489f18052460658fb119091ad1f2f805">field_3E</a></td></tr>
+<tr class="separator:a489f18052460658fb119091ad1f2f805"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80854348f70004b64b5a276168867991"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dff/struct_monster_info.html#a80854348f70004b64b5a276168867991">uHP</a></td></tr>
+<tr class="separator:a80854348f70004b64b5a276168867991"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0e5aa6466d4580af55441f5acb722c1"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dff/struct_monster_info.html#ac0e5aa6466d4580af55441f5acb722c1">uAC</a></td></tr>
+<tr class="separator:ac0e5aa6466d4580af55441f5acb722c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae780e8769f267ea5a341079ca4784987"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dff/struct_monster_info.html#ae780e8769f267ea5a341079ca4784987">uExp</a></td></tr>
+<tr class="separator:ae780e8769f267ea5a341079ca4784987"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8cea71393cb7c6539cb93d5612b955a"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dff/struct_monster_info.html#ad8cea71393cb7c6539cb93d5612b955a">uBaseSpeed</a></td></tr>
+<tr class="separator:ad8cea71393cb7c6539cb93d5612b955a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a985e9c4ebb3c112f56af53b1b46356e2"><td class="memItemLeft" align="right" valign="top">signed int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dff/struct_monster_info.html#a985e9c4ebb3c112f56af53b1b46356e2">uRecoveryTime</a></td></tr>
+<tr class="separator:a985e9c4ebb3c112f56af53b1b46356e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a047e4ad6a87bd0b8928b3ef3f1d7c734"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dff/struct_monster_info.html#a047e4ad6a87bd0b8928b3ef3f1d7c734">uAttackPreference</a></td></tr>
+<tr class="separator:a047e4ad6a87bd0b8928b3ef3f1d7c734"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock">
+<p class="definition">См. определение в файле <a class="el" href="../../dd/db7/_monsters_8h_source.html">Monsters.h</a> строка <a class="el" href="../../dd/db7/_monsters_8h_source.html#l00109">109</a></p>
+</div><h2 class="groupheader">Перечисления</h2>
+<a id="aa38e31e84e9aef458d866aad952baf50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa38e31e84e9aef458d866aad952baf50">&#9670;&nbsp;</a></span>HostilityRadius</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="../../d4/dff/struct_monster_info.html#aa38e31e84e9aef458d866aad952baf50">MonsterInfo::HostilityRadius</a> : <a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="aa38e31e84e9aef458d866aad952baf50aba95b66025de368cd0a2180c769dc570"></a>Hostility_Friendly&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa38e31e84e9aef458d866aad952baf50a37b8d246dbd9fd3fb3c51d5d41e023f7"></a>Hostility_Close&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa38e31e84e9aef458d866aad952baf50a3fb8774873de069b108e2ecebd5d4f46"></a>Hostility_Short&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa38e31e84e9aef458d866aad952baf50a0105a640258ea3f62577719e72aad263"></a>Hostility_Medium&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa38e31e84e9aef458d866aad952baf50ac8ef6787ec3d5ab5d9ddf8c71cd3047e"></a>Hostility_Long&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dd/db7/_monsters_8h_source.html">Monsters.h</a> строка <a class="el" href="../../dd/db7/_monsters_8h_source.html#l00110">110</a></p>
+<div class="fragment"><div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                         : <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> {</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <a class="code" href="../../d4/dff/struct_monster_info.html#aa38e31e84e9aef458d866aad952baf50aba95b66025de368cd0a2180c769dc570">Hostility_Friendly</a> = 0,</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <a class="code" href="../../d4/dff/struct_monster_info.html#aa38e31e84e9aef458d866aad952baf50a37b8d246dbd9fd3fb3c51d5d41e023f7">Hostility_Close</a> = 1,</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        <a class="code" href="../../d4/dff/struct_monster_info.html#aa38e31e84e9aef458d866aad952baf50a3fb8774873de069b108e2ecebd5d4f46">Hostility_Short</a> = 2,</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <a class="code" href="../../d4/dff/struct_monster_info.html#aa38e31e84e9aef458d866aad952baf50a0105a640258ea3f62577719e72aad263">Hostility_Medium</a> = 3,</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <a class="code" href="../../d4/dff/struct_monster_info.html#aa38e31e84e9aef458d866aad952baf50ac8ef6787ec3d5ab5d9ddf8c71cd3047e">Hostility_Long</a> = 4</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    };</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a id="af6be1461394a0fdbb83162b88df5e991"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6be1461394a0fdbb83162b88df5e991">&#9670;&nbsp;</a></span>MonsterInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">MonsterInfo::MonsterInfo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dd/db7/_monsters_8h_source.html">Monsters.h</a> строка <a class="el" href="../../dd/db7/_monsters_8h_source.html#l00118">118</a></p>
+<div class="fragment"><div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;: <a class="code" href="../../d4/dff/struct_monster_info.html#a83aec73eb9559cc192d0e45b7906f954">pName</a>(<span class="keyword">nullptr</span>), <a class="code" href="../../d4/dff/struct_monster_info.html#ac3642591666a60c6fbc90ee9d09d9c82">pPictureName</a>(<span class="keyword">nullptr</span>) {}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="a83aec73eb9559cc192d0e45b7906f954"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83aec73eb9559cc192d0e45b7906f954">&#9670;&nbsp;</a></span>pName</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* MonsterInfo::pName</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dd/db7/_monsters_8h_source.html">Monsters.h</a> строка <a class="el" href="../../dd/db7/_monsters_8h_source.html#l00120">120</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l03697">Actor::Arena_summon_actor()</a>, <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l01266">GameUI_WritePointedObjectStatusString()</a>, <a class="el" href="../../d6/d6c/_monsters_8cpp_source.html#l00491">MonsterStats::Initialize()</a>, <a class="el" href="../../d6/ded/_u_i_popup_8cpp_source.html#l00563">MonsterPopup_Draw()</a>, <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l03426">SimpleHouseDialog()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l04922">SpawnActor()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l05063">SpawnEncounter()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l04969">sub_44FA4C_spawn_light_elemental()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l02606">Actor::SummonMinion()</a> и <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l01915">TownHallDialog()</a>.</p>
+
+</div>
+</div>
+<a id="ac3642591666a60c6fbc90ee9d09d9c82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3642591666a60c6fbc90ee9d09d9c82">&#9670;&nbsp;</a></span>pPictureName</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* MonsterInfo::pPictureName</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dd/db7/_monsters_8h_source.html">Monsters.h</a> строка <a class="el" href="../../dd/db7/_monsters_8h_source.html#l00121">121</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d6/d6c/_monsters_8cpp_source.html#l00491">MonsterStats::Initialize()</a>.</p>
+
+</div>
+</div>
+<a id="af1a76ce94fd5fda82ee10e4cfce6ea57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1a76ce94fd5fda82ee10e4cfce6ea57">&#9670;&nbsp;</a></span>uLevel</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> MonsterInfo::uLevel</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dd/db7/_monsters_8h_source.html">Monsters.h</a> строка <a class="el" href="../../dd/db7/_monsters_8h_source.html#l00122">122</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l04262">Actor::_4273BB_DoesHitOtherActor()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l04293">Actor::ActorHitOrMiss()</a>, <a class="el" href="../../da/deb/_u_i_arena_8cpp_source.html#l00095">ArenaFight()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l06928">DamagePlayerFromMonster()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l04381">Actor::DoesDmgTypeDoDamage()</a>, <a class="el" href="../../d6/d6c/_monsters_8cpp_source.html#l00491">MonsterStats::Initialize()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l01667">Player::StealFromActor()</a> и <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l01915">TownHallDialog()</a>.</p>
+
+</div>
+</div>
+<a id="a62897b0858228582e01988cac4a064fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62897b0858228582e01988cac4a064fb">&#9670;&nbsp;</a></span>uTreasureDropChance</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> MonsterInfo::uTreasureDropChance</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dd/db7/_monsters_8h_source.html">Monsters.h</a> строка <a class="el" href="../../dd/db7/_monsters_8h_source.html#l00123">123</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d6/d6c/_monsters_8cpp_source.html#l00491">MonsterStats::Initialize()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l04064">Actor::LootActor()</a> и <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l00174">Actor::SetRandomGoldIfTheresNoItem()</a>.</p>
+
+</div>
+</div>
+<a id="a1c1cf643e5f3013be982b7d7286b7e3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c1cf643e5f3013be982b7d7286b7e3a">&#9670;&nbsp;</a></span>uTreasureDiceRolls</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> MonsterInfo::uTreasureDiceRolls</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dd/db7/_monsters_8h_source.html">Monsters.h</a> строка <a class="el" href="../../dd/db7/_monsters_8h_source.html#l00124">124</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d6/d6c/_monsters_8cpp_source.html#l00491">MonsterStats::Initialize()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l04064">Actor::LootActor()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l00174">Actor::SetRandomGoldIfTheresNoItem()</a> и <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l02606">Actor::SummonMinion()</a>.</p>
+
+</div>
+</div>
+<a id="af6e4c3ad7b43e193acd7e476c9abff6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6e4c3ad7b43e193acd7e476c9abff6b">&#9670;&nbsp;</a></span>uTreasureDiceSides</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> MonsterInfo::uTreasureDiceSides</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dd/db7/_monsters_8h_source.html">Monsters.h</a> строка <a class="el" href="../../dd/db7/_monsters_8h_source.html#l00125">125</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d6/d6c/_monsters_8cpp_source.html#l00491">MonsterStats::Initialize()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l04064">Actor::LootActor()</a> и <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l00174">Actor::SetRandomGoldIfTheresNoItem()</a>.</p>
+
+</div>
+</div>
+<a id="a6ac0cffff35bbc09c9c479f75b2443ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ac0cffff35bbc09c9c479f75b2443ab">&#9670;&nbsp;</a></span>uTreasureLevel</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> MonsterInfo::uTreasureLevel</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dd/db7/_monsters_8h_source.html">Monsters.h</a> строка <a class="el" href="../../dd/db7/_monsters_8h_source.html#l00126">126</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d6/d6c/_monsters_8cpp_source.html#l00491">MonsterStats::Initialize()</a> и <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l00174">Actor::SetRandomGoldIfTheresNoItem()</a>.</p>
+
+</div>
+</div>
+<a id="a53c169320102f2dd3f4ff2a816935bd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53c169320102f2dd3f4ff2a816935bd0">&#9670;&nbsp;</a></span>uTreasureType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> MonsterInfo::uTreasureType</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dd/db7/_monsters_8h_source.html">Monsters.h</a> строка <a class="el" href="../../dd/db7/_monsters_8h_source.html#l00127">127</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d6/d6c/_monsters_8cpp_source.html#l00491">MonsterStats::Initialize()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l04064">Actor::LootActor()</a> и <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l02606">Actor::SummonMinion()</a>.</p>
+
+</div>
+</div>
+<a id="ad7395918ccff2c86e80022aa1e5737cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7395918ccff2c86e80022aa1e5737cb">&#9670;&nbsp;</a></span>uFlying</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> MonsterInfo::uFlying</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dd/db7/_monsters_8h_source.html">Monsters.h</a> строка <a class="el" href="../../dd/db7/_monsters_8h_source.html#l00128">128</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l02070">Actor::AI_Flee()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l02003">Actor::AI_Pursue1()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l02114">Actor::AI_Pursue2()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l02171">Actor::AI_Pursue3()</a> и <a class="el" href="../../d6/d6c/_monsters_8cpp_source.html#l00491">MonsterStats::Initialize()</a>.</p>
+
+</div>
+</div>
+<a id="a4b0faf28cae7ef3cd1719433c5680c92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b0faf28cae7ef3cd1719433c5680c92">&#9670;&nbsp;</a></span>uMovementType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> MonsterInfo::uMovementType</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dd/db7/_monsters_8h_source.html">Monsters.h</a> строка <a class="el" href="../../dd/db7/_monsters_8h_source.html#l00129">129</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l01148">Actor::AI_MeleeAttack()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l01696">Actor::AI_RandomMove()</a>, <a class="el" href="../../d6/d6c/_monsters_8cpp_source.html#l00491">MonsterStats::Initialize()</a> и <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l02745">Actor::UpdateActorAI()</a>.</p>
+
+</div>
+</div>
+<a id="ae53780e0ae71964582b884fe94276722"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae53780e0ae71964582b884fe94276722">&#9670;&nbsp;</a></span>uAIType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> MonsterInfo::uAIType</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dd/db7/_monsters_8h_source.html">Monsters.h</a> строка <a class="el" href="../../dd/db7/_monsters_8h_source.html#l00130">130</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../da/deb/_u_i_arena_8cpp_source.html#l00095">ArenaFight()</a>, <a class="el" href="../../d6/d6c/_monsters_8cpp_source.html#l00491">MonsterStats::Initialize()</a> и <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l02745">Actor::UpdateActorAI()</a>.</p>
+
+</div>
+</div>
+<a id="ae0b8f4806fe3da3fe4b50bd65f2e7fc2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0b8f4806fe3da3fe4b50bd65f2e7fc2">&#9670;&nbsp;</a></span>uHostilityType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d4/dff/struct_monster_info.html#aa38e31e84e9aef458d866aad952baf50">HostilityRadius</a> MonsterInfo::uHostilityType</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dd/db7/_monsters_8h_source.html">Monsters.h</a> строка <a class="el" href="../../dd/db7/_monsters_8h_source.html#l00131">131</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l02230">Actor::_SelectTarget()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l00717">Actor::AggroSurroundingPeasants()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l01815">Actor::AI_Stun()</a>, <a class="el" href="../../d6/d6c/_monsters_8cpp_source.html#l00491">MonsterStats::Initialize()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l03334">Actor::InitializeActors()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l05063">SpawnEncounter()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l02606">Actor::SummonMinion()</a> и <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l02745">Actor::UpdateActorAI()</a>.</p>
+
+</div>
+</div>
+<a id="ada1165e854466a992057717b24af761b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada1165e854466a992057717b24af761b">&#9670;&nbsp;</a></span>field_12</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char MonsterInfo::field_12</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dd/db7/_monsters_8h_source.html">Monsters.h</a> строка <a class="el" href="../../dd/db7/_monsters_8h_source.html#l00132">132</a></p>
+
+</div>
+</div>
+<a id="afccd32683ad39b46b032d335fd01bd9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afccd32683ad39b46b032d335fd01bd9b">&#9670;&nbsp;</a></span>uSpecialAttackType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dd/db7/_monsters_8h.html#a067f95479d44d0b39da6439a62a06ba1">SPECIAL_ATTACK_TYPE</a> MonsterInfo::uSpecialAttackType</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dd/db7/_monsters_8h_source.html">Monsters.h</a> строка <a class="el" href="../../dd/db7/_monsters_8h_source.html#l00133">133</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d2/d82/_player_8cpp_source.html#l06928">DamagePlayerFromMonster()</a> и <a class="el" href="../../d6/d6c/_monsters_8cpp_source.html#l00491">MonsterStats::Initialize()</a>.</p>
+
+</div>
+</div>
+<a id="a67359837c78d0310856b049a03ca86e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67359837c78d0310856b049a03ca86e7">&#9670;&nbsp;</a></span>uSpecialAttackLevel</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> MonsterInfo::uSpecialAttackLevel</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dd/db7/_monsters_8h_source.html">Monsters.h</a> строка <a class="el" href="../../dd/db7/_monsters_8h_source.html#l00134">134</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d2/d82/_player_8cpp_source.html#l06928">DamagePlayerFromMonster()</a> и <a class="el" href="../../d6/d6c/_monsters_8cpp_source.html#l00491">MonsterStats::Initialize()</a>.</p>
+
+</div>
+</div>
+<a id="a0466804e2595e19edfd9e739bf4b88e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0466804e2595e19edfd9e739bf4b88e3">&#9670;&nbsp;</a></span>uAttack1Type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> MonsterInfo::uAttack1Type</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dd/db7/_monsters_8h_source.html">Monsters.h</a> строка <a class="el" href="../../dd/db7/_monsters_8h_source.html#l00135">135</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d2/d82/_player_8cpp_source.html#l06928">DamagePlayerFromMonster()</a> и <a class="el" href="../../d6/d6c/_monsters_8cpp_source.html#l00491">MonsterStats::Initialize()</a>.</p>
+
+</div>
+</div>
+<a id="aabd1a3f8429b203f9e7a328ab0f823b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabd1a3f8429b203f9e7a328ab0f823b6">&#9670;&nbsp;</a></span>uAttack1DamageDiceRolls</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> MonsterInfo::uAttack1DamageDiceRolls</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dd/db7/_monsters_8h_source.html">Monsters.h</a> строка <a class="el" href="../../dd/db7/_monsters_8h_source.html#l00136">136</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l01314">Actor::_43B3E0_CalcDamage()</a>.</p>
+
+</div>
+</div>
+<a id="ae59fe23fc66454b359861ac1429a3234"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae59fe23fc66454b359861ac1429a3234">&#9670;&nbsp;</a></span>uAttack1DamageDiceSides</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> MonsterInfo::uAttack1DamageDiceSides</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dd/db7/_monsters_8h_source.html">Monsters.h</a> строка <a class="el" href="../../dd/db7/_monsters_8h_source.html#l00137">137</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l01314">Actor::_43B3E0_CalcDamage()</a>.</p>
+
+</div>
+</div>
+<a id="a9b1838f11deceaa1b604c00e83ca5eb5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b1838f11deceaa1b604c00e83ca5eb5">&#9670;&nbsp;</a></span>uAttack1DamageBonus</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> MonsterInfo::uAttack1DamageBonus</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dd/db7/_monsters_8h_source.html">Monsters.h</a> строка <a class="el" href="../../dd/db7/_monsters_8h_source.html#l00138">138</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l01314">Actor::_43B3E0_CalcDamage()</a>.</p>
+
+</div>
+</div>
+<a id="a74d73782010b3ffbc0cc94df8147cc9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74d73782010b3ffbc0cc94df8147cc9f">&#9670;&nbsp;</a></span>uMissleAttack1Type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> MonsterInfo::uMissleAttack1Type</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dd/db7/_monsters_8h_source.html">Monsters.h</a> строка <a class="el" href="../../dd/db7/_monsters_8h_source.html#l00139">139</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l02003">Actor::AI_Pursue1()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l02114">Actor::AI_Pursue2()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l02171">Actor::AI_Pursue3()</a>, <a class="el" href="../../d6/d6c/_monsters_8cpp_source.html#l00491">MonsterStats::Initialize()</a> и <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l02745">Actor::UpdateActorAI()</a>.</p>
+
+</div>
+</div>
+<a id="ae1030f1ad99f8a03fe1b818a3eeeb5ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1030f1ad99f8a03fe1b818a3eeeb5ad">&#9670;&nbsp;</a></span>uAttack2Chance</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> MonsterInfo::uAttack2Chance</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dd/db7/_monsters_8h_source.html">Monsters.h</a> строка <a class="el" href="../../dd/db7/_monsters_8h_source.html#l00140">140</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d6/d6c/_monsters_8cpp_source.html#l00491">MonsterStats::Initialize()</a> и <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l04237">Actor::special_ability_use_check()</a>.</p>
+
+</div>
+</div>
+<a id="a2419d55ebc88a70b748b3986ff62489a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2419d55ebc88a70b748b3986ff62489a">&#9670;&nbsp;</a></span>uAttack2Type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> MonsterInfo::uAttack2Type</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dd/db7/_monsters_8h_source.html">Monsters.h</a> строка <a class="el" href="../../dd/db7/_monsters_8h_source.html#l00141">141</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d2/d82/_player_8cpp_source.html#l06928">DamagePlayerFromMonster()</a> и <a class="el" href="../../d6/d6c/_monsters_8cpp_source.html#l00491">MonsterStats::Initialize()</a>.</p>
+
+</div>
+</div>
+<a id="aacd0f939d18aff23e5aa6a1ced68f60a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aacd0f939d18aff23e5aa6a1ced68f60a">&#9670;&nbsp;</a></span>uAttack2DamageDiceRolls</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> MonsterInfo::uAttack2DamageDiceRolls</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dd/db7/_monsters_8h_source.html">Monsters.h</a> строка <a class="el" href="../../dd/db7/_monsters_8h_source.html#l00142">142</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l01314">Actor::_43B3E0_CalcDamage()</a>.</p>
+
+</div>
+</div>
+<a id="a76d48d4637df966dcd2e16de81aec5fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76d48d4637df966dcd2e16de81aec5fa">&#9670;&nbsp;</a></span>uAttack2DamageDiceSides</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> MonsterInfo::uAttack2DamageDiceSides</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dd/db7/_monsters_8h_source.html">Monsters.h</a> строка <a class="el" href="../../dd/db7/_monsters_8h_source.html#l00143">143</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l01314">Actor::_43B3E0_CalcDamage()</a>.</p>
+
+</div>
+</div>
+<a id="a85878c97d56cd8d435732fd0a735788d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85878c97d56cd8d435732fd0a735788d">&#9670;&nbsp;</a></span>uAttack2DamageBonus</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> MonsterInfo::uAttack2DamageBonus</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dd/db7/_monsters_8h_source.html">Monsters.h</a> строка <a class="el" href="../../dd/db7/_monsters_8h_source.html#l00144">144</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l01314">Actor::_43B3E0_CalcDamage()</a>.</p>
+
+</div>
+</div>
+<a id="ae9b4e421731886ce69f738c26d50a08f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9b4e421731886ce69f738c26d50a08f">&#9670;&nbsp;</a></span>uMissleAttack2Type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> MonsterInfo::uMissleAttack2Type</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dd/db7/_monsters_8h_source.html">Monsters.h</a> строка <a class="el" href="../../dd/db7/_monsters_8h_source.html#l00145">145</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d6/d6c/_monsters_8cpp_source.html#l00491">MonsterStats::Initialize()</a> и <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l02745">Actor::UpdateActorAI()</a>.</p>
+
+</div>
+</div>
+<a id="a175bc461b17e7f75279edc1d8ced2c28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a175bc461b17e7f75279edc1d8ced2c28">&#9670;&nbsp;</a></span>uSpell1UseChance</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> MonsterInfo::uSpell1UseChance</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dd/db7/_monsters_8h_source.html">Monsters.h</a> строка <a class="el" href="../../dd/db7/_monsters_8h_source.html#l00146">146</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d6/d6c/_monsters_8cpp_source.html#l00491">MonsterStats::Initialize()</a> и <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l04237">Actor::special_ability_use_check()</a>.</p>
+
+</div>
+</div>
+<a id="ab3b07950cee77af99316d0b9effe5b41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3b07950cee77af99316d0b9effe5b41">&#9670;&nbsp;</a></span>uSpell1ID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> MonsterInfo::uSpell1ID</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dd/db7/_monsters_8h_source.html">Monsters.h</a> строка <a class="el" href="../../dd/db7/_monsters_8h_source.html#l00147">147</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l01314">Actor::_43B3E0_CalcDamage()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l06928">DamagePlayerFromMonster()</a>, <a class="el" href="../../d6/d6c/_monsters_8cpp_source.html#l00491">MonsterStats::Initialize()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l04237">Actor::special_ability_use_check()</a> и <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l02745">Actor::UpdateActorAI()</a>.</p>
+
+</div>
+</div>
+<a id="a0d64870a669eb5ddfbe591353c76cda9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d64870a669eb5ddfbe591353c76cda9">&#9670;&nbsp;</a></span>uSpell2UseChance</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> MonsterInfo::uSpell2UseChance</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dd/db7/_monsters_8h_source.html">Monsters.h</a> строка <a class="el" href="../../dd/db7/_monsters_8h_source.html#l00148">148</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d6/d6c/_monsters_8cpp_source.html#l00491">MonsterStats::Initialize()</a> и <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l04237">Actor::special_ability_use_check()</a>.</p>
+
+</div>
+</div>
+<a id="afe9fb2e1ff5ae2fb4c6ad53496fd7cdf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe9fb2e1ff5ae2fb4c6ad53496fd7cdf">&#9670;&nbsp;</a></span>uSpell2ID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> MonsterInfo::uSpell2ID</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dd/db7/_monsters_8h_source.html">Monsters.h</a> строка <a class="el" href="../../dd/db7/_monsters_8h_source.html#l00149">149</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l01314">Actor::_43B3E0_CalcDamage()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l06928">DamagePlayerFromMonster()</a>, <a class="el" href="../../d6/d6c/_monsters_8cpp_source.html#l00491">MonsterStats::Initialize()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l04237">Actor::special_ability_use_check()</a> и <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l02745">Actor::UpdateActorAI()</a>.</p>
+
+</div>
+</div>
+<a id="a8408cc84b7c6b6e84d77f79087a7b1e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8408cc84b7c6b6e84d77f79087a7b1e8">&#9670;&nbsp;</a></span>uResFire</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> MonsterInfo::uResFire</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dd/db7/_monsters_8h_source.html">Monsters.h</a> строка <a class="el" href="../../dd/db7/_monsters_8h_source.html#l00150">150</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l04314">Actor::CalcMagicalDamageToActor()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l04381">Actor::DoesDmgTypeDoDamage()</a> и <a class="el" href="../../d6/d6c/_monsters_8cpp_source.html#l00491">MonsterStats::Initialize()</a>.</p>
+
+</div>
+</div>
+<a id="abd4408d40021e71c5af43492faf90dbe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd4408d40021e71c5af43492faf90dbe">&#9670;&nbsp;</a></span>uResAir</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> MonsterInfo::uResAir</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dd/db7/_monsters_8h_source.html">Monsters.h</a> строка <a class="el" href="../../dd/db7/_monsters_8h_source.html#l00151">151</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l04314">Actor::CalcMagicalDamageToActor()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l04381">Actor::DoesDmgTypeDoDamage()</a> и <a class="el" href="../../d6/d6c/_monsters_8cpp_source.html#l00491">MonsterStats::Initialize()</a>.</p>
+
+</div>
+</div>
+<a id="a3acb4666d2b7957f79874368c58c81d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3acb4666d2b7957f79874368c58c81d0">&#9670;&nbsp;</a></span>uResWater</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> MonsterInfo::uResWater</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dd/db7/_monsters_8h_source.html">Monsters.h</a> строка <a class="el" href="../../dd/db7/_monsters_8h_source.html#l00152">152</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l04314">Actor::CalcMagicalDamageToActor()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l04381">Actor::DoesDmgTypeDoDamage()</a> и <a class="el" href="../../d6/d6c/_monsters_8cpp_source.html#l00491">MonsterStats::Initialize()</a>.</p>
+
+</div>
+</div>
+<a id="a1e867f6535832e3b32bc09f5b692e8e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e867f6535832e3b32bc09f5b692e8e3">&#9670;&nbsp;</a></span>uResEarth</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> MonsterInfo::uResEarth</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dd/db7/_monsters_8h_source.html">Monsters.h</a> строка <a class="el" href="../../dd/db7/_monsters_8h_source.html#l00153">153</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l04314">Actor::CalcMagicalDamageToActor()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l04381">Actor::DoesDmgTypeDoDamage()</a> и <a class="el" href="../../d6/d6c/_monsters_8cpp_source.html#l00491">MonsterStats::Initialize()</a>.</p>
+
+</div>
+</div>
+<a id="abf3ac9c035695bb2cbcaa207844a6a43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf3ac9c035695bb2cbcaa207844a6a43">&#9670;&nbsp;</a></span>uResMind</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> MonsterInfo::uResMind</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dd/db7/_monsters_8h_source.html">Monsters.h</a> строка <a class="el" href="../../dd/db7/_monsters_8h_source.html#l00154">154</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l04314">Actor::CalcMagicalDamageToActor()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l04381">Actor::DoesDmgTypeDoDamage()</a> и <a class="el" href="../../d6/d6c/_monsters_8cpp_source.html#l00491">MonsterStats::Initialize()</a>.</p>
+
+</div>
+</div>
+<a id="a677a2953898cc353322860d1b7580593"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a677a2953898cc353322860d1b7580593">&#9670;&nbsp;</a></span>uResSpirit</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> MonsterInfo::uResSpirit</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dd/db7/_monsters_8h_source.html">Monsters.h</a> строка <a class="el" href="../../dd/db7/_monsters_8h_source.html#l00155">155</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l04314">Actor::CalcMagicalDamageToActor()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l04381">Actor::DoesDmgTypeDoDamage()</a> и <a class="el" href="../../d6/d6c/_monsters_8cpp_source.html#l00491">MonsterStats::Initialize()</a>.</p>
+
+</div>
+</div>
+<a id="a348e3590f642f49bbcb9c3a9ae579853"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a348e3590f642f49bbcb9c3a9ae579853">&#9670;&nbsp;</a></span>uResBody</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> MonsterInfo::uResBody</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dd/db7/_monsters_8h_source.html">Monsters.h</a> строка <a class="el" href="../../dd/db7/_monsters_8h_source.html#l00156">156</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l04314">Actor::CalcMagicalDamageToActor()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l04381">Actor::DoesDmgTypeDoDamage()</a> и <a class="el" href="../../d6/d6c/_monsters_8cpp_source.html#l00491">MonsterStats::Initialize()</a>.</p>
+
+</div>
+</div>
+<a id="a9ec8c4e8b79b695e102f37b1f4f54e8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ec8c4e8b79b695e102f37b1f4f54e8d">&#9670;&nbsp;</a></span>uResLight</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> MonsterInfo::uResLight</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dd/db7/_monsters_8h_source.html">Monsters.h</a> строка <a class="el" href="../../dd/db7/_monsters_8h_source.html#l00157">157</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l04314">Actor::CalcMagicalDamageToActor()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l04381">Actor::DoesDmgTypeDoDamage()</a> и <a class="el" href="../../d6/d6c/_monsters_8cpp_source.html#l00491">MonsterStats::Initialize()</a>.</p>
+
+</div>
+</div>
+<a id="a0d44eed712a4a51671f170358bb809c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d44eed712a4a51671f170358bb809c6">&#9670;&nbsp;</a></span>uResDark</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> MonsterInfo::uResDark</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dd/db7/_monsters_8h_source.html">Monsters.h</a> строка <a class="el" href="../../dd/db7/_monsters_8h_source.html#l00158">158</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l04314">Actor::CalcMagicalDamageToActor()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l04381">Actor::DoesDmgTypeDoDamage()</a> и <a class="el" href="../../d6/d6c/_monsters_8cpp_source.html#l00491">MonsterStats::Initialize()</a>.</p>
+
+</div>
+</div>
+<a id="abe9252240158aca731704b7bd93f4137"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe9252240158aca731704b7bd93f4137">&#9670;&nbsp;</a></span>uResPhysical</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> MonsterInfo::uResPhysical</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dd/db7/_monsters_8h_source.html">Monsters.h</a> строка <a class="el" href="../../dd/db7/_monsters_8h_source.html#l00159">159</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l04314">Actor::CalcMagicalDamageToActor()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l04381">Actor::DoesDmgTypeDoDamage()</a> и <a class="el" href="../../d6/d6c/_monsters_8cpp_source.html#l00491">MonsterStats::Initialize()</a>.</p>
+
+</div>
+</div>
+<a id="a039709f9c2134ca37eb5865d9bf54183"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a039709f9c2134ca37eb5865d9bf54183">&#9670;&nbsp;</a></span>uSpecialAbilityType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> MonsterInfo::uSpecialAbilityType</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dd/db7/_monsters_8h_source.html">Monsters.h</a> строка <a class="el" href="../../dd/db7/_monsters_8h_source.html#l00160">160</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l00747">Actor::AI_RangedAttack()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l01906">Actor::Die()</a>, <a class="el" href="../../d6/d6c/_monsters_8cpp_source.html#l00491">MonsterStats::Initialize()</a> и <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l04237">Actor::special_ability_use_check()</a>.</p>
+
+</div>
+</div>
+<a id="a027a41d7a04234dc5c4d90e54f0ef62f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a027a41d7a04234dc5c4d90e54f0ef62f">&#9670;&nbsp;</a></span>uSpecialAbilityDamageDiceRolls</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> MonsterInfo::uSpecialAbilityDamageDiceRolls</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dd/db7/_monsters_8h_source.html">Monsters.h</a> строка <a class="el" href="../../dd/db7/_monsters_8h_source.html#l00164">164</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l01314">Actor::_43B3E0_CalcDamage()</a>, <a class="el" href="../../d6/d6c/_monsters_8cpp_source.html#l00491">MonsterStats::Initialize()</a> и <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l02606">Actor::SummonMinion()</a>.</p>
+
+</div>
+</div>
+<a id="add92921bf1d00b3875a36a6263656c5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add92921bf1d00b3875a36a6263656c5c">&#9670;&nbsp;</a></span>uSpecialAbilityDamageDiceSides</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> MonsterInfo::uSpecialAbilityDamageDiceSides</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dd/db7/_monsters_8h_source.html">Monsters.h</a> строка <a class="el" href="../../dd/db7/_monsters_8h_source.html#l00165">165</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l01314">Actor::_43B3E0_CalcDamage()</a> и <a class="el" href="../../d6/d6c/_monsters_8cpp_source.html#l00491">MonsterStats::Initialize()</a>.</p>
+
+</div>
+</div>
+<a id="a120616df9f278e2118885a30c445a104"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a120616df9f278e2118885a30c445a104">&#9670;&nbsp;</a></span>uSpecialAbilityDamageDiceBonus</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> MonsterInfo::uSpecialAbilityDamageDiceBonus</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dd/db7/_monsters_8h_source.html">Monsters.h</a> строка <a class="el" href="../../dd/db7/_monsters_8h_source.html#l00166">166</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l01314">Actor::_43B3E0_CalcDamage()</a>, <a class="el" href="../../d6/d6c/_monsters_8cpp_source.html#l00491">MonsterStats::Initialize()</a> и <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l02606">Actor::SummonMinion()</a>.</p>
+
+</div>
+</div>
+<a id="a1fd824659626678fab042fbe94701a01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fd824659626678fab042fbe94701a01">&#9670;&nbsp;</a></span>uNumCharactersAttackedPerSpecialAbility</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> MonsterInfo::uNumCharactersAttackedPerSpecialAbility</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dd/db7/_monsters_8h_source.html">Monsters.h</a> строка <a class="el" href="../../dd/db7/_monsters_8h_source.html#l00167">167</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d6/d6c/_monsters_8cpp_source.html#l00491">MonsterStats::Initialize()</a>.</p>
+
+</div>
+</div>
+<a id="a34ef294eab1c963a695141f80fdc0192"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34ef294eab1c963a695141f80fdc0192">&#9670;&nbsp;</a></span>field_33</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char MonsterInfo::field_33</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dd/db7/_monsters_8h_source.html">Monsters.h</a> строка <a class="el" href="../../dd/db7/_monsters_8h_source.html#l00168">168</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l03300">Actor::SearchActorByMonsterID()</a>.</p>
+
+</div>
+</div>
+<a id="a6775c586e1ef80b3d480019e16fa3e03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6775c586e1ef80b3d480019e16fa3e03">&#9670;&nbsp;</a></span>uID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> MonsterInfo::uID</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dd/db7/_monsters_8h_source.html">Monsters.h</a> строка <a class="el" href="../../dd/db7/_monsters_8h_source.html#l00169">169</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l02230">Actor::_SelectTarget()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l02507">Actor::ActorDamageFromMonster()</a>, <a class="el" href="../../dc/d5b/_turn_engine_8cpp_source.html#l00709">stru262_TurnBased::AI_Action_()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l02070">Actor::AI_Flee()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l02003">Actor::AI_Pursue1()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l02114">Actor::AI_Pursue2()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l02171">Actor::AI_Pursue3()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l01696">Actor::AI_RandomMove()</a>, <a class="el" href="../../da/deb/_u_i_arena_8cpp_source.html#l00095">ArenaFight()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l00700">Actor::ArePeasantsOfSameFaction()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l03379">Actor::DamageMonsterFromParty()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l06928">DamagePlayerFromMonster()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l01906">Actor::Die()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l02319">Actor::GetActorsRelation()</a>, <a class="el" href="../../d6/d6c/_monsters_8cpp_source.html#l00491">MonsterStats::Initialize()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l01369">Actor::IsPeasant()</a>, <a class="el" href="../../d6/ded/_u_i_popup_8cpp_source.html#l00563">MonsterPopup_Draw()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l02481">Actor::PrepareSprites()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l02310">PrepareToLoadBLV()</a>, <a class="el" href="../../dc/d5b/_turn_engine_8cpp_source.html#l00551">stru262_TurnBased::SetAIRecoveryTimes()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l02606">Actor::SummonMinion()</a> и <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l02745">Actor::UpdateActorAI()</a>.</p>
+
+</div>
+</div>
+<a id="a57bd3cc0362d763ad86458a2d18fc439"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57bd3cc0362d763ad86458a2d18fc439">&#9670;&nbsp;</a></span>bQuestMonster</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> MonsterInfo::bQuestMonster</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dd/db7/_monsters_8h_source.html">Monsters.h</a> строка <a class="el" href="../../dd/db7/_monsters_8h_source.html#l00170">170</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l03379">Actor::DamageMonsterFromParty()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l06928">DamagePlayerFromMonster()</a> и <a class="el" href="../../d6/d6c/_monsters_8cpp_source.html#l00491">MonsterStats::Initialize()</a>.</p>
+
+</div>
+</div>
+<a id="a049353d4cc745b4b8f73c1d9e54935e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a049353d4cc745b4b8f73c1d9e54935e1">&#9670;&nbsp;</a></span>uSpellSkillAndMastery1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> MonsterInfo::uSpellSkillAndMastery1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dd/db7/_monsters_8h_source.html">Monsters.h</a> строка <a class="el" href="../../dd/db7/_monsters_8h_source.html#l00171">171</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l01314">Actor::_43B3E0_CalcDamage()</a>, <a class="el" href="../../d6/d6c/_monsters_8cpp_source.html#l00491">MonsterStats::Initialize()</a> и <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l02745">Actor::UpdateActorAI()</a>.</p>
+
+</div>
+</div>
+<a id="a8603e0b047ab0ef5faf1067a461f167f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8603e0b047ab0ef5faf1067a461f167f">&#9670;&nbsp;</a></span>uSpellSkillAndMastery2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> MonsterInfo::uSpellSkillAndMastery2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dd/db7/_monsters_8h_source.html">Monsters.h</a> строка <a class="el" href="../../dd/db7/_monsters_8h_source.html#l00172">172</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l01314">Actor::_43B3E0_CalcDamage()</a>, <a class="el" href="../../d6/d6c/_monsters_8cpp_source.html#l00491">MonsterStats::Initialize()</a> и <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l02745">Actor::UpdateActorAI()</a>.</p>
+
+</div>
+</div>
+<a id="ac4d6a01ae3e221e565a8da4cff29f0fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4d6a01ae3e221e565a8da4cff29f0fa">&#9670;&nbsp;</a></span>field_3C_some_special_attack</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> MonsterInfo::field_3C_some_special_attack</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dd/db7/_monsters_8h_source.html">Monsters.h</a> строка <a class="el" href="../../dd/db7/_monsters_8h_source.html#l00173">173</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d2/d82/_player_8cpp_source.html#l06928">DamagePlayerFromMonster()</a>, <a class="el" href="../../d6/d6c/_monsters_8cpp_source.html#l00491">MonsterStats::Initialize()</a> и <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l02606">Actor::SummonMinion()</a>.</p>
+
+</div>
+</div>
+<a id="a489f18052460658fb119091ad1f2f805"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a489f18052460658fb119091ad1f2f805">&#9670;&nbsp;</a></span>field_3E</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> MonsterInfo::field_3E</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dd/db7/_monsters_8h_source.html">Monsters.h</a> строка <a class="el" href="../../dd/db7/_monsters_8h_source.html#l00174">174</a></p>
+
+</div>
+</div>
+<a id="a80854348f70004b64b5a276168867991"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80854348f70004b64b5a276168867991">&#9670;&nbsp;</a></span>uHP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int MonsterInfo::uHP</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dd/db7/_monsters_8h_source.html">Monsters.h</a> строка <a class="el" href="../../dd/db7/_monsters_8h_source.html#l00175">175</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l04192">Actor::_427102_IsOkToCastSpell()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l00199">Actor::AI_SpellAttack()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l03697">Actor::Arena_summon_actor()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l03379">Actor::DamageMonsterFromParty()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l06928">DamagePlayerFromMonster()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l00067">Actor::DrawHealthBar()</a>, <a class="el" href="../../d6/d6c/_monsters_8cpp_source.html#l00491">MonsterStats::Initialize()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l03334">Actor::InitializeActors()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l01890">Actor::Resurrect()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l04922">SpawnActor()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l05063">SpawnEncounter()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l04969">sub_44FA4C_spawn_light_elemental()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l02606">Actor::SummonMinion()</a> и <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l02745">Actor::UpdateActorAI()</a>.</p>
+
+</div>
+</div>
+<a id="ac0e5aa6466d4580af55441f5acb722c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0e5aa6466d4580af55441f5acb722c1">&#9670;&nbsp;</a></span>uAC</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int MonsterInfo::uAC</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dd/db7/_monsters_8h_source.html">Monsters.h</a> строка <a class="el" href="../../dd/db7/_monsters_8h_source.html#l00176">176</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l04262">Actor::_4273BB_DoesHitOtherActor()</a>, <a class="el" href="../../d6/d6c/_monsters_8cpp_source.html#l00491">MonsterStats::Initialize()</a> и <a class="el" href="../../d2/d82/_player_8cpp_source.html#l07600">Player::PlayerHitOrMiss()</a>.</p>
+
+</div>
+</div>
+<a id="ae780e8769f267ea5a341079ca4784987"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae780e8769f267ea5a341079ca4784987">&#9670;&nbsp;</a></span>uExp</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int MonsterInfo::uExp</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dd/db7/_monsters_8h_source.html">Monsters.h</a> строка <a class="el" href="../../dd/db7/_monsters_8h_source.html#l00177">177</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l03379">Actor::DamageMonsterFromParty()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l06928">DamagePlayerFromMonster()</a>, <a class="el" href="../../d6/d6c/_monsters_8cpp_source.html#l00491">MonsterStats::Initialize()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l02606">Actor::SummonMinion()</a> и <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l02745">Actor::UpdateActorAI()</a>.</p>
+
+</div>
+</div>
+<a id="ad8cea71393cb7c6539cb93d5612b955a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8cea71393cb7c6539cb93d5612b955a">&#9670;&nbsp;</a></span>uBaseSpeed</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int MonsterInfo::uBaseSpeed</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dd/db7/_monsters_8h_source.html">Monsters.h</a> строка <a class="el" href="../../dd/db7/_monsters_8h_source.html#l00178">178</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d6/d6c/_monsters_8cpp_source.html#l00491">MonsterStats::Initialize()</a> и <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l02481">Actor::PrepareSprites()</a>.</p>
+
+</div>
+</div>
+<a id="a985e9c4ebb3c112f56af53b1b46356e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a985e9c4ebb3c112f56af53b1b46356e2">&#9670;&nbsp;</a></span>uRecoveryTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">signed int MonsterInfo::uRecoveryTime</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dd/db7/_monsters_8h_source.html">Monsters.h</a> строка <a class="el" href="../../dd/db7/_monsters_8h_source.html#l00179">179</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../dc/d5b/_turn_engine_8cpp_source.html#l00513">stru262_TurnBased::_406457()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l01148">Actor::AI_MeleeAttack()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l01626">Actor::AI_MissileAttack1()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l01561">Actor::AI_MissileAttack2()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l01486">Actor::AI_SpellAttack1()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l01412">Actor::AI_SpellAttack2()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l03379">Actor::DamageMonsterFromParty()</a>, <a class="el" href="../../d6/d6c/_monsters_8cpp_source.html#l00491">MonsterStats::Initialize()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l03334">Actor::InitializeActors()</a>, <a class="el" href="../../dc/d5b/_turn_engine_8cpp_source.html#l00551">stru262_TurnBased::SetAIRecoveryTimes()</a> и <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l02745">Actor::UpdateActorAI()</a>.</p>
+
+</div>
+</div>
+<a id="a047e4ad6a87bd0b8928b3ef3f1d7c734"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a047e4ad6a87bd0b8928b3ef3f1d7c734">&#9670;&nbsp;</a></span>uAttackPreference</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int MonsterInfo::uAttackPreference</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dd/db7/_monsters_8h_source.html">Monsters.h</a> строка <a class="el" href="../../dd/db7/_monsters_8h_source.html#l00180">180</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d6/d6c/_monsters_8cpp_source.html#l00491">MonsterStats::Initialize()</a> и <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l03754">stru319::which_player_to_attack()</a>.</p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов структуры находятся в файле:<ul>
+<li>C:/git/world-of-might-and-magic/Engine/Objects/<a class="el" href="../../dd/db7/_monsters_8h_source.html">Monsters.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="astruct_monster_info_html_aa38e31e84e9aef458d866aad952baf50aba95b66025de368cd0a2180c769dc570"><div class="ttname"><a href="../../d4/dff/struct_monster_info.html#aa38e31e84e9aef458d866aad952baf50aba95b66025de368cd0a2180c769dc570">MonsterInfo::Hostility_Friendly</a></div><div class="ttdeci">@ Hostility_Friendly</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/db7/_monsters_8h_source.html#l00111">Monsters.h:111</a></div></div>
+<div class="ttc" id="astruct_monster_info_html_aa38e31e84e9aef458d866aad952baf50a0105a640258ea3f62577719e72aad263"><div class="ttname"><a href="../../d4/dff/struct_monster_info.html#aa38e31e84e9aef458d866aad952baf50a0105a640258ea3f62577719e72aad263">MonsterInfo::Hostility_Medium</a></div><div class="ttdeci">@ Hostility_Medium</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/db7/_monsters_8h_source.html#l00114">Monsters.h:114</a></div></div>
+<div class="ttc" id="astruct_monster_info_html_ac3642591666a60c6fbc90ee9d09d9c82"><div class="ttname"><a href="../../d4/dff/struct_monster_info.html#ac3642591666a60c6fbc90ee9d09d9c82">MonsterInfo::pPictureName</a></div><div class="ttdeci">char * pPictureName</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/db7/_monsters_8h_source.html#l00121">Monsters.h:121</a></div></div>
+<div class="ttc" id="astruct_monster_info_html_aa38e31e84e9aef458d866aad952baf50a3fb8774873de069b108e2ecebd5d4f46"><div class="ttname"><a href="../../d4/dff/struct_monster_info.html#aa38e31e84e9aef458d866aad952baf50a3fb8774873de069b108e2ecebd5d4f46">MonsterInfo::Hostility_Short</a></div><div class="ttdeci">@ Hostility_Short</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/db7/_monsters_8h_source.html#l00113">Monsters.h:113</a></div></div>
+<div class="ttc" id="astruct_monster_info_html_aa38e31e84e9aef458d866aad952baf50a37b8d246dbd9fd3fb3c51d5d41e023f7"><div class="ttname"><a href="../../d4/dff/struct_monster_info.html#aa38e31e84e9aef458d866aad952baf50a37b8d246dbd9fd3fb3c51d5d41e023f7">MonsterInfo::Hostility_Close</a></div><div class="ttdeci">@ Hostility_Close</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/db7/_monsters_8h_source.html#l00112">Monsters.h:112</a></div></div>
+<div class="ttc" id="astruct_monster_info_html_aa38e31e84e9aef458d866aad952baf50ac8ef6787ec3d5ab5d9ddf8c71cd3047e"><div class="ttname"><a href="../../d4/dff/struct_monster_info.html#aa38e31e84e9aef458d866aad952baf50ac8ef6787ec3d5ab5d9ddf8c71cd3047e">MonsterInfo::Hostility_Long</a></div><div class="ttdeci">@ Hostility_Long</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/db7/_monsters_8h_source.html#l00115">Monsters.h:115</a></div></div>
+<div class="ttc" id="a_s_d_l__config_8h_html_aba7bc1797add20fe3efdf37ced1182c5"><div class="ttname"><a href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a></div><div class="ttdeci">unsigned __int8 uint8_t</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d8f/_s_d_l__config_8h_source.html#l00035">SDL_config.h:35</a></div></div>
+<div class="ttc" id="astruct_monster_info_html_a83aec73eb9559cc192d0e45b7906f954"><div class="ttname"><a href="../../d4/dff/struct_monster_info.html#a83aec73eb9559cc192d0e45b7906f954">MonsterInfo::pName</a></div><div class="ttdeci">char * pName</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/db7/_monsters_8h_source.html#l00120">Monsters.h:120</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../d4/dff/struct_monster_info.html">MonsterInfo</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:04:57. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

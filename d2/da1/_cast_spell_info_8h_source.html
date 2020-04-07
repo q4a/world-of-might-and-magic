@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Исходный файл C:/git/world-of-might-and-magic/Engine/Spells/CastSpellInfo.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d2/da1/_cast_spell_info_8h_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">CastSpellInfo.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d2/da1/_cast_spell_info_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;array&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;cstdint&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d5/d7d/_spells_8h.html">Spells.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="../../d8/d06/namespace_cast_spell_info_helpers.html">    8</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="../../d8/d06/namespace_cast_spell_info_helpers.html">CastSpellInfoHelpers</a> {</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d8/d06/namespace_cast_spell_info_helpers.html#adcfab5ec5567ebe310863a1f9c678cc7">Cancel_Spell_Cast_In_Progress</a>();</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d8/d06/namespace_cast_spell_info_helpers.html#a6fa3b22b4867c28cad6c215c646dc4aa">_427E01_cast_spell</a>();</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;};  <span class="comment">// namespace CastSpellInfoHelpers</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">class </span><a class="code" href="../../d4/d38/class_g_u_i_window.html">GUIWindow</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">/*  271 */</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#pragma pack(push, 1)</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="../../db/d9d/struct_cast_spell_info.html">   17</a></span>&#160;<span class="keyword">struct </span><a class="code" href="../../db/d9d/struct_cast_spell_info.html">CastSpellInfo</a> {</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="../../db/d9d/struct_cast_spell_info.html#adb79acbad053a1b5867374bca16021ff">   18</a></span>&#160;    <span class="keyword">inline</span> <a class="code" href="../../db/d9d/struct_cast_spell_info.html#adb79acbad053a1b5867374bca16021ff">CastSpellInfo</a>() {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        memset(<span class="keyword">this</span>, 0, <span class="keyword">sizeof</span>(*<span class="keyword">this</span>));</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    }</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="../../d4/d38/class_g_u_i_window.html">GUIWindow</a> *<a class="code" href="../../db/d9d/struct_cast_spell_info.html#a0cb3ab86a4ae66af0e0e579da0209fa4">GetCastSpellInInventoryWindow</a>();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="../../db/d9d/struct_cast_spell_info.html#a246bdaeeef614738a898af1750dd09b4">   24</a></span>&#160;    <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> <a class="code" href="../../db/d9d/struct_cast_spell_info.html#a246bdaeeef614738a898af1750dd09b4">uSpellID</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="../../db/d9d/struct_cast_spell_info.html#ae358f9cb5d86eaa6bf45c97f2c25397e">   25</a></span>&#160;    <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> <a class="code" href="../../db/d9d/struct_cast_spell_info.html#ae358f9cb5d86eaa6bf45c97f2c25397e">uPlayerID</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="../../db/d9d/struct_cast_spell_info.html#a0b9d7baef993baf3567134da95bb81c5">   26</a></span>&#160;    <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> <a class="code" href="../../db/d9d/struct_cast_spell_info.html#a0b9d7baef993baf3567134da95bb81c5">uPlayerID_2</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="../../db/d9d/struct_cast_spell_info.html#a455eabc6b1f114f9e55cd36f08dec9a1">   27</a></span>&#160;    __int16 <a class="code" href="../../db/d9d/struct_cast_spell_info.html#a455eabc6b1f114f9e55cd36f08dec9a1">field_6</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="../../db/d9d/struct_cast_spell_info.html#ab530836974e4791930ae526417c41eec">   28</a></span>&#160;    <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> <a class="code" href="../../db/d9d/struct_cast_spell_info.html#ab530836974e4791930ae526417c41eec">uFlags</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="../../db/d9d/struct_cast_spell_info.html#a4078f69d3c542e9102e18c1a23712c6e">   29</a></span>&#160;    __int16 <a class="code" href="../../db/d9d/struct_cast_spell_info.html#a4078f69d3c542e9102e18c1a23712c6e">forced_spell_skill_level</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="../../db/d9d/struct_cast_spell_info.html#ada0e029a5bd210bed452bf9145d8418f">   30</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../db/d9d/struct_cast_spell_info.html#ada0e029a5bd210bed452bf9145d8418f">spell_target_pid</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="../../db/d9d/struct_cast_spell_info.html#ab5d1cd9d226e58cca27c2a5d47a8c2c6">   31</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../db/d9d/struct_cast_spell_info.html#ab5d1cd9d226e58cca27c2a5d47a8c2c6">sound_id</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;};</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#pragma pack(pop)</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">// flags</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#define ON_CAST_WholeParty_BigImprovementAnim 0x0002</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#define ON_CAST_TargetCrosshair 0x0008</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#define ON_CAST_NoRecoverySpell 0x0020</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#define ON_CAST_Telekenesis 0x0040</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#define ON_CAST_Enchantment 0x0080</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#define ON_CAST_MonsterSparkles 0x0100</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#define ON_CAST_DarkSacrifice 0x0200</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#define ON_CAST_CastingInProgress                                          \</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">    (ON_CAST_WholeParty_BigImprovementAnim | ON_CAST_TargetCrosshair |     \</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">     ON_CAST_Telekenesis | ON_CAST_Enchantment | ON_CAST_MonsterSparkles | \</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">     ON_CAST_DarkSacrifice)</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d2/da1/_cast_spell_info_8h.html#aeaca4ce7b3943438e4d5020dd988b9d9">_42777D_CastSpell_UseWand_ShootArrow</a>(<a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5">SPELL_TYPE</a> spell,</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                                          <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> uPlayerID,</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                                          <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> a4, __int16 <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ac7ba7d3cce3d19ca020e056b37231289">flags</a>,</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                                          <span class="keywordtype">int</span> a6);</div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="a_s_d_l__config_8h_html_a273cf69d639a59973b6019625df33e30"><div class="ttname"><a href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a></div><div class="ttdeci">unsigned __int16 uint16_t</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d8f/_s_d_l__config_8h_source.html#l00037">SDL_config.h:37</a></div></div>
+<div class="ttc" id="astruct_cast_spell_info_html_adb79acbad053a1b5867374bca16021ff"><div class="ttname"><a href="../../db/d9d/struct_cast_spell_info.html#adb79acbad053a1b5867374bca16021ff">CastSpellInfo::CastSpellInfo</a></div><div class="ttdeci">CastSpellInfo()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/da1/_cast_spell_info_8h_source.html#l00018">CastSpellInfo.h:18</a></div></div>
+<div class="ttc" id="astruct_cast_spell_info_html_ab5d1cd9d226e58cca27c2a5d47a8c2c6"><div class="ttname"><a href="../../db/d9d/struct_cast_spell_info.html#ab5d1cd9d226e58cca27c2a5d47a8c2c6">CastSpellInfo::sound_id</a></div><div class="ttdeci">int sound_id</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/da1/_cast_spell_info_8h_source.html#l00031">CastSpellInfo.h:31</a></div></div>
+<div class="ttc" id="aclass_g_u_i_window_html"><div class="ttname"><a href="../../d4/d38/class_g_u_i_window.html">GUIWindow</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d0b/_g_u_i_window_8h_source.html#l00433">GUIWindow.h:433</a></div></div>
+<div class="ttc" id="astruct_cast_spell_info_html_ab530836974e4791930ae526417c41eec"><div class="ttname"><a href="../../db/d9d/struct_cast_spell_info.html#ab530836974e4791930ae526417c41eec">CastSpellInfo::uFlags</a></div><div class="ttdeci">uint16_t uFlags</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/da1/_cast_spell_info_8h_source.html#l00028">CastSpellInfo.h:28</a></div></div>
+<div class="ttc" id="astruct_cast_spell_info_html"><div class="ttname"><a href="../../db/d9d/struct_cast_spell_info.html">CastSpellInfo</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/da1/_cast_spell_info_8h_source.html#l00017">CastSpellInfo.h:17</a></div></div>
+<div class="ttc" id="a_cast_spell_info_8h_html_aeaca4ce7b3943438e4d5020dd988b9d9"><div class="ttname"><a href="../../d2/da1/_cast_spell_info_8h.html#aeaca4ce7b3943438e4d5020dd988b9d9">_42777D_CastSpell_UseWand_ShootArrow</a></div><div class="ttdeci">void _42777D_CastSpell_UseWand_ShootArrow(SPELL_TYPE spell, unsigned int uPlayerID, unsigned int a4, __int16 flags, int a6)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dd3/_cast_spell_info_8cpp_source.html#l04369">CastSpellInfo.cpp:4369</a></div></div>
+<div class="ttc" id="astruct_cast_spell_info_html_ae358f9cb5d86eaa6bf45c97f2c25397e"><div class="ttname"><a href="../../db/d9d/struct_cast_spell_info.html#ae358f9cb5d86eaa6bf45c97f2c25397e">CastSpellInfo::uPlayerID</a></div><div class="ttdeci">uint16_t uPlayerID</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/da1/_cast_spell_info_8h_source.html#l00025">CastSpellInfo.h:25</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5">SPELL_TYPE</a></div><div class="ttdeci">SPELL_TYPE</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00010">Spells.h:10</a></div></div>
+<div class="ttc" id="anamespace_cast_spell_info_helpers_html"><div class="ttname"><a href="../../d8/d06/namespace_cast_spell_info_helpers.html">CastSpellInfoHelpers</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/da1/_cast_spell_info_8h_source.html#l00008">CastSpellInfo.h:8</a></div></div>
+<div class="ttc" id="astruct_cast_spell_info_html_a0b9d7baef993baf3567134da95bb81c5"><div class="ttname"><a href="../../db/d9d/struct_cast_spell_info.html#a0b9d7baef993baf3567134da95bb81c5">CastSpellInfo::uPlayerID_2</a></div><div class="ttdeci">uint16_t uPlayerID_2</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/da1/_cast_spell_info_8h_source.html#l00026">CastSpellInfo.h:26</a></div></div>
+<div class="ttc" id="astruct_cast_spell_info_html_a4078f69d3c542e9102e18c1a23712c6e"><div class="ttname"><a href="../../db/d9d/struct_cast_spell_info.html#a4078f69d3c542e9102e18c1a23712c6e">CastSpellInfo::forced_spell_skill_level</a></div><div class="ttdeci">__int16 forced_spell_skill_level</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/da1/_cast_spell_info_8h_source.html#l00029">CastSpellInfo.h:29</a></div></div>
+<div class="ttc" id="a_spells_8h_html"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html">Spells.h</a></div></div>
+<div class="ttc" id="astruct_cast_spell_info_html_a246bdaeeef614738a898af1750dd09b4"><div class="ttname"><a href="../../db/d9d/struct_cast_spell_info.html#a246bdaeeef614738a898af1750dd09b4">CastSpellInfo::uSpellID</a></div><div class="ttdeci">uint16_t uSpellID</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/da1/_cast_spell_info_8h_source.html#l00024">CastSpellInfo.h:24</a></div></div>
+<div class="ttc" id="astruct_cast_spell_info_html_ada0e029a5bd210bed452bf9145d8418f"><div class="ttname"><a href="../../db/d9d/struct_cast_spell_info.html#ada0e029a5bd210bed452bf9145d8418f">CastSpellInfo::spell_target_pid</a></div><div class="ttdeci">int spell_target_pid</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/da1/_cast_spell_info_8h_source.html#l00030">CastSpellInfo.h:30</a></div></div>
+<div class="ttc" id="astruct_cast_spell_info_html_a455eabc6b1f114f9e55cd36f08dec9a1"><div class="ttname"><a href="../../db/d9d/struct_cast_spell_info.html#a455eabc6b1f114f9e55cd36f08dec9a1">CastSpellInfo::field_6</a></div><div class="ttdeci">__int16 field_6</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/da1/_cast_spell_info_8h_source.html#l00027">CastSpellInfo.h:27</a></div></div>
+<div class="ttc" id="astruct_cast_spell_info_html_a0cb3ab86a4ae66af0e0e579da0209fa4"><div class="ttname"><a href="../../db/d9d/struct_cast_spell_info.html#a0cb3ab86a4ae66af0e0e579da0209fa4">CastSpellInfo::GetCastSpellInInventoryWindow</a></div><div class="ttdeci">GUIWindow * GetCastSpellInInventoryWindow()</div><div class="ttdef"><b>Definition:</b> <a href="../../db/dd5/_u_i_character_8cpp_source.html#l00660">UICharacter.cpp:660</a></div></div>
+<div class="ttc" id="a_s_d_l__egl_8h_html_ac7ba7d3cce3d19ca020e056b37231289"><div class="ttname"><a href="../../df/d32/_s_d_l__egl_8h.html#ac7ba7d3cce3d19ca020e056b37231289">flags</a></div><div class="ttdeci">EGLSyncKHR EGLint flags</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/_s_d_l__egl_8h_source.html#l00898">SDL_egl.h:898</a></div></div>
+<div class="ttc" id="anamespace_cast_spell_info_helpers_html_adcfab5ec5567ebe310863a1f9c678cc7"><div class="ttname"><a href="../../d8/d06/namespace_cast_spell_info_helpers.html#adcfab5ec5567ebe310863a1f9c678cc7">CastSpellInfoHelpers::Cancel_Spell_Cast_In_Progress</a></div><div class="ttdeci">void Cancel_Spell_Cast_In_Progress()</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dd3/_cast_spell_info_8cpp_source.html#l04350">CastSpellInfo.cpp:4350</a></div></div>
+<div class="ttc" id="anamespace_cast_spell_info_helpers_html_a6fa3b22b4867c28cad6c215c646dc4aa"><div class="ttname"><a href="../../d8/d06/namespace_cast_spell_info_helpers.html#a6fa3b22b4867c28cad6c215c646dc4aa">CastSpellInfoHelpers::_427E01_cast_spell</a></div><div class="ttdeci">void _427E01_cast_spell()</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dd3/_cast_spell_info_8cpp_source.html#l00046">CastSpellInfo.cpp:46</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_0b6ee6e7e9547e675db4add2e5de97da.html">Engine</a></li><li class="navelem"><a class="el" href="../../dir_2a7ddc455d45d47bc23ad4371c29ec34.html">Spells</a></li><li class="navelem"><a class="el" href="../../d2/da1/_cast_spell_info_8h.html">CastSpellInfo.h</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:03:33. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Исходный файл C:/git/world-of-might-and-magic/GUI/UI/UIChest.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('dc/dbf/_u_i_chest_8h_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">UIChest.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../dc/dbf/_u_i_chest_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d5/d0b/_g_u_i_window_8h.html">GUI/GUIWindow.h</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">int</span> <a class="code" href="../../dc/dbf/_u_i_chest_8h.html#a98636382781da3dce2bdfb4126989d6b">pChestWidthsByType</a>[8];</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">int</span> <a class="code" href="../../dc/dbf/_u_i_chest_8h.html#ae4eb44725be4443b3fad28379769fd0c">pChestHeightsByType</a>[8];</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">int</span> <a class="code" href="../../dc/dbf/_u_i_chest_8h.html#a6fde5f80782f5efc717cdd08e1cab791">pChestPixelOffsetX</a>[8];</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">int</span> <a class="code" href="../../dc/dbf/_u_i_chest_8h.html#a2a25676c34454208ec3e3b853768dc16">pChestPixelOffsetY</a>[8];</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="../../d5/dcb/class_g_u_i_window___chest.html">   10</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d5/dcb/class_g_u_i_window___chest.html">GUIWindow_Chest</a> : <span class="keyword">public</span> <a class="code" href="../../d4/d38/class_g_u_i_window.html">GUIWindow</a> {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="../../d5/dcb/class_g_u_i_window___chest.html#a1088ffafe4cc38cdb66b6ae3c6aa2574">GUIWindow_Chest</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> chest_id);</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="../../d5/dcb/class_g_u_i_window___chest.html#aee627fe71f9567a9ac9549e3eb4437ea">   13</a></span>&#160;    <span class="keyword">virtual</span> <a class="code" href="../../d5/dcb/class_g_u_i_window___chest.html#aee627fe71f9567a9ac9549e3eb4437ea">~GUIWindow_Chest</a>() {}</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d5/dcb/class_g_u_i_window___chest.html#aa308c7edcf6ab7091930a44f279529c5">Update</a>();</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;};</div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="a_u_i_chest_8h_html_a98636382781da3dce2bdfb4126989d6b"><div class="ttname"><a href="../../dc/dbf/_u_i_chest_8h.html#a98636382781da3dce2bdfb4126989d6b">pChestWidthsByType</a></div><div class="ttdeci">int pChestWidthsByType[8]</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d15/_u_i_chest_8cpp_source.html#l00017">UIChest.cpp:17</a></div></div>
+<div class="ttc" id="aclass_g_u_i_window_html"><div class="ttname"><a href="../../d4/d38/class_g_u_i_window.html">GUIWindow</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d0b/_g_u_i_window_8h_source.html#l00433">GUIWindow.h:433</a></div></div>
+<div class="ttc" id="aclass_g_u_i_window___chest_html_aa308c7edcf6ab7091930a44f279529c5"><div class="ttname"><a href="../../d5/dcb/class_g_u_i_window___chest.html#aa308c7edcf6ab7091930a44f279529c5">GUIWindow_Chest::Update</a></div><div class="ttdeci">virtual void Update()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d15/_u_i_chest_8cpp_source.html#l00037">UIChest.cpp:37</a></div></div>
+<div class="ttc" id="aclass_g_u_i_window___chest_html"><div class="ttname"><a href="../../d5/dcb/class_g_u_i_window___chest.html">GUIWindow_Chest</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dbf/_u_i_chest_8h_source.html#l00010">UIChest.h:10</a></div></div>
+<div class="ttc" id="a_u_i_chest_8h_html_a6fde5f80782f5efc717cdd08e1cab791"><div class="ttname"><a href="../../dc/dbf/_u_i_chest_8h.html#a6fde5f80782f5efc717cdd08e1cab791">pChestPixelOffsetX</a></div><div class="ttdeci">int pChestPixelOffsetX[8]</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d15/_u_i_chest_8cpp_source.html#l00015">UIChest.cpp:15</a></div></div>
+<div class="ttc" id="aclass_g_u_i_window___chest_html_aee627fe71f9567a9ac9549e3eb4437ea"><div class="ttname"><a href="../../d5/dcb/class_g_u_i_window___chest.html#aee627fe71f9567a9ac9549e3eb4437ea">GUIWindow_Chest::~GUIWindow_Chest</a></div><div class="ttdeci">virtual ~GUIWindow_Chest()</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dbf/_u_i_chest_8h_source.html#l00013">UIChest.h:13</a></div></div>
+<div class="ttc" id="a_u_i_chest_8h_html_ae4eb44725be4443b3fad28379769fd0c"><div class="ttname"><a href="../../dc/dbf/_u_i_chest_8h.html#ae4eb44725be4443b3fad28379769fd0c">pChestHeightsByType</a></div><div class="ttdeci">int pChestHeightsByType[8]</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d15/_u_i_chest_8cpp_source.html#l00018">UIChest.cpp:18</a></div></div>
+<div class="ttc" id="aclass_g_u_i_window___chest_html_a1088ffafe4cc38cdb66b6ae3c6aa2574"><div class="ttname"><a href="../../d5/dcb/class_g_u_i_window___chest.html#a1088ffafe4cc38cdb66b6ae3c6aa2574">GUIWindow_Chest::GUIWindow_Chest</a></div><div class="ttdeci">GUIWindow_Chest(unsigned int chest_id)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d15/_u_i_chest_8cpp_source.html#l00020">UIChest.cpp:20</a></div></div>
+<div class="ttc" id="a_g_u_i_window_8h_html"><div class="ttname"><a href="../../d5/d0b/_g_u_i_window_8h.html">GUIWindow.h</a></div></div>
+<div class="ttc" id="a_u_i_chest_8h_html_a2a25676c34454208ec3e3b853768dc16"><div class="ttname"><a href="../../dc/dbf/_u_i_chest_8h.html#a2a25676c34454208ec3e3b853768dc16">pChestPixelOffsetY</a></div><div class="ttdeci">int pChestPixelOffsetY[8]</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d15/_u_i_chest_8cpp_source.html#l00016">UIChest.cpp:16</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_171b764decf33d63a7df2fab4f4bc6d8.html">GUI</a></li><li class="navelem"><a class="el" href="../../dir_008f70fed27c4008afe49ab10279d8cb.html">UI</a></li><li class="navelem"><a class="el" href="../../dc/dbf/_u_i_chest_8h.html">UIChest.h</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:03:35. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

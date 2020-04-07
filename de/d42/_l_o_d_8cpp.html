@@ -1,0 +1,449 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Файл C:/git/world-of-might-and-magic/Engine/LOD.cpp</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('de/d42/_l_o_d_8cpp.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#func-members">Функции</a> &#124;
+<a href="#var-members">Переменные</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл LOD.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><a href="../../de/d42/_l_o_d_8cpp_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/ddf/struct_l_o_d_sprite_line.html">LODSpriteLine</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/deb/struct_compressed_header.html">CompressedHeader</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:ac5f6c27c016c3c4c5cc60702a578c538"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d42/_l_o_d_8cpp.html#ac5f6c27c016c3c4c5cc60702a578c538">Initialize_GamesLOD_NewLOD</a> ()</td></tr>
+<tr class="separator:ac5f6c27c016c3c4c5cc60702a578c538"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:a0658cabda1f3f14fa5dc2f10a9b5d6ec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d81/class_l_o_d_file___icons_bitmaps.html">LODFile_IconsBitmaps</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d42/_l_o_d_8cpp.html#a0658cabda1f3f14fa5dc2f10a9b5d6ec">pEvents_LOD</a> = nullptr</td></tr>
+<tr class="separator:a0658cabda1f3f14fa5dc2f10a9b5d6ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69a9d0df11a07a79c1ecd460419cfcce"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d81/class_l_o_d_file___icons_bitmaps.html">LODFile_IconsBitmaps</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d42/_l_o_d_8cpp.html#a69a9d0df11a07a79c1ecd460419cfcce">pIcons_LOD</a> = nullptr</td></tr>
+<tr class="separator:a69a9d0df11a07a79c1ecd460419cfcce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afac4ba24476c632e2a452eaab3439550"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d81/class_l_o_d_file___icons_bitmaps.html">LODFile_IconsBitmaps</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d42/_l_o_d_8cpp.html#afac4ba24476c632e2a452eaab3439550">pIcons_LOD_mm6</a> = nullptr</td></tr>
+<tr class="separator:afac4ba24476c632e2a452eaab3439550"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab53efa2baacbef257db3bd287ce711b8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d81/class_l_o_d_file___icons_bitmaps.html">LODFile_IconsBitmaps</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d42/_l_o_d_8cpp.html#ab53efa2baacbef257db3bd287ce711b8">pIcons_LOD_mm8</a> = nullptr</td></tr>
+<tr class="separator:ab53efa2baacbef257db3bd287ce711b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35656858648d76649773ca0750c63b04"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d81/class_l_o_d_file___icons_bitmaps.html">LODFile_IconsBitmaps</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d42/_l_o_d_8cpp.html#a35656858648d76649773ca0750c63b04">pBitmaps_LOD</a> = nullptr</td></tr>
+<tr class="separator:a35656858648d76649773ca0750c63b04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a894b58714517c46b214d4b948a07d10f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d81/class_l_o_d_file___icons_bitmaps.html">LODFile_IconsBitmaps</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d42/_l_o_d_8cpp.html#a894b58714517c46b214d4b948a07d10f">pBitmaps_LOD_mm6</a> = nullptr</td></tr>
+<tr class="separator:a894b58714517c46b214d4b948a07d10f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00006d21981954ed6eb9dc215311a9f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d81/class_l_o_d_file___icons_bitmaps.html">LODFile_IconsBitmaps</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d42/_l_o_d_8cpp.html#a00006d21981954ed6eb9dc215311a9f4">pBitmaps_LOD_mm8</a> = nullptr</td></tr>
+<tr class="separator:a00006d21981954ed6eb9dc215311a9f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a620d8339d97670d600bd1bc9330b559c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d4/d10/class_l_o_d_file___sprites.html">LODFile_Sprites</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d42/_l_o_d_8cpp.html#a620d8339d97670d600bd1bc9330b559c">pSprites_LOD</a> = nullptr</td></tr>
+<tr class="separator:a620d8339d97670d600bd1bc9330b559c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e10725e973e2619743db9acd84c7556"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d4/d10/class_l_o_d_file___sprites.html">LODFile_Sprites</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d42/_l_o_d_8cpp.html#a3e10725e973e2619743db9acd84c7556">pSprites_LOD_mm6</a> = nullptr</td></tr>
+<tr class="separator:a3e10725e973e2619743db9acd84c7556"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5f9511afbcbfb324aaeb8ecc66f45b5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d4/d10/class_l_o_d_file___sprites.html">LODFile_Sprites</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d42/_l_o_d_8cpp.html#ac5f9511afbcbfb324aaeb8ecc66f45b5">pSprites_LOD_mm8</a> = nullptr</td></tr>
+<tr class="separator:ac5f9511afbcbfb324aaeb8ecc66f45b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef85f9958d2146e2fa92b9b5f9c184fd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d34/class_l_o_d_1_1_writeable_file.html">LOD::WriteableFile</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d42/_l_o_d_8cpp.html#aef85f9958d2146e2fa92b9b5f9c184fd">pNew_LOD</a> = nullptr</td></tr>
+<tr class="separator:aef85f9958d2146e2fa92b9b5f9c184fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a137bcff77c678b90cc1007a592cbb644"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/da7/class_l_o_d_1_1_file.html">LOD::File</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d42/_l_o_d_8cpp.html#a137bcff77c678b90cc1007a592cbb644">pGames_LOD</a> = nullptr</td></tr>
+<tr class="separator:a137bcff77c678b90cc1007a592cbb644"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fdbac406529ea6ebd81e33dd1a8db24"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d42/_l_o_d_8cpp.html#a5fdbac406529ea6ebd81e33dd1a8db24">_6A0CA4_lod_binary_search</a></td></tr>
+<tr class="separator:a5fdbac406529ea6ebd81e33dd1a8db24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e3e5362d7a687a56b2fa1dcced33774"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d42/_l_o_d_8cpp.html#a5e3e5362d7a687a56b2fa1dcced33774">_6A0CA8_lod_unused</a></td></tr>
+<tr class="separator:a5e3e5362d7a687a56b2fa1dcced33774"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Функции</h2>
+<a id="ac5f6c27c016c3c4c5cc60702a578c538"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5f6c27c016c3c4c5cc60702a578c538">&#9670;&nbsp;</a></span>Initialize_GamesLOD_NewLOD()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Initialize_GamesLOD_NewLOD </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html">LOD.cpp</a> строка <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html#l01218">1218</a></p>
+<div class="fragment"><div class="line"><a name="l01218"></a><span class="lineno"> 1218</span>&#160;                                  {</div>
+<div class="line"><a name="l01219"></a><span class="lineno"> 1219</span>&#160;    <a class="code" href="../../de/d42/_l_o_d_8cpp.html#a137bcff77c678b90cc1007a592cbb644">pGames_LOD</a> = <span class="keyword">new</span> <a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html">LOD::File</a>();</div>
+<div class="line"><a name="l01220"></a><span class="lineno"> 1220</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../de/d42/_l_o_d_8cpp.html#a137bcff77c678b90cc1007a592cbb644">pGames_LOD</a>-&gt;<a class="code" href="../../dd/da7/class_l_o_d_1_1_file.html#aa32d8447321690bead61de05f93352be">Open</a>(<a class="code" href="../../d4/d68/_engine_8cpp.html#a7a083a74e008e624d001444406d58c6d">MakeDataPath</a>(<span class="stringliteral">&quot;data\\games.lod&quot;</span>))) {</div>
+<div class="line"><a name="l01221"></a><span class="lineno"> 1221</span>&#160;        <a class="code" href="../../de/d42/_l_o_d_8cpp.html#aef85f9958d2146e2fa92b9b5f9c184fd">pNew_LOD</a> = <span class="keyword">new</span> <a class="code" href="../../d6/d34/class_l_o_d_1_1_writeable_file.html">LOD::WriteableFile</a>;</div>
+<div class="line"><a name="l01222"></a><span class="lineno"> 1222</span>&#160;        <a class="code" href="../../de/d42/_l_o_d_8cpp.html#aef85f9958d2146e2fa92b9b5f9c184fd">pNew_LOD</a>-&gt;<a class="code" href="../../d6/d34/class_l_o_d_1_1_writeable_file.html#a27c1375db8ac51cc709ea1bb913f6a6a">AllocSubIndicesAndIO</a>(300, 100000);</div>
+<div class="line"><a name="l01223"></a><span class="lineno"> 1223</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l01224"></a><span class="lineno"> 1224</span>&#160;    }</div>
+<div class="line"><a name="l01225"></a><span class="lineno"> 1225</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l01226"></a><span class="lineno"> 1226</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html#l00712">LOD::WriteableFile::AllocSubIndicesAndIO()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l00126">MakeDataPath()</a>, <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html#l00751">LOD::File::Open()</a>, <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html#l00025">pGames_LOD</a> и <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html#l00024">pNew_LOD</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l01082">Engine::SecondaryInitialization()</a>.</p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../de/d42/_l_o_d_8cpp_ac5f6c27c016c3c4c5cc60702a578c538_cgraph.svg" width="508" height="155"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../de/d42/_l_o_d_8cpp_ac5f6c27c016c3c4c5cc60702a578c538_icgraph.svg" width="403" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Переменные</h2>
+<a id="a0658cabda1f3f14fa5dc2f10a9b5d6ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0658cabda1f3f14fa5dc2f10a9b5d6ec">&#9670;&nbsp;</a></span>pEvents_LOD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d8/d81/class_l_o_d_file___icons_bitmaps.html">LODFile_IconsBitmaps</a>* pEvents_LOD = nullptr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html">LOD.cpp</a> строка <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html#l00010">10</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../db/d8c/_u_i_credits_8cpp_source.html#l00015">GUICredits::GUICredits()</a>, <a class="el" href="../../da/d25/_faction_table_8cpp_source.html#l00008">FactionTable::Initialize()</a>, <a class="el" href="../../dd/d8c/_localization_8cpp_source.html#l00034">Localization::Initialize()</a>, <a class="el" href="../../d5/d88/_storyline_text_table_8cpp_source.html#l00013">StorylineText::Initialize()</a>, <a class="el" href="../../dd/d31/_map_info_8cpp_source.html#l00047">MapStats::Initialize()</a>, <a class="el" href="../../d1/d6c/_n_p_c_8cpp_source.html#l00445">NPCStats::Initialize()</a>, <a class="el" href="../../d6/d6c/_monsters_8cpp_source.html#l00491">MonsterStats::Initialize()</a>, <a class="el" href="../../da/df3/_spells_8cpp_source.html#l00385">SpellStats::Initialize()</a>, <a class="el" href="../../d9/d99/_items_8cpp_source.html#l00181">ItemsTable::Initialize()</a>, <a class="el" href="../../dd/d8c/_localization_8cpp_source.html#l00418">Localization::InitializeAttributeNames()</a>, <a class="el" href="../../d1/d6c/_n_p_c_8cpp_source.html#l00945">InitializeAutonotes()</a>, <a class="el" href="../../d1/d6c/_n_p_c_8cpp_source.html#l00771">InitializeAwards()</a>, <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l03715">InitializeBuildingResidents()</a>, <a class="el" href="../../dd/d8c/_localization_8cpp_source.html#l00300">Localization::InitializeClassNames()</a>, <a class="el" href="../../d1/d6c/_n_p_c_8cpp_source.html#l00852">InitializeMerchants()</a>, <a class="el" href="../../d1/d6c/_n_p_c_8cpp_source.html#l00284">NPCStats::InitializeNPCData()</a>, <a class="el" href="../../d1/d6c/_n_p_c_8cpp_source.html#l00158">NPCStats::InitializeNPCText()</a>, <a class="el" href="../../d6/d6c/_monsters_8cpp_source.html#l00451">MonsterStats::InitializePlacements()</a>, <a class="el" href="../../d1/d6c/_n_p_c_8cpp_source.html#l01012">InitializeQuests()</a>, <a class="el" href="../../d1/d6c/_n_p_c_8cpp_source.html#l00814">InitializeScrolls()</a>, <a class="el" href="../../dd/d8c/_localization_8cpp_source.html#l00244">Localization::InitializeSkillNames()</a>, <a class="el" href="../../d1/d6c/_n_p_c_8cpp_source.html#l00905">InitializeTransitions()</a>, <a class="el" href="../../df/d5c/_events_8cpp_source.html#l00059">LoadEventsToBuffer()</a>, <a class="el" href="../../d9/d99/_items_8cpp_source.html#l00541">ItemsTable::LoadPotionNotes()</a>, <a class="el" href="../../d9/d99/_items_8cpp_source.html#l00494">ItemsTable::LoadPotions()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l00903">Engine::MM7_Initialize()</a> и <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l00869">MM7_LoadLods()</a>.</p>
+
+</div>
+</div>
+<a id="a69a9d0df11a07a79c1ecd460419cfcce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69a9d0df11a07a79c1ecd460419cfcce">&#9670;&nbsp;</a></span>pIcons_LOD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d8/d81/class_l_o_d_file___icons_bitmaps.html">LODFile_IconsBitmaps</a>* pIcons_LOD = nullptr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html">LOD.cpp</a> строка <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html#l00012">12</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l00921">RenderOpenGL::CreateTexture_Alpha()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l00088">Render::CreateTexture_Alpha()</a>, <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l00913">RenderOpenGL::CreateTexture_ColorKey()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l00080">Render::CreateTexture_ColorKey()</a>, <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l00933">RenderOpenGL::CreateTexture_PCXFromFile()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l00100">Render::CreateTexture_PCXFromFile()</a>, <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l00925">RenderOpenGL::CreateTexture_PCXFromIconsLOD()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l00092">Render::CreateTexture_PCXFromIconsLOD()</a>, <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l00917">RenderOpenGL::CreateTexture_Solid()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l00084">Render::CreateTexture_Solid()</a>, <a class="el" href="../../df/d5c/_events_8cpp_source.html#l00260">EventProcessor()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l00852">FinalInitialization()</a>, <a class="el" href="../../d7/db5/_game_8cpp_source.html#l02704">Application::Game::GameLoop()</a>, <a class="el" href="../../d9/d68/_u_i_save_load_8cpp_source.html#l00121">GUIWindow_Load::GUIWindow_Load()</a>, <a class="el" href="../../d4/d5e/_g_u_i_font_8cpp_source.html#l00056">GUIFont::LoadFont()</a>, <a class="el" href="../../dc/dce/_g_u_i_window_8cpp_source.html#l02512">MainMenuUI_LoadFontsAndSomeStuff()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l00869">MM7_LoadLods()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l01342">Engine::ResetCursor_Palettes_LODs_Level_Audio_SFT_Windows()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l01082">Engine::SecondaryInitialization()</a> и <a class="el" href="../../db/d8c/_u_i_credits_8cpp_source.html#l00049">GUICredits::~GUICredits()</a>.</p>
+
+</div>
+</div>
+<a id="afac4ba24476c632e2a452eaab3439550"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afac4ba24476c632e2a452eaab3439550">&#9670;&nbsp;</a></span>pIcons_LOD_mm6</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d8/d81/class_l_o_d_file___icons_bitmaps.html">LODFile_IconsBitmaps</a>* pIcons_LOD_mm6 = nullptr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html">LOD.cpp</a> строка <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html#l00013">13</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l00903">Engine::MM7_Initialize()</a>.</p>
+
+</div>
+</div>
+<a id="ab53efa2baacbef257db3bd287ce711b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab53efa2baacbef257db3bd287ce711b8">&#9670;&nbsp;</a></span>pIcons_LOD_mm8</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d8/d81/class_l_o_d_file___icons_bitmaps.html">LODFile_IconsBitmaps</a>* pIcons_LOD_mm8 = nullptr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html">LOD.cpp</a> строка <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html#l00014">14</a></p>
+
+</div>
+</div>
+<a id="a35656858648d76649773ca0750c63b04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35656858648d76649773ca0750c63b04">&#9670;&nbsp;</a></span>pBitmaps_LOD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d8/d81/class_l_o_d_file___icons_bitmaps.html">LODFile_IconsBitmaps</a>* pBitmaps_LOD = nullptr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html">LOD.cpp</a> строка <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html#l00016">16</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l01569">OutdoorLocation::_47F0E2()</a>, <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l00944">RenderOpenGL::CreateTexture()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l00112">Render::CreateTexture()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l00852">FinalInitialization()</a>, <a class="el" href="../../df/d35/_render_d3_d_8cpp_source.html#l00856">RenderD3D::HandleLostResources()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00858">IndoorLocation::Load()</a>, <a class="el" href="../../dc/dc7/_palette_manager_8cpp_source.html#l00648">PaletteManager::LoadPalette()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l00869">MM7_LoadLods()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l01342">Engine::ResetCursor_Palettes_LODs_Level_Audio_SFT_Windows()</a> и <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l01082">Engine::SecondaryInitialization()</a>.</p>
+
+</div>
+</div>
+<a id="a894b58714517c46b214d4b948a07d10f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a894b58714517c46b214d4b948a07d10f">&#9670;&nbsp;</a></span>pBitmaps_LOD_mm6</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d8/d81/class_l_o_d_file___icons_bitmaps.html">LODFile_IconsBitmaps</a>* pBitmaps_LOD_mm6 = nullptr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html">LOD.cpp</a> строка <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html#l00017">17</a></p>
+
+</div>
+</div>
+<a id="a00006d21981954ed6eb9dc215311a9f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00006d21981954ed6eb9dc215311a9f4">&#9670;&nbsp;</a></span>pBitmaps_LOD_mm8</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d8/d81/class_l_o_d_file___icons_bitmaps.html">LODFile_IconsBitmaps</a>* pBitmaps_LOD_mm8 = nullptr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html">LOD.cpp</a> строка <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html#l00018">18</a></p>
+
+</div>
+</div>
+<a id="a620d8339d97670d600bd1bc9330b559c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a620d8339d97670d600bd1bc9330b559c">&#9670;&nbsp;</a></span>pSprites_LOD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d4/d10/class_l_o_d_file___sprites.html">LODFile_Sprites</a>* pSprites_LOD = nullptr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html">LOD.cpp</a> строка <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html#l00020">20</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l01365">Engine::_461103_load_level_sub()</a>, <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l00948">RenderOpenGL::CreateSprite()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l00116">Render::CreateSprite()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l00852">FinalInitialization()</a>, <a class="el" href="../../df/d35/_render_d3_d_8cpp_source.html#l00856">RenderD3D::HandleLostResources()</a>, <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l00246">OutdoorLocation::Initialize()</a>, <a class="el" href="../../db/d87/_sprites_8cpp_source.html#l00046">SpriteFrameTable::InitializeSprite()</a>, <a class="el" href="../../de/dd4/_vis_8cpp_source.html#l00251">Vis::IsPointInsideD3DBillboard()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l00869">MM7_LoadLods()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l01342">Engine::ResetCursor_Palettes_LODs_Level_Audio_SFT_Windows()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l01082">Engine::SecondaryInitialization()</a> и <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l04922">SpawnActor()</a>.</p>
+
+</div>
+</div>
+<a id="a3e10725e973e2619743db9acd84c7556"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e10725e973e2619743db9acd84c7556">&#9670;&nbsp;</a></span>pSprites_LOD_mm6</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d4/d10/class_l_o_d_file___sprites.html">LODFile_Sprites</a>* pSprites_LOD_mm6 = nullptr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html">LOD.cpp</a> строка <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html#l00021">21</a></p>
+
+</div>
+</div>
+<a id="ac5f9511afbcbfb324aaeb8ecc66f45b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5f9511afbcbfb324aaeb8ecc66f45b5">&#9670;&nbsp;</a></span>pSprites_LOD_mm8</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d4/d10/class_l_o_d_file___sprites.html">LODFile_Sprites</a>* pSprites_LOD_mm8 = nullptr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html">LOD.cpp</a> строка <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html#l00022">22</a></p>
+
+</div>
+</div>
+<a id="aef85f9958d2146e2fa92b9b5f9c184fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef85f9958d2146e2fa92b9b5f9c184fd">&#9670;&nbsp;</a></span>pNew_LOD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d6/d34/class_l_o_d_1_1_writeable_file.html">LOD::WriteableFile</a>* pNew_LOD = nullptr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html">LOD.cpp</a> строка <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html#l00024">24</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l00929">RenderOpenGL::CreateTexture_PCXFromNewLOD()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l00096">Render::CreateTexture_PCXFromNewLOD()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l00478">Engine::Deinitialize()</a>, <a class="el" href="../../d4/d9d/_save_load_8cpp_source.html#l00514">DoSavegame()</a>, <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html#l01218">Initialize_GamesLOD_NewLOD()</a>, <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l00980">OutdoorLocation::Load()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00858">IndoorLocation::Load()</a>, <a class="el" href="../../d4/d9d/_save_load_8cpp_source.html#l00077">LoadGame()</a>, <a class="el" href="../../d4/d9d/_save_load_8cpp_source.html#l00238">SaveGame()</a> и <a class="el" href="../../d4/d9d/_save_load_8cpp_source.html#l00566">SaveNewGame()</a>.</p>
+
+</div>
+</div>
+<a id="a137bcff77c678b90cc1007a592cbb644"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a137bcff77c678b90cc1007a592cbb644">&#9670;&nbsp;</a></span>pGames_LOD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dd/da7/class_l_o_d_1_1_file.html">LOD::File</a>* pGames_LOD = nullptr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html">LOD.cpp</a> строка <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html#l00025">25</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d7/db5/_game_8cpp_source.html#l00322">Application::Game::EventLoop()</a>, <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html#l01218">Initialize_GamesLOD_NewLOD()</a>, <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l00980">OutdoorLocation::Load()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00858">IndoorLocation::Load()</a>, <a class="el" href="../../d4/d9d/_save_load_8cpp_source.html#l00077">LoadGame()</a>, <a class="el" href="../../d4/d9d/_save_load_8cpp_source.html#l00566">SaveNewGame()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l08186">Player::SetBeacon()</a> и <a class="el" href="../../dd/d31/_map_info_8cpp_source.html#l00213">MapStats::sub_410D99_get_map_index()</a>.</p>
+
+</div>
+</div>
+<a id="a5fdbac406529ea6ebd81e33dd1a8db24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fdbac406529ea6ebd81e33dd1a8db24">&#9670;&nbsp;</a></span>_6A0CA4_lod_binary_search</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int _6A0CA4_lod_binary_search</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html">LOD.cpp</a> строка <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html#l00027">27</a></p>
+
+</div>
+</div>
+<a id="a5e3e5362d7a687a56b2fa1dcced33774"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e3e5362d7a687a56b2fa1dcced33774">&#9670;&nbsp;</a></span>_6A0CA8_lod_unused</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int _6A0CA8_lod_unused</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html">LOD.cpp</a> строка <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html#l00028">28</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html#l00243">LOD::File::Close()</a> и <a class="el" href="../../de/d42/_l_o_d_8cpp_source.html#l00530">LOD::WriteableFile::CloseWriteFile()</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="a_l_o_d_8cpp_html_aef85f9958d2146e2fa92b9b5f9c184fd"><div class="ttname"><a href="../../de/d42/_l_o_d_8cpp.html#aef85f9958d2146e2fa92b9b5f9c184fd">pNew_LOD</a></div><div class="ttdeci">LOD::WriteableFile * pNew_LOD</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d42/_l_o_d_8cpp_source.html#l00024">LOD.cpp:24</a></div></div>
+<div class="ttc" id="aclass_l_o_d_1_1_writeable_file_html_a27c1375db8ac51cc709ea1bb913f6a6a"><div class="ttname"><a href="../../d6/d34/class_l_o_d_1_1_writeable_file.html#a27c1375db8ac51cc709ea1bb913f6a6a">LOD::WriteableFile::AllocSubIndicesAndIO</a></div><div class="ttdeci">void AllocSubIndicesAndIO(unsigned int uNumSubIndices, unsigned int uBufferSize)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d42/_l_o_d_8cpp_source.html#l00712">LOD.cpp:712</a></div></div>
+<div class="ttc" id="aclass_l_o_d_1_1_writeable_file_html"><div class="ttname"><a href="../../d6/d34/class_l_o_d_1_1_writeable_file.html">LOD::WriteableFile</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/_l_o_d_8h_source.html#l00097">LOD.h:97</a></div></div>
+<div class="ttc" id="a_l_o_d_8cpp_html_a137bcff77c678b90cc1007a592cbb644"><div class="ttname"><a href="../../de/d42/_l_o_d_8cpp.html#a137bcff77c678b90cc1007a592cbb644">pGames_LOD</a></div><div class="ttdeci">LOD::File * pGames_LOD</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d42/_l_o_d_8cpp_source.html#l00025">LOD.cpp:25</a></div></div>
+<div class="ttc" id="a_engine_8cpp_html_a7a083a74e008e624d001444406d58c6d"><div class="ttname"><a href="../../d4/d68/_engine_8cpp.html#a7a083a74e008e624d001444406d58c6d">MakeDataPath</a></div><div class="ttdeci">std::string MakeDataPath(const char *file_rel_path)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d68/_engine_8cpp_source.html#l00126">Engine.cpp:126</a></div></div>
+<div class="ttc" id="aclass_l_o_d_1_1_file_html"><div class="ttname"><a href="../../dd/da7/class_l_o_d_1_1_file.html">LOD::File</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/_l_o_d_8h_source.html#l00058">LOD.h:58</a></div></div>
+<div class="ttc" id="aclass_l_o_d_1_1_file_html_aa32d8447321690bead61de05f93352be"><div class="ttname"><a href="../../dd/da7/class_l_o_d_1_1_file.html#aa32d8447321690bead61de05f93352be">LOD::File::Open</a></div><div class="ttdeci">bool Open(const String &amp;pFilename)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d42/_l_o_d_8cpp_source.html#l00751">LOD.cpp:751</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_0b6ee6e7e9547e675db4add2e5de97da.html">Engine</a></li><li class="navelem"><a class="el" href="../../de/d42/_l_o_d_8cpp.html">LOD.cpp</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:03:59. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

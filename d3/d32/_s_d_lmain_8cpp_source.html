@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Исходный файл C:/git/world-of-might-and-magic/Platform/SDLmain.cpp</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d3/d32/_s_d_lmain_8cpp_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">SDLmain.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d3/d32/_s_d_lmain_8cpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;lib/SDL2/include/SDL.h&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="../../d3/d32/_s_d_lmain_8cpp.html#a2c6a3150165fb0370f9c026e970ae090">    5</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../d3/d32/_s_d_lmain_8cpp.html#a2c6a3150165fb0370f9c026e970ae090">SDL_main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[]) {</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#ae84541b4f3d8e1ea24ec0f466a8c568b">std::string</a> cmd;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt; argc; ++i) {</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;        cmd += <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#ae84541b4f3d8e1ea24ec0f466a8c568b">std::string</a>(argv[i]) + <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    }</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1dbb21208b9047cc8031ca9c840d3c2f">res</a> = -1;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../de/ddc/_s_d_l_8h.html#a8fc8d35348d7c74bad8392d776c937b8">SDL_Init</a>(SDL_INIT_VIDEO) &gt;= 0) {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <span class="keyword">extern</span> <span class="keywordtype">int</span> <a class="code" href="../../d7/db5/_game_8cpp.html#ad318314d1daea4c1b716cec6ef4b5982">MM_Main</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1dbb21208b9047cc8031ca9c840d3c2f">res</a> = <a class="code" href="../../d7/db5/_game_8cpp.html#ad318314d1daea4c1b716cec6ef4b5982">MM_Main</a>(cmd.c_str());</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <a class="code" href="../../de/ddc/_s_d_l_8h.html#afdabaf714781099083592051f2d9ac11">SDL_Quit</a>();</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    }</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1dbb21208b9047cc8031ca9c840d3c2f">res</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="a_s_d_l_8h_html_afdabaf714781099083592051f2d9ac11"><div class="ttname"><a href="../../de/ddc/_s_d_l_8h.html#afdabaf714781099083592051f2d9ac11">SDL_Quit</a></div><div class="ttdeci">DECLSPEC void SDLCALL SDL_Quit(void)</div></div>
+<div class="ttc" id="a_s_d_lmain_8cpp_html_a2c6a3150165fb0370f9c026e970ae090"><div class="ttname"><a href="../../d3/d32/_s_d_lmain_8cpp.html#a2c6a3150165fb0370f9c026e970ae090">SDL_main</a></div><div class="ttdeci">int SDL_main(int argc, char *argv[])</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d32/_s_d_lmain_8cpp_source.html#l00005">SDLmain.cpp:5</a></div></div>
+<div class="ttc" id="a_game_8cpp_html_ad318314d1daea4c1b716cec6ef4b5982"><div class="ttname"><a href="../../d7/db5/_game_8cpp.html#ad318314d1daea4c1b716cec6ef4b5982">MM_Main</a></div><div class="ttdeci">int MM_Main(const char *pCmdLine)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/db5/_game_8cpp_source.html#l00083">Game.cpp:83</a></div></div>
+<div class="ttc" id="a_s_d_l_8h_html_a8fc8d35348d7c74bad8392d776c937b8"><div class="ttname"><a href="../../de/ddc/_s_d_l_8h.html#a8fc8d35348d7c74bad8392d776c937b8">SDL_Init</a></div><div class="ttdeci">DECLSPEC int SDLCALL SDL_Init(Uint32 flags)</div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_ae84541b4f3d8e1ea24ec0f466a8c568b"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#ae84541b4f3d8e1ea24ec0f466a8c568b">string</a></div><div class="ttdeci">GLsizei const GLchar *const  * string</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l00691">SDL_opengl_glext.h:691</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a1dbb21208b9047cc8031ca9c840d3c2f"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1dbb21208b9047cc8031ca9c840d3c2f">res</a></div><div class="ttdeci">GLuint res</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l07940">SDL_opengl_glext.h:7940</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_46f0a310448968fe371c870cd868aa1f.html">Platform</a></li><li class="navelem"><a class="el" href="../../d3/d32/_s_d_lmain_8cpp.html">SDLmain.cpp</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:03:45. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

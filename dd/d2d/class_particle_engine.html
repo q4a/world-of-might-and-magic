@@ -1,0 +1,888 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Класс ParticleEngine</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('dd/d2d/class_particle_engine.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="../../dc/d30/class_particle_engine-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс ParticleEngine</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="../../da/ddf/_particle_engine_8h_source.html">ParticleEngine.h</a>&gt;</code></p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Граф связей класса ParticleEngine:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d7/df5/class_particle_engine__coll__graph.svg" width="382" height="484"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a7775dfeb4a6ea9040bb026878894df15"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d2d/class_particle_engine.html#a7775dfeb4a6ea9040bb026878894df15">ParticleEngine</a> ()</td></tr>
+<tr class="separator:a7775dfeb4a6ea9040bb026878894df15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa47b4db20bfd62c9d25f1bc0afa7558"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d2d/class_particle_engine.html#aaa47b4db20bfd62c9d25f1bc0afa7558">ResetParticles</a> ()</td></tr>
+<tr class="separator:aaa47b4db20bfd62c9d25f1bc0afa7558"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0699c216edc3b210955899c8df6cb05"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d2d/class_particle_engine.html#aa0699c216edc3b210955899c8df6cb05">AddParticle</a> (<a class="el" href="../../d8/d4e/struct_particle__sw.html">Particle_sw</a> *a2)</td></tr>
+<tr class="separator:aa0699c216edc3b210955899c8df6cb05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73c8076ecf6d3dcc50c56a7a755c4c58"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d2d/class_particle_engine.html#a73c8076ecf6d3dcc50c56a7a755c4c58">Draw</a> ()</td></tr>
+<tr class="separator:a73c8076ecf6d3dcc50c56a7a755c4c58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82017d932a3aac0e05acf6ed95783672"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d2d/class_particle_engine.html#a82017d932a3aac0e05acf6ed95783672">UpdateParticles</a> ()</td></tr>
+<tr class="separator:a82017d932a3aac0e05acf6ed95783672"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad63c7069319085019cf0c086e38cce06"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d2d/class_particle_engine.html#ad63c7069319085019cf0c086e38cce06">ViewProject_TrueIfStillVisible_BLV</a> (unsigned int uParticleID)</td></tr>
+<tr class="separator:ad63c7069319085019cf0c086e38cce06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac38c9e5bad552707f0c7f97d40c7aab9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d2d/class_particle_engine.html#ac38c9e5bad552707f0c7f97d40c7aab9">DrawParticles_BLV</a> ()</td></tr>
+<tr class="separator:ac38c9e5bad552707f0c7f97d40c7aab9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:adfa62ea7457580df57fe538cbf0ded72"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/d47/struct_particle.html">Particle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d2d/class_particle_engine.html#adfa62ea7457580df57fe538cbf0ded72">pParticles</a> [500]</td></tr>
+<tr class="separator:adfa62ea7457580df57fe538cbf0ded72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3957c1bbc15d72cbea17f0b368255408"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/dbb/structstru2___line_list.html">stru2_LineList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d2d/class_particle_engine.html#a3957c1bbc15d72cbea17f0b368255408">pLines</a></td></tr>
+<tr class="separator:a3957c1bbc15d72cbea17f0b368255408"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa059c11698f3b8d64094aa45112a7c8c"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d2d/class_particle_engine.html#aa059c11698f3b8d64094aa45112a7c8c">field_D160</a> [4800]</td></tr>
+<tr class="separator:aa059c11698f3b8d64094aa45112a7c8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a804d13ecd639e8ad0973161637b342c5"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d2d/class_particle_engine.html#a804d13ecd639e8ad0973161637b342c5">field_E420</a></td></tr>
+<tr class="separator:a804d13ecd639e8ad0973161637b342c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa04b254e2246aff582e7cdab6cb593aa"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d2d/class_particle_engine.html#aa04b254e2246aff582e7cdab6cb593aa">uStartParticle</a></td></tr>
+<tr class="separator:aa04b254e2246aff582e7cdab6cb593aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abea3a8c0db75ac902fd948ee13c98649"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d2d/class_particle_engine.html#abea3a8c0db75ac902fd948ee13c98649">uEndParticle</a></td></tr>
+<tr class="separator:abea3a8c0db75ac902fd948ee13c98649"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3781f756542a8ce3758883643f19ff09"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d2d/class_particle_engine.html#a3781f756542a8ce3758883643f19ff09">uTimeElapsed</a></td></tr>
+<tr class="separator:a3781f756542a8ce3758883643f19ff09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock">
+<p class="definition">См. определение в файле <a class="el" href="../../da/ddf/_particle_engine_8h_source.html">ParticleEngine.h</a> строка <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00093">93</a></p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a7775dfeb4a6ea9040bb026878894df15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7775dfeb4a6ea9040bb026878894df15">&#9670;&nbsp;</a></span>ParticleEngine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ParticleEngine::ParticleEngine </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d46/_particle_engine_8cpp_source.html">ParticleEngine.cpp</a> строка <a class="el" href="../../dc/d46/_particle_engine_8cpp_source.html#l00049">49</a></p>
+<div class="fragment"><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                               {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="../../d2/d83/_m_m7_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a> i = 0; i &lt; 500; ++i)</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        memset(&amp;<a class="code" href="../../dd/d2d/class_particle_engine.html#adfa62ea7457580df57fe538cbf0ded72">pParticles</a>[i], 0, <span class="keyword">sizeof</span>(<a class="code" href="../../dd/d2d/class_particle_engine.html#adfa62ea7457580df57fe538cbf0ded72">pParticles</a>[i]));</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <a class="code" href="../../dd/d2d/class_particle_engine.html#aaa47b4db20bfd62c9d25f1bc0afa7558">ResetParticles</a>();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00104">pParticles</a> и <a class="el" href="../../dc/d46/_particle_engine_8cpp_source.html#l00057">ResetParticles()</a>.</p>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../dd/d2d/class_particle_engine_a7775dfeb4a6ea9040bb026878894df15_cgraph.svg" width="416" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="aaa47b4db20bfd62c9d25f1bc0afa7558"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa47b4db20bfd62c9d25f1bc0afa7558">&#9670;&nbsp;</a></span>ResetParticles()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> ParticleEngine::ResetParticles </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d46/_particle_engine_8cpp_source.html">ParticleEngine.cpp</a> строка <a class="el" href="../../dc/d46/_particle_engine_8cpp_source.html#l00057">57</a></p>
+<div class="fragment"><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                                    {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    memset(<a class="code" href="../../dd/d2d/class_particle_engine.html#adfa62ea7457580df57fe538cbf0ded72">pParticles</a>, 0, 500 * <span class="keyword">sizeof</span>(*<a class="code" href="../../dd/d2d/class_particle_engine.html#adfa62ea7457580df57fe538cbf0ded72">pParticles</a>));</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="../../dd/d2d/class_particle_engine.html#aa04b254e2246aff582e7cdab6cb593aa">uStartParticle</a> = 500;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="../../dd/d2d/class_particle_engine.html#abea3a8c0db75ac902fd948ee13c98649">uEndParticle</a> = 0;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="../../dd/d2d/class_particle_engine.html#a3781f756542a8ce3758883643f19ff09">uTimeElapsed</a> = 0;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00104">pParticles</a>, <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00109">uEndParticle</a>, <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00108">uStartParticle</a> и <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00110">uTimeElapsed</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../dc/d46/_particle_engine_8cpp_source.html#l00049">ParticleEngine()</a>.</p>
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../dd/d2d/class_particle_engine_aaa47b4db20bfd62c9d25f1bc0afa7558_icgraph.svg" width="416" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="aa0699c216edc3b210955899c8df6cb05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0699c216edc3b210955899c8df6cb05">&#9670;&nbsp;</a></span>AddParticle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> ParticleEngine::AddParticle </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d8/d4e/struct_particle__sw.html">Particle_sw</a> *&#160;</td>
+          <td class="paramname"><em>a2</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d46/_particle_engine_8cpp_source.html">ParticleEngine.cpp</a> строка <a class="el" href="../../dc/d46/_particle_engine_8cpp_source.html#l00065">65</a></p>
+<div class="fragment"><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                                                {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">signed</span> <span class="keywordtype">int</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0928f6d0f0f794ba000a21dfae422136">v2</a>;  <span class="comment">// eax@2</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <a class="code" href="../../dd/d47/struct_particle.html">Particle</a> *<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#acc806b31cbf466ceba6555983d8b814d">v3</a>;   <span class="comment">// edx@2</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <a class="code" href="../../dd/d47/struct_particle.html">Particle</a> *v4;   <span class="comment">// esi@10</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">int</span> v5;         <span class="comment">// ecx@10</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="comment">// char v6; // zf@10</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="../../db/d84/_time_8cpp.html#a9ca3ab6c124ad35dfe22a7d293537c77">pMiscTimer</a>-&gt;<a class="code" href="../../d8/da1/struct_timer.html#a2b68b304c41fe966c42e0614ad00d08d">bPaused</a>) {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0928f6d0f0f794ba000a21dfae422136">v2</a> = 0;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#acc806b31cbf466ceba6555983d8b814d">v3</a> = (<a class="code" href="../../dd/d47/struct_particle.html">Particle</a> *)<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keywordflow">do</span> {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#acc806b31cbf466ceba6555983d8b814d">v3</a>-&gt;type == <a class="code" href="../../da/ddf/_particle_engine_8h.html#a70555b8606c05618f7f4180c162bc9dbaa40b8b41fdf4938e4ffef7889dbf3c05">ParticleType_Invalid</a>) <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            ++<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0928f6d0f0f794ba000a21dfae422136">v2</a>;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            ++<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#acc806b31cbf466ceba6555983d8b814d">v3</a>;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        } <span class="keywordflow">while</span> (<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0928f6d0f0f794ba000a21dfae422136">v2</a> &lt; 500);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0928f6d0f0f794ba000a21dfae422136">v2</a> &lt; 500) {</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0928f6d0f0f794ba000a21dfae422136">v2 &lt; this-&gt;</a><a class="code" href="../../dd/d2d/class_particle_engine.html#aa04b254e2246aff582e7cdab6cb593aa">uStartParticle</a>) this-&gt;uStartParticle = <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0928f6d0f0f794ba000a21dfae422136">v2</a>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0928f6d0f0f794ba000a21dfae422136">v2</a> &gt; this-&gt;<a class="code" href="../../dd/d2d/class_particle_engine.html#abea3a8c0db75ac902fd948ee13c98649">uEndParticle</a>) this-&gt;<a class="code" href="../../dd/d2d/class_particle_engine.html#abea3a8c0db75ac902fd948ee13c98649">uEndParticle</a> = <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0928f6d0f0f794ba000a21dfae422136">v2</a>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            v4 = &amp;this-&gt;<a class="code" href="../../dd/d2d/class_particle_engine.html#adfa62ea7457580df57fe538cbf0ded72">pParticles</a>[<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0928f6d0f0f794ba000a21dfae422136">v2</a>];</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            v4-&gt;<a class="code" href="../../dd/d47/struct_particle.html#af36c2527a2a500195d7b2fd090aabc1f">type</a> = a2-&gt;<a class="code" href="../../d8/d4e/struct_particle__sw.html#ad5caf699963ae1b98018e2891f7a374f">type</a>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            v4-&gt;<a class="code" href="../../dd/d47/struct_particle.html#ad4143dd85b447270cf6c5234cf1916b0">x</a> = a2-&gt;<a class="code" href="../../d8/d4e/struct_particle__sw.html#a8bff85f1a6710f15fb46f9b880d7b5af">x</a>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            v4-&gt;<a class="code" href="../../dd/d47/struct_particle.html#a5abb12ba5f671bbace1c0121412fa5b8">y</a> = a2-&gt;<a class="code" href="../../d8/d4e/struct_particle__sw.html#aa523cc7a2466a9211af7b1a28c5b67cf">y</a>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            v4-&gt;<a class="code" href="../../dd/d47/struct_particle.html#a998c42107ae9f67686ac2b651271015c">z</a> = a2-&gt;<a class="code" href="../../d8/d4e/struct_particle__sw.html#add71a36550c34405d46e540cc0e50d6c">z</a>;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            v4-&gt;<a class="code" href="../../dd/d47/struct_particle.html#a8a1ee0bb21d24dec02b5b89ab0782c7d">_x</a> = a2-&gt;<a class="code" href="../../d8/d4e/struct_particle__sw.html#a8bff85f1a6710f15fb46f9b880d7b5af">x</a>;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            v4-&gt;<a class="code" href="../../dd/d47/struct_particle.html#a1c8322bae84281ee01027751550742ec">_y</a> = a2-&gt;<a class="code" href="../../d8/d4e/struct_particle__sw.html#aa523cc7a2466a9211af7b1a28c5b67cf">y</a>;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            v4-&gt;<a class="code" href="../../dd/d47/struct_particle.html#a12a5cb9bc2784118f2549f0fcca184c1">_z</a> = a2-&gt;<a class="code" href="../../d8/d4e/struct_particle__sw.html#add71a36550c34405d46e540cc0e50d6c">z</a>;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            v4-&gt;<a class="code" href="../../dd/d47/struct_particle.html#a202e07007d5b218f07dff29e3b812db6">flt_10</a> = a2-&gt;<a class="code" href="../../d8/d4e/struct_particle__sw.html#a8de6a23ba04bd5a0a32eb69a8a4ac372">r</a>;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            v4-&gt;<a class="code" href="../../dd/d47/struct_particle.html#a3139ef76a99eb1d3e8e707de170bb180">flt_14</a> = a2-&gt;<a class="code" href="../../d8/d4e/struct_particle__sw.html#a40047b52ad61460c7680a0fcf8656ca1">g</a>;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            v4-&gt;<a class="code" href="../../dd/d47/struct_particle.html#a76881517fc83cf4f03f61681defb0f6b">flt_18</a> = a2-&gt;<a class="code" href="../../d8/d4e/struct_particle__sw.html#aa3e18dc9778ddc2f4888d93d8a1e1c8a">b</a>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            v5 = a2-&gt;<a class="code" href="../../d8/d4e/struct_particle__sw.html#a210567e5ef2eb5546384276797f7ce00">uDiffuse</a>;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            v4-&gt;<a class="code" href="../../dd/d47/struct_particle.html#ac7728ad51ce71093c049708f673c00d1">uParticleColor</a> = v5;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            v4-&gt;<a class="code" href="../../dd/d47/struct_particle.html#afa787d7730eb51953c01d4006dcf59f9">uLightColor_bgr</a> = v5;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            <span class="comment">// v6 = (v4-&gt;uType &amp; 4) == 0;</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            v4-&gt;<a class="code" href="../../dd/d47/struct_particle.html#a44447553c0dfe924adc21adcda78e59d">timeToLive</a> = a2-&gt;<a class="code" href="../../d8/d4e/struct_particle__sw.html#a2ba49c4799f41321b958b3bc4976adca">timeToLive</a>;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            v4-&gt;<a class="code" href="../../dd/d47/struct_particle.html#a1fb77b0e53df04ef3951c276e3d37a1d">texture</a> = a2-&gt;<a class="code" href="../../d8/d4e/struct_particle__sw.html#a78f7bf67be87334df23d7d821a43420f">texture</a>;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            v4-&gt;<a class="code" href="../../dd/d47/struct_particle.html#aaccafe73e8c2176ce9f2bea0f70e77b0">particle_size</a> = a2-&gt;<a class="code" href="../../d8/d4e/struct_particle__sw.html#a571eaa26716a333ec77b58875966c8ce">particle_size</a>;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            <span class="keywordflow">if</span> (v4-&gt;<a class="code" href="../../dd/d47/struct_particle.html#af36c2527a2a500195d7b2fd090aabc1f">type</a> &amp; <a class="code" href="../../da/ddf/_particle_engine_8h.html#a70555b8606c05618f7f4180c162bc9dba42aeda8913cd451e6f391b9c06d58002">ParticleType_Rotating</a>) {</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                v4-&gt;<a class="code" href="../../dd/d47/struct_particle.html#afc3be85262f36cb5f78cf3a51d8e61b3">rotation_speed</a> = (rand() % 256) - 128;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                v4-&gt;<a class="code" href="../../dd/d47/struct_particle.html#a48ab07efb5860c6a58b5fd469440e812">angle</a> = rand();</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                v4-&gt;<a class="code" href="../../dd/d47/struct_particle.html#afc3be85262f36cb5f78cf3a51d8e61b3">rotation_speed</a> = 0;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                v4-&gt;<a class="code" href="../../dd/d47/struct_particle.html#a48ab07efb5860c6a58b5fd469440e812">angle</a> = 0;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            }</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        }</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    }</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00058">Particle::_x</a>, <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00059">Particle::_y</a>, <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00060">Particle::_z</a>, <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00062">Particle::angle</a>, <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00025">Particle_sw::b</a>, <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00127">Timer::bPaused</a>, <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00045">Particle::flt_10</a>, <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00046">Particle::flt_14</a>, <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00047">Particle::flt_18</a>, <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00024">Particle_sw::g</a>, <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00030">Particle_sw::particle_size</a>, <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00057">Particle::particle_size</a>, <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00006">ParticleType_Invalid</a>, <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00008">ParticleType_Rotating</a>, <a class="el" href="../../db/d84/_time_8cpp_source.html#l00007">pMiscTimer</a>, <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00104">pParticles</a>, <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00023">Particle_sw::r</a>, <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00061">Particle::rotation_speed</a>, <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00028">Particle_sw::texture</a>, <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00055">Particle::texture</a>, <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00027">Particle_sw::timeToLive</a>, <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00054">Particle::timeToLive</a>, <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00019">Particle_sw::type</a>, <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00041">Particle::type</a>, <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00026">Particle_sw::uDiffuse</a>, <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00109">uEndParticle</a>, <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00078">Particle::uLightColor_bgr</a>, <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00052">Particle::uParticleColor</a>, <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00108">uStartParticle</a>, <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00020">Particle_sw::x</a>, <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00042">Particle::x</a>, <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00021">Particle_sw::y</a>, <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00043">Particle::y</a>, <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00022">Particle_sw::z</a> и <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00044">Particle::z</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../de/d6c/_spell_fx_renderer_8cpp_source.html#l00252">SpellFxRenderer::_4A73AA_hanging_trace_particles___like_fire_strike_ice_blast_etc()</a>, <a class="el" href="../../de/d6c/_spell_fx_renderer_8cpp_source.html#l00322">SpellFxRenderer::_4A75CC_single_spell_collision_particle()</a>, <a class="el" href="../../de/d6c/_spell_fx_renderer_8cpp_source.html#l00348">SpellFxRenderer::_4A7688_fireball_collision_particle()</a>, <a class="el" href="../../de/d6c/_spell_fx_renderer_8cpp_source.html#l00397">SpellFxRenderer::_4A78AE_sparks_spell()</a>, <a class="el" href="../../de/d6c/_spell_fx_renderer_8cpp_source.html#l00414">SpellFxRenderer::_4A7948_mind_blast_after_effect()</a>, <a class="el" href="../../de/d6c/_spell_fx_renderer_8cpp_source.html#l00443">SpellFxRenderer::_4A7A66_miltiple_spell_collision_partifles___like_after_sparks_or_lightning()</a>, <a class="el" href="../../de/d6c/_spell_fx_renderer_8cpp_source.html#l00510">SpellFxRenderer::_4A7C07_stun_spell_fx()</a>, <a class="el" href="../../de/d6c/_spell_fx_renderer_8cpp_source.html#l00576">SpellFxRenderer::_4A7E89_sparkles_on_actor_after_it_casts_buff()</a>, <a class="el" href="../../de/d6c/_spell_fx_renderer_8cpp_source.html#l00611">SpellFxRenderer::_4A7F74()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l03042">IndoorLocation::PrepareDecorationsRenderList_BLV()</a>, <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l00695">RenderOpenGL::PrepareDecorationsRenderList_ODM()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l00713">Render::PrepareDecorationsRenderList_ODM()</a>, <a class="el" href="../../d9/ded/_sprite_object_8cpp_source.html#l00463">SpriteObject::UpdateObject_fn0_BLV()</a> и <a class="el" href="../../d9/ded/_sprite_object_8cpp_source.html#l00130">SpriteObject::UpdateObject_fn0_ODM()</a>.</p>
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../dd/d2d/class_particle_engine_aa0699c216edc3b210955899c8df6cb05_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a73c8076ecf6d3dcc50c56a7a755c4c58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73c8076ecf6d3dcc50c56a7a755c4c58">&#9670;&nbsp;</a></span>Draw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> ParticleEngine::Draw </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d46/_particle_engine_8cpp_source.html">ParticleEngine.cpp</a> строка <a class="el" href="../../dc/d46/_particle_engine_8cpp_source.html#l00113">113</a></p>
+<div class="fragment"><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                          {</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <a class="code" href="../../dd/d2d/class_particle_engine.html#a3781f756542a8ce3758883643f19ff09">uTimeElapsed</a> += <a class="code" href="../../db/d84/_time_8cpp.html#a9b16df08347bd1a24e9e426848ffca3c">pEventTimer</a>-&gt;<a class="code" href="../../d8/da1/struct_timer.html#a1468b3bbde22d1dcfbe40bdd9396e15f">uTimeElapsed</a>;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <a class="code" href="../../dd/d2d/class_particle_engine.html#a3957c1bbc15d72cbea17f0b368255408">pLines</a>.<a class="code" href="../../d2/dbb/structstru2___line_list.html#a5323e78e6d81184d5aa79c3554aa978d">uNumLines</a> = 0;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <a class="code" href="../../dd/d2d/class_particle_engine.html#ac38c9e5bad552707f0c7f97d40c7aab9">DrawParticles_BLV</a>();</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="comment">// if (render-&gt;pRenderD3D)</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    {</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../dd/d2d/class_particle_engine.html#a3957c1bbc15d72cbea17f0b368255408">pLines</a>.<a class="code" href="../../d2/dbb/structstru2___line_list.html#a5323e78e6d81184d5aa79c3554aa978d">uNumLines</a>) {</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            <a class="code" href="../../da/d20/_i_render_8h.html#a21d31464313b2c66ff88d4aa97b66143">render</a>-&gt;DrawLines(<a class="code" href="../../dd/d2d/class_particle_engine.html#a3957c1bbc15d72cbea17f0b368255408">pLines</a>.<a class="code" href="../../d2/dbb/structstru2___line_list.html#a9fbc96021c1977f66f9b27f1a7b8fb09">pLineVertices</a>, <a class="code" href="../../dd/d2d/class_particle_engine.html#a3957c1bbc15d72cbea17f0b368255408">pLines</a>.<a class="code" href="../../d2/dbb/structstru2___line_list.html#a5323e78e6d81184d5aa79c3554aa978d">uNumLines</a>);</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            <span class="comment">/*render-&gt;pRenderD3D-&gt;pDevice-&gt;SetTexture(0, 0);</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="comment">            render-&gt;pRenderD3D-&gt;pDevice-&gt;DrawPrimitive(</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="comment">              D3DPT_LINELIST,</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="comment">              D3DFVF_XYZRHW | D3DFVF_DIFFUSE | D3DFVF_SPECULAR | D3DFVF_TEX1,</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="comment">              pLines.pLineVertices,</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="comment">              pLines.uNumLines,</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="comment">              D3DDP_DONOTLIGHT);*/</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        }</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    }</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../dc/d46/_particle_engine_8cpp_source.html#l00259">DrawParticles_BLV()</a>, <a class="el" href="../../db/d84/_time_8cpp_source.html#l00008">pEventTimer</a>, <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00105">pLines</a>, <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00086">stru2_LineList::pLineVertices</a>, <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l00052">render</a>, <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00085">stru2_LineList::uNumLines</a>, <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00110">uTimeElapsed</a> и <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00133">Timer::uTimeElapsed</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l00381">Engine::DrawParticles()</a>.</p>
+<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../dd/d2d/class_particle_engine_a73c8076ecf6d3dcc50c56a7a755c4c58_cgraph.svg" width="100%" height="480"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../dd/d2d/class_particle_engine_a73c8076ecf6d3dcc50c56a7a755c4c58_icgraph.svg" width="352" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a82017d932a3aac0e05acf6ed95783672"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82017d932a3aac0e05acf6ed95783672">&#9670;&nbsp;</a></span>UpdateParticles()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> ParticleEngine::UpdateParticles </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d46/_particle_engine_8cpp_source.html">ParticleEngine.cpp</a> строка <a class="el" href="../../dc/d46/_particle_engine_8cpp_source.html#l00134">134</a></p>
+<div class="fragment"><div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                                     {</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> time;  <span class="comment">// edi@1</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="comment">// int v5; // eax@3</span></div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="comment">// char v6; // sf@4</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <span class="keywordtype">float</span> v7;   <span class="comment">// ST4C_4@11</span></div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="keywordtype">double</span> v8;  <span class="comment">// st7@12</span></div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="comment">// int v9; // eax@12</span></div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <span class="comment">// double v10; // st7@14</span></div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <span class="keywordtype">signed</span> <span class="keywordtype">int</span> v19;      <span class="comment">// [sp+38h] [bp-14h]@1</span></div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="keywordtype">int</span> v20;             <span class="comment">// [sp+3Ch] [bp-10h]@1</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> time_;  <span class="comment">// [sp+40h] [bp-Ch]@1</span></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="keywordtype">int</span> v22;             <span class="comment">// [sp+44h] [bp-8h]@12</span></div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    v20 = 0;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    time = <a class="code" href="../../db/d84/_time_8cpp.html#a9ca3ab6c124ad35dfe22a7d293537c77">pMiscTimer</a>-&gt;<a class="code" href="../../d8/da1/struct_timer.html#a2b68b304c41fe966c42e0614ad00d08d">bPaused</a> == 0 ? <a class="code" href="../../db/d84/_time_8cpp.html#a9b16df08347bd1a24e9e426848ffca3c">pEventTimer</a>-&gt;<a class="code" href="../../d8/da1/struct_timer.html#a1468b3bbde22d1dcfbe40bdd9396e15f">uTimeElapsed</a> : 0;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    v19 = 500;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    time_ = <a class="code" href="../../db/d84/_time_8cpp.html#a9ca3ab6c124ad35dfe22a7d293537c77">pMiscTimer</a>-&gt;<a class="code" href="../../d8/da1/struct_timer.html#a2b68b304c41fe966c42e0614ad00d08d">bPaused</a> == 0 ? <a class="code" href="../../db/d84/_time_8cpp.html#a9b16df08347bd1a24e9e426848ffca3c">pEventTimer</a>-&gt;<a class="code" href="../../d8/da1/struct_timer.html#a1468b3bbde22d1dcfbe40bdd9396e15f">uTimeElapsed</a> : 0;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="../../d2/d83/_m_m7_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a> i = <a class="code" href="../../dd/d2d/class_particle_engine.html#aa04b254e2246aff582e7cdab6cb593aa">uStartParticle</a>; i &lt;= <a class="code" href="../../dd/d2d/class_particle_engine.html#abea3a8c0db75ac902fd948ee13c98649">uEndParticle</a>; ++i) {</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        <a class="code" href="../../dd/d47/struct_particle.html">Particle</a> *<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a> = &amp;<a class="code" href="../../dd/d2d/class_particle_engine.html#adfa62ea7457580df57fe538cbf0ded72">pParticles</a>[i];</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160; </div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>-&gt;type == <a class="code" href="../../da/ddf/_particle_engine_8h.html#a70555b8606c05618f7f4180c162bc9dbaa40b8b41fdf4938e4ffef7889dbf3c05">ParticleType_Invalid</a>) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160; </div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>-&gt;timeToLive &lt;= time) {</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>-&gt;<a class="code" href="../../dd/d47/struct_particle.html#a44447553c0dfe924adc21adcda78e59d">timeToLive</a> = 0;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;            <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>-&gt;type = <a class="code" href="../../da/ddf/_particle_engine_8h.html#a70555b8606c05618f7f4180c162bc9dbaa40b8b41fdf4938e4ffef7889dbf3c05">ParticleType_Invalid</a>;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;            <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        }</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>-&gt;timeToLive -= time;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160; </div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>-&gt;type &amp; <a class="code" href="../../da/ddf/_particle_engine_8h.html#a70555b8606c05618f7f4180c162bc9dba3c129b7711344416d02063bdd536a330">ParticleType_Line</a>) {</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;            <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>-&gt;_x = <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>-&gt;x;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;            <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>-&gt;_y = <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>-&gt;y;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>-&gt;_z = <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>-&gt;z;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        }</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>-&gt;type &amp; <a class="code" href="../../da/ddf/_particle_engine_8h.html#a70555b8606c05618f7f4180c162bc9dbac9ba0edb39e7ee8545a78e781ccf1b6c">ParticleType_1</a>)</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;            <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>-&gt;flt_18 = <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>-&gt;flt_18 - (double)(<span class="keywordtype">signed</span> <span class="keywordtype">int</span>)time_ * 5.0;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160; </div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>-&gt;type &amp; <a class="code" href="../../da/ddf/_particle_engine_8h.html#a70555b8606c05618f7f4180c162bc9dbacd8076e9142bff3c877fc6dd2f54e5e7">ParticleType_8</a>) {</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;            v7 = (double)(<span class="keywordtype">signed</span> <span class="keywordtype">int</span>)time_;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;            *(<span class="keywordtype">float</span> *)&amp;<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>-&gt;x += (<span class="keywordtype">double</span>)(rand() % 5 - 2) * v7 / 16.0<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a>;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;            *(<span class="keywordtype">float</span> *)&amp;<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>-&gt;y += (<span class="keywordtype">double</span>)(rand() % 5 - 2) * v7 / 16.0<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a>;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            *(<span class="keywordtype">float</span> *)&amp;<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>-&gt;z += (<span class="keywordtype">double</span>)(rand() % 5 + 4) * v7 / 16.0<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a>;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        }</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        v8 = (double)(<span class="keywordtype">signed</span> <span class="keywordtype">int</span>)time_ / 128.0f;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        <span class="comment">// v9 = (signed int)(time * p-&gt;rotation_speed) / 16;</span></div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160; </div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>-&gt;x += v8 * <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>-&gt;flt_10;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>-&gt;y += v8 * <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>-&gt;flt_14;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>-&gt;z += v8 * <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>-&gt;flt_18;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160; </div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>-&gt;angle += time * <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>-&gt;rotation_speed / 16;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        v22 = 2 * <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>-&gt;timeToLive;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        <span class="keywordflow">if</span> (v22 &gt;= 255) v22 = 255;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        <span class="comment">// v10 = (double)v22 * 0.0039215689;</span></div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>-&gt;uLightColor_bgr = ((<a class="code" href="../../d2/d83/_m_m7_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a>)floorf(<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>-&gt;b * (v22 / 255.0f) + 0.5) &lt;&lt; 16) |</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;                             ((<a class="code" href="../../d2/d83/_m_m7_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a>)floorf(<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>-&gt;g * (v22 / 255.0f) + 0.5) &lt;&lt; 8) |</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;                             ((<a class="code" href="../../d2/d83/_m_m7_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a>)floorf(<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>-&gt;r * (v22 / 255.0f) + 0.5) &lt;&lt; 0);</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        <span class="keywordflow">if</span> (i &lt; v19) v19 = i;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        <span class="keywordflow">if</span> (i &gt; v20) v20 = i;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    }</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160; </div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <a class="code" href="../../dd/d2d/class_particle_engine.html#abea3a8c0db75ac902fd948ee13c98649">uEndParticle</a> = v20;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <a class="code" href="../../dd/d2d/class_particle_engine.html#aa04b254e2246aff582e7cdab6cb593aa">uStartParticle</a> = v19;</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00127">Timer::bPaused</a>, <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00007">ParticleType_1</a>, <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00009">ParticleType_8</a>, <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00006">ParticleType_Invalid</a>, <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00011">ParticleType_Line</a>, <a class="el" href="../../db/d84/_time_8cpp_source.html#l00008">pEventTimer</a>, <a class="el" href="../../db/d84/_time_8cpp_source.html#l00007">pMiscTimer</a>, <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00104">pParticles</a>, <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00054">Particle::timeToLive</a>, <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00109">uEndParticle</a>, <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00108">uStartParticle</a> и <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00133">Timer::uTimeElapsed</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l00399">Engine::_44EEA7()</a>.</p>
+<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../dd/d2d/class_particle_engine_a82017d932a3aac0e05acf6ed95783672_icgraph.svg" width="391" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ad63c7069319085019cf0c086e38cce06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad63c7069319085019cf0c086e38cce06">&#9670;&nbsp;</a></span>ViewProject_TrueIfStillVisible_BLV()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ParticleEngine::ViewProject_TrueIfStillVisible_BLV </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>uParticleID</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d46/_particle_engine_8cpp_source.html">ParticleEngine.cpp</a> строка <a class="el" href="../../dc/d46/_particle_engine_8cpp_source.html#l00202">202</a></p>
+<div class="fragment"><div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;                              {</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <a class="code" href="../../dd/d47/struct_particle.html">Particle</a> *pParticle;  <span class="comment">// esi@1</span></div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <span class="keywordtype">int</span> y_int_;           <span class="comment">// [sp+10h] [bp-40h]@2</span></div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    <span class="keywordtype">int</span> x_int;            <span class="comment">// [sp+20h] [bp-30h]@2</span></div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <span class="keywordtype">int</span> z_int_;           <span class="comment">// [sp+24h] [bp-2Ch]@2</span></div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160; </div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    pParticle = &amp;this-&gt;<a class="code" href="../../dd/d2d/class_particle_engine.html#adfa62ea7457580df57fe538cbf0ded72">pParticles</a>[uParticleID];</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    <span class="keywordflow">if</span> (pParticle-&gt;<a class="code" href="../../dd/d47/struct_particle.html#af36c2527a2a500195d7b2fd090aabc1f">type</a> == <a class="code" href="../../da/ddf/_particle_engine_8h.html#a70555b8606c05618f7f4180c162bc9dbaa40b8b41fdf4938e4ffef7889dbf3c05">ParticleType_Invalid</a>) <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    <span class="comment">// uParticleID = LODWORD(pParticle-&gt;x);</span></div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    <span class="comment">// v56 = *(float *)&amp;uParticleID + 6.7553994e15;</span></div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    x_int = floorf(pParticle-&gt;<a class="code" href="../../dd/d47/struct_particle.html#ad4143dd85b447270cf6c5234cf1916b0">x</a> + 0.5f);</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    <span class="comment">// uParticleID = LODWORD(pParticle-&gt;y);</span></div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    <span class="comment">// y_int_ = *(float *)&amp;uParticleID + 6.7553994e15;</span></div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    y_int_ = floorf(pParticle-&gt;<a class="code" href="../../dd/d47/struct_particle.html#a5abb12ba5f671bbace1c0121412fa5b8">y</a> + 0.5f);</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <span class="comment">// uParticleID = LODWORD(pParticle-&gt;z);</span></div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    <span class="comment">// z_int_ = *(float *)&amp;uParticleID + 6.7553994e15;</span></div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    z_int_ = floorf(pParticle-&gt;<a class="code" href="../../dd/d47/struct_particle.html#a998c42107ae9f67686ac2b651271015c">z</a> + 0.5f);</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160; </div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    <span class="comment">/*fixed x, y, z;*/</span></div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    <span class="keywordtype">int</span> xt, yt, zt;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160; </div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    <span class="comment">/*if (!pIndoorCameraD3D-&gt;ApplyViewTransform_TrueIfStillVisible_BLV(</span></div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;<span class="comment">            x_int, y_int_, z_int_, &amp;x, &amp;y, &amp;z, 1))</span></div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;<span class="comment">        return false;*/</span></div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="../../dc/d16/_indoor_camera_d3_d_8cpp.html#adea3dd5475289b8ba2698ac5d77b3d14">pIndoorCameraD3D</a>-&gt;<a class="code" href="../../d9/de5/struct_indoor_camera_d3_d.html#a4c237cb96e18e53a8d9a9f01df08165c">ViewClip</a>(x_int, y_int_, z_int_, &amp;xt, &amp;yt, &amp;zt, 0)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160; </div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    <span class="comment">/*pIndoorCameraD3D-&gt;Project(x.GetInt(), y.GetInt(), z.GetInt(),</span></div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;<span class="comment">                              &amp;pParticle-&gt;uScreenSpaceX,</span></div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;<span class="comment">                              &amp;pParticle-&gt;uScreenSpaceY);*/</span></div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    <a class="code" href="../../dc/d16/_indoor_camera_d3_d_8cpp.html#adea3dd5475289b8ba2698ac5d77b3d14">pIndoorCameraD3D</a>-&gt;<a class="code" href="../../d9/de5/struct_indoor_camera_d3_d.html#a32190b521a23e986e5b0b13098e4b114">Project</a>(xt, yt, zt, &amp;pParticle-&gt;<a class="code" href="../../dd/d47/struct_particle.html#a1a129c3e59f8348e58be97c1a9236934">uScreenSpaceX</a>, &amp;pParticle-&gt;<a class="code" href="../../dd/d47/struct_particle.html#af76ef3c9290d07a41d1d9691624e329d">uScreenSpaceY</a>);</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160; </div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../d1/d4a/_indoor_8cpp.html#af7004771e2f64ebae04197860cd1f3d3">uCurrentlyLoadedLevelType</a> == <a class="code" href="../../da/dc7/_indoor_8h.html#a24bf8802234f411139f3a641894c3f70a15a823faa9b1cebf4eec0ccc61356569">LEVEL_Indoor</a>) {</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        pParticle-&gt;<a class="code" href="../../dd/d47/struct_particle.html#acd14e2e6d997cd040f3cf839577ba1a6">fov_x</a> = <a class="code" href="../../dc/d16/_indoor_camera_d3_d_8cpp.html#adea3dd5475289b8ba2698ac5d77b3d14">pIndoorCameraD3D</a>-&gt;<a class="code" href="../../d9/de5/struct_indoor_camera_d3_d.html#ae68acad67dfa2bd08fade931392d75d9">fov_x</a>;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        pParticle-&gt;<a class="code" href="../../dd/d47/struct_particle.html#acd14e2e6d997cd040f3cf839577ba1a6">fov_x</a> = <a class="code" href="../../da/d20/_i_render_8h.html#aa885cc37fa7e1d5564042afa5f571d52">pODMRenderParams</a>-&gt;<a class="code" href="../../d5/df7/struct_o_d_m_render_params.html#a45517a34536d436d872026f5056b45e0">int_fov_rad</a>;</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    }</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160; </div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160; </div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    <span class="comment">// pParticle-&gt;fov_x = pIndoorCameraD3D-&gt;fov_x; //</span></div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    pParticle-&gt;<a class="code" href="../../dd/d47/struct_particle.html#a503d42cfb56979e6687e9f7b7d89bb97">fov_y</a> = <a class="code" href="../../dc/d16/_indoor_camera_d3_d_8cpp.html#adea3dd5475289b8ba2698ac5d77b3d14">pIndoorCameraD3D</a>-&gt;<a class="code" href="../../d9/de5/struct_indoor_camera_d3_d.html#aaf7adb018484e02aa058fb2c052a0079">fov_y</a>;</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160; </div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    <span class="comment">/*pParticle-&gt;screenspace_scale = fixed::FromFloat(pParticle-&gt;particle_size) *</span></div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;<span class="comment">                                   fixed::FromFloat(pParticle-&gt;fov_x) / x;*/</span></div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160; </div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    pParticle-&gt;<a class="code" href="../../dd/d47/struct_particle.html#ae9266d8f7767c61769f98fb920f1cf47">screenspace_scale</a> = <a class="code" href="../../d6/dc9/structfixed.html#ad27ee11f1bd754c1dd01daf3f938cbbb">fixed::FromFloat</a>(pParticle-&gt;<a class="code" href="../../dd/d47/struct_particle.html#aaccafe73e8c2176ce9f2bea0f70e77b0">particle_size</a>) *</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;        <a class="code" href="../../d6/dc9/structfixed.html#ad27ee11f1bd754c1dd01daf3f938cbbb">fixed::FromFloat</a>(pParticle-&gt;<a class="code" href="../../dd/d47/struct_particle.html#acd14e2e6d997cd040f3cf839577ba1a6">fov_x</a>) / <a class="code" href="../../d6/dc9/structfixed.html#a5afca03668479a0abe9b6d9fcc2d3bd6">fixed::FromInt</a>(xt);</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160; </div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    <span class="comment">/*pParticle-&gt;zbuffer_depth = x.GetInt();*/</span></div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    pParticle-&gt;<a class="code" href="../../dd/d47/struct_particle.html#ae448c25f0d57488acd2d2955aa08a022">zbuffer_depth</a> = xt;</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160; </div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00076">Particle::fov_x</a>, <a class="el" href="../../d4/dcf/_indoor_camera_d3_d_8h_source.html#l00192">IndoorCameraD3D::fov_x</a>, <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00077">Particle::fov_y</a>, <a class="el" href="../../d4/dcf/_indoor_camera_d3_d_8h_source.html#l00193">IndoorCameraD3D::fov_y</a>, <a class="el" href="../../d0/dc0/_our_math_8h_source.html#l00025">fixed::FromFloat()</a>, <a class="el" href="../../d0/dc0/_our_math_8h_source.html#l00029">fixed::FromInt()</a>, <a class="el" href="../../da/d20/_i_render_8h_source.html#l00079">ODMRenderParams::int_fov_rad</a>, <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00286">LEVEL_Indoor</a>, <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00057">Particle::particle_size</a>, <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00006">ParticleType_Invalid</a>, <a class="el" href="../../dc/d16/_indoor_camera_d3_d_8cpp_source.html#l00021">pIndoorCameraD3D</a>, <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l00049">pODMRenderParams</a>, <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00104">pParticles</a>, <a class="el" href="../../dc/d16/_indoor_camera_d3_d_8cpp_source.html#l01137">IndoorCameraD3D::Project()</a>, <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00075">Particle::screenspace_scale</a>, <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00041">Particle::type</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00052">uCurrentlyLoadedLevelType</a>, <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00063">Particle::uScreenSpaceX</a>, <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00064">Particle::uScreenSpaceY</a>, <a class="el" href="../../dc/d16/_indoor_camera_d3_d_8cpp_source.html#l00172">IndoorCameraD3D::ViewClip()</a>, <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00042">Particle::x</a>, <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00043">Particle::y</a>, <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00044">Particle::z</a> и <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00071">Particle::zbuffer_depth</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../dc/d46/_particle_engine_8cpp_source.html#l00259">DrawParticles_BLV()</a>.</p>
+<div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-7-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-7-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../dd/d2d/class_particle_engine_ad63c7069319085019cf0c086e38cce06_cgraph.svg" width="100%" height="480"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-8-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-8-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../dd/d2d/class_particle_engine_ad63c7069319085019cf0c086e38cce06_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ac38c9e5bad552707f0c7f97d40c7aab9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac38c9e5bad552707f0c7f97d40c7aab9">&#9670;&nbsp;</a></span>DrawParticles_BLV()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> ParticleEngine::DrawParticles_BLV </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d46/_particle_engine_8cpp_source.html">ParticleEngine.cpp</a> строка <a class="el" href="../../dc/d46/_particle_engine_8cpp_source.html#l00259">259</a></p>
+<div class="fragment"><div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;                                       {</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <a class="code" href="../../d2/d7a/struct_software_billboard.html">SoftwareBillboard</a> v15;  <span class="comment">// [sp+Ch] [bp-58h]@1</span></div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160; </div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    v15.<a class="code" href="../../d2/d7a/struct_software_billboard.html#aa3b4ea72590f2a109f3a342391232cd0">sParentBillboardID</a> = -1;</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160; </div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="../../d2/d83/_m_m7_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a> i = <a class="code" href="../../dd/d2d/class_particle_engine.html#aa04b254e2246aff582e7cdab6cb593aa">uStartParticle</a>; i &lt; <a class="code" href="../../dd/d2d/class_particle_engine.html#abea3a8c0db75ac902fd948ee13c98649">uEndParticle</a>; ++i) {</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        <a class="code" href="../../dd/d47/struct_particle.html">Particle</a> *<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a> = &amp;<a class="code" href="../../dd/d2d/class_particle_engine.html#adfa62ea7457580df57fe538cbf0ded72">pParticles</a>[i];</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160; </div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>-&gt;type == <a class="code" href="../../da/ddf/_particle_engine_8h.html#a70555b8606c05618f7f4180c162bc9dbaa40b8b41fdf4938e4ffef7889dbf3c05">ParticleType_Invalid</a>) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160; </div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="../../dd/d2d/class_particle_engine.html#ad63c7069319085019cf0c086e38cce06">ViewProject_TrueIfStillVisible_BLV</a>(i)) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160; </div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        <span class="keywordflow">if</span> (<span class="keyword">true</span>) {</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;            <span class="comment">/*p-&gt;uScreenSpaceX &gt;= pBLVRenderParams-&gt;uViewportX &amp;&amp;</span></div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;<span class="comment">            p-&gt;uScreenSpaceX &lt; pBLVRenderParams-&gt;uViewportZ &amp;&amp;</span></div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;<span class="comment">            p-&gt;uScreenSpaceY &gt;= pBLVRenderParams-&gt;uViewportY &amp;&amp;</span></div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;<span class="comment">            p-&gt;uScreenSpaceY &lt; pBLVRenderParams-&gt;uViewportW) { */</span></div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>-&gt;type &amp; <a class="code" href="../../da/ddf/_particle_engine_8h.html#a70555b8606c05618f7f4180c162bc9dba2ab00588cccf49e6427d240cd89603bb">ParticleType_Diffuse</a>) {</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;                <span class="comment">// v14 = &amp;pParticles[i];</span></div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;                v15.<a class="code" href="../../d2/d7a/struct_software_billboard.html#a7a4e2ea1720c85f8bf5b1707d906ea15">screenspace_projection_factor_x</a> = <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>-&gt;screenspace_scale.GetFloat();</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;                v15.<a class="code" href="../../d2/d7a/struct_software_billboard.html#a496241102fd0e7b57dd2fb9bb41a515f">screenspace_projection_factor_y</a> = <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>-&gt;screenspace_scale.GetFloat();</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;                v15.<a class="code" href="../../d2/d7a/struct_software_billboard.html#ab042717b4de36b3dcb05f28ee86fc737">screen_space_x</a> = <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>-&gt;uScreenSpaceX;</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;                v15.<a class="code" href="../../d2/d7a/struct_software_billboard.html#acb1d82da7d39cd3d465c700483d9d146">screen_space_y</a> = <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>-&gt;uScreenSpaceY;</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;                v15.<a class="code" href="../../d2/d7a/struct_software_billboard.html#abd687bdb603a0593c62c469a45fce0f6">object_pid</a> = <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>-&gt;object_pid;</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;                v15.<a class="code" href="../../d2/d7a/struct_software_billboard.html#a515af649a275fa6efbcf52b46a0b0e0a">screen_space_z</a> = <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>-&gt;zbuffer_depth;</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;                <a class="code" href="../../da/d20/_i_render_8h.html#a21d31464313b2c66ff88d4aa97b66143">render</a>-&gt;MakeParticleBillboardAndPush(</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;                    &amp;v15, 0, <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>-&gt;uLightColor_bgr, <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>-&gt;angle);</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>-&gt;type &amp; <a class="code" href="../../da/ddf/_particle_engine_8h.html#a70555b8606c05618f7f4180c162bc9dba3c129b7711344416d02063bdd536a330">ParticleType_Line</a>) {  <span class="comment">// type doesnt appear to be used</span></div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;                <span class="keywordflow">if</span> (<a class="code" href="../../dd/d2d/class_particle_engine.html#a3957c1bbc15d72cbea17f0b368255408">pLines</a>.<a class="code" href="../../d2/dbb/structstru2___line_list.html#a5323e78e6d81184d5aa79c3554aa978d">uNumLines</a> &lt; 100) {</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;                    <a class="code" href="../../dd/d2d/class_particle_engine.html#a3957c1bbc15d72cbea17f0b368255408">pLines</a>.<a class="code" href="../../d2/dbb/structstru2___line_list.html#a9fbc96021c1977f66f9b27f1a7b8fb09">pLineVertices</a>[2 * <a class="code" href="../../dd/d2d/class_particle_engine.html#a3957c1bbc15d72cbea17f0b368255408">pLines</a>.<a class="code" href="../../d2/dbb/structstru2___line_list.html#a5323e78e6d81184d5aa79c3554aa978d">uNumLines</a>].<a class="code" href="../../d0/df7/struct_render_vertex_d3_d3.html#a75ac364f9282339bb990575a9d030b7c">pos</a>.<a class="code" href="../../d5/d06/struct_vec3__float__.html#af0a711a2d55037010621e3b795dac2b9">x</a> =</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;                        <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>-&gt;uScreenSpaceX;</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;                    <a class="code" href="../../dd/d2d/class_particle_engine.html#a3957c1bbc15d72cbea17f0b368255408">pLines</a>.<a class="code" href="../../d2/dbb/structstru2___line_list.html#a9fbc96021c1977f66f9b27f1a7b8fb09">pLineVertices</a>[2 * <a class="code" href="../../dd/d2d/class_particle_engine.html#a3957c1bbc15d72cbea17f0b368255408">pLines</a>.<a class="code" href="../../d2/dbb/structstru2___line_list.html#a5323e78e6d81184d5aa79c3554aa978d">uNumLines</a>].<a class="code" href="../../d0/df7/struct_render_vertex_d3_d3.html#a75ac364f9282339bb990575a9d030b7c">pos</a>.<a class="code" href="../../d5/d06/struct_vec3__float__.html#a900070092433a698ef721b459dc2bac5">y</a> =</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;                        <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>-&gt;uScreenSpaceY;</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;                    <a class="code" href="../../dd/d2d/class_particle_engine.html#a3957c1bbc15d72cbea17f0b368255408">pLines</a>.<a class="code" href="../../d2/dbb/structstru2___line_list.html#a9fbc96021c1977f66f9b27f1a7b8fb09">pLineVertices</a>[2 * <a class="code" href="../../dd/d2d/class_particle_engine.html#a3957c1bbc15d72cbea17f0b368255408">pLines</a>.<a class="code" href="../../d2/dbb/structstru2___line_list.html#a5323e78e6d81184d5aa79c3554aa978d">uNumLines</a>].<a class="code" href="../../d0/df7/struct_render_vertex_d3_d3.html#a75ac364f9282339bb990575a9d030b7c">pos</a>.<a class="code" href="../../d5/d06/struct_vec3__float__.html#acf20cbb55510370f6c8de01bf4ab3850">z</a> =</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;                        1.0 - 1.0 / (<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>-&gt;zbuffer_depth * 0.061758894);</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;                    <a class="code" href="../../dd/d2d/class_particle_engine.html#a3957c1bbc15d72cbea17f0b368255408">pLines</a>.<a class="code" href="../../d2/dbb/structstru2___line_list.html#a9fbc96021c1977f66f9b27f1a7b8fb09">pLineVertices</a>[2 * <a class="code" href="../../dd/d2d/class_particle_engine.html#a3957c1bbc15d72cbea17f0b368255408">pLines</a>.<a class="code" href="../../d2/dbb/structstru2___line_list.html#a5323e78e6d81184d5aa79c3554aa978d">uNumLines</a>].<a class="code" href="../../d0/df7/struct_render_vertex_d3_d3.html#a20896950efa27111b72e1f8f1ab8faab">rhw</a> = 1.0;</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;                    <a class="code" href="../../dd/d2d/class_particle_engine.html#a3957c1bbc15d72cbea17f0b368255408">pLines</a>.<a class="code" href="../../d2/dbb/structstru2___line_list.html#a9fbc96021c1977f66f9b27f1a7b8fb09">pLineVertices</a>[2 * <a class="code" href="../../dd/d2d/class_particle_engine.html#a3957c1bbc15d72cbea17f0b368255408">pLines</a>.<a class="code" href="../../d2/dbb/structstru2___line_list.html#a5323e78e6d81184d5aa79c3554aa978d">uNumLines</a>].<a class="code" href="../../d0/df7/struct_render_vertex_d3_d3.html#aa401cc77d717063a54fe0abdeccd5d45">diffuse</a> =</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;                        <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>-&gt;uLightColor_bgr;</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;                    <a class="code" href="../../dd/d2d/class_particle_engine.html#a3957c1bbc15d72cbea17f0b368255408">pLines</a>.<a class="code" href="../../d2/dbb/structstru2___line_list.html#a9fbc96021c1977f66f9b27f1a7b8fb09">pLineVertices</a>[2 * <a class="code" href="../../dd/d2d/class_particle_engine.html#a3957c1bbc15d72cbea17f0b368255408">pLines</a>.<a class="code" href="../../d2/dbb/structstru2___line_list.html#a5323e78e6d81184d5aa79c3554aa978d">uNumLines</a>].<a class="code" href="../../d0/df7/struct_render_vertex_d3_d3.html#a75e4332c9a530de4a53e427591f3225b">specular</a> = 0;</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;                    <a class="code" href="../../dd/d2d/class_particle_engine.html#a3957c1bbc15d72cbea17f0b368255408">pLines</a>.<a class="code" href="../../d2/dbb/structstru2___line_list.html#a9fbc96021c1977f66f9b27f1a7b8fb09">pLineVertices</a>[2 * <a class="code" href="../../dd/d2d/class_particle_engine.html#a3957c1bbc15d72cbea17f0b368255408">pLines</a>.<a class="code" href="../../d2/dbb/structstru2___line_list.html#a5323e78e6d81184d5aa79c3554aa978d">uNumLines</a>].<a class="code" href="../../d0/df7/struct_render_vertex_d3_d3.html#abc5c96408f45fe07b884992ac6b4dc71">texcoord</a>.x = 0.0;</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;                    <a class="code" href="../../dd/d2d/class_particle_engine.html#a3957c1bbc15d72cbea17f0b368255408">pLines</a>.<a class="code" href="../../d2/dbb/structstru2___line_list.html#a9fbc96021c1977f66f9b27f1a7b8fb09">pLineVertices</a>[2 * <a class="code" href="../../dd/d2d/class_particle_engine.html#a3957c1bbc15d72cbea17f0b368255408">pLines</a>.<a class="code" href="../../d2/dbb/structstru2___line_list.html#a5323e78e6d81184d5aa79c3554aa978d">uNumLines</a>].<a class="code" href="../../d0/df7/struct_render_vertex_d3_d3.html#abc5c96408f45fe07b884992ac6b4dc71">texcoord</a>.y = 0.0;</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160; </div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;                    <a class="code" href="../../dd/d2d/class_particle_engine.html#a3957c1bbc15d72cbea17f0b368255408">pLines</a>.<a class="code" href="../../d2/dbb/structstru2___line_list.html#a9fbc96021c1977f66f9b27f1a7b8fb09">pLineVertices</a>[2 * <a class="code" href="../../dd/d2d/class_particle_engine.html#a3957c1bbc15d72cbea17f0b368255408">pLines</a>.<a class="code" href="../../d2/dbb/structstru2___line_list.html#a5323e78e6d81184d5aa79c3554aa978d">uNumLines</a> + 1].<a class="code" href="../../d0/df7/struct_render_vertex_d3_d3.html#a75ac364f9282339bb990575a9d030b7c">pos</a>.<a class="code" href="../../d5/d06/struct_vec3__float__.html#af0a711a2d55037010621e3b795dac2b9">x</a> =</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;                        <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>-&gt;uScreenSpaceZ;  <span class="comment">// where is this set?</span></div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;                    <a class="code" href="../../dd/d2d/class_particle_engine.html#a3957c1bbc15d72cbea17f0b368255408">pLines</a>.<a class="code" href="../../d2/dbb/structstru2___line_list.html#a9fbc96021c1977f66f9b27f1a7b8fb09">pLineVertices</a>[2 * <a class="code" href="../../dd/d2d/class_particle_engine.html#a3957c1bbc15d72cbea17f0b368255408">pLines</a>.<a class="code" href="../../d2/dbb/structstru2___line_list.html#a5323e78e6d81184d5aa79c3554aa978d">uNumLines</a> + 1].<a class="code" href="../../d0/df7/struct_render_vertex_d3_d3.html#a75ac364f9282339bb990575a9d030b7c">pos</a>.<a class="code" href="../../d5/d06/struct_vec3__float__.html#a900070092433a698ef721b459dc2bac5">y</a> =</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;                        <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>-&gt;uScreenSpaceW;</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;                    <a class="code" href="../../dd/d2d/class_particle_engine.html#a3957c1bbc15d72cbea17f0b368255408">pLines</a>.<a class="code" href="../../d2/dbb/structstru2___line_list.html#a9fbc96021c1977f66f9b27f1a7b8fb09">pLineVertices</a>[2 * <a class="code" href="../../dd/d2d/class_particle_engine.html#a3957c1bbc15d72cbea17f0b368255408">pLines</a>.<a class="code" href="../../d2/dbb/structstru2___line_list.html#a5323e78e6d81184d5aa79c3554aa978d">uNumLines</a> + 1].<a class="code" href="../../d0/df7/struct_render_vertex_d3_d3.html#a75ac364f9282339bb990575a9d030b7c">pos</a>.<a class="code" href="../../d5/d06/struct_vec3__float__.html#acf20cbb55510370f6c8de01bf4ab3850">z</a> =</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;                        1.0 - 1.0 / ((short)<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>-&gt;sZValue2 * 0.061758894);</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;                    <a class="code" href="../../dd/d2d/class_particle_engine.html#a3957c1bbc15d72cbea17f0b368255408">pLines</a>.<a class="code" href="../../d2/dbb/structstru2___line_list.html#a9fbc96021c1977f66f9b27f1a7b8fb09">pLineVertices</a>[2 * <a class="code" href="../../dd/d2d/class_particle_engine.html#a3957c1bbc15d72cbea17f0b368255408">pLines</a>.<a class="code" href="../../d2/dbb/structstru2___line_list.html#a5323e78e6d81184d5aa79c3554aa978d">uNumLines</a> + 1].<a class="code" href="../../d0/df7/struct_render_vertex_d3_d3.html#a20896950efa27111b72e1f8f1ab8faab">rhw</a> = 1.0;</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;                    <a class="code" href="../../dd/d2d/class_particle_engine.html#a3957c1bbc15d72cbea17f0b368255408">pLines</a>.<a class="code" href="../../d2/dbb/structstru2___line_list.html#a9fbc96021c1977f66f9b27f1a7b8fb09">pLineVertices</a>[2 * <a class="code" href="../../dd/d2d/class_particle_engine.html#a3957c1bbc15d72cbea17f0b368255408">pLines</a>.<a class="code" href="../../d2/dbb/structstru2___line_list.html#a5323e78e6d81184d5aa79c3554aa978d">uNumLines</a> + 1].<a class="code" href="../../d0/df7/struct_render_vertex_d3_d3.html#aa401cc77d717063a54fe0abdeccd5d45">diffuse</a> =</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;                        <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>-&gt;uLightColor_bgr;</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;                    <a class="code" href="../../dd/d2d/class_particle_engine.html#a3957c1bbc15d72cbea17f0b368255408">pLines</a>.<a class="code" href="../../d2/dbb/structstru2___line_list.html#a9fbc96021c1977f66f9b27f1a7b8fb09">pLineVertices</a>[2 * <a class="code" href="../../dd/d2d/class_particle_engine.html#a3957c1bbc15d72cbea17f0b368255408">pLines</a>.<a class="code" href="../../d2/dbb/structstru2___line_list.html#a5323e78e6d81184d5aa79c3554aa978d">uNumLines</a> + 1].<a class="code" href="../../d0/df7/struct_render_vertex_d3_d3.html#a75e4332c9a530de4a53e427591f3225b">specular</a> = 0;</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;                    <a class="code" href="../../dd/d2d/class_particle_engine.html#a3957c1bbc15d72cbea17f0b368255408">pLines</a>.<a class="code" href="../../d2/dbb/structstru2___line_list.html#a9fbc96021c1977f66f9b27f1a7b8fb09">pLineVertices</a>[2 * <a class="code" href="../../dd/d2d/class_particle_engine.html#a3957c1bbc15d72cbea17f0b368255408">pLines</a>.<a class="code" href="../../d2/dbb/structstru2___line_list.html#a5323e78e6d81184d5aa79c3554aa978d">uNumLines</a> + 1].<a class="code" href="../../d0/df7/struct_render_vertex_d3_d3.html#abc5c96408f45fe07b884992ac6b4dc71">texcoord</a>.x =</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;                        0.0;</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;                    <a class="code" href="../../dd/d2d/class_particle_engine.html#a3957c1bbc15d72cbea17f0b368255408">pLines</a>.<a class="code" href="../../d2/dbb/structstru2___line_list.html#a9fbc96021c1977f66f9b27f1a7b8fb09">pLineVertices</a>[2 * <a class="code" href="../../dd/d2d/class_particle_engine.html#a3957c1bbc15d72cbea17f0b368255408">pLines</a>.<a class="code" href="../../d2/dbb/structstru2___line_list.html#a5323e78e6d81184d5aa79c3554aa978d">uNumLines</a>++ + 1]</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;                        .<a class="code" href="../../d0/df7/struct_render_vertex_d3_d3.html#abc5c96408f45fe07b884992ac6b4dc71">texcoord</a>.y = 0.0;</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;                }</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>-&gt;type &amp; <a class="code" href="../../da/ddf/_particle_engine_8h.html#a70555b8606c05618f7f4180c162bc9dbaa1e3e56940a49556f2668c2f7f465182">ParticleType_Bitmap</a>) {</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;                v15.<a class="code" href="../../d2/d7a/struct_software_billboard.html#a7a4e2ea1720c85f8bf5b1707d906ea15">screenspace_projection_factor_x</a> = <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>-&gt;screenspace_scale.GetFloat();</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;                v15.<a class="code" href="../../d2/d7a/struct_software_billboard.html#a496241102fd0e7b57dd2fb9bb41a515f">screenspace_projection_factor_y</a> = <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>-&gt;screenspace_scale.GetFloat();</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;                v15.<a class="code" href="../../d2/d7a/struct_software_billboard.html#ab042717b4de36b3dcb05f28ee86fc737">screen_space_x</a> = <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>-&gt;uScreenSpaceX;</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;                v15.<a class="code" href="../../d2/d7a/struct_software_billboard.html#acb1d82da7d39cd3d465c700483d9d146">screen_space_y</a> = <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>-&gt;uScreenSpaceY;</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;                v15.<a class="code" href="../../d2/d7a/struct_software_billboard.html#abd687bdb603a0593c62c469a45fce0f6">object_pid</a> = <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>-&gt;object_pid;</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;                v15.<a class="code" href="../../d2/d7a/struct_software_billboard.html#a515af649a275fa6efbcf52b46a0b0e0a">screen_space_z</a> = <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>-&gt;zbuffer_depth;</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;                <a class="code" href="../../da/d20/_i_render_8h.html#a21d31464313b2c66ff88d4aa97b66143">render</a>-&gt;MakeParticleBillboardAndPush(</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;                    &amp;v15, <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>-&gt;texture, <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>-&gt;uLightColor_bgr, <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>-&gt;angle);</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>-&gt;type &amp; <a class="code" href="../../da/ddf/_particle_engine_8h.html#a70555b8606c05618f7f4180c162bc9dba5b2c1f586bea8f7465cbd533d1dc1b98">ParticleType_Sprite</a>) {</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;                v15.<a class="code" href="../../d2/d7a/struct_software_billboard.html#a7a4e2ea1720c85f8bf5b1707d906ea15">screenspace_projection_factor_x</a> = <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>-&gt;screenspace_scale.GetFloat();</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;                v15.<a class="code" href="../../d2/d7a/struct_software_billboard.html#a496241102fd0e7b57dd2fb9bb41a515f">screenspace_projection_factor_y</a> = <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>-&gt;screenspace_scale.GetFloat();</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;                v15.<a class="code" href="../../d2/d7a/struct_software_billboard.html#ab042717b4de36b3dcb05f28ee86fc737">screen_space_x</a> = <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>-&gt;uScreenSpaceX;</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;                v15.<a class="code" href="../../d2/d7a/struct_software_billboard.html#acb1d82da7d39cd3d465c700483d9d146">screen_space_y</a> = <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>-&gt;uScreenSpaceY;</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;                v15.<a class="code" href="../../d2/d7a/struct_software_billboard.html#abd687bdb603a0593c62c469a45fce0f6">object_pid</a> = <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>-&gt;object_pid;</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;                v15.<a class="code" href="../../d2/d7a/struct_software_billboard.html#a515af649a275fa6efbcf52b46a0b0e0a">screen_space_z</a> = <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>-&gt;zbuffer_depth;</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;                <a class="code" href="../../da/d20/_i_render_8h.html#a21d31464313b2c66ff88d4aa97b66143">render</a>-&gt;MakeParticleBillboardAndPush(</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;                    &amp;v15, <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>-&gt;texture, <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>-&gt;uLightColor_bgr, <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a>-&gt;angle);</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;            }</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;        }</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;    }</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../da/d20/_i_render_8h_source.html#l00132">RenderVertexD3D3::diffuse</a>, <a class="el" href="../../da/d20/_i_render_8h_source.html#l00190">SoftwareBillboard::object_pid</a>, <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00012">ParticleType_Bitmap</a>, <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00010">ParticleType_Diffuse</a>, <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00006">ParticleType_Invalid</a>, <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00011">ParticleType_Line</a>, <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00013">ParticleType_Sprite</a>, <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00105">pLines</a>, <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00086">stru2_LineList::pLineVertices</a>, <a class="el" href="../../da/d20/_i_render_8h_source.html#l00130">RenderVertexD3D3::pos</a>, <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00104">pParticles</a>, <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l00052">render</a>, <a class="el" href="../../da/d20/_i_render_8h_source.html#l00131">RenderVertexD3D3::rhw</a>, <a class="el" href="../../da/d20/_i_render_8h_source.html#l00173">SoftwareBillboard::screen_space_x</a>, <a class="el" href="../../da/d20/_i_render_8h_source.html#l00174">SoftwareBillboard::screen_space_y</a>, <a class="el" href="../../da/d20/_i_render_8h_source.html#l00175">SoftwareBillboard::screen_space_z</a>, <a class="el" href="../../da/d20/_i_render_8h_source.html#l00176">SoftwareBillboard::screenspace_projection_factor_x</a>, <a class="el" href="../../da/d20/_i_render_8h_source.html#l00177">SoftwareBillboard::screenspace_projection_factor_y</a>, <a class="el" href="../../da/d20/_i_render_8h_source.html#l00188">SoftwareBillboard::sParentBillboardID</a>, <a class="el" href="../../da/d20/_i_render_8h_source.html#l00133">RenderVertexD3D3::specular</a>, <a class="el" href="../../da/d20/_i_render_8h_source.html#l00134">RenderVertexD3D3::texcoord</a>, <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00109">uEndParticle</a>, <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00085">stru2_LineList::uNumLines</a>, <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00108">uStartParticle</a>, <a class="el" href="../../dc/d46/_particle_engine_8cpp_source.html#l00202">ViewProject_TrueIfStillVisible_BLV()</a>, <a class="el" href="../../dc/d90/_vector_types_8h_source.html#l00089">Vec3_float_::x</a>, <a class="el" href="../../dc/d90/_vector_types_8h_source.html#l00090">Vec3_float_::y</a> и <a class="el" href="../../dc/d90/_vector_types_8h_source.html#l00091">Vec3_float_::z</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../dc/d46/_particle_engine_8cpp_source.html#l00113">Draw()</a>.</p>
+<div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-9-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-9-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../dd/d2d/class_particle_engine_ac38c9e5bad552707f0c7f97d40c7aab9_cgraph.svg" width="100%" height="480"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-10-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-10-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-10-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../dd/d2d/class_particle_engine_ac38c9e5bad552707f0c7f97d40c7aab9_icgraph.svg" width="627" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="adfa62ea7457580df57fe538cbf0ded72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfa62ea7457580df57fe538cbf0ded72">&#9670;&nbsp;</a></span>pParticles</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dd/d47/struct_particle.html">Particle</a> ParticleEngine::pParticles[500]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/ddf/_particle_engine_8h_source.html">ParticleEngine.h</a> строка <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00104">104</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../dc/d46/_particle_engine_8cpp_source.html#l00065">AddParticle()</a>, <a class="el" href="../../dc/d46/_particle_engine_8cpp_source.html#l00259">DrawParticles_BLV()</a>, <a class="el" href="../../dc/d46/_particle_engine_8cpp_source.html#l00049">ParticleEngine()</a>, <a class="el" href="../../dc/d46/_particle_engine_8cpp_source.html#l00057">ResetParticles()</a>, <a class="el" href="../../dc/d46/_particle_engine_8cpp_source.html#l00134">UpdateParticles()</a> и <a class="el" href="../../dc/d46/_particle_engine_8cpp_source.html#l00202">ViewProject_TrueIfStillVisible_BLV()</a>.</p>
+
+</div>
+</div>
+<a id="a3957c1bbc15d72cbea17f0b368255408"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3957c1bbc15d72cbea17f0b368255408">&#9670;&nbsp;</a></span>pLines</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d2/dbb/structstru2___line_list.html">stru2_LineList</a> ParticleEngine::pLines</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/ddf/_particle_engine_8h_source.html">ParticleEngine.h</a> строка <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00105">105</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../dc/d46/_particle_engine_8cpp_source.html#l00113">Draw()</a> и <a class="el" href="../../dc/d46/_particle_engine_8cpp_source.html#l00259">DrawParticles_BLV()</a>.</p>
+
+</div>
+</div>
+<a id="aa059c11698f3b8d64094aa45112a7c8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa059c11698f3b8d64094aa45112a7c8c">&#9670;&nbsp;</a></span>field_D160</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char ParticleEngine::field_D160[4800]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/ddf/_particle_engine_8h_source.html">ParticleEngine.h</a> строка <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00106">106</a></p>
+
+</div>
+</div>
+<a id="a804d13ecd639e8ad0973161637b342c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a804d13ecd639e8ad0973161637b342c5">&#9670;&nbsp;</a></span>field_E420</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float ParticleEngine::field_E420</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/ddf/_particle_engine_8h_source.html">ParticleEngine.h</a> строка <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00107">107</a></p>
+
+</div>
+</div>
+<a id="aa04b254e2246aff582e7cdab6cb593aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa04b254e2246aff582e7cdab6cb593aa">&#9670;&nbsp;</a></span>uStartParticle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ParticleEngine::uStartParticle</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/ddf/_particle_engine_8h_source.html">ParticleEngine.h</a> строка <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00108">108</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../dc/d46/_particle_engine_8cpp_source.html#l00065">AddParticle()</a>, <a class="el" href="../../dc/d46/_particle_engine_8cpp_source.html#l00259">DrawParticles_BLV()</a>, <a class="el" href="../../dc/d46/_particle_engine_8cpp_source.html#l00057">ResetParticles()</a> и <a class="el" href="../../dc/d46/_particle_engine_8cpp_source.html#l00134">UpdateParticles()</a>.</p>
+
+</div>
+</div>
+<a id="abea3a8c0db75ac902fd948ee13c98649"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abea3a8c0db75ac902fd948ee13c98649">&#9670;&nbsp;</a></span>uEndParticle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ParticleEngine::uEndParticle</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/ddf/_particle_engine_8h_source.html">ParticleEngine.h</a> строка <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00109">109</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../dc/d46/_particle_engine_8cpp_source.html#l00065">AddParticle()</a>, <a class="el" href="../../dc/d46/_particle_engine_8cpp_source.html#l00259">DrawParticles_BLV()</a>, <a class="el" href="../../dc/d46/_particle_engine_8cpp_source.html#l00057">ResetParticles()</a> и <a class="el" href="../../dc/d46/_particle_engine_8cpp_source.html#l00134">UpdateParticles()</a>.</p>
+
+</div>
+</div>
+<a id="a3781f756542a8ce3758883643f19ff09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3781f756542a8ce3758883643f19ff09">&#9670;&nbsp;</a></span>uTimeElapsed</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ParticleEngine::uTimeElapsed</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/ddf/_particle_engine_8h_source.html">ParticleEngine.h</a> строка <a class="el" href="../../da/ddf/_particle_engine_8h_source.html#l00110">110</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../dc/d46/_particle_engine_8cpp_source.html#l00113">Draw()</a> и <a class="el" href="../../dc/d46/_particle_engine_8cpp_source.html#l00057">ResetParticles()</a>.</p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>C:/git/world-of-might-and-magic/Engine/Graphics/<a class="el" href="../../da/ddf/_particle_engine_8h_source.html">ParticleEngine.h</a></li>
+<li>C:/git/world-of-might-and-magic/Engine/Graphics/<a class="el" href="../../dc/d46/_particle_engine_8cpp_source.html">ParticleEngine.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="astruct_particle__sw_html_add71a36550c34405d46e540cc0e50d6c"><div class="ttname"><a href="../../d8/d4e/struct_particle__sw.html#add71a36550c34405d46e540cc0e50d6c">Particle_sw::z</a></div><div class="ttdeci">float z</div><div class="ttdef"><b>Definition:</b> <a href="../../da/ddf/_particle_engine_8h_source.html#l00022">ParticleEngine.h:22</a></div></div>
+<div class="ttc" id="astruct_particle_html_a202e07007d5b218f07dff29e3b812db6"><div class="ttname"><a href="../../dd/d47/struct_particle.html#a202e07007d5b218f07dff29e3b812db6">Particle::flt_10</a></div><div class="ttdeci">float flt_10</div><div class="ttdef"><b>Definition:</b> <a href="../../da/ddf/_particle_engine_8h_source.html#l00045">ParticleEngine.h:45</a></div></div>
+<div class="ttc" id="astructfixed_html_ad27ee11f1bd754c1dd01daf3f938cbbb"><div class="ttname"><a href="../../d6/dc9/structfixed.html#ad27ee11f1bd754c1dd01daf3f938cbbb">fixed::FromFloat</a></div><div class="ttdeci">static fixed FromFloat(float f)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dc0/_our_math_8h_source.html#l00025">OurMath.h:25</a></div></div>
+<div class="ttc" id="astruct_particle__sw_html_aa3e18dc9778ddc2f4888d93d8a1e1c8a"><div class="ttname"><a href="../../d8/d4e/struct_particle__sw.html#aa3e18dc9778ddc2f4888d93d8a1e1c8a">Particle_sw::b</a></div><div class="ttdeci">float b</div><div class="ttdef"><b>Definition:</b> <a href="../../da/ddf/_particle_engine_8h_source.html#l00025">ParticleEngine.h:25</a></div></div>
+<div class="ttc" id="astruct_timer_html_a1468b3bbde22d1dcfbe40bdd9396e15f"><div class="ttname"><a href="../../d8/da1/struct_timer.html#a1468b3bbde22d1dcfbe40bdd9396e15f">Timer::uTimeElapsed</a></div><div class="ttdeci">unsigned int uTimeElapsed</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d0e/_engine_2_time_8h_source.html#l00133">Time.h:133</a></div></div>
+<div class="ttc" id="astruct_vec3__float___html_af0a711a2d55037010621e3b795dac2b9"><div class="ttname"><a href="../../d5/d06/struct_vec3__float__.html#af0a711a2d55037010621e3b795dac2b9">Vec3_float_::x</a></div><div class="ttdeci">float x</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d90/_vector_types_8h_source.html#l00089">VectorTypes.h:89</a></div></div>
+<div class="ttc" id="astruct_render_vertex_d3_d3_html_a75ac364f9282339bb990575a9d030b7c"><div class="ttname"><a href="../../d0/df7/struct_render_vertex_d3_d3.html#a75ac364f9282339bb990575a9d030b7c">RenderVertexD3D3::pos</a></div><div class="ttdeci">Vec3_float_ pos</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d20/_i_render_8h_source.html#l00130">IRender.h:130</a></div></div>
+<div class="ttc" id="astruct_particle_html_af76ef3c9290d07a41d1d9691624e329d"><div class="ttname"><a href="../../dd/d47/struct_particle.html#af76ef3c9290d07a41d1d9691624e329d">Particle::uScreenSpaceY</a></div><div class="ttdeci">int uScreenSpaceY</div><div class="ttdef"><b>Definition:</b> <a href="../../da/ddf/_particle_engine_8h_source.html#l00064">ParticleEngine.h:64</a></div></div>
+<div class="ttc" id="astruct_particle_html_a44447553c0dfe924adc21adcda78e59d"><div class="ttname"><a href="../../dd/d47/struct_particle.html#a44447553c0dfe924adc21adcda78e59d">Particle::timeToLive</a></div><div class="ttdeci">int timeToLive</div><div class="ttdef"><b>Definition:</b> <a href="../../da/ddf/_particle_engine_8h_source.html#l00054">ParticleEngine.h:54</a></div></div>
+<div class="ttc" id="astruct_software_billboard_html_a496241102fd0e7b57dd2fb9bb41a515f"><div class="ttname"><a href="../../d2/d7a/struct_software_billboard.html#a496241102fd0e7b57dd2fb9bb41a515f">SoftwareBillboard::screenspace_projection_factor_y</a></div><div class="ttdeci">float screenspace_projection_factor_y</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d20/_i_render_8h_source.html#l00177">IRender.h:177</a></div></div>
+<div class="ttc" id="astruct_timer_html_a2b68b304c41fe966c42e0614ad00d08d"><div class="ttname"><a href="../../d8/da1/struct_timer.html#a2b68b304c41fe966c42e0614ad00d08d">Timer::bPaused</a></div><div class="ttdeci">unsigned int bPaused</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d0e/_engine_2_time_8h_source.html#l00127">Time.h:127</a></div></div>
+<div class="ttc" id="astruct_particle_html_afa787d7730eb51953c01d4006dcf59f9"><div class="ttname"><a href="../../dd/d47/struct_particle.html#afa787d7730eb51953c01d4006dcf59f9">Particle::uLightColor_bgr</a></div><div class="ttdeci">int uLightColor_bgr</div><div class="ttdef"><b>Definition:</b> <a href="../../da/ddf/_particle_engine_8h_source.html#l00078">ParticleEngine.h:78</a></div></div>
+<div class="ttc" id="astruct_software_billboard_html_a7a4e2ea1720c85f8bf5b1707d906ea15"><div class="ttname"><a href="../../d2/d7a/struct_software_billboard.html#a7a4e2ea1720c85f8bf5b1707d906ea15">SoftwareBillboard::screenspace_projection_factor_x</a></div><div class="ttdeci">float screenspace_projection_factor_x</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d20/_i_render_8h_source.html#l00176">IRender.h:176</a></div></div>
+<div class="ttc" id="aclass_particle_engine_html_ad63c7069319085019cf0c086e38cce06"><div class="ttname"><a href="../../dd/d2d/class_particle_engine.html#ad63c7069319085019cf0c086e38cce06">ParticleEngine::ViewProject_TrueIfStillVisible_BLV</a></div><div class="ttdeci">bool ViewProject_TrueIfStillVisible_BLV(unsigned int uParticleID)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d46/_particle_engine_8cpp_source.html#l00202">ParticleEngine.cpp:202</a></div></div>
+<div class="ttc" id="astruct_particle__sw_html_a8de6a23ba04bd5a0a32eb69a8a4ac372"><div class="ttname"><a href="../../d8/d4e/struct_particle__sw.html#a8de6a23ba04bd5a0a32eb69a8a4ac372">Particle_sw::r</a></div><div class="ttdeci">float r</div><div class="ttdef"><b>Definition:</b> <a href="../../da/ddf/_particle_engine_8h_source.html#l00023">ParticleEngine.h:23</a></div></div>
+<div class="ttc" id="astruct_particle_html_ac7728ad51ce71093c049708f673c00d1"><div class="ttname"><a href="../../dd/d47/struct_particle.html#ac7728ad51ce71093c049708f673c00d1">Particle::uParticleColor</a></div><div class="ttdeci">unsigned int uParticleColor</div><div class="ttdef"><b>Definition:</b> <a href="../../da/ddf/_particle_engine_8h_source.html#l00052">ParticleEngine.h:52</a></div></div>
+<div class="ttc" id="astruct_vec3__float___html_a900070092433a698ef721b459dc2bac5"><div class="ttname"><a href="../../d5/d06/struct_vec3__float__.html#a900070092433a698ef721b459dc2bac5">Vec3_float_::y</a></div><div class="ttdeci">float y</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d90/_vector_types_8h_source.html#l00090">VectorTypes.h:90</a></div></div>
+<div class="ttc" id="astruct_vec3__float___html_acf20cbb55510370f6c8de01bf4ab3850"><div class="ttname"><a href="../../d5/d06/struct_vec3__float__.html#acf20cbb55510370f6c8de01bf4ab3850">Vec3_float_::z</a></div><div class="ttdeci">float z</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d90/_vector_types_8h_source.html#l00091">VectorTypes.h:91</a></div></div>
+<div class="ttc" id="astruct_render_vertex_d3_d3_html_abc5c96408f45fe07b884992ac6b4dc71"><div class="ttname"><a href="../../d0/df7/struct_render_vertex_d3_d3.html#abc5c96408f45fe07b884992ac6b4dc71">RenderVertexD3D3::texcoord</a></div><div class="ttdeci">Vec2_float_ texcoord</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d20/_i_render_8h_source.html#l00134">IRender.h:134</a></div></div>
+<div class="ttc" id="astruct_particle_html_ae9266d8f7767c61769f98fb920f1cf47"><div class="ttname"><a href="../../dd/d47/struct_particle.html#ae9266d8f7767c61769f98fb920f1cf47">Particle::screenspace_scale</a></div><div class="ttdeci">fixed screenspace_scale</div><div class="ttdef"><b>Definition:</b> <a href="../../da/ddf/_particle_engine_8h_source.html#l00075">ParticleEngine.h:75</a></div></div>
+<div class="ttc" id="astructfixed_html_a5afca03668479a0abe9b6d9fcc2d3bd6"><div class="ttname"><a href="../../d6/dc9/structfixed.html#a5afca03668479a0abe9b6d9fcc2d3bd6">fixed::FromInt</a></div><div class="ttdeci">static fixed FromInt(int value)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dc0/_our_math_8h_source.html#l00029">OurMath.h:29</a></div></div>
+<div class="ttc" id="astruct_particle__sw_html_ad5caf699963ae1b98018e2891f7a374f"><div class="ttname"><a href="../../d8/d4e/struct_particle__sw.html#ad5caf699963ae1b98018e2891f7a374f">Particle_sw::type</a></div><div class="ttdeci">unsigned int type</div><div class="ttdef"><b>Definition:</b> <a href="../../da/ddf/_particle_engine_8h_source.html#l00019">ParticleEngine.h:19</a></div></div>
+<div class="ttc" id="astruct_render_vertex_d3_d3_html_a20896950efa27111b72e1f8f1ab8faab"><div class="ttname"><a href="../../d0/df7/struct_render_vertex_d3_d3.html#a20896950efa27111b72e1f8f1ab8faab">RenderVertexD3D3::rhw</a></div><div class="ttdeci">float rhw</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d20/_i_render_8h_source.html#l00131">IRender.h:131</a></div></div>
+<div class="ttc" id="astruct_particle_html"><div class="ttname"><a href="../../dd/d47/struct_particle.html">Particle</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/ddf/_particle_engine_8h_source.html#l00040">ParticleEngine.h:40</a></div></div>
+<div class="ttc" id="aclass_particle_engine_html_aaa47b4db20bfd62c9d25f1bc0afa7558"><div class="ttname"><a href="../../dd/d2d/class_particle_engine.html#aaa47b4db20bfd62c9d25f1bc0afa7558">ParticleEngine::ResetParticles</a></div><div class="ttdeci">void ResetParticles()</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d46/_particle_engine_8cpp_source.html#l00057">ParticleEngine.cpp:57</a></div></div>
+<div class="ttc" id="astruct_software_billboard_html"><div class="ttname"><a href="../../d2/d7a/struct_software_billboard.html">SoftwareBillboard</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/d20/_i_render_8h_source.html#l00170">IRender.h:170</a></div></div>
+<div class="ttc" id="astruct_particle_html_acd14e2e6d997cd040f3cf839577ba1a6"><div class="ttname"><a href="../../dd/d47/struct_particle.html#acd14e2e6d997cd040f3cf839577ba1a6">Particle::fov_x</a></div><div class="ttdeci">float fov_x</div><div class="ttdef"><b>Definition:</b> <a href="../../da/ddf/_particle_engine_8h_source.html#l00076">ParticleEngine.h:76</a></div></div>
+<div class="ttc" id="a_particle_engine_8h_html_a70555b8606c05618f7f4180c162bc9dbac9ba0edb39e7ee8545a78e781ccf1b6c"><div class="ttname"><a href="../../da/ddf/_particle_engine_8h.html#a70555b8606c05618f7f4180c162bc9dbac9ba0edb39e7ee8545a78e781ccf1b6c">ParticleType_1</a></div><div class="ttdeci">@ ParticleType_1</div><div class="ttdef"><b>Definition:</b> <a href="../../da/ddf/_particle_engine_8h_source.html#l00007">ParticleEngine.h:7</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_aa5367c14d90f462230c2611b81b41d23"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa5367c14d90f462230c2611b81b41d23">p</a></div><div class="ttdeci">GLfloat GLfloat p</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l11093">SDL_opengl_glext.h:11093</a></div></div>
+<div class="ttc" id="astruct_particle_html_a76881517fc83cf4f03f61681defb0f6b"><div class="ttname"><a href="../../dd/d47/struct_particle.html#a76881517fc83cf4f03f61681defb0f6b">Particle::flt_18</a></div><div class="ttdeci">float flt_18</div><div class="ttdef"><b>Definition:</b> <a href="../../da/ddf/_particle_engine_8h_source.html#l00047">ParticleEngine.h:47</a></div></div>
+<div class="ttc" id="astruct_particle__sw_html_a2ba49c4799f41321b958b3bc4976adca"><div class="ttname"><a href="../../d8/d4e/struct_particle__sw.html#a2ba49c4799f41321b958b3bc4976adca">Particle_sw::timeToLive</a></div><div class="ttdeci">int timeToLive</div><div class="ttdef"><b>Definition:</b> <a href="../../da/ddf/_particle_engine_8h_source.html#l00027">ParticleEngine.h:27</a></div></div>
+<div class="ttc" id="astruct_software_billboard_html_a515af649a275fa6efbcf52b46a0b0e0a"><div class="ttname"><a href="../../d2/d7a/struct_software_billboard.html#a515af649a275fa6efbcf52b46a0b0e0a">SoftwareBillboard::screen_space_z</a></div><div class="ttdeci">short screen_space_z</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d20/_i_render_8h_source.html#l00175">IRender.h:175</a></div></div>
+<div class="ttc" id="astruct_indoor_camera_d3_d_html_a4c237cb96e18e53a8d9a9f01df08165c"><div class="ttname"><a href="../../d9/de5/struct_indoor_camera_d3_d.html#a4c237cb96e18e53a8d9a9f01df08165c">IndoorCameraD3D::ViewClip</a></div><div class="ttdeci">bool ViewClip(int x, int y, int z, int *transformed_x, int *transformed_y, int *transformed_z, bool dont_show=false)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d16/_indoor_camera_d3_d_8cpp_source.html#l00172">IndoorCameraD3D.cpp:172</a></div></div>
+<div class="ttc" id="astruct_particle_html_ad4143dd85b447270cf6c5234cf1916b0"><div class="ttname"><a href="../../dd/d47/struct_particle.html#ad4143dd85b447270cf6c5234cf1916b0">Particle::x</a></div><div class="ttdeci">float x</div><div class="ttdef"><b>Definition:</b> <a href="../../da/ddf/_particle_engine_8h_source.html#l00042">ParticleEngine.h:42</a></div></div>
+<div class="ttc" id="astruct_render_vertex_d3_d3_html_aa401cc77d717063a54fe0abdeccd5d45"><div class="ttname"><a href="../../d0/df7/struct_render_vertex_d3_d3.html#aa401cc77d717063a54fe0abdeccd5d45">RenderVertexD3D3::diffuse</a></div><div class="ttdeci">unsigned int diffuse</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d20/_i_render_8h_source.html#l00132">IRender.h:132</a></div></div>
+<div class="ttc" id="astruct_indoor_camera_d3_d_html_a32190b521a23e986e5b0b13098e4b114"><div class="ttname"><a href="../../d9/de5/struct_indoor_camera_d3_d.html#a32190b521a23e986e5b0b13098e4b114">IndoorCameraD3D::Project</a></div><div class="ttdeci">void Project(int x, int y, int z, int *screenspace_x, int *screenspace_y)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d16/_indoor_camera_d3_d_8cpp_source.html#l01137">IndoorCameraD3D.cpp:1137</a></div></div>
+<div class="ttc" id="a_particle_engine_8h_html_a70555b8606c05618f7f4180c162bc9dba3c129b7711344416d02063bdd536a330"><div class="ttname"><a href="../../da/ddf/_particle_engine_8h.html#a70555b8606c05618f7f4180c162bc9dba3c129b7711344416d02063bdd536a330">ParticleType_Line</a></div><div class="ttdeci">@ ParticleType_Line</div><div class="ttdef"><b>Definition:</b> <a href="../../da/ddf/_particle_engine_8h_source.html#l00011">ParticleEngine.h:11</a></div></div>
+<div class="ttc" id="aclass_particle_engine_html_adfa62ea7457580df57fe538cbf0ded72"><div class="ttname"><a href="../../dd/d2d/class_particle_engine.html#adfa62ea7457580df57fe538cbf0ded72">ParticleEngine::pParticles</a></div><div class="ttdeci">Particle pParticles[500]</div><div class="ttdef"><b>Definition:</b> <a href="../../da/ddf/_particle_engine_8h_source.html#l00104">ParticleEngine.h:104</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a691492ec0bd6383f91200e49f6ae40ed"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a></div><div class="ttdeci">GLfloat f</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l01873">SDL_opengl_glext.h:1873</a></div></div>
+<div class="ttc" id="a_particle_engine_8h_html_a70555b8606c05618f7f4180c162bc9dba2ab00588cccf49e6427d240cd89603bb"><div class="ttname"><a href="../../da/ddf/_particle_engine_8h.html#a70555b8606c05618f7f4180c162bc9dba2ab00588cccf49e6427d240cd89603bb">ParticleType_Diffuse</a></div><div class="ttdeci">@ ParticleType_Diffuse</div><div class="ttdef"><b>Definition:</b> <a href="../../da/ddf/_particle_engine_8h_source.html#l00010">ParticleEngine.h:10</a></div></div>
+<div class="ttc" id="astruct_particle__sw_html_aa523cc7a2466a9211af7b1a28c5b67cf"><div class="ttname"><a href="../../d8/d4e/struct_particle__sw.html#aa523cc7a2466a9211af7b1a28c5b67cf">Particle_sw::y</a></div><div class="ttdeci">float y</div><div class="ttdef"><b>Definition:</b> <a href="../../da/ddf/_particle_engine_8h_source.html#l00021">ParticleEngine.h:21</a></div></div>
+<div class="ttc" id="astruct_particle__sw_html_a40047b52ad61460c7680a0fcf8656ca1"><div class="ttname"><a href="../../d8/d4e/struct_particle__sw.html#a40047b52ad61460c7680a0fcf8656ca1">Particle_sw::g</a></div><div class="ttdeci">float g</div><div class="ttdef"><b>Definition:</b> <a href="../../da/ddf/_particle_engine_8h_source.html#l00024">ParticleEngine.h:24</a></div></div>
+<div class="ttc" id="astruct_particle_html_afc3be85262f36cb5f78cf3a51d8e61b3"><div class="ttname"><a href="../../dd/d47/struct_particle.html#afc3be85262f36cb5f78cf3a51d8e61b3">Particle::rotation_speed</a></div><div class="ttdeci">int rotation_speed</div><div class="ttdef"><b>Definition:</b> <a href="../../da/ddf/_particle_engine_8h_source.html#l00061">ParticleEngine.h:61</a></div></div>
+<div class="ttc" id="astruct_software_billboard_html_ab042717b4de36b3dcb05f28ee86fc737"><div class="ttname"><a href="../../d2/d7a/struct_software_billboard.html#ab042717b4de36b3dcb05f28ee86fc737">SoftwareBillboard::screen_space_x</a></div><div class="ttdeci">int screen_space_x</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d20/_i_render_8h_source.html#l00173">IRender.h:173</a></div></div>
+<div class="ttc" id="astruct_particle_html_a503d42cfb56979e6687e9f7b7d89bb97"><div class="ttname"><a href="../../dd/d47/struct_particle.html#a503d42cfb56979e6687e9f7b7d89bb97">Particle::fov_y</a></div><div class="ttdeci">float fov_y</div><div class="ttdef"><b>Definition:</b> <a href="../../da/ddf/_particle_engine_8h_source.html#l00077">ParticleEngine.h:77</a></div></div>
+<div class="ttc" id="astructstru2___line_list_html_a9fbc96021c1977f66f9b27f1a7b8fb09"><div class="ttname"><a href="../../d2/dbb/structstru2___line_list.html#a9fbc96021c1977f66f9b27f1a7b8fb09">stru2_LineList::pLineVertices</a></div><div class="ttdeci">RenderVertexD3D3 pLineVertices[48]</div><div class="ttdef"><b>Definition:</b> <a href="../../da/ddf/_particle_engine_8h_source.html#l00086">ParticleEngine.h:86</a></div></div>
+<div class="ttc" id="astruct_indoor_camera_d3_d_html_aaf7adb018484e02aa058fb2c052a0079"><div class="ttname"><a href="../../d9/de5/struct_indoor_camera_d3_d.html#aaf7adb018484e02aa058fb2c052a0079">IndoorCameraD3D::fov_y</a></div><div class="ttdeci">float fov_y</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcf/_indoor_camera_d3_d_8h_source.html#l00193">IndoorCameraD3D.h:193</a></div></div>
+<div class="ttc" id="a_time_8cpp_html_a9ca3ab6c124ad35dfe22a7d293537c77"><div class="ttname"><a href="../../db/d84/_time_8cpp.html#a9ca3ab6c124ad35dfe22a7d293537c77">pMiscTimer</a></div><div class="ttdeci">Timer * pMiscTimer</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d84/_time_8cpp_source.html#l00007">Time.cpp:7</a></div></div>
+<div class="ttc" id="astruct_particle_html_a1c8322bae84281ee01027751550742ec"><div class="ttname"><a href="../../dd/d47/struct_particle.html#a1c8322bae84281ee01027751550742ec">Particle::_y</a></div><div class="ttdeci">float _y</div><div class="ttdef"><b>Definition:</b> <a href="../../da/ddf/_particle_engine_8h_source.html#l00059">ParticleEngine.h:59</a></div></div>
+<div class="ttc" id="a_indoor_8h_html_a24bf8802234f411139f3a641894c3f70a15a823faa9b1cebf4eec0ccc61356569"><div class="ttname"><a href="../../da/dc7/_indoor_8h.html#a24bf8802234f411139f3a641894c3f70a15a823faa9b1cebf4eec0ccc61356569">LEVEL_Indoor</a></div><div class="ttdeci">@ LEVEL_Indoor</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dc7/_indoor_8h_source.html#l00286">Indoor.h:286</a></div></div>
+<div class="ttc" id="a_particle_engine_8h_html_a70555b8606c05618f7f4180c162bc9dba5b2c1f586bea8f7465cbd533d1dc1b98"><div class="ttname"><a href="../../da/ddf/_particle_engine_8h.html#a70555b8606c05618f7f4180c162bc9dba5b2c1f586bea8f7465cbd533d1dc1b98">ParticleType_Sprite</a></div><div class="ttdeci">@ ParticleType_Sprite</div><div class="ttdef"><b>Definition:</b> <a href="../../da/ddf/_particle_engine_8h_source.html#l00013">ParticleEngine.h:13</a></div></div>
+<div class="ttc" id="astruct_software_billboard_html_acb1d82da7d39cd3d465c700483d9d146"><div class="ttname"><a href="../../d2/d7a/struct_software_billboard.html#acb1d82da7d39cd3d465c700483d9d146">SoftwareBillboard::screen_space_y</a></div><div class="ttdeci">int screen_space_y</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d20/_i_render_8h_source.html#l00174">IRender.h:174</a></div></div>
+<div class="ttc" id="astructstru2___line_list_html_a5323e78e6d81184d5aa79c3554aa978d"><div class="ttname"><a href="../../d2/dbb/structstru2___line_list.html#a5323e78e6d81184d5aa79c3554aa978d">stru2_LineList::uNumLines</a></div><div class="ttdeci">unsigned int uNumLines</div><div class="ttdef"><b>Definition:</b> <a href="../../da/ddf/_particle_engine_8h_source.html#l00085">ParticleEngine.h:85</a></div></div>
+<div class="ttc" id="a_i_render_8h_html_aa885cc37fa7e1d5564042afa5f571d52"><div class="ttname"><a href="../../da/d20/_i_render_8h.html#aa885cc37fa7e1d5564042afa5f571d52">pODMRenderParams</a></div><div class="ttdeci">ODMRenderParams * pODMRenderParams</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d03/_outdoor_8cpp_source.html#l00049">Outdoor.cpp:49</a></div></div>
+<div class="ttc" id="astruct_particle_html_a998c42107ae9f67686ac2b651271015c"><div class="ttname"><a href="../../dd/d47/struct_particle.html#a998c42107ae9f67686ac2b651271015c">Particle::z</a></div><div class="ttdeci">float z</div><div class="ttdef"><b>Definition:</b> <a href="../../da/ddf/_particle_engine_8h_source.html#l00044">ParticleEngine.h:44</a></div></div>
+<div class="ttc" id="aclass_particle_engine_html_aa04b254e2246aff582e7cdab6cb593aa"><div class="ttname"><a href="../../dd/d2d/class_particle_engine.html#aa04b254e2246aff582e7cdab6cb593aa">ParticleEngine::uStartParticle</a></div><div class="ttdeci">int uStartParticle</div><div class="ttdef"><b>Definition:</b> <a href="../../da/ddf/_particle_engine_8h_source.html#l00108">ParticleEngine.h:108</a></div></div>
+<div class="ttc" id="astruct_particle_html_a3139ef76a99eb1d3e8e707de170bb180"><div class="ttname"><a href="../../dd/d47/struct_particle.html#a3139ef76a99eb1d3e8e707de170bb180">Particle::flt_14</a></div><div class="ttdeci">float flt_14</div><div class="ttdef"><b>Definition:</b> <a href="../../da/ddf/_particle_engine_8h_source.html#l00046">ParticleEngine.h:46</a></div></div>
+<div class="ttc" id="a_particle_engine_8h_html_a70555b8606c05618f7f4180c162bc9dbacd8076e9142bff3c877fc6dd2f54e5e7"><div class="ttname"><a href="../../da/ddf/_particle_engine_8h.html#a70555b8606c05618f7f4180c162bc9dbacd8076e9142bff3c877fc6dd2f54e5e7">ParticleType_8</a></div><div class="ttdeci">@ ParticleType_8</div><div class="ttdef"><b>Definition:</b> <a href="../../da/ddf/_particle_engine_8h_source.html#l00009">ParticleEngine.h:9</a></div></div>
+<div class="ttc" id="astruct_particle__sw_html_a78f7bf67be87334df23d7d821a43420f"><div class="ttname"><a href="../../d8/d4e/struct_particle__sw.html#a78f7bf67be87334df23d7d821a43420f">Particle_sw::texture</a></div><div class="ttdeci">Texture * texture</div><div class="ttdef"><b>Definition:</b> <a href="../../da/ddf/_particle_engine_8h_source.html#l00028">ParticleEngine.h:28</a></div></div>
+<div class="ttc" id="a_particle_engine_8h_html_a70555b8606c05618f7f4180c162bc9dbaa40b8b41fdf4938e4ffef7889dbf3c05"><div class="ttname"><a href="../../da/ddf/_particle_engine_8h.html#a70555b8606c05618f7f4180c162bc9dbaa40b8b41fdf4938e4ffef7889dbf3c05">ParticleType_Invalid</a></div><div class="ttdeci">@ ParticleType_Invalid</div><div class="ttdef"><b>Definition:</b> <a href="../../da/ddf/_particle_engine_8h_source.html#l00006">ParticleEngine.h:6</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a0928f6d0f0f794ba000a21dfae422136"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0928f6d0f0f794ba000a21dfae422136">v2</a></div><div class="ttdeci">GLfloat GLfloat GLfloat v2</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l00695">SDL_opengl_glext.h:695</a></div></div>
+<div class="ttc" id="a_m_m7_8h_html_a91ad9478d81a7aaf2593e8d9c3d06a14"><div class="ttname"><a href="../../d2/d83/_m_m7_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a></div><div class="ttdeci">unsigned int uint</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d83/_m_m7_8h_source.html#l00004">MM7.h:4</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_acc806b31cbf466ceba6555983d8b814d"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#acc806b31cbf466ceba6555983d8b814d">v3</a></div><div class="ttdeci">GLfloat GLfloat GLfloat GLfloat v3</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l00696">SDL_opengl_glext.h:696</a></div></div>
+<div class="ttc" id="astruct_software_billboard_html_aa3b4ea72590f2a109f3a342391232cd0"><div class="ttname"><a href="../../d2/d7a/struct_software_billboard.html#aa3b4ea72590f2a109f3a342391232cd0">SoftwareBillboard::sParentBillboardID</a></div><div class="ttdeci">int sParentBillboardID</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d20/_i_render_8h_source.html#l00188">IRender.h:188</a></div></div>
+<div class="ttc" id="astruct_particle_html_aaccafe73e8c2176ce9f2bea0f70e77b0"><div class="ttname"><a href="../../dd/d47/struct_particle.html#aaccafe73e8c2176ce9f2bea0f70e77b0">Particle::particle_size</a></div><div class="ttdeci">float particle_size</div><div class="ttdef"><b>Definition:</b> <a href="../../da/ddf/_particle_engine_8h_source.html#l00057">ParticleEngine.h:57</a></div></div>
+<div class="ttc" id="aclass_particle_engine_html_abea3a8c0db75ac902fd948ee13c98649"><div class="ttname"><a href="../../dd/d2d/class_particle_engine.html#abea3a8c0db75ac902fd948ee13c98649">ParticleEngine::uEndParticle</a></div><div class="ttdeci">int uEndParticle</div><div class="ttdef"><b>Definition:</b> <a href="../../da/ddf/_particle_engine_8h_source.html#l00109">ParticleEngine.h:109</a></div></div>
+<div class="ttc" id="astruct_particle__sw_html_a571eaa26716a333ec77b58875966c8ce"><div class="ttname"><a href="../../d8/d4e/struct_particle__sw.html#a571eaa26716a333ec77b58875966c8ce">Particle_sw::particle_size</a></div><div class="ttdeci">float particle_size</div><div class="ttdef"><b>Definition:</b> <a href="../../da/ddf/_particle_engine_8h_source.html#l00030">ParticleEngine.h:30</a></div></div>
+<div class="ttc" id="aclass_particle_engine_html_a3781f756542a8ce3758883643f19ff09"><div class="ttname"><a href="../../dd/d2d/class_particle_engine.html#a3781f756542a8ce3758883643f19ff09">ParticleEngine::uTimeElapsed</a></div><div class="ttdeci">int uTimeElapsed</div><div class="ttdef"><b>Definition:</b> <a href="../../da/ddf/_particle_engine_8h_source.html#l00110">ParticleEngine.h:110</a></div></div>
+<div class="ttc" id="a_particle_engine_8h_html_a70555b8606c05618f7f4180c162bc9dba42aeda8913cd451e6f391b9c06d58002"><div class="ttname"><a href="../../da/ddf/_particle_engine_8h.html#a70555b8606c05618f7f4180c162bc9dba42aeda8913cd451e6f391b9c06d58002">ParticleType_Rotating</a></div><div class="ttdeci">@ ParticleType_Rotating</div><div class="ttdef"><b>Definition:</b> <a href="../../da/ddf/_particle_engine_8h_source.html#l00008">ParticleEngine.h:8</a></div></div>
+<div class="ttc" id="astruct_particle_html_af36c2527a2a500195d7b2fd090aabc1f"><div class="ttname"><a href="../../dd/d47/struct_particle.html#af36c2527a2a500195d7b2fd090aabc1f">Particle::type</a></div><div class="ttdeci">unsigned int type</div><div class="ttdef"><b>Definition:</b> <a href="../../da/ddf/_particle_engine_8h_source.html#l00041">ParticleEngine.h:41</a></div></div>
+<div class="ttc" id="aclass_particle_engine_html_ac38c9e5bad552707f0c7f97d40c7aab9"><div class="ttname"><a href="../../dd/d2d/class_particle_engine.html#ac38c9e5bad552707f0c7f97d40c7aab9">ParticleEngine::DrawParticles_BLV</a></div><div class="ttdeci">void DrawParticles_BLV()</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d46/_particle_engine_8cpp_source.html#l00259">ParticleEngine.cpp:259</a></div></div>
+<div class="ttc" id="astruct_particle__sw_html_a8bff85f1a6710f15fb46f9b880d7b5af"><div class="ttname"><a href="../../d8/d4e/struct_particle__sw.html#a8bff85f1a6710f15fb46f9b880d7b5af">Particle_sw::x</a></div><div class="ttdeci">float x</div><div class="ttdef"><b>Definition:</b> <a href="../../da/ddf/_particle_engine_8h_source.html#l00020">ParticleEngine.h:20</a></div></div>
+<div class="ttc" id="astruct_particle_html_a8a1ee0bb21d24dec02b5b89ab0782c7d"><div class="ttname"><a href="../../dd/d47/struct_particle.html#a8a1ee0bb21d24dec02b5b89ab0782c7d">Particle::_x</a></div><div class="ttdeci">float _x</div><div class="ttdef"><b>Definition:</b> <a href="../../da/ddf/_particle_engine_8h_source.html#l00058">ParticleEngine.h:58</a></div></div>
+<div class="ttc" id="a_indoor_8cpp_html_af7004771e2f64ebae04197860cd1f3d3"><div class="ttname"><a href="../../d1/d4a/_indoor_8cpp.html#af7004771e2f64ebae04197860cd1f3d3">uCurrentlyLoadedLevelType</a></div><div class="ttdeci">LEVEL_TYPE uCurrentlyLoadedLevelType</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d4a/_indoor_8cpp_source.html#l00052">Indoor.cpp:52</a></div></div>
+<div class="ttc" id="astruct_indoor_camera_d3_d_html_ae68acad67dfa2bd08fade931392d75d9"><div class="ttname"><a href="../../d9/de5/struct_indoor_camera_d3_d.html#ae68acad67dfa2bd08fade931392d75d9">IndoorCameraD3D::fov_x</a></div><div class="ttdeci">float fov_x</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcf/_indoor_camera_d3_d_8h_source.html#l00192">IndoorCameraD3D.h:192</a></div></div>
+<div class="ttc" id="astruct_o_d_m_render_params_html_a45517a34536d436d872026f5056b45e0"><div class="ttname"><a href="../../d5/df7/struct_o_d_m_render_params.html#a45517a34536d436d872026f5056b45e0">ODMRenderParams::int_fov_rad</a></div><div class="ttdeci">int int_fov_rad</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d20/_i_render_8h_source.html#l00079">IRender.h:79</a></div></div>
+<div class="ttc" id="a_particle_engine_8h_html_a70555b8606c05618f7f4180c162bc9dbaa1e3e56940a49556f2668c2f7f465182"><div class="ttname"><a href="../../da/ddf/_particle_engine_8h.html#a70555b8606c05618f7f4180c162bc9dbaa1e3e56940a49556f2668c2f7f465182">ParticleType_Bitmap</a></div><div class="ttdeci">@ ParticleType_Bitmap</div><div class="ttdef"><b>Definition:</b> <a href="../../da/ddf/_particle_engine_8h_source.html#l00012">ParticleEngine.h:12</a></div></div>
+<div class="ttc" id="astruct_particle_html_a1a129c3e59f8348e58be97c1a9236934"><div class="ttname"><a href="../../dd/d47/struct_particle.html#a1a129c3e59f8348e58be97c1a9236934">Particle::uScreenSpaceX</a></div><div class="ttdeci">int uScreenSpaceX</div><div class="ttdef"><b>Definition:</b> <a href="../../da/ddf/_particle_engine_8h_source.html#l00063">ParticleEngine.h:63</a></div></div>
+<div class="ttc" id="astruct_particle_html_a1fb77b0e53df04ef3951c276e3d37a1d"><div class="ttname"><a href="../../dd/d47/struct_particle.html#a1fb77b0e53df04ef3951c276e3d37a1d">Particle::texture</a></div><div class="ttdeci">Texture * texture</div><div class="ttdef"><b>Definition:</b> <a href="../../da/ddf/_particle_engine_8h_source.html#l00055">ParticleEngine.h:55</a></div></div>
+<div class="ttc" id="aclass_particle_engine_html_a3957c1bbc15d72cbea17f0b368255408"><div class="ttname"><a href="../../dd/d2d/class_particle_engine.html#a3957c1bbc15d72cbea17f0b368255408">ParticleEngine::pLines</a></div><div class="ttdeci">stru2_LineList pLines</div><div class="ttdef"><b>Definition:</b> <a href="../../da/ddf/_particle_engine_8h_source.html#l00105">ParticleEngine.h:105</a></div></div>
+<div class="ttc" id="astruct_render_vertex_d3_d3_html_a75e4332c9a530de4a53e427591f3225b"><div class="ttname"><a href="../../d0/df7/struct_render_vertex_d3_d3.html#a75e4332c9a530de4a53e427591f3225b">RenderVertexD3D3::specular</a></div><div class="ttdeci">unsigned int specular</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d20/_i_render_8h_source.html#l00133">IRender.h:133</a></div></div>
+<div class="ttc" id="astruct_particle_html_a12a5cb9bc2784118f2549f0fcca184c1"><div class="ttname"><a href="../../dd/d47/struct_particle.html#a12a5cb9bc2784118f2549f0fcca184c1">Particle::_z</a></div><div class="ttdeci">float _z</div><div class="ttdef"><b>Definition:</b> <a href="../../da/ddf/_particle_engine_8h_source.html#l00060">ParticleEngine.h:60</a></div></div>
+<div class="ttc" id="astruct_particle_html_ae448c25f0d57488acd2d2955aa08a022"><div class="ttname"><a href="../../dd/d47/struct_particle.html#ae448c25f0d57488acd2d2955aa08a022">Particle::zbuffer_depth</a></div><div class="ttdeci">short zbuffer_depth</div><div class="ttdef"><b>Definition:</b> <a href="../../da/ddf/_particle_engine_8h_source.html#l00071">ParticleEngine.h:71</a></div></div>
+<div class="ttc" id="astruct_particle_html_a5abb12ba5f671bbace1c0121412fa5b8"><div class="ttname"><a href="../../dd/d47/struct_particle.html#a5abb12ba5f671bbace1c0121412fa5b8">Particle::y</a></div><div class="ttdeci">float y</div><div class="ttdef"><b>Definition:</b> <a href="../../da/ddf/_particle_engine_8h_source.html#l00043">ParticleEngine.h:43</a></div></div>
+<div class="ttc" id="a_indoor_camera_d3_d_8cpp_html_adea3dd5475289b8ba2698ac5d77b3d14"><div class="ttname"><a href="../../dc/d16/_indoor_camera_d3_d_8cpp.html#adea3dd5475289b8ba2698ac5d77b3d14">pIndoorCameraD3D</a></div><div class="ttdeci">IndoorCameraD3D * pIndoorCameraD3D</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d16/_indoor_camera_d3_d_8cpp_source.html#l00021">IndoorCameraD3D.cpp:21</a></div></div>
+<div class="ttc" id="a_time_8cpp_html_a9b16df08347bd1a24e9e426848ffca3c"><div class="ttname"><a href="../../db/d84/_time_8cpp.html#a9b16df08347bd1a24e9e426848ffca3c">pEventTimer</a></div><div class="ttdeci">Timer * pEventTimer</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d84/_time_8cpp_source.html#l00008">Time.cpp:8</a></div></div>
+<div class="ttc" id="astruct_particle_html_a48ab07efb5860c6a58b5fd469440e812"><div class="ttname"><a href="../../dd/d47/struct_particle.html#a48ab07efb5860c6a58b5fd469440e812">Particle::angle</a></div><div class="ttdeci">int angle</div><div class="ttdef"><b>Definition:</b> <a href="../../da/ddf/_particle_engine_8h_source.html#l00062">ParticleEngine.h:62</a></div></div>
+<div class="ttc" id="astruct_software_billboard_html_abd687bdb603a0593c62c469a45fce0f6"><div class="ttname"><a href="../../d2/d7a/struct_software_billboard.html#abd687bdb603a0593c62c469a45fce0f6">SoftwareBillboard::object_pid</a></div><div class="ttdeci">unsigned short object_pid</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d20/_i_render_8h_source.html#l00190">IRender.h:190</a></div></div>
+<div class="ttc" id="a_i_render_8h_html_a21d31464313b2c66ff88d4aa97b66143"><div class="ttname"><a href="../../da/d20/_i_render_8h.html#a21d31464313b2c66ff88d4aa97b66143">render</a></div><div class="ttdeci">std::shared_ptr&lt; IRender &gt; render</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d79/_render_open_g_l_8cpp_source.html#l00052">RenderOpenGL.cpp:52</a></div></div>
+<div class="ttc" id="astruct_particle__sw_html_a210567e5ef2eb5546384276797f7ce00"><div class="ttname"><a href="../../d8/d4e/struct_particle__sw.html#a210567e5ef2eb5546384276797f7ce00">Particle_sw::uDiffuse</a></div><div class="ttdeci">unsigned int uDiffuse</div><div class="ttdef"><b>Definition:</b> <a href="../../da/ddf/_particle_engine_8h_source.html#l00026">ParticleEngine.h:26</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dd/d2d/class_particle_engine.html">ParticleEngine</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:05:02. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

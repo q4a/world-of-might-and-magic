@@ -1,0 +1,550 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Файл C:/git/world-of-might-and-magic/Engine/Graphics/Direct3D/RenderD3D.cpp</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('df/d35/_render_d3_d_8cpp.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл RenderD3D.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><a href="../../df/d35/_render_d3_d_8cpp_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:afc68e55273098f0cffd0106a7647d4f1"><td class="memItemLeft" align="right" valign="top">HRESULT __stdcall&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d35/_render_d3_d_8cpp.html#afc68e55273098f0cffd0106a7647d4f1">DDrawDisplayModesEnumerator</a> (DDSURFACEDESC2 *pSurfaceDesc, __int16 *found_compatible_mode)</td></tr>
+<tr class="separator:afc68e55273098f0cffd0106a7647d4f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66e6e31300b5ccda310b6758934de49d"><td class="memItemLeft" align="right" valign="top">HRESULT __stdcall&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d35/_render_d3_d_8cpp.html#a66e6e31300b5ccda310b6758934de49d">D3DDeviceEnumerator</a> (const GUID *lpGUID, const char *lpDeviceDesc, const char *lpDeviceName, D3DDEVICEDESC *pHWDesc, D3DDEVICEDESC *pSWDesc, <a class="el" href="../../da/dfe/struct_render_d3_d__aux.html">RenderD3D_aux</a> *a6)</td></tr>
+<tr class="separator:a66e6e31300b5ccda310b6758934de49d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8cddd82c9f538b12e7744cbf77ed500"><td class="memItemLeft" align="right" valign="top">int __stdcall&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d35/_render_d3_d_8cpp.html#ab8cddd82c9f538b12e7744cbf77ed500">RenderD3D__DeviceEnumerator</a> (GUID *lpGUID, const char *lpDevDesc, const char *lpDriverName, <a class="el" href="../../d4/df2/struct_render_d3_d_____dev_info.html">RenderD3D__DevInfo</a> *pOut)</td></tr>
+<tr class="separator:ab8cddd82c9f538b12e7744cbf77ed500"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ec669baa535560efc31f3aa8ae00694"><td class="memItemLeft" align="right" valign="top">HRESULT __stdcall&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d35/_render_d3_d_8cpp.html#a0ec669baa535560efc31f3aa8ae00694">D3DZBufferFormatEnumerator</a> (DDPIXELFORMAT *Src, DDPIXELFORMAT *Dst)</td></tr>
+<tr class="separator:a0ec669baa535560efc31f3aa8ae00694"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02047cfbb0b46910c3431d420a00ea9e"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d35/_render_d3_d_8cpp.html#a02047cfbb0b46910c3431d420a00ea9e">GetMaxMipLevels</a> (unsigned int uDim)</td></tr>
+<tr class="separator:a02047cfbb0b46910c3431d420a00ea9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Функции</h2>
+<a id="afc68e55273098f0cffd0106a7647d4f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc68e55273098f0cffd0106a7647d4f1">&#9670;&nbsp;</a></span>DDrawDisplayModesEnumerator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">HRESULT __stdcall DDrawDisplayModesEnumerator </td>
+          <td>(</td>
+          <td class="paramtype">DDSURFACEDESC2 *&#160;</td>
+          <td class="paramname"><em>pSurfaceDesc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">__int16 *&#160;</td>
+          <td class="paramname"><em>found_compatible_mode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../df/d35/_render_d3_d_8cpp_source.html">RenderD3D.cpp</a> строка <a class="el" href="../../df/d35/_render_d3_d_8cpp_source.html#l00009">9</a></p>
+<div class="fragment"><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;                                                                              {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordflow">if</span> (pSurfaceDesc-&gt;ddsCaps.dwCaps | DDSCAPS_3DDEVICE) {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        *found_compatible_mode = 1;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <span class="keywordflow">return</span> S_OK;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    }</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Используется в <a class="el" href="../../df/d35/_render_d3_d_8cpp_source.html#l00070">RenderD3D__DeviceEnumerator()</a>.</p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../df/d35/_render_d3_d_8cpp_afc68e55273098f0cffd0106a7647d4f1_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a66e6e31300b5ccda310b6758934de49d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66e6e31300b5ccda310b6758934de49d">&#9670;&nbsp;</a></span>D3DDeviceEnumerator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">HRESULT __stdcall D3DDeviceEnumerator </td>
+          <td>(</td>
+          <td class="paramtype">const GUID *&#160;</td>
+          <td class="paramname"><em>lpGUID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>lpDeviceDesc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>lpDeviceName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">D3DDEVICEDESC *&#160;</td>
+          <td class="paramname"><em>pHWDesc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">D3DDEVICEDESC *&#160;</td>
+          <td class="paramname"><em>pSWDesc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../da/dfe/struct_render_d3_d__aux.html">RenderD3D_aux</a> *&#160;</td>
+          <td class="paramname"><em>a6</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../df/d35/_render_d3_d_8cpp_source.html">RenderD3D.cpp</a> строка <a class="el" href="../../df/d35/_render_d3_d_8cpp_source.html#l00018">18</a></p>
+<div class="fragment"><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;                                                                       {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">int</span> v7 = -1;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordflow">if</span> (pHWDesc-&gt;dwFlags) {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordflow">if</span> (!a6-&gt;<a class="code" href="../../da/dfe/struct_render_d3_d__aux.html#a8907c319d28df560083da06883678e00">ptr_4</a>-&gt;<a class="code" href="../../d1/dd7/struct_render_d3_d___d3_d_dev_desc.html#a308cd9a041fd11576aff746b0a224fe8">pGUID</a>) v7 = 0;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordflow">if</span> (pHWDesc-&gt;dwFlags &amp;&amp; a6-&gt;<a class="code" href="../../da/dfe/struct_render_d3_d__aux.html#a8907c319d28df560083da06883678e00">ptr_4</a>-&gt;<a class="code" href="../../d1/dd7/struct_render_d3_d___d3_d_dev_desc.html#a308cd9a041fd11576aff746b0a224fe8">pGUID</a>) v7 = 1;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    }</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordflow">if</span> (!strcmp(lpDeviceName, <span class="stringliteral">&quot;RGB Emulation&quot;</span>) &amp;&amp; !a6-&gt;<a class="code" href="../../da/dfe/struct_render_d3_d__aux.html#a8907c319d28df560083da06883678e00">ptr_4</a>-&gt;<a class="code" href="../../d1/dd7/struct_render_d3_d___d3_d_dev_desc.html#a308cd9a041fd11576aff746b0a224fe8">pGUID</a>) v7 = 2;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">if</span> (!strcmp(lpDeviceName, <span class="stringliteral">&quot;Reference Rasterizer&quot;</span>) &amp;&amp; !a6-&gt;<a class="code" href="../../da/dfe/struct_render_d3_d__aux.html#a8907c319d28df560083da06883678e00">ptr_4</a>-&gt;<a class="code" href="../../d1/dd7/struct_render_d3_d___d3_d_dev_desc.html#a308cd9a041fd11576aff746b0a224fe8">pGUID</a>)</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        v7 = 3;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordflow">if</span> (v7 != -1) {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        a6-&gt;<a class="code" href="../../da/dfe/struct_render_d3_d__aux.html#a05b0f894fa04068a167f31356c72521a">pInfo</a>[v7].<a class="code" href="../../d4/df2/struct_render_d3_d_____dev_info.html#a4a528bd89984027984e33e4a5ee24831">bIsDeviceCompatible</a> = 1;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        a6-&gt;<a class="code" href="../../da/dfe/struct_render_d3_d__aux.html#a05b0f894fa04068a167f31356c72521a">pInfo</a>[v7].<a class="code" href="../../d4/df2/struct_render_d3_d_____dev_info.html#a7efabec658a74760e7b05d6dbdc4b7e0">uCaps</a> = 0;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keywordflow">if</span> (!(pHWDesc-&gt;dpcTriCaps.dwSrcBlendCaps &amp; 0x10))</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            a6-&gt;<a class="code" href="../../da/dfe/struct_render_d3_d__aux.html#a05b0f894fa04068a167f31356c72521a">pInfo</a>[v7].<a class="code" href="../../d4/df2/struct_render_d3_d_____dev_info.html#a7efabec658a74760e7b05d6dbdc4b7e0">uCaps</a> |= 2;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordflow">if</span> (!(pHWDesc-&gt;dpcTriCaps.dwSrcBlendCaps &amp; 2)) a6-&gt;<a class="code" href="../../da/dfe/struct_render_d3_d__aux.html#a05b0f894fa04068a167f31356c72521a">pInfo</a>[v7].<a class="code" href="../../d4/df2/struct_render_d3_d_____dev_info.html#a7efabec658a74760e7b05d6dbdc4b7e0">uCaps</a> |= 4;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordflow">if</span> (!(pHWDesc-&gt;dpcTriCaps.dwSrcBlendCaps &amp; 1)) a6-&gt;<a class="code" href="../../da/dfe/struct_render_d3_d__aux.html#a05b0f894fa04068a167f31356c72521a">pInfo</a>[v7].<a class="code" href="../../d4/df2/struct_render_d3_d_____dev_info.html#a7efabec658a74760e7b05d6dbdc4b7e0">uCaps</a> |= 8;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordflow">if</span> (!(pHWDesc-&gt;dpcTriCaps.dwDestBlendCaps &amp; 0x20))</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            a6-&gt;<a class="code" href="../../da/dfe/struct_render_d3_d__aux.html#a05b0f894fa04068a167f31356c72521a">pInfo</a>[v7].<a class="code" href="../../d4/df2/struct_render_d3_d_____dev_info.html#a7efabec658a74760e7b05d6dbdc4b7e0">uCaps</a> |= 16;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordflow">if</span> (!(pHWDesc-&gt;dpcTriCaps.dwDestBlendCaps &amp; 2))</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            a6-&gt;<a class="code" href="../../da/dfe/struct_render_d3_d__aux.html#a05b0f894fa04068a167f31356c72521a">pInfo</a>[v7].<a class="code" href="../../d4/df2/struct_render_d3_d_____dev_info.html#a7efabec658a74760e7b05d6dbdc4b7e0">uCaps</a> |= 32;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordflow">if</span> (!(pHWDesc-&gt;dpcTriCaps.dwDestBlendCaps &amp; 4))</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            a6-&gt;<a class="code" href="../../da/dfe/struct_render_d3_d__aux.html#a05b0f894fa04068a167f31356c72521a">pInfo</a>[v7].<a class="code" href="../../d4/df2/struct_render_d3_d_____dev_info.html#a7efabec658a74760e7b05d6dbdc4b7e0">uCaps</a> |= 64;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordflow">if</span> (!(pHWDesc-&gt;dwDevCaps &amp; 0x1000)) a6-&gt;<a class="code" href="../../da/dfe/struct_render_d3_d__aux.html#a05b0f894fa04068a167f31356c72521a">pInfo</a>[v7].<a class="code" href="../../d4/df2/struct_render_d3_d_____dev_info.html#a7efabec658a74760e7b05d6dbdc4b7e0">uCaps</a> |= 0x100;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordflow">if</span> (pHWDesc-&gt;dpcTriCaps.dwTextureCaps &amp; 0x20)</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            a6-&gt;<a class="code" href="../../da/dfe/struct_render_d3_d__aux.html#a05b0f894fa04068a167f31356c72521a">pInfo</a>[v7].<a class="code" href="../../d4/df2/struct_render_d3_d_____dev_info.html#a7efabec658a74760e7b05d6dbdc4b7e0">uCaps</a> |= 0x80;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        a6-&gt;<a class="code" href="../../da/dfe/struct_render_d3_d__aux.html#a05b0f894fa04068a167f31356c72521a">pInfo</a>[v7].<a class="code" href="../../d4/df2/struct_render_d3_d_____dev_info.html#ac076ac0e53562e59e775be29c71dfdd3">pName</a> = <span class="keyword">new</span> <span class="keywordtype">char</span>[strlen(lpDeviceName) + 1];</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        strcpy(a6-&gt;<a class="code" href="../../da/dfe/struct_render_d3_d__aux.html#a05b0f894fa04068a167f31356c72521a">pInfo</a>[v7].<a class="code" href="../../d4/df2/struct_render_d3_d_____dev_info.html#ac076ac0e53562e59e775be29c71dfdd3">pName</a>, lpDeviceName);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        a6-&gt;<a class="code" href="../../da/dfe/struct_render_d3_d__aux.html#a05b0f894fa04068a167f31356c72521a">pInfo</a>[v7].<a class="code" href="../../d4/df2/struct_render_d3_d_____dev_info.html#a44793f70725c169bbb73dcdbd489c131">pDescription</a> = <span class="keyword">new</span> <span class="keywordtype">char</span>[strlen(lpDeviceDesc) + 1];</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        strcpy(a6-&gt;<a class="code" href="../../da/dfe/struct_render_d3_d__aux.html#a05b0f894fa04068a167f31356c72521a">pInfo</a>[v7].<a class="code" href="../../d4/df2/struct_render_d3_d_____dev_info.html#a44793f70725c169bbb73dcdbd489c131">pDescription</a>, lpDeviceDesc);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        a6-&gt;<a class="code" href="../../da/dfe/struct_render_d3_d__aux.html#a05b0f894fa04068a167f31356c72521a">pInfo</a>[v7].<a class="code" href="../../d4/df2/struct_render_d3_d_____dev_info.html#af6593d4c416a3722b3c72fab5495add2">pGUID</a> = <span class="keyword">new</span> GUID;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        memcpy(a6-&gt;<a class="code" href="../../da/dfe/struct_render_d3_d__aux.html#a05b0f894fa04068a167f31356c72521a">pInfo</a>[v7].<a class="code" href="../../d4/df2/struct_render_d3_d_____dev_info.html#af6593d4c416a3722b3c72fab5495add2">pGUID</a>, lpGUID, 0x10);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        a6-&gt;<a class="code" href="../../da/dfe/struct_render_d3_d__aux.html#a05b0f894fa04068a167f31356c72521a">pInfo</a>[v7].<a class="code" href="../../d4/df2/struct_render_d3_d_____dev_info.html#af9659beb5e0bd82c3d3120e45824ddd1">pDriverName</a> = strdup(a6-&gt;<a class="code" href="../../da/dfe/struct_render_d3_d__aux.html#a8907c319d28df560083da06883678e00">ptr_4</a>-&gt;<a class="code" href="../../d1/dd7/struct_render_d3_d___d3_d_dev_desc.html#adbedae955e3b821b6349e491df08988c">pDriverName</a>);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        a6-&gt;<a class="code" href="../../da/dfe/struct_render_d3_d__aux.html#a05b0f894fa04068a167f31356c72521a">pInfo</a>[v7].<a class="code" href="../../d4/df2/struct_render_d3_d_____dev_info.html#ad7c86fdd9c304e8d4d6060b9678c9272">pDeviceDesc</a> = strdup(a6-&gt;<a class="code" href="../../da/dfe/struct_render_d3_d__aux.html#a8907c319d28df560083da06883678e00">ptr_4</a>-&gt;<a class="code" href="../../d1/dd7/struct_render_d3_d___d3_d_dev_desc.html#a85d1b0c7c1f341d8466d4d9f3167c9a4">pDeviceDesc</a>);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        a6-&gt;<a class="code" href="../../da/dfe/struct_render_d3_d__aux.html#a05b0f894fa04068a167f31356c72521a">pInfo</a>[v7].<a class="code" href="../../d4/df2/struct_render_d3_d_____dev_info.html#a32b412dd8cda98a8b04e75ce0653abea">pDDraw4DevDesc</a> = strdup(a6-&gt;<a class="code" href="../../da/dfe/struct_render_d3_d__aux.html#a8907c319d28df560083da06883678e00">ptr_4</a>-&gt;<a class="code" href="../../d1/dd7/struct_render_d3_d___d3_d_dev_desc.html#aa5632891a2d5277ba23ceecd0e0ed498">pDDraw4DevDesc</a>);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordflow">if</span> (a6-&gt;<a class="code" href="../../da/dfe/struct_render_d3_d__aux.html#a8907c319d28df560083da06883678e00">ptr_4</a>-&gt;<a class="code" href="../../d1/dd7/struct_render_d3_d___d3_d_dev_desc.html#a308cd9a041fd11576aff746b0a224fe8">pGUID</a>) {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            a6-&gt;<a class="code" href="../../da/dfe/struct_render_d3_d__aux.html#a05b0f894fa04068a167f31356c72521a">pInfo</a>[v7].<a class="code" href="../../d4/df2/struct_render_d3_d_____dev_info.html#a89901fa0380202d2ea6753ecbd4a13d7">pDirectDrawGUID</a> = <span class="keyword">new</span> GUID;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            memcpy(a6-&gt;<a class="code" href="../../da/dfe/struct_render_d3_d__aux.html#a05b0f894fa04068a167f31356c72521a">pInfo</a>[v7].<a class="code" href="../../d4/df2/struct_render_d3_d_____dev_info.html#a89901fa0380202d2ea6753ecbd4a13d7">pDirectDrawGUID</a>, a6-&gt;<a class="code" href="../../da/dfe/struct_render_d3_d__aux.html#a8907c319d28df560083da06883678e00">ptr_4</a>-&gt;<a class="code" href="../../d1/dd7/struct_render_d3_d___d3_d_dev_desc.html#a308cd9a041fd11576aff746b0a224fe8">pGUID</a>, 0x10);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            a6-&gt;<a class="code" href="../../da/dfe/struct_render_d3_d__aux.html#a05b0f894fa04068a167f31356c72521a">pInfo</a>[v7].<a class="code" href="../../d4/df2/struct_render_d3_d_____dev_info.html#a89901fa0380202d2ea6753ecbd4a13d7">pDirectDrawGUID</a> = 0;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        a6-&gt;<a class="code" href="../../da/dfe/struct_render_d3_d__aux.html#a05b0f894fa04068a167f31356c72521a">pInfo</a>[v7].<a class="code" href="../../d4/df2/struct_render_d3_d_____dev_info.html#a6bcaf97b7397304ba30861bdb4d887bd">uVideoMem</a> = a6-&gt;<a class="code" href="../../da/dfe/struct_render_d3_d__aux.html#a8907c319d28df560083da06883678e00">ptr_4</a>-&gt;<a class="code" href="../../d1/dd7/struct_render_d3_d___d3_d_dev_desc.html#a422cb831230a316bde0f3da823ece37d">uVideoMem</a>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../df/d4f/_render_d3_d_8h_source.html#l00032">RenderD3D__DevInfo::bIsDeviceCompatible</a>, <a class="el" href="../../df/d4f/_render_d3_d_8h_source.html#l00039">RenderD3D__DevInfo::pDDraw4DevDesc</a>, <a class="el" href="../../df/d4f/_render_d3_d_8h_source.html#l00055">RenderD3D_D3DDevDesc::pDDraw4DevDesc</a>, <a class="el" href="../../df/d4f/_render_d3_d_8h_source.html#l00034">RenderD3D__DevInfo::pDescription</a>, <a class="el" href="../../df/d4f/_render_d3_d_8h_source.html#l00038">RenderD3D__DevInfo::pDeviceDesc</a>, <a class="el" href="../../df/d4f/_render_d3_d_8h_source.html#l00054">RenderD3D_D3DDevDesc::pDeviceDesc</a>, <a class="el" href="../../df/d4f/_render_d3_d_8h_source.html#l00040">RenderD3D__DevInfo::pDirectDrawGUID</a>, <a class="el" href="../../df/d4f/_render_d3_d_8h_source.html#l00037">RenderD3D__DevInfo::pDriverName</a>, <a class="el" href="../../df/d4f/_render_d3_d_8h_source.html#l00053">RenderD3D_D3DDevDesc::pDriverName</a>, <a class="el" href="../../df/d4f/_render_d3_d_8h_source.html#l00035">RenderD3D__DevInfo::pGUID</a>, <a class="el" href="../../df/d4f/_render_d3_d_8h_source.html#l00056">RenderD3D_D3DDevDesc::pGUID</a>, <a class="el" href="../../df/d4f/_render_d3_d_8h_source.html#l00061">RenderD3D_aux::pInfo</a>, <a class="el" href="../../df/d4f/_render_d3_d_8h_source.html#l00033">RenderD3D__DevInfo::pName</a>, <a class="el" href="../../df/d4f/_render_d3_d_8h_source.html#l00062">RenderD3D_aux::ptr_4</a>, <a class="el" href="../../df/d4f/_render_d3_d_8h_source.html#l00036">RenderD3D__DevInfo::uCaps</a>, <a class="el" href="../../df/d4f/_render_d3_d_8h_source.html#l00041">RenderD3D__DevInfo::uVideoMem</a> и <a class="el" href="../../df/d4f/_render_d3_d_8h_source.html#l00057">RenderD3D_D3DDevDesc::uVideoMem</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../df/d35/_render_d3_d_8cpp_source.html#l00070">RenderD3D__DeviceEnumerator()</a>.</p>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../df/d35/_render_d3_d_8cpp_a66e6e31300b5ccda310b6758934de49d_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ab8cddd82c9f538b12e7744cbf77ed500"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8cddd82c9f538b12e7744cbf77ed500">&#9670;&nbsp;</a></span>RenderD3D__DeviceEnumerator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int __stdcall RenderD3D__DeviceEnumerator </td>
+          <td>(</td>
+          <td class="paramtype">GUID *&#160;</td>
+          <td class="paramname"><em>lpGUID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>lpDevDesc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>lpDriverName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d4/df2/struct_render_d3_d_____dev_info.html">RenderD3D__DevInfo</a> *&#160;</td>
+          <td class="paramname"><em>pOut</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../df/d35/_render_d3_d_8cpp_source.html">RenderD3D.cpp</a> строка <a class="el" href="../../df/d35/_render_d3_d_8cpp_source.html#l00070">70</a></p>
+<div class="fragment"><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                                                                    {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordtype">size_t</span> v5;                   <span class="comment">// eax@1</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">size_t</span> v7;                   <span class="comment">// eax@13</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    DDDEVICEIDENTIFIER ddDevId;  <span class="comment">// [sp+4h] [bp-4F8h]@11</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    DDSURFACEDESC2 v10;          <span class="comment">// [sp+42Ch] [bp-D0h]@16</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    DDSCAPS2 ddsCaps;            <span class="comment">// [sp+4A8h] [bp-54h]@14</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> uFreeVideoMem;  <span class="comment">// [sp+4B8h] [bp-44h]@14</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <a class="code" href="../../da/dfe/struct_render_d3_d__aux.html">RenderD3D_aux</a> aux;           <span class="comment">// [sp+4BCh] [bp-40h]@19</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    IDirect3D3 *pDirect3D3;      <span class="comment">// [sp+4C4h] [bp-38h]@18</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">int</span> is_there_a_compatible_screen_mode;  <span class="comment">// [sp+4C8h] [bp-34h]@16</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    IDirectDraw4 *pDirectDraw4;             <span class="comment">// [sp+4F8h] [bp-4h]@7</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <a class="code" href="../../d1/dd7/struct_render_d3_d___d3_d_dev_desc.html">RenderD3D_D3DDevDesc</a> v20 = {0};</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordtype">size_t</span> v4 = strlen(lpDriverName);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    v20.<a class="code" href="../../d1/dd7/struct_render_d3_d___d3_d_dev_desc.html#adbedae955e3b821b6349e491df08988c">pDriverName</a> = <span class="keyword">new</span> <span class="keywordtype">char</span>[v4 + 1];</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    v5 = strlen(lpDevDesc);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    v20.<a class="code" href="../../d1/dd7/struct_render_d3_d___d3_d_dev_desc.html#a85d1b0c7c1f341d8466d4d9f3167c9a4">pDeviceDesc</a> = <span class="keyword">new</span> <span class="keywordtype">char</span>[v5 + 1];</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    strcpy(v20.<a class="code" href="../../d1/dd7/struct_render_d3_d___d3_d_dev_desc.html#adbedae955e3b821b6349e491df08988c">pDriverName</a>, lpDriverName);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    strcpy(v20.<a class="code" href="../../d1/dd7/struct_render_d3_d___d3_d_dev_desc.html#a85d1b0c7c1f341d8466d4d9f3167c9a4">pDeviceDesc</a>, lpDevDesc);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordflow">if</span> (lpGUID) {</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        v20.<a class="code" href="../../d1/dd7/struct_render_d3_d___d3_d_dev_desc.html#a308cd9a041fd11576aff746b0a224fe8">pGUID</a> = <span class="keyword">new</span> GUID;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        memcpy(v20.<a class="code" href="../../d1/dd7/struct_render_d3_d___d3_d_dev_desc.html#a308cd9a041fd11576aff746b0a224fe8">pGUID</a>, lpGUID, 0x10);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        v20.<a class="code" href="../../d1/dd7/struct_render_d3_d___d3_d_dev_desc.html#a308cd9a041fd11576aff746b0a224fe8">pGUID</a> = 0;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    }</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    LPDIRECTDRAW pDirectDraw = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordflow">if</span> (FAILED(DirectDrawCreate(v20.<a class="code" href="../../d1/dd7/struct_render_d3_d___d3_d_dev_desc.html#a308cd9a041fd11576aff746b0a224fe8">pGUID</a>, &amp;pDirectDraw, 0))) {</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keyword">delete</span>[] v20.<a class="code" href="../../d1/dd7/struct_render_d3_d___d3_d_dev_desc.html#adbedae955e3b821b6349e491df08988c">pDriverName</a>;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keyword">delete</span>[] v20.<a class="code" href="../../d1/dd7/struct_render_d3_d___d3_d_dev_desc.html#a85d1b0c7c1f341d8466d4d9f3167c9a4">pDeviceDesc</a>;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="keyword">delete</span> v20.<a class="code" href="../../d1/dd7/struct_render_d3_d___d3_d_dev_desc.html#a308cd9a041fd11576aff746b0a224fe8">pGUID</a>;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="keywordflow">if</span> (FAILED(pDirectDraw-&gt;QueryInterface(IID_IDirectDraw4,</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                                               (LPVOID *)&amp;pDirectDraw4))) {</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            <span class="keyword">delete</span>[] v20.<a class="code" href="../../d1/dd7/struct_render_d3_d___d3_d_dev_desc.html#adbedae955e3b821b6349e491df08988c">pDriverName</a>;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            <span class="keyword">delete</span>[] v20.<a class="code" href="../../d1/dd7/struct_render_d3_d___d3_d_dev_desc.html#a85d1b0c7c1f341d8466d4d9f3167c9a4">pDeviceDesc</a>;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            <span class="keyword">delete</span> v20.<a class="code" href="../../d1/dd7/struct_render_d3_d___d3_d_dev_desc.html#a308cd9a041fd11576aff746b0a224fe8">pGUID</a>;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            pDirectDraw-&gt;Release();</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            pDirectDraw-&gt;Release();</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            <span class="keywordflow">if</span> (FAILED(pDirectDraw4-&gt;GetDeviceIdentifier(&amp;ddDevId, 1))) {</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                v20.<a class="code" href="../../d1/dd7/struct_render_d3_d___d3_d_dev_desc.html#aa5632891a2d5277ba23ceecd0e0ed498">pDDraw4DevDesc</a> = 0;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                v7 = strlen(ddDevId.szDescription);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                v20.<a class="code" href="../../d1/dd7/struct_render_d3_d___d3_d_dev_desc.html#aa5632891a2d5277ba23ceecd0e0ed498">pDDraw4DevDesc</a> = <span class="keyword">new</span> <span class="keywordtype">char</span>[v7 + 1];</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                strcpy(v20.<a class="code" href="../../d1/dd7/struct_render_d3_d___d3_d_dev_desc.html#aa5632891a2d5277ba23ceecd0e0ed498">pDDraw4DevDesc</a>, ddDevId.szDescription);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            }</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            memset(&amp;ddsCaps, 0, <span class="keyword">sizeof</span>(ddsCaps));</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            <span class="keywordflow">if</span> (FAILED(pDirectDraw4-&gt;GetAvailableVidMem(</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                    &amp;ddsCaps, (LPDWORD)&amp;v20.<a class="code" href="../../d1/dd7/struct_render_d3_d___d3_d_dev_desc.html#a422cb831230a316bde0f3da823ece37d">uVideoMem</a>,</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                    (LPDWORD)&amp;uFreeVideoMem)))</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                v20.<a class="code" href="../../d1/dd7/struct_render_d3_d___d3_d_dev_desc.html#a422cb831230a316bde0f3da823ece37d">uVideoMem</a> = 0;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            memset(&amp;v10, 0, <span class="keyword">sizeof</span>(v10));</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            v10.dwSize = 124;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;            v10.dwFlags = 6;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;            v10.dwHeight = <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a92dbce8e3247f6a78126c99877caacb6">window</a>-&gt;GetWidth();</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;            v10.dwWidth = <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a92dbce8e3247f6a78126c99877caacb6">window</a>-&gt;GetHeight();</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;            v10.ddpfPixelFormat.dwSize = 32;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            is_there_a_compatible_screen_mode = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;            <span class="keywordflow">if</span> (FAILED(pDirectDraw4-&gt;EnumDisplayModes(</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;                    0, 0, &amp;is_there_a_compatible_screen_mode,</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                    (LPDDENUMMODESCALLBACK2)<a class="code" href="../../df/d35/_render_d3_d_8cpp.html#afc68e55273098f0cffd0106a7647d4f1">DDrawDisplayModesEnumerator</a>)) ||</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                !is_there_a_compatible_screen_mode ||</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;                FAILED(pDirectDraw4-&gt;QueryInterface(IID_IDirect3D3,</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;                                                    (LPVOID *)&amp;pDirect3D3))) {</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;                <span class="keyword">delete</span>[] v20.<a class="code" href="../../d1/dd7/struct_render_d3_d___d3_d_dev_desc.html#adbedae955e3b821b6349e491df08988c">pDriverName</a>;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;                <span class="keyword">delete</span>[] v20.<a class="code" href="../../d1/dd7/struct_render_d3_d___d3_d_dev_desc.html#a85d1b0c7c1f341d8466d4d9f3167c9a4">pDeviceDesc</a>;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;                <span class="comment">// free(v20.pDDraw4DevDesc);</span></div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;                <span class="keyword">delete</span>[] v20.<a class="code" href="../../d1/dd7/struct_render_d3_d___d3_d_dev_desc.html#aa5632891a2d5277ba23ceecd0e0ed498">pDDraw4DevDesc</a>;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;                <span class="keyword">delete</span> v20.<a class="code" href="../../d1/dd7/struct_render_d3_d___d3_d_dev_desc.html#a308cd9a041fd11576aff746b0a224fe8">pGUID</a>;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;                pDirectDraw4-&gt;Release();</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;                aux.<a class="code" href="../../da/dfe/struct_render_d3_d__aux.html#a05b0f894fa04068a167f31356c72521a">pInfo</a> = pOut;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;                aux.<a class="code" href="../../da/dfe/struct_render_d3_d__aux.html#a8907c319d28df560083da06883678e00">ptr_4</a> = &amp;v20;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;                pDirect3D3-&gt;EnumDevices(</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;                    (LPD3DENUMDEVICESCALLBACK)<a class="code" href="../../df/d35/_render_d3_d_8cpp.html#a66e6e31300b5ccda310b6758934de49d">D3DDeviceEnumerator</a>, &amp;aux);</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;                <span class="keyword">delete</span>[] v20.<a class="code" href="../../d1/dd7/struct_render_d3_d___d3_d_dev_desc.html#adbedae955e3b821b6349e491df08988c">pDriverName</a>;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;                <span class="keyword">delete</span>[] v20.<a class="code" href="../../d1/dd7/struct_render_d3_d___d3_d_dev_desc.html#a85d1b0c7c1f341d8466d4d9f3167c9a4">pDeviceDesc</a>;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;                <span class="keyword">delete</span>[] v20.<a class="code" href="../../d1/dd7/struct_render_d3_d___d3_d_dev_desc.html#aa5632891a2d5277ba23ceecd0e0ed498">pDDraw4DevDesc</a>;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;                <span class="keyword">delete</span> v20.<a class="code" href="../../d1/dd7/struct_render_d3_d___d3_d_dev_desc.html#a308cd9a041fd11576aff746b0a224fe8">pGUID</a>;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;                pDirectDraw4-&gt;Release();</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;                pDirectDraw4 = 0;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;                pDirect3D3-&gt;Release();</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            }</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        }</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    }</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../df/d35/_render_d3_d_8cpp_source.html#l00018">D3DDeviceEnumerator()</a>, <a class="el" href="../../df/d35/_render_d3_d_8cpp_source.html#l00009">DDrawDisplayModesEnumerator()</a>, <a class="el" href="../../df/d4f/_render_d3_d_8h_source.html#l00055">RenderD3D_D3DDevDesc::pDDraw4DevDesc</a>, <a class="el" href="../../df/d4f/_render_d3_d_8h_source.html#l00054">RenderD3D_D3DDevDesc::pDeviceDesc</a>, <a class="el" href="../../df/d4f/_render_d3_d_8h_source.html#l00053">RenderD3D_D3DDevDesc::pDriverName</a>, <a class="el" href="../../df/d4f/_render_d3_d_8h_source.html#l00056">RenderD3D_D3DDevDesc::pGUID</a>, <a class="el" href="../../df/d4f/_render_d3_d_8h_source.html#l00061">RenderD3D_aux::pInfo</a>, <a class="el" href="../../df/d4f/_render_d3_d_8h_source.html#l00062">RenderD3D_aux::ptr_4</a> и <a class="el" href="../../df/d4f/_render_d3_d_8h_source.html#l00057">RenderD3D_D3DDevDesc::uVideoMem</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../df/d35/_render_d3_d_8cpp_source.html#l00177">RenderD3D::GetAvailableDevices()</a>.</p>
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../df/d35/_render_d3_d_8cpp_ab8cddd82c9f538b12e7744cbf77ed500_cgraph.svg" width="475" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../df/d35/_render_d3_d_8cpp_ab8cddd82c9f538b12e7744cbf77ed500_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a0ec669baa535560efc31f3aa8ae00694"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ec669baa535560efc31f3aa8ae00694">&#9670;&nbsp;</a></span>D3DZBufferFormatEnumerator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">HRESULT __stdcall D3DZBufferFormatEnumerator </td>
+          <td>(</td>
+          <td class="paramtype">DDPIXELFORMAT *&#160;</td>
+          <td class="paramname"><em>Src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DDPIXELFORMAT *&#160;</td>
+          <td class="paramname"><em>Dst</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../df/d35/_render_d3_d_8cpp_source.html">RenderD3D.cpp</a> строка <a class="el" href="../../df/d35/_render_d3_d_8cpp_source.html#l00162">162</a></p>
+<div class="fragment"><div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;                                                                 {</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <span class="keywordflow">if</span> (Src-&gt;dwFlags &amp; (0x400 | 0x2000)) {</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        <span class="keywordflow">if</span> (Src-&gt;dwRGBBitCount == 16 &amp;&amp; !Src-&gt;dwRBitMask) {</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;            memcpy(Dst, Src, <span class="keyword">sizeof</span>(DDPIXELFORMAT));</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        }</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        <span class="keywordflow">if</span> (!Dst-&gt;dwSize) {</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;            memcpy(Dst, Src, <span class="keyword">sizeof</span>(DDPIXELFORMAT));</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;            <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        }</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    }</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Используется в <a class="el" href="../../df/d35/_render_d3_d_8cpp_source.html#l00291">RenderD3D::CreateDevice()</a>.</p>
+<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../df/d35/_render_d3_d_8cpp_a0ec669baa535560efc31f3aa8ae00694_icgraph.svg" width="652" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a02047cfbb0b46910c3431d420a00ea9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02047cfbb0b46910c3431d420a00ea9e">&#9670;&nbsp;</a></span>GetMaxMipLevels()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int GetMaxMipLevels </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>uDim</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../df/d35/_render_d3_d_8cpp_source.html">RenderD3D.cpp</a> строка <a class="el" href="../../df/d35/_render_d3_d_8cpp_source.html#l00771">771</a></p>
+<div class="fragment"><div class="line"><a name="l00771"></a><span class="lineno">  771</span>&#160;                                                {</div>
+<div class="line"><a name="l00772"></a><span class="lineno">  772</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0928f6d0f0f794ba000a21dfae422136">v2</a> = 0;</div>
+<div class="line"><a name="l00773"></a><span class="lineno">  773</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#acc806b31cbf466ceba6555983d8b814d">v3</a> = uDim - 1;</div>
+<div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160;    <span class="keywordflow">while</span> (<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#acc806b31cbf466ceba6555983d8b814d">v3</a> &amp; 1) {</div>
+<div class="line"><a name="l00775"></a><span class="lineno">  775</span>&#160;        <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#acc806b31cbf466ceba6555983d8b814d">v3</a> &gt;&gt;= 1;</div>
+<div class="line"><a name="l00776"></a><span class="lineno">  776</span>&#160;        ++<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0928f6d0f0f794ba000a21dfae422136">v2</a>;</div>
+<div class="line"><a name="l00777"></a><span class="lineno">  777</span>&#160;    }</div>
+<div class="line"><a name="l00778"></a><span class="lineno">  778</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#acc806b31cbf466ceba6555983d8b814d">v3</a> == 0 ? <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0928f6d0f0f794ba000a21dfae422136">v2</a> : 0;</div>
+<div class="line"><a name="l00779"></a><span class="lineno">  779</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Используется в <a class="el" href="../../df/d35/_render_d3_d_8cpp_source.html#l00781">RenderD3D::CreateTexture()</a>.</p>
+<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../df/d35/_render_d3_d_8cpp_a02047cfbb0b46910c3431d420a00ea9e_icgraph.svg" width="100%" height="385"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="astruct_render_d3_d_____dev_info_html_af6593d4c416a3722b3c72fab5495add2"><div class="ttname"><a href="../../d4/df2/struct_render_d3_d_____dev_info.html#af6593d4c416a3722b3c72fab5495add2">RenderD3D__DevInfo::pGUID</a></div><div class="ttdeci">GUID * pGUID</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d4f/_render_d3_d_8h_source.html#l00035">RenderD3D.h:35</a></div></div>
+<div class="ttc" id="astruct_render_d3_d___d3_d_dev_desc_html_a85d1b0c7c1f341d8466d4d9f3167c9a4"><div class="ttname"><a href="../../d1/dd7/struct_render_d3_d___d3_d_dev_desc.html#a85d1b0c7c1f341d8466d4d9f3167c9a4">RenderD3D_D3DDevDesc::pDeviceDesc</a></div><div class="ttdeci">char * pDeviceDesc</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d4f/_render_d3_d_8h_source.html#l00054">RenderD3D.h:54</a></div></div>
+<div class="ttc" id="astruct_render_d3_d_____dev_info_html_ac076ac0e53562e59e775be29c71dfdd3"><div class="ttname"><a href="../../d4/df2/struct_render_d3_d_____dev_info.html#ac076ac0e53562e59e775be29c71dfdd3">RenderD3D__DevInfo::pName</a></div><div class="ttdeci">char * pName</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d4f/_render_d3_d_8h_source.html#l00033">RenderD3D.h:33</a></div></div>
+<div class="ttc" id="astruct_render_d3_d_____dev_info_html_a89901fa0380202d2ea6753ecbd4a13d7"><div class="ttname"><a href="../../d4/df2/struct_render_d3_d_____dev_info.html#a89901fa0380202d2ea6753ecbd4a13d7">RenderD3D__DevInfo::pDirectDrawGUID</a></div><div class="ttdeci">GUID * pDirectDrawGUID</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d4f/_render_d3_d_8h_source.html#l00040">RenderD3D.h:40</a></div></div>
+<div class="ttc" id="astruct_render_d3_d_____dev_info_html_a32b412dd8cda98a8b04e75ce0653abea"><div class="ttname"><a href="../../d4/df2/struct_render_d3_d_____dev_info.html#a32b412dd8cda98a8b04e75ce0653abea">RenderD3D__DevInfo::pDDraw4DevDesc</a></div><div class="ttdeci">char * pDDraw4DevDesc</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d4f/_render_d3_d_8h_source.html#l00039">RenderD3D.h:39</a></div></div>
+<div class="ttc" id="astruct_render_d3_d_____dev_info_html_a44793f70725c169bbb73dcdbd489c131"><div class="ttname"><a href="../../d4/df2/struct_render_d3_d_____dev_info.html#a44793f70725c169bbb73dcdbd489c131">RenderD3D__DevInfo::pDescription</a></div><div class="ttdeci">char * pDescription</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d4f/_render_d3_d_8h_source.html#l00034">RenderD3D.h:34</a></div></div>
+<div class="ttc" id="a_s_d_l__egl_8h_html_a92dbce8e3247f6a78126c99877caacb6"><div class="ttname"><a href="../../df/d32/_s_d_l__egl_8h.html#a92dbce8e3247f6a78126c99877caacb6">window</a></div><div class="ttdeci">EGLSurface EGLNativeWindowType * window</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/_s_d_l__egl_8h_source.html#l01580">SDL_egl.h:1580</a></div></div>
+<div class="ttc" id="astruct_render_d3_d__aux_html_a8907c319d28df560083da06883678e00"><div class="ttname"><a href="../../da/dfe/struct_render_d3_d__aux.html#a8907c319d28df560083da06883678e00">RenderD3D_aux::ptr_4</a></div><div class="ttdeci">RenderD3D_D3DDevDesc * ptr_4</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d4f/_render_d3_d_8h_source.html#l00062">RenderD3D.h:62</a></div></div>
+<div class="ttc" id="astruct_render_d3_d___d3_d_dev_desc_html_adbedae955e3b821b6349e491df08988c"><div class="ttname"><a href="../../d1/dd7/struct_render_d3_d___d3_d_dev_desc.html#adbedae955e3b821b6349e491df08988c">RenderD3D_D3DDevDesc::pDriverName</a></div><div class="ttdeci">char * pDriverName</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d4f/_render_d3_d_8h_source.html#l00053">RenderD3D.h:53</a></div></div>
+<div class="ttc" id="astruct_render_d3_d___d3_d_dev_desc_html"><div class="ttname"><a href="../../d1/dd7/struct_render_d3_d___d3_d_dev_desc.html">RenderD3D_D3DDevDesc</a></div><div class="ttdef"><b>Definition:</b> <a href="../../df/d4f/_render_d3_d_8h_source.html#l00047">RenderD3D.h:47</a></div></div>
+<div class="ttc" id="astruct_render_d3_d_____dev_info_html_a6bcaf97b7397304ba30861bdb4d887bd"><div class="ttname"><a href="../../d4/df2/struct_render_d3_d_____dev_info.html#a6bcaf97b7397304ba30861bdb4d887bd">RenderD3D__DevInfo::uVideoMem</a></div><div class="ttdeci">int uVideoMem</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d4f/_render_d3_d_8h_source.html#l00041">RenderD3D.h:41</a></div></div>
+<div class="ttc" id="astruct_render_d3_d___d3_d_dev_desc_html_aa5632891a2d5277ba23ceecd0e0ed498"><div class="ttname"><a href="../../d1/dd7/struct_render_d3_d___d3_d_dev_desc.html#aa5632891a2d5277ba23ceecd0e0ed498">RenderD3D_D3DDevDesc::pDDraw4DevDesc</a></div><div class="ttdeci">char * pDDraw4DevDesc</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d4f/_render_d3_d_8h_source.html#l00055">RenderD3D.h:55</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a0928f6d0f0f794ba000a21dfae422136"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0928f6d0f0f794ba000a21dfae422136">v2</a></div><div class="ttdeci">GLfloat GLfloat GLfloat v2</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l00695">SDL_opengl_glext.h:695</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_acc806b31cbf466ceba6555983d8b814d"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#acc806b31cbf466ceba6555983d8b814d">v3</a></div><div class="ttdeci">GLfloat GLfloat GLfloat GLfloat v3</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l00696">SDL_opengl_glext.h:696</a></div></div>
+<div class="ttc" id="a_render_d3_d_8cpp_html_a66e6e31300b5ccda310b6758934de49d"><div class="ttname"><a href="../../df/d35/_render_d3_d_8cpp.html#a66e6e31300b5ccda310b6758934de49d">D3DDeviceEnumerator</a></div><div class="ttdeci">HRESULT __stdcall D3DDeviceEnumerator(const GUID *lpGUID, const char *lpDeviceDesc, const char *lpDeviceName, D3DDEVICEDESC *pHWDesc, D3DDEVICEDESC *pSWDesc, RenderD3D_aux *a6)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d35/_render_d3_d_8cpp_source.html#l00018">RenderD3D.cpp:18</a></div></div>
+<div class="ttc" id="astruct_render_d3_d__aux_html"><div class="ttname"><a href="../../da/dfe/struct_render_d3_d__aux.html">RenderD3D_aux</a></div><div class="ttdef"><b>Definition:</b> <a href="../../df/d4f/_render_d3_d_8h_source.html#l00060">RenderD3D.h:60</a></div></div>
+<div class="ttc" id="astruct_render_d3_d_____dev_info_html_a4a528bd89984027984e33e4a5ee24831"><div class="ttname"><a href="../../d4/df2/struct_render_d3_d_____dev_info.html#a4a528bd89984027984e33e4a5ee24831">RenderD3D__DevInfo::bIsDeviceCompatible</a></div><div class="ttdeci">unsigned int bIsDeviceCompatible</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d4f/_render_d3_d_8h_source.html#l00032">RenderD3D.h:32</a></div></div>
+<div class="ttc" id="astruct_render_d3_d_____dev_info_html_ad7c86fdd9c304e8d4d6060b9678c9272"><div class="ttname"><a href="../../d4/df2/struct_render_d3_d_____dev_info.html#ad7c86fdd9c304e8d4d6060b9678c9272">RenderD3D__DevInfo::pDeviceDesc</a></div><div class="ttdeci">char * pDeviceDesc</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d4f/_render_d3_d_8h_source.html#l00038">RenderD3D.h:38</a></div></div>
+<div class="ttc" id="a_render_d3_d_8cpp_html_afc68e55273098f0cffd0106a7647d4f1"><div class="ttname"><a href="../../df/d35/_render_d3_d_8cpp.html#afc68e55273098f0cffd0106a7647d4f1">DDrawDisplayModesEnumerator</a></div><div class="ttdeci">HRESULT __stdcall DDrawDisplayModesEnumerator(DDSURFACEDESC2 *pSurfaceDesc, __int16 *found_compatible_mode)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d35/_render_d3_d_8cpp_source.html#l00009">RenderD3D.cpp:9</a></div></div>
+<div class="ttc" id="astruct_render_d3_d__aux_html_a05b0f894fa04068a167f31356c72521a"><div class="ttname"><a href="../../da/dfe/struct_render_d3_d__aux.html#a05b0f894fa04068a167f31356c72521a">RenderD3D_aux::pInfo</a></div><div class="ttdeci">RenderD3D__DevInfo * pInfo</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d4f/_render_d3_d_8h_source.html#l00061">RenderD3D.h:61</a></div></div>
+<div class="ttc" id="astruct_render_d3_d___d3_d_dev_desc_html_a422cb831230a316bde0f3da823ece37d"><div class="ttname"><a href="../../d1/dd7/struct_render_d3_d___d3_d_dev_desc.html#a422cb831230a316bde0f3da823ece37d">RenderD3D_D3DDevDesc::uVideoMem</a></div><div class="ttdeci">unsigned int uVideoMem</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d4f/_render_d3_d_8h_source.html#l00057">RenderD3D.h:57</a></div></div>
+<div class="ttc" id="astruct_render_d3_d_____dev_info_html_a7efabec658a74760e7b05d6dbdc4b7e0"><div class="ttname"><a href="../../d4/df2/struct_render_d3_d_____dev_info.html#a7efabec658a74760e7b05d6dbdc4b7e0">RenderD3D__DevInfo::uCaps</a></div><div class="ttdeci">unsigned int uCaps</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d4f/_render_d3_d_8h_source.html#l00036">RenderD3D.h:36</a></div></div>
+<div class="ttc" id="astruct_render_d3_d___d3_d_dev_desc_html_a308cd9a041fd11576aff746b0a224fe8"><div class="ttname"><a href="../../d1/dd7/struct_render_d3_d___d3_d_dev_desc.html#a308cd9a041fd11576aff746b0a224fe8">RenderD3D_D3DDevDesc::pGUID</a></div><div class="ttdeci">GUID * pGUID</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d4f/_render_d3_d_8h_source.html#l00056">RenderD3D.h:56</a></div></div>
+<div class="ttc" id="astruct_render_d3_d_____dev_info_html_af9659beb5e0bd82c3d3120e45824ddd1"><div class="ttname"><a href="../../d4/df2/struct_render_d3_d_____dev_info.html#af9659beb5e0bd82c3d3120e45824ddd1">RenderD3D__DevInfo::pDriverName</a></div><div class="ttdeci">char * pDriverName</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d4f/_render_d3_d_8h_source.html#l00037">RenderD3D.h:37</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_0b6ee6e7e9547e675db4add2e5de97da.html">Engine</a></li><li class="navelem"><a class="el" href="../../dir_bb84c1711d8a00602a64a24ea462155a.html">Graphics</a></li><li class="navelem"><a class="el" href="../../dir_af96c260d7cfa98fbefabf37d3ce4a6d.html">Direct3D</a></li><li class="navelem"><a class="el" href="../../df/d35/_render_d3_d_8cpp.html">RenderD3D.cpp</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:03:52. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

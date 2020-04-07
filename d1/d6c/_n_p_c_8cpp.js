@@ -1,0 +1,25 @@
+var _n_p_c_8cpp =
+[
+    [ "InitializeAwards", "d1/d6c/_n_p_c_8cpp.html#a043f76dfc0d8c3e9f3d074f78cda3747", null ],
+    [ "InitializeScrolls", "d1/d6c/_n_p_c_8cpp.html#aafaea893b03e3c55735bdabdb076b606", null ],
+    [ "InitializeMerchants", "d1/d6c/_n_p_c_8cpp.html#aec1aa7ddd3e7865d9cb11dece846217f", null ],
+    [ "InitializeTransitions", "d1/d6c/_n_p_c_8cpp.html#ae41fb23005c98d9bbb14a9b0e4339f57", null ],
+    [ "InitializeAutonotes", "d1/d6c/_n_p_c_8cpp.html#af053ca5ac93568183e07c36118ccf9ab", null ],
+    [ "InitializeQuests", "d1/d6c/_n_p_c_8cpp.html#a5a4adf1abc138e731cd95454968eb157", null ],
+    [ "CheckPortretAgainstSex", "d1/d6c/_n_p_c_8cpp.html#ac02f307e9fa837b11c38cb77e5637682", null ],
+    [ "GetNPCData", "d1/d6c/_n_p_c_8cpp.html#a180405c45de6b90632b78da68b307897", null ],
+    [ "GetNewNPCData", "d1/d6c/_n_p_c_8cpp.html#aefcc0068ba7fa7f4cabeee628139d783", null ],
+    [ "PartyHasDragon", "d1/d6c/_n_p_c_8cpp.html#ab0b7197f3a0cdc35557d678ccaacdd7f", null ],
+    [ "CheckHiredNPCSpeciality", "d1/d6c/_n_p_c_8cpp.html#a40d19895c574dba82a55ee7b3031f20b", null ],
+    [ "ContractSelectText", "d1/d6c/_n_p_c_8cpp.html#a82f3f3f3f3bae57392d9db62be402d47", null ],
+    [ "NPCHireableDialogPrepare", "d1/d6c/_n_p_c_8cpp.html#a0d9b50c44576de7da3caff7d301ddab1", null ],
+    [ "_4B4224_UpdateNPCTopics", "d1/d6c/_n_p_c_8cpp.html#a58a376999ccce3cb142578b812b47124", null ],
+    [ "NPC_EventProcessor", "d1/d6c/_n_p_c_8cpp.html#a3f2b681a3cc5672e04821796a69f94f1", null ],
+    [ "GetGreetType", "d1/d6c/_n_p_c_8cpp.html#ac86fab3323cdfca65990849099e87551", null ],
+    [ "GetProfessionActionText", "d1/d6c/_n_p_c_8cpp.html#a57b6212ddd757d6be2a55b19dbbf0d9f", null ],
+    [ "UseNPCSkill", "d1/d6c/_n_p_c_8cpp.html#acfce0b79ca64a3c666c5bc7781622842", null ],
+    [ "pDialogueNPCCount", "d1/d6c/_n_p_c_8cpp.html#a87917bc65a38cef119e06260bbc6ad6e", null ],
+    [ "pDialogueNPCPortraits", "d1/d6c/_n_p_c_8cpp.html#a1d7a91739796949290831b69c2b8530c", null ],
+    [ "uNumDialogueNPCPortraits", "d1/d6c/_n_p_c_8cpp.html#aacd86f6c26e7b363a1be22693d7e1406", null ],
+    [ "pNPCStats", "d1/d6c/_n_p_c_8cpp.html#a5c8b4db1afd780cdf7ff9ccd02e7a542", null ]
+];

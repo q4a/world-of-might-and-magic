@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Исходный файл C:/git/world-of-might-and-magic/Engine/Graphics/HWLContainer.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d4/d11/_h_w_l_container_8h_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">HWLContainer.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d4/d11/_h_w_l_container_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;cstdint&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;cstdio&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../de/df7/_strings_8h.html">Engine/Strings.h</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="../../d8/dc7/class_h_w_l_texture.html">    9</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d8/dc7/class_h_w_l_texture.html">HWLTexture</a> {</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="../../d8/dc7/class_h_w_l_texture.html#a3d7e466142faf840267458c54409eac7">   11</a></span>&#160;    <span class="keyword">inline</span> <a class="code" href="../../d8/dc7/class_h_w_l_texture.html#a3d7e466142faf840267458c54409eac7">HWLTexture</a>() {}</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="../../d8/dc7/class_h_w_l_texture.html#a3e1a2768419a39174f32ed7cda62cd68">   13</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d8/dc7/class_h_w_l_texture.html#a3e1a2768419a39174f32ed7cda62cd68">uBufferWidth</a> = 0;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="../../d8/dc7/class_h_w_l_texture.html#a6b47be51f31e138cdb428fdbecf22091">   14</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d8/dc7/class_h_w_l_texture.html#a6b47be51f31e138cdb428fdbecf22091">uBufferHeight</a> = 0;</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="../../d8/dc7/class_h_w_l_texture.html#a42fb873b4dcf2b24f7d1455cfba85899">   15</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d8/dc7/class_h_w_l_texture.html#a42fb873b4dcf2b24f7d1455cfba85899">uAreaWidth</a> = 0;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="../../d8/dc7/class_h_w_l_texture.html#aeeb5c09589cd4e47b55adfff5d6e88e4">   16</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d8/dc7/class_h_w_l_texture.html#aeeb5c09589cd4e47b55adfff5d6e88e4">uAreaHeigth</a> = 0;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="../../d8/dc7/class_h_w_l_texture.html#afdfff9db6b7b6f01c2db039396873553">   17</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../d8/dc7/class_h_w_l_texture.html#afdfff9db6b7b6f01c2db039396873553">uWidth</a> = 0;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="../../d8/dc7/class_h_w_l_texture.html#a4ce7952a1d40d6030489b6b4503bd7fc">   18</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../d8/dc7/class_h_w_l_texture.html#a4ce7952a1d40d6030489b6b4503bd7fc">uHeight</a> = 0;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="../../d8/dc7/class_h_w_l_texture.html#ab5b824897e5012cb4a43aedd8c8fcdca">   19</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d8/dc7/class_h_w_l_texture.html#ab5b824897e5012cb4a43aedd8c8fcdca">uAreaX</a> = 0;</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="../../d8/dc7/class_h_w_l_texture.html#a0ba7d740ebe00e561490a31183b3f45c">   20</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d8/dc7/class_h_w_l_texture.html#a0ba7d740ebe00e561490a31183b3f45c">uAreaY</a> = 0;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="../../d8/dc7/class_h_w_l_texture.html#a7cabda64c5a450446ead45765a8f7d7e">   21</a></span>&#160;    <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> *<a class="code" href="../../d8/dc7/class_h_w_l_texture.html#a7cabda64c5a450446ead45765a8f7d7e">pPixels</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;};</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">class </span><a class="code" href="../../d6/d70/class_log.html">Log</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="../../d6/d71/class_h_w_l_container.html">   26</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d6/d71/class_h_w_l_container.html">HWLContainer</a> {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="../../d6/d71/class_h_w_l_container.html#a1811d86e6bec0a609377c2a3a8b6135e">HWLContainer</a>();</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="../../d6/d71/class_h_w_l_container.html#a2f30d857fb8110fced222e489cd055c0">~HWLContainer</a>();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d6/d71/class_h_w_l_container.html#a88ff4e43206798441867a8b333c7461b">Open</a>(<span class="keyword">const</span> <a class="code" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> &amp;pFilename);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="../../d8/dc7/class_h_w_l_texture.html">HWLTexture</a> *<a class="code" href="../../d6/d71/class_h_w_l_container.html#a56cdff5af6a25ed1f2b86a0ba8f82c5b">LoadTexture</a>(<span class="keyword">const</span> <a class="code" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> &amp;pName);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="../../d6/d71/class_h_w_l_container.html#a4fe307822bd043264e0c97692895c1b6">   36</a></span>&#160;    FILE *<a class="code" href="../../d6/d71/class_h_w_l_container.html#a4fe307822bd043264e0c97692895c1b6">pFile</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="../../d6/d71/class_h_w_l_container.html#ac9137514abe89a76bdbd1de26faa98ad">   37</a></span>&#160;    <a class="code" href="../../d6/d70/class_log.html">Log</a> *<a class="code" href="../../d6/d71/class_h_w_l_container.html#ac9137514abe89a76bdbd1de26faa98ad">log</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="../../d6/d71/class_h_w_l_container.html#a04d6826b85a33d917c6c6a9077de2eea">   38</a></span>&#160;    std::map&lt;String, size_t&gt; <a class="code" href="../../d6/d71/class_h_w_l_container.html#a04d6826b85a33d917c6c6a9077de2eea">mNodes</a>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;};</div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="a_s_d_l__config_8h_html_a273cf69d639a59973b6019625df33e30"><div class="ttname"><a href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a></div><div class="ttdeci">unsigned __int16 uint16_t</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d8f/_s_d_l__config_8h_source.html#l00037">SDL_config.h:37</a></div></div>
+<div class="ttc" id="aclass_h_w_l_texture_html_a42fb873b4dcf2b24f7d1455cfba85899"><div class="ttname"><a href="../../d8/dc7/class_h_w_l_texture.html#a42fb873b4dcf2b24f7d1455cfba85899">HWLTexture::uAreaWidth</a></div><div class="ttdeci">int uAreaWidth</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d11/_h_w_l_container_8h_source.html#l00015">HWLContainer.h:15</a></div></div>
+<div class="ttc" id="aclass_log_html"><div class="ttname"><a href="../../d6/d70/class_log.html">Log</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d3a/_engine_2_log_8h_source.html#l00003">Log.h:3</a></div></div>
+<div class="ttc" id="aclass_h_w_l_texture_html"><div class="ttname"><a href="../../d8/dc7/class_h_w_l_texture.html">HWLTexture</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d11/_h_w_l_container_8h_source.html#l00009">HWLContainer.h:9</a></div></div>
+<div class="ttc" id="aclass_h_w_l_container_html_a56cdff5af6a25ed1f2b86a0ba8f82c5b"><div class="ttname"><a href="../../d6/d71/class_h_w_l_container.html#a56cdff5af6a25ed1f2b86a0ba8f82c5b">HWLContainer::LoadTexture</a></div><div class="ttdeci">HWLTexture * LoadTexture(const String &amp;pName)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d5c/_h_w_l_container_8cpp_source.html#l00088">HWLContainer.cpp:88</a></div></div>
+<div class="ttc" id="aclass_h_w_l_texture_html_a3e1a2768419a39174f32ed7cda62cd68"><div class="ttname"><a href="../../d8/dc7/class_h_w_l_texture.html#a3e1a2768419a39174f32ed7cda62cd68">HWLTexture::uBufferWidth</a></div><div class="ttdeci">int uBufferWidth</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d11/_h_w_l_container_8h_source.html#l00013">HWLContainer.h:13</a></div></div>
+<div class="ttc" id="aclass_h_w_l_container_html_a2f30d857fb8110fced222e489cd055c0"><div class="ttname"><a href="../../d6/d71/class_h_w_l_container.html#a2f30d857fb8110fced222e489cd055c0">HWLContainer::~HWLContainer</a></div><div class="ttdeci">virtual ~HWLContainer()</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d5c/_h_w_l_container_8cpp_source.html#l00022">HWLContainer.cpp:22</a></div></div>
+<div class="ttc" id="aclass_h_w_l_container_html_a1811d86e6bec0a609377c2a3a8b6135e"><div class="ttname"><a href="../../d6/d71/class_h_w_l_container.html#a1811d86e6bec0a609377c2a3a8b6135e">HWLContainer::HWLContainer</a></div><div class="ttdeci">HWLContainer()</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d5c/_h_w_l_container_8cpp_source.html#l00017">HWLContainer.cpp:17</a></div></div>
+<div class="ttc" id="aclass_h_w_l_texture_html_a4ce7952a1d40d6030489b6b4503bd7fc"><div class="ttname"><a href="../../d8/dc7/class_h_w_l_texture.html#a4ce7952a1d40d6030489b6b4503bd7fc">HWLTexture::uHeight</a></div><div class="ttdeci">unsigned int uHeight</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d11/_h_w_l_container_8h_source.html#l00018">HWLContainer.h:18</a></div></div>
+<div class="ttc" id="aclass_h_w_l_texture_html_a6b47be51f31e138cdb428fdbecf22091"><div class="ttname"><a href="../../d8/dc7/class_h_w_l_texture.html#a6b47be51f31e138cdb428fdbecf22091">HWLTexture::uBufferHeight</a></div><div class="ttdeci">int uBufferHeight</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d11/_h_w_l_container_8h_source.html#l00014">HWLContainer.h:14</a></div></div>
+<div class="ttc" id="aclass_h_w_l_container_html_a4fe307822bd043264e0c97692895c1b6"><div class="ttname"><a href="../../d6/d71/class_h_w_l_container.html#a4fe307822bd043264e0c97692895c1b6">HWLContainer::pFile</a></div><div class="ttdeci">FILE * pFile</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d11/_h_w_l_container_8h_source.html#l00036">HWLContainer.h:36</a></div></div>
+<div class="ttc" id="aclass_h_w_l_texture_html_afdfff9db6b7b6f01c2db039396873553"><div class="ttname"><a href="../../d8/dc7/class_h_w_l_texture.html#afdfff9db6b7b6f01c2db039396873553">HWLTexture::uWidth</a></div><div class="ttdeci">unsigned int uWidth</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d11/_h_w_l_container_8h_source.html#l00017">HWLContainer.h:17</a></div></div>
+<div class="ttc" id="aclass_h_w_l_container_html_a88ff4e43206798441867a8b333c7461b"><div class="ttname"><a href="../../d6/d71/class_h_w_l_container.html#a88ff4e43206798441867a8b333c7461b">HWLContainer::Open</a></div><div class="ttdeci">bool Open(const String &amp;pFilename)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d5c/_h_w_l_container_8cpp_source.html#l00028">HWLContainer.cpp:28</a></div></div>
+<div class="ttc" id="aclass_h_w_l_texture_html_a7cabda64c5a450446ead45765a8f7d7e"><div class="ttname"><a href="../../d8/dc7/class_h_w_l_texture.html#a7cabda64c5a450446ead45765a8f7d7e">HWLTexture::pPixels</a></div><div class="ttdeci">uint16_t * pPixels</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d11/_h_w_l_container_8h_source.html#l00021">HWLContainer.h:21</a></div></div>
+<div class="ttc" id="aclass_h_w_l_container_html_ac9137514abe89a76bdbd1de26faa98ad"><div class="ttname"><a href="../../d6/d71/class_h_w_l_container.html#ac9137514abe89a76bdbd1de26faa98ad">HWLContainer::log</a></div><div class="ttdeci">Log * log</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d11/_h_w_l_container_8h_source.html#l00037">HWLContainer.h:37</a></div></div>
+<div class="ttc" id="aclass_h_w_l_texture_html_a3d7e466142faf840267458c54409eac7"><div class="ttname"><a href="../../d8/dc7/class_h_w_l_texture.html#a3d7e466142faf840267458c54409eac7">HWLTexture::HWLTexture</a></div><div class="ttdeci">HWLTexture()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d11/_h_w_l_container_8h_source.html#l00011">HWLContainer.h:11</a></div></div>
+<div class="ttc" id="aclass_h_w_l_container_html_a04d6826b85a33d917c6c6a9077de2eea"><div class="ttname"><a href="../../d6/d71/class_h_w_l_container.html#a04d6826b85a33d917c6c6a9077de2eea">HWLContainer::mNodes</a></div><div class="ttdeci">std::map&lt; String, size_t &gt; mNodes</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d11/_h_w_l_container_8h_source.html#l00038">HWLContainer.h:38</a></div></div>
+<div class="ttc" id="aclass_h_w_l_container_html"><div class="ttname"><a href="../../d6/d71/class_h_w_l_container.html">HWLContainer</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d11/_h_w_l_container_8h_source.html#l00026">HWLContainer.h:26</a></div></div>
+<div class="ttc" id="aclass_h_w_l_texture_html_ab5b824897e5012cb4a43aedd8c8fcdca"><div class="ttname"><a href="../../d8/dc7/class_h_w_l_texture.html#ab5b824897e5012cb4a43aedd8c8fcdca">HWLTexture::uAreaX</a></div><div class="ttdeci">int uAreaX</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d11/_h_w_l_container_8h_source.html#l00019">HWLContainer.h:19</a></div></div>
+<div class="ttc" id="aclass_h_w_l_texture_html_a0ba7d740ebe00e561490a31183b3f45c"><div class="ttname"><a href="../../d8/dc7/class_h_w_l_texture.html#a0ba7d740ebe00e561490a31183b3f45c">HWLTexture::uAreaY</a></div><div class="ttdeci">int uAreaY</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d11/_h_w_l_container_8h_source.html#l00020">HWLContainer.h:20</a></div></div>
+<div class="ttc" id="a_strings_8h_html_afbeda3fd1bdc8c37d01bdf9f5c8274ff"><div class="ttname"><a href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a></div><div class="ttdeci">std::string String</div><div class="ttdef"><b>Definition:</b> <a href="../../de/df7/_strings_8h_source.html#l00010">Strings.h:10</a></div></div>
+<div class="ttc" id="a_strings_8h_html"><div class="ttname"><a href="../../de/df7/_strings_8h.html">Strings.h</a></div></div>
+<div class="ttc" id="aclass_h_w_l_texture_html_aeeb5c09589cd4e47b55adfff5d6e88e4"><div class="ttname"><a href="../../d8/dc7/class_h_w_l_texture.html#aeeb5c09589cd4e47b55adfff5d6e88e4">HWLTexture::uAreaHeigth</a></div><div class="ttdeci">int uAreaHeigth</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d11/_h_w_l_container_8h_source.html#l00016">HWLContainer.h:16</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_0b6ee6e7e9547e675db4add2e5de97da.html">Engine</a></li><li class="navelem"><a class="el" href="../../dir_bb84c1711d8a00602a64a24ea462155a.html">Graphics</a></li><li class="navelem"><a class="el" href="../../d4/d11/_h_w_l_container_8h.html">HWLContainer.h</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:03:28. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

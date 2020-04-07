@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Исходный файл C:/git/world-of-might-and-magic/src/Application/GameMenu.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('db/ded/_game_menu_8h_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">GameMenu.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../db/ded/_game_menu_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d6/de4/_engine_2_ioc_container_8h.html">Engine/IocContainer.h</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="../../db/ded/_game_menu_8h.html#a8df51996eaa93ee226542e4ebb9d6f14">    5</a></span>&#160;<span class="keyword">using</span> <a class="code" href="../../d1/d12/class_engine___1_1_ioc_container.html">EngineIoc</a> = <a class="code" href="../../d1/d12/class_engine___1_1_ioc_container.html">Engine_::IocContainer</a>;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../d1/dda/namespace_application.html">Application</a> {</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="../../df/dac/class_application_1_1_menu.html">    9</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../df/dac/class_application_1_1_menu.html">Menu</a> {</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="../../df/dac/class_application_1_1_menu.html#a1b37e2ac8a9fa3508699d267c0a2e7bb">   11</a></span>&#160;    <span class="keyword">inline</span> <a class="code" href="../../df/dac/class_application_1_1_menu.html#a1b37e2ac8a9fa3508699d267c0a2e7bb">Menu</a>() {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        this-&gt;<a class="code" href="../../df/dac/class_application_1_1_menu.html#a751ba36cb6d155f84b800afc8216d5ba">mouse</a> = <a class="code" href="../../d1/d12/class_engine___1_1_ioc_container.html#ad92ce5cee27f4415ef48d49dea4ec074">EngineIoc::ResolveMouse</a>();</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    }</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../df/dac/class_application_1_1_menu.html#aaf253396760ddad4b41b2db8901e97ee">MenuLoop</a>();</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="../../df/dac/class_application_1_1_menu.html#a751ba36cb6d155f84b800afc8216d5ba">   18</a></span>&#160;     <a class="code" href="../../d7/dc5/class_mouse.html">Mouse</a> *<a class="code" href="../../df/dac/class_application_1_1_menu.html#a751ba36cb6d155f84b800afc8216d5ba">mouse</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;     <span class="keywordtype">void</span> <a class="code" href="../../df/dac/class_application_1_1_menu.html#aac9ec557a30f1ba7bf6746aa62f70764">EventLoop</a>();</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;};</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}  <span class="comment">// namespace Application</span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aclass_engine___1_1_ioc_container_html"><div class="ttname"><a href="../../d1/d12/class_engine___1_1_ioc_container.html">Engine_::IocContainer</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/de4/_engine_2_ioc_container_8h_source.html#l00015">IocContainer.h:15</a></div></div>
+<div class="ttc" id="a_engine_2_ioc_container_8h_html"><div class="ttname"><a href="../../d6/de4/_engine_2_ioc_container_8h.html">IocContainer.h</a></div></div>
+<div class="ttc" id="aclass_mouse_html"><div class="ttname"><a href="../../d7/dc5/class_mouse.html">Mouse</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de3/_mouse_8h_source.html#l00279">Mouse.h:279</a></div></div>
+<div class="ttc" id="aclass_application_1_1_menu_html_aaf253396760ddad4b41b2db8901e97ee"><div class="ttname"><a href="../../df/dac/class_application_1_1_menu.html#aaf253396760ddad4b41b2db8901e97ee">Application::Menu::MenuLoop</a></div><div class="ttdeci">void MenuLoop()</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d21/_game_menu_8cpp_source.html#l00512">GameMenu.cpp:512</a></div></div>
+<div class="ttc" id="aclass_application_1_1_menu_html_a751ba36cb6d155f84b800afc8216d5ba"><div class="ttname"><a href="../../df/dac/class_application_1_1_menu.html#a751ba36cb6d155f84b800afc8216d5ba">Application::Menu::mouse</a></div><div class="ttdeci">Mouse * mouse</div><div class="ttdef"><b>Definition:</b> <a href="../../db/ded/_game_menu_8h_source.html#l00018">GameMenu.h:18</a></div></div>
+<div class="ttc" id="aclass_application_1_1_menu_html"><div class="ttname"><a href="../../df/dac/class_application_1_1_menu.html">Application::Menu</a></div><div class="ttdef"><b>Definition:</b> <a href="../../db/ded/_game_menu_8h_source.html#l00009">GameMenu.h:9</a></div></div>
+<div class="ttc" id="aclass_engine___1_1_ioc_container_html_ad92ce5cee27f4415ef48d49dea4ec074"><div class="ttname"><a href="../../d1/d12/class_engine___1_1_ioc_container.html#ad92ce5cee27f4415ef48d49dea4ec074">Engine_::IocContainer::ResolveMouse</a></div><div class="ttdeci">static Mouse * ResolveMouse()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d8c/_engine_2_ioc_container_8cpp_source.html#l00088">IocContainer.cpp:88</a></div></div>
+<div class="ttc" id="aclass_application_1_1_menu_html_aac9ec557a30f1ba7bf6746aa62f70764"><div class="ttname"><a href="../../df/dac/class_application_1_1_menu.html#aac9ec557a30f1ba7bf6746aa62f70764">Application::Menu::EventLoop</a></div><div class="ttdeci">void EventLoop()</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d21/_game_menu_8cpp_source.html#l00070">GameMenu.cpp:70</a></div></div>
+<div class="ttc" id="anamespace_application_html"><div class="ttname"><a href="../../d1/dda/namespace_application.html">Application</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dfb/_configuration_8h_source.html#l00005">Configuration.h:5</a></div></div>
+<div class="ttc" id="aclass_application_1_1_menu_html_a1b37e2ac8a9fa3508699d267c0a2e7bb"><div class="ttname"><a href="../../df/dac/class_application_1_1_menu.html#a1b37e2ac8a9fa3508699d267c0a2e7bb">Application::Menu::Menu</a></div><div class="ttdeci">Menu()</div><div class="ttdef"><b>Definition:</b> <a href="../../db/ded/_game_menu_8h_source.html#l00011">GameMenu.h:11</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_378992324979dd2b2ee7a83cc14dc244.html">Application</a></li><li class="navelem"><a class="el" href="../../db/ded/_game_menu_8h.html">GameMenu.h</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:03:45. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,961 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Файл C:/git/world-of-might-and-magic/lib/win32/x86/sdl2-2.0.12/include/SDL_system.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d9/d7c/_s_d_l__system_8h.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#typedef-members">Определения типов</a> &#124;
+<a href="#enum-members">Перечисления</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл SDL_system.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><a href="../../d9/d7c/_s_d_l__system_8h_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Определения типов</h2></td></tr>
+<tr class="memitem:a2893a6e30c95d576736e333237b98bbc"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>(SDLCALL *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d7c/_s_d_l__system_8h.html#a2893a6e30c95d576736e333237b98bbc">SDL_WindowsMessageHook</a>) (<a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *userdata, <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *hWnd, unsigned int <a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a7b6161cffb9b8aee272b3b916183d28c">message</a>, <a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#ac006cf2bd55a42a9cc8ae9f123aa7e13">Uint64</a> wParam, <a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#a2c1a61d5c466bb74680be0a8cc1b455d">Sint64</a> lParam)</td></tr>
+<tr class="memdesc:a2893a6e30c95d576736e333237b98bbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a function that is called for every windows message, before TranslateMessage()  <a href="../../d9/d7c/_s_d_l__system_8h.html#a2893a6e30c95d576736e333237b98bbc">Подробнее...</a><br /></td></tr>
+<tr class="separator:a2893a6e30c95d576736e333237b98bbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa995839c488ceda33ed998bbfa79c2a9"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="../../d9/d7c/_s_d_l__system_8h.html#aa995839c488ceda33ed998bbfa79c2a9">IDirect3DDevice9</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d7c/_s_d_l__system_8h.html#aa995839c488ceda33ed998bbfa79c2a9">IDirect3DDevice9</a></td></tr>
+<tr class="separator:aa995839c488ceda33ed998bbfa79c2a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Перечисления</h2></td></tr>
+<tr class="memitem:a440cc3d867286d8f602805f95a08f1ee"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d7c/_s_d_l__system_8h.html#a440cc3d867286d8f602805f95a08f1ee">SDL_WinRT_Path</a> { <a class="el" href="../../d9/d7c/_s_d_l__system_8h.html#a440cc3d867286d8f602805f95a08f1eeafb74cfaa0edb18afaf46cf9e555ecb40">SDL_WINRT_PATH_INSTALLED_LOCATION</a>, 
+<a class="el" href="../../d9/d7c/_s_d_l__system_8h.html#a440cc3d867286d8f602805f95a08f1eeab471aff43442ebb033ba3fbbd3913a1c">SDL_WINRT_PATH_LOCAL_FOLDER</a>, 
+<a class="el" href="../../d9/d7c/_s_d_l__system_8h.html#a440cc3d867286d8f602805f95a08f1eeae0f75b335ea464dde9b168fd1691b48f">SDL_WINRT_PATH_ROAMING_FOLDER</a>, 
+<a class="el" href="../../d9/d7c/_s_d_l__system_8h.html#a440cc3d867286d8f602805f95a08f1eea9a451c52f98a046705bdd51257657d23">SDL_WINRT_PATH_TEMP_FOLDER</a>
+ }</td></tr>
+<tr class="memdesc:a440cc3d867286d8f602805f95a08f1ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">WinRT / Windows Phone path types.  <a href="../../d9/d7c/_s_d_l__system_8h.html#a440cc3d867286d8f602805f95a08f1ee">Подробнее...</a><br /></td></tr>
+<tr class="separator:a440cc3d867286d8f602805f95a08f1ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08f4191a0cddd95466752fe2238ae810"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d7c/_s_d_l__system_8h.html#a08f4191a0cddd95466752fe2238ae810">SDL_WinRT_DeviceFamily</a> { <a class="el" href="../../d9/d7c/_s_d_l__system_8h.html#a08f4191a0cddd95466752fe2238ae810a823f650aee2ecd29f75eb375e1daed08">SDL_WINRT_DEVICEFAMILY_UNKNOWN</a>, 
+<a class="el" href="../../d9/d7c/_s_d_l__system_8h.html#a08f4191a0cddd95466752fe2238ae810a5bcf9c1dd6e4b919e5846e9311421748">SDL_WINRT_DEVICEFAMILY_DESKTOP</a>, 
+<a class="el" href="../../d9/d7c/_s_d_l__system_8h.html#a08f4191a0cddd95466752fe2238ae810acb5e0dc9d4c9f8cc5138e7314140c490">SDL_WINRT_DEVICEFAMILY_MOBILE</a>, 
+<a class="el" href="../../d9/d7c/_s_d_l__system_8h.html#a08f4191a0cddd95466752fe2238ae810a10110058700c924bedd3fbe6127dd97e">SDL_WINRT_DEVICEFAMILY_XBOX</a>
+ }</td></tr>
+<tr class="memdesc:a08f4191a0cddd95466752fe2238ae810"><td class="mdescLeft">&#160;</td><td class="mdescRight">WinRT Device Family.  <a href="../../d9/d7c/_s_d_l__system_8h.html#a08f4191a0cddd95466752fe2238ae810">Подробнее...</a><br /></td></tr>
+<tr class="separator:a08f4191a0cddd95466752fe2238ae810"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a3ee70959067d938e3a3f80e43f3157a8"><td class="memItemLeft" align="right" valign="top">DECLSPEC <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> SDLCALL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d7c/_s_d_l__system_8h.html#a3ee70959067d938e3a3f80e43f3157a8">SDL_SetWindowsMessageHook</a> (<a class="el" href="../../d9/d7c/_s_d_l__system_8h.html#a2893a6e30c95d576736e333237b98bbc">SDL_WindowsMessageHook</a> callback, <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *userdata)</td></tr>
+<tr class="separator:a3ee70959067d938e3a3f80e43f3157a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e02336961a1fe8dd27c04733117371a"><td class="memItemLeft" align="right" valign="top">DECLSPEC int SDLCALL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d7c/_s_d_l__system_8h.html#a6e02336961a1fe8dd27c04733117371a">SDL_Direct3D9GetAdapterIndex</a> (int displayIndex)</td></tr>
+<tr class="memdesc:a6e02336961a1fe8dd27c04733117371a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the D3D9 adapter index that matches the specified display index.  <a href="../../d9/d7c/_s_d_l__system_8h.html#a6e02336961a1fe8dd27c04733117371a">Подробнее...</a><br /></td></tr>
+<tr class="separator:a6e02336961a1fe8dd27c04733117371a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adcfe0853c55093a8f7ea6d5b9ff41097"><td class="memItemLeft" align="right" valign="top">DECLSPEC <a class="el" href="../../d9/d7c/_s_d_l__system_8h.html#aa995839c488ceda33ed998bbfa79c2a9">IDirect3DDevice9</a> *SDLCALL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d7c/_s_d_l__system_8h.html#adcfe0853c55093a8f7ea6d5b9ff41097">SDL_RenderGetD3D9Device</a> (<a class="el" href="../../d6/d30/_s_d_l__render_8h.html#aaf0bf7d020754fc614fe06552ea4d5d4">SDL_Renderer</a> *renderer)</td></tr>
+<tr class="memdesc:adcfe0853c55093a8f7ea6d5b9ff41097"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the D3D device associated with a renderer, or NULL if it's not a D3D renderer.  <a href="../../d9/d7c/_s_d_l__system_8h.html#adcfe0853c55093a8f7ea6d5b9ff41097">Подробнее...</a><br /></td></tr>
+<tr class="separator:adcfe0853c55093a8f7ea6d5b9ff41097"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d89d5fdbaa443c76856d612739d17c0"><td class="memItemLeft" align="right" valign="top">DECLSPEC <a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#a8fca68df0f976765230fe589a7c7733b">SDL_bool</a> SDLCALL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d7c/_s_d_l__system_8h.html#a4d89d5fdbaa443c76856d612739d17c0">SDL_DXGIGetOutputInfo</a> (int displayIndex, int *adapterIndex, int *outputIndex)</td></tr>
+<tr class="memdesc:a4d89d5fdbaa443c76856d612739d17c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the DXGI Adapter and Output indices for the specified display index.  <a href="../../d9/d7c/_s_d_l__system_8h.html#a4d89d5fdbaa443c76856d612739d17c0">Подробнее...</a><br /></td></tr>
+<tr class="separator:a4d89d5fdbaa443c76856d612739d17c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8b089710ddbb2e3133c8b78d687051e"><td class="memItemLeft" align="right" valign="top">DECLSPEC int SDLCALL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d7c/_s_d_l__system_8h.html#ad8b089710ddbb2e3133c8b78d687051e">SDL_LinuxSetThreadPriority</a> (<a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#a2c1a61d5c466bb74680be0a8cc1b455d">Sint64</a> threadID, int priority)</td></tr>
+<tr class="memdesc:ad8b089710ddbb2e3133c8b78d687051e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the UNIX nice value for a thread, using setpriority() if possible, and RealtimeKit if available.  <a href="../../d9/d7c/_s_d_l__system_8h.html#ad8b089710ddbb2e3133c8b78d687051e">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad8b089710ddbb2e3133c8b78d687051e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa39cfd8b255adb42149c7204ecf50823"><td class="memItemLeft" align="right" valign="top">DECLSPEC int SDLCALL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d7c/_s_d_l__system_8h.html#aa39cfd8b255adb42149c7204ecf50823">SDL_iPhoneSetAnimationCallback</a> (<a class="el" href="../../dc/d64/_s_d_l__video_8h.html#a55a196c7d3b8497538632c79ae1e6392">SDL_Window</a> *<a class="el" href="../../df/d32/_s_d_l__egl_8h.html#a92dbce8e3247f6a78126c99877caacb6">window</a>, int interval, <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>(*callback)(<a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *), <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *callbackParam)</td></tr>
+<tr class="separator:aa39cfd8b255adb42149c7204ecf50823"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b4fb7a09ddb8304b18debf6bfd7ca13"><td class="memItemLeft" align="right" valign="top">DECLSPEC <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> SDLCALL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d7c/_s_d_l__system_8h.html#a4b4fb7a09ddb8304b18debf6bfd7ca13">SDL_iPhoneSetEventPump</a> (<a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#a8fca68df0f976765230fe589a7c7733b">SDL_bool</a> <a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0455a397ab5468d21c3021f2efa6dd3c">enabled</a>)</td></tr>
+<tr class="separator:a4b4fb7a09ddb8304b18debf6bfd7ca13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae2559eaec8b8239360f629919ded363"><td class="memItemLeft" align="right" valign="top">DECLSPEC <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *SDLCALL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d7c/_s_d_l__system_8h.html#aae2559eaec8b8239360f629919ded363">SDL_AndroidGetJNIEnv</a> (<a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>)</td></tr>
+<tr class="memdesc:aae2559eaec8b8239360f629919ded363"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the JNI environment for the current thread.  <a href="../../d9/d7c/_s_d_l__system_8h.html#aae2559eaec8b8239360f629919ded363">Подробнее...</a><br /></td></tr>
+<tr class="separator:aae2559eaec8b8239360f629919ded363"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c8af38268c4bf8a2885d47a2c62e236"><td class="memItemLeft" align="right" valign="top">DECLSPEC <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *SDLCALL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d7c/_s_d_l__system_8h.html#a5c8af38268c4bf8a2885d47a2c62e236">SDL_AndroidGetActivity</a> (<a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>)</td></tr>
+<tr class="memdesc:a5c8af38268c4bf8a2885d47a2c62e236"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the SDL Activity object for the application.  <a href="../../d9/d7c/_s_d_l__system_8h.html#a5c8af38268c4bf8a2885d47a2c62e236">Подробнее...</a><br /></td></tr>
+<tr class="separator:a5c8af38268c4bf8a2885d47a2c62e236"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab24f21211fa79a76247ba1beab0ef4c7"><td class="memItemLeft" align="right" valign="top">DECLSPEC int SDLCALL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d7c/_s_d_l__system_8h.html#ab24f21211fa79a76247ba1beab0ef4c7">SDL_GetAndroidSDKVersion</a> (<a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>)</td></tr>
+<tr class="memdesc:ab24f21211fa79a76247ba1beab0ef4c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return API level of the current device.  <a href="../../d9/d7c/_s_d_l__system_8h.html#ab24f21211fa79a76247ba1beab0ef4c7">Подробнее...</a><br /></td></tr>
+<tr class="separator:ab24f21211fa79a76247ba1beab0ef4c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad034e62cd98deb37b0407b3ee28ab377"><td class="memItemLeft" align="right" valign="top">DECLSPEC <a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#a8fca68df0f976765230fe589a7c7733b">SDL_bool</a> SDLCALL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d7c/_s_d_l__system_8h.html#ad034e62cd98deb37b0407b3ee28ab377">SDL_IsAndroidTV</a> (<a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>)</td></tr>
+<tr class="memdesc:ad034e62cd98deb37b0407b3ee28ab377"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if the application is running on Android TV.  <a href="../../d9/d7c/_s_d_l__system_8h.html#ad034e62cd98deb37b0407b3ee28ab377">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad034e62cd98deb37b0407b3ee28ab377"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85e791b8175f0e81b324a6a974b3abaf"><td class="memItemLeft" align="right" valign="top">DECLSPEC <a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#a8fca68df0f976765230fe589a7c7733b">SDL_bool</a> SDLCALL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d7c/_s_d_l__system_8h.html#a85e791b8175f0e81b324a6a974b3abaf">SDL_IsChromebook</a> (<a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>)</td></tr>
+<tr class="memdesc:a85e791b8175f0e81b324a6a974b3abaf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if the application is running on a Chromebook.  <a href="../../d9/d7c/_s_d_l__system_8h.html#a85e791b8175f0e81b324a6a974b3abaf">Подробнее...</a><br /></td></tr>
+<tr class="separator:a85e791b8175f0e81b324a6a974b3abaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a353602b01a75bb5a8714db48448edf3d"><td class="memItemLeft" align="right" valign="top">DECLSPEC <a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#a8fca68df0f976765230fe589a7c7733b">SDL_bool</a> SDLCALL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d7c/_s_d_l__system_8h.html#a353602b01a75bb5a8714db48448edf3d">SDL_IsDeXMode</a> (<a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>)</td></tr>
+<tr class="memdesc:a353602b01a75bb5a8714db48448edf3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true is the application is running on a Samsung DeX docking station.  <a href="../../d9/d7c/_s_d_l__system_8h.html#a353602b01a75bb5a8714db48448edf3d">Подробнее...</a><br /></td></tr>
+<tr class="separator:a353602b01a75bb5a8714db48448edf3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a763a0616f2892dd995b332f0c4515495"><td class="memItemLeft" align="right" valign="top">DECLSPEC <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> SDLCALL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d7c/_s_d_l__system_8h.html#a763a0616f2892dd995b332f0c4515495">SDL_AndroidBackButton</a> (<a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>)</td></tr>
+<tr class="memdesc:a763a0616f2892dd995b332f0c4515495"><td class="mdescLeft">&#160;</td><td class="mdescRight">Trigger the Android system back button behavior.  <a href="../../d9/d7c/_s_d_l__system_8h.html#a763a0616f2892dd995b332f0c4515495">Подробнее...</a><br /></td></tr>
+<tr class="separator:a763a0616f2892dd995b332f0c4515495"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58501c9ea7e4ccfb1d83f2025540db18"><td class="memItemLeft" align="right" valign="top">const DECLSPEC char *SDLCALL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d7c/_s_d_l__system_8h.html#a58501c9ea7e4ccfb1d83f2025540db18">SDL_AndroidGetInternalStoragePath</a> (<a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>)</td></tr>
+<tr class="memdesc:a58501c9ea7e4ccfb1d83f2025540db18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the path used for internal storage for this application.  <a href="../../d9/d7c/_s_d_l__system_8h.html#a58501c9ea7e4ccfb1d83f2025540db18">Подробнее...</a><br /></td></tr>
+<tr class="separator:a58501c9ea7e4ccfb1d83f2025540db18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5b0a121988392b39eb1022bd836f571"><td class="memItemLeft" align="right" valign="top">DECLSPEC int SDLCALL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d7c/_s_d_l__system_8h.html#ad5b0a121988392b39eb1022bd836f571">SDL_AndroidGetExternalStorageState</a> (<a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>)</td></tr>
+<tr class="memdesc:ad5b0a121988392b39eb1022bd836f571"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current state of external storage, a bitmask of these values: SDL_ANDROID_EXTERNAL_STORAGE_READ SDL_ANDROID_EXTERNAL_STORAGE_WRITE.  <a href="../../d9/d7c/_s_d_l__system_8h.html#ad5b0a121988392b39eb1022bd836f571">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad5b0a121988392b39eb1022bd836f571"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ca40a20f27902d5e90c42ac3b14a2fe"><td class="memItemLeft" align="right" valign="top">const DECLSPEC char *SDLCALL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d7c/_s_d_l__system_8h.html#a5ca40a20f27902d5e90c42ac3b14a2fe">SDL_AndroidGetExternalStoragePath</a> (<a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>)</td></tr>
+<tr class="memdesc:a5ca40a20f27902d5e90c42ac3b14a2fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the path used for external storage for this application.  <a href="../../d9/d7c/_s_d_l__system_8h.html#a5ca40a20f27902d5e90c42ac3b14a2fe">Подробнее...</a><br /></td></tr>
+<tr class="separator:a5ca40a20f27902d5e90c42ac3b14a2fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d7bcf2ef5aee2ba60aefe387d473ab1"><td class="memItemLeft" align="right" valign="top">const DECLSPEC wchar_t *SDLCALL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d7c/_s_d_l__system_8h.html#a7d7bcf2ef5aee2ba60aefe387d473ab1">SDL_WinRTGetFSPathUNICODE</a> (<a class="el" href="../../d9/d7c/_s_d_l__system_8h.html#a440cc3d867286d8f602805f95a08f1ee">SDL_WinRT_Path</a> pathType)</td></tr>
+<tr class="memdesc:a7d7bcf2ef5aee2ba60aefe387d473ab1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves a WinRT defined path on the local file system.  <a href="../../d9/d7c/_s_d_l__system_8h.html#a7d7bcf2ef5aee2ba60aefe387d473ab1">Подробнее...</a><br /></td></tr>
+<tr class="separator:a7d7bcf2ef5aee2ba60aefe387d473ab1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26c195948692ce218bd848b0bc6ed950"><td class="memItemLeft" align="right" valign="top">const DECLSPEC char *SDLCALL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d7c/_s_d_l__system_8h.html#a26c195948692ce218bd848b0bc6ed950">SDL_WinRTGetFSPathUTF8</a> (<a class="el" href="../../d9/d7c/_s_d_l__system_8h.html#a440cc3d867286d8f602805f95a08f1ee">SDL_WinRT_Path</a> pathType)</td></tr>
+<tr class="memdesc:a26c195948692ce218bd848b0bc6ed950"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves a WinRT defined path on the local file system.  <a href="../../d9/d7c/_s_d_l__system_8h.html#a26c195948692ce218bd848b0bc6ed950">Подробнее...</a><br /></td></tr>
+<tr class="separator:a26c195948692ce218bd848b0bc6ed950"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3496685286ce4d1c25a57e222dd28f8"><td class="memItemLeft" align="right" valign="top">DECLSPEC <a class="el" href="../../d9/d7c/_s_d_l__system_8h.html#a08f4191a0cddd95466752fe2238ae810">SDL_WinRT_DeviceFamily</a> SDLCALL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d7c/_s_d_l__system_8h.html#ab3496685286ce4d1c25a57e222dd28f8">SDL_WinRTGetDeviceFamily</a> ()</td></tr>
+<tr class="memdesc:ab3496685286ce4d1c25a57e222dd28f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detects the device family of WinRT plattform on runtime.  <a href="../../d9/d7c/_s_d_l__system_8h.html#ab3496685286ce4d1c25a57e222dd28f8">Подробнее...</a><br /></td></tr>
+<tr class="separator:ab3496685286ce4d1c25a57e222dd28f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a211a146233e8e37c64185105132e6257"><td class="memItemLeft" align="right" valign="top">DECLSPEC <a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#a8fca68df0f976765230fe589a7c7733b">SDL_bool</a> SDLCALL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d7c/_s_d_l__system_8h.html#a211a146233e8e37c64185105132e6257">SDL_IsTablet</a> (<a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>)</td></tr>
+<tr class="memdesc:a211a146233e8e37c64185105132e6257"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if the current device is a tablet.  <a href="../../d9/d7c/_s_d_l__system_8h.html#a211a146233e8e37c64185105132e6257">Подробнее...</a><br /></td></tr>
+<tr class="separator:a211a146233e8e37c64185105132e6257"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3e44a610898157232a49a754fc3ab9a"><td class="memItemLeft" align="right" valign="top">DECLSPEC <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> SDLCALL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d7c/_s_d_l__system_8h.html#ae3e44a610898157232a49a754fc3ab9a">SDL_OnApplicationWillTerminate</a> (<a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>)</td></tr>
+<tr class="separator:ae3e44a610898157232a49a754fc3ab9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0ff6644972f065a06072426a0f1691f"><td class="memItemLeft" align="right" valign="top">DECLSPEC <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> SDLCALL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d7c/_s_d_l__system_8h.html#ae0ff6644972f065a06072426a0f1691f">SDL_OnApplicationDidReceiveMemoryWarning</a> (<a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>)</td></tr>
+<tr class="separator:ae0ff6644972f065a06072426a0f1691f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8e8c246a466b29a84a9018cb0803a55"><td class="memItemLeft" align="right" valign="top">DECLSPEC <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> SDLCALL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d7c/_s_d_l__system_8h.html#ad8e8c246a466b29a84a9018cb0803a55">SDL_OnApplicationWillResignActive</a> (<a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>)</td></tr>
+<tr class="separator:ad8e8c246a466b29a84a9018cb0803a55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af10116e8b6a71fb584a0cec7e582f9ec"><td class="memItemLeft" align="right" valign="top">DECLSPEC <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> SDLCALL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d7c/_s_d_l__system_8h.html#af10116e8b6a71fb584a0cec7e582f9ec">SDL_OnApplicationDidEnterBackground</a> (<a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>)</td></tr>
+<tr class="separator:af10116e8b6a71fb584a0cec7e582f9ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4292c3354aed782e634ee116d23cfd26"><td class="memItemLeft" align="right" valign="top">DECLSPEC <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> SDLCALL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d7c/_s_d_l__system_8h.html#a4292c3354aed782e634ee116d23cfd26">SDL_OnApplicationWillEnterForeground</a> (<a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>)</td></tr>
+<tr class="separator:a4292c3354aed782e634ee116d23cfd26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e224d35ef257b2a7583e02ac9dabe90"><td class="memItemLeft" align="right" valign="top">DECLSPEC <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> SDLCALL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d7c/_s_d_l__system_8h.html#a3e224d35ef257b2a7583e02ac9dabe90">SDL_OnApplicationDidBecomeActive</a> (<a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>)</td></tr>
+<tr class="separator:a3e224d35ef257b2a7583e02ac9dabe90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28c907d23a5db116b0287d2eb89f2fdb"><td class="memItemLeft" align="right" valign="top">DECLSPEC <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> SDLCALL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d7c/_s_d_l__system_8h.html#a28c907d23a5db116b0287d2eb89f2fdb">SDL_OnApplicationDidChangeStatusBarOrientation</a> (<a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>)</td></tr>
+<tr class="separator:a28c907d23a5db116b0287d2eb89f2fdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Include file for platform specific SDL API functions </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d9/d7c/_s_d_l__system_8h_source.html">SDL_system.h</a></p>
+</div><h2 class="groupheader">Типы</h2>
+<a id="a2893a6e30c95d576736e333237b98bbc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2893a6e30c95d576736e333237b98bbc">&#9670;&nbsp;</a></span>SDL_WindowsMessageHook</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>(SDLCALL * SDL_WindowsMessageHook) (<a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *userdata, <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *hWnd, unsigned int <a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a7b6161cffb9b8aee272b3b916183d28c">message</a>, <a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#ac006cf2bd55a42a9cc8ae9f123aa7e13">Uint64</a> wParam, <a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#a2c1a61d5c466bb74680be0a8cc1b455d">Sint64</a> lParam)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set a function that is called for every windows message, before TranslateMessage() </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d9/d7c/_s_d_l__system_8h_source.html">SDL_system.h</a> строка <a class="el" href="../../d9/d7c/_s_d_l__system_8h_source.html#l00049">49</a></p>
+
+</div>
+</div>
+<a id="aa995839c488ceda33ed998bbfa79c2a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa995839c488ceda33ed998bbfa79c2a9">&#9670;&nbsp;</a></span>IDirect3DDevice9</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="../../d9/d7c/_s_d_l__system_8h.html#aa995839c488ceda33ed998bbfa79c2a9">IDirect3DDevice9</a> <a class="el" href="../../d9/d7c/_s_d_l__system_8h.html#aa995839c488ceda33ed998bbfa79c2a9">IDirect3DDevice9</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d9/d7c/_s_d_l__system_8h_source.html">SDL_system.h</a> строка <a class="el" href="../../d9/d7c/_s_d_l__system_8h_source.html#l00060">60</a></p>
+
+</div>
+</div>
+<h2 class="groupheader">Перечисления</h2>
+<a id="a440cc3d867286d8f602805f95a08f1ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a440cc3d867286d8f602805f95a08f1ee">&#9670;&nbsp;</a></span>SDL_WinRT_Path</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="../../d9/d7c/_s_d_l__system_8h.html#a440cc3d867286d8f602805f95a08f1ee">SDL_WinRT_Path</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>WinRT / Windows Phone path types. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="a440cc3d867286d8f602805f95a08f1eeafb74cfaa0edb18afaf46cf9e555ecb40"></a>SDL_WINRT_PATH_INSTALLED_LOCATION&#160;</td><td class="fielddoc"><p>The installed app's root directory. Files here are likely to be read-only. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a440cc3d867286d8f602805f95a08f1eeab471aff43442ebb033ba3fbbd3913a1c"></a>SDL_WINRT_PATH_LOCAL_FOLDER&#160;</td><td class="fielddoc"><p>The app's local data store. Files may be written here. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a440cc3d867286d8f602805f95a08f1eeae0f75b335ea464dde9b168fd1691b48f"></a>SDL_WINRT_PATH_ROAMING_FOLDER&#160;</td><td class="fielddoc"><p>The app's roaming data store. Unsupported on Windows Phone. Files written here may be copied to other machines via a network connection. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a440cc3d867286d8f602805f95a08f1eea9a451c52f98a046705bdd51257657d23"></a>SDL_WINRT_PATH_TEMP_FOLDER&#160;</td><td class="fielddoc"><p>The app's temporary data store. Unsupported on Windows Phone. Files written here may be deleted at any time. </p>
+</td></tr>
+</table>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d9/d7c/_s_d_l__system_8h_source.html">SDL_system.h</a> строка <a class="el" href="../../d9/d7c/_s_d_l__system_8h_source.html#l00209">209</a></p>
+<div class="fragment"><div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;{</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    <a class="code" href="../../d9/d7c/_s_d_l__system_8h.html#a440cc3d867286d8f602805f95a08f1eeafb74cfaa0edb18afaf46cf9e555ecb40">SDL_WINRT_PATH_INSTALLED_LOCATION</a>,</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160; </div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    <a class="code" href="../../d9/d7c/_s_d_l__system_8h.html#a440cc3d867286d8f602805f95a08f1eeab471aff43442ebb033ba3fbbd3913a1c">SDL_WINRT_PATH_LOCAL_FOLDER</a>,</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160; </div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    <a class="code" href="../../d9/d7c/_s_d_l__system_8h.html#a440cc3d867286d8f602805f95a08f1eeae0f75b335ea464dde9b168fd1691b48f">SDL_WINRT_PATH_ROAMING_FOLDER</a>,</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160; </div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    <a class="code" href="../../d9/d7c/_s_d_l__system_8h.html#a440cc3d867286d8f602805f95a08f1eea9a451c52f98a046705bdd51257657d23">SDL_WINRT_PATH_TEMP_FOLDER</a></div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;} <a class="code" href="../../d9/d7c/_s_d_l__system_8h.html#a440cc3d867286d8f602805f95a08f1ee">SDL_WinRT_Path</a>;</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a08f4191a0cddd95466752fe2238ae810"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08f4191a0cddd95466752fe2238ae810">&#9670;&nbsp;</a></span>SDL_WinRT_DeviceFamily</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="../../d9/d7c/_s_d_l__system_8h.html#a08f4191a0cddd95466752fe2238ae810">SDL_WinRT_DeviceFamily</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>WinRT Device Family. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="a08f4191a0cddd95466752fe2238ae810a823f650aee2ecd29f75eb375e1daed08"></a>SDL_WINRT_DEVICEFAMILY_UNKNOWN&#160;</td><td class="fielddoc"><p>Unknown family <br  />
+ </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a08f4191a0cddd95466752fe2238ae810a5bcf9c1dd6e4b919e5846e9311421748"></a>SDL_WINRT_DEVICEFAMILY_DESKTOP&#160;</td><td class="fielddoc"><p>Desktop family. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a08f4191a0cddd95466752fe2238ae810acb5e0dc9d4c9f8cc5138e7314140c490"></a>SDL_WINRT_DEVICEFAMILY_MOBILE&#160;</td><td class="fielddoc"><p>Mobile family (for example smartphone) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a08f4191a0cddd95466752fe2238ae810a10110058700c924bedd3fbe6127dd97e"></a>SDL_WINRT_DEVICEFAMILY_XBOX&#160;</td><td class="fielddoc"><p>XBox family. </p>
+</td></tr>
+</table>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d9/d7c/_s_d_l__system_8h_source.html">SDL_system.h</a> строка <a class="el" href="../../d9/d7c/_s_d_l__system_8h_source.html#l00233">233</a></p>
+<div class="fragment"><div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;{</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    <a class="code" href="../../d9/d7c/_s_d_l__system_8h.html#a08f4191a0cddd95466752fe2238ae810a823f650aee2ecd29f75eb375e1daed08">SDL_WINRT_DEVICEFAMILY_UNKNOWN</a>,</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160; </div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    <a class="code" href="../../d9/d7c/_s_d_l__system_8h.html#a08f4191a0cddd95466752fe2238ae810a5bcf9c1dd6e4b919e5846e9311421748">SDL_WINRT_DEVICEFAMILY_DESKTOP</a>,</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160; </div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <a class="code" href="../../d9/d7c/_s_d_l__system_8h.html#a08f4191a0cddd95466752fe2238ae810acb5e0dc9d4c9f8cc5138e7314140c490">SDL_WINRT_DEVICEFAMILY_MOBILE</a>,</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160; </div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <a class="code" href="../../d9/d7c/_s_d_l__system_8h.html#a08f4191a0cddd95466752fe2238ae810a10110058700c924bedd3fbe6127dd97e">SDL_WINRT_DEVICEFAMILY_XBOX</a>,</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;} <a class="code" href="../../d9/d7c/_s_d_l__system_8h.html#a08f4191a0cddd95466752fe2238ae810">SDL_WinRT_DeviceFamily</a>;</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Функции</h2>
+<a id="a3ee70959067d938e3a3f80e43f3157a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ee70959067d938e3a3f80e43f3157a8">&#9670;&nbsp;</a></span>SDL_SetWindowsMessageHook()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DECLSPEC <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> SDLCALL SDL_SetWindowsMessageHook </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d9/d7c/_s_d_l__system_8h.html#a2893a6e30c95d576736e333237b98bbc">SDL_WindowsMessageHook</a>&#160;</td>
+          <td class="paramname"><em>callback</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *&#160;</td>
+          <td class="paramname"><em>userdata</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6e02336961a1fe8dd27c04733117371a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e02336961a1fe8dd27c04733117371a">&#9670;&nbsp;</a></span>SDL_Direct3D9GetAdapterIndex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DECLSPEC int SDLCALL SDL_Direct3D9GetAdapterIndex </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>displayIndex</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the D3D9 adapter index that matches the specified display index. </p>
+<p>This adapter index can be passed to IDirect3D9::CreateDevice and controls on which monitor a full screen application will appear. </p>
+
+</div>
+</div>
+<a id="adcfe0853c55093a8f7ea6d5b9ff41097"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adcfe0853c55093a8f7ea6d5b9ff41097">&#9670;&nbsp;</a></span>SDL_RenderGetD3D9Device()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DECLSPEC <a class="el" href="../../d9/d7c/_s_d_l__system_8h.html#aa995839c488ceda33ed998bbfa79c2a9">IDirect3DDevice9</a>* SDLCALL SDL_RenderGetD3D9Device </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d6/d30/_s_d_l__render_8h.html#aaf0bf7d020754fc614fe06552ea4d5d4">SDL_Renderer</a> *&#160;</td>
+          <td class="paramname"><em>renderer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the D3D device associated with a renderer, or NULL if it's not a D3D renderer. </p>
+<p>Once you are done using the device, you should release it to avoid a resource leak. </p>
+
+</div>
+</div>
+<a id="a4d89d5fdbaa443c76856d612739d17c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d89d5fdbaa443c76856d612739d17c0">&#9670;&nbsp;</a></span>SDL_DXGIGetOutputInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DECLSPEC <a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#a8fca68df0f976765230fe589a7c7733b">SDL_bool</a> SDLCALL SDL_DXGIGetOutputInfo </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>displayIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>adapterIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>outputIndex</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the DXGI Adapter and Output indices for the specified display index. </p>
+<p>These can be passed to EnumAdapters and EnumOutputs respectively to get the objects required to create a DX10 or DX11 device and swap chain. </p>
+
+</div>
+</div>
+<a id="ad8b089710ddbb2e3133c8b78d687051e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8b089710ddbb2e3133c8b78d687051e">&#9670;&nbsp;</a></span>SDL_LinuxSetThreadPriority()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DECLSPEC int SDLCALL SDL_LinuxSetThreadPriority </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#a2c1a61d5c466bb74680be0a8cc1b455d">Sint64</a>&#160;</td>
+          <td class="paramname"><em>threadID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>priority</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the UNIX nice value for a thread, using setpriority() if possible, and RealtimeKit if available. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>0 on success, or -1 on error. </dd></dl>
+
+</div>
+</div>
+<a id="aa39cfd8b255adb42149c7204ecf50823"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa39cfd8b255adb42149c7204ecf50823">&#9670;&nbsp;</a></span>SDL_iPhoneSetAnimationCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DECLSPEC int SDLCALL SDL_iPhoneSetAnimationCallback </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/d64/_s_d_l__video_8h.html#a55a196c7d3b8497538632c79ae1e6392">SDL_Window</a> *&#160;</td>
+          <td class="paramname"><em>window</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>interval</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>(*)(<a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *)&#160;</td>
+          <td class="paramname"><em>callback</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *&#160;</td>
+          <td class="paramname"><em>callbackParam</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4b4fb7a09ddb8304b18debf6bfd7ca13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b4fb7a09ddb8304b18debf6bfd7ca13">&#9670;&nbsp;</a></span>SDL_iPhoneSetEventPump()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DECLSPEC <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> SDLCALL SDL_iPhoneSetEventPump </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#a8fca68df0f976765230fe589a7c7733b">SDL_bool</a>&#160;</td>
+          <td class="paramname"><em>enabled</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aae2559eaec8b8239360f629919ded363"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae2559eaec8b8239360f629919ded363">&#9670;&nbsp;</a></span>SDL_AndroidGetJNIEnv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DECLSPEC <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>* SDLCALL SDL_AndroidGetJNIEnv </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the JNI environment for the current thread. </p>
+<p>This returns JNIEnv*, but the prototype is void* so we don't need jni.h </p>
+
+</div>
+</div>
+<a id="a5c8af38268c4bf8a2885d47a2c62e236"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c8af38268c4bf8a2885d47a2c62e236">&#9670;&nbsp;</a></span>SDL_AndroidGetActivity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DECLSPEC <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>* SDLCALL SDL_AndroidGetActivity </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the SDL Activity object for the application. </p>
+<p>This returns jobject, but the prototype is void* so we don't need jni.h The jobject returned by SDL_AndroidGetActivity is a local reference. It is the caller's responsibility to properly release it (using env-&gt;Push/PopLocalFrame or manually with env-&gt;DeleteLocalRef) </p>
+
+</div>
+</div>
+<a id="ab24f21211fa79a76247ba1beab0ef4c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab24f21211fa79a76247ba1beab0ef4c7">&#9670;&nbsp;</a></span>SDL_GetAndroidSDKVersion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DECLSPEC int SDLCALL SDL_GetAndroidSDKVersion </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return API level of the current device. </p>
+<p>API level 29: Android 10 API level 28: Android 9 API level 27: Android 8.1 API level 26: Android 8.0 API level 25: Android 7.1 API level 24: Android 7.0 API level 23: Android 6.0 API level 22: Android 5.1 API level 21: Android 5.0 API level 20: Android 4.4W API level 19: Android 4.4 API level 18: Android 4.3 API level 17: Android 4.2 API level 16: Android 4.1 API level 15: Android 4.0.3 API level 14: Android 4.0 API level 13: Android 3.2 API level 12: Android 3.1 API level 11: Android 3.0 API level 10: Android 2.3.3 </p>
+
+</div>
+</div>
+<a id="ad034e62cd98deb37b0407b3ee28ab377"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad034e62cd98deb37b0407b3ee28ab377">&#9670;&nbsp;</a></span>SDL_IsAndroidTV()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DECLSPEC <a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#a8fca68df0f976765230fe589a7c7733b">SDL_bool</a> SDLCALL SDL_IsAndroidTV </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return true if the application is running on Android TV. </p>
+
+</div>
+</div>
+<a id="a85e791b8175f0e81b324a6a974b3abaf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85e791b8175f0e81b324a6a974b3abaf">&#9670;&nbsp;</a></span>SDL_IsChromebook()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DECLSPEC <a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#a8fca68df0f976765230fe589a7c7733b">SDL_bool</a> SDLCALL SDL_IsChromebook </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return true if the application is running on a Chromebook. </p>
+
+</div>
+</div>
+<a id="a353602b01a75bb5a8714db48448edf3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a353602b01a75bb5a8714db48448edf3d">&#9670;&nbsp;</a></span>SDL_IsDeXMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DECLSPEC <a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#a8fca68df0f976765230fe589a7c7733b">SDL_bool</a> SDLCALL SDL_IsDeXMode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return true is the application is running on a Samsung DeX docking station. </p>
+
+</div>
+</div>
+<a id="a763a0616f2892dd995b332f0c4515495"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a763a0616f2892dd995b332f0c4515495">&#9670;&nbsp;</a></span>SDL_AndroidBackButton()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DECLSPEC <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> SDLCALL SDL_AndroidBackButton </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Trigger the Android system back button behavior. </p>
+
+</div>
+</div>
+<a id="a58501c9ea7e4ccfb1d83f2025540db18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58501c9ea7e4ccfb1d83f2025540db18">&#9670;&nbsp;</a></span>SDL_AndroidGetInternalStoragePath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const DECLSPEC char* SDLCALL SDL_AndroidGetInternalStoragePath </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the path used for internal storage for this application. </p>
+<p>This path is unique to your application and cannot be written to by other applications. </p>
+
+</div>
+</div>
+<a id="ad5b0a121988392b39eb1022bd836f571"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5b0a121988392b39eb1022bd836f571">&#9670;&nbsp;</a></span>SDL_AndroidGetExternalStorageState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DECLSPEC int SDLCALL SDL_AndroidGetExternalStorageState </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the current state of external storage, a bitmask of these values: SDL_ANDROID_EXTERNAL_STORAGE_READ SDL_ANDROID_EXTERNAL_STORAGE_WRITE. </p>
+<p>If external storage is currently unavailable, this will return 0. </p>
+
+</div>
+</div>
+<a id="a5ca40a20f27902d5e90c42ac3b14a2fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ca40a20f27902d5e90c42ac3b14a2fe">&#9670;&nbsp;</a></span>SDL_AndroidGetExternalStoragePath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const DECLSPEC char* SDLCALL SDL_AndroidGetExternalStoragePath </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the path used for external storage for this application. </p>
+<p>This path is unique to your application, but is public and can be written to by other applications. </p>
+
+</div>
+</div>
+<a id="a7d7bcf2ef5aee2ba60aefe387d473ab1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d7bcf2ef5aee2ba60aefe387d473ab1">&#9670;&nbsp;</a></span>SDL_WinRTGetFSPathUNICODE()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const DECLSPEC wchar_t* SDLCALL SDL_WinRTGetFSPathUNICODE </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d9/d7c/_s_d_l__system_8h.html#a440cc3d867286d8f602805f95a08f1ee">SDL_WinRT_Path</a>&#160;</td>
+          <td class="paramname"><em>pathType</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieves a WinRT defined path on the local file system. </p>
+<dl class="section note"><dt>Заметки</dt><dd>Documentation on most app-specific path types on WinRT can be found on MSDN, at the URL: <a href="http://msdn.microsoft.com/en-us/library/windows/apps/hh464917.aspx">http://msdn.microsoft.com/en-us/library/windows/apps/hh464917.aspx</a></dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pathType</td><td>The type of path to retrieve. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>A UCS-2 string (16-bit, wide-char) containing the path, or NULL if the path is not available for any reason. Not all paths are available on all versions of Windows. This is especially true on Windows Phone. Check the documentation for the given SDL_WinRT_Path for more information on which path types are supported where. </dd></dl>
+
+</div>
+</div>
+<a id="a26c195948692ce218bd848b0bc6ed950"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26c195948692ce218bd848b0bc6ed950">&#9670;&nbsp;</a></span>SDL_WinRTGetFSPathUTF8()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const DECLSPEC char* SDLCALL SDL_WinRTGetFSPathUTF8 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d9/d7c/_s_d_l__system_8h.html#a440cc3d867286d8f602805f95a08f1ee">SDL_WinRT_Path</a>&#160;</td>
+          <td class="paramname"><em>pathType</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieves a WinRT defined path on the local file system. </p>
+<dl class="section note"><dt>Заметки</dt><dd>Documentation on most app-specific path types on WinRT can be found on MSDN, at the URL: <a href="http://msdn.microsoft.com/en-us/library/windows/apps/hh464917.aspx">http://msdn.microsoft.com/en-us/library/windows/apps/hh464917.aspx</a></dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pathType</td><td>The type of path to retrieve. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>A UTF-8 string (8-bit, multi-byte) containing the path, or NULL if the path is not available for any reason. Not all paths are available on all versions of Windows. This is especially true on Windows Phone. Check the documentation for the given SDL_WinRT_Path for more information on which path types are supported where. </dd></dl>
+
+</div>
+</div>
+<a id="ab3496685286ce4d1c25a57e222dd28f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3496685286ce4d1c25a57e222dd28f8">&#9670;&nbsp;</a></span>SDL_WinRTGetDeviceFamily()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DECLSPEC <a class="el" href="../../d9/d7c/_s_d_l__system_8h.html#a08f4191a0cddd95466752fe2238ae810">SDL_WinRT_DeviceFamily</a> SDLCALL SDL_WinRTGetDeviceFamily </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Detects the device family of WinRT plattform on runtime. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Device family </dd></dl>
+
+</div>
+</div>
+<a id="a211a146233e8e37c64185105132e6257"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a211a146233e8e37c64185105132e6257">&#9670;&nbsp;</a></span>SDL_IsTablet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DECLSPEC <a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#a8fca68df0f976765230fe589a7c7733b">SDL_bool</a> SDLCALL SDL_IsTablet </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return true if the current device is a tablet. </p>
+
+</div>
+</div>
+<a id="ae3e44a610898157232a49a754fc3ab9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3e44a610898157232a49a754fc3ab9a">&#9670;&nbsp;</a></span>SDL_OnApplicationWillTerminate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DECLSPEC <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> SDLCALL SDL_OnApplicationWillTerminate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae0ff6644972f065a06072426a0f1691f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0ff6644972f065a06072426a0f1691f">&#9670;&nbsp;</a></span>SDL_OnApplicationDidReceiveMemoryWarning()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DECLSPEC <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> SDLCALL SDL_OnApplicationDidReceiveMemoryWarning </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad8e8c246a466b29a84a9018cb0803a55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8e8c246a466b29a84a9018cb0803a55">&#9670;&nbsp;</a></span>SDL_OnApplicationWillResignActive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DECLSPEC <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> SDLCALL SDL_OnApplicationWillResignActive </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af10116e8b6a71fb584a0cec7e582f9ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af10116e8b6a71fb584a0cec7e582f9ec">&#9670;&nbsp;</a></span>SDL_OnApplicationDidEnterBackground()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DECLSPEC <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> SDLCALL SDL_OnApplicationDidEnterBackground </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4292c3354aed782e634ee116d23cfd26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4292c3354aed782e634ee116d23cfd26">&#9670;&nbsp;</a></span>SDL_OnApplicationWillEnterForeground()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DECLSPEC <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> SDLCALL SDL_OnApplicationWillEnterForeground </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3e224d35ef257b2a7583e02ac9dabe90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e224d35ef257b2a7583e02ac9dabe90">&#9670;&nbsp;</a></span>SDL_OnApplicationDidBecomeActive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DECLSPEC <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> SDLCALL SDL_OnApplicationDidBecomeActive </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a28c907d23a5db116b0287d2eb89f2fdb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28c907d23a5db116b0287d2eb89f2fdb">&#9670;&nbsp;</a></span>SDL_OnApplicationDidChangeStatusBarOrientation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DECLSPEC <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> SDLCALL SDL_OnApplicationDidChangeStatusBarOrientation </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="a_s_d_l__system_8h_html_a08f4191a0cddd95466752fe2238ae810a10110058700c924bedd3fbe6127dd97e"><div class="ttname"><a href="../../d9/d7c/_s_d_l__system_8h.html#a08f4191a0cddd95466752fe2238ae810a10110058700c924bedd3fbe6127dd97e">SDL_WINRT_DEVICEFAMILY_XBOX</a></div><div class="ttdeci">@ SDL_WINRT_DEVICEFAMILY_XBOX</div><div class="ttdoc">XBox family.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d7c/_s_d_l__system_8h_source.html#l00245">SDL_system.h:245</a></div></div>
+<div class="ttc" id="a_s_d_l__system_8h_html_a08f4191a0cddd95466752fe2238ae810a5bcf9c1dd6e4b919e5846e9311421748"><div class="ttname"><a href="../../d9/d7c/_s_d_l__system_8h.html#a08f4191a0cddd95466752fe2238ae810a5bcf9c1dd6e4b919e5846e9311421748">SDL_WINRT_DEVICEFAMILY_DESKTOP</a></div><div class="ttdeci">@ SDL_WINRT_DEVICEFAMILY_DESKTOP</div><div class="ttdoc">Desktop family.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d7c/_s_d_l__system_8h_source.html#l00239">SDL_system.h:239</a></div></div>
+<div class="ttc" id="a_s_d_l__system_8h_html_a440cc3d867286d8f602805f95a08f1eeafb74cfaa0edb18afaf46cf9e555ecb40"><div class="ttname"><a href="../../d9/d7c/_s_d_l__system_8h.html#a440cc3d867286d8f602805f95a08f1eeafb74cfaa0edb18afaf46cf9e555ecb40">SDL_WINRT_PATH_INSTALLED_LOCATION</a></div><div class="ttdeci">@ SDL_WINRT_PATH_INSTALLED_LOCATION</div><div class="ttdoc">The installed app's root directory. Files here are likely to be read-only.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d7c/_s_d_l__system_8h_source.html#l00213">SDL_system.h:213</a></div></div>
+<div class="ttc" id="a_s_d_l__system_8h_html_a08f4191a0cddd95466752fe2238ae810"><div class="ttname"><a href="../../d9/d7c/_s_d_l__system_8h.html#a08f4191a0cddd95466752fe2238ae810">SDL_WinRT_DeviceFamily</a></div><div class="ttdeci">SDL_WinRT_DeviceFamily</div><div class="ttdoc">WinRT Device Family.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d7c/_s_d_l__system_8h_source.html#l00233">SDL_system.h:233</a></div></div>
+<div class="ttc" id="a_s_d_l__system_8h_html_a440cc3d867286d8f602805f95a08f1eea9a451c52f98a046705bdd51257657d23"><div class="ttname"><a href="../../d9/d7c/_s_d_l__system_8h.html#a440cc3d867286d8f602805f95a08f1eea9a451c52f98a046705bdd51257657d23">SDL_WINRT_PATH_TEMP_FOLDER</a></div><div class="ttdeci">@ SDL_WINRT_PATH_TEMP_FOLDER</div><div class="ttdoc">The app's temporary data store. Unsupported on Windows Phone. Files written here may be deleted at an...</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d7c/_s_d_l__system_8h_source.html#l00226">SDL_system.h:226</a></div></div>
+<div class="ttc" id="a_s_d_l__system_8h_html_a440cc3d867286d8f602805f95a08f1ee"><div class="ttname"><a href="../../d9/d7c/_s_d_l__system_8h.html#a440cc3d867286d8f602805f95a08f1ee">SDL_WinRT_Path</a></div><div class="ttdeci">SDL_WinRT_Path</div><div class="ttdoc">WinRT / Windows Phone path types.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d7c/_s_d_l__system_8h_source.html#l00209">SDL_system.h:209</a></div></div>
+<div class="ttc" id="a_s_d_l__system_8h_html_a08f4191a0cddd95466752fe2238ae810a823f650aee2ecd29f75eb375e1daed08"><div class="ttname"><a href="../../d9/d7c/_s_d_l__system_8h.html#a08f4191a0cddd95466752fe2238ae810a823f650aee2ecd29f75eb375e1daed08">SDL_WINRT_DEVICEFAMILY_UNKNOWN</a></div><div class="ttdeci">@ SDL_WINRT_DEVICEFAMILY_UNKNOWN</div><div class="ttdoc">Unknown family</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d7c/_s_d_l__system_8h_source.html#l00236">SDL_system.h:236</a></div></div>
+<div class="ttc" id="a_s_d_l__system_8h_html_a440cc3d867286d8f602805f95a08f1eeab471aff43442ebb033ba3fbbd3913a1c"><div class="ttname"><a href="../../d9/d7c/_s_d_l__system_8h.html#a440cc3d867286d8f602805f95a08f1eeab471aff43442ebb033ba3fbbd3913a1c">SDL_WINRT_PATH_LOCAL_FOLDER</a></div><div class="ttdeci">@ SDL_WINRT_PATH_LOCAL_FOLDER</div><div class="ttdoc">The app's local data store. Files may be written here.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d7c/_s_d_l__system_8h_source.html#l00216">SDL_system.h:216</a></div></div>
+<div class="ttc" id="a_s_d_l__system_8h_html_a440cc3d867286d8f602805f95a08f1eeae0f75b335ea464dde9b168fd1691b48f"><div class="ttname"><a href="../../d9/d7c/_s_d_l__system_8h.html#a440cc3d867286d8f602805f95a08f1eeae0f75b335ea464dde9b168fd1691b48f">SDL_WINRT_PATH_ROAMING_FOLDER</a></div><div class="ttdeci">@ SDL_WINRT_PATH_ROAMING_FOLDER</div><div class="ttdoc">The app's roaming data store. Unsupported on Windows Phone. Files written here may be copied to other...</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d7c/_s_d_l__system_8h_source.html#l00222">SDL_system.h:222</a></div></div>
+<div class="ttc" id="a_s_d_l__system_8h_html_a08f4191a0cddd95466752fe2238ae810acb5e0dc9d4c9f8cc5138e7314140c490"><div class="ttname"><a href="../../d9/d7c/_s_d_l__system_8h.html#a08f4191a0cddd95466752fe2238ae810acb5e0dc9d4c9f8cc5138e7314140c490">SDL_WINRT_DEVICEFAMILY_MOBILE</a></div><div class="ttdeci">@ SDL_WINRT_DEVICEFAMILY_MOBILE</div><div class="ttdoc">Mobile family (for example smartphone)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d7c/_s_d_l__system_8h_source.html#l00242">SDL_system.h:242</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_97aefd0d527b934f1d99a682da8fe6a9.html">lib</a></li><li class="navelem"><a class="el" href="../../dir_da53678e933bc13c5b44fc9f96ac81aa.html">win32</a></li><li class="navelem"><a class="el" href="../../dir_7ac189985cec0e073b46d34a5d96bfc1.html">x86</a></li><li class="navelem"><a class="el" href="../../dir_7b0bc3efc80275bf98f373482bc8cca9.html">sdl2-2.0.12</a></li><li class="navelem"><a class="el" href="../../dir_9d91f83a81d35ca44b21a6c37d7d8d02.html">include</a></li><li class="navelem"><a class="el" href="../../d9/d7c/_s_d_l__system_8h.html">SDL_system.h</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:04:20. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+var struct_a_v_h_d_r_plus_color_transform_params =
+[
+    [ "window_upper_left_corner_x", "d7/d46/struct_a_v_h_d_r_plus_color_transform_params.html#a833d18029d732f86a0ec4c029a7da42f", null ],
+    [ "window_upper_left_corner_y", "d7/d46/struct_a_v_h_d_r_plus_color_transform_params.html#a8006c018b5fbe184fa4a26bcc52e2dc6", null ],
+    [ "window_lower_right_corner_x", "d7/d46/struct_a_v_h_d_r_plus_color_transform_params.html#a4be54ddced4fe5a8d024d291bc65749a", null ],
+    [ "window_lower_right_corner_y", "d7/d46/struct_a_v_h_d_r_plus_color_transform_params.html#a07fa3b7fb0be0b93b6d95ca9d9a1fa25", null ],
+    [ "center_of_ellipse_x", "d7/d46/struct_a_v_h_d_r_plus_color_transform_params.html#a26fffeac222cba512e7255119a054f0a", null ],
+    [ "center_of_ellipse_y", "d7/d46/struct_a_v_h_d_r_plus_color_transform_params.html#ac7f7e03a4b08143ad03a2232425dfac3", null ],
+    [ "rotation_angle", "d7/d46/struct_a_v_h_d_r_plus_color_transform_params.html#a18f23a30fba19eff68496aad64cd38a9", null ],
+    [ "semimajor_axis_internal_ellipse", "d7/d46/struct_a_v_h_d_r_plus_color_transform_params.html#a218dacd1c86e8c6357c491f0f3b0f855", null ],
+    [ "semimajor_axis_external_ellipse", "d7/d46/struct_a_v_h_d_r_plus_color_transform_params.html#a2c8efbbb1812d0c1a11b11e99e784cdb", null ],
+    [ "semiminor_axis_external_ellipse", "d7/d46/struct_a_v_h_d_r_plus_color_transform_params.html#aa0bea0324f7b95bbacdcdf06d0504edf", null ],
+    [ "overlap_process_option", "d7/d46/struct_a_v_h_d_r_plus_color_transform_params.html#ad7fcfbfd8167724c9fda3b6a5b2ebf6a", null ],
+    [ "maxscl", "d7/d46/struct_a_v_h_d_r_plus_color_transform_params.html#a291012e029b09282caad1c1399e0b1b8", null ],
+    [ "average_maxrgb", "d7/d46/struct_a_v_h_d_r_plus_color_transform_params.html#a21bb186cad82079311029fdbfc9d8634", null ],
+    [ "num_distribution_maxrgb_percentiles", "d7/d46/struct_a_v_h_d_r_plus_color_transform_params.html#a50ec72b9b9c718fcbe77bff97bfa272e", null ],
+    [ "distribution_maxrgb", "d7/d46/struct_a_v_h_d_r_plus_color_transform_params.html#a368c274bb7d9999fb6436f527e5b3f88", null ],
+    [ "fraction_bright_pixels", "d7/d46/struct_a_v_h_d_r_plus_color_transform_params.html#a0b8acc98ae2020d2578efe9761bb89e9", null ],
+    [ "tone_mapping_flag", "d7/d46/struct_a_v_h_d_r_plus_color_transform_params.html#a030e8abd2a965bf9bb36ef87aa00ba22", null ],
+    [ "knee_point_x", "d7/d46/struct_a_v_h_d_r_plus_color_transform_params.html#ac3d809a287fa4e915384075b78252927", null ],
+    [ "knee_point_y", "d7/d46/struct_a_v_h_d_r_plus_color_transform_params.html#a200c599bed02c3e498426a5f75a4fae1", null ],
+    [ "num_bezier_curve_anchors", "d7/d46/struct_a_v_h_d_r_plus_color_transform_params.html#a863cb83c97afabe33b40609d21586c27", null ],
+    [ "bezier_curve_anchors", "d7/d46/struct_a_v_h_d_r_plus_color_transform_params.html#af36d5ee6dc3443fe771875d2f6b804ef", null ],
+    [ "color_saturation_mapping_flag", "d7/d46/struct_a_v_h_d_r_plus_color_transform_params.html#a4c683c17f2049a6d49675e52f71b3f46", null ],
+    [ "color_saturation_weight", "d7/d46/struct_a_v_h_d_r_plus_color_transform_params.html#aea97c3d086ce533e4d117204725716d4", null ]
+];

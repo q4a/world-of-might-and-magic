@@ -1,0 +1,580 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Структура BLVDoor</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d1/dcf/struct_b_l_v_door.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Открытые типы</a> &#124;
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="../../db/de2/struct_b_l_v_door-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Структура BLVDoor</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="../../da/dc7/_indoor_8h_source.html">Indoor.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Открытые типы</h2></td></tr>
+<tr class="memitem:a938bde09f5649e4d1982d7e51a31b832"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dcf/struct_b_l_v_door.html#a938bde09f5649e4d1982d7e51a31b832">State</a> : uint16_t { <a class="el" href="../../d1/dcf/struct_b_l_v_door.html#a938bde09f5649e4d1982d7e51a31b832a692429460a25bfebc224590f0dc5efcf">Closed</a> = 0, 
+<a class="el" href="../../d1/dcf/struct_b_l_v_door.html#a938bde09f5649e4d1982d7e51a31b832a73064c29c09158bd9e6503c2af97b268">Opening</a> = 1, 
+<a class="el" href="../../d1/dcf/struct_b_l_v_door.html#a938bde09f5649e4d1982d7e51a31b832ab93af758077ddf72d379461bd33dab98">Open</a> = 2, 
+<a class="el" href="../../d1/dcf/struct_b_l_v_door.html#a938bde09f5649e4d1982d7e51a31b832afebe84428e287e700bdeab34e374c978">Closing</a> = 3
+ }</td></tr>
+<tr class="separator:a938bde09f5649e4d1982d7e51a31b832"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:a8e5687fb5cf04d0acd65ed3c1e54b78d"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dcf/struct_b_l_v_door.html#a8e5687fb5cf04d0acd65ed3c1e54b78d">uAttributes</a></td></tr>
+<tr class="separator:a8e5687fb5cf04d0acd65ed3c1e54b78d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a457155567501631c1d6d7820e2680ba5"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dcf/struct_b_l_v_door.html#a457155567501631c1d6d7820e2680ba5">uDoorID</a></td></tr>
+<tr class="separator:a457155567501631c1d6d7820e2680ba5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4781b6c25f702d3014339a7ff4a9efa"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dcf/struct_b_l_v_door.html#ac4781b6c25f702d3014339a7ff4a9efa">uTimeSinceTriggered</a></td></tr>
+<tr class="separator:ac4781b6c25f702d3014339a7ff4a9efa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2df4a149d7af03ab25d4ab74a200d2a8"><td class="memItemLeft" align="right" valign="top">Vec3_int_&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dcf/struct_b_l_v_door.html#a2df4a149d7af03ab25d4ab74a200d2a8">vDirection</a></td></tr>
+<tr class="separator:a2df4a149d7af03ab25d4ab74a200d2a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbcac42f1eced092435af9c723e03aa7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dcf/struct_b_l_v_door.html#adbcac42f1eced092435af9c723e03aa7">uMoveLength</a></td></tr>
+<tr class="separator:adbcac42f1eced092435af9c723e03aa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed67ee6e0e520694f5641724e27c0257"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dcf/struct_b_l_v_door.html#aed67ee6e0e520694f5641724e27c0257">uOpenSpeed</a></td></tr>
+<tr class="separator:aed67ee6e0e520694f5641724e27c0257"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff12f97dee042ed782254a7838355c0e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dcf/struct_b_l_v_door.html#aff12f97dee042ed782254a7838355c0e">uCloseSpeed</a></td></tr>
+<tr class="separator:aff12f97dee042ed782254a7838355c0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26d9d844b29d04ebecf5398142932bdb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dcf/struct_b_l_v_door.html#a26d9d844b29d04ebecf5398142932bdb">pVertexIDs</a></td></tr>
+<tr class="separator:a26d9d844b29d04ebecf5398142932bdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19245bd8fedb55624ffba657b7728fe8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dcf/struct_b_l_v_door.html#a19245bd8fedb55624ffba657b7728fe8">pFaceIDs</a></td></tr>
+<tr class="separator:a19245bd8fedb55624ffba657b7728fe8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c8be926cbe39d02a5a7491b620ede0f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dcf/struct_b_l_v_door.html#a8c8be926cbe39d02a5a7491b620ede0f">pSectorIDs</a></td></tr>
+<tr class="separator:a8c8be926cbe39d02a5a7491b620ede0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97a74df04610b345bb55b9d7e6908f61"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dcf/struct_b_l_v_door.html#a97a74df04610b345bb55b9d7e6908f61">pDeltaUs</a></td></tr>
+<tr class="separator:a97a74df04610b345bb55b9d7e6908f61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cc0d260ea9fcdd7e3b816a30d4fa21e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dcf/struct_b_l_v_door.html#a5cc0d260ea9fcdd7e3b816a30d4fa21e">pDeltaVs</a></td></tr>
+<tr class="separator:a5cc0d260ea9fcdd7e3b816a30d4fa21e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8ce24fb026502cd74e91566030fb524"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dcf/struct_b_l_v_door.html#ac8ce24fb026502cd74e91566030fb524">pXOffsets</a></td></tr>
+<tr class="separator:ac8ce24fb026502cd74e91566030fb524"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53cbda9984a36888f152c57377e39dc7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dcf/struct_b_l_v_door.html#a53cbda9984a36888f152c57377e39dc7">pYOffsets</a></td></tr>
+<tr class="separator:a53cbda9984a36888f152c57377e39dc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c7a72800df7a630f605967ab13bb87c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dcf/struct_b_l_v_door.html#a6c7a72800df7a630f605967ab13bb87c">pZOffsets</a></td></tr>
+<tr class="separator:a6c7a72800df7a630f605967ab13bb87c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add13d2fcfc606df971d76ea7ffbedcd3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dcf/struct_b_l_v_door.html#add13d2fcfc606df971d76ea7ffbedcd3">uNumVertices</a></td></tr>
+<tr class="separator:add13d2fcfc606df971d76ea7ffbedcd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d857dd3c1dacdbe9c817d7c5c6d6678"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dcf/struct_b_l_v_door.html#a4d857dd3c1dacdbe9c817d7c5c6d6678">uNumFaces</a></td></tr>
+<tr class="separator:a4d857dd3c1dacdbe9c817d7c5c6d6678"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30995cbba304b4c7ec1bb1b9caa7b6a3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dcf/struct_b_l_v_door.html#a30995cbba304b4c7ec1bb1b9caa7b6a3">field_48</a></td></tr>
+<tr class="separator:a30995cbba304b4c7ec1bb1b9caa7b6a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98ed90a0a786dbf8d0c323c5ce21b70a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dcf/struct_b_l_v_door.html#a98ed90a0a786dbf8d0c323c5ce21b70a">uNumOffsets</a></td></tr>
+<tr class="separator:a98ed90a0a786dbf8d0c323c5ce21b70a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72961e41f952e83c831046a2ffba1cfc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/dcf/struct_b_l_v_door.html#a938bde09f5649e4d1982d7e51a31b832">State</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dcf/struct_b_l_v_door.html#a72961e41f952e83c831046a2ffba1cfc">uState</a></td></tr>
+<tr class="separator:a72961e41f952e83c831046a2ffba1cfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0749b3f6a42e739d72e823a9ea80777"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dcf/struct_b_l_v_door.html#ad0749b3f6a42e739d72e823a9ea80777">field_4E</a></td></tr>
+<tr class="separator:ad0749b3f6a42e739d72e823a9ea80777"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock">
+<p class="definition">См. определение в файле <a class="el" href="../../da/dc7/_indoor_8h_source.html">Indoor.h</a> строка <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00378">378</a></p>
+</div><h2 class="groupheader">Перечисления</h2>
+<a id="a938bde09f5649e4d1982d7e51a31b832"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a938bde09f5649e4d1982d7e51a31b832">&#9670;&nbsp;</a></span>State</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="../../d1/dcf/struct_b_l_v_door.html#a938bde09f5649e4d1982d7e51a31b832">BLVDoor::State</a> : <a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="a938bde09f5649e4d1982d7e51a31b832a692429460a25bfebc224590f0dc5efcf"></a>Closed&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a938bde09f5649e4d1982d7e51a31b832a73064c29c09158bd9e6503c2af97b268"></a>Opening&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a938bde09f5649e4d1982d7e51a31b832ab93af758077ddf72d379461bd33dab98"></a>Open&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a938bde09f5649e4d1982d7e51a31b832afebe84428e287e700bdeab34e374c978"></a>Closing&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/dc7/_indoor_8h_source.html">Indoor.h</a> строка <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00379">379</a></p>
+<div class="fragment"><div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;               : <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> {</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;        <a class="code" href="../../d1/dcf/struct_b_l_v_door.html#a938bde09f5649e4d1982d7e51a31b832a692429460a25bfebc224590f0dc5efcf">Closed</a> = 0,</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;        <a class="code" href="../../d1/dcf/struct_b_l_v_door.html#a938bde09f5649e4d1982d7e51a31b832a73064c29c09158bd9e6503c2af97b268">Opening</a> = 1,</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;        <a class="code" href="../../d1/dcf/struct_b_l_v_door.html#a938bde09f5649e4d1982d7e51a31b832ab93af758077ddf72d379461bd33dab98">Open</a> = 2,</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;        <a class="code" href="../../d1/dcf/struct_b_l_v_door.html#a938bde09f5649e4d1982d7e51a31b832afebe84428e287e700bdeab34e374c978">Closing</a> = 3</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;    };</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="a8e5687fb5cf04d0acd65ed3c1e54b78d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e5687fb5cf04d0acd65ed3c1e54b78d">&#9670;&nbsp;</a></span>uAttributes</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int BLVDoor::uAttributes</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/dc7/_indoor_8h_source.html">Indoor.h</a> строка <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00386">386</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l01506">BLV_UpdateDoors()</a> и <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l02310">PrepareToLoadBLV()</a>.</p>
+
+</div>
+</div>
+<a id="a457155567501631c1d6d7820e2680ba5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a457155567501631c1d6d7820e2680ba5">&#9670;&nbsp;</a></span>uDoorID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int BLVDoor::uDoorID</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/dc7/_indoor_8h_source.html">Indoor.h</a> строка <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00387">387</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l01506">BLV_UpdateDoors()</a> и <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l05183">Door_switch_animation()</a>.</p>
+
+</div>
+</div>
+<a id="ac4781b6c25f702d3014339a7ff4a9efa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4781b6c25f702d3014339a7ff4a9efa">&#9670;&nbsp;</a></span>uTimeSinceTriggered</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int BLVDoor::uTimeSinceTriggered</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/dc7/_indoor_8h_source.html">Indoor.h</a> строка <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00388">388</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l01506">BLV_UpdateDoors()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l05183">Door_switch_animation()</a> и <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l02310">PrepareToLoadBLV()</a>.</p>
+
+</div>
+</div>
+<a id="a2df4a149d7af03ab25d4ab74a200d2a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2df4a149d7af03ab25d4ab74a200d2a8">&#9670;&nbsp;</a></span>vDirection</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vec3_int_ BLVDoor::vDirection</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/dc7/_indoor_8h_source.html">Indoor.h</a> строка <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00389">389</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l01506">BLV_UpdateDoors()</a>.</p>
+
+</div>
+</div>
+<a id="adbcac42f1eced092435af9c723e03aa7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbcac42f1eced092435af9c723e03aa7">&#9670;&nbsp;</a></span>uMoveLength</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int BLVDoor::uMoveLength</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/dc7/_indoor_8h_source.html">Indoor.h</a> строка <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00390">390</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l01506">BLV_UpdateDoors()</a> и <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l05183">Door_switch_animation()</a>.</p>
+
+</div>
+</div>
+<a id="aed67ee6e0e520694f5641724e27c0257"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed67ee6e0e520694f5641724e27c0257">&#9670;&nbsp;</a></span>uOpenSpeed</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int BLVDoor::uOpenSpeed</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/dc7/_indoor_8h_source.html">Indoor.h</a> строка <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00391">391</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l01506">BLV_UpdateDoors()</a> и <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l05183">Door_switch_animation()</a>.</p>
+
+</div>
+</div>
+<a id="aff12f97dee042ed782254a7838355c0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff12f97dee042ed782254a7838355c0e">&#9670;&nbsp;</a></span>uCloseSpeed</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int BLVDoor::uCloseSpeed</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/dc7/_indoor_8h_source.html">Indoor.h</a> строка <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00392">392</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l01506">BLV_UpdateDoors()</a> и <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l05183">Door_switch_animation()</a>.</p>
+
+</div>
+</div>
+<a id="a26d9d844b29d04ebecf5398142932bdb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26d9d844b29d04ebecf5398142932bdb">&#9670;&nbsp;</a></span>pVertexIDs</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>* BLVDoor::pVertexIDs</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/dc7/_indoor_8h_source.html">Indoor.h</a> строка <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00393">393</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l01506">BLV_UpdateDoors()</a> и <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00858">IndoorLocation::Load()</a>.</p>
+
+</div>
+</div>
+<a id="a19245bd8fedb55624ffba657b7728fe8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19245bd8fedb55624ffba657b7728fe8">&#9670;&nbsp;</a></span>pFaceIDs</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>* BLVDoor::pFaceIDs</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/dc7/_indoor_8h_source.html">Indoor.h</a> строка <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00394">394</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l01506">BLV_UpdateDoors()</a> и <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00858">IndoorLocation::Load()</a>.</p>
+
+</div>
+</div>
+<a id="a8c8be926cbe39d02a5a7491b620ede0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c8be926cbe39d02a5a7491b620ede0f">&#9670;&nbsp;</a></span>pSectorIDs</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>* BLVDoor::pSectorIDs</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/dc7/_indoor_8h_source.html">Indoor.h</a> строка <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00395">395</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00858">IndoorLocation::Load()</a>.</p>
+
+</div>
+</div>
+<a id="a97a74df04610b345bb55b9d7e6908f61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97a74df04610b345bb55b9d7e6908f61">&#9670;&nbsp;</a></span>pDeltaUs</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a>* BLVDoor::pDeltaUs</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/dc7/_indoor_8h_source.html">Indoor.h</a> строка <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00396">396</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l01506">BLV_UpdateDoors()</a> и <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00858">IndoorLocation::Load()</a>.</p>
+
+</div>
+</div>
+<a id="a5cc0d260ea9fcdd7e3b816a30d4fa21e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cc0d260ea9fcdd7e3b816a30d4fa21e">&#9670;&nbsp;</a></span>pDeltaVs</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a>* BLVDoor::pDeltaVs</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/dc7/_indoor_8h_source.html">Indoor.h</a> строка <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00397">397</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l01506">BLV_UpdateDoors()</a> и <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00858">IndoorLocation::Load()</a>.</p>
+
+</div>
+</div>
+<a id="ac8ce24fb026502cd74e91566030fb524"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8ce24fb026502cd74e91566030fb524">&#9670;&nbsp;</a></span>pXOffsets</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>* BLVDoor::pXOffsets</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/dc7/_indoor_8h_source.html">Indoor.h</a> строка <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00398">398</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l01506">BLV_UpdateDoors()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00858">IndoorLocation::Load()</a> и <a class="el" href="../../d3/df2/_audio_player_8cpp_source.html#l00195">AudioPlayer::PlaySound()</a>.</p>
+
+</div>
+</div>
+<a id="a53cbda9984a36888f152c57377e39dc7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53cbda9984a36888f152c57377e39dc7">&#9670;&nbsp;</a></span>pYOffsets</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>* BLVDoor::pYOffsets</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/dc7/_indoor_8h_source.html">Indoor.h</a> строка <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00399">399</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l01506">BLV_UpdateDoors()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00858">IndoorLocation::Load()</a> и <a class="el" href="../../d3/df2/_audio_player_8cpp_source.html#l00195">AudioPlayer::PlaySound()</a>.</p>
+
+</div>
+</div>
+<a id="a6c7a72800df7a630f605967ab13bb87c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c7a72800df7a630f605967ab13bb87c">&#9670;&nbsp;</a></span>pZOffsets</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>* BLVDoor::pZOffsets</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/dc7/_indoor_8h_source.html">Indoor.h</a> строка <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00400">400</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l01506">BLV_UpdateDoors()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00858">IndoorLocation::Load()</a> и <a class="el" href="../../d3/df2/_audio_player_8cpp_source.html#l00195">AudioPlayer::PlaySound()</a>.</p>
+
+</div>
+</div>
+<a id="add13d2fcfc606df971d76ea7ffbedcd3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add13d2fcfc606df971d76ea7ffbedcd3">&#9670;&nbsp;</a></span>uNumVertices</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> BLVDoor::uNumVertices</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/dc7/_indoor_8h_source.html">Indoor.h</a> строка <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00401">401</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l01506">BLV_UpdateDoors()</a> и <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00858">IndoorLocation::Load()</a>.</p>
+
+</div>
+</div>
+<a id="a4d857dd3c1dacdbe9c817d7c5c6d6678"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d857dd3c1dacdbe9c817d7c5c6d6678">&#9670;&nbsp;</a></span>uNumFaces</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> BLVDoor::uNumFaces</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/dc7/_indoor_8h_source.html">Indoor.h</a> строка <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00402">402</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l01506">BLV_UpdateDoors()</a> и <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00858">IndoorLocation::Load()</a>.</p>
+
+</div>
+</div>
+<a id="a30995cbba304b4c7ec1bb1b9caa7b6a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30995cbba304b4c7ec1bb1b9caa7b6a3">&#9670;&nbsp;</a></span>field_48</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> BLVDoor::field_48</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/dc7/_indoor_8h_source.html">Indoor.h</a> строка <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00403">403</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00858">IndoorLocation::Load()</a>.</p>
+
+</div>
+</div>
+<a id="a98ed90a0a786dbf8d0c323c5ce21b70a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98ed90a0a786dbf8d0c323c5ce21b70a">&#9670;&nbsp;</a></span>uNumOffsets</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> BLVDoor::uNumOffsets</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/dc7/_indoor_8h_source.html">Indoor.h</a> строка <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00404">404</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00858">IndoorLocation::Load()</a>.</p>
+
+</div>
+</div>
+<a id="a72961e41f952e83c831046a2ffba1cfc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72961e41f952e83c831046a2ffba1cfc">&#9670;&nbsp;</a></span>uState</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/dcf/struct_b_l_v_door.html#a938bde09f5649e4d1982d7e51a31b832">State</a> BLVDoor::uState</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/dc7/_indoor_8h_source.html">Indoor.h</a> строка <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00405">405</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l01506">BLV_UpdateDoors()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l05183">Door_switch_animation()</a> и <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l02310">PrepareToLoadBLV()</a>.</p>
+
+</div>
+</div>
+<a id="ad0749b3f6a42e739d72e823a9ea80777"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0749b3f6a42e739d72e823a9ea80777">&#9670;&nbsp;</a></span>field_4E</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> BLVDoor::field_4E</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/dc7/_indoor_8h_source.html">Indoor.h</a> строка <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00406">406</a></p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов структуры находятся в файле:<ul>
+<li>C:/git/world-of-might-and-magic/Engine/Graphics/<a class="el" href="../../da/dc7/_indoor_8h_source.html">Indoor.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="a_s_d_l__config_8h_html_a273cf69d639a59973b6019625df33e30"><div class="ttname"><a href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a></div><div class="ttdeci">unsigned __int16 uint16_t</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d8f/_s_d_l__config_8h_source.html#l00037">SDL_config.h:37</a></div></div>
+<div class="ttc" id="astruct_b_l_v_door_html_a938bde09f5649e4d1982d7e51a31b832a692429460a25bfebc224590f0dc5efcf"><div class="ttname"><a href="../../d1/dcf/struct_b_l_v_door.html#a938bde09f5649e4d1982d7e51a31b832a692429460a25bfebc224590f0dc5efcf">BLVDoor::Closed</a></div><div class="ttdeci">@ Closed</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dc7/_indoor_8h_source.html#l00380">Indoor.h:380</a></div></div>
+<div class="ttc" id="astruct_b_l_v_door_html_a938bde09f5649e4d1982d7e51a31b832a73064c29c09158bd9e6503c2af97b268"><div class="ttname"><a href="../../d1/dcf/struct_b_l_v_door.html#a938bde09f5649e4d1982d7e51a31b832a73064c29c09158bd9e6503c2af97b268">BLVDoor::Opening</a></div><div class="ttdeci">@ Opening</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dc7/_indoor_8h_source.html#l00381">Indoor.h:381</a></div></div>
+<div class="ttc" id="astruct_b_l_v_door_html_a938bde09f5649e4d1982d7e51a31b832afebe84428e287e700bdeab34e374c978"><div class="ttname"><a href="../../d1/dcf/struct_b_l_v_door.html#a938bde09f5649e4d1982d7e51a31b832afebe84428e287e700bdeab34e374c978">BLVDoor::Closing</a></div><div class="ttdeci">@ Closing</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dc7/_indoor_8h_source.html#l00383">Indoor.h:383</a></div></div>
+<div class="ttc" id="astruct_b_l_v_door_html_a938bde09f5649e4d1982d7e51a31b832ab93af758077ddf72d379461bd33dab98"><div class="ttname"><a href="../../d1/dcf/struct_b_l_v_door.html#a938bde09f5649e4d1982d7e51a31b832ab93af758077ddf72d379461bd33dab98">BLVDoor::Open</a></div><div class="ttdeci">@ Open</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dc7/_indoor_8h_source.html#l00382">Indoor.h:382</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../d1/dcf/struct_b_l_v_door.html">BLVDoor</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:04:39. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

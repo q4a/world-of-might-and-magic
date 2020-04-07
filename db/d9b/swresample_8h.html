@@ -1,0 +1,209 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Файл C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libswresample/swresample.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('db/d9b/swresample_8h.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#typedef-members">Определения типов</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл swresample.h<div class="ingroups"><a class="el" href="../../df/dcb/group__lswr.html">libswresample</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><a href="../../db/d9b/swresample_8h_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Определения типов</h2></td></tr>
+<tr class="memitem:ga4aa775b7fba31d2c8dc14c7b7e282863"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="../../df/dcb/group__lswr.html#ga4aa775b7fba31d2c8dc14c7b7e282863">SwrContext</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dcb/group__lswr.html#ga4aa775b7fba31d2c8dc14c7b7e282863">SwrContext</a></td></tr>
+<tr class="separator:ga4aa775b7fba31d2c8dc14c7b7e282863"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Перечисления</h2></td></tr>
+<tr><td colspan="2"><div class="groupHeader">Option constants</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>These constants are used for the <a class="el" href="../../da/da1/group__avoptions.html">AVOptions</a> interface for lswr. </p>
+</div></td></tr>
+<tr class="memitem:ga387e613b19e5269a46d9ff1a5ee3fcd4"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dcb/group__lswr.html#ga387e613b19e5269a46d9ff1a5ee3fcd4">SwrDitherType</a> { <br />
+&#160;&#160;<a class="el" href="../../df/dcb/group__lswr.html#gga387e613b19e5269a46d9ff1a5ee3fcd4afacc17a82581598f762a8036ba559836">SWR_DITHER_NONE</a> = 0, 
+<a class="el" href="../../df/dcb/group__lswr.html#gga387e613b19e5269a46d9ff1a5ee3fcd4a0fec2dd28b1357b50e9807ca6ecee83a">SWR_DITHER_RECTANGULAR</a>, 
+<a class="el" href="../../df/dcb/group__lswr.html#gga387e613b19e5269a46d9ff1a5ee3fcd4ae4635dc355dc680eeb211e7af17ddfd2">SWR_DITHER_TRIANGULAR</a>, 
+<a class="el" href="../../df/dcb/group__lswr.html#gga387e613b19e5269a46d9ff1a5ee3fcd4a91276f2e437aa9d0d8bdffabe24f5532">SWR_DITHER_TRIANGULAR_HIGHPASS</a>, 
+<br />
+&#160;&#160;<a class="el" href="../../df/dcb/group__lswr.html#gga387e613b19e5269a46d9ff1a5ee3fcd4ae6858a54f5b2e1bffa9aaef20b2593c0">SWR_DITHER_NS</a> = 64, 
+<a class="el" href="../../df/dcb/group__lswr.html#gga387e613b19e5269a46d9ff1a5ee3fcd4a6f6072071262f7f05a52057cfe48df87">SWR_DITHER_NS_LIPSHITZ</a>, 
+<a class="el" href="../../df/dcb/group__lswr.html#gga387e613b19e5269a46d9ff1a5ee3fcd4ae197d7fc5592652aaa8edf1067c56af9">SWR_DITHER_NS_F_WEIGHTED</a>, 
+<a class="el" href="../../df/dcb/group__lswr.html#gga387e613b19e5269a46d9ff1a5ee3fcd4a60eeb8ca5de47916a81f2c3a6534eed4">SWR_DITHER_NS_MODIFIED_E_WEIGHTED</a>, 
+<br />
+&#160;&#160;<a class="el" href="../../df/dcb/group__lswr.html#gga387e613b19e5269a46d9ff1a5ee3fcd4ad13d2ff2831d463eb46ca4c46dfec7b0">SWR_DITHER_NS_IMPROVED_E_WEIGHTED</a>, 
+<a class="el" href="../../df/dcb/group__lswr.html#gga387e613b19e5269a46d9ff1a5ee3fcd4ae3aba4bf43c2210a148b11c0215b5d24">SWR_DITHER_NS_SHIBATA</a>, 
+<a class="el" href="../../df/dcb/group__lswr.html#gga387e613b19e5269a46d9ff1a5ee3fcd4af275c21089abbf78a6623544f34d76f9">SWR_DITHER_NS_LOW_SHIBATA</a>, 
+<a class="el" href="../../df/dcb/group__lswr.html#gga387e613b19e5269a46d9ff1a5ee3fcd4ac569828a706ccf22a8d5810c973c8f17">SWR_DITHER_NS_HIGH_SHIBATA</a>, 
+<br />
+&#160;&#160;<a class="el" href="../../df/dcb/group__lswr.html#gga387e613b19e5269a46d9ff1a5ee3fcd4aacbdf2f91bb14cf390116492115fb8ea">SWR_DITHER_NB</a>
+<br />
+ }</td></tr>
+<tr class="separator:ga387e613b19e5269a46d9ff1a5ee3fcd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga87f9e023bbe780d3ccf17dfc7abed580"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dcb/group__lswr.html#ga87f9e023bbe780d3ccf17dfc7abed580">SwrEngine</a> { <a class="el" href="../../df/dcb/group__lswr.html#gga87f9e023bbe780d3ccf17dfc7abed580a11652db5af0c279d79deba1c577c9729">SWR_ENGINE_SWR</a>, 
+<a class="el" href="../../df/dcb/group__lswr.html#gga87f9e023bbe780d3ccf17dfc7abed580a2933f5b0b96829095a04a8acd19b27e7">SWR_ENGINE_SOXR</a>, 
+<a class="el" href="../../df/dcb/group__lswr.html#gga87f9e023bbe780d3ccf17dfc7abed580a865af2e70ebb85b3cafb93f1854dbef9">SWR_ENGINE_NB</a>
+ }</td></tr>
+<tr class="separator:ga87f9e023bbe780d3ccf17dfc7abed580"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2176b2a3a8b809788f6e7ccdc238b6be"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dcb/group__lswr.html#ga2176b2a3a8b809788f6e7ccdc238b6be">SwrFilterType</a> { <a class="el" href="../../df/dcb/group__lswr.html#gga2176b2a3a8b809788f6e7ccdc238b6bea1a6413b9888bac851e2ee4f991f01d0c">SWR_FILTER_TYPE_CUBIC</a>, 
+<a class="el" href="../../df/dcb/group__lswr.html#gga2176b2a3a8b809788f6e7ccdc238b6bea17f5dd4512b4abc2285905293a81cf55">SWR_FILTER_TYPE_BLACKMAN_NUTTALL</a>, 
+<a class="el" href="../../df/dcb/group__lswr.html#gga2176b2a3a8b809788f6e7ccdc238b6bea8f492a5dc94b6e41a37f190c5492bf3f">SWR_FILTER_TYPE_KAISER</a>
+ }</td></tr>
+<tr class="separator:ga2176b2a3a8b809788f6e7ccdc238b6be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:ga6ca0298348b382cf0fe67d7f339a17f3"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d2/de1/struct_a_v_class.html">AVClass</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dcb/group__lswr.html#ga6ca0298348b382cf0fe67d7f339a17f3">swr_get_class</a> (<a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>)</td></tr>
+<tr class="separator:ga6ca0298348b382cf0fe67d7f339a17f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">SwrContext constructor functions</div></td></tr>
+<tr class="memitem:gaf58c4ff10f73d74bdab8e5aa7193147c"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="../../df/dcb/group__lswr.html#ga4aa775b7fba31d2c8dc14c7b7e282863">SwrContext</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dcb/group__lswr.html#gaf58c4ff10f73d74bdab8e5aa7193147c">swr_alloc</a> (<a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>)</td></tr>
+<tr class="separator:gaf58c4ff10f73d74bdab8e5aa7193147c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae173e8ed91717700471a1dcd06f00f67"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dcb/group__lswr.html#gae173e8ed91717700471a1dcd06f00f67">swr_init</a> (struct <a class="el" href="../../df/dcb/group__lswr.html#ga4aa775b7fba31d2c8dc14c7b7e282863">SwrContext</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>)</td></tr>
+<tr class="separator:gae173e8ed91717700471a1dcd06f00f67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab11b02705e97404b6d74b18b2fcfdfcf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dcb/group__lswr.html#gab11b02705e97404b6d74b18b2fcfdfcf">swr_is_initialized</a> (struct <a class="el" href="../../df/dcb/group__lswr.html#ga4aa775b7fba31d2c8dc14c7b7e282863">SwrContext</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>)</td></tr>
+<tr class="separator:gab11b02705e97404b6d74b18b2fcfdfcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad7f29022726c871aadf935281a9813bc"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="../../df/dcb/group__lswr.html#ga4aa775b7fba31d2c8dc14c7b7e282863">SwrContext</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dcb/group__lswr.html#gad7f29022726c871aadf935281a9813bc">swr_alloc_set_opts</a> (struct <a class="el" href="../../df/dcb/group__lswr.html#ga4aa775b7fba31d2c8dc14c7b7e282863">SwrContext</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>, <a class="el" href="../../dd/df4/alext_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a> out_ch_layout, enum <a class="el" href="../../da/d54/group__lavu__sampfmts.html#gaf9a51ca15301871723577c730b5865c5">AVSampleFormat</a> out_sample_fmt, int out_sample_rate, <a class="el" href="../../dd/df4/alext_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a> in_ch_layout, enum <a class="el" href="../../da/d54/group__lavu__sampfmts.html#gaf9a51ca15301871723577c730b5865c5">AVSampleFormat</a> in_sample_fmt, int in_sample_rate, int log_offset, <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *log_ctx)</td></tr>
+<tr class="separator:gad7f29022726c871aadf935281a9813bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">SwrContext destructor functions</div></td></tr>
+<tr class="memitem:ga818f7d78b1ad7d8d5b70de374b668c34"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dcb/group__lswr.html#ga818f7d78b1ad7d8d5b70de374b668c34">swr_free</a> (struct <a class="el" href="../../df/dcb/group__lswr.html#ga4aa775b7fba31d2c8dc14c7b7e282863">SwrContext</a> **<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>)</td></tr>
+<tr class="separator:ga818f7d78b1ad7d8d5b70de374b668c34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa4bf1048740dfc08d68aba9f1b4db22e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dcb/group__lswr.html#gaa4bf1048740dfc08d68aba9f1b4db22e">swr_close</a> (struct <a class="el" href="../../df/dcb/group__lswr.html#ga4aa775b7fba31d2c8dc14c7b7e282863">SwrContext</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>)</td></tr>
+<tr class="separator:gaa4bf1048740dfc08d68aba9f1b4db22e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Core conversion functions</div></td></tr>
+<tr class="memitem:gaa5bb6cab830146efa8c760fa66ee582a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dcb/group__lswr.html#gaa5bb6cab830146efa8c760fa66ee582a">swr_convert</a> (struct <a class="el" href="../../df/dcb/group__lswr.html#ga4aa775b7fba31d2c8dc14c7b7e282863">SwrContext</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>, <a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> **out, int out_count, const <a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> **<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a83ad0ee7f1e06b59c90271716e689080">in</a>, int in_count)</td></tr>
+<tr class="separator:gaa5bb6cab830146efa8c760fa66ee582a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaad9811626c6c01a241f6bf46aff27333"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/df4/alext_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dcb/group__lswr.html#gaad9811626c6c01a241f6bf46aff27333">swr_next_pts</a> (struct <a class="el" href="../../df/dcb/group__lswr.html#ga4aa775b7fba31d2c8dc14c7b7e282863">SwrContext</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>, <a class="el" href="../../dd/df4/alext_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a> pts)</td></tr>
+<tr class="separator:gaad9811626c6c01a241f6bf46aff27333"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Low-level option setting functions</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>These functons provide a means to set low-level options that is not possible with the <a class="el" href="../../d3/ded/struct_a_v_option.html">AVOption</a> API. </p>
+</div></td></tr>
+<tr class="memitem:gab7f21690522b85d7757e13fa9853d4d8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dcb/group__lswr.html#gab7f21690522b85d7757e13fa9853d4d8">swr_set_compensation</a> (struct <a class="el" href="../../df/dcb/group__lswr.html#ga4aa775b7fba31d2c8dc14c7b7e282863">SwrContext</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>, int sample_delta, int compensation_distance)</td></tr>
+<tr class="separator:gab7f21690522b85d7757e13fa9853d4d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1b528050b5f5b704aecbfbc257a17ef0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dcb/group__lswr.html#ga1b528050b5f5b704aecbfbc257a17ef0">swr_set_channel_mapping</a> (struct <a class="el" href="../../df/dcb/group__lswr.html#ga4aa775b7fba31d2c8dc14c7b7e282863">SwrContext</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>, const int *channel_map)</td></tr>
+<tr class="separator:ga1b528050b5f5b704aecbfbc257a17ef0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0405fcd08440b3fc0165a00969582dc3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dcb/group__lswr.html#ga0405fcd08440b3fc0165a00969582dc3">swr_build_matrix</a> (<a class="el" href="../../dd/df4/alext_8h.html#aec6fcb673ff035718c238c8c9d544c47">uint64_t</a> in_layout, <a class="el" href="../../dd/df4/alext_8h.html#aec6fcb673ff035718c238c8c9d544c47">uint64_t</a> out_layout, double center_mix_level, double surround_mix_level, double lfe_mix_level, double rematrix_maxval, double rematrix_volume, double *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a7b24a3f2f56eb1244ae69dacb4fecb6f">matrix</a>, int <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#a743715bb319dd426e85b9774559cc0ea">stride</a>, enum <a class="el" href="../../db/dac/group__channel__mask__c.html#gabd576ea664e3ac5d31f3362064fe13e6">AVMatrixEncoding</a> matrix_encoding, <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *log_ctx)</td></tr>
+<tr class="separator:ga0405fcd08440b3fc0165a00969582dc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf9064d65b1e654dc78f7d6bcd2e8c747"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dcb/group__lswr.html#gaf9064d65b1e654dc78f7d6bcd2e8c747">swr_set_matrix</a> (struct <a class="el" href="../../df/dcb/group__lswr.html#ga4aa775b7fba31d2c8dc14c7b7e282863">SwrContext</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>, const double *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a7b24a3f2f56eb1244ae69dacb4fecb6f">matrix</a>, int <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#a743715bb319dd426e85b9774559cc0ea">stride</a>)</td></tr>
+<tr class="separator:gaf9064d65b1e654dc78f7d6bcd2e8c747"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Sample handling functions</div></td></tr>
+<tr class="memitem:ga43d7ba4507891fc25aacbbea5cdfb065"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dcb/group__lswr.html#ga43d7ba4507891fc25aacbbea5cdfb065">swr_drop_output</a> (struct <a class="el" href="../../df/dcb/group__lswr.html#ga4aa775b7fba31d2c8dc14c7b7e282863">SwrContext</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>, int <a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a619bc20e8198de3bd3f3d7fc34de66b2">count</a>)</td></tr>
+<tr class="separator:ga43d7ba4507891fc25aacbbea5cdfb065"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4733ed4779ed3e30379de2a6ef8de837"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dcb/group__lswr.html#ga4733ed4779ed3e30379de2a6ef8de837">swr_inject_silence</a> (struct <a class="el" href="../../df/dcb/group__lswr.html#ga4aa775b7fba31d2c8dc14c7b7e282863">SwrContext</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>, int <a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a619bc20e8198de3bd3f3d7fc34de66b2">count</a>)</td></tr>
+<tr class="separator:ga4733ed4779ed3e30379de2a6ef8de837"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5121a5a7890a2d23b72dc871dd0ebb06"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/df4/alext_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dcb/group__lswr.html#ga5121a5a7890a2d23b72dc871dd0ebb06">swr_get_delay</a> (struct <a class="el" href="../../df/dcb/group__lswr.html#ga4aa775b7fba31d2c8dc14c7b7e282863">SwrContext</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>, <a class="el" href="../../dd/df4/alext_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a> base)</td></tr>
+<tr class="separator:ga5121a5a7890a2d23b72dc871dd0ebb06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga97a8d5f6abe3bcdfb6072412f17285a4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dcb/group__lswr.html#ga97a8d5f6abe3bcdfb6072412f17285a4">swr_get_out_samples</a> (struct <a class="el" href="../../df/dcb/group__lswr.html#ga4aa775b7fba31d2c8dc14c7b7e282863">SwrContext</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>, int in_samples)</td></tr>
+<tr class="separator:ga97a8d5f6abe3bcdfb6072412f17285a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Configuration accessors</div></td></tr>
+<tr class="memitem:gaed39c2153a1e26b4ef656ec8c765a2e3"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dcb/group__lswr.html#gaed39c2153a1e26b4ef656ec8c765a2e3">swresample_version</a> (<a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>)</td></tr>
+<tr class="separator:gaed39c2153a1e26b4ef656ec8c765a2e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad602fde7a824753d5adc57e7f1372e27"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dcb/group__lswr.html#gad602fde7a824753d5adc57e7f1372e27">swresample_configuration</a> (<a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>)</td></tr>
+<tr class="separator:gad602fde7a824753d5adc57e7f1372e27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga29c5657b18632e206a99d1ae27225499"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dcb/group__lswr.html#ga29c5657b18632e206a99d1ae27225499">swresample_license</a> (<a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>)</td></tr>
+<tr class="separator:ga29c5657b18632e206a99d1ae27225499"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">AVFrame based API</div></td></tr>
+<tr class="memitem:gac482028c01d95580106183aa84b0930c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dcb/group__lswr.html#gac482028c01d95580106183aa84b0930c">swr_convert_frame</a> (<a class="el" href="../../df/dcb/group__lswr.html#ga4aa775b7fba31d2c8dc14c7b7e282863">SwrContext</a> *swr, <a class="el" href="../../d6/d03/struct_a_v_frame.html">AVFrame</a> *output, const <a class="el" href="../../d6/d03/struct_a_v_frame.html">AVFrame</a> *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#ad3c78daa7d8673f71649d4840c641779">input</a>)</td></tr>
+<tr class="separator:gac482028c01d95580106183aa84b0930c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga73ade2cf6934765cf518c6c917b77c76"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dcb/group__lswr.html#ga73ade2cf6934765cf518c6c917b77c76">swr_config_frame</a> (<a class="el" href="../../df/dcb/group__lswr.html#ga4aa775b7fba31d2c8dc14c7b7e282863">SwrContext</a> *swr, const <a class="el" href="../../d6/d03/struct_a_v_frame.html">AVFrame</a> *out, const <a class="el" href="../../d6/d03/struct_a_v_frame.html">AVFrame</a> *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a83ad0ee7f1e06b59c90271716e689080">in</a>)</td></tr>
+<tr class="separator:ga73ade2cf6934765cf518c6c917b77c76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>libswresample public header </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/d9b/swresample_8h_source.html">swresample.h</a></p>
+</div></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_97aefd0d527b934f1d99a682da8fe6a9.html">lib</a></li><li class="navelem"><a class="el" href="../../dir_da53678e933bc13c5b44fc9f96ac81aa.html">win32</a></li><li class="navelem"><a class="el" href="../../dir_7ac189985cec0e073b46d34a5d96bfc1.html">x86</a></li><li class="navelem"><a class="el" href="../../dir_e3469dbcd8a5e63a5540df758d989c34.html">ffmpeg-4.2.2</a></li><li class="navelem"><a class="el" href="../../dir_880368755e1ee5b32b1864dac7163836.html">include</a></li><li class="navelem"><a class="el" href="../../dir_d29e400eeefebb0817cfe7831ae8d034.html">libswresample</a></li><li class="navelem"><a class="el" href="../../db/d9b/swresample_8h.html">swresample.h</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:04:17. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

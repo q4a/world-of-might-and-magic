@@ -1,0 +1,743 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Класс OSWindow</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('db/da4/class_o_s_window.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pro-attribs">Защищенные данные</a> &#124;
+<a href="../../da/dc9/class_o_s_window-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс OSWindow<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="../../d0/df6/_o_s_window_8h_source.html">OSWindow.h</a>&gt;</code></p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Граф наследования:OSWindow:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d1/d72/class_o_s_window__inherit__graph.svg" width="240" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">см. легенду</a>]</span></center></div>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="../../closed.png" alt="+"/> Граф связей класса OSWindow:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d6/d76/class_o_s_window__coll__graph.svg" width="466" height="410"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a9bc566c58d6d49b638481e00b2d163a6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da4/class_o_s_window.html#a9bc566c58d6d49b638481e00b2d163a6">OSWindow</a> ()</td></tr>
+<tr class="separator:a9bc566c58d6d49b638481e00b2d163a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9638d4750a519325c9a8b1440ab734f3"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da4/class_o_s_window.html#a9638d4750a519325c9a8b1440ab734f3">SetFullscreenMode</a> ()=0</td></tr>
+<tr class="separator:a9638d4750a519325c9a8b1440ab734f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e2980fc9dacf730e9b402ee23b67fec"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da4/class_o_s_window.html#a4e2980fc9dacf730e9b402ee23b67fec">SetWindowedMode</a> (int new_window_width, int new_window_height)=0</td></tr>
+<tr class="separator:a4e2980fc9dacf730e9b402ee23b67fec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acefdd76200a79ad1a2470ffaba79d931"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da4/class_o_s_window.html#acefdd76200a79ad1a2470ffaba79d931">SetCursor</a> (const char *cursor_name)=0</td></tr>
+<tr class="separator:acefdd76200a79ad1a2470ffaba79d931"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f227932ce302a7de92f454f2d56e6ff"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da4/class_o_s_window.html#a3f227932ce302a7de92f454f2d56e6ff">GetX</a> () const =0</td></tr>
+<tr class="separator:a3f227932ce302a7de92f454f2d56e6ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d7eaf4454b4341287b627707272d4b0"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da4/class_o_s_window.html#a2d7eaf4454b4341287b627707272d4b0">GetY</a> () const =0</td></tr>
+<tr class="separator:a2d7eaf4454b4341287b627707272d4b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a9f8dcf1edbc15b7fe18d961d790058"><td class="memItemLeft" align="right" valign="top">virtual unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da4/class_o_s_window.html#a1a9f8dcf1edbc15b7fe18d961d790058">GetWidth</a> () const =0</td></tr>
+<tr class="separator:a1a9f8dcf1edbc15b7fe18d961d790058"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9429736faeacd2622e2b96053d19804"><td class="memItemLeft" align="right" valign="top">virtual unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da4/class_o_s_window.html#af9429736faeacd2622e2b96053d19804">GetHeight</a> () const =0</td></tr>
+<tr class="separator:af9429736faeacd2622e2b96053d19804"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3bcf249e9160bad317ff3d1e7c579f3"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d8/dc8/struct_point.html">Point</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da4/class_o_s_window.html#ad3bcf249e9160bad317ff3d1e7c579f3">TransformCursorPos</a> (<a class="el" href="../../d8/dc8/struct_point.html">Point</a> &amp;pt) const =0</td></tr>
+<tr class="separator:ad3bcf249e9160bad317ff3d1e7c579f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac78b183f9694ce0a27466e9308157017"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da4/class_o_s_window.html#ac78b183f9694ce0a27466e9308157017">OnOSMenu</a> (int item_id)=0</td></tr>
+<tr class="separator:ac78b183f9694ce0a27466e9308157017"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad66e71c73b965cf2f319028236d136b2"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da4/class_o_s_window.html#ad66e71c73b965cf2f319028236d136b2">Show</a> ()=0</td></tr>
+<tr class="separator:ad66e71c73b965cf2f319028236d136b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a385cfb98bf07c7340227b63be0ef56da"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da4/class_o_s_window.html#a385cfb98bf07c7340227b63be0ef56da">Focused</a> ()=0</td></tr>
+<tr class="separator:a385cfb98bf07c7340227b63be0ef56da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a113dc175fcf6c5c4ebd3cb80b3ab9ad4"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da4/class_o_s_window.html#a113dc175fcf6c5c4ebd3cb80b3ab9ad4">Activate</a> ()=0</td></tr>
+<tr class="separator:a113dc175fcf6c5c4ebd3cb80b3ab9ad4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20dd22fff43a609ad677ff75e499595e"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da4/class_o_s_window.html#a20dd22fff43a609ad677ff75e499595e">PeekSingleMessage</a> ()=0</td></tr>
+<tr class="separator:a20dd22fff43a609ad677ff75e499595e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f74522fd3e4b3290db2b663f73ab572"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da4/class_o_s_window.html#a6f74522fd3e4b3290db2b663f73ab572">PeekMessageLoop</a> ()=0</td></tr>
+<tr class="separator:a6f74522fd3e4b3290db2b663f73ab572"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14ecc929f299d6a1079ad6db9a5560aa"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da4/class_o_s_window.html#a14ecc929f299d6a1079ad6db9a5560aa">GetWinApiHandle</a> ()=0</td></tr>
+<tr class="separator:a14ecc929f299d6a1079ad6db9a5560aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca09e1554c96e0102f6bc445e9c60a51"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da4/class_o_s_window.html#aca09e1554c96e0102f6bc445e9c60a51">OpenGlCreate</a> ()=0</td></tr>
+<tr class="separator:aca09e1554c96e0102f6bc445e9c60a51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c6ef7297e6265bbd26ba12caa021a10"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da4/class_o_s_window.html#a0c6ef7297e6265bbd26ba12caa021a10">OpenGlSwapBuffers</a> ()=0</td></tr>
+<tr class="separator:a0c6ef7297e6265bbd26ba12caa021a10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Защищенные данные</h2></td></tr>
+<tr class="memitem:adb6df4c86bfd15f3cbed541352eca0fd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d12/class_application_1_1_game_window_handler.html">GameWindowHandler</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da4/class_o_s_window.html#adb6df4c86bfd15f3cbed541352eca0fd">gameCallback</a> = nullptr</td></tr>
+<tr class="separator:adb6df4c86bfd15f3cbed541352eca0fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d7ed6d54d9d75d632aecd7bf78c0236"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d70/class_log.html">Log</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da4/class_o_s_window.html#a7d7ed6d54d9d75d632aecd7bf78c0236">log</a> = nullptr</td></tr>
+<tr class="separator:a7d7ed6d54d9d75d632aecd7bf78c0236"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock">
+<p class="definition">См. определение в файле <a class="el" href="../../d0/df6/_o_s_window_8h_source.html">OSWindow.h</a> строка <a class="el" href="../../d0/df6/_o_s_window_8h_source.html#l00012">12</a></p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a9bc566c58d6d49b638481e00b2d163a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9bc566c58d6d49b638481e00b2d163a6">&#9670;&nbsp;</a></span>OSWindow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">OSWindow::OSWindow </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d9/db3/_o_s_window_8cpp_source.html">OSWindow.cpp</a> строка <a class="el" href="../../d9/db3/_o_s_window_8cpp_source.html#l00012">12</a></p>
+<div class="fragment"><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;                   {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    this-&gt;<a class="code" href="../../db/da4/class_o_s_window.html#adb6df4c86bfd15f3cbed541352eca0fd">gameCallback</a> = <a class="code" href="../../d5/d77/class_application_1_1_ioc_container.html#a080d7029162290db9d0236c4d681f4f9">ApplicationIoc::ResolveGameWindowHandler</a>();</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    this-&gt;<a class="code" href="../../db/da4/class_o_s_window.html#a7d7ed6d54d9d75d632aecd7bf78c0236">log</a> = <a class="code" href="../../d1/d12/class_engine___1_1_ioc_container.html#a095a16a5af8d2d49ae6445b823332256">EngineIoc::ResolveLogger</a>();</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d0/df6/_o_s_window_8h_source.html#l00043">gameCallback</a>, <a class="el" href="../../d0/df6/_o_s_window_8h_source.html#l00044">log</a>, <a class="el" href="../../d2/de7/src_2_application_2_ioc_container_8cpp_source.html#l00021">Application::IocContainer::ResolveGameWindowHandler()</a> и <a class="el" href="../../de/d8c/_engine_2_ioc_container_8cpp_source.html#l00051">Engine_::IocContainer::ResolveLogger()</a>.</p>
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../db/da4/class_o_s_window_a9bc566c58d6d49b638481e00b2d163a6_cgraph.svg" width="100%" height="402"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a9638d4750a519325c9a8b1440ab734f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9638d4750a519325c9a8b1440ab734f3">&#9670;&nbsp;</a></span>SetFullscreenMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> OSWindow::SetFullscreenMode </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещается в <a class="el" href="../../d3/da4/class_win_api_window.html#a8e980242e5c51f3740dce17e55bd15df">WinApiWindow</a> и <a class="el" href="../../d4/d57/class_sdl2_window.html#abbd8e2f42347486b3ce48558e9d2dcfe">Sdl2Window</a>.</p>
+
+</div>
+</div>
+<a id="a4e2980fc9dacf730e9b402ee23b67fec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e2980fc9dacf730e9b402ee23b67fec">&#9670;&nbsp;</a></span>SetWindowedMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> OSWindow::SetWindowedMode </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>new_window_width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>new_window_height</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещается в <a class="el" href="../../d3/da4/class_win_api_window.html#a33e9ef16a0f133d00c32accd8aae21d4">WinApiWindow</a> и <a class="el" href="../../d4/d57/class_sdl2_window.html#a0273d305e391308bdc0ae8bc36c48609">Sdl2Window</a>.</p>
+
+</div>
+</div>
+<a id="acefdd76200a79ad1a2470ffaba79d931"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acefdd76200a79ad1a2470ffaba79d931">&#9670;&nbsp;</a></span>SetCursor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> OSWindow::SetCursor </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>cursor_name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещается в <a class="el" href="../../d3/da4/class_win_api_window.html#ad8bf3afce78caa7bfb94dfff47bd179b">WinApiWindow</a> и <a class="el" href="../../d4/d57/class_sdl2_window.html#ac30dd9445ebf4328334279c2f0d50015">Sdl2Window</a>.</p>
+
+</div>
+</div>
+<a id="a3f227932ce302a7de92f454f2d56e6ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f227932ce302a7de92f454f2d56e6ff">&#9670;&nbsp;</a></span>GetX()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int OSWindow::GetX </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещается в <a class="el" href="../../d3/da4/class_win_api_window.html#a45f7496c41c2a7bce97867b0d486dd21">WinApiWindow</a> и <a class="el" href="../../d4/d57/class_sdl2_window.html#aab0e38bad68951c8b41432957cdafc83">Sdl2Window</a>.</p>
+
+</div>
+</div>
+<a id="a2d7eaf4454b4341287b627707272d4b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d7eaf4454b4341287b627707272d4b0">&#9670;&nbsp;</a></span>GetY()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int OSWindow::GetY </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещается в <a class="el" href="../../d3/da4/class_win_api_window.html#ac0a03beeab3bc3773bbde9e2d6d67a01">WinApiWindow</a> и <a class="el" href="../../d4/d57/class_sdl2_window.html#a83afc986e1d5e333da9bc29a20f2f287">Sdl2Window</a>.</p>
+
+</div>
+</div>
+<a id="a1a9f8dcf1edbc15b7fe18d961d790058"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a9f8dcf1edbc15b7fe18d961d790058">&#9670;&nbsp;</a></span>GetWidth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual unsigned int OSWindow::GetWidth </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещается в <a class="el" href="../../d3/da4/class_win_api_window.html#ad4eef290a18562f46ef79c885f6945aa">WinApiWindow</a> и <a class="el" href="../../d4/d57/class_sdl2_window.html#a16f47136e465da1f74000cfd693e1d42">Sdl2Window</a>.</p>
+
+</div>
+</div>
+<a id="af9429736faeacd2622e2b96053d19804"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9429736faeacd2622e2b96053d19804">&#9670;&nbsp;</a></span>GetHeight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual unsigned int OSWindow::GetHeight </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещается в <a class="el" href="../../d3/da4/class_win_api_window.html#a28c57f4e1c49fe85193f6b29f3387cf6">WinApiWindow</a> и <a class="el" href="../../d4/d57/class_sdl2_window.html#a660a2dc37d35ff663fc7476a10a0f0d9">Sdl2Window</a>.</p>
+
+</div>
+</div>
+<a id="ad3bcf249e9160bad317ff3d1e7c579f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3bcf249e9160bad317ff3d1e7c579f3">&#9670;&nbsp;</a></span>TransformCursorPos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="../../d8/dc8/struct_point.html">Point</a> OSWindow::TransformCursorPos </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d8/dc8/struct_point.html">Point</a> &amp;&#160;</td>
+          <td class="paramname"><em>pt</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещается в <a class="el" href="../../d3/da4/class_win_api_window.html#aa1871fe0ac2192607e2289bdcbff1604">WinApiWindow</a> и <a class="el" href="../../d4/d57/class_sdl2_window.html#a3c6a909a607294e6d66905441cfb0500">Sdl2Window</a>.</p>
+
+</div>
+</div>
+<a id="ac78b183f9694ce0a27466e9308157017"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac78b183f9694ce0a27466e9308157017">&#9670;&nbsp;</a></span>OnOSMenu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool OSWindow::OnOSMenu </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>item_id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещается в <a class="el" href="../../d3/da4/class_win_api_window.html#ac7dffd1a9acce9462f7373d678d79f0a">WinApiWindow</a> и <a class="el" href="../../d4/d57/class_sdl2_window.html#adfe7d305c7f0e50a8cab70d4207e2e9e">Sdl2Window</a>.</p>
+
+</div>
+</div>
+<a id="ad66e71c73b965cf2f319028236d136b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad66e71c73b965cf2f319028236d136b2">&#9670;&nbsp;</a></span>Show()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> OSWindow::Show </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещается в <a class="el" href="../../d3/da4/class_win_api_window.html#a4765def8be1b8357a87dbe7eb7ad08f4">WinApiWindow</a> и <a class="el" href="../../d4/d57/class_sdl2_window.html#a0dd6c37030f6dad341aec034d0bff1dd">Sdl2Window</a>.</p>
+
+</div>
+</div>
+<a id="a385cfb98bf07c7340227b63be0ef56da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a385cfb98bf07c7340227b63be0ef56da">&#9670;&nbsp;</a></span>Focused()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool OSWindow::Focused </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещается в <a class="el" href="../../d3/da4/class_win_api_window.html#ae8ae2c1a2aa01dc483dbda914d711348">WinApiWindow</a> и <a class="el" href="../../d4/d57/class_sdl2_window.html#a1132084f0f2631cc02b43e9ea47c2917">Sdl2Window</a>.</p>
+
+</div>
+</div>
+<a id="a113dc175fcf6c5c4ebd3cb80b3ab9ad4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a113dc175fcf6c5c4ebd3cb80b3ab9ad4">&#9670;&nbsp;</a></span>Activate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> OSWindow::Activate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещается в <a class="el" href="../../d3/da4/class_win_api_window.html#a2cf345adb0061db3632ad44d8264db70">WinApiWindow</a> и <a class="el" href="../../d4/d57/class_sdl2_window.html#a9b769335b68750a84afc47d9e010118a">Sdl2Window</a>.</p>
+
+</div>
+</div>
+<a id="a20dd22fff43a609ad677ff75e499595e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20dd22fff43a609ad677ff75e499595e">&#9670;&nbsp;</a></span>PeekSingleMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> OSWindow::PeekSingleMessage </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещается в <a class="el" href="../../d3/da4/class_win_api_window.html#ac73a1c3ffeebead24c8dbd21e85848d9">WinApiWindow</a> и <a class="el" href="../../d4/d57/class_sdl2_window.html#a025ddd23e30a4cfd14f9361834f51d3c">Sdl2Window</a>.</p>
+
+</div>
+</div>
+<a id="a6f74522fd3e4b3290db2b663f73ab572"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f74522fd3e4b3290db2b663f73ab572">&#9670;&nbsp;</a></span>PeekMessageLoop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> OSWindow::PeekMessageLoop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещается в <a class="el" href="../../d3/da4/class_win_api_window.html#acf26c3fbded5b1d9f3540cd9aefda9ca">WinApiWindow</a> и <a class="el" href="../../d4/d57/class_sdl2_window.html#ad7e54fb14bc94c3939631a909ec17370">Sdl2Window</a>.</p>
+
+</div>
+</div>
+<a id="a14ecc929f299d6a1079ad6db9a5560aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14ecc929f299d6a1079ad6db9a5560aa">&#9670;&nbsp;</a></span>GetWinApiHandle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>* OSWindow::GetWinApiHandle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещается в <a class="el" href="../../d3/da4/class_win_api_window.html#a4c69da169aa8a542cbc3b0ccc7170e6c">WinApiWindow</a> и <a class="el" href="../../d4/d57/class_sdl2_window.html#a8eaac87bbd4503351ad52d37c6e15050">Sdl2Window</a>.</p>
+
+</div>
+</div>
+<a id="aca09e1554c96e0102f6bc445e9c60a51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca09e1554c96e0102f6bc445e9c60a51">&#9670;&nbsp;</a></span>OpenGlCreate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> OSWindow::OpenGlCreate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещается в <a class="el" href="../../d4/d57/class_sdl2_window.html#a7ecb3da7df633650a7bdb9a6fe315986">Sdl2Window</a>.</p>
+
+</div>
+</div>
+<a id="a0c6ef7297e6265bbd26ba12caa021a10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c6ef7297e6265bbd26ba12caa021a10">&#9670;&nbsp;</a></span>OpenGlSwapBuffers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> OSWindow::OpenGlSwapBuffers </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещается в <a class="el" href="../../d4/d57/class_sdl2_window.html#a8d67346939b1f65cf3efad96830bcf91">Sdl2Window</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="adb6df4c86bfd15f3cbed541352eca0fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb6df4c86bfd15f3cbed541352eca0fd">&#9670;&nbsp;</a></span>gameCallback</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/d12/class_application_1_1_game_window_handler.html">GameWindowHandler</a>* OSWindow::gameCallback = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d0/df6/_o_s_window_8h_source.html">OSWindow.h</a> строка <a class="el" href="../../d0/df6/_o_s_window_8h_source.html#l00043">43</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d6/d76/_sdl2_window_8cpp_source.html#l00005">Sdl2Window::MessageProc()</a>, <a class="el" href="../../d9/db3/_o_s_window_8cpp_source.html#l00012">OSWindow()</a> и <a class="el" href="../../d4/dff/_win_api_window_8cpp_source.html#l00078">WinApiWindow::WinApiMessageProc()</a>.</p>
+
+</div>
+</div>
+<a id="a7d7ed6d54d9d75d632aecd7bf78c0236"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d7ed6d54d9d75d632aecd7bf78c0236">&#9670;&nbsp;</a></span>log</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d6/d70/class_log.html">Log</a>* OSWindow::log = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d0/df6/_o_s_window_8h_source.html">OSWindow.h</a> строка <a class="el" href="../../d0/df6/_o_s_window_8h_source.html#l00044">44</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d6/d76/_sdl2_window_8cpp_source.html#l00242">Sdl2Window::OpenGlCreate()</a> и <a class="el" href="../../d9/db3/_o_s_window_8cpp_source.html#l00012">OSWindow()</a>.</p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>C:/git/world-of-might-and-magic/Platform/<a class="el" href="../../d0/df6/_o_s_window_8h_source.html">OSWindow.h</a></li>
+<li>C:/git/world-of-might-and-magic/Platform/<a class="el" href="../../d9/db3/_o_s_window_8cpp_source.html">OSWindow.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aclass_engine___1_1_ioc_container_html_a095a16a5af8d2d49ae6445b823332256"><div class="ttname"><a href="../../d1/d12/class_engine___1_1_ioc_container.html#a095a16a5af8d2d49ae6445b823332256">Engine_::IocContainer::ResolveLogger</a></div><div class="ttdeci">static Log * ResolveLogger()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d8c/_engine_2_ioc_container_8cpp_source.html#l00051">IocContainer.cpp:51</a></div></div>
+<div class="ttc" id="aclass_o_s_window_html_a7d7ed6d54d9d75d632aecd7bf78c0236"><div class="ttname"><a href="../../db/da4/class_o_s_window.html#a7d7ed6d54d9d75d632aecd7bf78c0236">OSWindow::log</a></div><div class="ttdeci">Log * log</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/df6/_o_s_window_8h_source.html#l00044">OSWindow.h:44</a></div></div>
+<div class="ttc" id="aclass_o_s_window_html_adb6df4c86bfd15f3cbed541352eca0fd"><div class="ttname"><a href="../../db/da4/class_o_s_window.html#adb6df4c86bfd15f3cbed541352eca0fd">OSWindow::gameCallback</a></div><div class="ttdeci">GameWindowHandler * gameCallback</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/df6/_o_s_window_8h_source.html#l00043">OSWindow.h:43</a></div></div>
+<div class="ttc" id="aclass_application_1_1_ioc_container_html_a080d7029162290db9d0236c4d681f4f9"><div class="ttname"><a href="../../d5/d77/class_application_1_1_ioc_container.html#a080d7029162290db9d0236c4d681f4f9">Application::IocContainer::ResolveGameWindowHandler</a></div><div class="ttdeci">static GameWindowHandler * ResolveGameWindowHandler()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de7/src_2_application_2_ioc_container_8cpp_source.html#l00021">IocContainer.cpp:21</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../db/da4/class_o_s_window.html">OSWindow</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:05:00. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Исходный файл C:/git/world-of-might-and-magic/Engine/Objects/Chest.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d7/d0e/_chest_8h_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Chest.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d7/d0e/_chest_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d5/da4/_items_8h.html">Engine/Objects/Items.h</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../de/df7/_strings_8h.html">Engine/Strings.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="../../d7/d0e/_chest_8h.html#a28efc1643b99dc40e3f89f10ebc64828">    8</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="../../d7/d0e/_chest_8h.html#a28efc1643b99dc40e3f89f10ebc64828">CHEST_FLAGS</a> {</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="../../d7/d0e/_chest_8h.html#a28efc1643b99dc40e3f89f10ebc64828aac7f7c9bb3a08b484f740b83403f10ea">    9</a></span>&#160;    <a class="code" href="../../d7/d0e/_chest_8h.html#a28efc1643b99dc40e3f89f10ebc64828aac7f7c9bb3a08b484f740b83403f10ea">CHEST_TRAPPED</a> = 0x1,</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="../../d7/d0e/_chest_8h.html#a28efc1643b99dc40e3f89f10ebc64828a181c555a7c1cffd1182dc9084b853009">   10</a></span>&#160;    <a class="code" href="../../d7/d0e/_chest_8h.html#a28efc1643b99dc40e3f89f10ebc64828a181c555a7c1cffd1182dc9084b853009">CHEST_ITEMS_PLACED</a> = 0x2,</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="../../d7/d0e/_chest_8h.html#a28efc1643b99dc40e3f89f10ebc64828a1a93ce403739c9ed232dff1b0e930695">   11</a></span>&#160;    <a class="code" href="../../d7/d0e/_chest_8h.html#a28efc1643b99dc40e3f89f10ebc64828a1a93ce403739c9ed232dff1b0e930695">CHEST_OPENED</a> = 0x4,</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;};</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="../../db/dc5/struct_chest_desc.html">   14</a></span>&#160;<span class="keyword">struct </span><a class="code" href="../../db/dc5/struct_chest_desc.html">ChestDesc</a> {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="../../db/dc5/struct_chest_desc.html#a18252c00402a674e017b45d2650aaccf">ChestDesc</a>(<span class="keyword">struct</span> <a class="code" href="../../d1/d96/struct_chest_desc__mm7.html">ChestDesc_mm7</a> *pChest);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="../../db/dc5/struct_chest_desc.html#a66c4552377e5d68ce616813a7ed05ad0">   17</a></span>&#160;    <a class="code" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> <a class="code" href="../../db/dc5/struct_chest_desc.html#a66c4552377e5d68ce616813a7ed05ad0">sName</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="../../db/dc5/struct_chest_desc.html#a6cb72f2db8932758ba084b50bf0238f0">   18</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../db/dc5/struct_chest_desc.html#a6cb72f2db8932758ba084b50bf0238f0">uWidth</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="../../db/dc5/struct_chest_desc.html#ae9ddaede3fc3854431951ce226a1ba59">   19</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../db/dc5/struct_chest_desc.html#ae9ddaede3fc3854431951ce226a1ba59">uHeight</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="../../db/dc5/struct_chest_desc.html#a37b0ffa4fba07f47c4dac11c7810e095">   20</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../db/dc5/struct_chest_desc.html#a37b0ffa4fba07f47c4dac11c7810e095">uTextureID</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;};</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="../../d1/d7a/class_chest_list.html">   23</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d1/d7a/class_chest_list.html">ChestList</a> {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="../../d1/d7a/class_chest_list.html#a880d8523bf3a752d7ddb13c394536dae">   25</a></span>&#160;    <a class="code" href="../../d1/d7a/class_chest_list.html#a880d8523bf3a752d7ddb13c394536dae">ChestList</a>() {}</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d1/d7a/class_chest_list.html#a5bb5c3d294944af2c8e6f928107a08e5">FromFile</a>(<span class="keywordtype">void</span> *data_mm6, <span class="keywordtype">void</span> *data_mm7, <span class="keywordtype">void</span> *data_mm8);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="../../d1/d7a/class_chest_list.html#a8d89c28a0eed566f415aa78c5a87b581">   30</a></span>&#160;    std::vector&lt;ChestDesc&gt; <a class="code" href="../../d1/d7a/class_chest_list.html#a8d89c28a0eed566f415aa78c5a87b581">vChests</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;};</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">/*   65 */</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#pragma pack(push, 1)</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="../../db/d0a/struct_chest.html">   35</a></span>&#160;<span class="keyword">struct </span><a class="code" href="../../db/d0a/struct_chest.html">Chest</a> {  <span class="comment">// 0x14cc</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="../../db/d0a/struct_chest.html#a500d5248fa9b38870e8c4f5d6da8b89e">   36</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="../../db/d0a/struct_chest.html#a500d5248fa9b38870e8c4f5d6da8b89e">Initialized</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="../../db/d0a/struct_chest.html#a2cc56f6e3257ec1aa7d45d1c03613fd0">uFlags</a> &amp; <a class="code" href="../../d7/d0e/_chest_8h.html#a28efc1643b99dc40e3f89f10ebc64828a181c555a7c1cffd1182dc9084b853009">CHEST_ITEMS_PLACED</a>) != 0;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    }</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="../../db/d0a/struct_chest.html#a640eac22e4e8cc8c4972830e0de1ae6e">   39</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="../../db/d0a/struct_chest.html#a640eac22e4e8cc8c4972830e0de1ae6e">SetInitialized</a>(<span class="keywordtype">bool</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0f71581a41fd2264c8944126dabbd010">b</a>) {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0f71581a41fd2264c8944126dabbd010">b</a>)</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <a class="code" href="../../db/d0a/struct_chest.html#a2cc56f6e3257ec1aa7d45d1c03613fd0">uFlags</a> |= <a class="code" href="../../d7/d0e/_chest_8h.html#a28efc1643b99dc40e3f89f10ebc64828a181c555a7c1cffd1182dc9084b853009">CHEST_ITEMS_PLACED</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <a class="code" href="../../db/d0a/struct_chest.html#a2cc56f6e3257ec1aa7d45d1c03613fd0">uFlags</a> &amp;= ~<a class="code" href="../../d7/d0e/_chest_8h.html#a28efc1643b99dc40e3f89f10ebc64828a181c555a7c1cffd1182dc9084b853009">CHEST_ITEMS_PLACED</a>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    }</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="../../db/d0a/struct_chest.html#a46a59eb4dd0436692cbe07a766219993">   45</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="../../db/d0a/struct_chest.html#a46a59eb4dd0436692cbe07a766219993">Trapped</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (<a class="code" href="../../db/d0a/struct_chest.html#a2cc56f6e3257ec1aa7d45d1c03613fd0">uFlags</a> &amp; <a class="code" href="../../d7/d0e/_chest_8h.html#a28efc1643b99dc40e3f89f10ebc64828aac7f7c9bb3a08b484f740b83403f10ea">CHEST_TRAPPED</a>) != 0; }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="../../db/d0a/struct_chest.html#aaecc4da0fc3a1b9e94f2096baf72962e">CanPlaceItemAt</a>(<span class="keywordtype">int</span> a1, <span class="keywordtype">int</span> a2, <span class="keywordtype">int</span> uChestID);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="../../db/d0a/struct_chest.html#a12d435bc54ef9dd01e972b13b4716e4a">CountChestItems</a>(<span class="keywordtype">int</span> uChestID);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="../../db/d0a/struct_chest.html#a17accef120d3473c51c7c570ff451ddc">PutItemInChest</a>(<span class="keywordtype">int</span> a1, <span class="keyword">struct</span> <a class="code" href="../../d7/d9c/struct_item_gen.html">ItemGen</a> *a2, <span class="keywordtype">int</span> uChestID);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="../../db/d0a/struct_chest.html#ab1f451279007eb5cda35c0d3c2b81444">PlaceItemAt</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> put_cell_pos, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> uItemIdx, <span class="keywordtype">int</span> uChestID);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="../../db/d0a/struct_chest.html#a9f6bb82d50b588a3ff3dd99a829a28be">PlaceItems</a>(<span class="keywordtype">int</span> uChestID);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="../../db/d0a/struct_chest.html#af128ccad12c7983f8dac3e7ef38596f1">Open</a>(<span class="keywordtype">int</span> uChestID);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="../../db/d0a/struct_chest.html#a6cf5e94dc8b7d1a61e6a3d7a6f5dccba">ToggleFlag</a>(<span class="keywordtype">int</span> uChestID, <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> uFlag, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> bToggle);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="../../db/d0a/struct_chest.html#afc09b9527a9960368cc4982e245b0924">ChestUI_WritePointedObjectStatusString</a>();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="../../db/d0a/struct_chest.html#a2c1784c3f2b90957cde7323661f73118">OnChestLeftClick</a>();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="../../db/d0a/struct_chest.html#a224e52be0c9ac4e1b941f992ab675957">GrabItem</a>(<span class="keywordtype">bool</span> all = <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="../../db/d0a/struct_chest.html#aa35029c6f9e97d6b013e3a61e76adf0c">   58</a></span>&#160;    <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> <a class="code" href="../../db/d0a/struct_chest.html#aa35029c6f9e97d6b013e3a61e76adf0c">uChestBitmapID</a>;        <span class="comment">// 0</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="../../db/d0a/struct_chest.html#a2cc56f6e3257ec1aa7d45d1c03613fd0">   59</a></span>&#160;    <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> <a class="code" href="../../db/d0a/struct_chest.html#a2cc56f6e3257ec1aa7d45d1c03613fd0">uFlags</a>;                <span class="comment">// 2</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="../../db/d0a/struct_chest.html#aeabe7e861f198346d31ba627a0783ba6">   60</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="../../d7/d9c/struct_item_gen.html">ItemGen</a> <a class="code" href="../../db/d0a/struct_chest.html#aeabe7e861f198346d31ba627a0783ba6">igChestItems</a>[140];       <span class="comment">// 4</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="../../db/d0a/struct_chest.html#ae4cda01f1110c28d47baaae558d02e67">   61</a></span>&#160;    <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> <a class="code" href="../../db/d0a/struct_chest.html#ae4cda01f1110c28d47baaae558d02e67">pInventoryIndices</a>[140];  <span class="comment">// 0x13b4 why is this a short?</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;};</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">#pragma pack(pop)</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d7/d0e/_chest_8h.html#a5d5df27af9a0319f240d34f83a27abda">RemoveItemAtChestIndex</a>(<span class="keywordtype">int</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a57f14e05b1900f16a2da82ade47d0c6d">index</a>);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d7/d0e/_chest_8h.html#a605ec4a4eb2b8920c9e67e57f44a9f85">GenerateItemsInChest</a>();</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keywordtype">char</span> *<a class="code" href="../../d7/d0e/_chest_8h.html#a83ef29e58e4690b446af1b06f66bdbd7">ChestsSerialize</a>(<span class="keywordtype">char</span> *pData);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="keywordtype">char</span> *<a class="code" href="../../d7/d0e/_chest_8h.html#aa1bf7e2775c7704bc22647546c403395">ChestsDeserialize</a>(<span class="keywordtype">char</span> *pData);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="keyword">extern</span> <a class="code" href="../../d1/d7a/class_chest_list.html">ChestList</a> *<a class="code" href="../../d7/d0e/_chest_8h.html#ae5306a119320916adff382149bf0fb87">pChestList</a>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="keyword">extern</span> std::vector&lt;Chest&gt; <a class="code" href="../../d7/d0e/_chest_8h.html#a69b8af73220304518033692198679e17">vChests</a>;</div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="a_s_d_l__config_8h_html_a273cf69d639a59973b6019625df33e30"><div class="ttname"><a href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a></div><div class="ttdeci">unsigned __int16 uint16_t</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d8f/_s_d_l__config_8h_source.html#l00037">SDL_config.h:37</a></div></div>
+<div class="ttc" id="a_chest_8h_html_a5d5df27af9a0319f240d34f83a27abda"><div class="ttname"><a href="../../d7/d0e/_chest_8h.html#a5d5df27af9a0319f240d34f83a27abda">RemoveItemAtChestIndex</a></div><div class="ttdeci">void RemoveItemAtChestIndex(int index)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d67/_chest_8cpp_source.html#l00513">Chest.cpp:513</a></div></div>
+<div class="ttc" id="astruct_chest_desc_html_a18252c00402a674e017b45d2650aaccf"><div class="ttname"><a href="../../db/dc5/struct_chest_desc.html#a18252c00402a674e017b45d2650aaccf">ChestDesc::ChestDesc</a></div><div class="ttdeci">ChestDesc(struct ChestDesc_mm7 *pChest)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d67/_chest_8cpp_source.html#l00450">Chest.cpp:450</a></div></div>
+<div class="ttc" id="astruct_chest_html_a640eac22e4e8cc8c4972830e0de1ae6e"><div class="ttname"><a href="../../db/d0a/struct_chest.html#a640eac22e4e8cc8c4972830e0de1ae6e">Chest::SetInitialized</a></div><div class="ttdeci">void SetInitialized(bool b)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d0e/_chest_8h_source.html#l00039">Chest.h:39</a></div></div>
+<div class="ttc" id="astruct_chest_html_a224e52be0c9ac4e1b941f992ab675957"><div class="ttname"><a href="../../db/d0a/struct_chest.html#a224e52be0c9ac4e1b941f992ab675957">Chest::GrabItem</a></div><div class="ttdeci">static void GrabItem(bool all=false)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d67/_chest_8cpp_source.html#l00580">Chest.cpp:580</a></div></div>
+<div class="ttc" id="a_s_d_l__config_8h_html_a269259c924dce846340ddbb810db2e3c"><div class="ttname"><a href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a></div><div class="ttdeci">signed __int16 int16_t</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d8f/_s_d_l__config_8h_source.html#l00036">SDL_config.h:36</a></div></div>
+<div class="ttc" id="astruct_chest_html_a500d5248fa9b38870e8c4f5d6da8b89e"><div class="ttname"><a href="../../db/d0a/struct_chest.html#a500d5248fa9b38870e8c4f5d6da8b89e">Chest::Initialized</a></div><div class="ttdeci">bool Initialized() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d0e/_chest_8h_source.html#l00036">Chest.h:36</a></div></div>
+<div class="ttc" id="astruct_chest_html_aeabe7e861f198346d31ba627a0783ba6"><div class="ttname"><a href="../../db/d0a/struct_chest.html#aeabe7e861f198346d31ba627a0783ba6">Chest::igChestItems</a></div><div class="ttdeci">struct ItemGen igChestItems[140]</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d0e/_chest_8h_source.html#l00060">Chest.h:60</a></div></div>
+<div class="ttc" id="a_items_8h_html"><div class="ttname"><a href="../../d5/da4/_items_8h.html">Items.h</a></div></div>
+<div class="ttc" id="astruct_chest_html_a12d435bc54ef9dd01e972b13b4716e4a"><div class="ttname"><a href="../../db/d0a/struct_chest.html#a12d435bc54ef9dd01e972b13b4716e4a">Chest::CountChestItems</a></div><div class="ttdeci">static int CountChestItems(int uChestID)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d67/_chest_8cpp_source.html#l00289">Chest.cpp:289</a></div></div>
+<div class="ttc" id="astruct_chest_html_a9f6bb82d50b588a3ff3dd99a829a28be"><div class="ttname"><a href="../../db/d0a/struct_chest.html#a9f6bb82d50b588a3ff3dd99a829a28be">Chest::PlaceItems</a></div><div class="ttdeci">static void PlaceItems(int uChestID)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d67/_chest_8cpp_source.html#l00391">Chest.cpp:391</a></div></div>
+<div class="ttc" id="astruct_chest_html_a2cc56f6e3257ec1aa7d45d1c03613fd0"><div class="ttname"><a href="../../db/d0a/struct_chest.html#a2cc56f6e3257ec1aa7d45d1c03613fd0">Chest::uFlags</a></div><div class="ttdeci">uint16_t uFlags</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d0e/_chest_8h_source.html#l00059">Chest.h:59</a></div></div>
+<div class="ttc" id="astruct_chest_desc__mm7_html"><div class="ttname"><a href="../../d1/d96/struct_chest_desc__mm7.html">ChestDesc_mm7</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d67/_chest_8cpp_source.html#l00442">Chest.cpp:442</a></div></div>
+<div class="ttc" id="a_chest_8h_html_a605ec4a4eb2b8920c9e67e57f44a9f85"><div class="ttname"><a href="../../d7/d0e/_chest_8h.html#a605ec4a4eb2b8920c9e67e57f44a9f85">GenerateItemsInChest</a></div><div class="ttdeci">void GenerateItemsInChest()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d67/_chest_8cpp_source.html#l00631">Chest.cpp:631</a></div></div>
+<div class="ttc" id="astruct_chest_html_ab1f451279007eb5cda35c0d3c2b81444"><div class="ttname"><a href="../../db/d0a/struct_chest.html#ab1f451279007eb5cda35c0d3c2b81444">Chest::PlaceItemAt</a></div><div class="ttdeci">static void PlaceItemAt(unsigned int put_cell_pos, unsigned int uItemIdx, int uChestID)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d67/_chest_8cpp_source.html#l00362">Chest.cpp:362</a></div></div>
+<div class="ttc" id="a_chest_8h_html_aa1bf7e2775c7704bc22647546c403395"><div class="ttname"><a href="../../d7/d0e/_chest_8h.html#aa1bf7e2775c7704bc22647546c403395">ChestsDeserialize</a></div><div class="ttdeci">char * ChestsDeserialize(char *pData)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d67/_chest_8cpp_source.html#l00500">Chest.cpp:500</a></div></div>
+<div class="ttc" id="astruct_chest_html_a2c1784c3f2b90957cde7323661f73118"><div class="ttname"><a href="../../db/d0a/struct_chest.html#a2c1784c3f2b90957cde7323661f73118">Chest::OnChestLeftClick</a></div><div class="ttdeci">static void OnChestLeftClick()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d67/_chest_8cpp_source.html#l00537">Chest.cpp:537</a></div></div>
+<div class="ttc" id="astruct_chest_html_a17accef120d3473c51c7c570ff451ddc"><div class="ttname"><a href="../../db/d0a/struct_chest.html#a17accef120d3473c51c7c570ff451ddc">Chest::PutItemInChest</a></div><div class="ttdeci">static int PutItemInChest(int a1, struct ItemGen *a2, int uChestID)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d67/_chest_8cpp_source.html#l00309">Chest.cpp:309</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a57f14e05b1900f16a2da82ade47d0c6d"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a57f14e05b1900f16a2da82ade47d0c6d">index</a></div><div class="ttdeci">GLuint index</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l00663">SDL_opengl_glext.h:663</a></div></div>
+<div class="ttc" id="astruct_chest_desc_html_ae9ddaede3fc3854431951ce226a1ba59"><div class="ttname"><a href="../../db/dc5/struct_chest_desc.html#ae9ddaede3fc3854431951ce226a1ba59">ChestDesc::uHeight</a></div><div class="ttdeci">unsigned int uHeight</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d0e/_chest_8h_source.html#l00019">Chest.h:19</a></div></div>
+<div class="ttc" id="astruct_chest_html_a6cf5e94dc8b7d1a61e6a3d7a6f5dccba"><div class="ttname"><a href="../../db/d0a/struct_chest.html#a6cf5e94dc8b7d1a61e6a3d7a6f5dccba">Chest::ToggleFlag</a></div><div class="ttdeci">static void ToggleFlag(int uChestID, uint16_t uFlag, unsigned int bToggle)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d67/_chest_8cpp_source.html#l00432">Chest.cpp:432</a></div></div>
+<div class="ttc" id="a_chest_8h_html_ae5306a119320916adff382149bf0fb87"><div class="ttname"><a href="../../d7/d0e/_chest_8h.html#ae5306a119320916adff382149bf0fb87">pChestList</a></div><div class="ttdeci">ChestList * pChestList</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d67/_chest_8cpp_source.html#l00038">Chest.cpp:38</a></div></div>
+<div class="ttc" id="aclass_chest_list_html_a880d8523bf3a752d7ddb13c394536dae"><div class="ttname"><a href="../../d1/d7a/class_chest_list.html#a880d8523bf3a752d7ddb13c394536dae">ChestList::ChestList</a></div><div class="ttdeci">ChestList()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d0e/_chest_8h_source.html#l00025">Chest.h:25</a></div></div>
+<div class="ttc" id="astruct_chest_desc_html"><div class="ttname"><a href="../../db/dc5/struct_chest_desc.html">ChestDesc</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d0e/_chest_8h_source.html#l00014">Chest.h:14</a></div></div>
+<div class="ttc" id="a_chest_8h_html_a83ef29e58e4690b446af1b06f66bdbd7"><div class="ttname"><a href="../../d7/d0e/_chest_8h.html#a83ef29e58e4690b446af1b06f66bdbd7">ChestsSerialize</a></div><div class="ttdeci">char * ChestsSerialize(char *pData)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d67/_chest_8cpp_source.html#l00486">Chest.cpp:486</a></div></div>
+<div class="ttc" id="astruct_chest_desc_html_a66c4552377e5d68ce616813a7ed05ad0"><div class="ttname"><a href="../../db/dc5/struct_chest_desc.html#a66c4552377e5d68ce616813a7ed05ad0">ChestDesc::sName</a></div><div class="ttdeci">String sName</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d0e/_chest_8h_source.html#l00017">Chest.h:17</a></div></div>
+<div class="ttc" id="astruct_chest_html_aa35029c6f9e97d6b013e3a61e76adf0c"><div class="ttname"><a href="../../db/d0a/struct_chest.html#aa35029c6f9e97d6b013e3a61e76adf0c">Chest::uChestBitmapID</a></div><div class="ttdeci">uint16_t uChestBitmapID</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d0e/_chest_8h_source.html#l00058">Chest.h:58</a></div></div>
+<div class="ttc" id="a_chest_8h_html_a69b8af73220304518033692198679e17"><div class="ttname"><a href="../../d7/d0e/_chest_8h.html#a69b8af73220304518033692198679e17">vChests</a></div><div class="ttdeci">std::vector&lt; Chest &gt; vChests</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d67/_chest_8cpp_source.html#l00039">Chest.cpp:39</a></div></div>
+<div class="ttc" id="astruct_chest_html_a46a59eb4dd0436692cbe07a766219993"><div class="ttname"><a href="../../db/d0a/struct_chest.html#a46a59eb4dd0436692cbe07a766219993">Chest::Trapped</a></div><div class="ttdeci">bool Trapped() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d0e/_chest_8h_source.html#l00045">Chest.h:45</a></div></div>
+<div class="ttc" id="astruct_chest_desc_html_a37b0ffa4fba07f47c4dac11c7810e095"><div class="ttname"><a href="../../db/dc5/struct_chest_desc.html#a37b0ffa4fba07f47c4dac11c7810e095">ChestDesc::uTextureID</a></div><div class="ttdeci">unsigned int uTextureID</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d0e/_chest_8h_source.html#l00020">Chest.h:20</a></div></div>
+<div class="ttc" id="astruct_chest_html_af128ccad12c7983f8dac3e7ef38596f1"><div class="ttname"><a href="../../db/d0a/struct_chest.html#af128ccad12c7983f8dac3e7ef38596f1">Chest::Open</a></div><div class="ttdeci">static bool Open(int uChestID)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d67/_chest_8cpp_source.html#l00041">Chest.cpp:41</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a0f71581a41fd2264c8944126dabbd010"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0f71581a41fd2264c8944126dabbd010">b</a></div><div class="ttdeci">GLboolean GLboolean GLboolean b</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l01112">SDL_opengl_glext.h:1112</a></div></div>
+<div class="ttc" id="aclass_chest_list_html"><div class="ttname"><a href="../../d1/d7a/class_chest_list.html">ChestList</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d0e/_chest_8h_source.html#l00023">Chest.h:23</a></div></div>
+<div class="ttc" id="a_chest_8h_html_a28efc1643b99dc40e3f89f10ebc64828a181c555a7c1cffd1182dc9084b853009"><div class="ttname"><a href="../../d7/d0e/_chest_8h.html#a28efc1643b99dc40e3f89f10ebc64828a181c555a7c1cffd1182dc9084b853009">CHEST_ITEMS_PLACED</a></div><div class="ttdeci">@ CHEST_ITEMS_PLACED</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d0e/_chest_8h_source.html#l00010">Chest.h:10</a></div></div>
+<div class="ttc" id="astruct_chest_html_afc09b9527a9960368cc4982e245b0924"><div class="ttname"><a href="../../db/d0a/struct_chest.html#afc09b9527a9960368cc4982e245b0924">Chest::ChestUI_WritePointedObjectStatusString</a></div><div class="ttdeci">static bool ChestUI_WritePointedObjectStatusString()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d67/_chest_8cpp_source.html#l00175">Chest.cpp:175</a></div></div>
+<div class="ttc" id="astruct_chest_html_aaecc4da0fc3a1b9e94f2096baf72962e"><div class="ttname"><a href="../../db/d0a/struct_chest.html#aaecc4da0fc3a1b9e94f2096baf72962e">Chest::CanPlaceItemAt</a></div><div class="ttdeci">static bool CanPlaceItemAt(int a1, int a2, int uChestID)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d67/_chest_8cpp_source.html#l00266">Chest.cpp:266</a></div></div>
+<div class="ttc" id="aclass_chest_list_html_a5bb5c3d294944af2c8e6f928107a08e5"><div class="ttname"><a href="../../d1/d7a/class_chest_list.html#a5bb5c3d294944af2c8e6f928107a08e5">ChestList::FromFile</a></div><div class="ttdeci">void FromFile(void *data_mm6, void *data_mm7, void *data_mm8)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d67/_chest_8cpp_source.html#l00457">Chest.cpp:457</a></div></div>
+<div class="ttc" id="a_chest_8h_html_a28efc1643b99dc40e3f89f10ebc64828aac7f7c9bb3a08b484f740b83403f10ea"><div class="ttname"><a href="../../d7/d0e/_chest_8h.html#a28efc1643b99dc40e3f89f10ebc64828aac7f7c9bb3a08b484f740b83403f10ea">CHEST_TRAPPED</a></div><div class="ttdeci">@ CHEST_TRAPPED</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d0e/_chest_8h_source.html#l00009">Chest.h:9</a></div></div>
+<div class="ttc" id="astruct_chest_html"><div class="ttname"><a href="../../db/d0a/struct_chest.html">Chest</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d0e/_chest_8h_source.html#l00035">Chest.h:35</a></div></div>
+<div class="ttc" id="astruct_chest_html_ae4cda01f1110c28d47baaae558d02e67"><div class="ttname"><a href="../../db/d0a/struct_chest.html#ae4cda01f1110c28d47baaae558d02e67">Chest::pInventoryIndices</a></div><div class="ttdeci">int16_t pInventoryIndices[140]</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d0e/_chest_8h_source.html#l00061">Chest.h:61</a></div></div>
+<div class="ttc" id="astruct_item_gen_html"><div class="ttname"><a href="../../d7/d9c/struct_item_gen.html">ItemGen</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d5/da4/_items_8h_source.html#l00263">Items.h:263</a></div></div>
+<div class="ttc" id="a_chest_8h_html_a28efc1643b99dc40e3f89f10ebc64828a1a93ce403739c9ed232dff1b0e930695"><div class="ttname"><a href="../../d7/d0e/_chest_8h.html#a28efc1643b99dc40e3f89f10ebc64828a1a93ce403739c9ed232dff1b0e930695">CHEST_OPENED</a></div><div class="ttdeci">@ CHEST_OPENED</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d0e/_chest_8h_source.html#l00011">Chest.h:11</a></div></div>
+<div class="ttc" id="astruct_chest_desc_html_a6cb72f2db8932758ba084b50bf0238f0"><div class="ttname"><a href="../../db/dc5/struct_chest_desc.html#a6cb72f2db8932758ba084b50bf0238f0">ChestDesc::uWidth</a></div><div class="ttdeci">unsigned int uWidth</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d0e/_chest_8h_source.html#l00018">Chest.h:18</a></div></div>
+<div class="ttc" id="a_strings_8h_html_afbeda3fd1bdc8c37d01bdf9f5c8274ff"><div class="ttname"><a href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a></div><div class="ttdeci">std::string String</div><div class="ttdef"><b>Definition:</b> <a href="../../de/df7/_strings_8h_source.html#l00010">Strings.h:10</a></div></div>
+<div class="ttc" id="a_chest_8h_html_a28efc1643b99dc40e3f89f10ebc64828"><div class="ttname"><a href="../../d7/d0e/_chest_8h.html#a28efc1643b99dc40e3f89f10ebc64828">CHEST_FLAGS</a></div><div class="ttdeci">CHEST_FLAGS</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d0e/_chest_8h_source.html#l00008">Chest.h:8</a></div></div>
+<div class="ttc" id="aclass_chest_list_html_a8d89c28a0eed566f415aa78c5a87b581"><div class="ttname"><a href="../../d1/d7a/class_chest_list.html#a8d89c28a0eed566f415aa78c5a87b581">ChestList::vChests</a></div><div class="ttdeci">std::vector&lt; ChestDesc &gt; vChests</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d0e/_chest_8h_source.html#l00030">Chest.h:30</a></div></div>
+<div class="ttc" id="a_strings_8h_html"><div class="ttname"><a href="../../de/df7/_strings_8h.html">Strings.h</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_0b6ee6e7e9547e675db4add2e5de97da.html">Engine</a></li><li class="navelem"><a class="el" href="../../dir_6408a7ac1a5e313e0a4448b1ca2d7416.html">Objects</a></li><li class="navelem"><a class="el" href="../../d7/d0e/_chest_8h.html">Chest.h</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:03:31. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Исходный файл C:/git/world-of-might-and-magic/GUI/GUIFont.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d0/d34/_g_u_i_font_8h_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">GUIFont.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d0/d34/_g_u_i_font_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../de/df7/_strings_8h.html">Engine/Strings.h</a>&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">class </span><a class="code" href="../../d4/d38/class_g_u_i_window.html">GUIWindow</a>;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">class </span><a class="code" href="../../de/d73/class_image.html">Image</a>;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">struct </span><a class="code" href="../../d6/d00/struct_font_data.html">FontData</a>;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="../../d3/d39/class_g_u_i_font.html">    8</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d3/d39/class_g_u_i_font.html">GUIFont</a> {</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keyword">static</span> <a class="code" href="../../d3/d39/class_g_u_i_font.html">GUIFont</a> *<a class="code" href="../../d3/d39/class_g_u_i_font.html#a60a9fdf52ee46948981d31ce14d2f005">LoadFont</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *pFontFile, <span class="keyword">const</span> <span class="keywordtype">char</span> *pFontPalette,</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;                             ...);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d3/d39/class_g_u_i_font.html#adfbdd225f4c0eedcbf7e82eecd29e404">IsCharValid</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1f2d7f8147412c43ba2303a56f97ee73">c</a>) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../d3/d39/class_g_u_i_font.html#a439cccf73db5fd93ffc18cbba51d07e0">GetHeight</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../d3/d39/class_g_u_i_font.html#a9fa3825419fdf34ded3536e27bccbfdf">AlignText_Center</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a9a82cf3caff84cabc4598e2619faac17">width</a>, <span class="keyword">const</span> <a class="code" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> &amp;str);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../d3/d39/class_g_u_i_font.html#abf5dc44bc1b328f80d5c7033279a4f8d">GetLineWidth</a>(<span class="keyword">const</span> <a class="code" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> &amp;str);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../d3/d39/class_g_u_i_font.html#a08b74df638b5c055d9f18f5ce4d8ee11">CalcTextHeight</a>(<span class="keyword">const</span> <a class="code" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> &amp;str, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a9a82cf3caff84cabc4598e2619faac17">width</a>,</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                                <span class="keywordtype">int</span> x_offset, <span class="keywordtype">bool</span> return_on_carriage = <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> <a class="code" href="../../d3/d39/class_g_u_i_font.html#ace43d089e882ba6f5d721ffd5779342f">GetPageTop</a>(<span class="keyword">const</span> <a class="code" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> &amp;pInString, <a class="code" href="../../d4/d38/class_g_u_i_window.html">GUIWindow</a> *pWindow,</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                      <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> uX, <span class="keywordtype">int</span> a5);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d3/d39/class_g_u_i_font.html#af8449e36ee49ae96e21f4406b398a010">DrawTextLine</a>(<span class="keyword">const</span> <a class="code" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> &amp;text, <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> uDefaultColor, <span class="keywordtype">int</span> uX,</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                      <span class="keywordtype">int</span> uY, <span class="keywordtype">int</span> max_len_pix);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d3/d39/class_g_u_i_font.html#abea1624c5890b044ef1368a7ca051b3e">DrawText</a>(<a class="code" href="../../d4/d38/class_g_u_i_window.html">GUIWindow</a> *pWindow, <span class="keywordtype">int</span> uX, <span class="keywordtype">int</span> uY, <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> uFontColor,</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                  <span class="keyword">const</span> <a class="code" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> &amp;str, <span class="keywordtype">bool</span> present_time_transparency,</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                  <span class="keywordtype">int</span> max_text_height, <span class="keywordtype">int</span> uFontShadowColor);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d3/d39/class_g_u_i_font.html#ae9be5779466a505d9499e9bd606703e6">DrawTextInRect</a>(<a class="code" href="../../d4/d38/class_g_u_i_window.html">GUIWindow</a> *pWindow, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> uX, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> uY,</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                       <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> uColor, <span class="keyword">const</span> <a class="code" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> &amp;str, <span class="keywordtype">int</span> rect_width,</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                       <span class="keywordtype">int</span> reverse_text);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> <a class="code" href="../../d3/d39/class_g_u_i_font.html#acff82a6ae67e879bd76ddc52aa25fe02">FitTextInAWindow</a>(<span class="keyword">const</span> <a class="code" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> &amp;inString, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a9a82cf3caff84cabc4598e2619faac17">width</a>, <span class="keywordtype">int</span> uX,</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                            <span class="keywordtype">bool</span> return_on_carriage = <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d3/d39/class_g_u_i_font.html#a9ea614ccc8e48327793341c01ff7e650">DrawCreditsEntry</a>(<a class="code" href="../../d3/d39/class_g_u_i_font.html">GUIFont</a> *pSecondFont, <span class="keywordtype">int</span> uFrameX, <span class="keywordtype">int</span> uFrameY,</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                          <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a6ee8f168a7ab6785a9bb57c6715dad99">w</a>, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#afa0fb1b5e976920c0abeff2dca3ed774">h</a>, <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> firstColor,</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                          <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> secondColor, <span class="keyword">const</span> <a class="code" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> &amp;pString,</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                          <a class="code" href="../../de/d73/class_image.html">Image</a> *<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a0a221b005894579fea3b9eb7bfc2ee71">image</a>);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d3/d39/class_g_u_i_font.html#a1764d577b37f5600326ffb2271e3f59a">GetStringHeight2</a>(<a class="code" href="../../d3/d39/class_g_u_i_font.html">GUIFont</a> *secondFont, <span class="keyword">const</span> <a class="code" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> &amp;text_str,</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                         <a class="code" href="../../d4/d38/class_g_u_i_window.html">GUIWindow</a> *pWindow, <span class="keywordtype">int</span> startX, <span class="keywordtype">int</span> a6);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="../../d3/d39/class_g_u_i_font.html#a47ece6014435ced0a6d7d0f5d1d89572">   45</a></span>&#160;    <a class="code" href="../../d6/d00/struct_font_data.html">FontData</a> *<a class="code" href="../../d3/d39/class_g_u_i_font.html#a47ece6014435ced0a6d7d0f5d1d89572">pData</a>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> <a class="code" href="../../d3/d39/class_g_u_i_font.html#a9e5d94c3391452a0fe7a7032685e31b7">FitTwoFontStringINWindow</a>(<span class="keyword">const</span> <a class="code" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> &amp;pString, <a class="code" href="../../d3/d39/class_g_u_i_font.html">GUIFont</a> *pFontSecond,</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                                    <a class="code" href="../../d4/d38/class_g_u_i_window.html">GUIWindow</a> *pWindow, <span class="keywordtype">int</span> startPixlOff,</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                                    <span class="keywordtype">int</span> a6);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d3/d39/class_g_u_i_font.html#add9f655047a5db5765d0e83ee5f56386">DrawTextLineToBuff</a>(<a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> uColor, <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> *uX_buff_pos,</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                            <span class="keyword">const</span> <a class="code" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> &amp;text, <span class="keywordtype">int</span> line_width);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;};</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keyword">extern</span> <a class="code" href="../../d3/d39/class_g_u_i_font.html">GUIFont</a> *<a class="code" href="../../d0/d34/_g_u_i_font_8h.html#af228a87a0bf453b625832d63c9d97b29">pAutonoteFont</a>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keyword">extern</span> <a class="code" href="../../d3/d39/class_g_u_i_font.html">GUIFont</a> *<a class="code" href="../../d0/d34/_g_u_i_font_8h.html#a1e244eec57294250bd240fd5b4202429">pSpellFont</a>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keyword">extern</span> <a class="code" href="../../d3/d39/class_g_u_i_font.html">GUIFont</a> *<a class="code" href="../../d0/d34/_g_u_i_font_8h.html#a45c1d51c36b4ee9c4bdfc2f3b65cf2bc">pFontArrus</a>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keyword">extern</span> <a class="code" href="../../d3/d39/class_g_u_i_font.html">GUIFont</a> *<a class="code" href="../../d0/d34/_g_u_i_font_8h.html#a20125354aa9f9043e5405fc5c9a4898c">pFontLucida</a>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword">extern</span> <a class="code" href="../../d3/d39/class_g_u_i_font.html">GUIFont</a> *<a class="code" href="../../d0/d34/_g_u_i_font_8h.html#a93614bfe1d53f3730466f0e89d2c0e1d">pBook2Font</a>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keyword">extern</span> <a class="code" href="../../d3/d39/class_g_u_i_font.html">GUIFont</a> *<a class="code" href="../../d0/d34/_g_u_i_font_8h.html#a169dd543d5caf40db90d86857a76056a">pBookFont</a>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">extern</span> <a class="code" href="../../d3/d39/class_g_u_i_font.html">GUIFont</a> *<a class="code" href="../../d0/d34/_g_u_i_font_8h.html#a58be15783993a5541a86ecc68a74fb89">pFontCreate</a>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keyword">extern</span> <a class="code" href="../../d3/d39/class_g_u_i_font.html">GUIFont</a> *<a class="code" href="../../d0/d34/_g_u_i_font_8h.html#a9323cb3a480b3f7b76310d78b8bd11f1">pFontComic</a>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keyword">extern</span> <a class="code" href="../../d3/d39/class_g_u_i_font.html">GUIFont</a> *<a class="code" href="../../d0/d34/_g_u_i_font_8h.html#a2e07a9b4c2f22ec0a4985defe865852b">pFontSmallnum</a>;</div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="a_s_d_l__config_8h_html_a273cf69d639a59973b6019625df33e30"><div class="ttname"><a href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a></div><div class="ttdeci">unsigned __int16 uint16_t</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d8f/_s_d_l__config_8h_source.html#l00037">SDL_config.h:37</a></div></div>
+<div class="ttc" id="a_g_u_i_font_8h_html_a58be15783993a5541a86ecc68a74fb89"><div class="ttname"><a href="../../d0/d34/_g_u_i_font_8h.html#a58be15783993a5541a86ecc68a74fb89">pFontCreate</a></div><div class="ttdeci">GUIFont * pFontCreate</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d5e/_g_u_i_font_8cpp_source.html#l00022">GUIFont.cpp:22</a></div></div>
+<div class="ttc" id="a_g_u_i_font_8h_html_a1e244eec57294250bd240fd5b4202429"><div class="ttname"><a href="../../d0/d34/_g_u_i_font_8h.html#a1e244eec57294250bd240fd5b4202429">pSpellFont</a></div><div class="ttdeci">GUIFont * pSpellFont</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d5e/_g_u_i_font_8cpp_source.html#l00017">GUIFont.cpp:17</a></div></div>
+<div class="ttc" id="aclass_g_u_i_font_html"><div class="ttname"><a href="../../d3/d39/class_g_u_i_font.html">GUIFont</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d34/_g_u_i_font_8h_source.html#l00008">GUIFont.h:8</a></div></div>
+<div class="ttc" id="aclass_g_u_i_window_html"><div class="ttname"><a href="../../d4/d38/class_g_u_i_window.html">GUIWindow</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d0b/_g_u_i_window_8h_source.html#l00433">GUIWindow.h:433</a></div></div>
+<div class="ttc" id="a_g_u_i_font_8h_html_a9323cb3a480b3f7b76310d78b8bd11f1"><div class="ttname"><a href="../../d0/d34/_g_u_i_font_8h.html#a9323cb3a480b3f7b76310d78b8bd11f1">pFontComic</a></div><div class="ttdeci">GUIFont * pFontComic</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d5e/_g_u_i_font_8cpp_source.html#l00024">GUIFont.cpp:24</a></div></div>
+<div class="ttc" id="aclass_g_u_i_font_html_a9ea614ccc8e48327793341c01ff7e650"><div class="ttname"><a href="../../d3/d39/class_g_u_i_font.html#a9ea614ccc8e48327793341c01ff7e650">GUIFont::DrawCreditsEntry</a></div><div class="ttdeci">void DrawCreditsEntry(GUIFont *pSecondFont, int uFrameX, int uFrameY, unsigned int w, unsigned int h, uint16_t firstColor, uint16_t secondColor, const String &amp;pString, Image *image)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d5e/_g_u_i_font_8cpp_source.html#l00611">GUIFont.cpp:611</a></div></div>
+<div class="ttc" id="aclass_g_u_i_font_html_a47ece6014435ced0a6d7d0f5d1d89572"><div class="ttname"><a href="../../d3/d39/class_g_u_i_font.html#a47ece6014435ced0a6d7d0f5d1d89572">GUIFont::pData</a></div><div class="ttdeci">FontData * pData</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d34/_g_u_i_font_8h_source.html#l00045">GUIFont.h:45</a></div></div>
+<div class="ttc" id="a_g_u_i_font_8h_html_a2e07a9b4c2f22ec0a4985defe865852b"><div class="ttname"><a href="../../d0/d34/_g_u_i_font_8h.html#a2e07a9b4c2f22ec0a4985defe865852b">pFontSmallnum</a></div><div class="ttdeci">GUIFont * pFontSmallnum</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d5e/_g_u_i_font_8cpp_source.html#l00025">GUIFont.cpp:25</a></div></div>
+<div class="ttc" id="aclass_g_u_i_font_html_ae9be5779466a505d9499e9bd606703e6"><div class="ttname"><a href="../../d3/d39/class_g_u_i_font.html#ae9be5779466a505d9499e9bd606703e6">GUIFont::DrawTextInRect</a></div><div class="ttdeci">int DrawTextInRect(GUIWindow *pWindow, unsigned int uX, unsigned int uY, uint16_t uColor, const String &amp;str, int rect_width, int reverse_text)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d5e/_g_u_i_font_8cpp_source.html#l00496">GUIFont.cpp:496</a></div></div>
+<div class="ttc" id="a_g_u_i_font_8h_html_a93614bfe1d53f3730466f0e89d2c0e1d"><div class="ttname"><a href="../../d0/d34/_g_u_i_font_8h.html#a93614bfe1d53f3730466f0e89d2c0e1d">pBook2Font</a></div><div class="ttdeci">GUIFont * pBook2Font</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d5e/_g_u_i_font_8cpp_source.html#l00020">GUIFont.cpp:20</a></div></div>
+<div class="ttc" id="astruct_font_data_html"><div class="ttname"><a href="../../d6/d00/struct_font_data.html">FontData</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d5e/_g_u_i_font_8cpp_source.html#l00040">GUIFont.cpp:40</a></div></div>
+<div class="ttc" id="aclass_g_u_i_font_html_abf5dc44bc1b328f80d5c7033279a4f8d"><div class="ttname"><a href="../../d3/d39/class_g_u_i_font.html#abf5dc44bc1b328f80d5c7033279a4f8d">GUIFont::GetLineWidth</a></div><div class="ttdeci">unsigned int GetLineWidth(const String &amp;str)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d5e/_g_u_i_font_8cpp_source.html#l00278">GUIFont.cpp:278</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a6ee8f168a7ab6785a9bb57c6715dad99"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a6ee8f168a7ab6785a9bb57c6715dad99">w</a></div><div class="ttdeci">GLubyte GLubyte GLubyte GLubyte w</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l00734">SDL_opengl_glext.h:734</a></div></div>
+<div class="ttc" id="aclass_g_u_i_font_html_a439cccf73db5fd93ffc18cbba51d07e0"><div class="ttname"><a href="../../d3/d39/class_g_u_i_font.html#a439cccf73db5fd93ffc18cbba51d07e0">GUIFont::GetHeight</a></div><div class="ttdeci">unsigned int GetHeight() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d5e/_g_u_i_font_8cpp_source.html#l00084">GUIFont.cpp:84</a></div></div>
+<div class="ttc" id="aclass_g_u_i_font_html_a1764d577b37f5600326ffb2271e3f59a"><div class="ttname"><a href="../../d3/d39/class_g_u_i_font.html#a1764d577b37f5600326ffb2271e3f59a">GUIFont::GetStringHeight2</a></div><div class="ttdeci">int GetStringHeight2(GUIFont *secondFont, const String &amp;text_str, GUIWindow *pWindow, int startX, int a6)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d5e/_g_u_i_font_8cpp_source.html#l00747">GUIFont.cpp:747</a></div></div>
+<div class="ttc" id="a_g_u_i_font_8h_html_a20125354aa9f9043e5405fc5c9a4898c"><div class="ttname"><a href="../../d0/d34/_g_u_i_font_8h.html#a20125354aa9f9043e5405fc5c9a4898c">pFontLucida</a></div><div class="ttdeci">GUIFont * pFontLucida</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d5e/_g_u_i_font_8cpp_source.html#l00019">GUIFont.cpp:19</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_afa0fb1b5e976920c0abeff2dca3ed774"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#afa0fb1b5e976920c0abeff2dca3ed774">h</a></div><div class="ttdeci">GLfloat GLfloat GLfloat GLfloat h</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l01949">SDL_opengl_glext.h:1949</a></div></div>
+<div class="ttc" id="aclass_g_u_i_font_html_af8449e36ee49ae96e21f4406b398a010"><div class="ttname"><a href="../../d3/d39/class_g_u_i_font.html#af8449e36ee49ae96e21f4406b398a010">GUIFont::DrawTextLine</a></div><div class="ttdeci">void DrawTextLine(const String &amp;text, uint16_t uDefaultColor, int uX, int uY, int max_len_pix)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d5e/_g_u_i_font_8cpp_source.html#l00088">GUIFont.cpp:88</a></div></div>
+<div class="ttc" id="aclass_image_html"><div class="ttname"><a href="../../de/d73/class_image.html">Image</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/de5/_image_8h_source.html#l00019">Image.h:19</a></div></div>
+<div class="ttc" id="aclass_g_u_i_font_html_adfbdd225f4c0eedcbf7e82eecd29e404"><div class="ttname"><a href="../../d3/d39/class_g_u_i_font.html#adfbdd225f4c0eedcbf7e82eecd29e404">GUIFont::IsCharValid</a></div><div class="ttdeci">bool IsCharValid(unsigned char c) const</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d5e/_g_u_i_font_8cpp_source.html#l00080">GUIFont.cpp:80</a></div></div>
+<div class="ttc" id="a_g_u_i_font_8h_html_a45c1d51c36b4ee9c4bdfc2f3b65cf2bc"><div class="ttname"><a href="../../d0/d34/_g_u_i_font_8h.html#a45c1d51c36b4ee9c4bdfc2f3b65cf2bc">pFontArrus</a></div><div class="ttdeci">GUIFont * pFontArrus</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d5e/_g_u_i_font_8cpp_source.html#l00018">GUIFont.cpp:18</a></div></div>
+<div class="ttc" id="aclass_g_u_i_font_html_a9fa3825419fdf34ded3536e27bccbfdf"><div class="ttname"><a href="../../d3/d39/class_g_u_i_font.html#a9fa3825419fdf34ded3536e27bccbfdf">GUIFont::AlignText_Center</a></div><div class="ttdeci">unsigned int AlignText_Center(unsigned int width, const String &amp;str)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d5e/_g_u_i_font_8cpp_source.html#l00306">GUIFont.cpp:306</a></div></div>
+<div class="ttc" id="a_g_u_i_font_8h_html_a169dd543d5caf40db90d86857a76056a"><div class="ttname"><a href="../../d0/d34/_g_u_i_font_8h.html#a169dd543d5caf40db90d86857a76056a">pBookFont</a></div><div class="ttdeci">GUIFont * pBookFont</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d5e/_g_u_i_font_8cpp_source.html#l00021">GUIFont.cpp:21</a></div></div>
+<div class="ttc" id="aclass_g_u_i_font_html_a60a9fdf52ee46948981d31ce14d2f005"><div class="ttname"><a href="../../d3/d39/class_g_u_i_font.html#a60a9fdf52ee46948981d31ce14d2f005">GUIFont::LoadFont</a></div><div class="ttdeci">static GUIFont * LoadFont(const char *pFontFile, const char *pFontPalette,...)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d5e/_g_u_i_font_8cpp_source.html#l00056">GUIFont.cpp:56</a></div></div>
+<div class="ttc" id="a_s_d_l__egl_8h_html_a9a82cf3caff84cabc4598e2619faac17"><div class="ttname"><a href="../../df/d32/_s_d_l__egl_8h.html#a9a82cf3caff84cabc4598e2619faac17">width</a></div><div class="ttdeci">EGLSurface EGLint EGLint EGLint width</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/_s_d_l__egl_8h_source.html#l01596">SDL_egl.h:1596</a></div></div>
+<div class="ttc" id="aclass_g_u_i_font_html_a08b74df638b5c055d9f18f5ce4d8ee11"><div class="ttname"><a href="../../d3/d39/class_g_u_i_font.html#a08b74df638b5c055d9f18f5ce4d8ee11">GUIFont::CalcTextHeight</a></div><div class="ttdeci">unsigned int CalcTextHeight(const String &amp;str, unsigned int width, int x_offset, bool return_on_carriage=false)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d5e/_g_u_i_font_8cpp_source.html#l00246">GUIFont.cpp:246</a></div></div>
+<div class="ttc" id="aclass_g_u_i_font_html_ace43d089e882ba6f5d721ffd5779342f"><div class="ttname"><a href="../../d3/d39/class_g_u_i_font.html#ace43d089e882ba6f5d721ffd5779342f">GUIFont::GetPageTop</a></div><div class="ttdeci">String GetPageTop(const String &amp;pInString, GUIWindow *pWindow, unsigned int uX, int a5)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d5e/_g_u_i_font_8cpp_source.html#l00211">GUIFont.cpp:211</a></div></div>
+<div class="ttc" id="aclass_g_u_i_font_html_abea1624c5890b044ef1368a7ca051b3e"><div class="ttname"><a href="../../d3/d39/class_g_u_i_font.html#abea1624c5890b044ef1368a7ca051b3e">GUIFont::DrawText</a></div><div class="ttdeci">void DrawText(GUIWindow *pWindow, int uX, int uY, uint16_t uFontColor, const String &amp;str, bool present_time_transparency, int max_text_height, int uFontShadowColor)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d5e/_g_u_i_font_8cpp_source.html#l00388">GUIFont.cpp:388</a></div></div>
+<div class="ttc" id="a_g_u_i_font_8h_html_af228a87a0bf453b625832d63c9d97b29"><div class="ttname"><a href="../../d0/d34/_g_u_i_font_8h.html#af228a87a0bf453b625832d63c9d97b29">pAutonoteFont</a></div><div class="ttdeci">GUIFont * pAutonoteFont</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d5e/_g_u_i_font_8cpp_source.html#l00016">GUIFont.cpp:16</a></div></div>
+<div class="ttc" id="aclass_g_u_i_font_html_add9f655047a5db5765d0e83ee5f56386"><div class="ttname"><a href="../../d3/d39/class_g_u_i_font.html#add9f655047a5db5765d0e83ee5f56386">GUIFont::DrawTextLineToBuff</a></div><div class="ttdeci">void DrawTextLineToBuff(uint16_t uColor, uint32_t *uX_buff_pos, const String &amp;text, int line_width)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d5e/_g_u_i_font_8cpp_source.html#l00160">GUIFont.cpp:160</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a1f2d7f8147412c43ba2303a56f97ee73"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a1f2d7f8147412c43ba2303a56f97ee73">c</a></div><div class="ttdeci">const GLubyte * c</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l11096">SDL_opengl_glext.h:11096</a></div></div>
+<div class="ttc" id="aclass_g_u_i_font_html_a9e5d94c3391452a0fe7a7032685e31b7"><div class="ttname"><a href="../../d3/d39/class_g_u_i_font.html#a9e5d94c3391452a0fe7a7032685e31b7">GUIFont::FitTwoFontStringINWindow</a></div><div class="ttdeci">String FitTwoFontStringINWindow(const String &amp;pString, GUIFont *pFontSecond, GUIWindow *pWindow, int startPixlOff, int a6)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d5e/_g_u_i_font_8cpp_source.html#l00657">GUIFont.cpp:657</a></div></div>
+<div class="ttc" id="aclass_g_u_i_font_html_acff82a6ae67e879bd76ddc52aa25fe02"><div class="ttname"><a href="../../d3/d39/class_g_u_i_font.html#acff82a6ae67e879bd76ddc52aa25fe02">GUIFont::FitTextInAWindow</a></div><div class="ttdeci">String FitTextInAWindow(const String &amp;inString, unsigned int width, int uX, bool return_on_carriage=false)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d5e/_g_u_i_font_8cpp_source.html#l00311">GUIFont.cpp:311</a></div></div>
+<div class="ttc" id="a_s_d_l__egl_8h_html_a0a221b005894579fea3b9eb7bfc2ee71"><div class="ttname"><a href="../../df/d32/_s_d_l__egl_8h.html#a0a221b005894579fea3b9eb7bfc2ee71">image</a></div><div class="ttdeci">EGLImageKHR image</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/_s_d_l__egl_8h_source.html#l00953">SDL_egl.h:953</a></div></div>
+<div class="ttc" id="a_s_d_l__config_8h_html_a435d1572bf3f880d55459d9805097f62"><div class="ttname"><a href="../../d1/d8f/_s_d_l__config_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a></div><div class="ttdeci">unsigned __int32 uint32_t</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d8f/_s_d_l__config_8h_source.html#l00039">SDL_config.h:39</a></div></div>
+<div class="ttc" id="a_strings_8h_html_afbeda3fd1bdc8c37d01bdf9f5c8274ff"><div class="ttname"><a href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a></div><div class="ttdeci">std::string String</div><div class="ttdef"><b>Definition:</b> <a href="../../de/df7/_strings_8h_source.html#l00010">Strings.h:10</a></div></div>
+<div class="ttc" id="a_strings_8h_html"><div class="ttname"><a href="../../de/df7/_strings_8h.html">Strings.h</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_171b764decf33d63a7df2fab4f4bc6d8.html">GUI</a></li><li class="navelem"><a class="el" href="../../d0/d34/_g_u_i_font_8h.html">GUIFont.h</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:03:34. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

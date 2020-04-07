@@ -1,0 +1,1836 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Структура GameTime</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('df/dc2/struct_game_time.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-static-methods">Открытые статические члены</a> &#124;
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="../../db/dc8/struct_game_time-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Структура GameTime</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html">Time.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:ab3b7fbfbc2a94e223d349b3dd48f76d3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dc2/struct_game_time.html#ab3b7fbfbc2a94e223d349b3dd48f76d3">GameTime</a> ()</td></tr>
+<tr class="separator:ab3b7fbfbc2a94e223d349b3dd48f76d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e117c4d6f5835fb2f4a7b7f0eea59a1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dc2/struct_game_time.html#a7e117c4d6f5835fb2f4a7b7f0eea59a1">GameTime</a> (<a class="el" href="../../dd/df4/alext_8h.html#aec6fcb673ff035718c238c8c9d544c47">uint64_t</a> <a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a26942fd2ed566ef553eae82d2c109c8f">val</a>)</td></tr>
+<tr class="separator:a7e117c4d6f5835fb2f4a7b7f0eea59a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f1d46eb3500683b62ee347a40b41fa7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dc2/struct_game_time.html#a7f1d46eb3500683b62ee347a40b41fa7">GameTime</a> (int seconds, int minutes, int hours=0, int days=0, int weeks=0, int months=0, int years=0)</td></tr>
+<tr class="separator:a7f1d46eb3500683b62ee347a40b41fa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a719def6268b14c320733038cb701d1a6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/df4/alext_8h.html#aec6fcb673ff035718c238c8c9d544c47">uint64_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dc2/struct_game_time.html#a719def6268b14c320733038cb701d1a6">GetSeconds</a> () const</td></tr>
+<tr class="separator:a719def6268b14c320733038cb701d1a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6957230697b66012e8207c587aa65e33"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/df4/alext_8h.html#aec6fcb673ff035718c238c8c9d544c47">uint64_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dc2/struct_game_time.html#a6957230697b66012e8207c587aa65e33">GetMinutes</a> () const</td></tr>
+<tr class="separator:a6957230697b66012e8207c587aa65e33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f828cfde868d07e1f607171c6809435"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/df4/alext_8h.html#aec6fcb673ff035718c238c8c9d544c47">uint64_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dc2/struct_game_time.html#a9f828cfde868d07e1f607171c6809435">GetHours</a> () const</td></tr>
+<tr class="separator:a9f828cfde868d07e1f607171c6809435"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63923f44c458d6327dec9c87660700a5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dc2/struct_game_time.html#a63923f44c458d6327dec9c87660700a5">GetDays</a> () const</td></tr>
+<tr class="separator:a63923f44c458d6327dec9c87660700a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abba323570853b3416523a1f751d9434e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dc2/struct_game_time.html#abba323570853b3416523a1f751d9434e">GetWeeks</a> () const</td></tr>
+<tr class="separator:abba323570853b3416523a1f751d9434e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07ae29857951b03940de0d2232075558"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dc2/struct_game_time.html#a07ae29857951b03940de0d2232075558">GetMonths</a> () const</td></tr>
+<tr class="separator:a07ae29857951b03940de0d2232075558"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00951cb2332c791ffd8142e0e9425875"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dc2/struct_game_time.html#a00951cb2332c791ffd8142e0e9425875">GetYears</a> () const</td></tr>
+<tr class="separator:a00951cb2332c791ffd8142e0e9425875"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b06bc31a7d3a042d1addbcb9a5d3a58"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dc2/struct_game_time.html#a2b06bc31a7d3a042d1addbcb9a5d3a58">GetSecondsFraction</a> () const</td></tr>
+<tr class="separator:a2b06bc31a7d3a042d1addbcb9a5d3a58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72d75830ae38cb9176ae7370f0b116a0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dc2/struct_game_time.html#a72d75830ae38cb9176ae7370f0b116a0">GetMinutesFraction</a> () const</td></tr>
+<tr class="separator:a72d75830ae38cb9176ae7370f0b116a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52727e9719cc59a2bfedd0b56ee7d2ba"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dc2/struct_game_time.html#a52727e9719cc59a2bfedd0b56ee7d2ba">GetHoursOfDay</a> () const</td></tr>
+<tr class="separator:a52727e9719cc59a2bfedd0b56ee7d2ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ec14829aa4069e06cdd6dbaa1b10778"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dc2/struct_game_time.html#a0ec14829aa4069e06cdd6dbaa1b10778">GetDaysOfWeek</a> () const</td></tr>
+<tr class="separator:a0ec14829aa4069e06cdd6dbaa1b10778"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a641f4d3ee68d3353156b0291d1858745"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dc2/struct_game_time.html#a641f4d3ee68d3353156b0291d1858745">GetDaysOfMonth</a> () const</td></tr>
+<tr class="separator:a641f4d3ee68d3353156b0291d1858745"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d3f93e6db6e0fc0b6c18db39f286551"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dc2/struct_game_time.html#a3d3f93e6db6e0fc0b6c18db39f286551">GetWeeksOfMonth</a> () const</td></tr>
+<tr class="separator:a3d3f93e6db6e0fc0b6c18db39f286551"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae36e2f49426d2d6b1dae91b85cb45e7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dc2/struct_game_time.html#aae36e2f49426d2d6b1dae91b85cb45e7">GetMonthsOfYear</a> () const</td></tr>
+<tr class="separator:aae36e2f49426d2d6b1dae91b85cb45e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb3a47b5676007549eab9dadfe6d9867"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dc2/struct_game_time.html#aeb3a47b5676007549eab9dadfe6d9867">AddMinutes</a> (int minutes)</td></tr>
+<tr class="separator:aeb3a47b5676007549eab9dadfe6d9867"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34c27e8f594abff5ac40b859536a1b9b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dc2/struct_game_time.html#a34c27e8f594abff5ac40b859536a1b9b">SubtractHours</a> (int hours)</td></tr>
+<tr class="separator:a34c27e8f594abff5ac40b859536a1b9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f06da8b2c89fd27e206932b0aea9368"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dc2/struct_game_time.html#a9f06da8b2c89fd27e206932b0aea9368">AddDays</a> (int days)</td></tr>
+<tr class="separator:a9f06da8b2c89fd27e206932b0aea9368"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7e03e3391fcb6591246805aa44a0b2c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dc2/struct_game_time.html#ac7e03e3391fcb6591246805aa44a0b2c">AddYears</a> (int years)</td></tr>
+<tr class="separator:ac7e03e3391fcb6591246805aa44a0b2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab85c95665b71cdbbfb8f0c3ee03d8f2d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dc2/struct_game_time.html#ab85c95665b71cdbbfb8f0c3ee03d8f2d">Reset</a> ()</td></tr>
+<tr class="separator:ab85c95665b71cdbbfb8f0c3ee03d8f2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7be2495c8b562bc9065128876a224679"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dc2/struct_game_time.html#a7be2495c8b562bc9065128876a224679">Valid</a> () const</td></tr>
+<tr class="separator:a7be2495c8b562bc9065128876a224679"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3568dd205a0b93710e7ae4d59cdf566c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/dc2/struct_game_time.html">GameTime</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dc2/struct_game_time.html#a3568dd205a0b93710e7ae4d59cdf566c">operator+</a> (<a class="el" href="../../df/dc2/struct_game_time.html">GameTime</a> &amp;rhs)</td></tr>
+<tr class="separator:a3568dd205a0b93710e7ae4d59cdf566c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1fdcd3b9c08e585e1866923cd2b8468"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/dc2/struct_game_time.html">GameTime</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dc2/struct_game_time.html#ae1fdcd3b9c08e585e1866923cd2b8468">operator-</a> (<a class="el" href="../../df/dc2/struct_game_time.html">GameTime</a> &amp;rhs)</td></tr>
+<tr class="separator:ae1fdcd3b9c08e585e1866923cd2b8468"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5855401e2bb8831058b23e1a1d893bab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/dc2/struct_game_time.html">GameTime</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dc2/struct_game_time.html#a5855401e2bb8831058b23e1a1d893bab">operator+=</a> (<a class="el" href="../../df/dc2/struct_game_time.html">GameTime</a> &amp;rhs)</td></tr>
+<tr class="separator:a5855401e2bb8831058b23e1a1d893bab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a096d32f33ca387c64655287df9c36f28"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dc2/struct_game_time.html#a096d32f33ca387c64655287df9c36f28">operator&gt;</a> (const <a class="el" href="../../df/dc2/struct_game_time.html">GameTime</a> &amp;rhs) const</td></tr>
+<tr class="separator:a096d32f33ca387c64655287df9c36f28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b221e3a9317e4391b87d17cf88c346a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dc2/struct_game_time.html#a3b221e3a9317e4391b87d17cf88c346a">operator&gt;=</a> (const <a class="el" href="../../df/dc2/struct_game_time.html">GameTime</a> &amp;rhs) const</td></tr>
+<tr class="separator:a3b221e3a9317e4391b87d17cf88c346a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14d428ce294ad4c7b8f6e4522d9d97b1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dc2/struct_game_time.html#a14d428ce294ad4c7b8f6e4522d9d97b1">operator&lt;</a> (const <a class="el" href="../../df/dc2/struct_game_time.html">GameTime</a> &amp;rhs) const</td></tr>
+<tr class="separator:a14d428ce294ad4c7b8f6e4522d9d97b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab09606047176325fac8ee7d40a787876"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dc2/struct_game_time.html#ab09606047176325fac8ee7d40a787876">operator&lt;=</a> (const <a class="el" href="../../df/dc2/struct_game_time.html">GameTime</a> &amp;rhs) const</td></tr>
+<tr class="separator:ab09606047176325fac8ee7d40a787876"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b3dc4810748e950127feea3b46bb916"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dc2/struct_game_time.html#a1b3dc4810748e950127feea3b46bb916">operator bool</a> ()</td></tr>
+<tr class="separator:a1b3dc4810748e950127feea3b46bb916"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a3cfcbac2f5278aadee1889cfa2da0e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dc2/struct_game_time.html#a7a3cfcbac2f5278aadee1889cfa2da0e">operator int</a> ()</td></tr>
+<tr class="separator:a7a3cfcbac2f5278aadee1889cfa2da0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Открытые статические члены</h2></td></tr>
+<tr class="memitem:a988d4e6b372bedab06913239264fd54c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../df/dc2/struct_game_time.html">GameTime</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dc2/struct_game_time.html#a988d4e6b372bedab06913239264fd54c">FromSeconds</a> (int seconds)</td></tr>
+<tr class="separator:a988d4e6b372bedab06913239264fd54c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06d361d87d87ee254e6c14ce035e6f58"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../df/dc2/struct_game_time.html">GameTime</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dc2/struct_game_time.html#a06d361d87d87ee254e6c14ce035e6f58">FromMinutes</a> (int minutes)</td></tr>
+<tr class="separator:a06d361d87d87ee254e6c14ce035e6f58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5038a8342841cf37dbf3857427fe4cf0"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../df/dc2/struct_game_time.html">GameTime</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dc2/struct_game_time.html#a5038a8342841cf37dbf3857427fe4cf0">FromHours</a> (int hours)</td></tr>
+<tr class="separator:a5038a8342841cf37dbf3857427fe4cf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae04d60fcc7991002de7fe83d9fd5f7fc"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../df/dc2/struct_game_time.html">GameTime</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dc2/struct_game_time.html#ae04d60fcc7991002de7fe83d9fd5f7fc">FromDays</a> (int days)</td></tr>
+<tr class="separator:ae04d60fcc7991002de7fe83d9fd5f7fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4614fa6237061060135892717d0fc1de"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../df/dc2/struct_game_time.html">GameTime</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dc2/struct_game_time.html#a4614fa6237061060135892717d0fc1de">FromYears</a> (int years)</td></tr>
+<tr class="separator:a4614fa6237061060135892717d0fc1de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:a19529c76d49c92dc7e664297b1d51244"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/df4/alext_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dc2/struct_game_time.html#a19529c76d49c92dc7e664297b1d51244">value</a></td></tr>
+<tr class="separator:a19529c76d49c92dc7e664297b1d51244"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock">
+<p class="definition">См. определение в файле <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html">Time.h</a> строка <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00014">14</a></p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="ab3b7fbfbc2a94e223d349b3dd48f76d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3b7fbfbc2a94e223d349b3dd48f76d3">&#9670;&nbsp;</a></span>GameTime() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameTime::GameTime </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html">Time.h</a> строка <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00015">15</a></p>
+<div class="fragment"><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;: <a class="code" href="../../df/dc2/struct_game_time.html#a19529c76d49c92dc7e664297b1d51244">value</a>(0) {}</div>
+</div><!-- fragment -->
+<p class="reference">Используется в <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00092">FromDays()</a>, <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00089">FromHours()</a>, <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00086">FromMinutes()</a>, <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00083">FromSeconds()</a>, <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00095">FromYears()</a>, <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00061">operator+()</a> и <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00064">operator-()</a>.</p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../df/dc2/struct_game_time_ab3b7fbfbc2a94e223d349b3dd48f76d3_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a7e117c4d6f5835fb2f4a7b7f0eea59a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e117c4d6f5835fb2f4a7b7f0eea59a1">&#9670;&nbsp;</a></span>GameTime() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameTime::GameTime </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dd/df4/alext_8h.html#aec6fcb673ff035718c238c8c9d544c47">uint64_t</a>&#160;</td>
+          <td class="paramname"><em>val</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html">Time.h</a> строка <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00016">16</a></p>
+<div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;: <a class="code" href="../../df/dc2/struct_game_time.html#a19529c76d49c92dc7e664297b1d51244">value</a>(<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a26942fd2ed566ef553eae82d2c109c8f">val</a>) {}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a7f1d46eb3500683b62ee347a40b41fa7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f1d46eb3500683b62ee347a40b41fa7">&#9670;&nbsp;</a></span>GameTime() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameTime::GameTime </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>seconds</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>minutes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>hours</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>days</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>weeks</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>months</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>years</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html">Time.h</a> строка <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00017">17</a></p>
+<div class="fragment"><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;                                                           {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keyword">auto</span> converted = (seconds + (<a class="code" href="../../dd/df4/alext_8h.html#aec6fcb673ff035718c238c8c9d544c47">uint64_t</a>)60 * minutes + (<a class="code" href="../../dd/df4/alext_8h.html#aec6fcb673ff035718c238c8c9d544c47">uint64_t</a>)3600 * hours + (<a class="code" href="../../dd/df4/alext_8h.html#aec6fcb673ff035718c238c8c9d544c47">uint64_t</a>)86400 * days +</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            (<a class="code" href="../../dd/df4/alext_8h.html#aec6fcb673ff035718c238c8c9d544c47">uint64_t</a>)604800 * weeks + (<a class="code" href="../../dd/df4/alext_8h.html#aec6fcb673ff035718c238c8c9d544c47">uint64_t</a>)2419200 * months +</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                          (<a class="code" href="../../dd/df4/alext_8h.html#aec6fcb673ff035718c238c8c9d544c47">uint64_t</a>)29030400 * years) *</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                         TIME_PACK_GAME_SECONDS;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        this-&gt;<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a8ad81492d410ff2ac11f754f4042150f">value</a> = (<a class="code" href="../../dd/df4/alext_8h.html#aec6fcb673ff035718c238c8c9d544c47">uint64_t</a>)converted;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a719def6268b14c320733038cb701d1a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a719def6268b14c320733038cb701d1a6">&#9670;&nbsp;</a></span>GetSeconds()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dd/df4/alext_8h.html#aec6fcb673ff035718c238c8c9d544c47">uint64_t</a> GameTime::GetSeconds </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html">Time.h</a> строка <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00027">27</a></p>
+<div class="fragment"><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                                {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="../../dd/df4/alext_8h.html#aec6fcb673ff035718c238c8c9d544c47">uint64_t</a>)(this-&gt;<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a8ad81492d410ff2ac11f754f4042150f">value</a> * TIME_UNPACK_GAME_SECONDS);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    }</div>
+</div><!-- fragment -->
+<p class="reference">Используется в <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00039">GetHoursOfDay()</a>, <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00030">GetMinutes()</a>, <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00038">GetMinutesFraction()</a> и <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00037">GetSecondsFraction()</a>.</p>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../df/dc2/struct_game_time_a719def6268b14c320733038cb701d1a6_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a6957230697b66012e8207c587aa65e33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6957230697b66012e8207c587aa65e33">&#9670;&nbsp;</a></span>GetMinutes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dd/df4/alext_8h.html#aec6fcb673ff035718c238c8c9d544c47">uint64_t</a> GameTime::GetMinutes </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html">Time.h</a> строка <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00030">30</a></p>
+<div class="fragment"><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{ <span class="keywordflow">return</span> this-&gt;<a class="code" href="../../df/dc2/struct_game_time.html#a719def6268b14c320733038cb701d1a6">GetSeconds</a>() / 60; }</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00027">GetSeconds()</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00031">GetHours()</a>.</p>
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../df/dc2/struct_game_time_a6957230697b66012e8207c587aa65e33_cgraph.svg" width="384" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../df/dc2/struct_game_time_a6957230697b66012e8207c587aa65e33_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a9f828cfde868d07e1f607171c6809435"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f828cfde868d07e1f607171c6809435">&#9670;&nbsp;</a></span>GetHours()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dd/df4/alext_8h.html#aec6fcb673ff035718c238c8c9d544c47">uint64_t</a> GameTime::GetHours </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html">Time.h</a> строка <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00031">31</a></p>
+<div class="fragment"><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{ <span class="keywordflow">return</span> this-&gt;<a class="code" href="../../df/dc2/struct_game_time.html#a6957230697b66012e8207c587aa65e33">GetMinutes</a>() / 60; }</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00030">GetMinutes()</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00032">GetDays()</a>.</p>
+<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../df/dc2/struct_game_time_a9f828cfde868d07e1f607171c6809435_cgraph.svg" width="580" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../df/dc2/struct_game_time_a9f828cfde868d07e1f607171c6809435_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a63923f44c458d6327dec9c87660700a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63923f44c458d6327dec9c87660700a5">&#9670;&nbsp;</a></span>GetDays()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GameTime::GetDays </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html">Time.h</a> строка <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00032">32</a></p>
+<div class="fragment"><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{ <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)(this-&gt;<a class="code" href="../../df/dc2/struct_game_time.html#a9f828cfde868d07e1f607171c6809435">GetHours</a>() / 24); }</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00031">GetHours()</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l01623">_494035_timed_effects__water_walking_damage__etc()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l04645">Player::CompareVariable()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l00325">Player::GetConditionDaysPassed()</a>, <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00041">GetDaysOfMonth()</a>, <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00040">GetDaysOfWeek()</a>, <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00033">GetWeeks()</a>, <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l00980">OutdoorLocation::Load()</a>, <a class="el" href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00609">MakeDateTimeString()</a>, <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l03788">ODM_LoadAndInitialize()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l02327">OnMapLoad()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l02310">PrepareToLoadBLV()</a> и <a class="el" href="../../d3/d59/_lloyds_book_8cpp_source.html#l00060">GUIWindow_LloydsBook::Update()</a>.</p>
+<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../df/dc2/struct_game_time_a63923f44c458d6327dec9c87660700a5_cgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-7-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-7-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../df/dc2/struct_game_time_a63923f44c458d6327dec9c87660700a5_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="abba323570853b3416523a1f751d9434e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abba323570853b3416523a1f751d9434e">&#9670;&nbsp;</a></span>GetWeeks()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GameTime::GetWeeks </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html">Time.h</a> строка <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00033">33</a></p>
+<div class="fragment"><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{ <span class="keywordflow">return</span> this-&gt;<a class="code" href="../../df/dc2/struct_game_time.html#a63923f44c458d6327dec9c87660700a5">GetDays</a>() / 7; }</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00032">GetDays()</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00034">GetMonths()</a>, <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00042">GetWeeksOfMonth()</a> и <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l02327">OnMapLoad()</a>.</p>
+<div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-8-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-8-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../df/dc2/struct_game_time_abba323570853b3416523a1f751d9434e_cgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-9-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-9-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../df/dc2/struct_game_time_abba323570853b3416523a1f751d9434e_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a07ae29857951b03940de0d2232075558"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07ae29857951b03940de0d2232075558">&#9670;&nbsp;</a></span>GetMonths()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GameTime::GetMonths </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html">Time.h</a> строка <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00034">34</a></p>
+<div class="fragment"><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;{ <span class="keywordflow">return</span> this-&gt;<a class="code" href="../../df/dc2/struct_game_time.html#abba323570853b3416523a1f751d9434e">GetWeeks</a>() / 4; }</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00033">GetWeeks()</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l01623">_494035_timed_effects__water_walking_damage__etc()</a>, <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00043">GetMonthsOfYear()</a>, <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00035">GetYears()</a>, <a class="el" href="../../d5/da4/_items_8h_source.html#l00573">SummonedItem::Initialize()</a> и <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l02327">OnMapLoad()</a>.</p>
+<div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-10-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-10-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-10-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../df/dc2/struct_game_time_a07ae29857951b03940de0d2232075558_cgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-11-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-11-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-11-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../df/dc2/struct_game_time_a07ae29857951b03940de0d2232075558_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a00951cb2332c791ffd8142e0e9425875"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00951cb2332c791ffd8142e0e9425875">&#9670;&nbsp;</a></span>GetYears()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GameTime::GetYears </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html">Time.h</a> строка <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00035">35</a></p>
+<div class="fragment"><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{ <span class="keywordflow">return</span> this-&gt;<a class="code" href="../../df/dc2/struct_game_time.html#a07ae29857951b03940de0d2232075558">GetMonths</a>() / 12; }</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00034">GetMonths()</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d2/d82/_player_8cpp_source.html#l02468">Player::GetBaseAge()</a>, <a class="el" href="../../d5/da4/_items_8h_source.html#l00573">SummonedItem::Initialize()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l02327">OnMapLoad()</a>, <a class="el" href="../../da/db4/_party_8cpp_source.html#l00872">RestAndHeal()</a> и <a class="el" href="../../d9/d68/_u_i_save_load_8cpp_source.html#l00231">UI_DrawSaveLoad()</a>.</p>
+<div id="dynsection-12" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-12-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-12-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-12-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../df/dc2/struct_game_time_a00951cb2332c791ffd8142e0e9425875_cgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div id="dynsection-13" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-13-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-13-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-13-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../df/dc2/struct_game_time_a00951cb2332c791ffd8142e0e9425875_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a2b06bc31a7d3a042d1addbcb9a5d3a58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b06bc31a7d3a042d1addbcb9a5d3a58">&#9670;&nbsp;</a></span>GetSecondsFraction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GameTime::GetSecondsFraction </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html">Time.h</a> строка <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00037">37</a></p>
+<div class="fragment"><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;{ <span class="keywordflow">return</span> this-&gt;<a class="code" href="../../df/dc2/struct_game_time.html#a719def6268b14c320733038cb701d1a6">GetSeconds</a>() % 60; }</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00027">GetSeconds()</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l01623">_494035_timed_effects__water_walking_damage__etc()</a>, <a class="el" href="../../d5/da4/_items_8h_source.html#l00573">SummonedItem::Initialize()</a>, <a class="el" href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00609">MakeDateTimeString()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l02327">OnMapLoad()</a> и <a class="el" href="../../da/db4/_party_8cpp_source.html#l00872">RestAndHeal()</a>.</p>
+<div id="dynsection-14" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-14-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-14-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-14-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../df/dc2/struct_game_time_a2b06bc31a7d3a042d1addbcb9a5d3a58_cgraph.svg" width="436" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-15" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-15-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-15-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-15-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../df/dc2/struct_game_time_a2b06bc31a7d3a042d1addbcb9a5d3a58_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a72d75830ae38cb9176ae7370f0b116a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72d75830ae38cb9176ae7370f0b116a0">&#9670;&nbsp;</a></span>GetMinutesFraction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GameTime::GetMinutesFraction </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html">Time.h</a> строка <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00038">38</a></p>
+<div class="fragment"><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{ <span class="keywordflow">return</span> (this-&gt;<a class="code" href="../../df/dc2/struct_game_time.html#a719def6268b14c320733038cb701d1a6">GetSeconds</a>() / 60) % 60; }</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00027">GetSeconds()</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l01929">_493938_regenerate()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l01623">_494035_timed_effects__water_walking_damage__etc()</a>, <a class="el" href="../../d5/da4/_items_8h_source.html#l00573">SummonedItem::Initialize()</a>, <a class="el" href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00609">MakeDateTimeString()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l02327">OnMapLoad()</a>, <a class="el" href="../../da/db4/_party_8cpp_source.html#l00872">RestAndHeal()</a> и <a class="el" href="../../d9/d68/_u_i_save_load_8cpp_source.html#l00231">UI_DrawSaveLoad()</a>.</p>
+<div id="dynsection-16" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-16-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-16-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-16-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../df/dc2/struct_game_time_a72d75830ae38cb9176ae7370f0b116a0_cgraph.svg" width="431" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-17" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-17-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-17-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-17-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../df/dc2/struct_game_time_a72d75830ae38cb9176ae7370f0b116a0_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a52727e9719cc59a2bfedd0b56ee7d2ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52727e9719cc59a2bfedd0b56ee7d2ba">&#9670;&nbsp;</a></span>GetHoursOfDay()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GameTime::GetHoursOfDay </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html">Time.h</a> строка <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00039">39</a></p>
+<div class="fragment"><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;{ <span class="keywordflow">return</span> (this-&gt;<a class="code" href="../../df/dc2/struct_game_time.html#a719def6268b14c320733038cb701d1a6">GetSeconds</a>() / 3600) % 24; }</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00027">GetSeconds()</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l01623">_494035_timed_effects__water_walking_damage__etc()</a>, <a class="el" href="../../dc/dce/_g_u_i_window_8cpp_source.html#l02196">BuildDialogueString()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l04645">Player::CompareVariable()</a>, <a class="el" href="../../d5/da4/_items_8h_source.html#l00573">SummonedItem::Initialize()</a>, <a class="el" href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00609">MakeDateTimeString()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l02327">OnMapLoad()</a>, <a class="el" href="../../da/db4/_party_8cpp_source.html#l00872">RestAndHeal()</a>, <a class="el" href="../../d9/d68/_u_i_save_load_8cpp_source.html#l00231">UI_DrawSaveLoad()</a> и <a class="el" href="../../d3/d59/_lloyds_book_8cpp_source.html#l00060">GUIWindow_LloydsBook::Update()</a>.</p>
+<div id="dynsection-18" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-18-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-18-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-18-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../df/dc2/struct_game_time_a52727e9719cc59a2bfedd0b56ee7d2ba_cgraph.svg" width="408" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-19" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-19-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-19-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-19-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../df/dc2/struct_game_time_a52727e9719cc59a2bfedd0b56ee7d2ba_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a0ec14829aa4069e06cdd6dbaa1b10778"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ec14829aa4069e06cdd6dbaa1b10778">&#9670;&nbsp;</a></span>GetDaysOfWeek()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GameTime::GetDaysOfWeek </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html">Time.h</a> строка <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00040">40</a></p>
+<div class="fragment"><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{ <span class="keywordflow">return</span> this-&gt;<a class="code" href="../../df/dc2/struct_game_time.html#a63923f44c458d6327dec9c87660700a5">GetDays</a>() % 7; }</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00032">GetDays()</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l02327">OnMapLoad()</a> и <a class="el" href="../../d9/d68/_u_i_save_load_8cpp_source.html#l00231">UI_DrawSaveLoad()</a>.</p>
+<div id="dynsection-20" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-20-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-20-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-20-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../df/dc2/struct_game_time_a0ec14829aa4069e06cdd6dbaa1b10778_cgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div id="dynsection-21" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-21-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-21-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-21-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../df/dc2/struct_game_time_a0ec14829aa4069e06cdd6dbaa1b10778_icgraph.svg" width="100%" height="458"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a641f4d3ee68d3353156b0291d1858745"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a641f4d3ee68d3353156b0291d1858745">&#9670;&nbsp;</a></span>GetDaysOfMonth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GameTime::GetDaysOfMonth </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html">Time.h</a> строка <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00041">41</a></p>
+<div class="fragment"><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;{ <span class="keywordflow">return</span> this-&gt;<a class="code" href="../../df/dc2/struct_game_time.html#a63923f44c458d6327dec9c87660700a5">GetDays</a>() % 28; }</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00032">GetDays()</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d5/da4/_items_8h_source.html#l00573">SummonedItem::Initialize()</a>, <a class="el" href="../../da/db4/_party_8cpp_source.html#l00872">RestAndHeal()</a> и <a class="el" href="../../d9/d68/_u_i_save_load_8cpp_source.html#l00231">UI_DrawSaveLoad()</a>.</p>
+<div id="dynsection-22" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-22-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-22-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-22-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../df/dc2/struct_game_time_a641f4d3ee68d3353156b0291d1858745_cgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div id="dynsection-23" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-23-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-23-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-23-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../df/dc2/struct_game_time_a641f4d3ee68d3353156b0291d1858745_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a3d3f93e6db6e0fc0b6c18db39f286551"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d3f93e6db6e0fc0b6c18db39f286551">&#9670;&nbsp;</a></span>GetWeeksOfMonth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GameTime::GetWeeksOfMonth </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html">Time.h</a> строка <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00042">42</a></p>
+<div class="fragment"><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{ <span class="keywordflow">return</span> this-&gt;<a class="code" href="../../df/dc2/struct_game_time.html#abba323570853b3416523a1f751d9434e">GetWeeks</a>() % 4; }</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00033">GetWeeks()</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d5/da4/_items_8h_source.html#l00573">SummonedItem::Initialize()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l02327">OnMapLoad()</a> и <a class="el" href="../../da/db4/_party_8cpp_source.html#l00872">RestAndHeal()</a>.</p>
+<div id="dynsection-24" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-24-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-24-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-24-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../df/dc2/struct_game_time_a3d3f93e6db6e0fc0b6c18db39f286551_cgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div id="dynsection-25" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-25-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-25-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-25-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../df/dc2/struct_game_time_a3d3f93e6db6e0fc0b6c18db39f286551_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="aae36e2f49426d2d6b1dae91b85cb45e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae36e2f49426d2d6b1dae91b85cb45e7">&#9670;&nbsp;</a></span>GetMonthsOfYear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GameTime::GetMonthsOfYear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html">Time.h</a> строка <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00043">43</a></p>
+<div class="fragment"><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;{ <span class="keywordflow">return</span> this-&gt;<a class="code" href="../../df/dc2/struct_game_time.html#a07ae29857951b03940de0d2232075558">GetMonths</a>() % 12; }</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00034">GetMonths()</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l01623">_494035_timed_effects__water_walking_damage__etc()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l02327">OnMapLoad()</a>, <a class="el" href="../../da/db4/_party_8cpp_source.html#l00872">RestAndHeal()</a> и <a class="el" href="../../d9/d68/_u_i_save_load_8cpp_source.html#l00231">UI_DrawSaveLoad()</a>.</p>
+<div id="dynsection-26" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-26-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-26-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-26-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../df/dc2/struct_game_time_aae36e2f49426d2d6b1dae91b85cb45e7_cgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div id="dynsection-27" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-27-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-27-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-27-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../df/dc2/struct_game_time_aae36e2f49426d2d6b1dae91b85cb45e7_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="aeb3a47b5676007549eab9dadfe6d9867"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb3a47b5676007549eab9dadfe6d9867">&#9670;&nbsp;</a></span>AddMinutes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> GameTime::AddMinutes </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>minutes</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html">Time.h</a> строка <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00045">45</a></p>
+<div class="fragment"><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                                 {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        this-&gt;<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a8ad81492d410ff2ac11f754f4042150f">value</a> += ((<a class="code" href="../../dd/df4/alext_8h.html#aec6fcb673ff035718c238c8c9d544c47">uint64_t</a>)60 * minutes * TIME_PACK_GAME_SECONDS);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    }</div>
+</div><!-- fragment -->
+<p class="reference">Используется в <a class="el" href="../../da/db4/_party_8cpp_source.html#l00872">RestAndHeal()</a>.</p>
+<div id="dynsection-28" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-28-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-28-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-28-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../df/dc2/struct_game_time_aeb3a47b5676007549eab9dadfe6d9867_icgraph.svg" width="100%" height="416"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a34c27e8f594abff5ac40b859536a1b9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34c27e8f594abff5ac40b859536a1b9b">&#9670;&nbsp;</a></span>SubtractHours()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> GameTime::SubtractHours </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>hours</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html">Time.h</a> строка <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00048">48</a></p>
+<div class="fragment"><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                                  {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        this-&gt;<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a8ad81492d410ff2ac11f754f4042150f">value</a> -= ((<a class="code" href="../../dd/df4/alext_8h.html#aec6fcb673ff035718c238c8c9d544c47">uint64_t</a>)60 * 60 * hours * TIME_PACK_GAME_SECONDS);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a9f06da8b2c89fd27e206932b0aea9368"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f06da8b2c89fd27e206932b0aea9368">&#9670;&nbsp;</a></span>AddDays()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> GameTime::AddDays </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>days</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html">Time.h</a> строка <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00051">51</a></p>
+<div class="fragment"><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                           {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        this-&gt;<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a8ad81492d410ff2ac11f754f4042150f">value</a> += ((<a class="code" href="../../dd/df4/alext_8h.html#aec6fcb673ff035718c238c8c9d544c47">uint64_t</a>)60 * 60 * 24 * days * TIME_PACK_GAME_SECONDS);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    }</div>
+</div><!-- fragment -->
+<p class="reference">Используется в <a class="el" href="../../d7/db5/_game_8cpp_source.html#l00322">Application::Game::EventLoop()</a> и <a class="el" href="../../d7/db5/_game_8cpp_source.html#l02704">Application::Game::GameLoop()</a>.</p>
+<div id="dynsection-29" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-29-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-29-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-29-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../df/dc2/struct_game_time_a9f06da8b2c89fd27e206932b0aea9368_icgraph.svg" width="100%" height="361"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ac7e03e3391fcb6591246805aa44a0b2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7e03e3391fcb6591246805aa44a0b2c">&#9670;&nbsp;</a></span>AddYears()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> GameTime::AddYears </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>years</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html">Time.h</a> строка <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00054">54</a></p>
+<div class="fragment"><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                             {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        this-&gt;<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a8ad81492d410ff2ac11f754f4042150f">value</a> += ((<a class="code" href="../../dd/df4/alext_8h.html#aec6fcb673ff035718c238c8c9d544c47">uint64_t</a>)60 * 60 * 24 * 7 * 4 * 12 * years * TIME_PACK_GAME_SECONDS);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    }</div>
+</div><!-- fragment -->
+<p class="reference">Используется в <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l00826">EnterHouse()</a>.</p>
+<div id="dynsection-30" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-30-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-30-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-30-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../df/dc2/struct_game_time_ac7e03e3391fcb6591246805aa44a0b2c_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ab85c95665b71cdbbfb8f0c3ee03d8f2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab85c95665b71cdbbfb8f0c3ee03d8f2d">&#9670;&nbsp;</a></span>Reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> GameTime::Reset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html">Time.h</a> строка <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00058">58</a></p>
+<div class="fragment"><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;{ this-&gt;<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a8ad81492d410ff2ac11f754f4042150f">value</a> = 0; }</div>
+</div><!-- fragment -->
+<p class="reference">Используется в <a class="el" href="../../da/df3/_spells_8cpp_source.html#l00351">SpellBuff::IsBuffExpiredToTime()</a>, <a class="el" href="../../da/df3/_spells_8cpp_source.html#l00337">SpellBuff::Reset()</a> и <a class="el" href="../../d9/d99/_items_8cpp_source.html#l00133">ItemGen::Reset()</a>.</p>
+<div id="dynsection-31" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-31-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-31-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-31-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../df/dc2/struct_game_time_ab85c95665b71cdbbfb8f0c3ee03d8f2d_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a7be2495c8b562bc9065128876a224679"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7be2495c8b562bc9065128876a224679">&#9670;&nbsp;</a></span>Valid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool GameTime::Valid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html">Time.h</a> строка <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00059">59</a></p>
+<div class="fragment"><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;{ <span class="keywordflow">return</span> this-&gt;<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a8ad81492d410ff2ac11f754f4042150f">value</a> &gt; 0; }</div>
+</div><!-- fragment -->
+<p class="reference">Используется в <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00077">operator bool()</a>.</p>
+<div id="dynsection-32" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-32-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-32-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-32-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../df/dc2/struct_game_time_a7be2495c8b562bc9065128876a224679_icgraph.svg" width="350" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a3568dd205a0b93710e7ae4d59cdf566c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3568dd205a0b93710e7ae4d59cdf566c">&#9670;&nbsp;</a></span>operator+()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../df/dc2/struct_game_time.html">GameTime</a> GameTime::operator+ </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../df/dc2/struct_game_time.html">GameTime</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html">Time.h</a> строка <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00061">61</a></p>
+<div class="fragment"><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                                      {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../df/dc2/struct_game_time.html#ab3b7fbfbc2a94e223d349b3dd48f76d3">GameTime</a>(this-&gt;<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a8ad81492d410ff2ac11f754f4042150f">value</a> + rhs.<a class="code" href="../../df/dc2/struct_game_time.html#a19529c76d49c92dc7e664297b1d51244">value</a>);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    }</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00015">GameTime()</a> и <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00099">value</a>.</p>
+<div id="dynsection-33" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-33-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-33-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-33-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../df/dc2/struct_game_time_a3568dd205a0b93710e7ae4d59cdf566c_cgraph.svg" width="363" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ae1fdcd3b9c08e585e1866923cd2b8468"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1fdcd3b9c08e585e1866923cd2b8468">&#9670;&nbsp;</a></span>operator-()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../df/dc2/struct_game_time.html">GameTime</a> GameTime::operator- </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../df/dc2/struct_game_time.html">GameTime</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html">Time.h</a> строка <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00064">64</a></p>
+<div class="fragment"><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                                      {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../df/dc2/struct_game_time.html#ab3b7fbfbc2a94e223d349b3dd48f76d3">GameTime</a>(this-&gt;<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a8ad81492d410ff2ac11f754f4042150f">value</a> - rhs.<a class="code" href="../../df/dc2/struct_game_time.html#a19529c76d49c92dc7e664297b1d51244">value</a>);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    }</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00015">GameTime()</a> и <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00099">value</a>.</p>
+<div id="dynsection-34" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-34-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-34-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-34-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../df/dc2/struct_game_time_ae1fdcd3b9c08e585e1866923cd2b8468_cgraph.svg" width="359" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a5855401e2bb8831058b23e1a1d893bab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5855401e2bb8831058b23e1a1d893bab">&#9670;&nbsp;</a></span>operator+=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../df/dc2/struct_game_time.html">GameTime</a>&amp; GameTime::operator+= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../df/dc2/struct_game_time.html">GameTime</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html">Time.h</a> строка <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00067">67</a></p>
+<div class="fragment"><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                                        {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        this-&gt;<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a8ad81492d410ff2ac11f754f4042150f">value</a> += rhs.<a class="code" href="../../df/dc2/struct_game_time.html#a19529c76d49c92dc7e664297b1d51244">value</a>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    }</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00099">value</a>.</p>
+
+</div>
+</div>
+<a id="a096d32f33ca387c64655287df9c36f28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a096d32f33ca387c64655287df9c36f28">&#9670;&nbsp;</a></span>operator&gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool GameTime::operator&gt; </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../df/dc2/struct_game_time.html">GameTime</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html">Time.h</a> строка <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00072">72</a></p>
+<div class="fragment"><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;{ <span class="keywordflow">return</span> this-&gt;<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a8ad81492d410ff2ac11f754f4042150f">value</a> &gt; rhs.<a class="code" href="../../df/dc2/struct_game_time.html#a19529c76d49c92dc7e664297b1d51244">value</a>; }</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00099">value</a>.</p>
+
+</div>
+</div>
+<a id="a3b221e3a9317e4391b87d17cf88c346a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b221e3a9317e4391b87d17cf88c346a">&#9670;&nbsp;</a></span>operator&gt;=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool GameTime::operator&gt;= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../df/dc2/struct_game_time.html">GameTime</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html">Time.h</a> строка <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00073">73</a></p>
+<div class="fragment"><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;{ <span class="keywordflow">return</span> this-&gt;<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a8ad81492d410ff2ac11f754f4042150f">value</a> &gt;= rhs.<a class="code" href="../../df/dc2/struct_game_time.html#a19529c76d49c92dc7e664297b1d51244">value</a>; }</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00099">value</a>.</p>
+
+</div>
+</div>
+<a id="a14d428ce294ad4c7b8f6e4522d9d97b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14d428ce294ad4c7b8f6e4522d9d97b1">&#9670;&nbsp;</a></span>operator&lt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool GameTime::operator&lt; </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../df/dc2/struct_game_time.html">GameTime</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html">Time.h</a> строка <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00074">74</a></p>
+<div class="fragment"><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;{ <span class="keywordflow">return</span> this-&gt;<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a8ad81492d410ff2ac11f754f4042150f">value</a> &lt; rhs.<a class="code" href="../../df/dc2/struct_game_time.html#a19529c76d49c92dc7e664297b1d51244">value</a>; }</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00099">value</a>.</p>
+
+</div>
+</div>
+<a id="ab09606047176325fac8ee7d40a787876"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab09606047176325fac8ee7d40a787876">&#9670;&nbsp;</a></span>operator&lt;=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool GameTime::operator&lt;= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../df/dc2/struct_game_time.html">GameTime</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html">Time.h</a> строка <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00075">75</a></p>
+<div class="fragment"><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;{ <span class="keywordflow">return</span> this-&gt;<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a8ad81492d410ff2ac11f754f4042150f">value</a> &lt;= rhs.<a class="code" href="../../df/dc2/struct_game_time.html#a19529c76d49c92dc7e664297b1d51244">value</a>; }</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00099">value</a>.</p>
+
+</div>
+</div>
+<a id="a1b3dc4810748e950127feea3b46bb916"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b3dc4810748e950127feea3b46bb916">&#9670;&nbsp;</a></span>operator bool()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameTime::operator bool </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html">Time.h</a> строка <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00077">77</a></p>
+<div class="fragment"><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                             {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordflow">return</span> this-&gt;<a class="code" href="../../df/dc2/struct_game_time.html#a7be2495c8b562bc9065128876a224679">Valid</a>();</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    }  <span class="comment">// unsafe bool was casuing many problems</span></div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00059">Valid()</a>.</p>
+<div id="dynsection-35" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-35-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-35-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-35-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../df/dc2/struct_game_time_a1b3dc4810748e950127feea3b46bb916_cgraph.svg" width="350" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a7a3cfcbac2f5278aadee1889cfa2da0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a3cfcbac2f5278aadee1889cfa2da0e">&#9670;&nbsp;</a></span>operator int()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameTime::operator int </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html">Time.h</a> строка <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00081">81</a></p>
+<div class="fragment"><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;{ <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(this-&gt;<a class="code" href="../../df/dc2/struct_game_time.html#a19529c76d49c92dc7e664297b1d51244">value</a>); }  <span class="comment">// cast operator conversion require</span></div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00099">value</a>.</p>
+
+</div>
+</div>
+<a id="a988d4e6b372bedab06913239264fd54c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a988d4e6b372bedab06913239264fd54c">&#9670;&nbsp;</a></span>FromSeconds()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="../../df/dc2/struct_game_time.html">GameTime</a> GameTime::FromSeconds </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>seconds</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html">Time.h</a> строка <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00083">83</a></p>
+<div class="fragment"><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                                             {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../df/dc2/struct_game_time.html#ab3b7fbfbc2a94e223d349b3dd48f76d3">GameTime</a>(seconds, 0, 0, 0, 0, 0, 0);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    }</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00015">GameTime()</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d9/dd3/_cast_spell_info_8cpp_source.html#l00046">CastSpellInfoHelpers::_427E01_cast_spell()</a>, <a class="el" href="../../d9/ded/_sprite_object_8cpp_source.html#l00909">SpriteObject::_46BEF1_apply_spells_aoe()</a>, <a class="el" href="../../d9/ded/_sprite_object_8cpp_source.html#l01017">_46BFFA_update_spell_fx()</a>, <a class="el" href="../../da/df3/_spells_8cpp_source.html#l00429">EventCastSpell()</a>, <a class="el" href="../../d6/ded/_u_i_popup_8cpp_source.html#l01817">Inventory_ItemPopupAndAlchemy()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l08186">Player::SetBeacon()</a> и <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l04969">sub_44FA4C_spawn_light_elemental()</a>.</p>
+<div id="dynsection-36" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-36-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-36-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-36-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../df/dc2/struct_game_time_a988d4e6b372bedab06913239264fd54c_cgraph.svg" width="390" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-37" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-37-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-37-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-37-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../df/dc2/struct_game_time_a988d4e6b372bedab06913239264fd54c_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a06d361d87d87ee254e6c14ce035e6f58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06d361d87d87ee254e6c14ce035e6f58">&#9670;&nbsp;</a></span>FromMinutes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="../../df/dc2/struct_game_time.html">GameTime</a> GameTime::FromMinutes </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>minutes</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html">Time.h</a> строка <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00086">86</a></p>
+<div class="fragment"><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                                             {</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../df/dc2/struct_game_time.html#ab3b7fbfbc2a94e223d349b3dd48f76d3">GameTime</a>(0, minutes, 0, 0, 0, 0, 0);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    }</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00015">GameTime()</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d9/dd3/_cast_spell_info_8cpp_source.html#l00046">CastSpellInfoHelpers::_427E01_cast_spell()</a> и <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l00199">Actor::AI_SpellAttack()</a>.</p>
+<div id="dynsection-38" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-38-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-38-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-38-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../df/dc2/struct_game_time_a06d361d87d87ee254e6c14ce035e6f58_cgraph.svg" width="384" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-39" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-39-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-39-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-39-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../df/dc2/struct_game_time_a06d361d87d87ee254e6c14ce035e6f58_icgraph.svg" width="100%" height="415"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a5038a8342841cf37dbf3857427fe4cf0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5038a8342841cf37dbf3857427fe4cf0">&#9670;&nbsp;</a></span>FromHours()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="../../df/dc2/struct_game_time.html">GameTime</a> GameTime::FromHours </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>hours</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html">Time.h</a> строка <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00089">89</a></p>
+<div class="fragment"><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                                         {</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../df/dc2/struct_game_time.html#ab3b7fbfbc2a94e223d349b3dd48f76d3">GameTime</a>(0, 0, hours, 0, 0, 0, 0);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    }</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00015">GameTime()</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d2/d82/_player_8cpp_source.html#l04645">Player::CompareVariable()</a> и <a class="el" href="../../d1/d6c/_n_p_c_8cpp_source.html#l01378">UseNPCSkill()</a>.</p>
+<div id="dynsection-40" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-40-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-40-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-40-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../df/dc2/struct_game_time_a5038a8342841cf37dbf3857427fe4cf0_cgraph.svg" width="372" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-41" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-41-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-41-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-41-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../df/dc2/struct_game_time_a5038a8342841cf37dbf3857427fe4cf0_icgraph.svg" width="100%" height="372"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ae04d60fcc7991002de7fe83d9fd5f7fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae04d60fcc7991002de7fe83d9fd5f7fc">&#9670;&nbsp;</a></span>FromDays()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="../../df/dc2/struct_game_time.html">GameTime</a> GameTime::FromDays </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>days</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html">Time.h</a> строка <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00092">92</a></p>
+<div class="fragment"><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                                       {</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../df/dc2/struct_game_time.html#ab3b7fbfbc2a94e223d349b3dd48f76d3">GameTime</a>(0, 0, 0, days, 0, 0, 0);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    }</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00015">GameTime()</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/dff/_win_api_window_8cpp_source.html#l00565">WinApiWindow::OnOSMenu()</a> и <a class="el" href="../../d9/d21/_u_i_shops_8cpp_source.html#l01709">sub_4B1447_party_fine()</a>.</p>
+<div id="dynsection-42" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-42-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-42-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-42-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../df/dc2/struct_game_time_ae04d60fcc7991002de7fe83d9fd5f7fc_cgraph.svg" width="368" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-43" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-43-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-43-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-43-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../df/dc2/struct_game_time_ae04d60fcc7991002de7fe83d9fd5f7fc_icgraph.svg" width="100%" height="378"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a4614fa6237061060135892717d0fc1de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4614fa6237061060135892717d0fc1de">&#9670;&nbsp;</a></span>FromYears()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="../../df/dc2/struct_game_time.html">GameTime</a> GameTime::FromYears </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>years</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html">Time.h</a> строка <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00095">95</a></p>
+<div class="fragment"><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                                         {</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../df/dc2/struct_game_time.html#ab3b7fbfbc2a94e223d349b3dd48f76d3">GameTime</a>(0, 0, 0, 0, 0, 0, years);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    }</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00015">GameTime()</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/dff/_win_api_window_8cpp_source.html#l00565">WinApiWindow::OnOSMenu()</a>.</p>
+<div id="dynsection-44" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-44-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-44-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-44-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../df/dc2/struct_game_time_a4614fa6237061060135892717d0fc1de_cgraph.svg" width="372" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-45" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-45-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-45-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-45-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../df/dc2/struct_game_time_a4614fa6237061060135892717d0fc1de_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="a19529c76d49c92dc7e664297b1d51244"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19529c76d49c92dc7e664297b1d51244">&#9670;&nbsp;</a></span>value</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dd/df4/alext_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a> GameTime::value</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html">Time.h</a> строка <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00099">99</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l01623">_494035_timed_effects__water_walking_damage__etc()</a>, <a class="el" href="../../de/d6c/_spell_fx_renderer_8cpp_source.html#l00648">SpellFxRenderer::_4A806F_get_mass_distortion_value()</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00162">SpellBuff::Active()</a>, <a class="el" href="../../de/deb/_actor_8h_source.html#l00153">Actor::Actor()</a>, <a class="el" href="../../d9/d4f/_legacy_images_8cpp_source.html#l00247">ItemGen_Image_MM7::Deserialize()</a>, <a class="el" href="../../d9/d4f/_legacy_images_8cpp_source.html#l00222">SpellBuff_Image_MM7::Deserialize()</a>, <a class="el" href="../../d9/d4f/_legacy_images_8cpp_source.html#l00428">Party_Image_MM7::Deserialize()</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00163">SpellBuff::Expired()</a>, <a class="el" href="../../dc/d5b/_turn_engine_8cpp_source.html#l00395">stru262_TurnBased::NextTurn()</a>, <a class="el" href="../../d4/dff/_win_api_window_8cpp_source.html#l00565">WinApiWindow::OnOSMenu()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l02479">OnTimer()</a>, <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00081">operator int()</a>, <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00061">operator+()</a>, <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00067">operator+=()</a>, <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00064">operator-()</a>, <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00074">operator&lt;()</a>, <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00075">operator&lt;=()</a>, <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00072">operator&gt;()</a>, <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00073">operator&gt;=()</a>, <a class="el" href="../../d9/d4f/_legacy_images_8cpp_source.html#l00231">ItemGen_Image_MM7::Serialize()</a>, <a class="el" href="../../d9/d4f/_legacy_images_8cpp_source.html#l00211">SpellBuff_Image_MM7::Serialize()</a> и <a class="el" href="../../d9/d4f/_legacy_images_8cpp_source.html#l00261">Party_Image_MM7::Serialize()</a>.</p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов структуры находятся в файле:<ul>
+<li>C:/git/world-of-might-and-magic/Engine/<a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html">Time.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="astruct_game_time_html_a63923f44c458d6327dec9c87660700a5"><div class="ttname"><a href="../../df/dc2/struct_game_time.html#a63923f44c458d6327dec9c87660700a5">GameTime::GetDays</a></div><div class="ttdeci">int GetDays() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d0e/_engine_2_time_8h_source.html#l00032">Time.h:32</a></div></div>
+<div class="ttc" id="aalext_8h_html_aec6fcb673ff035718c238c8c9d544c47"><div class="ttname"><a href="../../dd/df4/alext_8h.html#aec6fcb673ff035718c238c8c9d544c47">uint64_t</a></div><div class="ttdeci">unsigned __int64 uint64_t</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/df4/alext_8h_source.html#l00032">alext.h:32</a></div></div>
+<div class="ttc" id="astruct_game_time_html_a19529c76d49c92dc7e664297b1d51244"><div class="ttname"><a href="../../df/dc2/struct_game_time.html#a19529c76d49c92dc7e664297b1d51244">GameTime::value</a></div><div class="ttdeci">int64_t value</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d0e/_engine_2_time_8h_source.html#l00099">Time.h:99</a></div></div>
+<div class="ttc" id="astruct_game_time_html_abba323570853b3416523a1f751d9434e"><div class="ttname"><a href="../../df/dc2/struct_game_time.html#abba323570853b3416523a1f751d9434e">GameTime::GetWeeks</a></div><div class="ttdeci">int GetWeeks() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d0e/_engine_2_time_8h_source.html#l00033">Time.h:33</a></div></div>
+<div class="ttc" id="astruct_game_time_html_a7be2495c8b562bc9065128876a224679"><div class="ttname"><a href="../../df/dc2/struct_game_time.html#a7be2495c8b562bc9065128876a224679">GameTime::Valid</a></div><div class="ttdeci">bool Valid() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d0e/_engine_2_time_8h_source.html#l00059">Time.h:59</a></div></div>
+<div class="ttc" id="astruct_game_time_html_a6957230697b66012e8207c587aa65e33"><div class="ttname"><a href="../../df/dc2/struct_game_time.html#a6957230697b66012e8207c587aa65e33">GameTime::GetMinutes</a></div><div class="ttdeci">uint64_t GetMinutes() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d0e/_engine_2_time_8h_source.html#l00030">Time.h:30</a></div></div>
+<div class="ttc" id="a_s_d_l__egl_8h_html_a8ad81492d410ff2ac11f754f4042150f"><div class="ttname"><a href="../../df/d32/_s_d_l__egl_8h.html#a8ad81492d410ff2ac11f754f4042150f">value</a></div><div class="ttdeci">EGLSyncKHR EGLint EGLint * value</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/_s_d_l__egl_8h_source.html#l00899">SDL_egl.h:899</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a26942fd2ed566ef553eae82d2c109c8f"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a26942fd2ed566ef553eae82d2c109c8f">val</a></div><div class="ttdeci">GLuint GLfloat * val</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l01495">SDL_opengl_glext.h:1495</a></div></div>
+<div class="ttc" id="astruct_game_time_html_a719def6268b14c320733038cb701d1a6"><div class="ttname"><a href="../../df/dc2/struct_game_time.html#a719def6268b14c320733038cb701d1a6">GameTime::GetSeconds</a></div><div class="ttdeci">uint64_t GetSeconds() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d0e/_engine_2_time_8h_source.html#l00027">Time.h:27</a></div></div>
+<div class="ttc" id="astruct_game_time_html_a07ae29857951b03940de0d2232075558"><div class="ttname"><a href="../../df/dc2/struct_game_time.html#a07ae29857951b03940de0d2232075558">GameTime::GetMonths</a></div><div class="ttdeci">int GetMonths() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d0e/_engine_2_time_8h_source.html#l00034">Time.h:34</a></div></div>
+<div class="ttc" id="astruct_game_time_html_a9f828cfde868d07e1f607171c6809435"><div class="ttname"><a href="../../df/dc2/struct_game_time.html#a9f828cfde868d07e1f607171c6809435">GameTime::GetHours</a></div><div class="ttdeci">uint64_t GetHours() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d0e/_engine_2_time_8h_source.html#l00031">Time.h:31</a></div></div>
+<div class="ttc" id="astruct_game_time_html_ab3b7fbfbc2a94e223d349b3dd48f76d3"><div class="ttname"><a href="../../df/dc2/struct_game_time.html#ab3b7fbfbc2a94e223d349b3dd48f76d3">GameTime::GameTime</a></div><div class="ttdeci">GameTime()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d0e/_engine_2_time_8h_source.html#l00015">Time.h:15</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../df/dc2/struct_game_time.html">GameTime</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:04:44. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

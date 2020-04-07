@@ -1,0 +1,580 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Структура SpellBuff</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('db/d1e/struct_spell_buff.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="../../db/dba/struct_spell_buff-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Структура SpellBuff</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="../../d5/d7d/_spells_8h_source.html">Spells.h</a>&gt;</code></p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Граф связей класса SpellBuff:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../db/de0/struct_spell_buff__coll__graph.svg" width="126" height="127"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:ab6e0314bfd5dedb4d370ffc217515673"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d1e/struct_spell_buff.html#ab6e0314bfd5dedb4d370ffc217515673">SpellBuff</a> ()</td></tr>
+<tr class="separator:ab6e0314bfd5dedb4d370ffc217515673"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8803557ab6370bc592c8cc85e0d59bb1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d1e/struct_spell_buff.html#a8803557ab6370bc592c8cc85e0d59bb1">Apply</a> (<a class="el" href="../../df/dc2/struct_game_time.html">GameTime</a> time, unsigned __int16 uSkillLevel, unsigned __int16 <a class="el" href="../../db/d1e/struct_spell_buff.html#ac99ad5c37b4d77ac2ae3146c7d4c4e3e">uPower</a>, int <a class="el" href="../../db/d1e/struct_spell_buff.html#aada5191249674b044d78519b874e2f19">uOverlayID</a>, unsigned __int8 caster)</td></tr>
+<tr class="separator:a8803557ab6370bc592c8cc85e0d59bb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05bb78040b623168fa0fcc66764d1871"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d1e/struct_spell_buff.html#a05bb78040b623168fa0fcc66764d1871">Reset</a> ()</td></tr>
+<tr class="separator:a05bb78040b623168fa0fcc66764d1871"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01a6d12114f06b996d5e57a5c8196519"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d1e/struct_spell_buff.html#a01a6d12114f06b996d5e57a5c8196519">IsBuffExpiredToTime</a> (<a class="el" href="../../df/dc2/struct_game_time.html">GameTime</a> time)</td></tr>
+<tr class="separator:a01a6d12114f06b996d5e57a5c8196519"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8120188fb27f4eac35052ee945cce00"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d1e/struct_spell_buff.html#aa8120188fb27f4eac35052ee945cce00">Active</a> () const</td></tr>
+<tr class="separator:aa8120188fb27f4eac35052ee945cce00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82ae66dc29fa0c9404dc1044aa0ae922"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d1e/struct_spell_buff.html#a82ae66dc29fa0c9404dc1044aa0ae922">Expired</a> () const</td></tr>
+<tr class="separator:a82ae66dc29fa0c9404dc1044aa0ae922"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:af39ece8d281254a31a4e65db8a1139a9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/dc2/struct_game_time.html">GameTime</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d1e/struct_spell_buff.html#af39ece8d281254a31a4e65db8a1139a9">expire_time</a></td></tr>
+<tr class="separator:af39ece8d281254a31a4e65db8a1139a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac99ad5c37b4d77ac2ae3146c7d4c4e3e"><td class="memItemLeft" align="right" valign="top">unsigned __int16&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d1e/struct_spell_buff.html#ac99ad5c37b4d77ac2ae3146c7d4c4e3e">uPower</a></td></tr>
+<tr class="separator:ac99ad5c37b4d77ac2ae3146c7d4c4e3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec3d6567d7d8a6ff80fc82ed2d992dc0"><td class="memItemLeft" align="right" valign="top">unsigned __int16&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d1e/struct_spell_buff.html#aec3d6567d7d8a6ff80fc82ed2d992dc0">uSkill</a></td></tr>
+<tr class="separator:aec3d6567d7d8a6ff80fc82ed2d992dc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aada5191249674b044d78519b874e2f19"><td class="memItemLeft" align="right" valign="top">unsigned __int16&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d1e/struct_spell_buff.html#aada5191249674b044d78519b874e2f19">uOverlayID</a></td></tr>
+<tr class="separator:aada5191249674b044d78519b874e2f19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b2e6ec32b6a2a985e3fb3576c119770"><td class="memItemLeft" align="right" valign="top">unsigned __int8&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d1e/struct_spell_buff.html#a7b2e6ec32b6a2a985e3fb3576c119770">uCaster</a></td></tr>
+<tr class="separator:a7b2e6ec32b6a2a985e3fb3576c119770"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af14f5e682a44fbce26a7f7a78319e5d9"><td class="memItemLeft" align="right" valign="top">unsigned __int8&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d1e/struct_spell_buff.html#af14f5e682a44fbce26a7f7a78319e5d9">uFlags</a></td></tr>
+<tr class="separator:af14f5e682a44fbce26a7f7a78319e5d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock">
+<p class="definition">См. определение в файле <a class="el" href="../../d5/d7d/_spells_8h_source.html">Spells.h</a> строка <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00147">147</a></p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="ab6e0314bfd5dedb4d370ffc217515673"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6e0314bfd5dedb4d370ffc217515673">&#9670;&nbsp;</a></span>SpellBuff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SpellBuff::SpellBuff </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/d7d/_spells_8h_source.html">Spells.h</a> строка <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00148">148</a></p>
+<div class="fragment"><div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;                       {</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        <a class="code" href="../../db/d1e/struct_spell_buff.html#ac99ad5c37b4d77ac2ae3146c7d4c4e3e">uPower</a> = 0;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        <a class="code" href="../../db/d1e/struct_spell_buff.html#aec3d6567d7d8a6ff80fc82ed2d992dc0">uSkill</a> = 0;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        <a class="code" href="../../db/d1e/struct_spell_buff.html#aada5191249674b044d78519b874e2f19">uOverlayID</a> = 0;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        <a class="code" href="../../db/d1e/struct_spell_buff.html#a7b2e6ec32b6a2a985e3fb3576c119770">uCaster</a> = 0;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        <a class="code" href="../../db/d1e/struct_spell_buff.html#af14f5e682a44fbce26a7f7a78319e5d9">uFlags</a> = 0;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    }</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00169">uCaster</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00170">uFlags</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00168">uOverlayID</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00166">uPower</a> и <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00167">uSkill</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a8803557ab6370bc592c8cc85e0d59bb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8803557ab6370bc592c8cc85e0d59bb1">&#9670;&nbsp;</a></span>Apply()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SpellBuff::Apply </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../df/dc2/struct_game_time.html">GameTime</a>&#160;</td>
+          <td class="paramname"><em>time</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned __int16&#160;</td>
+          <td class="paramname"><em>uSkillLevel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned __int16&#160;</td>
+          <td class="paramname"><em>uPower</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>uOverlayID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned __int8&#160;</td>
+          <td class="paramname"><em>caster</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/df3/_spells_8cpp_source.html">Spells.cpp</a> строка <a class="el" href="../../da/df3/_spells_8cpp_source.html#l00363">363</a></p>
+<div class="fragment"><div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;                                              {</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;    <span class="keywordflow">if</span> (this-&gt;<a class="code" href="../../db/d1e/struct_spell_buff.html#af39ece8d281254a31a4e65db8a1139a9">expire_time</a> &amp;&amp; (expire_time &lt; this-&gt;<a class="code" href="../../db/d1e/struct_spell_buff.html#af39ece8d281254a31a4e65db8a1139a9">expire_time</a>)) {</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;    }</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160; </div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;    this-&gt;<a class="code" href="../../db/d1e/struct_spell_buff.html#aec3d6567d7d8a6ff80fc82ed2d992dc0">uSkill</a> = uSkillLevel;</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;    this-&gt;<a class="code" href="../../db/d1e/struct_spell_buff.html#ac99ad5c37b4d77ac2ae3146c7d4c4e3e">uPower</a> = <a class="code" href="../../db/d1e/struct_spell_buff.html#ac99ad5c37b4d77ac2ae3146c7d4c4e3e">uPower</a>;</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;    this-&gt;expire_time = <a class="code" href="../../db/d1e/struct_spell_buff.html#af39ece8d281254a31a4e65db8a1139a9">expire_time</a>;</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;    <span class="keywordflow">if</span> (this-&gt;<a class="code" href="../../db/d1e/struct_spell_buff.html#aada5191249674b044d78519b874e2f19">uOverlayID</a> &amp;&amp; this-&gt;<a class="code" href="../../db/d1e/struct_spell_buff.html#aada5191249674b044d78519b874e2f19">uOverlayID</a> != <a class="code" href="../../db/d1e/struct_spell_buff.html#aada5191249674b044d78519b874e2f19">uOverlayID</a>) {</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;        <a class="code" href="../../de/d68/_overlays_8cpp.html#aa512635acfca2f1fa4fb7976cf2f01f5">pOtherOverlayList</a>-&gt;<a class="code" href="../../d8/df0/struct_other_overlay_list.html#a73423f16e52608314863f6b02600c7e0">pOverlays</a>[this-&gt;<a class="code" href="../../db/d1e/struct_spell_buff.html#aada5191249674b044d78519b874e2f19">uOverlayID</a> - 1].<a class="code" href="../../db/dca/struct_other_overlay.html#a5398dc06bba4fa8c1bbfa026ace4cbb2">Reset</a>();</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;        <a class="code" href="../../de/d68/_overlays_8cpp.html#aa512635acfca2f1fa4fb7976cf2f01f5">pOtherOverlayList</a>-&gt;<a class="code" href="../../d8/df0/struct_other_overlay_list.html#a78989d89b6816badcacc224e0e658d61">bRedraw</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;        this-&gt;<a class="code" href="../../db/d1e/struct_spell_buff.html#aada5191249674b044d78519b874e2f19">uOverlayID</a> = 0;</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;    }</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;    this-&gt;<a class="code" href="../../db/d1e/struct_spell_buff.html#aada5191249674b044d78519b874e2f19">uOverlayID</a> = <a class="code" href="../../db/d1e/struct_spell_buff.html#aada5191249674b044d78519b874e2f19">uOverlayID</a>;</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;    this-&gt;<a class="code" href="../../db/d1e/struct_spell_buff.html#a7b2e6ec32b6a2a985e3fb3576c119770">uCaster</a> = caster;</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160; </div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../db/dac/_overlays_8h_source.html#l00038">OtherOverlayList::bRedraw</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00165">expire_time</a>, <a class="el" href="../../de/d68/_overlays_8cpp_source.html#l00019">pOtherOverlayList</a>, <a class="el" href="../../db/dac/_overlays_8h_source.html#l00036">OtherOverlayList::pOverlays</a>, <a class="el" href="../../de/d68/_overlays_8cpp_source.html#l00203">OtherOverlay::Reset()</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00169">uCaster</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00168">uOverlayID</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00166">uPower</a> и <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00167">uSkill</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l00199">Actor::AI_SpellAttack()</a> и <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l03379">Actor::DamageMonsterFromParty()</a>.</p>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../db/d1e/struct_spell_buff_a8803557ab6370bc592c8cc85e0d59bb1_cgraph.svg" width="312" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../db/d1e/struct_spell_buff_a8803557ab6370bc592c8cc85e0d59bb1_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a05bb78040b623168fa0fcc66764d1871"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05bb78040b623168fa0fcc66764d1871">&#9670;&nbsp;</a></span>Reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> SpellBuff::Reset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/df3/_spells_8cpp_source.html">Spells.cpp</a> строка <a class="el" href="../../da/df3/_spells_8cpp_source.html#l00337">337</a></p>
+<div class="fragment"><div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;                      {</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;    <a class="code" href="../../db/d1e/struct_spell_buff.html#aec3d6567d7d8a6ff80fc82ed2d992dc0">uSkill</a> = 0;</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    <a class="code" href="../../db/d1e/struct_spell_buff.html#ac99ad5c37b4d77ac2ae3146c7d4c4e3e">uPower</a> = 0;</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;    <a class="code" href="../../db/d1e/struct_spell_buff.html#af39ece8d281254a31a4e65db8a1139a9">expire_time</a>.<a class="code" href="../../df/dc2/struct_game_time.html#ab85c95665b71cdbbfb8f0c3ee03d8f2d">Reset</a>();</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;    <a class="code" href="../../db/d1e/struct_spell_buff.html#a7b2e6ec32b6a2a985e3fb3576c119770">uCaster</a> = 0;</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;    <a class="code" href="../../db/d1e/struct_spell_buff.html#af14f5e682a44fbce26a7f7a78319e5d9">uFlags</a> = 0;</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../db/d1e/struct_spell_buff.html#aada5191249674b044d78519b874e2f19">uOverlayID</a>) {</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;        <a class="code" href="../../de/d68/_overlays_8cpp.html#aa512635acfca2f1fa4fb7976cf2f01f5">pOtherOverlayList</a>-&gt;<a class="code" href="../../d8/df0/struct_other_overlay_list.html#a73423f16e52608314863f6b02600c7e0">pOverlays</a>[<a class="code" href="../../db/d1e/struct_spell_buff.html#aada5191249674b044d78519b874e2f19">uOverlayID</a> - 1].<a class="code" href="../../db/dca/struct_other_overlay.html#a5398dc06bba4fa8c1bbfa026ace4cbb2">Reset</a>();</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;        <a class="code" href="../../de/d68/_overlays_8cpp.html#aa512635acfca2f1fa4fb7976cf2f01f5">pOtherOverlayList</a>-&gt;<a class="code" href="../../d8/df0/struct_other_overlay_list.html#a78989d89b6816badcacc224e0e658d61">bRedraw</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;        <a class="code" href="../../db/d1e/struct_spell_buff.html#aada5191249674b044d78519b874e2f19">uOverlayID</a> = 0;</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;    }</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../db/dac/_overlays_8h_source.html#l00038">OtherOverlayList::bRedraw</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00165">expire_time</a>, <a class="el" href="../../de/d68/_overlays_8cpp_source.html#l00019">pOtherOverlayList</a>, <a class="el" href="../../db/dac/_overlays_8h_source.html#l00036">OtherOverlayList::pOverlays</a>, <a class="el" href="../../de/d68/_overlays_8cpp_source.html#l00203">OtherOverlay::Reset()</a>, <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00058">GameTime::Reset()</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00169">uCaster</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00170">uFlags</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00168">uOverlayID</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00166">uPower</a> и <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00167">uSkill</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l04262">Actor::_4273BB_DoesHitOtherActor()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l01623">_494035_timed_effects__water_walking_damage__etc()</a>, <a class="el" href="../../de/d6c/_spell_fx_renderer_8cpp_source.html#l00648">SpellFxRenderer::_4A806F_get_mass_distortion_value()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l04293">Actor::ActorHitOrMiss()</a> и <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l01906">Actor::Die()</a>.</p>
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../db/d1e/struct_spell_buff_a05bb78040b623168fa0fcc66764d1871_cgraph.svg" width="312" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../db/d1e/struct_spell_buff_a05bb78040b623168fa0fcc66764d1871_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a01a6d12114f06b996d5e57a5c8196519"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01a6d12114f06b996d5e57a5c8196519">&#9670;&nbsp;</a></span>IsBuffExpiredToTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SpellBuff::IsBuffExpiredToTime </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../df/dc2/struct_game_time.html">GameTime</a>&#160;</td>
+          <td class="paramname"><em>time</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/df3/_spells_8cpp_source.html">Spells.cpp</a> строка <a class="el" href="../../da/df3/_spells_8cpp_source.html#l00351">351</a></p>
+<div class="fragment"><div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;                                                 {</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;    <span class="keywordflow">if</span> (this-&gt;<a class="code" href="../../db/d1e/struct_spell_buff.html#af39ece8d281254a31a4e65db8a1139a9">expire_time</a> &amp;&amp; (this-&gt;<a class="code" href="../../db/d1e/struct_spell_buff.html#af39ece8d281254a31a4e65db8a1139a9">expire_time</a> &lt; time)) {</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;        <a class="code" href="../../db/d1e/struct_spell_buff.html#af39ece8d281254a31a4e65db8a1139a9">expire_time</a>.<a class="code" href="../../df/dc2/struct_game_time.html#ab85c95665b71cdbbfb8f0c3ee03d8f2d">Reset</a>();</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;        <a class="code" href="../../db/d1e/struct_spell_buff.html#ac99ad5c37b4d77ac2ae3146c7d4c4e3e">uPower</a> = 0;</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;        <a class="code" href="../../db/d1e/struct_spell_buff.html#aec3d6567d7d8a6ff80fc82ed2d992dc0">uSkill</a> = 0;</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;        <a class="code" href="../../db/d1e/struct_spell_buff.html#aada5191249674b044d78519b874e2f19">uOverlayID</a> = 0;</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;    }</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00165">expire_time</a>, <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00058">GameTime::Reset()</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00168">uOverlayID</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00166">uPower</a> и <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00167">uSkill</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l02745">Actor::UpdateActorAI()</a>.</p>
+<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../db/d1e/struct_spell_buff_a01a6d12114f06b996d5e57a5c8196519_cgraph.svg" width="343" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../db/d1e/struct_spell_buff_a01a6d12114f06b996d5e57a5c8196519_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="aa8120188fb27f4eac35052ee945cce00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8120188fb27f4eac35052ee945cce00">&#9670;&nbsp;</a></span>Active()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SpellBuff::Active </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/d7d/_spells_8h_source.html">Spells.h</a> строка <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00162">162</a></p>
+<div class="fragment"><div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;{ <span class="keywordflow">return</span> this-&gt;<a class="code" href="../../db/d1e/struct_spell_buff.html#af39ece8d281254a31a4e65db8a1139a9">expire_time</a>.<a class="code" href="../../df/dc2/struct_game_time.html#a19529c76d49c92dc7e664297b1d51244">value</a> &gt; 0; }</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00165">expire_time</a> и <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00099">GameTime::value</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l04262">Actor::_4273BB_DoesHitOtherActor()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l02230">Actor::_SelectTarget()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l00157">Actor::CanAct()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l03379">Actor::DamageMonsterFromParty()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l06928">DamagePlayerFromMonster()</a>, <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l01057">GameUI_CharacterQuickRecord_Draw()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l02319">Actor::GetActorsRelation()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l00166">Actor::IsNotAlive()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l07600">Player::PlayerHitOrMiss()</a>, <a class="el" href="../../dc/d5b/_turn_engine_8cpp_source.html#l00551">stru262_TurnBased::SetAIRecoveryTimes()</a> и <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l02745">Actor::UpdateActorAI()</a>.</p>
+<div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-7-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-7-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../db/d1e/struct_spell_buff_aa8120188fb27f4eac35052ee945cce00_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a82ae66dc29fa0c9404dc1044aa0ae922"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82ae66dc29fa0c9404dc1044aa0ae922">&#9670;&nbsp;</a></span>Expired()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SpellBuff::Expired </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/d7d/_spells_8h_source.html">Spells.h</a> строка <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00163">163</a></p>
+<div class="fragment"><div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;{ <span class="keywordflow">return</span> this-&gt;<a class="code" href="../../db/d1e/struct_spell_buff.html#af39ece8d281254a31a4e65db8a1139a9">expire_time</a>.<a class="code" href="../../df/dc2/struct_game_time.html#a19529c76d49c92dc7e664297b1d51244">value</a> &lt; 0; }</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00165">expire_time</a> и <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00099">GameTime::value</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l04192">Actor::_427102_IsOkToCastSpell()</a>, <a class="el" href="../../dc/d5b/_turn_engine_8cpp_source.html#l00260">stru262_TurnBased::AITurnBasedAction()</a> и <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l02745">Actor::UpdateActorAI()</a>.</p>
+<div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-8-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-8-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../db/d1e/struct_spell_buff_a82ae66dc29fa0c9404dc1044aa0ae922_icgraph.svg" width="100%" height="427"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="af39ece8d281254a31a4e65db8a1139a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af39ece8d281254a31a4e65db8a1139a9">&#9670;&nbsp;</a></span>expire_time</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../df/dc2/struct_game_time.html">GameTime</a> SpellBuff::expire_time</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/d7d/_spells_8h_source.html">Spells.h</a> строка <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00165">165</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l01623">_494035_timed_effects__water_walking_damage__etc()</a>, <a class="el" href="../../de/d6c/_spell_fx_renderer_8cpp_source.html#l00648">SpellFxRenderer::_4A806F_get_mass_distortion_value()</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00162">Active()</a>, <a class="el" href="../../de/deb/_actor_8h_source.html#l00153">Actor::Actor()</a>, <a class="el" href="../../da/df3/_spells_8cpp_source.html#l00363">Apply()</a>, <a class="el" href="../../d9/d4f/_legacy_images_8cpp_source.html#l00222">SpellBuff_Image_MM7::Deserialize()</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00163">Expired()</a>, <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l01057">GameUI_CharacterQuickRecord_Draw()</a>, <a class="el" href="../../da/df3/_spells_8cpp_source.html#l00351">IsBuffExpiredToTime()</a>, <a class="el" href="../../da/df3/_spells_8cpp_source.html#l00337">Reset()</a> и <a class="el" href="../../d9/d4f/_legacy_images_8cpp_source.html#l00211">SpellBuff_Image_MM7::Serialize()</a>.</p>
+
+</div>
+</div>
+<a id="ac99ad5c37b4d77ac2ae3146c7d4c4e3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac99ad5c37b4d77ac2ae3146c7d4c4e3e">&#9670;&nbsp;</a></span>uPower</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned __int16 SpellBuff::uPower</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/d7d/_spells_8h_source.html">Spells.h</a> строка <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00166">166</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l04262">Actor::_4273BB_DoesHitOtherActor()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l01314">Actor::_43B3E0_CalcDamage()</a>, <a class="el" href="../../de/deb/_actor_8h_source.html#l00153">Actor::Actor()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l04293">Actor::ActorHitOrMiss()</a>, <a class="el" href="../../da/df3/_spells_8cpp_source.html#l00363">Apply()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l04314">Actor::CalcMagicalDamageToActor()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l06928">DamagePlayerFromMonster()</a>, <a class="el" href="../../d9/d4f/_legacy_images_8cpp_source.html#l00222">SpellBuff_Image_MM7::Deserialize()</a>, <a class="el" href="../../da/df3/_spells_8cpp_source.html#l00351">IsBuffExpiredToTime()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l07600">Player::PlayerHitOrMiss()</a>, <a class="el" href="../../da/df3/_spells_8cpp_source.html#l00337">Reset()</a>, <a class="el" href="../../d9/d4f/_legacy_images_8cpp_source.html#l00211">SpellBuff_Image_MM7::Serialize()</a> и <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00148">SpellBuff()</a>.</p>
+
+</div>
+</div>
+<a id="aec3d6567d7d8a6ff80fc82ed2d992dc0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec3d6567d7d8a6ff80fc82ed2d992dc0">&#9670;&nbsp;</a></span>uSkill</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned __int16 SpellBuff::uSkill</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/d7d/_spells_8h_source.html">Spells.h</a> строка <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00167">167</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../de/deb/_actor_8h_source.html#l00153">Actor::Actor()</a>, <a class="el" href="../../da/df3/_spells_8cpp_source.html#l00363">Apply()</a>, <a class="el" href="../../d9/d4f/_legacy_images_8cpp_source.html#l00222">SpellBuff_Image_MM7::Deserialize()</a>, <a class="el" href="../../da/df3/_spells_8cpp_source.html#l00351">IsBuffExpiredToTime()</a>, <a class="el" href="../../da/df3/_spells_8cpp_source.html#l00337">Reset()</a>, <a class="el" href="../../d9/d4f/_legacy_images_8cpp_source.html#l00211">SpellBuff_Image_MM7::Serialize()</a> и <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00148">SpellBuff()</a>.</p>
+
+</div>
+</div>
+<a id="aada5191249674b044d78519b874e2f19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aada5191249674b044d78519b874e2f19">&#9670;&nbsp;</a></span>uOverlayID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned __int16 SpellBuff::uOverlayID</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/d7d/_spells_8h_source.html">Spells.h</a> строка <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00168">168</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../da/df3/_spells_8cpp_source.html#l00363">Apply()</a>, <a class="el" href="../../d9/d4f/_legacy_images_8cpp_source.html#l00222">SpellBuff_Image_MM7::Deserialize()</a>, <a class="el" href="../../da/df3/_spells_8cpp_source.html#l00351">IsBuffExpiredToTime()</a>, <a class="el" href="../../da/df3/_spells_8cpp_source.html#l00337">Reset()</a>, <a class="el" href="../../d9/d4f/_legacy_images_8cpp_source.html#l00211">SpellBuff_Image_MM7::Serialize()</a> и <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00148">SpellBuff()</a>.</p>
+
+</div>
+</div>
+<a id="a7b2e6ec32b6a2a985e3fb3576c119770"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b2e6ec32b6a2a985e3fb3576c119770">&#9670;&nbsp;</a></span>uCaster</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned __int8 SpellBuff::uCaster</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/d7d/_spells_8h_source.html">Spells.h</a> строка <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00169">169</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l01623">_494035_timed_effects__water_walking_damage__etc()</a>, <a class="el" href="../../de/deb/_actor_8h_source.html#l00153">Actor::Actor()</a>, <a class="el" href="../../da/df3/_spells_8cpp_source.html#l00363">Apply()</a>, <a class="el" href="../../d9/d4f/_legacy_images_8cpp_source.html#l00222">SpellBuff_Image_MM7::Deserialize()</a>, <a class="el" href="../../da/df3/_spells_8cpp_source.html#l00337">Reset()</a>, <a class="el" href="../../d9/d4f/_legacy_images_8cpp_source.html#l00211">SpellBuff_Image_MM7::Serialize()</a> и <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00148">SpellBuff()</a>.</p>
+
+</div>
+</div>
+<a id="af14f5e682a44fbce26a7f7a78319e5d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af14f5e682a44fbce26a7f7a78319e5d9">&#9670;&nbsp;</a></span>uFlags</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned __int8 SpellBuff::uFlags</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/d7d/_spells_8h_source.html">Spells.h</a> строка <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00170">170</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l01623">_494035_timed_effects__water_walking_damage__etc()</a>, <a class="el" href="../../de/deb/_actor_8h_source.html#l00153">Actor::Actor()</a>, <a class="el" href="../../d9/d4f/_legacy_images_8cpp_source.html#l00222">SpellBuff_Image_MM7::Deserialize()</a>, <a class="el" href="../../da/df3/_spells_8cpp_source.html#l00337">Reset()</a>, <a class="el" href="../../d9/d4f/_legacy_images_8cpp_source.html#l00211">SpellBuff_Image_MM7::Serialize()</a> и <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00148">SpellBuff()</a>.</p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов структур находятся в файлах:<ul>
+<li>C:/git/world-of-might-and-magic/Engine/Spells/<a class="el" href="../../d5/d7d/_spells_8h_source.html">Spells.h</a></li>
+<li>C:/git/world-of-might-and-magic/Engine/Spells/<a class="el" href="../../da/df3/_spells_8cpp_source.html">Spells.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="astruct_other_overlay_list_html_a78989d89b6816badcacc224e0e658d61"><div class="ttname"><a href="../../d8/df0/struct_other_overlay_list.html#a78989d89b6816badcacc224e0e658d61">OtherOverlayList::bRedraw</a></div><div class="ttdeci">int bRedraw</div><div class="ttdef"><b>Definition:</b> <a href="../../db/dac/_overlays_8h_source.html#l00038">Overlays.h:38</a></div></div>
+<div class="ttc" id="astruct_spell_buff_html_aec3d6567d7d8a6ff80fc82ed2d992dc0"><div class="ttname"><a href="../../db/d1e/struct_spell_buff.html#aec3d6567d7d8a6ff80fc82ed2d992dc0">SpellBuff::uSkill</a></div><div class="ttdeci">unsigned __int16 uSkill</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00167">Spells.h:167</a></div></div>
+<div class="ttc" id="astruct_game_time_html_a19529c76d49c92dc7e664297b1d51244"><div class="ttname"><a href="../../df/dc2/struct_game_time.html#a19529c76d49c92dc7e664297b1d51244">GameTime::value</a></div><div class="ttdeci">int64_t value</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d0e/_engine_2_time_8h_source.html#l00099">Time.h:99</a></div></div>
+<div class="ttc" id="astruct_game_time_html_ab85c95665b71cdbbfb8f0c3ee03d8f2d"><div class="ttname"><a href="../../df/dc2/struct_game_time.html#ab85c95665b71cdbbfb8f0c3ee03d8f2d">GameTime::Reset</a></div><div class="ttdeci">void Reset()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d0e/_engine_2_time_8h_source.html#l00058">Time.h:58</a></div></div>
+<div class="ttc" id="astruct_other_overlay_list_html_a73423f16e52608314863f6b02600c7e0"><div class="ttname"><a href="../../d8/df0/struct_other_overlay_list.html#a73423f16e52608314863f6b02600c7e0">OtherOverlayList::pOverlays</a></div><div class="ttdeci">OtherOverlay pOverlays[50]</div><div class="ttdef"><b>Definition:</b> <a href="../../db/dac/_overlays_8h_source.html#l00036">Overlays.h:36</a></div></div>
+<div class="ttc" id="astruct_spell_buff_html_af39ece8d281254a31a4e65db8a1139a9"><div class="ttname"><a href="../../db/d1e/struct_spell_buff.html#af39ece8d281254a31a4e65db8a1139a9">SpellBuff::expire_time</a></div><div class="ttdeci">GameTime expire_time</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00165">Spells.h:165</a></div></div>
+<div class="ttc" id="astruct_spell_buff_html_aada5191249674b044d78519b874e2f19"><div class="ttname"><a href="../../db/d1e/struct_spell_buff.html#aada5191249674b044d78519b874e2f19">SpellBuff::uOverlayID</a></div><div class="ttdeci">unsigned __int16 uOverlayID</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00168">Spells.h:168</a></div></div>
+<div class="ttc" id="a_overlays_8cpp_html_aa512635acfca2f1fa4fb7976cf2f01f5"><div class="ttname"><a href="../../de/d68/_overlays_8cpp.html#aa512635acfca2f1fa4fb7976cf2f01f5">pOtherOverlayList</a></div><div class="ttdeci">struct OtherOverlayList * pOtherOverlayList</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d68/_overlays_8cpp_source.html#l00019">Overlays.cpp:19</a></div></div>
+<div class="ttc" id="astruct_spell_buff_html_a7b2e6ec32b6a2a985e3fb3576c119770"><div class="ttname"><a href="../../db/d1e/struct_spell_buff.html#a7b2e6ec32b6a2a985e3fb3576c119770">SpellBuff::uCaster</a></div><div class="ttdeci">unsigned __int8 uCaster</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00169">Spells.h:169</a></div></div>
+<div class="ttc" id="astruct_spell_buff_html_ac99ad5c37b4d77ac2ae3146c7d4c4e3e"><div class="ttname"><a href="../../db/d1e/struct_spell_buff.html#ac99ad5c37b4d77ac2ae3146c7d4c4e3e">SpellBuff::uPower</a></div><div class="ttdeci">unsigned __int16 uPower</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00166">Spells.h:166</a></div></div>
+<div class="ttc" id="astruct_spell_buff_html_af14f5e682a44fbce26a7f7a78319e5d9"><div class="ttname"><a href="../../db/d1e/struct_spell_buff.html#af14f5e682a44fbce26a7f7a78319e5d9">SpellBuff::uFlags</a></div><div class="ttdeci">unsigned __int8 uFlags</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00170">Spells.h:170</a></div></div>
+<div class="ttc" id="astruct_other_overlay_html_a5398dc06bba4fa8c1bbfa026ace4cbb2"><div class="ttname"><a href="../../db/dca/struct_other_overlay.html#a5398dc06bba4fa8c1bbfa026ace4cbb2">OtherOverlay::Reset</a></div><div class="ttdeci">void Reset()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d68/_overlays_8cpp_source.html#l00203">Overlays.cpp:203</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../db/d1e/struct_spell_buff.html">SpellBuff</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:05:17. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Исходный файл C:/git/world-of-might-and-magic/src/Application/Game.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d9/dcd/_game_8h_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Game.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d9/dcd/_game_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d2/dfb/_configuration_8h.html">src/Application/Configuration.h</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../db/ded/_game_menu_8h.html">src/Application/GameMenu.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d2/d43/src_2_application_2_ioc_container_8h.html">src/Application/IocContainer.h</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../de/dcf/_engine_8h.html">Engine/Engine.h</a>&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d6/de4/_engine_2_ioc_container_8h.html">Engine/IocContainer.h</a>&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="../../d9/dcd/_game_8h.html#a8df51996eaa93ee226542e4ebb9d6f14">   13</a></span>&#160;<span class="keyword">using</span> <a class="code" href="../../d1/d12/class_engine___1_1_ioc_container.html">EngineIoc</a> = <a class="code" href="../../d1/d12/class_engine___1_1_ioc_container.html">Engine_::IocContainer</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="../../d9/dcd/_game_8h.html#ae7ba6712f0b897dccb37b120d2d17571">   14</a></span>&#160;<span class="keyword">using</span> <a class="code" href="../../d5/d77/class_application_1_1_ioc_container.html">GameIoc</a> = <a class="code" href="../../d5/d77/class_application_1_1_ioc_container.html">Application::IocContainer</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../d1/dda/namespace_application.html">Application</a> {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="../../d4/d06/class_application_1_1_game.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d4/d06/class_application_1_1_game.html">Game</a> {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="../../d4/d06/class_application_1_1_game.html#abceeabaa240dca2a28a247339010f3cb">   21</a></span>&#160;     <span class="keyword">inline</span> <a class="code" href="../../d4/d06/class_application_1_1_game.html#abceeabaa240dca2a28a247339010f3cb">Game</a>() {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;         this-&gt;<a class="code" href="../../d4/d06/class_application_1_1_game.html#a231a73be527e487c44c128d8cc3c9b24">log</a> = <a class="code" href="../../d1/d12/class_engine___1_1_ioc_container.html#a095a16a5af8d2d49ae6445b823332256">EngineIoc::ResolveLogger</a>();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;         this-&gt;<a class="code" href="../../d4/d06/class_application_1_1_game.html#a8be6dbc8843d07c9d1d3d81d52063814">mouse</a> = <a class="code" href="../../d1/d12/class_engine___1_1_ioc_container.html#ad92ce5cee27f4415ef48d49dea4ec074">EngineIoc::ResolveMouse</a>();</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;         this-&gt;<a class="code" href="../../d4/d06/class_application_1_1_game.html#a831338f9ce92a8e09ce3c7e10f3c3ceb">keyboard</a> = <a class="code" href="../../d1/d12/class_engine___1_1_ioc_container.html#ac3f47d02b62814ff7d9a2743a81799b0">EngineIoc::ResolveKeyboard</a>();</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;         this-&gt;<a class="code" href="../../d4/d06/class_application_1_1_game.html#aa71a7935276c4c3c942aab84a4c121a2">decal_builder</a> = <a class="code" href="../../d1/d12/class_engine___1_1_ioc_container.html#a2d38b23552ec4a6244d4154107b9c981">EngineIoc::ResolveDecalBuilder</a>();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;         this-&gt;<a class="code" href="../../d4/d06/class_application_1_1_game.html#ad75023561bcf45b5bc94974963e0823a">vis</a> = <a class="code" href="../../d1/d12/class_engine___1_1_ioc_container.html#a201a6dee8928c65a2577af08596b8c18">EngineIoc::ResolveVis</a>();</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;         this-&gt;<a class="code" href="../../d4/d06/class_application_1_1_game.html#ae3986ba699d8a3be1862d6212adef588">menu</a> = <a class="code" href="../../d5/d77/class_application_1_1_ioc_container.html#a0a6dbb72b0f8d6c6a57503df40ff6d97">GameIoc::ResolveGameMenu</a>();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;     }</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;     <span class="keywordtype">bool</span> <a class="code" href="../../d4/d06/class_application_1_1_game.html#a783e04d4f3de6e65ac9a12bd4313c458">Configure</a>(std::shared_ptr&lt;const Configuration&gt; <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a13b3686016f6a1889a75cd91a854514a">config</a>);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;     <span class="keywordtype">void</span> <a class="code" href="../../d4/d06/class_application_1_1_game.html#a96341ca5b54d90adc3ecb3bf0bcd2312">Run</a>();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;     <span class="keywordtype">bool</span> <a class="code" href="../../d4/d06/class_application_1_1_game.html#a013ffd59e8fdf1c0a396da1dbe1681ca">Loop</a>();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;     <span class="keywordtype">void</span> <a class="code" href="../../d4/d06/class_application_1_1_game.html#a3f65e3f0ef1a9114fb3dea275e52442e">EventLoop</a>();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;     <span class="keywordtype">void</span> <a class="code" href="../../d4/d06/class_application_1_1_game.html#aaa0ff18388b32b4e6198835a35e000d3">GameLoop</a>();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;     <span class="keywordtype">void</span> <a class="code" href="../../d4/d06/class_application_1_1_game.html#a8e7d0c6eed45061e4009a7a8bfba2fe9">CloseTargetedSpellWindow</a>();</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;     <span class="keywordtype">void</span> <a class="code" href="../../d4/d06/class_application_1_1_game.html#a38be2dadf5b0f2d739f52ac8d95d89c9">OnEscape</a>();</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;     <span class="keywordtype">void</span> <a class="code" href="../../d4/d06/class_application_1_1_game.html#abdee85389dd132c251e41e1b953b5ced">OnPressSpace</a>();</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="../../d4/d06/class_application_1_1_game.html#a646a55f1de55ad871c372904490ad0f4">   42</a></span>&#160;     std::shared_ptr&lt;const Configuration&gt; <a class="code" href="../../d4/d06/class_application_1_1_game.html#a646a55f1de55ad871c372904490ad0f4">config</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="../../d4/d06/class_application_1_1_game.html#ae3c2fda9154804eebacc17259ebc8088">   43</a></span>&#160;     std::shared_ptr&lt;Engine&gt; <a class="code" href="../../d4/d06/class_application_1_1_game.html#ae3c2fda9154804eebacc17259ebc8088">engine</a>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="../../d4/d06/class_application_1_1_game.html#a231a73be527e487c44c128d8cc3c9b24">   44</a></span>&#160;     <a class="code" href="../../d6/d70/class_log.html">Log</a> *<a class="code" href="../../d4/d06/class_application_1_1_game.html#a231a73be527e487c44c128d8cc3c9b24">log</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="../../d4/d06/class_application_1_1_game.html#a8be6dbc8843d07c9d1d3d81d52063814">   45</a></span>&#160;     <a class="code" href="../../d7/dc5/class_mouse.html">Mouse</a> *<a class="code" href="../../d4/d06/class_application_1_1_game.html#a8be6dbc8843d07c9d1d3d81d52063814">mouse</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="../../d4/d06/class_application_1_1_game.html#a831338f9ce92a8e09ce3c7e10f3c3ceb">   46</a></span>&#160;     <a class="code" href="../../d6/d7e/class_keyboard.html">Keyboard</a> *<a class="code" href="../../d4/d06/class_application_1_1_game.html#a831338f9ce92a8e09ce3c7e10f3c3ceb">keyboard</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="../../d4/d06/class_application_1_1_game.html#aa71a7935276c4c3c942aab84a4c121a2">   47</a></span>&#160;     <a class="code" href="../../d9/d57/struct_decal_builder.html">DecalBuilder</a> *<a class="code" href="../../d4/d06/class_application_1_1_game.html#aa71a7935276c4c3c942aab84a4c121a2">decal_builder</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="../../d4/d06/class_application_1_1_game.html#ad75023561bcf45b5bc94974963e0823a">   48</a></span>&#160;     <a class="code" href="../../d0/def/class_vis.html">Vis</a> *<a class="code" href="../../d4/d06/class_application_1_1_game.html#ad75023561bcf45b5bc94974963e0823a">vis</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="../../d4/d06/class_application_1_1_game.html#ae3986ba699d8a3be1862d6212adef588">   50</a></span>&#160;     <a class="code" href="../../df/dac/class_application_1_1_menu.html">Menu</a> *<a class="code" href="../../d4/d06/class_application_1_1_game.html#ae3986ba699d8a3be1862d6212adef588">menu</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;};</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}  <span class="comment">// namespace Application</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keyword">extern</span> <span class="keyword">class </span><a class="code" href="../../de/d73/class_image.html">Image</a> *<a class="code" href="../../d9/dcd/_game_8h.html#ae0d7c78f764d67256a5bcf2351b2bda1">gamma_preview_image</a>;  <span class="comment">// 506E40</span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aclass_engine___1_1_ioc_container_html"><div class="ttname"><a href="../../d1/d12/class_engine___1_1_ioc_container.html">Engine_::IocContainer</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/de4/_engine_2_ioc_container_8h_source.html#l00015">IocContainer.h:15</a></div></div>
+<div class="ttc" id="a_engine_2_ioc_container_8h_html"><div class="ttname"><a href="../../d6/de4/_engine_2_ioc_container_8h.html">IocContainer.h</a></div></div>
+<div class="ttc" id="aclass_application_1_1_game_html_a831338f9ce92a8e09ce3c7e10f3c3ceb"><div class="ttname"><a href="../../d4/d06/class_application_1_1_game.html#a831338f9ce92a8e09ce3c7e10f3c3ceb">Application::Game::keyboard</a></div><div class="ttdeci">Keyboard * keyboard</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dcd/_game_8h_source.html#l00046">Game.h:46</a></div></div>
+<div class="ttc" id="aclass_application_1_1_game_html_a8e7d0c6eed45061e4009a7a8bfba2fe9"><div class="ttname"><a href="../../d4/d06/class_application_1_1_game.html#a8e7d0c6eed45061e4009a7a8bfba2fe9">Application::Game::CloseTargetedSpellWindow</a></div><div class="ttdeci">void CloseTargetedSpellWindow()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/db5/_game_8cpp_source.html#l00285">Game.cpp:285</a></div></div>
+<div class="ttc" id="asrc_2_application_2_ioc_container_8h_html"><div class="ttname"><a href="../../d2/d43/src_2_application_2_ioc_container_8h.html">IocContainer.h</a></div></div>
+<div class="ttc" id="aclass_mouse_html"><div class="ttname"><a href="../../d7/dc5/class_mouse.html">Mouse</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de3/_mouse_8h_source.html#l00279">Mouse.h:279</a></div></div>
+<div class="ttc" id="aclass_application_1_1_game_html_aaa0ff18388b32b4e6198835a35e000d3"><div class="ttname"><a href="../../d4/d06/class_application_1_1_game.html#aaa0ff18388b32b4e6198835a35e000d3">Application::Game::GameLoop</a></div><div class="ttdeci">void GameLoop()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/db5/_game_8cpp_source.html#l02704">Game.cpp:2704</a></div></div>
+<div class="ttc" id="aclass_engine___1_1_ioc_container_html_a095a16a5af8d2d49ae6445b823332256"><div class="ttname"><a href="../../d1/d12/class_engine___1_1_ioc_container.html#a095a16a5af8d2d49ae6445b823332256">Engine_::IocContainer::ResolveLogger</a></div><div class="ttdeci">static Log * ResolveLogger()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d8c/_engine_2_ioc_container_8cpp_source.html#l00051">IocContainer.cpp:51</a></div></div>
+<div class="ttc" id="aclass_application_1_1_game_html_aa71a7935276c4c3c942aab84a4c121a2"><div class="ttname"><a href="../../d4/d06/class_application_1_1_game.html#aa71a7935276c4c3c942aab84a4c121a2">Application::Game::decal_builder</a></div><div class="ttdeci">DecalBuilder * decal_builder</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dcd/_game_8h_source.html#l00047">Game.h:47</a></div></div>
+<div class="ttc" id="aclass_application_1_1_game_html_a231a73be527e487c44c128d8cc3c9b24"><div class="ttname"><a href="../../d4/d06/class_application_1_1_game.html#a231a73be527e487c44c128d8cc3c9b24">Application::Game::log</a></div><div class="ttdeci">Log * log</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dcd/_game_8h_source.html#l00044">Game.h:44</a></div></div>
+<div class="ttc" id="aclass_log_html"><div class="ttname"><a href="../../d6/d70/class_log.html">Log</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d3a/_engine_2_log_8h_source.html#l00003">Log.h:3</a></div></div>
+<div class="ttc" id="a_engine_8h_html"><div class="ttname"><a href="../../de/dcf/_engine_8h.html">Engine.h</a></div></div>
+<div class="ttc" id="aclass_application_1_1_game_html_ad75023561bcf45b5bc94974963e0823a"><div class="ttname"><a href="../../d4/d06/class_application_1_1_game.html#ad75023561bcf45b5bc94974963e0823a">Application::Game::vis</a></div><div class="ttdeci">Vis * vis</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dcd/_game_8h_source.html#l00048">Game.h:48</a></div></div>
+<div class="ttc" id="aclass_application_1_1_menu_html"><div class="ttname"><a href="../../df/dac/class_application_1_1_menu.html">Application::Menu</a></div><div class="ttdef"><b>Definition:</b> <a href="../../db/ded/_game_menu_8h_source.html#l00009">GameMenu.h:9</a></div></div>
+<div class="ttc" id="aclass_engine___1_1_ioc_container_html_a201a6dee8928c65a2577af08596b8c18"><div class="ttname"><a href="../../d1/d12/class_engine___1_1_ioc_container.html#a201a6dee8928c65a2577af08596b8c18">Engine_::IocContainer::ResolveVis</a></div><div class="ttdeci">static Vis * ResolveVis()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d8c/_engine_2_ioc_container_8cpp_source.html#l00110">IocContainer.cpp:110</a></div></div>
+<div class="ttc" id="aclass_image_html"><div class="ttname"><a href="../../de/d73/class_image.html">Image</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/de5/_image_8h_source.html#l00019">Image.h:19</a></div></div>
+<div class="ttc" id="aclass_application_1_1_game_html_a783e04d4f3de6e65ac9a12bd4313c458"><div class="ttname"><a href="../../d4/d06/class_application_1_1_game.html#a783e04d4f3de6e65ac9a12bd4313c458">Application::Game::Configure</a></div><div class="ttdeci">bool Configure(std::shared_ptr&lt; const Configuration &gt; config)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/db5/_game_8cpp_source.html#l00092">Game.cpp:92</a></div></div>
+<div class="ttc" id="aclass_application_1_1_ioc_container_html_a0a6dbb72b0f8d6c6a57503df40ff6d97"><div class="ttname"><a href="../../d5/d77/class_application_1_1_ioc_container.html#a0a6dbb72b0f8d6c6a57503df40ff6d97">Application::IocContainer::ResolveGameMenu</a></div><div class="ttdeci">static Menu * ResolveGameMenu()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de7/src_2_application_2_ioc_container_8cpp_source.html#l00013">IocContainer.cpp:13</a></div></div>
+<div class="ttc" id="aclass_vis_html"><div class="ttname"><a href="../../d0/def/class_vis.html">Vis</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d6e/_vis_8h_source.html#l00069">Vis.h:69</a></div></div>
+<div class="ttc" id="aclass_application_1_1_game_html_a013ffd59e8fdf1c0a396da1dbe1681ca"><div class="ttname"><a href="../../d4/d06/class_application_1_1_game.html#a013ffd59e8fdf1c0a396da1dbe1681ca">Application::Game::Loop</a></div><div class="ttdeci">bool Loop()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/db5/_game_8cpp_source.html#l00134">Game.cpp:134</a></div></div>
+<div class="ttc" id="aclass_application_1_1_game_html_ae3986ba699d8a3be1862d6212adef588"><div class="ttname"><a href="../../d4/d06/class_application_1_1_game.html#ae3986ba699d8a3be1862d6212adef588">Application::Game::menu</a></div><div class="ttdeci">Menu * menu</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dcd/_game_8h_source.html#l00050">Game.h:50</a></div></div>
+<div class="ttc" id="aclass_engine___1_1_ioc_container_html_a2d38b23552ec4a6244d4154107b9c981"><div class="ttname"><a href="../../d1/d12/class_engine___1_1_ioc_container.html#a2d38b23552ec4a6244d4154107b9c981">Engine_::IocContainer::ResolveDecalBuilder</a></div><div class="ttdeci">static DecalBuilder * ResolveDecalBuilder()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d8c/_engine_2_ioc_container_8cpp_source.html#l00060">IocContainer.cpp:60</a></div></div>
+<div class="ttc" id="a_game_menu_8h_html"><div class="ttname"><a href="../../db/ded/_game_menu_8h.html">GameMenu.h</a></div></div>
+<div class="ttc" id="aclass_engine___1_1_ioc_container_html_ad92ce5cee27f4415ef48d49dea4ec074"><div class="ttname"><a href="../../d1/d12/class_engine___1_1_ioc_container.html#ad92ce5cee27f4415ef48d49dea4ec074">Engine_::IocContainer::ResolveMouse</a></div><div class="ttdeci">static Mouse * ResolveMouse()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d8c/_engine_2_ioc_container_8cpp_source.html#l00088">IocContainer.cpp:88</a></div></div>
+<div class="ttc" id="aclass_application_1_1_game_html_abdee85389dd132c251e41e1b953b5ced"><div class="ttname"><a href="../../d4/d06/class_application_1_1_game.html#abdee85389dd132c251e41e1b953b5ced">Application::Game::OnPressSpace</a></div><div class="ttdeci">void OnPressSpace()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/db5/_game_8cpp_source.html#l02697">Game.cpp:2697</a></div></div>
+<div class="ttc" id="aclass_application_1_1_game_html_abceeabaa240dca2a28a247339010f3cb"><div class="ttname"><a href="../../d4/d06/class_application_1_1_game.html#abceeabaa240dca2a28a247339010f3cb">Application::Game::Game</a></div><div class="ttdeci">Game()</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dcd/_game_8h_source.html#l00021">Game.h:21</a></div></div>
+<div class="ttc" id="anamespace_application_html"><div class="ttname"><a href="../../d1/dda/namespace_application.html">Application</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dfb/_configuration_8h_source.html#l00005">Configuration.h:5</a></div></div>
+<div class="ttc" id="a_configuration_8h_html"><div class="ttname"><a href="../../d2/dfb/_configuration_8h.html">Configuration.h</a></div></div>
+<div class="ttc" id="a_game_8h_html_ae0d7c78f764d67256a5bcf2351b2bda1"><div class="ttname"><a href="../../d9/dcd/_game_8h.html#ae0d7c78f764d67256a5bcf2351b2bda1">gamma_preview_image</a></div><div class="ttdeci">class Image * gamma_preview_image</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/db5/_game_8cpp_source.html#l00242">Game.cpp:242</a></div></div>
+<div class="ttc" id="aclass_application_1_1_game_html_a96341ca5b54d90adc3ecb3bf0bcd2312"><div class="ttname"><a href="../../d4/d06/class_application_1_1_game.html#a96341ca5b54d90adc3ecb3bf0bcd2312">Application::Game::Run</a></div><div class="ttdeci">void Run()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/db5/_game_8cpp_source.html#l00100">Game.cpp:100</a></div></div>
+<div class="ttc" id="aclass_application_1_1_game_html"><div class="ttname"><a href="../../d4/d06/class_application_1_1_game.html">Application::Game</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dcd/_game_8h_source.html#l00019">Game.h:19</a></div></div>
+<div class="ttc" id="aclass_application_1_1_ioc_container_html"><div class="ttname"><a href="../../d5/d77/class_application_1_1_ioc_container.html">Application::IocContainer</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d43/src_2_application_2_ioc_container_8h_source.html#l00008">IocContainer.h:8</a></div></div>
+<div class="ttc" id="aclass_application_1_1_game_html_a3f65e3f0ef1a9114fb3dea275e52442e"><div class="ttname"><a href="../../d4/d06/class_application_1_1_game.html#a3f65e3f0ef1a9114fb3dea275e52442e">Application::Game::EventLoop</a></div><div class="ttdeci">void EventLoop()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/db5/_game_8cpp_source.html#l00322">Game.cpp:322</a></div></div>
+<div class="ttc" id="aclass_application_1_1_game_html_a38be2dadf5b0f2d739f52ac8d95d89c9"><div class="ttname"><a href="../../d4/d06/class_application_1_1_game.html#a38be2dadf5b0f2d739f52ac8d95d89c9">Application::Game::OnEscape</a></div><div class="ttdeci">void OnEscape()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/db5/_game_8cpp_source.html#l00300">Game.cpp:300</a></div></div>
+<div class="ttc" id="aclass_application_1_1_game_html_ae3c2fda9154804eebacc17259ebc8088"><div class="ttname"><a href="../../d4/d06/class_application_1_1_game.html#ae3c2fda9154804eebacc17259ebc8088">Application::Game::engine</a></div><div class="ttdeci">std::shared_ptr&lt; Engine &gt; engine</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dcd/_game_8h_source.html#l00043">Game.h:43</a></div></div>
+<div class="ttc" id="aclass_engine___1_1_ioc_container_html_ac3f47d02b62814ff7d9a2743a81799b0"><div class="ttname"><a href="../../d1/d12/class_engine___1_1_ioc_container.html#ac3f47d02b62814ff7d9a2743a81799b0">Engine_::IocContainer::ResolveKeyboard</a></div><div class="ttdeci">static Keyboard * ResolveKeyboard()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d8c/_engine_2_ioc_container_8cpp_source.html#l00096">IocContainer.cpp:96</a></div></div>
+<div class="ttc" id="a_s_d_l__egl_8h_html_a13b3686016f6a1889a75cd91a854514a"><div class="ttname"><a href="../../df/d32/_s_d_l__egl_8h.html#a13b3686016f6a1889a75cd91a854514a">config</a></div><div class="ttdeci">EGLConfig config</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/_s_d_l__egl_8h_source.html#l01149">SDL_egl.h:1149</a></div></div>
+<div class="ttc" id="aclass_application_1_1_game_html_a8be6dbc8843d07c9d1d3d81d52063814"><div class="ttname"><a href="../../d4/d06/class_application_1_1_game.html#a8be6dbc8843d07c9d1d3d81d52063814">Application::Game::mouse</a></div><div class="ttdeci">Mouse * mouse</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dcd/_game_8h_source.html#l00045">Game.h:45</a></div></div>
+<div class="ttc" id="aclass_keyboard_html"><div class="ttname"><a href="../../d6/d7e/class_keyboard.html">Keyboard</a></div><div class="ttdef"><b>Definition:</b> <a href="../../df/d85/_keyboard_8h_source.html#l00076">Keyboard.h:76</a></div></div>
+<div class="ttc" id="astruct_decal_builder_html"><div class="ttname"><a href="../../d9/d57/struct_decal_builder.html">DecalBuilder</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d87/_decal_builder_8h_source.html#l00123">DecalBuilder.h:123</a></div></div>
+<div class="ttc" id="aclass_application_1_1_game_html_a646a55f1de55ad871c372904490ad0f4"><div class="ttname"><a href="../../d4/d06/class_application_1_1_game.html#a646a55f1de55ad871c372904490ad0f4">Application::Game::config</a></div><div class="ttdeci">std::shared_ptr&lt; const Configuration &gt; config</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dcd/_game_8h_source.html#l00042">Game.h:42</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_378992324979dd2b2ee7a83cc14dc244.html">Application</a></li><li class="navelem"><a class="el" href="../../d9/dcd/_game_8h.html">Game.h</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:03:45. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

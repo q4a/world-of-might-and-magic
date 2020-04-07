@@ -1,0 +1,208 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Исходный файл C:/git/world-of-might-and-magic/lib/win32/x86/sdl2-2.0.12/include/SDL_touch.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('da/dc2/_s_d_l__touch_8h_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">SDL_touch.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../da/dc2/_s_d_l__touch_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">  Simple DirectMedia Layer</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">  Copyright (C) 1997-2020 Sam Lantinga &lt;slouken@libsdl.org&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">  This software is provided &#39;as-is&#39;, without any express or implied</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">  warranty.  In no event will the authors be held liable for any damages</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">  arising from the use of this software.</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">  Permission is granted to anyone to use this software for any purpose,</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">  including commercial applications, and to alter it and redistribute it</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">  freely, subject to the following restrictions:</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">  1. The origin of this software must not be misrepresented; you must not</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">     claim that you wrote the original software. If you use this software</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">     in a product, an acknowledgment in the product documentation would be</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">     appreciated but is not required.</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">  2. Altered source versions must be plainly marked as such, and must not be</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">     misrepresented as being the original software.</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">  3. This notice may not be removed or altered from any source distribution.</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#ifndef SDL_touch_h_</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#define SDL_touch_h_</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d9/d24/_s_d_l__stdinc_8h.html">SDL_stdinc.h</a>&quot;</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../df/d2d/_s_d_l__error_8h.html">SDL_error.h</a>&quot;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../dc/d64/_s_d_l__video_8h.html">SDL_video.h</a>&quot;</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d1/d90/begin__code_8h.html">begin_code.h</a>&quot;</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">/* Set up for C function definitions, even when using C++ */</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="../../da/dc2/_s_d_l__touch_8h.html#a10f5f86abe4ea8308a8706bd5d3b337a">   41</a></span>&#160;<span class="keyword">typedef</span> <a class="code" href="../../d9/d24/_s_d_l__stdinc_8h.html#a2c1a61d5c466bb74680be0a8cc1b455d">Sint64</a> <a class="code" href="../../da/dc2/_s_d_l__touch_8h.html#a10f5f86abe4ea8308a8706bd5d3b337a">SDL_TouchID</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="../../da/dc2/_s_d_l__touch_8h.html#a5fa58141f78415ca09645af359ad2250">   42</a></span>&#160;<span class="keyword">typedef</span> <a class="code" href="../../d9/d24/_s_d_l__stdinc_8h.html#a2c1a61d5c466bb74680be0a8cc1b455d">Sint64</a> <a class="code" href="../../da/dc2/_s_d_l__touch_8h.html#a5fa58141f78415ca09645af359ad2250">SDL_FingerID</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="../../da/dc2/_s_d_l__touch_8h.html#a63f6b605841f681e036a96d9b2790cff">   44</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;{</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="../../da/dc2/_s_d_l__touch_8h.html#a63f6b605841f681e036a96d9b2790cffae544a4f823bceaa24188c6ab960da300">   46</a></span>&#160;    <a class="code" href="../../da/dc2/_s_d_l__touch_8h.html#a63f6b605841f681e036a96d9b2790cffae544a4f823bceaa24188c6ab960da300">SDL_TOUCH_DEVICE_INVALID</a> = -1,</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="../../da/dc2/_s_d_l__touch_8h.html#a63f6b605841f681e036a96d9b2790cffab39ea53b15fce0d49c796c8ca5515863">   47</a></span>&#160;    <a class="code" href="../../da/dc2/_s_d_l__touch_8h.html#a63f6b605841f681e036a96d9b2790cffab39ea53b15fce0d49c796c8ca5515863">SDL_TOUCH_DEVICE_DIRECT</a>,            <span class="comment">/* touch screen with window-relative coordinates */</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="../../da/dc2/_s_d_l__touch_8h.html#a63f6b605841f681e036a96d9b2790cffa0715f9019e2a5180a76eb3a8f90d4f5e">   48</a></span>&#160;    <a class="code" href="../../da/dc2/_s_d_l__touch_8h.html#a63f6b605841f681e036a96d9b2790cffa0715f9019e2a5180a76eb3a8f90d4f5e">SDL_TOUCH_DEVICE_INDIRECT_ABSOLUTE</a>, <span class="comment">/* trackpad with absolute device coordinates */</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="../../da/dc2/_s_d_l__touch_8h.html#a63f6b605841f681e036a96d9b2790cffad8c3585eabc32e6dcccc7726f4c99505">   49</a></span>&#160;    <a class="code" href="../../da/dc2/_s_d_l__touch_8h.html#a63f6b605841f681e036a96d9b2790cffad8c3585eabc32e6dcccc7726f4c99505">SDL_TOUCH_DEVICE_INDIRECT_RELATIVE</a>  <span class="comment">/* trackpad with screen cursor-relative coordinates */</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;} <a class="code" href="../../da/dc2/_s_d_l__touch_8h.html#a63f6b605841f681e036a96d9b2790cff">SDL_TouchDeviceType</a>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="../../da/db6/struct_s_d_l___finger.html">   52</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="../../da/db6/struct_s_d_l___finger.html">SDL_Finger</a></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;{</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="../../da/db6/struct_s_d_l___finger.html#a3cec630146eeec5bd6299a9387a6f16a">   54</a></span>&#160;    <a class="code" href="../../da/dc2/_s_d_l__touch_8h.html#a5fa58141f78415ca09645af359ad2250">SDL_FingerID</a> <a class="code" href="../../da/db6/struct_s_d_l___finger.html#a3cec630146eeec5bd6299a9387a6f16a">id</a>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="../../da/db6/struct_s_d_l___finger.html#ab91dfbd03c3215560457fef44e1c7755">   55</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="../../da/db6/struct_s_d_l___finger.html#ab91dfbd03c3215560457fef44e1c7755">x</a>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="../../da/db6/struct_s_d_l___finger.html#a0a2c7a06ae641940111e03801c672cf9">   56</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="../../da/db6/struct_s_d_l___finger.html#a0a2c7a06ae641940111e03801c672cf9">y</a>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="../../da/db6/struct_s_d_l___finger.html#a0ecb50c7fd699d59899ac60c941bdee6">   57</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="../../da/db6/struct_s_d_l___finger.html#a0ecb50c7fd699d59899ac60c941bdee6">pressure</a>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;} <a class="code" href="../../da/dc2/_s_d_l__touch_8h.html#ab870bc362a74d92227b8bc9c9654d25e">SDL_Finger</a>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">/* Used as the device ID for mouse events simulated with touch input */</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">#define SDL_TOUCH_MOUSEID ((Uint32)-1)</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment">/* Used as the SDL_TouchID for touch events simulated with mouse input */</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor">#define SDL_MOUSE_TOUCHID ((Sint64)-1)</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment">/* Function prototypes */</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="keyword">extern</span> DECLSPEC <span class="keywordtype">int</span> SDLCALL <a class="code" href="../../da/dc2/_s_d_l__touch_8h.html#a14a41a2964ddf868a180e42ccfd441d1">SDL_GetNumTouchDevices</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="keyword">extern</span> DECLSPEC <a class="code" href="../../da/dc2/_s_d_l__touch_8h.html#a10f5f86abe4ea8308a8706bd5d3b337a">SDL_TouchID</a> SDLCALL <a class="code" href="../../da/dc2/_s_d_l__touch_8h.html#af23f09dc79eace93cdc8dd770eed0d0a">SDL_GetTouchDevice</a>(<span class="keywordtype">int</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a57f14e05b1900f16a2da82ade47d0c6d">index</a>);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="keyword">extern</span> DECLSPEC <a class="code" href="../../da/dc2/_s_d_l__touch_8h.html#a63f6b605841f681e036a96d9b2790cff">SDL_TouchDeviceType</a> SDLCALL <a class="code" href="../../da/dc2/_s_d_l__touch_8h.html#acb47d9bf9103c6c039127cea040d89a7">SDL_GetTouchDeviceType</a>(<a class="code" href="../../da/dc2/_s_d_l__touch_8h.html#a10f5f86abe4ea8308a8706bd5d3b337a">SDL_TouchID</a> touchID);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="keyword">extern</span> DECLSPEC <span class="keywordtype">int</span> SDLCALL <a class="code" href="../../da/dc2/_s_d_l__touch_8h.html#a7dcd1494c8dd433b7ef7b24c2926e721">SDL_GetNumTouchFingers</a>(<a class="code" href="../../da/dc2/_s_d_l__touch_8h.html#a10f5f86abe4ea8308a8706bd5d3b337a">SDL_TouchID</a> touchID);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="keyword">extern</span> DECLSPEC <a class="code" href="../../da/db6/struct_s_d_l___finger.html">SDL_Finger</a> * SDLCALL <a class="code" href="../../da/dc2/_s_d_l__touch_8h.html#a50902a3c1e4dba0b82cb73cb786dae41">SDL_GetTouchFinger</a>(<a class="code" href="../../da/dc2/_s_d_l__touch_8h.html#a10f5f86abe4ea8308a8706bd5d3b337a">SDL_TouchID</a> touchID, <span class="keywordtype">int</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a57f14e05b1900f16a2da82ade47d0c6d">index</a>);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="comment">/* Ends C function definitions when using C++ */</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;}</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d0/d2e/close__code_8h.html">close_code.h</a>&quot;</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* SDL_touch_h_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="comment">/* vi: set ts=4 sw=4 expandtab: */</span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="a_s_d_l__touch_8h_html_a63f6b605841f681e036a96d9b2790cffab39ea53b15fce0d49c796c8ca5515863"><div class="ttname"><a href="../../da/dc2/_s_d_l__touch_8h.html#a63f6b605841f681e036a96d9b2790cffab39ea53b15fce0d49c796c8ca5515863">SDL_TOUCH_DEVICE_DIRECT</a></div><div class="ttdeci">@ SDL_TOUCH_DEVICE_DIRECT</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dc2/_s_d_l__touch_8h_source.html#l00047">SDL_touch.h:47</a></div></div>
+<div class="ttc" id="a_s_d_l__touch_8h_html_acb47d9bf9103c6c039127cea040d89a7"><div class="ttname"><a href="../../da/dc2/_s_d_l__touch_8h.html#acb47d9bf9103c6c039127cea040d89a7">SDL_GetTouchDeviceType</a></div><div class="ttdeci">DECLSPEC SDL_TouchDeviceType SDLCALL SDL_GetTouchDeviceType(SDL_TouchID touchID)</div><div class="ttdoc">Get the type of the given touch device.</div></div>
+<div class="ttc" id="a_s_d_l__touch_8h_html_a10f5f86abe4ea8308a8706bd5d3b337a"><div class="ttname"><a href="../../da/dc2/_s_d_l__touch_8h.html#a10f5f86abe4ea8308a8706bd5d3b337a">SDL_TouchID</a></div><div class="ttdeci">Sint64 SDL_TouchID</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dc2/_s_d_l__touch_8h_source.html#l00041">SDL_touch.h:41</a></div></div>
+<div class="ttc" id="a_s_d_l__touch_8h_html_a63f6b605841f681e036a96d9b2790cffae544a4f823bceaa24188c6ab960da300"><div class="ttname"><a href="../../da/dc2/_s_d_l__touch_8h.html#a63f6b605841f681e036a96d9b2790cffae544a4f823bceaa24188c6ab960da300">SDL_TOUCH_DEVICE_INVALID</a></div><div class="ttdeci">@ SDL_TOUCH_DEVICE_INVALID</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dc2/_s_d_l__touch_8h_source.html#l00046">SDL_touch.h:46</a></div></div>
+<div class="ttc" id="a_s_d_l__error_8h_html"><div class="ttname"><a href="../../df/d2d/_s_d_l__error_8h.html">SDL_error.h</a></div></div>
+<div class="ttc" id="a_s_d_l__touch_8h_html_a5fa58141f78415ca09645af359ad2250"><div class="ttname"><a href="../../da/dc2/_s_d_l__touch_8h.html#a5fa58141f78415ca09645af359ad2250">SDL_FingerID</a></div><div class="ttdeci">Sint64 SDL_FingerID</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dc2/_s_d_l__touch_8h_source.html#l00042">SDL_touch.h:42</a></div></div>
+<div class="ttc" id="a_s_d_l__touch_8h_html_ab870bc362a74d92227b8bc9c9654d25e"><div class="ttname"><a href="../../da/dc2/_s_d_l__touch_8h.html#ab870bc362a74d92227b8bc9c9654d25e">SDL_Finger</a></div><div class="ttdeci">struct SDL_Finger SDL_Finger</div></div>
+<div class="ttc" id="a_s_d_l__touch_8h_html_a50902a3c1e4dba0b82cb73cb786dae41"><div class="ttname"><a href="../../da/dc2/_s_d_l__touch_8h.html#a50902a3c1e4dba0b82cb73cb786dae41">SDL_GetTouchFinger</a></div><div class="ttdeci">DECLSPEC SDL_Finger *SDLCALL SDL_GetTouchFinger(SDL_TouchID touchID, int index)</div><div class="ttdoc">Get the finger object of the given touch, with the given index.</div></div>
+<div class="ttc" id="a_s_d_l__touch_8h_html_a63f6b605841f681e036a96d9b2790cffad8c3585eabc32e6dcccc7726f4c99505"><div class="ttname"><a href="../../da/dc2/_s_d_l__touch_8h.html#a63f6b605841f681e036a96d9b2790cffad8c3585eabc32e6dcccc7726f4c99505">SDL_TOUCH_DEVICE_INDIRECT_RELATIVE</a></div><div class="ttdeci">@ SDL_TOUCH_DEVICE_INDIRECT_RELATIVE</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dc2/_s_d_l__touch_8h_source.html#l00049">SDL_touch.h:49</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a57f14e05b1900f16a2da82ade47d0c6d"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a57f14e05b1900f16a2da82ade47d0c6d">index</a></div><div class="ttdeci">GLuint index</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l00663">SDL_opengl_glext.h:663</a></div></div>
+<div class="ttc" id="aclose__code_8h_html"><div class="ttname"><a href="../../d0/d2e/close__code_8h.html">close_code.h</a></div></div>
+<div class="ttc" id="abegin__code_8h_html"><div class="ttname"><a href="../../d1/d90/begin__code_8h.html">begin_code.h</a></div></div>
+<div class="ttc" id="astruct_s_d_l___finger_html"><div class="ttname"><a href="../../da/db6/struct_s_d_l___finger.html">SDL_Finger</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/dc2/_s_d_l__touch_8h_source.html#l00052">SDL_touch.h:52</a></div></div>
+<div class="ttc" id="a_s_d_l__touch_8h_html_a63f6b605841f681e036a96d9b2790cff"><div class="ttname"><a href="../../da/dc2/_s_d_l__touch_8h.html#a63f6b605841f681e036a96d9b2790cff">SDL_TouchDeviceType</a></div><div class="ttdeci">SDL_TouchDeviceType</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dc2/_s_d_l__touch_8h_source.html#l00044">SDL_touch.h:44</a></div></div>
+<div class="ttc" id="a_s_d_l__touch_8h_html_a63f6b605841f681e036a96d9b2790cffa0715f9019e2a5180a76eb3a8f90d4f5e"><div class="ttname"><a href="../../da/dc2/_s_d_l__touch_8h.html#a63f6b605841f681e036a96d9b2790cffa0715f9019e2a5180a76eb3a8f90d4f5e">SDL_TOUCH_DEVICE_INDIRECT_ABSOLUTE</a></div><div class="ttdeci">@ SDL_TOUCH_DEVICE_INDIRECT_ABSOLUTE</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dc2/_s_d_l__touch_8h_source.html#l00048">SDL_touch.h:48</a></div></div>
+<div class="ttc" id="a_s_d_l__touch_8h_html_a7dcd1494c8dd433b7ef7b24c2926e721"><div class="ttname"><a href="../../da/dc2/_s_d_l__touch_8h.html#a7dcd1494c8dd433b7ef7b24c2926e721">SDL_GetNumTouchFingers</a></div><div class="ttdeci">DECLSPEC int SDLCALL SDL_GetNumTouchFingers(SDL_TouchID touchID)</div><div class="ttdoc">Get the number of active fingers for a given touch device.</div></div>
+<div class="ttc" id="astruct_s_d_l___finger_html_a0a2c7a06ae641940111e03801c672cf9"><div class="ttname"><a href="../../da/db6/struct_s_d_l___finger.html#a0a2c7a06ae641940111e03801c672cf9">SDL_Finger::y</a></div><div class="ttdeci">float y</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dc2/_s_d_l__touch_8h_source.html#l00056">SDL_touch.h:56</a></div></div>
+<div class="ttc" id="a_s_d_l__stdinc_8h_html"><div class="ttname"><a href="../../d9/d24/_s_d_l__stdinc_8h.html">SDL_stdinc.h</a></div></div>
+<div class="ttc" id="astruct_s_d_l___finger_html_a0ecb50c7fd699d59899ac60c941bdee6"><div class="ttname"><a href="../../da/db6/struct_s_d_l___finger.html#a0ecb50c7fd699d59899ac60c941bdee6">SDL_Finger::pressure</a></div><div class="ttdeci">float pressure</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dc2/_s_d_l__touch_8h_source.html#l00057">SDL_touch.h:57</a></div></div>
+<div class="ttc" id="a_s_d_l__touch_8h_html_af23f09dc79eace93cdc8dd770eed0d0a"><div class="ttname"><a href="../../da/dc2/_s_d_l__touch_8h.html#af23f09dc79eace93cdc8dd770eed0d0a">SDL_GetTouchDevice</a></div><div class="ttdeci">DECLSPEC SDL_TouchID SDLCALL SDL_GetTouchDevice(int index)</div><div class="ttdoc">Get the touch ID with the given index, or 0 if the index is invalid.</div></div>
+<div class="ttc" id="astruct_s_d_l___finger_html_a3cec630146eeec5bd6299a9387a6f16a"><div class="ttname"><a href="../../da/db6/struct_s_d_l___finger.html#a3cec630146eeec5bd6299a9387a6f16a">SDL_Finger::id</a></div><div class="ttdeci">SDL_FingerID id</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dc2/_s_d_l__touch_8h_source.html#l00054">SDL_touch.h:54</a></div></div>
+<div class="ttc" id="a_s_d_l__video_8h_html"><div class="ttname"><a href="../../dc/d64/_s_d_l__video_8h.html">SDL_video.h</a></div></div>
+<div class="ttc" id="astruct_s_d_l___finger_html_ab91dfbd03c3215560457fef44e1c7755"><div class="ttname"><a href="../../da/db6/struct_s_d_l___finger.html#ab91dfbd03c3215560457fef44e1c7755">SDL_Finger::x</a></div><div class="ttdeci">float x</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dc2/_s_d_l__touch_8h_source.html#l00055">SDL_touch.h:55</a></div></div>
+<div class="ttc" id="a_s_d_l__touch_8h_html_a14a41a2964ddf868a180e42ccfd441d1"><div class="ttname"><a href="../../da/dc2/_s_d_l__touch_8h.html#a14a41a2964ddf868a180e42ccfd441d1">SDL_GetNumTouchDevices</a></div><div class="ttdeci">DECLSPEC int SDLCALL SDL_GetNumTouchDevices(void)</div><div class="ttdoc">Get the number of registered touch devices.</div></div>
+<div class="ttc" id="a_s_d_l__stdinc_8h_html_a2c1a61d5c466bb74680be0a8cc1b455d"><div class="ttname"><a href="../../d9/d24/_s_d_l__stdinc_8h.html#a2c1a61d5c466bb74680be0a8cc1b455d">Sint64</a></div><div class="ttdeci">int64_t Sint64</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d24/_s_d_l__stdinc_8h_source.html#l00210">SDL_stdinc.h:210</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_97aefd0d527b934f1d99a682da8fe6a9.html">lib</a></li><li class="navelem"><a class="el" href="../../dir_da53678e933bc13c5b44fc9f96ac81aa.html">win32</a></li><li class="navelem"><a class="el" href="../../dir_7ac189985cec0e073b46d34a5d96bfc1.html">x86</a></li><li class="navelem"><a class="el" href="../../dir_7b0bc3efc80275bf98f373482bc8cca9.html">sdl2-2.0.12</a></li><li class="navelem"><a class="el" href="../../dir_9d91f83a81d35ca44b21a6c37d7d8d02.html">include</a></li><li class="navelem"><a class="el" href="../../da/dc2/_s_d_l__touch_8h.html">SDL_touch.h</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:03:44. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

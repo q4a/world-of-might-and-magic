@@ -1,0 +1,462 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Структура OverlayList</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d8/d68/struct_overlay_list.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="../../d9/d2c/struct_overlay_list-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Структура OverlayList</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="../../db/dac/_overlays_8h_source.html">Overlays.h</a>&gt;</code></p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Граф связей класса OverlayList:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../db/d38/struct_overlay_list__coll__graph.svg" width="120" height="127"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a1db7dcb70d351a42f5762d7194593836"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d68/struct_overlay_list.html#a1db7dcb70d351a42f5762d7194593836">OverlayList</a> ()</td></tr>
+<tr class="separator:a1db7dcb70d351a42f5762d7194593836"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ee5df622cc90fb45ae84a52d1babe20"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d68/struct_overlay_list.html#a8ee5df622cc90fb45ae84a52d1babe20">ToFile</a> ()</td></tr>
+<tr class="separator:a8ee5df622cc90fb45ae84a52d1babe20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdd698256afa738e0ae6d70fa10b65c6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d68/struct_overlay_list.html#abdd698256afa738e0ae6d70fa10b65c6">FromFile</a> (<a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *data_mm6, <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *data_mm7, <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *data_mm8)</td></tr>
+<tr class="separator:abdd698256afa738e0ae6d70fa10b65c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a721ba36c7767efaf8d5a21a920136190"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d68/struct_overlay_list.html#a721ba36c7767efaf8d5a21a920136190">FromFileTxt</a> (const char *Args)</td></tr>
+<tr class="separator:a721ba36c7767efaf8d5a21a920136190"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7dda79ede4cf1c0dd5a96032e680d7ca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d68/struct_overlay_list.html#a7dda79ede4cf1c0dd5a96032e680d7ca">InitializeSprites</a> ()</td></tr>
+<tr class="separator:a7dda79ede4cf1c0dd5a96032e680d7ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:ab6845da54dd15901191380e1328e3493"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d68/struct_overlay_list.html#ab6845da54dd15901191380e1328e3493">uNumOverlays</a></td></tr>
+<tr class="separator:ab6845da54dd15901191380e1328e3493"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29f04f3bae043d5f8ec976ef1c9d8c0e"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="../../d1/d39/struct_overlay_desc.html">OverlayDesc</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d68/struct_overlay_list.html#a29f04f3bae043d5f8ec976ef1c9d8c0e">pOverlays</a></td></tr>
+<tr class="separator:a29f04f3bae043d5f8ec976ef1c9d8c0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock">
+<p class="definition">См. определение в файле <a class="el" href="../../db/dac/_overlays_8h_source.html">Overlays.h</a> строка <a class="el" href="../../db/dac/_overlays_8h_source.html#l00053">53</a></p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a1db7dcb70d351a42f5762d7194593836"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1db7dcb70d351a42f5762d7194593836">&#9670;&nbsp;</a></span>OverlayList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">OverlayList::OverlayList </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/dac/_overlays_8h_source.html">Overlays.h</a> строка <a class="el" href="../../db/dac/_overlays_8h_source.html#l00054">54</a></p>
+<div class="fragment"><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        :  <span class="comment">//----- (00458474)</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;          <a class="code" href="../../d8/d68/struct_overlay_list.html#ab6845da54dd15901191380e1328e3493">uNumOverlays</a>(0),</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;          <a class="code" href="../../d8/d68/struct_overlay_list.html#a29f04f3bae043d5f8ec976ef1c9d8c0e">pOverlays</a>(<span class="keyword">nullptr</span>) {}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a8ee5df622cc90fb45ae84a52d1babe20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ee5df622cc90fb45ae84a52d1babe20">&#9670;&nbsp;</a></span>ToFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> OverlayList::ToFile </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/d68/_overlays_8cpp_source.html">Overlays.cpp</a> строка <a class="el" href="../../de/d68/_overlays_8cpp_source.html#l00106">106</a></p>
+<div class="fragment"><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                         {</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    FILE *<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0928f6d0f0f794ba000a21dfae422136">v2</a>;  <span class="comment">// eax@1</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="comment">// FILE *v3; // edi@1</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0928f6d0f0f794ba000a21dfae422136">v2</a> = fopen(<span class="stringliteral">&quot;data\\doverlay.bin&quot;</span>, <span class="stringliteral">&quot;wb&quot;</span>);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="comment">// v3 = v2;</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0928f6d0f0f794ba000a21dfae422136">v2</a>) Error(<span class="stringliteral">&quot;Unable to save doverlay.bin!&quot;</span>);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    fwrite(<span class="keyword">this</span>, 4, 1, <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0928f6d0f0f794ba000a21dfae422136">v2</a>);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    fwrite(this-&gt;<a class="code" href="../../d8/d68/struct_overlay_list.html#a29f04f3bae043d5f8ec976ef1c9d8c0e">pOverlays</a>, 8, this-&gt;<a class="code" href="../../d8/d68/struct_overlay_list.html#ab6845da54dd15901191380e1328e3493">uNumOverlays</a>, v2);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    fclose(<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0928f6d0f0f794ba000a21dfae422136">v2</a>);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../db/dac/_overlays_8h_source.html#l00065">pOverlays</a> и <a class="el" href="../../db/dac/_overlays_8h_source.html#l00064">uNumOverlays</a>.</p>
+
+</div>
+</div>
+<a id="abdd698256afa738e0ae6d70fa10b65c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abdd698256afa738e0ae6d70fa10b65c6">&#9670;&nbsp;</a></span>FromFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> OverlayList::FromFile </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *&#160;</td>
+          <td class="paramname"><em>data_mm6</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *&#160;</td>
+          <td class="paramname"><em>data_mm7</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *&#160;</td>
+          <td class="paramname"><em>data_mm8</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/d68/_overlays_8cpp_source.html">Overlays.cpp</a> строка <a class="el" href="../../de/d68/_overlays_8cpp_source.html#l00119">119</a></p>
+<div class="fragment"><div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                                                                         {</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <a class="code" href="../../d2/d83/_m_m7_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a> num_mm6_overlays = data_mm6 ? *(<span class="keywordtype">int</span> *)data_mm6 : 0,</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;         num_mm7_overlays = data_mm7 ? *(<span class="keywordtype">int</span> *)data_mm7 : 0,</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;         num_mm8_overlays = data_mm8 ? *(<span class="keywordtype">int</span> *)data_mm8 : 0;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <a class="code" href="../../d8/d68/struct_overlay_list.html#ab6845da54dd15901191380e1328e3493">uNumOverlays</a> = num_mm6_overlays + num_mm7_overlays + num_mm8_overlays;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    Assert(<a class="code" href="../../d8/d68/struct_overlay_list.html#ab6845da54dd15901191380e1328e3493">uNumOverlays</a>);</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    Assert(!num_mm8_overlays);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <a class="code" href="../../d8/d68/struct_overlay_list.html#a29f04f3bae043d5f8ec976ef1c9d8c0e">pOverlays</a> = (<a class="code" href="../../d1/d39/struct_overlay_desc.html">OverlayDesc</a> *)malloc(<a class="code" href="../../d8/d68/struct_overlay_list.html#ab6845da54dd15901191380e1328e3493">uNumOverlays</a> * <span class="keyword">sizeof</span>(<a class="code" href="../../d1/d39/struct_overlay_desc.html">OverlayDesc</a>));</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    memcpy(<a class="code" href="../../d8/d68/struct_overlay_list.html#a29f04f3bae043d5f8ec976ef1c9d8c0e">pOverlays</a>, (<span class="keywordtype">char</span> *)data_mm7 + 4,</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;           num_mm7_overlays * <span class="keyword">sizeof</span>(<a class="code" href="../../d1/d39/struct_overlay_desc.html">OverlayDesc</a>));</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    memcpy(<a class="code" href="../../d8/d68/struct_overlay_list.html#a29f04f3bae043d5f8ec976ef1c9d8c0e">pOverlays</a> + num_mm7_overlays, (<span class="keywordtype">char</span> *)data_mm6 + 4,</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;           num_mm6_overlays * <span class="keyword">sizeof</span>(<a class="code" href="../../d1/d39/struct_overlay_desc.html">OverlayDesc</a>));</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    memcpy(<a class="code" href="../../d8/d68/struct_overlay_list.html#a29f04f3bae043d5f8ec976ef1c9d8c0e">pOverlays</a> + num_mm6_overlays + num_mm7_overlays,</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;           (<span class="keywordtype">char</span> *)data_mm8 + 4, num_mm8_overlays * <span class="keyword">sizeof</span>(<a class="code" href="../../d1/d39/struct_overlay_desc.html">OverlayDesc</a>));</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../db/dac/_overlays_8h_source.html#l00065">pOverlays</a> и <a class="el" href="../../db/dac/_overlays_8h_source.html#l00064">uNumOverlays</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l00903">Engine::MM7_Initialize()</a>.</p>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d8/d68/struct_overlay_list_abdd698256afa738e0ae6d70fa10b65c6_icgraph.svg" width="523" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a721ba36c7767efaf8d5a21a920136190"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a721ba36c7767efaf8d5a21a920136190">&#9670;&nbsp;</a></span>FromFileTxt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool OverlayList::FromFileTxt </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>Args</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/d68/_overlays_8cpp_source.html">Overlays.cpp</a> строка <a class="el" href="../../de/d68/_overlays_8cpp_source.html#l00138">138</a></p>
+<div class="fragment"><div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;                                              {</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    __int32 <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#acc806b31cbf466ceba6555983d8b814d">v3</a>;       <span class="comment">// edi@1</span></div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    FILE *v4;         <span class="comment">// eax@1</span></div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> v5;  <span class="comment">// esi@3</span></div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <span class="keywordtype">void</span> *v7;         <span class="comment">// eax@9</span></div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="comment">// FILE *v8; // ST0C_4@11</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="keywordtype">char</span> *i;                <span class="comment">// eax@11</span></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="keywordtype">char</span> Buf;               <span class="comment">// [sp+10h] [bp-2F0h]@3</span></div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <a class="code" href="../../de/dfd/struct_frame_table_txt_line.html">FrameTableTxtLine</a> v18;  <span class="comment">// [sp+204h] [bp-FCh]@4</span></div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <a class="code" href="../../de/dfd/struct_frame_table_txt_line.html">FrameTableTxtLine</a> v19;  <span class="comment">// [sp+280h] [bp-80h]@4</span></div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    FILE *File;             <span class="comment">// [sp+2FCh] [bp-4h]@1</span></div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> Argsa;     <span class="comment">// [sp+308h] [bp+8h]@3</span></div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    free(this-&gt;<a class="code" href="../../d8/d68/struct_overlay_list.html#a29f04f3bae043d5f8ec976ef1c9d8c0e">pOverlays</a>);</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    v3 = 0;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    this-&gt;<a class="code" href="../../d8/d68/struct_overlay_list.html#a29f04f3bae043d5f8ec976ef1c9d8c0e">pOverlays</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    this-&gt;<a class="code" href="../../d8/d68/struct_overlay_list.html#ab6845da54dd15901191380e1328e3493">uNumOverlays</a> = 0;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    v4 = fopen(Args, <span class="stringliteral">&quot;r&quot;</span>);</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    File = v4;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="keywordflow">if</span> (!v4) Error(<span class="stringliteral">&quot;ObjectDescriptionList::load - Unable to open file: %s.&quot;</span>);</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; </div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    v5 = 0;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    Argsa = 0;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="keywordflow">if</span> (fgets(&amp;Buf, 490, v4)) {</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        <span class="keywordflow">do</span> {</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;            *strchr(&amp;Buf, 10) = 0;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;            memcpy(&amp;v19, <a class="code" href="../../d2/d6d/_frame_table_inc_8cpp.html#abf3b77a8a504ee496dbdf080705cdb1a">txt_file_frametable_parser</a>(&amp;Buf, &amp;v18), <span class="keyword">sizeof</span>(v19));</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;            <span class="keywordflow">if</span> (v19.<a class="code" href="../../de/dfd/struct_frame_table_txt_line.html#acc6fabebe36579b7f4bd22025744e882">uPropCount</a> &amp;&amp; *v19.<a class="code" href="../../de/dfd/struct_frame_table_txt_line.html#a843902bb9c02e00fa7849613a7fcb166">pProperties</a>[0] != 47) ++Argsa;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        } <span class="keywordflow">while</span> (fgets(&amp;Buf, 490, File));</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        v5 = Argsa;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#acc806b31cbf466ceba6555983d8b814d">v3</a> = 0;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    }</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    this-&gt;<a class="code" href="../../d8/d68/struct_overlay_list.html#ab6845da54dd15901191380e1328e3493">uNumOverlays</a> = v5;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    v7 = malloc(<span class="keyword">sizeof</span>(<a class="code" href="../../d1/d39/struct_overlay_desc.html">OverlayDesc</a>) * v5);</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    this-&gt;<a class="code" href="../../d8/d68/struct_overlay_list.html#a29f04f3bae043d5f8ec976ef1c9d8c0e">pOverlays</a> = (<a class="code" href="../../d1/d39/struct_overlay_desc.html">OverlayDesc</a> *)v7;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="keywordflow">if</span> (v7 == NULL)</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        Error(<span class="stringliteral">&quot;OverlayDescriptionList::load - Out of Memory!&quot;</span>);</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160; </div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    memset(v7, <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#acc806b31cbf466ceba6555983d8b814d">v3</a>, <span class="keyword">sizeof</span>(<a class="code" href="../../d1/d39/struct_overlay_desc.html">OverlayDesc</a>) * this-&gt;<a class="code" href="../../d8/d68/struct_overlay_list.html#ab6845da54dd15901191380e1328e3493">uNumOverlays</a>);</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="comment">// v8 = File;</span></div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    this-&gt;<a class="code" href="../../d8/d68/struct_overlay_list.html#ab6845da54dd15901191380e1328e3493">uNumOverlays</a> = <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#acc806b31cbf466ceba6555983d8b814d">v3</a>;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    fseek(File, <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#acc806b31cbf466ceba6555983d8b814d">v3</a>, <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#acc806b31cbf466ceba6555983d8b814d">v3</a>);</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <span class="keywordflow">for</span> (i = fgets(&amp;Buf, 490, File); i; i = fgets(&amp;Buf, 490, File)) {</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        *strchr(&amp;Buf, 10) = 0;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        memcpy(&amp;v19, <a class="code" href="../../d2/d6d/_frame_table_inc_8cpp.html#abf3b77a8a504ee496dbdf080705cdb1a">txt_file_frametable_parser</a>(&amp;Buf, &amp;v18), <span class="keyword">sizeof</span>(v19));</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        <span class="keywordflow">if</span> (v19.<a class="code" href="../../de/dfd/struct_frame_table_txt_line.html#acc6fabebe36579b7f4bd22025744e882">uPropCount</a> &amp;&amp; *v19.<a class="code" href="../../de/dfd/struct_frame_table_txt_line.html#a843902bb9c02e00fa7849613a7fcb166">pProperties</a>[0] != 47) {</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;            this-&gt;<a class="code" href="../../d8/d68/struct_overlay_list.html#a29f04f3bae043d5f8ec976ef1c9d8c0e">pOverlays</a>[this-&gt;<a class="code" href="../../d8/d68/struct_overlay_list.html#ab6845da54dd15901191380e1328e3493">uNumOverlays</a>].<a class="code" href="../../d1/d39/struct_overlay_desc.html#a64f744ac13589e521a609939ca2903c2">uOverlayID</a> =</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;                atoi(v19.<a class="code" href="../../de/dfd/struct_frame_table_txt_line.html#a843902bb9c02e00fa7849613a7fcb166">pProperties</a>[0]);</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;            <span class="keywordflow">if</span> (_stricmp(v19.<a class="code" href="../../de/dfd/struct_frame_table_txt_line.html#a843902bb9c02e00fa7849613a7fcb166">pProperties</a>[1], <span class="stringliteral">&quot;center&quot;</span>)) {</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;                <span class="keywordflow">if</span> (!_stricmp(v19.<a class="code" href="../../de/dfd/struct_frame_table_txt_line.html#a843902bb9c02e00fa7849613a7fcb166">pProperties</a>[1], <span class="stringliteral">&quot;transparent&quot;</span>))</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;                    this-&gt;<a class="code" href="../../d8/d68/struct_overlay_list.html#a29f04f3bae043d5f8ec976ef1c9d8c0e">pOverlays</a>[this-&gt;<a class="code" href="../../d8/d68/struct_overlay_list.html#ab6845da54dd15901191380e1328e3493">uNumOverlays</a>].<a class="code" href="../../d1/d39/struct_overlay_desc.html#a18c42a2c9e0fa23380bede19cce5ad88">uOverlayType</a> = 2;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;                <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;                    this-&gt;<a class="code" href="../../d8/d68/struct_overlay_list.html#a29f04f3bae043d5f8ec976ef1c9d8c0e">pOverlays</a>[this-&gt;<a class="code" href="../../d8/d68/struct_overlay_list.html#ab6845da54dd15901191380e1328e3493">uNumOverlays</a>].<a class="code" href="../../d1/d39/struct_overlay_desc.html#a18c42a2c9e0fa23380bede19cce5ad88">uOverlayType</a> = 1;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;                this-&gt;<a class="code" href="../../d8/d68/struct_overlay_list.html#a29f04f3bae043d5f8ec976ef1c9d8c0e">pOverlays</a>[this-&gt;<a class="code" href="../../d8/d68/struct_overlay_list.html#ab6845da54dd15901191380e1328e3493">uNumOverlays</a>].<a class="code" href="../../d1/d39/struct_overlay_desc.html#a18c42a2c9e0fa23380bede19cce5ad88">uOverlayType</a> = 0;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;            }</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;            this-&gt;<a class="code" href="../../d8/d68/struct_overlay_list.html#a29f04f3bae043d5f8ec976ef1c9d8c0e">pOverlays</a>[this-&gt;<a class="code" href="../../d8/d68/struct_overlay_list.html#ab6845da54dd15901191380e1328e3493">uNumOverlays</a>++].<a class="code" href="../../d1/d39/struct_overlay_desc.html#aed7b4d239272725965773be77d845796">uSpriteFramesetID</a> =</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;                <a class="code" href="../../db/d87/_sprites_8cpp.html#a24875b3e3df466428121a86748c8c09a">pSpriteFrameTable</a>-&gt;<a class="code" href="../../de/da7/struct_sprite_frame_table.html#aa747f09694e5f633ee156ef8de5d07f5">FastFindSprite</a>((<span class="keywordtype">char</span> *)v19.<a class="code" href="../../de/dfd/struct_frame_table_txt_line.html#a843902bb9c02e00fa7849613a7fcb166">pProperties</a>[2]);</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        }</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    }</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    fclose(File);</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../db/d87/_sprites_8cpp_source.html#l00243">SpriteFrameTable::FastFindSprite()</a>, <a class="el" href="../../db/dac/_overlays_8h_source.html#l00065">pOverlays</a>, <a class="el" href="../../d8/d19/_frame_table_inc_8h_source.html#l00013">FrameTableTxtLine::pProperties</a>, <a class="el" href="../../db/d87/_sprites_8cpp_source.html#l00022">pSpriteFrameTable</a>, <a class="el" href="../../d2/d6d/_frame_table_inc_8cpp_source.html#l00008">txt_file_frametable_parser()</a>, <a class="el" href="../../db/dac/_overlays_8h_source.html#l00064">uNumOverlays</a>, <a class="el" href="../../db/dac/_overlays_8h_source.html#l00045">OverlayDesc::uOverlayID</a>, <a class="el" href="../../db/dac/_overlays_8h_source.html#l00046">OverlayDesc::uOverlayType</a>, <a class="el" href="../../d8/d19/_frame_table_inc_8h_source.html#l00012">FrameTableTxtLine::uPropCount</a> и <a class="el" href="../../db/dac/_overlays_8h_source.html#l00047">OverlayDesc::uSpriteFramesetID</a>.</p>
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d8/d68/struct_overlay_list_a721ba36c7767efaf8d5a21a920136190_cgraph.svg" width="622" height="118"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a7dda79ede4cf1c0dd5a96032e680d7ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7dda79ede4cf1c0dd5a96032e680d7ca">&#9670;&nbsp;</a></span>InitializeSprites()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> OverlayList::InitializeSprites </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/d68/_overlays_8cpp_source.html">Overlays.cpp</a> строка <a class="el" href="../../de/d68/_overlays_8cpp_source.html#l00100">100</a></p>
+<div class="fragment"><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                                    {</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="../../d2/d83/_m_m7_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a> i = 0; i &lt; <a class="code" href="../../d8/d68/struct_overlay_list.html#ab6845da54dd15901191380e1328e3493">uNumOverlays</a>; ++i)</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <a class="code" href="../../db/d87/_sprites_8cpp.html#a24875b3e3df466428121a86748c8c09a">pSpriteFrameTable</a>-&gt;<a class="code" href="../../de/da7/struct_sprite_frame_table.html#a1d390b4fbe5985c715439289d806b3c4">InitializeSprite</a>(<a class="code" href="../../d8/d68/struct_overlay_list.html#a29f04f3bae043d5f8ec976ef1c9d8c0e">pOverlays</a>[i].<a class="code" href="../../d1/d39/struct_overlay_desc.html#aed7b4d239272725965773be77d845796">uSpriteFramesetID</a>);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../db/d87/_sprites_8cpp_source.html#l00046">SpriteFrameTable::InitializeSprite()</a>, <a class="el" href="../../db/dac/_overlays_8h_source.html#l00065">pOverlays</a>, <a class="el" href="../../db/d87/_sprites_8cpp_source.html#l00022">pSpriteFrameTable</a>, <a class="el" href="../../db/dac/_overlays_8h_source.html#l00064">uNumOverlays</a> и <a class="el" href="../../db/dac/_overlays_8h_source.html#l00047">OverlayDesc::uSpriteFramesetID</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l01082">Engine::SecondaryInitialization()</a>.</p>
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d8/d68/struct_overlay_list_a7dda79ede4cf1c0dd5a96032e680d7ca_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d8/d68/struct_overlay_list_a7dda79ede4cf1c0dd5a96032e680d7ca_icgraph.svg" width="442" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="ab6845da54dd15901191380e1328e3493"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6845da54dd15901191380e1328e3493">&#9670;&nbsp;</a></span>uNumOverlays</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int OverlayList::uNumOverlays</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/dac/_overlays_8h_source.html">Overlays.h</a> строка <a class="el" href="../../db/dac/_overlays_8h_source.html#l00064">64</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../de/d68/_overlays_8cpp_source.html#l00032">OtherOverlayList::_4418B6()</a>, <a class="el" href="../../de/d68/_overlays_8cpp_source.html#l00119">FromFile()</a>, <a class="el" href="../../de/d68/_overlays_8cpp_source.html#l00138">FromFileTxt()</a>, <a class="el" href="../../de/d68/_overlays_8cpp_source.html#l00100">InitializeSprites()</a> и <a class="el" href="../../de/d68/_overlays_8cpp_source.html#l00106">ToFile()</a>.</p>
+
+</div>
+</div>
+<a id="a29f04f3bae043d5f8ec976ef1c9d8c0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29f04f3bae043d5f8ec976ef1c9d8c0e">&#9670;&nbsp;</a></span>pOverlays</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="../../d1/d39/struct_overlay_desc.html">OverlayDesc</a>* OverlayList::pOverlays</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/dac/_overlays_8h_source.html">Overlays.h</a> строка <a class="el" href="../../db/dac/_overlays_8h_source.html#l00065">65</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../de/d68/_overlays_8cpp_source.html#l00032">OtherOverlayList::_4418B6()</a>, <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l02373">_441A4E_overlay_on_portrait()</a>, <a class="el" href="../../de/d68/_overlays_8cpp_source.html#l00119">FromFile()</a>, <a class="el" href="../../de/d68/_overlays_8cpp_source.html#l00138">FromFileTxt()</a>, <a class="el" href="../../de/d68/_overlays_8cpp_source.html#l00100">InitializeSprites()</a> и <a class="el" href="../../de/d68/_overlays_8cpp_source.html#l00106">ToFile()</a>.</p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов структур находятся в файлах:<ul>
+<li>C:/git/world-of-might-and-magic/Engine/Graphics/<a class="el" href="../../db/dac/_overlays_8h_source.html">Overlays.h</a></li>
+<li>C:/git/world-of-might-and-magic/Engine/Graphics/<a class="el" href="../../de/d68/_overlays_8cpp_source.html">Overlays.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="astruct_overlay_desc_html_a64f744ac13589e521a609939ca2903c2"><div class="ttname"><a href="../../d1/d39/struct_overlay_desc.html#a64f744ac13589e521a609939ca2903c2">OverlayDesc::uOverlayID</a></div><div class="ttdeci">uint16_t uOverlayID</div><div class="ttdef"><b>Definition:</b> <a href="../../db/dac/_overlays_8h_source.html#l00045">Overlays.h:45</a></div></div>
+<div class="ttc" id="astruct_frame_table_txt_line_html_acc6fabebe36579b7f4bd22025744e882"><div class="ttname"><a href="../../de/dfd/struct_frame_table_txt_line.html#acc6fabebe36579b7f4bd22025744e882">FrameTableTxtLine::uPropCount</a></div><div class="ttdeci">int uPropCount</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d19/_frame_table_inc_8h_source.html#l00012">FrameTableInc.h:12</a></div></div>
+<div class="ttc" id="astruct_frame_table_txt_line_html_a843902bb9c02e00fa7849613a7fcb166"><div class="ttname"><a href="../../de/dfd/struct_frame_table_txt_line.html#a843902bb9c02e00fa7849613a7fcb166">FrameTableTxtLine::pProperties</a></div><div class="ttdeci">const char * pProperties[30]</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d19/_frame_table_inc_8h_source.html#l00013">FrameTableInc.h:13</a></div></div>
+<div class="ttc" id="astruct_overlay_desc_html"><div class="ttname"><a href="../../d1/d39/struct_overlay_desc.html">OverlayDesc</a></div><div class="ttdef"><b>Definition:</b> <a href="../../db/dac/_overlays_8h_source.html#l00044">Overlays.h:44</a></div></div>
+<div class="ttc" id="a_sprites_8cpp_html_a24875b3e3df466428121a86748c8c09a"><div class="ttname"><a href="../../db/d87/_sprites_8cpp.html#a24875b3e3df466428121a86748c8c09a">pSpriteFrameTable</a></div><div class="ttdeci">struct SpriteFrameTable * pSpriteFrameTable</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d87/_sprites_8cpp_source.html#l00022">Sprites.cpp:22</a></div></div>
+<div class="ttc" id="astruct_overlay_desc_html_aed7b4d239272725965773be77d845796"><div class="ttname"><a href="../../d1/d39/struct_overlay_desc.html#aed7b4d239272725965773be77d845796">OverlayDesc::uSpriteFramesetID</a></div><div class="ttdeci">uint16_t uSpriteFramesetID</div><div class="ttdef"><b>Definition:</b> <a href="../../db/dac/_overlays_8h_source.html#l00047">Overlays.h:47</a></div></div>
+<div class="ttc" id="astruct_overlay_desc_html_a18c42a2c9e0fa23380bede19cce5ad88"><div class="ttname"><a href="../../d1/d39/struct_overlay_desc.html#a18c42a2c9e0fa23380bede19cce5ad88">OverlayDesc::uOverlayType</a></div><div class="ttdeci">uint16_t uOverlayType</div><div class="ttdef"><b>Definition:</b> <a href="../../db/dac/_overlays_8h_source.html#l00046">Overlays.h:46</a></div></div>
+<div class="ttc" id="astruct_sprite_frame_table_html_a1d390b4fbe5985c715439289d806b3c4"><div class="ttname"><a href="../../de/da7/struct_sprite_frame_table.html#a1d390b4fbe5985c715439289d806b3c4">SpriteFrameTable::InitializeSprite</a></div><div class="ttdeci">void InitializeSprite(signed int uSpriteID)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d87/_sprites_8cpp_source.html#l00046">Sprites.cpp:46</a></div></div>
+<div class="ttc" id="a_frame_table_inc_8cpp_html_abf3b77a8a504ee496dbdf080705cdb1a"><div class="ttname"><a href="../../d2/d6d/_frame_table_inc_8cpp.html#abf3b77a8a504ee496dbdf080705cdb1a">txt_file_frametable_parser</a></div><div class="ttdeci">FrameTableTxtLine * txt_file_frametable_parser(const char *str_to_parse, FrameTableTxtLine *tokens_table)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d6d/_frame_table_inc_8cpp_source.html#l00008">FrameTableInc.cpp:8</a></div></div>
+<div class="ttc" id="astruct_sprite_frame_table_html_aa747f09694e5f633ee156ef8de5d07f5"><div class="ttname"><a href="../../de/da7/struct_sprite_frame_table.html#aa747f09694e5f633ee156ef8de5d07f5">SpriteFrameTable::FastFindSprite</a></div><div class="ttdeci">int FastFindSprite(const char *pSpriteName)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d87/_sprites_8cpp_source.html#l00243">Sprites.cpp:243</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a0928f6d0f0f794ba000a21dfae422136"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0928f6d0f0f794ba000a21dfae422136">v2</a></div><div class="ttdeci">GLfloat GLfloat GLfloat v2</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l00695">SDL_opengl_glext.h:695</a></div></div>
+<div class="ttc" id="a_m_m7_8h_html_a91ad9478d81a7aaf2593e8d9c3d06a14"><div class="ttname"><a href="../../d2/d83/_m_m7_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a></div><div class="ttdeci">unsigned int uint</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d83/_m_m7_8h_source.html#l00004">MM7.h:4</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_acc806b31cbf466ceba6555983d8b814d"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#acc806b31cbf466ceba6555983d8b814d">v3</a></div><div class="ttdeci">GLfloat GLfloat GLfloat GLfloat v3</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l00696">SDL_opengl_glext.h:696</a></div></div>
+<div class="ttc" id="astruct_overlay_list_html_ab6845da54dd15901191380e1328e3493"><div class="ttname"><a href="../../d8/d68/struct_overlay_list.html#ab6845da54dd15901191380e1328e3493">OverlayList::uNumOverlays</a></div><div class="ttdeci">unsigned int uNumOverlays</div><div class="ttdef"><b>Definition:</b> <a href="../../db/dac/_overlays_8h_source.html#l00064">Overlays.h:64</a></div></div>
+<div class="ttc" id="astruct_overlay_list_html_a29f04f3bae043d5f8ec976ef1c9d8c0e"><div class="ttname"><a href="../../d8/d68/struct_overlay_list.html#a29f04f3bae043d5f8ec976ef1c9d8c0e">OverlayList::pOverlays</a></div><div class="ttdeci">struct OverlayDesc * pOverlays</div><div class="ttdef"><b>Definition:</b> <a href="../../db/dac/_overlays_8h_source.html#l00065">Overlays.h:65</a></div></div>
+<div class="ttc" id="astruct_frame_table_txt_line_html"><div class="ttname"><a href="../../de/dfd/struct_frame_table_txt_line.html">FrameTableTxtLine</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d19/_frame_table_inc_8h_source.html#l00011">FrameTableInc.h:11</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../d8/d68/struct_overlay_list.html">OverlayList</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:05:02. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Исходный файл C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavcodec/vdpau.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d4/da6/vdpau_8h_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">vdpau.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d4/da6/vdpau_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * The Video Decode and Presentation API for UNIX (VDPAU) is used for</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * hardware-accelerated decoding of MPEG-1/2, H.264 and VC-1.</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * Copyright (C) 2008 NVIDIA</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> * This file is part of FFmpeg.</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> * FFmpeg is free software; you can redistribute it and/or</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> * modify it under the terms of the GNU Lesser General Public</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> * License as published by the Free Software Foundation; either</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> * version 2.1 of the License, or (at your option) any later version.</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> * FFmpeg is distributed in the hope that it will be useful,</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> * but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> * Lesser General Public License for more details.</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> * You should have received a copy of the GNU Lesser General Public</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> * License along with FFmpeg; if not, write to the Free Software</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"> * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#ifndef AVCODEC_VDPAU_H</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#define AVCODEC_VDPAU_H</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#include &lt;vdpau/vdpau.h&gt;</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../de/dfe/avconfig_8h.html">libavutil/avconfig.h</a>&quot;</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../da/d6e/attributes_8h.html">libavutil/attributes.h</a>&quot;</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d4/d02/avcodec_8h.html">avcodec.h</a>&quot;</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">#include &quot;version.h&quot;</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">struct </span><a class="code" href="../../de/d1f/struct_a_v_codec_context.html">AVCodecContext</a>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keyword">struct </span><a class="code" href="../../d6/d03/struct_a_v_frame.html">AVFrame</a>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="../../df/d85/group__lavc__codec__hwaccel__vdpau.html#ga1f243045ef2673ebe2a50a8431f3dfa7">   63</a></span>&#160;<span class="keyword">typedef</span> int (*<a class="code" href="../../df/d85/group__lavc__codec__hwaccel__vdpau.html#ga1f243045ef2673ebe2a50a8431f3dfa7">AVVDPAU_Render2</a>)(<span class="keyword">struct </span><a class="code" href="../../de/d1f/struct_a_v_codec_context.html">AVCodecContext</a> *, <span class="keyword">struct </span><a class="code" href="../../d6/d03/struct_a_v_frame.html">AVFrame</a> *,</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                               <span class="keyword">const</span> VdpPictureInfo *, <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>,</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                               <span class="keyword">const</span> VdpBitstreamBuffer *);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="../../d0/da5/struct_a_v_v_d_p_a_u_context.html">   81</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="../../d0/da5/struct_a_v_v_d_p_a_u_context.html">AVVDPAUContext</a> {</div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="../../df/d85/group__lavc__codec__hwaccel__vdpau.html#ga54b51de52e8b936c93272cad8e94e395">   87</a></span>&#160;    VdpDecoder <a class="code" href="../../df/d85/group__lavc__codec__hwaccel__vdpau.html#ga54b51de52e8b936c93272cad8e94e395">decoder</a>;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="../../df/d85/group__lavc__codec__hwaccel__vdpau.html#gac007e73409f8171d5aa26c2c1b72454c">   94</a></span>&#160;    VdpDecoderRender *<a class="code" href="../../df/d85/group__lavc__codec__hwaccel__vdpau.html#gac007e73409f8171d5aa26c2c1b72454c">render</a>;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="../../df/d85/group__lavc__codec__hwaccel__vdpau.html#gaf220e2bf6c0093dd63c8384dccccd3d8">   96</a></span>&#160;    <a class="code" href="../../df/d85/group__lavc__codec__hwaccel__vdpau.html#ga1f243045ef2673ebe2a50a8431f3dfa7">AVVDPAU_Render2</a> <a class="code" href="../../df/d85/group__lavc__codec__hwaccel__vdpau.html#gaf220e2bf6c0093dd63c8384dccccd3d8">render2</a>;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;} <a class="code" href="../../df/d85/group__lavc__codec__hwaccel__vdpau.html#gad70cdc6d639f2d1a6a9342969837df64">AVVDPAUContext</a>;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<a class="code" href="../../d0/da5/struct_a_v_v_d_p_a_u_context.html">AVVDPAUContext</a> *<a class="code" href="../../df/d85/group__lavc__codec__hwaccel__vdpau.html#gabd46596564db27b9783814b2942f6d84">av_alloc_vdpaucontext</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<a class="code" href="../../df/d85/group__lavc__codec__hwaccel__vdpau.html#ga1f243045ef2673ebe2a50a8431f3dfa7">AVVDPAU_Render2</a> <a class="code" href="../../df/d85/group__lavc__codec__hwaccel__vdpau.html#ga0a3496e46e9dfcd50f7baa96a9da0275">av_vdpau_hwaccel_get_render2</a>(<span class="keyword">const</span> <a class="code" href="../../d0/da5/struct_a_v_v_d_p_a_u_context.html">AVVDPAUContext</a> *);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../df/d85/group__lavc__codec__hwaccel__vdpau.html#ga5d993c664b580bb5b927e46c34455cf6">av_vdpau_hwaccel_set_render2</a>(<a class="code" href="../../d0/da5/struct_a_v_v_d_p_a_u_context.html">AVVDPAUContext</a> *, <a class="code" href="../../df/d85/group__lavc__codec__hwaccel__vdpau.html#ga1f243045ef2673ebe2a50a8431f3dfa7">AVVDPAU_Render2</a>);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../df/d85/group__lavc__codec__hwaccel__vdpau.html#gac56d6b1b4478056afc0e0a8f52271afa">av_vdpau_bind_context</a>(<a class="code" href="../../de/d1f/struct_a_v_codec_context.html">AVCodecContext</a> *avctx, VdpDevice device,</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;                          VdpGetProcAddress *get_proc_address, <span class="keywordtype">unsigned</span> <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ac7ba7d3cce3d19ca020e056b37231289">flags</a>);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../df/d85/group__lavc__codec__hwaccel__vdpau.html#gad4354a22f2f4d44000515e836b7863af">av_vdpau_get_surface_parameters</a>(<a class="code" href="../../de/d1f/struct_a_v_codec_context.html">AVCodecContext</a> *avctx, VdpChromaType *<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ad5ddf6fca7b585646515660e810e0188">type</a>,</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;                                    <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> *<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a9a82cf3caff84cabc4598e2619faac17">width</a>, <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> *<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#aa352f2804b9902ac30769c00dde75d5f">height</a>);</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<a class="code" href="../../d0/da5/struct_a_v_v_d_p_a_u_context.html">AVVDPAUContext</a> *<a class="code" href="../../df/d85/group__lavc__codec__hwaccel__vdpau.html#gac3b2e926326d9bc7c4a856304c4bc0f8">av_vdpau_alloc_context</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160; </div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="preprocessor">#if FF_API_VDPAU_PROFILE</span></div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160; </div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;attribute_deprecated</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../df/d85/group__lavc__codec__hwaccel__vdpau.html#gaf111973c1c9863d63a591b19128764c5">av_vdpau_get_profile</a>(<a class="code" href="../../de/d1f/struct_a_v_codec_context.html">AVCodecContext</a> *avctx, VdpDecoderProfile *profile);</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160; </div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;<span class="comment">/* @}*/</span></div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160; </div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* AVCODEC_VDPAU_H */</span><span class="preprocessor"></span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="astruct_a_v_codec_context_html"><div class="ttname"><a href="../../de/d1f/struct_a_v_codec_context.html">AVCodecContext</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d02/avcodec_8h_source.html#l01565">avcodec.h:1565</a></div></div>
+<div class="ttc" id="a_s_d_l__egl_8h_html_aa352f2804b9902ac30769c00dde75d5f"><div class="ttname"><a href="../../df/d32/_s_d_l__egl_8h.html#aa352f2804b9902ac30769c00dde75d5f">height</a></div><div class="ttdeci">EGLSurface EGLint EGLint EGLint EGLint height</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/_s_d_l__egl_8h_source.html#l01596">SDL_egl.h:1596</a></div></div>
+<div class="ttc" id="agroup__lavc__codec__hwaccel__vdpau_html_gad4354a22f2f4d44000515e836b7863af"><div class="ttname"><a href="../../df/d85/group__lavc__codec__hwaccel__vdpau.html#gad4354a22f2f4d44000515e836b7863af">av_vdpau_get_surface_parameters</a></div><div class="ttdeci">int av_vdpau_get_surface_parameters(AVCodecContext *avctx, VdpChromaType *type, uint32_t *width, uint32_t *height)</div></div>
+<div class="ttc" id="aavconfig_8h_html"><div class="ttname"><a href="../../de/dfe/avconfig_8h.html">avconfig.h</a></div></div>
+<div class="ttc" id="agroup__lavc__codec__hwaccel__vdpau_html_ga0a3496e46e9dfcd50f7baa96a9da0275"><div class="ttname"><a href="../../df/d85/group__lavc__codec__hwaccel__vdpau.html#ga0a3496e46e9dfcd50f7baa96a9da0275">av_vdpau_hwaccel_get_render2</a></div><div class="ttdeci">AVVDPAU_Render2 av_vdpau_hwaccel_get_render2(const AVVDPAUContext *)</div></div>
+<div class="ttc" id="agroup__lavc__codec__hwaccel__vdpau_html_gaf220e2bf6c0093dd63c8384dccccd3d8"><div class="ttname"><a href="../../df/d85/group__lavc__codec__hwaccel__vdpau.html#gaf220e2bf6c0093dd63c8384dccccd3d8">AVVDPAUContext::render2</a></div><div class="ttdeci">AVVDPAU_Render2 render2</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/da6/vdpau_8h_source.html#l00096">vdpau.h:96</a></div></div>
+<div class="ttc" id="agroup__lavc__codec__hwaccel__vdpau_html_gac3b2e926326d9bc7c4a856304c4bc0f8"><div class="ttname"><a href="../../df/d85/group__lavc__codec__hwaccel__vdpau.html#gac3b2e926326d9bc7c4a856304c4bc0f8">av_vdpau_alloc_context</a></div><div class="ttdeci">AVVDPAUContext * av_vdpau_alloc_context(void)</div></div>
+<div class="ttc" id="agroup__lavc__codec__hwaccel__vdpau_html_gabd46596564db27b9783814b2942f6d84"><div class="ttname"><a href="../../df/d85/group__lavc__codec__hwaccel__vdpau.html#gabd46596564db27b9783814b2942f6d84">av_alloc_vdpaucontext</a></div><div class="ttdeci">AVVDPAUContext * av_alloc_vdpaucontext(void)</div><div class="ttdoc">allocation function for AVVDPAUContext</div></div>
+<div class="ttc" id="astruct_a_v_v_d_p_a_u_context_html"><div class="ttname"><a href="../../d0/da5/struct_a_v_v_d_p_a_u_context.html">AVVDPAUContext</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/da6/vdpau_8h_source.html#l00081">vdpau.h:81</a></div></div>
+<div class="ttc" id="agroup__lavc__codec__hwaccel__vdpau_html_gac56d6b1b4478056afc0e0a8f52271afa"><div class="ttname"><a href="../../df/d85/group__lavc__codec__hwaccel__vdpau.html#gac56d6b1b4478056afc0e0a8f52271afa">av_vdpau_bind_context</a></div><div class="ttdeci">int av_vdpau_bind_context(AVCodecContext *avctx, VdpDevice device, VdpGetProcAddress *get_proc_address, unsigned flags)</div></div>
+<div class="ttc" id="a_s_d_l__egl_8h_html_a9a82cf3caff84cabc4598e2619faac17"><div class="ttname"><a href="../../df/d32/_s_d_l__egl_8h.html#a9a82cf3caff84cabc4598e2619faac17">width</a></div><div class="ttdeci">EGLSurface EGLint EGLint EGLint width</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/_s_d_l__egl_8h_source.html#l01596">SDL_egl.h:1596</a></div></div>
+<div class="ttc" id="agroup__lavc__codec__hwaccel__vdpau_html_gac007e73409f8171d5aa26c2c1b72454c"><div class="ttname"><a href="../../df/d85/group__lavc__codec__hwaccel__vdpau.html#gac007e73409f8171d5aa26c2c1b72454c">AVVDPAUContext::render</a></div><div class="ttdeci">VdpDecoderRender * render</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/da6/vdpau_8h_source.html#l00094">vdpau.h:94</a></div></div>
+<div class="ttc" id="a_s_d_l__egl_8h_html_ad5ddf6fca7b585646515660e810e0188"><div class="ttname"><a href="../../df/d32/_s_d_l__egl_8h.html#ad5ddf6fca7b585646515660e810e0188">type</a></div><div class="ttdeci">EGLenum type</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/_s_d_l__egl_8h_source.html#l00850">SDL_egl.h:850</a></div></div>
+<div class="ttc" id="agroup__lavc__codec__hwaccel__vdpau_html_ga54b51de52e8b936c93272cad8e94e395"><div class="ttname"><a href="../../df/d85/group__lavc__codec__hwaccel__vdpau.html#ga54b51de52e8b936c93272cad8e94e395">AVVDPAUContext::decoder</a></div><div class="ttdeci">VdpDecoder decoder</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/da6/vdpau_8h_source.html#l00087">vdpau.h:87</a></div></div>
+<div class="ttc" id="aattributes_8h_html"><div class="ttname"><a href="../../da/d6e/attributes_8h.html">attributes.h</a></div></div>
+<div class="ttc" id="agroup__lavc__codec__hwaccel__vdpau_html_ga1f243045ef2673ebe2a50a8431f3dfa7"><div class="ttname"><a href="../../df/d85/group__lavc__codec__hwaccel__vdpau.html#ga1f243045ef2673ebe2a50a8431f3dfa7">AVVDPAU_Render2</a></div><div class="ttdeci">int(* AVVDPAU_Render2)(struct AVCodecContext *, struct AVFrame *, const VdpPictureInfo *, uint32_t, const VdpBitstreamBuffer *)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/da6/vdpau_8h_source.html#l00063">vdpau.h:63</a></div></div>
+<div class="ttc" id="aavcodec_8h_html"><div class="ttname"><a href="../../d4/d02/avcodec_8h.html">avcodec.h</a></div></div>
+<div class="ttc" id="agroup__lavc__codec__hwaccel__vdpau_html_gaf111973c1c9863d63a591b19128764c5"><div class="ttname"><a href="../../df/d85/group__lavc__codec__hwaccel__vdpau.html#gaf111973c1c9863d63a591b19128764c5">av_vdpau_get_profile</a></div><div class="ttdeci">attribute_deprecated int av_vdpau_get_profile(AVCodecContext *avctx, VdpDecoderProfile *profile)</div></div>
+<div class="ttc" id="a_s_d_l__egl_8h_html_ac7ba7d3cce3d19ca020e056b37231289"><div class="ttname"><a href="../../df/d32/_s_d_l__egl_8h.html#ac7ba7d3cce3d19ca020e056b37231289">flags</a></div><div class="ttdeci">EGLSyncKHR EGLint flags</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/_s_d_l__egl_8h_source.html#l00898">SDL_egl.h:898</a></div></div>
+<div class="ttc" id="agroup__lavc__codec__hwaccel__vdpau_html_gad70cdc6d639f2d1a6a9342969837df64"><div class="ttname"><a href="../../df/d85/group__lavc__codec__hwaccel__vdpau.html#gad70cdc6d639f2d1a6a9342969837df64">AVVDPAUContext</a></div><div class="ttdeci">struct AVVDPAUContext AVVDPAUContext</div></div>
+<div class="ttc" id="a_s_d_l__config_8h_html_a435d1572bf3f880d55459d9805097f62"><div class="ttname"><a href="../../d1/d8f/_s_d_l__config_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a></div><div class="ttdeci">unsigned __int32 uint32_t</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d8f/_s_d_l__config_8h_source.html#l00039">SDL_config.h:39</a></div></div>
+<div class="ttc" id="astruct_a_v_frame_html"><div class="ttname"><a href="../../d6/d03/struct_a_v_frame.html">AVFrame</a></div><div class="ttdef"><b>Definition:</b> <a href="../../df/d7d/frame_8h_source.html#l00295">frame.h:295</a></div></div>
+<div class="ttc" id="agroup__lavc__codec__hwaccel__vdpau_html_ga5d993c664b580bb5b927e46c34455cf6"><div class="ttname"><a href="../../df/d85/group__lavc__codec__hwaccel__vdpau.html#ga5d993c664b580bb5b927e46c34455cf6">av_vdpau_hwaccel_set_render2</a></div><div class="ttdeci">void av_vdpau_hwaccel_set_render2(AVVDPAUContext *, AVVDPAU_Render2)</div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_97aefd0d527b934f1d99a682da8fe6a9.html">lib</a></li><li class="navelem"><a class="el" href="../../dir_da53678e933bc13c5b44fc9f96ac81aa.html">win32</a></li><li class="navelem"><a class="el" href="../../dir_7ac189985cec0e073b46d34a5d96bfc1.html">x86</a></li><li class="navelem"><a class="el" href="../../dir_e3469dbcd8a5e63a5540df758d989c34.html">ffmpeg-4.2.2</a></li><li class="navelem"><a class="el" href="../../dir_880368755e1ee5b32b1864dac7163836.html">include</a></li><li class="navelem"><a class="el" href="../../dir_cc1240911a46d75e55d7400edd5b0c1d.html">libavcodec</a></li><li class="navelem"><a class="el" href="../../d4/da6/vdpau_8h.html">vdpau.h</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:03:38. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

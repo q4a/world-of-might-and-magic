@@ -1,0 +1,748 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Файл C:/git/world-of-might-and-magic/Engine/Spells/CastSpellInfo.cpp</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d9/dd3/_cast_spell_info_8cpp.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#typedef-members">Определения типов</a> &#124;
+<a href="#func-members">Функции</a> &#124;
+<a href="#var-members">Переменные</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл CastSpellInfo.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><a href="../../d9/dd3/_cast_spell_info_8cpp_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Определения типов</h2></td></tr>
+<tr class="memitem:a8df51996eaa93ee226542e4ebb9d6f14"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dd3/_cast_spell_info_8cpp.html#a8df51996eaa93ee226542e4ebb9d6f14">EngineIoc</a> = <a class="el" href="../../d1/d12/class_engine___1_1_ioc_container.html">Engine_::IocContainer</a></td></tr>
+<tr class="separator:a8df51996eaa93ee226542e4ebb9d6f14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a3f20d288867015ddde3717be6c6137ea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a7c94ea6f8948649f8d181ae55911eeaf">size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dd3/_cast_spell_info_8cpp.html#a3f20d288867015ddde3717be6c6137ea">PushCastSpellInfo</a> (<a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> uSpellID, <a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> uPlayerID, __int16 skill_level, <a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> uFlags, int spell_sound_id)</td></tr>
+<tr class="separator:a3f20d288867015ddde3717be6c6137ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeaca4ce7b3943438e4d5020dd988b9d9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dd3/_cast_spell_info_8cpp.html#aeaca4ce7b3943438e4d5020dd988b9d9">_42777D_CastSpell_UseWand_ShootArrow</a> (<a class="el" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5">SPELL_TYPE</a> spell, unsigned int uPlayerID, unsigned int a4, __int16 <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#ac7ba7d3cce3d19ca020e056b37231289">flags</a>, int a6)</td></tr>
+<tr class="separator:aeaca4ce7b3943438e4d5020dd988b9d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:a2514b83cbae6998a57eae74a24f6faf4"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d7/dc5/class_mouse.html">Mouse</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dd3/_cast_spell_info_8cpp.html#a2514b83cbae6998a57eae74a24f6faf4">mouse</a> = <a class="el" href="../../d1/d12/class_engine___1_1_ioc_container.html#ad92ce5cee27f4415ef48d49dea4ec074">EngineIoc::ResolveMouse</a>()</td></tr>
+<tr class="separator:a2514b83cbae6998a57eae74a24f6faf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad751f48ec25997384265298b15224f31"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../db/d64/struct_spell_fx_renderer.html">SpellFxRenderer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dd3/_cast_spell_info_8cpp.html#ad751f48ec25997384265298b15224f31">spell_fx_renderer</a> = <a class="el" href="../../d1/d12/class_engine___1_1_ioc_container.html#a29d34163cc9c0b9585b4f2440918de8f">EngineIoc::ResolveSpellFxRenderer</a>()</td></tr>
+<tr class="separator:ad751f48ec25997384265298b15224f31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33c934883739457919a1b62f8cf4643e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a7c94ea6f8948649f8d181ae55911eeaf">size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dd3/_cast_spell_info_8cpp.html#a33c934883739457919a1b62f8cf4643e">CastSpellInfoCount</a> = 10</td></tr>
+<tr class="separator:a33c934883739457919a1b62f8cf4643e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0101864ab328e1992d661d446105d8dc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a52f38e7d822a46377fde7a02708eedb1">std::array</a>&lt; <a class="el" href="../../db/d9d/struct_cast_spell_info.html">CastSpellInfo</a>, <a class="el" href="../../d9/dd3/_cast_spell_info_8cpp.html#a33c934883739457919a1b62f8cf4643e">CastSpellInfoCount</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dd3/_cast_spell_info_8cpp.html#a0101864ab328e1992d661d446105d8dc">pCastSpellInfo</a></td></tr>
+<tr class="separator:a0101864ab328e1992d661d446105d8dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Типы</h2>
+<a id="a8df51996eaa93ee226542e4ebb9d6f14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8df51996eaa93ee226542e4ebb9d6f14">&#9670;&nbsp;</a></span>EngineIoc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d4/d68/_engine_8cpp.html#a8df51996eaa93ee226542e4ebb9d6f14">EngineIoc</a> =  <a class="el" href="../../d1/d12/class_engine___1_1_ioc_container.html">Engine_::IocContainer</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d9/dd3/_cast_spell_info_8cpp_source.html">CastSpellInfo.cpp</a> строка <a class="el" href="../../d9/dd3/_cast_spell_info_8cpp_source.html#l00037">37</a></p>
+
+</div>
+</div>
+<h2 class="groupheader">Функции</h2>
+<a id="a3f20d288867015ddde3717be6c6137ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f20d288867015ddde3717be6c6137ea">&#9670;&nbsp;</a></span>PushCastSpellInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a7c94ea6f8948649f8d181ae55911eeaf">size_t</a> PushCastSpellInfo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td>
+          <td class="paramname"><em>uSpellID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td>
+          <td class="paramname"><em>uPlayerID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">__int16&#160;</td>
+          <td class="paramname"><em>skill_level</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td>
+          <td class="paramname"><em>uFlags</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>spell_sound_id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d9/dd3/_cast_spell_info_8cpp_source.html">CastSpellInfo.cpp</a> строка <a class="el" href="../../d9/dd3/_cast_spell_info_8cpp_source.html#l04329">4329</a></p>
+<div class="fragment"><div class="line"><a name="l04331"></a><span class="lineno"> 4331</span>&#160;                                             {</div>
+<div class="line"><a name="l04332"></a><span class="lineno"> 4332</span>&#160;    <span class="comment">// uFlags: ON_CAST_*</span></div>
+<div class="line"><a name="l04333"></a><span class="lineno"> 4333</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; <a class="code" href="../../d9/dd3/_cast_spell_info_8cpp.html#a33c934883739457919a1b62f8cf4643e">CastSpellInfoCount</a>; i++) {</div>
+<div class="line"><a name="l04334"></a><span class="lineno"> 4334</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="../../d9/dd3/_cast_spell_info_8cpp.html#a0101864ab328e1992d661d446105d8dc">pCastSpellInfo</a>[i].uSpellID) {</div>
+<div class="line"><a name="l04335"></a><span class="lineno"> 4335</span>&#160;            <a class="code" href="../../d9/dd3/_cast_spell_info_8cpp.html#a0101864ab328e1992d661d446105d8dc">pCastSpellInfo</a>[i].uSpellID = uSpellID;</div>
+<div class="line"><a name="l04336"></a><span class="lineno"> 4336</span>&#160;            <a class="code" href="../../d9/dd3/_cast_spell_info_8cpp.html#a0101864ab328e1992d661d446105d8dc">pCastSpellInfo</a>[i].uPlayerID = uPlayerID;</div>
+<div class="line"><a name="l04337"></a><span class="lineno"> 4337</span>&#160;            <span class="keywordflow">if</span> (uFlags &amp; 0x10) <a class="code" href="../../d9/dd3/_cast_spell_info_8cpp.html#a0101864ab328e1992d661d446105d8dc">pCastSpellInfo</a>[i].uPlayerID_2 = uPlayerID;</div>
+<div class="line"><a name="l04338"></a><span class="lineno"> 4338</span>&#160;            <a class="code" href="../../d9/dd3/_cast_spell_info_8cpp.html#a0101864ab328e1992d661d446105d8dc">pCastSpellInfo</a>[i].field_6 = 0;</div>
+<div class="line"><a name="l04339"></a><span class="lineno"> 4339</span>&#160;            <a class="code" href="../../d9/dd3/_cast_spell_info_8cpp.html#a0101864ab328e1992d661d446105d8dc">pCastSpellInfo</a>[i].spell_target_pid = 0;</div>
+<div class="line"><a name="l04340"></a><span class="lineno"> 4340</span>&#160;            <a class="code" href="../../d9/dd3/_cast_spell_info_8cpp.html#a0101864ab328e1992d661d446105d8dc">pCastSpellInfo</a>[i].uFlags = uFlags;</div>
+<div class="line"><a name="l04341"></a><span class="lineno"> 4341</span>&#160;            <a class="code" href="../../d9/dd3/_cast_spell_info_8cpp.html#a0101864ab328e1992d661d446105d8dc">pCastSpellInfo</a>[i].forced_spell_skill_level = skill_level;</div>
+<div class="line"><a name="l04342"></a><span class="lineno"> 4342</span>&#160;            <a class="code" href="../../d9/dd3/_cast_spell_info_8cpp.html#a0101864ab328e1992d661d446105d8dc">pCastSpellInfo</a>[i].sound_id = spell_sound_id;</div>
+<div class="line"><a name="l04343"></a><span class="lineno"> 4343</span>&#160;            <span class="keywordflow">return</span> i;</div>
+<div class="line"><a name="l04344"></a><span class="lineno"> 4344</span>&#160;        }</div>
+<div class="line"><a name="l04345"></a><span class="lineno"> 4345</span>&#160;    }</div>
+<div class="line"><a name="l04346"></a><span class="lineno"> 4346</span>&#160;    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l04347"></a><span class="lineno"> 4347</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d9/dd3/_cast_spell_info_8cpp_source.html#l00042">CastSpellInfoCount</a> и <a class="el" href="../../d9/dd3/_cast_spell_info_8cpp_source.html#l00043">pCastSpellInfo</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d9/dd3/_cast_spell_info_8cpp_source.html#l04369">_42777D_CastSpell_UseWand_ShootArrow()</a>.</p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d9/dd3/_cast_spell_info_8cpp_a3f20d288867015ddde3717be6c6137ea_icgraph.svg" width="100%" height="492"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="aeaca4ce7b3943438e4d5020dd988b9d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeaca4ce7b3943438e4d5020dd988b9d9">&#9670;&nbsp;</a></span>_42777D_CastSpell_UseWand_ShootArrow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> _42777D_CastSpell_UseWand_ShootArrow </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5">SPELL_TYPE</a>&#160;</td>
+          <td class="paramname"><em>spell</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>uPlayerID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>a4</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">__int16&#160;</td>
+          <td class="paramname"><em>flags</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>a6</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d9/dd3/_cast_spell_info_8cpp_source.html">CastSpellInfo.cpp</a> строка <a class="el" href="../../d9/dd3/_cast_spell_info_8cpp_source.html#l04369">4369</a></p>
+<div class="fragment"><div class="line"><a name="l04372"></a><span class="lineno"> 4372</span>&#160;                                                  {</div>
+<div class="line"><a name="l04373"></a><span class="lineno"> 4373</span>&#160;    <span class="keywordtype">unsigned</span> __int16 v9;   <span class="comment">// cx@16</span></div>
+<div class="line"><a name="l04374"></a><span class="lineno"> 4374</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> v10;      <span class="comment">// eax@18</span></div>
+<div class="line"><a name="l04375"></a><span class="lineno"> 4375</span>&#160;    <span class="keywordtype">unsigned</span> __int8 v11;   <span class="comment">// sf@18</span></div>
+<div class="line"><a name="l04376"></a><span class="lineno"> 4376</span>&#160;    <span class="keywordtype">unsigned</span> __int8 v12;   <span class="comment">// of@18</span></div>
+<div class="line"><a name="l04377"></a><span class="lineno"> 4377</span>&#160;    <span class="keywordtype">unsigned</span> __int16 v13;  <span class="comment">// cx@21</span></div>
+<div class="line"><a name="l04378"></a><span class="lineno"> 4378</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> v14;      <span class="comment">// eax@23</span></div>
+<div class="line"><a name="l04379"></a><span class="lineno"> 4379</span>&#160; </div>
+<div class="line"><a name="l04380"></a><span class="lineno"> 4380</span>&#160;    <span class="comment">// if (!pParty-&gt;bTurnBasedModeOn</span></div>
+<div class="line"><a name="l04381"></a><span class="lineno"> 4381</span>&#160;    <span class="comment">//  || (result = pTurnEngine-&gt;field_4, pTurnEngine-&gt;field_4 != 1) &amp;&amp;</span></div>
+<div class="line"><a name="l04382"></a><span class="lineno"> 4382</span>&#160;    <span class="comment">//  pTurnEngine-&gt;field_4 != 3 )</span></div>
+<div class="line"><a name="l04383"></a><span class="lineno"> 4383</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#ae2dd455d6d436a6bd2111aeeb1718ac3">bTurnBasedModeOn</a>) {</div>
+<div class="line"><a name="l04384"></a><span class="lineno"> 4384</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../dc/d5b/_turn_engine_8cpp.html#afca243c8c16ea361d451a791fa3db31f">pTurnEngine</a>-&gt;<a class="code" href="../../d1/d28/structstru262___turn_based.html#a10e68759e9c1c29f0cf17b183e0c3785">turn_stage</a> == <a class="code" href="../../de/d5a/_turn_engine_8h.html#a760e35e380d23bde08ae732e619f2e9fa6fbf139abbb8dae3ef5de59384b33b00">TE_WAIT</a> ||</div>
+<div class="line"><a name="l04385"></a><span class="lineno"> 4385</span>&#160;            <a class="code" href="../../dc/d5b/_turn_engine_8cpp.html#afca243c8c16ea361d451a791fa3db31f">pTurnEngine</a>-&gt;<a class="code" href="../../d1/d28/structstru262___turn_based.html#a10e68759e9c1c29f0cf17b183e0c3785">turn_stage</a> == <a class="code" href="../../de/d5a/_turn_engine_8h.html#a760e35e380d23bde08ae732e619f2e9fab2a666dfd6f40adba23ac540d2d165b7">TE_MOVEMENT</a>)</div>
+<div class="line"><a name="l04386"></a><span class="lineno"> 4386</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l04387"></a><span class="lineno"> 4387</span>&#160;    }</div>
+<div class="line"><a name="l04388"></a><span class="lineno"> 4388</span>&#160; </div>
+<div class="line"><a name="l04389"></a><span class="lineno"> 4389</span>&#160;    <span class="comment">// spell_pointed_target = a5;</span></div>
+<div class="line"><a name="l04390"></a><span class="lineno"> 4390</span>&#160;    <span class="comment">// v7 = &amp;pParty-&gt;pPlayers[uPlayerID];</span></div>
+<div class="line"><a name="l04391"></a><span class="lineno"> 4391</span>&#160;    assert(uPlayerID &lt; 4);</div>
+<div class="line"><a name="l04392"></a><span class="lineno"> 4392</span>&#160;    <a class="code" href="../../d3/db1/struct_player.html">Player</a> *player = &amp;<a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a25894a432feab69bcbbff2194bac47dd">pPlayers</a>[uPlayerID];</div>
+<div class="line"><a name="l04393"></a><span class="lineno"> 4393</span>&#160;    <span class="keywordflow">if</span> (!(<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ac7ba7d3cce3d19ca020e056b37231289">flags</a> &amp; 0x10)) {</div>
+<div class="line"><a name="l04394"></a><span class="lineno"> 4394</span>&#160;        <span class="keywordflow">switch</span> (spell) {</div>
+<div class="line"><a name="l04395"></a><span class="lineno"> 4395</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a182eb7208dbb4f8f8826728e36912623">SPELL_SPIRIT_FATE</a>:</div>
+<div class="line"><a name="l04396"></a><span class="lineno"> 4396</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a0dbd9a3a50c453abd1a9507f66e58713">SPELL_BODY_FIRST_AID</a>:</div>
+<div class="line"><a name="l04397"></a><span class="lineno"> 4397</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5aaa0371702e60586042d58bf523dff822">SPELL_DARK_REANIMATE</a>:</div>
+<div class="line"><a name="l04398"></a><span class="lineno"> 4398</span>&#160;                <span class="comment">// HIBYTE(spell_pointed_target) = HIBYTE(a5) | 1;</span></div>
+<div class="line"><a name="l04399"></a><span class="lineno"> 4399</span>&#160;                <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ac7ba7d3cce3d19ca020e056b37231289">flags</a> |= ON_CAST_MonsterSparkles;</div>
+<div class="line"><a name="l04400"></a><span class="lineno"> 4400</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l04401"></a><span class="lineno"> 4401</span>&#160; </div>
+<div class="line"><a name="l04402"></a><span class="lineno"> 4402</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5afee30b286a69763a11949cd5371361a6">SPELL_FIRE_FIRE_AURA</a>:</div>
+<div class="line"><a name="l04403"></a><span class="lineno"> 4403</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a30a0668a1bb93b8565f87bf5778e600f">SPELL_WATER_RECHARGE_ITEM</a>:</div>
+<div class="line"><a name="l04404"></a><span class="lineno"> 4404</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a76ca25d8383486f75984b575f30f13b4">SPELL_WATER_ENCHANT_ITEM</a>:</div>
+<div class="line"><a name="l04405"></a><span class="lineno"> 4405</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5aa8b3d376ed53389867d7f85ab1b7e43d">SPELL_DARK_VAMPIRIC_WEAPON</a>:</div>
+<div class="line"><a name="l04406"></a><span class="lineno"> 4406</span>&#160;                <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ac7ba7d3cce3d19ca020e056b37231289">flags</a> |= ON_CAST_Enchantment;</div>
+<div class="line"><a name="l04407"></a><span class="lineno"> 4407</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l04408"></a><span class="lineno"> 4408</span>&#160; </div>
+<div class="line"><a name="l04409"></a><span class="lineno"> 4409</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5ac550842d8cecdb466903b3b3f53f357f">SPELL_FIRE_FIRE_BOLT</a>:</div>
+<div class="line"><a name="l04410"></a><span class="lineno"> 4410</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5ac8516477fda4b9010b446168dd2b4484">SPELL_FIRE_FIREBALL</a>:</div>
+<div class="line"><a name="l04411"></a><span class="lineno"> 4411</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5af6146c4c377c08df7f5c2f88111f3540">SPELL_FIRE_INCINERATE</a>:</div>
+<div class="line"><a name="l04412"></a><span class="lineno"> 4412</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a10493e53950452f6decc7ff5417e7a54">SPELL_AIR_LIGHNING_BOLT</a>:</div>
+<div class="line"><a name="l04413"></a><span class="lineno"> 4413</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5ac6854383e0e1a0c423d6a5eb04086deb">SPELL_AIR_IMPLOSION</a>:</div>
+<div class="line"><a name="l04414"></a><span class="lineno"> 4414</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a7797e044ba6ed10af0b549952e30773c">SPELL_WATER_POISON_SPRAY</a>:</div>
+<div class="line"><a name="l04415"></a><span class="lineno"> 4415</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a1d1009b3de0b3f20f31f97e501f996fd">SPELL_WATER_ICE_BOLT</a>:</div>
+<div class="line"><a name="l04416"></a><span class="lineno"> 4416</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5af201a3e73ee75fb779ffaaba160ddd59">SPELL_WATER_ACID_BURST</a>:</div>
+<div class="line"><a name="l04417"></a><span class="lineno"> 4417</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a7b443858f4901e1adb4eb2c48a97d0d0">SPELL_WATER_ICE_BLAST</a>:</div>
+<div class="line"><a name="l04418"></a><span class="lineno"> 4418</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a658830c8695b891b991332539df51b0d">SPELL_EARTH_STUN</a>:</div>
+<div class="line"><a name="l04419"></a><span class="lineno"> 4419</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5aafcadcc9f056d9335a56891c4e8f9dfa">SPELL_EARTH_SLOW</a>:</div>
+<div class="line"><a name="l04420"></a><span class="lineno"> 4420</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a078bad6a3968611fe1be427446a8d4bf">SPELL_EARTH_DEADLY_SWARM</a>:</div>
+<div class="line"><a name="l04421"></a><span class="lineno"> 4421</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5ac62edc94567f310d91e1c7628014d3df">SPELL_EARTH_BLADES</a>:</div>
+<div class="line"><a name="l04422"></a><span class="lineno"> 4422</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5ab61dbd68de154ea78fe981268ec1b337">SPELL_EARTH_MASS_DISTORTION</a>:</div>
+<div class="line"><a name="l04423"></a><span class="lineno"> 4423</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5af784478eeae84e0b3f690588c2fb40a3">SPELL_SPIRIT_SPIRIT_LASH</a>:</div>
+<div class="line"><a name="l04424"></a><span class="lineno"> 4424</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a4031760d28797556690326c334a8e014">SPELL_MIND_MIND_BLAST</a>:</div>
+<div class="line"><a name="l04425"></a><span class="lineno"> 4425</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a2b27970612ef4e969d342dabc82dc106">SPELL_MIND_CHARM</a>:</div>
+<div class="line"><a name="l04426"></a><span class="lineno"> 4426</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5ad7bc9c04229f93a580ee1b7a5daf0cd8">SPELL_MIND_PSYCHIC_SHOCK</a>:</div>
+<div class="line"><a name="l04427"></a><span class="lineno"> 4427</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5ac381a2914cebec943b2718180d9e7f43">SPELL_BODY_HARM</a>:</div>
+<div class="line"><a name="l04428"></a><span class="lineno"> 4428</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a63249e16e7b9ff9323f139775ecb111d">SPELL_BODY_FLYING_FIST</a>:</div>
+<div class="line"><a name="l04429"></a><span class="lineno"> 4429</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5ab5b2490bf8105760b631726608b7ffbe">SPELL_LIGHT_LIGHT_BOLT</a>:</div>
+<div class="line"><a name="l04430"></a><span class="lineno"> 4430</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5aca066f824718cea8d234708e8c211d31">SPELL_LIGHT_DESTROY_UNDEAD</a>:</div>
+<div class="line"><a name="l04431"></a><span class="lineno"> 4431</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a70dfa8439b892468a27c8d6e037fae7a">SPELL_LIGHT_SUNRAY</a>:</div>
+<div class="line"><a name="l04432"></a><span class="lineno"> 4432</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a7920f1af8f0ed0ec1268d59db41fdb05">SPELL_DARK_TOXIC_CLOUD</a>:</div>
+<div class="line"><a name="l04433"></a><span class="lineno"> 4433</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a492082e657a5a79a9ccfd8b1317032a6">SPELL_DARK_SHRINKING_RAY</a>:</div>
+<div class="line"><a name="l04434"></a><span class="lineno"> 4434</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a15b585917f89c97a0d52735faa91cd93">SPELL_DARK_SHARPMETAL</a>:</div>
+<div class="line"><a name="l04435"></a><span class="lineno"> 4435</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a658bd96d01962c795467502dc8b5f1fb">SPELL_DARK_DRAGON_BREATH</a>:</div>
+<div class="line"><a name="l04436"></a><span class="lineno"> 4436</span>&#160;                <span class="keywordflow">if</span> (!a6) <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ac7ba7d3cce3d19ca020e056b37231289">flags</a> |= ON_CAST_TargetCrosshair;</div>
+<div class="line"><a name="l04437"></a><span class="lineno"> 4437</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l04438"></a><span class="lineno"> 4438</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a2bdcf5f6fb39236882da82cea91b3fa7">SPELL_MIND_TELEPATHY</a>:</div>
+<div class="line"><a name="l04439"></a><span class="lineno"> 4439</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5ae0fa3c94f6be031a9b7c5baec276e7b5">SPELL_MIND_BERSERK</a>:</div>
+<div class="line"><a name="l04440"></a><span class="lineno"> 4440</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5aca64940b6e46cb4521016678c02118e6">SPELL_MIND_ENSLAVE</a>:</div>
+<div class="line"><a name="l04441"></a><span class="lineno"> 4441</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a77a5c6e00aaa63aac9c9e33ff811ee6e">SPELL_LIGHT_PARALYZE</a>:</div>
+<div class="line"><a name="l04442"></a><span class="lineno"> 4442</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a8e937c29ba984d90179c7cf1734cd96d">SPELL_DARK_CONTROL_UNDEAD</a>:</div>
+<div class="line"><a name="l04443"></a><span class="lineno"> 4443</span>&#160;                <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ac7ba7d3cce3d19ca020e056b37231289">flags</a> |= ON_CAST_TargetCrosshair;</div>
+<div class="line"><a name="l04444"></a><span class="lineno"> 4444</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l04445"></a><span class="lineno"> 4445</span>&#160; </div>
+<div class="line"><a name="l04446"></a><span class="lineno"> 4446</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a1e7cf27324fe924f4b037b9cd456f7f8">SPELL_EARTH_TELEKINESIS</a>:</div>
+<div class="line"><a name="l04447"></a><span class="lineno"> 4447</span>&#160;                <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ac7ba7d3cce3d19ca020e056b37231289">flags</a> |= ON_CAST_Telekenesis;</div>
+<div class="line"><a name="l04448"></a><span class="lineno"> 4448</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l04449"></a><span class="lineno"> 4449</span>&#160; </div>
+<div class="line"><a name="l04450"></a><span class="lineno"> 4450</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a50daf5b2609e206f072efc6eceb0a1bf">SPELL_SPIRIT_BLESS</a>:</div>
+<div class="line"><a name="l04451"></a><span class="lineno"> 4451</span>&#160;                <span class="keywordflow">if</span> (a4 &amp;&amp; ~a4 &amp; 0x01C0) {</div>
+<div class="line"><a name="l04452"></a><span class="lineno"> 4452</span>&#160;                    <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ac7ba7d3cce3d19ca020e056b37231289">flags</a> |= ON_CAST_WholeParty_BigImprovementAnim;</div>
+<div class="line"><a name="l04453"></a><span class="lineno"> 4453</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l04454"></a><span class="lineno"> 4454</span>&#160;                } <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((player-&gt;<a class="code" href="../../d3/db1/struct_player.html#a87f809ea83134e484f68df03fdd5d316">pActiveSkills</a>[<a class="code" href="../../d1/d39/_player_8h.html#a1b05d2a7f20e4a42c536e687caaff1ceaae0003564d680d6a80695e3c1e04ed4e">PLAYER_SKILL_SPIRIT</a>] &amp;</div>
+<div class="line"><a name="l04455"></a><span class="lineno"> 4455</span>&#160;                            0x1C0) == 0) {</div>
+<div class="line"><a name="l04456"></a><span class="lineno"> 4456</span>&#160;                    <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ac7ba7d3cce3d19ca020e056b37231289">flags</a> |= ON_CAST_WholeParty_BigImprovementAnim;</div>
+<div class="line"><a name="l04457"></a><span class="lineno"> 4457</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l04458"></a><span class="lineno"> 4458</span>&#160;                }</div>
+<div class="line"><a name="l04459"></a><span class="lineno"> 4459</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l04460"></a><span class="lineno"> 4460</span>&#160; </div>
+<div class="line"><a name="l04461"></a><span class="lineno"> 4461</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a6caf7e7fd877f5e4607ddbd503a355eb">SPELL_SPIRIT_PRESERVATION</a>:</div>
+<div class="line"><a name="l04462"></a><span class="lineno"> 4462</span>&#160;                v9 = a4;</div>
+<div class="line"><a name="l04463"></a><span class="lineno"> 4463</span>&#160;                <span class="keywordflow">if</span> (!a4) v9 = player-&gt;<a class="code" href="../../d3/db1/struct_player.html#a87f809ea83134e484f68df03fdd5d316">pActiveSkills</a>[<a class="code" href="../../d1/d39/_player_8h.html#a1b05d2a7f20e4a42c536e687caaff1ceaae0003564d680d6a80695e3c1e04ed4e">PLAYER_SKILL_SPIRIT</a>];</div>
+<div class="line"><a name="l04464"></a><span class="lineno"> 4464</span>&#160;                <span class="comment">// goto LABEL_18;</span></div>
+<div class="line"><a name="l04465"></a><span class="lineno"> 4465</span>&#160;                v10 = <a class="code" href="../../d2/d82/_player_8cpp.html#a946581808d635467b04b165fb20cc75f">SkillToMastery</a>(v9);</div>
+<div class="line"><a name="l04466"></a><span class="lineno"> 4466</span>&#160;                v12 = <a class="code" href="../../d2/d83/_m_m7_8h.html#a82b63e8f54902c2b305e727c7372761f">__OFSUB__</a>(v10, 3);</div>
+<div class="line"><a name="l04467"></a><span class="lineno"> 4467</span>&#160;                v11 = ((v10 - 3) &amp; 0x80000000u) != 0;</div>
+<div class="line"><a name="l04468"></a><span class="lineno"> 4468</span>&#160;                <span class="comment">// goto LABEL_24;</span></div>
+<div class="line"><a name="l04469"></a><span class="lineno"> 4469</span>&#160;                <span class="keywordflow">if</span> (v11 ^ v12) {</div>
+<div class="line"><a name="l04470"></a><span class="lineno"> 4470</span>&#160;                    <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ac7ba7d3cce3d19ca020e056b37231289">flags</a> |= ON_CAST_WholeParty_BigImprovementAnim;</div>
+<div class="line"><a name="l04471"></a><span class="lineno"> 4471</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l04472"></a><span class="lineno"> 4472</span>&#160;                }</div>
+<div class="line"><a name="l04473"></a><span class="lineno"> 4473</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l04474"></a><span class="lineno"> 4474</span>&#160; </div>
+<div class="line"><a name="l04475"></a><span class="lineno"> 4475</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a765fe6ac01c60417be8618278beb3159">SPELL_DARK_PAIN_REFLECTION</a>:</div>
+<div class="line"><a name="l04476"></a><span class="lineno"> 4476</span>&#160;                v9 = a4;</div>
+<div class="line"><a name="l04477"></a><span class="lineno"> 4477</span>&#160;                <span class="keywordflow">if</span> (!a4) v9 = player-&gt;<a class="code" href="../../d3/db1/struct_player.html#a87f809ea83134e484f68df03fdd5d316">pActiveSkills</a>[<a class="code" href="../../d1/d39/_player_8h.html#a1b05d2a7f20e4a42c536e687caaff1ceac84faa92fbbbf6bf1bee432f8a832aac">PLAYER_SKILL_DARK</a>];</div>
+<div class="line"><a name="l04478"></a><span class="lineno"> 4478</span>&#160;                <span class="comment">// LABEL_18:</span></div>
+<div class="line"><a name="l04479"></a><span class="lineno"> 4479</span>&#160;                v10 = <a class="code" href="../../d2/d82/_player_8cpp.html#a946581808d635467b04b165fb20cc75f">SkillToMastery</a>(v9);</div>
+<div class="line"><a name="l04480"></a><span class="lineno"> 4480</span>&#160;                v12 = <a class="code" href="../../d2/d83/_m_m7_8h.html#a82b63e8f54902c2b305e727c7372761f">__OFSUB__</a>(v10, 3);</div>
+<div class="line"><a name="l04481"></a><span class="lineno"> 4481</span>&#160;                v11 = ((v10 - 3) &amp; 0x80000000u) != 0;</div>
+<div class="line"><a name="l04482"></a><span class="lineno"> 4482</span>&#160;                <span class="comment">// goto LABEL_24;</span></div>
+<div class="line"><a name="l04483"></a><span class="lineno"> 4483</span>&#160;                <span class="keywordflow">if</span> (v11 ^ v12) {</div>
+<div class="line"><a name="l04484"></a><span class="lineno"> 4484</span>&#160;                    <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ac7ba7d3cce3d19ca020e056b37231289">flags</a> |= ON_CAST_WholeParty_BigImprovementAnim;</div>
+<div class="line"><a name="l04485"></a><span class="lineno"> 4485</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l04486"></a><span class="lineno"> 4486</span>&#160;                }</div>
+<div class="line"><a name="l04487"></a><span class="lineno"> 4487</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l04488"></a><span class="lineno"> 4488</span>&#160; </div>
+<div class="line"><a name="l04489"></a><span class="lineno"> 4489</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a044e1ec310deba5c49e92f33cabd4250">SPELL_BODY_HAMMERHANDS</a>:</div>
+<div class="line"><a name="l04490"></a><span class="lineno"> 4490</span>&#160;                v13 = a4;</div>
+<div class="line"><a name="l04491"></a><span class="lineno"> 4491</span>&#160;                <span class="keywordflow">if</span> (!a4) v13 = player-&gt;<a class="code" href="../../d3/db1/struct_player.html#a87f809ea83134e484f68df03fdd5d316">pActiveSkills</a>[<a class="code" href="../../d1/d39/_player_8h.html#a1b05d2a7f20e4a42c536e687caaff1cea3469bc310e6f5b016f5a410349a4e1f3">PLAYER_SKILL_BODY</a>];</div>
+<div class="line"><a name="l04492"></a><span class="lineno"> 4492</span>&#160;                v14 = <a class="code" href="../../d2/d82/_player_8cpp.html#a946581808d635467b04b165fb20cc75f">SkillToMastery</a>(v13);</div>
+<div class="line"><a name="l04493"></a><span class="lineno"> 4493</span>&#160;                v12 = <a class="code" href="../../d2/d83/_m_m7_8h.html#a82b63e8f54902c2b305e727c7372761f">__OFSUB__</a>(v14, 4);</div>
+<div class="line"><a name="l04494"></a><span class="lineno"> 4494</span>&#160;                v11 = ((v14 - 4) &amp; 0x80000000u) != 0;</div>
+<div class="line"><a name="l04495"></a><span class="lineno"> 4495</span>&#160;                <span class="comment">// LABEL_24:</span></div>
+<div class="line"><a name="l04496"></a><span class="lineno"> 4496</span>&#160;                <span class="keywordflow">if</span> (v11 ^ v12) {</div>
+<div class="line"><a name="l04497"></a><span class="lineno"> 4497</span>&#160;                    <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ac7ba7d3cce3d19ca020e056b37231289">flags</a> |= ON_CAST_WholeParty_BigImprovementAnim;</div>
+<div class="line"><a name="l04498"></a><span class="lineno"> 4498</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l04499"></a><span class="lineno"> 4499</span>&#160;                }</div>
+<div class="line"><a name="l04500"></a><span class="lineno"> 4500</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l04501"></a><span class="lineno"> 4501</span>&#160; </div>
+<div class="line"><a name="l04502"></a><span class="lineno"> 4502</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a98b9b37acc86021063041924ba58eb31">SPELL_EARTH_STONE_TO_FLESH</a>:</div>
+<div class="line"><a name="l04503"></a><span class="lineno"> 4503</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a573ce34ee30ca12f04be5771e61397bd">SPELL_SPIRIT_REMOVE_CURSE</a>:</div>
+<div class="line"><a name="l04504"></a><span class="lineno"> 4504</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a15d7caafdef74eaa061e33dff8aec4e8">SPELL_SPIRIT_RAISE_DEAD</a>:</div>
+<div class="line"><a name="l04505"></a><span class="lineno"> 4505</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a981324e26c8ca12ed8d0cbc5dddc5c2c">SPELL_SPIRIT_RESSURECTION</a>:</div>
+<div class="line"><a name="l04506"></a><span class="lineno"> 4506</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5ae11578b1ca932ba5d273a952582a70dd">SPELL_MIND_REMOVE_FEAR</a>:</div>
+<div class="line"><a name="l04507"></a><span class="lineno"> 4507</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a3bfe62d06092495315c005b2b0cd30dd">SPELL_MIND_CURE_PARALYSIS</a>:</div>
+<div class="line"><a name="l04508"></a><span class="lineno"> 4508</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a412b968dfa138c2de402bc5dc5bf9755">SPELL_MIND_CURE_INSANITY</a>:</div>
+<div class="line"><a name="l04509"></a><span class="lineno"> 4509</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a1c6ada9a45572464d5f9849ef2283811">SPELL_BODY_CURE_WEAKNESS</a>:</div>
+<div class="line"><a name="l04510"></a><span class="lineno"> 4510</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5ae5b853ec258a2d0d8ce1eee727683cea">SPELL_BODY_REGENERATION</a>:</div>
+<div class="line"><a name="l04511"></a><span class="lineno"> 4511</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5acac57ddd5dcb1e81ac1b7931768acc72">SPELL_BODY_CURE_POISON</a>:</div>
+<div class="line"><a name="l04512"></a><span class="lineno"> 4512</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a3f9a98e4fe9f8a618dcb9337f65060d0">SPELL_BODY_CURE_DISEASE</a>:</div>
+<div class="line"><a name="l04513"></a><span class="lineno"> 4513</span>&#160;                <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ac7ba7d3cce3d19ca020e056b37231289">flags</a> |= ON_CAST_WholeParty_BigImprovementAnim;</div>
+<div class="line"><a name="l04514"></a><span class="lineno"> 4514</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l04515"></a><span class="lineno"> 4515</span>&#160; </div>
+<div class="line"><a name="l04516"></a><span class="lineno"> 4516</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a69c42ea37669c1c5894efef7cbee3207">SPELL_DARK_SACRIFICE</a>:</div>
+<div class="line"><a name="l04517"></a><span class="lineno"> 4517</span>&#160;                <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ac7ba7d3cce3d19ca020e056b37231289">flags</a> |= ON_CAST_DarkSacrifice;</div>
+<div class="line"><a name="l04518"></a><span class="lineno"> 4518</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l04519"></a><span class="lineno"> 4519</span>&#160;            <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l04520"></a><span class="lineno"> 4520</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l04521"></a><span class="lineno"> 4521</span>&#160;        }</div>
+<div class="line"><a name="l04522"></a><span class="lineno"> 4522</span>&#160;    }</div>
+<div class="line"><a name="l04523"></a><span class="lineno"> 4523</span>&#160; </div>
+<div class="line"><a name="l04524"></a><span class="lineno"> 4524</span>&#160;    <span class="comment">// clear previous casts</span></div>
+<div class="line"><a name="l04525"></a><span class="lineno"> 4525</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ac7ba7d3cce3d19ca020e056b37231289">flags</a> &amp; ON_CAST_CastingInProgress) {</div>
+<div class="line"><a name="l04526"></a><span class="lineno"> 4526</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="../../d2/d83/_m_m7_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a> i = 0; i &lt; <a class="code" href="../../d9/dd3/_cast_spell_info_8cpp.html#a33c934883739457919a1b62f8cf4643e">CastSpellInfoCount</a>; ++i)</div>
+<div class="line"><a name="l04527"></a><span class="lineno"> 4527</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="../../d9/dd3/_cast_spell_info_8cpp.html#a0101864ab328e1992d661d446105d8dc">pCastSpellInfo</a>[i].uFlags &amp; ON_CAST_CastingInProgress) {</div>
+<div class="line"><a name="l04528"></a><span class="lineno"> 4528</span>&#160;                <a class="code" href="../../d9/dd3/_cast_spell_info_8cpp.html#a0101864ab328e1992d661d446105d8dc">pCastSpellInfo</a>[i].uSpellID = 0;</div>
+<div class="line"><a name="l04529"></a><span class="lineno"> 4529</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l04530"></a><span class="lineno"> 4530</span>&#160;            }</div>
+<div class="line"><a name="l04531"></a><span class="lineno"> 4531</span>&#160;    }</div>
+<div class="line"><a name="l04532"></a><span class="lineno"> 4532</span>&#160; </div>
+<div class="line"><a name="l04533"></a><span class="lineno"> 4533</span>&#160;    <a class="code" href="../../d8/d06/namespace_cast_spell_info_helpers.html#adcfab5ec5567ebe310863a1f9c678cc7">CastSpellInfoHelpers::Cancel_Spell_Cast_In_Progress</a>();</div>
+<div class="line"><a name="l04534"></a><span class="lineno"> 4534</span>&#160; </div>
+<div class="line"><a name="l04535"></a><span class="lineno"> 4535</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a321ff419cd5252e54cf95e64dc6687ee">result</a> = <a class="code" href="../../d9/dd3/_cast_spell_info_8cpp.html#a3f20d288867015ddde3717be6c6137ea">PushCastSpellInfo</a>(spell, uPlayerID, a4, <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ac7ba7d3cce3d19ca020e056b37231289">flags</a>, a6);</div>
+<div class="line"><a name="l04536"></a><span class="lineno"> 4536</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a321ff419cd5252e54cf95e64dc6687ee">result</a> != -1) {</div>
+<div class="line"><a name="l04537"></a><span class="lineno"> 4537</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ac7ba7d3cce3d19ca020e056b37231289">flags</a> &amp; ON_CAST_WholeParty_BigImprovementAnim) {</div>
+<div class="line"><a name="l04538"></a><span class="lineno"> 4538</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="../../dc/dce/_g_u_i_window_8cpp.html#af07bd46153a7b735d9862f5769696e8a">pGUIWindow_CastTargetedSpell</a>) <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l04539"></a><span class="lineno"> 4539</span>&#160;            <a class="code" href="../../dc/dce/_g_u_i_window_8cpp.html#af07bd46153a7b735d9862f5769696e8a">pGUIWindow_CastTargetedSpell</a> = <span class="keyword">new</span> <a class="code" href="../../d0/d30/class_on_cast_targeted_spell.html">OnCastTargetedSpell</a>(</div>
+<div class="line"><a name="l04540"></a><span class="lineno"> 4540</span>&#160;                0, 0, <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a92dbce8e3247f6a78126c99877caacb6">window</a>-&gt;GetWidth(), <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a92dbce8e3247f6a78126c99877caacb6">window</a>-&gt;GetHeight(),</div>
+<div class="line"><a name="l04541"></a><span class="lineno"> 4541</span>&#160;                (<span class="keywordtype">int</span>)&amp;<a class="code" href="../../d9/dd3/_cast_spell_info_8cpp.html#a0101864ab328e1992d661d446105d8dc">pCastSpellInfo</a>[<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a321ff419cd5252e54cf95e64dc6687ee">result</a>]);</div>
+<div class="line"><a name="l04542"></a><span class="lineno"> 4542</span>&#160;            <a class="code" href="../../dc/dce/_g_u_i_window_8cpp.html#af07bd46153a7b735d9862f5769696e8a">pGUIWindow_CastTargetedSpell</a>-&gt;<a class="code" href="../../d4/d38/class_g_u_i_window.html#a29f96468b54f142995e3b1890cb7e45e">CreateButton</a>(</div>
+<div class="line"><a name="l04543"></a><span class="lineno"> 4543</span>&#160;                52, 422, 35, 0, 2, 0, <a class="code" href="../../d5/d0b/_g_u_i_window_8h.html#a2519966952faeb9397447ce89e9bcb02a7620927feaa2d7196b6d71c9b57654ec">UIMSG_CastSpell_Character_Big_Improvement</a>,</div>
+<div class="line"><a name="l04544"></a><span class="lineno"> 4544</span>&#160;                0, 49, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l04545"></a><span class="lineno"> 4545</span>&#160;            <a class="code" href="../../dc/dce/_g_u_i_window_8cpp.html#af07bd46153a7b735d9862f5769696e8a">pGUIWindow_CastTargetedSpell</a>-&gt;<a class="code" href="../../d4/d38/class_g_u_i_window.html#a29f96468b54f142995e3b1890cb7e45e">CreateButton</a>(</div>
+<div class="line"><a name="l04546"></a><span class="lineno"> 4546</span>&#160;                165, 422, 35, 0, 2, 0,</div>
+<div class="line"><a name="l04547"></a><span class="lineno"> 4547</span>&#160;                <a class="code" href="../../d5/d0b/_g_u_i_window_8h.html#a2519966952faeb9397447ce89e9bcb02a7620927feaa2d7196b6d71c9b57654ec">UIMSG_CastSpell_Character_Big_Improvement</a>, 1, 50, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l04548"></a><span class="lineno"> 4548</span>&#160;            <a class="code" href="../../dc/dce/_g_u_i_window_8cpp.html#af07bd46153a7b735d9862f5769696e8a">pGUIWindow_CastTargetedSpell</a>-&gt;<a class="code" href="../../d4/d38/class_g_u_i_window.html#a29f96468b54f142995e3b1890cb7e45e">CreateButton</a>(</div>
+<div class="line"><a name="l04549"></a><span class="lineno"> 4549</span>&#160;                280, 422, 35, 0, 2, 0,</div>
+<div class="line"><a name="l04550"></a><span class="lineno"> 4550</span>&#160;                <a class="code" href="../../d5/d0b/_g_u_i_window_8h.html#a2519966952faeb9397447ce89e9bcb02a7620927feaa2d7196b6d71c9b57654ec">UIMSG_CastSpell_Character_Big_Improvement</a>, 2, 51, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l04551"></a><span class="lineno"> 4551</span>&#160;            <a class="code" href="../../dc/dce/_g_u_i_window_8cpp.html#af07bd46153a7b735d9862f5769696e8a">pGUIWindow_CastTargetedSpell</a>-&gt;<a class="code" href="../../d4/d38/class_g_u_i_window.html#a29f96468b54f142995e3b1890cb7e45e">CreateButton</a>(</div>
+<div class="line"><a name="l04552"></a><span class="lineno"> 4552</span>&#160;                390, 422, 35, 0, 2, 0,</div>
+<div class="line"><a name="l04553"></a><span class="lineno"> 4553</span>&#160;                <a class="code" href="../../d5/d0b/_g_u_i_window_8h.html#a2519966952faeb9397447ce89e9bcb02a7620927feaa2d7196b6d71c9b57654ec">UIMSG_CastSpell_Character_Big_Improvement</a>, 3, 52, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l04554"></a><span class="lineno"> 4554</span>&#160;            <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#ac9e435d65b7d78122dddeef2c457a52a">sub_421B2C_PlaceInInventory_or_DropPickedItem</a>();</div>
+<div class="line"><a name="l04555"></a><span class="lineno"> 4555</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l04556"></a><span class="lineno"> 4556</span>&#160;        }</div>
+<div class="line"><a name="l04557"></a><span class="lineno"> 4557</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ac7ba7d3cce3d19ca020e056b37231289">flags</a> &amp; ON_CAST_TargetCrosshair) {</div>
+<div class="line"><a name="l04558"></a><span class="lineno"> 4558</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="../../dc/dce/_g_u_i_window_8cpp.html#af07bd46153a7b735d9862f5769696e8a">pGUIWindow_CastTargetedSpell</a>) <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l04559"></a><span class="lineno"> 4559</span>&#160; </div>
+<div class="line"><a name="l04560"></a><span class="lineno"> 4560</span>&#160;            <a class="code" href="../../dc/dce/_g_u_i_window_8cpp.html#af07bd46153a7b735d9862f5769696e8a">pGUIWindow_CastTargetedSpell</a> = <span class="keyword">new</span> <a class="code" href="../../d0/d30/class_on_cast_targeted_spell.html">OnCastTargetedSpell</a>(</div>
+<div class="line"><a name="l04561"></a><span class="lineno"> 4561</span>&#160;                0, 0, <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a92dbce8e3247f6a78126c99877caacb6">window</a>-&gt;GetWidth(), <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a92dbce8e3247f6a78126c99877caacb6">window</a>-&gt;GetHeight(),</div>
+<div class="line"><a name="l04562"></a><span class="lineno"> 4562</span>&#160;                (<span class="keywordtype">int</span>)&amp;<a class="code" href="../../d9/dd3/_cast_spell_info_8cpp.html#a0101864ab328e1992d661d446105d8dc">pCastSpellInfo</a>[<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a321ff419cd5252e54cf95e64dc6687ee">result</a>]);</div>
+<div class="line"><a name="l04563"></a><span class="lineno"> 4563</span>&#160;            <a class="code" href="../../dc/dce/_g_u_i_window_8cpp.html#af07bd46153a7b735d9862f5769696e8a">pGUIWindow_CastTargetedSpell</a>-&gt;<a class="code" href="../../d4/d38/class_g_u_i_window.html#a29f96468b54f142995e3b1890cb7e45e">CreateButton</a>(</div>
+<div class="line"><a name="l04564"></a><span class="lineno"> 4564</span>&#160;                <a class="code" href="../../d6/d5b/mm7__data_8cpp.html#af1ed4b32929d9f52e90e679540582951">game_viewport_x</a>, <a class="code" href="../../d6/d5b/mm7__data_8cpp.html#aee6f7aebb8fc3cf3a860cab46a1beb8b">game_viewport_y</a>, <a class="code" href="../../d6/d5b/mm7__data_8cpp.html#a8916b10b5a6b131ede8f6dbf200e4866">game_viewport_width</a>,</div>
+<div class="line"><a name="l04565"></a><span class="lineno"> 4565</span>&#160;                <a class="code" href="../../d6/d5b/mm7__data_8cpp.html#afd93b2f71cb70a7279451964648b30c4">game_viewport_height</a>, 1, 0, <a class="code" href="../../d5/d0b/_g_u_i_window_8h.html#a2519966952faeb9397447ce89e9bcb02aae46833490448e3d4e87f9bb6756be80">UIMSG_CastSpell_Shoot_Monster</a>, 0, 0,</div>
+<div class="line"><a name="l04566"></a><span class="lineno"> 4566</span>&#160;                <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l04567"></a><span class="lineno"> 4567</span>&#160;            <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#ac9e435d65b7d78122dddeef2c457a52a">sub_421B2C_PlaceInInventory_or_DropPickedItem</a>();</div>
+<div class="line"><a name="l04568"></a><span class="lineno"> 4568</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l04569"></a><span class="lineno"> 4569</span>&#160;        }</div>
+<div class="line"><a name="l04570"></a><span class="lineno"> 4570</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ac7ba7d3cce3d19ca020e056b37231289">flags</a> &amp; ON_CAST_Telekenesis) {</div>
+<div class="line"><a name="l04571"></a><span class="lineno"> 4571</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="../../dc/dce/_g_u_i_window_8cpp.html#af07bd46153a7b735d9862f5769696e8a">pGUIWindow_CastTargetedSpell</a>) <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l04572"></a><span class="lineno"> 4572</span>&#160; </div>
+<div class="line"><a name="l04573"></a><span class="lineno"> 4573</span>&#160;            <a class="code" href="../../dc/dce/_g_u_i_window_8cpp.html#af07bd46153a7b735d9862f5769696e8a">pGUIWindow_CastTargetedSpell</a> = <span class="keyword">new</span> <a class="code" href="../../d0/d30/class_on_cast_targeted_spell.html">OnCastTargetedSpell</a>(</div>
+<div class="line"><a name="l04574"></a><span class="lineno"> 4574</span>&#160;                0, 0, <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a92dbce8e3247f6a78126c99877caacb6">window</a>-&gt;GetWidth(), <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a92dbce8e3247f6a78126c99877caacb6">window</a>-&gt;GetHeight(),</div>
+<div class="line"><a name="l04575"></a><span class="lineno"> 4575</span>&#160;                (<span class="keywordtype">int</span>)&amp;<a class="code" href="../../d9/dd3/_cast_spell_info_8cpp.html#a0101864ab328e1992d661d446105d8dc">pCastSpellInfo</a>[<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a321ff419cd5252e54cf95e64dc6687ee">result</a>]);</div>
+<div class="line"><a name="l04576"></a><span class="lineno"> 4576</span>&#160;            <a class="code" href="../../dc/dce/_g_u_i_window_8cpp.html#af07bd46153a7b735d9862f5769696e8a">pGUIWindow_CastTargetedSpell</a>-&gt;<a class="code" href="../../d4/d38/class_g_u_i_window.html#a29f96468b54f142995e3b1890cb7e45e">CreateButton</a>(</div>
+<div class="line"><a name="l04577"></a><span class="lineno"> 4577</span>&#160;                <a class="code" href="../../d6/d5b/mm7__data_8cpp.html#af1ed4b32929d9f52e90e679540582951">game_viewport_x</a>, <a class="code" href="../../d6/d5b/mm7__data_8cpp.html#aee6f7aebb8fc3cf3a860cab46a1beb8b">game_viewport_y</a>, <a class="code" href="../../d6/d5b/mm7__data_8cpp.html#a8916b10b5a6b131ede8f6dbf200e4866">game_viewport_width</a>,</div>
+<div class="line"><a name="l04578"></a><span class="lineno"> 4578</span>&#160;                <a class="code" href="../../d6/d5b/mm7__data_8cpp.html#afd93b2f71cb70a7279451964648b30c4">game_viewport_height</a>, 1, 0, <a class="code" href="../../d5/d0b/_g_u_i_window_8h.html#a2519966952faeb9397447ce89e9bcb02a4cc27a3966b174ba5ba71645d6ea0fa3">UIMSG_CastSpell_Telekinesis</a>, 0, 0,</div>
+<div class="line"><a name="l04579"></a><span class="lineno"> 4579</span>&#160;                <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l04580"></a><span class="lineno"> 4580</span>&#160;            <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#ac9e435d65b7d78122dddeef2c457a52a">sub_421B2C_PlaceInInventory_or_DropPickedItem</a>();</div>
+<div class="line"><a name="l04581"></a><span class="lineno"> 4581</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l04582"></a><span class="lineno"> 4582</span>&#160;        }</div>
+<div class="line"><a name="l04583"></a><span class="lineno"> 4583</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ac7ba7d3cce3d19ca020e056b37231289">flags</a> &amp; ON_CAST_Enchantment) {</div>
+<div class="line"><a name="l04584"></a><span class="lineno"> 4584</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="../../dc/dce/_g_u_i_window_8cpp.html#af07bd46153a7b735d9862f5769696e8a">pGUIWindow_CastTargetedSpell</a>) <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l04585"></a><span class="lineno"> 4585</span>&#160; </div>
+<div class="line"><a name="l04586"></a><span class="lineno"> 4586</span>&#160;            <a class="code" href="../../dc/dce/_g_u_i_window_8cpp.html#af07bd46153a7b735d9862f5769696e8a">pGUIWindow_CastTargetedSpell</a> =</div>
+<div class="line"><a name="l04587"></a><span class="lineno"> 4587</span>&#160;                <a class="code" href="../../d9/dd3/_cast_spell_info_8cpp.html#a0101864ab328e1992d661d446105d8dc">pCastSpellInfo</a>[<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a321ff419cd5252e54cf95e64dc6687ee">result</a>].GetCastSpellInInventoryWindow();</div>
+<div class="line"><a name="l04588"></a><span class="lineno"> 4588</span>&#160;            <a class="code" href="../../d6/d5b/mm7__data_8cpp.html#a4aec43bd6dfc09b2d20ba13c7955930b">_50C9A0_IsEnchantingInProgress</a> = 1;</div>
+<div class="line"><a name="l04589"></a><span class="lineno"> 4589</span>&#160;            <a class="code" href="../../d6/d5b/mm7__data_8cpp.html#ae41569d5e76689f92f16e9703de26cb1">some_active_character</a> = <a class="code" href="../../d6/d5b/mm7__data_8cpp.html#aea2cd445c717797ec38d3ac259b5f20b">uActiveCharacter</a>;</div>
+<div class="line"><a name="l04590"></a><span class="lineno"> 4590</span>&#160;            <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#ac9e435d65b7d78122dddeef2c457a52a">sub_421B2C_PlaceInInventory_or_DropPickedItem</a>();</div>
+<div class="line"><a name="l04591"></a><span class="lineno"> 4591</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l04592"></a><span class="lineno"> 4592</span>&#160;        }</div>
+<div class="line"><a name="l04593"></a><span class="lineno"> 4593</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ac7ba7d3cce3d19ca020e056b37231289">flags</a> &amp; ON_CAST_MonsterSparkles) {</div>
+<div class="line"><a name="l04594"></a><span class="lineno"> 4594</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="../../dc/dce/_g_u_i_window_8cpp.html#af07bd46153a7b735d9862f5769696e8a">pGUIWindow_CastTargetedSpell</a>) <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l04595"></a><span class="lineno"> 4595</span>&#160;            <a class="code" href="../../dc/dce/_g_u_i_window_8cpp.html#af07bd46153a7b735d9862f5769696e8a">pGUIWindow_CastTargetedSpell</a> = <span class="keyword">new</span> <a class="code" href="../../d0/d30/class_on_cast_targeted_spell.html">OnCastTargetedSpell</a>(</div>
+<div class="line"><a name="l04596"></a><span class="lineno"> 4596</span>&#160;                0, 0, <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a92dbce8e3247f6a78126c99877caacb6">window</a>-&gt;GetWidth(), <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a92dbce8e3247f6a78126c99877caacb6">window</a>-&gt;GetHeight(),</div>
+<div class="line"><a name="l04597"></a><span class="lineno"> 4597</span>&#160;                (<span class="keywordtype">int</span>)&amp;<a class="code" href="../../d9/dd3/_cast_spell_info_8cpp.html#a0101864ab328e1992d661d446105d8dc">pCastSpellInfo</a>[<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a321ff419cd5252e54cf95e64dc6687ee">result</a>]);</div>
+<div class="line"><a name="l04598"></a><span class="lineno"> 4598</span>&#160;            <a class="code" href="../../dc/dce/_g_u_i_window_8cpp.html#af07bd46153a7b735d9862f5769696e8a">pGUIWindow_CastTargetedSpell</a>-&gt;<a class="code" href="../../d4/d38/class_g_u_i_window.html#a29f96468b54f142995e3b1890cb7e45e">CreateButton</a>(</div>
+<div class="line"><a name="l04599"></a><span class="lineno"> 4599</span>&#160;                0x34u, 0x1A6u, 0x23u, 0, 2, 0,</div>
+<div class="line"><a name="l04600"></a><span class="lineno"> 4600</span>&#160;                <a class="code" href="../../d5/d0b/_g_u_i_window_8h.html#a2519966952faeb9397447ce89e9bcb02a6b0b556d79d61f218f64ad5ac72c8015">UIMSG_CastSpell_Character_Small_Improvement</a>, 0, 0x31u, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l04601"></a><span class="lineno"> 4601</span>&#160;            <a class="code" href="../../dc/dce/_g_u_i_window_8cpp.html#af07bd46153a7b735d9862f5769696e8a">pGUIWindow_CastTargetedSpell</a>-&gt;<a class="code" href="../../d4/d38/class_g_u_i_window.html#a29f96468b54f142995e3b1890cb7e45e">CreateButton</a>(</div>
+<div class="line"><a name="l04602"></a><span class="lineno"> 4602</span>&#160;                0xA5u, 0x1A6u, 0x23u, 0, 2, 0,</div>
+<div class="line"><a name="l04603"></a><span class="lineno"> 4603</span>&#160;                <a class="code" href="../../d5/d0b/_g_u_i_window_8h.html#a2519966952faeb9397447ce89e9bcb02a6b0b556d79d61f218f64ad5ac72c8015">UIMSG_CastSpell_Character_Small_Improvement</a>, 1, 0x32u, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l04604"></a><span class="lineno"> 4604</span>&#160;            <a class="code" href="../../dc/dce/_g_u_i_window_8cpp.html#af07bd46153a7b735d9862f5769696e8a">pGUIWindow_CastTargetedSpell</a>-&gt;<a class="code" href="../../d4/d38/class_g_u_i_window.html#a29f96468b54f142995e3b1890cb7e45e">CreateButton</a>(</div>
+<div class="line"><a name="l04605"></a><span class="lineno"> 4605</span>&#160;                0x118u, 0x1A6u, 0x23u, 0, 2, 0,</div>
+<div class="line"><a name="l04606"></a><span class="lineno"> 4606</span>&#160;                <a class="code" href="../../d5/d0b/_g_u_i_window_8h.html#a2519966952faeb9397447ce89e9bcb02a6b0b556d79d61f218f64ad5ac72c8015">UIMSG_CastSpell_Character_Small_Improvement</a>, 2, 0x33u, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l04607"></a><span class="lineno"> 4607</span>&#160;            <a class="code" href="../../dc/dce/_g_u_i_window_8cpp.html#af07bd46153a7b735d9862f5769696e8a">pGUIWindow_CastTargetedSpell</a>-&gt;<a class="code" href="../../d4/d38/class_g_u_i_window.html#a29f96468b54f142995e3b1890cb7e45e">CreateButton</a>(</div>
+<div class="line"><a name="l04608"></a><span class="lineno"> 4608</span>&#160;                0x186u, 0x1A6u, 0x23u, 0, 2, 0,</div>
+<div class="line"><a name="l04609"></a><span class="lineno"> 4609</span>&#160;                <a class="code" href="../../d5/d0b/_g_u_i_window_8h.html#a2519966952faeb9397447ce89e9bcb02a6b0b556d79d61f218f64ad5ac72c8015">UIMSG_CastSpell_Character_Small_Improvement</a>, 3, 0x34u, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l04610"></a><span class="lineno"> 4610</span>&#160;            <a class="code" href="../../dc/dce/_g_u_i_window_8cpp.html#af07bd46153a7b735d9862f5769696e8a">pGUIWindow_CastTargetedSpell</a>-&gt;<a class="code" href="../../d4/d38/class_g_u_i_window.html#a29f96468b54f142995e3b1890cb7e45e">CreateButton</a>(</div>
+<div class="line"><a name="l04611"></a><span class="lineno"> 4611</span>&#160;                8, 8, <a class="code" href="../../d6/d5b/mm7__data_8cpp.html#a8916b10b5a6b131ede8f6dbf200e4866">game_viewport_width</a>, <a class="code" href="../../d6/d5b/mm7__data_8cpp.html#afd93b2f71cb70a7279451964648b30c4">game_viewport_height</a>, 1, 0,</div>
+<div class="line"><a name="l04612"></a><span class="lineno"> 4612</span>&#160;                <a class="code" href="../../d5/d0b/_g_u_i_window_8h.html#a2519966952faeb9397447ce89e9bcb02af8eec8e8c128e503afcfe70c0d4ac753">UIMSG_CastSpell_Monster_Improvement</a>, 0, 0, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l04613"></a><span class="lineno"> 4613</span>&#160;            <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#ac9e435d65b7d78122dddeef2c457a52a">sub_421B2C_PlaceInInventory_or_DropPickedItem</a>();</div>
+<div class="line"><a name="l04614"></a><span class="lineno"> 4614</span>&#160;        }</div>
+<div class="line"><a name="l04615"></a><span class="lineno"> 4615</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ac7ba7d3cce3d19ca020e056b37231289">flags</a> &amp; ON_CAST_DarkSacrifice &amp;&amp; !<a class="code" href="../../dc/dce/_g_u_i_window_8cpp.html#af07bd46153a7b735d9862f5769696e8a">pGUIWindow_CastTargetedSpell</a>) {</div>
+<div class="line"><a name="l04616"></a><span class="lineno"> 4616</span>&#160;            <a class="code" href="../../dc/dce/_g_u_i_window_8cpp.html#af07bd46153a7b735d9862f5769696e8a">pGUIWindow_CastTargetedSpell</a> = <span class="keyword">new</span> <a class="code" href="../../d0/d30/class_on_cast_targeted_spell.html">OnCastTargetedSpell</a>(</div>
+<div class="line"><a name="l04617"></a><span class="lineno"> 4617</span>&#160;                0, 0, <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a92dbce8e3247f6a78126c99877caacb6">window</a>-&gt;GetWidth(), <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a92dbce8e3247f6a78126c99877caacb6">window</a>-&gt;GetHeight(),</div>
+<div class="line"><a name="l04618"></a><span class="lineno"> 4618</span>&#160;                (<span class="keywordtype">int</span>)&amp;<a class="code" href="../../d9/dd3/_cast_spell_info_8cpp.html#a0101864ab328e1992d661d446105d8dc">pCastSpellInfo</a>[<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a321ff419cd5252e54cf95e64dc6687ee">result</a>]);</div>
+<div class="line"><a name="l04619"></a><span class="lineno"> 4619</span>&#160;            <a class="code" href="../../d9/d1d/_g_u_i_button_8cpp.html#adfaec584436e6ff83c147a5ca6b3e21d">pBtn_NPCLeft</a> = <a class="code" href="../../dc/dce/_g_u_i_window_8cpp.html#af07bd46153a7b735d9862f5769696e8a">pGUIWindow_CastTargetedSpell</a>-&gt;<a class="code" href="../../d4/d38/class_g_u_i_window.html#a29f96468b54f142995e3b1890cb7e45e">CreateButton</a>(</div>
+<div class="line"><a name="l04620"></a><span class="lineno"> 4620</span>&#160;                469, 178, <a class="code" href="../../dc/dce/_g_u_i_window_8cpp.html#ab50047af1ce5207a716c9758bc53659d">ui_btn_npc_left</a>-&gt;<a class="code" href="../../de/d73/class_image.html#a9241b1c53141c78273e4060a91634d47">GetWidth</a>(),</div>
+<div class="line"><a name="l04621"></a><span class="lineno"> 4621</span>&#160;                <a class="code" href="../../dc/dce/_g_u_i_window_8cpp.html#ab50047af1ce5207a716c9758bc53659d">ui_btn_npc_left</a>-&gt;<a class="code" href="../../de/d73/class_image.html#a5093fa64598a4d7e0c70d43fe67e35cd">GetHeight</a>(), 1, 0, <a class="code" href="../../d5/d0b/_g_u_i_window_8h.html#a2519966952faeb9397447ce89e9bcb02a533bdfa6a2cdeca622f64a90ad0c9598">UIMSG_ScrollNPCPanel</a>, 0, 0,</div>
+<div class="line"><a name="l04622"></a><span class="lineno"> 4622</span>&#160;                <span class="stringliteral">&quot;&quot;</span>, {{ui_btn_npc_left}});</div>
+<div class="line"><a name="l04623"></a><span class="lineno"> 4623</span>&#160;            <a class="code" href="../../d9/d1d/_g_u_i_button_8cpp.html#aaad048c6385eb989a2909ee9a28be82b">pBtn_NPCRight</a> = <a class="code" href="../../dc/dce/_g_u_i_window_8cpp.html#af07bd46153a7b735d9862f5769696e8a">pGUIWindow_CastTargetedSpell</a>-&gt;<a class="code" href="../../d4/d38/class_g_u_i_window.html#a29f96468b54f142995e3b1890cb7e45e">CreateButton</a>(</div>
+<div class="line"><a name="l04624"></a><span class="lineno"> 4624</span>&#160;                626, 178, <a class="code" href="../../dc/dce/_g_u_i_window_8cpp.html#ad9d0048b55182efec82177fbaf1716b2">ui_btn_npc_right</a>-&gt;<a class="code" href="../../de/d73/class_image.html#a9241b1c53141c78273e4060a91634d47">GetWidth</a>(),</div>
+<div class="line"><a name="l04625"></a><span class="lineno"> 4625</span>&#160;                <a class="code" href="../../dc/dce/_g_u_i_window_8cpp.html#ad9d0048b55182efec82177fbaf1716b2">ui_btn_npc_right</a>-&gt;<a class="code" href="../../de/d73/class_image.html#a5093fa64598a4d7e0c70d43fe67e35cd">GetHeight</a>(), 1, 0, <a class="code" href="../../d5/d0b/_g_u_i_window_8h.html#a2519966952faeb9397447ce89e9bcb02a533bdfa6a2cdeca622f64a90ad0c9598">UIMSG_ScrollNPCPanel</a>, 1, 0,</div>
+<div class="line"><a name="l04626"></a><span class="lineno"> 4626</span>&#160;                <span class="stringliteral">&quot;&quot;</span>, {{ui_btn_npc_right}});</div>
+<div class="line"><a name="l04627"></a><span class="lineno"> 4627</span>&#160;            <a class="code" href="../../dc/dce/_g_u_i_window_8cpp.html#af07bd46153a7b735d9862f5769696e8a">pGUIWindow_CastTargetedSpell</a>-&gt;<a class="code" href="../../d4/d38/class_g_u_i_window.html#a29f96468b54f142995e3b1890cb7e45e">CreateButton</a>(</div>
+<div class="line"><a name="l04628"></a><span class="lineno"> 4628</span>&#160;                491, 149, 64, 74, 1, 0, <a class="code" href="../../d5/d0b/_g_u_i_window_8h.html#a2519966952faeb9397447ce89e9bcb02a4c762958e14a17daa62348409100e778">UIMSG_HiredNPC_CastSpell</a>, 4, 0x35u, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l04629"></a><span class="lineno"> 4629</span>&#160;            <a class="code" href="../../dc/dce/_g_u_i_window_8cpp.html#af07bd46153a7b735d9862f5769696e8a">pGUIWindow_CastTargetedSpell</a>-&gt;<a class="code" href="../../d4/d38/class_g_u_i_window.html#a29f96468b54f142995e3b1890cb7e45e">CreateButton</a>(</div>
+<div class="line"><a name="l04630"></a><span class="lineno"> 4630</span>&#160;                561, 149, 64, 74, 1, 0, <a class="code" href="../../d5/d0b/_g_u_i_window_8h.html#a2519966952faeb9397447ce89e9bcb02a4c762958e14a17daa62348409100e778">UIMSG_HiredNPC_CastSpell</a>, 5, 0x36u, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l04631"></a><span class="lineno"> 4631</span>&#160;        }</div>
+<div class="line"><a name="l04632"></a><span class="lineno"> 4632</span>&#160;    }</div>
+<div class="line"><a name="l04633"></a><span class="lineno"> 4633</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d6/d5b/mm7__data_8cpp_source.html#l00578">_50C9A0_IsEnchantingInProgress</a>, <a class="el" href="../../d2/d83/_m_m7_8h_source.html#l00209">__OFSUB__()</a>, <a class="el" href="../../db/d38/_party_8h_source.html#l00305">Party::bTurnBasedModeOn</a>, <a class="el" href="../../d9/dd3/_cast_spell_info_8cpp_source.html#l04350">CastSpellInfoHelpers::Cancel_Spell_Cast_In_Progress()</a>, <a class="el" href="../../d9/dd3/_cast_spell_info_8cpp_source.html#l00042">CastSpellInfoCount</a>, <a class="el" href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00717">GUIWindow::CreateButton()</a>, <a class="el" href="../../d6/d5b/mm7__data_8cpp_source.html#l00195">game_viewport_height</a>, <a class="el" href="../../d6/d5b/mm7__data_8cpp_source.html#l00194">game_viewport_width</a>, <a class="el" href="../../d6/d5b/mm7__data_8cpp_source.html#l00196">game_viewport_x</a>, <a class="el" href="../../d6/d5b/mm7__data_8cpp_source.html#l00197">game_viewport_y</a>, <a class="el" href="../../d0/dac/_image_8cpp_source.html#l00230">Image::GetHeight()</a>, <a class="el" href="../../d0/dac/_image_8cpp_source.html#l00217">Image::GetWidth()</a>, <a class="el" href="../../d1/d39/_player_8h_source.html#l00711">Player::pActiveSkills</a>, <a class="el" href="../../d9/d1d/_g_u_i_button_8cpp_source.html#l00051">pBtn_NPCLeft</a>, <a class="el" href="../../d9/d1d/_g_u_i_button_8cpp_source.html#l00050">pBtn_NPCRight</a>, <a class="el" href="../../d9/dd3/_cast_spell_info_8cpp_source.html#l00043">pCastSpellInfo</a>, <a class="el" href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00056">pGUIWindow_CastTargetedSpell</a>, <a class="el" href="../../d1/d39/_player_8h_source.html#l00189">PLAYER_SKILL_BODY</a>, <a class="el" href="../../d1/d39/_player_8h_source.html#l00191">PLAYER_SKILL_DARK</a>, <a class="el" href="../../d1/d39/_player_8h_source.html#l00187">PLAYER_SKILL_SPIRIT</a>, <a class="el" href="../../da/db4/_party_8cpp_source.html#l00030">pParty</a>, <a class="el" href="../../db/d38/_party_8h_source.html#l00310">Party::pPlayers</a>, <a class="el" href="../../dc/d5b/_turn_engine_8cpp_source.html#l00021">pTurnEngine</a>, <a class="el" href="../../d9/dd3/_cast_spell_info_8cpp_source.html#l04329">PushCastSpellInfo()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l07854">SkillToMastery()</a>, <a class="el" href="../../d6/d5b/mm7__data_8cpp_source.html#l00569">some_active_character</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00033">SPELL_AIR_IMPLOSION</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00031">SPELL_AIR_LIGHNING_BOLT</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00092">SPELL_BODY_CURE_DISEASE</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00090">SPELL_BODY_CURE_POISON</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00085">SPELL_BODY_CURE_WEAKNESS</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00086">SPELL_BODY_FIRST_AID</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00094">SPELL_BODY_FLYING_FIST</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00091">SPELL_BODY_HAMMERHANDS</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00088">SPELL_BODY_HARM</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00089">SPELL_BODY_REGENERATION</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00114">SPELL_DARK_CONTROL_UNDEAD</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00117">SPELL_DARK_DRAGON_BREATH</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00115">SPELL_DARK_PAIN_REFLECTION</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00109">SPELL_DARK_REANIMATE</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00116">SPELL_DARK_SACRIFICE</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00113">SPELL_DARK_SHARPMETAL</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00112">SPELL_DARK_SHRINKING_RAY</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00110">SPELL_DARK_TOXIC_CLOUD</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00111">SPELL_DARK_VAMPIRIC_WEAPON</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00054">SPELL_EARTH_BLADES</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00052">SPELL_EARTH_DEADLY_SWARM</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00059">SPELL_EARTH_MASS_DISTORTION</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00050">SPELL_EARTH_SLOW</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00055">SPELL_EARTH_STONE_TO_FLESH</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00049">SPELL_EARTH_STUN</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00057">SPELL_EARTH_TELEKINESIS</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00016">SPELL_FIRE_FIRE_AURA</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00014">SPELL_FIRE_FIRE_BOLT</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00018">SPELL_FIRE_FIREBALL</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00023">SPELL_FIRE_INCINERATE</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00098">SPELL_LIGHT_DESTROY_UNDEAD</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00097">SPELL_LIGHT_LIGHT_BOLT</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00100">SPELL_LIGHT_PARALYZE</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00106">SPELL_LIGHT_SUNRAY</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00079">SPELL_MIND_BERSERK</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00077">SPELL_MIND_CHARM</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00081">SPELL_MIND_CURE_INSANITY</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00078">SPELL_MIND_CURE_PARALYSIS</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00083">SPELL_MIND_ENSLAVE</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00074">SPELL_MIND_MIND_BLAST</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00082">SPELL_MIND_PSYCHIC_SHOCK</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00073">SPELL_MIND_REMOVE_FEAR</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00076">SPELL_MIND_TELEPATHY</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00062">SPELL_SPIRIT_BLESS</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00063">SPELL_SPIRIT_FATE</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00066">SPELL_SPIRIT_PRESERVATION</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00069">SPELL_SPIRIT_RAISE_DEAD</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00065">SPELL_SPIRIT_REMOVE_CURSE</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00071">SPELL_SPIRIT_RESSURECTION</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00068">SPELL_SPIRIT_SPIRIT_LASH</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00043">SPELL_WATER_ACID_BURST</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00044">SPELL_WATER_ENCHANT_ITEM</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00046">SPELL_WATER_ICE_BLAST</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00040">SPELL_WATER_ICE_BOLT</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00038">SPELL_WATER_POISON_SPRAY</a>, <a class="el" href="../../d5/d7d/_spells_8h_source.html#l00042">SPELL_WATER_RECHARGE_ITEM</a>, <a class="el" href="../../da/db4/_party_8cpp_source.html#l01048">Party::sub_421B2C_PlaceInInventory_or_DropPickedItem()</a>, <a class="el" href="../../de/d5a/_turn_engine_8h_source.html#l00022">TE_MOVEMENT</a>, <a class="el" href="../../de/d5a/_turn_engine_8h_source.html#l00020">TE_WAIT</a>, <a class="el" href="../../de/d5a/_turn_engine_8h_source.html#l00075">stru262_TurnBased::turn_stage</a>, <a class="el" href="../../d6/d5b/mm7__data_8cpp_source.html#l00555">uActiveCharacter</a>, <a class="el" href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00098">ui_btn_npc_left</a>, <a class="el" href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00097">ui_btn_npc_right</a>, <a class="el" href="../../d5/d0b/_g_u_i_window_8h_source.html#l00055">UIMSG_CastSpell_Character_Big_Improvement</a>, <a class="el" href="../../d5/d0b/_g_u_i_window_8h_source.html#l00121">UIMSG_CastSpell_Character_Small_Improvement</a>, <a class="el" href="../../d5/d0b/_g_u_i_window_8h_source.html#l00120">UIMSG_CastSpell_Monster_Improvement</a>, <a class="el" href="../../d5/d0b/_g_u_i_window_8h_source.html#l00056">UIMSG_CastSpell_Shoot_Monster</a>, <a class="el" href="../../d5/d0b/_g_u_i_window_8h_source.html#l00157">UIMSG_CastSpell_Telekinesis</a>, <a class="el" href="../../d5/d0b/_g_u_i_window_8h_source.html#l00123">UIMSG_HiredNPC_CastSpell</a> и <a class="el" href="../../d5/d0b/_g_u_i_window_8h_source.html#l00155">UIMSG_ScrollNPCPanel</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d2/d82/_player_8cpp_source.html#l07643">Player::_42ECB5_PlayerAttacksActor()</a>, <a class="el" href="../../d7/db5/_game_8cpp_source.html#l00322">Application::Game::EventLoop()</a>, <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l02599">TempleDialog()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l03850">Player::UseItem_DrinkPotion_etc()</a> и <a class="el" href="../../d1/d6c/_n_p_c_8cpp_source.html#l01378">UseNPCSkill()</a>.</p>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d9/dd3/_cast_spell_info_8cpp_aeaca4ce7b3943438e4d5020dd988b9d9_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d9/dd3/_cast_spell_info_8cpp_aeaca4ce7b3943438e4d5020dd988b9d9_icgraph.svg" width="100%" height="492"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Переменные</h2>
+<a id="a2514b83cbae6998a57eae74a24f6faf4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2514b83cbae6998a57eae74a24f6faf4">&#9670;&nbsp;</a></span>mouse</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d7/dc5/class_mouse.html">Mouse</a>* mouse = <a class="el" href="../../d1/d12/class_engine___1_1_ioc_container.html#ad92ce5cee27f4415ef48d49dea4ec074">EngineIoc::ResolveMouse</a>()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d9/dd3/_cast_spell_info_8cpp_source.html">CastSpellInfo.cpp</a> строка <a class="el" href="../../d9/dd3/_cast_spell_info_8cpp_source.html#l00039">39</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d9/dd3/_cast_spell_info_8cpp_source.html#l00046">CastSpellInfoHelpers::_427E01_cast_spell()</a> и <a class="el" href="../../d9/dd3/_cast_spell_info_8cpp_source.html#l04350">CastSpellInfoHelpers::Cancel_Spell_Cast_In_Progress()</a>.</p>
+
+</div>
+</div>
+<a id="ad751f48ec25997384265298b15224f31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad751f48ec25997384265298b15224f31">&#9670;&nbsp;</a></span>spell_fx_renderer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/d64/struct_spell_fx_renderer.html">SpellFxRenderer</a>* spell_fx_renderer = <a class="el" href="../../d1/d12/class_engine___1_1_ioc_container.html#a29d34163cc9c0b9585b4f2440918de8f">EngineIoc::ResolveSpellFxRenderer</a>()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d9/dd3/_cast_spell_info_8cpp_source.html">CastSpellInfo.cpp</a> строка <a class="el" href="../../d9/dd3/_cast_spell_info_8cpp_source.html#l00040">40</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d9/dd3/_cast_spell_info_8cpp_source.html#l00046">CastSpellInfoHelpers::_427E01_cast_spell()</a>.</p>
+
+</div>
+</div>
+<a id="a33c934883739457919a1b62f8cf4643e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33c934883739457919a1b62f8cf4643e">&#9670;&nbsp;</a></span>CastSpellInfoCount</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a7c94ea6f8948649f8d181ae55911eeaf">size_t</a> CastSpellInfoCount = 10</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d9/dd3/_cast_spell_info_8cpp_source.html">CastSpellInfo.cpp</a> строка <a class="el" href="../../d9/dd3/_cast_spell_info_8cpp_source.html#l00042">42</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d9/dd3/_cast_spell_info_8cpp_source.html#l04369">_42777D_CastSpell_UseWand_ShootArrow()</a>, <a class="el" href="../../d9/dd3/_cast_spell_info_8cpp_source.html#l00046">CastSpellInfoHelpers::_427E01_cast_spell()</a>, <a class="el" href="../../d9/dd3/_cast_spell_info_8cpp_source.html#l04350">CastSpellInfoHelpers::Cancel_Spell_Cast_In_Progress()</a> и <a class="el" href="../../d9/dd3/_cast_spell_info_8cpp_source.html#l04329">PushCastSpellInfo()</a>.</p>
+
+</div>
+</div>
+<a id="a0101864ab328e1992d661d446105d8dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0101864ab328e1992d661d446105d8dc">&#9670;&nbsp;</a></span>pCastSpellInfo</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a52f38e7d822a46377fde7a02708eedb1">std::array</a>&lt;<a class="el" href="../../db/d9d/struct_cast_spell_info.html">CastSpellInfo</a>, <a class="el" href="../../d9/dd3/_cast_spell_info_8cpp.html#a33c934883739457919a1b62f8cf4643e">CastSpellInfoCount</a>&gt; pCastSpellInfo</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d9/dd3/_cast_spell_info_8cpp_source.html">CastSpellInfo.cpp</a> строка <a class="el" href="../../d9/dd3/_cast_spell_info_8cpp_source.html#l00043">43</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d9/dd3/_cast_spell_info_8cpp_source.html#l04369">_42777D_CastSpell_UseWand_ShootArrow()</a>, <a class="el" href="../../d9/dd3/_cast_spell_info_8cpp_source.html#l00046">CastSpellInfoHelpers::_427E01_cast_spell()</a>, <a class="el" href="../../d9/dd3/_cast_spell_info_8cpp_source.html#l04350">CastSpellInfoHelpers::Cancel_Spell_Cast_In_Progress()</a> и <a class="el" href="../../d9/dd3/_cast_spell_info_8cpp_source.html#l04329">PushCastSpellInfo()</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="a_turn_engine_8h_html_a760e35e380d23bde08ae732e619f2e9fab2a666dfd6f40adba23ac540d2d165b7"><div class="ttname"><a href="../../de/d5a/_turn_engine_8h.html#a760e35e380d23bde08ae732e619f2e9fab2a666dfd6f40adba23ac540d2d165b7">TE_MOVEMENT</a></div><div class="ttdeci">@ TE_MOVEMENT</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d5a/_turn_engine_8h_source.html#l00022">TurnEngine.h:22</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5a77a5c6e00aaa63aac9c9e33ff811ee6e"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a77a5c6e00aaa63aac9c9e33ff811ee6e">SPELL_LIGHT_PARALYZE</a></div><div class="ttdeci">@ SPELL_LIGHT_PARALYZE</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00100">Spells.h:100</a></div></div>
+<div class="ttc" id="astruct_player_html"><div class="ttname"><a href="../../d3/db1/struct_player.html">Player</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d39/_player_8h_source.html#l00401">Player.h:401</a></div></div>
+<div class="ttc" id="a_cast_spell_info_8cpp_html_a0101864ab328e1992d661d446105d8dc"><div class="ttname"><a href="../../d9/dd3/_cast_spell_info_8cpp.html#a0101864ab328e1992d661d446105d8dc">pCastSpellInfo</a></div><div class="ttdeci">std::array&lt; CastSpellInfo, CastSpellInfoCount &gt; pCastSpellInfo</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dd3/_cast_spell_info_8cpp_source.html#l00043">CastSpellInfo.cpp:43</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5a981324e26c8ca12ed8d0cbc5dddc5c2c"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a981324e26c8ca12ed8d0cbc5dddc5c2c">SPELL_SPIRIT_RESSURECTION</a></div><div class="ttdeci">@ SPELL_SPIRIT_RESSURECTION</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00071">Spells.h:71</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5aca066f824718cea8d234708e8c211d31"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5aca066f824718cea8d234708e8c211d31">SPELL_LIGHT_DESTROY_UNDEAD</a></div><div class="ttdeci">@ SPELL_LIGHT_DESTROY_UNDEAD</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00098">Spells.h:98</a></div></div>
+<div class="ttc" id="aclass_image_html_a5093fa64598a4d7e0c70d43fe67e35cd"><div class="ttname"><a href="../../de/d73/class_image.html#a5093fa64598a4d7e0c70d43fe67e35cd">Image::GetHeight</a></div><div class="ttdeci">unsigned int GetHeight()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dac/_image_8cpp_source.html#l00230">Image.cpp:230</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5aa8b3d376ed53389867d7f85ab1b7e43d"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5aa8b3d376ed53389867d7f85ab1b7e43d">SPELL_DARK_VAMPIRIC_WEAPON</a></div><div class="ttdeci">@ SPELL_DARK_VAMPIRIC_WEAPON</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00111">Spells.h:111</a></div></div>
+<div class="ttc" id="a_g_u_i_window_8cpp_html_ad9d0048b55182efec82177fbaf1716b2"><div class="ttname"><a href="../../dc/dce/_g_u_i_window_8cpp.html#ad9d0048b55182efec82177fbaf1716b2">ui_btn_npc_right</a></div><div class="ttdeci">Image * ui_btn_npc_right</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00097">GUIWindow.cpp:97</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5ab5b2490bf8105760b631726608b7ffbe"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5ab5b2490bf8105760b631726608b7ffbe">SPELL_LIGHT_LIGHT_BOLT</a></div><div class="ttdeci">@ SPELL_LIGHT_LIGHT_BOLT</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00097">Spells.h:97</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5a6caf7e7fd877f5e4607ddbd503a355eb"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a6caf7e7fd877f5e4607ddbd503a355eb">SPELL_SPIRIT_PRESERVATION</a></div><div class="ttdeci">@ SPELL_SPIRIT_PRESERVATION</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00066">Spells.h:66</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5ad7bc9c04229f93a580ee1b7a5daf0cd8"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5ad7bc9c04229f93a580ee1b7a5daf0cd8">SPELL_MIND_PSYCHIC_SHOCK</a></div><div class="ttdeci">@ SPELL_MIND_PSYCHIC_SHOCK</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00082">Spells.h:82</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5a765fe6ac01c60417be8618278beb3159"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a765fe6ac01c60417be8618278beb3159">SPELL_DARK_PAIN_REFLECTION</a></div><div class="ttdeci">@ SPELL_DARK_PAIN_REFLECTION</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00115">Spells.h:115</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5a7797e044ba6ed10af0b549952e30773c"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a7797e044ba6ed10af0b549952e30773c">SPELL_WATER_POISON_SPRAY</a></div><div class="ttdeci">@ SPELL_WATER_POISON_SPRAY</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00038">Spells.h:38</a></div></div>
+<div class="ttc" id="aclass_g_u_i_window_html_a29f96468b54f142995e3b1890cb7e45e"><div class="ttname"><a href="../../d4/d38/class_g_u_i_window.html#a29f96468b54f142995e3b1890cb7e45e">GUIWindow::CreateButton</a></div><div class="ttdeci">GUIButton * CreateButton(int x, int y, int width, int height, int a6, int a7, UIMessageType msg, unsigned int msg_param, uint8_t hotkey, const String &amp;label, const std::vector&lt; Image * &gt; &amp;textures=std::vector&lt; Image * &gt;())</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00717">GUIWindow.cpp:717</a></div></div>
+<div class="ttc" id="a_g_u_i_window_8h_html_a2519966952faeb9397447ce89e9bcb02a7620927feaa2d7196b6d71c9b57654ec"><div class="ttname"><a href="../../d5/d0b/_g_u_i_window_8h.html#a2519966952faeb9397447ce89e9bcb02a7620927feaa2d7196b6d71c9b57654ec">UIMSG_CastSpell_Character_Big_Improvement</a></div><div class="ttdeci">@ UIMSG_CastSpell_Character_Big_Improvement</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d0b/_g_u_i_window_8h_source.html#l00055">GUIWindow.h:55</a></div></div>
+<div class="ttc" id="a_player_8cpp_html_a946581808d635467b04b165fb20cc75f"><div class="ttname"><a href="../../d2/d82/_player_8cpp.html#a946581808d635467b04b165fb20cc75f">SkillToMastery</a></div><div class="ttdeci">unsigned int SkillToMastery(unsigned int skill_value)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d82/_player_8cpp_source.html#l07854">Player.cpp:7854</a></div></div>
+<div class="ttc" id="a_g_u_i_window_8h_html_a2519966952faeb9397447ce89e9bcb02a6b0b556d79d61f218f64ad5ac72c8015"><div class="ttname"><a href="../../d5/d0b/_g_u_i_window_8h.html#a2519966952faeb9397447ce89e9bcb02a6b0b556d79d61f218f64ad5ac72c8015">UIMSG_CastSpell_Character_Small_Improvement</a></div><div class="ttdeci">@ UIMSG_CastSpell_Character_Small_Improvement</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d0b/_g_u_i_window_8h_source.html#l00121">GUIWindow.h:121</a></div></div>
+<div class="ttc" id="a_g_u_i_window_8h_html_a2519966952faeb9397447ce89e9bcb02aae46833490448e3d4e87f9bb6756be80"><div class="ttname"><a href="../../d5/d0b/_g_u_i_window_8h.html#a2519966952faeb9397447ce89e9bcb02aae46833490448e3d4e87f9bb6756be80">UIMSG_CastSpell_Shoot_Monster</a></div><div class="ttdeci">@ UIMSG_CastSpell_Shoot_Monster</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d0b/_g_u_i_window_8h_source.html#l00056">GUIWindow.h:56</a></div></div>
+<div class="ttc" id="amm7__data_8cpp_html_a8916b10b5a6b131ede8f6dbf200e4866"><div class="ttname"><a href="../../d6/d5b/mm7__data_8cpp.html#a8916b10b5a6b131ede8f6dbf200e4866">game_viewport_width</a></div><div class="ttdeci">unsigned int game_viewport_width</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d5b/mm7__data_8cpp_source.html#l00194">mm7_data.cpp:194</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5a078bad6a3968611fe1be427446a8d4bf"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a078bad6a3968611fe1be427446a8d4bf">SPELL_EARTH_DEADLY_SWARM</a></div><div class="ttdeci">@ SPELL_EARTH_DEADLY_SWARM</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00052">Spells.h:52</a></div></div>
+<div class="ttc" id="a_g_u_i_window_8h_html_a2519966952faeb9397447ce89e9bcb02af8eec8e8c128e503afcfe70c0d4ac753"><div class="ttname"><a href="../../d5/d0b/_g_u_i_window_8h.html#a2519966952faeb9397447ce89e9bcb02af8eec8e8c128e503afcfe70c0d4ac753">UIMSG_CastSpell_Monster_Improvement</a></div><div class="ttdeci">@ UIMSG_CastSpell_Monster_Improvement</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d0b/_g_u_i_window_8h_source.html#l00120">GUIWindow.h:120</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5ac381a2914cebec943b2718180d9e7f43"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5ac381a2914cebec943b2718180d9e7f43">SPELL_BODY_HARM</a></div><div class="ttdeci">@ SPELL_BODY_HARM</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00088">Spells.h:88</a></div></div>
+<div class="ttc" id="amm7__data_8cpp_html_af1ed4b32929d9f52e90e679540582951"><div class="ttname"><a href="../../d6/d5b/mm7__data_8cpp.html#af1ed4b32929d9f52e90e679540582951">game_viewport_x</a></div><div class="ttdeci">int game_viewport_x</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d5b/mm7__data_8cpp_source.html#l00196">mm7_data.cpp:196</a></div></div>
+<div class="ttc" id="astruct_party_html_a25894a432feab69bcbbff2194bac47dd"><div class="ttname"><a href="../../d0/d14/struct_party.html#a25894a432feab69bcbbff2194bac47dd">Party::pPlayers</a></div><div class="ttdeci">std::array&lt; Player, 4 &gt; pPlayers</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00310">Party.h:310</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5a98b9b37acc86021063041924ba58eb31"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a98b9b37acc86021063041924ba58eb31">SPELL_EARTH_STONE_TO_FLESH</a></div><div class="ttdeci">@ SPELL_EARTH_STONE_TO_FLESH</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00055">Spells.h:55</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5a2bdcf5f6fb39236882da82cea91b3fa7"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a2bdcf5f6fb39236882da82cea91b3fa7">SPELL_MIND_TELEPATHY</a></div><div class="ttdeci">@ SPELL_MIND_TELEPATHY</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00076">Spells.h:76</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5a4031760d28797556690326c334a8e014"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a4031760d28797556690326c334a8e014">SPELL_MIND_MIND_BLAST</a></div><div class="ttdeci">@ SPELL_MIND_MIND_BLAST</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00074">Spells.h:74</a></div></div>
+<div class="ttc" id="astruct_party_html_ac9e435d65b7d78122dddeef2c457a52a"><div class="ttname"><a href="../../d0/d14/struct_party.html#ac9e435d65b7d78122dddeef2c457a52a">Party::sub_421B2C_PlaceInInventory_or_DropPickedItem</a></div><div class="ttdeci">void sub_421B2C_PlaceInInventory_or_DropPickedItem()</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db4/_party_8cpp_source.html#l01048">Party.cpp:1048</a></div></div>
+<div class="ttc" id="a_g_u_i_window_8h_html_a2519966952faeb9397447ce89e9bcb02a4cc27a3966b174ba5ba71645d6ea0fa3"><div class="ttname"><a href="../../d5/d0b/_g_u_i_window_8h.html#a2519966952faeb9397447ce89e9bcb02a4cc27a3966b174ba5ba71645d6ea0fa3">UIMSG_CastSpell_Telekinesis</a></div><div class="ttdeci">@ UIMSG_CastSpell_Telekinesis</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d0b/_g_u_i_window_8h_source.html#l00157">GUIWindow.h:157</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5a15b585917f89c97a0d52735faa91cd93"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a15b585917f89c97a0d52735faa91cd93">SPELL_DARK_SHARPMETAL</a></div><div class="ttdeci">@ SPELL_DARK_SHARPMETAL</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00113">Spells.h:113</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5a1d1009b3de0b3f20f31f97e501f996fd"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a1d1009b3de0b3f20f31f97e501f996fd">SPELL_WATER_ICE_BOLT</a></div><div class="ttdeci">@ SPELL_WATER_ICE_BOLT</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00040">Spells.h:40</a></div></div>
+<div class="ttc" id="astruct_player_html_a87f809ea83134e484f68df03fdd5d316"><div class="ttname"><a href="../../d3/db1/struct_player.html#a87f809ea83134e484f68df03fdd5d316">Player::pActiveSkills</a></div><div class="ttdeci">std::array&lt; unsigned __int16, 37 &gt; pActiveSkills</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d39/_player_8h_source.html#l00711">Player.h:711</a></div></div>
+<div class="ttc" id="amm7__data_8cpp_html_afd93b2f71cb70a7279451964648b30c4"><div class="ttname"><a href="../../d6/d5b/mm7__data_8cpp.html#afd93b2f71cb70a7279451964648b30c4">game_viewport_height</a></div><div class="ttdeci">unsigned int game_viewport_height</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d5b/mm7__data_8cpp_source.html#l00195">mm7_data.cpp:195</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5aca64940b6e46cb4521016678c02118e6"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5aca64940b6e46cb4521016678c02118e6">SPELL_MIND_ENSLAVE</a></div><div class="ttdeci">@ SPELL_MIND_ENSLAVE</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00083">Spells.h:83</a></div></div>
+<div class="ttc" id="a_turn_engine_8cpp_html_afca243c8c16ea361d451a791fa3db31f"><div class="ttname"><a href="../../dc/d5b/_turn_engine_8cpp.html#afca243c8c16ea361d451a791fa3db31f">pTurnEngine</a></div><div class="ttdeci">struct stru262_TurnBased * pTurnEngine</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d5b/_turn_engine_8cpp_source.html#l00021">TurnEngine.cpp:21</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a321ff419cd5252e54cf95e64dc6687ee"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a321ff419cd5252e54cf95e64dc6687ee">result</a></div><div class="ttdeci">GLuint64EXT * result</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l09435">SDL_opengl_glext.h:9435</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5ac550842d8cecdb466903b3b3f53f357f"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5ac550842d8cecdb466903b3b3f53f357f">SPELL_FIRE_FIRE_BOLT</a></div><div class="ttdeci">@ SPELL_FIRE_FIRE_BOLT</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00014">Spells.h:14</a></div></div>
+<div class="ttc" id="amm7__data_8cpp_html_aee6f7aebb8fc3cf3a860cab46a1beb8b"><div class="ttname"><a href="../../d6/d5b/mm7__data_8cpp.html#aee6f7aebb8fc3cf3a860cab46a1beb8b">game_viewport_y</a></div><div class="ttdeci">int game_viewport_y</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d5b/mm7__data_8cpp_source.html#l00197">mm7_data.cpp:197</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5a1e7cf27324fe924f4b037b9cd456f7f8"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a1e7cf27324fe924f4b037b9cd456f7f8">SPELL_EARTH_TELEKINESIS</a></div><div class="ttdeci">@ SPELL_EARTH_TELEKINESIS</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00057">Spells.h:57</a></div></div>
+<div class="ttc" id="aclass_image_html_a9241b1c53141c78273e4060a91634d47"><div class="ttname"><a href="../../de/d73/class_image.html#a9241b1c53141c78273e4060a91634d47">Image::GetWidth</a></div><div class="ttdeci">unsigned int GetWidth()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dac/_image_8cpp_source.html#l00217">Image.cpp:217</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5a0dbd9a3a50c453abd1a9507f66e58713"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a0dbd9a3a50c453abd1a9507f66e58713">SPELL_BODY_FIRST_AID</a></div><div class="ttdeci">@ SPELL_BODY_FIRST_AID</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00086">Spells.h:86</a></div></div>
+<div class="ttc" id="a_party_8cpp_html_a638b1d8b985f1c7f8b69f2d81286f98e"><div class="ttname"><a href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a></div><div class="ttdeci">Party * pParty</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db4/_party_8cpp_source.html#l00030">Party.cpp:30</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5acac57ddd5dcb1e81ac1b7931768acc72"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5acac57ddd5dcb1e81ac1b7931768acc72">SPELL_BODY_CURE_POISON</a></div><div class="ttdeci">@ SPELL_BODY_CURE_POISON</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00090">Spells.h:90</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5a7b443858f4901e1adb4eb2c48a97d0d0"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a7b443858f4901e1adb4eb2c48a97d0d0">SPELL_WATER_ICE_BLAST</a></div><div class="ttdeci">@ SPELL_WATER_ICE_BLAST</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00046">Spells.h:46</a></div></div>
+<div class="ttc" id="a_player_8h_html_a1b05d2a7f20e4a42c536e687caaff1ceaae0003564d680d6a80695e3c1e04ed4e"><div class="ttname"><a href="../../d1/d39/_player_8h.html#a1b05d2a7f20e4a42c536e687caaff1ceaae0003564d680d6a80695e3c1e04ed4e">PLAYER_SKILL_SPIRIT</a></div><div class="ttdeci">@ PLAYER_SKILL_SPIRIT</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d39/_player_8h_source.html#l00187">Player.h:187</a></div></div>
+<div class="ttc" id="a_cast_spell_info_8cpp_html_a33c934883739457919a1b62f8cf4643e"><div class="ttname"><a href="../../d9/dd3/_cast_spell_info_8cpp.html#a33c934883739457919a1b62f8cf4643e">CastSpellInfoCount</a></div><div class="ttdeci">const size_t CastSpellInfoCount</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dd3/_cast_spell_info_8cpp_source.html#l00042">CastSpellInfo.cpp:42</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5a8e937c29ba984d90179c7cf1734cd96d"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a8e937c29ba984d90179c7cf1734cd96d">SPELL_DARK_CONTROL_UNDEAD</a></div><div class="ttdeci">@ SPELL_DARK_CONTROL_UNDEAD</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00114">Spells.h:114</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5a2b27970612ef4e969d342dabc82dc106"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a2b27970612ef4e969d342dabc82dc106">SPELL_MIND_CHARM</a></div><div class="ttdeci">@ SPELL_MIND_CHARM</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00077">Spells.h:77</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5ae5b853ec258a2d0d8ce1eee727683cea"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5ae5b853ec258a2d0d8ce1eee727683cea">SPELL_BODY_REGENERATION</a></div><div class="ttdeci">@ SPELL_BODY_REGENERATION</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00089">Spells.h:89</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5afee30b286a69763a11949cd5371361a6"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5afee30b286a69763a11949cd5371361a6">SPELL_FIRE_FIRE_AURA</a></div><div class="ttdeci">@ SPELL_FIRE_FIRE_AURA</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00016">Spells.h:16</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5a044e1ec310deba5c49e92f33cabd4250"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a044e1ec310deba5c49e92f33cabd4250">SPELL_BODY_HAMMERHANDS</a></div><div class="ttdeci">@ SPELL_BODY_HAMMERHANDS</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00091">Spells.h:91</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5aafcadcc9f056d9335a56891c4e8f9dfa"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5aafcadcc9f056d9335a56891c4e8f9dfa">SPELL_EARTH_SLOW</a></div><div class="ttdeci">@ SPELL_EARTH_SLOW</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00050">Spells.h:50</a></div></div>
+<div class="ttc" id="a_s_d_l__egl_8h_html_a92dbce8e3247f6a78126c99877caacb6"><div class="ttname"><a href="../../df/d32/_s_d_l__egl_8h.html#a92dbce8e3247f6a78126c99877caacb6">window</a></div><div class="ttdeci">EGLSurface EGLNativeWindowType * window</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/_s_d_l__egl_8h_source.html#l01580">SDL_egl.h:1580</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5a658830c8695b891b991332539df51b0d"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a658830c8695b891b991332539df51b0d">SPELL_EARTH_STUN</a></div><div class="ttdeci">@ SPELL_EARTH_STUN</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00049">Spells.h:49</a></div></div>
+<div class="ttc" id="a_g_u_i_button_8cpp_html_adfaec584436e6ff83c147a5ca6b3e21d"><div class="ttname"><a href="../../d9/d1d/_g_u_i_button_8cpp.html#adfaec584436e6ff83c147a5ca6b3e21d">pBtn_NPCLeft</a></div><div class="ttdeci">GUIButton * pBtn_NPCLeft</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d1d/_g_u_i_button_8cpp_source.html#l00051">GUIButton.cpp:51</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5a69c42ea37669c1c5894efef7cbee3207"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a69c42ea37669c1c5894efef7cbee3207">SPELL_DARK_SACRIFICE</a></div><div class="ttdeci">@ SPELL_DARK_SACRIFICE</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00116">Spells.h:116</a></div></div>
+<div class="ttc" id="amm7__data_8cpp_html_a4aec43bd6dfc09b2d20ba13c7955930b"><div class="ttname"><a href="../../d6/d5b/mm7__data_8cpp.html#a4aec43bd6dfc09b2d20ba13c7955930b">_50C9A0_IsEnchantingInProgress</a></div><div class="ttdeci">bool _50C9A0_IsEnchantingInProgress</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d5b/mm7__data_8cpp_source.html#l00578">mm7_data.cpp:578</a></div></div>
+<div class="ttc" id="a_g_u_i_window_8cpp_html_ab50047af1ce5207a716c9758bc53659d"><div class="ttname"><a href="../../dc/dce/_g_u_i_window_8cpp.html#ab50047af1ce5207a716c9758bc53659d">ui_btn_npc_left</a></div><div class="ttdeci">Image * ui_btn_npc_left</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00098">GUIWindow.cpp:98</a></div></div>
+<div class="ttc" id="a_turn_engine_8h_html_a760e35e380d23bde08ae732e619f2e9fa6fbf139abbb8dae3ef5de59384b33b00"><div class="ttname"><a href="../../de/d5a/_turn_engine_8h.html#a760e35e380d23bde08ae732e619f2e9fa6fbf139abbb8dae3ef5de59384b33b00">TE_WAIT</a></div><div class="ttdeci">@ TE_WAIT</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d5a/_turn_engine_8h_source.html#l00020">TurnEngine.h:20</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5a412b968dfa138c2de402bc5dc5bf9755"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a412b968dfa138c2de402bc5dc5bf9755">SPELL_MIND_CURE_INSANITY</a></div><div class="ttdeci">@ SPELL_MIND_CURE_INSANITY</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00081">Spells.h:81</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5a70dfa8439b892468a27c8d6e037fae7a"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a70dfa8439b892468a27c8d6e037fae7a">SPELL_LIGHT_SUNRAY</a></div><div class="ttdeci">@ SPELL_LIGHT_SUNRAY</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00106">Spells.h:106</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5ac8516477fda4b9010b446168dd2b4484"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5ac8516477fda4b9010b446168dd2b4484">SPELL_FIRE_FIREBALL</a></div><div class="ttdeci">@ SPELL_FIRE_FIREBALL</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00018">Spells.h:18</a></div></div>
+<div class="ttc" id="astruct_party_html_ae2dd455d6d436a6bd2111aeeb1718ac3"><div class="ttname"><a href="../../d0/d14/struct_party.html#ae2dd455d6d436a6bd2111aeeb1718ac3">Party::bTurnBasedModeOn</a></div><div class="ttdeci">bool bTurnBasedModeOn</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00305">Party.h:305</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5a15d7caafdef74eaa061e33dff8aec4e8"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a15d7caafdef74eaa061e33dff8aec4e8">SPELL_SPIRIT_RAISE_DEAD</a></div><div class="ttdeci">@ SPELL_SPIRIT_RAISE_DEAD</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00069">Spells.h:69</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5a50daf5b2609e206f072efc6eceb0a1bf"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a50daf5b2609e206f072efc6eceb0a1bf">SPELL_SPIRIT_BLESS</a></div><div class="ttdeci">@ SPELL_SPIRIT_BLESS</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00062">Spells.h:62</a></div></div>
+<div class="ttc" id="a_g_u_i_window_8h_html_a2519966952faeb9397447ce89e9bcb02a4c762958e14a17daa62348409100e778"><div class="ttname"><a href="../../d5/d0b/_g_u_i_window_8h.html#a2519966952faeb9397447ce89e9bcb02a4c762958e14a17daa62348409100e778">UIMSG_HiredNPC_CastSpell</a></div><div class="ttdeci">@ UIMSG_HiredNPC_CastSpell</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d0b/_g_u_i_window_8h_source.html#l00123">GUIWindow.h:123</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5a573ce34ee30ca12f04be5771e61397bd"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a573ce34ee30ca12f04be5771e61397bd">SPELL_SPIRIT_REMOVE_CURSE</a></div><div class="ttdeci">@ SPELL_SPIRIT_REMOVE_CURSE</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00065">Spells.h:65</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5af784478eeae84e0b3f690588c2fb40a3"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5af784478eeae84e0b3f690588c2fb40a3">SPELL_SPIRIT_SPIRIT_LASH</a></div><div class="ttdeci">@ SPELL_SPIRIT_SPIRIT_LASH</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00068">Spells.h:68</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5ab61dbd68de154ea78fe981268ec1b337"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5ab61dbd68de154ea78fe981268ec1b337">SPELL_EARTH_MASS_DISTORTION</a></div><div class="ttdeci">@ SPELL_EARTH_MASS_DISTORTION</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00059">Spells.h:59</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5a1c6ada9a45572464d5f9849ef2283811"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a1c6ada9a45572464d5f9849ef2283811">SPELL_BODY_CURE_WEAKNESS</a></div><div class="ttdeci">@ SPELL_BODY_CURE_WEAKNESS</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00085">Spells.h:85</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5a182eb7208dbb4f8f8826728e36912623"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a182eb7208dbb4f8f8826728e36912623">SPELL_SPIRIT_FATE</a></div><div class="ttdeci">@ SPELL_SPIRIT_FATE</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00063">Spells.h:63</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5af201a3e73ee75fb779ffaaba160ddd59"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5af201a3e73ee75fb779ffaaba160ddd59">SPELL_WATER_ACID_BURST</a></div><div class="ttdeci">@ SPELL_WATER_ACID_BURST</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00043">Spells.h:43</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5a658bd96d01962c795467502dc8b5f1fb"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a658bd96d01962c795467502dc8b5f1fb">SPELL_DARK_DRAGON_BREATH</a></div><div class="ttdeci">@ SPELL_DARK_DRAGON_BREATH</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00117">Spells.h:117</a></div></div>
+<div class="ttc" id="a_m_m7_8h_html_a91ad9478d81a7aaf2593e8d9c3d06a14"><div class="ttname"><a href="../../d2/d83/_m_m7_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a></div><div class="ttdeci">unsigned int uint</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d83/_m_m7_8h_source.html#l00004">MM7.h:4</a></div></div>
+<div class="ttc" id="a_g_u_i_window_8h_html_a2519966952faeb9397447ce89e9bcb02a533bdfa6a2cdeca622f64a90ad0c9598"><div class="ttname"><a href="../../d5/d0b/_g_u_i_window_8h.html#a2519966952faeb9397447ce89e9bcb02a533bdfa6a2cdeca622f64a90ad0c9598">UIMSG_ScrollNPCPanel</a></div><div class="ttdeci">@ UIMSG_ScrollNPCPanel</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d0b/_g_u_i_window_8h_source.html#l00155">GUIWindow.h:155</a></div></div>
+<div class="ttc" id="amm7__data_8cpp_html_aea2cd445c717797ec38d3ac259b5f20b"><div class="ttname"><a href="../../d6/d5b/mm7__data_8cpp.html#aea2cd445c717797ec38d3ac259b5f20b">uActiveCharacter</a></div><div class="ttdeci">unsigned int uActiveCharacter</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d5b/mm7__data_8cpp_source.html#l00555">mm7_data.cpp:555</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5ac6854383e0e1a0c423d6a5eb04086deb"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5ac6854383e0e1a0c423d6a5eb04086deb">SPELL_AIR_IMPLOSION</a></div><div class="ttdeci">@ SPELL_AIR_IMPLOSION</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00033">Spells.h:33</a></div></div>
+<div class="ttc" id="a_s_d_l__egl_8h_html_ac7ba7d3cce3d19ca020e056b37231289"><div class="ttname"><a href="../../df/d32/_s_d_l__egl_8h.html#ac7ba7d3cce3d19ca020e056b37231289">flags</a></div><div class="ttdeci">EGLSyncKHR EGLint flags</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/_s_d_l__egl_8h_source.html#l00898">SDL_egl.h:898</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5a3f9a98e4fe9f8a618dcb9337f65060d0"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a3f9a98e4fe9f8a618dcb9337f65060d0">SPELL_BODY_CURE_DISEASE</a></div><div class="ttdeci">@ SPELL_BODY_CURE_DISEASE</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00092">Spells.h:92</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5ac62edc94567f310d91e1c7628014d3df"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5ac62edc94567f310d91e1c7628014d3df">SPELL_EARTH_BLADES</a></div><div class="ttdeci">@ SPELL_EARTH_BLADES</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00054">Spells.h:54</a></div></div>
+<div class="ttc" id="a_cast_spell_info_8cpp_html_a3f20d288867015ddde3717be6c6137ea"><div class="ttname"><a href="../../d9/dd3/_cast_spell_info_8cpp.html#a3f20d288867015ddde3717be6c6137ea">PushCastSpellInfo</a></div><div class="ttdeci">size_t PushCastSpellInfo(uint16_t uSpellID, uint16_t uPlayerID, __int16 skill_level, uint16_t uFlags, int spell_sound_id)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dd3/_cast_spell_info_8cpp_source.html#l04329">CastSpellInfo.cpp:4329</a></div></div>
+<div class="ttc" id="a_player_8h_html_a1b05d2a7f20e4a42c536e687caaff1ceac84faa92fbbbf6bf1bee432f8a832aac"><div class="ttname"><a href="../../d1/d39/_player_8h.html#a1b05d2a7f20e4a42c536e687caaff1ceac84faa92fbbbf6bf1bee432f8a832aac">PLAYER_SKILL_DARK</a></div><div class="ttdeci">@ PLAYER_SKILL_DARK</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d39/_player_8h_source.html#l00191">Player.h:191</a></div></div>
+<div class="ttc" id="a_player_8h_html_a1b05d2a7f20e4a42c536e687caaff1cea3469bc310e6f5b016f5a410349a4e1f3"><div class="ttname"><a href="../../d1/d39/_player_8h.html#a1b05d2a7f20e4a42c536e687caaff1cea3469bc310e6f5b016f5a410349a4e1f3">PLAYER_SKILL_BODY</a></div><div class="ttdeci">@ PLAYER_SKILL_BODY</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d39/_player_8h_source.html#l00189">Player.h:189</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5ae0fa3c94f6be031a9b7c5baec276e7b5"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5ae0fa3c94f6be031a9b7c5baec276e7b5">SPELL_MIND_BERSERK</a></div><div class="ttdeci">@ SPELL_MIND_BERSERK</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00079">Spells.h:79</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5a76ca25d8383486f75984b575f30f13b4"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a76ca25d8383486f75984b575f30f13b4">SPELL_WATER_ENCHANT_ITEM</a></div><div class="ttdeci">@ SPELL_WATER_ENCHANT_ITEM</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00044">Spells.h:44</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5a10493e53950452f6decc7ff5417e7a54"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a10493e53950452f6decc7ff5417e7a54">SPELL_AIR_LIGHNING_BOLT</a></div><div class="ttdeci">@ SPELL_AIR_LIGHNING_BOLT</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00031">Spells.h:31</a></div></div>
+<div class="ttc" id="a_g_u_i_button_8cpp_html_aaad048c6385eb989a2909ee9a28be82b"><div class="ttname"><a href="../../d9/d1d/_g_u_i_button_8cpp.html#aaad048c6385eb989a2909ee9a28be82b">pBtn_NPCRight</a></div><div class="ttdeci">GUIButton * pBtn_NPCRight</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d1d/_g_u_i_button_8cpp_source.html#l00050">GUIButton.cpp:50</a></div></div>
+<div class="ttc" id="a_m_m7_8h_html_a82b63e8f54902c2b305e727c7372761f"><div class="ttname"><a href="../../d2/d83/_m_m7_8h.html#a82b63e8f54902c2b305e727c7372761f">__OFSUB__</a></div><div class="ttdeci">int8 __OFSUB__(T x, U y)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d83/_m_m7_8h_source.html#l00209">MM7.h:209</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5a63249e16e7b9ff9323f139775ecb111d"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a63249e16e7b9ff9323f139775ecb111d">SPELL_BODY_FLYING_FIST</a></div><div class="ttdeci">@ SPELL_BODY_FLYING_FIST</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00094">Spells.h:94</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5ae11578b1ca932ba5d273a952582a70dd"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5ae11578b1ca932ba5d273a952582a70dd">SPELL_MIND_REMOVE_FEAR</a></div><div class="ttdeci">@ SPELL_MIND_REMOVE_FEAR</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00073">Spells.h:73</a></div></div>
+<div class="ttc" id="anamespace_cast_spell_info_helpers_html_adcfab5ec5567ebe310863a1f9c678cc7"><div class="ttname"><a href="../../d8/d06/namespace_cast_spell_info_helpers.html#adcfab5ec5567ebe310863a1f9c678cc7">CastSpellInfoHelpers::Cancel_Spell_Cast_In_Progress</a></div><div class="ttdeci">void Cancel_Spell_Cast_In_Progress()</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dd3/_cast_spell_info_8cpp_source.html#l04350">CastSpellInfo.cpp:4350</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5a7920f1af8f0ed0ec1268d59db41fdb05"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a7920f1af8f0ed0ec1268d59db41fdb05">SPELL_DARK_TOXIC_CLOUD</a></div><div class="ttdeci">@ SPELL_DARK_TOXIC_CLOUD</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00110">Spells.h:110</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5a30a0668a1bb93b8565f87bf5778e600f"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a30a0668a1bb93b8565f87bf5778e600f">SPELL_WATER_RECHARGE_ITEM</a></div><div class="ttdeci">@ SPELL_WATER_RECHARGE_ITEM</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00042">Spells.h:42</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5aaa0371702e60586042d58bf523dff822"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5aaa0371702e60586042d58bf523dff822">SPELL_DARK_REANIMATE</a></div><div class="ttdeci">@ SPELL_DARK_REANIMATE</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00109">Spells.h:109</a></div></div>
+<div class="ttc" id="aclass_on_cast_targeted_spell_html"><div class="ttname"><a href="../../d0/d30/class_on_cast_targeted_spell.html">OnCastTargetedSpell</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d0b/_g_u_i_window_8h_source.html#l00598">GUIWindow.h:598</a></div></div>
+<div class="ttc" id="amm7__data_8cpp_html_ae41569d5e76689f92f16e9703de26cb1"><div class="ttname"><a href="../../d6/d5b/mm7__data_8cpp.html#ae41569d5e76689f92f16e9703de26cb1">some_active_character</a></div><div class="ttdeci">int some_active_character</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d5b/mm7__data_8cpp_source.html#l00569">mm7_data.cpp:569</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5a492082e657a5a79a9ccfd8b1317032a6"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a492082e657a5a79a9ccfd8b1317032a6">SPELL_DARK_SHRINKING_RAY</a></div><div class="ttdeci">@ SPELL_DARK_SHRINKING_RAY</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00112">Spells.h:112</a></div></div>
+<div class="ttc" id="a_g_u_i_window_8cpp_html_af07bd46153a7b735d9862f5769696e8a"><div class="ttname"><a href="../../dc/dce/_g_u_i_window_8cpp.html#af07bd46153a7b735d9862f5769696e8a">pGUIWindow_CastTargetedSpell</a></div><div class="ttdeci">GUIWindow * pGUIWindow_CastTargetedSpell</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00056">GUIWindow.cpp:56</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5a3bfe62d06092495315c005b2b0cd30dd"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5a3bfe62d06092495315c005b2b0cd30dd">SPELL_MIND_CURE_PARALYSIS</a></div><div class="ttdeci">@ SPELL_MIND_CURE_PARALYSIS</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00078">Spells.h:78</a></div></div>
+<div class="ttc" id="astructstru262___turn_based_html_a10e68759e9c1c29f0cf17b183e0c3785"><div class="ttname"><a href="../../d1/d28/structstru262___turn_based.html#a10e68759e9c1c29f0cf17b183e0c3785">stru262_TurnBased::turn_stage</a></div><div class="ttdeci">int turn_stage</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d5a/_turn_engine_8h_source.html#l00075">TurnEngine.h:75</a></div></div>
+<div class="ttc" id="a_spells_8h_html_a4e71efcf980b83e3205a4079c10bd8d5af6146c4c377c08df7f5c2f88111f3540"><div class="ttname"><a href="../../d5/d7d/_spells_8h.html#a4e71efcf980b83e3205a4079c10bd8d5af6146c4c377c08df7f5c2f88111f3540">SPELL_FIRE_INCINERATE</a></div><div class="ttdeci">@ SPELL_FIRE_INCINERATE</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7d/_spells_8h_source.html#l00023">Spells.h:23</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_0b6ee6e7e9547e675db4add2e5de97da.html">Engine</a></li><li class="navelem"><a class="el" href="../../dir_2a7ddc455d45d47bc23ad4371c29ec34.html">Spells</a></li><li class="navelem"><a class="el" href="../../d9/dd3/_cast_spell_info_8cpp.html">CastSpellInfo.cpp</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:04:03. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

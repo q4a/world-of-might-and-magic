@@ -1,0 +1,353 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Файл C:/git/world-of-might-and-magic/Media/MediaPlayer.cpp</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('de/d56/_media_player_8cpp.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#func-members">Функции</a> &#124;
+<a href="#var-members">Переменные</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл MediaPlayer.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><a href="../../de/d56/_media_player_8cpp_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/ddd/class_a_v_stream_wrapper.html">AVStreamWrapper</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d4c/class_a_v_audio_stream.html">AVAudioStream</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d90/class_a_v_video_stream.html">AVVideoStream</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d14/class_movie.html">Movie</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dfa/class_video_list.html">VideoList</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dd8/struct_video_list_1_1_movie_header.html">VideoList::MovieHeader</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/db8/struct_video_list_1_1_node.html">VideoList::Node</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dfd/class_audio_base_data_source.html">AudioBaseDataSource</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd4/class_audio_file_data_source.html">AudioFileDataSource</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/de5/class_audio_buffer_data_source.html">AudioBufferDataSource</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a054d6b3e7e3609d7cd9fe2f5cde2c529"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d56/_media_player_8cpp.html#a054d6b3e7e3609d7cd9fe2f5cde2c529">av_logger</a> (<a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *ptr, int <a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a2b536fca24f51d6a849aed325793e661">level</a>, const char *<a class="el" href="../../d3/d78/_s_d_l__audio_8h.html#a71a65ffd977afe9c3fef116a5bc9ee27">format</a>, va_list args)</td></tr>
+<tr class="separator:a054d6b3e7e3609d7cd9fe2f5cde2c529"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5be6bacef31d891b63a778c75e093d44"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/def/_media_8h.html#aa9016c9de6c0ff9dbc6e13d443ec452b">PAudioDataSource</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d56/_media_player_8cpp.html#a5be6bacef31d891b63a778c75e093d44">CreateAudioFileDataSource</a> (const <a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#ae84541b4f3d8e1ea24ec0f466a8c568b">std::string</a> &amp;file_name)</td></tr>
+<tr class="separator:a5be6bacef31d891b63a778c75e093d44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab508e4ee3c70ec5e60273ec99af30a2e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/def/_media_8h.html#aa9016c9de6c0ff9dbc6e13d443ec452b">PAudioDataSource</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d56/_media_player_8cpp.html#ab508e4ee3c70ec5e60273ec99af30a2e">CreateAudioBufferDataSource</a> (<a class="el" href="../../de/d13/_mem_buffer_8h.html#a8722c69b0b425d6a28bc23839396f8f5">PMemBuffer</a> <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#a76461e97a098d2c9ae20ac193d3825ae">buffer</a>)</td></tr>
+<tr class="separator:ab508e4ee3c70ec5e60273ec99af30a2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:a672b1c255eab419abeec8fbbb6504f50"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/d98/class_open_a_l_sound_provider.html">OpenALSoundProvider</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d56/_media_player_8cpp.html#a672b1c255eab419abeec8fbbb6504f50">provider</a> = nullptr</td></tr>
+<tr class="separator:a672b1c255eab419abeec8fbbb6504f50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf8c80364a0b3242d22a7e8cc23362b5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/db7/class_m_player.html">MPlayer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d56/_media_player_8cpp.html#adf8c80364a0b3242d22a7e8cc23362b5">pMediaPlayer</a> = nullptr</td></tr>
+<tr class="separator:adf8c80364a0b3242d22a7e8cc23362b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf9ee4055f87a9e3ee8fca85a5226b08"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/def/_media_8h.html#a6a20c0b91ed94a979f220e4e1d767616">PMovie</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d56/_media_player_8cpp.html#aaf9ee4055f87a9e3ee8fca85a5226b08">pMovie_Track</a></td></tr>
+<tr class="separator:aaf9ee4055f87a9e3ee8fca85a5226b08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Функции</h2>
+<a id="a054d6b3e7e3609d7cd9fe2f5cde2c529"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a054d6b3e7e3609d7cd9fe2f5cde2c529">&#9670;&nbsp;</a></span>av_logger()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> av_logger </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *&#160;</td>
+          <td class="paramname"><em>ptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>level</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>format</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">va_list&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/d56/_media_player_8cpp_source.html">MediaPlayer.cpp</a> строка <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00839">839</a></p>
+<div class="fragment"><div class="line"><a name="l00839"></a><span class="lineno">  839</span>&#160;                                                                       {</div>
+<div class="line"><a name="l00840"></a><span class="lineno">  840</span>&#160;    <span class="keywordtype">char</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa3b73d9ca9f2e2396cbeae1ce6ce14be">buf</a>[2048];</div>
+<div class="line"><a name="l00841"></a><span class="lineno">  841</span>&#160;    <span class="keywordtype">int</span> prefix = 1;</div>
+<div class="line"><a name="l00842"></a><span class="lineno">  842</span>&#160;    <a class="code" href="../../d2/df1/group__lavu__log.html#gaed9e57ccba2adc41864f54f47dfcccec">av_log_format_line</a>(ptr, <a class="code" href="../../df/dc4/_s_d_l__opengl_8h.html#a2b536fca24f51d6a849aed325793e661">level</a>, <a class="code" href="../../d3/d78/_s_d_l__audio_8h.html#a71a65ffd977afe9c3fef116a5bc9ee27">format</a>, args, <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa3b73d9ca9f2e2396cbeae1ce6ce14be">buf</a>, 2048, &amp;prefix);</div>
+<div class="line"><a name="l00843"></a><span class="lineno">  843</span>&#160;    <a class="code" href="../../d4/db9/_open_a_l_sound_provider_8cpp.html#a5ed8e2adc6340d877478a62cc1d448c9">log</a>(<span class="stringliteral">&quot;av: %s&quot;</span>, <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa3b73d9ca9f2e2396cbeae1ce6ce14be">buf</a>);</div>
+<div class="line"><a name="l00844"></a><span class="lineno">  844</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d2/df1/group__lavu__log.html#gaed9e57ccba2adc41864f54f47dfcccec">av_log_format_line()</a> и <a class="el" href="../../d4/db9/_open_a_l_sound_provider_8cpp_source.html#l00024">log()</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00846">MPlayer::MPlayer()</a>.</p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../de/d56/_media_player_8cpp_a054d6b3e7e3609d7cd9fe2f5cde2c529_cgraph.svg" width="263" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../de/d56/_media_player_8cpp_a054d6b3e7e3609d7cd9fe2f5cde2c529_icgraph.svg" width="262" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a5be6bacef31d891b63a778c75e093d44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5be6bacef31d891b63a778c75e093d44">&#9670;&nbsp;</a></span>CreateAudioFileDataSource()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../da/def/_media_8h.html#aa9016c9de6c0ff9dbc6e13d443ec452b">PAudioDataSource</a> CreateAudioFileDataSource </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#ae84541b4f3d8e1ea24ec0f466a8c568b">std::string</a> &amp;&#160;</td>
+          <td class="paramname"><em>file_name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/d56/_media_player_8cpp_source.html">MediaPlayer.cpp</a> строка <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l01169">1169</a></p>
+<div class="fragment"><div class="line"><a name="l01169"></a><span class="lineno"> 1169</span>&#160;                                                                       {</div>
+<div class="line"><a name="l01170"></a><span class="lineno"> 1170</span>&#160;    std::shared_ptr&lt;AudioFileDataSource&gt; <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a633906574fe6e39b7f2840bed0e49832">source</a> =</div>
+<div class="line"><a name="l01171"></a><span class="lineno"> 1171</span>&#160;        std::make_shared&lt;AudioFileDataSource&gt;(file_name);</div>
+<div class="line"><a name="l01172"></a><span class="lineno"> 1172</span>&#160;    <span class="keywordflow">return</span> std::dynamic_pointer_cast&lt;IAudioDataSource, AudioFileDataSource&gt;(</div>
+<div class="line"><a name="l01173"></a><span class="lineno"> 1173</span>&#160;        <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a633906574fe6e39b7f2840bed0e49832">source</a>);</div>
+<div class="line"><a name="l01174"></a><span class="lineno"> 1174</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Используется в <a class="el" href="../../d4/db9/_open_a_l_sound_provider_8cpp_source.html#l00657">CreateAudioTrack()</a>.</p>
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../de/d56/_media_player_8cpp_a5be6bacef31d891b63a778c75e093d44_icgraph.svg" width="100%" height="466"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ab508e4ee3c70ec5e60273ec99af30a2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab508e4ee3c70ec5e60273ec99af30a2e">&#9670;&nbsp;</a></span>CreateAudioBufferDataSource()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../da/def/_media_8h.html#aa9016c9de6c0ff9dbc6e13d443ec452b">PAudioDataSource</a> CreateAudioBufferDataSource </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../de/d13/_mem_buffer_8h.html#a8722c69b0b425d6a28bc23839396f8f5">PMemBuffer</a>&#160;</td>
+          <td class="paramname"><em>buffer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/d56/_media_player_8cpp_source.html">MediaPlayer.cpp</a> строка <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l01176">1176</a></p>
+<div class="fragment"><div class="line"><a name="l01176"></a><span class="lineno"> 1176</span>&#160;                                                                {</div>
+<div class="line"><a name="l01177"></a><span class="lineno"> 1177</span>&#160;    std::shared_ptr&lt;AudioBufferDataSource&gt; <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a633906574fe6e39b7f2840bed0e49832">source</a> =</div>
+<div class="line"><a name="l01178"></a><span class="lineno"> 1178</span>&#160;        std::make_shared&lt;AudioBufferDataSource&gt;(<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a76461e97a098d2c9ae20ac193d3825ae">buffer</a>);</div>
+<div class="line"><a name="l01179"></a><span class="lineno"> 1179</span>&#160;    <span class="keywordflow">return</span> std::dynamic_pointer_cast&lt;IAudioDataSource, AudioBufferDataSource&gt;(</div>
+<div class="line"><a name="l01180"></a><span class="lineno"> 1180</span>&#160;        <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a633906574fe6e39b7f2840bed0e49832">source</a>);</div>
+<div class="line"><a name="l01181"></a><span class="lineno"> 1181</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Используется в <a class="el" href="../../d4/db9/_open_a_l_sound_provider_8cpp_source.html#l00873">CreateAudioSample()</a>.</p>
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../de/d56/_media_player_8cpp_ab508e4ee3c70ec5e60273ec99af30a2e_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Переменные</h2>
+<a id="a672b1c255eab419abeec8fbbb6504f50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a672b1c255eab419abeec8fbbb6504f50">&#9670;&nbsp;</a></span>provider</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d9/d98/class_open_a_l_sound_provider.html">OpenALSoundProvider</a>* provider = nullptr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/d56/_media_player_8cpp_source.html">MediaPlayer.cpp</a> строка <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00041">41</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00288">Movie::Close()</a>, <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00372">Movie::GetFrame()</a>, <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00316">Movie::Load()</a>, <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00846">MPlayer::MPlayer()</a>, <a class="el" href="../../d3/df2/_audio_player_8cpp_source.html#l00195">AudioPlayer::PlaySound()</a>, <a class="el" href="../../d3/df2/_audio_player_8cpp_source.html#l00322">AudioPlayer::UpdateSounds()</a> и <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00868">MPlayer::~MPlayer()</a>.</p>
+
+</div>
+</div>
+<a id="adf8c80364a0b3242d22a7e8cc23362b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf8c80364a0b3242d22a7e8cc23362b5">&#9670;&nbsp;</a></span>pMediaPlayer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/db7/class_m_player.html">MPlayer</a>* pMediaPlayer = nullptr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/d56/_media_player_8cpp_source.html">MediaPlayer.cpp</a> строка <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00043">43</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l00826">EnterHouse()</a>, <a class="el" href="../../d7/db5/_game_8cpp_source.html#l00322">Application::Game::EventLoop()</a>, <a class="el" href="../../df/d5c/_events_8cpp_source.html#l00260">EventProcessor()</a>, <a class="el" href="../../d7/db5/_game_8cpp_source.html#l02704">Application::Game::GameLoop()</a>, <a class="el" href="../../de/d09/_u_i_transition_8cpp_source.html#l00070">GUIWindow_Transition::GUIWindow_Transition()</a>, <a class="el" href="../../d7/db5/_game_8cpp_source.html#l00134">Application::Game::Loop()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l00903">Engine::MM7_Initialize()</a>, <a class="el" href="../../dc/da3/_game_window_handler_8cpp_source.html#l00047">Application::GameWindowHandler::OnMouseLeftClick()</a>, <a class="el" href="../../dc/da3/_game_window_handler_8cpp_source.html#l00070">Application::GameWindowHandler::OnMouseRightClick()</a>, <a class="el" href="../../dc/da3/_game_window_handler_8cpp_source.html#l00135">Application::GameWindowHandler::OnVkDown()</a>, <a class="el" href="../../d7/db5/_game_8cpp_source.html#l00221">ShowMM7IntroVideo_and_LoadingScreen()</a> и <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l02200">TavernDialog()</a>.</p>
+
+</div>
+</div>
+<a id="aaf9ee4055f87a9e3ee8fca85a5226b08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf9ee4055f87a9e3ee8fca85a5226b08">&#9670;&nbsp;</a></span>pMovie_Track</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../da/def/_media_8h.html#a6a20c0b91ed94a979f220e4e1d767616">PMovie</a> pMovie_Track</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/d56/_media_player_8cpp_source.html">MediaPlayer.cpp</a> строка <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00044">44</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l03991">BackToHouseMenu()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l00166">Engine::Draw()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l00252">Engine::DrawGUI()</a>, <a class="el" href="../../d7/db5/_game_8cpp_source.html#l00322">Application::Game::EventLoop()</a>, <a class="el" href="../../d7/db5/_game_8cpp_source.html#l02704">Application::Game::GameLoop()</a>, <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00653">MPlayer::HouseMovieLoop()</a>, <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00777">MPlayer::IsMoviePlaying()</a>, <a class="el" href="../../d3/d70/_arcomage_2_arcomage_8cpp_source.html#l00896">ArcomageGame::Loop()</a>, <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00846">MPlayer::MPlayer()</a>, <a class="el" href="../../dc/da3/_game_window_handler_8cpp_source.html#l00196">Application::GameWindowHandler::OnActivated()</a>, <a class="el" href="../../dc/da3/_game_window_handler_8cpp_source.html#l00135">Application::GameWindowHandler::OnVkDown()</a>, <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00633">MPlayer::OpenHouseMovie()</a>, <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00705">MPlayer::PlayFullscreenMovie()</a>, <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00785">MPlayer::StopMovie()</a>, <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00826">MPlayer::Unload()</a> и <a class="el" href="../../de/d09/_u_i_transition_8cpp_source.html#l00279">GUIWindow_Transition::Update()</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a633906574fe6e39b7f2840bed0e49832"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a633906574fe6e39b7f2840bed0e49832">source</a></div><div class="ttdeci">GLsizei GLsizei GLchar * source</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l00680">SDL_opengl_glext.h:680</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl_8h_html_a2b536fca24f51d6a849aed325793e661"><div class="ttname"><a href="../../df/dc4/_s_d_l__opengl_8h.html#a2b536fca24f51d6a849aed325793e661">level</a></div><div class="ttdeci">GLint level</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dc4/_s_d_l__opengl_8h_source.html#l01572">SDL_opengl.h:1572</a></div></div>
+<div class="ttc" id="agroup__lavu__log_html_gaed9e57ccba2adc41864f54f47dfcccec"><div class="ttname"><a href="../../d2/df1/group__lavu__log.html#gaed9e57ccba2adc41864f54f47dfcccec">av_log_format_line</a></div><div class="ttdeci">void av_log_format_line(void *ptr, int level, const char *fmt, va_list vl, char *line, int line_size, int *print_prefix)</div></div>
+<div class="ttc" id="a_s_d_l__audio_8h_html_a71a65ffd977afe9c3fef116a5bc9ee27"><div class="ttname"><a href="../../d3/d78/_s_d_l__audio_8h.html#a71a65ffd977afe9c3fef116a5bc9ee27">format</a></div><div class="ttdeci">SDL_AudioFormat format</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d78/_s_d_l__audio_8h_source.html#l00194">SDL_audio.h:194</a></div></div>
+<div class="ttc" id="a_s_d_l__egl_8h_html_a76461e97a098d2c9ae20ac193d3825ae"><div class="ttname"><a href="../../df/d32/_s_d_l__egl_8h.html#a76461e97a098d2c9ae20ac193d3825ae">buffer</a></div><div class="ttdeci">EGLContext EGLenum EGLClientBuffer buffer</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/_s_d_l__egl_8h_source.html#l00952">SDL_egl.h:952</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_aa3b73d9ca9f2e2396cbeae1ce6ce14be"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#aa3b73d9ca9f2e2396cbeae1ce6ce14be">buf</a></div><div class="ttdeci">GLenum GLuint GLenum GLsizei const GLchar * buf</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l02483">SDL_opengl_glext.h:2483</a></div></div>
+<div class="ttc" id="a_open_a_l_sound_provider_8cpp_html_a5ed8e2adc6340d877478a62cc1d448c9"><div class="ttname"><a href="../../d4/db9/_open_a_l_sound_provider_8cpp.html#a5ed8e2adc6340d877478a62cc1d448c9">log</a></div><div class="ttdeci">void log(const char *format,...)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db9/_open_a_l_sound_provider_8cpp_source.html#l00024">OpenALSoundProvider.cpp:24</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_3974871bf467d5376b8307ffe9ef875e.html">Media</a></li><li class="navelem"><a class="el" href="../../de/d56/_media_player_8cpp.html">MediaPlayer.cpp</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:04:21. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

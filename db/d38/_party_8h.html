@@ -1,0 +1,1025 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Файл C:/git/world-of-might-and-magic/Engine/Party.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('db/d38/_party_8h.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#typedef-members">Определения типов</a> &#124;
+<a href="#enum-members">Перечисления</a> &#124;
+<a href="#func-members">Функции</a> &#124;
+<a href="#var-members">Переменные</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл Party.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><a href="../../db/d38/_party_8h_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d47/struct_action_queue.html">ActionQueue</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dfa/struct_party_time_struct.html">PartyTimeStruct</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d14/struct_party.html">Party</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Определения типов</h2></td></tr>
+<tr class="memitem:a67e89a75d2c3cdfd0d306e25c01589d0"><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="../../db/d38/_party_8h.html#a8bd3eeda5ec3780afeff00593e27b6f2">PartyAlignment</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d38/_party_8h.html#a67e89a75d2c3cdfd0d306e25c01589d0">PartyAlignment</a></td></tr>
+<tr class="separator:a67e89a75d2c3cdfd0d306e25c01589d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Перечисления</h2></td></tr>
+<tr class="memitem:a90eae1c60a6a092f2d2ea08550f6cdb2"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2">PARTY_QUEST_BITS</a> : uint16_t { <br />
+&#160;&#160;<a class="el" href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2ace42c49b6413dfbfacb3ff495c8364f2">PARTY_QUEST_EMERALD_RED_POTION_ACTIVE</a> = 1, 
+<a class="el" href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2afdb738f08e2dc2b266220676a1bb1430">PARTY_QUEST_EMERALD_SEASHELL_ACTIVE</a> = 2, 
+<a class="el" href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2add7b5a24cfb376fc81da3c94b3702162">PARTY_QUEST_EMERALD_LONGBOW_ACTIVE</a> = 3, 
+<a class="el" href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2a1f82cec2820e6cfb0f834acae977cdce">PARTY_QUEST_EMERALD_PLATE_ACTIVE</a> = 4, 
+<br />
+&#160;&#160;<a class="el" href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2a5830adafd618c603696df03b60c51da7">PARTY_QUEST_EMERALD_LUTE_ACTIVE</a> = 5, 
+<a class="el" href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2a73af09665216538186fa6dc863385757">PARTY_QUEST_EMERALD_HAT_ACTIVE</a> = 6, 
+<a class="el" href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2ac600b46363f7b1d7e727683ebc5e7704">PARTY_QUEST_EMERALD_MARGARETH_OFF</a> = 17, 
+<a class="el" href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2a45983f31afe8ba031e6f2d7cb61a1997">PARTY_QUEST_EVENMORN_MAP_FOUND</a> = 64, 
+<br />
+&#160;&#160;<a class="el" href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2a2a0f6c885ca69ac437bd94e1decf47ef">PARTY_QUEST_HARMONDALE_REBUILT</a> = 98, 
+<a class="el" href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2a6b2e02bee26bb58b3b8e1dbc41a263b7">PARTY_QUEST_FINISHED_EMERALD_ISLE</a> = 136, 
+<a class="el" href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2a74874605d44369c0c583af8d734d8ba9">PARTY_QUEST_OBELISK_HARMONDALE</a> = 164, 
+<a class="el" href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2a37d54456f292e8e773348b846a877fe3">PARTY_QUEST_OBELISK_ERATHIA</a> = 165, 
+<br />
+&#160;&#160;<a class="el" href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2add140a3b3df7cdd415bbd2dec0f2fdc4">PARTY_QUEST_OBELISK_TULAREAN_FOREST</a> = 166, 
+<a class="el" href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2ace8edefb5944f125b30de4b55a614713">PARTY_QUEST_OBELISK_DEYJA</a> = 167, 
+<a class="el" href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2aa18cf9f6c72b29e8c0ca96eade9d13e4">PARTY_QUEST_OBELISK_BRACADA_DESERT</a> = 168, 
+<a class="el" href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2a9622f4f7f6f457c99f3475df56010682">PARTY_QUEST_OBELISK_CELESTE</a> = 169, 
+<br />
+&#160;&#160;<a class="el" href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2a289adc95b864b28f4843b4cd62a3fb19">PARTY_QUEST_OBELISK_THE_PIT</a> = 170, 
+<a class="el" href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2a8b32f1642e8320477cfd5af2653ec304">PARTY_QUEST_OBELISK_EVENMORN_ISLAND</a> = 171, 
+<a class="el" href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2ad1b10053838a6da448cef6bc41b1ff10">PARTY_QUEST_OBELISK_MOUNT_NIGHON</a> = 172, 
+<a class="el" href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2acfc3795d451dcba54bfc86de26919544">PARTY_QUEST_OBELISK_BARROW_DOWNS</a> = 173, 
+<br />
+&#160;&#160;<a class="el" href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2a6d598cd82b36a652ecc3b081aef2220e">PARTY_QUEST_OBELISK_LAND_OF_THE_GIANTS</a> = 174, 
+<a class="el" href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2a77e865a4c4aca35314412c9b5807a2ce">PARTY_QUEST_OBELISK_TATALIA</a> = 175, 
+<a class="el" href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2a804cbcd8c7983a9f169710688e27ef97">PARTY_QUEST_OBELISK_AVLEE</a> = 176, 
+<a class="el" href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2acecd51fd400f91d5b9725298e773a3d1">PARTY_QUEST_OBELISK_STONE_CITY</a> = 177, 
+<br />
+&#160;&#160;<a class="el" href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2a2424fcf4013d2efcdfe6bde628448bda">PARTY_QUEST_OBELISK_TREASURE_FOUND</a> = 178, 
+<a class="el" href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2a00474a19ebd3b04f6b3c6f8c2526ea2f">PARTY_QUEST_FOUNTAIN_HARMONDALE</a> = 206, 
+<a class="el" href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2ae3673d56e453a3002b1a7a741209153e">PARTY_QUEST_FOUNTAIN_NIGHON</a> = 207, 
+<a class="el" href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2a7f74bd85d34ea9a5dd78dfcd0aa68ce0">PARTY_QUEST_FOUNTAIN_PIERPONT</a> = 208, 
+<br />
+&#160;&#160;<a class="el" href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2a9bb1ad6bf7bf2d4b9778921f9b6248f4">PARTY_QUEST_FOUNTAIN_CELESTIA</a> = 209, 
+<a class="el" href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2a87ddfe4c25f2e2a26e5f4789fe9c3586">PARTY_QUEST_FOUNTAIN_THE_PIT</a> = 210, 
+<a class="el" href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2a1d5a96bb7d82985e63f2d0c7ddc03cd5">PARTY_QUEST_FOUNTAIN_EVENMORN_ISLE</a> = 211
+<br />
+ }</td></tr>
+<tr class="separator:a90eae1c60a6a092f2d2ea08550f6cdb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ba652169aade3baa03ee56a91cb5dc1"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d38/_party_8h.html#a7ba652169aade3baa03ee56a91cb5dc1">PARTY_FLAGS_1</a> : int32_t { <br />
+&#160;&#160;<a class="el" href="../../db/d38/_party_8h.html#a7ba652169aade3baa03ee56a91cb5dc1afcd4377b4d296a33fdcbd3435d62705f">PARTY_FLAGS_1_0002</a> = 0x0002, 
+<a class="el" href="../../db/d38/_party_8h.html#a7ba652169aade3baa03ee56a91cb5dc1a0911b3acfb27eaf58c995ae401a76895">PARTY_FLAGS_1_WATER_DAMAGE</a> = 0x0004, 
+<a class="el" href="../../db/d38/_party_8h.html#a7ba652169aade3baa03ee56a91cb5dc1a243fa0999bbd987120b6ae79172e321d">PARTY_FLAGS_1_FALLING</a> = 0x0008, 
+<a class="el" href="../../db/d38/_party_8h.html#a7ba652169aade3baa03ee56a91cb5dc1a10c54c69c3f257f5dc866fba216a009a">PARTY_FLAGS_1_ALERT_RED</a> = 0x0010, 
+<br />
+&#160;&#160;<a class="el" href="../../db/d38/_party_8h.html#a7ba652169aade3baa03ee56a91cb5dc1aeb0381955490c08e94080b7fd27b1492">PARTY_FLAGS_1_ALERT_YELLOW</a> = 0x0020, 
+<a class="el" href="../../db/d38/_party_8h.html#a7ba652169aade3baa03ee56a91cb5dc1a7f6dabf76eda41e29a95123c1fe33fd6">PARTY_FLAGS_1_STANDING_ON_WATER</a> = 0x0080, 
+<a class="el" href="../../db/d38/_party_8h.html#a7ba652169aade3baa03ee56a91cb5dc1a0d4efebf09d06c08133b90267b858d30">PARTY_FLAGS_1_LANDING</a> = 0x0100, 
+<a class="el" href="../../db/d38/_party_8h.html#a7ba652169aade3baa03ee56a91cb5dc1a1294e24b863533d78aaee423877e478b">PARTY_FLAGS_1_BURNING</a> = 0x200
+<br />
+ }</td></tr>
+<tr class="separator:a7ba652169aade3baa03ee56a91cb5dc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09dcebc28a84afbca0bf362f5e1348d8"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d38/_party_8h.html#a09dcebc28a84afbca0bf362f5e1348d8">PARTY_FLAGS_2</a> : int32_t { <a class="el" href="../../db/d38/_party_8h.html#a09dcebc28a84afbca0bf362f5e1348d8ab905663a9d31df27dda341a2bc9a8c2b">PARTY_FLAGS_2_RUNNING</a> = 0x2
+ }</td></tr>
+<tr class="separator:a09dcebc28a84afbca0bf362f5e1348d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7935db13258ffa8a17fd65aa633b80df"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80df">PARTY_BUFF_INDEX</a> { <br />
+&#160;&#160;<a class="el" href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80dfa0cfd076d0ee96fcabe3f0cbe7ac5f02e">PARTY_BUFF_RESIST_AIR</a> = 0, 
+<a class="el" href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80dfa19d0e136a15d2fd35fd2c5138d1d9c72">PARTY_BUFF_RESIST_BODY</a> = 1, 
+<a class="el" href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80dfab13703d70e23ca64a2f30328ef02420a">PARTY_BUFF_DAY_OF_GODS</a> = 2, 
+<a class="el" href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80dfa49d31b7873b1806ed400d0fd66eb407b">PARTY_BUFF_DETECT_LIFE</a> = 3, 
+<br />
+&#160;&#160;<a class="el" href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80dfa9db51cc9d4c57a15ec0c83b5f59db342">PARTY_BUFF_RESIST_EARTH</a> = 4, 
+<a class="el" href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80dfaf8c5cf5be4e693823c7ef7a8e46fc623">PARTY_BUFF_FEATHER_FALL</a> = 5, 
+<a class="el" href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80dfa95364e4632a66b4e3033629ee350d101">PARTY_BUFF_RESIST_FIRE</a> = 6, 
+<a class="el" href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80dfa46d524d4e7026f1b90643679fc2a2d0d">PARTY_BUFF_FLY</a> = 7, 
+<br />
+&#160;&#160;<a class="el" href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80dfa714e9cc910fc85bd06a140c2b023caf5">PARTY_BUFF_HASTE</a> = 8, 
+<a class="el" href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80dfad0aea79e5c43712776c90aa7d0cd1625">PARTY_BUFF_HEROISM</a> = 9, 
+<a class="el" href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80dfa0873a4f505e8da2be49aa61b88b9c10d">PARTY_BUFF_IMMOLATION</a> = 10, 
+<a class="el" href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80dfaeaaac556d8c0d8843c6dfcb01f4306be">PARTY_BUFF_INVISIBILITY</a> = 11, 
+<br />
+&#160;&#160;<a class="el" href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80dfa25b168c1e2df55713ae2f5b946f411cb">PARTY_BUFF_RESIST_MIND</a> = 12, 
+<a class="el" href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80dfa5830c2dcd2ccbc70732a6de712218a99">PARTY_BUFF_PROTECTION_FROM_MAGIC</a> = 13, 
+<a class="el" href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80dfa1bd052767f3c587e3d020387b829696a">PARTY_BUFF_SHIELD</a> = 14, 
+<a class="el" href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80dfa138bf4e6964a5755193bbb9b504da7af">PARTY_BUFF_STONE_SKIN</a> = 15, 
+<br />
+&#160;&#160;<a class="el" href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80dfa58eb6c8c27d21c054cfb5fd11738d17f">PARTY_BUFF_TORCHLIGHT</a> = 16, 
+<a class="el" href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80dfa5ddb27c75588446b065c12eb9d5afcc9">PARTY_BUFF_RESIST_WATER</a> = 17, 
+<a class="el" href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80dfa457dcbd00b5c38c730d8ce1d83d7d637">PARTY_BUFF_WATER_WALK</a> = 18, 
+<a class="el" href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80dfabd2b2983b02dda98c4dff6711e971cd1">PARTY_BUFF_WIZARD_EYE</a> = 19
+<br />
+ }</td></tr>
+<tr class="separator:a7935db13258ffa8a17fd65aa633b80df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae22569c4d0bb9a2f547ede442cd02b9b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d38/_party_8h.html#ae22569c4d0bb9a2f547ede442cd02b9b">PartyAction</a> : uint32_t { <br />
+&#160;&#160;<a class="el" href="../../db/d38/_party_8h.html#ae22569c4d0bb9a2f547ede442cd02b9ba78abe3d01861684ef7d3e860083cd75b">PARTY_INVALID</a> = 0, 
+<a class="el" href="../../db/d38/_party_8h.html#ae22569c4d0bb9a2f547ede442cd02b9bab6899ebff5771a5422118e3b6e026e60">PARTY_TurnLeft</a> = 0x1, 
+<a class="el" href="../../db/d38/_party_8h.html#ae22569c4d0bb9a2f547ede442cd02b9ba88ca4edb9b0f641cdecd64f7b67a3f5f">PARTY_TurnRight</a> = 0x2, 
+<a class="el" href="../../db/d38/_party_8h.html#ae22569c4d0bb9a2f547ede442cd02b9bad65778804e1010e5e928ee715e1ba51a">PARTY_StrafeLeft</a> = 0x3, 
+<br />
+&#160;&#160;<a class="el" href="../../db/d38/_party_8h.html#ae22569c4d0bb9a2f547ede442cd02b9bad4ea271467e29fb978148d4adf8bb08b">PARTY_StrafeRight</a> = 0x4, 
+<a class="el" href="../../db/d38/_party_8h.html#ae22569c4d0bb9a2f547ede442cd02b9badc7a4d713fe35144207975db42eae4e9">PARTY_WalkForward</a> = 0x5, 
+<a class="el" href="../../db/d38/_party_8h.html#ae22569c4d0bb9a2f547ede442cd02b9ba64f6a03f9a52992802eb0efebca0ad9c">PARTY_WalkBackward</a> = 0x6, 
+<a class="el" href="../../db/d38/_party_8h.html#ae22569c4d0bb9a2f547ede442cd02b9baa319c6d3681f7f4009f955f38b21d8b7">PARTY_LookUp</a> = 0x7, 
+<br />
+&#160;&#160;<a class="el" href="../../db/d38/_party_8h.html#ae22569c4d0bb9a2f547ede442cd02b9babc828745d9efc6eed08eac2ad9164422">PARTY_LookDown</a> = 0x8, 
+<a class="el" href="../../db/d38/_party_8h.html#ae22569c4d0bb9a2f547ede442cd02b9ba24b2857af610a82656874589c4a84478">PARTY_CenterView</a> = 0x9, 
+<a class="el" href="../../db/d38/_party_8h.html#ae22569c4d0bb9a2f547ede442cd02b9bab5420b0b560d4d213ffd656f8ac5f596">PARTY_unkA</a> = 0xA, 
+<a class="el" href="../../db/d38/_party_8h.html#ae22569c4d0bb9a2f547ede442cd02b9ba610645fe137132373c9d4f66b3cf0738">PARTY_unkB</a> = 0xB, 
+<br />
+&#160;&#160;<a class="el" href="../../db/d38/_party_8h.html#ae22569c4d0bb9a2f547ede442cd02b9bad9c91444353cd06cc639b326338935ae">PARTY_Jump</a> = 0xC, 
+<a class="el" href="../../db/d38/_party_8h.html#ae22569c4d0bb9a2f547ede442cd02b9ba95eeaa6dae426f180022dc37497f4685">PARTY_FlyUp</a> = 0xD, 
+<a class="el" href="../../db/d38/_party_8h.html#ae22569c4d0bb9a2f547ede442cd02b9bad2598d40d3ab2a68c1f6d665d1c5cd38">PARTY_FlyDown</a> = 0xE, 
+<a class="el" href="../../db/d38/_party_8h.html#ae22569c4d0bb9a2f547ede442cd02b9bad48d0b3396be46a1eddb780bfbbdb1bd">PARTY_Land</a> = 0xF, 
+<br />
+&#160;&#160;<a class="el" href="../../db/d38/_party_8h.html#ae22569c4d0bb9a2f547ede442cd02b9ba4554047b9f09100dbbafa31a6aac9bd3">PARTY_RunForward</a> = 0x10, 
+<a class="el" href="../../db/d38/_party_8h.html#ae22569c4d0bb9a2f547ede442cd02b9ba18b584268c26076a3feadae59e1c992b">PARTY_RunBackward</a> = 0x11, 
+<a class="el" href="../../db/d38/_party_8h.html#ae22569c4d0bb9a2f547ede442cd02b9ba277ee913e22ee1d1e925552d71d7742d">PARTY_FastTurnLeft</a> = 0x12, 
+<a class="el" href="../../db/d38/_party_8h.html#ae22569c4d0bb9a2f547ede442cd02b9bac9f1c75823fb84b30d4eb96fe3646142">PARTY_FastTurnRight</a> = 0x13, 
+<br />
+&#160;&#160;<a class="el" href="../../db/d38/_party_8h.html#ae22569c4d0bb9a2f547ede442cd02b9ba5d8e496dde6817b2b814a3fab9dfa95f">PARTY_dword</a> = 0xFFFFFFFF
+<br />
+ }</td></tr>
+<tr class="separator:ae22569c4d0bb9a2f547ede442cd02b9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bd3eeda5ec3780afeff00593e27b6f2"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d38/_party_8h.html#a8bd3eeda5ec3780afeff00593e27b6f2">PartyAlignment</a> : uint32_t { <a class="el" href="../../db/d38/_party_8h.html#a8bd3eeda5ec3780afeff00593e27b6f2a138a01d401a68aab61b07b596bb532a7">PartyAlignment::PartyAlignment_Good</a> = 0, 
+<a class="el" href="../../db/d38/_party_8h.html#a8bd3eeda5ec3780afeff00593e27b6f2af9794c109d91984889aa4427dd2b45b9">PartyAlignment::PartyAlignment_Neutral</a> = 1, 
+<a class="el" href="../../db/d38/_party_8h.html#a8bd3eeda5ec3780afeff00593e27b6f2a5a3e1b0ba1793049451900a1e065630d">PartyAlignment::PartyAlignment_Evil</a> = 2
+ }</td></tr>
+<tr class="separator:a8bd3eeda5ec3780afeff00593e27b6f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a4e3b1773dfc5d7a21fe51039de25d2f9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d38/_party_8h.html#a4e3b1773dfc5d7a21fe51039de25d2f9">TestPartyQuestBit</a> (<a class="el" href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2">PARTY_QUEST_BITS</a> bit)</td></tr>
+<tr class="separator:a4e3b1773dfc5d7a21fe51039de25d2f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6327fa16a015add5509d93cc738c035b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d38/_party_8h.html#a6327fa16a015add5509d93cc738c035b">Rest</a> (unsigned int uHoursToSleep)</td></tr>
+<tr class="separator:a6327fa16a015add5509d93cc738c035b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a599ef8a30dd8c1245d9bd515a1f27ecc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d38/_party_8h.html#a599ef8a30dd8c1245d9bd515a1f27ecc">RestAndHeal</a> (int uNumMinutes)</td></tr>
+<tr class="separator:a599ef8a30dd8c1245d9bd515a1f27ecc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b4bc5b810c765998d778c19b917eb52"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d38/_party_8h.html#a6b4bc5b810c765998d778c19b917eb52">GetTravelTime</a> ()</td></tr>
+<tr class="separator:a6b4bc5b810c765998d778c19b917eb52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa01264472ea7dcb05880846fec64b7c3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d38/_party_8h.html#aa01264472ea7dcb05880846fec64b7c3">_449B57_test_bit</a> (<a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *a1, <a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> a2)</td></tr>
+<tr class="separator:aa01264472ea7dcb05880846fec64b7c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2dcd1576e011d3d4ff119d155742c5ef"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d38/_party_8h.html#a2dcd1576e011d3d4ff119d155742c5ef">_449B7E_toggle_bit</a> (unsigned char *pArray, <a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> a2, <a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> bToggle)</td></tr>
+<tr class="separator:a2dcd1576e011d3d4ff119d155742c5ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:a638b1d8b985f1c7f8b69f2d81286f98e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d14/struct_party.html">Party</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d38/_party_8h.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a></td></tr>
+<tr class="separator:a638b1d8b985f1c7f8b69f2d81286f98e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac491d2aeba0335bbbe632bdc3c04cffe"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="../../da/d47/struct_action_queue.html">ActionQueue</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d38/_party_8h.html#ac491d2aeba0335bbbe632bdc3c04cffe">pPartyActionQueue</a></td></tr>
+<tr class="separator:ac491d2aeba0335bbbe632bdc3c04cffe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Типы</h2>
+<a id="a67e89a75d2c3cdfd0d306e25c01589d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67e89a75d2c3cdfd0d306e25c01589d0">&#9670;&nbsp;</a></span>PartyAlignment</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef enum <a class="el" href="../../db/d38/_party_8h.html#a8bd3eeda5ec3780afeff00593e27b6f2">PartyAlignment</a> <a class="el" href="../../db/d38/_party_8h.html#a8bd3eeda5ec3780afeff00593e27b6f2">PartyAlignment</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Перечисления</h2>
+<a id="a90eae1c60a6a092f2d2ea08550f6cdb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90eae1c60a6a092f2d2ea08550f6cdb2">&#9670;&nbsp;</a></span>PARTY_QUEST_BITS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2">PARTY_QUEST_BITS</a> : <a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="a90eae1c60a6a092f2d2ea08550f6cdb2ace42c49b6413dfbfacb3ff495c8364f2"></a>PARTY_QUEST_EMERALD_RED_POTION_ACTIVE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a90eae1c60a6a092f2d2ea08550f6cdb2afdb738f08e2dc2b266220676a1bb1430"></a>PARTY_QUEST_EMERALD_SEASHELL_ACTIVE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a90eae1c60a6a092f2d2ea08550f6cdb2add7b5a24cfb376fc81da3c94b3702162"></a>PARTY_QUEST_EMERALD_LONGBOW_ACTIVE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a90eae1c60a6a092f2d2ea08550f6cdb2a1f82cec2820e6cfb0f834acae977cdce"></a>PARTY_QUEST_EMERALD_PLATE_ACTIVE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a90eae1c60a6a092f2d2ea08550f6cdb2a5830adafd618c603696df03b60c51da7"></a>PARTY_QUEST_EMERALD_LUTE_ACTIVE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a90eae1c60a6a092f2d2ea08550f6cdb2a73af09665216538186fa6dc863385757"></a>PARTY_QUEST_EMERALD_HAT_ACTIVE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a90eae1c60a6a092f2d2ea08550f6cdb2ac600b46363f7b1d7e727683ebc5e7704"></a>PARTY_QUEST_EMERALD_MARGARETH_OFF&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a90eae1c60a6a092f2d2ea08550f6cdb2a45983f31afe8ba031e6f2d7cb61a1997"></a>PARTY_QUEST_EVENMORN_MAP_FOUND&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a90eae1c60a6a092f2d2ea08550f6cdb2a2a0f6c885ca69ac437bd94e1decf47ef"></a>PARTY_QUEST_HARMONDALE_REBUILT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a90eae1c60a6a092f2d2ea08550f6cdb2a6b2e02bee26bb58b3b8e1dbc41a263b7"></a>PARTY_QUEST_FINISHED_EMERALD_ISLE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a90eae1c60a6a092f2d2ea08550f6cdb2a74874605d44369c0c583af8d734d8ba9"></a>PARTY_QUEST_OBELISK_HARMONDALE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a90eae1c60a6a092f2d2ea08550f6cdb2a37d54456f292e8e773348b846a877fe3"></a>PARTY_QUEST_OBELISK_ERATHIA&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a90eae1c60a6a092f2d2ea08550f6cdb2add140a3b3df7cdd415bbd2dec0f2fdc4"></a>PARTY_QUEST_OBELISK_TULAREAN_FOREST&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a90eae1c60a6a092f2d2ea08550f6cdb2ace8edefb5944f125b30de4b55a614713"></a>PARTY_QUEST_OBELISK_DEYJA&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a90eae1c60a6a092f2d2ea08550f6cdb2aa18cf9f6c72b29e8c0ca96eade9d13e4"></a>PARTY_QUEST_OBELISK_BRACADA_DESERT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a90eae1c60a6a092f2d2ea08550f6cdb2a9622f4f7f6f457c99f3475df56010682"></a>PARTY_QUEST_OBELISK_CELESTE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a90eae1c60a6a092f2d2ea08550f6cdb2a289adc95b864b28f4843b4cd62a3fb19"></a>PARTY_QUEST_OBELISK_THE_PIT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a90eae1c60a6a092f2d2ea08550f6cdb2a8b32f1642e8320477cfd5af2653ec304"></a>PARTY_QUEST_OBELISK_EVENMORN_ISLAND&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a90eae1c60a6a092f2d2ea08550f6cdb2ad1b10053838a6da448cef6bc41b1ff10"></a>PARTY_QUEST_OBELISK_MOUNT_NIGHON&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a90eae1c60a6a092f2d2ea08550f6cdb2acfc3795d451dcba54bfc86de26919544"></a>PARTY_QUEST_OBELISK_BARROW_DOWNS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a90eae1c60a6a092f2d2ea08550f6cdb2a6d598cd82b36a652ecc3b081aef2220e"></a>PARTY_QUEST_OBELISK_LAND_OF_THE_GIANTS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a90eae1c60a6a092f2d2ea08550f6cdb2a77e865a4c4aca35314412c9b5807a2ce"></a>PARTY_QUEST_OBELISK_TATALIA&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a90eae1c60a6a092f2d2ea08550f6cdb2a804cbcd8c7983a9f169710688e27ef97"></a>PARTY_QUEST_OBELISK_AVLEE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a90eae1c60a6a092f2d2ea08550f6cdb2acecd51fd400f91d5b9725298e773a3d1"></a>PARTY_QUEST_OBELISK_STONE_CITY&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a90eae1c60a6a092f2d2ea08550f6cdb2a2424fcf4013d2efcdfe6bde628448bda"></a>PARTY_QUEST_OBELISK_TREASURE_FOUND&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a90eae1c60a6a092f2d2ea08550f6cdb2a00474a19ebd3b04f6b3c6f8c2526ea2f"></a>PARTY_QUEST_FOUNTAIN_HARMONDALE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a90eae1c60a6a092f2d2ea08550f6cdb2ae3673d56e453a3002b1a7a741209153e"></a>PARTY_QUEST_FOUNTAIN_NIGHON&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a90eae1c60a6a092f2d2ea08550f6cdb2a7f74bd85d34ea9a5dd78dfcd0aa68ce0"></a>PARTY_QUEST_FOUNTAIN_PIERPONT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a90eae1c60a6a092f2d2ea08550f6cdb2a9bb1ad6bf7bf2d4b9778921f9b6248f4"></a>PARTY_QUEST_FOUNTAIN_CELESTIA&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a90eae1c60a6a092f2d2ea08550f6cdb2a87ddfe4c25f2e2a26e5f4789fe9c3586"></a>PARTY_QUEST_FOUNTAIN_THE_PIT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a90eae1c60a6a092f2d2ea08550f6cdb2a1d5a96bb7d82985e63f2d0c7ddc03cd5"></a>PARTY_QUEST_FOUNTAIN_EVENMORN_ISLE&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/d38/_party_8h_source.html">Party.h</a> строка <a class="el" href="../../db/d38/_party_8h_source.html#l00013">13</a></p>
+<div class="fragment"><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;                      : <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2ace42c49b6413dfbfacb3ff495c8364f2">PARTY_QUEST_EMERALD_RED_POTION_ACTIVE</a> = 1,</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2afdb738f08e2dc2b266220676a1bb1430">PARTY_QUEST_EMERALD_SEASHELL_ACTIVE</a> = 2,</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2add7b5a24cfb376fc81da3c94b3702162">PARTY_QUEST_EMERALD_LONGBOW_ACTIVE</a> = 3,</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2a1f82cec2820e6cfb0f834acae977cdce">PARTY_QUEST_EMERALD_PLATE_ACTIVE</a> = 4,</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2a5830adafd618c603696df03b60c51da7">PARTY_QUEST_EMERALD_LUTE_ACTIVE</a> = 5,</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2a73af09665216538186fa6dc863385757">PARTY_QUEST_EMERALD_HAT_ACTIVE</a> = 6,</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2ac600b46363f7b1d7e727683ebc5e7704">PARTY_QUEST_EMERALD_MARGARETH_OFF</a> = 17,</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2a45983f31afe8ba031e6f2d7cb61a1997">PARTY_QUEST_EVENMORN_MAP_FOUND</a> = 64,</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2a2a0f6c885ca69ac437bd94e1decf47ef">PARTY_QUEST_HARMONDALE_REBUILT</a> = 98,</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2a6b2e02bee26bb58b3b8e1dbc41a263b7">PARTY_QUEST_FINISHED_EMERALD_ISLE</a> = 136,</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2a74874605d44369c0c583af8d734d8ba9">PARTY_QUEST_OBELISK_HARMONDALE</a> = 164,</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2a37d54456f292e8e773348b846a877fe3">PARTY_QUEST_OBELISK_ERATHIA</a> = 165,</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2add140a3b3df7cdd415bbd2dec0f2fdc4">PARTY_QUEST_OBELISK_TULAREAN_FOREST</a> = 166,</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2ace8edefb5944f125b30de4b55a614713">PARTY_QUEST_OBELISK_DEYJA</a> = 167,</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2aa18cf9f6c72b29e8c0ca96eade9d13e4">PARTY_QUEST_OBELISK_BRACADA_DESERT</a> = 168,</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2a9622f4f7f6f457c99f3475df56010682">PARTY_QUEST_OBELISK_CELESTE</a> = 169,</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2a289adc95b864b28f4843b4cd62a3fb19">PARTY_QUEST_OBELISK_THE_PIT</a> = 170,</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2a8b32f1642e8320477cfd5af2653ec304">PARTY_QUEST_OBELISK_EVENMORN_ISLAND</a> = 171,</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2ad1b10053838a6da448cef6bc41b1ff10">PARTY_QUEST_OBELISK_MOUNT_NIGHON</a> = 172,</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2acfc3795d451dcba54bfc86de26919544">PARTY_QUEST_OBELISK_BARROW_DOWNS</a> = 173,</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2a6d598cd82b36a652ecc3b081aef2220e">PARTY_QUEST_OBELISK_LAND_OF_THE_GIANTS</a> = 174,</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2a77e865a4c4aca35314412c9b5807a2ce">PARTY_QUEST_OBELISK_TATALIA</a> = 175,</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2a804cbcd8c7983a9f169710688e27ef97">PARTY_QUEST_OBELISK_AVLEE</a> = 176,</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2acecd51fd400f91d5b9725298e773a3d1">PARTY_QUEST_OBELISK_STONE_CITY</a> = 177,</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2a2424fcf4013d2efcdfe6bde628448bda">PARTY_QUEST_OBELISK_TREASURE_FOUND</a> = 178,</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2a00474a19ebd3b04f6b3c6f8c2526ea2f">PARTY_QUEST_FOUNTAIN_HARMONDALE</a> = 206,</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2ae3673d56e453a3002b1a7a741209153e">PARTY_QUEST_FOUNTAIN_NIGHON</a> = 207,</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2a7f74bd85d34ea9a5dd78dfcd0aa68ce0">PARTY_QUEST_FOUNTAIN_PIERPONT</a> = 208,</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2a9bb1ad6bf7bf2d4b9778921f9b6248f4">PARTY_QUEST_FOUNTAIN_CELESTIA</a> = 209,</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2a87ddfe4c25f2e2a26e5f4789fe9c3586">PARTY_QUEST_FOUNTAIN_THE_PIT</a> = 210,</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2a1d5a96bb7d82985e63f2d0c7ddc03cd5">PARTY_QUEST_FOUNTAIN_EVENMORN_ISLE</a> = 211</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;};</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a7ba652169aade3baa03ee56a91cb5dc1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ba652169aade3baa03ee56a91cb5dc1">&#9670;&nbsp;</a></span>PARTY_FLAGS_1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="../../db/d38/_party_8h.html#a7ba652169aade3baa03ee56a91cb5dc1">PARTY_FLAGS_1</a> : <a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a37994e3b11c72957c6f454c6ec96d43d">int32_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="a7ba652169aade3baa03ee56a91cb5dc1afcd4377b4d296a33fdcbd3435d62705f"></a>PARTY_FLAGS_1_0002&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a7ba652169aade3baa03ee56a91cb5dc1a0911b3acfb27eaf58c995ae401a76895"></a>PARTY_FLAGS_1_WATER_DAMAGE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a7ba652169aade3baa03ee56a91cb5dc1a243fa0999bbd987120b6ae79172e321d"></a>PARTY_FLAGS_1_FALLING&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a7ba652169aade3baa03ee56a91cb5dc1a10c54c69c3f257f5dc866fba216a009a"></a>PARTY_FLAGS_1_ALERT_RED&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a7ba652169aade3baa03ee56a91cb5dc1aeb0381955490c08e94080b7fd27b1492"></a>PARTY_FLAGS_1_ALERT_YELLOW&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a7ba652169aade3baa03ee56a91cb5dc1a7f6dabf76eda41e29a95123c1fe33fd6"></a>PARTY_FLAGS_1_STANDING_ON_WATER&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a7ba652169aade3baa03ee56a91cb5dc1a0d4efebf09d06c08133b90267b858d30"></a>PARTY_FLAGS_1_LANDING&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a7ba652169aade3baa03ee56a91cb5dc1a1294e24b863533d78aaee423877e478b"></a>PARTY_FLAGS_1_BURNING&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/d38/_party_8h_source.html">Party.h</a> строка <a class="el" href="../../db/d38/_party_8h_source.html#l00055">55</a></p>
+<div class="fragment"><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                   : <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a37994e3b11c72957c6f454c6ec96d43d">int32_t</a> {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#a7ba652169aade3baa03ee56a91cb5dc1afcd4377b4d296a33fdcbd3435d62705f">PARTY_FLAGS_1_0002</a> = 0x0002,</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#a7ba652169aade3baa03ee56a91cb5dc1a0911b3acfb27eaf58c995ae401a76895">PARTY_FLAGS_1_WATER_DAMAGE</a> = 0x0004,</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#a7ba652169aade3baa03ee56a91cb5dc1a243fa0999bbd987120b6ae79172e321d">PARTY_FLAGS_1_FALLING</a> = 0x0008,</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#a7ba652169aade3baa03ee56a91cb5dc1a10c54c69c3f257f5dc866fba216a009a">PARTY_FLAGS_1_ALERT_RED</a> = 0x0010,</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#a7ba652169aade3baa03ee56a91cb5dc1aeb0381955490c08e94080b7fd27b1492">PARTY_FLAGS_1_ALERT_YELLOW</a> = 0x0020,</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#a7ba652169aade3baa03ee56a91cb5dc1a7f6dabf76eda41e29a95123c1fe33fd6">PARTY_FLAGS_1_STANDING_ON_WATER</a> = 0x0080,</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#a7ba652169aade3baa03ee56a91cb5dc1a0d4efebf09d06c08133b90267b858d30">PARTY_FLAGS_1_LANDING</a> = 0x0100,</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#a7ba652169aade3baa03ee56a91cb5dc1a1294e24b863533d78aaee423877e478b">PARTY_FLAGS_1_BURNING</a> = 0x200</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;};</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a09dcebc28a84afbca0bf362f5e1348d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09dcebc28a84afbca0bf362f5e1348d8">&#9670;&nbsp;</a></span>PARTY_FLAGS_2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="../../db/d38/_party_8h.html#a09dcebc28a84afbca0bf362f5e1348d8">PARTY_FLAGS_2</a> : <a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a37994e3b11c72957c6f454c6ec96d43d">int32_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="a09dcebc28a84afbca0bf362f5e1348d8ab905663a9d31df27dda341a2bc9a8c2b"></a>PARTY_FLAGS_2_RUNNING&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/d38/_party_8h_source.html">Party.h</a> строка <a class="el" href="../../db/d38/_party_8h_source.html#l00065">65</a></p>
+<div class="fragment"><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                   : <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a37994e3b11c72957c6f454c6ec96d43d">int32_t</a> {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#a09dcebc28a84afbca0bf362f5e1348d8ab905663a9d31df27dda341a2bc9a8c2b">PARTY_FLAGS_2_RUNNING</a> = 0x2,</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;};</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a7935db13258ffa8a17fd65aa633b80df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7935db13258ffa8a17fd65aa633b80df">&#9670;&nbsp;</a></span>PARTY_BUFF_INDEX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80df">PARTY_BUFF_INDEX</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="a7935db13258ffa8a17fd65aa633b80dfa0cfd076d0ee96fcabe3f0cbe7ac5f02e"></a>PARTY_BUFF_RESIST_AIR&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a7935db13258ffa8a17fd65aa633b80dfa19d0e136a15d2fd35fd2c5138d1d9c72"></a>PARTY_BUFF_RESIST_BODY&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a7935db13258ffa8a17fd65aa633b80dfab13703d70e23ca64a2f30328ef02420a"></a>PARTY_BUFF_DAY_OF_GODS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a7935db13258ffa8a17fd65aa633b80dfa49d31b7873b1806ed400d0fd66eb407b"></a>PARTY_BUFF_DETECT_LIFE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a7935db13258ffa8a17fd65aa633b80dfa9db51cc9d4c57a15ec0c83b5f59db342"></a>PARTY_BUFF_RESIST_EARTH&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a7935db13258ffa8a17fd65aa633b80dfaf8c5cf5be4e693823c7ef7a8e46fc623"></a>PARTY_BUFF_FEATHER_FALL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a7935db13258ffa8a17fd65aa633b80dfa95364e4632a66b4e3033629ee350d101"></a>PARTY_BUFF_RESIST_FIRE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a7935db13258ffa8a17fd65aa633b80dfa46d524d4e7026f1b90643679fc2a2d0d"></a>PARTY_BUFF_FLY&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a7935db13258ffa8a17fd65aa633b80dfa714e9cc910fc85bd06a140c2b023caf5"></a>PARTY_BUFF_HASTE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a7935db13258ffa8a17fd65aa633b80dfad0aea79e5c43712776c90aa7d0cd1625"></a>PARTY_BUFF_HEROISM&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a7935db13258ffa8a17fd65aa633b80dfa0873a4f505e8da2be49aa61b88b9c10d"></a>PARTY_BUFF_IMMOLATION&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a7935db13258ffa8a17fd65aa633b80dfaeaaac556d8c0d8843c6dfcb01f4306be"></a>PARTY_BUFF_INVISIBILITY&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a7935db13258ffa8a17fd65aa633b80dfa25b168c1e2df55713ae2f5b946f411cb"></a>PARTY_BUFF_RESIST_MIND&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a7935db13258ffa8a17fd65aa633b80dfa5830c2dcd2ccbc70732a6de712218a99"></a>PARTY_BUFF_PROTECTION_FROM_MAGIC&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a7935db13258ffa8a17fd65aa633b80dfa1bd052767f3c587e3d020387b829696a"></a>PARTY_BUFF_SHIELD&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a7935db13258ffa8a17fd65aa633b80dfa138bf4e6964a5755193bbb9b504da7af"></a>PARTY_BUFF_STONE_SKIN&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a7935db13258ffa8a17fd65aa633b80dfa58eb6c8c27d21c054cfb5fd11738d17f"></a>PARTY_BUFF_TORCHLIGHT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a7935db13258ffa8a17fd65aa633b80dfa5ddb27c75588446b065c12eb9d5afcc9"></a>PARTY_BUFF_RESIST_WATER&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a7935db13258ffa8a17fd65aa633b80dfa457dcbd00b5c38c730d8ce1d83d7d637"></a>PARTY_BUFF_WATER_WALK&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a7935db13258ffa8a17fd65aa633b80dfabd2b2983b02dda98c4dff6711e971cd1"></a>PARTY_BUFF_WIZARD_EYE&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/d38/_party_8h_source.html">Party.h</a> строка <a class="el" href="../../db/d38/_party_8h_source.html#l00070">70</a></p>
+<div class="fragment"><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                      {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80dfa0cfd076d0ee96fcabe3f0cbe7ac5f02e">PARTY_BUFF_RESIST_AIR</a> = 0,</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80dfa19d0e136a15d2fd35fd2c5138d1d9c72">PARTY_BUFF_RESIST_BODY</a> = 1,</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80dfab13703d70e23ca64a2f30328ef02420a">PARTY_BUFF_DAY_OF_GODS</a> = 2,</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80dfa49d31b7873b1806ed400d0fd66eb407b">PARTY_BUFF_DETECT_LIFE</a> = 3,</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80dfa9db51cc9d4c57a15ec0c83b5f59db342">PARTY_BUFF_RESIST_EARTH</a> = 4,</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80dfaf8c5cf5be4e693823c7ef7a8e46fc623">PARTY_BUFF_FEATHER_FALL</a> = 5,</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80dfa95364e4632a66b4e3033629ee350d101">PARTY_BUFF_RESIST_FIRE</a> = 6,</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80dfa46d524d4e7026f1b90643679fc2a2d0d">PARTY_BUFF_FLY</a> = 7,</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80dfa714e9cc910fc85bd06a140c2b023caf5">PARTY_BUFF_HASTE</a> = 8,</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80dfad0aea79e5c43712776c90aa7d0cd1625">PARTY_BUFF_HEROISM</a> = 9,</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80dfa0873a4f505e8da2be49aa61b88b9c10d">PARTY_BUFF_IMMOLATION</a> = 10,</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80dfaeaaac556d8c0d8843c6dfcb01f4306be">PARTY_BUFF_INVISIBILITY</a> = 11,</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80dfa25b168c1e2df55713ae2f5b946f411cb">PARTY_BUFF_RESIST_MIND</a> = 12,</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80dfa5830c2dcd2ccbc70732a6de712218a99">PARTY_BUFF_PROTECTION_FROM_MAGIC</a> = 13,</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80dfa1bd052767f3c587e3d020387b829696a">PARTY_BUFF_SHIELD</a> = 14,</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80dfa138bf4e6964a5755193bbb9b504da7af">PARTY_BUFF_STONE_SKIN</a> = 15,</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80dfa58eb6c8c27d21c054cfb5fd11738d17f">PARTY_BUFF_TORCHLIGHT</a> = 16,</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80dfa5ddb27c75588446b065c12eb9d5afcc9">PARTY_BUFF_RESIST_WATER</a> = 17,</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80dfa457dcbd00b5c38c730d8ce1d83d7d637">PARTY_BUFF_WATER_WALK</a> = 18,</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80dfabd2b2983b02dda98c4dff6711e971cd1">PARTY_BUFF_WIZARD_EYE</a> = 19,</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;};</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae22569c4d0bb9a2f547ede442cd02b9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae22569c4d0bb9a2f547ede442cd02b9b">&#9670;&nbsp;</a></span>PartyAction</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="../../db/d38/_party_8h.html#ae22569c4d0bb9a2f547ede442cd02b9b">PartyAction</a> : <a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="ae22569c4d0bb9a2f547ede442cd02b9ba78abe3d01861684ef7d3e860083cd75b"></a>PARTY_INVALID&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ae22569c4d0bb9a2f547ede442cd02b9bab6899ebff5771a5422118e3b6e026e60"></a>PARTY_TurnLeft&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ae22569c4d0bb9a2f547ede442cd02b9ba88ca4edb9b0f641cdecd64f7b67a3f5f"></a>PARTY_TurnRight&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ae22569c4d0bb9a2f547ede442cd02b9bad65778804e1010e5e928ee715e1ba51a"></a>PARTY_StrafeLeft&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ae22569c4d0bb9a2f547ede442cd02b9bad4ea271467e29fb978148d4adf8bb08b"></a>PARTY_StrafeRight&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ae22569c4d0bb9a2f547ede442cd02b9badc7a4d713fe35144207975db42eae4e9"></a>PARTY_WalkForward&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ae22569c4d0bb9a2f547ede442cd02b9ba64f6a03f9a52992802eb0efebca0ad9c"></a>PARTY_WalkBackward&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ae22569c4d0bb9a2f547ede442cd02b9baa319c6d3681f7f4009f955f38b21d8b7"></a>PARTY_LookUp&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ae22569c4d0bb9a2f547ede442cd02b9babc828745d9efc6eed08eac2ad9164422"></a>PARTY_LookDown&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ae22569c4d0bb9a2f547ede442cd02b9ba24b2857af610a82656874589c4a84478"></a>PARTY_CenterView&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ae22569c4d0bb9a2f547ede442cd02b9bab5420b0b560d4d213ffd656f8ac5f596"></a>PARTY_unkA&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ae22569c4d0bb9a2f547ede442cd02b9ba610645fe137132373c9d4f66b3cf0738"></a>PARTY_unkB&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ae22569c4d0bb9a2f547ede442cd02b9bad9c91444353cd06cc639b326338935ae"></a>PARTY_Jump&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ae22569c4d0bb9a2f547ede442cd02b9ba95eeaa6dae426f180022dc37497f4685"></a>PARTY_FlyUp&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ae22569c4d0bb9a2f547ede442cd02b9bad2598d40d3ab2a68c1f6d665d1c5cd38"></a>PARTY_FlyDown&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ae22569c4d0bb9a2f547ede442cd02b9bad48d0b3396be46a1eddb780bfbbdb1bd"></a>PARTY_Land&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ae22569c4d0bb9a2f547ede442cd02b9ba4554047b9f09100dbbafa31a6aac9bd3"></a>PARTY_RunForward&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ae22569c4d0bb9a2f547ede442cd02b9ba18b584268c26076a3feadae59e1c992b"></a>PARTY_RunBackward&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ae22569c4d0bb9a2f547ede442cd02b9ba277ee913e22ee1d1e925552d71d7742d"></a>PARTY_FastTurnLeft&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ae22569c4d0bb9a2f547ede442cd02b9bac9f1c75823fb84b30d4eb96fe3646142"></a>PARTY_FastTurnRight&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ae22569c4d0bb9a2f547ede442cd02b9ba5d8e496dde6817b2b814a3fab9dfa95f"></a>PARTY_dword&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/d38/_party_8h_source.html">Party.h</a> строка <a class="el" href="../../db/d38/_party_8h_source.html#l00094">94</a></p>
+<div class="fragment"><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                 : <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> {</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#ae22569c4d0bb9a2f547ede442cd02b9ba78abe3d01861684ef7d3e860083cd75b">PARTY_INVALID</a> = 0,</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#ae22569c4d0bb9a2f547ede442cd02b9bab6899ebff5771a5422118e3b6e026e60">PARTY_TurnLeft</a> = 0x1,</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#ae22569c4d0bb9a2f547ede442cd02b9ba88ca4edb9b0f641cdecd64f7b67a3f5f">PARTY_TurnRight</a> = 0x2,</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#ae22569c4d0bb9a2f547ede442cd02b9bad65778804e1010e5e928ee715e1ba51a">PARTY_StrafeLeft</a> = 0x3,</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#ae22569c4d0bb9a2f547ede442cd02b9bad4ea271467e29fb978148d4adf8bb08b">PARTY_StrafeRight</a> = 0x4,</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#ae22569c4d0bb9a2f547ede442cd02b9badc7a4d713fe35144207975db42eae4e9">PARTY_WalkForward</a> = 0x5,</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#ae22569c4d0bb9a2f547ede442cd02b9ba64f6a03f9a52992802eb0efebca0ad9c">PARTY_WalkBackward</a> = 0x6,</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#ae22569c4d0bb9a2f547ede442cd02b9baa319c6d3681f7f4009f955f38b21d8b7">PARTY_LookUp</a> = 0x7,</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#ae22569c4d0bb9a2f547ede442cd02b9babc828745d9efc6eed08eac2ad9164422">PARTY_LookDown</a> = 0x8,</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#ae22569c4d0bb9a2f547ede442cd02b9ba24b2857af610a82656874589c4a84478">PARTY_CenterView</a> = 0x9,</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#ae22569c4d0bb9a2f547ede442cd02b9bab5420b0b560d4d213ffd656f8ac5f596">PARTY_unkA</a> = 0xA,</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#ae22569c4d0bb9a2f547ede442cd02b9ba610645fe137132373c9d4f66b3cf0738">PARTY_unkB</a> = 0xB,</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#ae22569c4d0bb9a2f547ede442cd02b9bad9c91444353cd06cc639b326338935ae">PARTY_Jump</a> = 0xC,</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#ae22569c4d0bb9a2f547ede442cd02b9ba95eeaa6dae426f180022dc37497f4685">PARTY_FlyUp</a> = 0xD,</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#ae22569c4d0bb9a2f547ede442cd02b9bad2598d40d3ab2a68c1f6d665d1c5cd38">PARTY_FlyDown</a> = 0xE,</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#ae22569c4d0bb9a2f547ede442cd02b9bad48d0b3396be46a1eddb780bfbbdb1bd">PARTY_Land</a> = 0xF,</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#ae22569c4d0bb9a2f547ede442cd02b9ba4554047b9f09100dbbafa31a6aac9bd3">PARTY_RunForward</a> = 0x10,</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#ae22569c4d0bb9a2f547ede442cd02b9ba18b584268c26076a3feadae59e1c992b">PARTY_RunBackward</a> = 0x11,</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#ae22569c4d0bb9a2f547ede442cd02b9ba277ee913e22ee1d1e925552d71d7742d">PARTY_FastTurnLeft</a> = 0x12,</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#ae22569c4d0bb9a2f547ede442cd02b9bac9f1c75823fb84b30d4eb96fe3646142">PARTY_FastTurnRight</a> = 0x13,</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#ae22569c4d0bb9a2f547ede442cd02b9ba5d8e496dde6817b2b814a3fab9dfa95f">PARTY_dword</a> = 0xFFFFFFFF</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;};</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a8bd3eeda5ec3780afeff00593e27b6f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bd3eeda5ec3780afeff00593e27b6f2">&#9670;&nbsp;</a></span>PartyAlignment</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="../../db/d38/_party_8h.html#a8bd3eeda5ec3780afeff00593e27b6f2">PartyAlignment</a> : <a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="a8bd3eeda5ec3780afeff00593e27b6f2a138a01d401a68aab61b07b596bb532a7"></a>PartyAlignment_Good&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8bd3eeda5ec3780afeff00593e27b6f2af9794c109d91984889aa4427dd2b45b9"></a>PartyAlignment_Neutral&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8bd3eeda5ec3780afeff00593e27b6f2a5a3e1b0ba1793049451900a1e065630d"></a>PartyAlignment_Evil&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/d38/_party_8h_source.html">Party.h</a> строка <a class="el" href="../../db/d38/_party_8h_source.html#l00133">133</a></p>
+<div class="fragment"><div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;                                  : <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> {</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#a8bd3eeda5ec3780afeff00593e27b6f2a138a01d401a68aab61b07b596bb532a7">PartyAlignment_Good</a> = 0,</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#a8bd3eeda5ec3780afeff00593e27b6f2af9794c109d91984889aa4427dd2b45b9">PartyAlignment_Neutral</a> = 1,</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <a class="code" href="../../db/d38/_party_8h.html#a8bd3eeda5ec3780afeff00593e27b6f2a5a3e1b0ba1793049451900a1e065630d">PartyAlignment_Evil</a> = 2</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;} <a class="code" href="../../db/d38/_party_8h.html#a8bd3eeda5ec3780afeff00593e27b6f2">PartyAlignment</a>;</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Функции</h2>
+<a id="a4e3b1773dfc5d7a21fe51039de25d2f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e3b1773dfc5d7a21fe51039de25d2f9">&#9670;&nbsp;</a></span>TestPartyQuestBit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TestPartyQuestBit </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2">PARTY_QUEST_BITS</a>&#160;</td>
+          <td class="paramname"><em>bit</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/db4/_party_8cpp_source.html">Party.cpp</a> строка <a class="el" href="../../da/db4/_party_8cpp_source.html#l00917">917</a></p>
+<div class="fragment"><div class="line"><a name="l00917"></a><span class="lineno">  917</span>&#160;                                             {</div>
+<div class="line"><a name="l00918"></a><span class="lineno">  918</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../da/db4/_party_8cpp.html#aa98e661066fa419e8f3b18a3fb7c1bb2">_449B57_test_bit</a>(<a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#ab5b1378cc25e8c4deb49847ead3e7187">_quest_bits</a>, bit);</div>
+<div class="line"><a name="l00919"></a><span class="lineno">  919</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../da/db4/_party_8cpp_source.html#l01185">_449B57_test_bit()</a>, <a class="el" href="../../db/d38/_party_8h_source.html#l00291">Party::_quest_bits</a> и <a class="el" href="../../da/db4/_party_8cpp_source.html#l00030">pParty</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d1/d3f/_decoration_8cpp_source.html#l00311">LevelDecoration::IsObeliskChestActive()</a>.</p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../db/d38/_party_8h_a4e3b1773dfc5d7a21fe51039de25d2f9_cgraph.svg" width="311" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../db/d38/_party_8h_a4e3b1773dfc5d7a21fe51039de25d2f9_icgraph.svg" width="363" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a6327fa16a015add5509d93cc738c035b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6327fa16a015add5509d93cc738c035b">&#9670;&nbsp;</a></span>Rest()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> Rest </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>uHoursToSleep</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/db4/_party_8cpp_source.html">Party.cpp</a> строка <a class="el" href="../../da/db4/_party_8cpp_source.html#l00857">857</a></p>
+<div class="fragment"><div class="line"><a name="l00857"></a><span class="lineno">  857</span>&#160;                                    {  <span class="comment">// this is passed mins not hours</span></div>
+<div class="line"><a name="l00858"></a><span class="lineno">  858</span>&#160;    <span class="keyword">auto</span> rest_time = <a class="code" href="../../df/dc2/struct_game_time.html">GameTime</a>(0, uMinsToRest);</div>
+<div class="line"><a name="l00859"></a><span class="lineno">  859</span>&#160; </div>
+<div class="line"><a name="l00860"></a><span class="lineno">  860</span>&#160;    <span class="keywordflow">if</span> (uMinsToRest &gt; 240) <a class="code" href="../../da/d35/struct_actor.html#a0cccbcf5491285664669a25726646402">Actor::InitializeActors</a>();</div>
+<div class="line"><a name="l00861"></a><span class="lineno">  861</span>&#160; </div>
+<div class="line"><a name="l00862"></a><span class="lineno">  862</span>&#160;    <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a2e22e5307901cb1acb688185168b6161">GetPlayingTime</a>() += rest_time;</div>
+<div class="line"><a name="l00863"></a><span class="lineno">  863</span>&#160; </div>
+<div class="line"><a name="l00864"></a><span class="lineno">  864</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt;= 4; i++) {</div>
+<div class="line"><a name="l00865"></a><span class="lineno">  865</span>&#160;        <a class="code" href="../../d2/d82/_player_8cpp.html#abac7ac837ed00fe097135a9a7573347a">pPlayers</a>[i]-&gt;Recover(rest_time);  <span class="comment">// ??</span></div>
+<div class="line"><a name="l00866"></a><span class="lineno">  866</span>&#160;    }</div>
+<div class="line"><a name="l00867"></a><span class="lineno">  867</span>&#160; </div>
+<div class="line"><a name="l00868"></a><span class="lineno">  868</span>&#160;    <a class="code" href="../../d4/d68/_engine_8cpp.html#a79dc644d7866ee9c87c3774a8fab9af6">_494035_timed_effects__water_walking_damage__etc</a>();</div>
+<div class="line"><a name="l00869"></a><span class="lineno">  869</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l01623">_494035_timed_effects__water_walking_damage__etc()</a>, <a class="el" href="../../db/d38/_party_8h_source.html#l00230">Party::GetPlayingTime()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l03334">Actor::InitializeActors()</a>, <a class="el" href="../../da/db4/_party_8cpp_source.html#l00030">pParty</a> и <a class="el" href="../../d2/d82/_player_8cpp_source.html#l00046">pPlayers</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d7/db5/_game_8cpp_source.html#l00322">Application::Game::EventLoop()</a> и <a class="el" href="../../da/db4/_party_8cpp_source.html#l00899">Party::Sleep8Hours()</a>.</p>
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../db/d38/_party_8h_a6327fa16a015add5509d93cc738c035b_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../db/d38/_party_8h_a6327fa16a015add5509d93cc738c035b_icgraph.svg" width="100%" height="378"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a599ef8a30dd8c1245d9bd515a1f27ecc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a599ef8a30dd8c1245d9bd515a1f27ecc">&#9670;&nbsp;</a></span>RestAndHeal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> RestAndHeal </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>uNumMinutes</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/db4/_party_8cpp_source.html">Party.cpp</a> строка <a class="el" href="../../da/db4/_party_8cpp_source.html#l00872">872</a></p>
+<div class="fragment"><div class="line"><a name="l00872"></a><span class="lineno">  872</span>&#160;                              {</div>
+<div class="line"><a name="l00873"></a><span class="lineno">  873</span>&#160;    <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a2e22e5307901cb1acb688185168b6161">GetPlayingTime</a>().<a class="code" href="../../df/dc2/struct_game_time.html#aeb3a47b5676007549eab9dadfe6d9867">AddMinutes</a>(minutes);</div>
+<div class="line"><a name="l00874"></a><span class="lineno">  874</span>&#160; </div>
+<div class="line"><a name="l00875"></a><span class="lineno">  875</span>&#160;    <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a410e9cc317caf355b1e3572e46c223a2">pHirelings</a>[0].bHasUsedTheAbility = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00876"></a><span class="lineno">  876</span>&#160;    <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a410e9cc317caf355b1e3572e46c223a2">pHirelings</a>[1].bHasUsedTheAbility = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00877"></a><span class="lineno">  877</span>&#160; </div>
+<div class="line"><a name="l00878"></a><span class="lineno">  878</span>&#160;    <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a0987d48199d987b0b87f2eecb29cf425">uCurrentTimeSecond</a> = <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a2e22e5307901cb1acb688185168b6161">GetPlayingTime</a>().<a class="code" href="../../df/dc2/struct_game_time.html#a2b06bc31a7d3a042d1addbcb9a5d3a58">GetSecondsFraction</a>();</div>
+<div class="line"><a name="l00879"></a><span class="lineno">  879</span>&#160;    <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#ab6b693dbf3da05e9c25839152a1ed28d">uCurrentMinute</a> = <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a2e22e5307901cb1acb688185168b6161">GetPlayingTime</a>().<a class="code" href="../../df/dc2/struct_game_time.html#a72d75830ae38cb9176ae7370f0b116a0">GetMinutesFraction</a>();</div>
+<div class="line"><a name="l00880"></a><span class="lineno">  880</span>&#160;    <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#ab1d902911ff77a09014f91157ae89d58">uCurrentHour</a> = <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a2e22e5307901cb1acb688185168b6161">GetPlayingTime</a>().<a class="code" href="../../df/dc2/struct_game_time.html#a52727e9719cc59a2bfedd0b56ee7d2ba">GetHoursOfDay</a>();</div>
+<div class="line"><a name="l00881"></a><span class="lineno">  881</span>&#160;    <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a639ea47a219242efb7eb9e6263e61e12">uCurrentMonthWeek</a> = <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a2e22e5307901cb1acb688185168b6161">GetPlayingTime</a>().<a class="code" href="../../df/dc2/struct_game_time.html#a3d3f93e6db6e0fc0b6c18db39f286551">GetWeeksOfMonth</a>();</div>
+<div class="line"><a name="l00882"></a><span class="lineno">  882</span>&#160;    <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a1e784ecf3cde874aa4c6a319d677cc36">uCurrentDayOfMonth</a> = <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a2e22e5307901cb1acb688185168b6161">GetPlayingTime</a>().<a class="code" href="../../df/dc2/struct_game_time.html#a641f4d3ee68d3353156b0291d1858745">GetDaysOfMonth</a>();</div>
+<div class="line"><a name="l00883"></a><span class="lineno">  883</span>&#160;    <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a09d03b453bb7e40a41e9244a7849e81d">uCurrentMonth</a> = <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a2e22e5307901cb1acb688185168b6161">GetPlayingTime</a>().<a class="code" href="../../df/dc2/struct_game_time.html#aae36e2f49426d2d6b1dae91b85cb45e7">GetMonthsOfYear</a>();</div>
+<div class="line"><a name="l00884"></a><span class="lineno">  884</span>&#160;    <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a1ab94ea5e0d694dbd0af19c41812ccd4">uCurrentYear</a> =</div>
+<div class="line"><a name="l00885"></a><span class="lineno">  885</span>&#160;        <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a2e22e5307901cb1acb688185168b6161">GetPlayingTime</a>().<a class="code" href="../../df/dc2/struct_game_time.html#a00951cb2332c791ffd8142e0e9425875">GetYears</a>() + <a class="code" href="../../d6/d5b/mm7__data_8cpp.html#a31e1cf50975dea688e44df739697248c">game_starting_year</a>;</div>
+<div class="line"><a name="l00886"></a><span class="lineno">  886</span>&#160;    <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a15bb93aa5fc3a568f217700224f4fc30">RestAndHeal</a>();</div>
+<div class="line"><a name="l00887"></a><span class="lineno">  887</span>&#160; </div>
+<div class="line"><a name="l00888"></a><span class="lineno">  888</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 4; i++) {</div>
+<div class="line"><a name="l00889"></a><span class="lineno">  889</span>&#160;        <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a25894a432feab69bcbbff2194bac47dd">pPlayers</a>[i].uTimeToRecovery = 0;</div>
+<div class="line"><a name="l00890"></a><span class="lineno">  890</span>&#160;        <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a25894a432feab69bcbbff2194bac47dd">pPlayers</a>[i].uNumDivineInterventionCastsThisDay = 0;</div>
+<div class="line"><a name="l00891"></a><span class="lineno">  891</span>&#160;        <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a25894a432feab69bcbbff2194bac47dd">pPlayers</a>[i].uNumArmageddonCasts = 0;</div>
+<div class="line"><a name="l00892"></a><span class="lineno">  892</span>&#160;        <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a25894a432feab69bcbbff2194bac47dd">pPlayers</a>[i].uNumFireSpikeCasts = 0;</div>
+<div class="line"><a name="l00893"></a><span class="lineno">  893</span>&#160;        <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a25894a432feab69bcbbff2194bac47dd">pPlayers</a>[i].field_1B3B = 0;</div>
+<div class="line"><a name="l00894"></a><span class="lineno">  894</span>&#160;    }</div>
+<div class="line"><a name="l00895"></a><span class="lineno">  895</span>&#160; </div>
+<div class="line"><a name="l00896"></a><span class="lineno">  896</span>&#160;    <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#ae0e2e8cbee9642f7a915e2d43a86e8c4">UpdatePlayersAndHirelingsEmotions</a>();</div>
+<div class="line"><a name="l00897"></a><span class="lineno">  897</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00045">GameTime::AddMinutes()</a>, <a class="el" href="../../d6/d5b/mm7__data_8cpp_source.html#l00193">game_starting_year</a>, <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00041">GameTime::GetDaysOfMonth()</a>, <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00039">GameTime::GetHoursOfDay()</a>, <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00038">GameTime::GetMinutesFraction()</a>, <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00043">GameTime::GetMonthsOfYear()</a>, <a class="el" href="../../db/d38/_party_8h_source.html#l00230">Party::GetPlayingTime()</a>, <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00037">GameTime::GetSecondsFraction()</a>, <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00042">GameTime::GetWeeksOfMonth()</a>, <a class="el" href="../../d0/d0e/_engine_2_time_8h_source.html#l00035">GameTime::GetYears()</a>, <a class="el" href="../../db/d38/_party_8h_source.html#l00311">Party::pHirelings</a>, <a class="el" href="../../da/db4/_party_8cpp_source.html#l00030">pParty</a>, <a class="el" href="../../db/d38/_party_8h_source.html#l00310">Party::pPlayers</a>, <a class="el" href="../../da/db4/_party_8cpp_source.html#l00793">Party::RestAndHeal()</a>, <a class="el" href="../../db/d38/_party_8h_source.html#l00274">Party::uCurrentDayOfMonth</a>, <a class="el" href="../../db/d38/_party_8h_source.html#l00275">Party::uCurrentHour</a>, <a class="el" href="../../db/d38/_party_8h_source.html#l00276">Party::uCurrentMinute</a>, <a class="el" href="../../db/d38/_party_8h_source.html#l00272">Party::uCurrentMonth</a>, <a class="el" href="../../db/d38/_party_8h_source.html#l00273">Party::uCurrentMonthWeek</a>, <a class="el" href="../../db/d38/_party_8h_source.html#l00277">Party::uCurrentTimeSecond</a>, <a class="el" href="../../db/d38/_party_8h_source.html#l00271">Party::uCurrentYear</a> и <a class="el" href="../../da/db4/_party_8cpp_source.html#l00657">Party::UpdatePlayersAndHirelingsEmotions()</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d7/db5/_game_8cpp_source.html#l00322">Application::Game::EventLoop()</a>, <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l02933">TrainingDialog()</a> и <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l01673">TravelByTransport()</a>.</p>
+<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../db/d38/_party_8h_a599ef8a30dd8c1245d9bd515a1f27ecc_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../db/d38/_party_8h_a599ef8a30dd8c1245d9bd515a1f27ecc_icgraph.svg" width="100%" height="416"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a6b4bc5b810c765998d778c19b917eb52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b4bc5b810c765998d778c19b917eb52">&#9670;&nbsp;</a></span>GetTravelTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GetTravelTime </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/db4/_party_8cpp_source.html">Party.cpp</a> строка <a class="el" href="../../da/db4/_party_8cpp_source.html#l01171">1171</a></p>
+<div class="fragment"><div class="line"><a name="l01171"></a><span class="lineno"> 1171</span>&#160;                    {</div>
+<div class="line"><a name="l01172"></a><span class="lineno"> 1172</span>&#160;    <span class="keywordtype">signed</span> <span class="keywordtype">int</span> new_travel_time;  <span class="comment">// esi@1</span></div>
+<div class="line"><a name="l01173"></a><span class="lineno"> 1173</span>&#160; </div>
+<div class="line"><a name="l01174"></a><span class="lineno"> 1174</span>&#160;    new_travel_time = <a class="code" href="../../d6/d5b/mm7__data_8cpp.html#a16ee6f1a1afac17ced62271983692cd3">uDefaultTravelTime_ByFoot</a>;</div>
+<div class="line"><a name="l01175"></a><span class="lineno"> 1175</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../d1/d6c/_n_p_c_8cpp.html#a40d19895c574dba82a55ee7b3031f20b">CheckHiredNPCSpeciality</a>(<a class="code" href="../../d9/dbc/_n_p_c_8h.html#acaaa8b5b48efcd871d20e4e373884599aa73051e38214e2328e22c482b446defd">Guide</a>)) --new_travel_time;</div>
+<div class="line"><a name="l01176"></a><span class="lineno"> 1176</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../d1/d6c/_n_p_c_8cpp.html#a40d19895c574dba82a55ee7b3031f20b">CheckHiredNPCSpeciality</a>(<a class="code" href="../../d9/dbc/_n_p_c_8h.html#acaaa8b5b48efcd871d20e4e373884599ab0872aa49f608e4e7bc85f08167ac350">Tracker</a>)) new_travel_time -= 2;</div>
+<div class="line"><a name="l01177"></a><span class="lineno"> 1177</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../d1/d6c/_n_p_c_8cpp.html#a40d19895c574dba82a55ee7b3031f20b">CheckHiredNPCSpeciality</a>(<a class="code" href="../../d9/dbc/_n_p_c_8h.html#acaaa8b5b48efcd871d20e4e373884599a2e868c33b66a8999b838783a3eb1a243">Pathfinder</a>)) new_travel_time -= 3;</div>
+<div class="line"><a name="l01178"></a><span class="lineno"> 1178</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../d1/d6c/_n_p_c_8cpp.html#a40d19895c574dba82a55ee7b3031f20b">CheckHiredNPCSpeciality</a>(<a class="code" href="../../d9/dbc/_n_p_c_8h.html#acaaa8b5b48efcd871d20e4e373884599a45f4e61dfb1852d701d865458d61a6ed">Explorer</a>)) --new_travel_time;</div>
+<div class="line"><a name="l01179"></a><span class="lineno"> 1179</span>&#160;    <span class="keywordflow">if</span> (new_travel_time &lt; 1) new_travel_time = 1;</div>
+<div class="line"><a name="l01180"></a><span class="lineno"> 1180</span>&#160;    <span class="keywordflow">return</span> new_travel_time;</div>
+<div class="line"><a name="l01181"></a><span class="lineno"> 1181</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d1/d6c/_n_p_c_8cpp_source.html#l00754">CheckHiredNPCSpeciality()</a>, <a class="el" href="../../d9/dbc/_n_p_c_8h_source.html#l00049">Explorer</a>, <a class="el" href="../../d9/dbc/_n_p_c_8h_source.html#l00010">Guide</a>, <a class="el" href="../../d9/dbc/_n_p_c_8h_source.html#l00012">Pathfinder</a>, <a class="el" href="../../d9/dbc/_n_p_c_8h_source.html#l00011">Tracker</a> и <a class="el" href="../../d6/d5b/mm7__data_8cpp_source.html#l00696">uDefaultTravelTime_ByFoot</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d7/db5/_game_8cpp_source.html#l00322">Application::Game::EventLoop()</a> и <a class="el" href="../../de/d09/_u_i_transition_8cpp_source.html#l00227">GUIWindow_Travel::Update()</a>.</p>
+<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../db/d38/_party_8h_a6b4bc5b810c765998d778c19b917eb52_cgraph.svg" width="336" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-7-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-7-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../db/d38/_party_8h_a6b4bc5b810c765998d778c19b917eb52_icgraph.svg" width="100%" height="378"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="aa01264472ea7dcb05880846fec64b7c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa01264472ea7dcb05880846fec64b7c3">&#9670;&nbsp;</a></span>_449B57_test_bit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool _449B57_test_bit </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *&#160;</td>
+          <td class="paramname"><em>a1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a>&#160;</td>
+          <td class="paramname"><em>a2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2dcd1576e011d3d4ff119d155742c5ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2dcd1576e011d3d4ff119d155742c5ef">&#9670;&nbsp;</a></span>_449B7E_toggle_bit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> _449B7E_toggle_bit </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char *&#160;</td>
+          <td class="paramname"><em>pArray</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a>&#160;</td>
+          <td class="paramname"><em>a2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td>
+          <td class="paramname"><em>bToggle</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Переменные</h2>
+<a id="a638b1d8b985f1c7f8b69f2d81286f98e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a638b1d8b985f1c7f8b69f2d81286f98e">&#9670;&nbsp;</a></span>pParty</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d14/struct_party.html">Party</a>* pParty</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/db4/_party_8cpp_source.html">Party.cpp</a> строка <a class="el" href="../../da/db4/_party_8cpp_source.html#l00030">30</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../dc/d5b/_turn_engine_8cpp_source.html#l00513">stru262_TurnBased::_406457()</a>, <a class="el" href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00235">GUIWindow::_41D73D_draw_buff_tooltip()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l04192">Actor::_427102_IsOkToCastSpell()</a>, <a class="el" href="../../d9/dd3/_cast_spell_info_8cpp_source.html#l04369">_42777D_CastSpell_UseWand_ShootArrow()</a>, <a class="el" href="../../d9/dd3/_cast_spell_info_8cpp_source.html#l00046">CastSpellInfoHelpers::_427E01_cast_spell()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l07643">Player::_42ECB5_PlayerAttacksActor()</a>, <a class="el" href="../../d9/d99/_items_8cpp_source.html#l00042">ItemGen::_439DF3_get_additional_damage()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l05298">_45063B_spawn_some_monster()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l01365">Engine::_461103_load_level_sub()</a>, <a class="el" href="../../d9/ded/_sprite_object_8cpp_source.html#l00909">SpriteObject::_46BEF1_apply_spells_aoe()</a>, <a class="el" href="../../d9/ded/_sprite_object_8cpp_source.html#l01017">_46BFFA_update_spell_fx()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l04790">_46EF01_collision_chech_player()</a>, <a class="el" href="../../d1/d6c/_n_p_c_8cpp_source.html#l00273">NPCStats::_476C60_on_load_game()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l01929">_493938_regenerate()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l01623">_494035_timed_effects__water_walking_damage__etc()</a>, <a class="el" href="../../dc/dce/_g_u_i_window_8cpp_source.html#l01846">_4B254D_SkillMasteryTeacher()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l02230">Actor::_SelectTarget()</a>, <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l01077">_set_3d_modelview_matrix()</a>, <a class="el" href="../../dd/da4/_viewport_8cpp_source.html#l00250">ActorInteraction()</a>, <a class="el" href="../../da/db4/_party_8cpp_source.html#l00287">Party::AddGold()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l05658">Player::AddVariable()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l01148">Actor::AI_MeleeAttack()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l01626">Actor::AI_MissileAttack1()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l01561">Actor::AI_MissileAttack2()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l02003">Actor::AI_Pursue1()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l02114">Actor::AI_Pursue2()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l02171">Actor::AI_Pursue3()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l00199">Actor::AI_SpellAttack()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l01486">Actor::AI_SpellAttack1()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l01412">Actor::AI_SpellAttack2()</a>, <a class="el" href="../../dc/d5b/_turn_engine_8cpp_source.html#l00260">stru262_TurnBased::AITurnBasedAction()</a>, <a class="el" href="../../d9/d21/_u_i_shops_8cpp_source.html#l00648">AlchemyMagicShopWares()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l01223">Actor::ApplyFineForKillingPeasant()</a>, <a class="el" href="../../dc/d5b/_turn_engine_8cpp_source.html#l00101">stru262_TurnBased::ApplyPlayerAction()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l05320">area_of_effect__damage_evaluate()</a>, <a class="el" href="../../da/deb/_u_i_arena_8cpp_source.html#l00034">Arena_SelectionFightLevel()</a>, <a class="el" href="../../da/deb/_u_i_arena_8cpp_source.html#l00095">ArenaFight()</a>, <a class="el" href="../../d9/d21/_u_i_shops_8cpp_source.html#l00483">ArmorShopWares()</a>, <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l03991">BackToHouseMenu()</a>, <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l02074">BankDialog()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l04655">BLV_ProcessPartyActions()</a>, <a class="el" href="../../d1/d3f/_spellbook_8cpp_source.html#l00307">BookUI_Spellbook_DrawCurrentSchoolBackground()</a>, <a class="el" href="../../dc/dce/_g_u_i_window_8cpp_source.html#l02196">BuildDialogueString()</a>, <a class="el" href="../../dd/d97/stru10_8cpp_source.html#l00235">stru10::CalcFaceBounding()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l00564">Player::CanEquip_RaceAndAlignmentCheck()</a>, <a class="el" href="../../dd/da4/_viewport_8cpp_source.html#l00127">ViewingParams::CenterOnPartyZoomIn()</a>, <a class="el" href="../../dd/da4/_viewport_8cpp_source.html#l00117">ViewingParams::CenterOnPartyZoomOut()</a>, <a class="el" href="../../db/dd5/_u_i_character_8cpp_source.html#l00812">GUIWindow_CharacterRecord::CharacterUI_AwardsTab_Draw()</a>, <a class="el" href="../../d6/ded/_u_i_popup_8cpp_source.html#l01044">CharacterUI_GetSkillDescText()</a>, <a class="el" href="../../db/dd5/_u_i_character_8cpp_source.html#l01941">CharacterUI_LoadPaperdollTextures()</a>, <a class="el" href="../../db/dd5/_u_i_character_8cpp_source.html#l02217">GUIWindow_CharacterRecord::CharacterUI_SkillsTab_CreateButtons()</a>, <a class="el" href="../../d6/ded/_u_i_popup_8cpp_source.html#l01153">CharacterUI_StatsTab_ShowHint()</a>, <a class="el" href="../../df/d5c/_events_8cpp_source.html#l01215">check_event_triggers()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l04034">CheckActors_proximity()</a>, <a class="el" href="../../d1/d6c/_n_p_c_8cpp_source.html#l00754">CheckHiredNPCSpeciality()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l08177">Player::CleanupBeacons()</a>, <a class="el" href="../../dc/dce/_g_u_i_window_8cpp_source.html#l01412">ClickNPCTopic()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l04645">Player::CompareVariable()</a>, <a class="el" href="../../d1/d6c/_n_p_c_8cpp_source.html#l01052">ContractSelectText()</a>, <a class="el" href="../../da/db4/_party_8cpp_source.html#l00311">Party::CreateDefaultParty()</a>, <a class="el" href="../../de/da8/_u_i_party_creation_8cpp_source.html#l00066">CreateParty_EventLoop()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l03379">Actor::DamageMonsterFromParty()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l06928">DamagePlayerFromMonster()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l01906">Actor::Die()</a>, <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l01389">OutdoorLocation::DoGetTile()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l00796">DoPrepareWorld()</a>, <a class="el" href="../../d4/d9d/_save_load_8cpp_source.html#l00514">DoSavegame()</a>, <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l00160">OutdoorLocation::Draw()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l00166">Engine::Draw()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00322">IndoorLocation::Draw()</a>, <a class="el" href="../../d0/d67/_map_book_8cpp_source.html#l00180">DrawBook_Map_sub()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l00252">Engine::DrawGUI()</a>, <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l01572">RenderOpenGL::DrawOutdoorSkyPolygon()</a>, <a class="el" href="../../de/d68/_overlays_8cpp_source.html#l00067">OtherOverlayList::DrawTurnBasedIcon()</a>, <a class="el" href="../../dd/da4/_viewport_8cpp_source.html#l00289">Engine::DropHeldItem()</a>, <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l00826">EnterHouse()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l06787">Player::EquipBody()</a>, <a class="el" href="../../da/df3/_spells_8cpp_source.html#l00429">EventCastSpell()</a>, <a class="el" href="../../df/d21/_game_menu_8cpp_source.html#l00070">Application::Menu::EventLoop()</a>, <a class="el" href="../../d7/db5/_game_8cpp_source.html#l00322">Application::Game::EventLoop()</a>, <a class="el" href="../../df/d5c/_events_8cpp_source.html#l00260">EventProcessor()</a>, <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l00084">OutdoorLocation::ExecDraw()</a>, <a class="el" href="../../d9/ded/_sprite_object_8cpp_source.html#l00788">SpriteObject::ExplosionTraps()</a>, <a class="el" href="../../d7/db5/_game_8cpp_source.html#l00255">Game_StartHirelingDialogue()</a>, <a class="el" href="../../d7/db5/_game_8cpp_source.html#l02704">Application::Game::GameLoop()</a>, <a class="el" href="../../d3/d70/_arcomage_2_arcomage_8cpp_source.html#l02801">GameResultsApply()</a>, <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l01057">GameUI_CharacterQuickRecord_Draw()</a>, <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l01179">GameUI_DrawFoodAndGold()</a>, <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l02236">GameUI_DrawHiredNPCs()</a>, <a class="el" href="../../d6/ded/_u_i_popup_8cpp_source.html#l00168">GameUI_DrawItemInfo()</a>, <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l01197">GameUI_DrawLifeManaBars()</a>, <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l01916">GameUI_DrawMinimap()</a>, <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l00891">GameUI_DrawNPCPopup()</a>, <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l01699">GameUI_DrawPartySpells()</a>, <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l01766">GameUI_DrawPortraits()</a>, <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l01154">GameUI_DrawRightPanelItems()</a>, <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l02205">GameUI_DrawTorchlightAndWizardEye()</a>, <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l01001">GameUI_GetMinimapHintText()</a>, <a class="el" href="../../dd/d76/_u_i_dialogue_8cpp_source.html#l00025">GameUI_InitializeDialogue()</a>, <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l00170">GameUI_LoadPlayerPortraintsAndVoices()</a>, <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l00796">GameUI_OnPlayerPortraitLeftClick()</a>, <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l01266">GameUI_WritePointedObjectStatusString()</a>, <a class="el" href="../../d9/d99/_items_8cpp_source.html#l00978">ItemGen::GenerateArtifact()</a>, <a class="el" href="../../d9/d99/_items_8cpp_source.html#l00680">ItemsTable::GenerateItem()</a>, <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l04246">GenerateSpecialShopItems()</a>, <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l04298">GenerateStandartShopItems()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l04114">GetActorTintColor()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l02203">Player::GetAttackRecoveryTime()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l02468">Player::GetBaseAge()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l00325">Player::GetConditionDaysPassed()</a>, <a class="el" href="../../df/d8d/_calendar_book_8cpp_source.html#l00049">GetDayPart()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l00890">Actor::GetDirectionInfo()</a>, <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l00172">OutdoorLocation::GetFogDensityByTime()</a>, <a class="el" href="../../d1/d6c/_n_p_c_8cpp_source.html#l01322">GetGreetType()</a>, <a class="el" href="../../d9/d21/_u_i_shops_8cpp_source.html#l01654">GetHouseGoodbyeSpeech()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l02942">Player::GetMagicalBonus()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l00975">Player::GetMerchant()</a>, <a class="el" href="../../d1/d6c/_n_p_c_8cpp_source.html#l00099">GetNewNPCData()</a>, <a class="el" href="../../da/db4/_party_8cpp_source.html#l00166">Party::GetNextActiveCharacter()</a>, <a class="el" href="../../d1/d6c/_n_p_c_8cpp_source.html#l00043">GetNPCData()</a>, <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l00457">OutdoorLocation::GetNumFoodRequiredToRestInCurrentPos()</a>, <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l00330">OutdoorLocation::GetTravelDestination()</a>, <a class="el" href="../../da/db4/_party_8cpp_source.html#l00255">Party::GiveFood()</a>, <a class="el" href="../../da/db4/_party_8cpp_source.html#l00938">Party::GivePartyExp()</a>, <a class="el" href="../../d8/d67/_chest_8cpp_source.html#l00580">Chest::GrabItem()</a>, <a class="el" href="../../d4/d5b/_u_i_guilds_8cpp_source.html#l00027">GuildDialog()</a>, <a class="el" href="../../d3/d59/_lloyds_book_8cpp_source.html#l00023">GUIWindow_LloydsBook::GUIWindow_LloydsBook()</a>, <a class="el" href="../../d0/d67/_map_book_8cpp_source.html#l00029">GUIWindow_MapBook::GUIWindow_MapBook()</a>, <a class="el" href="../../de/d09/_u_i_transition_8cpp_source.html#l00070">GUIWindow_Transition::GUIWindow_Transition()</a>, <a class="el" href="../../de/d09/_u_i_transition_8cpp_source.html#l00183">GUIWindow_Travel::GUIWindow_Travel()</a>, <a class="el" href="../../da/db4/_party_8cpp_source.html#l00216">Party::HasItem()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l06855">Player::HasItem()</a>, <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l00442">InitializaDialogueOptions()</a>, <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l00398">InitializaDialogueOptions_Tavern()</a>, <a class="el" href="../../d7/d51/_g_u_i_progress_bar_8cpp_source.html#l00022">GUIProgressBar::Initialize()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l03334">Actor::InitializeActors()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l01262">Render::InitializeFullscreen()</a>, <a class="el" href="../../d6/ded/_u_i_popup_8cpp_source.html#l01817">Inventory_ItemPopupAndAlchemy()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l06915">IsDwarfPresentInParty()</a>, <a class="el" href="../../d1/d3f/_decoration_8cpp_source.html#l00311">LevelDecoration::IsObeliskChestActive()</a>, <a class="el" href="../../d4/d1c/_conditions_8cpp_source.html#l00050">ConditionProcessor::IsPlayerAffected()</a>, <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l01900">IsTravelAvailable()</a>, <a class="el" href="../../dd/da4/_viewport_8cpp_source.html#l00224">ItemInteraction()</a>, <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l00980">OutdoorLocation::Load()</a>, <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l02143">OutdoorLocation::LoadActualSkyFrame()</a>, <a class="el" href="../../d4/d9d/_save_load_8cpp_source.html#l00077">LoadGame()</a>, <a class="el" href="../../d7/db5/_game_8cpp_source.html#l00134">Application::Game::Loop()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l04064">Actor::LootActor()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l04556">Actor::MakeActorAIList_BLV()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l04457">Actor::MakeActorAIList_ODM()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l00903">Engine::MM7_Initialize()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l01287">MM7Initialization()</a>, <a class="el" href="../../d6/ded/_u_i_popup_8cpp_source.html#l00563">MonsterPopup_Draw()</a>, <a class="el" href="../../dc/d5b/_turn_engine_8cpp_source.html#l00395">stru262_TurnBased::NextTurn()</a>, <a class="el" href="../../d1/d6c/_n_p_c_8cpp_source.html#l01227">NPC_EventProcessor()</a>, <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l03788">ODM_LoadAndInitialize()</a>, <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l02221">ODM_ProcessPartyActions()</a>, <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l02115">ODM_UpdateUserInputAndOther()</a>, <a class="el" href="../../d8/d67/_chest_8cpp_source.html#l00537">Chest::OnChestLeftClick()</a>, <a class="el" href="../../d7/db5/_game_8cpp_source.html#l00300">Application::Game::OnEscape()</a>, <a class="el" href="../../dd/da4/_viewport_8cpp_source.html#l00315">Engine::OnGameViewportClick()</a>, <a class="el" href="../../d9/ded/_sprite_object_8cpp_source.html#l00872">SpriteObject::OnInteraction()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l07294">Player::OnInventoryLeftClick()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l02327">OnMapLoad()</a>, <a class="el" href="../../d4/dff/_win_api_window_8cpp_source.html#l00565">WinApiWindow::OnOSMenu()</a>, <a class="el" href="../../db/dd5/_u_i_character_8cpp_source.html#l02712">OnPaperdollLeftClick()</a>, <a class="el" href="../../dd/d76/_u_i_dialogue_8cpp_source.html#l00660">OnSelectNPCDialogueOption()</a>, <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l01047">OnSelectShopDialogueOption()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l02479">OnTimer()</a>, <a class="el" href="../../d8/d67/_chest_8cpp_source.html#l00041">Chest::Open()</a>, <a class="el" href="../../dc/dce/_g_u_i_window_8cpp_source.html#l01693">OracleDialogue()</a>, <a class="el" href="../../de/da8/_u_i_party_creation_8cpp_source.html#l00274">PartyCreationUI_Loop()</a>, <a class="el" href="../../de/da8/_u_i_party_creation_8cpp_source.html#l00856">PartyCreationUI_LoopInternal()</a>, <a class="el" href="../../de/da8/_u_i_party_creation_8cpp_source.html#l00051">PlayerCreation_Choose4Skills()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l00223">PlayerCreation_GetUnspentAttributePointCount()</a>, <a class="el" href="../../d3/df2/_audio_player_8cpp_source.html#l00195">AudioPlayer::PlaySound()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l02739">IndoorLocation::PrepareActorRenderList_BLV()</a>, <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l01722">OutdoorLocation::PrepareActorsDrawList()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l03042">IndoorLocation::PrepareDecorationsRenderList_BLV()</a>, <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l00695">RenderOpenGL::PrepareDecorationsRenderList_ODM()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l00713">Render::PrepareDecorationsRenderList_ODM()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00102">PrepareDrawLists_BLV()</a>, <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l00978">PrepareHouse()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l02310">PrepareToLoadBLV()</a>, <a class="el" href="../../d1/d10/_u_i_rest_8cpp_source.html#l00054">PrepareToLoadRestUI()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l00781">PrepareWorld()</a>, <a class="el" href="../../d9/d5c/_keyboard_8cpp_source.html#l00332">Keyboard::ProcessInputActions()</a>, <a class="el" href="../../d7/d54/_mouse_8cpp_source.html#l00206">Mouse::ReadCursorWithItem()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l02573">Player::Recover()</a>, <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l04396">GUIWindow_House::Release()</a>, <a class="el" href="../../d7/d54/_mouse_8cpp_source.html#l00025">Mouse::RemoveHoldingItem()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l01342">Engine::ResetCursor_Palettes_LODs_Level_Audio_SFT_Windows()</a>, <a class="el" href="../../da/db4/_party_8cpp_source.html#l00857">Rest()</a>, <a class="el" href="../../da/db4/_party_8cpp_source.html#l00793">Party::RestAndHeal()</a>, <a class="el" href="../../da/db4/_party_8cpp_source.html#l00872">RestAndHeal()</a>, <a class="el" href="../../d4/d9d/_save_load_8cpp_source.html#l00238">SaveGame()</a>, <a class="el" href="../../d4/d9d/_save_load_8cpp_source.html#l00566">SaveNewGame()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l08186">Player::SetBeacon()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l00612">Player::SetCondition()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l01590">SetDecorationSprite()</a>, <a class="el" href="../../da/db4/_party_8cpp_source.html#l00239">Party::SetFood()</a>, <a class="el" href="../../da/db4/_party_8cpp_source.html#l00281">Party::SetGold()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l02593">Player::SetRecoveryTime()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l05061">Player::SetVariable()</a>, <a class="el" href="../../d9/d21/_u_i_shops_8cpp_source.html#l01344">ShowPopupShopItem()</a>, <a class="el" href="../../dc/d5b/_turn_engine_8cpp_source.html#l00024">stru262_TurnBased::SortTurnQueue()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l04922">SpawnActor()</a>, <a class="el" href="../../d4/d5b/_u_i_guilds_8cpp_source.html#l00298">SpellBookGenerator()</a>, <a class="el" href="../../dc/d5b/_turn_engine_8cpp_source.html#l00108">stru262_TurnBased::Start()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l01385">Actor::StealFrom()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l01667">Player::StealFromActor()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l04688">sub_4070EF_prolly_detect_player()</a>, <a class="el" href="../../da/db4/_party_8cpp_source.html#l01048">Party::sub_421B2C_PlaceInInventory_or_DropPickedItem()</a>, <a class="el" href="../../dd/d76/_u_i_dialogue_8cpp_source.html#l00615">sub_4451A8_press_any_key()</a>, <a class="el" href="../../df/d5c/_events_8cpp_source.html#l01247">sub_4465DF_check_season()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l01538">sub_44861E_set_texture()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l01558">sub_44892E_set_faces_bit()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l04969">sub_44FA4C_spawn_light_elemental()</a>, <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l03898">sub_47C3D7_get_fog_specular()</a>, <a class="el" href="../../d9/d21/_u_i_shops_8cpp_source.html#l01709">sub_4B1447_party_fine()</a>, <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l03266">sub_4B6478()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l06230">Player::SubtractVariable()</a>, <a class="el" href="../../da/db4/_party_8cpp_source.html#l00245">Party::TakeFood()</a>, <a class="el" href="../../da/db4/_party_8cpp_source.html#l00292">Party::TakeGold()</a>, <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l02200">TavernDialog()</a>, <a class="el" href="../../dd/d31/_map_info_8cpp_source.html#l00308">TeleportToStartingPoint()</a>, <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l02599">TempleDialog()</a>, <a class="el" href="../../da/db4/_party_8cpp_source.html#l00917">TestPartyQuestBit()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00846">IndoorLocation::ToggleLight()</a>, <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l01915">TownHallDialog()</a>, <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l02933">TrainingDialog()</a>, <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l01673">TravelByTransport()</a>, <a class="el" href="../../d7/d54/_mouse_8cpp_source.html#l00258">Mouse::UI_OnMouseLeftClick()</a>, <a class="el" href="../../d6/ded/_u_i_popup_8cpp_source.html#l01459">UI_OnMouseRightClick()</a>, <a class="el" href="../../d9/d21/_u_i_shops_8cpp_source.html#l00874">UIShop_Buy_Identify_Repair()</a>, <a class="el" href="../../dd/d41/_journal_book_8cpp_source.html#l00093">GUIWindow_JournalBook::Update()</a>, <a class="el" href="../../dc/dda/_u_i_quick_reference_8cpp_source.html#l00038">GUIWindow_QuickReference::Update()</a>, <a class="el" href="../../d3/d59/_lloyds_book_8cpp_source.html#l00060">GUIWindow_LloydsBook::Update()</a>, <a class="el" href="../../df/d8d/_calendar_book_8cpp_source.html#l00060">GUIWindow_CalendarBook::Update()</a>, <a class="el" href="../../dc/d90/_autonotes_book_8cpp_source.html#l00106">GUIWindow_AutonotesBook::Update()</a>, <a class="el" href="../../db/d9f/_town_portal_book_8cpp_source.html#l00048">GUIWindow_TownPortalBook::Update()</a>, <a class="el" href="../../d0/d67/_map_book_8cpp_source.html#l00081">GUIWindow_MapBook::Update()</a>, <a class="el" href="../../dd/d76/_u_i_dialogue_8cpp_source.html#l00238">GUIWindow_Dialogue::Update()</a>, <a class="el" href="../../d1/d10/_u_i_rest_8cpp_source.html#l00123">GUIWindow_Rest::Update()</a>, <a class="el" href="../../de/d09/_u_i_transition_8cpp_source.html#l00227">GUIWindow_Travel::Update()</a>, <a class="el" href="../../de/da8/_u_i_party_creation_8cpp_source.html#l00303">GUIWindow_PartyCreation::Update()</a>, <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l02496">GUIWindow_DebugMenu::Update()</a>, <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l04381">GUIWindow_House::Update()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l02745">Actor::UpdateActorAI()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l01718">UpdateActors_BLV()</a>, <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l03393">UpdateActors_ODM()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l04955">UpdateObjects()</a>, <a class="el" href="../../da/db4/_party_8cpp_source.html#l00657">Party::UpdatePlayersAndHirelingsEmotions()</a>, <a class="el" href="../../d3/df2/_audio_player_8cpp_source.html#l00322">AudioPlayer::UpdateSounds()</a>, <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l00429">OutdoorLocation::UpdateSunlightVectors()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l03850">Player::UseItem_DrinkPotion_etc()</a>, <a class="el" href="../../d1/d6c/_n_p_c_8cpp_source.html#l01378">UseNPCSkill()</a>, <a class="el" href="../../d9/d21/_u_i_shops_8cpp_source.html#l00327">WeaponShopWares()</a> и <a class="el" href="../../da/db4/_party_8cpp_source.html#l00598">Party::Yell()</a>.</p>
+
+</div>
+</div>
+<a id="ac491d2aeba0335bbbe632bdc3c04cffe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac491d2aeba0335bbbe632bdc3c04cffe">&#9670;&nbsp;</a></span>pPartyActionQueue</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="../../da/d47/struct_action_queue.html">ActionQueue</a>* pPartyActionQueue</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/db4/_party_8cpp_source.html">Party.cpp</a> строка <a class="el" href="../../da/db4/_party_8cpp_source.html#l00032">32</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l04655">BLV_ProcessPartyActions()</a>, <a class="el" href="../../d7/db5/_game_8cpp_source.html#l02704">Application::Game::GameLoop()</a>, <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l02221">ODM_ProcessPartyActions()</a> и <a class="el" href="../../d9/d5c/_keyboard_8cpp_source.html#l00332">Keyboard::ProcessInputActions()</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="a_s_d_l__config_8h_html_a273cf69d639a59973b6019625df33e30"><div class="ttname"><a href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a></div><div class="ttdeci">unsigned __int16 uint16_t</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d8f/_s_d_l__config_8h_source.html#l00037">SDL_config.h:37</a></div></div>
+<div class="ttc" id="a_party_8h_html_a7ba652169aade3baa03ee56a91cb5dc1a243fa0999bbd987120b6ae79172e321d"><div class="ttname"><a href="../../db/d38/_party_8h.html#a7ba652169aade3baa03ee56a91cb5dc1a243fa0999bbd987120b6ae79172e321d">PARTY_FLAGS_1_FALLING</a></div><div class="ttdeci">@ PARTY_FLAGS_1_FALLING</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00058">Party.h:58</a></div></div>
+<div class="ttc" id="astruct_party_html_a0987d48199d987b0b87f2eecb29cf425"><div class="ttname"><a href="../../d0/d14/struct_party.html#a0987d48199d987b0b87f2eecb29cf425">Party::uCurrentTimeSecond</a></div><div class="ttdeci">unsigned int uCurrentTimeSecond</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00277">Party.h:277</a></div></div>
+<div class="ttc" id="a_party_8h_html_a8bd3eeda5ec3780afeff00593e27b6f2"><div class="ttname"><a href="../../db/d38/_party_8h.html#a8bd3eeda5ec3780afeff00593e27b6f2">PartyAlignment</a></div><div class="ttdeci">PartyAlignment</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00133">Party.h:133</a></div></div>
+<div class="ttc" id="a_party_8h_html_a8bd3eeda5ec3780afeff00593e27b6f2a138a01d401a68aab61b07b596bb532a7"><div class="ttname"><a href="../../db/d38/_party_8h.html#a8bd3eeda5ec3780afeff00593e27b6f2a138a01d401a68aab61b07b596bb532a7">PartyAlignment::PartyAlignment_Good</a></div><div class="ttdeci">@ PartyAlignment_Good</div></div>
+<div class="ttc" id="a_party_8h_html_a7935db13258ffa8a17fd65aa633b80dfab13703d70e23ca64a2f30328ef02420a"><div class="ttname"><a href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80dfab13703d70e23ca64a2f30328ef02420a">PARTY_BUFF_DAY_OF_GODS</a></div><div class="ttdeci">@ PARTY_BUFF_DAY_OF_GODS</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00073">Party.h:73</a></div></div>
+<div class="ttc" id="a_party_8h_html_a7935db13258ffa8a17fd65aa633b80dfa1bd052767f3c587e3d020387b829696a"><div class="ttname"><a href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80dfa1bd052767f3c587e3d020387b829696a">PARTY_BUFF_SHIELD</a></div><div class="ttdeci">@ PARTY_BUFF_SHIELD</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00085">Party.h:85</a></div></div>
+<div class="ttc" id="a_party_8h_html_a90eae1c60a6a092f2d2ea08550f6cdb2a9622f4f7f6f457c99f3475df56010682"><div class="ttname"><a href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2a9622f4f7f6f457c99f3475df56010682">PARTY_QUEST_OBELISK_CELESTE</a></div><div class="ttdeci">@ PARTY_QUEST_OBELISK_CELESTE</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00034">Party.h:34</a></div></div>
+<div class="ttc" id="a_party_8h_html_a90eae1c60a6a092f2d2ea08550f6cdb2ae3673d56e453a3002b1a7a741209153e"><div class="ttname"><a href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2ae3673d56e453a3002b1a7a741209153e">PARTY_QUEST_FOUNTAIN_NIGHON</a></div><div class="ttdeci">@ PARTY_QUEST_FOUNTAIN_NIGHON</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00047">Party.h:47</a></div></div>
+<div class="ttc" id="a_party_8h_html_a8bd3eeda5ec3780afeff00593e27b6f2af9794c109d91984889aa4427dd2b45b9"><div class="ttname"><a href="../../db/d38/_party_8h.html#a8bd3eeda5ec3780afeff00593e27b6f2af9794c109d91984889aa4427dd2b45b9">PartyAlignment::PartyAlignment_Neutral</a></div><div class="ttdeci">@ PartyAlignment_Neutral</div></div>
+<div class="ttc" id="a_party_8h_html_a7ba652169aade3baa03ee56a91cb5dc1a10c54c69c3f257f5dc866fba216a009a"><div class="ttname"><a href="../../db/d38/_party_8h.html#a7ba652169aade3baa03ee56a91cb5dc1a10c54c69c3f257f5dc866fba216a009a">PARTY_FLAGS_1_ALERT_RED</a></div><div class="ttdeci">@ PARTY_FLAGS_1_ALERT_RED</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00059">Party.h:59</a></div></div>
+<div class="ttc" id="astruct_party_html_a09d03b453bb7e40a41e9244a7849e81d"><div class="ttname"><a href="../../d0/d14/struct_party.html#a09d03b453bb7e40a41e9244a7849e81d">Party::uCurrentMonth</a></div><div class="ttdeci">unsigned int uCurrentMonth</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00272">Party.h:272</a></div></div>
+<div class="ttc" id="astruct_party_html_a2e22e5307901cb1acb688185168b6161"><div class="ttname"><a href="../../d0/d14/struct_party.html#a2e22e5307901cb1acb688185168b6161">Party::GetPlayingTime</a></div><div class="ttdeci">GameTime &amp; GetPlayingTime()</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00230">Party.h:230</a></div></div>
+<div class="ttc" id="a_party_8h_html_a90eae1c60a6a092f2d2ea08550f6cdb2a1f82cec2820e6cfb0f834acae977cdce"><div class="ttname"><a href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2a1f82cec2820e6cfb0f834acae977cdce">PARTY_QUEST_EMERALD_PLATE_ACTIVE</a></div><div class="ttdeci">@ PARTY_QUEST_EMERALD_PLATE_ACTIVE</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00017">Party.h:17</a></div></div>
+<div class="ttc" id="a_party_8h_html_ae22569c4d0bb9a2f547ede442cd02b9bad65778804e1010e5e928ee715e1ba51a"><div class="ttname"><a href="../../db/d38/_party_8h.html#ae22569c4d0bb9a2f547ede442cd02b9bad65778804e1010e5e928ee715e1ba51a">PARTY_StrafeLeft</a></div><div class="ttdeci">@ PARTY_StrafeLeft</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00098">Party.h:98</a></div></div>
+<div class="ttc" id="astruct_party_html_ab6b693dbf3da05e9c25839152a1ed28d"><div class="ttname"><a href="../../d0/d14/struct_party.html#ab6b693dbf3da05e9c25839152a1ed28d">Party::uCurrentMinute</a></div><div class="ttdeci">unsigned int uCurrentMinute</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00276">Party.h:276</a></div></div>
+<div class="ttc" id="a_party_8h_html_ae22569c4d0bb9a2f547ede442cd02b9babc828745d9efc6eed08eac2ad9164422"><div class="ttname"><a href="../../db/d38/_party_8h.html#ae22569c4d0bb9a2f547ede442cd02b9babc828745d9efc6eed08eac2ad9164422">PARTY_LookDown</a></div><div class="ttdeci">@ PARTY_LookDown</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00103">Party.h:103</a></div></div>
+<div class="ttc" id="a_party_8h_html_a7ba652169aade3baa03ee56a91cb5dc1a1294e24b863533d78aaee423877e478b"><div class="ttname"><a href="../../db/d38/_party_8h.html#a7ba652169aade3baa03ee56a91cb5dc1a1294e24b863533d78aaee423877e478b">PARTY_FLAGS_1_BURNING</a></div><div class="ttdeci">@ PARTY_FLAGS_1_BURNING</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00063">Party.h:63</a></div></div>
+<div class="ttc" id="a_party_8h_html_a7935db13258ffa8a17fd65aa633b80dfa5830c2dcd2ccbc70732a6de712218a99"><div class="ttname"><a href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80dfa5830c2dcd2ccbc70732a6de712218a99">PARTY_BUFF_PROTECTION_FROM_MAGIC</a></div><div class="ttdeci">@ PARTY_BUFF_PROTECTION_FROM_MAGIC</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00084">Party.h:84</a></div></div>
+<div class="ttc" id="a_party_8h_html_a7935db13258ffa8a17fd65aa633b80dfa0873a4f505e8da2be49aa61b88b9c10d"><div class="ttname"><a href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80dfa0873a4f505e8da2be49aa61b88b9c10d">PARTY_BUFF_IMMOLATION</a></div><div class="ttdeci">@ PARTY_BUFF_IMMOLATION</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00081">Party.h:81</a></div></div>
+<div class="ttc" id="a_party_8h_html_a90eae1c60a6a092f2d2ea08550f6cdb2ac600b46363f7b1d7e727683ebc5e7704"><div class="ttname"><a href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2ac600b46363f7b1d7e727683ebc5e7704">PARTY_QUEST_EMERALD_MARGARETH_OFF</a></div><div class="ttdeci">@ PARTY_QUEST_EMERALD_MARGARETH_OFF</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00021">Party.h:21</a></div></div>
+<div class="ttc" id="a_party_8h_html_ae22569c4d0bb9a2f547ede442cd02b9ba78abe3d01861684ef7d3e860083cd75b"><div class="ttname"><a href="../../db/d38/_party_8h.html#ae22569c4d0bb9a2f547ede442cd02b9ba78abe3d01861684ef7d3e860083cd75b">PARTY_INVALID</a></div><div class="ttdeci">@ PARTY_INVALID</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00095">Party.h:95</a></div></div>
+<div class="ttc" id="a_party_8cpp_html_aa98e661066fa419e8f3b18a3fb7c1bb2"><div class="ttname"><a href="../../da/db4/_party_8cpp.html#aa98e661066fa419e8f3b18a3fb7c1bb2">_449B57_test_bit</a></div><div class="ttdeci">bool _449B57_test_bit(unsigned __int8 *a1, __int16 a2)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db4/_party_8cpp_source.html#l01185">Party.cpp:1185</a></div></div>
+<div class="ttc" id="a_party_8h_html_a90eae1c60a6a092f2d2ea08550f6cdb2a73af09665216538186fa6dc863385757"><div class="ttname"><a href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2a73af09665216538186fa6dc863385757">PARTY_QUEST_EMERALD_HAT_ACTIVE</a></div><div class="ttdeci">@ PARTY_QUEST_EMERALD_HAT_ACTIVE</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00019">Party.h:19</a></div></div>
+<div class="ttc" id="a_party_8h_html_a90eae1c60a6a092f2d2ea08550f6cdb2a8b32f1642e8320477cfd5af2653ec304"><div class="ttname"><a href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2a8b32f1642e8320477cfd5af2653ec304">PARTY_QUEST_OBELISK_EVENMORN_ISLAND</a></div><div class="ttdeci">@ PARTY_QUEST_OBELISK_EVENMORN_ISLAND</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00036">Party.h:36</a></div></div>
+<div class="ttc" id="a_party_8h_html_a8bd3eeda5ec3780afeff00593e27b6f2a5a3e1b0ba1793049451900a1e065630d"><div class="ttname"><a href="../../db/d38/_party_8h.html#a8bd3eeda5ec3780afeff00593e27b6f2a5a3e1b0ba1793049451900a1e065630d">PartyAlignment::PartyAlignment_Evil</a></div><div class="ttdeci">@ PartyAlignment_Evil</div></div>
+<div class="ttc" id="a_party_8h_html_a90eae1c60a6a092f2d2ea08550f6cdb2aa18cf9f6c72b29e8c0ca96eade9d13e4"><div class="ttname"><a href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2aa18cf9f6c72b29e8c0ca96eade9d13e4">PARTY_QUEST_OBELISK_BRACADA_DESERT</a></div><div class="ttdeci">@ PARTY_QUEST_OBELISK_BRACADA_DESERT</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00033">Party.h:33</a></div></div>
+<div class="ttc" id="amm7__data_8cpp_html_a16ee6f1a1afac17ced62271983692cd3"><div class="ttname"><a href="../../d6/d5b/mm7__data_8cpp.html#a16ee6f1a1afac17ced62271983692cd3">uDefaultTravelTime_ByFoot</a></div><div class="ttdeci">int uDefaultTravelTime_ByFoot</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d5b/mm7__data_8cpp_source.html#l00696">mm7_data.cpp:696</a></div></div>
+<div class="ttc" id="astruct_game_time_html_a641f4d3ee68d3353156b0291d1858745"><div class="ttname"><a href="../../df/dc2/struct_game_time.html#a641f4d3ee68d3353156b0291d1858745">GameTime::GetDaysOfMonth</a></div><div class="ttdeci">int GetDaysOfMonth() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d0e/_engine_2_time_8h_source.html#l00041">Time.h:41</a></div></div>
+<div class="ttc" id="a_party_8h_html_ae22569c4d0bb9a2f547ede442cd02b9bab5420b0b560d4d213ffd656f8ac5f596"><div class="ttname"><a href="../../db/d38/_party_8h.html#ae22569c4d0bb9a2f547ede442cd02b9bab5420b0b560d4d213ffd656f8ac5f596">PARTY_unkA</a></div><div class="ttdeci">@ PARTY_unkA</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00105">Party.h:105</a></div></div>
+<div class="ttc" id="a_party_8h_html_a90eae1c60a6a092f2d2ea08550f6cdb2a2a0f6c885ca69ac437bd94e1decf47ef"><div class="ttname"><a href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2a2a0f6c885ca69ac437bd94e1decf47ef">PARTY_QUEST_HARMONDALE_REBUILT</a></div><div class="ttdeci">@ PARTY_QUEST_HARMONDALE_REBUILT</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00025">Party.h:25</a></div></div>
+<div class="ttc" id="amm7__data_8cpp_html_a31e1cf50975dea688e44df739697248c"><div class="ttname"><a href="../../d6/d5b/mm7__data_8cpp.html#a31e1cf50975dea688e44df739697248c">game_starting_year</a></div><div class="ttdeci">int game_starting_year</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d5b/mm7__data_8cpp_source.html#l00193">mm7_data.cpp:193</a></div></div>
+<div class="ttc" id="astruct_party_html_ab5b1378cc25e8c4deb49847ead3e7187"><div class="ttname"><a href="../../d0/d14/struct_party.html#ab5b1378cc25e8c4deb49847ead3e7187">Party::_quest_bits</a></div><div class="ttdeci">unsigned __int8 _quest_bits[64]</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00291">Party.h:291</a></div></div>
+<div class="ttc" id="a_party_8h_html_a7935db13258ffa8a17fd65aa633b80dfa138bf4e6964a5755193bbb9b504da7af"><div class="ttname"><a href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80dfa138bf4e6964a5755193bbb9b504da7af">PARTY_BUFF_STONE_SKIN</a></div><div class="ttdeci">@ PARTY_BUFF_STONE_SKIN</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00086">Party.h:86</a></div></div>
+<div class="ttc" id="a_party_8h_html_a90eae1c60a6a092f2d2ea08550f6cdb2a37d54456f292e8e773348b846a877fe3"><div class="ttname"><a href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2a37d54456f292e8e773348b846a877fe3">PARTY_QUEST_OBELISK_ERATHIA</a></div><div class="ttdeci">@ PARTY_QUEST_OBELISK_ERATHIA</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00030">Party.h:30</a></div></div>
+<div class="ttc" id="a_party_8h_html_a7935db13258ffa8a17fd65aa633b80dfa457dcbd00b5c38c730d8ce1d83d7d637"><div class="ttname"><a href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80dfa457dcbd00b5c38c730d8ce1d83d7d637">PARTY_BUFF_WATER_WALK</a></div><div class="ttdeci">@ PARTY_BUFF_WATER_WALK</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00089">Party.h:89</a></div></div>
+<div class="ttc" id="astruct_party_html_ab1d902911ff77a09014f91157ae89d58"><div class="ttname"><a href="../../d0/d14/struct_party.html#ab1d902911ff77a09014f91157ae89d58">Party::uCurrentHour</a></div><div class="ttdeci">unsigned int uCurrentHour</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00275">Party.h:275</a></div></div>
+<div class="ttc" id="a_party_8h_html_ae22569c4d0bb9a2f547ede442cd02b9badc7a4d713fe35144207975db42eae4e9"><div class="ttname"><a href="../../db/d38/_party_8h.html#ae22569c4d0bb9a2f547ede442cd02b9badc7a4d713fe35144207975db42eae4e9">PARTY_WalkForward</a></div><div class="ttdeci">@ PARTY_WalkForward</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00100">Party.h:100</a></div></div>
+<div class="ttc" id="a_party_8h_html_a90eae1c60a6a092f2d2ea08550f6cdb2a87ddfe4c25f2e2a26e5f4789fe9c3586"><div class="ttname"><a href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2a87ddfe4c25f2e2a26e5f4789fe9c3586">PARTY_QUEST_FOUNTAIN_THE_PIT</a></div><div class="ttdeci">@ PARTY_QUEST_FOUNTAIN_THE_PIT</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00050">Party.h:50</a></div></div>
+<div class="ttc" id="astruct_party_html_a25894a432feab69bcbbff2194bac47dd"><div class="ttname"><a href="../../d0/d14/struct_party.html#a25894a432feab69bcbbff2194bac47dd">Party::pPlayers</a></div><div class="ttdeci">std::array&lt; Player, 4 &gt; pPlayers</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00310">Party.h:310</a></div></div>
+<div class="ttc" id="a_party_8h_html_ae22569c4d0bb9a2f547ede442cd02b9ba610645fe137132373c9d4f66b3cf0738"><div class="ttname"><a href="../../db/d38/_party_8h.html#ae22569c4d0bb9a2f547ede442cd02b9ba610645fe137132373c9d4f66b3cf0738">PARTY_unkB</a></div><div class="ttdeci">@ PARTY_unkB</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00106">Party.h:106</a></div></div>
+<div class="ttc" id="astruct_party_html_ae0e2e8cbee9642f7a915e2d43a86e8c4"><div class="ttname"><a href="../../d0/d14/struct_party.html#ae0e2e8cbee9642f7a915e2d43a86e8c4">Party::UpdatePlayersAndHirelingsEmotions</a></div><div class="ttdeci">void UpdatePlayersAndHirelingsEmotions()</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db4/_party_8cpp_source.html#l00657">Party.cpp:657</a></div></div>
+<div class="ttc" id="a_party_8h_html_a7935db13258ffa8a17fd65aa633b80dfa0cfd076d0ee96fcabe3f0cbe7ac5f02e"><div class="ttname"><a href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80dfa0cfd076d0ee96fcabe3f0cbe7ac5f02e">PARTY_BUFF_RESIST_AIR</a></div><div class="ttdeci">@ PARTY_BUFF_RESIST_AIR</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00071">Party.h:71</a></div></div>
+<div class="ttc" id="astruct_party_html_a639ea47a219242efb7eb9e6263e61e12"><div class="ttname"><a href="../../d0/d14/struct_party.html#a639ea47a219242efb7eb9e6263e61e12">Party::uCurrentMonthWeek</a></div><div class="ttdeci">unsigned int uCurrentMonthWeek</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00273">Party.h:273</a></div></div>
+<div class="ttc" id="a_engine_8cpp_html_a79dc644d7866ee9c87c3774a8fab9af6"><div class="ttname"><a href="../../d4/d68/_engine_8cpp.html#a79dc644d7866ee9c87c3774a8fab9af6">_494035_timed_effects__water_walking_damage__etc</a></div><div class="ttdeci">void _494035_timed_effects__water_walking_damage__etc()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d68/_engine_8cpp_source.html#l01623">Engine.cpp:1623</a></div></div>
+<div class="ttc" id="astruct_game_time_html_a00951cb2332c791ffd8142e0e9425875"><div class="ttname"><a href="../../df/dc2/struct_game_time.html#a00951cb2332c791ffd8142e0e9425875">GameTime::GetYears</a></div><div class="ttdeci">int GetYears() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d0e/_engine_2_time_8h_source.html#l00035">Time.h:35</a></div></div>
+<div class="ttc" id="a_party_8h_html_a7935db13258ffa8a17fd65aa633b80dfa25b168c1e2df55713ae2f5b946f411cb"><div class="ttname"><a href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80dfa25b168c1e2df55713ae2f5b946f411cb">PARTY_BUFF_RESIST_MIND</a></div><div class="ttdeci">@ PARTY_BUFF_RESIST_MIND</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00083">Party.h:83</a></div></div>
+<div class="ttc" id="a_party_8h_html_a90eae1c60a6a092f2d2ea08550f6cdb2add140a3b3df7cdd415bbd2dec0f2fdc4"><div class="ttname"><a href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2add140a3b3df7cdd415bbd2dec0f2fdc4">PARTY_QUEST_OBELISK_TULAREAN_FOREST</a></div><div class="ttdeci">@ PARTY_QUEST_OBELISK_TULAREAN_FOREST</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00031">Party.h:31</a></div></div>
+<div class="ttc" id="a_player_8cpp_html_abac7ac837ed00fe097135a9a7573347a"><div class="ttname"><a href="../../d2/d82/_player_8cpp.html#abac7ac837ed00fe097135a9a7573347a">pPlayers</a></div><div class="ttdeci">NZIArray&lt; struct Player *, 5 &gt; pPlayers</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d82/_player_8cpp_source.html#l00046">Player.cpp:46</a></div></div>
+<div class="ttc" id="a_party_8h_html_a90eae1c60a6a092f2d2ea08550f6cdb2a2424fcf4013d2efcdfe6bde628448bda"><div class="ttname"><a href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2a2424fcf4013d2efcdfe6bde628448bda">PARTY_QUEST_OBELISK_TREASURE_FOUND</a></div><div class="ttdeci">@ PARTY_QUEST_OBELISK_TREASURE_FOUND</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00044">Party.h:44</a></div></div>
+<div class="ttc" id="a_party_8h_html_a7935db13258ffa8a17fd65aa633b80dfabd2b2983b02dda98c4dff6711e971cd1"><div class="ttname"><a href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80dfabd2b2983b02dda98c4dff6711e971cd1">PARTY_BUFF_WIZARD_EYE</a></div><div class="ttdeci">@ PARTY_BUFF_WIZARD_EYE</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00090">Party.h:90</a></div></div>
+<div class="ttc" id="a_party_8h_html_a7935db13258ffa8a17fd65aa633b80dfa58eb6c8c27d21c054cfb5fd11738d17f"><div class="ttname"><a href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80dfa58eb6c8c27d21c054cfb5fd11738d17f">PARTY_BUFF_TORCHLIGHT</a></div><div class="ttdeci">@ PARTY_BUFF_TORCHLIGHT</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00087">Party.h:87</a></div></div>
+<div class="ttc" id="a_party_8h_html_ae22569c4d0bb9a2f547ede442cd02b9ba95eeaa6dae426f180022dc37497f4685"><div class="ttname"><a href="../../db/d38/_party_8h.html#ae22569c4d0bb9a2f547ede442cd02b9ba95eeaa6dae426f180022dc37497f4685">PARTY_FlyUp</a></div><div class="ttdeci">@ PARTY_FlyUp</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00108">Party.h:108</a></div></div>
+<div class="ttc" id="a_party_8h_html_a90eae1c60a6a092f2d2ea08550f6cdb2a1d5a96bb7d82985e63f2d0c7ddc03cd5"><div class="ttname"><a href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2a1d5a96bb7d82985e63f2d0c7ddc03cd5">PARTY_QUEST_FOUNTAIN_EVENMORN_ISLE</a></div><div class="ttdeci">@ PARTY_QUEST_FOUNTAIN_EVENMORN_ISLE</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00051">Party.h:51</a></div></div>
+<div class="ttc" id="astruct_game_time_html_a72d75830ae38cb9176ae7370f0b116a0"><div class="ttname"><a href="../../df/dc2/struct_game_time.html#a72d75830ae38cb9176ae7370f0b116a0">GameTime::GetMinutesFraction</a></div><div class="ttdeci">int GetMinutesFraction() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d0e/_engine_2_time_8h_source.html#l00038">Time.h:38</a></div></div>
+<div class="ttc" id="a_party_8h_html_a7ba652169aade3baa03ee56a91cb5dc1a7f6dabf76eda41e29a95123c1fe33fd6"><div class="ttname"><a href="../../db/d38/_party_8h.html#a7ba652169aade3baa03ee56a91cb5dc1a7f6dabf76eda41e29a95123c1fe33fd6">PARTY_FLAGS_1_STANDING_ON_WATER</a></div><div class="ttdeci">@ PARTY_FLAGS_1_STANDING_ON_WATER</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00061">Party.h:61</a></div></div>
+<div class="ttc" id="a_party_8h_html_a7ba652169aade3baa03ee56a91cb5dc1a0d4efebf09d06c08133b90267b858d30"><div class="ttname"><a href="../../db/d38/_party_8h.html#a7ba652169aade3baa03ee56a91cb5dc1a0d4efebf09d06c08133b90267b858d30">PARTY_FLAGS_1_LANDING</a></div><div class="ttdeci">@ PARTY_FLAGS_1_LANDING</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00062">Party.h:62</a></div></div>
+<div class="ttc" id="astruct_game_time_html_a2b06bc31a7d3a042d1addbcb9a5d3a58"><div class="ttname"><a href="../../df/dc2/struct_game_time.html#a2b06bc31a7d3a042d1addbcb9a5d3a58">GameTime::GetSecondsFraction</a></div><div class="ttdeci">int GetSecondsFraction() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d0e/_engine_2_time_8h_source.html#l00037">Time.h:37</a></div></div>
+<div class="ttc" id="a_party_8h_html_ae22569c4d0bb9a2f547ede442cd02b9baa319c6d3681f7f4009f955f38b21d8b7"><div class="ttname"><a href="../../db/d38/_party_8h.html#ae22569c4d0bb9a2f547ede442cd02b9baa319c6d3681f7f4009f955f38b21d8b7">PARTY_LookUp</a></div><div class="ttdeci">@ PARTY_LookUp</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00102">Party.h:102</a></div></div>
+<div class="ttc" id="a_party_8h_html_a90eae1c60a6a092f2d2ea08550f6cdb2a74874605d44369c0c583af8d734d8ba9"><div class="ttname"><a href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2a74874605d44369c0c583af8d734d8ba9">PARTY_QUEST_OBELISK_HARMONDALE</a></div><div class="ttdeci">@ PARTY_QUEST_OBELISK_HARMONDALE</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00029">Party.h:29</a></div></div>
+<div class="ttc" id="a_party_8h_html_ae22569c4d0bb9a2f547ede442cd02b9ba5d8e496dde6817b2b814a3fab9dfa95f"><div class="ttname"><a href="../../db/d38/_party_8h.html#ae22569c4d0bb9a2f547ede442cd02b9ba5d8e496dde6817b2b814a3fab9dfa95f">PARTY_dword</a></div><div class="ttdeci">@ PARTY_dword</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00116">Party.h:116</a></div></div>
+<div class="ttc" id="a_party_8h_html_a7ba652169aade3baa03ee56a91cb5dc1aeb0381955490c08e94080b7fd27b1492"><div class="ttname"><a href="../../db/d38/_party_8h.html#a7ba652169aade3baa03ee56a91cb5dc1aeb0381955490c08e94080b7fd27b1492">PARTY_FLAGS_1_ALERT_YELLOW</a></div><div class="ttdeci">@ PARTY_FLAGS_1_ALERT_YELLOW</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00060">Party.h:60</a></div></div>
+<div class="ttc" id="a_party_8cpp_html_a638b1d8b985f1c7f8b69f2d81286f98e"><div class="ttname"><a href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a></div><div class="ttdeci">Party * pParty</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db4/_party_8cpp_source.html#l00030">Party.cpp:30</a></div></div>
+<div class="ttc" id="a_party_8h_html_ae22569c4d0bb9a2f547ede442cd02b9bad48d0b3396be46a1eddb780bfbbdb1bd"><div class="ttname"><a href="../../db/d38/_party_8h.html#ae22569c4d0bb9a2f547ede442cd02b9bad48d0b3396be46a1eddb780bfbbdb1bd">PARTY_Land</a></div><div class="ttdeci">@ PARTY_Land</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00110">Party.h:110</a></div></div>
+<div class="ttc" id="a_party_8h_html_a7935db13258ffa8a17fd65aa633b80dfa5ddb27c75588446b065c12eb9d5afcc9"><div class="ttname"><a href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80dfa5ddb27c75588446b065c12eb9d5afcc9">PARTY_BUFF_RESIST_WATER</a></div><div class="ttdeci">@ PARTY_BUFF_RESIST_WATER</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00088">Party.h:88</a></div></div>
+<div class="ttc" id="a_party_8h_html_a90eae1c60a6a092f2d2ea08550f6cdb2a289adc95b864b28f4843b4cd62a3fb19"><div class="ttname"><a href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2a289adc95b864b28f4843b4cd62a3fb19">PARTY_QUEST_OBELISK_THE_PIT</a></div><div class="ttdeci">@ PARTY_QUEST_OBELISK_THE_PIT</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00035">Party.h:35</a></div></div>
+<div class="ttc" id="a_party_8h_html_ae22569c4d0bb9a2f547ede442cd02b9bad2598d40d3ab2a68c1f6d665d1c5cd38"><div class="ttname"><a href="../../db/d38/_party_8h.html#ae22569c4d0bb9a2f547ede442cd02b9bad2598d40d3ab2a68c1f6d665d1c5cd38">PARTY_FlyDown</a></div><div class="ttdeci">@ PARTY_FlyDown</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00109">Party.h:109</a></div></div>
+<div class="ttc" id="a_party_8h_html_ae22569c4d0bb9a2f547ede442cd02b9bac9f1c75823fb84b30d4eb96fe3646142"><div class="ttname"><a href="../../db/d38/_party_8h.html#ae22569c4d0bb9a2f547ede442cd02b9bac9f1c75823fb84b30d4eb96fe3646142">PARTY_FastTurnRight</a></div><div class="ttdeci">@ PARTY_FastTurnRight</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00114">Party.h:114</a></div></div>
+<div class="ttc" id="a_party_8h_html_a90eae1c60a6a092f2d2ea08550f6cdb2ad1b10053838a6da448cef6bc41b1ff10"><div class="ttname"><a href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2ad1b10053838a6da448cef6bc41b1ff10">PARTY_QUEST_OBELISK_MOUNT_NIGHON</a></div><div class="ttdeci">@ PARTY_QUEST_OBELISK_MOUNT_NIGHON</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00037">Party.h:37</a></div></div>
+<div class="ttc" id="a_party_8h_html_a90eae1c60a6a092f2d2ea08550f6cdb2a5830adafd618c603696df03b60c51da7"><div class="ttname"><a href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2a5830adafd618c603696df03b60c51da7">PARTY_QUEST_EMERALD_LUTE_ACTIVE</a></div><div class="ttdeci">@ PARTY_QUEST_EMERALD_LUTE_ACTIVE</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00018">Party.h:18</a></div></div>
+<div class="ttc" id="a_party_8h_html_ae22569c4d0bb9a2f547ede442cd02b9ba88ca4edb9b0f641cdecd64f7b67a3f5f"><div class="ttname"><a href="../../db/d38/_party_8h.html#ae22569c4d0bb9a2f547ede442cd02b9ba88ca4edb9b0f641cdecd64f7b67a3f5f">PARTY_TurnRight</a></div><div class="ttdeci">@ PARTY_TurnRight</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00097">Party.h:97</a></div></div>
+<div class="ttc" id="a_party_8h_html_ae22569c4d0bb9a2f547ede442cd02b9ba24b2857af610a82656874589c4a84478"><div class="ttname"><a href="../../db/d38/_party_8h.html#ae22569c4d0bb9a2f547ede442cd02b9ba24b2857af610a82656874589c4a84478">PARTY_CenterView</a></div><div class="ttdeci">@ PARTY_CenterView</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00104">Party.h:104</a></div></div>
+<div class="ttc" id="a_party_8h_html_a7935db13258ffa8a17fd65aa633b80dfa714e9cc910fc85bd06a140c2b023caf5"><div class="ttname"><a href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80dfa714e9cc910fc85bd06a140c2b023caf5">PARTY_BUFF_HASTE</a></div><div class="ttdeci">@ PARTY_BUFF_HASTE</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00079">Party.h:79</a></div></div>
+<div class="ttc" id="a_party_8h_html_a7935db13258ffa8a17fd65aa633b80dfaf8c5cf5be4e693823c7ef7a8e46fc623"><div class="ttname"><a href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80dfaf8c5cf5be4e693823c7ef7a8e46fc623">PARTY_BUFF_FEATHER_FALL</a></div><div class="ttdeci">@ PARTY_BUFF_FEATHER_FALL</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00076">Party.h:76</a></div></div>
+<div class="ttc" id="a_party_8h_html_ae22569c4d0bb9a2f547ede442cd02b9ba18b584268c26076a3feadae59e1c992b"><div class="ttname"><a href="../../db/d38/_party_8h.html#ae22569c4d0bb9a2f547ede442cd02b9ba18b584268c26076a3feadae59e1c992b">PARTY_RunBackward</a></div><div class="ttdeci">@ PARTY_RunBackward</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00112">Party.h:112</a></div></div>
+<div class="ttc" id="astruct_party_html_a15bb93aa5fc3a568f217700224f4fc30"><div class="ttname"><a href="../../d0/d14/struct_party.html#a15bb93aa5fc3a568f217700224f4fc30">Party::RestAndHeal</a></div><div class="ttdeci">void RestAndHeal()</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db4/_party_8cpp_source.html#l00793">Party.cpp:793</a></div></div>
+<div class="ttc" id="a_s_d_l__config_8h_html_a37994e3b11c72957c6f454c6ec96d43d"><div class="ttname"><a href="../../d1/d8f/_s_d_l__config_8h.html#a37994e3b11c72957c6f454c6ec96d43d">int32_t</a></div><div class="ttdeci">signed __int32 int32_t</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d8f/_s_d_l__config_8h_source.html#l00038">SDL_config.h:38</a></div></div>
+<div class="ttc" id="a_party_8h_html_a7935db13258ffa8a17fd65aa633b80dfad0aea79e5c43712776c90aa7d0cd1625"><div class="ttname"><a href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80dfad0aea79e5c43712776c90aa7d0cd1625">PARTY_BUFF_HEROISM</a></div><div class="ttdeci">@ PARTY_BUFF_HEROISM</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00080">Party.h:80</a></div></div>
+<div class="ttc" id="astruct_game_time_html_a52727e9719cc59a2bfedd0b56ee7d2ba"><div class="ttname"><a href="../../df/dc2/struct_game_time.html#a52727e9719cc59a2bfedd0b56ee7d2ba">GameTime::GetHoursOfDay</a></div><div class="ttdeci">int GetHoursOfDay() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d0e/_engine_2_time_8h_source.html#l00039">Time.h:39</a></div></div>
+<div class="ttc" id="a_party_8h_html_a90eae1c60a6a092f2d2ea08550f6cdb2a45983f31afe8ba031e6f2d7cb61a1997"><div class="ttname"><a href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2a45983f31afe8ba031e6f2d7cb61a1997">PARTY_QUEST_EVENMORN_MAP_FOUND</a></div><div class="ttdeci">@ PARTY_QUEST_EVENMORN_MAP_FOUND</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00023">Party.h:23</a></div></div>
+<div class="ttc" id="a_party_8h_html_a90eae1c60a6a092f2d2ea08550f6cdb2a804cbcd8c7983a9f169710688e27ef97"><div class="ttname"><a href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2a804cbcd8c7983a9f169710688e27ef97">PARTY_QUEST_OBELISK_AVLEE</a></div><div class="ttdeci">@ PARTY_QUEST_OBELISK_AVLEE</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00041">Party.h:41</a></div></div>
+<div class="ttc" id="a_party_8h_html_a90eae1c60a6a092f2d2ea08550f6cdb2ace42c49b6413dfbfacb3ff495c8364f2"><div class="ttname"><a href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2ace42c49b6413dfbfacb3ff495c8364f2">PARTY_QUEST_EMERALD_RED_POTION_ACTIVE</a></div><div class="ttdeci">@ PARTY_QUEST_EMERALD_RED_POTION_ACTIVE</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00014">Party.h:14</a></div></div>
+<div class="ttc" id="a_party_8h_html_a7ba652169aade3baa03ee56a91cb5dc1a0911b3acfb27eaf58c995ae401a76895"><div class="ttname"><a href="../../db/d38/_party_8h.html#a7ba652169aade3baa03ee56a91cb5dc1a0911b3acfb27eaf58c995ae401a76895">PARTY_FLAGS_1_WATER_DAMAGE</a></div><div class="ttdeci">@ PARTY_FLAGS_1_WATER_DAMAGE</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00057">Party.h:57</a></div></div>
+<div class="ttc" id="a_party_8h_html_a90eae1c60a6a092f2d2ea08550f6cdb2add7b5a24cfb376fc81da3c94b3702162"><div class="ttname"><a href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2add7b5a24cfb376fc81da3c94b3702162">PARTY_QUEST_EMERALD_LONGBOW_ACTIVE</a></div><div class="ttdeci">@ PARTY_QUEST_EMERALD_LONGBOW_ACTIVE</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00016">Party.h:16</a></div></div>
+<div class="ttc" id="a_party_8h_html_a90eae1c60a6a092f2d2ea08550f6cdb2a6d598cd82b36a652ecc3b081aef2220e"><div class="ttname"><a href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2a6d598cd82b36a652ecc3b081aef2220e">PARTY_QUEST_OBELISK_LAND_OF_THE_GIANTS</a></div><div class="ttdeci">@ PARTY_QUEST_OBELISK_LAND_OF_THE_GIANTS</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00039">Party.h:39</a></div></div>
+<div class="ttc" id="a_n_p_c_8h_html_acaaa8b5b48efcd871d20e4e373884599ab0872aa49f608e4e7bc85f08167ac350"><div class="ttname"><a href="../../d9/dbc/_n_p_c_8h.html#acaaa8b5b48efcd871d20e4e373884599ab0872aa49f608e4e7bc85f08167ac350">Tracker</a></div><div class="ttdeci">@ Tracker</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dbc/_n_p_c_8h_source.html#l00011">NPC.h:11</a></div></div>
+<div class="ttc" id="astruct_game_time_html_a3d3f93e6db6e0fc0b6c18db39f286551"><div class="ttname"><a href="../../df/dc2/struct_game_time.html#a3d3f93e6db6e0fc0b6c18db39f286551">GameTime::GetWeeksOfMonth</a></div><div class="ttdeci">int GetWeeksOfMonth() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d0e/_engine_2_time_8h_source.html#l00042">Time.h:42</a></div></div>
+<div class="ttc" id="a_n_p_c_8h_html_acaaa8b5b48efcd871d20e4e373884599a45f4e61dfb1852d701d865458d61a6ed"><div class="ttname"><a href="../../d9/dbc/_n_p_c_8h.html#acaaa8b5b48efcd871d20e4e373884599a45f4e61dfb1852d701d865458d61a6ed">Explorer</a></div><div class="ttdeci">@ Explorer</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dbc/_n_p_c_8h_source.html#l00049">NPC.h:49</a></div></div>
+<div class="ttc" id="a_party_8h_html_a90eae1c60a6a092f2d2ea08550f6cdb2acfc3795d451dcba54bfc86de26919544"><div class="ttname"><a href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2acfc3795d451dcba54bfc86de26919544">PARTY_QUEST_OBELISK_BARROW_DOWNS</a></div><div class="ttdeci">@ PARTY_QUEST_OBELISK_BARROW_DOWNS</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00038">Party.h:38</a></div></div>
+<div class="ttc" id="a_party_8h_html_a09dcebc28a84afbca0bf362f5e1348d8ab905663a9d31df27dda341a2bc9a8c2b"><div class="ttname"><a href="../../db/d38/_party_8h.html#a09dcebc28a84afbca0bf362f5e1348d8ab905663a9d31df27dda341a2bc9a8c2b">PARTY_FLAGS_2_RUNNING</a></div><div class="ttdeci">@ PARTY_FLAGS_2_RUNNING</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00066">Party.h:66</a></div></div>
+<div class="ttc" id="a_party_8h_html_ae22569c4d0bb9a2f547ede442cd02b9bab6899ebff5771a5422118e3b6e026e60"><div class="ttname"><a href="../../db/d38/_party_8h.html#ae22569c4d0bb9a2f547ede442cd02b9bab6899ebff5771a5422118e3b6e026e60">PARTY_TurnLeft</a></div><div class="ttdeci">@ PARTY_TurnLeft</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00096">Party.h:96</a></div></div>
+<div class="ttc" id="astruct_party_html_a410e9cc317caf355b1e3572e46c223a2"><div class="ttname"><a href="../../d0/d14/struct_party.html#a410e9cc317caf355b1e3572e46c223a2">Party::pHirelings</a></div><div class="ttdeci">std::array&lt; NPCData, 2 &gt; pHirelings</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00311">Party.h:311</a></div></div>
+<div class="ttc" id="a_party_8h_html_a90eae1c60a6a092f2d2ea08550f6cdb2acecd51fd400f91d5b9725298e773a3d1"><div class="ttname"><a href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2acecd51fd400f91d5b9725298e773a3d1">PARTY_QUEST_OBELISK_STONE_CITY</a></div><div class="ttdeci">@ PARTY_QUEST_OBELISK_STONE_CITY</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00042">Party.h:42</a></div></div>
+<div class="ttc" id="astruct_game_time_html_aae36e2f49426d2d6b1dae91b85cb45e7"><div class="ttname"><a href="../../df/dc2/struct_game_time.html#aae36e2f49426d2d6b1dae91b85cb45e7">GameTime::GetMonthsOfYear</a></div><div class="ttdeci">int GetMonthsOfYear() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d0e/_engine_2_time_8h_source.html#l00043">Time.h:43</a></div></div>
+<div class="ttc" id="astruct_game_time_html_aeb3a47b5676007549eab9dadfe6d9867"><div class="ttname"><a href="../../df/dc2/struct_game_time.html#aeb3a47b5676007549eab9dadfe6d9867">GameTime::AddMinutes</a></div><div class="ttdeci">void AddMinutes(int minutes)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d0e/_engine_2_time_8h_source.html#l00045">Time.h:45</a></div></div>
+<div class="ttc" id="a_party_8h_html_a7935db13258ffa8a17fd65aa633b80dfaeaaac556d8c0d8843c6dfcb01f4306be"><div class="ttname"><a href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80dfaeaaac556d8c0d8843c6dfcb01f4306be">PARTY_BUFF_INVISIBILITY</a></div><div class="ttdeci">@ PARTY_BUFF_INVISIBILITY</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00082">Party.h:82</a></div></div>
+<div class="ttc" id="astruct_party_html_a1e784ecf3cde874aa4c6a319d677cc36"><div class="ttname"><a href="../../d0/d14/struct_party.html#a1e784ecf3cde874aa4c6a319d677cc36">Party::uCurrentDayOfMonth</a></div><div class="ttdeci">unsigned int uCurrentDayOfMonth</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00274">Party.h:274</a></div></div>
+<div class="ttc" id="a_party_8h_html_a7935db13258ffa8a17fd65aa633b80dfa9db51cc9d4c57a15ec0c83b5f59db342"><div class="ttname"><a href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80dfa9db51cc9d4c57a15ec0c83b5f59db342">PARTY_BUFF_RESIST_EARTH</a></div><div class="ttdeci">@ PARTY_BUFF_RESIST_EARTH</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00075">Party.h:75</a></div></div>
+<div class="ttc" id="a_party_8h_html_a7ba652169aade3baa03ee56a91cb5dc1afcd4377b4d296a33fdcbd3435d62705f"><div class="ttname"><a href="../../db/d38/_party_8h.html#a7ba652169aade3baa03ee56a91cb5dc1afcd4377b4d296a33fdcbd3435d62705f">PARTY_FLAGS_1_0002</a></div><div class="ttdeci">@ PARTY_FLAGS_1_0002</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00056">Party.h:56</a></div></div>
+<div class="ttc" id="a_party_8h_html_a90eae1c60a6a092f2d2ea08550f6cdb2a9bb1ad6bf7bf2d4b9778921f9b6248f4"><div class="ttname"><a href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2a9bb1ad6bf7bf2d4b9778921f9b6248f4">PARTY_QUEST_FOUNTAIN_CELESTIA</a></div><div class="ttdeci">@ PARTY_QUEST_FOUNTAIN_CELESTIA</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00049">Party.h:49</a></div></div>
+<div class="ttc" id="a_n_p_c_8h_html_acaaa8b5b48efcd871d20e4e373884599a2e868c33b66a8999b838783a3eb1a243"><div class="ttname"><a href="../../d9/dbc/_n_p_c_8h.html#acaaa8b5b48efcd871d20e4e373884599a2e868c33b66a8999b838783a3eb1a243">Pathfinder</a></div><div class="ttdeci">@ Pathfinder</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dbc/_n_p_c_8h_source.html#l00012">NPC.h:12</a></div></div>
+<div class="ttc" id="a_party_8h_html_a7935db13258ffa8a17fd65aa633b80dfa46d524d4e7026f1b90643679fc2a2d0d"><div class="ttname"><a href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80dfa46d524d4e7026f1b90643679fc2a2d0d">PARTY_BUFF_FLY</a></div><div class="ttdeci">@ PARTY_BUFF_FLY</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00078">Party.h:78</a></div></div>
+<div class="ttc" id="a_party_8h_html_a90eae1c60a6a092f2d2ea08550f6cdb2afdb738f08e2dc2b266220676a1bb1430"><div class="ttname"><a href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2afdb738f08e2dc2b266220676a1bb1430">PARTY_QUEST_EMERALD_SEASHELL_ACTIVE</a></div><div class="ttdeci">@ PARTY_QUEST_EMERALD_SEASHELL_ACTIVE</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00015">Party.h:15</a></div></div>
+<div class="ttc" id="a_party_8h_html_a7935db13258ffa8a17fd65aa633b80dfa19d0e136a15d2fd35fd2c5138d1d9c72"><div class="ttname"><a href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80dfa19d0e136a15d2fd35fd2c5138d1d9c72">PARTY_BUFF_RESIST_BODY</a></div><div class="ttdeci">@ PARTY_BUFF_RESIST_BODY</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00072">Party.h:72</a></div></div>
+<div class="ttc" id="a_party_8h_html_a7935db13258ffa8a17fd65aa633b80dfa49d31b7873b1806ed400d0fd66eb407b"><div class="ttname"><a href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80dfa49d31b7873b1806ed400d0fd66eb407b">PARTY_BUFF_DETECT_LIFE</a></div><div class="ttdeci">@ PARTY_BUFF_DETECT_LIFE</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00074">Party.h:74</a></div></div>
+<div class="ttc" id="a_party_8h_html_a7935db13258ffa8a17fd65aa633b80dfa95364e4632a66b4e3033629ee350d101"><div class="ttname"><a href="../../db/d38/_party_8h.html#a7935db13258ffa8a17fd65aa633b80dfa95364e4632a66b4e3033629ee350d101">PARTY_BUFF_RESIST_FIRE</a></div><div class="ttdeci">@ PARTY_BUFF_RESIST_FIRE</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00077">Party.h:77</a></div></div>
+<div class="ttc" id="a_party_8h_html_ae22569c4d0bb9a2f547ede442cd02b9bad9c91444353cd06cc639b326338935ae"><div class="ttname"><a href="../../db/d38/_party_8h.html#ae22569c4d0bb9a2f547ede442cd02b9bad9c91444353cd06cc639b326338935ae">PARTY_Jump</a></div><div class="ttdeci">@ PARTY_Jump</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00107">Party.h:107</a></div></div>
+<div class="ttc" id="a_party_8h_html_a90eae1c60a6a092f2d2ea08550f6cdb2a6b2e02bee26bb58b3b8e1dbc41a263b7"><div class="ttname"><a href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2a6b2e02bee26bb58b3b8e1dbc41a263b7">PARTY_QUEST_FINISHED_EMERALD_ISLE</a></div><div class="ttdeci">@ PARTY_QUEST_FINISHED_EMERALD_ISLE</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00027">Party.h:27</a></div></div>
+<div class="ttc" id="a_n_p_c_8cpp_html_a40d19895c574dba82a55ee7b3031f20b"><div class="ttname"><a href="../../d1/d6c/_n_p_c_8cpp.html#a40d19895c574dba82a55ee7b3031f20b">CheckHiredNPCSpeciality</a></div><div class="ttdeci">bool CheckHiredNPCSpeciality(unsigned int uProfession)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d6c/_n_p_c_8cpp_source.html#l00754">NPC.cpp:754</a></div></div>
+<div class="ttc" id="a_party_8h_html_a90eae1c60a6a092f2d2ea08550f6cdb2a77e865a4c4aca35314412c9b5807a2ce"><div class="ttname"><a href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2a77e865a4c4aca35314412c9b5807a2ce">PARTY_QUEST_OBELISK_TATALIA</a></div><div class="ttdeci">@ PARTY_QUEST_OBELISK_TATALIA</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00040">Party.h:40</a></div></div>
+<div class="ttc" id="a_party_8h_html_a90eae1c60a6a092f2d2ea08550f6cdb2ace8edefb5944f125b30de4b55a614713"><div class="ttname"><a href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2ace8edefb5944f125b30de4b55a614713">PARTY_QUEST_OBELISK_DEYJA</a></div><div class="ttdeci">@ PARTY_QUEST_OBELISK_DEYJA</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00032">Party.h:32</a></div></div>
+<div class="ttc" id="a_party_8h_html_a90eae1c60a6a092f2d2ea08550f6cdb2a7f74bd85d34ea9a5dd78dfcd0aa68ce0"><div class="ttname"><a href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2a7f74bd85d34ea9a5dd78dfcd0aa68ce0">PARTY_QUEST_FOUNTAIN_PIERPONT</a></div><div class="ttdeci">@ PARTY_QUEST_FOUNTAIN_PIERPONT</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00048">Party.h:48</a></div></div>
+<div class="ttc" id="astruct_party_html_a1ab94ea5e0d694dbd0af19c41812ccd4"><div class="ttname"><a href="../../d0/d14/struct_party.html#a1ab94ea5e0d694dbd0af19c41812ccd4">Party::uCurrentYear</a></div><div class="ttdeci">unsigned int uCurrentYear</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00271">Party.h:271</a></div></div>
+<div class="ttc" id="a_party_8h_html_ae22569c4d0bb9a2f547ede442cd02b9ba64f6a03f9a52992802eb0efebca0ad9c"><div class="ttname"><a href="../../db/d38/_party_8h.html#ae22569c4d0bb9a2f547ede442cd02b9ba64f6a03f9a52992802eb0efebca0ad9c">PARTY_WalkBackward</a></div><div class="ttdeci">@ PARTY_WalkBackward</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00101">Party.h:101</a></div></div>
+<div class="ttc" id="a_s_d_l__config_8h_html_a435d1572bf3f880d55459d9805097f62"><div class="ttname"><a href="../../d1/d8f/_s_d_l__config_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a></div><div class="ttdeci">unsigned __int32 uint32_t</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d8f/_s_d_l__config_8h_source.html#l00039">SDL_config.h:39</a></div></div>
+<div class="ttc" id="a_party_8h_html_ae22569c4d0bb9a2f547ede442cd02b9ba277ee913e22ee1d1e925552d71d7742d"><div class="ttname"><a href="../../db/d38/_party_8h.html#ae22569c4d0bb9a2f547ede442cd02b9ba277ee913e22ee1d1e925552d71d7742d">PARTY_FastTurnLeft</a></div><div class="ttdeci">@ PARTY_FastTurnLeft</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00113">Party.h:113</a></div></div>
+<div class="ttc" id="a_party_8h_html_ae22569c4d0bb9a2f547ede442cd02b9ba4554047b9f09100dbbafa31a6aac9bd3"><div class="ttname"><a href="../../db/d38/_party_8h.html#ae22569c4d0bb9a2f547ede442cd02b9ba4554047b9f09100dbbafa31a6aac9bd3">PARTY_RunForward</a></div><div class="ttdeci">@ PARTY_RunForward</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00111">Party.h:111</a></div></div>
+<div class="ttc" id="astruct_game_time_html"><div class="ttname"><a href="../../df/dc2/struct_game_time.html">GameTime</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d0e/_engine_2_time_8h_source.html#l00014">Time.h:14</a></div></div>
+<div class="ttc" id="a_party_8h_html_a90eae1c60a6a092f2d2ea08550f6cdb2a00474a19ebd3b04f6b3c6f8c2526ea2f"><div class="ttname"><a href="../../db/d38/_party_8h.html#a90eae1c60a6a092f2d2ea08550f6cdb2a00474a19ebd3b04f6b3c6f8c2526ea2f">PARTY_QUEST_FOUNTAIN_HARMONDALE</a></div><div class="ttdeci">@ PARTY_QUEST_FOUNTAIN_HARMONDALE</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00046">Party.h:46</a></div></div>
+<div class="ttc" id="astruct_actor_html_a0cccbcf5491285664669a25726646402"><div class="ttname"><a href="../../da/d35/struct_actor.html#a0cccbcf5491285664669a25726646402">Actor::InitializeActors</a></div><div class="ttdeci">static void InitializeActors()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d59/_actor_8cpp_source.html#l03334">Actor.cpp:3334</a></div></div>
+<div class="ttc" id="a_n_p_c_8h_html_acaaa8b5b48efcd871d20e4e373884599aa73051e38214e2328e22c482b446defd"><div class="ttname"><a href="../../d9/dbc/_n_p_c_8h.html#acaaa8b5b48efcd871d20e4e373884599aa73051e38214e2328e22c482b446defd">Guide</a></div><div class="ttdeci">@ Guide</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dbc/_n_p_c_8h_source.html#l00010">NPC.h:10</a></div></div>
+<div class="ttc" id="a_party_8h_html_ae22569c4d0bb9a2f547ede442cd02b9bad4ea271467e29fb978148d4adf8bb08b"><div class="ttname"><a href="../../db/d38/_party_8h.html#ae22569c4d0bb9a2f547ede442cd02b9bad4ea271467e29fb978148d4adf8bb08b">PARTY_StrafeRight</a></div><div class="ttdeci">@ PARTY_StrafeRight</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00099">Party.h:99</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_0b6ee6e7e9547e675db4add2e5de97da.html">Engine</a></li><li class="navelem"><a class="el" href="../../db/d38/_party_8h.html">Party.h</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:04:02. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

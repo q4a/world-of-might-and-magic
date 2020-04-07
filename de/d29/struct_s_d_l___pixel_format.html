@@ -1,0 +1,469 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Структура SDL_PixelFormat</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('de/d29/struct_s_d_l___pixel_format.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="../../db/d11/struct_s_d_l___pixel_format-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Структура SDL_PixelFormat</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="../../d8/d6a/_s_d_l__pixels_8h_source.html">SDL_pixels.h</a>&gt;</code></p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Граф связей класса SDL_PixelFormat:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d6/d56/struct_s_d_l___pixel_format__coll__graph.svg" width="188" height="216"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:a44045e1da843f3d1fad3a608e16af712"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#add440eff171ea5f55cb00c4a9ab8672d">Uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d29/struct_s_d_l___pixel_format.html#a44045e1da843f3d1fad3a608e16af712">format</a></td></tr>
+<tr class="separator:a44045e1da843f3d1fad3a608e16af712"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeae611aba76f5eb11b696807926c5116"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/d4f/struct_s_d_l___palette.html">SDL_Palette</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d29/struct_s_d_l___pixel_format.html#aeae611aba76f5eb11b696807926c5116">palette</a></td></tr>
+<tr class="separator:aeae611aba76f5eb11b696807926c5116"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac533fae3043ef44df01108248e111d8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#a2944638813a090aa23e62f4da842c3e2">Uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d29/struct_s_d_l___pixel_format.html#aac533fae3043ef44df01108248e111d8">BitsPerPixel</a></td></tr>
+<tr class="separator:aac533fae3043ef44df01108248e111d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fec9e1809cc3da458d58b8cccd058f2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#a2944638813a090aa23e62f4da842c3e2">Uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d29/struct_s_d_l___pixel_format.html#a6fec9e1809cc3da458d58b8cccd058f2">BytesPerPixel</a></td></tr>
+<tr class="separator:a6fec9e1809cc3da458d58b8cccd058f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f4e276fbda82e60eaff28f61c7cd19e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#a2944638813a090aa23e62f4da842c3e2">Uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d29/struct_s_d_l___pixel_format.html#a1f4e276fbda82e60eaff28f61c7cd19e">padding</a> [2]</td></tr>
+<tr class="separator:a1f4e276fbda82e60eaff28f61c7cd19e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35e5793f6e9c356aec2d130167174946"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#add440eff171ea5f55cb00c4a9ab8672d">Uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d29/struct_s_d_l___pixel_format.html#a35e5793f6e9c356aec2d130167174946">Rmask</a></td></tr>
+<tr class="separator:a35e5793f6e9c356aec2d130167174946"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d07a81b430202c6ea0089d8df8f4e15"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#add440eff171ea5f55cb00c4a9ab8672d">Uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d29/struct_s_d_l___pixel_format.html#a3d07a81b430202c6ea0089d8df8f4e15">Gmask</a></td></tr>
+<tr class="separator:a3d07a81b430202c6ea0089d8df8f4e15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad366812df3ae62edb9ae6cb89234fddb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#add440eff171ea5f55cb00c4a9ab8672d">Uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d29/struct_s_d_l___pixel_format.html#ad366812df3ae62edb9ae6cb89234fddb">Bmask</a></td></tr>
+<tr class="separator:ad366812df3ae62edb9ae6cb89234fddb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cdaf31f6cb153fefda47fa6b8368c0e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#add440eff171ea5f55cb00c4a9ab8672d">Uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d29/struct_s_d_l___pixel_format.html#a6cdaf31f6cb153fefda47fa6b8368c0e">Amask</a></td></tr>
+<tr class="separator:a6cdaf31f6cb153fefda47fa6b8368c0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9994b4ed87a2551253aebfa191db8424"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#a2944638813a090aa23e62f4da842c3e2">Uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d29/struct_s_d_l___pixel_format.html#a9994b4ed87a2551253aebfa191db8424">Rloss</a></td></tr>
+<tr class="separator:a9994b4ed87a2551253aebfa191db8424"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94469768d8436e631a13d68623ff663f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#a2944638813a090aa23e62f4da842c3e2">Uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d29/struct_s_d_l___pixel_format.html#a94469768d8436e631a13d68623ff663f">Gloss</a></td></tr>
+<tr class="separator:a94469768d8436e631a13d68623ff663f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a337072c1bc8b41efdd2da4e95b8c2ff7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#a2944638813a090aa23e62f4da842c3e2">Uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d29/struct_s_d_l___pixel_format.html#a337072c1bc8b41efdd2da4e95b8c2ff7">Bloss</a></td></tr>
+<tr class="separator:a337072c1bc8b41efdd2da4e95b8c2ff7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a660e95097874088292f1289a458efaa2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#a2944638813a090aa23e62f4da842c3e2">Uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d29/struct_s_d_l___pixel_format.html#a660e95097874088292f1289a458efaa2">Aloss</a></td></tr>
+<tr class="separator:a660e95097874088292f1289a458efaa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfdec7b9ee2ee39db630f4022e4e0daa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#a2944638813a090aa23e62f4da842c3e2">Uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d29/struct_s_d_l___pixel_format.html#abfdec7b9ee2ee39db630f4022e4e0daa">Rshift</a></td></tr>
+<tr class="separator:abfdec7b9ee2ee39db630f4022e4e0daa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6045012f994c02a86bdc4a91b28d2a3c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#a2944638813a090aa23e62f4da842c3e2">Uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d29/struct_s_d_l___pixel_format.html#a6045012f994c02a86bdc4a91b28d2a3c">Gshift</a></td></tr>
+<tr class="separator:a6045012f994c02a86bdc4a91b28d2a3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4212574b67529628d8822ed4eb109754"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#a2944638813a090aa23e62f4da842c3e2">Uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d29/struct_s_d_l___pixel_format.html#a4212574b67529628d8822ed4eb109754">Bshift</a></td></tr>
+<tr class="separator:a4212574b67529628d8822ed4eb109754"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3c4ffa0de1f2c94040340deede3bf46"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#a2944638813a090aa23e62f4da842c3e2">Uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d29/struct_s_d_l___pixel_format.html#ac3c4ffa0de1f2c94040340deede3bf46">Ashift</a></td></tr>
+<tr class="separator:ac3c4ffa0de1f2c94040340deede3bf46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23be8060443d58064a720a4e2ef31729"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d29/struct_s_d_l___pixel_format.html#a23be8060443d58064a720a4e2ef31729">refcount</a></td></tr>
+<tr class="separator:a23be8060443d58064a720a4e2ef31729"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1953b66c817116bf81bae4873ee6bce5"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="../../de/d29/struct_s_d_l___pixel_format.html">SDL_PixelFormat</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d29/struct_s_d_l___pixel_format.html#a1953b66c817116bf81bae4873ee6bce5">next</a></td></tr>
+<tr class="separator:a1953b66c817116bf81bae4873ee6bce5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><dl class="section note"><dt>Заметки</dt><dd>Everything in the pixel format structure is read-only. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/d6a/_s_d_l__pixels_8h_source.html">SDL_pixels.h</a> строка <a class="el" href="../../d8/d6a/_s_d_l__pixels_8h_source.html#l00318">318</a></p>
+</div><h2 class="groupheader">Данные класса</h2>
+<a id="a44045e1da843f3d1fad3a608e16af712"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44045e1da843f3d1fad3a608e16af712">&#9670;&nbsp;</a></span>format</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#add440eff171ea5f55cb00c4a9ab8672d">Uint32</a> SDL_PixelFormat::format</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/d6a/_s_d_l__pixels_8h_source.html">SDL_pixels.h</a> строка <a class="el" href="../../d8/d6a/_s_d_l__pixels_8h_source.html#l00320">320</a></p>
+
+</div>
+</div>
+<a id="aeae611aba76f5eb11b696807926c5116"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeae611aba76f5eb11b696807926c5116">&#9670;&nbsp;</a></span>palette</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../de/d4f/struct_s_d_l___palette.html">SDL_Palette</a>* SDL_PixelFormat::palette</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/d6a/_s_d_l__pixels_8h_source.html">SDL_pixels.h</a> строка <a class="el" href="../../d8/d6a/_s_d_l__pixels_8h_source.html#l00321">321</a></p>
+
+</div>
+</div>
+<a id="aac533fae3043ef44df01108248e111d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac533fae3043ef44df01108248e111d8">&#9670;&nbsp;</a></span>BitsPerPixel</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#a2944638813a090aa23e62f4da842c3e2">Uint8</a> SDL_PixelFormat::BitsPerPixel</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/d6a/_s_d_l__pixels_8h_source.html">SDL_pixels.h</a> строка <a class="el" href="../../d8/d6a/_s_d_l__pixels_8h_source.html#l00322">322</a></p>
+
+</div>
+</div>
+<a id="a6fec9e1809cc3da458d58b8cccd058f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fec9e1809cc3da458d58b8cccd058f2">&#9670;&nbsp;</a></span>BytesPerPixel</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#a2944638813a090aa23e62f4da842c3e2">Uint8</a> SDL_PixelFormat::BytesPerPixel</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/d6a/_s_d_l__pixels_8h_source.html">SDL_pixels.h</a> строка <a class="el" href="../../d8/d6a/_s_d_l__pixels_8h_source.html#l00323">323</a></p>
+
+</div>
+</div>
+<a id="a1f4e276fbda82e60eaff28f61c7cd19e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f4e276fbda82e60eaff28f61c7cd19e">&#9670;&nbsp;</a></span>padding</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#a2944638813a090aa23e62f4da842c3e2">Uint8</a> SDL_PixelFormat::padding[2]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/d6a/_s_d_l__pixels_8h_source.html">SDL_pixels.h</a> строка <a class="el" href="../../d8/d6a/_s_d_l__pixels_8h_source.html#l00324">324</a></p>
+
+</div>
+</div>
+<a id="a35e5793f6e9c356aec2d130167174946"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35e5793f6e9c356aec2d130167174946">&#9670;&nbsp;</a></span>Rmask</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#add440eff171ea5f55cb00c4a9ab8672d">Uint32</a> SDL_PixelFormat::Rmask</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/d6a/_s_d_l__pixels_8h_source.html">SDL_pixels.h</a> строка <a class="el" href="../../d8/d6a/_s_d_l__pixels_8h_source.html#l00325">325</a></p>
+
+</div>
+</div>
+<a id="a3d07a81b430202c6ea0089d8df8f4e15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d07a81b430202c6ea0089d8df8f4e15">&#9670;&nbsp;</a></span>Gmask</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#add440eff171ea5f55cb00c4a9ab8672d">Uint32</a> SDL_PixelFormat::Gmask</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/d6a/_s_d_l__pixels_8h_source.html">SDL_pixels.h</a> строка <a class="el" href="../../d8/d6a/_s_d_l__pixels_8h_source.html#l00326">326</a></p>
+
+</div>
+</div>
+<a id="ad366812df3ae62edb9ae6cb89234fddb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad366812df3ae62edb9ae6cb89234fddb">&#9670;&nbsp;</a></span>Bmask</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#add440eff171ea5f55cb00c4a9ab8672d">Uint32</a> SDL_PixelFormat::Bmask</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/d6a/_s_d_l__pixels_8h_source.html">SDL_pixels.h</a> строка <a class="el" href="../../d8/d6a/_s_d_l__pixels_8h_source.html#l00327">327</a></p>
+
+</div>
+</div>
+<a id="a6cdaf31f6cb153fefda47fa6b8368c0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6cdaf31f6cb153fefda47fa6b8368c0e">&#9670;&nbsp;</a></span>Amask</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#add440eff171ea5f55cb00c4a9ab8672d">Uint32</a> SDL_PixelFormat::Amask</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/d6a/_s_d_l__pixels_8h_source.html">SDL_pixels.h</a> строка <a class="el" href="../../d8/d6a/_s_d_l__pixels_8h_source.html#l00328">328</a></p>
+
+</div>
+</div>
+<a id="a9994b4ed87a2551253aebfa191db8424"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9994b4ed87a2551253aebfa191db8424">&#9670;&nbsp;</a></span>Rloss</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#a2944638813a090aa23e62f4da842c3e2">Uint8</a> SDL_PixelFormat::Rloss</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/d6a/_s_d_l__pixels_8h_source.html">SDL_pixels.h</a> строка <a class="el" href="../../d8/d6a/_s_d_l__pixels_8h_source.html#l00329">329</a></p>
+
+</div>
+</div>
+<a id="a94469768d8436e631a13d68623ff663f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94469768d8436e631a13d68623ff663f">&#9670;&nbsp;</a></span>Gloss</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#a2944638813a090aa23e62f4da842c3e2">Uint8</a> SDL_PixelFormat::Gloss</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/d6a/_s_d_l__pixels_8h_source.html">SDL_pixels.h</a> строка <a class="el" href="../../d8/d6a/_s_d_l__pixels_8h_source.html#l00330">330</a></p>
+
+</div>
+</div>
+<a id="a337072c1bc8b41efdd2da4e95b8c2ff7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a337072c1bc8b41efdd2da4e95b8c2ff7">&#9670;&nbsp;</a></span>Bloss</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#a2944638813a090aa23e62f4da842c3e2">Uint8</a> SDL_PixelFormat::Bloss</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/d6a/_s_d_l__pixels_8h_source.html">SDL_pixels.h</a> строка <a class="el" href="../../d8/d6a/_s_d_l__pixels_8h_source.html#l00331">331</a></p>
+
+</div>
+</div>
+<a id="a660e95097874088292f1289a458efaa2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a660e95097874088292f1289a458efaa2">&#9670;&nbsp;</a></span>Aloss</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#a2944638813a090aa23e62f4da842c3e2">Uint8</a> SDL_PixelFormat::Aloss</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/d6a/_s_d_l__pixels_8h_source.html">SDL_pixels.h</a> строка <a class="el" href="../../d8/d6a/_s_d_l__pixels_8h_source.html#l00332">332</a></p>
+
+</div>
+</div>
+<a id="abfdec7b9ee2ee39db630f4022e4e0daa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfdec7b9ee2ee39db630f4022e4e0daa">&#9670;&nbsp;</a></span>Rshift</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#a2944638813a090aa23e62f4da842c3e2">Uint8</a> SDL_PixelFormat::Rshift</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/d6a/_s_d_l__pixels_8h_source.html">SDL_pixels.h</a> строка <a class="el" href="../../d8/d6a/_s_d_l__pixels_8h_source.html#l00333">333</a></p>
+
+</div>
+</div>
+<a id="a6045012f994c02a86bdc4a91b28d2a3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6045012f994c02a86bdc4a91b28d2a3c">&#9670;&nbsp;</a></span>Gshift</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#a2944638813a090aa23e62f4da842c3e2">Uint8</a> SDL_PixelFormat::Gshift</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/d6a/_s_d_l__pixels_8h_source.html">SDL_pixels.h</a> строка <a class="el" href="../../d8/d6a/_s_d_l__pixels_8h_source.html#l00334">334</a></p>
+
+</div>
+</div>
+<a id="a4212574b67529628d8822ed4eb109754"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4212574b67529628d8822ed4eb109754">&#9670;&nbsp;</a></span>Bshift</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#a2944638813a090aa23e62f4da842c3e2">Uint8</a> SDL_PixelFormat::Bshift</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/d6a/_s_d_l__pixels_8h_source.html">SDL_pixels.h</a> строка <a class="el" href="../../d8/d6a/_s_d_l__pixels_8h_source.html#l00335">335</a></p>
+
+</div>
+</div>
+<a id="ac3c4ffa0de1f2c94040340deede3bf46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3c4ffa0de1f2c94040340deede3bf46">&#9670;&nbsp;</a></span>Ashift</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#a2944638813a090aa23e62f4da842c3e2">Uint8</a> SDL_PixelFormat::Ashift</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/d6a/_s_d_l__pixels_8h_source.html">SDL_pixels.h</a> строка <a class="el" href="../../d8/d6a/_s_d_l__pixels_8h_source.html#l00336">336</a></p>
+
+</div>
+</div>
+<a id="a23be8060443d58064a720a4e2ef31729"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23be8060443d58064a720a4e2ef31729">&#9670;&nbsp;</a></span>refcount</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int SDL_PixelFormat::refcount</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/d6a/_s_d_l__pixels_8h_source.html">SDL_pixels.h</a> строка <a class="el" href="../../d8/d6a/_s_d_l__pixels_8h_source.html#l00337">337</a></p>
+
+</div>
+</div>
+<a id="a1953b66c817116bf81bae4873ee6bce5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1953b66c817116bf81bae4873ee6bce5">&#9670;&nbsp;</a></span>next</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="../../de/d29/struct_s_d_l___pixel_format.html">SDL_PixelFormat</a>* SDL_PixelFormat::next</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/d6a/_s_d_l__pixels_8h_source.html">SDL_pixels.h</a> строка <a class="el" href="../../d8/d6a/_s_d_l__pixels_8h_source.html#l00338">338</a></p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов структуры находятся в файле:<ul>
+<li>C:/git/world-of-might-and-magic/lib/win32/x86/sdl2-2.0.12/include/<a class="el" href="../../d8/d6a/_s_d_l__pixels_8h_source.html">SDL_pixels.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../de/d29/struct_s_d_l___pixel_format.html">SDL_PixelFormat</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:05:15. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

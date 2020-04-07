@@ -1,0 +1,345 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Файл C:/git/world-of-might-and-magic/Engine/Graphics/Viewport.cpp</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('dd/da4/_viewport_8cpp.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл Viewport.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><a href="../../dd/da4/_viewport_8cpp_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:ad2fc7671d4f9ef2ac5c25246e2c74bca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/da4/_viewport_8cpp.html#ad2fc7671d4f9ef2ac5c25246e2c74bca">ItemInteraction</a> (unsigned int item_id)</td></tr>
+<tr class="separator:ad2fc7671d4f9ef2ac5c25246e2c74bca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7291e3aad3c053a6f0dd0bbd788f375b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/da4/_viewport_8cpp.html#a7291e3aad3c053a6f0dd0bbd788f375b">ActorInteraction</a> (unsigned int <a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a58c2a664503e14ffb8f21012aabff3e9">id</a>)</td></tr>
+<tr class="separator:a7291e3aad3c053a6f0dd0bbd788f375b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5fd167f78f03f865122445749988f17"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/da4/_viewport_8cpp.html#ad5fd167f78f03f865122445749988f17">DecorationInteraction</a> (unsigned int <a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a58c2a664503e14ffb8f21012aabff3e9">id</a>, unsigned int pid)</td></tr>
+<tr class="separator:ad5fd167f78f03f865122445749988f17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Функции</h2>
+<a id="ad2fc7671d4f9ef2ac5c25246e2c74bca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2fc7671d4f9ef2ac5c25246e2c74bca">&#9670;&nbsp;</a></span>ItemInteraction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> ItemInteraction </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>item_id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dd/da4/_viewport_8cpp_source.html">Viewport.cpp</a> строка <a class="el" href="../../dd/da4/_viewport_8cpp_source.html#l00224">224</a></p>
+<div class="fragment"><div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;                                           {</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../d9/d99/_items_8cpp.html#abf52bfff3807296d2b51dd2af081c59f">pItemsTable</a>-&gt;<a class="code" href="../../db/d39/struct_items_table.html#af211962cc05a32190d55251bdc49ae30">pItems</a>[<a class="code" href="../../d9/ded/_sprite_object_8cpp.html#a52287337197f435e50cf4450fd11db77">pSpriteObjects</a>[item_id].containing_item.uItemID]</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;            .uEquipType == <a class="code" href="../../d5/da4/_items_8h.html#a6efba91e38f0848b5e0d1d4cc6011a2dae43922ed12bc7f27f0de65902165a198">EQUIP_GOLD</a>) {</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a6ffe5822dbcc7089a716e75bc4b381f9">PartyFindsGold</a>(</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;            <a class="code" href="../../d9/ded/_sprite_object_8cpp.html#a52287337197f435e50cf4450fd11db77">pSpriteObjects</a>[item_id].containing_item.special_enchantment, 0);</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        <a class="code" href="../../d7/d19/_viewport_8h.html#a3728133a9af71bc7d784f76d49025ec0">viewparams</a>-&gt;<a class="code" href="../../d4/d10/struct_viewing_params.html#a0bb88f953083fe55c27db34b5b774956">bRedrawGameUI</a> = 1;</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#aa0d4246542588ebae5609a8e8a4718d1">pPickedItem</a>.<a class="code" href="../../d7/d9c/struct_item_gen.html#acfc0fac84e8ae19763e36fc7d153f959">uItemID</a>) <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160; </div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        <a class="code" href="../../d4/dca/_u_i_status_bar_8cpp.html#abe7a1f2130faa2a0a455965241061a8c">GameUI_StatusBar_OnEvent</a>(<a class="code" href="../../dd/d8c/_localization_8cpp.html#acce22610cffe19ad6cc8f577cd611b8b">localization</a>-&gt;<a class="code" href="../../dd/d88/class_localization.html#aa585c1180dc1a338b5822de8e413d2d6">FormatString</a>(</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;            471,</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;            <a class="code" href="../../d9/d99/_items_8cpp.html#abf52bfff3807296d2b51dd2af081c59f">pItemsTable</a>-&gt;<a class="code" href="../../db/d39/struct_items_table.html#af211962cc05a32190d55251bdc49ae30">pItems</a>[<a class="code" href="../../d9/ded/_sprite_object_8cpp.html#a52287337197f435e50cf4450fd11db77">pSpriteObjects</a>[item_id].containing_item.uItemID]</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;                .pUnidentifiedName));  <span class="comment">// You found an item (%s)!</span></div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160; </div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../d9/ded/_sprite_object_8cpp.html#a52287337197f435e50cf4450fd11db77">pSpriteObjects</a>[item_id].containing_item.uItemID ==</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;            <a class="code" href="../../d5/da4/_items_8h.html#a025279585f93967b0c7184f5b8597490af8f8bf3010d083c23eda359ab773a825">ITEM_ARTIFACT_SPLITTER</a>)</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;            <a class="code" href="../../da/db4/_party_8cpp.html#a7ef9fde76af050170268e578ef76b6ef">_449B7E_toggle_bit</a>(<a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#ab5b1378cc25e8c4deb49847ead3e7187">_quest_bits</a>, 184, 1);</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../d9/ded/_sprite_object_8cpp.html#a52287337197f435e50cf4450fd11db77">pSpriteObjects</a>[item_id].containing_item.uItemID ==</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;            <a class="code" href="../../d5/da4/_items_8h.html#a025279585f93967b0c7184f5b8597490aed2424739eab5d7641a18704a8c10f38">ITEM_SPELLBOOK_MIND_REMOVE_FEAR</a>)</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;            <a class="code" href="../../da/db4/_party_8cpp.html#a7ef9fde76af050170268e578ef76b6ef">_449B7E_toggle_bit</a>(<a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#ab5b1378cc25e8c4deb49847ead3e7187">_quest_bits</a>, 185, 1);</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a15aa57610c7dbb86e541329683ab9334">AddItemToParty</a>(&amp;<a class="code" href="../../d9/ded/_sprite_object_8cpp.html#a52287337197f435e50cf4450fd11db77">pSpriteObjects</a>[item_id].containing_item))</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;            <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#a88da8d8d7640e1a24c482a7dd548f6f3">SetHoldingItem</a>(&amp;<a class="code" href="../../d9/ded/_sprite_object_8cpp.html#a52287337197f435e50cf4450fd11db77">pSpriteObjects</a>[item_id].containing_item);</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    }</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    <a class="code" href="../../d0/d5a/struct_sprite_object.html#aba19a5c3248618b6104fdbb864522d54">SpriteObject::OnInteraction</a>(item_id);</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../da/db4/_party_8cpp_source.html#l01190">_449B7E_toggle_bit()</a>, <a class="el" href="../../db/d38/_party_8h_source.html#l00291">Party::_quest_bits</a>, <a class="el" href="../../da/db4/_party_8cpp_source.html#l01096">Party::AddItemToParty()</a>, <a class="el" href="../../d7/d19/_viewport_8h_source.html#l00074">ViewingParams::bRedrawGameUI</a>, <a class="el" href="../../d5/da4/_items_8h_source.html#l00246">EQUIP_GOLD</a>, <a class="el" href="../../dd/d8c/_localization_8cpp_source.html#l00017">Localization::FormatString()</a>, <a class="el" href="../../d4/dca/_u_i_status_bar_8cpp_source.html#l00033">GameUI_StatusBar_OnEvent()</a>, <a class="el" href="../../d5/da4/_items_8h_source.html#l00159">ITEM_ARTIFACT_SPLITTER</a>, <a class="el" href="../../d5/da4/_items_8h_source.html#l00145">ITEM_SPELLBOOK_MIND_REMOVE_FEAR</a>, <a class="el" href="../../dd/d8c/_localization_8cpp_source.html#l00011">localization</a>, <a class="el" href="../../d9/ded/_sprite_object_8cpp_source.html#l00872">SpriteObject::OnInteraction()</a>, <a class="el" href="../../da/db4/_party_8cpp_source.html#l00976">Party::PartyFindsGold()</a>, <a class="el" href="../../d5/da4/_items_8h_source.html#l00460">ItemsTable::pItems</a>, <a class="el" href="../../d9/d99/_items_8cpp_source.html#l00037">pItemsTable</a>, <a class="el" href="../../da/db4/_party_8cpp_source.html#l00030">pParty</a>, <a class="el" href="../../db/d38/_party_8h_source.html#l00312">Party::pPickedItem</a>, <a class="el" href="../../d9/ded/_sprite_object_8cpp_source.html#l00034">pSpriteObjects</a>, <a class="el" href="../../da/db4/_party_8cpp_source.html#l00150">Party::SetHoldingItem()</a>, <a class="el" href="../../d5/da4/_items_8h_source.html#l00326">ItemGen::uItemID</a> и <a class="el" href="../../d6/d5b/mm7__data_8cpp_source.html#l00022">viewparams</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l03716">DoInteractionWithTopmostZObject()</a> и <a class="el" href="../../dd/da4/_viewport_8cpp_source.html#l00315">Engine::OnGameViewportClick()</a>.</p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../dd/da4/_viewport_8cpp_ad2fc7671d4f9ef2ac5c25246e2c74bca_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../dd/da4/_viewport_8cpp_ad2fc7671d4f9ef2ac5c25246e2c74bca_icgraph.svg" width="100%" height="378"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a7291e3aad3c053a6f0dd0bbd788f375b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7291e3aad3c053a6f0dd0bbd788f375b">&#9670;&nbsp;</a></span>ActorInteraction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ActorInteraction </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dd/da4/_viewport_8cpp_source.html">Viewport.cpp</a> строка <a class="el" href="../../dd/da4/_viewport_8cpp_source.html#l00250">250</a></p>
+<div class="fragment"><div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;                                       {</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="../../d4/d59/_actor_8cpp.html#ab7c12523a0048f72c6ed89eff8330548">pActors</a>[<span class="keywordtype">id</span>].GetActorsRelation(0) &amp;&amp; <a class="code" href="../../d4/d59/_actor_8cpp.html#ab7c12523a0048f72c6ed89eff8330548">pActors</a>[<span class="keywordtype">id</span>].ActorFriend() &amp;&amp;</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        <a class="code" href="../../d4/d59/_actor_8cpp.html#ab7c12523a0048f72c6ed89eff8330548">pActors</a>[<span class="keywordtype">id</span>].CanAct()) {</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        <a class="code" href="../../da/d35/struct_actor.html#a84810b2dcc2f1683232efdcd997dc249">Actor::AI_FaceObject</a>(<span class="keywordtype">id</span>, 4, 0, 0);</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../d4/d59/_actor_8cpp.html#ab7c12523a0048f72c6ed89eff8330548">pActors</a>[<span class="keywordtype">id</span>].sNPC_ID) {</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;            <a class="code" href="../../dc/dce/_g_u_i_window_8cpp.html#a67ca5f2a4757601de2f69711ee287539">pMessageQueue_50CBD0</a>-&gt;AddGUIMessage(<a class="code" href="../../d5/d0b/_g_u_i_window_8h.html#a2519966952faeb9397447ce89e9bcb02ab85b04807c1d678460f7cf0ba8998485">UIMSG_StartNPCDialogue</a>, <span class="keywordtype">id</span>, 0);</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="../../d1/d6c/_n_p_c_8cpp.html#a5c8b4db1afd780cdf7ff9ccd02e7a542">pNPCStats</a>-&gt;<a class="code" href="../../d5/d11/struct_n_p_c_stats.html#af63e699d3c1607b59e7d9f6823b2370b">pGroups_copy</a>[<a class="code" href="../../d4/d59/_actor_8cpp.html#ab7c12523a0048f72c6ed89eff8330548">pActors</a>[<span class="keywordtype">id</span>].uGroup]) {</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;                <span class="keywordflow">if</span> (<a class="code" href="../../d1/d6c/_n_p_c_8cpp.html#a5c8b4db1afd780cdf7ff9ccd02e7a542">pNPCStats</a>-&gt;<a class="code" href="../../d5/d11/struct_n_p_c_stats.html#aafd5f01d52c0ee1e4a77065813f69471">pCatchPhrases</a></div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;                        [<a class="code" href="../../d1/d6c/_n_p_c_8cpp.html#a5c8b4db1afd780cdf7ff9ccd02e7a542">pNPCStats</a>-&gt;<a class="code" href="../../d5/d11/struct_n_p_c_stats.html#af63e699d3c1607b59e7d9f6823b2370b">pGroups_copy</a>[<a class="code" href="../../d4/d59/_actor_8cpp.html#ab7c12523a0048f72c6ed89eff8330548">pActors</a>[<span class="keywordtype">id</span>].uGroup]]) {</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;                    <a class="code" href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a>-&gt;<a class="code" href="../../d0/d14/struct_party.html#aed74780ef48b350965fad5ab6d02b365">uFlags</a> |= 2;</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;                    <a class="code" href="../../d6/d5b/mm7__data_8cpp.html#aaab3a97c4ebbe15cb97c7840b826f264">branchless_dialogue_str</a> = <a class="code" href="../../d1/d6c/_n_p_c_8cpp.html#a5c8b4db1afd780cdf7ff9ccd02e7a542">pNPCStats</a>-&gt;<a class="code" href="../../d5/d11/struct_n_p_c_stats.html#aafd5f01d52c0ee1e4a77065813f69471">pCatchPhrases</a>[<a class="code" href="../../d1/d6c/_n_p_c_8cpp.html#a5c8b4db1afd780cdf7ff9ccd02e7a542">pNPCStats</a>-&gt;<a class="code" href="../../d5/d11/struct_n_p_c_stats.html#af63e699d3c1607b59e7d9f6823b2370b">pGroups_copy</a>[<a class="code" href="../../d4/d59/_actor_8cpp.html#ab7c12523a0048f72c6ed89eff8330548">pActors</a>[<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a58c2a664503e14ffb8f21012aabff3e9">id</a>].uGroup]];</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;                    <a class="code" href="../../dd/d76/_u_i_dialogue_8cpp.html#a4cc8df3663b16dbbd9599a115b4fc2c7">sub_4451A8_press_any_key</a>(0, 0, 0);</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;                }</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;            }</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        }</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    }</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l01072">Actor::AI_FaceObject()</a>, <a class="el" href="../../d6/d5b/mm7__data_8cpp_source.html#l00619">branchless_dialogue_str</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l00038">pActors</a>, <a class="el" href="../../d9/dbc/_n_p_c_8h_source.html#l00169">NPCStats::pCatchPhrases</a>, <a class="el" href="../../d9/dbc/_n_p_c_8h_source.html#l00177">NPCStats::pGroups_copy</a>, <a class="el" href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00086">pMessageQueue_50CBD0</a>, <a class="el" href="../../d1/d6c/_n_p_c_8cpp_source.html#l00029">pNPCStats</a>, <a class="el" href="../../da/db4/_party_8cpp_source.html#l00030">pParty</a>, <a class="el" href="../../dd/d76/_u_i_dialogue_8cpp_source.html#l00615">sub_4451A8_press_any_key()</a>, <a class="el" href="../../db/d38/_party_8h_source.html#l00313">Party::uFlags</a> и <a class="el" href="../../d5/d0b/_g_u_i_window_8h_source.html#l00128">UIMSG_StartNPCDialogue</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l03716">DoInteractionWithTopmostZObject()</a> и <a class="el" href="../../dd/da4/_viewport_8cpp_source.html#l00315">Engine::OnGameViewportClick()</a>.</p>
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../dd/da4/_viewport_8cpp_a7291e3aad3c053a6f0dd0bbd788f375b_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../dd/da4/_viewport_8cpp_a7291e3aad3c053a6f0dd0bbd788f375b_icgraph.svg" width="100%" height="378"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ad5fd167f78f03f865122445749988f17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5fd167f78f03f865122445749988f17">&#9670;&nbsp;</a></span>DecorationInteraction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> DecorationInteraction </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>pid</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dd/da4/_viewport_8cpp_source.html">Viewport.cpp</a> строка <a class="el" href="../../dd/da4/_viewport_8cpp_source.html#l00271">271</a></p>
+<div class="fragment"><div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;                                                              {</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../d1/d3f/_decoration_8cpp.html#a30fe70a9ffc6c9e200b414bc5b3e3e8b">pLevelDecorations</a>[<span class="keywordtype">id</span>].uEventID) {</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        <a class="code" href="../../df/d5c/_events_8cpp.html#adf7cab48524f3d8404933f5bf0969895">EventProcessor</a>(<a class="code" href="../../d1/d3f/_decoration_8cpp.html#a30fe70a9ffc6c9e200b414bc5b3e3e8b">pLevelDecorations</a>[<span class="keywordtype">id</span>].uEventID, pid, 1);</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        <a class="code" href="../../d1/d3f/_decoration_8cpp.html#a30fe70a9ffc6c9e200b414bc5b3e3e8b">pLevelDecorations</a>[<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a58c2a664503e14ffb8f21012aabff3e9">id</a>].uFlags |= <a class="code" href="../../dd/dbf/_decoration_8h.html#a59975f806acd339ee53b7f8d21bc8159acd333521c509d7f62d78686f6d05201c">LEVEL_DECORATION_VISIBLE_ON_MAP</a>;</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../d1/d3f/_decoration_8cpp.html#a30fe70a9ffc6c9e200b414bc5b3e3e8b">pLevelDecorations</a>[<span class="keywordtype">id</span>].IsInteractive()) {</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;            <a class="code" href="../../d1/d3f/_decoration_8cpp.html#ad0fa06b8c2179a9134b5d63f3949a141">activeLevelDecoration</a> = &amp;<a class="code" href="../../d1/d3f/_decoration_8cpp.html#a30fe70a9ffc6c9e200b414bc5b3e3e8b">pLevelDecorations</a>[<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a58c2a664503e14ffb8f21012aabff3e9">id</a>];</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;            <a class="code" href="../../df/d5c/_events_8cpp.html#adf7cab48524f3d8404933f5bf0969895">EventProcessor</a>(</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;                <a class="code" href="../../d6/d5b/mm7__data_8cpp.html#a820b7032fb7d7cfff6d46feb02d3932d">stru_5E4C90_MapPersistVars</a></div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;                        ._decor_events[<a class="code" href="../../d1/d3f/_decoration_8cpp.html#a30fe70a9ffc6c9e200b414bc5b3e3e8b">pLevelDecorations</a>[<span class="keywordtype">id</span>]._idx_in_stru123 -</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;                                       75] +</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;                    380,</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;                0, 1);</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;            <a class="code" href="../../d1/d3f/_decoration_8cpp.html#ad0fa06b8c2179a9134b5d63f3949a141">activeLevelDecoration</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;        }</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    }</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d1/d3f/_decoration_8cpp_source.html#l00010">activeLevelDecoration</a>, <a class="el" href="../../df/d5c/_events_8cpp_source.html#l00260">EventProcessor()</a>, <a class="el" href="../../dd/dbf/_decoration_8h_source.html#l00012">LEVEL_DECORATION_VISIBLE_ON_MAP</a>, <a class="el" href="../../d1/d3f/_decoration_8cpp_source.html#l00008">pLevelDecorations</a> и <a class="el" href="../../d6/d5b/mm7__data_8cpp_source.html#l00023">stru_5E4C90_MapPersistVars</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l03716">DoInteractionWithTopmostZObject()</a> и <a class="el" href="../../dd/da4/_viewport_8cpp_source.html#l00315">Engine::OnGameViewportClick()</a>.</p>
+<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../dd/da4/_viewport_8cpp_ad5fd167f78f03f865122445749988f17_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../dd/da4/_viewport_8cpp_ad5fd167f78f03f865122445749988f17_icgraph.svg" width="100%" height="378"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="astruct_party_html_aa0d4246542588ebae5609a8e8a4718d1"><div class="ttname"><a href="../../d0/d14/struct_party.html#aa0d4246542588ebae5609a8e8a4718d1">Party::pPickedItem</a></div><div class="ttdeci">ItemGen pPickedItem</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00312">Party.h:312</a></div></div>
+<div class="ttc" id="a_decoration_8cpp_html_a30fe70a9ffc6c9e200b414bc5b3e3e8b"><div class="ttname"><a href="../../d1/d3f/_decoration_8cpp.html#a30fe70a9ffc6c9e200b414bc5b3e3e8b">pLevelDecorations</a></div><div class="ttdeci">std::array&lt; LevelDecoration, 3000 &gt; pLevelDecorations</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d3f/_decoration_8cpp_source.html#l00008">Decoration.cpp:8</a></div></div>
+<div class="ttc" id="a_sprite_object_8cpp_html_a52287337197f435e50cf4450fd11db77"><div class="ttname"><a href="../../d9/ded/_sprite_object_8cpp.html#a52287337197f435e50cf4450fd11db77">pSpriteObjects</a></div><div class="ttdeci">std::array&lt; SpriteObject, MAX_SPRITE_OBJECTS &gt; pSpriteObjects</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/ded/_sprite_object_8cpp_source.html#l00034">SpriteObject.cpp:34</a></div></div>
+<div class="ttc" id="a_u_i_dialogue_8cpp_html_a4cc8df3663b16dbbd9599a115b4fc2c7"><div class="ttname"><a href="../../dd/d76/_u_i_dialogue_8cpp.html#a4cc8df3663b16dbbd9599a115b4fc2c7">sub_4451A8_press_any_key</a></div><div class="ttdeci">void sub_4451A8_press_any_key(int a1, int a2, int a4)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d76/_u_i_dialogue_8cpp_source.html#l00615">UIDialogue.cpp:615</a></div></div>
+<div class="ttc" id="astruct_n_p_c_stats_html_af63e699d3c1607b59e7d9f6823b2370b"><div class="ttname"><a href="../../d5/d11/struct_n_p_c_stats.html#af63e699d3c1607b59e7d9f6823b2370b">NPCStats::pGroups_copy</a></div><div class="ttdeci">uint16_t pGroups_copy[51]</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dbc/_n_p_c_8h_source.html#l00177">NPC.h:177</a></div></div>
+<div class="ttc" id="astruct_actor_html_a84810b2dcc2f1683232efdcd997dc249"><div class="ttname"><a href="../../da/d35/struct_actor.html#a84810b2dcc2f1683232efdcd997dc249">Actor::AI_FaceObject</a></div><div class="ttdeci">static void AI_FaceObject(unsigned int uActorID, unsigned int uObjID, int UNUSED, struct AIDirection *Dir_In)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d59/_actor_8cpp_source.html#l01072">Actor.cpp:1072</a></div></div>
+<div class="ttc" id="a_g_u_i_window_8h_html_a2519966952faeb9397447ce89e9bcb02ab85b04807c1d678460f7cf0ba8998485"><div class="ttname"><a href="../../d5/d0b/_g_u_i_window_8h.html#a2519966952faeb9397447ce89e9bcb02ab85b04807c1d678460f7cf0ba8998485">UIMSG_StartNPCDialogue</a></div><div class="ttdeci">@ UIMSG_StartNPCDialogue</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d0b/_g_u_i_window_8h_source.html#l00128">GUIWindow.h:128</a></div></div>
+<div class="ttc" id="astruct_party_html_ab5b1378cc25e8c4deb49847ead3e7187"><div class="ttname"><a href="../../d0/d14/struct_party.html#ab5b1378cc25e8c4deb49847ead3e7187">Party::_quest_bits</a></div><div class="ttdeci">unsigned __int8 _quest_bits[64]</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00291">Party.h:291</a></div></div>
+<div class="ttc" id="a_localization_8cpp_html_acce22610cffe19ad6cc8f577cd611b8b"><div class="ttname"><a href="../../dd/d8c/_localization_8cpp.html#acce22610cffe19ad6cc8f577cd611b8b">localization</a></div><div class="ttdeci">Localization * localization</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d8c/_localization_8cpp_source.html#l00011">Localization.cpp:11</a></div></div>
+<div class="ttc" id="a_items_8h_html_a6efba91e38f0848b5e0d1d4cc6011a2dae43922ed12bc7f27f0de65902165a198"><div class="ttname"><a href="../../d5/da4/_items_8h.html#a6efba91e38f0848b5e0d1d4cc6011a2dae43922ed12bc7f27f0de65902165a198">EQUIP_GOLD</a></div><div class="ttdeci">@ EQUIP_GOLD</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/da4/_items_8h_source.html#l00246">Items.h:246</a></div></div>
+<div class="ttc" id="astruct_party_html_a15aa57610c7dbb86e541329683ab9334"><div class="ttname"><a href="../../d0/d14/struct_party.html#a15aa57610c7dbb86e541329683ab9334">Party::AddItemToParty</a></div><div class="ttdeci">bool AddItemToParty(ItemGen *pItem)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db4/_party_8cpp_source.html#l01096">Party.cpp:1096</a></div></div>
+<div class="ttc" id="a_items_8cpp_html_abf52bfff3807296d2b51dd2af081c59f"><div class="ttname"><a href="../../d9/d99/_items_8cpp.html#abf52bfff3807296d2b51dd2af081c59f">pItemsTable</a></div><div class="ttdeci">struct ItemsTable * pItemsTable</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d99/_items_8cpp_source.html#l00037">Items.cpp:37</a></div></div>
+<div class="ttc" id="astruct_party_html_a6ffe5822dbcc7089a716e75bc4b381f9"><div class="ttname"><a href="../../d0/d14/struct_party.html#a6ffe5822dbcc7089a716e75bc4b381f9">Party::PartyFindsGold</a></div><div class="ttdeci">void PartyFindsGold(unsigned int uNumGold, int _1_dont_share_with_followers___2_the_same_but_without_a_message__else_normal)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db4/_party_8cpp_source.html#l00976">Party.cpp:976</a></div></div>
+<div class="ttc" id="a_decoration_8h_html_a59975f806acd339ee53b7f8d21bc8159acd333521c509d7f62d78686f6d05201c"><div class="ttname"><a href="../../dd/dbf/_decoration_8h.html#a59975f806acd339ee53b7f8d21bc8159acd333521c509d7f62d78686f6d05201c">LEVEL_DECORATION_VISIBLE_ON_MAP</a></div><div class="ttdeci">@ LEVEL_DECORATION_VISIBLE_ON_MAP</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dbf/_decoration_8h_source.html#l00012">Decoration.h:12</a></div></div>
+<div class="ttc" id="astruct_n_p_c_stats_html_aafd5f01d52c0ee1e4a77065813f69471"><div class="ttname"><a href="../../d5/d11/struct_n_p_c_stats.html#aafd5f01d52c0ee1e4a77065813f69471">NPCStats::pCatchPhrases</a></div><div class="ttdeci">char * pCatchPhrases[52]</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dbc/_n_p_c_8h_source.html#l00169">NPC.h:169</a></div></div>
+<div class="ttc" id="a_decoration_8cpp_html_ad0fa06b8c2179a9134b5d63f3949a141"><div class="ttname"><a href="../../d1/d3f/_decoration_8cpp.html#ad0fa06b8c2179a9134b5d63f3949a141">activeLevelDecoration</a></div><div class="ttdeci">LevelDecoration * activeLevelDecoration</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d3f/_decoration_8cpp_source.html#l00010">Decoration.cpp:10</a></div></div>
+<div class="ttc" id="a_party_8cpp_html_a638b1d8b985f1c7f8b69f2d81286f98e"><div class="ttname"><a href="../../da/db4/_party_8cpp.html#a638b1d8b985f1c7f8b69f2d81286f98e">pParty</a></div><div class="ttdeci">Party * pParty</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db4/_party_8cpp_source.html#l00030">Party.cpp:30</a></div></div>
+<div class="ttc" id="a_viewport_8h_html_a3728133a9af71bc7d784f76d49025ec0"><div class="ttname"><a href="../../d7/d19/_viewport_8h.html#a3728133a9af71bc7d784f76d49025ec0">viewparams</a></div><div class="ttdeci">struct ViewingParams * viewparams</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d5b/mm7__data_8cpp_source.html#l00022">mm7_data.cpp:22</a></div></div>
+<div class="ttc" id="astruct_item_gen_html_acfc0fac84e8ae19763e36fc7d153f959"><div class="ttname"><a href="../../d7/d9c/struct_item_gen.html#acfc0fac84e8ae19763e36fc7d153f959">ItemGen::uItemID</a></div><div class="ttdeci">int uItemID</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/da4/_items_8h_source.html#l00326">Items.h:326</a></div></div>
+<div class="ttc" id="a_actor_8cpp_html_ab7c12523a0048f72c6ed89eff8330548"><div class="ttname"><a href="../../d4/d59/_actor_8cpp.html#ab7c12523a0048f72c6ed89eff8330548">pActors</a></div><div class="ttdeci">std::array&lt; Actor, 500 &gt; pActors</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d59/_actor_8cpp_source.html#l00038">Actor.cpp:38</a></div></div>
+<div class="ttc" id="astruct_party_html_aed74780ef48b350965fad5ab6d02b365"><div class="ttname"><a href="../../d0/d14/struct_party.html#aed74780ef48b350965fad5ab6d02b365">Party::uFlags</a></div><div class="ttdeci">unsigned int uFlags</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d38/_party_8h_source.html#l00313">Party.h:313</a></div></div>
+<div class="ttc" id="amm7__data_8cpp_html_aaab3a97c4ebbe15cb97c7840b826f264"><div class="ttname"><a href="../../d6/d5b/mm7__data_8cpp.html#aaab3a97c4ebbe15cb97c7840b826f264">branchless_dialogue_str</a></div><div class="ttdeci">String branchless_dialogue_str</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d5b/mm7__data_8cpp_source.html#l00619">mm7_data.cpp:619</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a58c2a664503e14ffb8f21012aabff3e9"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a58c2a664503e14ffb8f21012aabff3e9">id</a></div><div class="ttdeci">GLuint id</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l00531">SDL_opengl_glext.h:531</a></div></div>
+<div class="ttc" id="aclass_localization_html_aa585c1180dc1a338b5822de8e413d2d6"><div class="ttname"><a href="../../dd/d88/class_localization.html#aa585c1180dc1a338b5822de8e413d2d6">Localization::FormatString</a></div><div class="ttdeci">String FormatString(unsigned int index,...) const</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d8c/_localization_8cpp_source.html#l00017">Localization.cpp:17</a></div></div>
+<div class="ttc" id="a_party_8cpp_html_a7ef9fde76af050170268e578ef76b6ef"><div class="ttname"><a href="../../da/db4/_party_8cpp.html#a7ef9fde76af050170268e578ef76b6ef">_449B7E_toggle_bit</a></div><div class="ttdeci">void _449B7E_toggle_bit(unsigned char *pArray, __int16 a2, unsigned __int16 bToggle)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db4/_party_8cpp_source.html#l01190">Party.cpp:1190</a></div></div>
+<div class="ttc" id="a_n_p_c_8cpp_html_a5c8b4db1afd780cdf7ff9ccd02e7a542"><div class="ttname"><a href="../../d1/d6c/_n_p_c_8cpp.html#a5c8b4db1afd780cdf7ff9ccd02e7a542">pNPCStats</a></div><div class="ttdeci">struct NPCStats * pNPCStats</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d6c/_n_p_c_8cpp_source.html#l00029">NPC.cpp:29</a></div></div>
+<div class="ttc" id="a_u_i_status_bar_8cpp_html_abe7a1f2130faa2a0a455965241061a8c"><div class="ttname"><a href="../../d4/dca/_u_i_status_bar_8cpp.html#abe7a1f2130faa2a0a455965241061a8c">GameUI_StatusBar_OnEvent</a></div><div class="ttdeci">void GameUI_StatusBar_OnEvent(const String &amp;str, unsigned int num_seconds)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dca/_u_i_status_bar_8cpp_source.html#l00033">UIStatusBar.cpp:33</a></div></div>
+<div class="ttc" id="astruct_party_html_a88da8d8d7640e1a24c482a7dd548f6f3"><div class="ttname"><a href="../../d0/d14/struct_party.html#a88da8d8d7640e1a24c482a7dd548f6f3">Party::SetHoldingItem</a></div><div class="ttdeci">void SetHoldingItem(ItemGen *pItem)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db4/_party_8cpp_source.html#l00150">Party.cpp:150</a></div></div>
+<div class="ttc" id="astruct_viewing_params_html_a0bb88f953083fe55c27db34b5b774956"><div class="ttname"><a href="../../d4/d10/struct_viewing_params.html#a0bb88f953083fe55c27db34b5b774956">ViewingParams::bRedrawGameUI</a></div><div class="ttdeci">int bRedrawGameUI</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d19/_viewport_8h_source.html#l00074">Viewport.h:74</a></div></div>
+<div class="ttc" id="a_events_8cpp_html_adf7cab48524f3d8404933f5bf0969895"><div class="ttname"><a href="../../df/d5c/_events_8cpp.html#adf7cab48524f3d8404933f5bf0969895">EventProcessor</a></div><div class="ttdeci">void EventProcessor(int uEventID, int targetObj, int canShowMessages, int entry_line)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d5c/_events_8cpp_source.html#l00260">Events.cpp:260</a></div></div>
+<div class="ttc" id="a_items_8h_html_a025279585f93967b0c7184f5b8597490af8f8bf3010d083c23eda359ab773a825"><div class="ttname"><a href="../../d5/da4/_items_8h.html#a025279585f93967b0c7184f5b8597490af8f8bf3010d083c23eda359ab773a825">ITEM_ARTIFACT_SPLITTER</a></div><div class="ttdeci">@ ITEM_ARTIFACT_SPLITTER</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/da4/_items_8h_source.html#l00159">Items.h:159</a></div></div>
+<div class="ttc" id="astruct_sprite_object_html_aba19a5c3248618b6104fdbb864522d54"><div class="ttname"><a href="../../d0/d5a/struct_sprite_object.html#aba19a5c3248618b6104fdbb864522d54">SpriteObject::OnInteraction</a></div><div class="ttdeci">static void OnInteraction(unsigned int uLayingItemID)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/ded/_sprite_object_8cpp_source.html#l00872">SpriteObject.cpp:872</a></div></div>
+<div class="ttc" id="a_g_u_i_window_8cpp_html_a67ca5f2a4757601de2f69711ee287539"><div class="ttname"><a href="../../dc/dce/_g_u_i_window_8cpp.html#a67ca5f2a4757601de2f69711ee287539">pMessageQueue_50CBD0</a></div><div class="ttdeci">struct GUIMessageQueue * pMessageQueue_50CBD0</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00086">GUIWindow.cpp:86</a></div></div>
+<div class="ttc" id="amm7__data_8cpp_html_a820b7032fb7d7cfff6d46feb02d3932d"><div class="ttname"><a href="../../d6/d5b/mm7__data_8cpp.html#a820b7032fb7d7cfff6d46feb02d3932d">stru_5E4C90_MapPersistVars</a></div><div class="ttdeci">stru123 stru_5E4C90_MapPersistVars</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d5b/mm7__data_8cpp_source.html#l00023">mm7_data.cpp:23</a></div></div>
+<div class="ttc" id="a_items_8h_html_a025279585f93967b0c7184f5b8597490aed2424739eab5d7641a18704a8c10f38"><div class="ttname"><a href="../../d5/da4/_items_8h.html#a025279585f93967b0c7184f5b8597490aed2424739eab5d7641a18704a8c10f38">ITEM_SPELLBOOK_MIND_REMOVE_FEAR</a></div><div class="ttdeci">@ ITEM_SPELLBOOK_MIND_REMOVE_FEAR</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/da4/_items_8h_source.html#l00145">Items.h:145</a></div></div>
+<div class="ttc" id="astruct_items_table_html_af211962cc05a32190d55251bdc49ae30"><div class="ttname"><a href="../../db/d39/struct_items_table.html#af211962cc05a32190d55251bdc49ae30">ItemsTable::pItems</a></div><div class="ttdeci">NZIArray&lt; ItemDesc, 800 &gt; pItems</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/da4/_items_8h_source.html#l00460">Items.h:460</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_0b6ee6e7e9547e675db4add2e5de97da.html">Engine</a></li><li class="navelem"><a class="el" href="../../dir_bb84c1711d8a00602a64a24ea462155a.html">Graphics</a></li><li class="navelem"><a class="el" href="../../dd/da4/_viewport_8cpp.html">Viewport.cpp</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:03:58. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

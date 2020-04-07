@@ -1,0 +1,336 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Файл C:/git/world-of-might-and-magic/Media/Audio/OpenALSoundProvider.cpp</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d4/db9/_open_a_l_sound_provider_8cpp.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл OpenALSoundProvider.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><a href="../../d4/db9/_open_a_l_sound_provider_8cpp_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d9c/class_call_back_timer.html">CallBackTimer</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dcc/class_audio_track_s16.html">AudioTrackS16</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d2b/class_audio_sample16.html">AudioSample16</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a5ed8e2adc6340d877478a62cc1d448c9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/db9/_open_a_l_sound_provider_8cpp.html#a5ed8e2adc6340d877478a62cc1d448c9">log</a> (const char *<a class="el" href="../../d3/d78/_s_d_l__audio_8h.html#a71a65ffd977afe9c3fef116a5bc9ee27">format</a>,...)</td></tr>
+<tr class="separator:a5ed8e2adc6340d877478a62cc1d448c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aece65ae279d5009406167c5949cdf6e1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/db9/_open_a_l_sound_provider_8cpp.html#aece65ae279d5009406167c5949cdf6e1">CheckError</a> ()</td></tr>
+<tr class="separator:aece65ae279d5009406167c5949cdf6e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ddf1ec6f0d8b6a95f35e17ae192b4d8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/def/_media_8h.html#ae0744a89d3eaa9875de4dfc82c051b0b">PAudioTrack</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/db9/_open_a_l_sound_provider_8cpp.html#a9ddf1ec6f0d8b6a95f35e17ae192b4d8">CreateAudioTrack</a> (const <a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#ae84541b4f3d8e1ea24ec0f466a8c568b">std::string</a> &amp;file_path)</td></tr>
+<tr class="separator:a9ddf1ec6f0d8b6a95f35e17ae192b4d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d61058bc8900801bc227bc7b47881d7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/def/_media_8h.html#aec9137d201f9fdc6dc340ae7b19f86f8">PAudioSample</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/db9/_open_a_l_sound_provider_8cpp.html#a0d61058bc8900801bc227bc7b47881d7">CreateAudioSample</a> (<a class="el" href="../../de/d13/_mem_buffer_8h.html#a8722c69b0b425d6a28bc23839396f8f5">PMemBuffer</a> <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#a76461e97a098d2c9ae20ac193d3825ae">buffer</a>)</td></tr>
+<tr class="separator:a0d61058bc8900801bc227bc7b47881d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Функции</h2>
+<a id="a5ed8e2adc6340d877478a62cc1d448c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ed8e2adc6340d877478a62cc1d448c9">&#9670;&nbsp;</a></span>log()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> log </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>format</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d4/db9/_open_a_l_sound_provider_8cpp_source.html">OpenALSoundProvider.cpp</a> строка <a class="el" href="../../d4/db9/_open_a_l_sound_provider_8cpp_source.html#l00024">24</a></p>
+<div class="fragment"><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                                  {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    va_list va;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    va_start(va, <a class="code" href="../../d3/d78/_s_d_l__audio_8h.html#a71a65ffd977afe9c3fef116a5bc9ee27">format</a>);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    vprintf(<a class="code" href="../../d3/d78/_s_d_l__audio_8h.html#a71a65ffd977afe9c3fef116a5bc9ee27">format</a>, va);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    va_end(va);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Используется в <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l00839">av_logger()</a>, <a class="el" href="../../d4/db9/_open_a_l_sound_provider_8cpp_source.html#l00031">CheckError()</a>, <a class="el" href="../../d4/db9/_open_a_l_sound_provider_8cpp_source.html#l00594">AudioTrackS16::DrainBuffers()</a>, <a class="el" href="../../d4/db9/_open_a_l_sound_provider_8cpp_source.html#l00050">OpenALSoundProvider::Initialize()</a>, <a class="el" href="../../d4/db9/_open_a_l_sound_provider_8cpp_source.html#l00358">OpenALSoundProvider::PlayTrack16()</a> и <a class="el" href="../../d4/db9/_open_a_l_sound_provider_8cpp_source.html#l00226">OpenALSoundProvider::Stream16()</a>.</p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d4/db9/_open_a_l_sound_provider_8cpp_a5ed8e2adc6340d877478a62cc1d448c9_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="aece65ae279d5009406167c5949cdf6e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aece65ae279d5009406167c5949cdf6e1">&#9670;&nbsp;</a></span>CheckError()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CheckError </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d4/db9/_open_a_l_sound_provider_8cpp_source.html">OpenALSoundProvider.cpp</a> строка <a class="el" href="../../d4/db9/_open_a_l_sound_provider_8cpp_source.html#l00031">31</a></p>
+<div class="fragment"><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                  {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="../../d1/d20/al_8h.html#a715098c13211f3570a9288a27f87fdfa">ALenum</a> code1 = <a class="code" href="../../d1/d20/al_8h.html#a4186472fc50616acf52fd0b41232e044">alGetError</a>();</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordflow">if</span> (code1 == AL_NO_ERROR) {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    }</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a7b6161cffb9b8aee272b3b916183d28c">message</a> = <a class="code" href="../../d1/d20/al_8h.html#afff97eeab77b7d7ca32af121f1f7c76b">alGetString</a>(code1);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="../../d4/db9/_open_a_l_sound_provider_8cpp.html#a5ed8e2adc6340d877478a62cc1d448c9">log</a>(<span class="stringliteral">&quot;al: error #%d \&quot;%s\&quot;\n&quot;</span>, code1, <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a7b6161cffb9b8aee272b3b916183d28c">message</a>);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d1/d20/al_8h.html#a4186472fc50616acf52fd0b41232e044">alGetError()</a>, <a class="el" href="../../d1/d20/al_8h.html#afff97eeab77b7d7ca32af121f1f7c76b">alGetString()</a> и <a class="el" href="../../d4/db9/_open_a_l_sound_provider_8cpp_source.html#l00024">log()</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/db9/_open_a_l_sound_provider_8cpp_source.html#l00158">OpenALSoundProvider::alBufferLength()</a>, <a class="el" href="../../d4/db9/_open_a_l_sound_provider_8cpp_source.html#l00575">AudioTrackS16::Close()</a>, <a class="el" href="../../d4/db9/_open_a_l_sound_provider_8cpp_source.html#l00704">AudioSample16::Close()</a>, <a class="el" href="../../d4/db9/_open_a_l_sound_provider_8cpp_source.html#l00173">OpenALSoundProvider::CreateStreamingTrack16()</a>, <a class="el" href="../../d4/db9/_open_a_l_sound_provider_8cpp_source.html#l00286">OpenALSoundProvider::CreateTrack16()</a>, <a class="el" href="../../d4/db9/_open_a_l_sound_provider_8cpp_source.html#l00150">OpenALSoundProvider::DeleteBuffer16()</a>, <a class="el" href="../../d4/db9/_open_a_l_sound_provider_8cpp_source.html#l00116">OpenALSoundProvider::DeleteStreamingTrack()</a>, <a class="el" href="../../d4/db9/_open_a_l_sound_provider_8cpp_source.html#l00594">AudioTrackS16::DrainBuffers()</a>, <a class="el" href="../../d4/db9/_open_a_l_sound_provider_8cpp_source.html#l00562">AudioTrackS16::GetVolume()</a>, <a class="el" href="../../d4/db9/_open_a_l_sound_provider_8cpp_source.html#l00050">OpenALSoundProvider::Initialize()</a>, <a class="el" href="../../d4/db9/_open_a_l_sound_provider_8cpp_source.html#l00467">AudioTrackS16::Open()</a>, <a class="el" href="../../d4/db9/_open_a_l_sound_provider_8cpp_source.html#l00721">AudioSample16::Open()</a>, <a class="el" href="../../d4/db9/_open_a_l_sound_provider_8cpp_source.html#l00532">AudioTrackS16::Pause()</a>, <a class="el" href="../../d4/db9/_open_a_l_sound_provider_8cpp_source.html#l00499">AudioTrackS16::Play()</a>, <a class="el" href="../../d4/db9/_open_a_l_sound_provider_8cpp_source.html#l00819">AudioSample16::Play()</a>, <a class="el" href="../../d4/db9/_open_a_l_sound_provider_8cpp_source.html#l00358">OpenALSoundProvider::PlayTrack16()</a>, <a class="el" href="../../d4/db9/_open_a_l_sound_provider_8cpp_source.html#l00803">AudioSample16::SetPosition()</a>, <a class="el" href="../../d4/db9/_open_a_l_sound_provider_8cpp_source.html#l00549">AudioTrackS16::SetVolume()</a>, <a class="el" href="../../d4/db9/_open_a_l_sound_provider_8cpp_source.html#l00860">AudioSample16::SetVolume()</a>, <a class="el" href="../../d4/db9/_open_a_l_sound_provider_8cpp_source.html#l00847">AudioSample16::Stop()</a>, <a class="el" href="../../d4/db9/_open_a_l_sound_provider_8cpp_source.html#l00226">OpenALSoundProvider::Stream16()</a> и <a class="el" href="../../d4/db9/_open_a_l_sound_provider_8cpp_source.html#l00624">AudioTrackS16::Update()</a>.</p>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d4/db9/_open_a_l_sound_provider_8cpp_aece65ae279d5009406167c5949cdf6e1_cgraph.svg" width="232" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d4/db9/_open_a_l_sound_provider_8cpp_aece65ae279d5009406167c5949cdf6e1_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a9ddf1ec6f0d8b6a95f35e17ae192b4d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ddf1ec6f0d8b6a95f35e17ae192b4d8">&#9670;&nbsp;</a></span>CreateAudioTrack()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../da/def/_media_8h.html#ae0744a89d3eaa9875de4dfc82c051b0b">PAudioTrack</a> CreateAudioTrack </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#ae84541b4f3d8e1ea24ec0f466a8c568b">std::string</a> &amp;&#160;</td>
+          <td class="paramname"><em>file_path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d4/db9/_open_a_l_sound_provider_8cpp_source.html">OpenALSoundProvider.cpp</a> строка <a class="el" href="../../d4/db9/_open_a_l_sound_provider_8cpp_source.html#l00657">657</a></p>
+<div class="fragment"><div class="line"><a name="l00657"></a><span class="lineno">  657</span>&#160;                                                         {</div>
+<div class="line"><a name="l00658"></a><span class="lineno">  658</span>&#160;    std::shared_ptr&lt;AudioTrackS16&gt; track = std::make_shared&lt;AudioTrackS16&gt;();</div>
+<div class="line"><a name="l00659"></a><span class="lineno">  659</span>&#160; </div>
+<div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160;    <a class="code" href="../../da/def/_media_8h.html#aa9016c9de6c0ff9dbc6e13d443ec452b">PAudioDataSource</a> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a633906574fe6e39b7f2840bed0e49832">source</a> = <a class="code" href="../../da/def/_media_8h.html#a5be6bacef31d891b63a778c75e093d44">CreateAudioFileDataSource</a>(file_path);</div>
+<div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;    <span class="keywordflow">if</span> (!track-&gt;Open(<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a633906574fe6e39b7f2840bed0e49832">source</a>)) {</div>
+<div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;        track = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160;    }</div>
+<div class="line"><a name="l00664"></a><span class="lineno">  664</span>&#160; </div>
+<div class="line"><a name="l00665"></a><span class="lineno">  665</span>&#160;    <span class="keywordflow">return</span> std::dynamic_pointer_cast&lt;IAudioTrack, AudioTrackS16&gt;(track);</div>
+<div class="line"><a name="l00666"></a><span class="lineno">  666</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l01169">CreateAudioFileDataSource()</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d3/df2/_audio_player_8cpp_source.html#l00109">AudioPlayer::MusicPlayTrack()</a>.</p>
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d4/db9/_open_a_l_sound_provider_8cpp_a9ddf1ec6f0d8b6a95f35e17ae192b4d8_cgraph.svg" width="367" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d4/db9/_open_a_l_sound_provider_8cpp_a9ddf1ec6f0d8b6a95f35e17ae192b4d8_icgraph.svg" width="100%" height="466"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a0d61058bc8900801bc227bc7b47881d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d61058bc8900801bc227bc7b47881d7">&#9670;&nbsp;</a></span>CreateAudioSample()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../da/def/_media_8h.html#aec9137d201f9fdc6dc340ae7b19f86f8">PAudioSample</a> CreateAudioSample </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../de/d13/_mem_buffer_8h.html#a8722c69b0b425d6a28bc23839396f8f5">PMemBuffer</a>&#160;</td>
+          <td class="paramname"><em>buffer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d4/db9/_open_a_l_sound_provider_8cpp_source.html">OpenALSoundProvider.cpp</a> строка <a class="el" href="../../d4/db9/_open_a_l_sound_provider_8cpp_source.html#l00873">873</a></p>
+<div class="fragment"><div class="line"><a name="l00873"></a><span class="lineno">  873</span>&#160;                                                  {</div>
+<div class="line"><a name="l00874"></a><span class="lineno">  874</span>&#160;    std::shared_ptr&lt;AudioSample16&gt; sample = std::make_shared&lt;AudioSample16&gt;();</div>
+<div class="line"><a name="l00875"></a><span class="lineno">  875</span>&#160; </div>
+<div class="line"><a name="l00876"></a><span class="lineno">  876</span>&#160;    <a class="code" href="../../da/def/_media_8h.html#aa9016c9de6c0ff9dbc6e13d443ec452b">PAudioDataSource</a> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a633906574fe6e39b7f2840bed0e49832">source</a> = <a class="code" href="../../da/def/_media_8h.html#ab508e4ee3c70ec5e60273ec99af30a2e">CreateAudioBufferDataSource</a>(<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a76461e97a098d2c9ae20ac193d3825ae">buffer</a>);</div>
+<div class="line"><a name="l00877"></a><span class="lineno">  877</span>&#160;    <span class="keywordflow">if</span> (!sample-&gt;Open(<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a633906574fe6e39b7f2840bed0e49832">source</a>)) {</div>
+<div class="line"><a name="l00878"></a><span class="lineno">  878</span>&#160;        sample = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00879"></a><span class="lineno">  879</span>&#160;    }</div>
+<div class="line"><a name="l00880"></a><span class="lineno">  880</span>&#160; </div>
+<div class="line"><a name="l00881"></a><span class="lineno">  881</span>&#160;    <span class="keywordflow">return</span> std::dynamic_pointer_cast&lt;IAudioSample, AudioSample16&gt;(sample);</div>
+<div class="line"><a name="l00882"></a><span class="lineno">  882</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../de/d56/_media_player_8cpp_source.html#l01176">CreateAudioBufferDataSource()</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d3/df2/_audio_player_8cpp_source.html#l00195">AudioPlayer::PlaySound()</a>.</p>
+<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d4/db9/_open_a_l_sound_provider_8cpp_a0d61058bc8900801bc227bc7b47881d7_cgraph.svg" width="391" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d4/db9/_open_a_l_sound_provider_8cpp_a0d61058bc8900801bc227bc7b47881d7_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aal_8h_html_a715098c13211f3570a9288a27f87fdfa"><div class="ttname"><a href="../../d1/d20/al_8h.html#a715098c13211f3570a9288a27f87fdfa">ALenum</a></div><div class="ttdeci">int ALenum</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d20/al_8h_source.html#l00065">al.h:65</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a633906574fe6e39b7f2840bed0e49832"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a633906574fe6e39b7f2840bed0e49832">source</a></div><div class="ttdeci">GLsizei GLsizei GLchar * source</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l00680">SDL_opengl_glext.h:680</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a7b6161cffb9b8aee272b3b916183d28c"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a7b6161cffb9b8aee272b3b916183d28c">message</a></div><div class="ttdeci">GLuint GLsizei const GLchar * message</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l02486">SDL_opengl_glext.h:2486</a></div></div>
+<div class="ttc" id="a_media_8h_html_aa9016c9de6c0ff9dbc6e13d443ec452b"><div class="ttname"><a href="../../da/def/_media_8h.html#aa9016c9de6c0ff9dbc6e13d443ec452b">PAudioDataSource</a></div><div class="ttdeci">std::shared_ptr&lt; IAudioDataSource &gt; PAudioDataSource</div><div class="ttdef"><b>Definition:</b> <a href="../../da/def/_media_8h_source.html#l00020">Media.h:20</a></div></div>
+<div class="ttc" id="a_media_8h_html_ab508e4ee3c70ec5e60273ec99af30a2e"><div class="ttname"><a href="../../da/def/_media_8h.html#ab508e4ee3c70ec5e60273ec99af30a2e">CreateAudioBufferDataSource</a></div><div class="ttdeci">PAudioDataSource CreateAudioBufferDataSource(PMemBuffer buffer)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d56/_media_player_8cpp_source.html#l01176">MediaPlayer.cpp:1176</a></div></div>
+<div class="ttc" id="aal_8h_html_afff97eeab77b7d7ca32af121f1f7c76b"><div class="ttname"><a href="../../d1/d20/al_8h.html#afff97eeab77b7d7ca32af121f1f7c76b">alGetString</a></div><div class="ttdeci">const AL_API ALchar *AL_APIENTRY alGetString(ALenum param)</div></div>
+<div class="ttc" id="a_s_d_l__audio_8h_html_a71a65ffd977afe9c3fef116a5bc9ee27"><div class="ttname"><a href="../../d3/d78/_s_d_l__audio_8h.html#a71a65ffd977afe9c3fef116a5bc9ee27">format</a></div><div class="ttdeci">SDL_AudioFormat format</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d78/_s_d_l__audio_8h_source.html#l00194">SDL_audio.h:194</a></div></div>
+<div class="ttc" id="a_s_d_l__egl_8h_html_a76461e97a098d2c9ae20ac193d3825ae"><div class="ttname"><a href="../../df/d32/_s_d_l__egl_8h.html#a76461e97a098d2c9ae20ac193d3825ae">buffer</a></div><div class="ttdeci">EGLContext EGLenum EGLClientBuffer buffer</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/_s_d_l__egl_8h_source.html#l00952">SDL_egl.h:952</a></div></div>
+<div class="ttc" id="a_media_8h_html_a5be6bacef31d891b63a778c75e093d44"><div class="ttname"><a href="../../da/def/_media_8h.html#a5be6bacef31d891b63a778c75e093d44">CreateAudioFileDataSource</a></div><div class="ttdeci">PAudioDataSource CreateAudioFileDataSource(const std::string &amp;file_name)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d56/_media_player_8cpp_source.html#l01169">MediaPlayer.cpp:1169</a></div></div>
+<div class="ttc" id="aal_8h_html_a4186472fc50616acf52fd0b41232e044"><div class="ttname"><a href="../../d1/d20/al_8h.html#a4186472fc50616acf52fd0b41232e044">alGetError</a></div><div class="ttdeci">AL_API ALenum AL_APIENTRY alGetError(void)</div></div>
+<div class="ttc" id="a_open_a_l_sound_provider_8cpp_html_a5ed8e2adc6340d877478a62cc1d448c9"><div class="ttname"><a href="../../d4/db9/_open_a_l_sound_provider_8cpp.html#a5ed8e2adc6340d877478a62cc1d448c9">log</a></div><div class="ttdeci">void log(const char *format,...)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db9/_open_a_l_sound_provider_8cpp_source.html#l00024">OpenALSoundProvider.cpp:24</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_3974871bf467d5376b8307ffe9ef875e.html">Media</a></li><li class="navelem"><a class="el" href="../../dir_1bd8ddbedbd74a30e08a039cf6e2b679.html">Audio</a></li><li class="navelem"><a class="el" href="../../d4/db9/_open_a_l_sound_provider_8cpp.html">OpenALSoundProvider.cpp</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:04:21. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

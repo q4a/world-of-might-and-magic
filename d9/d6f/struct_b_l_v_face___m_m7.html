@@ -1,0 +1,538 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Структура BLVFace_MM7</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d9/d6f/struct_b_l_v_face___m_m7.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="../../df/d63/struct_b_l_v_face___m_m7-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Структура BLVFace_MM7</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="../../da/dd3/_legacy_images_8h_source.html">LegacyImages.h</a>&gt;</code></p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Граф связей класса BLVFace_MM7:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../da/da7/struct_b_l_v_face___m_m7__coll__graph.svg" width="347" height="216"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:ae1ea29edf7cdefb9f39014cd995d2f37"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="../../dd/d96/struct_plane__float__.html">Plane_float_</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d6f/struct_b_l_v_face___m_m7.html#ae1ea29edf7cdefb9f39014cd995d2f37">pFacePlane</a></td></tr>
+<tr class="separator:ae1ea29edf7cdefb9f39014cd995d2f37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f0d6709b1a69cda9825e2949fb2493e"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="../../d0/d75/struct_plane__int__.html">Plane_int_</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d6f/struct_b_l_v_face___m_m7.html#a3f0d6709b1a69cda9825e2949fb2493e">pFacePlane_old</a></td></tr>
+<tr class="separator:a3f0d6709b1a69cda9825e2949fb2493e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b5793d6293e5d85fdc32182e6d4766e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d6f/struct_b_l_v_face___m_m7.html#a5b5793d6293e5d85fdc32182e6d4766e">zCalc1</a></td></tr>
+<tr class="separator:a5b5793d6293e5d85fdc32182e6d4766e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46598f753ad3d0a70e45082fb65739d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d6f/struct_b_l_v_face___m_m7.html#a46598f753ad3d0a70e45082fb65739d4">zCalc2</a></td></tr>
+<tr class="separator:a46598f753ad3d0a70e45082fb65739d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ea789347f1c9af8f60ec7e8f183bba3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d6f/struct_b_l_v_face___m_m7.html#a4ea789347f1c9af8f60ec7e8f183bba3">zCalc3</a></td></tr>
+<tr class="separator:a4ea789347f1c9af8f60ec7e8f183bba3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ef8472e43096d6cfcf8ba4cf014c999"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d6f/struct_b_l_v_face___m_m7.html#a3ef8472e43096d6cfcf8ba4cf014c999">uAttributes</a></td></tr>
+<tr class="separator:a3ef8472e43096d6cfcf8ba4cf014c999"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06599162137a7e39406890e63953d76b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d6f/struct_b_l_v_face___m_m7.html#a06599162137a7e39406890e63953d76b">pVertexIDs</a></td></tr>
+<tr class="separator:a06599162137a7e39406890e63953d76b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bd4149d9328c7d9966b5a672839df9b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d6f/struct_b_l_v_face___m_m7.html#a8bd4149d9328c7d9966b5a672839df9b">pXInterceptDisplacements</a></td></tr>
+<tr class="separator:a8bd4149d9328c7d9966b5a672839df9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac32df075adcc629c71e0a21293f7e5ce"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d6f/struct_b_l_v_face___m_m7.html#ac32df075adcc629c71e0a21293f7e5ce">pYInterceptDisplacements</a></td></tr>
+<tr class="separator:ac32df075adcc629c71e0a21293f7e5ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abec8f02bfd8faad0247b137da548db92"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d6f/struct_b_l_v_face___m_m7.html#abec8f02bfd8faad0247b137da548db92">pZInterceptDisplacements</a></td></tr>
+<tr class="separator:abec8f02bfd8faad0247b137da548db92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81335bcfe6578fe6f1eb0f3dbfc96caa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d6f/struct_b_l_v_face___m_m7.html#a81335bcfe6578fe6f1eb0f3dbfc96caa">pVertexUIDs</a></td></tr>
+<tr class="separator:a81335bcfe6578fe6f1eb0f3dbfc96caa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a147ec572c417b7b8652b0763a8a6138d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d6f/struct_b_l_v_face___m_m7.html#a147ec572c417b7b8652b0763a8a6138d">pVertexVIDs</a></td></tr>
+<tr class="separator:a147ec572c417b7b8652b0763a8a6138d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60de241cefa7b7ac9197689a5920c375"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d6f/struct_b_l_v_face___m_m7.html#a60de241cefa7b7ac9197689a5920c375">uFaceExtraID</a></td></tr>
+<tr class="separator:a60de241cefa7b7ac9197689a5920c375"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0852bc37bed1a09afeda61f0251b2aa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d6f/struct_b_l_v_face___m_m7.html#af0852bc37bed1a09afeda61f0251b2aa">uBitmapID</a></td></tr>
+<tr class="separator:af0852bc37bed1a09afeda61f0251b2aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5aa396538b9c0a80bda8a43e6fe66c86"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d6f/struct_b_l_v_face___m_m7.html#a5aa396538b9c0a80bda8a43e6fe66c86">uSectorID</a></td></tr>
+<tr class="separator:a5aa396538b9c0a80bda8a43e6fe66c86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cc2d2bbcc2dd9dfd52c26604bea3235"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d6f/struct_b_l_v_face___m_m7.html#a5cc2d2bbcc2dd9dfd52c26604bea3235">uBackSectorID</a></td></tr>
+<tr class="separator:a5cc2d2bbcc2dd9dfd52c26604bea3235"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58b5d31258d6c2d2b78b860dd7b12410"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="../../df/d81/struct_b_box__short__.html">BBox_short_</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d6f/struct_b_l_v_face___m_m7.html#a58b5d31258d6c2d2b78b860dd7b12410">pBounding</a></td></tr>
+<tr class="separator:a58b5d31258d6c2d2b78b860dd7b12410"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7dcd59d0d815402689b7bb1f8eb6bb72"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d6f/struct_b_l_v_face___m_m7.html#a7dcd59d0d815402689b7bb1f8eb6bb72">uPolygonType</a></td></tr>
+<tr class="separator:a7dcd59d0d815402689b7bb1f8eb6bb72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a333af0051e4455aae970f10a2126a6d0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d6f/struct_b_l_v_face___m_m7.html#a333af0051e4455aae970f10a2126a6d0">uNumVertices</a></td></tr>
+<tr class="separator:a333af0051e4455aae970f10a2126a6d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44b05005138350dc5a9fceda20a4d3ac"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d6f/struct_b_l_v_face___m_m7.html#a44b05005138350dc5a9fceda20a4d3ac">field_5E</a></td></tr>
+<tr class="separator:a44b05005138350dc5a9fceda20a4d3ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f6f5ba9f92491f6e1a326a0b056eff7"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d6f/struct_b_l_v_face___m_m7.html#a5f6f5ba9f92491f6e1a326a0b056eff7">field_5F</a></td></tr>
+<tr class="separator:a5f6f5ba9f92491f6e1a326a0b056eff7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock">
+<p class="definition">См. определение в файле <a class="el" href="../../da/dd3/_legacy_images_8h_source.html">LegacyImages.h</a> строка <a class="el" href="../../da/dd3/_legacy_images_8h_source.html#l00039">39</a></p>
+</div><h2 class="groupheader">Данные класса</h2>
+<a id="ae1ea29edf7cdefb9f39014cd995d2f37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1ea29edf7cdefb9f39014cd995d2f37">&#9670;&nbsp;</a></span>pFacePlane</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="../../dd/d96/struct_plane__float__.html">Plane_float_</a> BLVFace_MM7::pFacePlane</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/dd3/_legacy_images_8h_source.html">LegacyImages.h</a> строка <a class="el" href="../../da/dd3/_legacy_images_8h_source.html#l00040">40</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00074">BLVFace::Deserialize()</a>.</p>
+
+</div>
+</div>
+<a id="a3f0d6709b1a69cda9825e2949fb2493e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f0d6709b1a69cda9825e2949fb2493e">&#9670;&nbsp;</a></span>pFacePlane_old</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="../../d0/d75/struct_plane__int__.html">Plane_int_</a> BLVFace_MM7::pFacePlane_old</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/dd3/_legacy_images_8h_source.html">LegacyImages.h</a> строка <a class="el" href="../../da/dd3/_legacy_images_8h_source.html#l00041">41</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00074">BLVFace::Deserialize()</a>.</p>
+
+</div>
+</div>
+<a id="a5b5793d6293e5d85fdc32182e6d4766e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b5793d6293e5d85fdc32182e6d4766e">&#9670;&nbsp;</a></span>zCalc1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int BLVFace_MM7::zCalc1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/dd3/_legacy_images_8h_source.html">LegacyImages.h</a> строка <a class="el" href="../../da/dd3/_legacy_images_8h_source.html#l00042">42</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00074">BLVFace::Deserialize()</a>.</p>
+
+</div>
+</div>
+<a id="a46598f753ad3d0a70e45082fb65739d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46598f753ad3d0a70e45082fb65739d4">&#9670;&nbsp;</a></span>zCalc2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int BLVFace_MM7::zCalc2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/dd3/_legacy_images_8h_source.html">LegacyImages.h</a> строка <a class="el" href="../../da/dd3/_legacy_images_8h_source.html#l00043">43</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00074">BLVFace::Deserialize()</a>.</p>
+
+</div>
+</div>
+<a id="a4ea789347f1c9af8f60ec7e8f183bba3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ea789347f1c9af8f60ec7e8f183bba3">&#9670;&nbsp;</a></span>zCalc3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int BLVFace_MM7::zCalc3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/dd3/_legacy_images_8h_source.html">LegacyImages.h</a> строка <a class="el" href="../../da/dd3/_legacy_images_8h_source.html#l00044">44</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00074">BLVFace::Deserialize()</a>.</p>
+
+</div>
+</div>
+<a id="a3ef8472e43096d6cfcf8ba4cf014c999"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ef8472e43096d6cfcf8ba4cf014c999">&#9670;&nbsp;</a></span>uAttributes</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int BLVFace_MM7::uAttributes</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/dd3/_legacy_images_8h_source.html">LegacyImages.h</a> строка <a class="el" href="../../da/dd3/_legacy_images_8h_source.html#l00045">45</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00074">BLVFace::Deserialize()</a>.</p>
+
+</div>
+</div>
+<a id="a06599162137a7e39406890e63953d76b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06599162137a7e39406890e63953d76b">&#9670;&nbsp;</a></span>pVertexIDs</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>* BLVFace_MM7::pVertexIDs</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/dd3/_legacy_images_8h_source.html">LegacyImages.h</a> строка <a class="el" href="../../da/dd3/_legacy_images_8h_source.html#l00046">46</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00074">BLVFace::Deserialize()</a>.</p>
+
+</div>
+</div>
+<a id="a8bd4149d9328c7d9966b5a672839df9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bd4149d9328c7d9966b5a672839df9b">&#9670;&nbsp;</a></span>pXInterceptDisplacements</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a>* BLVFace_MM7::pXInterceptDisplacements</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/dd3/_legacy_images_8h_source.html">LegacyImages.h</a> строка <a class="el" href="../../da/dd3/_legacy_images_8h_source.html#l00047">47</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00074">BLVFace::Deserialize()</a>.</p>
+
+</div>
+</div>
+<a id="ac32df075adcc629c71e0a21293f7e5ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac32df075adcc629c71e0a21293f7e5ce">&#9670;&nbsp;</a></span>pYInterceptDisplacements</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a>* BLVFace_MM7::pYInterceptDisplacements</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/dd3/_legacy_images_8h_source.html">LegacyImages.h</a> строка <a class="el" href="../../da/dd3/_legacy_images_8h_source.html#l00048">48</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00074">BLVFace::Deserialize()</a>.</p>
+
+</div>
+</div>
+<a id="abec8f02bfd8faad0247b137da548db92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abec8f02bfd8faad0247b137da548db92">&#9670;&nbsp;</a></span>pZInterceptDisplacements</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a>* BLVFace_MM7::pZInterceptDisplacements</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/dd3/_legacy_images_8h_source.html">LegacyImages.h</a> строка <a class="el" href="../../da/dd3/_legacy_images_8h_source.html#l00049">49</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00074">BLVFace::Deserialize()</a>.</p>
+
+</div>
+</div>
+<a id="a81335bcfe6578fe6f1eb0f3dbfc96caa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81335bcfe6578fe6f1eb0f3dbfc96caa">&#9670;&nbsp;</a></span>pVertexUIDs</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a>* BLVFace_MM7::pVertexUIDs</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/dd3/_legacy_images_8h_source.html">LegacyImages.h</a> строка <a class="el" href="../../da/dd3/_legacy_images_8h_source.html#l00050">50</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00074">BLVFace::Deserialize()</a>.</p>
+
+</div>
+</div>
+<a id="a147ec572c417b7b8652b0763a8a6138d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a147ec572c417b7b8652b0763a8a6138d">&#9670;&nbsp;</a></span>pVertexVIDs</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a>* BLVFace_MM7::pVertexVIDs</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/dd3/_legacy_images_8h_source.html">LegacyImages.h</a> строка <a class="el" href="../../da/dd3/_legacy_images_8h_source.html#l00051">51</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00074">BLVFace::Deserialize()</a>.</p>
+
+</div>
+</div>
+<a id="a60de241cefa7b7ac9197689a5920c375"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60de241cefa7b7ac9197689a5920c375">&#9670;&nbsp;</a></span>uFaceExtraID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> BLVFace_MM7::uFaceExtraID</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/dd3/_legacy_images_8h_source.html">LegacyImages.h</a> строка <a class="el" href="../../da/dd3/_legacy_images_8h_source.html#l00052">52</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00074">BLVFace::Deserialize()</a>.</p>
+
+</div>
+</div>
+<a id="af0852bc37bed1a09afeda61f0251b2aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0852bc37bed1a09afeda61f0251b2aa">&#9670;&nbsp;</a></span>uBitmapID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> BLVFace_MM7::uBitmapID</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/dd3/_legacy_images_8h_source.html">LegacyImages.h</a> строка <a class="el" href="../../da/dd3/_legacy_images_8h_source.html#l00053">53</a></p>
+
+</div>
+</div>
+<a id="a5aa396538b9c0a80bda8a43e6fe66c86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5aa396538b9c0a80bda8a43e6fe66c86">&#9670;&nbsp;</a></span>uSectorID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> BLVFace_MM7::uSectorID</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/dd3/_legacy_images_8h_source.html">LegacyImages.h</a> строка <a class="el" href="../../da/dd3/_legacy_images_8h_source.html#l00054">54</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00074">BLVFace::Deserialize()</a>.</p>
+
+</div>
+</div>
+<a id="a5cc2d2bbcc2dd9dfd52c26604bea3235"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cc2d2bbcc2dd9dfd52c26604bea3235">&#9670;&nbsp;</a></span>uBackSectorID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> BLVFace_MM7::uBackSectorID</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/dd3/_legacy_images_8h_source.html">LegacyImages.h</a> строка <a class="el" href="../../da/dd3/_legacy_images_8h_source.html#l00055">55</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00074">BLVFace::Deserialize()</a>.</p>
+
+</div>
+</div>
+<a id="a58b5d31258d6c2d2b78b860dd7b12410"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58b5d31258d6c2d2b78b860dd7b12410">&#9670;&nbsp;</a></span>pBounding</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="../../df/d81/struct_b_box__short__.html">BBox_short_</a> BLVFace_MM7::pBounding</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/dd3/_legacy_images_8h_source.html">LegacyImages.h</a> строка <a class="el" href="../../da/dd3/_legacy_images_8h_source.html#l00056">56</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00074">BLVFace::Deserialize()</a>.</p>
+
+</div>
+</div>
+<a id="a7dcd59d0d815402689b7bb1f8eb6bb72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7dcd59d0d815402689b7bb1f8eb6bb72">&#9670;&nbsp;</a></span>uPolygonType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> BLVFace_MM7::uPolygonType</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/dd3/_legacy_images_8h_source.html">LegacyImages.h</a> строка <a class="el" href="../../da/dd3/_legacy_images_8h_source.html#l00057">57</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00074">BLVFace::Deserialize()</a>.</p>
+
+</div>
+</div>
+<a id="a333af0051e4455aae970f10a2126a6d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a333af0051e4455aae970f10a2126a6d0">&#9670;&nbsp;</a></span>uNumVertices</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> BLVFace_MM7::uNumVertices</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/dd3/_legacy_images_8h_source.html">LegacyImages.h</a> строка <a class="el" href="../../da/dd3/_legacy_images_8h_source.html#l00058">58</a></p>
+
+</div>
+</div>
+<a id="a44b05005138350dc5a9fceda20a4d3ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44b05005138350dc5a9fceda20a4d3ac">&#9670;&nbsp;</a></span>field_5E</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char BLVFace_MM7::field_5E</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/dd3/_legacy_images_8h_source.html">LegacyImages.h</a> строка <a class="el" href="../../da/dd3/_legacy_images_8h_source.html#l00059">59</a></p>
+
+</div>
+</div>
+<a id="a5f6f5ba9f92491f6e1a326a0b056eff7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f6f5ba9f92491f6e1a326a0b056eff7">&#9670;&nbsp;</a></span>field_5F</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char BLVFace_MM7::field_5F</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/dd3/_legacy_images_8h_source.html">LegacyImages.h</a> строка <a class="el" href="../../da/dd3/_legacy_images_8h_source.html#l00060">60</a></p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов структуры находятся в файле:<ul>
+<li>C:/git/world-of-might-and-magic/Engine/Serialization/<a class="el" href="../../da/dd3/_legacy_images_8h_source.html">LegacyImages.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../d9/d6f/struct_b_l_v_face___m_m7.html">BLVFace_MM7</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:04:39. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

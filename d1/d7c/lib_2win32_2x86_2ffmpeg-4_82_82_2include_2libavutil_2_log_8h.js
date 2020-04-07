@@ -1,0 +1,37 @@
+var lib_2win32_2x86_2ffmpeg_4_82_82_2include_2libavutil_2_log_8h =
+[
+    [ "AVClass", "d2/de1/struct_a_v_class.html", "d2/de1/struct_a_v_class" ],
+    [ "AVClass", "d1/d7c/lib_2win32_2x86_2ffmpeg-4_82_82_2include_2libavutil_2_log_8h.html#a56f1ed7b1ab5801b834afc119af7f338", null ],
+    [ "AVClassCategory", "d1/d7c/lib_2win32_2x86_2ffmpeg-4_82_82_2include_2libavutil_2_log_8h.html#aeb1c06cc3e47a029ca6afeac782ac8f9", [
+      [ "AV_CLASS_CATEGORY_NA", "d1/d7c/lib_2win32_2x86_2ffmpeg-4_82_82_2include_2libavutil_2_log_8h.html#aeb1c06cc3e47a029ca6afeac782ac8f9a71af9d0d8f60e47a7a83046e27dadefa", null ],
+      [ "AV_CLASS_CATEGORY_INPUT", "d1/d7c/lib_2win32_2x86_2ffmpeg-4_82_82_2include_2libavutil_2_log_8h.html#aeb1c06cc3e47a029ca6afeac782ac8f9a0b907bb25d241484062534be320001d1", null ],
+      [ "AV_CLASS_CATEGORY_OUTPUT", "d1/d7c/lib_2win32_2x86_2ffmpeg-4_82_82_2include_2libavutil_2_log_8h.html#aeb1c06cc3e47a029ca6afeac782ac8f9a922ed45f6aaa6e0bdcdcdcfa20e5f6a4", null ],
+      [ "AV_CLASS_CATEGORY_MUXER", "d1/d7c/lib_2win32_2x86_2ffmpeg-4_82_82_2include_2libavutil_2_log_8h.html#aeb1c06cc3e47a029ca6afeac782ac8f9a25e15ba6dba2dcd767d69c04eaa38a59", null ],
+      [ "AV_CLASS_CATEGORY_DEMUXER", "d1/d7c/lib_2win32_2x86_2ffmpeg-4_82_82_2include_2libavutil_2_log_8h.html#aeb1c06cc3e47a029ca6afeac782ac8f9a86a70f4c26b01f85c4c23433322eec2c", null ],
+      [ "AV_CLASS_CATEGORY_ENCODER", "d1/d7c/lib_2win32_2x86_2ffmpeg-4_82_82_2include_2libavutil_2_log_8h.html#aeb1c06cc3e47a029ca6afeac782ac8f9ae22f8fa66b02cff95fb04ec963713a4c", null ],
+      [ "AV_CLASS_CATEGORY_DECODER", "d1/d7c/lib_2win32_2x86_2ffmpeg-4_82_82_2include_2libavutil_2_log_8h.html#aeb1c06cc3e47a029ca6afeac782ac8f9af24522b3c299ba8b85a5a00574d43b2b", null ],
+      [ "AV_CLASS_CATEGORY_FILTER", "d1/d7c/lib_2win32_2x86_2ffmpeg-4_82_82_2include_2libavutil_2_log_8h.html#aeb1c06cc3e47a029ca6afeac782ac8f9a78b8da9853ff87127b31ceb9a78f3a37", null ],
+      [ "AV_CLASS_CATEGORY_BITSTREAM_FILTER", "d1/d7c/lib_2win32_2x86_2ffmpeg-4_82_82_2include_2libavutil_2_log_8h.html#aeb1c06cc3e47a029ca6afeac782ac8f9a2aa971aa717aa1f2b812ed1358ff7fbf", null ],
+      [ "AV_CLASS_CATEGORY_SWSCALER", "d1/d7c/lib_2win32_2x86_2ffmpeg-4_82_82_2include_2libavutil_2_log_8h.html#aeb1c06cc3e47a029ca6afeac782ac8f9a2852542cb189f4d25e470ee67e09ff6a", null ],
+      [ "AV_CLASS_CATEGORY_SWRESAMPLER", "d1/d7c/lib_2win32_2x86_2ffmpeg-4_82_82_2include_2libavutil_2_log_8h.html#aeb1c06cc3e47a029ca6afeac782ac8f9acf18a1d69313a920e4a5229c86de8e1c", null ],
+      [ "AV_CLASS_CATEGORY_DEVICE_VIDEO_OUTPUT", "d1/d7c/lib_2win32_2x86_2ffmpeg-4_82_82_2include_2libavutil_2_log_8h.html#aeb1c06cc3e47a029ca6afeac782ac8f9a6facbfe512802ca4b03378f5c4bd2aa2", null ],
+      [ "AV_CLASS_CATEGORY_DEVICE_VIDEO_INPUT", "d1/d7c/lib_2win32_2x86_2ffmpeg-4_82_82_2include_2libavutil_2_log_8h.html#aeb1c06cc3e47a029ca6afeac782ac8f9a73fb8c6b471b22685e8d2836f25ca6c7", null ],
+      [ "AV_CLASS_CATEGORY_DEVICE_AUDIO_OUTPUT", "d1/d7c/lib_2win32_2x86_2ffmpeg-4_82_82_2include_2libavutil_2_log_8h.html#aeb1c06cc3e47a029ca6afeac782ac8f9a4acd911842413e1bd9e1387f7b6b5e4b", null ],
+      [ "AV_CLASS_CATEGORY_DEVICE_AUDIO_INPUT", "d1/d7c/lib_2win32_2x86_2ffmpeg-4_82_82_2include_2libavutil_2_log_8h.html#aeb1c06cc3e47a029ca6afeac782ac8f9aacba77c66d969c8dbd8b9597e9b98869", null ],
+      [ "AV_CLASS_CATEGORY_DEVICE_OUTPUT", "d1/d7c/lib_2win32_2x86_2ffmpeg-4_82_82_2include_2libavutil_2_log_8h.html#aeb1c06cc3e47a029ca6afeac782ac8f9a47ac8b5cb587a90463644ccab01ce71b", null ],
+      [ "AV_CLASS_CATEGORY_DEVICE_INPUT", "d1/d7c/lib_2win32_2x86_2ffmpeg-4_82_82_2include_2libavutil_2_log_8h.html#aeb1c06cc3e47a029ca6afeac782ac8f9ace341ef5b34a656419e6ae61474334e1", null ],
+      [ "AV_CLASS_CATEGORY_NB", "d1/d7c/lib_2win32_2x86_2ffmpeg-4_82_82_2include_2libavutil_2_log_8h.html#aeb1c06cc3e47a029ca6afeac782ac8f9a6500b5dc52e5485b497c3f7228ce637f", null ]
+    ] ],
+    [ "av_log", "d2/df1/group__lavu__log.html#gabd386ffd4b27637cf34e98d5d1a6e8ae", null ],
+    [ "av_vlog", "d2/df1/group__lavu__log.html#ga6d72fb598cff2c8385069a1fc2ee5812", null ],
+    [ "av_log_get_level", "d2/df1/group__lavu__log.html#gae8ada5cc5722548d8698650b05207904", null ],
+    [ "av_log_set_level", "d2/df1/group__lavu__log.html#ga1fd32c74db581e3e2e7f35d277bb1e24", null ],
+    [ "av_log_set_callback", "d2/df1/group__lavu__log.html#ga14034761faf581a8b9ed6ef19b313708", null ],
+    [ "av_log_default_callback", "d2/df1/group__lavu__log.html#ga5bd132d2e4ac6f9843ef6d8e3c05050a", null ],
+    [ "av_default_item_name", "d2/df1/group__lavu__log.html#ga791fcd0dba1d19fe0c3677509344328e", null ],
+    [ "av_default_get_category", "d2/df1/group__lavu__log.html#ga796896ca6a991fda200e8363777aeea3", null ],
+    [ "av_log_format_line", "d2/df1/group__lavu__log.html#gaed9e57ccba2adc41864f54f47dfcccec", null ],
+    [ "av_log_format_line2", "d2/df1/group__lavu__log.html#ga0c595c96d63711069accb9c60549e84f", null ],
+    [ "av_log_set_flags", "d2/df1/group__lavu__log.html#gaf8143cc9a7cd364af1ff525c6181c0ce", null ],
+    [ "av_log_get_flags", "d2/df1/group__lavu__log.html#ga86a29f38fba2fdb9579d5fa3bbf6f8bf", null ]
+];

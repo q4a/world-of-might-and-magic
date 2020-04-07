@@ -1,0 +1,206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Исходный файл C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavutil/encryption_info.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('de/d7b/encryption__info_8h_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">encryption_info.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../de/d7b/encryption__info_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#ifndef AVUTIL_ENCRYPTION_INFO_H</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#define AVUTIL_ENCRYPTION_INFO_H</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;stddef.h&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="../../d6/d10/struct_a_v_subsample_encryption_info.html">   25</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="../../d6/d10/struct_a_v_subsample_encryption_info.html">AVSubsampleEncryptionInfo</a> {</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="../../d6/d10/struct_a_v_subsample_encryption_info.html#aae4b75d9e9948da9de53b0e419eef3f8">   27</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../d6/d10/struct_a_v_subsample_encryption_info.html#aae4b75d9e9948da9de53b0e419eef3f8">bytes_of_clear_data</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="../../d6/d10/struct_a_v_subsample_encryption_info.html#ad6dd17f1be1daf4f5982689a5debb935">   34</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../d6/d10/struct_a_v_subsample_encryption_info.html#ad6dd17f1be1daf4f5982689a5debb935">bytes_of_protected_data</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;} <a class="code" href="../../de/d7b/encryption__info_8h.html#a8287e845b9a7db1ed5d17eecfb30cdd5">AVSubsampleEncryptionInfo</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="../../d9/dfc/struct_a_v_encryption_info.html">   43</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="../../d9/dfc/struct_a_v_encryption_info.html">AVEncryptionInfo</a> {</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="../../d9/dfc/struct_a_v_encryption_info.html#ae0525acdfc0976caa7824da69e69108c">   45</a></span>&#160;    <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="code" href="../../d9/dfc/struct_a_v_encryption_info.html#ae0525acdfc0976caa7824da69e69108c">scheme</a>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="../../d9/dfc/struct_a_v_encryption_info.html#a419cb6a7096045c0d17eb57ad5de5c5a">   51</a></span>&#160;    <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="code" href="../../d9/dfc/struct_a_v_encryption_info.html#a419cb6a7096045c0d17eb57ad5de5c5a">crypt_byte_block</a>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="../../d9/dfc/struct_a_v_encryption_info.html#a07101d72147615f4e794630b5003fdb3">   57</a></span>&#160;    <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="code" href="../../d9/dfc/struct_a_v_encryption_info.html#a07101d72147615f4e794630b5003fdb3">skip_byte_block</a>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="../../d9/dfc/struct_a_v_encryption_info.html#a63649ca3be8a587136decc7837d8f0b0">   63</a></span>&#160;    <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *<a class="code" href="../../d9/dfc/struct_a_v_encryption_info.html#a63649ca3be8a587136decc7837d8f0b0">key_id</a>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="../../d9/dfc/struct_a_v_encryption_info.html#aa60828f2d9f03b10953cdae6d9a52c62">   64</a></span>&#160;    <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="code" href="../../d9/dfc/struct_a_v_encryption_info.html#aa60828f2d9f03b10953cdae6d9a52c62">key_id_size</a>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="../../d9/dfc/struct_a_v_encryption_info.html#a36258773710a13cbe7e652853dd65709">   71</a></span>&#160;    <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *<a class="code" href="../../d9/dfc/struct_a_v_encryption_info.html#a36258773710a13cbe7e652853dd65709">iv</a>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="../../d9/dfc/struct_a_v_encryption_info.html#ad7656cb4ce7cf286472f3854e0f091f6">   72</a></span>&#160;    <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="code" href="../../d9/dfc/struct_a_v_encryption_info.html#ad7656cb4ce7cf286472f3854e0f091f6">iv_size</a>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="../../d9/dfc/struct_a_v_encryption_info.html#a7512fb530e6dfad559d46f6c3832ef6a">   79</a></span>&#160;    <a class="code" href="../../d6/d10/struct_a_v_subsample_encryption_info.html">AVSubsampleEncryptionInfo</a> *<a class="code" href="../../d9/dfc/struct_a_v_encryption_info.html#a7512fb530e6dfad559d46f6c3832ef6a">subsamples</a>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="../../d9/dfc/struct_a_v_encryption_info.html#a6df1f28804425659902da964e4799ad6">   80</a></span>&#160;    <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="code" href="../../d9/dfc/struct_a_v_encryption_info.html#a6df1f28804425659902da964e4799ad6">subsample_count</a>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;} <a class="code" href="../../de/d7b/encryption__info_8h.html#a8953bc7257930dd6770eed47a30a8363">AVEncryptionInfo</a>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="../../d4/d3f/struct_a_v_encryption_init_info.html">   88</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="../../d4/d3f/struct_a_v_encryption_init_info.html">AVEncryptionInitInfo</a> {</div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="../../d4/d3f/struct_a_v_encryption_init_info.html#a382a65e2db4592a799ae4701bd29b81e">   94</a></span>&#160;    <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>* <a class="code" href="../../d4/d3f/struct_a_v_encryption_init_info.html#a382a65e2db4592a799ae4701bd29b81e">system_id</a>;</div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="../../d4/d3f/struct_a_v_encryption_init_info.html#a4a87627576869c7cf282eb6ad3e4bb17">   95</a></span>&#160;    <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="code" href="../../d4/d3f/struct_a_v_encryption_init_info.html#a4a87627576869c7cf282eb6ad3e4bb17">system_id_size</a>;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="../../d4/d3f/struct_a_v_encryption_init_info.html#a2a3b7706913ff0ecba8e75db35ef931f">  101</a></span>&#160;    <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>** <a class="code" href="../../d4/d3f/struct_a_v_encryption_init_info.html#a2a3b7706913ff0ecba8e75db35ef931f">key_ids</a>;</div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="../../d4/d3f/struct_a_v_encryption_init_info.html#aa146edb2a56bd1123318373cd36f1e5b">  103</a></span>&#160;    <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="code" href="../../d4/d3f/struct_a_v_encryption_init_info.html#aa146edb2a56bd1123318373cd36f1e5b">num_key_ids</a>;</div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="../../d4/d3f/struct_a_v_encryption_init_info.html#a63b474ad39e3d467c00d729aa6e6850c">  108</a></span>&#160;    <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="code" href="../../d4/d3f/struct_a_v_encryption_init_info.html#a63b474ad39e3d467c00d729aa6e6850c">key_id_size</a>;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="../../d4/d3f/struct_a_v_encryption_init_info.html#a057b7260a55099838ecee4278a6b69cb">  116</a></span>&#160;    <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>* <a class="code" href="../../d4/d3f/struct_a_v_encryption_init_info.html#a057b7260a55099838ecee4278a6b69cb">data</a>;</div>
+<div class="line"><a name="l00117"></a><span class="lineno"><a class="line" href="../../d4/d3f/struct_a_v_encryption_init_info.html#aa4b980b6c7e3b9d24f8084e21de4187c">  117</a></span>&#160;    <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="code" href="../../d4/d3f/struct_a_v_encryption_init_info.html#aa4b980b6c7e3b9d24f8084e21de4187c">data_size</a>;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
+<div class="line"><a name="l00122"></a><span class="lineno"><a class="line" href="../../d4/d3f/struct_a_v_encryption_init_info.html#a25a89671f39c5b8d3813df00f0576753">  122</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="../../d4/d3f/struct_a_v_encryption_init_info.html">AVEncryptionInitInfo</a> *<a class="code" href="../../d4/d3f/struct_a_v_encryption_init_info.html#a25a89671f39c5b8d3813df00f0576753">next</a>;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;} <a class="code" href="../../de/d7b/encryption__info_8h.html#a37a0ad4e35ffe73c78c83a2e1cd5df32">AVEncryptionInitInfo</a>;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<a class="code" href="../../d9/dfc/struct_a_v_encryption_info.html">AVEncryptionInfo</a> *<a class="code" href="../../de/d7b/encryption__info_8h.html#a9c5f5536f094350753a2d5d71d1a5333">av_encryption_info_alloc</a>(<a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> subsample_count, <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="code" href="../../d4/d3f/struct_a_v_encryption_init_info.html#a63b474ad39e3d467c00d729aa6e6850c">key_id_size</a>, <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> iv_size);</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160; </div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;<a class="code" href="../../d9/dfc/struct_a_v_encryption_info.html">AVEncryptionInfo</a> *<a class="code" href="../../de/d7b/encryption__info_8h.html#ab5df7d12f40e3fe2300dfc7ade895814">av_encryption_info_clone</a>(<span class="keyword">const</span> <a class="code" href="../../d9/dfc/struct_a_v_encryption_info.html">AVEncryptionInfo</a> *info);</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160; </div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../de/d7b/encryption__info_8h.html#ae49dc2ef6b84e80914f401bba34d4410">av_encryption_info_free</a>(<a class="code" href="../../d9/dfc/struct_a_v_encryption_info.html">AVEncryptionInfo</a> *info);</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160; </div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<a class="code" href="../../d9/dfc/struct_a_v_encryption_info.html">AVEncryptionInfo</a> *<a class="code" href="../../de/d7b/encryption__info_8h.html#ad365bfaa8edbf677742f9d73364e37ff">av_encryption_info_get_side_data</a>(<span class="keyword">const</span> <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *side_data, <span class="keywordtype">size_t</span> side_data_size);</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; </div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;<a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *<a class="code" href="../../de/d7b/encryption__info_8h.html#a489ebd49e50be760e9bfdeaf4c1739c5">av_encryption_info_add_side_data</a>(</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;      <span class="keyword">const</span> <a class="code" href="../../d9/dfc/struct_a_v_encryption_info.html">AVEncryptionInfo</a> *info, <span class="keywordtype">size_t</span> *side_data_size);</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160; </div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;<a class="code" href="../../d4/d3f/struct_a_v_encryption_init_info.html">AVEncryptionInitInfo</a> *<a class="code" href="../../de/d7b/encryption__info_8h.html#aa0978e1e71c8f175a9d9a6cbad63c3d0">av_encryption_init_info_alloc</a>(</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="code" href="../../d4/d3f/struct_a_v_encryption_init_info.html#a4a87627576869c7cf282eb6ad3e4bb17">system_id_size</a>, <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="code" href="../../d4/d3f/struct_a_v_encryption_init_info.html#aa146edb2a56bd1123318373cd36f1e5b">num_key_ids</a>, <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="code" href="../../d4/d3f/struct_a_v_encryption_init_info.html#a63b474ad39e3d467c00d729aa6e6850c">key_id_size</a>, <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="code" href="../../d4/d3f/struct_a_v_encryption_init_info.html#aa4b980b6c7e3b9d24f8084e21de4187c">data_size</a>);</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../de/d7b/encryption__info_8h.html#ad5b99e780657d38504da850e7d621921">av_encryption_init_info_free</a>(<a class="code" href="../../d4/d3f/struct_a_v_encryption_init_info.html">AVEncryptionInitInfo</a>* info);</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160; </div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;<a class="code" href="../../d4/d3f/struct_a_v_encryption_init_info.html">AVEncryptionInitInfo</a> *<a class="code" href="../../de/d7b/encryption__info_8h.html#ae0fd76bcba84d38470a8e6af0691b279">av_encryption_init_info_get_side_data</a>(</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    <span class="keyword">const</span> <a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>* side_data, <span class="keywordtype">size_t</span> side_data_size);</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160; </div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;<a class="code" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *<a class="code" href="../../de/d7b/encryption__info_8h.html#a86d0d586d0a323495207b8fba0f7ea3a">av_encryption_init_info_add_side_data</a>(</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <span class="keyword">const</span> <a class="code" href="../../d4/d3f/struct_a_v_encryption_init_info.html">AVEncryptionInitInfo</a> *info, <span class="keywordtype">size_t</span> *side_data_size);</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160; </div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* AVUTIL_ENCRYPTION_INFO_H */</span><span class="preprocessor"></span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aencryption__info_8h_html_a37a0ad4e35ffe73c78c83a2e1cd5df32"><div class="ttname"><a href="../../de/d7b/encryption__info_8h.html#a37a0ad4e35ffe73c78c83a2e1cd5df32">AVEncryptionInitInfo</a></div><div class="ttdeci">struct AVEncryptionInitInfo AVEncryptionInitInfo</div></div>
+<div class="ttc" id="astruct_a_v_encryption_init_info_html_a4a87627576869c7cf282eb6ad3e4bb17"><div class="ttname"><a href="../../d4/d3f/struct_a_v_encryption_init_info.html#a4a87627576869c7cf282eb6ad3e4bb17">AVEncryptionInitInfo::system_id_size</a></div><div class="ttdeci">uint32_t system_id_size</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d7b/encryption__info_8h_source.html#l00095">encryption_info.h:95</a></div></div>
+<div class="ttc" id="astruct_a_v_encryption_info_html_a63649ca3be8a587136decc7837d8f0b0"><div class="ttname"><a href="../../d9/dfc/struct_a_v_encryption_info.html#a63649ca3be8a587136decc7837d8f0b0">AVEncryptionInfo::key_id</a></div><div class="ttdeci">uint8_t * key_id</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d7b/encryption__info_8h_source.html#l00063">encryption_info.h:63</a></div></div>
+<div class="ttc" id="aencryption__info_8h_html_ae49dc2ef6b84e80914f401bba34d4410"><div class="ttname"><a href="../../de/d7b/encryption__info_8h.html#ae49dc2ef6b84e80914f401bba34d4410">av_encryption_info_free</a></div><div class="ttdeci">void av_encryption_info_free(AVEncryptionInfo *info)</div></div>
+<div class="ttc" id="aencryption__info_8h_html_a489ebd49e50be760e9bfdeaf4c1739c5"><div class="ttname"><a href="../../de/d7b/encryption__info_8h.html#a489ebd49e50be760e9bfdeaf4c1739c5">av_encryption_info_add_side_data</a></div><div class="ttdeci">uint8_t * av_encryption_info_add_side_data(const AVEncryptionInfo *info, size_t *side_data_size)</div></div>
+<div class="ttc" id="astruct_a_v_subsample_encryption_info_html"><div class="ttname"><a href="../../d6/d10/struct_a_v_subsample_encryption_info.html">AVSubsampleEncryptionInfo</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d7b/encryption__info_8h_source.html#l00025">encryption_info.h:25</a></div></div>
+<div class="ttc" id="astruct_a_v_encryption_info_html_ad7656cb4ce7cf286472f3854e0f091f6"><div class="ttname"><a href="../../d9/dfc/struct_a_v_encryption_info.html#ad7656cb4ce7cf286472f3854e0f091f6">AVEncryptionInfo::iv_size</a></div><div class="ttdeci">uint32_t iv_size</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d7b/encryption__info_8h_source.html#l00072">encryption_info.h:72</a></div></div>
+<div class="ttc" id="aencryption__info_8h_html_ad365bfaa8edbf677742f9d73364e37ff"><div class="ttname"><a href="../../de/d7b/encryption__info_8h.html#ad365bfaa8edbf677742f9d73364e37ff">av_encryption_info_get_side_data</a></div><div class="ttdeci">AVEncryptionInfo * av_encryption_info_get_side_data(const uint8_t *side_data, size_t side_data_size)</div></div>
+<div class="ttc" id="astruct_a_v_encryption_init_info_html_a057b7260a55099838ecee4278a6b69cb"><div class="ttname"><a href="../../d4/d3f/struct_a_v_encryption_init_info.html#a057b7260a55099838ecee4278a6b69cb">AVEncryptionInitInfo::data</a></div><div class="ttdeci">uint8_t * data</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d7b/encryption__info_8h_source.html#l00116">encryption_info.h:116</a></div></div>
+<div class="ttc" id="aencryption__info_8h_html_a86d0d586d0a323495207b8fba0f7ea3a"><div class="ttname"><a href="../../de/d7b/encryption__info_8h.html#a86d0d586d0a323495207b8fba0f7ea3a">av_encryption_init_info_add_side_data</a></div><div class="ttdeci">uint8_t * av_encryption_init_info_add_side_data(const AVEncryptionInitInfo *info, size_t *side_data_size)</div></div>
+<div class="ttc" id="astruct_a_v_encryption_init_info_html"><div class="ttname"><a href="../../d4/d3f/struct_a_v_encryption_init_info.html">AVEncryptionInitInfo</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d7b/encryption__info_8h_source.html#l00088">encryption_info.h:88</a></div></div>
+<div class="ttc" id="astruct_a_v_encryption_info_html_a36258773710a13cbe7e652853dd65709"><div class="ttname"><a href="../../d9/dfc/struct_a_v_encryption_info.html#a36258773710a13cbe7e652853dd65709">AVEncryptionInfo::iv</a></div><div class="ttdeci">uint8_t * iv</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d7b/encryption__info_8h_source.html#l00071">encryption_info.h:71</a></div></div>
+<div class="ttc" id="aencryption__info_8h_html_aa0978e1e71c8f175a9d9a6cbad63c3d0"><div class="ttname"><a href="../../de/d7b/encryption__info_8h.html#aa0978e1e71c8f175a9d9a6cbad63c3d0">av_encryption_init_info_alloc</a></div><div class="ttdeci">AVEncryptionInitInfo * av_encryption_init_info_alloc(uint32_t system_id_size, uint32_t num_key_ids, uint32_t key_id_size, uint32_t data_size)</div></div>
+<div class="ttc" id="astruct_a_v_encryption_init_info_html_aa4b980b6c7e3b9d24f8084e21de4187c"><div class="ttname"><a href="../../d4/d3f/struct_a_v_encryption_init_info.html#aa4b980b6c7e3b9d24f8084e21de4187c">AVEncryptionInitInfo::data_size</a></div><div class="ttdeci">uint32_t data_size</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d7b/encryption__info_8h_source.html#l00117">encryption_info.h:117</a></div></div>
+<div class="ttc" id="astruct_a_v_encryption_init_info_html_a63b474ad39e3d467c00d729aa6e6850c"><div class="ttname"><a href="../../d4/d3f/struct_a_v_encryption_init_info.html#a63b474ad39e3d467c00d729aa6e6850c">AVEncryptionInitInfo::key_id_size</a></div><div class="ttdeci">uint32_t key_id_size</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d7b/encryption__info_8h_source.html#l00108">encryption_info.h:108</a></div></div>
+<div class="ttc" id="aencryption__info_8h_html_a8287e845b9a7db1ed5d17eecfb30cdd5"><div class="ttname"><a href="../../de/d7b/encryption__info_8h.html#a8287e845b9a7db1ed5d17eecfb30cdd5">AVSubsampleEncryptionInfo</a></div><div class="ttdeci">struct AVSubsampleEncryptionInfo AVSubsampleEncryptionInfo</div></div>
+<div class="ttc" id="astruct_a_v_encryption_info_html_a07101d72147615f4e794630b5003fdb3"><div class="ttname"><a href="../../d9/dfc/struct_a_v_encryption_info.html#a07101d72147615f4e794630b5003fdb3">AVEncryptionInfo::skip_byte_block</a></div><div class="ttdeci">uint32_t skip_byte_block</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d7b/encryption__info_8h_source.html#l00057">encryption_info.h:57</a></div></div>
+<div class="ttc" id="astruct_a_v_encryption_info_html_a7512fb530e6dfad559d46f6c3832ef6a"><div class="ttname"><a href="../../d9/dfc/struct_a_v_encryption_info.html#a7512fb530e6dfad559d46f6c3832ef6a">AVEncryptionInfo::subsamples</a></div><div class="ttdeci">AVSubsampleEncryptionInfo * subsamples</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d7b/encryption__info_8h_source.html#l00079">encryption_info.h:79</a></div></div>
+<div class="ttc" id="astruct_a_v_encryption_info_html_a6df1f28804425659902da964e4799ad6"><div class="ttname"><a href="../../d9/dfc/struct_a_v_encryption_info.html#a6df1f28804425659902da964e4799ad6">AVEncryptionInfo::subsample_count</a></div><div class="ttdeci">uint32_t subsample_count</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d7b/encryption__info_8h_source.html#l00080">encryption_info.h:80</a></div></div>
+<div class="ttc" id="astruct_a_v_encryption_info_html_a419cb6a7096045c0d17eb57ad5de5c5a"><div class="ttname"><a href="../../d9/dfc/struct_a_v_encryption_info.html#a419cb6a7096045c0d17eb57ad5de5c5a">AVEncryptionInfo::crypt_byte_block</a></div><div class="ttdeci">uint32_t crypt_byte_block</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d7b/encryption__info_8h_source.html#l00051">encryption_info.h:51</a></div></div>
+<div class="ttc" id="aencryption__info_8h_html_a9c5f5536f094350753a2d5d71d1a5333"><div class="ttname"><a href="../../de/d7b/encryption__info_8h.html#a9c5f5536f094350753a2d5d71d1a5333">av_encryption_info_alloc</a></div><div class="ttdeci">AVEncryptionInfo * av_encryption_info_alloc(uint32_t subsample_count, uint32_t key_id_size, uint32_t iv_size)</div></div>
+<div class="ttc" id="aencryption__info_8h_html_ad5b99e780657d38504da850e7d621921"><div class="ttname"><a href="../../de/d7b/encryption__info_8h.html#ad5b99e780657d38504da850e7d621921">av_encryption_init_info_free</a></div><div class="ttdeci">void av_encryption_init_info_free(AVEncryptionInitInfo *info)</div></div>
+<div class="ttc" id="aencryption__info_8h_html_ab5df7d12f40e3fe2300dfc7ade895814"><div class="ttname"><a href="../../de/d7b/encryption__info_8h.html#ab5df7d12f40e3fe2300dfc7ade895814">av_encryption_info_clone</a></div><div class="ttdeci">AVEncryptionInfo * av_encryption_info_clone(const AVEncryptionInfo *info)</div></div>
+<div class="ttc" id="astruct_a_v_subsample_encryption_info_html_aae4b75d9e9948da9de53b0e419eef3f8"><div class="ttname"><a href="../../d6/d10/struct_a_v_subsample_encryption_info.html#aae4b75d9e9948da9de53b0e419eef3f8">AVSubsampleEncryptionInfo::bytes_of_clear_data</a></div><div class="ttdeci">unsigned int bytes_of_clear_data</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d7b/encryption__info_8h_source.html#l00027">encryption_info.h:27</a></div></div>
+<div class="ttc" id="aencryption__info_8h_html_ae0fd76bcba84d38470a8e6af0691b279"><div class="ttname"><a href="../../de/d7b/encryption__info_8h.html#ae0fd76bcba84d38470a8e6af0691b279">av_encryption_init_info_get_side_data</a></div><div class="ttdeci">AVEncryptionInitInfo * av_encryption_init_info_get_side_data(const uint8_t *side_data, size_t side_data_size)</div></div>
+<div class="ttc" id="a_s_d_l__config_8h_html_aba7bc1797add20fe3efdf37ced1182c5"><div class="ttname"><a href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a></div><div class="ttdeci">unsigned __int8 uint8_t</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d8f/_s_d_l__config_8h_source.html#l00035">SDL_config.h:35</a></div></div>
+<div class="ttc" id="astruct_a_v_encryption_info_html"><div class="ttname"><a href="../../d9/dfc/struct_a_v_encryption_info.html">AVEncryptionInfo</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d7b/encryption__info_8h_source.html#l00043">encryption_info.h:43</a></div></div>
+<div class="ttc" id="astruct_a_v_encryption_init_info_html_a25a89671f39c5b8d3813df00f0576753"><div class="ttname"><a href="../../d4/d3f/struct_a_v_encryption_init_info.html#a25a89671f39c5b8d3813df00f0576753">AVEncryptionInitInfo::next</a></div><div class="ttdeci">struct AVEncryptionInitInfo * next</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d7b/encryption__info_8h_source.html#l00122">encryption_info.h:122</a></div></div>
+<div class="ttc" id="astruct_a_v_encryption_init_info_html_a382a65e2db4592a799ae4701bd29b81e"><div class="ttname"><a href="../../d4/d3f/struct_a_v_encryption_init_info.html#a382a65e2db4592a799ae4701bd29b81e">AVEncryptionInitInfo::system_id</a></div><div class="ttdeci">uint8_t * system_id</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d7b/encryption__info_8h_source.html#l00094">encryption_info.h:94</a></div></div>
+<div class="ttc" id="aencryption__info_8h_html_a8953bc7257930dd6770eed47a30a8363"><div class="ttname"><a href="../../de/d7b/encryption__info_8h.html#a8953bc7257930dd6770eed47a30a8363">AVEncryptionInfo</a></div><div class="ttdeci">struct AVEncryptionInfo AVEncryptionInfo</div></div>
+<div class="ttc" id="a_s_d_l__config_8h_html_a435d1572bf3f880d55459d9805097f62"><div class="ttname"><a href="../../d1/d8f/_s_d_l__config_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a></div><div class="ttdeci">unsigned __int32 uint32_t</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d8f/_s_d_l__config_8h_source.html#l00039">SDL_config.h:39</a></div></div>
+<div class="ttc" id="astruct_a_v_encryption_info_html_aa60828f2d9f03b10953cdae6d9a52c62"><div class="ttname"><a href="../../d9/dfc/struct_a_v_encryption_info.html#aa60828f2d9f03b10953cdae6d9a52c62">AVEncryptionInfo::key_id_size</a></div><div class="ttdeci">uint32_t key_id_size</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d7b/encryption__info_8h_source.html#l00064">encryption_info.h:64</a></div></div>
+<div class="ttc" id="astruct_a_v_encryption_init_info_html_aa146edb2a56bd1123318373cd36f1e5b"><div class="ttname"><a href="../../d4/d3f/struct_a_v_encryption_init_info.html#aa146edb2a56bd1123318373cd36f1e5b">AVEncryptionInitInfo::num_key_ids</a></div><div class="ttdeci">uint32_t num_key_ids</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d7b/encryption__info_8h_source.html#l00103">encryption_info.h:103</a></div></div>
+<div class="ttc" id="astruct_a_v_encryption_init_info_html_a2a3b7706913ff0ecba8e75db35ef931f"><div class="ttname"><a href="../../d4/d3f/struct_a_v_encryption_init_info.html#a2a3b7706913ff0ecba8e75db35ef931f">AVEncryptionInitInfo::key_ids</a></div><div class="ttdeci">uint8_t ** key_ids</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d7b/encryption__info_8h_source.html#l00101">encryption_info.h:101</a></div></div>
+<div class="ttc" id="astruct_a_v_subsample_encryption_info_html_ad6dd17f1be1daf4f5982689a5debb935"><div class="ttname"><a href="../../d6/d10/struct_a_v_subsample_encryption_info.html#ad6dd17f1be1daf4f5982689a5debb935">AVSubsampleEncryptionInfo::bytes_of_protected_data</a></div><div class="ttdeci">unsigned int bytes_of_protected_data</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d7b/encryption__info_8h_source.html#l00034">encryption_info.h:34</a></div></div>
+<div class="ttc" id="astruct_a_v_encryption_info_html_ae0525acdfc0976caa7824da69e69108c"><div class="ttname"><a href="../../d9/dfc/struct_a_v_encryption_info.html#ae0525acdfc0976caa7824da69e69108c">AVEncryptionInfo::scheme</a></div><div class="ttdeci">uint32_t scheme</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d7b/encryption__info_8h_source.html#l00045">encryption_info.h:45</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_97aefd0d527b934f1d99a682da8fe6a9.html">lib</a></li><li class="navelem"><a class="el" href="../../dir_da53678e933bc13c5b44fc9f96ac81aa.html">win32</a></li><li class="navelem"><a class="el" href="../../dir_7ac189985cec0e073b46d34a5d96bfc1.html">x86</a></li><li class="navelem"><a class="el" href="../../dir_e3469dbcd8a5e63a5540df758d989c34.html">ffmpeg-4.2.2</a></li><li class="navelem"><a class="el" href="../../dir_880368755e1ee5b32b1864dac7163836.html">include</a></li><li class="navelem"><a class="el" href="../../dir_e95abcf8ca274311b94b0e3a5da6ed50.html">libavutil</a></li><li class="navelem"><a class="el" href="../../de/d7b/encryption__info_8h.html">encryption_info.h</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:03:39. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

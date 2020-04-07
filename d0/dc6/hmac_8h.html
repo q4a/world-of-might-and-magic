@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Файл C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavutil/hmac.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d0/dc6/hmac_8h.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#typedef-members">Определения типов</a> &#124;
+<a href="#enum-members">Перечисления</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл hmac.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><a href="../../d0/dc6/hmac_8h_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Определения типов</h2></td></tr>
+<tr class="memitem:gad8c944f9437e65d8e8ebc526bdeee676"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="../../d9/d15/group__lavu__hmac.html#gad8c944f9437e65d8e8ebc526bdeee676">AVHMAC</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d15/group__lavu__hmac.html#gad8c944f9437e65d8e8ebc526bdeee676">AVHMAC</a></td></tr>
+<tr class="separator:gad8c944f9437e65d8e8ebc526bdeee676"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Перечисления</h2></td></tr>
+<tr class="memitem:gaec34f18155d20236c9f39961bb58f7d4"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d15/group__lavu__hmac.html#gaec34f18155d20236c9f39961bb58f7d4">AVHMACType</a> { <br />
+&#160;&#160;<a class="el" href="../../d9/d15/group__lavu__hmac.html#ggaec34f18155d20236c9f39961bb58f7d4a063ecd7e758d4abcd438aba0b9708c7a">AV_HMAC_MD5</a>, 
+<a class="el" href="../../d9/d15/group__lavu__hmac.html#ggaec34f18155d20236c9f39961bb58f7d4a421f7f38b635e8d5ef1cc45d1867d5a7">AV_HMAC_SHA1</a>, 
+<a class="el" href="../../d9/d15/group__lavu__hmac.html#ggaec34f18155d20236c9f39961bb58f7d4a283c3d421f8279ec3530d0bd0cb56313">AV_HMAC_SHA224</a>, 
+<a class="el" href="../../d9/d15/group__lavu__hmac.html#ggaec34f18155d20236c9f39961bb58f7d4a2f0a1a712c6e85b5149baa0780dcda4c">AV_HMAC_SHA256</a>, 
+<br />
+&#160;&#160;<a class="el" href="../../d9/d15/group__lavu__hmac.html#ggaec34f18155d20236c9f39961bb58f7d4a268dfcdccbe89e48a662989087728ff7">AV_HMAC_SHA384</a>, 
+<a class="el" href="../../d9/d15/group__lavu__hmac.html#ggaec34f18155d20236c9f39961bb58f7d4a811a3754bdc32d9e258c6504759a6608">AV_HMAC_SHA512</a>
+<br />
+ }</td></tr>
+<tr class="separator:gaec34f18155d20236c9f39961bb58f7d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:gaae6685287d6645eb1be86525ecee17ae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/d15/group__lavu__hmac.html#gad8c944f9437e65d8e8ebc526bdeee676">AVHMAC</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d15/group__lavu__hmac.html#gaae6685287d6645eb1be86525ecee17ae">av_hmac_alloc</a> (enum <a class="el" href="../../d9/d15/group__lavu__hmac.html#gaec34f18155d20236c9f39961bb58f7d4">AVHMACType</a> <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#ad5ddf6fca7b585646515660e810e0188">type</a>)</td></tr>
+<tr class="separator:gaae6685287d6645eb1be86525ecee17ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaaa2951b832fdc7abed35a9112f7f1a02"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d15/group__lavu__hmac.html#gaaa2951b832fdc7abed35a9112f7f1a02">av_hmac_free</a> (<a class="el" href="../../d9/d15/group__lavu__hmac.html#gad8c944f9437e65d8e8ebc526bdeee676">AVHMAC</a> *<a class="el" href="../../df/d32/_s_d_l__egl_8h.html#a209c8e51e11ce41075280eea53ad018c">ctx</a>)</td></tr>
+<tr class="separator:gaaa2951b832fdc7abed35a9112f7f1a02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae91a0c1f832c269006164b29df7e9aa8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d15/group__lavu__hmac.html#gae91a0c1f832c269006164b29df7e9aa8">av_hmac_init</a> (<a class="el" href="../../d9/d15/group__lavu__hmac.html#gad8c944f9437e65d8e8ebc526bdeee676">AVHMAC</a> *<a class="el" href="../../df/d32/_s_d_l__egl_8h.html#a209c8e51e11ce41075280eea53ad018c">ctx</a>, const <a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *key, unsigned int keylen)</td></tr>
+<tr class="separator:gae91a0c1f832c269006164b29df7e9aa8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4c3307cc9b1f331a15e999f8dacb90de"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d15/group__lavu__hmac.html#ga4c3307cc9b1f331a15e999f8dacb90de">av_hmac_update</a> (<a class="el" href="../../d9/d15/group__lavu__hmac.html#gad8c944f9437e65d8e8ebc526bdeee676">AVHMAC</a> *<a class="el" href="../../df/d32/_s_d_l__egl_8h.html#a209c8e51e11ce41075280eea53ad018c">ctx</a>, const <a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a2e335d56e2846b0fea47eed068b2d34a">data</a>, unsigned int <a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a652168017ea9a8bbcead03d5c16269fb">len</a>)</td></tr>
+<tr class="separator:ga4c3307cc9b1f331a15e999f8dacb90de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga02f0b343d9045500beef1f6b09c650cd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d15/group__lavu__hmac.html#ga02f0b343d9045500beef1f6b09c650cd">av_hmac_final</a> (<a class="el" href="../../d9/d15/group__lavu__hmac.html#gad8c944f9437e65d8e8ebc526bdeee676">AVHMAC</a> *<a class="el" href="../../df/d32/_s_d_l__egl_8h.html#a209c8e51e11ce41075280eea53ad018c">ctx</a>, <a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *out, unsigned int outlen)</td></tr>
+<tr class="separator:ga02f0b343d9045500beef1f6b09c650cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga22d17ebca8556c49be5c22e706de1ab3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d15/group__lavu__hmac.html#ga22d17ebca8556c49be5c22e706de1ab3">av_hmac_calc</a> (<a class="el" href="../../d9/d15/group__lavu__hmac.html#gad8c944f9437e65d8e8ebc526bdeee676">AVHMAC</a> *<a class="el" href="../../df/d32/_s_d_l__egl_8h.html#a209c8e51e11ce41075280eea53ad018c">ctx</a>, const <a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a2e335d56e2846b0fea47eed068b2d34a">data</a>, unsigned int <a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a652168017ea9a8bbcead03d5c16269fb">len</a>, const <a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *key, unsigned int keylen, <a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *out, unsigned int outlen)</td></tr>
+<tr class="separator:ga22d17ebca8556c49be5c22e706de1ab3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_97aefd0d527b934f1d99a682da8fe6a9.html">lib</a></li><li class="navelem"><a class="el" href="../../dir_da53678e933bc13c5b44fc9f96ac81aa.html">win32</a></li><li class="navelem"><a class="el" href="../../dir_7ac189985cec0e073b46d34a5d96bfc1.html">x86</a></li><li class="navelem"><a class="el" href="../../dir_e3469dbcd8a5e63a5540df758d989c34.html">ffmpeg-4.2.2</a></li><li class="navelem"><a class="el" href="../../dir_880368755e1ee5b32b1864dac7163836.html">include</a></li><li class="navelem"><a class="el" href="../../dir_e95abcf8ca274311b94b0e3a5da6ed50.html">libavutil</a></li><li class="navelem"><a class="el" href="../../d0/dc6/hmac_8h.html">hmac.h</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:04:15. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

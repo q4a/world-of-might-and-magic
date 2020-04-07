@@ -1,0 +1,398 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Структура AVFilterGraph</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d4/d5e/struct_a_v_filter_graph.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="../../d0/dfa/struct_a_v_filter_graph-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Структура AVFilterGraph<div class="ingroups"><a class="el" href="../../d0/d96/group__lavfi.html">libavfilter</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="../../d8/da0/avfilter_8h_source.html">avfilter.h</a>&gt;</code></p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Граф связей класса AVFilterGraph:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d7/d19/struct_a_v_filter_graph__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:af00925dd69b474fac48887efc0e1ac94"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d2/de1/struct_a_v_class.html">AVClass</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d5e/struct_a_v_filter_graph.html#af00925dd69b474fac48887efc0e1ac94">av_class</a></td></tr>
+<tr class="separator:af00925dd69b474fac48887efc0e1ac94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1dafd3d239f7c2f5e3ac109578ef926d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d74/struct_a_v_filter_context.html">AVFilterContext</a> **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d5e/struct_a_v_filter_graph.html#a1dafd3d239f7c2f5e3ac109578ef926d">filters</a></td></tr>
+<tr class="separator:a1dafd3d239f7c2f5e3ac109578ef926d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ba5c820c760788ea5f8e40c476f9704"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d5e/struct_a_v_filter_graph.html#a0ba5c820c760788ea5f8e40c476f9704">nb_filters</a></td></tr>
+<tr class="separator:a0ba5c820c760788ea5f8e40c476f9704"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17ced656602d33101ec4f46f6a9bdc53"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d5e/struct_a_v_filter_graph.html#a17ced656602d33101ec4f46f6a9bdc53">scale_sws_opts</a></td></tr>
+<tr class="memdesc:a17ced656602d33101ec4f46f6a9bdc53"><td class="mdescLeft">&#160;</td><td class="mdescRight">sws options to use for the auto-inserted scale filters  <a href="../../d4/d5e/struct_a_v_filter_graph.html#a17ced656602d33101ec4f46f6a9bdc53">Подробнее...</a><br /></td></tr>
+<tr class="separator:a17ced656602d33101ec4f46f6a9bdc53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6425a1be148d6bea493bc9d7f33a5222"><td class="memItemLeft" align="right" valign="top">attribute_deprecated char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d5e/struct_a_v_filter_graph.html#a6425a1be148d6bea493bc9d7f33a5222">resample_lavr_opts</a></td></tr>
+<tr class="memdesc:a6425a1be148d6bea493bc9d7f33a5222"><td class="mdescLeft">&#160;</td><td class="mdescRight">libavresample options to use for the auto-inserted resample filters  <a href="../../d4/d5e/struct_a_v_filter_graph.html#a6425a1be148d6bea493bc9d7f33a5222">Подробнее...</a><br /></td></tr>
+<tr class="separator:a6425a1be148d6bea493bc9d7f33a5222"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fd96bbd6d1a3b730681dc0bf5107a5e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d5e/struct_a_v_filter_graph.html#a7fd96bbd6d1a3b730681dc0bf5107a5e">thread_type</a></td></tr>
+<tr class="separator:a7fd96bbd6d1a3b730681dc0bf5107a5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac28dcbf76e6fdd800295a2738d41660e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d5e/struct_a_v_filter_graph.html#ac28dcbf76e6fdd800295a2738d41660e">nb_threads</a></td></tr>
+<tr class="separator:ac28dcbf76e6fdd800295a2738d41660e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a487dec9e7b5a3be71fce03a9901511f6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d96/group__lavfi.html#gaa34cc0f3d5e4d49806c6c40aac97a963">AVFilterGraphInternal</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d5e/struct_a_v_filter_graph.html#a487dec9e7b5a3be71fce03a9901511f6">internal</a></td></tr>
+<tr class="separator:a487dec9e7b5a3be71fce03a9901511f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e9ac166e2d259bdd0b0c6b1a21f702c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d5e/struct_a_v_filter_graph.html#a2e9ac166e2d259bdd0b0c6b1a21f702c">opaque</a></td></tr>
+<tr class="separator:a2e9ac166e2d259bdd0b0c6b1a21f702c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbabdacc9b11e239ec24c969549d62ec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d96/group__lavfi.html#gaa110ebfed4a342f88cd86da1b0037ab7">avfilter_execute_func</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d5e/struct_a_v_filter_graph.html#abbabdacc9b11e239ec24c969549d62ec">execute</a></td></tr>
+<tr class="separator:abbabdacc9b11e239ec24c969549d62ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34c3bdd638ffba56d89ad7f5e84601e1"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d5e/struct_a_v_filter_graph.html#a34c3bdd638ffba56d89ad7f5e84601e1">aresample_swr_opts</a></td></tr>
+<tr class="memdesc:a34c3bdd638ffba56d89ad7f5e84601e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">swr options to use for the auto-inserted aresample filters, Access ONLY through AVOptions  <a href="../../d4/d5e/struct_a_v_filter_graph.html#a34c3bdd638ffba56d89ad7f5e84601e1">Подробнее...</a><br /></td></tr>
+<tr class="separator:a34c3bdd638ffba56d89ad7f5e84601e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ea2eac0e3a3ed82bb4b4663052d37bd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d1a/struct_a_v_filter_link.html">AVFilterLink</a> **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d5e/struct_a_v_filter_graph.html#a0ea2eac0e3a3ed82bb4b4663052d37bd">sink_links</a></td></tr>
+<tr class="separator:a0ea2eac0e3a3ed82bb4b4663052d37bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3d70b6569f4f9718437008f91c898ea"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d5e/struct_a_v_filter_graph.html#af3d70b6569f4f9718437008f91c898ea">sink_links_count</a></td></tr>
+<tr class="separator:af3d70b6569f4f9718437008f91c898ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56b011b2191d8650b78d75b0e938e22d"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d5e/struct_a_v_filter_graph.html#a56b011b2191d8650b78d75b0e938e22d">disable_auto_convert</a></td></tr>
+<tr class="separator:a56b011b2191d8650b78d75b0e938e22d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock">
+<p class="definition">См. определение в файле <a class="el" href="../../d8/da0/avfilter_8h_source.html">avfilter.h</a> строка <a class="el" href="../../d8/da0/avfilter_8h_source.html#l00840">840</a></p>
+</div><h2 class="groupheader">Данные класса</h2>
+<a id="af00925dd69b474fac48887efc0e1ac94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af00925dd69b474fac48887efc0e1ac94">&#9670;&nbsp;</a></span>av_class</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="../../d2/de1/struct_a_v_class.html">AVClass</a>* AVFilterGraph::av_class</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/da0/avfilter_8h_source.html">avfilter.h</a> строка <a class="el" href="../../d8/da0/avfilter_8h_source.html#l00841">841</a></p>
+
+</div>
+</div>
+<a id="a1dafd3d239f7c2f5e3ac109578ef926d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1dafd3d239f7c2f5e3ac109578ef926d">&#9670;&nbsp;</a></span>filters</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/d74/struct_a_v_filter_context.html">AVFilterContext</a>** AVFilterGraph::filters</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/da0/avfilter_8h_source.html">avfilter.h</a> строка <a class="el" href="../../d8/da0/avfilter_8h_source.html#l00842">842</a></p>
+
+</div>
+</div>
+<a id="a0ba5c820c760788ea5f8e40c476f9704"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ba5c820c760788ea5f8e40c476f9704">&#9670;&nbsp;</a></span>nb_filters</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned AVFilterGraph::nb_filters</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/da0/avfilter_8h_source.html">avfilter.h</a> строка <a class="el" href="../../d8/da0/avfilter_8h_source.html#l00843">843</a></p>
+
+</div>
+</div>
+<a id="a17ced656602d33101ec4f46f6a9bdc53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17ced656602d33101ec4f46f6a9bdc53">&#9670;&nbsp;</a></span>scale_sws_opts</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* AVFilterGraph::scale_sws_opts</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>sws options to use for the auto-inserted scale filters </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/da0/avfilter_8h_source.html">avfilter.h</a> строка <a class="el" href="../../d8/da0/avfilter_8h_source.html#l00845">845</a></p>
+
+</div>
+</div>
+<a id="a6425a1be148d6bea493bc9d7f33a5222"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6425a1be148d6bea493bc9d7f33a5222">&#9670;&nbsp;</a></span>resample_lavr_opts</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">attribute_deprecated char* AVFilterGraph::resample_lavr_opts</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>libavresample options to use for the auto-inserted resample filters </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/da0/avfilter_8h_source.html">avfilter.h</a> строка <a class="el" href="../../d8/da0/avfilter_8h_source.html#l00847">847</a></p>
+
+</div>
+</div>
+<a id="a7fd96bbd6d1a3b730681dc0bf5107a5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7fd96bbd6d1a3b730681dc0bf5107a5e">&#9670;&nbsp;</a></span>thread_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int AVFilterGraph::thread_type</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Type of multithreading allowed for filters in this graph. A combination of AVFILTER_THREAD_* flags.</p>
+<p>May be set by the caller at any point, the setting will apply to all filters initialized after that. The default is allowing everything.</p>
+<p>When a filter in this graph is initialized, this field is combined using bit AND with <a class="el" href="../../db/d74/struct_a_v_filter_context.html#a07b5e1a4c3cbde993e54bcc4873401a9">AVFilterContext.thread_type</a> to get the final mask used for determining allowed threading types. I.e. a threading type needs to be set in both to be allowed. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/da0/avfilter_8h_source.html">avfilter.h</a> строка <a class="el" href="../../d8/da0/avfilter_8h_source.html#l00862">862</a></p>
+
+</div>
+</div>
+<a id="ac28dcbf76e6fdd800295a2738d41660e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac28dcbf76e6fdd800295a2738d41660e">&#9670;&nbsp;</a></span>nb_threads</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int AVFilterGraph::nb_threads</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Maximum number of threads used by filters in this graph. May be set by the caller before adding any filters to the filtergraph. Zero (the default) means that the number of threads is determined automatically. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/da0/avfilter_8h_source.html">avfilter.h</a> строка <a class="el" href="../../d8/da0/avfilter_8h_source.html#l00869">869</a></p>
+
+</div>
+</div>
+<a id="a487dec9e7b5a3be71fce03a9901511f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a487dec9e7b5a3be71fce03a9901511f6">&#9670;&nbsp;</a></span>internal</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d96/group__lavfi.html#gaa34cc0f3d5e4d49806c6c40aac97a963">AVFilterGraphInternal</a>* AVFilterGraph::internal</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Opaque object for libavfilter internal use. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/da0/avfilter_8h_source.html">avfilter.h</a> строка <a class="el" href="../../d8/da0/avfilter_8h_source.html#l00874">874</a></p>
+
+</div>
+</div>
+<a id="a2e9ac166e2d259bdd0b0c6b1a21f702c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e9ac166e2d259bdd0b0c6b1a21f702c">&#9670;&nbsp;</a></span>opaque</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>* AVFilterGraph::opaque</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Opaque user data. May be set by the caller to an arbitrary value, e.g. to be used from callbacks like <a class="el" href="../../d4/d5e/struct_a_v_filter_graph.html#abbabdacc9b11e239ec24c969549d62ec">AVFilterGraph::execute</a>. Libavfilter will not touch this field in any way. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/da0/avfilter_8h_source.html">avfilter.h</a> строка <a class="el" href="../../d8/da0/avfilter_8h_source.html#l00881">881</a></p>
+
+</div>
+</div>
+<a id="abbabdacc9b11e239ec24c969549d62ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbabdacc9b11e239ec24c969549d62ec">&#9670;&nbsp;</a></span>execute</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d96/group__lavfi.html#gaa110ebfed4a342f88cd86da1b0037ab7">avfilter_execute_func</a>* AVFilterGraph::execute</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This callback may be set by the caller immediately after allocating the graph and before adding any filters to it, to provide a custom multithreading implementation.</p>
+<p>If set, filters with slice threading capability will call this callback to execute multiple jobs in parallel.</p>
+<p>If this field is left unset, libavfilter will use its internal implementation, which may or may not be multithreaded depending on the platform and build options. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/da0/avfilter_8h_source.html">avfilter.h</a> строка <a class="el" href="../../d8/da0/avfilter_8h_source.html#l00895">895</a></p>
+
+</div>
+</div>
+<a id="a34c3bdd638ffba56d89ad7f5e84601e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34c3bdd638ffba56d89ad7f5e84601e1">&#9670;&nbsp;</a></span>aresample_swr_opts</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* AVFilterGraph::aresample_swr_opts</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>swr options to use for the auto-inserted aresample filters, Access ONLY through AVOptions </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/da0/avfilter_8h_source.html">avfilter.h</a> строка <a class="el" href="../../d8/da0/avfilter_8h_source.html#l00897">897</a></p>
+
+</div>
+</div>
+<a id="a0ea2eac0e3a3ed82bb4b4663052d37bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ea2eac0e3a3ed82bb4b4663052d37bd">&#9670;&nbsp;</a></span>sink_links</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d6/d1a/struct_a_v_filter_link.html">AVFilterLink</a>** AVFilterGraph::sink_links</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Private fields</p>
+<p>The following fields are for internal use only. Their type, offset, number and semantic can change without notice. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/da0/avfilter_8h_source.html">avfilter.h</a> строка <a class="el" href="../../d8/da0/avfilter_8h_source.html#l00906">906</a></p>
+
+</div>
+</div>
+<a id="af3d70b6569f4f9718437008f91c898ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3d70b6569f4f9718437008f91c898ea">&#9670;&nbsp;</a></span>sink_links_count</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int AVFilterGraph::sink_links_count</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/da0/avfilter_8h_source.html">avfilter.h</a> строка <a class="el" href="../../d8/da0/avfilter_8h_source.html#l00907">907</a></p>
+
+</div>
+</div>
+<a id="a56b011b2191d8650b78d75b0e938e22d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56b011b2191d8650b78d75b0e938e22d">&#9670;&nbsp;</a></span>disable_auto_convert</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned AVFilterGraph::disable_auto_convert</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/da0/avfilter_8h_source.html">avfilter.h</a> строка <a class="el" href="../../d8/da0/avfilter_8h_source.html#l00909">909</a></p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов структуры находятся в файле:<ul>
+<li>C:/git/world-of-might-and-magic/lib/win32/x86/ffmpeg-4.2.2/include/libavfilter/<a class="el" href="../../d8/da0/avfilter_8h_source.html">avfilter.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../d4/d5e/struct_a_v_filter_graph.html">AVFilterGraph</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:04:35. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,1445 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Структура BLVFace</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d9/ded/struct_b_l_v_face.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="../../d2/dcb/struct_b_l_v_face-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Структура BLVFace</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="../../da/dc7/_indoor_8h_source.html">Indoor.h</a>&gt;</code></p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Граф связей класса BLVFace:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d2/d63/struct_b_l_v_face__coll__graph.svg" width="347" height="216"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a46c1e3d9c5dc4b8c98cd5e5ad77a41ad"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/ded/struct_b_l_v_face.html#a46c1e3d9c5dc4b8c98cd5e5ad77a41ad">BLVFace</a> ()</td></tr>
+<tr class="separator:a46c1e3d9c5dc4b8c98cd5e5ad77a41ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2788e6e9d23649cf18b72fab31591e93"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/ded/struct_b_l_v_face.html#a2788e6e9d23649cf18b72fab31591e93">_get_normals</a> (Vec3_int_ *a2, Vec3_int_ *a3)</td></tr>
+<tr class="separator:a2788e6e9d23649cf18b72fab31591e93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4ff9cc8b3facb6b57845e28ca725468"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/ded/struct_b_l_v_face.html#ae4ff9cc8b3facb6b57845e28ca725468">FromODM</a> (struct <a class="el" href="../../d3/df8/struct_o_d_m_face.html">ODMFace</a> *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a676ca580c460c0154eb58200433d2a9e">face</a>)</td></tr>
+<tr class="separator:ae4ff9cc8b3facb6b57845e28ca725468"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7630bb93c82ffff04220c843b5f10263"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/ded/struct_b_l_v_face.html#a7630bb93c82ffff04220c843b5f10263">SetTexture</a> (const <a class="el" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> &amp;filename)</td></tr>
+<tr class="separator:a7630bb93c82ffff04220c843b5f10263"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02918f2597af7a3483e902777148ebee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/d7f/class_texture.html">Texture</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/ded/struct_b_l_v_face.html#a02918f2597af7a3483e902777148ebee">GetTexture</a> ()</td></tr>
+<tr class="separator:a02918f2597af7a3483e902777148ebee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a731650f7102cc18bdacc71b6714a2660"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/ded/struct_b_l_v_face.html#a731650f7102cc18bdacc71b6714a2660">Deserialize</a> (struct <a class="el" href="../../d9/d6f/struct_b_l_v_face___m_m7.html">BLVFace_MM7</a> *)</td></tr>
+<tr class="separator:a731650f7102cc18bdacc71b6714a2660"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4153fa3c2f23af1deb82914497d35e9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/ded/struct_b_l_v_face.html#aa4153fa3c2f23af1deb82914497d35e9">Invisible</a> () const</td></tr>
+<tr class="separator:aa4153fa3c2f23af1deb82914497d35e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0f27bf592ba9ca357dde5deef3459b4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/ded/struct_b_l_v_face.html#ab0f27bf592ba9ca357dde5deef3459b4">Visible</a> () const</td></tr>
+<tr class="separator:ab0f27bf592ba9ca357dde5deef3459b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a844dd21df457421f6e527684d67a35db"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/ded/struct_b_l_v_face.html#a844dd21df457421f6e527684d67a35db">Portal</a> () const</td></tr>
+<tr class="separator:a844dd21df457421f6e527684d67a35db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9b5b5f8bcfe6f36e1c17a0abb85e430"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/ded/struct_b_l_v_face.html#ae9b5b5f8bcfe6f36e1c17a0abb85e430">Fluid</a> () const</td></tr>
+<tr class="separator:ae9b5b5f8bcfe6f36e1c17a0abb85e430"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a9b0d3013fea0ada511a94da4db9438"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/ded/struct_b_l_v_face.html#a5a9b0d3013fea0ada511a94da4db9438">Indoor_sky</a> () const</td></tr>
+<tr class="separator:a5a9b0d3013fea0ada511a94da4db9438"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6c500644a55aee257902e05a3eab2a9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/ded/struct_b_l_v_face.html#ae6c500644a55aee257902e05a3eab2a9">Clickable</a> () const</td></tr>
+<tr class="separator:ae6c500644a55aee257902e05a3eab2a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2da59a7061c84e9964ccc0ac219c98b9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/ded/struct_b_l_v_face.html#a2da59a7061c84e9964ccc0ac219c98b9">Pressure_Plate</a> () const</td></tr>
+<tr class="separator:a2da59a7061c84e9964ccc0ac219c98b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa265acfdce5d21ef5d46c0a8b83fc719"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/ded/struct_b_l_v_face.html#aa265acfdce5d21ef5d46c0a8b83fc719">Ethereal</a> () const</td></tr>
+<tr class="separator:aa265acfdce5d21ef5d46c0a8b83fc719"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f592ccc759d53ca44c5374dc8c65a72"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/ded/struct_b_l_v_face.html#a8f592ccc759d53ca44c5374dc8c65a72">IsTextureFrameTable</a> () const</td></tr>
+<tr class="separator:a8f592ccc759d53ca44c5374dc8c65a72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab08aa300699edc541cf52972c8676418"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/ded/struct_b_l_v_face.html#ab08aa300699edc541cf52972c8676418">ToggleIsTextureFrameTable</a> ()</td></tr>
+<tr class="separator:ab08aa300699edc541cf52972c8676418"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:a5188d6e9b104a3a9735288266e5a3067"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="../../dd/d96/struct_plane__float__.html">Plane_float_</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/ded/struct_b_l_v_face.html#a5188d6e9b104a3a9735288266e5a3067">pFacePlane</a></td></tr>
+<tr class="separator:a5188d6e9b104a3a9735288266e5a3067"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0c6d94ea401cba33b26469064284731"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="../../d0/d75/struct_plane__int__.html">Plane_int_</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/ded/struct_b_l_v_face.html#ab0c6d94ea401cba33b26469064284731">pFacePlane_old</a></td></tr>
+<tr class="separator:ab0c6d94ea401cba33b26469064284731"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35a7f01ef4d019a1c5656f15c1e59a71"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/ded/struct_b_l_v_face.html#a35a7f01ef4d019a1c5656f15c1e59a71">zCalc1</a></td></tr>
+<tr class="separator:a35a7f01ef4d019a1c5656f15c1e59a71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1711df8775102130b3a9a56cc4616b4c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/ded/struct_b_l_v_face.html#a1711df8775102130b3a9a56cc4616b4c">zCalc2</a></td></tr>
+<tr class="separator:a1711df8775102130b3a9a56cc4616b4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf8a458d72795d065989049056f608c1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/ded/struct_b_l_v_face.html#adf8a458d72795d065989049056f608c1">zCalc3</a></td></tr>
+<tr class="separator:adf8a458d72795d065989049056f608c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53874a062912a47d57a0ad755c1fc3d9"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/ded/struct_b_l_v_face.html#a53874a062912a47d57a0ad755c1fc3d9">uAttributes</a></td></tr>
+<tr class="separator:a53874a062912a47d57a0ad755c1fc3d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00bc82f2671655ea42cb0eeb2ac5b2ba"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/ded/struct_b_l_v_face.html#a00bc82f2671655ea42cb0eeb2ac5b2ba">pVertexIDs</a></td></tr>
+<tr class="separator:a00bc82f2671655ea42cb0eeb2ac5b2ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7adcd76303b521ac4b990f5ae8a24153"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/ded/struct_b_l_v_face.html#a7adcd76303b521ac4b990f5ae8a24153">pXInterceptDisplacements</a></td></tr>
+<tr class="separator:a7adcd76303b521ac4b990f5ae8a24153"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7b215d7b3d97fd9379c335ede5d3ff9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/ded/struct_b_l_v_face.html#ab7b215d7b3d97fd9379c335ede5d3ff9">pYInterceptDisplacements</a></td></tr>
+<tr class="separator:ab7b215d7b3d97fd9379c335ede5d3ff9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45f6a5ce090f7ab6762c9ced85f7abf0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/ded/struct_b_l_v_face.html#a45f6a5ce090f7ab6762c9ced85f7abf0">pZInterceptDisplacements</a></td></tr>
+<tr class="separator:a45f6a5ce090f7ab6762c9ced85f7abf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae34d7420a330cd89f4b14df034e22dbf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/ded/struct_b_l_v_face.html#ae34d7420a330cd89f4b14df034e22dbf">pVertexUIDs</a></td></tr>
+<tr class="separator:ae34d7420a330cd89f4b14df034e22dbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a628539caca064812d94435087ed52e6a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/ded/struct_b_l_v_face.html#a628539caca064812d94435087ed52e6a">pVertexVIDs</a></td></tr>
+<tr class="separator:a628539caca064812d94435087ed52e6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2e1207585b39e211d18feeae872159a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/ded/struct_b_l_v_face.html#ab2e1207585b39e211d18feeae872159a">uFaceExtraID</a></td></tr>
+<tr class="separator:ab2e1207585b39e211d18feeae872159a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c1c89a245c1562d5421f95a690ffdd8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/ded/struct_b_l_v_face.html#a2c1c89a245c1562d5421f95a690ffdd8">resource</a></td></tr>
+<tr class="separator:a2c1c89a245c1562d5421f95a690ffdd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae412f82d5dddff989389c7b9a8f94924"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/ded/struct_b_l_v_face.html#ae412f82d5dddff989389c7b9a8f94924">uSectorID</a></td></tr>
+<tr class="separator:ae412f82d5dddff989389c7b9a8f94924"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe98dacf4c7e09483f562cf60ebd674d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/ded/struct_b_l_v_face.html#afe98dacf4c7e09483f562cf60ebd674d">uBackSectorID</a></td></tr>
+<tr class="separator:afe98dacf4c7e09483f562cf60ebd674d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b076a9f86faed1adf719e28190821f7"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="../../df/d81/struct_b_box__short__.html">BBox_short_</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/ded/struct_b_l_v_face.html#a6b076a9f86faed1adf719e28190821f7">pBounding</a></td></tr>
+<tr class="separator:a6b076a9f86faed1adf719e28190821f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abac4fff82d763aadd57fc9b5347055c3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/dc7/_indoor_8h.html#a91fb3e69af7609c2810f12d81ecf6fab">PolygonType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/ded/struct_b_l_v_face.html#abac4fff82d763aadd57fc9b5347055c3">uPolygonType</a></td></tr>
+<tr class="separator:abac4fff82d763aadd57fc9b5347055c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a981fe6d2b6afa2225755e81216f62326"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/ded/struct_b_l_v_face.html#a981fe6d2b6afa2225755e81216f62326">uNumVertices</a></td></tr>
+<tr class="separator:a981fe6d2b6afa2225755e81216f62326"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace930599348b1d03a1f2306c322dfe1c"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/ded/struct_b_l_v_face.html#ace930599348b1d03a1f2306c322dfe1c">field_5E</a></td></tr>
+<tr class="separator:ace930599348b1d03a1f2306c322dfe1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb56fd1b1ba0e60821711bbb90b34313"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/ded/struct_b_l_v_face.html#adb56fd1b1ba0e60821711bbb90b34313">field_5F</a></td></tr>
+<tr class="separator:adb56fd1b1ba0e60821711bbb90b34313"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock">
+<p class="definition">См. определение в файле <a class="el" href="../../da/dc7/_indoor_8h_source.html">Indoor.h</a> строка <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00424">424</a></p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a46c1e3d9c5dc4b8c98cd5e5ad77a41ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46c1e3d9c5dc4b8c98cd5e5ad77a41ad">&#9670;&nbsp;</a></span>BLVFace()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BLVFace::BLVFace </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/dc7/_indoor_8h_source.html">Indoor.h</a> строка <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00426">426</a></p>
+<div class="fragment"><div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;                     {</div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;        this-&gt;<a class="code" href="../../d9/ded/struct_b_l_v_face.html#a981fe6d2b6afa2225755e81216f62326">uNumVertices</a> = 0;</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;        this-&gt;<a class="code" href="../../d9/ded/struct_b_l_v_face.html#a53874a062912a47d57a0ad755c1fc3d9">uAttributes</a> = 0;</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;        this-&gt;<a class="code" href="../../d9/ded/struct_b_l_v_face.html#ab2e1207585b39e211d18feeae872159a">uFaceExtraID</a> = 0;</div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;        this-&gt;<a class="code" href="../../d9/ded/struct_b_l_v_face.html#a00bc82f2671655ea42cb0eeb2ac5b2ba">pVertexIDs</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;        this-&gt;<a class="code" href="../../d9/ded/struct_b_l_v_face.html#a45f6a5ce090f7ab6762c9ced85f7abf0">pZInterceptDisplacements</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;        this-&gt;<a class="code" href="../../d9/ded/struct_b_l_v_face.html#ab7b215d7b3d97fd9379c335ede5d3ff9">pYInterceptDisplacements</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;        this-&gt;<a class="code" href="../../d9/ded/struct_b_l_v_face.html#a7adcd76303b521ac4b990f5ae8a24153">pXInterceptDisplacements</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;    }</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00476">pVertexIDs</a>, <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00477">pXInterceptDisplacements</a>, <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00478">pYInterceptDisplacements</a>, <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00479">pZInterceptDisplacements</a>, <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00475">uAttributes</a>, <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00482">uFaceExtraID</a> и <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00488">uNumVertices</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a2788e6e9d23649cf18b72fab31591e93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2788e6e9d23649cf18b72fab31591e93">&#9670;&nbsp;</a></span>_get_normals()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> BLVFace::_get_normals </td>
+          <td>(</td>
+          <td class="paramtype">Vec3_int_ *&#160;</td>
+          <td class="paramname"><em>a2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vec3_int_ *&#160;</td>
+          <td class="paramname"><em>a3</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html">Indoor.cpp</a> строка <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l01422">1422</a></p>
+<div class="fragment"><div class="line"><a name="l01422"></a><span class="lineno"> 1422</span>&#160;                                                       {</div>
+<div class="line"><a name="l01423"></a><span class="lineno"> 1423</span>&#160;    <span class="keywordflow">if</span> (this-&gt;<a class="code" href="../../d9/ded/struct_b_l_v_face.html#abac4fff82d763aadd57fc9b5347055c3">uPolygonType</a> == <a class="code" href="../../da/dc7/_indoor_8h.html#a91fb3e69af7609c2810f12d81ecf6fabaed80b99ffcd2645296ed9e7af033e2bb">POLYGON_VerticalWall</a>) {</div>
+<div class="line"><a name="l01424"></a><span class="lineno"> 1424</span>&#160;        a2-&gt;x = -this-&gt;<a class="code" href="../../d9/ded/struct_b_l_v_face.html#ab0c6d94ea401cba33b26469064284731">pFacePlane_old</a>.<a class="code" href="../../d0/d75/struct_plane__int__.html#a58a82ef0253746e6fc82eb307b140735">vNormal</a>.y;</div>
+<div class="line"><a name="l01425"></a><span class="lineno"> 1425</span>&#160;        a2-&gt;y = this-&gt;<a class="code" href="../../d9/ded/struct_b_l_v_face.html#ab0c6d94ea401cba33b26469064284731">pFacePlane_old</a>.<a class="code" href="../../d0/d75/struct_plane__int__.html#a58a82ef0253746e6fc82eb307b140735">vNormal</a>.x;</div>
+<div class="line"><a name="l01426"></a><span class="lineno"> 1426</span>&#160;        a2-&gt;z = 0;</div>
+<div class="line"><a name="l01427"></a><span class="lineno"> 1427</span>&#160; </div>
+<div class="line"><a name="l01428"></a><span class="lineno"> 1428</span>&#160;        a3-&gt;x = 0;</div>
+<div class="line"><a name="l01429"></a><span class="lineno"> 1429</span>&#160;        a3-&gt;y = 0;</div>
+<div class="line"><a name="l01430"></a><span class="lineno"> 1430</span>&#160;        a3-&gt;z = 0xFFFF0000u;</div>
+<div class="line"><a name="l01431"></a><span class="lineno"> 1431</span>&#160; </div>
+<div class="line"><a name="l01432"></a><span class="lineno"> 1432</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (this-&gt;<a class="code" href="../../d9/ded/struct_b_l_v_face.html#abac4fff82d763aadd57fc9b5347055c3">uPolygonType</a> == <a class="code" href="../../da/dc7/_indoor_8h.html#a91fb3e69af7609c2810f12d81ecf6fabae4490b69eafeea478f87b3c1e9712254">POLYGON_Floor</a> ||</div>
+<div class="line"><a name="l01433"></a><span class="lineno"> 1433</span>&#160;               this-&gt;<a class="code" href="../../d9/ded/struct_b_l_v_face.html#abac4fff82d763aadd57fc9b5347055c3">uPolygonType</a> == <a class="code" href="../../da/dc7/_indoor_8h.html#a91fb3e69af7609c2810f12d81ecf6fabae1e308275ba818e9fcd75162bcdbd4d7">POLYGON_Ceiling</a>) {</div>
+<div class="line"><a name="l01434"></a><span class="lineno"> 1434</span>&#160;        a2-&gt;x = 0x10000u;</div>
+<div class="line"><a name="l01435"></a><span class="lineno"> 1435</span>&#160;        a2-&gt;y = 0;</div>
+<div class="line"><a name="l01436"></a><span class="lineno"> 1436</span>&#160;        a2-&gt;z = 0;</div>
+<div class="line"><a name="l01437"></a><span class="lineno"> 1437</span>&#160; </div>
+<div class="line"><a name="l01438"></a><span class="lineno"> 1438</span>&#160;        a3-&gt;x = 0;</div>
+<div class="line"><a name="l01439"></a><span class="lineno"> 1439</span>&#160;        a3-&gt;y = 0xFFFF0000u;</div>
+<div class="line"><a name="l01440"></a><span class="lineno"> 1440</span>&#160;        a3-&gt;z = 0;</div>
+<div class="line"><a name="l01441"></a><span class="lineno"> 1441</span>&#160; </div>
+<div class="line"><a name="l01442"></a><span class="lineno"> 1442</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (this-&gt;<a class="code" href="../../d9/ded/struct_b_l_v_face.html#abac4fff82d763aadd57fc9b5347055c3">uPolygonType</a> == <a class="code" href="../../da/dc7/_indoor_8h.html#a91fb3e69af7609c2810f12d81ecf6fabadbd72c7f032c1d8a85e8c928083d9ce8">POLYGON_InBetweenFloorAndWall</a> ||</div>
+<div class="line"><a name="l01443"></a><span class="lineno"> 1443</span>&#160;               this-&gt;<a class="code" href="../../d9/ded/struct_b_l_v_face.html#abac4fff82d763aadd57fc9b5347055c3">uPolygonType</a> == <a class="code" href="../../da/dc7/_indoor_8h.html#a91fb3e69af7609c2810f12d81ecf6faba212f1c353912c54d258c088ffa7f80c4">POLYGON_InBetweenCeilingAndWall</a>) {</div>
+<div class="line"><a name="l01444"></a><span class="lineno"> 1444</span>&#160;        <span class="keywordflow">if</span> (abs(this-&gt;<a class="code" href="../../d9/ded/struct_b_l_v_face.html#ab0c6d94ea401cba33b26469064284731">pFacePlane_old</a>.<a class="code" href="../../d0/d75/struct_plane__int__.html#a58a82ef0253746e6fc82eb307b140735">vNormal</a>.z) &lt; 46441) {</div>
+<div class="line"><a name="l01445"></a><span class="lineno"> 1445</span>&#160;            <a class="code" href="../../d5/d06/struct_vec3__float__.html">Vec3_float_</a> a1;</div>
+<div class="line"><a name="l01446"></a><span class="lineno"> 1446</span>&#160;            a1.<a class="code" href="../../d5/d06/struct_vec3__float__.html#af0a711a2d55037010621e3b795dac2b9">x</a> = (double)-this-&gt;<a class="code" href="../../d9/ded/struct_b_l_v_face.html#ab0c6d94ea401cba33b26469064284731">pFacePlane_old</a>.<a class="code" href="../../d0/d75/struct_plane__int__.html#a58a82ef0253746e6fc82eb307b140735">vNormal</a>.y;</div>
+<div class="line"><a name="l01447"></a><span class="lineno"> 1447</span>&#160;            a1.<a class="code" href="../../d5/d06/struct_vec3__float__.html#a900070092433a698ef721b459dc2bac5">y</a> = (<span class="keywordtype">double</span>)this-&gt;<a class="code" href="../../d9/ded/struct_b_l_v_face.html#ab0c6d94ea401cba33b26469064284731">pFacePlane_old</a>.<a class="code" href="../../d0/d75/struct_plane__int__.html#a58a82ef0253746e6fc82eb307b140735">vNormal</a>.x;</div>
+<div class="line"><a name="l01448"></a><span class="lineno"> 1448</span>&#160;            a1.<a class="code" href="../../d5/d06/struct_vec3__float__.html#acf20cbb55510370f6c8de01bf4ab3850">z</a> = 0.0;</div>
+<div class="line"><a name="l01449"></a><span class="lineno"> 1449</span>&#160;            a1.<a class="code" href="../../d5/d06/struct_vec3__float__.html#a1e4f12ec431a3a2e6b3e62ea7a8397c6">Normalize</a>();</div>
+<div class="line"><a name="l01450"></a><span class="lineno"> 1450</span>&#160; </div>
+<div class="line"><a name="l01451"></a><span class="lineno"> 1451</span>&#160;            a2-&gt;x = (<span class="keywordtype">signed</span> __int64)(a1.<a class="code" href="../../d5/d06/struct_vec3__float__.html#af0a711a2d55037010621e3b795dac2b9">x</a> * 65536.0);</div>
+<div class="line"><a name="l01452"></a><span class="lineno"> 1452</span>&#160;            a2-&gt;y = (<span class="keywordtype">signed</span> __int64)(a1.<a class="code" href="../../d5/d06/struct_vec3__float__.html#a900070092433a698ef721b459dc2bac5">y</a> * 65536.0);</div>
+<div class="line"><a name="l01453"></a><span class="lineno"> 1453</span>&#160;            a2-&gt;z = 0;</div>
+<div class="line"><a name="l01454"></a><span class="lineno"> 1454</span>&#160; </div>
+<div class="line"><a name="l01455"></a><span class="lineno"> 1455</span>&#160;            a3-&gt;y = 0;</div>
+<div class="line"><a name="l01456"></a><span class="lineno"> 1456</span>&#160;            a3-&gt;z = 0xFFFF0000u;</div>
+<div class="line"><a name="l01457"></a><span class="lineno"> 1457</span>&#160;            a3-&gt;x = 0;</div>
+<div class="line"><a name="l01458"></a><span class="lineno"> 1458</span>&#160; </div>
+<div class="line"><a name="l01459"></a><span class="lineno"> 1459</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l01460"></a><span class="lineno"> 1460</span>&#160;            a2-&gt;x = 0x10000u;</div>
+<div class="line"><a name="l01461"></a><span class="lineno"> 1461</span>&#160;            a2-&gt;y = 0;</div>
+<div class="line"><a name="l01462"></a><span class="lineno"> 1462</span>&#160;            a2-&gt;z = 0;</div>
+<div class="line"><a name="l01463"></a><span class="lineno"> 1463</span>&#160; </div>
+<div class="line"><a name="l01464"></a><span class="lineno"> 1464</span>&#160;            a3-&gt;x = 0;</div>
+<div class="line"><a name="l01465"></a><span class="lineno"> 1465</span>&#160;            a3-&gt;y = 0xFFFF0000u;</div>
+<div class="line"><a name="l01466"></a><span class="lineno"> 1466</span>&#160;            a3-&gt;z = 0;</div>
+<div class="line"><a name="l01467"></a><span class="lineno"> 1467</span>&#160;        }</div>
+<div class="line"><a name="l01468"></a><span class="lineno"> 1468</span>&#160;    }</div>
+<div class="line"><a name="l01469"></a><span class="lineno"> 1469</span>&#160;    <span class="comment">// LABEL_12:</span></div>
+<div class="line"><a name="l01470"></a><span class="lineno"> 1470</span>&#160;    <span class="keywordflow">if</span> (this-&gt;<a class="code" href="../../d9/ded/struct_b_l_v_face.html#a53874a062912a47d57a0ad755c1fc3d9">uAttributes</a> &amp; FACE_UNKNOW3) {</div>
+<div class="line"><a name="l01471"></a><span class="lineno"> 1471</span>&#160;        a2-&gt;x = -a2-&gt;x;</div>
+<div class="line"><a name="l01472"></a><span class="lineno"> 1472</span>&#160;        a2-&gt;y = -a2-&gt;y;</div>
+<div class="line"><a name="l01473"></a><span class="lineno"> 1473</span>&#160;        a2-&gt;z = -a2-&gt;z;</div>
+<div class="line"><a name="l01474"></a><span class="lineno"> 1474</span>&#160;    }</div>
+<div class="line"><a name="l01475"></a><span class="lineno"> 1475</span>&#160;    <span class="keywordflow">if</span> (this-&gt;<a class="code" href="../../d9/ded/struct_b_l_v_face.html#a53874a062912a47d57a0ad755c1fc3d9">uAttributes</a> &amp; FACE_UNKNOW4) {</div>
+<div class="line"><a name="l01476"></a><span class="lineno"> 1476</span>&#160;        a3-&gt;x = -a3-&gt;x;</div>
+<div class="line"><a name="l01477"></a><span class="lineno"> 1477</span>&#160;        a3-&gt;y = -a3-&gt;y;</div>
+<div class="line"><a name="l01478"></a><span class="lineno"> 1478</span>&#160;        a3-&gt;z = -a3-&gt;z;</div>
+<div class="line"><a name="l01479"></a><span class="lineno"> 1479</span>&#160;    }</div>
+<div class="line"><a name="l01480"></a><span class="lineno"> 1480</span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l01481"></a><span class="lineno"> 1481</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d5/d2e/_vector_types_8cpp_source.html#l00022">Vec3_float_::Normalize()</a>, <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00471">pFacePlane_old</a>, <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00222">POLYGON_Ceiling</a>, <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00220">POLYGON_Floor</a>, <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00223">POLYGON_InBetweenCeilingAndWall</a>, <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00221">POLYGON_InBetweenFloorAndWall</a>, <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00218">POLYGON_VerticalWall</a>, <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00475">uAttributes</a>, <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00487">uPolygonType</a>, <a class="el" href="../../dc/d90/_vector_types_8h_source.html#l00107">Plane_int_::vNormal</a>, <a class="el" href="../../dc/d90/_vector_types_8h_source.html#l00089">Vec3_float_::x</a>, <a class="el" href="../../dc/d90/_vector_types_8h_source.html#l00090">Vec3_float_::y</a> и <a class="el" href="../../dc/d90/_vector_types_8h_source.html#l00091">Vec3_float_::z</a>.</p>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d9/ded/struct_b_l_v_face_a2788e6e9d23649cf18b72fab31591e93_cgraph.svg" width="378" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ae4ff9cc8b3facb6b57845e28ca725468"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4ff9cc8b3facb6b57845e28ca725468">&#9670;&nbsp;</a></span>FromODM()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> BLVFace::FromODM </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="../../d3/df8/struct_o_d_m_face.html">ODMFace</a> *&#160;</td>
+          <td class="paramname"><em>face</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html">Indoor.cpp</a> строка <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00372">372</a></p>
+<div class="fragment"><div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;                                   {</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;    this-&gt;<a class="code" href="../../d9/ded/struct_b_l_v_face.html#ab0c6d94ea401cba33b26469064284731">pFacePlane_old</a>.<a class="code" href="../../d0/d75/struct_plane__int__.html#a58a82ef0253746e6fc82eb307b140735">vNormal</a>.x = face-&gt;<a class="code" href="../../d3/df8/struct_o_d_m_face.html#a35df2e4cf290f926db446ef194d8504e">pFacePlane</a>.<a class="code" href="../../d0/d75/struct_plane__int__.html#a58a82ef0253746e6fc82eb307b140735">vNormal</a>.x;</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;    this-&gt;<a class="code" href="../../d9/ded/struct_b_l_v_face.html#ab0c6d94ea401cba33b26469064284731">pFacePlane_old</a>.<a class="code" href="../../d0/d75/struct_plane__int__.html#a58a82ef0253746e6fc82eb307b140735">vNormal</a>.y = face-&gt;<a class="code" href="../../d3/df8/struct_o_d_m_face.html#a35df2e4cf290f926db446ef194d8504e">pFacePlane</a>.<a class="code" href="../../d0/d75/struct_plane__int__.html#a58a82ef0253746e6fc82eb307b140735">vNormal</a>.y;</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;    this-&gt;<a class="code" href="../../d9/ded/struct_b_l_v_face.html#ab0c6d94ea401cba33b26469064284731">pFacePlane_old</a>.<a class="code" href="../../d0/d75/struct_plane__int__.html#a58a82ef0253746e6fc82eb307b140735">vNormal</a>.z = face-&gt;<a class="code" href="../../d3/df8/struct_o_d_m_face.html#a35df2e4cf290f926db446ef194d8504e">pFacePlane</a>.<a class="code" href="../../d0/d75/struct_plane__int__.html#a58a82ef0253746e6fc82eb307b140735">vNormal</a>.z;</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;    this-&gt;<a class="code" href="../../d9/ded/struct_b_l_v_face.html#ab0c6d94ea401cba33b26469064284731">pFacePlane_old</a>.<a class="code" href="../../d0/d75/struct_plane__int__.html#afafd5e784389c9ed4c4e843a741276b0">dist</a> = face-&gt;<a class="code" href="../../d3/df8/struct_o_d_m_face.html#a35df2e4cf290f926db446ef194d8504e">pFacePlane</a>.<a class="code" href="../../d0/d75/struct_plane__int__.html#afafd5e784389c9ed4c4e843a741276b0">dist</a>;</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;    this-&gt;<a class="code" href="../../d9/ded/struct_b_l_v_face.html#a5188d6e9b104a3a9735288266e5a3067">pFacePlane</a>.<a class="code" href="../../dd/d96/struct_plane__float__.html#aff32486dc39cd3d04d32913315e60f99">vNormal</a>.<a class="code" href="../../d5/d06/struct_vec3__float__.html#af0a711a2d55037010621e3b795dac2b9">x</a> =</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;        (double)(<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a676ca580c460c0154eb58200433d2a9e">face</a>-&gt;pFacePlane.vNormal.x &amp; 0xFFFF) * 0.000015259022 +</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;        (double)(<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a676ca580c460c0154eb58200433d2a9e">face</a>-&gt;pFacePlane.vNormal.x &gt;&gt; 16);</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;    this-&gt;<a class="code" href="../../d9/ded/struct_b_l_v_face.html#a5188d6e9b104a3a9735288266e5a3067">pFacePlane</a>.<a class="code" href="../../dd/d96/struct_plane__float__.html#aff32486dc39cd3d04d32913315e60f99">vNormal</a>.<a class="code" href="../../d5/d06/struct_vec3__float__.html#a900070092433a698ef721b459dc2bac5">y</a> =</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;        (double)(<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a676ca580c460c0154eb58200433d2a9e">face</a>-&gt;pFacePlane.vNormal.y &amp; 0xFFFF) * 0.000015259022 +</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;        (double)(<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a676ca580c460c0154eb58200433d2a9e">face</a>-&gt;pFacePlane.vNormal.y &gt;&gt; 16);</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;    this-&gt;<a class="code" href="../../d9/ded/struct_b_l_v_face.html#a5188d6e9b104a3a9735288266e5a3067">pFacePlane</a>.<a class="code" href="../../dd/d96/struct_plane__float__.html#aff32486dc39cd3d04d32913315e60f99">vNormal</a>.<a class="code" href="../../d5/d06/struct_vec3__float__.html#acf20cbb55510370f6c8de01bf4ab3850">z</a> =</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;        (double)(<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a676ca580c460c0154eb58200433d2a9e">face</a>-&gt;pFacePlane.vNormal.z &amp; 0xFFFF) * 0.000015259022 +</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;        (double)(<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a676ca580c460c0154eb58200433d2a9e">face</a>-&gt;pFacePlane.vNormal.z &gt;&gt; 16);</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;    this-&gt;<a class="code" href="../../d9/ded/struct_b_l_v_face.html#a5188d6e9b104a3a9735288266e5a3067">pFacePlane</a>.<a class="code" href="../../dd/d96/struct_plane__float__.html#a18af467d1acff5b329783b6013842eb6">dist</a> =</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;        (double)(<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a676ca580c460c0154eb58200433d2a9e">face</a>-&gt;pFacePlane.dist &amp; 0xFFFF) * 0.000015259022 +</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;        (double)(<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a676ca580c460c0154eb58200433d2a9e">face</a>-&gt;pFacePlane.dist &gt;&gt; 16);</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    this-&gt;<a class="code" href="../../d9/ded/struct_b_l_v_face.html#a53874a062912a47d57a0ad755c1fc3d9">uAttributes</a> = face-&gt;<a class="code" href="../../d3/df8/struct_o_d_m_face.html#a858d38a427038bf8fa9607f9f7eaaea9">uAttributes</a>;</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;    this-&gt;<a class="code" href="../../d9/ded/struct_b_l_v_face.html#a6b076a9f86faed1adf719e28190821f7">pBounding</a>.<a class="code" href="../../df/d81/struct_b_box__short__.html#a158512dd7a7f77d307b5771f97cb72bc">x1</a> = face-&gt;<a class="code" href="../../d3/df8/struct_o_d_m_face.html#abb77a85bcd8b760218d6c2c36e256c1d">pBoundingBox</a>.<a class="code" href="../../df/d81/struct_b_box__short__.html#a158512dd7a7f77d307b5771f97cb72bc">x1</a>;</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;    this-&gt;<a class="code" href="../../d9/ded/struct_b_l_v_face.html#a6b076a9f86faed1adf719e28190821f7">pBounding</a>.<a class="code" href="../../df/d81/struct_b_box__short__.html#afe7f2fb3c29ac5df826d64947e29b7d6">y1</a> = face-&gt;<a class="code" href="../../d3/df8/struct_o_d_m_face.html#abb77a85bcd8b760218d6c2c36e256c1d">pBoundingBox</a>.<a class="code" href="../../df/d81/struct_b_box__short__.html#afe7f2fb3c29ac5df826d64947e29b7d6">y1</a>;</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;    this-&gt;<a class="code" href="../../d9/ded/struct_b_l_v_face.html#a6b076a9f86faed1adf719e28190821f7">pBounding</a>.<a class="code" href="../../df/d81/struct_b_box__short__.html#a05118d3302b7e2c22b73607b8ab4d306">z1</a> = face-&gt;<a class="code" href="../../d3/df8/struct_o_d_m_face.html#abb77a85bcd8b760218d6c2c36e256c1d">pBoundingBox</a>.<a class="code" href="../../df/d81/struct_b_box__short__.html#a05118d3302b7e2c22b73607b8ab4d306">z1</a>;</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;    this-&gt;<a class="code" href="../../d9/ded/struct_b_l_v_face.html#a6b076a9f86faed1adf719e28190821f7">pBounding</a>.<a class="code" href="../../df/d81/struct_b_box__short__.html#a5337cf4e923d4af9c6eddae5e75f0430">x2</a> = face-&gt;<a class="code" href="../../d3/df8/struct_o_d_m_face.html#abb77a85bcd8b760218d6c2c36e256c1d">pBoundingBox</a>.<a class="code" href="../../df/d81/struct_b_box__short__.html#a5337cf4e923d4af9c6eddae5e75f0430">x2</a>;</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;    this-&gt;<a class="code" href="../../d9/ded/struct_b_l_v_face.html#a6b076a9f86faed1adf719e28190821f7">pBounding</a>.<a class="code" href="../../df/d81/struct_b_box__short__.html#aaee7e80483cfc3508b081068295f63f8">y2</a> = face-&gt;<a class="code" href="../../d3/df8/struct_o_d_m_face.html#abb77a85bcd8b760218d6c2c36e256c1d">pBoundingBox</a>.<a class="code" href="../../df/d81/struct_b_box__short__.html#aaee7e80483cfc3508b081068295f63f8">y2</a>;</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;    this-&gt;<a class="code" href="../../d9/ded/struct_b_l_v_face.html#a6b076a9f86faed1adf719e28190821f7">pBounding</a>.<a class="code" href="../../df/d81/struct_b_box__short__.html#ad93ead96f4ecc1afcb6032989a33723d">z2</a> = face-&gt;<a class="code" href="../../d3/df8/struct_o_d_m_face.html#abb77a85bcd8b760218d6c2c36e256c1d">pBoundingBox</a>.<a class="code" href="../../df/d81/struct_b_box__short__.html#ad93ead96f4ecc1afcb6032989a33723d">z2</a>;</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;    this-&gt;<a class="code" href="../../d9/ded/struct_b_l_v_face.html#a35a7f01ef4d019a1c5656f15c1e59a71">zCalc1</a> = face-&gt;<a class="code" href="../../d3/df8/struct_o_d_m_face.html#a710d5b0dc5645ae9df58d60bfae85b00">zCalc1</a>;</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;    this-&gt;<a class="code" href="../../d9/ded/struct_b_l_v_face.html#a1711df8775102130b3a9a56cc4616b4c">zCalc2</a> = face-&gt;<a class="code" href="../../d3/df8/struct_o_d_m_face.html#a5e8b735c89ae2dae1f3fd12576633b17">zCalc2</a>;</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;    this-&gt;<a class="code" href="../../d9/ded/struct_b_l_v_face.html#adf8a458d72795d065989049056f608c1">zCalc3</a> = face-&gt;<a class="code" href="../../d3/df8/struct_o_d_m_face.html#a3326909cc521f55e083c46a06f67864a">zCalc3</a>;</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;    this-&gt;<a class="code" href="../../d9/ded/struct_b_l_v_face.html#a7adcd76303b521ac4b990f5ae8a24153">pXInterceptDisplacements</a> = face-&gt;<a class="code" href="../../d3/df8/struct_o_d_m_face.html#aab5f89fc9200ef55cb09443065e15d7b">pXInterceptDisplacements</a>;</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;    this-&gt;<a class="code" href="../../d9/ded/struct_b_l_v_face.html#ab7b215d7b3d97fd9379c335ede5d3ff9">pYInterceptDisplacements</a> = face-&gt;<a class="code" href="../../d3/df8/struct_o_d_m_face.html#af3f36cdde5b4448fe655d5a32f834632">pYInterceptDisplacements</a>;</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;    this-&gt;<a class="code" href="../../d9/ded/struct_b_l_v_face.html#a45f6a5ce090f7ab6762c9ced85f7abf0">pZInterceptDisplacements</a> = face-&gt;<a class="code" href="../../d3/df8/struct_o_d_m_face.html#a87f3008d0bdc9245fefedc79b51f1cc5">pZInterceptDisplacements</a>;</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;    this-&gt;<a class="code" href="../../d9/ded/struct_b_l_v_face.html#abac4fff82d763aadd57fc9b5347055c3">uPolygonType</a> = (<a class="code" href="../../da/dc7/_indoor_8h.html#a91fb3e69af7609c2810f12d81ecf6fab">PolygonType</a>)face-&gt;<a class="code" href="../../d3/df8/struct_o_d_m_face.html#ae384db7b26d39d8f96f7610056faffc0">uPolygonType</a>;</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;    this-&gt;uNumVertices = <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a676ca580c460c0154eb58200433d2a9e">face</a>-&gt;uNumVertices;</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;    this-&gt;resource = <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a676ca580c460c0154eb58200433d2a9e">face</a>-&gt;resource;</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;    this-&gt;pVertexIDs = <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a676ca580c460c0154eb58200433d2a9e">face</a>-&gt;pVertexIDs;</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../dc/d90/_vector_types_8h_source.html#l00108">Plane_int_::dist</a>, <a class="el" href="../../dc/d90/_vector_types_8h_source.html#l00137">Plane_float_::dist</a>, <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00486">pBounding</a>, <a class="el" href="../../d7/dbc/_b_s_p_model_8h_source.html#l00145">ODMFace::pBoundingBox</a>, <a class="el" href="../../d7/dbc/_b_s_p_model_8h_source.html#l00131">ODMFace::pFacePlane</a>, <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00470">pFacePlane</a>, <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00471">pFacePlane_old</a>, <a class="el" href="../../d7/dbc/_b_s_p_model_8h_source.html#l00139">ODMFace::pXInterceptDisplacements</a>, <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00477">pXInterceptDisplacements</a>, <a class="el" href="../../d7/dbc/_b_s_p_model_8h_source.html#l00140">ODMFace::pYInterceptDisplacements</a>, <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00478">pYInterceptDisplacements</a>, <a class="el" href="../../d7/dbc/_b_s_p_model_8h_source.html#l00141">ODMFace::pZInterceptDisplacements</a>, <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00479">pZInterceptDisplacements</a>, <a class="el" href="../../d7/dbc/_b_s_p_model_8h_source.html#l00135">ODMFace::uAttributes</a>, <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00475">uAttributes</a>, <a class="el" href="../../d7/dbc/_b_s_p_model_8h_source.html#l00156">ODMFace::uPolygonType</a>, <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00487">uPolygonType</a>, <a class="el" href="../../dc/d90/_vector_types_8h_source.html#l00107">Plane_int_::vNormal</a>, <a class="el" href="../../dc/d90/_vector_types_8h_source.html#l00136">Plane_float_::vNormal</a>, <a class="el" href="../../dc/d90/_vector_types_8h_source.html#l00089">Vec3_float_::x</a>, <a class="el" href="../../dc/d90/_vector_types_8h_source.html#l00114">BBox_short_::x1</a>, <a class="el" href="../../dc/d90/_vector_types_8h_source.html#l00115">BBox_short_::x2</a>, <a class="el" href="../../dc/d90/_vector_types_8h_source.html#l00090">Vec3_float_::y</a>, <a class="el" href="../../dc/d90/_vector_types_8h_source.html#l00116">BBox_short_::y1</a>, <a class="el" href="../../dc/d90/_vector_types_8h_source.html#l00117">BBox_short_::y2</a>, <a class="el" href="../../dc/d90/_vector_types_8h_source.html#l00091">Vec3_float_::z</a>, <a class="el" href="../../dc/d90/_vector_types_8h_source.html#l00118">BBox_short_::z1</a>, <a class="el" href="../../dc/d90/_vector_types_8h_source.html#l00119">BBox_short_::z2</a>, <a class="el" href="../../d7/dbc/_b_s_p_model_8h_source.html#l00132">ODMFace::zCalc1</a>, <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00472">zCalc1</a>, <a class="el" href="../../d7/dbc/_b_s_p_model_8h_source.html#l00133">ODMFace::zCalc2</a>, <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00473">zCalc2</a>, <a class="el" href="../../d7/dbc/_b_s_p_model_8h_source.html#l00134">ODMFace::zCalc3</a> и <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00474">zCalc3</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../de/dd4/_vis_8cpp_source.html#l01601">Vis::PickOutdoorFaces_Keyboard()</a> и <a class="el" href="../../de/dd4/_vis_8cpp_source.html#l00359">Vis::PickOutdoorFaces_Mouse()</a>.</p>
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d9/ded/struct_b_l_v_face_ae4ff9cc8b3facb6b57845e28ca725468_icgraph.svg" width="100%" height="543"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a7630bb93c82ffff04220c843b5f10263"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7630bb93c82ffff04220c843b5f10263">&#9670;&nbsp;</a></span>SetTexture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> BLVFace::SetTexture </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html">Indoor.cpp</a> строка <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00746">746</a></p>
+<div class="fragment"><div class="line"><a name="l00746"></a><span class="lineno">  746</span>&#160;                                               {</div>
+<div class="line"><a name="l00747"></a><span class="lineno">  747</span>&#160;    <span class="keywordflow">if</span> (this-&gt;<a class="code" href="../../d9/ded/struct_b_l_v_face.html#a8f592ccc759d53ca44c5374dc8c65a72">IsTextureFrameTable</a>()) {</div>
+<div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160;        this-&gt;<a class="code" href="../../d9/ded/struct_b_l_v_face.html#a2c1c89a245c1562d5421f95a690ffdd8">resource</a> =</div>
+<div class="line"><a name="l00749"></a><span class="lineno">  749</span>&#160;            (<span class="keywordtype">void</span> *)<a class="code" href="../../d0/dac/_image_8cpp.html#a93f3d773c9f75e7baf34c76879251b59">pTextureFrameTable</a>-&gt;<a class="code" href="../../dd/d55/struct_texture_frame_table.html#a36bc3b3742a2b297fec5a1d6fef24a87">FindTextureByName</a>(filename.c_str());</div>
+<div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;        <span class="keywordflow">if</span> (this-&gt;<a class="code" href="../../d9/ded/struct_b_l_v_face.html#a2c1c89a245c1562d5421f95a690ffdd8">resource</a> != (<span class="keywordtype">void</span> *)-1) {</div>
+<div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160;        }</div>
+<div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160; </div>
+<div class="line"><a name="l00754"></a><span class="lineno">  754</span>&#160;        this-&gt;<a class="code" href="../../d9/ded/struct_b_l_v_face.html#ab08aa300699edc541cf52972c8676418">ToggleIsTextureFrameTable</a>();</div>
+<div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160;    }</div>
+<div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160; </div>
+<div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160;    this-&gt;<a class="code" href="../../d9/ded/struct_b_l_v_face.html#a2c1c89a245c1562d5421f95a690ffdd8">resource</a> = <a class="code" href="../../d3/d93/_assets_manager_8cpp.html#a645270130330d2d99964c967b7d33cd8">assets</a>-&gt;<a class="code" href="../../db/dd6/class_assets_manager.html#a10437426fdfa6c1e8e6d6a2ece0c532f">GetBitmap</a>(filename);</div>
+<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d3/d93/_assets_manager_8cpp_source.html#l00012">assets</a>, <a class="el" href="../../d0/dac/_image_8cpp_source.html#l00136">TextureFrameTable::FindTextureByName()</a>, <a class="el" href="../../d3/d93/_assets_manager_8cpp_source.html#l00126">AssetsManager::GetBitmap()</a>, <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00461">IsTextureFrameTable()</a>, <a class="el" href="../../d0/dac/_image_8cpp_source.html#l00020">pTextureFrameTable</a>, <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00483">resource</a> и <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00464">ToggleIsTextureFrameTable()</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00858">IndoorLocation::Load()</a> и <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l01515">sub_44861E_set_texture_indoor()</a>.</p>
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d9/ded/struct_b_l_v_face_a7630bb93c82ffff04220c843b5f10263_cgraph.svg" width="411" height="220"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d9/ded/struct_b_l_v_face_a7630bb93c82ffff04220c843b5f10263_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a02918f2597af7a3483e902777148ebee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02918f2597af7a3483e902777148ebee">&#9670;&nbsp;</a></span>GetTexture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d2/d7f/class_texture.html">Texture</a> * BLVFace::GetTexture </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html">Indoor.cpp</a> строка <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00738">738</a></p>
+<div class="fragment"><div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;                             {</div>
+<div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;    <span class="keywordflow">if</span> (this-&gt;<a class="code" href="../../d9/ded/struct_b_l_v_face.html#a8f592ccc759d53ca44c5374dc8c65a72">IsTextureFrameTable</a>())</div>
+<div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d0/dac/_image_8cpp.html#a93f3d773c9f75e7baf34c76879251b59">pTextureFrameTable</a>-&gt;<a class="code" href="../../dd/d55/struct_texture_frame_table.html#a3b51764eda67472b56fa913b4b709b86">GetFrameTexture</a>(</div>
+<div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160;            (<span class="keywordtype">int</span>)this-&gt;<a class="code" href="../../d9/ded/struct_b_l_v_face.html#a2c1c89a245c1562d5421f95a690ffdd8">resource</a>, <a class="code" href="../../d1/d4a/_indoor_8cpp.html#ac0fb829e03a912f8cfee4431c86ddce9">pBLVRenderParams</a>-&gt;<a class="code" href="../../d4/d1d/struct_b_l_v_render_params.html#a5e69bb313c932d97389e830362e2e157">field_0_timer_</a>);</div>
+<div class="line"><a name="l00742"></a><span class="lineno">  742</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="../../d2/d7f/class_texture.html">Texture</a> *)this-&gt;<a class="code" href="../../d9/ded/struct_b_l_v_face.html#a2c1c89a245c1562d5421f95a690ffdd8">resource</a>;</div>
+<div class="line"><a name="l00744"></a><span class="lineno">  744</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00675">BLVRenderParams::field_0_timer_</a>, <a class="el" href="../../d0/dac/_image_8cpp_source.html#l00146">TextureFrameTable::GetFrameTexture()</a>, <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00461">IsTextureFrameTable()</a>, <a class="el" href="../../d0/dac/_image_8cpp_source.html#l00020">pTextureFrameTable</a> и <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00483">resource</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l02381">RenderOpenGL::DrawIndoorPolygon()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l01992">Render::DrawIndoorPolygon()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l05795">Render::DrawIndoorSky()</a> и <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00409">IndoorLocation::ExecDraw_d3d()</a>.</p>
+<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d9/ded/struct_b_l_v_face_a02918f2597af7a3483e902777148ebee_cgraph.svg" width="100%" height="378"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d9/ded/struct_b_l_v_face_a02918f2597af7a3483e902777148ebee_icgraph.svg" width="100%" height="530"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a731650f7102cc18bdacc71b6714a2660"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a731650f7102cc18bdacc71b6714a2660">&#9670;&nbsp;</a></span>Deserialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool BLVFace::Deserialize </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="../../d9/d6f/struct_b_l_v_face___m_m7.html">BLVFace_MM7</a> *&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html">Indoor.cpp</a> строка <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00074">74</a></p>
+<div class="fragment"><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                                           {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    memcpy(&amp;this-&gt;<a class="code" href="../../d9/ded/struct_b_l_v_face.html#a5188d6e9b104a3a9735288266e5a3067">pFacePlane</a>, &amp;data-&gt;<a class="code" href="../../d9/d6f/struct_b_l_v_face___m_m7.html#ae1ea29edf7cdefb9f39014cd995d2f37">pFacePlane</a>, <span class="keyword">sizeof</span>(this-&gt;pFacePlane));</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    memcpy(&amp;this-&gt;<a class="code" href="../../d9/ded/struct_b_l_v_face.html#ab0c6d94ea401cba33b26469064284731">pFacePlane_old</a>, &amp;data-&gt;<a class="code" href="../../d9/d6f/struct_b_l_v_face___m_m7.html#a3f0d6709b1a69cda9825e2949fb2493e">pFacePlane_old</a>,</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;           <span class="keyword">sizeof</span>(this-&gt;pFacePlane_old));</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    this-&gt;<a class="code" href="../../d9/ded/struct_b_l_v_face.html#a35a7f01ef4d019a1c5656f15c1e59a71">zCalc1</a> = data-&gt;<a class="code" href="../../d9/d6f/struct_b_l_v_face___m_m7.html#a5b5793d6293e5d85fdc32182e6d4766e">zCalc1</a>;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    this-&gt;<a class="code" href="../../d9/ded/struct_b_l_v_face.html#a1711df8775102130b3a9a56cc4616b4c">zCalc2</a> = data-&gt;<a class="code" href="../../d9/d6f/struct_b_l_v_face___m_m7.html#a46598f753ad3d0a70e45082fb65739d4">zCalc2</a>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    this-&gt;<a class="code" href="../../d9/ded/struct_b_l_v_face.html#adf8a458d72795d065989049056f608c1">zCalc3</a> = data-&gt;<a class="code" href="../../d9/d6f/struct_b_l_v_face___m_m7.html#a4ea789347f1c9af8f60ec7e8f183bba3">zCalc3</a>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    this-&gt;<a class="code" href="../../d9/ded/struct_b_l_v_face.html#a53874a062912a47d57a0ad755c1fc3d9">uAttributes</a> = data-&gt;<a class="code" href="../../d9/d6f/struct_b_l_v_face___m_m7.html#a3ef8472e43096d6cfcf8ba4cf014c999">uAttributes</a>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    this-&gt;<a class="code" href="../../d9/ded/struct_b_l_v_face.html#a00bc82f2671655ea42cb0eeb2ac5b2ba">pVertexIDs</a> = data-&gt;<a class="code" href="../../d9/d6f/struct_b_l_v_face___m_m7.html#a06599162137a7e39406890e63953d76b">pVertexIDs</a>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    this-&gt;<a class="code" href="../../d9/ded/struct_b_l_v_face.html#a7adcd76303b521ac4b990f5ae8a24153">pXInterceptDisplacements</a> = data-&gt;<a class="code" href="../../d9/d6f/struct_b_l_v_face___m_m7.html#a8bd4149d9328c7d9966b5a672839df9b">pXInterceptDisplacements</a>;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    this-&gt;<a class="code" href="../../d9/ded/struct_b_l_v_face.html#ab7b215d7b3d97fd9379c335ede5d3ff9">pYInterceptDisplacements</a> = data-&gt;<a class="code" href="../../d9/d6f/struct_b_l_v_face___m_m7.html#ac32df075adcc629c71e0a21293f7e5ce">pYInterceptDisplacements</a>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    this-&gt;<a class="code" href="../../d9/ded/struct_b_l_v_face.html#a45f6a5ce090f7ab6762c9ced85f7abf0">pZInterceptDisplacements</a> = data-&gt;<a class="code" href="../../d9/d6f/struct_b_l_v_face___m_m7.html#abec8f02bfd8faad0247b137da548db92">pZInterceptDisplacements</a>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    this-&gt;<a class="code" href="../../d9/ded/struct_b_l_v_face.html#ae34d7420a330cd89f4b14df034e22dbf">pVertexUIDs</a> = data-&gt;<a class="code" href="../../d9/d6f/struct_b_l_v_face___m_m7.html#a81335bcfe6578fe6f1eb0f3dbfc96caa">pVertexUIDs</a>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    this-&gt;<a class="code" href="../../d9/ded/struct_b_l_v_face.html#a628539caca064812d94435087ed52e6a">pVertexVIDs</a> = data-&gt;<a class="code" href="../../d9/d6f/struct_b_l_v_face___m_m7.html#a147ec572c417b7b8652b0763a8a6138d">pVertexVIDs</a>;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    this-&gt;<a class="code" href="../../d9/ded/struct_b_l_v_face.html#ab2e1207585b39e211d18feeae872159a">uFaceExtraID</a> = data-&gt;<a class="code" href="../../d9/d6f/struct_b_l_v_face___m_m7.html#a60de241cefa7b7ac9197689a5920c375">uFaceExtraID</a>;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="comment">// unsigned __int16  uBitmapID;</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    this-&gt;<a class="code" href="../../d9/ded/struct_b_l_v_face.html#ae412f82d5dddff989389c7b9a8f94924">uSectorID</a> = data-&gt;<a class="code" href="../../d9/d6f/struct_b_l_v_face___m_m7.html#a5aa396538b9c0a80bda8a43e6fe66c86">uSectorID</a>;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    this-&gt;<a class="code" href="../../d9/ded/struct_b_l_v_face.html#afe98dacf4c7e09483f562cf60ebd674d">uBackSectorID</a> = data-&gt;<a class="code" href="../../d9/d6f/struct_b_l_v_face___m_m7.html#a5cc2d2bbcc2dd9dfd52c26604bea3235">uBackSectorID</a>;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    memcpy(&amp;this-&gt;<a class="code" href="../../d9/ded/struct_b_l_v_face.html#a6b076a9f86faed1adf719e28190821f7">pBounding</a>, &amp;data-&gt;<a class="code" href="../../d9/d6f/struct_b_l_v_face___m_m7.html#a58b5d31258d6c2d2b78b860dd7b12410">pBounding</a>, <span class="keyword">sizeof</span>(this-&gt;pBounding));</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    this-&gt;<a class="code" href="../../d9/ded/struct_b_l_v_face.html#abac4fff82d763aadd57fc9b5347055c3">uPolygonType</a> = (<a class="code" href="../../da/dc7/_indoor_8h.html#a91fb3e69af7609c2810f12d81ecf6fab">PolygonType</a>)data-&gt;<a class="code" href="../../d9/d6f/struct_b_l_v_face___m_m7.html#a7dcd59d0d815402689b7bb1f8eb6bb72">uPolygonType</a>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    this-&gt;uNumVertices = <a class="code" href="../../df/dc4/_s_d_l__opengl_8h.html#a2e335d56e2846b0fea47eed068b2d34a">data</a>-&gt;uNumVertices;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    this-&gt;field_5E = <a class="code" href="../../df/dc4/_s_d_l__opengl_8h.html#a2e335d56e2846b0fea47eed068b2d34a">data</a>-&gt;field_5E;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    this-&gt;field_5F = <a class="code" href="../../df/dc4/_s_d_l__opengl_8h.html#a2e335d56e2846b0fea47eed068b2d34a">data</a>-&gt;field_5F;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../da/dd3/_legacy_images_8h_source.html#l00056">BLVFace_MM7::pBounding</a>, <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00486">pBounding</a>, <a class="el" href="../../da/dd3/_legacy_images_8h_source.html#l00040">BLVFace_MM7::pFacePlane</a>, <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00470">pFacePlane</a>, <a class="el" href="../../da/dd3/_legacy_images_8h_source.html#l00041">BLVFace_MM7::pFacePlane_old</a>, <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00471">pFacePlane_old</a>, <a class="el" href="../../da/dd3/_legacy_images_8h_source.html#l00046">BLVFace_MM7::pVertexIDs</a>, <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00476">pVertexIDs</a>, <a class="el" href="../../da/dd3/_legacy_images_8h_source.html#l00050">BLVFace_MM7::pVertexUIDs</a>, <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00480">pVertexUIDs</a>, <a class="el" href="../../da/dd3/_legacy_images_8h_source.html#l00051">BLVFace_MM7::pVertexVIDs</a>, <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00481">pVertexVIDs</a>, <a class="el" href="../../da/dd3/_legacy_images_8h_source.html#l00047">BLVFace_MM7::pXInterceptDisplacements</a>, <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00477">pXInterceptDisplacements</a>, <a class="el" href="../../da/dd3/_legacy_images_8h_source.html#l00048">BLVFace_MM7::pYInterceptDisplacements</a>, <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00478">pYInterceptDisplacements</a>, <a class="el" href="../../da/dd3/_legacy_images_8h_source.html#l00049">BLVFace_MM7::pZInterceptDisplacements</a>, <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00479">pZInterceptDisplacements</a>, <a class="el" href="../../da/dd3/_legacy_images_8h_source.html#l00045">BLVFace_MM7::uAttributes</a>, <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00475">uAttributes</a>, <a class="el" href="../../da/dd3/_legacy_images_8h_source.html#l00055">BLVFace_MM7::uBackSectorID</a>, <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00485">uBackSectorID</a>, <a class="el" href="../../da/dd3/_legacy_images_8h_source.html#l00052">BLVFace_MM7::uFaceExtraID</a>, <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00482">uFaceExtraID</a>, <a class="el" href="../../da/dd3/_legacy_images_8h_source.html#l00057">BLVFace_MM7::uPolygonType</a>, <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00487">uPolygonType</a>, <a class="el" href="../../da/dd3/_legacy_images_8h_source.html#l00054">BLVFace_MM7::uSectorID</a>, <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00484">uSectorID</a>, <a class="el" href="../../da/dd3/_legacy_images_8h_source.html#l00042">BLVFace_MM7::zCalc1</a>, <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00472">zCalc1</a>, <a class="el" href="../../da/dd3/_legacy_images_8h_source.html#l00043">BLVFace_MM7::zCalc2</a>, <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00473">zCalc2</a>, <a class="el" href="../../da/dd3/_legacy_images_8h_source.html#l00044">BLVFace_MM7::zCalc3</a> и <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00474">zCalc3</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00858">IndoorLocation::Load()</a>.</p>
+<div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-7-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-7-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d9/ded/struct_b_l_v_face_a731650f7102cc18bdacc71b6714a2660_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="aa4153fa3c2f23af1deb82914497d35e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4153fa3c2f23af1deb82914497d35e9">&#9670;&nbsp;</a></span>Invisible()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool BLVFace::Invisible </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/dc7/_indoor_8h_source.html">Indoor.h</a> строка <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00444">444</a></p>
+<div class="fragment"><div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;                                  {</div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="../../d9/ded/struct_b_l_v_face.html#a53874a062912a47d57a0ad755c1fc3d9">uAttributes</a> &amp; FACE_INVISIBLE) != 0;</div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;    }</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00475">uAttributes</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00409">IndoorLocation::ExecDraw_d3d()</a>, <a class="el" href="../../de/dd4/_vis_8cpp_source.html#l00524">Vis::Intersect_Ray_Face()</a> и <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00447">Visible()</a>.</p>
+<div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-8-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-8-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d9/ded/struct_b_l_v_face_aa4153fa3c2f23af1deb82914497d35e9_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ab0f27bf592ba9ca357dde5deef3459b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0f27bf592ba9ca357dde5deef3459b4">&#9670;&nbsp;</a></span>Visible()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool BLVFace::Visible </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/dc7/_indoor_8h_source.html">Indoor.h</a> строка <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00447">447</a></p>
+<div class="fragment"><div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;{ <span class="keywordflow">return</span> !<a class="code" href="../../d9/ded/struct_b_l_v_face.html#aa4153fa3c2f23af1deb82914497d35e9">Invisible</a>(); }</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00444">Invisible()</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d0/d67/_map_book_8cpp_source.html#l00180">DrawBook_Map_sub()</a> и <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l01916">GameUI_DrawMinimap()</a>.</p>
+<div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-9-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-9-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d9/ded/struct_b_l_v_face_ab0f27bf592ba9ca357dde5deef3459b4_cgraph.svg" width="311" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-10-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-10-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-10-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d9/ded/struct_b_l_v_face_ab0f27bf592ba9ca357dde5deef3459b4_icgraph.svg" width="100%" height="378"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a844dd21df457421f6e527684d67a35db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a844dd21df457421f6e527684d67a35db">&#9670;&nbsp;</a></span>Portal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool BLVFace::Portal </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/dc7/_indoor_8h_source.html">Indoor.h</a> строка <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00448">448</a></p>
+<div class="fragment"><div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;{ <span class="keywordflow">return</span> (<a class="code" href="../../d9/ded/struct_b_l_v_face.html#a53874a062912a47d57a0ad755c1fc3d9">uAttributes</a> &amp; FACE_PORTAL) != 0; }</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00475">uAttributes</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l04350">_46E44E_collide_against_faces_and_portals()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00584">BspRenderer::AddFaceToRenderList_d3d()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l04045">GetPortalScreenCoord()</a>, <a class="el" href="../../de/dd4/_vis_8cpp_source.html#l00524">Vis::Intersect_Ray_Face()</a>, <a class="el" href="../../dc/d16/_indoor_camera_d3_d_8cpp_source.html#l00292">IndoorCameraD3D::is_face_faced_to_camera()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l02987">sub_4406BC()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l05403">sub_475D85()</a> и <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l05467">sub_475F30()</a>.</p>
+<div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-11-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-11-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-11-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d9/ded/struct_b_l_v_face_a844dd21df457421f6e527684d67a35db_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ae9b5b5f8bcfe6f36e1c17a0abb85e430"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9b5b5f8bcfe6f36e1c17a0abb85e430">&#9670;&nbsp;</a></span>Fluid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool BLVFace::Fluid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/dc7/_indoor_8h_source.html">Indoor.h</a> строка <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00449">449</a></p>
+<div class="fragment"><div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;{ <span class="keywordflow">return</span> (<a class="code" href="../../d9/ded/struct_b_l_v_face.html#a53874a062912a47d57a0ad755c1fc3d9">uAttributes</a> &amp; FACE_FLUID) != 0; }</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00475">uAttributes</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d5/da1/_decal_builder_8cpp_source.html#l00325">DecalBuilder::ApplyBloodsplatDecals_IndoorFace()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l04655">BLV_ProcessPartyActions()</a> и <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00409">IndoorLocation::ExecDraw_d3d()</a>.</p>
+<div id="dynsection-12" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-12-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-12-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-12-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d9/ded/struct_b_l_v_face_ae9b5b5f8bcfe6f36e1c17a0abb85e430_icgraph.svg" width="100%" height="486"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a5a9b0d3013fea0ada511a94da4db9438"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a9b0d3013fea0ada511a94da4db9438">&#9670;&nbsp;</a></span>Indoor_sky()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool BLVFace::Indoor_sky </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/dc7/_indoor_8h_source.html">Indoor.h</a> строка <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00450">450</a></p>
+<div class="fragment"><div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;                                   {</div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="../../d9/ded/struct_b_l_v_face.html#a53874a062912a47d57a0ad755c1fc3d9">uAttributes</a> &amp; FACE_INDOOR_SKY) != 0;</div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;    }</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00475">uAttributes</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d5/da1/_decal_builder_8cpp_source.html#l00325">DecalBuilder::ApplyBloodsplatDecals_IndoorFace()</a> и <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00409">IndoorLocation::ExecDraw_d3d()</a>.</p>
+<div id="dynsection-13" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-13-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-13-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-13-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d9/ded/struct_b_l_v_face_a5a9b0d3013fea0ada511a94da4db9438_icgraph.svg" width="100%" height="448"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ae6c500644a55aee257902e05a3eab2a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6c500644a55aee257902e05a3eab2a9">&#9670;&nbsp;</a></span>Clickable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool BLVFace::Clickable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/dc7/_indoor_8h_source.html">Indoor.h</a> строка <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00453">453</a></p>
+<div class="fragment"><div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;                                  {</div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="../../d9/ded/struct_b_l_v_face.html#a53874a062912a47d57a0ad755c1fc3d9">uAttributes</a> &amp; FACE_CLICKABLE) != 0;</div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;    }</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00475">uAttributes</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d7/db5/_game_8cpp_source.html#l00322">Application::Game::EventLoop()</a> и <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l01916">GameUI_DrawMinimap()</a>.</p>
+<div id="dynsection-14" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-14-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-14-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-14-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d9/ded/struct_b_l_v_face_ae6c500644a55aee257902e05a3eab2a9_icgraph.svg" width="100%" height="378"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a2da59a7061c84e9964ccc0ac219c98b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2da59a7061c84e9964ccc0ac219c98b9">&#9670;&nbsp;</a></span>Pressure_Plate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool BLVFace::Pressure_Plate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/dc7/_indoor_8h_source.html">Indoor.h</a> строка <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00456">456</a></p>
+<div class="fragment"><div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;                                       {</div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="../../d9/ded/struct_b_l_v_face.html#a53874a062912a47d57a0ad755c1fc3d9">uAttributes</a> &amp; FACE_PRESSURE_PLATE) != 0;</div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;    }</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00475">uAttributes</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l04655">BLV_ProcessPartyActions()</a>.</p>
+<div id="dynsection-15" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-15-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-15-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-15-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d9/ded/struct_b_l_v_face_a2da59a7061c84e9964ccc0ac219c98b9_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="aa265acfdce5d21ef5d46c0a8b83fc719"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa265acfdce5d21ef5d46c0a8b83fc719">&#9670;&nbsp;</a></span>Ethereal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool BLVFace::Ethereal </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/dc7/_indoor_8h_source.html">Indoor.h</a> строка <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00459">459</a></p>
+<div class="fragment"><div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;{ <span class="keywordflow">return</span> (<a class="code" href="../../d9/ded/struct_b_l_v_face.html#a53874a062912a47d57a0ad755c1fc3d9">uAttributes</a> &amp; FACE_ETHEREAL) != 0; }</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00475">uAttributes</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l02530">BLV_GetFloorLevel()</a> и <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l05467">sub_475F30()</a>.</p>
+<div id="dynsection-16" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-16-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-16-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-16-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d9/ded/struct_b_l_v_face_aa265acfdce5d21ef5d46c0a8b83fc719_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a8f592ccc759d53ca44c5374dc8c65a72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f592ccc759d53ca44c5374dc8c65a72">&#9670;&nbsp;</a></span>IsTextureFrameTable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool BLVFace::IsTextureFrameTable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/dc7/_indoor_8h_source.html">Indoor.h</a> строка <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00461">461</a></p>
+<div class="fragment"><div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;                                            {</div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;        <span class="keywordflow">return</span> this-&gt;<a class="code" href="../../d9/ded/struct_b_l_v_face.html#a53874a062912a47d57a0ad755c1fc3d9">uAttributes</a> &amp; FACE_TEXTURE_FRAME;</div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;    }</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00475">uAttributes</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00409">IndoorLocation::ExecDraw_d3d()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00738">GetTexture()</a> и <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00746">SetTexture()</a>.</p>
+<div id="dynsection-17" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-17-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-17-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-17-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d9/ded/struct_b_l_v_face_a8f592ccc759d53ca44c5374dc8c65a72_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ab08aa300699edc541cf52972c8676418"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab08aa300699edc541cf52972c8676418">&#9670;&nbsp;</a></span>ToggleIsTextureFrameTable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> BLVFace::ToggleIsTextureFrameTable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/dc7/_indoor_8h_source.html">Indoor.h</a> строка <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00464">464</a></p>
+<div class="fragment"><div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;                                            {</div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;        this-&gt;<a class="code" href="../../d9/ded/struct_b_l_v_face.html#a53874a062912a47d57a0ad755c1fc3d9">uAttributes</a> = this-&gt;<a class="code" href="../../d9/ded/struct_b_l_v_face.html#a53874a062912a47d57a0ad755c1fc3d9">uAttributes</a> &amp; FACE_TEXTURE_FRAME</div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;                                ? this-&gt;<a class="code" href="../../d9/ded/struct_b_l_v_face.html#a53874a062912a47d57a0ad755c1fc3d9">uAttributes</a> &amp; ~FACE_TEXTURE_FRAME</div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;                                : this-&gt;<a class="code" href="../../d9/ded/struct_b_l_v_face.html#a53874a062912a47d57a0ad755c1fc3d9">uAttributes</a> | FACE_TEXTURE_FRAME;</div>
+<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;    }</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00475">uAttributes</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00746">SetTexture()</a>.</p>
+<div id="dynsection-18" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-18-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-18-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-18-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d9/ded/struct_b_l_v_face_ab08aa300699edc541cf52972c8676418_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="a5188d6e9b104a3a9735288266e5a3067"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5188d6e9b104a3a9735288266e5a3067">&#9670;&nbsp;</a></span>pFacePlane</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="../../dd/d96/struct_plane__float__.html">Plane_float_</a> BLVFace::pFacePlane</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/dc7/_indoor_8h_source.html">Indoor.h</a> строка <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00470">470</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d5/da1/_decal_builder_8cpp_source.html#l00325">DecalBuilder::ApplyBloodsplatDecals_IndoorFace()</a>, <a class="el" href="../../d9/dc7/_lightmap_builder_8cpp_source.html#l00299">LightmapBuilder::ApplyLight_BLV()</a>, <a class="el" href="../../dd/d97/stru10_8cpp_source.html#l00235">stru10::CalcFaceBounding()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00074">Deserialize()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00409">IndoorLocation::ExecDraw_d3d()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00372">FromODM()</a> и <a class="el" href="../../de/dd4/_vis_8cpp_source.html#l00524">Vis::Intersect_Ray_Face()</a>.</p>
+
+</div>
+</div>
+<a id="ab0c6d94ea401cba33b26469064284731"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0c6d94ea401cba33b26469064284731">&#9670;&nbsp;</a></span>pFacePlane_old</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="../../d0/d75/struct_plane__int__.html">Plane_int_</a> BLVFace::pFacePlane_old</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/dc7/_indoor_8h_source.html">Indoor.h</a> строка <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00471">471</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l04350">_46E44E_collide_against_faces_and_portals()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l01422">_get_normals()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00584">BspRenderer::AddFaceToRenderList_d3d()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l04655">BLV_ProcessPartyActions()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00074">Deserialize()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00372">FromODM()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l04045">GetPortalScreenCoord()</a>, <a class="el" href="../../dc/d16/_indoor_camera_d3_d_8cpp_source.html#l00292">IndoorCameraD3D::is_face_faced_to_camera()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l04688">sub_4070EF_prolly_detect_player()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l02987">sub_4406BC()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l05403">sub_475D85()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l05467">sub_475F30()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l01718">UpdateActors_BLV()</a> и <a class="el" href="../../d9/ded/_sprite_object_8cpp_source.html#l00463">SpriteObject::UpdateObject_fn0_BLV()</a>.</p>
+
+</div>
+</div>
+<a id="a35a7f01ef4d019a1c5656f15c1e59a71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35a7f01ef4d019a1c5656f15c1e59a71">&#9670;&nbsp;</a></span>zCalc1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int BLVFace::zCalc1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/dc7/_indoor_8h_source.html">Indoor.h</a> строка <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00472">472</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l02530">BLV_GetFloorLevel()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00074">Deserialize()</a> и <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00372">FromODM()</a>.</p>
+
+</div>
+</div>
+<a id="a1711df8775102130b3a9a56cc4616b4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1711df8775102130b3a9a56cc4616b4c">&#9670;&nbsp;</a></span>zCalc2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int BLVFace::zCalc2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/dc7/_indoor_8h_source.html">Indoor.h</a> строка <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00473">473</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l02530">BLV_GetFloorLevel()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00074">Deserialize()</a> и <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00372">FromODM()</a>.</p>
+
+</div>
+</div>
+<a id="adf8a458d72795d065989049056f608c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf8a458d72795d065989049056f608c1">&#9670;&nbsp;</a></span>zCalc3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int BLVFace::zCalc3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/dc7/_indoor_8h_source.html">Indoor.h</a> строка <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00474">474</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l02530">BLV_GetFloorLevel()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00074">Deserialize()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00372">FromODM()</a> и <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l01279">IndoorLocation::GetSector()</a>.</p>
+
+</div>
+</div>
+<a id="a53874a062912a47d57a0ad755c1fc3d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53874a062912a47d57a0ad755c1fc3d9">&#9670;&nbsp;</a></span>uAttributes</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int BLVFace::uAttributes</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/dc7/_indoor_8h_source.html">Indoor.h</a> строка <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00475">475</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l00561">Engine::_44ED0A_saturate_face_blv()</a>, <a class="el" href="../../dd/d97/stru10_8cpp_source.html#l00068">stru10::_49CE9E()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l01422">_get_normals()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l00459">Engine::AlterGamma_BLV()</a>, <a class="el" href="../../de/dd4/_vis_8cpp_source.html#l00731">Vis::BLV_CreateIntersectFacesVertexCoordList()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l04655">BLV_ProcessPartyActions()</a>, <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00426">BLVFace()</a>, <a class="el" href="../../dd/d97/stru10_8cpp_source.html#l00235">stru10::CalcFaceBounding()</a>, <a class="el" href="../../dd/d97/stru10_8cpp_source.html#l00130">stru10::CalcPolygonLimits()</a>, <a class="el" href="../../de/dd4/_vis_8cpp_source.html#l00585">Vis::CheckIntersectBModel()</a>, <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00453">Clickable()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00074">Deserialize()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l03716">DoInteractionWithTopmostZObject()</a>, <a class="el" href="../../d0/d67/_map_book_8cpp_source.html#l00180">DrawBook_Map_sub()</a>, <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l02381">RenderOpenGL::DrawIndoorPolygon()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l01992">Render::DrawIndoorPolygon()</a>, <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00459">Ethereal()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00409">IndoorLocation::ExecDraw_d3d()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00562">FaceFlowTextureOffset()</a>, <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00449">Fluid()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00372">FromODM()</a>, <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l01916">GameUI_DrawMinimap()</a>, <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l01266">GameUI_WritePointedObjectStatusString()</a>, <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00450">Indoor_sky()</a>, <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00444">Invisible()</a>, <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00461">IsTextureFrameTable()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00858">IndoorLocation::Load()</a>, <a class="el" href="../../de/dd4/_vis_8cpp_source.html#l00798">Vis::ODM_CreateIntersectFacesVertexCoordList()</a>, <a class="el" href="../../de/dd4/_vis_8cpp_source.html#l00359">Vis::PickOutdoorFaces_Mouse()</a>, <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00448">Portal()</a>, <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00456">Pressure_Plate()</a>, <a class="el" href="../../d4/d9d/_save_load_8cpp_source.html#l00238">SaveGame()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l01558">sub_44892E_set_faces_bit()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l05403">sub_475D85()</a>, <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00464">ToggleIsTextureFrameTable()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l01718">UpdateActors_BLV()</a> и <a class="el" href="../../d9/ded/_sprite_object_8cpp_source.html#l00463">SpriteObject::UpdateObject_fn0_BLV()</a>.</p>
+
+</div>
+</div>
+<a id="a00bc82f2671655ea42cb0eeb2ac5b2ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00bc82f2671655ea42cb0eeb2ac5b2ba">&#9670;&nbsp;</a></span>pVertexIDs</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>* BLVFace::pVertexIDs</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/dc7/_indoor_8h_source.html">Indoor.h</a> строка <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00476">476</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00584">BspRenderer::AddFaceToRenderList_d3d()</a>, <a class="el" href="../../de/dd4/_vis_8cpp_source.html#l00731">Vis::BLV_CreateIntersectFacesVertexCoordList()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l02530">BLV_GetFloorLevel()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l04655">BLV_ProcessPartyActions()</a>, <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00426">BLVFace()</a>, <a class="el" href="../../dd/d97/stru10_8cpp_source.html#l00130">stru10::CalcPolygonLimits()</a>, <a class="el" href="../../dc/d16/_indoor_camera_d3_d_8cpp_source.html#l00414">IndoorCameraD3D::DebugDrawPortal()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00074">Deserialize()</a>, <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l02381">RenderOpenGL::DrawIndoorPolygon()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00409">IndoorLocation::ExecDraw_d3d()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l04045">GetPortalScreenCoord()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l01279">IndoorLocation::GetSector()</a>, <a class="el" href="../../dc/d16/_indoor_camera_d3_d_8cpp_source.html#l00128">IndoorCameraD3D::IsCulled()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00858">IndoorLocation::Load()</a>, <a class="el" href="../../de/dd4/_vis_8cpp_source.html#l00798">Vis::ODM_CreateIntersectFacesVertexCoordList()</a>, <a class="el" href="../../dc/d16/_indoor_camera_d3_d_8cpp_source.html#l00445">IndoorCameraD3D::PrepareAndDrawDebugOutline()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l04688">sub_4070EF_prolly_detect_player()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l01718">UpdateActors_BLV()</a> и <a class="el" href="../../d9/ded/_sprite_object_8cpp_source.html#l00463">SpriteObject::UpdateObject_fn0_BLV()</a>.</p>
+
+</div>
+</div>
+<a id="a7adcd76303b521ac4b990f5ae8a24153"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7adcd76303b521ac4b990f5ae8a24153">&#9670;&nbsp;</a></span>pXInterceptDisplacements</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a>* BLVFace::pXInterceptDisplacements</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/dc7/_indoor_8h_source.html">Indoor.h</a> строка <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00477">477</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../de/dd4/_vis_8cpp_source.html#l00731">Vis::BLV_CreateIntersectFacesVertexCoordList()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l02530">BLV_GetFloorLevel()</a>, <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00426">BLVFace()</a>, <a class="el" href="../../dd/d97/stru10_8cpp_source.html#l00130">stru10::CalcPolygonLimits()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00074">Deserialize()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00372">FromODM()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00858">IndoorLocation::Load()</a> и <a class="el" href="../../de/dd4/_vis_8cpp_source.html#l00798">Vis::ODM_CreateIntersectFacesVertexCoordList()</a>.</p>
+
+</div>
+</div>
+<a id="ab7b215d7b3d97fd9379c335ede5d3ff9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7b215d7b3d97fd9379c335ede5d3ff9">&#9670;&nbsp;</a></span>pYInterceptDisplacements</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a>* BLVFace::pYInterceptDisplacements</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/dc7/_indoor_8h_source.html">Indoor.h</a> строка <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00478">478</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../de/dd4/_vis_8cpp_source.html#l00731">Vis::BLV_CreateIntersectFacesVertexCoordList()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l02530">BLV_GetFloorLevel()</a>, <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00426">BLVFace()</a>, <a class="el" href="../../dd/d97/stru10_8cpp_source.html#l00130">stru10::CalcPolygonLimits()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00074">Deserialize()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00372">FromODM()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00858">IndoorLocation::Load()</a> и <a class="el" href="../../de/dd4/_vis_8cpp_source.html#l00798">Vis::ODM_CreateIntersectFacesVertexCoordList()</a>.</p>
+
+</div>
+</div>
+<a id="a45f6a5ce090f7ab6762c9ced85f7abf0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45f6a5ce090f7ab6762c9ced85f7abf0">&#9670;&nbsp;</a></span>pZInterceptDisplacements</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a>* BLVFace::pZInterceptDisplacements</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/dc7/_indoor_8h_source.html">Indoor.h</a> строка <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00479">479</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../de/dd4/_vis_8cpp_source.html#l00731">Vis::BLV_CreateIntersectFacesVertexCoordList()</a>, <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00426">BLVFace()</a>, <a class="el" href="../../dd/d97/stru10_8cpp_source.html#l00130">stru10::CalcPolygonLimits()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00074">Deserialize()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00372">FromODM()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00858">IndoorLocation::Load()</a> и <a class="el" href="../../de/dd4/_vis_8cpp_source.html#l00798">Vis::ODM_CreateIntersectFacesVertexCoordList()</a>.</p>
+
+</div>
+</div>
+<a id="ae34d7420a330cd89f4b14df034e22dbf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae34d7420a330cd89f4b14df034e22dbf">&#9670;&nbsp;</a></span>pVertexUIDs</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a>* BLVFace::pVertexUIDs</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/dc7/_indoor_8h_source.html">Indoor.h</a> строка <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00480">480</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00074">Deserialize()</a>, <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l02381">RenderOpenGL::DrawIndoorPolygon()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00409">IndoorLocation::ExecDraw_d3d()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00858">IndoorLocation::Load()</a> и <a class="el" href="../../dc/d16/_indoor_camera_d3_d_8cpp_source.html#l00445">IndoorCameraD3D::PrepareAndDrawDebugOutline()</a>.</p>
+
+</div>
+</div>
+<a id="a628539caca064812d94435087ed52e6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a628539caca064812d94435087ed52e6a">&#9670;&nbsp;</a></span>pVertexVIDs</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a>* BLVFace::pVertexVIDs</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/dc7/_indoor_8h_source.html">Indoor.h</a> строка <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00481">481</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00074">Deserialize()</a>, <a class="el" href="../../da/d79/_render_open_g_l_8cpp_source.html#l02381">RenderOpenGL::DrawIndoorPolygon()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00409">IndoorLocation::ExecDraw_d3d()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00858">IndoorLocation::Load()</a> и <a class="el" href="../../dc/d16/_indoor_camera_d3_d_8cpp_source.html#l00445">IndoorCameraD3D::PrepareAndDrawDebugOutline()</a>.</p>
+
+</div>
+</div>
+<a id="ab2e1207585b39e211d18feeae872159a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2e1207585b39e211d18feeae872159a">&#9670;&nbsp;</a></span>uFaceExtraID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> BLVFace::uFaceExtraID</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/dc7/_indoor_8h_source.html">Indoor.h</a> строка <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00482">482</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d9/dd3/_cast_spell_info_8cpp_source.html#l00046">CastSpellInfoHelpers::_427E01_cast_spell()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l04655">BLV_ProcessPartyActions()</a>, <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00426">BLVFace()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00074">Deserialize()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l03716">DoInteractionWithTopmostZObject()</a>, <a class="el" href="../../d7/db5/_game_8cpp_source.html#l00322">Application::Game::EventLoop()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00562">FaceFlowTextureOffset()</a>, <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l01916">GameUI_DrawMinimap()</a>, <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l01266">GameUI_WritePointedObjectStatusString()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00858">IndoorLocation::Load()</a>, <a class="el" href="../../dd/da4/_viewport_8cpp_source.html#l00315">Engine::OnGameViewportClick()</a> и <a class="el" href="../../d9/ded/_sprite_object_8cpp_source.html#l00463">SpriteObject::UpdateObject_fn0_BLV()</a>.</p>
+
+</div>
+</div>
+<a id="a2c1c89a245c1562d5421f95a690ffdd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c1c89a245c1562d5421f95a690ffdd8">&#9670;&nbsp;</a></span>resource</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>* BLVFace::resource</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/dc7/_indoor_8h_source.html">Indoor.h</a> строка <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00483">483</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00409">IndoorLocation::ExecDraw_d3d()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00562">FaceFlowTextureOffset()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00738">GetTexture()</a> и <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00746">SetTexture()</a>.</p>
+
+</div>
+</div>
+<a id="ae412f82d5dddff989389c7b9a8f94924"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae412f82d5dddff989389c7b9a8f94924">&#9670;&nbsp;</a></span>uSectorID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> BLVFace::uSectorID</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/dc7/_indoor_8h_source.html">Indoor.h</a> строка <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00484">484</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l04350">_46E44E_collide_against_faces_and_portals()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l04895">_46F04E_collide_against_portals()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00584">BspRenderer::AddFaceToRenderList_d3d()</a>, <a class="el" href="../../d9/dc7/_lightmap_builder_8cpp_source.html#l00261">LightmapBuilder::ApplyLights_IndoorFace()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00074">Deserialize()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00409">IndoorLocation::ExecDraw_d3d()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l01279">IndoorLocation::GetSector()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l04688">sub_4070EF_prolly_detect_player()</a> и <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l02987">sub_4406BC()</a>.</p>
+
+</div>
+</div>
+<a id="afe98dacf4c7e09483f562cf60ebd674d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe98dacf4c7e09483f562cf60ebd674d">&#9670;&nbsp;</a></span>uBackSectorID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> BLVFace::uBackSectorID</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/dc7/_indoor_8h_source.html">Indoor.h</a> строка <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00485">485</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l04350">_46E44E_collide_against_faces_and_portals()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l04895">_46F04E_collide_against_portals()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00584">BspRenderer::AddFaceToRenderList_d3d()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00074">Deserialize()</a> и <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l04688">sub_4070EF_prolly_detect_player()</a>.</p>
+
+</div>
+</div>
+<a id="a6b076a9f86faed1adf719e28190821f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b076a9f86faed1adf719e28190821f7">&#9670;&nbsp;</a></span>pBounding</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="../../df/d81/struct_b_box__short__.html">BBox_short_</a> BLVFace::pBounding</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/dc7/_indoor_8h_source.html">Indoor.h</a> строка <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00486">486</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l04350">_46E44E_collide_against_faces_and_portals()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00584">BspRenderer::AddFaceToRenderList_d3d()</a>, <a class="el" href="../../d5/da1/_decal_builder_8cpp_source.html#l00325">DecalBuilder::ApplyBloodsplatDecals_IndoorFace()</a>, <a class="el" href="../../d9/dc7/_lightmap_builder_8cpp_source.html#l00299">LightmapBuilder::ApplyLight_BLV()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l02530">BLV_GetFloorLevel()</a>, <a class="el" href="../../de/dd4/_vis_8cpp_source.html#l00585">Vis::CheckIntersectBModel()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00074">Deserialize()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00372">FromODM()</a>, <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l00890">Actor::GetDirectionInfo()</a>, <a class="el" href="../../d8/d67/_chest_8cpp_source.html#l00041">Chest::Open()</a> и <a class="el" href="../../d4/d59/_actor_8cpp_source.html#l04688">sub_4070EF_prolly_detect_player()</a>.</p>
+
+</div>
+</div>
+<a id="abac4fff82d763aadd57fc9b5347055c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abac4fff82d763aadd57fc9b5347055c3">&#9670;&nbsp;</a></span>uPolygonType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../da/dc7/_indoor_8h.html#a91fb3e69af7609c2810f12d81ecf6fab">PolygonType</a> BLVFace::uPolygonType</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/dc7/_indoor_8h_source.html">Indoor.h</a> строка <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00487">487</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l01422">_get_normals()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l02530">BLV_GetFloorLevel()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l04655">BLV_ProcessPartyActions()</a>, <a class="el" href="../../dd/d97/stru10_8cpp_source.html#l00235">stru10::CalcFaceBounding()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00074">Deserialize()</a>, <a class="el" href="../../d2/dc7/_render_8cpp_source.html#l05795">Render::DrawIndoorSky()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00409">IndoorLocation::ExecDraw_d3d()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00372">FromODM()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l01279">IndoorLocation::GetSector()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l01718">UpdateActors_BLV()</a> и <a class="el" href="../../d9/ded/_sprite_object_8cpp_source.html#l00463">SpriteObject::UpdateObject_fn0_BLV()</a>.</p>
+
+</div>
+</div>
+<a id="a981fe6d2b6afa2225755e81216f62326"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a981fe6d2b6afa2225755e81216f62326">&#9670;&nbsp;</a></span>uNumVertices</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d8f/_s_d_l__config_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> BLVFace::uNumVertices</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/dc7/_indoor_8h_source.html">Indoor.h</a> строка <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00488">488</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00584">BspRenderer::AddFaceToRenderList_d3d()</a>, <a class="el" href="../../de/dd4/_vis_8cpp_source.html#l00731">Vis::BLV_CreateIntersectFacesVertexCoordList()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l02530">BLV_GetFloorLevel()</a>, <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00426">BLVFace()</a>, <a class="el" href="../../dd/d97/stru10_8cpp_source.html#l00130">stru10::CalcPolygonLimits()</a>, <a class="el" href="../../de/dd4/_vis_8cpp_source.html#l00585">Vis::CheckIntersectBModel()</a>, <a class="el" href="../../dc/d16/_indoor_camera_d3_d_8cpp_source.html#l00414">IndoorCameraD3D::DebugDrawPortal()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00409">IndoorLocation::ExecDraw_d3d()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l04045">GetPortalScreenCoord()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l01279">IndoorLocation::GetSector()</a>, <a class="el" href="../../d1/d4a/_indoor_8cpp_source.html#l00858">IndoorLocation::Load()</a>, <a class="el" href="../../de/dd4/_vis_8cpp_source.html#l00798">Vis::ODM_CreateIntersectFacesVertexCoordList()</a> и <a class="el" href="../../dc/d16/_indoor_camera_d3_d_8cpp_source.html#l00445">IndoorCameraD3D::PrepareAndDrawDebugOutline()</a>.</p>
+
+</div>
+</div>
+<a id="ace930599348b1d03a1f2306c322dfe1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace930599348b1d03a1f2306c322dfe1c">&#9670;&nbsp;</a></span>field_5E</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char BLVFace::field_5E</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/dc7/_indoor_8h_source.html">Indoor.h</a> строка <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00489">489</a></p>
+
+</div>
+</div>
+<a id="adb56fd1b1ba0e60821711bbb90b34313"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb56fd1b1ba0e60821711bbb90b34313">&#9670;&nbsp;</a></span>field_5F</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char BLVFace::field_5F</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/dc7/_indoor_8h_source.html">Indoor.h</a> строка <a class="el" href="../../da/dc7/_indoor_8h_source.html#l00490">490</a></p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов структур находятся в файлах:<ul>
+<li>C:/git/world-of-might-and-magic/Engine/Graphics/<a class="el" href="../../da/dc7/_indoor_8h_source.html">Indoor.h</a></li>
+<li>C:/git/world-of-might-and-magic/Engine/Graphics/<a class="el" href="../../d1/d4a/_indoor_8cpp_source.html">Indoor.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="astruct_b_l_v_face_html_abac4fff82d763aadd57fc9b5347055c3"><div class="ttname"><a href="../../d9/ded/struct_b_l_v_face.html#abac4fff82d763aadd57fc9b5347055c3">BLVFace::uPolygonType</a></div><div class="ttdeci">PolygonType uPolygonType</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dc7/_indoor_8h_source.html#l00487">Indoor.h:487</a></div></div>
+<div class="ttc" id="astruct_b_l_v_face___m_m7_html_a58b5d31258d6c2d2b78b860dd7b12410"><div class="ttname"><a href="../../d9/d6f/struct_b_l_v_face___m_m7.html#a58b5d31258d6c2d2b78b860dd7b12410">BLVFace_MM7::pBounding</a></div><div class="ttdeci">struct BBox_short_ pBounding</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dd3/_legacy_images_8h_source.html#l00056">LegacyImages.h:56</a></div></div>
+<div class="ttc" id="astruct_vec3__float___html"><div class="ttname"><a href="../../d5/d06/struct_vec3__float__.html">Vec3_float_</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d90/_vector_types_8h_source.html#l00074">VectorTypes.h:74</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a676ca580c460c0154eb58200433d2a9e"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a676ca580c460c0154eb58200433d2a9e">face</a></div><div class="ttdeci">GLenum GLuint GLint GLenum face</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l03022">SDL_opengl_glext.h:3022</a></div></div>
+<div class="ttc" id="astruct_b_l_v_face___m_m7_html_a7dcd59d0d815402689b7bb1f8eb6bb72"><div class="ttname"><a href="../../d9/d6f/struct_b_l_v_face___m_m7.html#a7dcd59d0d815402689b7bb1f8eb6bb72">BLVFace_MM7::uPolygonType</a></div><div class="ttdeci">uint8_t uPolygonType</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dd3/_legacy_images_8h_source.html#l00057">LegacyImages.h:57</a></div></div>
+<div class="ttc" id="astruct_o_d_m_face_html_a710d5b0dc5645ae9df58d60bfae85b00"><div class="ttname"><a href="../../d3/df8/struct_o_d_m_face.html#a710d5b0dc5645ae9df58d60bfae85b00">ODMFace::zCalc1</a></div><div class="ttdeci">int zCalc1</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dbc/_b_s_p_model_8h_source.html#l00132">BSPModel.h:132</a></div></div>
+<div class="ttc" id="astruct_b_l_v_face_html_a981fe6d2b6afa2225755e81216f62326"><div class="ttname"><a href="../../d9/ded/struct_b_l_v_face.html#a981fe6d2b6afa2225755e81216f62326">BLVFace::uNumVertices</a></div><div class="ttdeci">uint8_t uNumVertices</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dc7/_indoor_8h_source.html#l00488">Indoor.h:488</a></div></div>
+<div class="ttc" id="astruct_b_l_v_face___m_m7_html_a5b5793d6293e5d85fdc32182e6d4766e"><div class="ttname"><a href="../../d9/d6f/struct_b_l_v_face___m_m7.html#a5b5793d6293e5d85fdc32182e6d4766e">BLVFace_MM7::zCalc1</a></div><div class="ttdeci">int zCalc1</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dd3/_legacy_images_8h_source.html#l00042">LegacyImages.h:42</a></div></div>
+<div class="ttc" id="astruct_o_d_m_face_html_af3f36cdde5b4448fe655d5a32f834632"><div class="ttname"><a href="../../d3/df8/struct_o_d_m_face.html#af3f36cdde5b4448fe655d5a32f834632">ODMFace::pYInterceptDisplacements</a></div><div class="ttdeci">int16_t pYInterceptDisplacements[20]</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dbc/_b_s_p_model_8h_source.html#l00140">BSPModel.h:140</a></div></div>
+<div class="ttc" id="astruct_texture_frame_table_html_a36bc3b3742a2b297fec5a1d6fef24a87"><div class="ttname"><a href="../../dd/d55/struct_texture_frame_table.html#a36bc3b3742a2b297fec5a1d6fef24a87">TextureFrameTable::FindTextureByName</a></div><div class="ttdeci">int FindTextureByName(const char *Str2)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dac/_image_8cpp_source.html#l00136">Image.cpp:136</a></div></div>
+<div class="ttc" id="astruct_b_l_v_face_html_ab0c6d94ea401cba33b26469064284731"><div class="ttname"><a href="../../d9/ded/struct_b_l_v_face.html#ab0c6d94ea401cba33b26469064284731">BLVFace::pFacePlane_old</a></div><div class="ttdeci">struct Plane_int_ pFacePlane_old</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dc7/_indoor_8h_source.html#l00471">Indoor.h:471</a></div></div>
+<div class="ttc" id="a_image_8cpp_html_a93f3d773c9f75e7baf34c76879251b59"><div class="ttname"><a href="../../d0/dac/_image_8cpp.html#a93f3d773c9f75e7baf34c76879251b59">pTextureFrameTable</a></div><div class="ttdeci">struct TextureFrameTable * pTextureFrameTable</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dac/_image_8cpp_source.html#l00020">Image.cpp:20</a></div></div>
+<div class="ttc" id="astruct_b_l_v_face___m_m7_html_a4ea789347f1c9af8f60ec7e8f183bba3"><div class="ttname"><a href="../../d9/d6f/struct_b_l_v_face___m_m7.html#a4ea789347f1c9af8f60ec7e8f183bba3">BLVFace_MM7::zCalc3</a></div><div class="ttdeci">int zCalc3</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dd3/_legacy_images_8h_source.html#l00044">LegacyImages.h:44</a></div></div>
+<div class="ttc" id="astruct_b_l_v_face_html_a00bc82f2671655ea42cb0eeb2ac5b2ba"><div class="ttname"><a href="../../d9/ded/struct_b_l_v_face.html#a00bc82f2671655ea42cb0eeb2ac5b2ba">BLVFace::pVertexIDs</a></div><div class="ttdeci">uint16_t * pVertexIDs</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dc7/_indoor_8h_source.html#l00476">Indoor.h:476</a></div></div>
+<div class="ttc" id="astruct_vec3__float___html_af0a711a2d55037010621e3b795dac2b9"><div class="ttname"><a href="../../d5/d06/struct_vec3__float__.html#af0a711a2d55037010621e3b795dac2b9">Vec3_float_::x</a></div><div class="ttdeci">float x</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d90/_vector_types_8h_source.html#l00089">VectorTypes.h:89</a></div></div>
+<div class="ttc" id="astruct_b_l_v_render_params_html_a5e69bb313c932d97389e830362e2e157"><div class="ttname"><a href="../../d4/d1d/struct_b_l_v_render_params.html#a5e69bb313c932d97389e830362e2e157">BLVRenderParams::field_0_timer_</a></div><div class="ttdeci">int field_0_timer_</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dc7/_indoor_8h_source.html#l00675">Indoor.h:675</a></div></div>
+<div class="ttc" id="a_indoor_8cpp_html_ac0fb829e03a912f8cfee4431c86ddce9"><div class="ttname"><a href="../../d1/d4a/_indoor_8cpp.html#ac0fb829e03a912f8cfee4431c86ddce9">pBLVRenderParams</a></div><div class="ttdeci">BLVRenderParams * pBLVRenderParams</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d4a/_indoor_8cpp_source.html#l00050">Indoor.cpp:50</a></div></div>
+<div class="ttc" id="astruct_b_l_v_face___m_m7_html_ae1ea29edf7cdefb9f39014cd995d2f37"><div class="ttname"><a href="../../d9/d6f/struct_b_l_v_face___m_m7.html#ae1ea29edf7cdefb9f39014cd995d2f37">BLVFace_MM7::pFacePlane</a></div><div class="ttdeci">struct Plane_float_ pFacePlane</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dd3/_legacy_images_8h_source.html#l00040">LegacyImages.h:40</a></div></div>
+<div class="ttc" id="a_indoor_8h_html_a91fb3e69af7609c2810f12d81ecf6fabadbd72c7f032c1d8a85e8c928083d9ce8"><div class="ttname"><a href="../../da/dc7/_indoor_8h.html#a91fb3e69af7609c2810f12d81ecf6fabadbd72c7f032c1d8a85e8c928083d9ce8">POLYGON_InBetweenFloorAndWall</a></div><div class="ttdeci">@ POLYGON_InBetweenFloorAndWall</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dc7/_indoor_8h_source.html#l00221">Indoor.h:221</a></div></div>
+<div class="ttc" id="astruct_b_box__short___html_a158512dd7a7f77d307b5771f97cb72bc"><div class="ttname"><a href="../../df/d81/struct_b_box__short__.html#a158512dd7a7f77d307b5771f97cb72bc">BBox_short_::x1</a></div><div class="ttdeci">int16_t x1</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d90/_vector_types_8h_source.html#l00114">VectorTypes.h:114</a></div></div>
+<div class="ttc" id="astruct_b_l_v_face_html_a7adcd76303b521ac4b990f5ae8a24153"><div class="ttname"><a href="../../d9/ded/struct_b_l_v_face.html#a7adcd76303b521ac4b990f5ae8a24153">BLVFace::pXInterceptDisplacements</a></div><div class="ttdeci">int16_t * pXInterceptDisplacements</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dc7/_indoor_8h_source.html#l00477">Indoor.h:477</a></div></div>
+<div class="ttc" id="aclass_texture_html"><div class="ttname"><a href="../../d2/d7f/class_texture.html">Texture</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/dbf/_texture_8h_source.html#l00004">Texture.h:4</a></div></div>
+<div class="ttc" id="astruct_o_d_m_face_html_a3326909cc521f55e083c46a06f67864a"><div class="ttname"><a href="../../d3/df8/struct_o_d_m_face.html#a3326909cc521f55e083c46a06f67864a">ODMFace::zCalc3</a></div><div class="ttdeci">int zCalc3</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dbc/_b_s_p_model_8h_source.html#l00134">BSPModel.h:134</a></div></div>
+<div class="ttc" id="astruct_b_l_v_face___m_m7_html_a5aa396538b9c0a80bda8a43e6fe66c86"><div class="ttname"><a href="../../d9/d6f/struct_b_l_v_face___m_m7.html#a5aa396538b9c0a80bda8a43e6fe66c86">BLVFace_MM7::uSectorID</a></div><div class="ttdeci">uint16_t uSectorID</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dd3/_legacy_images_8h_source.html#l00054">LegacyImages.h:54</a></div></div>
+<div class="ttc" id="astruct_b_box__short___html_afe7f2fb3c29ac5df826d64947e29b7d6"><div class="ttname"><a href="../../df/d81/struct_b_box__short__.html#afe7f2fb3c29ac5df826d64947e29b7d6">BBox_short_::y1</a></div><div class="ttdeci">int16_t y1</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d90/_vector_types_8h_source.html#l00116">VectorTypes.h:116</a></div></div>
+<div class="ttc" id="astruct_b_l_v_face___m_m7_html_abec8f02bfd8faad0247b137da548db92"><div class="ttname"><a href="../../d9/d6f/struct_b_l_v_face___m_m7.html#abec8f02bfd8faad0247b137da548db92">BLVFace_MM7::pZInterceptDisplacements</a></div><div class="ttdeci">int16_t * pZInterceptDisplacements</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dd3/_legacy_images_8h_source.html#l00049">LegacyImages.h:49</a></div></div>
+<div class="ttc" id="astruct_o_d_m_face_html_ae384db7b26d39d8f96f7610056faffc0"><div class="ttname"><a href="../../d3/df8/struct_o_d_m_face.html#ae384db7b26d39d8f96f7610056faffc0">ODMFace::uPolygonType</a></div><div class="ttdeci">uint8_t uPolygonType</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dbc/_b_s_p_model_8h_source.html#l00156">BSPModel.h:156</a></div></div>
+<div class="ttc" id="astruct_b_l_v_face_html_ab08aa300699edc541cf52972c8676418"><div class="ttname"><a href="../../d9/ded/struct_b_l_v_face.html#ab08aa300699edc541cf52972c8676418">BLVFace::ToggleIsTextureFrameTable</a></div><div class="ttdeci">void ToggleIsTextureFrameTable()</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dc7/_indoor_8h_source.html#l00464">Indoor.h:464</a></div></div>
+<div class="ttc" id="a_indoor_8h_html_a91fb3e69af7609c2810f12d81ecf6fabae4490b69eafeea478f87b3c1e9712254"><div class="ttname"><a href="../../da/dc7/_indoor_8h.html#a91fb3e69af7609c2810f12d81ecf6fabae4490b69eafeea478f87b3c1e9712254">POLYGON_Floor</a></div><div class="ttdeci">@ POLYGON_Floor</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dc7/_indoor_8h_source.html#l00220">Indoor.h:220</a></div></div>
+<div class="ttc" id="astruct_b_l_v_face_html_a8f592ccc759d53ca44c5374dc8c65a72"><div class="ttname"><a href="../../d9/ded/struct_b_l_v_face.html#a8f592ccc759d53ca44c5374dc8c65a72">BLVFace::IsTextureFrameTable</a></div><div class="ttdeci">bool IsTextureFrameTable() const</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dc7/_indoor_8h_source.html#l00461">Indoor.h:461</a></div></div>
+<div class="ttc" id="astruct_vec3__float___html_a900070092433a698ef721b459dc2bac5"><div class="ttname"><a href="../../d5/d06/struct_vec3__float__.html#a900070092433a698ef721b459dc2bac5">Vec3_float_::y</a></div><div class="ttdeci">float y</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d90/_vector_types_8h_source.html#l00090">VectorTypes.h:90</a></div></div>
+<div class="ttc" id="astruct_vec3__float___html_acf20cbb55510370f6c8de01bf4ab3850"><div class="ttname"><a href="../../d5/d06/struct_vec3__float__.html#acf20cbb55510370f6c8de01bf4ab3850">Vec3_float_::z</a></div><div class="ttdeci">float z</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d90/_vector_types_8h_source.html#l00091">VectorTypes.h:91</a></div></div>
+<div class="ttc" id="astruct_b_box__short___html_ad93ead96f4ecc1afcb6032989a33723d"><div class="ttname"><a href="../../df/d81/struct_b_box__short__.html#ad93ead96f4ecc1afcb6032989a33723d">BBox_short_::z2</a></div><div class="ttdeci">int16_t z2</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d90/_vector_types_8h_source.html#l00119">VectorTypes.h:119</a></div></div>
+<div class="ttc" id="astruct_vec3__float___html_a1e4f12ec431a3a2e6b3e62ea7a8397c6"><div class="ttname"><a href="../../d5/d06/struct_vec3__float__.html#a1e4f12ec431a3a2e6b3e62ea7a8397c6">Vec3_float_::Normalize</a></div><div class="ttdeci">void Normalize()</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d2e/_vector_types_8cpp_source.html#l00022">VectorTypes.cpp:22</a></div></div>
+<div class="ttc" id="astruct_plane__float___html_aff32486dc39cd3d04d32913315e60f99"><div class="ttname"><a href="../../dd/d96/struct_plane__float__.html#aff32486dc39cd3d04d32913315e60f99">Plane_float_::vNormal</a></div><div class="ttdeci">struct Vec3_float_ vNormal</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d90/_vector_types_8h_source.html#l00136">VectorTypes.h:136</a></div></div>
+<div class="ttc" id="astruct_plane__int___html_a58a82ef0253746e6fc82eb307b140735"><div class="ttname"><a href="../../d0/d75/struct_plane__int__.html#a58a82ef0253746e6fc82eb307b140735">Plane_int_::vNormal</a></div><div class="ttdeci">Vec3_int_ vNormal</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d90/_vector_types_8h_source.html#l00107">VectorTypes.h:107</a></div></div>
+<div class="ttc" id="astruct_o_d_m_face_html_abb77a85bcd8b760218d6c2c36e256c1d"><div class="ttname"><a href="../../d3/df8/struct_o_d_m_face.html#abb77a85bcd8b760218d6c2c36e256c1d">ODMFace::pBoundingBox</a></div><div class="ttdeci">struct BBox_short_ pBoundingBox</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dbc/_b_s_p_model_8h_source.html#l00145">BSPModel.h:145</a></div></div>
+<div class="ttc" id="astruct_b_l_v_face___m_m7_html_a46598f753ad3d0a70e45082fb65739d4"><div class="ttname"><a href="../../d9/d6f/struct_b_l_v_face___m_m7.html#a46598f753ad3d0a70e45082fb65739d4">BLVFace_MM7::zCalc2</a></div><div class="ttdeci">int zCalc2</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dd3/_legacy_images_8h_source.html#l00043">LegacyImages.h:43</a></div></div>
+<div class="ttc" id="astruct_plane__float___html_a18af467d1acff5b329783b6013842eb6"><div class="ttname"><a href="../../dd/d96/struct_plane__float__.html#a18af467d1acff5b329783b6013842eb6">Plane_float_::dist</a></div><div class="ttdeci">float dist</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d90/_vector_types_8h_source.html#l00137">VectorTypes.h:137</a></div></div>
+<div class="ttc" id="astruct_b_l_v_face_html_adf8a458d72795d065989049056f608c1"><div class="ttname"><a href="../../d9/ded/struct_b_l_v_face.html#adf8a458d72795d065989049056f608c1">BLVFace::zCalc3</a></div><div class="ttdeci">int zCalc3</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dc7/_indoor_8h_source.html#l00474">Indoor.h:474</a></div></div>
+<div class="ttc" id="astruct_o_d_m_face_html_aab5f89fc9200ef55cb09443065e15d7b"><div class="ttname"><a href="../../d3/df8/struct_o_d_m_face.html#aab5f89fc9200ef55cb09443065e15d7b">ODMFace::pXInterceptDisplacements</a></div><div class="ttdeci">int16_t pXInterceptDisplacements[20]</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dbc/_b_s_p_model_8h_source.html#l00139">BSPModel.h:139</a></div></div>
+<div class="ttc" id="astruct_b_l_v_face_html_a45f6a5ce090f7ab6762c9ced85f7abf0"><div class="ttname"><a href="../../d9/ded/struct_b_l_v_face.html#a45f6a5ce090f7ab6762c9ced85f7abf0">BLVFace::pZInterceptDisplacements</a></div><div class="ttdeci">int16_t * pZInterceptDisplacements</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dc7/_indoor_8h_source.html#l00479">Indoor.h:479</a></div></div>
+<div class="ttc" id="astruct_b_l_v_face___m_m7_html_a3f0d6709b1a69cda9825e2949fb2493e"><div class="ttname"><a href="../../d9/d6f/struct_b_l_v_face___m_m7.html#a3f0d6709b1a69cda9825e2949fb2493e">BLVFace_MM7::pFacePlane_old</a></div><div class="ttdeci">struct Plane_int_ pFacePlane_old</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dd3/_legacy_images_8h_source.html#l00041">LegacyImages.h:41</a></div></div>
+<div class="ttc" id="astruct_b_l_v_face___m_m7_html_a06599162137a7e39406890e63953d76b"><div class="ttname"><a href="../../d9/d6f/struct_b_l_v_face___m_m7.html#a06599162137a7e39406890e63953d76b">BLVFace_MM7::pVertexIDs</a></div><div class="ttdeci">uint16_t * pVertexIDs</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dd3/_legacy_images_8h_source.html#l00046">LegacyImages.h:46</a></div></div>
+<div class="ttc" id="astruct_b_box__short___html_aaee7e80483cfc3508b081068295f63f8"><div class="ttname"><a href="../../df/d81/struct_b_box__short__.html#aaee7e80483cfc3508b081068295f63f8">BBox_short_::y2</a></div><div class="ttdeci">int16_t y2</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d90/_vector_types_8h_source.html#l00117">VectorTypes.h:117</a></div></div>
+<div class="ttc" id="astruct_b_l_v_face_html_ae412f82d5dddff989389c7b9a8f94924"><div class="ttname"><a href="../../d9/ded/struct_b_l_v_face.html#ae412f82d5dddff989389c7b9a8f94924">BLVFace::uSectorID</a></div><div class="ttdeci">uint16_t uSectorID</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dc7/_indoor_8h_source.html#l00484">Indoor.h:484</a></div></div>
+<div class="ttc" id="astruct_b_l_v_face_html_a628539caca064812d94435087ed52e6a"><div class="ttname"><a href="../../d9/ded/struct_b_l_v_face.html#a628539caca064812d94435087ed52e6a">BLVFace::pVertexVIDs</a></div><div class="ttdeci">int16_t * pVertexVIDs</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dc7/_indoor_8h_source.html#l00481">Indoor.h:481</a></div></div>
+<div class="ttc" id="astruct_b_l_v_face_html_a5188d6e9b104a3a9735288266e5a3067"><div class="ttname"><a href="../../d9/ded/struct_b_l_v_face.html#a5188d6e9b104a3a9735288266e5a3067">BLVFace::pFacePlane</a></div><div class="ttdeci">struct Plane_float_ pFacePlane</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dc7/_indoor_8h_source.html#l00470">Indoor.h:470</a></div></div>
+<div class="ttc" id="astruct_b_l_v_face___m_m7_html_a60de241cefa7b7ac9197689a5920c375"><div class="ttname"><a href="../../d9/d6f/struct_b_l_v_face___m_m7.html#a60de241cefa7b7ac9197689a5920c375">BLVFace_MM7::uFaceExtraID</a></div><div class="ttdeci">uint16_t uFaceExtraID</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dd3/_legacy_images_8h_source.html#l00052">LegacyImages.h:52</a></div></div>
+<div class="ttc" id="astruct_b_l_v_face___m_m7_html_a81335bcfe6578fe6f1eb0f3dbfc96caa"><div class="ttname"><a href="../../d9/d6f/struct_b_l_v_face___m_m7.html#a81335bcfe6578fe6f1eb0f3dbfc96caa">BLVFace_MM7::pVertexUIDs</a></div><div class="ttdeci">int16_t * pVertexUIDs</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dd3/_legacy_images_8h_source.html#l00050">LegacyImages.h:50</a></div></div>
+<div class="ttc" id="astruct_b_l_v_face___m_m7_html_ac32df075adcc629c71e0a21293f7e5ce"><div class="ttname"><a href="../../d9/d6f/struct_b_l_v_face___m_m7.html#ac32df075adcc629c71e0a21293f7e5ce">BLVFace_MM7::pYInterceptDisplacements</a></div><div class="ttdeci">int16_t * pYInterceptDisplacements</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dd3/_legacy_images_8h_source.html#l00048">LegacyImages.h:48</a></div></div>
+<div class="ttc" id="astruct_b_l_v_face_html_a1711df8775102130b3a9a56cc4616b4c"><div class="ttname"><a href="../../d9/ded/struct_b_l_v_face.html#a1711df8775102130b3a9a56cc4616b4c">BLVFace::zCalc2</a></div><div class="ttdeci">int zCalc2</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dc7/_indoor_8h_source.html#l00473">Indoor.h:473</a></div></div>
+<div class="ttc" id="aclass_assets_manager_html_a10437426fdfa6c1e8e6d6a2ece0c532f"><div class="ttname"><a href="../../db/dd6/class_assets_manager.html#a10437426fdfa6c1e8e6d6a2ece0c532f">AssetsManager::GetBitmap</a></div><div class="ttdeci">Texture * GetBitmap(const String &amp;name)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d93/_assets_manager_8cpp_source.html#l00126">AssetsManager.cpp:126</a></div></div>
+<div class="ttc" id="astruct_b_l_v_face_html_aa4153fa3c2f23af1deb82914497d35e9"><div class="ttname"><a href="../../d9/ded/struct_b_l_v_face.html#aa4153fa3c2f23af1deb82914497d35e9">BLVFace::Invisible</a></div><div class="ttdeci">bool Invisible() const</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dc7/_indoor_8h_source.html#l00444">Indoor.h:444</a></div></div>
+<div class="ttc" id="astruct_b_l_v_face_html_afe98dacf4c7e09483f562cf60ebd674d"><div class="ttname"><a href="../../d9/ded/struct_b_l_v_face.html#afe98dacf4c7e09483f562cf60ebd674d">BLVFace::uBackSectorID</a></div><div class="ttdeci">int16_t uBackSectorID</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dc7/_indoor_8h_source.html#l00485">Indoor.h:485</a></div></div>
+<div class="ttc" id="astruct_b_l_v_face_html_a6b076a9f86faed1adf719e28190821f7"><div class="ttname"><a href="../../d9/ded/struct_b_l_v_face.html#a6b076a9f86faed1adf719e28190821f7">BLVFace::pBounding</a></div><div class="ttdeci">struct BBox_short_ pBounding</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dc7/_indoor_8h_source.html#l00486">Indoor.h:486</a></div></div>
+<div class="ttc" id="astruct_plane__int___html_afafd5e784389c9ed4c4e843a741276b0"><div class="ttname"><a href="../../d0/d75/struct_plane__int__.html#afafd5e784389c9ed4c4e843a741276b0">Plane_int_::dist</a></div><div class="ttdeci">int dist</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d90/_vector_types_8h_source.html#l00108">VectorTypes.h:108</a></div></div>
+<div class="ttc" id="astruct_b_l_v_face_html_ab7b215d7b3d97fd9379c335ede5d3ff9"><div class="ttname"><a href="../../d9/ded/struct_b_l_v_face.html#ab7b215d7b3d97fd9379c335ede5d3ff9">BLVFace::pYInterceptDisplacements</a></div><div class="ttdeci">int16_t * pYInterceptDisplacements</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dc7/_indoor_8h_source.html#l00478">Indoor.h:478</a></div></div>
+<div class="ttc" id="astruct_b_l_v_face_html_a2c1c89a245c1562d5421f95a690ffdd8"><div class="ttname"><a href="../../d9/ded/struct_b_l_v_face.html#a2c1c89a245c1562d5421f95a690ffdd8">BLVFace::resource</a></div><div class="ttdeci">void * resource</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dc7/_indoor_8h_source.html#l00483">Indoor.h:483</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl_8h_html_a2e335d56e2846b0fea47eed068b2d34a"><div class="ttname"><a href="../../df/dc4/_s_d_l__opengl_8h.html#a2e335d56e2846b0fea47eed068b2d34a">data</a></div><div class="ttdeci">GLint GLenum GLsizei GLsizei GLsizei GLint GLsizei const GLvoid * data</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dc4/_s_d_l__opengl_8h_source.html#l01974">SDL_opengl.h:1974</a></div></div>
+<div class="ttc" id="a_assets_manager_8cpp_html_a645270130330d2d99964c967b7d33cd8"><div class="ttname"><a href="../../d3/d93/_assets_manager_8cpp.html#a645270130330d2d99964c967b7d33cd8">assets</a></div><div class="ttdeci">AssetsManager * assets</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d93/_assets_manager_8cpp_source.html#l00012">AssetsManager.cpp:12</a></div></div>
+<div class="ttc" id="astruct_o_d_m_face_html_a858d38a427038bf8fa9607f9f7eaaea9"><div class="ttname"><a href="../../d3/df8/struct_o_d_m_face.html#a858d38a427038bf8fa9607f9f7eaaea9">ODMFace::uAttributes</a></div><div class="ttdeci">uint32_t uAttributes</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dbc/_b_s_p_model_8h_source.html#l00135">BSPModel.h:135</a></div></div>
+<div class="ttc" id="astruct_o_d_m_face_html_a35df2e4cf290f926db446ef194d8504e"><div class="ttname"><a href="../../d3/df8/struct_o_d_m_face.html#a35df2e4cf290f926db446ef194d8504e">ODMFace::pFacePlane</a></div><div class="ttdeci">struct Plane_int_ pFacePlane</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dbc/_b_s_p_model_8h_source.html#l00131">BSPModel.h:131</a></div></div>
+<div class="ttc" id="a_indoor_8h_html_a91fb3e69af7609c2810f12d81ecf6faba212f1c353912c54d258c088ffa7f80c4"><div class="ttname"><a href="../../da/dc7/_indoor_8h.html#a91fb3e69af7609c2810f12d81ecf6faba212f1c353912c54d258c088ffa7f80c4">POLYGON_InBetweenCeilingAndWall</a></div><div class="ttdeci">@ POLYGON_InBetweenCeilingAndWall</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dc7/_indoor_8h_source.html#l00223">Indoor.h:223</a></div></div>
+<div class="ttc" id="astruct_o_d_m_face_html_a5e8b735c89ae2dae1f3fd12576633b17"><div class="ttname"><a href="../../d3/df8/struct_o_d_m_face.html#a5e8b735c89ae2dae1f3fd12576633b17">ODMFace::zCalc2</a></div><div class="ttdeci">int zCalc2</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dbc/_b_s_p_model_8h_source.html#l00133">BSPModel.h:133</a></div></div>
+<div class="ttc" id="astruct_b_box__short___html_a5337cf4e923d4af9c6eddae5e75f0430"><div class="ttname"><a href="../../df/d81/struct_b_box__short__.html#a5337cf4e923d4af9c6eddae5e75f0430">BBox_short_::x2</a></div><div class="ttdeci">int16_t x2</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d90/_vector_types_8h_source.html#l00115">VectorTypes.h:115</a></div></div>
+<div class="ttc" id="astruct_b_l_v_face___m_m7_html_a5cc2d2bbcc2dd9dfd52c26604bea3235"><div class="ttname"><a href="../../d9/d6f/struct_b_l_v_face___m_m7.html#a5cc2d2bbcc2dd9dfd52c26604bea3235">BLVFace_MM7::uBackSectorID</a></div><div class="ttdeci">int16_t uBackSectorID</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dd3/_legacy_images_8h_source.html#l00055">LegacyImages.h:55</a></div></div>
+<div class="ttc" id="astruct_b_l_v_face___m_m7_html_a3ef8472e43096d6cfcf8ba4cf014c999"><div class="ttname"><a href="../../d9/d6f/struct_b_l_v_face___m_m7.html#a3ef8472e43096d6cfcf8ba4cf014c999">BLVFace_MM7::uAttributes</a></div><div class="ttdeci">unsigned int uAttributes</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dd3/_legacy_images_8h_source.html#l00045">LegacyImages.h:45</a></div></div>
+<div class="ttc" id="astruct_b_l_v_face___m_m7_html_a8bd4149d9328c7d9966b5a672839df9b"><div class="ttname"><a href="../../d9/d6f/struct_b_l_v_face___m_m7.html#a8bd4149d9328c7d9966b5a672839df9b">BLVFace_MM7::pXInterceptDisplacements</a></div><div class="ttdeci">int16_t * pXInterceptDisplacements</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dd3/_legacy_images_8h_source.html#l00047">LegacyImages.h:47</a></div></div>
+<div class="ttc" id="astruct_b_box__short___html_a05118d3302b7e2c22b73607b8ab4d306"><div class="ttname"><a href="../../df/d81/struct_b_box__short__.html#a05118d3302b7e2c22b73607b8ab4d306">BBox_short_::z1</a></div><div class="ttdeci">int16_t z1</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d90/_vector_types_8h_source.html#l00118">VectorTypes.h:118</a></div></div>
+<div class="ttc" id="astruct_o_d_m_face_html_a87f3008d0bdc9245fefedc79b51f1cc5"><div class="ttname"><a href="../../d3/df8/struct_o_d_m_face.html#a87f3008d0bdc9245fefedc79b51f1cc5">ODMFace::pZInterceptDisplacements</a></div><div class="ttdeci">int16_t pZInterceptDisplacements[20]</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dbc/_b_s_p_model_8h_source.html#l00141">BSPModel.h:141</a></div></div>
+<div class="ttc" id="a_indoor_8h_html_a91fb3e69af7609c2810f12d81ecf6fabae1e308275ba818e9fcd75162bcdbd4d7"><div class="ttname"><a href="../../da/dc7/_indoor_8h.html#a91fb3e69af7609c2810f12d81ecf6fabae1e308275ba818e9fcd75162bcdbd4d7">POLYGON_Ceiling</a></div><div class="ttdeci">@ POLYGON_Ceiling</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dc7/_indoor_8h_source.html#l00222">Indoor.h:222</a></div></div>
+<div class="ttc" id="a_indoor_8h_html_a91fb3e69af7609c2810f12d81ecf6fab"><div class="ttname"><a href="../../da/dc7/_indoor_8h.html#a91fb3e69af7609c2810f12d81ecf6fab">PolygonType</a></div><div class="ttdeci">PolygonType</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dc7/_indoor_8h_source.html#l00216">Indoor.h:216</a></div></div>
+<div class="ttc" id="astruct_b_l_v_face_html_a53874a062912a47d57a0ad755c1fc3d9"><div class="ttname"><a href="../../d9/ded/struct_b_l_v_face.html#a53874a062912a47d57a0ad755c1fc3d9">BLVFace::uAttributes</a></div><div class="ttdeci">unsigned int uAttributes</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dc7/_indoor_8h_source.html#l00475">Indoor.h:475</a></div></div>
+<div class="ttc" id="astruct_b_l_v_face_html_ae34d7420a330cd89f4b14df034e22dbf"><div class="ttname"><a href="../../d9/ded/struct_b_l_v_face.html#ae34d7420a330cd89f4b14df034e22dbf">BLVFace::pVertexUIDs</a></div><div class="ttdeci">int16_t * pVertexUIDs</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dc7/_indoor_8h_source.html#l00480">Indoor.h:480</a></div></div>
+<div class="ttc" id="astruct_b_l_v_face___m_m7_html_a147ec572c417b7b8652b0763a8a6138d"><div class="ttname"><a href="../../d9/d6f/struct_b_l_v_face___m_m7.html#a147ec572c417b7b8652b0763a8a6138d">BLVFace_MM7::pVertexVIDs</a></div><div class="ttdeci">int16_t * pVertexVIDs</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dd3/_legacy_images_8h_source.html#l00051">LegacyImages.h:51</a></div></div>
+<div class="ttc" id="astruct_b_l_v_face_html_ab2e1207585b39e211d18feeae872159a"><div class="ttname"><a href="../../d9/ded/struct_b_l_v_face.html#ab2e1207585b39e211d18feeae872159a">BLVFace::uFaceExtraID</a></div><div class="ttdeci">uint16_t uFaceExtraID</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dc7/_indoor_8h_source.html#l00482">Indoor.h:482</a></div></div>
+<div class="ttc" id="a_indoor_8h_html_a91fb3e69af7609c2810f12d81ecf6fabaed80b99ffcd2645296ed9e7af033e2bb"><div class="ttname"><a href="../../da/dc7/_indoor_8h.html#a91fb3e69af7609c2810f12d81ecf6fabaed80b99ffcd2645296ed9e7af033e2bb">POLYGON_VerticalWall</a></div><div class="ttdeci">@ POLYGON_VerticalWall</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dc7/_indoor_8h_source.html#l00218">Indoor.h:218</a></div></div>
+<div class="ttc" id="astruct_b_l_v_face_html_a35a7f01ef4d019a1c5656f15c1e59a71"><div class="ttname"><a href="../../d9/ded/struct_b_l_v_face.html#a35a7f01ef4d019a1c5656f15c1e59a71">BLVFace::zCalc1</a></div><div class="ttdeci">int zCalc1</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dc7/_indoor_8h_source.html#l00472">Indoor.h:472</a></div></div>
+<div class="ttc" id="astruct_texture_frame_table_html_a3b51764eda67472b56fa913b4b709b86"><div class="ttname"><a href="../../dd/d55/struct_texture_frame_table.html#a3b51764eda67472b56fa913b4b709b86">TextureFrameTable::GetFrameTexture</a></div><div class="ttdeci">Texture * GetFrameTexture(int uFrameID, int time)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dac/_image_8cpp_source.html#l00146">Image.cpp:146</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../d9/ded/struct_b_l_v_face.html">BLVFace</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:04:39. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

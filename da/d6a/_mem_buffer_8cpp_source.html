@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Исходный файл C:/git/world-of-might-and-magic/src/tools/MemBuffer.cpp</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('da/d6a/_mem_buffer_8cpp_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">MemBuffer.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../da/d6a/_mem_buffer_8cpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../de/d13/_mem_buffer_8h.html">src/tools/MemBuffer.h</a>&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="../../de/d32/class_mem_buffer.html">    5</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../de/d32/class_mem_buffer.html">MemBuffer</a> : <span class="keyword">public</span> <a class="code" href="../../df/df1/class_i_mem_buffer.html">IMemBuffer</a> {</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="../../de/d32/class_mem_buffer.html#a542879f49ccc3b7605be07c4dbe3019f">    7</a></span>&#160;    <span class="keyword">explicit</span> <a class="code" href="../../de/d32/class_mem_buffer.html#a542879f49ccc3b7605be07c4dbe3019f">MemBuffer</a>(<span class="keywordtype">size_t</span> <a class="code" href="../../db/d76/group__lavu__mem__funcs.html#ga3d1e3edfcf61ca2d831883e1afbad89e">size</a>) : <a class="code" href="../../db/d76/group__lavu__mem__funcs.html#ga3d1e3edfcf61ca2d831883e1afbad89e">size</a>(<a class="code" href="../../db/d76/group__lavu__mem__funcs.html#ga3d1e3edfcf61ca2d831883e1afbad89e">size</a>) { <a class="code" href="../../df/dc4/_s_d_l__opengl_8h.html#a2e335d56e2846b0fea47eed068b2d34a">data</a> = malloc(<a class="code" href="../../db/d76/group__lavu__mem__funcs.html#ga3d1e3edfcf61ca2d831883e1afbad89e">size</a>); }</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="../../de/d32/class_mem_buffer.html#a21167a01cb88cf4ce89579e24fe02dd5">    8</a></span>&#160;    <span class="keyword">virtual</span> <a class="code" href="../../de/d32/class_mem_buffer.html#a21167a01cb88cf4ce89579e24fe02dd5">~MemBuffer</a>() { free(<a class="code" href="../../df/dc4/_s_d_l__opengl_8h.html#a2e335d56e2846b0fea47eed068b2d34a">data</a>); }</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="../../de/d32/class_mem_buffer.html#af1c2dbeaefbb757e9fe95e79d1236b23">   10</a></span>&#160;    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">void</span> *<a class="code" href="../../de/d32/class_mem_buffer.html#af1c2dbeaefbb757e9fe95e79d1236b23">GetData</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="../../de/d32/class_mem_buffer.html#a5fd10450fda7d70272cadea7088e88c5">data</a>; }</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="../../de/d32/class_mem_buffer.html#a333db69e1f1bed3895ced075b2facf26">   11</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">size_t</span> <a class="code" href="../../de/d32/class_mem_buffer.html#a333db69e1f1bed3895ced075b2facf26">GetSize</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="../../de/d32/class_mem_buffer.html#a7759df5380f06a527f2b86237e95240c">size</a>; }</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="../../de/d32/class_mem_buffer.html#a215e9e0486916658c707dfb780384d4b">   13</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> *<a class="code" href="../../de/d32/class_mem_buffer.html#a215e9e0486916658c707dfb780384d4b">GetWritableData</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="../../de/d32/class_mem_buffer.html#a5fd10450fda7d70272cadea7088e88c5">data</a>; }</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="../../de/d32/class_mem_buffer.html#a5fd10450fda7d70272cadea7088e88c5">   16</a></span>&#160;    <span class="keywordtype">void</span> *<a class="code" href="../../de/d32/class_mem_buffer.html#a5fd10450fda7d70272cadea7088e88c5">data</a>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="../../de/d32/class_mem_buffer.html#a7759df5380f06a527f2b86237e95240c">   17</a></span>&#160;    <span class="keywordtype">size_t</span> <a class="code" href="../../de/d32/class_mem_buffer.html#a7759df5380f06a527f2b86237e95240c">size</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;};</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="../../de/d13/_mem_buffer_8h.html#a685632d9cd2b61b24a9bfc649d54937e">   20</a></span>&#160;<a class="code" href="../../de/d13/_mem_buffer_8h.html#a8722c69b0b425d6a28bc23839396f8f5">PMemBuffer</a> <a class="code" href="../../da/d6a/_mem_buffer_8cpp.html#a685632d9cd2b61b24a9bfc649d54937e">AllocMemBuffer</a>(<span class="keywordtype">size_t</span> <a class="code" href="../../db/d76/group__lavu__mem__funcs.html#ga3d1e3edfcf61ca2d831883e1afbad89e">size</a>) {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    std::shared_ptr&lt;MemBuffer&gt; <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a76461e97a098d2c9ae20ac193d3825ae">buffer</a> = std::make_shared&lt;MemBuffer&gt;(<a class="code" href="../../db/d76/group__lavu__mem__funcs.html#ga3d1e3edfcf61ca2d831883e1afbad89e">size</a>);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordflow">return</span> std::dynamic_pointer_cast&lt;IMemBuffer, MemBuffer&gt;(<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a76461e97a098d2c9ae20ac193d3825ae">buffer</a>);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aclass_mem_buffer_html_a7759df5380f06a527f2b86237e95240c"><div class="ttname"><a href="../../de/d32/class_mem_buffer.html#a7759df5380f06a527f2b86237e95240c">MemBuffer::size</a></div><div class="ttdeci">size_t size</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d6a/_mem_buffer_8cpp_source.html#l00017">MemBuffer.cpp:17</a></div></div>
+<div class="ttc" id="aclass_i_mem_buffer_html"><div class="ttname"><a href="../../df/df1/class_i_mem_buffer.html">IMemBuffer</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d13/_mem_buffer_8h_source.html#l00005">MemBuffer.h:5</a></div></div>
+<div class="ttc" id="a_mem_buffer_8h_html"><div class="ttname"><a href="../../de/d13/_mem_buffer_8h.html">MemBuffer.h</a></div></div>
+<div class="ttc" id="aclass_mem_buffer_html_a333db69e1f1bed3895ced075b2facf26"><div class="ttname"><a href="../../de/d32/class_mem_buffer.html#a333db69e1f1bed3895ced075b2facf26">MemBuffer::GetSize</a></div><div class="ttdeci">virtual size_t GetSize() const</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d6a/_mem_buffer_8cpp_source.html#l00011">MemBuffer.cpp:11</a></div></div>
+<div class="ttc" id="aclass_mem_buffer_html_af1c2dbeaefbb757e9fe95e79d1236b23"><div class="ttname"><a href="../../de/d32/class_mem_buffer.html#af1c2dbeaefbb757e9fe95e79d1236b23">MemBuffer::GetData</a></div><div class="ttdeci">virtual const void * GetData() const</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d6a/_mem_buffer_8cpp_source.html#l00010">MemBuffer.cpp:10</a></div></div>
+<div class="ttc" id="a_s_d_l__egl_8h_html_a76461e97a098d2c9ae20ac193d3825ae"><div class="ttname"><a href="../../df/d32/_s_d_l__egl_8h.html#a76461e97a098d2c9ae20ac193d3825ae">buffer</a></div><div class="ttdeci">EGLContext EGLenum EGLClientBuffer buffer</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/_s_d_l__egl_8h_source.html#l00952">SDL_egl.h:952</a></div></div>
+<div class="ttc" id="a_mem_buffer_8cpp_html_a685632d9cd2b61b24a9bfc649d54937e"><div class="ttname"><a href="../../da/d6a/_mem_buffer_8cpp.html#a685632d9cd2b61b24a9bfc649d54937e">AllocMemBuffer</a></div><div class="ttdeci">PMemBuffer AllocMemBuffer(size_t size)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d6a/_mem_buffer_8cpp_source.html#l00020">MemBuffer.cpp:20</a></div></div>
+<div class="ttc" id="aclass_mem_buffer_html_a5fd10450fda7d70272cadea7088e88c5"><div class="ttname"><a href="../../de/d32/class_mem_buffer.html#a5fd10450fda7d70272cadea7088e88c5">MemBuffer::data</a></div><div class="ttdeci">void * data</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d6a/_mem_buffer_8cpp_source.html#l00016">MemBuffer.cpp:16</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl_8h_html_a2e335d56e2846b0fea47eed068b2d34a"><div class="ttname"><a href="../../df/dc4/_s_d_l__opengl_8h.html#a2e335d56e2846b0fea47eed068b2d34a">data</a></div><div class="ttdeci">GLint GLenum GLsizei GLsizei GLsizei GLint GLsizei const GLvoid * data</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dc4/_s_d_l__opengl_8h_source.html#l01974">SDL_opengl.h:1974</a></div></div>
+<div class="ttc" id="aclass_mem_buffer_html_a542879f49ccc3b7605be07c4dbe3019f"><div class="ttname"><a href="../../de/d32/class_mem_buffer.html#a542879f49ccc3b7605be07c4dbe3019f">MemBuffer::MemBuffer</a></div><div class="ttdeci">MemBuffer(size_t size)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d6a/_mem_buffer_8cpp_source.html#l00007">MemBuffer.cpp:7</a></div></div>
+<div class="ttc" id="aclass_mem_buffer_html_a215e9e0486916658c707dfb780384d4b"><div class="ttname"><a href="../../de/d32/class_mem_buffer.html#a215e9e0486916658c707dfb780384d4b">MemBuffer::GetWritableData</a></div><div class="ttdeci">virtual void * GetWritableData() const</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d6a/_mem_buffer_8cpp_source.html#l00013">MemBuffer.cpp:13</a></div></div>
+<div class="ttc" id="aclass_mem_buffer_html_a21167a01cb88cf4ce89579e24fe02dd5"><div class="ttname"><a href="../../de/d32/class_mem_buffer.html#a21167a01cb88cf4ce89579e24fe02dd5">MemBuffer::~MemBuffer</a></div><div class="ttdeci">virtual ~MemBuffer()</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d6a/_mem_buffer_8cpp_source.html#l00008">MemBuffer.cpp:8</a></div></div>
+<div class="ttc" id="aclass_mem_buffer_html"><div class="ttname"><a href="../../de/d32/class_mem_buffer.html">MemBuffer</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/d6a/_mem_buffer_8cpp_source.html#l00005">MemBuffer.cpp:5</a></div></div>
+<div class="ttc" id="agroup__lavu__mem__funcs_html_ga3d1e3edfcf61ca2d831883e1afbad89e"><div class="ttname"><a href="../../db/d76/group__lavu__mem__funcs.html#ga3d1e3edfcf61ca2d831883e1afbad89e">size</a></div><div class="ttdeci">GLsizeiptr size</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l00540">SDL_opengl_glext.h:540</a></div></div>
+<div class="ttc" id="a_mem_buffer_8h_html_a8722c69b0b425d6a28bc23839396f8f5"><div class="ttname"><a href="../../de/d13/_mem_buffer_8h.html#a8722c69b0b425d6a28bc23839396f8f5">PMemBuffer</a></div><div class="ttdeci">std::shared_ptr&lt; IMemBuffer &gt; PMemBuffer</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d13/_mem_buffer_8h_source.html#l00013">MemBuffer.h:13</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_1563a38af0d3a5e4a6330d6d45e9792a.html">tools</a></li><li class="navelem"><a class="el" href="../../da/d6a/_mem_buffer_8cpp.html">MemBuffer.cpp</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:03:45. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

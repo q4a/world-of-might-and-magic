@@ -1,0 +1,337 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Исходный файл C:/git/world-of-might-and-magic/Engine/OurMath.cpp</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('de/db6/_our_math_8cpp_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">OurMath.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../de/db6/_our_math_8cpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d0/dc0/_our_math_8h.html">Engine/OurMath.h</a>&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../de/dcf/_engine_8h.html">Engine/Engine.h</a>&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//----- (00452969) --------------------------------------------------------</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="../../d6/d38/structstru193__math.html#aadad20ef2466685f18f5ee0a2ae94b22">    5</a></span>&#160;<a class="code" href="../../d6/d38/structstru193__math.html#aadad20ef2466685f18f5ee0a2ae94b22">stru193_math::stru193_math</a>() {</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <span class="keywordtype">double</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#acc806b31cbf466ceba6555983d8b814d">v3</a>;  <span class="comment">// ST18_8@2</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    this-&gt;<a class="code" href="../../d6/d38/structstru193__math.html#a45f7ef5dbe80155b3434165459321918">pTanTable</a>[0] = 0;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    this-&gt;<a class="code" href="../../d6/d38/structstru193__math.html#a259e37bc4a3568a0b8cd43e05699b377">pCosTable</a>[0] = 65536;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    this-&gt;<a class="code" href="../../d6/d38/structstru193__math.html#aabdd01d94396ad962c512e3a06895ce2">pInvCosTable</a>[0] = 65536;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt; (<span class="keywordtype">signed</span> int)this-&gt;<a class="code" href="../../d6/d38/structstru193__math.html#a934f5bef4348dfa90bc562afbf38caac">uIntegerHalfPi</a>; i++) {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#acc806b31cbf466ceba6555983d8b814d">v3</a> = (double)i * pi_double / (<span class="keywordtype">double</span>)<a class="code" href="../../d6/d38/structstru193__math.html#a3cc39ca567bc6b6c1a11a064df1f297f">uIntegerPi</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <a class="code" href="../../d6/d38/structstru193__math.html#a45f7ef5dbe80155b3434165459321918">pTanTable</a>[i] =</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;            (<span class="keywordtype">signed</span> __int64)(tan(<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#acc806b31cbf466ceba6555983d8b814d">v3</a>) * (double)this-&gt;<a class="code" href="../../d6/d38/structstru193__math.html#a259e37bc4a3568a0b8cd43e05699b377">pCosTable</a>[0] + 0.5);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <a class="code" href="../../d6/d38/structstru193__math.html#a259e37bc4a3568a0b8cd43e05699b377">pCosTable</a>[i] =</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            (<span class="keywordtype">signed</span> __int64)(cos(<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#acc806b31cbf466ceba6555983d8b814d">v3</a>) * (double)this-&gt;<a class="code" href="../../d6/d38/structstru193__math.html#a259e37bc4a3568a0b8cd43e05699b377">pCosTable</a>[0] + 0.5);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <a class="code" href="../../d6/d38/structstru193__math.html#aabdd01d94396ad962c512e3a06895ce2">pInvCosTable</a>[i] =</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            (<span class="keywordtype">signed</span> __int64)(1.0 / cos(<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#acc806b31cbf466ceba6555983d8b814d">v3</a>) * (double)this-&gt;<a class="code" href="../../d6/d38/structstru193__math.html#a259e37bc4a3568a0b8cd43e05699b377">pCosTable</a>[0] + 0.5);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    }</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = this-&gt;<a class="code" href="../../d6/d38/structstru193__math.html#a934f5bef4348dfa90bc562afbf38caac">uIntegerHalfPi</a>; i &lt; 520; i++) {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        this-&gt;<a class="code" href="../../d6/d38/structstru193__math.html#a45f7ef5dbe80155b3434165459321918">pTanTable</a>[i] = 0xEFFFFFFFu;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        this-&gt;<a class="code" href="../../d6/d38/structstru193__math.html#a259e37bc4a3568a0b8cd43e05699b377">pCosTable</a>[i] = 0;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        this-&gt;<a class="code" href="../../d6/d38/structstru193__math.html#aabdd01d94396ad962c512e3a06895ce2">pInvCosTable</a>[i] = 0xEFFFFFFFu;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    }</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;}</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">//----- (00402CAE) --------------------------------------------------------</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="../../d6/d38/structstru193__math.html#a7a4a47e93ff200721e19681b71783c51">   28</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../d6/d38/structstru193__math.html#a7a4a47e93ff200721e19681b71783c51">stru193_math::Cos</a>(<span class="keywordtype">int</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a9e06c1f76a20fed54ca742cd25cb02c4">angle</a>) {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0928f6d0f0f794ba000a21dfae422136">v2</a>;  <span class="comment">// eax@1</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="comment">// a2: (angle - uIntegerHalfPi)    for  sin(angle)</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="comment">//    (angle)                     for  cos(angle)</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0928f6d0f0f794ba000a21dfae422136">v2</a> = <a class="code" href="../../d6/d38/structstru193__math.html#a0a30af82a3eb6b7968a3a3e72a6e4fc2">uDoublePiMask</a> &amp; <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a9e06c1f76a20fed54ca742cd25cb02c4">angle</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0928f6d0f0f794ba000a21dfae422136">v2</a> &gt; <a class="code" href="../../d6/d38/structstru193__math.html#a3cc39ca567bc6b6c1a11a064df1f297f">uIntegerPi</a>) <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0928f6d0f0f794ba000a21dfae422136">v2</a> = <a class="code" href="../../d6/d38/structstru193__math.html#af14e1d25baaec50921cce5bbbc8ea0f6">uIntegerDoublePi</a> - <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0928f6d0f0f794ba000a21dfae422136">v2</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0928f6d0f0f794ba000a21dfae422136">v2</a> &gt;= <a class="code" href="../../d6/d38/structstru193__math.html#a934f5bef4348dfa90bc562afbf38caac">uIntegerHalfPi</a>)</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordflow">return</span> -<a class="code" href="../../d6/d38/structstru193__math.html#a259e37bc4a3568a0b8cd43e05699b377">pCosTable</a>[<a class="code" href="../../d6/d38/structstru193__math.html#a3cc39ca567bc6b6c1a11a064df1f297f">uIntegerPi</a> - <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0928f6d0f0f794ba000a21dfae422136">v2</a>];</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d6/d38/structstru193__math.html#a259e37bc4a3568a0b8cd43e05699b377">pCosTable</a>[<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0928f6d0f0f794ba000a21dfae422136">v2</a>];</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">//----- (0045281E) --------------------------------------------------------</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">//    Calculates atan2(y/x)</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">// return value: angle in integer format (multiplier of Pi/1024)</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="../../d6/d38/structstru193__math.html#ae5c580a8915049b2fe00949acf3ca728">   46</a></span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../d6/d38/structstru193__math.html#ae5c580a8915049b2fe00949acf3ca728">stru193_math::Atan2</a>(<span class="keywordtype">int</span> <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ad0e63d0edcdbd3d79554076bf309fd47">x</a>, <span class="keywordtype">int</span> <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a1675d9d7bb68e1657ff028643b4037e3">y</a>) {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">signed</span> <span class="keywordtype">int</span> quadrant;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    __int64 dividend;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">int</span> quotient;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">int</span> lowIdx;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">int</span> highIdx;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a9e06c1f76a20fed54ca742cd25cb02c4">angle</a>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">int</span> X = <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ad0e63d0edcdbd3d79554076bf309fd47">x</a>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">int</span> Y = <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a1675d9d7bb68e1657ff028643b4037e3">y</a>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">if</span> (abs(X) &lt; 65536) {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordflow">if</span> ((abs(Y) &gt;&gt; 15) &gt;= abs(X)) X = 0;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordflow">if</span> (!X) {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordflow">if</span> (Y &gt; 0) {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="../../d6/d38/structstru193__math.html#a934f5bef4348dfa90bc562afbf38caac">uIntegerHalfPi</a>;  <span class="comment">// Pi/2</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="../../d6/d38/structstru193__math.html#a934f5bef4348dfa90bc562afbf38caac">uIntegerHalfPi</a> + <a class="code" href="../../d6/d38/structstru193__math.html#a3cc39ca567bc6b6c1a11a064df1f297f">uIntegerPi</a>;  <span class="comment">// 3*(Pi/2)</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    }</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">if</span> (Y) {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordflow">if</span> (X &lt; 0) {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            X = -X;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <span class="keywordflow">if</span> (Y &gt; 0) {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                quadrant = 4;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                quadrant = 3;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            <span class="keywordflow">if</span> (Y &gt; 0) {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                quadrant = 1;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                quadrant = 2;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            }</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        }</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keywordflow">if</span> (Y &lt; 0) Y = -Y;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        HEXRAYS_LODWORD(dividend) = Y &lt;&lt; 16;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        HEXRAYS_HIDWORD(dividend) = Y &gt;&gt; 16;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        quotient = dividend / X;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="comment">// looks like binary search</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        {</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            <span class="keywordtype">int</span> i;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            highIdx = <a class="code" href="../../d6/d38/structstru193__math.html#a934f5bef4348dfa90bc562afbf38caac">uIntegerHalfPi</a>;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            lowIdx = 0;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            <span class="keywordflow">for</span> (i = 0; i &lt; 6; ++i) {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                <span class="keywordflow">if</span> (quotient &lt;= <a class="code" href="../../d6/d38/structstru193__math.html#a45f7ef5dbe80155b3434165459321918">pTanTable</a>[(lowIdx + highIdx) / 2])</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                    highIdx = (lowIdx + highIdx) / 2;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                    lowIdx = (lowIdx + highIdx) / 2;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            }</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        }</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a9e06c1f76a20fed54ca742cd25cb02c4">angle</a> = lowIdx + 1;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <span class="keywordflow">while</span> (<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a9e06c1f76a20fed54ca742cd25cb02c4">angle</a> &lt; (highIdx - 1) &amp;&amp; quotient &gt;= <a class="code" href="../../d6/d38/structstru193__math.html#a45f7ef5dbe80155b3434165459321918">pTanTable</a>[<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a9e06c1f76a20fed54ca742cd25cb02c4">angle</a>]) ++<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a9e06c1f76a20fed54ca742cd25cb02c4">angle</a>;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="keywordflow">switch</span> (quadrant) {</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            <span class="keywordflow">case</span> 1:  <span class="comment">// X &gt; 0, Y &gt; 0</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                <span class="keywordflow">return</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a9e06c1f76a20fed54ca742cd25cb02c4">angle</a>;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            <span class="keywordflow">case</span> 2:                               <span class="comment">// X &gt; 0, Y &lt; 0</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                <span class="keywordflow">return</span> <a class="code" href="../../d6/d38/structstru193__math.html#af14e1d25baaec50921cce5bbbc8ea0f6">uIntegerDoublePi</a> - <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a9e06c1f76a20fed54ca742cd25cb02c4">angle</a>;  <span class="comment">// 2*Pi - angle</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            <span class="keywordflow">case</span> 3:                         <span class="comment">// X &gt; 0, Y &lt; 0</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                <span class="keywordflow">return</span> <a class="code" href="../../d6/d38/structstru193__math.html#a3cc39ca567bc6b6c1a11a064df1f297f">uIntegerPi</a> + <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a9e06c1f76a20fed54ca742cd25cb02c4">angle</a>;  <span class="comment">// Pi + angle</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            <span class="keywordflow">case</span> 4:                         <span class="comment">// X &lt; 0, Y &gt; 0</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                <span class="keywordflow">return</span> <a class="code" href="../../d6/d38/structstru193__math.html#a3cc39ca567bc6b6c1a11a064df1f297f">uIntegerPi</a> - <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a9e06c1f76a20fed54ca742cd25cb02c4">angle</a>;  <span class="comment">// Pi - angle</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        }</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <span class="comment">// should never get here</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    }</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keywordflow">if</span> (X &lt; 0)  <span class="comment">// Y == 0, X &lt; 0</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d6/d38/structstru193__math.html#a3cc39ca567bc6b6c1a11a064df1f297f">uIntegerPi</a>;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;}</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="comment">//----- (0042EBDB) --------------------------------------------------------</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno"><a class="line" href="../../d6/d38/structstru193__math.html#a9bd57620c86e36d03d93f2306f8ab80a">  133</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../d6/d38/structstru193__math.html#a9bd57620c86e36d03d93f2306f8ab80a">stru193_math::Sin</a>(<span class="keywordtype">int</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a9e06c1f76a20fed54ca742cd25cb02c4">angle</a>) { <span class="keywordflow">return</span> <a class="code" href="../../d6/d38/structstru193__math.html#a7a4a47e93ff200721e19681b71783c51">Cos</a>(<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a9e06c1f76a20fed54ca742cd25cb02c4">angle</a> - this-&gt;<a class="code" href="../../d6/d38/structstru193__math.html#a934f5bef4348dfa90bc562afbf38caac">uIntegerHalfPi</a>); }</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="comment">//----- (0042EBBE) --------------------------------------------------------</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="comment">//----- (004453C0) mm6-----------------------------------------------------</span></div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="comment">//----- (004A1760) mm6_chinese---------------------------------------------</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno"><a class="line" href="../../d0/dc0/_our_math_8h.html#a6f934d757f0bee6d89896c7783663481">  138</a></span>&#160;__int64 <a class="code" href="../../de/db6/_our_math_8cpp.html#abc4811d26f9864e00046c39c39d65680">fixpoint_mul</a>(<span class="keywordtype">int</span> a1, <span class="keywordtype">int</span> a2) {</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="keywordflow">return</span> ((__int64)a1 * (__int64)a2) &gt;&gt; 16;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;}</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160; </div>
+<div class="line"><a name="l00142"></a><span class="lineno"><a class="line" href="../../d0/dc0/_our_math_8h.html#aa0e99487f7c2ea9f26c3e1b6acfabf81">  142</a></span>&#160;__int64 <a class="code" href="../../de/db6/_our_math_8cpp.html#a58862672cc5cd743a746469cb57f63fb">fixpoint_dot</a>(<span class="keywordtype">int</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a49825216c96caaeb09237b36651181c5">x1</a>, <span class="keywordtype">int</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a7b907a03236685c534d89d604cff23c8">x2</a>, <span class="keywordtype">int</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a3af6c78fcdfccea028a5878bc747ef39">y1</a>, <span class="keywordtype">int</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a2be1135ed68e8d80fa9e130c7814f8c2">y2</a>, <span class="keywordtype">int</span> z1, <span class="keywordtype">int</span> z2) {</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../de/db6/_our_math_8cpp.html#abc4811d26f9864e00046c39c39d65680">fixpoint_mul</a>(<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a49825216c96caaeb09237b36651181c5">x1</a>, <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a7b907a03236685c534d89d604cff23c8">x2</a>) + <a class="code" href="../../de/db6/_our_math_8cpp.html#abc4811d26f9864e00046c39c39d65680">fixpoint_mul</a>(<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a3af6c78fcdfccea028a5878bc747ef39">y1</a>, <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a2be1135ed68e8d80fa9e130c7814f8c2">y2</a>) + <a class="code" href="../../de/db6/_our_math_8cpp.html#abc4811d26f9864e00046c39c39d65680">fixpoint_mul</a>(z1, z2);</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;}</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160; </div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="comment">//----- (004A1780) mm6_chinese---------------------------------------------</span></div>
+<div class="line"><a name="l00147"></a><span class="lineno"><a class="line" href="../../d0/dc0/_our_math_8h.html#a5bdf27934bffbfa089daaeb21bef234a">  147</a></span>&#160;__int64 <a class="code" href="../../de/db6/_our_math_8cpp.html#a26d802a4465483f7c2f89657b75c9ebe">fixpoint_div</a>(<span class="keywordtype">int</span> a1, <span class="keywordtype">int</span> a2) { <span class="keywordflow">return</span> ((__int64)a1 &lt;&lt; 16) / a2; }</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
+<div class="line"><a name="l00149"></a><span class="lineno"><a class="line" href="../../d0/dc0/_our_math_8h.html#a52f1bdee7e430fa4469bb94efb478de1">  149</a></span>&#160;__int64 <a class="code" href="../../de/db6/_our_math_8cpp.html#a6df7012b7f2fca9b8855f2505479849f">fixpoint_sub_unknown</a>(<span class="keywordtype">int</span> a1, <span class="keywordtype">int</span> a2) {</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <span class="keywordflow">return</span> (((__int64)a1 &lt;&lt; 16) * a2) &gt;&gt; 16;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;}</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160; </div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;<span class="comment">//----- (0048B561) --------------------------------------------------------</span></div>
+<div class="line"><a name="l00154"></a><span class="lineno"><a class="line" href="../../d0/dc0/_our_math_8h.html#a0291a2ad34d9448b49019f7be6a6e503">  154</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../de/db6/_our_math_8cpp.html#a60e23493341fe2f31d154b9f2a14f1bd">fixpoint_from_float</a>(<span class="keywordtype">float</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a26942fd2ed566ef553eae82d2c109c8f">val</a>) {</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="comment">//  float X.Yf -&gt; int XXXX YYYY</span></div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a85b8f6c07fbc1fb5d77c2ae090f21995">left</a> = floorf((<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a26942fd2ed566ef553eae82d2c109c8f">val</a> - 0.5<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a>) + 0.5<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a>);</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a5ffadbbacc6b89cf6218bc43b384d3fe">right</a> = floorf((<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a26942fd2ed566ef553eae82d2c109c8f">val</a> - <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a85b8f6c07fbc1fb5d77c2ae090f21995">left</a>) * 65536.0<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a>);</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keywordflow">return</span> (<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a85b8f6c07fbc1fb5d77c2ae090f21995">left</a> &lt;&lt; 16) | <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a5ffadbbacc6b89cf6218bc43b384d3fe">right</a>;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;}</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
+<div class="line"><a name="l00161"></a><span class="lineno"><a class="line" href="../../d0/dc0/_our_math_8h.html#a2ceb3f872920afca04b7158dbda4078a">  161</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../de/db6/_our_math_8cpp.html#a2ceb3f872920afca04b7158dbda4078a">fixpoint_from_int</a>(<span class="keywordtype">int</span> lhv, <span class="keywordtype">int</span> rhv) { <span class="keywordflow">return</span> (lhv &lt;&lt; 16) | rhv; }</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="comment">//----- (00452A9E) --------------------------------------------------------</span></div>
+<div class="line"><a name="l00164"></a><span class="lineno"><a class="line" href="../../d0/dc0/_our_math_8h.html#aac6e421d654d85d401b67bcb0da79680">  164</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../de/db6/_our_math_8cpp.html#aac6e421d654d85d401b67bcb0da79680">integer_sqrt</a>(<span class="keywordtype">int</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a26942fd2ed566ef553eae82d2c109c8f">val</a>) {</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="comment">//Получение квадратного корня//</span></div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a321ff419cd5252e54cf95e64dc6687ee">result</a>;       <span class="comment">// eax@2</span></div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0928f6d0f0f794ba000a21dfae422136">v2</a>;  <span class="comment">// edx@3</span></div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#acc806b31cbf466ceba6555983d8b814d">v3</a>;  <span class="comment">// edi@3</span></div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="keywordtype">int</span> v5;           <span class="comment">// esi@4</span></div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160; </div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a26942fd2ed566ef553eae82d2c109c8f">val</a> &lt; 1) <span class="keywordflow">return</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a26942fd2ed566ef553eae82d2c109c8f">val</a>;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160; </div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0928f6d0f0f794ba000a21dfae422136">v2</a> = 0;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#acc806b31cbf466ceba6555983d8b814d">v3</a> = <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a26942fd2ed566ef553eae82d2c109c8f">val</a>;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a321ff419cd5252e54cf95e64dc6687ee">result</a> = 0;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; 16; ++i) {</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a321ff419cd5252e54cf95e64dc6687ee">result</a> *= 2;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0928f6d0f0f794ba000a21dfae422136">v2</a> = (<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#acc806b31cbf466ceba6555983d8b814d">v3</a> &gt;&gt; 30) | 4 * <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0928f6d0f0f794ba000a21dfae422136">v2</a>;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        v5 = 2 * <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a321ff419cd5252e54cf95e64dc6687ee">result</a> + 1;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#acc806b31cbf466ceba6555983d8b814d">v3</a> *= 4;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0928f6d0f0f794ba000a21dfae422136">v2</a> &gt;= v5) {</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;            ++<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a321ff419cd5252e54cf95e64dc6687ee">result</a>;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;            <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0928f6d0f0f794ba000a21dfae422136">v2</a> -= v5;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        }</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    }</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a26942fd2ed566ef553eae82d2c109c8f">val</a> - <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a321ff419cd5252e54cf95e64dc6687ee">result</a> * <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a321ff419cd5252e54cf95e64dc6687ee">result</a> &gt;= (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>)(<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a321ff419cd5252e54cf95e64dc6687ee">result</a> - 1)) ++<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a321ff419cd5252e54cf95e64dc6687ee">result</a>;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a321ff419cd5252e54cf95e64dc6687ee">result</a>;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;}</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160; </div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;<span class="comment">//----- (00452B2E) --------------------------------------------------------</span></div>
+<div class="line"><a name="l00194"></a><span class="lineno"><a class="line" href="../../d0/dc0/_our_math_8h.html#a6b46ede8d1d8678f2c7835a70c46f10c">  194</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../de/db6/_our_math_8cpp.html#a6b46ede8d1d8678f2c7835a70c46f10c">GetDiceResult</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> uNumDice, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> uDiceSides) {</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#acc806b31cbf466ceba6555983d8b814d">v3</a> = 0;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <span class="keywordflow">if</span> (uDiceSides) {</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; uNumDice; ++i)</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;            <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#acc806b31cbf466ceba6555983d8b814d">v3</a> += rand() % uDiceSides + 1;</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#acc806b31cbf466ceba6555983d8b814d">v3</a>;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    }</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="astructstru193__math_html_af14e1d25baaec50921cce5bbbc8ea0f6"><div class="ttname"><a href="../../d6/d38/structstru193__math.html#af14e1d25baaec50921cce5bbbc8ea0f6">stru193_math::uIntegerDoublePi</a></div><div class="ttdeci">static const unsigned int uIntegerDoublePi</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dc0/_our_math_8h_source.html#l00090">OurMath.h:90</a></div></div>
+<div class="ttc" id="astructstru193__math_html_a0a30af82a3eb6b7968a3a3e72a6e4fc2"><div class="ttname"><a href="../../d6/d38/structstru193__math.html#a0a30af82a3eb6b7968a3a3e72a6e4fc2">stru193_math::uDoublePiMask</a></div><div class="ttdeci">static const unsigned int uDoublePiMask</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dc0/_our_math_8h_source.html#l00091">OurMath.h:91</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a5ffadbbacc6b89cf6218bc43b384d3fe"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a5ffadbbacc6b89cf6218bc43b384d3fe">right</a></div><div class="ttdeci">GLdouble GLdouble right</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l06106">SDL_opengl_glext.h:6106</a></div></div>
+<div class="ttc" id="a_our_math_8cpp_html_a26d802a4465483f7c2f89657b75c9ebe"><div class="ttname"><a href="../../de/db6/_our_math_8cpp.html#a26d802a4465483f7c2f89657b75c9ebe">fixpoint_div</a></div><div class="ttdeci">__int64 fixpoint_div(int a1, int a2)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/db6/_our_math_8cpp_source.html#l00147">OurMath.cpp:147</a></div></div>
+<div class="ttc" id="astructstru193__math_html_a934f5bef4348dfa90bc562afbf38caac"><div class="ttname"><a href="../../d6/d38/structstru193__math.html#a934f5bef4348dfa90bc562afbf38caac">stru193_math::uIntegerHalfPi</a></div><div class="ttdeci">static const unsigned int uIntegerHalfPi</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dc0/_our_math_8h_source.html#l00089">OurMath.h:89</a></div></div>
+<div class="ttc" id="astructstru193__math_html_a259e37bc4a3568a0b8cd43e05699b377"><div class="ttname"><a href="../../d6/d38/structstru193__math.html#a259e37bc4a3568a0b8cd43e05699b377">stru193_math::pCosTable</a></div><div class="ttdeci">int pCosTable[520]</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dc0/_our_math_8h_source.html#l00086">OurMath.h:86</a></div></div>
+<div class="ttc" id="a_our_math_8cpp_html_a6b46ede8d1d8678f2c7835a70c46f10c"><div class="ttname"><a href="../../de/db6/_our_math_8cpp.html#a6b46ede8d1d8678f2c7835a70c46f10c">GetDiceResult</a></div><div class="ttdeci">int GetDiceResult(unsigned int uNumDice, unsigned int uDiceSides)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/db6/_our_math_8cpp_source.html#l00194">OurMath.cpp:194</a></div></div>
+<div class="ttc" id="a_our_math_8cpp_html_a2ceb3f872920afca04b7158dbda4078a"><div class="ttname"><a href="../../de/db6/_our_math_8cpp.html#a2ceb3f872920afca04b7158dbda4078a">fixpoint_from_int</a></div><div class="ttdeci">int fixpoint_from_int(int lhv, int rhv)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/db6/_our_math_8cpp_source.html#l00161">OurMath.cpp:161</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a49825216c96caaeb09237b36651181c5"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a49825216c96caaeb09237b36651181c5">x1</a></div><div class="ttdeci">GLuint GLfloat GLfloat GLfloat x1</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l08586">SDL_opengl_glext.h:8586</a></div></div>
+<div class="ttc" id="a_engine_8h_html"><div class="ttname"><a href="../../de/dcf/_engine_8h.html">Engine.h</a></div></div>
+<div class="ttc" id="a_our_math_8cpp_html_a6df7012b7f2fca9b8855f2505479849f"><div class="ttname"><a href="../../de/db6/_our_math_8cpp.html#a6df7012b7f2fca9b8855f2505479849f">fixpoint_sub_unknown</a></div><div class="ttdeci">__int64 fixpoint_sub_unknown(int a1, int a2)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/db6/_our_math_8cpp_source.html#l00149">OurMath.cpp:149</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a321ff419cd5252e54cf95e64dc6687ee"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a321ff419cd5252e54cf95e64dc6687ee">result</a></div><div class="ttdeci">GLuint64EXT * result</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l09435">SDL_opengl_glext.h:9435</a></div></div>
+<div class="ttc" id="a_s_d_l__egl_8h_html_a1675d9d7bb68e1657ff028643b4037e3"><div class="ttname"><a href="../../df/d32/_s_d_l__egl_8h.html#a1675d9d7bb68e1657ff028643b4037e3">y</a></div><div class="ttdeci">EGLSurface EGLint EGLint y</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/_s_d_l__egl_8h_source.html#l01596">SDL_egl.h:1596</a></div></div>
+<div class="ttc" id="astructstru193__math_html_aadad20ef2466685f18f5ee0a2ae94b22"><div class="ttname"><a href="../../d6/d38/structstru193__math.html#aadad20ef2466685f18f5ee0a2ae94b22">stru193_math::stru193_math</a></div><div class="ttdeci">stru193_math()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/db6/_our_math_8cpp_source.html#l00005">OurMath.cpp:5</a></div></div>
+<div class="ttc" id="a_our_math_8cpp_html_a58862672cc5cd743a746469cb57f63fb"><div class="ttname"><a href="../../de/db6/_our_math_8cpp.html#a58862672cc5cd743a746469cb57f63fb">fixpoint_dot</a></div><div class="ttdeci">__int64 fixpoint_dot(int x1, int x2, int y1, int y2, int z1, int z2)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/db6/_our_math_8cpp_source.html#l00142">OurMath.cpp:142</a></div></div>
+<div class="ttc" id="a_s_d_l__egl_8h_html_ad0e63d0edcdbd3d79554076bf309fd47"><div class="ttname"><a href="../../df/d32/_s_d_l__egl_8h.html#ad0e63d0edcdbd3d79554076bf309fd47">x</a></div><div class="ttdeci">EGLSurface EGLint x</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/_s_d_l__egl_8h_source.html#l01596">SDL_egl.h:1596</a></div></div>
+<div class="ttc" id="astructstru193__math_html_a45f7ef5dbe80155b3434165459321918"><div class="ttname"><a href="../../d6/d38/structstru193__math.html#a45f7ef5dbe80155b3434165459321918">stru193_math::pTanTable</a></div><div class="ttdeci">int pTanTable[520]</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dc0/_our_math_8h_source.html#l00085">OurMath.h:85</a></div></div>
+<div class="ttc" id="a_our_math_8cpp_html_a60e23493341fe2f31d154b9f2a14f1bd"><div class="ttname"><a href="../../de/db6/_our_math_8cpp.html#a60e23493341fe2f31d154b9f2a14f1bd">fixpoint_from_float</a></div><div class="ttdeci">int fixpoint_from_float(float val)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/db6/_our_math_8cpp_source.html#l00154">OurMath.cpp:154</a></div></div>
+<div class="ttc" id="a_our_math_8cpp_html_abc4811d26f9864e00046c39c39d65680"><div class="ttname"><a href="../../de/db6/_our_math_8cpp.html#abc4811d26f9864e00046c39c39d65680">fixpoint_mul</a></div><div class="ttdeci">__int64 fixpoint_mul(int a1, int a2)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/db6/_our_math_8cpp_source.html#l00138">OurMath.cpp:138</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a691492ec0bd6383f91200e49f6ae40ed"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a691492ec0bd6383f91200e49f6ae40ed">f</a></div><div class="ttdeci">GLfloat f</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l01873">SDL_opengl_glext.h:1873</a></div></div>
+<div class="ttc" id="astructstru193__math_html_aabdd01d94396ad962c512e3a06895ce2"><div class="ttname"><a href="../../d6/d38/structstru193__math.html#aabdd01d94396ad962c512e3a06895ce2">stru193_math::pInvCosTable</a></div><div class="ttdeci">int pInvCosTable[520]</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dc0/_our_math_8h_source.html#l00087">OurMath.h:87</a></div></div>
+<div class="ttc" id="astructstru193__math_html_ae5c580a8915049b2fe00949acf3ca728"><div class="ttname"><a href="../../d6/d38/structstru193__math.html#ae5c580a8915049b2fe00949acf3ca728">stru193_math::Atan2</a></div><div class="ttdeci">unsigned int Atan2(int x, int y)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/db6/_our_math_8cpp_source.html#l00046">OurMath.cpp:46</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a26942fd2ed566ef553eae82d2c109c8f"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a26942fd2ed566ef553eae82d2c109c8f">val</a></div><div class="ttdeci">GLuint GLfloat * val</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l01495">SDL_opengl_glext.h:1495</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a7b907a03236685c534d89d604cff23c8"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a7b907a03236685c534d89d604cff23c8">x2</a></div><div class="ttdeci">GLfixed GLfixed x2</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l04586">SDL_opengl_glext.h:4586</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a0928f6d0f0f794ba000a21dfae422136"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a0928f6d0f0f794ba000a21dfae422136">v2</a></div><div class="ttdeci">GLfloat GLfloat GLfloat v2</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l00695">SDL_opengl_glext.h:695</a></div></div>
+<div class="ttc" id="a_our_math_8cpp_html_aac6e421d654d85d401b67bcb0da79680"><div class="ttname"><a href="../../de/db6/_our_math_8cpp.html#aac6e421d654d85d401b67bcb0da79680">integer_sqrt</a></div><div class="ttdeci">int integer_sqrt(int val)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/db6/_our_math_8cpp_source.html#l00164">OurMath.cpp:164</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_acc806b31cbf466ceba6555983d8b814d"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#acc806b31cbf466ceba6555983d8b814d">v3</a></div><div class="ttdeci">GLfloat GLfloat GLfloat GLfloat v3</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l00696">SDL_opengl_glext.h:696</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a3af6c78fcdfccea028a5878bc747ef39"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a3af6c78fcdfccea028a5878bc747ef39">y1</a></div><div class="ttdeci">GLfixed y1</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l04586">SDL_opengl_glext.h:4586</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a2be1135ed68e8d80fa9e130c7814f8c2"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a2be1135ed68e8d80fa9e130c7814f8c2">y2</a></div><div class="ttdeci">GLfixed GLfixed GLfixed y2</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l04586">SDL_opengl_glext.h:4586</a></div></div>
+<div class="ttc" id="astructstru193__math_html_a7a4a47e93ff200721e19681b71783c51"><div class="ttname"><a href="../../d6/d38/structstru193__math.html#a7a4a47e93ff200721e19681b71783c51">stru193_math::Cos</a></div><div class="ttdeci">int Cos(int angle)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/db6/_our_math_8cpp_source.html#l00028">OurMath.cpp:28</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a9e06c1f76a20fed54ca742cd25cb02c4"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a9e06c1f76a20fed54ca742cd25cb02c4">angle</a></div><div class="ttdeci">GLfloat angle</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l06100">SDL_opengl_glext.h:6100</a></div></div>
+<div class="ttc" id="a_our_math_8h_html"><div class="ttname"><a href="../../d0/dc0/_our_math_8h.html">OurMath.h</a></div></div>
+<div class="ttc" id="astructstru193__math_html_a9bd57620c86e36d03d93f2306f8ab80a"><div class="ttname"><a href="../../d6/d38/structstru193__math.html#a9bd57620c86e36d03d93f2306f8ab80a">stru193_math::Sin</a></div><div class="ttdeci">int Sin(int angle)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/db6/_our_math_8cpp_source.html#l00133">OurMath.cpp:133</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a85b8f6c07fbc1fb5d77c2ae090f21995"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a85b8f6c07fbc1fb5d77c2ae090f21995">left</a></div><div class="ttdeci">GLint left</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l01952">SDL_opengl_glext.h:1952</a></div></div>
+<div class="ttc" id="astructstru193__math_html_a3cc39ca567bc6b6c1a11a064df1f297f"><div class="ttname"><a href="../../d6/d38/structstru193__math.html#a3cc39ca567bc6b6c1a11a064df1f297f">stru193_math::uIntegerPi</a></div><div class="ttdeci">static const unsigned int uIntegerPi</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dc0/_our_math_8h_source.html#l00088">OurMath.h:88</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_0b6ee6e7e9547e675db4add2e5de97da.html">Engine</a></li><li class="navelem"><a class="el" href="../../de/db6/_our_math_8cpp.html">OurMath.cpp</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:03:32. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

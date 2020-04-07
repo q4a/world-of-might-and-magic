@@ -1,0 +1,45 @@
+var _s_d_l__system_8h =
+[
+    [ "SDL_WindowsMessageHook", "d9/d7c/_s_d_l__system_8h.html#a2893a6e30c95d576736e333237b98bbc", null ],
+    [ "IDirect3DDevice9", "d9/d7c/_s_d_l__system_8h.html#aa995839c488ceda33ed998bbfa79c2a9", null ],
+    [ "SDL_WinRT_Path", "d9/d7c/_s_d_l__system_8h.html#a440cc3d867286d8f602805f95a08f1ee", [
+      [ "SDL_WINRT_PATH_INSTALLED_LOCATION", "d9/d7c/_s_d_l__system_8h.html#a440cc3d867286d8f602805f95a08f1eeafb74cfaa0edb18afaf46cf9e555ecb40", null ],
+      [ "SDL_WINRT_PATH_LOCAL_FOLDER", "d9/d7c/_s_d_l__system_8h.html#a440cc3d867286d8f602805f95a08f1eeab471aff43442ebb033ba3fbbd3913a1c", null ],
+      [ "SDL_WINRT_PATH_ROAMING_FOLDER", "d9/d7c/_s_d_l__system_8h.html#a440cc3d867286d8f602805f95a08f1eeae0f75b335ea464dde9b168fd1691b48f", null ],
+      [ "SDL_WINRT_PATH_TEMP_FOLDER", "d9/d7c/_s_d_l__system_8h.html#a440cc3d867286d8f602805f95a08f1eea9a451c52f98a046705bdd51257657d23", null ]
+    ] ],
+    [ "SDL_WinRT_DeviceFamily", "d9/d7c/_s_d_l__system_8h.html#a08f4191a0cddd95466752fe2238ae810", [
+      [ "SDL_WINRT_DEVICEFAMILY_UNKNOWN", "d9/d7c/_s_d_l__system_8h.html#a08f4191a0cddd95466752fe2238ae810a823f650aee2ecd29f75eb375e1daed08", null ],
+      [ "SDL_WINRT_DEVICEFAMILY_DESKTOP", "d9/d7c/_s_d_l__system_8h.html#a08f4191a0cddd95466752fe2238ae810a5bcf9c1dd6e4b919e5846e9311421748", null ],
+      [ "SDL_WINRT_DEVICEFAMILY_MOBILE", "d9/d7c/_s_d_l__system_8h.html#a08f4191a0cddd95466752fe2238ae810acb5e0dc9d4c9f8cc5138e7314140c490", null ],
+      [ "SDL_WINRT_DEVICEFAMILY_XBOX", "d9/d7c/_s_d_l__system_8h.html#a08f4191a0cddd95466752fe2238ae810a10110058700c924bedd3fbe6127dd97e", null ]
+    ] ],
+    [ "SDL_SetWindowsMessageHook", "d9/d7c/_s_d_l__system_8h.html#a3ee70959067d938e3a3f80e43f3157a8", null ],
+    [ "SDL_Direct3D9GetAdapterIndex", "d9/d7c/_s_d_l__system_8h.html#a6e02336961a1fe8dd27c04733117371a", null ],
+    [ "SDL_RenderGetD3D9Device", "d9/d7c/_s_d_l__system_8h.html#adcfe0853c55093a8f7ea6d5b9ff41097", null ],
+    [ "SDL_DXGIGetOutputInfo", "d9/d7c/_s_d_l__system_8h.html#a4d89d5fdbaa443c76856d612739d17c0", null ],
+    [ "SDL_LinuxSetThreadPriority", "d9/d7c/_s_d_l__system_8h.html#ad8b089710ddbb2e3133c8b78d687051e", null ],
+    [ "SDL_iPhoneSetAnimationCallback", "d9/d7c/_s_d_l__system_8h.html#aa39cfd8b255adb42149c7204ecf50823", null ],
+    [ "SDL_iPhoneSetEventPump", "d9/d7c/_s_d_l__system_8h.html#a4b4fb7a09ddb8304b18debf6bfd7ca13", null ],
+    [ "SDL_AndroidGetJNIEnv", "d9/d7c/_s_d_l__system_8h.html#aae2559eaec8b8239360f629919ded363", null ],
+    [ "SDL_AndroidGetActivity", "d9/d7c/_s_d_l__system_8h.html#a5c8af38268c4bf8a2885d47a2c62e236", null ],
+    [ "SDL_GetAndroidSDKVersion", "d9/d7c/_s_d_l__system_8h.html#ab24f21211fa79a76247ba1beab0ef4c7", null ],
+    [ "SDL_IsAndroidTV", "d9/d7c/_s_d_l__system_8h.html#ad034e62cd98deb37b0407b3ee28ab377", null ],
+    [ "SDL_IsChromebook", "d9/d7c/_s_d_l__system_8h.html#a85e791b8175f0e81b324a6a974b3abaf", null ],
+    [ "SDL_IsDeXMode", "d9/d7c/_s_d_l__system_8h.html#a353602b01a75bb5a8714db48448edf3d", null ],
+    [ "SDL_AndroidBackButton", "d9/d7c/_s_d_l__system_8h.html#a763a0616f2892dd995b332f0c4515495", null ],
+    [ "SDL_AndroidGetInternalStoragePath", "d9/d7c/_s_d_l__system_8h.html#a58501c9ea7e4ccfb1d83f2025540db18", null ],
+    [ "SDL_AndroidGetExternalStorageState", "d9/d7c/_s_d_l__system_8h.html#ad5b0a121988392b39eb1022bd836f571", null ],
+    [ "SDL_AndroidGetExternalStoragePath", "d9/d7c/_s_d_l__system_8h.html#a5ca40a20f27902d5e90c42ac3b14a2fe", null ],
+    [ "SDL_WinRTGetFSPathUNICODE", "d9/d7c/_s_d_l__system_8h.html#a7d7bcf2ef5aee2ba60aefe387d473ab1", null ],
+    [ "SDL_WinRTGetFSPathUTF8", "d9/d7c/_s_d_l__system_8h.html#a26c195948692ce218bd848b0bc6ed950", null ],
+    [ "SDL_WinRTGetDeviceFamily", "d9/d7c/_s_d_l__system_8h.html#ab3496685286ce4d1c25a57e222dd28f8", null ],
+    [ "SDL_IsTablet", "d9/d7c/_s_d_l__system_8h.html#a211a146233e8e37c64185105132e6257", null ],
+    [ "SDL_OnApplicationWillTerminate", "d9/d7c/_s_d_l__system_8h.html#ae3e44a610898157232a49a754fc3ab9a", null ],
+    [ "SDL_OnApplicationDidReceiveMemoryWarning", "d9/d7c/_s_d_l__system_8h.html#ae0ff6644972f065a06072426a0f1691f", null ],
+    [ "SDL_OnApplicationWillResignActive", "d9/d7c/_s_d_l__system_8h.html#ad8e8c246a466b29a84a9018cb0803a55", null ],
+    [ "SDL_OnApplicationDidEnterBackground", "d9/d7c/_s_d_l__system_8h.html#af10116e8b6a71fb584a0cec7e582f9ec", null ],
+    [ "SDL_OnApplicationWillEnterForeground", "d9/d7c/_s_d_l__system_8h.html#a4292c3354aed782e634ee116d23cfd26", null ],
+    [ "SDL_OnApplicationDidBecomeActive", "d9/d7c/_s_d_l__system_8h.html#a3e224d35ef257b2a7583e02ac9dabe90", null ],
+    [ "SDL_OnApplicationDidChangeStatusBarOrientation", "d9/d7c/_s_d_l__system_8h.html#a28c907d23a5db116b0287d2eb89f2fdb", null ]
+];

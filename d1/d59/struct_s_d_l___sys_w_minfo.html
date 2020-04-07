@@ -1,0 +1,848 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Структура SDL_SysWMinfo</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d1/d59/struct_s_d_l___sys_w_minfo.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="../../da/d8a/struct_s_d_l___sys_w_minfo-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Структура SDL_SysWMinfo</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="../../de/df3/_s_d_l__syswm_8h_source.html">SDL_syswm.h</a>&gt;</code></p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Граф связей класса SDL_SysWMinfo:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d9/d47/struct_s_d_l___sys_w_minfo__coll__graph.svg" width="132" height="127"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:ac3a70af022d4849e9ff546595e94627f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/d84/struct_s_d_l__version.html">SDL_version</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d59/struct_s_d_l___sys_w_minfo.html#ac3a70af022d4849e9ff546595e94627f">version</a></td></tr>
+<tr class="separator:ac3a70af022d4849e9ff546595e94627f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a438b6a06ab3ee417293c7b7fc5a23855"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/df3/_s_d_l__syswm_8h.html#a064c26598287280fff2a00d6758ac4f7">SDL_SYSWM_TYPE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d59/struct_s_d_l___sys_w_minfo.html#a438b6a06ab3ee417293c7b7fc5a23855">subsystem</a></td></tr>
+<tr class="separator:a438b6a06ab3ee417293c7b7fc5a23855"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4433c0ff6e9faf723d8a775259d020f"><td class="memItemLeft" >union {</td></tr>
+<tr class="memitem:ae527309e9f657d1d22058416595bcafd"><td class="memItemLeft" >&#160;&#160;&#160;struct {</td></tr>
+<tr class="memitem:ab5c8a3a6352222b6fe17ae3633c133c0"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;HWND&#160;&#160;&#160;<a class="el" href="../../d1/d59/struct_s_d_l___sys_w_minfo.html#af06225591ff07e837bbd037728a525b9">window</a></td></tr>
+<tr class="separator:ab5c8a3a6352222b6fe17ae3633c133c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8d628843921d561f2d7c895b0a9ba6e"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;HDC&#160;&#160;&#160;<a class="el" href="../../d1/d59/struct_s_d_l___sys_w_minfo.html#a5c9d0745b083422834681e99c38b803e">hdc</a></td></tr>
+<tr class="separator:ae8d628843921d561f2d7c895b0a9ba6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6f97a5c983755cb45b4851fe748c466"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;HINSTANCE&#160;&#160;&#160;<a class="el" href="../../d1/d59/struct_s_d_l___sys_w_minfo.html#ae3e93d21e2b20b2069f5f7d5308194f1">hinstance</a></td></tr>
+<tr class="separator:aa6f97a5c983755cb45b4851fe748c466"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae527309e9f657d1d22058416595bcafd"><td class="memItemLeft" valign="top">&#160;&#160;&#160;}&#160;&#160;&#160;<a class="el" href="../../d1/d59/struct_s_d_l___sys_w_minfo.html#a2d85e43774cbdafc76c490f13af89607">win</a></td></tr>
+<tr class="separator:ae527309e9f657d1d22058416595bcafd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ada705a0ccb593d15a07f77a60d4d71"><td class="memItemLeft" >&#160;&#160;&#160;struct {</td></tr>
+<tr class="memitem:a9506ae31fb30134f9c43b59b9233b1b8"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;IInspectable *&#160;&#160;&#160;<a class="el" href="../../d1/d59/struct_s_d_l___sys_w_minfo.html#ac6860cd821e71542c242622ca3f7c1e2">window</a></td></tr>
+<tr class="separator:a9506ae31fb30134f9c43b59b9233b1b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ada705a0ccb593d15a07f77a60d4d71"><td class="memItemLeft" valign="top">&#160;&#160;&#160;}&#160;&#160;&#160;<a class="el" href="../../d1/d59/struct_s_d_l___sys_w_minfo.html#a38662cf602a70395a3c9426e99184ccf">winrt</a></td></tr>
+<tr class="separator:a8ada705a0ccb593d15a07f77a60d4d71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af062c93f42ca1f3dce35759984882304"><td class="memItemLeft" >&#160;&#160;&#160;struct {</td></tr>
+<tr class="memitem:af3abab17d0763ef250d4e8b4815a7aa0"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;Display *&#160;&#160;&#160;<a class="el" href="../../d1/d59/struct_s_d_l___sys_w_minfo.html#a58ef8bc8e1065e95e75a08d08f4a4741">display</a></td></tr>
+<tr class="separator:af3abab17d0763ef250d4e8b4815a7aa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a0389d08bac47445bb492990cc042fe"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;Window&#160;&#160;&#160;<a class="el" href="../../d1/d59/struct_s_d_l___sys_w_minfo.html#a83ca4b0f4bdf67a0edee03d5bde86b93">window</a></td></tr>
+<tr class="separator:a3a0389d08bac47445bb492990cc042fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af062c93f42ca1f3dce35759984882304"><td class="memItemLeft" valign="top">&#160;&#160;&#160;}&#160;&#160;&#160;<a class="el" href="../../d1/d59/struct_s_d_l___sys_w_minfo.html#a5175e05fe7ce53835601b15816d79940">x11</a></td></tr>
+<tr class="separator:af062c93f42ca1f3dce35759984882304"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35d1cbdc24922131b0a94bc900f50404"><td class="memItemLeft" >&#160;&#160;&#160;struct {</td></tr>
+<tr class="memitem:a98c1e14e675e66a31d9347e3fed2f9b0"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;IDirectFB *&#160;&#160;&#160;<a class="el" href="../../d1/d59/struct_s_d_l___sys_w_minfo.html#af6e2eca8f33b5e47d8e26b752d82baa7">dfb</a></td></tr>
+<tr class="separator:a98c1e14e675e66a31d9347e3fed2f9b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8038e611759f92bc1beeef600977ced"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;IDirectFBWindow *&#160;&#160;&#160;<a class="el" href="../../d1/d59/struct_s_d_l___sys_w_minfo.html#a8e8537189c08d15c6151792b701314a0">window</a></td></tr>
+<tr class="separator:ae8038e611759f92bc1beeef600977ced"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80780f8df08d37c1db40aa3d5b6e7b93"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;IDirectFBSurface *&#160;&#160;&#160;<a class="el" href="../../d1/d59/struct_s_d_l___sys_w_minfo.html#a5784f17efcbd981f030f7023883c933f">surface</a></td></tr>
+<tr class="separator:a80780f8df08d37c1db40aa3d5b6e7b93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35d1cbdc24922131b0a94bc900f50404"><td class="memItemLeft" valign="top">&#160;&#160;&#160;}&#160;&#160;&#160;<a class="el" href="../../d1/d59/struct_s_d_l___sys_w_minfo.html#a32037a635bf874472a0ada674ce3149e">dfb</a></td></tr>
+<tr class="separator:a35d1cbdc24922131b0a94bc900f50404"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23ee77a9b4bb59aafd22e9516d7f0f8f"><td class="memItemLeft" >&#160;&#160;&#160;struct {</td></tr>
+<tr class="memitem:a3e6311ab8e182cc3d5f1d186a2f26e03"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;<a class="el" href="../../de/df3/_s_d_l__syswm_8h.html#acdc50a3c7569e5419370b3dbafd7131a">NSWindow</a> __unsafe_unretained *&#160;&#160;&#160;<a class="el" href="../../d1/d59/struct_s_d_l___sys_w_minfo.html#a6cb063fcd85fb640f2de47a3e09c559e">window</a></td></tr>
+<tr class="separator:a3e6311ab8e182cc3d5f1d186a2f26e03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94ba042f1bdd97323fe2623c95260255"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;<a class="el" href="../../de/df3/_s_d_l__syswm_8h.html#acdc50a3c7569e5419370b3dbafd7131a">NSWindow</a> *&#160;&#160;&#160;<a class="el" href="../../d1/d59/struct_s_d_l___sys_w_minfo.html#af98dd3855f4e9000626830c7c8a36c0b">window</a></td></tr>
+<tr class="separator:a94ba042f1bdd97323fe2623c95260255"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23ee77a9b4bb59aafd22e9516d7f0f8f"><td class="memItemLeft" valign="top">&#160;&#160;&#160;}&#160;&#160;&#160;<a class="el" href="../../d1/d59/struct_s_d_l___sys_w_minfo.html#a6377a1ec6869b84b20c722cd5dcdd936">cocoa</a></td></tr>
+<tr class="separator:a23ee77a9b4bb59aafd22e9516d7f0f8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2d45988a790aea98afa61607e052f87"><td class="memItemLeft" >&#160;&#160;&#160;struct {</td></tr>
+<tr class="memitem:a781bd141f643b0456eaec02aa67b23bb"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;<a class="el" href="../../de/df3/_s_d_l__syswm_8h.html#ae5b140b1721159a15ebe5a7c8f381323">UIWindow</a> __unsafe_unretained *&#160;&#160;&#160;<a class="el" href="../../d1/d59/struct_s_d_l___sys_w_minfo.html#aef659a45069c4246dd60cff59d825df4">window</a></td></tr>
+<tr class="separator:a781bd141f643b0456eaec02aa67b23bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe8d304679afda37180de2e770ddbd1f"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;<a class="el" href="../../de/df3/_s_d_l__syswm_8h.html#ae5b140b1721159a15ebe5a7c8f381323">UIWindow</a> *&#160;&#160;&#160;<a class="el" href="../../d1/d59/struct_s_d_l___sys_w_minfo.html#a45c31681406c125426cd40855ec376b6">window</a></td></tr>
+<tr class="separator:afe8d304679afda37180de2e770ddbd1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d2e7fff3cf6eb7316b78069ef829b4b"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a68c4714e43d8e827d80759f9cb864f3c">GLuint</a>&#160;&#160;&#160;<a class="el" href="../../d1/d59/struct_s_d_l___sys_w_minfo.html#a5cc41f3ab7155f708b5f4db8d56495ee">framebuffer</a></td></tr>
+<tr class="separator:a8d2e7fff3cf6eb7316b78069ef829b4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af58e02db12a711eb4833617e5622374f"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a68c4714e43d8e827d80759f9cb864f3c">GLuint</a>&#160;&#160;&#160;<a class="el" href="../../d1/d59/struct_s_d_l___sys_w_minfo.html#af88139b6753b0b34f553562418ef9989">colorbuffer</a></td></tr>
+<tr class="separator:af58e02db12a711eb4833617e5622374f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2120768c485f903b2e5ce561bafe38f"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;<a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a68c4714e43d8e827d80759f9cb864f3c">GLuint</a>&#160;&#160;&#160;<a class="el" href="../../d1/d59/struct_s_d_l___sys_w_minfo.html#a9acfcd8dfa4ef2d6ac87145cd62ba249">resolveFramebuffer</a></td></tr>
+<tr class="separator:af2120768c485f903b2e5ce561bafe38f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2d45988a790aea98afa61607e052f87"><td class="memItemLeft" valign="top">&#160;&#160;&#160;}&#160;&#160;&#160;<a class="el" href="../../d1/d59/struct_s_d_l___sys_w_minfo.html#a4acde68b806d3c67bba1eaf63a805c65">uikit</a></td></tr>
+<tr class="separator:aa2d45988a790aea98afa61607e052f87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1dcd2d3a05f5dc4fcb04cebe08318d71"><td class="memItemLeft" >&#160;&#160;&#160;struct {</td></tr>
+<tr class="memitem:ae570e267b13d4c04edaf31a4c4af2dcc"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;struct wl_display *&#160;&#160;&#160;<a class="el" href="../../d1/d59/struct_s_d_l___sys_w_minfo.html#a148aa67e71b758f6930165fbc027e2b2">display</a></td></tr>
+<tr class="separator:ae570e267b13d4c04edaf31a4c4af2dcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a212c3b82b5f41e14c5a2916681382ff7"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;struct wl_surface *&#160;&#160;&#160;<a class="el" href="../../d1/d59/struct_s_d_l___sys_w_minfo.html#a24a91614de4a63682f391f38c7ebb7a2">surface</a></td></tr>
+<tr class="separator:a212c3b82b5f41e14c5a2916681382ff7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeaa282e6423ddcb2c4bb05650947bcb4"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;struct wl_shell_surface *&#160;&#160;&#160;<a class="el" href="../../d1/d59/struct_s_d_l___sys_w_minfo.html#a599f8ae7807209c4160fd6580015e2a3">shell_surface</a></td></tr>
+<tr class="separator:aeaa282e6423ddcb2c4bb05650947bcb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1dcd2d3a05f5dc4fcb04cebe08318d71"><td class="memItemLeft" valign="top">&#160;&#160;&#160;}&#160;&#160;&#160;<a class="el" href="../../d1/d59/struct_s_d_l___sys_w_minfo.html#ac3f9dbffea5f3eef9f6611feb44e89ba">wl</a></td></tr>
+<tr class="separator:a1dcd2d3a05f5dc4fcb04cebe08318d71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fc637a2efdd6e94760f5af401024987"><td class="memItemLeft" >&#160;&#160;&#160;struct {</td></tr>
+<tr class="memitem:a61a2db15d9d793ac238c70659dbe2651"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;<a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *&#160;&#160;&#160;<a class="el" href="../../d1/d59/struct_s_d_l___sys_w_minfo.html#ad90d8a9ccc9c2f8db37901f1dded28e6">connection</a></td></tr>
+<tr class="separator:a61a2db15d9d793ac238c70659dbe2651"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15ddf6c5192b7e80b7d338f7b10a387c"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;<a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *&#160;&#160;&#160;<a class="el" href="../../d1/d59/struct_s_d_l___sys_w_minfo.html#ad84d9490e4ad6b3b589acaca6a7e814e">surface</a></td></tr>
+<tr class="separator:a15ddf6c5192b7e80b7d338f7b10a387c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fc637a2efdd6e94760f5af401024987"><td class="memItemLeft" valign="top">&#160;&#160;&#160;}&#160;&#160;&#160;<a class="el" href="../../d1/d59/struct_s_d_l___sys_w_minfo.html#ad7af49ea84af27fa89472d4d390bae6b">mir</a></td></tr>
+<tr class="separator:a4fc637a2efdd6e94760f5af401024987"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a962a6f61989a7194b6f3a8b36fd6b786"><td class="memItemLeft" >&#160;&#160;&#160;struct {</td></tr>
+<tr class="memitem:a0e77b05d094e8da9e253bcbb8f24b222"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;<a class="el" href="../../de/df3/_s_d_l__syswm_8h.html#a66956d540c2e3709e12156d195e64726">ANativeWindow</a> *&#160;&#160;&#160;<a class="el" href="../../d1/d59/struct_s_d_l___sys_w_minfo.html#aa04f70e2e01593a35c1ac935a477f35f">window</a></td></tr>
+<tr class="separator:a0e77b05d094e8da9e253bcbb8f24b222"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab433482471999c5d6acbce5ec2096aa5"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;<a class="el" href="../../df/d32/_s_d_l__egl_8h.html#afdf6ff8dd00cd23228e4bfacd693e3e0">EGLSurface</a>&#160;&#160;&#160;<a class="el" href="../../d1/d59/struct_s_d_l___sys_w_minfo.html#af57c868a494c4b7b341d6fae215f29d8">surface</a></td></tr>
+<tr class="separator:ab433482471999c5d6acbce5ec2096aa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a962a6f61989a7194b6f3a8b36fd6b786"><td class="memItemLeft" valign="top">&#160;&#160;&#160;}&#160;&#160;&#160;<a class="el" href="../../d1/d59/struct_s_d_l___sys_w_minfo.html#adadef2d360e893e6355ddd84ed04d928">android</a></td></tr>
+<tr class="separator:a962a6f61989a7194b6f3a8b36fd6b786"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a836bc25fc2d395b7c511fb3a3264840e"><td class="memItemLeft" >&#160;&#160;&#160;struct {</td></tr>
+<tr class="memitem:a686821487bb751bf4990862c2791e6f1"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;<a class="el" href="../../df/d32/_s_d_l__egl_8h.html#a128581db27a8ceb43480c355d324a159">EGLNativeDisplayType</a>&#160;&#160;&#160;<a class="el" href="../../d1/d59/struct_s_d_l___sys_w_minfo.html#ad314a8d6f63184338bfb9f0fe47e4727">display</a></td></tr>
+<tr class="separator:a686821487bb751bf4990862c2791e6f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ffc1731d9ef5feccf84f23a5d855daa"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;<a class="el" href="../../df/d32/_s_d_l__egl_8h.html#af35c51d9926b99f265eef71096b586e2">EGLNativeWindowType</a>&#160;&#160;&#160;<a class="el" href="../../d1/d59/struct_s_d_l___sys_w_minfo.html#aeb37ee77853021304b17fcb9e7a28ccc">window</a></td></tr>
+<tr class="separator:a0ffc1731d9ef5feccf84f23a5d855daa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a836bc25fc2d395b7c511fb3a3264840e"><td class="memItemLeft" valign="top">&#160;&#160;&#160;}&#160;&#160;&#160;<a class="el" href="../../d1/d59/struct_s_d_l___sys_w_minfo.html#a3908c87745bb709c7050bbc99719effb">vivante</a></td></tr>
+<tr class="separator:a836bc25fc2d395b7c511fb3a3264840e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6143c7eaed86e0f9ab819fc2cb9c75bc"><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#a2944638813a090aa23e62f4da842c3e2">Uint8</a>&#160;&#160;&#160;<a class="el" href="../../d1/d59/struct_s_d_l___sys_w_minfo.html#a0e7fc58b98ae8317076e763fa94bc41f">dummy</a> [64]</td></tr>
+<tr class="separator:a6143c7eaed86e0f9ab819fc2cb9c75bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4433c0ff6e9faf723d8a775259d020f"><td class="memItemLeft" valign="top">}&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d59/struct_s_d_l___sys_w_minfo.html#ad4433c0ff6e9faf723d8a775259d020f">info</a></td></tr>
+<tr class="separator:ad4433c0ff6e9faf723d8a775259d020f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>The custom window manager information structure.</p>
+<p>When this structure is returned, it holds information about which low level system it is using, and will be one of SDL_SYSWM_TYPE. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/df3/_s_d_l__syswm_8h_source.html">SDL_syswm.h</a> строка <a class="el" href="../../de/df3/_s_d_l__syswm_8h_source.html#l00201">201</a></p>
+</div><h2 class="groupheader">Данные класса</h2>
+<a id="ac3a70af022d4849e9ff546595e94627f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3a70af022d4849e9ff546595e94627f">&#9670;&nbsp;</a></span>version</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d9/d84/struct_s_d_l__version.html">SDL_version</a> SDL_SysWMinfo::version</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/df3/_s_d_l__syswm_8h_source.html">SDL_syswm.h</a> строка <a class="el" href="../../de/df3/_s_d_l__syswm_8h_source.html#l00203">203</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d6/d76/_sdl2_window_8cpp_source.html#l00113">Sdl2Window::GetWinApiHandle()</a>.</p>
+
+</div>
+</div>
+<a id="a438b6a06ab3ee417293c7b7fc5a23855"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a438b6a06ab3ee417293c7b7fc5a23855">&#9670;&nbsp;</a></span>subsystem</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../de/df3/_s_d_l__syswm_8h.html#a064c26598287280fff2a00d6758ac4f7">SDL_SYSWM_TYPE</a> SDL_SysWMinfo::subsystem</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/df3/_s_d_l__syswm_8h_source.html">SDL_syswm.h</a> строка <a class="el" href="../../de/df3/_s_d_l__syswm_8h_source.html#l00204">204</a></p>
+
+</div>
+</div>
+<a id="af06225591ff07e837bbd037728a525b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af06225591ff07e837bbd037728a525b9">&#9670;&nbsp;</a></span>window <span class="overload">[1/10]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">HWND SDL_SysWMinfo::window</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The window handle </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/df3/_s_d_l__syswm_8h_source.html">SDL_syswm.h</a> строка <a class="el" href="../../de/df3/_s_d_l__syswm_8h_source.html#l00210">210</a></p>
+
+</div>
+</div>
+<a id="a5c9d0745b083422834681e99c38b803e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c9d0745b083422834681e99c38b803e">&#9670;&nbsp;</a></span>hdc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">HDC SDL_SysWMinfo::hdc</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The window device context </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/df3/_s_d_l__syswm_8h_source.html">SDL_syswm.h</a> строка <a class="el" href="../../de/df3/_s_d_l__syswm_8h_source.html#l00211">211</a></p>
+
+</div>
+</div>
+<a id="ae3e93d21e2b20b2069f5f7d5308194f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3e93d21e2b20b2069f5f7d5308194f1">&#9670;&nbsp;</a></span>hinstance</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">HINSTANCE SDL_SysWMinfo::hinstance</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The instance handle </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/df3/_s_d_l__syswm_8h_source.html">SDL_syswm.h</a> строка <a class="el" href="../../de/df3/_s_d_l__syswm_8h_source.html#l00212">212</a></p>
+
+</div>
+</div>
+<a id="a2d85e43774cbdafc76c490f13af89607"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d85e43774cbdafc76c490f13af89607">&#9670;&nbsp;</a></span>win</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct { ... }  SDL_SysWMinfo::win</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">Используется в <a class="el" href="../../d6/d76/_sdl2_window_8cpp_source.html#l00113">Sdl2Window::GetWinApiHandle()</a>.</p>
+
+</div>
+</div>
+<a id="ac6860cd821e71542c242622ca3f7c1e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6860cd821e71542c242622ca3f7c1e2">&#9670;&nbsp;</a></span>window <span class="overload">[2/10]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IInspectable* SDL_SysWMinfo::window</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The WinRT CoreWindow </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/df3/_s_d_l__syswm_8h_source.html">SDL_syswm.h</a> строка <a class="el" href="../../de/df3/_s_d_l__syswm_8h_source.html#l00218">218</a></p>
+
+</div>
+</div>
+<a id="a38662cf602a70395a3c9426e99184ccf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38662cf602a70395a3c9426e99184ccf">&#9670;&nbsp;</a></span>winrt</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct { ... }  SDL_SysWMinfo::winrt</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a58ef8bc8e1065e95e75a08d08f4a4741"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58ef8bc8e1065e95e75a08d08f4a4741">&#9670;&nbsp;</a></span>display <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Display* SDL_SysWMinfo::display</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The X11 display </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/df3/_s_d_l__syswm_8h_source.html">SDL_syswm.h</a> строка <a class="el" href="../../de/df3/_s_d_l__syswm_8h_source.html#l00224">224</a></p>
+
+</div>
+</div>
+<a id="a83ca4b0f4bdf67a0edee03d5bde86b93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83ca4b0f4bdf67a0edee03d5bde86b93">&#9670;&nbsp;</a></span>window <span class="overload">[3/10]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Window SDL_SysWMinfo::window</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The X11 window </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/df3/_s_d_l__syswm_8h_source.html">SDL_syswm.h</a> строка <a class="el" href="../../de/df3/_s_d_l__syswm_8h_source.html#l00225">225</a></p>
+
+</div>
+</div>
+<a id="a5175e05fe7ce53835601b15816d79940"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5175e05fe7ce53835601b15816d79940">&#9670;&nbsp;</a></span>x11</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct { ... }  SDL_SysWMinfo::x11</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">Используется в <a class="el" href="../../d6/d76/_sdl2_window_8cpp_source.html#l00113">Sdl2Window::GetWinApiHandle()</a>.</p>
+
+</div>
+</div>
+<a id="af6e2eca8f33b5e47d8e26b752d82baa7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6e2eca8f33b5e47d8e26b752d82baa7">&#9670;&nbsp;</a></span>dfb <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IDirectFB* SDL_SysWMinfo::dfb</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The directfb main interface </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/df3/_s_d_l__syswm_8h_source.html">SDL_syswm.h</a> строка <a class="el" href="../../de/df3/_s_d_l__syswm_8h_source.html#l00231">231</a></p>
+
+</div>
+</div>
+<a id="a8e8537189c08d15c6151792b701314a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e8537189c08d15c6151792b701314a0">&#9670;&nbsp;</a></span>window <span class="overload">[4/10]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IDirectFBWindow* SDL_SysWMinfo::window</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The directfb window handle </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/df3/_s_d_l__syswm_8h_source.html">SDL_syswm.h</a> строка <a class="el" href="../../de/df3/_s_d_l__syswm_8h_source.html#l00232">232</a></p>
+
+</div>
+</div>
+<a id="a5784f17efcbd981f030f7023883c933f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5784f17efcbd981f030f7023883c933f">&#9670;&nbsp;</a></span>surface <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IDirectFBSurface* SDL_SysWMinfo::surface</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The directfb client surface </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/df3/_s_d_l__syswm_8h_source.html">SDL_syswm.h</a> строка <a class="el" href="../../de/df3/_s_d_l__syswm_8h_source.html#l00233">233</a></p>
+
+</div>
+</div>
+<a id="a32037a635bf874472a0ada674ce3149e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32037a635bf874472a0ada674ce3149e">&#9670;&nbsp;</a></span>dfb <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct { ... }  SDL_SysWMinfo::dfb</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6cb063fcd85fb640f2de47a3e09c559e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6cb063fcd85fb640f2de47a3e09c559e">&#9670;&nbsp;</a></span>window <span class="overload">[5/10]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../de/df3/_s_d_l__syswm_8h.html#acdc50a3c7569e5419370b3dbafd7131a">NSWindow</a> __unsafe_unretained* SDL_SysWMinfo::window</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The Cocoa window </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/df3/_s_d_l__syswm_8h_source.html">SDL_syswm.h</a> строка <a class="el" href="../../de/df3/_s_d_l__syswm_8h_source.html#l00240">240</a></p>
+
+</div>
+</div>
+<a id="af98dd3855f4e9000626830c7c8a36c0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af98dd3855f4e9000626830c7c8a36c0b">&#9670;&nbsp;</a></span>window <span class="overload">[6/10]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../de/df3/_s_d_l__syswm_8h.html#acdc50a3c7569e5419370b3dbafd7131a">NSWindow</a>* SDL_SysWMinfo::window</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The Cocoa window </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/df3/_s_d_l__syswm_8h_source.html">SDL_syswm.h</a> строка <a class="el" href="../../de/df3/_s_d_l__syswm_8h_source.html#l00242">242</a></p>
+
+</div>
+</div>
+<a id="a6377a1ec6869b84b20c722cd5dcdd936"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6377a1ec6869b84b20c722cd5dcdd936">&#9670;&nbsp;</a></span>cocoa</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct { ... }  SDL_SysWMinfo::cocoa</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aef659a45069c4246dd60cff59d825df4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef659a45069c4246dd60cff59d825df4">&#9670;&nbsp;</a></span>window <span class="overload">[7/10]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../de/df3/_s_d_l__syswm_8h.html#ae5b140b1721159a15ebe5a7c8f381323">UIWindow</a> __unsafe_unretained* SDL_SysWMinfo::window</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The UIKit window </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/df3/_s_d_l__syswm_8h_source.html">SDL_syswm.h</a> строка <a class="el" href="../../de/df3/_s_d_l__syswm_8h_source.html#l00250">250</a></p>
+
+</div>
+</div>
+<a id="a45c31681406c125426cd40855ec376b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45c31681406c125426cd40855ec376b6">&#9670;&nbsp;</a></span>window <span class="overload">[8/10]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../de/df3/_s_d_l__syswm_8h.html#ae5b140b1721159a15ebe5a7c8f381323">UIWindow</a>* SDL_SysWMinfo::window</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The UIKit window </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/df3/_s_d_l__syswm_8h_source.html">SDL_syswm.h</a> строка <a class="el" href="../../de/df3/_s_d_l__syswm_8h_source.html#l00252">252</a></p>
+
+</div>
+</div>
+<a id="a5cc41f3ab7155f708b5f4db8d56495ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cc41f3ab7155f708b5f4db8d56495ee">&#9670;&nbsp;</a></span>framebuffer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a68c4714e43d8e827d80759f9cb864f3c">GLuint</a> SDL_SysWMinfo::framebuffer</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The GL view's Framebuffer Object. It must be bound when rendering to the screen using GL. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/df3/_s_d_l__syswm_8h_source.html">SDL_syswm.h</a> строка <a class="el" href="../../de/df3/_s_d_l__syswm_8h_source.html#l00254">254</a></p>
+
+</div>
+</div>
+<a id="af88139b6753b0b34f553562418ef9989"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af88139b6753b0b34f553562418ef9989">&#9670;&nbsp;</a></span>colorbuffer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a68c4714e43d8e827d80759f9cb864f3c">GLuint</a> SDL_SysWMinfo::colorbuffer</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The GL view's color Renderbuffer Object. It must be bound when SDL_GL_SwapWindow is called. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/df3/_s_d_l__syswm_8h_source.html">SDL_syswm.h</a> строка <a class="el" href="../../de/df3/_s_d_l__syswm_8h_source.html#l00255">255</a></p>
+
+</div>
+</div>
+<a id="a9acfcd8dfa4ef2d6ac87145cd62ba249"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9acfcd8dfa4ef2d6ac87145cd62ba249">&#9670;&nbsp;</a></span>resolveFramebuffer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../df/dc4/_s_d_l__opengl_8h.html#a68c4714e43d8e827d80759f9cb864f3c">GLuint</a> SDL_SysWMinfo::resolveFramebuffer</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The Framebuffer Object which holds the resolve color Renderbuffer, when MSAA is used. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/df3/_s_d_l__syswm_8h_source.html">SDL_syswm.h</a> строка <a class="el" href="../../de/df3/_s_d_l__syswm_8h_source.html#l00256">256</a></p>
+
+</div>
+</div>
+<a id="a4acde68b806d3c67bba1eaf63a805c65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4acde68b806d3c67bba1eaf63a805c65">&#9670;&nbsp;</a></span>uikit</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct { ... }  SDL_SysWMinfo::uikit</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a148aa67e71b758f6930165fbc027e2b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a148aa67e71b758f6930165fbc027e2b2">&#9670;&nbsp;</a></span>display <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct wl_display* SDL_SysWMinfo::display</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Wayland display </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/df3/_s_d_l__syswm_8h_source.html">SDL_syswm.h</a> строка <a class="el" href="../../de/df3/_s_d_l__syswm_8h_source.html#l00262">262</a></p>
+
+</div>
+</div>
+<a id="a24a91614de4a63682f391f38c7ebb7a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24a91614de4a63682f391f38c7ebb7a2">&#9670;&nbsp;</a></span>surface <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct wl_surface* SDL_SysWMinfo::surface</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Wayland surface </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/df3/_s_d_l__syswm_8h_source.html">SDL_syswm.h</a> строка <a class="el" href="../../de/df3/_s_d_l__syswm_8h_source.html#l00263">263</a></p>
+
+</div>
+</div>
+<a id="a599f8ae7807209c4160fd6580015e2a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a599f8ae7807209c4160fd6580015e2a3">&#9670;&nbsp;</a></span>shell_surface</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct wl_shell_surface* SDL_SysWMinfo::shell_surface</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Wayland shell_surface (window manager handle) </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/df3/_s_d_l__syswm_8h_source.html">SDL_syswm.h</a> строка <a class="el" href="../../de/df3/_s_d_l__syswm_8h_source.html#l00264">264</a></p>
+
+</div>
+</div>
+<a id="ac3f9dbffea5f3eef9f6611feb44e89ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3f9dbffea5f3eef9f6611feb44e89ba">&#9670;&nbsp;</a></span>wl</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct { ... }  SDL_SysWMinfo::wl</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad90d8a9ccc9c2f8db37901f1dded28e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad90d8a9ccc9c2f8db37901f1dded28e6">&#9670;&nbsp;</a></span>connection</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>* SDL_SysWMinfo::connection</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Mir display server connection </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/df3/_s_d_l__syswm_8h_source.html">SDL_syswm.h</a> строка <a class="el" href="../../de/df3/_s_d_l__syswm_8h_source.html#l00270">270</a></p>
+
+</div>
+</div>
+<a id="ad84d9490e4ad6b3b589acaca6a7e814e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad84d9490e4ad6b3b589acaca6a7e814e">&#9670;&nbsp;</a></span>surface <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>* SDL_SysWMinfo::surface</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Mir surface </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/df3/_s_d_l__syswm_8h_source.html">SDL_syswm.h</a> строка <a class="el" href="../../de/df3/_s_d_l__syswm_8h_source.html#l00271">271</a></p>
+
+</div>
+</div>
+<a id="ad7af49ea84af27fa89472d4d390bae6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7af49ea84af27fa89472d4d390bae6b">&#9670;&nbsp;</a></span>mir</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct { ... }  SDL_SysWMinfo::mir</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa04f70e2e01593a35c1ac935a477f35f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa04f70e2e01593a35c1ac935a477f35f">&#9670;&nbsp;</a></span>window <span class="overload">[9/10]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../de/df3/_s_d_l__syswm_8h.html#a66956d540c2e3709e12156d195e64726">ANativeWindow</a>* SDL_SysWMinfo::window</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/df3/_s_d_l__syswm_8h_source.html">SDL_syswm.h</a> строка <a class="el" href="../../de/df3/_s_d_l__syswm_8h_source.html#l00278">278</a></p>
+
+</div>
+</div>
+<a id="af57c868a494c4b7b341d6fae215f29d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af57c868a494c4b7b341d6fae215f29d8">&#9670;&nbsp;</a></span>surface <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../df/d32/_s_d_l__egl_8h.html#afdf6ff8dd00cd23228e4bfacd693e3e0">EGLSurface</a> SDL_SysWMinfo::surface</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/df3/_s_d_l__syswm_8h_source.html">SDL_syswm.h</a> строка <a class="el" href="../../de/df3/_s_d_l__syswm_8h_source.html#l00279">279</a></p>
+
+</div>
+</div>
+<a id="adadef2d360e893e6355ddd84ed04d928"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adadef2d360e893e6355ddd84ed04d928">&#9670;&nbsp;</a></span>android</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct { ... }  SDL_SysWMinfo::android</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad314a8d6f63184338bfb9f0fe47e4727"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad314a8d6f63184338bfb9f0fe47e4727">&#9670;&nbsp;</a></span>display <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../df/d32/_s_d_l__egl_8h.html#a128581db27a8ceb43480c355d324a159">EGLNativeDisplayType</a> SDL_SysWMinfo::display</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/df3/_s_d_l__syswm_8h_source.html">SDL_syswm.h</a> строка <a class="el" href="../../de/df3/_s_d_l__syswm_8h_source.html#l00286">286</a></p>
+
+</div>
+</div>
+<a id="aeb37ee77853021304b17fcb9e7a28ccc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb37ee77853021304b17fcb9e7a28ccc">&#9670;&nbsp;</a></span>window <span class="overload">[10/10]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../df/d32/_s_d_l__egl_8h.html#af35c51d9926b99f265eef71096b586e2">EGLNativeWindowType</a> SDL_SysWMinfo::window</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/df3/_s_d_l__syswm_8h_source.html">SDL_syswm.h</a> строка <a class="el" href="../../de/df3/_s_d_l__syswm_8h_source.html#l00287">287</a></p>
+
+</div>
+</div>
+<a id="a3908c87745bb709c7050bbc99719effb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3908c87745bb709c7050bbc99719effb">&#9670;&nbsp;</a></span>vivante</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct { ... }  SDL_SysWMinfo::vivante</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0e7fc58b98ae8317076e763fa94bc41f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e7fc58b98ae8317076e763fa94bc41f">&#9670;&nbsp;</a></span>dummy</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#a2944638813a090aa23e62f4da842c3e2">Uint8</a> SDL_SysWMinfo::dummy[64]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/df3/_s_d_l__syswm_8h_source.html">SDL_syswm.h</a> строка <a class="el" href="../../de/df3/_s_d_l__syswm_8h_source.html#l00293">293</a></p>
+
+</div>
+</div>
+<a id="ad4433c0ff6e9faf723d8a775259d020f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4433c0ff6e9faf723d8a775259d020f">&#9670;&nbsp;</a></span>info</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">union { ... }  SDL_SysWMinfo::info</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">Используется в <a class="el" href="../../d6/d76/_sdl2_window_8cpp_source.html#l00113">Sdl2Window::GetWinApiHandle()</a>.</p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов структуры находятся в файле:<ul>
+<li>C:/git/world-of-might-and-magic/lib/win32/x86/sdl2-2.0.12/include/<a class="el" href="../../de/df3/_s_d_l__syswm_8h_source.html">SDL_syswm.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../d1/d59/struct_s_d_l___sys_w_minfo.html">SDL_SysWMinfo</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:05:16. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

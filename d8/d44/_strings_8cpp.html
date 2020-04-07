@@ -1,0 +1,315 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Файл C:/git/world-of-might-and-magic/Engine/Strings.cpp</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d8/d44/_strings_8cpp.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл Strings.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><a href="../../d8/d44/_strings_8cpp_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a5e82a10895f9cdb451d997d26edfd1d2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d44/_strings_8cpp.html#a5e82a10895f9cdb451d997d26edfd1d2">StringFromInt</a> (int <a class="el" href="../../df/d32/_s_d_l__egl_8h.html#a8ad81492d410ff2ac11f754f4042150f">value</a>)</td></tr>
+<tr class="separator:a5e82a10895f9cdb451d997d26edfd1d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebf99e80337d8db0a005aebe8a13fb7f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d44/_strings_8cpp.html#aebf99e80337d8db0a005aebe8a13fb7f">StringPrintf</a> (const char *fmt,...)</td></tr>
+<tr class="separator:aebf99e80337d8db0a005aebe8a13fb7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae146e86f2bb99e255b31df22155b2d79"><td class="memItemLeft" align="right" valign="top">std::vector&lt; char * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d44/_strings_8cpp.html#ae146e86f2bb99e255b31df22155b2d79">Tokenize</a> (char *<a class="el" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#ad3c78daa7d8673f71649d4840c641779">input</a>, const char separator)</td></tr>
+<tr class="separator:ae146e86f2bb99e255b31df22155b2d79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae591bae1416df2b3638ae859ad4ede6f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d44/_strings_8cpp.html#ae591bae1416df2b3638ae859ad4ede6f">MakeLower</a> (const <a class="el" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> &amp;text)</td></tr>
+<tr class="separator:ae591bae1416df2b3638ae859ad4ede6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Функции</h2>
+<a id="a5e82a10895f9cdb451d997d26edfd1d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e82a10895f9cdb451d997d26edfd1d2">&#9670;&nbsp;</a></span>StringFromInt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> StringFromInt </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/d44/_strings_8cpp_source.html">Strings.cpp</a> строка <a class="el" href="../../d8/d44/_strings_8cpp_source.html#l00007">7</a></p>
+<div class="fragment"><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="../../d8/d44/_strings_8cpp.html#aebf99e80337d8db0a005aebe8a13fb7f">StringPrintf</a>(<span class="stringliteral">&quot;%d&quot;</span>, <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a8ad81492d410ff2ac11f754f4042150f">value</a>); }</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d8/d44/_strings_8cpp_source.html#l00009">StringPrintf()</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d3/d70/_arcomage_2_arcomage_8cpp_source.html#l01509">DrawPlayersText()</a>.</p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d8/d44/_strings_8cpp_a5e82a10895f9cdb451d997d26edfd1d2_cgraph.svg" width="246" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d8/d44/_strings_8cpp_a5e82a10895f9cdb451d997d26edfd1d2_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="aebf99e80337d8db0a005aebe8a13fb7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebf99e80337d8db0a005aebe8a13fb7f">&#9670;&nbsp;</a></span>StringPrintf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> StringPrintf </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>fmt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/d44/_strings_8cpp_source.html">Strings.cpp</a> строка <a class="el" href="../../d8/d44/_strings_8cpp_source.html#l00009">9</a></p>
+<div class="fragment"><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;                                          {</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../db/d76/group__lavu__mem__funcs.html#ga3d1e3edfcf61ca2d831883e1afbad89e">size</a> = 1024;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordtype">char</span> *<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a76461e97a098d2c9ae20ac193d3825ae">buffer</a> = <span class="keyword">new</span> <span class="keywordtype">char</span>[<a class="code" href="../../db/d76/group__lavu__mem__funcs.html#ga3d1e3edfcf61ca2d831883e1afbad89e">size</a>];</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    va_list va;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    va_start(va, fmt);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="keywordtype">int</span> nsize = vsnprintf(<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a76461e97a098d2c9ae20ac193d3825ae">buffer</a>, <a class="code" href="../../db/d76/group__lavu__mem__funcs.html#ga3d1e3edfcf61ca2d831883e1afbad89e">size</a>, fmt, va);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../db/d76/group__lavu__mem__funcs.html#ga3d1e3edfcf61ca2d831883e1afbad89e">size</a> &lt;= nsize) {  <span class="comment">// fail delete buffer and try again</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            <span class="keyword">delete</span>[] <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a76461e97a098d2c9ae20ac193d3825ae">buffer</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a76461e97a098d2c9ae20ac193d3825ae">buffer</a> = <span class="keyword">new</span> <span class="keywordtype">char</span>[nsize + 1];  <span class="comment">// +1 for \0</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            nsize = vsnprintf(<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a76461e97a098d2c9ae20ac193d3825ae">buffer</a>, <a class="code" href="../../db/d76/group__lavu__mem__funcs.html#ga3d1e3edfcf61ca2d831883e1afbad89e">size</a>, fmt, va);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        }</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    }</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    va_end(va);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> ret(<a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a76461e97a098d2c9ae20ac193d3825ae">buffer</a>);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">delete</span>[] <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a76461e97a098d2c9ae20ac193d3825ae">buffer</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">return</span> ret;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Используется в <a class="el" href="../../d9/dd3/_cast_spell_info_8cpp_source.html#l00046">CastSpellInfoHelpers::_427E01_cast_spell()</a>, <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l02074">BankDialog()</a>, <a class="el" href="../../db/dd5/_u_i_character_8cpp_source.html#l00812">GUIWindow_CharacterRecord::CharacterUI_AwardsTab_Draw()</a>, <a class="el" href="../../d6/ded/_u_i_popup_8cpp_source.html#l00051">CharacterUI_DrawTooltip()</a>, <a class="el" href="../../db/dd5/_u_i_character_8cpp_source.html#l01941">CharacterUI_LoadPaperdollTextures()</a>, <a class="el" href="../../db/dd5/_u_i_character_8cpp_source.html#l00776">GUIWindow_CharacterRecord::CharacterUI_SkillsTab_Draw()</a>, <a class="el" href="../../db/dd5/_u_i_character_8cpp_source.html#l00689">CharacterUI_SkillsTab_Draw__DrawSkillTable()</a>, <a class="el" href="../../db/dd5/_u_i_character_8cpp_source.html#l02296">GUIWindow_CharacterRecord::CharacterUI_StatsTab_Draw()</a>, <a class="el" href="../../d6/ded/_u_i_popup_8cpp_source.html#l01153">CharacterUI_StatsTab_ShowHint()</a>, <a class="el" href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00977">CreateScrollWindow()</a>, <a class="el" href="../../d4/d9d/_save_load_8cpp_source.html#l00514">DoSavegame()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l00252">Engine::DrawGUI()</a>, <a class="el" href="../../d6/ded/_u_i_popup_8cpp_source.html#l01372">DrawSpellDescriptionPopup()</a>, <a class="el" href="../../d7/db5/_game_8cpp_source.html#l00322">Application::Game::EventLoop()</a>, <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l01057">GameUI_CharacterQuickRecord_Draw()</a>, <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l01179">GameUI_DrawFoodAndGold()</a>, <a class="el" href="../../d6/ded/_u_i_popup_8cpp_source.html#l00168">GameUI_DrawItemInfo()</a>, <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l00891">GameUI_DrawNPCPopup()</a>, <a class="el" href="../../dd/d76/_u_i_dialogue_8cpp_source.html#l00025">GameUI_InitializeDialogue()</a>, <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l00170">GameUI_LoadPlayerPortraintsAndVoices()</a>, <a class="el" href="../../da/db4/_u_i_game_8cpp_source.html#l00199">GameUI_ReloadPlayerPortraits()</a>, <a class="el" href="../../d9/d99/_items_8cpp_source.html#l00619">ItemGen::GetIdentifiedName()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l01413">Player::GetMeleeDamageString()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l01441">Player::GetRangedDamageString()</a>, <a class="el" href="../../de/da8/_u_i_party_creation_8cpp_source.html#l00713">GUIWindow_PartyCreation::GUIWindow_PartyCreation()</a>, <a class="el" href="../../d9/d68/_u_i_save_load_8cpp_source.html#l00035">GUIWindow_Save::GUIWindow_Save()</a>, <a class="el" href="../../d7/d51/_g_u_i_progress_bar_8cpp_source.html#l00022">GUIProgressBar::Initialize()</a>, <a class="el" href="../../d6/d6c/_monsters_8cpp_source.html#l00491">MonsterStats::Initialize()</a>, <a class="el" href="../../d1/d3f/_spellbook_8cpp_source.html#l00321">InitializeSpellBookTextures()</a>, <a class="el" href="../../d1/d03/_outdoor_8cpp_source.html#l02143">OutdoorLocation::LoadActualSkyFrame()</a>, <a class="el" href="../../d4/d9d/_save_load_8cpp_source.html#l00077">LoadGame()</a>, <a class="el" href="../../dc/dce/_g_u_i_window_8cpp_source.html#l02530">LoadPartyBuffIcons()</a>, <a class="el" href="../../dc/dce/_g_u_i_window_8cpp_source.html#l00609">MakeDateTimeString()</a>, <a class="el" href="../../d4/d68/_engine_8cpp_source.html#l00869">MM7_LoadLods()</a>, <a class="el" href="../../d6/ded/_u_i_popup_8cpp_source.html#l00563">MonsterPopup_Draw()</a>, <a class="el" href="../../d3/df2/_audio_player_8cpp_source.html#l00109">AudioPlayer::MusicPlayTrack()</a>, <a class="el" href="../../d6/d6c/_monsters_8cpp_source.html#l00020">ParseSpellType()</a>, <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l00978">PrepareHouse()</a>, <a class="el" href="../../d4/d9d/_save_load_8cpp_source.html#l00238">SaveGame()</a>, <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l03426">SimpleHouseDialog()</a>, <a class="el" href="../../d8/d44/_strings_8cpp_source.html#l00007">StringFromInt()</a>, <a class="el" href="../../d9/d21/_u_i_shops_8cpp_source.html#l01577">sub_4B1523_showSpellbookInfo()</a>, <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l02200">TavernDialog()</a>, <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l02599">TempleDialog()</a>, <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l01915">TownHallDialog()</a>, <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l02933">TrainingDialog()</a>, <a class="el" href="../../d3/d54/_u_i_houses_8cpp_source.html#l01673">TravelByTransport()</a>, <a class="el" href="../../d9/d68/_u_i_save_load_8cpp_source.html#l00231">UI_DrawSaveLoad()</a>, <a class="el" href="../../d6/ded/_u_i_popup_8cpp_source.html#l01459">UI_OnMouseRightClick()</a>, <a class="el" href="../../df/d8d/_calendar_book_8cpp_source.html#l00060">GUIWindow_CalendarBook::Update()</a>, <a class="el" href="../../d3/d59/_lloyds_book_8cpp_source.html#l00060">GUIWindow_LloydsBook::Update()</a>, <a class="el" href="../../dc/dda/_u_i_quick_reference_8cpp_source.html#l00038">GUIWindow_QuickReference::Update()</a>, <a class="el" href="../../dd/d76/_u_i_dialogue_8cpp_source.html#l00238">GUIWindow_Dialogue::Update()</a>, <a class="el" href="../../d4/d40/_u_i_modal_8cpp_source.html#l00020">GUIWindow_Modal::Update()</a>, <a class="el" href="../../d1/d10/_u_i_rest_8cpp_source.html#l00123">GUIWindow_Rest::Update()</a>, <a class="el" href="../../de/da8/_u_i_party_creation_8cpp_source.html#l00303">GUIWindow_PartyCreation::Update()</a>, <a class="el" href="../../d7/d15/_u_i_chest_8cpp_source.html#l00037">GUIWindow_Chest::Update()</a>, <a class="el" href="../../dd/d76/_u_i_dialogue_8cpp_source.html#l00552">GUIWindow_GenericDialogue::Update()</a>, <a class="el" href="../../d2/d82/_player_8cpp_source.html#l03850">Player::UseItem_DrinkPotion_etc()</a> и <a class="el" href="../../db/dd5/_u_i_character_8cpp_source.html#l02680">WetsuitOff()</a>.</p>
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d8/d44/_strings_8cpp_aebf99e80337d8db0a005aebe8a13fb7f_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ae146e86f2bb99e255b31df22155b2d79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae146e86f2bb99e255b31df22155b2d79">&#9670;&nbsp;</a></span>Tokenize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;char *&gt; Tokenize </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>input</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char&#160;</td>
+          <td class="paramname"><em>separator</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/d44/_strings_8cpp_source.html">Strings.cpp</a> строка <a class="el" href="../../d8/d44/_strings_8cpp_source.html#l00030">30</a></p>
+<div class="fragment"><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                                                              {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    std::vector&lt;char *&gt; retVect;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    retVect.push_back(<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#ad3c78daa7d8673f71649d4840c641779">input</a>);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordflow">while</span> (*<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#ad3c78daa7d8673f71649d4840c641779">input</a>) {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordflow">if</span> (*<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#ad3c78daa7d8673f71649d4840c641779">input</a> == separator) {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            *<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#ad3c78daa7d8673f71649d4840c641779">input</a> = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            retVect.push_back(<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#ad3c78daa7d8673f71649d4840c641779">input</a> + 1);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        }</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        ++<a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#ad3c78daa7d8673f71649d4840c641779">input</a>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordflow">return</span> retVect;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Используется в <a class="el" href="../../d5/d88/_storyline_text_table_8cpp_source.html#l00013">StorylineText::Initialize()</a>, <a class="el" href="../../da/df3/_spells_8cpp_source.html#l00385">SpellStats::Initialize()</a>, <a class="el" href="../../d9/d99/_items_8cpp_source.html#l00181">ItemsTable::Initialize()</a>, <a class="el" href="../../dd/d8c/_localization_8cpp_source.html#l00418">Localization::InitializeAttributeNames()</a>, <a class="el" href="../../dd/d8c/_localization_8cpp_source.html#l00300">Localization::InitializeClassNames()</a>, <a class="el" href="../../dd/d8c/_localization_8cpp_source.html#l00244">Localization::InitializeSkillNames()</a>, <a class="el" href="../../d9/d99/_items_8cpp_source.html#l00541">ItemsTable::LoadPotionNotes()</a> и <a class="el" href="../../d9/d99/_items_8cpp_source.html#l00494">ItemsTable::LoadPotions()</a>.</p>
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d8/d44/_strings_8cpp_ae146e86f2bb99e255b31df22155b2d79_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ae591bae1416df2b3638ae859ad4ede6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae591bae1416df2b3638ae859ad4ede6f">&#9670;&nbsp;</a></span>MakeLower()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> MakeLower </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>text</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/d44/_strings_8cpp_source.html">Strings.cpp</a> строка <a class="el" href="../../d8/d44/_strings_8cpp_source.html#l00043">43</a></p>
+<div class="fragment"><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                                     {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#ae84541b4f3d8e1ea24ec0f466a8c568b">std::string</a> tmp = text;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a07993c0d92c1aeeb357ba0495c8b5325">std::transform</a>(tmp.begin(), tmp.end(), tmp.begin(), ::tolower);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordflow">return</span> tmp;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Используется в <a class="el" href="../../d3/df2/_audio_player_8cpp_source.html#l00385">AudioPlayer::FindSound()</a>, <a class="el" href="../../dd/d31/_map_info_8cpp_source.html#l00225">MapStats::GetMapInfo()</a>, <a class="el" href="../../dd/d31/_map_info_8cpp_source.html#l00047">MapStats::Initialize()</a>, <a class="el" href="../../d3/df2/_audio_player_8cpp_source.html#l00342">AudioPlayer::LoadAudioSnd()</a>, <a class="el" href="../../dc/d5c/_h_w_l_container_8cpp_source.html#l00088">HWLContainer::LoadTexture()</a> и <a class="el" href="../../dc/d5c/_h_w_l_container_8cpp_source.html#l00028">HWLContainer::Open()</a>.</p>
+<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d8/d44/_strings_8cpp_ae591bae1416df2b3638ae859ad4ede6f_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_ad3c78daa7d8673f71649d4840c641779"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#ad3c78daa7d8673f71649d4840c641779">input</a></div><div class="ttdeci">GLenum GLenum GLenum input</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l09377">SDL_opengl_glext.h:9377</a></div></div>
+<div class="ttc" id="a_s_d_l__egl_8h_html_a76461e97a098d2c9ae20ac193d3825ae"><div class="ttname"><a href="../../df/d32/_s_d_l__egl_8h.html#a76461e97a098d2c9ae20ac193d3825ae">buffer</a></div><div class="ttdeci">EGLContext EGLenum EGLClientBuffer buffer</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/_s_d_l__egl_8h_source.html#l00952">SDL_egl.h:952</a></div></div>
+<div class="ttc" id="a_s_d_l__egl_8h_html_a8ad81492d410ff2ac11f754f4042150f"><div class="ttname"><a href="../../df/d32/_s_d_l__egl_8h.html#a8ad81492d410ff2ac11f754f4042150f">value</a></div><div class="ttdeci">EGLSyncKHR EGLint EGLint * value</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/_s_d_l__egl_8h_source.html#l00899">SDL_egl.h:899</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a07993c0d92c1aeeb357ba0495c8b5325"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a07993c0d92c1aeeb357ba0495c8b5325">transform</a></div><div class="ttdeci">GLuint GLenum GLenum transform</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l09999">SDL_opengl_glext.h:9999</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_ae84541b4f3d8e1ea24ec0f466a8c568b"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#ae84541b4f3d8e1ea24ec0f466a8c568b">string</a></div><div class="ttdeci">GLsizei const GLchar *const  * string</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l00691">SDL_opengl_glext.h:691</a></div></div>
+<div class="ttc" id="agroup__lavu__mem__funcs_html_ga3d1e3edfcf61ca2d831883e1afbad89e"><div class="ttname"><a href="../../db/d76/group__lavu__mem__funcs.html#ga3d1e3edfcf61ca2d831883e1afbad89e">size</a></div><div class="ttdeci">GLsizeiptr size</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l00540">SDL_opengl_glext.h:540</a></div></div>
+<div class="ttc" id="a_strings_8cpp_html_aebf99e80337d8db0a005aebe8a13fb7f"><div class="ttname"><a href="../../d8/d44/_strings_8cpp.html#aebf99e80337d8db0a005aebe8a13fb7f">StringPrintf</a></div><div class="ttdeci">String StringPrintf(const char *fmt,...)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d44/_strings_8cpp_source.html#l00009">Strings.cpp:9</a></div></div>
+<div class="ttc" id="a_strings_8h_html_afbeda3fd1bdc8c37d01bdf9f5c8274ff"><div class="ttname"><a href="../../de/df7/_strings_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a></div><div class="ttdeci">std::string String</div><div class="ttdef"><b>Definition:</b> <a href="../../de/df7/_strings_8h_source.html#l00010">Strings.h:10</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_0b6ee6e7e9547e675db4add2e5de97da.html">Engine</a></li><li class="navelem"><a class="el" href="../../d8/d44/_strings_8cpp.html">Strings.cpp</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:04:03. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

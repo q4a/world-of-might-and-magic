@@ -1,0 +1,252 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World of Might and Magic: Исходный файл C:/git/world-of-might-and-magic/Media/Media.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">World of Might and Magic
+   &#160;<span id="projectnumber">0.2.0</span>
+   </div>
+   <div id="projectbrief">Open reimplementation of Might and Magic 6 7 8 game engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('da/def/_media_8h_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Media.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../da/def/_media_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../de/d13/_mem_buffer_8h.html">src/tools/MemBuffer.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="../../d0/df5/class_i_audio_data_source.html">    8</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d0/df5/class_i_audio_data_source.html">IAudioDataSource</a> {</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="../../d0/df5/class_i_audio_data_source.html#a834ca9be6f29be2aa03b9f6679afc089">   10</a></span>&#160;    <a class="code" href="../../d0/df5/class_i_audio_data_source.html#a834ca9be6f29be2aa03b9f6679afc089">IAudioDataSource</a>() {}</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="../../d0/df5/class_i_audio_data_source.html#afdfba368bebc2b34beeabce9f68b2caa">   11</a></span>&#160;    <span class="keyword">virtual</span> <a class="code" href="../../d0/df5/class_i_audio_data_source.html#afdfba368bebc2b34beeabce9f68b2caa">~IAudioDataSource</a>() {}</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../d0/df5/class_i_audio_data_source.html#a17b54a33e10bc293b0f4b941169768c7">Open</a>() = 0;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d0/df5/class_i_audio_data_source.html#a896ccf54e89b56a96adaff1b70af1e08">Close</a>() = 0;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">size_t</span> <a class="code" href="../../d0/df5/class_i_audio_data_source.html#ad87ff02b7f6c1d19a816e37f93be1cc0">GetSampleRate</a>() = 0;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">size_t</span> <a class="code" href="../../d0/df5/class_i_audio_data_source.html#a5680714e900e8ee861c9a4bd10313c40">GetChannelCount</a>() = 0;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="../../de/d13/_mem_buffer_8h.html#a8722c69b0b425d6a28bc23839396f8f5">PMemBuffer</a> <a class="code" href="../../d0/df5/class_i_audio_data_source.html#abc2d490b7caa7b4f9ad53a9f4d3c37aa">GetNextBuffer</a>() = 0;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;};</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="../../da/def/_media_8h.html#aa9016c9de6c0ff9dbc6e13d443ec452b">   20</a></span>&#160;<span class="keyword">typedef</span> std::shared_ptr&lt;IAudioDataSource&gt; <a class="code" href="../../da/def/_media_8h.html#aa9016c9de6c0ff9dbc6e13d443ec452b">PAudioDataSource</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<a class="code" href="../../da/def/_media_8h.html#aa9016c9de6c0ff9dbc6e13d443ec452b">PAudioDataSource</a> <a class="code" href="../../da/def/_media_8h.html#a5be6bacef31d891b63a778c75e093d44">CreateAudioFileDataSource</a>(<span class="keyword">const</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#ae84541b4f3d8e1ea24ec0f466a8c568b">std::string</a> &amp;file_name);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<a class="code" href="../../da/def/_media_8h.html#aa9016c9de6c0ff9dbc6e13d443ec452b">PAudioDataSource</a> <a class="code" href="../../da/def/_media_8h.html#ab508e4ee3c70ec5e60273ec99af30a2e">CreateAudioBufferDataSource</a>(<a class="code" href="../../de/d13/_mem_buffer_8h.html#a8722c69b0b425d6a28bc23839396f8f5">PMemBuffer</a> <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a76461e97a098d2c9ae20ac193d3825ae">buffer</a>);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="../../dd/d42/class_i_audio_track.html">   25</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../dd/d42/class_i_audio_track.html">IAudioTrack</a> {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="../../dd/d42/class_i_audio_track.html#a4ca1de15507a7e0c186cbdb776832e78">   27</a></span>&#160;    <a class="code" href="../../dd/d42/class_i_audio_track.html#a4ca1de15507a7e0c186cbdb776832e78">IAudioTrack</a>() {}</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="../../dd/d42/class_i_audio_track.html#a12701e1cc7c8efe971aa080b0879f744">   28</a></span>&#160;    <span class="keyword">virtual</span> <a class="code" href="../../dd/d42/class_i_audio_track.html#a12701e1cc7c8efe971aa080b0879f744">~IAudioTrack</a>() {}</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../dd/d42/class_i_audio_track.html#a1f6c92a7a342d8eb6f0a05a537c3fb41">Open</a>(<a class="code" href="../../da/def/_media_8h.html#aa9016c9de6c0ff9dbc6e13d443ec452b">PAudioDataSource</a> data_source) = 0;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../dd/d42/class_i_audio_track.html#a95bd90e29d0b811234cd1ca746aafda9">IsValid</a>() = 0;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../dd/d42/class_i_audio_track.html#aab7aca2b95bb9db530dbcf38397ef7b1">Play</a>() = 0;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../dd/d42/class_i_audio_track.html#a712dfce95acfd5651b4c48802e6629bd">Stop</a>() = 0;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../dd/d42/class_i_audio_track.html#af3754a574a3819b9136cdeff60ce7e95">Pause</a>() = 0;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../dd/d42/class_i_audio_track.html#a9140ea4200193d1c87e7b25728835bb5">Resume</a>() = 0;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../dd/d42/class_i_audio_track.html#a85e1e15df84d513d71c03cabc8a76124">SetVolume</a>(<span class="keywordtype">float</span> volume) = 0;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">float</span> <a class="code" href="../../dd/d42/class_i_audio_track.html#a099c7cfe0540930f205db2c42f901895">GetVolume</a>() = 0;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;};</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="../../da/def/_media_8h.html#ae0744a89d3eaa9875de4dfc82c051b0b">   40</a></span>&#160;<span class="keyword">typedef</span> std::shared_ptr&lt;IAudioTrack&gt; <a class="code" href="../../da/def/_media_8h.html#ae0744a89d3eaa9875de4dfc82c051b0b">PAudioTrack</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<a class="code" href="../../da/def/_media_8h.html#ae0744a89d3eaa9875de4dfc82c051b0b">PAudioTrack</a> <a class="code" href="../../da/def/_media_8h.html#a9ddf1ec6f0d8b6a95f35e17ae192b4d8">CreateAudioTrack</a>(<span class="keyword">const</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#ae84541b4f3d8e1ea24ec0f466a8c568b">std::string</a> &amp;file_path);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="../../dc/d36/class_i_audio_sample.html">   44</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../dc/d36/class_i_audio_sample.html">IAudioSample</a> {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="../../dc/d36/class_i_audio_sample.html#a161aa556f62bcf09810c5a6e01638af0">   46</a></span>&#160;    <a class="code" href="../../dc/d36/class_i_audio_sample.html#a161aa556f62bcf09810c5a6e01638af0">IAudioSample</a>() {}</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="../../dc/d36/class_i_audio_sample.html#abd230cf1a334a1418d8fb06ea324f53a">   47</a></span>&#160;    <span class="keyword">virtual</span> <a class="code" href="../../dc/d36/class_i_audio_sample.html#abd230cf1a334a1418d8fb06ea324f53a">~IAudioSample</a>() {}</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../dc/d36/class_i_audio_sample.html#acbb82ddfa6be775cc5eb9129413bc5cc">Open</a>(<a class="code" href="../../da/def/_media_8h.html#aa9016c9de6c0ff9dbc6e13d443ec452b">PAudioDataSource</a> data_source) = 0;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../dc/d36/class_i_audio_sample.html#a48701f2cf740b4c817f5df237affed23">IsValid</a>() = 0;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../dc/d36/class_i_audio_sample.html#a01a0b45c9dc6bdf6827f792a5c3d4364">Play</a>(<span class="keywordtype">bool</span> loop = <span class="keyword">false</span>, <span class="keywordtype">bool</span> positioned = <span class="keyword">false</span>) = 0;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../dc/d36/class_i_audio_sample.html#afa2de9abc6e8024ad7be10e969a54293">Stop</a>() = 0;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../dc/d36/class_i_audio_sample.html#a5ee0aa69e82a33d628e63c5136c5ab06">SetVolume</a>(<span class="keywordtype">float</span> volume) = 0;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../dc/d36/class_i_audio_sample.html#a25a2edd90266eb3affd02fc7dfecc223">SetPosition</a>(<span class="keywordtype">float</span> <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#ad0e63d0edcdbd3d79554076bf309fd47">x</a>, <span class="keywordtype">float</span> <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a1675d9d7bb68e1657ff028643b4037e3">y</a>, <span class="keywordtype">float</span> <a class="code" href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a5e74030ebb3297ce1b37ff716fedd68f">z</a>, <span class="keywordtype">float</span> max_dist) = 0;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;};</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="../../da/def/_media_8h.html#aec9137d201f9fdc6dc340ae7b19f86f8">   57</a></span>&#160;<span class="keyword">typedef</span> std::shared_ptr&lt;IAudioSample&gt; <a class="code" href="../../da/def/_media_8h.html#aec9137d201f9fdc6dc340ae7b19f86f8">PAudioSample</a>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<a class="code" href="../../da/def/_media_8h.html#aec9137d201f9fdc6dc340ae7b19f86f8">PAudioSample</a> <a class="code" href="../../da/def/_media_8h.html#a0d61058bc8900801bc227bc7b47881d7">CreateAudioSample</a>(<a class="code" href="../../de/d13/_mem_buffer_8h.html#a8722c69b0b425d6a28bc23839396f8f5">PMemBuffer</a> <a class="code" href="../../df/d32/_s_d_l__egl_8h.html#a76461e97a098d2c9ae20ac193d3825ae">buffer</a>);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="../../d8/d61/class_i_video_data_source.html">   61</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d8/d61/class_i_video_data_source.html">IVideoDataSource</a> {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="../../d8/d61/class_i_video_data_source.html#a3e7f33979d344cbaf5a121a25e986ee9">   63</a></span>&#160;    <a class="code" href="../../d8/d61/class_i_video_data_source.html#a3e7f33979d344cbaf5a121a25e986ee9">IVideoDataSource</a>() {}</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="../../d8/d61/class_i_video_data_source.html#a906980416527d59a78de58d8a66a056c">   64</a></span>&#160;    <span class="keyword">virtual</span> <a class="code" href="../../d8/d61/class_i_video_data_source.html#a906980416527d59a78de58d8a66a056c">~IVideoDataSource</a>() {}</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../d8/d61/class_i_video_data_source.html#aabe02bd0e0b6b3c6a33bbecd60c4e872">Open</a>() = 0;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d8/d61/class_i_video_data_source.html#afb8036ff167e4a3159c23313c462911c">Close</a>() = 0;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">size_t</span> <a class="code" href="../../d8/d61/class_i_video_data_source.html#a539457ad1fb5c3d3f7c81ff364a8d2fe">GetFrameRate</a>() = 0;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">size_t</span> <a class="code" href="../../d8/d61/class_i_video_data_source.html#aa7f77f3743e1d18e9dfd56257a32313d">GetWidth</a>() = 0;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">size_t</span> <a class="code" href="../../d8/d61/class_i_video_data_source.html#ac8784568c3dfb40c998c80bc50844881">GetHeight</a>() = 0;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="../../de/d13/_mem_buffer_8h.html#a8722c69b0b425d6a28bc23839396f8f5">PMemBuffer</a> <a class="code" href="../../d8/d61/class_i_video_data_source.html#abbe913f71982121fc5eb52eddf09dd17">GetNextFrame</a>() = 0;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;};</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="keyword">typedef</span> std::shared_ptr&lt;IAudioDataSource&gt; <a class="code" href="../../da/def/_media_8h.html#aa9016c9de6c0ff9dbc6e13d443ec452b">PAudioDataSource</a>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="../../d9/d93/class_i_movie.html">   76</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d9/d93/class_i_movie.html">IMovie</a> {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="../../d9/d93/class_i_movie.html#acc542dfca4bfb27e229f13268a8abb84">   78</a></span>&#160;    <a class="code" href="../../d9/d93/class_i_movie.html#acc542dfca4bfb27e229f13268a8abb84">IMovie</a>() {}</div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="../../d9/d93/class_i_movie.html#ae21798661a86d02f213b0aed9d3a781d">   79</a></span>&#160;    <span class="keyword">virtual</span> <a class="code" href="../../d9/d93/class_i_movie.html#ae21798661a86d02f213b0aed9d3a781d">~IMovie</a>() {}</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../d9/d93/class_i_movie.html#a98a93569866e535b542ccf92cb8a7235">GetWidth</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../d9/d93/class_i_movie.html#a8df63d180f1a84760934775e4f594e8b">GetHeight</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../d9/d93/class_i_movie.html#a4de0ad68f483bdbfcf9735acf31db1b3">Play</a>(<span class="keywordtype">bool</span> loop = <span class="keyword">false</span>) = 0;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../d9/d93/class_i_movie.html#a903af1651899208d8beda2c665c330a9">Stop</a>() = 0;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../d9/d93/class_i_movie.html#abe037e5f65685f5970d1317eb08a5e06">IsPlaing</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="../../de/d13/_mem_buffer_8h.html#a8722c69b0b425d6a28bc23839396f8f5">PMemBuffer</a> <a class="code" href="../../d9/d93/class_i_movie.html#abb4a08109e2548aea1c785c857aab381">GetFrame</a>() = 0;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;};</div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="../../da/def/_media_8h.html#a6a20c0b91ed94a979f220e4e1d767616">   89</a></span>&#160;<span class="keyword">typedef</span> std::shared_ptr&lt;IMovie&gt; <a class="code" href="../../da/def/_media_8h.html#a6a20c0b91ed94a979f220e4e1d767616">PMovie</a>;</div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aclass_i_movie_html_a4de0ad68f483bdbfcf9735acf31db1b3"><div class="ttname"><a href="../../d9/d93/class_i_movie.html#a4de0ad68f483bdbfcf9735acf31db1b3">IMovie::Play</a></div><div class="ttdeci">virtual bool Play(bool loop=false)=0</div></div>
+<div class="ttc" id="aclass_i_audio_data_source_html_a834ca9be6f29be2aa03b9f6679afc089"><div class="ttname"><a href="../../d0/df5/class_i_audio_data_source.html#a834ca9be6f29be2aa03b9f6679afc089">IAudioDataSource::IAudioDataSource</a></div><div class="ttdeci">IAudioDataSource()</div><div class="ttdef"><b>Definition:</b> <a href="../../da/def/_media_8h_source.html#l00010">Media.h:10</a></div></div>
+<div class="ttc" id="aclass_i_audio_track_html_a9140ea4200193d1c87e7b25728835bb5"><div class="ttname"><a href="../../dd/d42/class_i_audio_track.html#a9140ea4200193d1c87e7b25728835bb5">IAudioTrack::Resume</a></div><div class="ttdeci">virtual bool Resume()=0</div></div>
+<div class="ttc" id="aclass_i_audio_data_source_html_ad87ff02b7f6c1d19a816e37f93be1cc0"><div class="ttname"><a href="../../d0/df5/class_i_audio_data_source.html#ad87ff02b7f6c1d19a816e37f93be1cc0">IAudioDataSource::GetSampleRate</a></div><div class="ttdeci">virtual size_t GetSampleRate()=0</div></div>
+<div class="ttc" id="aclass_i_video_data_source_html_aa7f77f3743e1d18e9dfd56257a32313d"><div class="ttname"><a href="../../d8/d61/class_i_video_data_source.html#aa7f77f3743e1d18e9dfd56257a32313d">IVideoDataSource::GetWidth</a></div><div class="ttdeci">virtual size_t GetWidth()=0</div></div>
+<div class="ttc" id="aclass_i_audio_track_html_a95bd90e29d0b811234cd1ca746aafda9"><div class="ttname"><a href="../../dd/d42/class_i_audio_track.html#a95bd90e29d0b811234cd1ca746aafda9">IAudioTrack::IsValid</a></div><div class="ttdeci">virtual bool IsValid()=0</div></div>
+<div class="ttc" id="aclass_i_video_data_source_html_a906980416527d59a78de58d8a66a056c"><div class="ttname"><a href="../../d8/d61/class_i_video_data_source.html#a906980416527d59a78de58d8a66a056c">IVideoDataSource::~IVideoDataSource</a></div><div class="ttdeci">virtual ~IVideoDataSource()</div><div class="ttdef"><b>Definition:</b> <a href="../../da/def/_media_8h_source.html#l00064">Media.h:64</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_a5e74030ebb3297ce1b37ff716fedd68f"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#a5e74030ebb3297ce1b37ff716fedd68f">z</a></div><div class="ttdeci">GLdouble GLdouble z</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l00407">SDL_opengl_glext.h:407</a></div></div>
+<div class="ttc" id="a_mem_buffer_8h_html"><div class="ttname"><a href="../../de/d13/_mem_buffer_8h.html">MemBuffer.h</a></div></div>
+<div class="ttc" id="aclass_i_movie_html_a8df63d180f1a84760934775e4f594e8b"><div class="ttname"><a href="../../d9/d93/class_i_movie.html#a8df63d180f1a84760934775e4f594e8b">IMovie::GetHeight</a></div><div class="ttdeci">virtual unsigned int GetHeight() const =0</div></div>
+<div class="ttc" id="aclass_i_video_data_source_html_a3e7f33979d344cbaf5a121a25e986ee9"><div class="ttname"><a href="../../d8/d61/class_i_video_data_source.html#a3e7f33979d344cbaf5a121a25e986ee9">IVideoDataSource::IVideoDataSource</a></div><div class="ttdeci">IVideoDataSource()</div><div class="ttdef"><b>Definition:</b> <a href="../../da/def/_media_8h_source.html#l00063">Media.h:63</a></div></div>
+<div class="ttc" id="aclass_i_movie_html"><div class="ttname"><a href="../../d9/d93/class_i_movie.html">IMovie</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/def/_media_8h_source.html#l00076">Media.h:76</a></div></div>
+<div class="ttc" id="a_media_8h_html_aa9016c9de6c0ff9dbc6e13d443ec452b"><div class="ttname"><a href="../../da/def/_media_8h.html#aa9016c9de6c0ff9dbc6e13d443ec452b">PAudioDataSource</a></div><div class="ttdeci">std::shared_ptr&lt; IAudioDataSource &gt; PAudioDataSource</div><div class="ttdef"><b>Definition:</b> <a href="../../da/def/_media_8h_source.html#l00020">Media.h:20</a></div></div>
+<div class="ttc" id="a_media_8h_html_ab508e4ee3c70ec5e60273ec99af30a2e"><div class="ttname"><a href="../../da/def/_media_8h.html#ab508e4ee3c70ec5e60273ec99af30a2e">CreateAudioBufferDataSource</a></div><div class="ttdeci">PAudioDataSource CreateAudioBufferDataSource(PMemBuffer buffer)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d56/_media_player_8cpp_source.html#l01176">MediaPlayer.cpp:1176</a></div></div>
+<div class="ttc" id="aclass_i_video_data_source_html_a539457ad1fb5c3d3f7c81ff364a8d2fe"><div class="ttname"><a href="../../d8/d61/class_i_video_data_source.html#a539457ad1fb5c3d3f7c81ff364a8d2fe">IVideoDataSource::GetFrameRate</a></div><div class="ttdeci">virtual size_t GetFrameRate()=0</div></div>
+<div class="ttc" id="aclass_i_audio_sample_html_a161aa556f62bcf09810c5a6e01638af0"><div class="ttname"><a href="../../dc/d36/class_i_audio_sample.html#a161aa556f62bcf09810c5a6e01638af0">IAudioSample::IAudioSample</a></div><div class="ttdeci">IAudioSample()</div><div class="ttdef"><b>Definition:</b> <a href="../../da/def/_media_8h_source.html#l00046">Media.h:46</a></div></div>
+<div class="ttc" id="aclass_i_audio_data_source_html_a5680714e900e8ee861c9a4bd10313c40"><div class="ttname"><a href="../../d0/df5/class_i_audio_data_source.html#a5680714e900e8ee861c9a4bd10313c40">IAudioDataSource::GetChannelCount</a></div><div class="ttdeci">virtual size_t GetChannelCount()=0</div></div>
+<div class="ttc" id="aclass_i_audio_data_source_html"><div class="ttname"><a href="../../d0/df5/class_i_audio_data_source.html">IAudioDataSource</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/def/_media_8h_source.html#l00008">Media.h:8</a></div></div>
+<div class="ttc" id="a_s_d_l__egl_8h_html_a76461e97a098d2c9ae20ac193d3825ae"><div class="ttname"><a href="../../df/d32/_s_d_l__egl_8h.html#a76461e97a098d2c9ae20ac193d3825ae">buffer</a></div><div class="ttdeci">EGLContext EGLenum EGLClientBuffer buffer</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/_s_d_l__egl_8h_source.html#l00952">SDL_egl.h:952</a></div></div>
+<div class="ttc" id="aclass_i_audio_track_html_a4ca1de15507a7e0c186cbdb776832e78"><div class="ttname"><a href="../../dd/d42/class_i_audio_track.html#a4ca1de15507a7e0c186cbdb776832e78">IAudioTrack::IAudioTrack</a></div><div class="ttdeci">IAudioTrack()</div><div class="ttdef"><b>Definition:</b> <a href="../../da/def/_media_8h_source.html#l00027">Media.h:27</a></div></div>
+<div class="ttc" id="a_s_d_l__egl_8h_html_a1675d9d7bb68e1657ff028643b4037e3"><div class="ttname"><a href="../../df/d32/_s_d_l__egl_8h.html#a1675d9d7bb68e1657ff028643b4037e3">y</a></div><div class="ttdeci">EGLSurface EGLint EGLint y</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/_s_d_l__egl_8h_source.html#l01596">SDL_egl.h:1596</a></div></div>
+<div class="ttc" id="aclass_i_audio_track_html_a85e1e15df84d513d71c03cabc8a76124"><div class="ttname"><a href="../../dd/d42/class_i_audio_track.html#a85e1e15df84d513d71c03cabc8a76124">IAudioTrack::SetVolume</a></div><div class="ttdeci">virtual bool SetVolume(float volume)=0</div></div>
+<div class="ttc" id="aclass_i_movie_html_abe037e5f65685f5970d1317eb08a5e06"><div class="ttname"><a href="../../d9/d93/class_i_movie.html#abe037e5f65685f5970d1317eb08a5e06">IMovie::IsPlaing</a></div><div class="ttdeci">virtual bool IsPlaing() const =0</div></div>
+<div class="ttc" id="aclass_i_video_data_source_html_ac8784568c3dfb40c998c80bc50844881"><div class="ttname"><a href="../../d8/d61/class_i_video_data_source.html#ac8784568c3dfb40c998c80bc50844881">IVideoDataSource::GetHeight</a></div><div class="ttdeci">virtual size_t GetHeight()=0</div></div>
+<div class="ttc" id="aclass_i_video_data_source_html_afb8036ff167e4a3159c23313c462911c"><div class="ttname"><a href="../../d8/d61/class_i_video_data_source.html#afb8036ff167e4a3159c23313c462911c">IVideoDataSource::Close</a></div><div class="ttdeci">virtual void Close()=0</div></div>
+<div class="ttc" id="aclass_i_audio_track_html_aab7aca2b95bb9db530dbcf38397ef7b1"><div class="ttname"><a href="../../dd/d42/class_i_audio_track.html#aab7aca2b95bb9db530dbcf38397ef7b1">IAudioTrack::Play</a></div><div class="ttdeci">virtual bool Play()=0</div></div>
+<div class="ttc" id="a_s_d_l__egl_8h_html_ad0e63d0edcdbd3d79554076bf309fd47"><div class="ttname"><a href="../../df/d32/_s_d_l__egl_8h.html#ad0e63d0edcdbd3d79554076bf309fd47">x</a></div><div class="ttdeci">EGLSurface EGLint x</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/_s_d_l__egl_8h_source.html#l01596">SDL_egl.h:1596</a></div></div>
+<div class="ttc" id="a_media_8h_html_ae0744a89d3eaa9875de4dfc82c051b0b"><div class="ttname"><a href="../../da/def/_media_8h.html#ae0744a89d3eaa9875de4dfc82c051b0b">PAudioTrack</a></div><div class="ttdeci">std::shared_ptr&lt; IAudioTrack &gt; PAudioTrack</div><div class="ttdef"><b>Definition:</b> <a href="../../da/def/_media_8h_source.html#l00040">Media.h:40</a></div></div>
+<div class="ttc" id="aclass_i_audio_track_html_a099c7cfe0540930f205db2c42f901895"><div class="ttname"><a href="../../dd/d42/class_i_audio_track.html#a099c7cfe0540930f205db2c42f901895">IAudioTrack::GetVolume</a></div><div class="ttdeci">virtual float GetVolume()=0</div></div>
+<div class="ttc" id="a_media_8h_html_a0d61058bc8900801bc227bc7b47881d7"><div class="ttname"><a href="../../da/def/_media_8h.html#a0d61058bc8900801bc227bc7b47881d7">CreateAudioSample</a></div><div class="ttdeci">PAudioSample CreateAudioSample(PMemBuffer buffer)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db9/_open_a_l_sound_provider_8cpp_source.html#l00873">OpenALSoundProvider.cpp:873</a></div></div>
+<div class="ttc" id="a_media_8h_html_aec9137d201f9fdc6dc340ae7b19f86f8"><div class="ttname"><a href="../../da/def/_media_8h.html#aec9137d201f9fdc6dc340ae7b19f86f8">PAudioSample</a></div><div class="ttdeci">std::shared_ptr&lt; IAudioSample &gt; PAudioSample</div><div class="ttdef"><b>Definition:</b> <a href="../../da/def/_media_8h_source.html#l00057">Media.h:57</a></div></div>
+<div class="ttc" id="aclass_i_audio_data_source_html_a17b54a33e10bc293b0f4b941169768c7"><div class="ttname"><a href="../../d0/df5/class_i_audio_data_source.html#a17b54a33e10bc293b0f4b941169768c7">IAudioDataSource::Open</a></div><div class="ttdeci">virtual bool Open()=0</div></div>
+<div class="ttc" id="aclass_i_audio_sample_html_a25a2edd90266eb3affd02fc7dfecc223"><div class="ttname"><a href="../../dc/d36/class_i_audio_sample.html#a25a2edd90266eb3affd02fc7dfecc223">IAudioSample::SetPosition</a></div><div class="ttdeci">virtual bool SetPosition(float x, float y, float z, float max_dist)=0</div></div>
+<div class="ttc" id="aclass_i_movie_html_abb4a08109e2548aea1c785c857aab381"><div class="ttname"><a href="../../d9/d93/class_i_movie.html#abb4a08109e2548aea1c785c857aab381">IMovie::GetFrame</a></div><div class="ttdeci">virtual PMemBuffer GetFrame()=0</div></div>
+<div class="ttc" id="a_media_8h_html_a5be6bacef31d891b63a778c75e093d44"><div class="ttname"><a href="../../da/def/_media_8h.html#a5be6bacef31d891b63a778c75e093d44">CreateAudioFileDataSource</a></div><div class="ttdeci">PAudioDataSource CreateAudioFileDataSource(const std::string &amp;file_name)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d56/_media_player_8cpp_source.html#l01169">MediaPlayer.cpp:1169</a></div></div>
+<div class="ttc" id="aclass_i_video_data_source_html_aabe02bd0e0b6b3c6a33bbecd60c4e872"><div class="ttname"><a href="../../d8/d61/class_i_video_data_source.html#aabe02bd0e0b6b3c6a33bbecd60c4e872">IVideoDataSource::Open</a></div><div class="ttdeci">virtual bool Open()=0</div></div>
+<div class="ttc" id="aclass_i_audio_track_html_a12701e1cc7c8efe971aa080b0879f744"><div class="ttname"><a href="../../dd/d42/class_i_audio_track.html#a12701e1cc7c8efe971aa080b0879f744">IAudioTrack::~IAudioTrack</a></div><div class="ttdeci">virtual ~IAudioTrack()</div><div class="ttdef"><b>Definition:</b> <a href="../../da/def/_media_8h_source.html#l00028">Media.h:28</a></div></div>
+<div class="ttc" id="aclass_i_audio_sample_html"><div class="ttname"><a href="../../dc/d36/class_i_audio_sample.html">IAudioSample</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/def/_media_8h_source.html#l00044">Media.h:44</a></div></div>
+<div class="ttc" id="aclass_i_movie_html_a98a93569866e535b542ccf92cb8a7235"><div class="ttname"><a href="../../d9/d93/class_i_movie.html#a98a93569866e535b542ccf92cb8a7235">IMovie::GetWidth</a></div><div class="ttdeci">virtual unsigned int GetWidth() const =0</div></div>
+<div class="ttc" id="aclass_i_audio_sample_html_a01a0b45c9dc6bdf6827f792a5c3d4364"><div class="ttname"><a href="../../dc/d36/class_i_audio_sample.html#a01a0b45c9dc6bdf6827f792a5c3d4364">IAudioSample::Play</a></div><div class="ttdeci">virtual bool Play(bool loop=false, bool positioned=false)=0</div></div>
+<div class="ttc" id="aclass_i_movie_html_a903af1651899208d8beda2c665c330a9"><div class="ttname"><a href="../../d9/d93/class_i_movie.html#a903af1651899208d8beda2c665c330a9">IMovie::Stop</a></div><div class="ttdeci">virtual bool Stop()=0</div></div>
+<div class="ttc" id="aclass_i_audio_data_source_html_afdfba368bebc2b34beeabce9f68b2caa"><div class="ttname"><a href="../../d0/df5/class_i_audio_data_source.html#afdfba368bebc2b34beeabce9f68b2caa">IAudioDataSource::~IAudioDataSource</a></div><div class="ttdeci">virtual ~IAudioDataSource()</div><div class="ttdef"><b>Definition:</b> <a href="../../da/def/_media_8h_source.html#l00011">Media.h:11</a></div></div>
+<div class="ttc" id="aclass_i_audio_sample_html_abd230cf1a334a1418d8fb06ea324f53a"><div class="ttname"><a href="../../dc/d36/class_i_audio_sample.html#abd230cf1a334a1418d8fb06ea324f53a">IAudioSample::~IAudioSample</a></div><div class="ttdeci">virtual ~IAudioSample()</div><div class="ttdef"><b>Definition:</b> <a href="../../da/def/_media_8h_source.html#l00047">Media.h:47</a></div></div>
+<div class="ttc" id="aclass_i_audio_track_html"><div class="ttname"><a href="../../dd/d42/class_i_audio_track.html">IAudioTrack</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/def/_media_8h_source.html#l00025">Media.h:25</a></div></div>
+<div class="ttc" id="aclass_i_audio_sample_html_a5ee0aa69e82a33d628e63c5136c5ab06"><div class="ttname"><a href="../../dc/d36/class_i_audio_sample.html#a5ee0aa69e82a33d628e63c5136c5ab06">IAudioSample::SetVolume</a></div><div class="ttdeci">virtual bool SetVolume(float volume)=0</div></div>
+<div class="ttc" id="aclass_i_audio_data_source_html_abc2d490b7caa7b4f9ad53a9f4d3c37aa"><div class="ttname"><a href="../../d0/df5/class_i_audio_data_source.html#abc2d490b7caa7b4f9ad53a9f4d3c37aa">IAudioDataSource::GetNextBuffer</a></div><div class="ttdeci">virtual PMemBuffer GetNextBuffer()=0</div></div>
+<div class="ttc" id="aclass_i_audio_sample_html_afa2de9abc6e8024ad7be10e969a54293"><div class="ttname"><a href="../../dc/d36/class_i_audio_sample.html#afa2de9abc6e8024ad7be10e969a54293">IAudioSample::Stop</a></div><div class="ttdeci">virtual bool Stop()=0</div></div>
+<div class="ttc" id="aclass_i_movie_html_acc542dfca4bfb27e229f13268a8abb84"><div class="ttname"><a href="../../d9/d93/class_i_movie.html#acc542dfca4bfb27e229f13268a8abb84">IMovie::IMovie</a></div><div class="ttdeci">IMovie()</div><div class="ttdef"><b>Definition:</b> <a href="../../da/def/_media_8h_source.html#l00078">Media.h:78</a></div></div>
+<div class="ttc" id="aclass_i_video_data_source_html"><div class="ttname"><a href="../../d8/d61/class_i_video_data_source.html">IVideoDataSource</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/def/_media_8h_source.html#l00061">Media.h:61</a></div></div>
+<div class="ttc" id="aclass_i_audio_track_html_a712dfce95acfd5651b4c48802e6629bd"><div class="ttname"><a href="../../dd/d42/class_i_audio_track.html#a712dfce95acfd5651b4c48802e6629bd">IAudioTrack::Stop</a></div><div class="ttdeci">virtual bool Stop()=0</div></div>
+<div class="ttc" id="aclass_i_video_data_source_html_abbe913f71982121fc5eb52eddf09dd17"><div class="ttname"><a href="../../d8/d61/class_i_video_data_source.html#abbe913f71982121fc5eb52eddf09dd17">IVideoDataSource::GetNextFrame</a></div><div class="ttdeci">virtual PMemBuffer GetNextFrame()=0</div></div>
+<div class="ttc" id="aclass_i_audio_sample_html_acbb82ddfa6be775cc5eb9129413bc5cc"><div class="ttname"><a href="../../dc/d36/class_i_audio_sample.html#acbb82ddfa6be775cc5eb9129413bc5cc">IAudioSample::Open</a></div><div class="ttdeci">virtual bool Open(PAudioDataSource data_source)=0</div></div>
+<div class="ttc" id="a_media_8h_html_a6a20c0b91ed94a979f220e4e1d767616"><div class="ttname"><a href="../../da/def/_media_8h.html#a6a20c0b91ed94a979f220e4e1d767616">PMovie</a></div><div class="ttdeci">std::shared_ptr&lt; IMovie &gt; PMovie</div><div class="ttdef"><b>Definition:</b> <a href="../../da/def/_media_8h_source.html#l00089">Media.h:89</a></div></div>
+<div class="ttc" id="a_s_d_l__opengl__glext_8h_html_ae84541b4f3d8e1ea24ec0f466a8c568b"><div class="ttname"><a href="../../d0/d32/_s_d_l__opengl__glext_8h.html#ae84541b4f3d8e1ea24ec0f466a8c568b">string</a></div><div class="ttdeci">GLsizei const GLchar *const  * string</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d32/_s_d_l__opengl__glext_8h_source.html#l00691">SDL_opengl_glext.h:691</a></div></div>
+<div class="ttc" id="aclass_i_audio_track_html_af3754a574a3819b9136cdeff60ce7e95"><div class="ttname"><a href="../../dd/d42/class_i_audio_track.html#af3754a574a3819b9136cdeff60ce7e95">IAudioTrack::Pause</a></div><div class="ttdeci">virtual bool Pause()=0</div></div>
+<div class="ttc" id="aclass_i_audio_data_source_html_a896ccf54e89b56a96adaff1b70af1e08"><div class="ttname"><a href="../../d0/df5/class_i_audio_data_source.html#a896ccf54e89b56a96adaff1b70af1e08">IAudioDataSource::Close</a></div><div class="ttdeci">virtual void Close()=0</div></div>
+<div class="ttc" id="aclass_i_audio_track_html_a1f6c92a7a342d8eb6f0a05a537c3fb41"><div class="ttname"><a href="../../dd/d42/class_i_audio_track.html#a1f6c92a7a342d8eb6f0a05a537c3fb41">IAudioTrack::Open</a></div><div class="ttdeci">virtual bool Open(PAudioDataSource data_source)=0</div></div>
+<div class="ttc" id="aclass_i_audio_sample_html_a48701f2cf740b4c817f5df237affed23"><div class="ttname"><a href="../../dc/d36/class_i_audio_sample.html#a48701f2cf740b4c817f5df237affed23">IAudioSample::IsValid</a></div><div class="ttdeci">virtual bool IsValid()=0</div></div>
+<div class="ttc" id="a_mem_buffer_8h_html_a8722c69b0b425d6a28bc23839396f8f5"><div class="ttname"><a href="../../de/d13/_mem_buffer_8h.html#a8722c69b0b425d6a28bc23839396f8f5">PMemBuffer</a></div><div class="ttdeci">std::shared_ptr&lt; IMemBuffer &gt; PMemBuffer</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d13/_mem_buffer_8h_source.html#l00013">MemBuffer.h:13</a></div></div>
+<div class="ttc" id="a_media_8h_html_a9ddf1ec6f0d8b6a95f35e17ae192b4d8"><div class="ttname"><a href="../../da/def/_media_8h.html#a9ddf1ec6f0d8b6a95f35e17ae192b4d8">CreateAudioTrack</a></div><div class="ttdeci">PAudioTrack CreateAudioTrack(const std::string &amp;file_path)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db9/_open_a_l_sound_provider_8cpp_source.html#l00657">OpenALSoundProvider.cpp:657</a></div></div>
+<div class="ttc" id="aclass_i_movie_html_ae21798661a86d02f213b0aed9d3a781d"><div class="ttname"><a href="../../d9/d93/class_i_movie.html#ae21798661a86d02f213b0aed9d3a781d">IMovie::~IMovie</a></div><div class="ttdeci">virtual ~IMovie()</div><div class="ttdef"><b>Definition:</b> <a href="../../da/def/_media_8h_source.html#l00079">Media.h:79</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_3974871bf467d5376b8307ffe9ef875e.html">Media</a></li><li class="navelem"><a class="el" href="../../da/def/_media_8h.html">Media.h</a></li>
+    <li class="footer">Документация по World of Might and Magic. Последние изменения: Вт 7 Апр 2020 22:03:44. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>
