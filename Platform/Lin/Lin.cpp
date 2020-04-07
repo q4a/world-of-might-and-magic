@@ -29,6 +29,10 @@ void OS_ShowCursor(bool show) {
     //ShowCursor(show ? 1 : 0);
 }
 
+void OS_WaitMessage() {
+    //WaitMessage();
+}
+
 void OS_Sleep(int ms) {
     //Sleep(ms);
 }

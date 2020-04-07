@@ -50,8 +50,81 @@
 #include "Platform/OSWindow.h"
 
 std::shared_ptr<IRender> render;
+int uNumDecorationsDrawnThisFrame;
+RenderBillboard pBillboardRenderList[500];
+unsigned int uNumBillboardsToDraw;
+int uNumSpritesDrawnThisFrame;
 
 RenderVertexSoft array_507D30[50];
+
+// sky billboard stuff
+
+void SkyBillboardStruct::CalcSkyFrustumVec(int x1, int y1, int z1, int x2, int y2, int z2) {
+    // 6 0 0 0 6 0
+
+    int cosy = pIndoorCameraD3D->int_cosine_y;
+    int cosx = pIndoorCameraD3D->int_cosine_x;
+    int siny = pIndoorCameraD3D->int_sine_y;
+    int sinx = pIndoorCameraD3D->int_sine_x;
+
+    // positions all minus ?
+    int v11 = cosy * -pIndoorCameraD3D->vPartyPos.x +
+        siny * -pIndoorCameraD3D->vPartyPos.y;
+    int v24 = cosy * -pIndoorCameraD3D->vPartyPos.y -
+        siny * -pIndoorCameraD3D->vPartyPos.x;
+
+    // cam position transform
+    if (pIndoorCameraD3D->sRotationX) {
+        this->field_0_party_dir_x = fixpoint_mul(v11, cosx) +
+            fixpoint_mul((-pIndoorCameraD3D->vPartyPos.z) << 16, sinx);
+        this->field_4_party_dir_y = v24;
+        this->field_8_party_dir_z =
+            fixpoint_mul((-pIndoorCameraD3D->vPartyPos.z) << 16, cosx) /*-*/ +
+            fixpoint_mul(v11, sinx);
+    }
+    else {
+        this->field_0_party_dir_x = v11;
+        this->field_4_party_dir_y = v24;
+        this->field_8_party_dir_z = (-pIndoorCameraD3D->vPartyPos.z) << 16;
+    }
+
+    // set 1 position transfrom (6 0 0) looks like cam left vector
+    if (pIndoorCameraD3D->sRotationX) {
+        int v17 = fixpoint_mul(x1, cosy) + fixpoint_mul(y1, siny);
+
+        this->CamVecLeft_Z = fixpoint_mul(v17, cosx) + fixpoint_mul(z1, sinx);  // dz
+        this->CamVecLeft_X = fixpoint_mul(y1, cosy) - fixpoint_mul(x1, siny);  // dx
+        this->CamVecLeft_Y = fixpoint_mul(z1, cosx) /*-*/ + fixpoint_mul(v17, sinx);  // dy
+    }
+    else {
+        this->CamVecLeft_Z = fixpoint_mul(x1, cosy) + fixpoint_mul(y1, siny);  // dz
+        this->CamVecLeft_X = fixpoint_mul(y1, cosy) - fixpoint_mul(x1, siny);  // dx
+        this->CamVecLeft_Y = z1;  // dy
+    }
+
+    // set 2 position transfrom (0 6 0) looks like cam front vector
+    if (pIndoorCameraD3D->sRotationX) {
+        int v19 = fixpoint_mul(x2, cosy) + fixpoint_mul(y2, siny);
+
+        this->CamVecFront_Z = fixpoint_mul(v19, cosx) + fixpoint_mul(z2, sinx);  // dz
+        this->CamVecFront_X = fixpoint_mul(y2, cosy) - fixpoint_mul(x2, siny);  // dx
+        this->CamVecFront_Y = fixpoint_mul(z2, cosx) /*-*/ + fixpoint_mul(v19, sinx);  // dy
+    }
+    else {
+        this->CamVecFront_Z = fixpoint_mul(x2, cosy) + fixpoint_mul(y2, siny);  // dz
+        this->CamVecFront_X = fixpoint_mul(y2, cosy) - fixpoint_mul(x2, siny);  // dx
+        this->CamVecFront_Y = z2;  // dy
+    }
+
+    this->CamLeftDot = fixpoint_dot(
+        this->CamVecLeft_Z, this->field_0_party_dir_x,
+        this->CamVecLeft_X, this->field_4_party_dir_y,
+        this->CamVecLeft_Y, this->field_8_party_dir_z);
+    this->CamFrontDot = fixpoint_dot(
+        this->CamVecFront_Z, this->field_0_party_dir_x,
+        this->CamVecFront_X, this->field_4_party_dir_y,
+        this->CamVecFront_Y, this->field_8_party_dir_z);
+}
 
 RenderOpenGL::RenderOpenGL()
     : RenderBase() {
