@@ -49,11 +49,829 @@
 #include "Platform/Api.h"
 #include "Platform/OSWindow.h"
 
+//ADDED // change// Sourcecodeded//
+#include "Engine/Objects/ObjectList.h"
+
+//end///
+
+
+
+
 std::shared_ptr<IRender> render;
 int uNumDecorationsDrawnThisFrame;
 RenderBillboard pBillboardRenderList[500];
 unsigned int uNumBillboardsToDraw;
 int uNumSpritesDrawnThisFrame;
+
+//ADDED by Sourcecodedeleted
+RenderVertexSoft array_73D150[20]; // added
+
+void _46E889_collide_against_bmodels(unsigned int ecx0) {
+    int v8;            // eax@19
+    int v9;            // ecx@20
+    int v10;           // eax@24
+    // unsigned int v14;  // eax@28
+    int v15;           // eax@30
+    int v16;           // ecx@31
+    // unsigned int v17;  // eax@36
+    int v21;           // eax@42
+    // unsigned int v22;  // eax@43
+    int a2;            // [sp+84h] [bp-4h]@23
+    BLVFace face;      // [sp+Ch] [bp-7Ch]@1
+
+    for (BSPModel &model : pOutdoor->pBModels) {
+        if (stru_721530.sMaxX <= model.sMaxX &&
+            stru_721530.sMinX >= model.sMinX &&
+            stru_721530.sMaxY <= model.sMaxY &&
+            stru_721530.sMinY >= model.sMinY &&
+            stru_721530.sMaxZ <= model.sMaxZ &&
+            stru_721530.sMinZ >= model.sMinZ) {
+            for (ODMFace &mface : model.pFaces) {
+                if (stru_721530.sMaxX <= mface.pBoundingBox.x2 &&
+                    stru_721530.sMinX >= mface.pBoundingBox.x1 &&
+                    stru_721530.sMaxY <= mface.pBoundingBox.y2 &&
+                    stru_721530.sMinY >= mface.pBoundingBox.y1 &&
+                    stru_721530.sMaxZ <= mface.pBoundingBox.z2 &&
+                    stru_721530.sMinZ >= mface.pBoundingBox.z1) {
+                    face.pFacePlane_old.vNormal.x = mface.pFacePlane.vNormal.x;
+                    face.pFacePlane_old.vNormal.y = mface.pFacePlane.vNormal.y;
+                    face.pFacePlane_old.vNormal.z = mface.pFacePlane.vNormal.z;
+
+                    face.pFacePlane_old.dist =
+                        mface.pFacePlane.dist;  // incorrect
+
+                    face.uAttributes = mface.uAttributes;
+
+                    face.pBounding.x1 = mface.pBoundingBox.x1;
+                    face.pBounding.y1 = mface.pBoundingBox.y1;
+                    face.pBounding.z1 = mface.pBoundingBox.z1;
+
+                    face.pBounding.x2 = mface.pBoundingBox.x2;
+                    face.pBounding.y2 = mface.pBoundingBox.y2;
+                    face.pBounding.z2 = mface.pBoundingBox.z2;
+
+                    face.zCalc1 = mface.zCalc1;
+                    face.zCalc2 = mface.zCalc2;
+                    face.zCalc3 = mface.zCalc3;
+
+                    face.pXInterceptDisplacements =
+                        mface.pXInterceptDisplacements;
+                    face.pYInterceptDisplacements =
+                        mface.pYInterceptDisplacements;
+                    face.pZInterceptDisplacements =
+                        mface.pZInterceptDisplacements;
+
+                    face.uPolygonType = (PolygonType)mface.uPolygonType;
+
+                    face.uNumVertices = mface.uNumVertices;
+
+                    // face.uBitmapID = model.pFaces[j].uTextureID;
+                    face.resource = mface.resource;
+
+                    face.pVertexIDs = mface.pVertexIDs;
+
+                    if (!face.Ethereal() && !face.Portal()) {
+                        v8 = (face.pFacePlane_old.dist +
+                              face.pFacePlane_old.vNormal.x *
+                                  stru_721530.normal.x +
+                              face.pFacePlane_old.vNormal.y *
+                                  stru_721530.normal.y +
+                              face.pFacePlane_old.vNormal.z *
+                                  stru_721530.normal.z) >>
+                             16;
+                        if (v8 > 0) {
+                            v9 = (face.pFacePlane_old.dist +
+                                  face.pFacePlane_old.vNormal.x *
+                                      stru_721530.normal2.x +
+                                  face.pFacePlane_old.vNormal.y *
+                                      stru_721530.normal2.y +
+                                  face.pFacePlane_old.vNormal.z *
+                                      stru_721530.normal2.z) >>
+                                 16;
+                            if (v8 <= stru_721530.prolly_normal_d ||
+                                v9 <= stru_721530.prolly_normal_d) {
+                                if (v9 <= v8) {
+                                    a2 = stru_721530.field_6C;
+                                    if (sub_4754BF(stru_721530.prolly_normal_d,
+                                                   &a2, stru_721530.normal.x,
+                                                   stru_721530.normal.y,
+                                                   stru_721530.normal.z,
+                                                   stru_721530.direction.x,
+                                                   stru_721530.direction.y,
+                                                   stru_721530.direction.z,
+                                                   &face, model.index, ecx0)) {
+                                        v10 = a2;
+                                    } else {
+                                        a2 = stru_721530.prolly_normal_d +
+                                             stru_721530.field_6C;
+                                        if (!sub_475F30(&a2, &face,
+                                                        stru_721530.normal.x,
+                                                        stru_721530.normal.y,
+                                                        stru_721530.normal.z,
+                                                        stru_721530.direction.x,
+                                                        stru_721530.direction.y,
+                                                        stru_721530.direction.z,
+                                                        model.index))
+                                            goto LABEL_29;
+                                        v10 = a2 - stru_721530.prolly_normal_d;
+                                        a2 -= stru_721530.prolly_normal_d;
+                                    }
+                                    if (v10 < stru_721530.field_7C) {
+                                        stru_721530.field_7C = v10;
+                                        stru_721530.pid = PID(
+                                            OBJECT_BModel,
+                                            (mface.index | (model.index << 6)));
+                                    }
+                                }
+                            }
+                        }
+                    LABEL_29:
+                        if (stru_721530.field_0 & 1) {
+                            v15 = (face.pFacePlane_old.dist +
+                                   face.pFacePlane_old.vNormal.x *
+                                       stru_721530.position.x +
+                                   face.pFacePlane_old.vNormal.y *
+                                       stru_721530.position.y +
+                                   face.pFacePlane_old.vNormal.z *
+                                       stru_721530.position.z) >>
+                                  16;
+                            if (v15 > 0) {
+                                v16 = (face.pFacePlane_old.dist +
+                                       face.pFacePlane_old.vNormal.x *
+                                           stru_721530.field_4C +
+                                       face.pFacePlane_old.vNormal.y *
+                                           stru_721530.field_50 +
+                                       face.pFacePlane_old.vNormal.z *
+                                           stru_721530.field_54) >>
+                                      16;
+                                if (v15 <= stru_721530.prolly_normal_d ||
+                                    v16 <= stru_721530.prolly_normal_d) {
+                                    if (v16 <= v15) {
+                                        a2 = stru_721530.field_6C;
+                                        if (sub_4754BF(
+                                                stru_721530.field_8_radius, &a2,
+                                                stru_721530.position.x,
+                                                stru_721530.position.y,
+                                                stru_721530.position.z,
+                                                stru_721530.direction.x,
+                                                stru_721530.direction.y,
+                                                stru_721530.direction.z, &face,
+                                                model.index, ecx0)) {
+                                            if (a2 < stru_721530.field_7C) {
+                                                stru_721530.field_7C = a2;
+                                                stru_721530.pid =
+                                                    PID(OBJECT_BModel,
+                                                        (mface.index |
+                                                         (model.index << 6)));
+                                            }
+                                        } else {
+                                            a2 = stru_721530.field_6C +
+                                                 stru_721530.field_8_radius;
+                                            if (sub_475F30(
+                                                    &a2, &face,
+                                                    stru_721530.position.x,
+                                                    stru_721530.position.y,
+                                                    stru_721530.position.z,
+                                                    stru_721530.direction.x,
+                                                    stru_721530.direction.y,
+                                                    stru_721530.direction.z,
+                                                    model.index)) {
+                                                v21 =
+                                                    a2 -
+                                                    stru_721530.prolly_normal_d;
+                                                a2 -=
+                                                    stru_721530.prolly_normal_d;
+                                                if (a2 < stru_721530.field_7C) {
+                                                    stru_721530.field_7C = v21;
+                                                    stru_721530.pid = PID(
+                                                        OBJECT_BModel,
+                                                        (mface.index |
+                                                         (model.index << 6)));
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+int _46EF01_collision_chech_player(int a1) {
+    int result;  // eax@1
+    int v3;      // ebx@7
+    int v4;      // esi@7
+    int v5;      // edi@8
+    int v6;      // ecx@9
+    int v7;      // edi@12
+    int v10;     // [sp+14h] [bp-8h]@7
+    int v11;     // [sp+18h] [bp-4h]@7
+
+    result = pParty->vPosition.x;
+    // device_caps = pParty->uPartyHeight;
+    if (stru_721530.sMaxX <=
+            pParty->vPosition.x + (2 * pParty->field_14_radius) &&
+        stru_721530.sMinX >=
+            pParty->vPosition.x - (2 * pParty->field_14_radius) &&
+        stru_721530.sMaxY <=
+            pParty->vPosition.y + (2 * pParty->field_14_radius) &&
+        stru_721530.sMinY >=
+            pParty->vPosition.y - (2 * pParty->field_14_radius) &&
+        stru_721530.sMinZ/*sMaxZ*/ <= (pParty->vPosition.z + (int)pParty->uPartyHeight) &&
+        stru_721530.sMaxZ/*sMinZ*/ >= pParty->vPosition.z) {
+        v3 = stru_721530.prolly_normal_d + (2 * pParty->field_14_radius);
+        v11 = pParty->vPosition.x - stru_721530.normal.x;
+        v4 = ((pParty->vPosition.x - stru_721530.normal.x) *
+                  stru_721530.direction.y -
+              (pParty->vPosition.y - stru_721530.normal.y) *
+                  stru_721530.direction.x) >>
+             16;
+        v10 = pParty->vPosition.y - stru_721530.normal.y;
+        result = abs(((pParty->vPosition.x - stru_721530.normal.x) *
+                          stru_721530.direction.y -
+                      (pParty->vPosition.y - stru_721530.normal.y) *
+                          stru_721530.direction.x) >>
+                     16);
+        if (result <=
+            stru_721530.prolly_normal_d + (2 * pParty->field_14_radius)) {
+            result = v10 * stru_721530.direction.y;
+            v5 = (v10 * stru_721530.direction.y +
+                  v11 * stru_721530.direction.x) >>
+                 16;
+            if (v5 > 0) {
+                v6 = fixpoint_mul(stru_721530.direction.z, v5) +
+                     stru_721530.normal.z;
+                result = pParty->vPosition.z;
+                if (v6 >= pParty->vPosition.z) {
+                    result = pParty->uPartyHeight + pParty->vPosition.z;
+                    if (v6 <= (signed int)(pParty->uPartyHeight +
+                                           pParty->vPosition.z) ||
+                        a1) {
+                        result = integer_sqrt(v3 * v3 - v4 * v4);
+                        v7 = v5 - integer_sqrt(v3 * v3 - v4 * v4);
+                        if (v7 < 0) v7 = 0;
+                        if (v7 < stru_721530.field_7C) {
+                            stru_721530.field_7C = v7;
+                            stru_721530.pid = 4;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    return result;
+}
+
+
+void _46E0B2_collide_against_decorations() {
+    BLVSector *sector = &pIndoor->pSectors[stru_721530.uSectorID];
+    for (unsigned int i = 0; i < sector->uNumDecorations; ++i) {
+        LevelDecoration *decor = &pLevelDecorations[sector->pDecorationIDs[i]];
+        if (!(decor->uFlags & LEVEL_DECORATION_INVISIBLE)) {
+            DecorationDesc *decor_desc = pDecorationList->GetDecoration(decor->uDecorationDescID);
+            if (!decor_desc->CanMoveThrough()) {
+                if (stru_721530.sMaxX <= decor->vPosition.x + decor_desc->uRadius &&
+                    stru_721530.sMinX >= decor->vPosition.x - decor_desc->uRadius &&
+                    stru_721530.sMaxY <= decor->vPosition.y + decor_desc->uRadius &&
+                    stru_721530.sMinY >= decor->vPosition.y - decor_desc->uRadius &&
+                    stru_721530.sMaxZ <= decor->vPosition.z + decor_desc->uDecorationHeight &&
+                    stru_721530.sMinZ >= decor->vPosition.z) {
+                    int v16 = decor->vPosition.x - stru_721530.normal.x;
+                    int v15 = decor->vPosition.y - stru_721530.normal.y;
+                    int v8 = stru_721530.prolly_normal_d + decor_desc->uRadius;
+                    int v17 = ((decor->vPosition.x - stru_721530.normal.x) * stru_721530.direction.y -
+                               (decor->vPosition.y - stru_721530.normal.y) * stru_721530.direction.x) >> 16;
+                    if (abs(v17) <= stru_721530.prolly_normal_d + decor_desc->uRadius) {
+                        int v9 = (v16 * stru_721530.direction.x + v15 * stru_721530.direction.y) >> 16;
+                        if (v9 > 0) {
+                            int v11 = stru_721530.normal.z + fixpoint_mul(stru_721530.direction.z, v9);
+                            if (v11 >= decor->vPosition.z) {
+                                if (v11 <= decor_desc->uDecorationHeight + decor->vPosition.z) {
+                                    int v12 = v9 - integer_sqrt(v8 * v8 - v17 * v17);
+                                    if (v12 < 0) v12 = 0;
+                                    if (v12 < stru_721530.field_7C) {
+                                        stru_721530.field_7C = v12;
+                                        stru_721530.pid = PID(OBJECT_Decoration, sector->pDecorationIDs[i]);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+int _46F04E_collide_against_portals() {
+    int a3;             // [sp+Ch] [bp-8h]@13
+    int v12 = 0;            // [sp+10h] [bp-4h]@15
+
+    unsigned int v1 = 0xFFFFFF;
+    unsigned int v10 = 0xFFFFFF;
+    for (unsigned int i = 0; i < pIndoor->pSectors[stru_721530.uSectorID].uNumPortals; ++i) {
+        if (pIndoor->pSectors[stru_721530.uSectorID].pPortals[i] !=
+            stru_721530.field_80) {
+            BLVFace *face = &pIndoor->pFaces[pIndoor->pSectors[stru_721530.uSectorID].pPortals[i]];
+            if (stru_721530.sMaxX <= face->pBounding.x2 &&
+                stru_721530.sMinX >= face->pBounding.x1 &&
+                stru_721530.sMaxY <= face->pBounding.y2 &&
+                stru_721530.sMinY >= face->pBounding.y1 &&
+                stru_721530.sMaxZ <= face->pBounding.z2 &&
+                stru_721530.sMinZ >= face->pBounding.z1) {
+                int v4 = (stru_721530.normal.x * face->pFacePlane_old.vNormal.x +
+                          face->pFacePlane_old.dist +
+                          stru_721530.normal.y * face->pFacePlane_old.vNormal.y +
+                          stru_721530.normal.z * face->pFacePlane_old.vNormal.z) >> 16;
+                int v5 = (stru_721530.normal2.z * face->pFacePlane_old.vNormal.z +
+                          face->pFacePlane_old.dist +
+                          stru_721530.normal2.x * face->pFacePlane_old.vNormal.x +
+                          stru_721530.normal2.y * face->pFacePlane_old.vNormal.y) >> 16;
+                if ((v4 < stru_721530.prolly_normal_d || v5 < stru_721530.prolly_normal_d) &&
+                    (v4 > -stru_721530.prolly_normal_d || v5 > -stru_721530.prolly_normal_d) &&
+                    (a3 = stru_721530.field_6C, sub_475D85(&stru_721530.normal, &stru_721530.direction, &a3, face)) && a3 < (int)v10) {
+                    v10 = a3;
+                    v12 = pIndoor->pSectors[stru_721530.uSectorID].pPortals[i];
+                }
+            }
+        }
+    }
+
+    v1 = v10;
+
+    int result = 1;
+
+    if (stru_721530.field_7C >= (int)v1 && (int)v1 <= stru_721530.field_6C) {
+        stru_721530.field_80 = v12;
+        if (pIndoor->pFaces[v12].uSectorID == stru_721530.uSectorID) {
+            stru_721530.uSectorID = pIndoor->pFaces[v12].uBackSectorID;
+        } else {
+            stru_721530.uSectorID = pIndoor->pFaces[v12].uSectorID;
+        }
+        stru_721530.field_7C = 268435455;  // 0xFFFFFFF
+        result = 0;
+    }
+
+    return result;
+}
+
+int _46E44E_collide_against_faces_and_portals(unsigned int b1) {
+    BLVSector *pSector;   // edi@1
+    int v2;        // ebx@1
+    BLVFace *pFace;       // esi@2
+    __int16 pNextSector;  // si@10
+    int pArrayNum;        // ecx@12
+    unsigned __int8 v6;   // sf@12
+    unsigned __int8 v7;   // of@12
+    int result;           // eax@14
+    // int v10; // ecx@15
+    int pFloor;             // eax@16
+    int v15;                // eax@24
+    int v16;                // edx@25
+    int v17;                // eax@29
+    unsigned int v18;       // eax@33
+    int v21;                // eax@35
+    int v22;                // ecx@36
+    int v23;                // eax@40
+    unsigned int v24;       // eax@44
+    int a3;                 // [sp+10h] [bp-48h]@28
+    int v26;                // [sp+14h] [bp-44h]@15
+    int i;                  // [sp+18h] [bp-40h]@1
+    int a10;                // [sp+1Ch] [bp-3Ch]@1
+    int v29;                // [sp+20h] [bp-38h]@14
+    int v32;                // [sp+2Ch] [bp-2Ch]@15
+    int pSectorsArray[10];  // [sp+30h] [bp-28h]@1
+
+    pSector = &pIndoor->pSectors[stru_721530.uSectorID];
+    i = 1;
+    a10 = b1;
+    pSectorsArray[0] = stru_721530.uSectorID;
+    for (v2 = 0; v2 < pSector->uNumPortals; ++v2) {
+        pFace = &pIndoor->pFaces[pSector->pPortals[v2]];
+        if (stru_721530.sMaxX <= pFace->pBounding.x2 &&
+            stru_721530.sMinX >= pFace->pBounding.x1 &&
+            stru_721530.sMaxY <= pFace->pBounding.y2 &&
+            stru_721530.sMinY >= pFace->pBounding.y1 &&
+            stru_721530.sMaxZ <= pFace->pBounding.z2 &&
+            stru_721530.sMinZ >= pFace->pBounding.z1 &&
+            abs((pFace->pFacePlane_old.dist +
+                 stru_721530.normal.x * pFace->pFacePlane_old.vNormal.x +
+                 stru_721530.normal.y * pFace->pFacePlane_old.vNormal.y +
+                 stru_721530.normal.z * pFace->pFacePlane_old.vNormal.z) >>
+                16) <= stru_721530.field_6C + 16) {
+            pNextSector = pFace->uSectorID == stru_721530.uSectorID
+                              ? pFace->uBackSectorID
+                              : pFace->uSectorID;  // FrontSectorID
+            pArrayNum = i++;
+            v7 = i < 10;
+            v6 = i - 10 < 0;
+            pSectorsArray[pArrayNum] = pNextSector;
+            if (!(v6 ^ v7)) break;
+        }
+    }
+    result = 0;
+    for (v29 = 0; v29 < i; v29++) {
+        pSector = &pIndoor->pSectors[pSectorsArray[v29]];
+        v32 = pSector->uNumFloors + pSector->uNumWalls + pSector->uNumCeilings;
+        for (v26 = 0; v26 < v32; v26++) {
+            pFloor = pSector->pFloors[v26];
+            pFace = &pIndoor->pFaces[pSector->pFloors[v26]];
+            if (!pFace->Portal() && stru_721530.sMaxX <= pFace->pBounding.x2 &&
+                stru_721530.sMinX >= pFace->pBounding.x1 &&
+                stru_721530.sMaxY <= pFace->pBounding.y2 &&
+                stru_721530.sMinY >= pFace->pBounding.y1 &&
+                stru_721530.sMaxZ <= pFace->pBounding.z2 &&
+                stru_721530.sMinZ >= pFace->pBounding.z1 &&
+                pFloor != stru_721530.field_84) {
+                v15 =
+                    (pFace->pFacePlane_old.dist +
+                     stru_721530.normal.x * pFace->pFacePlane_old.vNormal.x +
+                     stru_721530.normal.y * pFace->pFacePlane_old.vNormal.y +
+                     stru_721530.normal.z * pFace->pFacePlane_old.vNormal.z) >>
+                    16;
+                if (v15 > 0) {
+                    v16 = (pFace->pFacePlane_old.dist +
+                           stru_721530.normal2.x *
+                               pFace->pFacePlane_old.vNormal.x +
+                           stru_721530.normal2.y *
+                               pFace->pFacePlane_old.vNormal.y +
+                           stru_721530.normal2.z *
+                               pFace->pFacePlane_old.vNormal.z) >>
+                          16;
+                    if (v15 <= stru_721530.prolly_normal_d ||
+                        v16 <= stru_721530.prolly_normal_d) {
+                        if (v16 <= v15) {
+                            a3 = stru_721530.field_6C;
+                            if (sub_47531C(
+                                    stru_721530.prolly_normal_d, &a3,
+                                    stru_721530.normal.x, stru_721530.normal.y,
+                                    stru_721530.normal.z,
+                                    stru_721530.direction.x,
+                                    stru_721530.direction.y,
+                                    stru_721530.direction.z, pFace, a10)) {
+                                v17 = a3;
+                            } else {
+                                a3 = stru_721530.field_6C +
+                                     stru_721530.prolly_normal_d;
+                                if (!sub_475D85(&stru_721530.normal,
+                                                &stru_721530.direction, &a3,
+                                                pFace))
+                                    goto LABEL_34;
+                                v17 = a3 - stru_721530.prolly_normal_d;
+                                a3 -= stru_721530.prolly_normal_d;
+                            }
+                            if (v17 < stru_721530.field_7C) {
+                                stru_721530.field_7C = v17;
+                                v18 = 8 * pSector->pFloors[v26];
+                                v18 |= 6;
+                                stru_721530.pid = v18;
+                            }
+                        }
+                    }
+                }
+            LABEL_34:
+                if (!(stru_721530.field_0 & 1) ||
+                    (v21 = (pFace->pFacePlane_old.dist +
+                            stru_721530.position.x *
+                                pFace->pFacePlane_old.vNormal.x +
+                            stru_721530.position.y *
+                                pFace->pFacePlane_old.vNormal.y +
+                            stru_721530.position.z *
+                                pFace->pFacePlane_old.vNormal.z) >>
+                           16,
+                     v21 <= 0) ||
+                    (v22 = (pFace->pFacePlane_old.dist +
+                            stru_721530.field_4C *
+                                pFace->pFacePlane_old.vNormal.x +
+                            stru_721530.field_50 *
+                                pFace->pFacePlane_old.vNormal.y +
+                            stru_721530.field_54 *
+                                pFace->pFacePlane_old.vNormal.z) >>
+                           16,
+                     v21 > stru_721530.prolly_normal_d) &&
+                        v22 > stru_721530.prolly_normal_d ||
+                    v22 > v21)
+                    continue;
+                a3 = stru_721530.field_6C;
+                if (sub_47531C(stru_721530.field_8_radius, &a3,
+                               stru_721530.position.x, stru_721530.position.y,
+                               stru_721530.position.z, stru_721530.direction.x,
+                               stru_721530.direction.y, stru_721530.direction.z,
+                               pFace, a10)) {
+                    v23 = a3;
+                    goto LABEL_43;
+                }
+                a3 = stru_721530.field_6C + stru_721530.field_8_radius;
+                if (sub_475D85(&stru_721530.position, &stru_721530.direction,
+                               &a3, pFace)) {
+                    v23 = a3 - stru_721530.prolly_normal_d;
+                    a3 -= stru_721530.prolly_normal_d;
+                LABEL_43:
+                    if (v23 < stru_721530.field_7C) {
+                        stru_721530.field_7C = v23;
+                        v24 = 8 * pSector->pFloors[v26];
+                        v24 |= 6;
+                        stru_721530.pid = v24;
+                    }
+                }
+            }
+        }
+        result = v29 + 1;
+    }
+    return result;
+}
+
+
+
+int _43F5C8_get_point_light_level_with_respect_to_lights( unsigned int uBaseLightLevel, int uSectorID, float x, float y, float z) {
+    signed int v6;     // edi@1
+    int v8;            // eax@6
+    int v9;            // ebx@6
+    unsigned int v10;  // ecx@6
+    unsigned int v11;  // edx@9
+    unsigned int v12;  // edx@11
+    signed int v13;    // ecx@12
+    BLVLightMM7 *v16;  // esi@20
+    int v17;           // ebx@21
+    signed int v24;    // ecx@30
+    int v26;           // ebx@35
+    int v37;           // [sp+Ch] [bp-18h]@37
+    int v39;           // [sp+10h] [bp-14h]@23
+    int v40;           // [sp+10h] [bp-14h]@36
+    int v42;           // [sp+14h] [bp-10h]@22
+    unsigned int v43;  // [sp+18h] [bp-Ch]@12
+    unsigned int v44;  // [sp+18h] [bp-Ch]@30
+    unsigned int v45;  // [sp+18h] [bp-Ch]@44
+
+    v6 = uBaseLightLevel;
+    for (uint i = 0; i < pMobileLightsStack->uNumLightsActive; ++i) {
+        MobileLight *p = &pMobileLightsStack->pLights[i];
+
+        float distX = abs(p->vPosition.x - x);
+        if (distX <= p->uRadius) {
+            float distY = abs(p->vPosition.y - y);
+            if (distY <= p->uRadius) {
+                float distZ = abs(p->vPosition.z - z);
+                if (distZ <= p->uRadius) {
+                    v8 = distX;
+                    v9 = distY;
+                    v10 = distZ;
+                    if (distX < distY) {
+                        v8 = distY;
+                        v9 = distX;
+                    }
+                    if (v8 < distZ) {
+                        v11 = v8;
+                        v8 = distZ;
+                        v10 = v11;
+                    }
+                    if (v9 < (signed int)v10) {
+                        v12 = v10;
+                        v10 = v9;
+                        v9 = v12;
+                    }
+                    v43 = ((unsigned int)(11 * v9) / 32) + (v10 / 4) + v8;
+                    v13 = p->uRadius;
+                    if ((signed int)v43 < v13)
+                    /* ORIGONAL */v6 += ((unsigned __int64)(30i64 *  (signed int)(v43 << 16) /  v13) >> 16) -  30;
+                        //v6 += ((unsigned int)(30 *  (signed int)(v43 << 16) /  v13) >> 16) -  30;
+                }
+            }
+        }
+    }
+
+    if (uCurrentlyLoadedLevelType == LEVEL_Indoor) {
+        BLVSector *pSector = &pIndoor->pSectors[uSectorID];
+
+        for (uint i = 0; i < pSector->uNumLights; ++i) {
+            v16 = pIndoor->pLights + pSector->pLights[i];
+            if (~v16->uAtributes & 8) {
+                v17 = abs(v16->vPosition.x - x);
+                if (v17 <= v16->uRadius) {
+                    v42 = abs(v16->vPosition.y - y);
+                    if (v42 <= v16->uRadius) {
+                        v39 = abs(v16->vPosition.z - z);
+                        if (v39 <= v16->uRadius) {
+                            v44 = int_get_vector_length(v17, v42, v39);
+                            v24 = v16->uRadius;
+                            if ((signed int)v44 < v24)
+                            /*ORIGONAL*/v6 += ((unsigned __int64)(30i64 *(signed int)(v44 << 16) /v24) >> 16) -  30;
+                            //v6 += ((unsigned int)(30 *(signed int)(v44 << 16) /v24) >> 16) -  30;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    for (uint i = 0; i < pStationaryLightsStack->uNumLightsActive; ++i) {
+        // StationaryLight* p = &pStationaryLightsStack->pLights[i];
+        v26 = abs(pStationaryLightsStack->pLights[i].vPosition.x - x);
+        if (v26 <= pStationaryLightsStack->pLights[i].uRadius) {
+            v40 = abs(pStationaryLightsStack->pLights[i].vPosition.y - y);
+            if (v40 <= pStationaryLightsStack->pLights[i].uRadius) {
+                v37 = abs(pStationaryLightsStack->pLights[i].vPosition.z - z);
+                if (v37 <= pStationaryLightsStack->pLights[i].uRadius) {
+                    v45 = int_get_vector_length(v26, v40, v37);
+                    // v33 = pStationaryLightsStack->pLights[i].uRadius;
+                    if ((signed int)v45 <
+                        pStationaryLightsStack->pLights[i].uRadius)
+/*Origonal */ v6 += ((unsigned __int64)(30i64 *(signed int)(v45 << 16) / pStationaryLightsStack->pLights[i].uRadius) >> 16) -30;
+                 //v6 += ((unsigned int)(30 *(signed int)(v45 << 16) / pStationaryLightsStack->pLights[i].uRadius) >> 16) -30;
+
+                }
+            }
+        }
+    }
+
+    if (v6 <= 31) {
+        if (v6 < 0) v6 = 0;
+    } else {
+        v6 = 31;
+    }
+    return v6;
+}
+
+
+int collide_against_floor(int x, int y, int z, unsigned int *pSectorID, unsigned int *pFaceID) {
+    uint uFaceID = -1;
+    int floor_level = BLV_GetFloorLevel(x, y, z, *pSectorID, &uFaceID);
+
+    if (floor_level != -30000 && floor_level <= z + 50) {
+        *pFaceID = uFaceID;
+        return floor_level;
+    }
+
+    uint uSectorID = pIndoor->GetSector(x, y, z);
+    *pSectorID = uSectorID;
+
+    floor_level = BLV_GetFloorLevel(x, y, z, uSectorID, &uFaceID);
+    if (uSectorID && floor_level != -30000)
+        *pFaceID = uFaceID;
+    else
+        return -30000;
+    return floor_level;
+}
+
+void _46ED8A_collide_against_sprite_objects(unsigned int _this) {
+    ObjectDesc *object;  // edx@4
+    int v10;             // ecx@12
+    int v11;             // esi@13
+
+    for (uint i = 0; i < uNumSpriteObjects; ++i) {
+        if (pSpriteObjects[i].uObjectDescID) {
+            object = &pObjectList->pObjects[pSpriteObjects[i].uObjectDescID];
+            if (!(object->uFlags & OBJECT_DESC_NO_COLLISION)) {
+                if (stru_721530.sMaxX <=
+                        pSpriteObjects[i].vPosition.x + object->uRadius &&
+                    stru_721530.sMinX >=
+                        pSpriteObjects[i].vPosition.x - object->uRadius &&
+                    stru_721530.sMaxY <=
+                        pSpriteObjects[i].vPosition.y + object->uRadius &&
+                    stru_721530.sMinY >=
+                        pSpriteObjects[i].vPosition.y - object->uRadius &&
+                    stru_721530.sMaxZ <=
+                        pSpriteObjects[i].vPosition.z + object->uHeight &&
+                    stru_721530.sMinZ >= pSpriteObjects[i].vPosition.z) {
+                    if (abs(((pSpriteObjects[i].vPosition.x -
+                              stru_721530.normal.x) *
+                                 stru_721530.direction.y -
+                             (pSpriteObjects[i].vPosition.y -
+                              stru_721530.normal.y) *
+                                 stru_721530.direction.x) >>
+                            16) <=
+                        object->uHeight + stru_721530.prolly_normal_d) {
+                        v10 = ((pSpriteObjects[i].vPosition.x -
+                                stru_721530.normal.x) *
+                                   stru_721530.direction.x +
+                               (pSpriteObjects[i].vPosition.y -
+                                stru_721530.normal.y) *
+                                   stru_721530.direction.y) >>
+                              16;
+                        if (v10 > 0) {
+                            v11 = stru_721530.normal.z +
+                                  ((unsigned __int64)(stru_721530.direction.z *
+                                                      (signed __int64)v10) >>
+                                   16);
+                            if (v11 >= pSpriteObjects[i].vPosition.z -
+                                           stru_721530.prolly_normal_d) {
+                                if (v11 <= object->uHeight +
+                                               stru_721530.prolly_normal_d +
+                                               pSpriteObjects[i].vPosition.z) {
+                                    if (v10 < stru_721530.field_7C) {
+                                        sub_46DEF2(_this, i);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+void UpdateObjects() {
+    int v5;   // ecx@6
+    int v7;   // eax@9
+    int v11;  // eax@17
+    int v12;  // edi@27
+    int v18;  // [sp+4h] [bp-10h]@27
+    int v19;  // [sp+8h] [bp-Ch]@27
+
+    for (uint i = 0; i < uNumSpriteObjects; ++i) {
+        if (pSpriteObjects[i].uAttributes & OBJECT_40) {
+            pSpriteObjects[i].uAttributes &= ~OBJECT_40;
+        } else {
+            ObjectDesc *object =
+                &pObjectList->pObjects[pSpriteObjects[i].uObjectDescID];
+            if (pSpriteObjects[i].AttachedToActor()) {
+                v5 = PID_ID(pSpriteObjects[i].spell_target_pid);
+                pSpriteObjects[i].vPosition.x = pActors[v5].vPosition.x;
+                pSpriteObjects[i].vPosition.y = pActors[v5].vPosition.y;
+                pSpriteObjects[i].vPosition.z =
+                    pActors[v5].vPosition.z + pActors[v5].uActorHeight;
+                if (!pSpriteObjects[i].uObjectDescID) continue;
+                pSpriteObjects[i].uSpriteFrameID += pEventTimer->uTimeElapsed;
+                if (!(object->uFlags & OBJECT_DESC_TEMPORARY)) continue;
+                if (pSpriteObjects[i].uSpriteFrameID >= 0) {
+                    v7 = object->uLifetime;
+                    if (pSpriteObjects[i].uAttributes & ITEM_BROKEN)
+                        v7 = pSpriteObjects[i].field_20;
+                    if (pSpriteObjects[i].uSpriteFrameID < v7) continue;
+                }
+                SpriteObject::OnInteraction(i);
+                continue;
+            }
+            if (pSpriteObjects[i].uObjectDescID) {
+                pSpriteObjects[i].uSpriteFrameID += pEventTimer->uTimeElapsed;
+                if (object->uFlags & OBJECT_DESC_TEMPORARY) {
+                    if (pSpriteObjects[i].uSpriteFrameID < 0) {
+                        SpriteObject::OnInteraction(i);
+                        continue;
+                    }
+                    v11 = object->uLifetime;
+                    if (pSpriteObjects[i].uAttributes & ITEM_BROKEN)
+                        v11 = pSpriteObjects[i].field_20;
+                }
+                if (!(object->uFlags & OBJECT_DESC_TEMPORARY) ||
+                    pSpriteObjects[i].uSpriteFrameID < v11) {
+                    if (uCurrentlyLoadedLevelType == LEVEL_Indoor)
+                        SpriteObject::UpdateObject_fn0_BLV(i);
+                    else
+                        SpriteObject::UpdateObject_fn0_ODM(i);
+                    if (!pParty->bTurnBasedModeOn || !(pSpriteObjects[i].uSectorID & 4)) {
+                        continue;
+                    }
+                    v12 = abs(pParty->vPosition.x -
+                              pSpriteObjects[i].vPosition.x);
+                    v18 = abs(pParty->vPosition.y -
+                              pSpriteObjects[i].vPosition.y);
+                    v19 = abs(pParty->vPosition.z -
+                              pSpriteObjects[i].vPosition.z);
+                    if (int_get_vector_length(v12, v18, v19) <= 5120) continue;
+                    SpriteObject::OnInteraction(i);
+                    continue;
+                }
+                if (!(object->uFlags & OBJECT_DESC_INTERACTABLE)) {
+                    SpriteObject::OnInteraction(i);
+                    continue;
+                }
+                _46BFFA_update_spell_fx(i, PID(OBJECT_Item, i));
+            }
+        }
+    }
+}
+
+int _43F55F_get_billboard_light_level(RenderBillboard *a1,
+                                      int uBaseLightLevel) {
+    int v3 = 0;
+
+    if (uCurrentlyLoadedLevelType == LEVEL_Indoor) {
+        v3 = pIndoor->pSectors[a1->uIndoorSectorID].uMinAmbientLightLevel;
+    } else {
+        if (uBaseLightLevel == -1) {
+            v3 = a1->dimming_level;
+        } else {
+            v3 = uBaseLightLevel;
+        }
+    }
+
+    return _43F5C8_get_point_light_level_with_respect_to_lights(
+        v3, a1->uIndoorSectorID, a1->world_x, a1->world_y, a1->world_z);
+}
+
+
+
+
+//END
+
 
 RenderVertexSoft array_507D30[50];
 
@@ -2015,6 +2833,8 @@ void RenderOpenGL::Present() {
 }
 
 RenderVertexSoft ogl_draw_buildings_vertices[20];
+
+
 void RenderOpenGL::DrawBuildingsD3D() {
     // int v27;  // eax@57
     int v49;  // [sp+2Ch] [bp-2Ch]@10
