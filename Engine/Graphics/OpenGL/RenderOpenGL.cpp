@@ -872,6 +872,70 @@ int _43F55F_get_billboard_light_level(RenderBillboard *a1,
 
 //END
 
+unsigned int sub_46DEF2(signed int a2, unsigned int uLayingItemID) {
+    unsigned int result = uLayingItemID;
+    if (pObjectList->pObjects[pSpriteObjects[uLayingItemID].uObjectDescID].uFlags & 0x10) {
+        result = _46BFFA_update_spell_fx(uLayingItemID, a2);
+    }
+    return result;
+}
+
+bool sub_47531C(int a1, int* a2, int pos_x, int pos_y, int pos_z, int dir_x,
+    int dir_y, int dir_z, BLVFace* face, int a10) {
+    int v11;          // ST1C_4@3
+    int v12;          // edi@3
+    int v13;          // esi@3
+    int v14;          // edi@4
+    __int64 v15;      // qtt@6
+                      // __int16 v16; // si@7
+    int a7a;          // [sp+30h] [bp+18h]@7
+    int a9b;          // [sp+38h] [bp+20h]@3
+    int a9a;          // [sp+38h] [bp+20h]@3
+    int a10b;         // [sp+3Ch] [bp+24h]@3
+    signed int a10a;  // [sp+3Ch] [bp+24h]@4
+    int a10c;         // [sp+3Ch] [bp+24h]@5
+
+    if (a10 && face->Ethereal()) return 0;
+    v11 = fixpoint_mul(dir_x, face->pFacePlane_old.vNormal.x);
+    a10b = fixpoint_mul(dir_y, face->pFacePlane_old.vNormal.y);
+    a9b = fixpoint_mul(dir_z, face->pFacePlane_old.vNormal.z);
+    v12 = v11 + a9b + a10b;
+    a9a = v11 + a9b + a10b;
+    v13 = (a1 << 16) - pos_x * face->pFacePlane_old.vNormal.x -
+        pos_y * face->pFacePlane_old.vNormal.y -
+        pos_z * face->pFacePlane_old.vNormal.z - face->pFacePlane_old.dist;
+    if (abs((a1 << 16) - pos_x * face->pFacePlane_old.vNormal.x -
+        pos_y * face->pFacePlane_old.vNormal.y -
+        pos_z * face->pFacePlane_old.vNormal.z -
+        face->pFacePlane_old.dist) >= a1 << 16) {
+        a10c = abs(v13) >> 14;
+        if (a10c > abs(v12)) return 0;
+        HEXRAYS_LODWORD(v15) = v13 << 16;
+        HEXRAYS_HIDWORD(v15) = v13 >> 16;
+        v14 = a1;
+        a10a = v15 / a9a;
+    }
+    else {
+        a10a = 0;
+        v14 = abs(v13) >> 16;
+    }
+    // v16 = pos_y + ((unsigned int)fixpoint_mul(a10a, dir_y) >> 16);
+    HEXRAYS_LOWORD(a7a) = (short)pos_x +
+        ((unsigned int)fixpoint_mul(a10a, dir_x) >> 16) -
+        fixpoint_mul(v14, face->pFacePlane_old.vNormal.x);
+    HEXRAYS_HIWORD(a7a) = pos_y +
+        ((unsigned int)fixpoint_mul(a10a, dir_y) >> 16) -
+        fixpoint_mul(v14, face->pFacePlane_old.vNormal.y);
+    if (!sub_475665(face, a7a,
+        (short)pos_z +
+    ((unsigned int)fixpoint_mul(a10a, dir_z) >> 16) -
+        fixpoint_mul(v14, face->pFacePlane_old.vNormal.z)))
+        return 0;
+    *a2 = a10a >> 16;
+    if (a10a >> 16 < 0) *a2 = 0;
+    return 1;
+}
+
 bool sub_4754BF(int a1, int* a2, int X, int Y, int Z, int dir_x, int dir_y,
     int dir_z, BLVFace* face, int a10, int a11) {
     int v12;      // ST1C_4@3
@@ -924,6 +988,129 @@ bool sub_4754BF(int a1, int* a2, int X, int Y, int Z, int dir_x, int dir_y,
     *a2 = a11a >> 16;
     if (a11a >> 16 < 0) *a2 = 0;
     return true;
+}
+
+int sub_475665(BLVFace* face, int a2, __int16 a3) {
+    bool v16;     // edi@14
+    int v20;      // ebx@18
+    int v21;      // edi@20
+    int v22;      // ST14_4@22
+    __int64 v23;  // qtt@22
+    int result;   // eax@25
+    int v25;      // [sp+14h] [bp-10h]@14
+    int v26;      // [sp+1Ch] [bp-8h]@2
+    int v27;      // [sp+20h] [bp-4h]@2
+    int v28;      // [sp+30h] [bp+Ch]@2
+    int v29;      // [sp+30h] [bp+Ch]@7
+    int v30;      // [sp+30h] [bp+Ch]@11
+    int v31;      // [sp+30h] [bp+Ch]@14
+
+    if (face->uAttributes & FACE_XY_PLANE) {
+        v26 = (signed __int16)a2;
+        v27 = HEXRAYS_SHIWORD(a2);
+        if (face->uNumVertices) {
+            for (v28 = 0; v28 < face->uNumVertices; v28++) {
+                word_720C10_intercepts_xs[2 * v28] =
+                    face->pXInterceptDisplacements[v28] +
+                    pIndoor->pVertices[face->pVertexIDs[v28]].x;
+                word_720B40_intercepts_zs[2 * v28] =
+                    face->pYInterceptDisplacements[v28] +
+                    pIndoor->pVertices[face->pVertexIDs[v28]].y;
+                word_720C10_intercepts_xs[2 * v28 + 1] =
+                    face->pXInterceptDisplacements[v28 + 1] +
+                    pIndoor->pVertices[face->pVertexIDs[v28 + 1]].x;
+                word_720B40_intercepts_zs[2 * v28 + 1] =
+                    face->pYInterceptDisplacements[v28 + 1] +
+                    pIndoor->pVertices[face->pVertexIDs[v28 + 1]].y;
+            }
+        }
+    }
+    else {
+        if (face->uAttributes & FACE_XZ_PLANE) {
+            v26 = (signed __int16)a2;
+            v27 = a3;
+            if (face->uNumVertices) {
+                for (v29 = 0; v29 < face->uNumVertices; v29++) {
+                    word_720C10_intercepts_xs[2 * v29] =
+                        face->pXInterceptDisplacements[v29] +
+                        pIndoor->pVertices[face->pVertexIDs[v29]].x;
+                    word_720B40_intercepts_zs[2 * v29] =
+                        face->pZInterceptDisplacements[v29] +
+                        pIndoor->pVertices[face->pVertexIDs[v29]].z;
+                    word_720C10_intercepts_xs[2 * v29 + 1] =
+                        face->pXInterceptDisplacements[v29 + 1] +
+                        pIndoor->pVertices[face->pVertexIDs[v29 + 1]].x;
+                    word_720B40_intercepts_zs[2 * v29 + 1] =
+                        face->pZInterceptDisplacements[v29 + 1] +
+                        pIndoor->pVertices[face->pVertexIDs[v29 + 1]].z;
+                }
+            }
+        }
+        else {
+            v26 = HEXRAYS_SHIWORD(a2);
+            v27 = a3;
+            if (face->uNumVertices) {
+                for (v30 = 0; v30 < face->uNumVertices; v30++) {
+                    word_720C10_intercepts_xs[2 * v30] =
+                        face->pYInterceptDisplacements[v30] +
+                        pIndoor->pVertices[face->pVertexIDs[v30]].y;
+                    word_720B40_intercepts_zs[2 * v30] =
+                        face->pZInterceptDisplacements[v30] +
+                        pIndoor->pVertices[face->pVertexIDs[v30]].z;
+                    word_720C10_intercepts_xs[2 * v30 + 1] =
+                        face->pYInterceptDisplacements[v30 + 1] +
+                        pIndoor->pVertices[face->pVertexIDs[v30 + 1]].y;
+                    word_720B40_intercepts_zs[2 * v30 + 1] =
+                        face->pZInterceptDisplacements[v30 + 1] +
+                        pIndoor->pVertices[face->pVertexIDs[v30 + 1]].z;
+                }
+            }
+        }
+    }
+    v31 = 0;
+    word_720C10_intercepts_xs[2 * face->uNumVertices] =
+        word_720C10_intercepts_xs[0];
+    word_720B40_intercepts_zs[2 * face->uNumVertices] =
+        word_720B40_intercepts_zs[0];
+    v16 = word_720B40_intercepts_zs[0] >= v27;
+    if (2 * face->uNumVertices <= 0) return 0;
+    for (v25 = 0; v25 < 2 * face->uNumVertices; ++v25) {
+        if (v31 >= 2) break;
+        if (v16 ^ (word_720B40_intercepts_zs[v25 + 1] >= v27)) {
+            if (word_720C10_intercepts_xs[v25 + 1] >= v26)
+                v20 = 0;
+            else
+                v20 = 2;
+            v21 = v20 | (word_720C10_intercepts_xs[v25] < v26);
+            if (v21 != 3) {
+                v22 = word_720C10_intercepts_xs[v25 + 1] -
+                    word_720C10_intercepts_xs[v25];
+                HEXRAYS_LODWORD(v23) = v22 << 16;
+                HEXRAYS_HIDWORD(v23) = v22 >> 16;
+                if (!v21 ||
+                    (word_720C10_intercepts_xs[v25] +
+                        ((signed int)(((unsigned __int64)(v23 /
+                            (word_720B40_intercepts_zs
+                                [v25 + 1] -
+                                word_720B40_intercepts_zs
+                                [v25]) *
+                            ((v27 -
+                                (signed int)
+                                word_720B40_intercepts_zs
+                                [v25])
+                                << 16)) >>
+                            16) +
+                            32768) >>
+                            16) >=
+                        v26))
+                    ++v31;
+            }
+        }
+        v16 = word_720B40_intercepts_zs[v25 + 1] >= v27;
+    }
+    result = 1;
+    if (v31 != 1) result = 0;
+    return result;
 }
 
 bool sub_4759C9(BLVFace* face, int a2, int a3, __int16 a4) {
@@ -1073,6 +1260,121 @@ bool sub_4759C9(BLVFace* face, int a2, int a3, __int16 a4) {
     result = 1;
     if (a4d != 1) result = 0;
     return result;
+}
+
+bool sub_475D85(Vec3_int_* a1, Vec3_int_* a2, int* a3, BLVFace* a4) {
+    BLVFace* v4;         // ebx@1
+    int v5;              // ST24_4@2
+    int v6;              // ST28_4@2
+    int v7;              // edi@2
+    int v8;              // eax@5
+    signed int v9;       // esi@5
+    signed __int64 v10;  // qtt@10
+    Vec3_int_* v11;      // esi@11
+    int v12;             // ST14_4@11
+    Vec3_int_* v14;      // [sp+Ch] [bp-18h]@1
+    Vec3_int_* v15;      // [sp+14h] [bp-10h]@1
+    int v17;             // [sp+20h] [bp-4h]@10
+    int a4b;             // [sp+30h] [bp+Ch]@2
+    int a4c;             // [sp+30h] [bp+Ch]@9
+    int a4a;             // [sp+30h] [bp+Ch]@10
+
+    v4 = a4;
+    v15 = a2;
+    v14 = a1;
+    v5 = fixpoint_mul(a2->x, a4->pFacePlane_old.vNormal.x);
+    a4b = fixpoint_mul(a2->y, a4->pFacePlane_old.vNormal.y);
+    v6 = fixpoint_mul(a2->z, v4->pFacePlane_old.vNormal.z);
+    v7 = v5 + v6 + a4b;
+    // (v16 = v5 + v6 + a4b) == 0;
+    if (a4->uAttributes & FACE_ETHEREAL || !v7 || v7 > 0 && !v4->Portal())
+        return 0;
+    v8 = v4->pFacePlane_old.vNormal.z * a1->z;
+    v9 = -(v4->pFacePlane_old.dist + v8 + a1->y * v4->pFacePlane_old.vNormal.y +
+        a1->x * v4->pFacePlane_old.vNormal.x);
+    if (v7 <= 0) {
+        if (v4->pFacePlane_old.dist + v8 +
+            a1->y * v4->pFacePlane_old.vNormal.y +
+            a1->x * v4->pFacePlane_old.vNormal.x <
+            0)
+            return 0;
+    }
+    else {
+        if (v9 < 0) return 0;
+    }
+    a4c = abs(-(v4->pFacePlane_old.dist + v8 +
+        a1->y * v4->pFacePlane_old.vNormal.y +
+        a1->x * v4->pFacePlane_old.vNormal.x)) >>
+        14;
+    v11 = v14;
+    HEXRAYS_LODWORD(v10) = v9 << 16;
+    HEXRAYS_HIDWORD(v10) = v9 >> 16;
+    a4a = v10 / v7;
+    v17 = v10 / v7;
+    HEXRAYS_LOWORD(v12) =
+        HEXRAYS_LOWORD(v14->x) +
+        (((unsigned int)fixpoint_mul(v17, v15->x) + 0x8000) >> 16);
+    HEXRAYS_HIWORD(v12) =
+        HEXRAYS_LOWORD(v11->y) +
+        (((unsigned int)fixpoint_mul(v17, v15->y) + 0x8000) >> 16);
+    if (a4c > abs(v7) || (v17 > * a3 << 16) ||
+        !sub_475665(
+            v4, v12,
+            LOWORD(v11->z) +
+        (((unsigned int)fixpoint_mul(v17, v15->z) + 0x8000) >> 16)))
+        return 0;
+    *a3 = a4a >> 16;
+    return 1;
+}
+
+bool sub_475F30(int* a1, BLVFace* a2, int a3, int a4, int a5, int a6, int a7,
+    int a8, int a9) {
+    int v10 = fixpoint_mul(a6, a2->pFacePlane_old.vNormal.x);
+    int v11 = fixpoint_mul(a7, a2->pFacePlane_old.vNormal.y);
+    int v12 = fixpoint_mul(a8, a2->pFacePlane_old.vNormal.z);
+    int v13 = v10 + v12 + v11;
+    int v14 = v10 + v12 + v11;
+    int v22 = v10 + v12 + v11;
+    if (a2->Ethereal() || !v13 || v14 > 0 && !a2->Portal()) {
+        return false;
+    }
+    int v16 = -(a2->pFacePlane_old.dist + a4 * a2->pFacePlane_old.vNormal.y +
+        a3 * a2->pFacePlane_old.vNormal.x +
+        a5 * a2->pFacePlane_old.vNormal.z);
+    if (v14 <= 0) {
+        if (a2->pFacePlane_old.dist + a4 * a2->pFacePlane_old.vNormal.y +
+            a3 * a2->pFacePlane_old.vNormal.x +
+            a5 * a2->pFacePlane_old.vNormal.z <
+            0)
+            return 0;
+    }
+    else {
+        if (v16 < 0) {
+            return 0;
+        }
+    }
+    int v17 =
+        abs(-(a2->pFacePlane_old.dist + a4 * a2->pFacePlane_old.vNormal.y +
+            a3 * a2->pFacePlane_old.vNormal.x +
+            a5 * a2->pFacePlane_old.vNormal.z)) >>
+        14;
+    int64_t v18;
+    HEXRAYS_LODWORD(v18) = v16 << 16;
+    HEXRAYS_HIDWORD(v18) = v16 >> 16;
+    int v24 = v18 / v22;
+    int v23 = v18 / v22;
+    int v19;
+    HEXRAYS_LOWORD(v19) =
+        a3 + (((unsigned int)fixpoint_mul(v23, a6) + 0x8000) >> 16);
+    HEXRAYS_HIWORD(v19) =
+        a4 + (((unsigned int)fixpoint_mul(v23, a7) + 0x8000) >> 16);
+    if (v17 > abs(v14) || v23 > * a1 << 16 ||
+        !sub_4759C9(
+            a2, a9, v19,
+            a5 + (((unsigned int)fixpoint_mul(v23, a8) + 0x8000) >> 16)))
+        return 0;
+    *a1 = v24 >> 16;
+    return 1;
 }
 
 
