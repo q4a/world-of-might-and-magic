@@ -157,8 +157,8 @@ void GameWindowHandler::OnVkDown(int vk, int vk_to_char) {
         if (vk == VK_RETURN) {
             if (!viewparams->field_4C) UI_OnVkKeyDown(vk);
         } else if (vk == VK_CONTROL) {
-            extern bool _507B98_ctrl_pressed;
-            _507B98_ctrl_pressed = true;
+            
+            bool _507B98_ctrl_pressed = true;
         } else if (vk == VK_ESCAPE) {
             pMessageQueue_50CBD0->AddGUIMessage(UIMSG_Escape, window_SpeakInHouse != 0, 0);
         } else if (vk == VK_F4 && !pMovie_Track) {

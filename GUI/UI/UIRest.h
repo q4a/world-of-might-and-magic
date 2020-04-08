@@ -18,7 +18,7 @@ class GUIWindow_RestWindow : public GUIWindow {
     virtual ~GUIWindow_RestWindow() {}
 
     virtual void Update();
-    virtual void Release();
+    //virtual void Release();
 };
 
 extern class Image *rest_ui_sky_frame_current;

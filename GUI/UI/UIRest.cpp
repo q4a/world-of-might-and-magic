@@ -15,6 +15,7 @@
 
 #include "GUI/GUIButton.h"
 #include "GUI/UI/UIRest.h"
+#include "GUI/UI/UITransition.h"// added
 #include "GUI/GUIFont.h"
 
 #include "Media/Audio/AudioPlayer.h"

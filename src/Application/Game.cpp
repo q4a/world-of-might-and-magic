@@ -100,6 +100,7 @@ bool Game::Configure(std::shared_ptr<const Configuration> config) {
 void Game::Run() {
     IntegrityTest();
 
+
     EngineFactory engineFactory;
     engine = engineFactory.CreateEngine(config->command_line);
     ::engine = engine;
@@ -1301,8 +1302,8 @@ void Game::EventLoop() {
                         continue;
                     }
 
-                    extern bool _506360_installing_beacon;
-                    _506360_installing_beacon = true;
+                    
+                    bool _506360_installing_beacon = true;
 
                     pPlayer9->CanCastSpell(uRequiredMana);
                     if (pParty->bTurnBasedModeOn) {

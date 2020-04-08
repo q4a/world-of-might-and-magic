@@ -9,6 +9,7 @@ class GUIWindow_Travel : public GUIWindow {
 
     virtual void Update();
     virtual void Release();
+   
 };
 
 class GUIWindow_Transition : public GUIWindow {
