@@ -638,8 +638,8 @@ int _43F5C8_get_point_light_level_with_respect_to_lights( unsigned int uBaseLigh
                     v43 = ((unsigned int)(11 * v9) / 32) + (v10 / 4) + v8;
                     v13 = p->uRadius;
                     if ((signed int)v43 < v13)
-                    /* ORIGONAL */v6 += ((unsigned __int64)(30i64 *  (signed int)(v43 << 16) /  v13) >> 16) -  30;
-                        //v6 += ((unsigned int)(30 *  (signed int)(v43 << 16) /  v13) >> 16) -  30;
+         //* ORIGONAL */v6 += ((unsigned __int64)(30i64 *(signed int)(v43 << 16) / v13) >> 16) - 30;
+                        v6 += ((unsigned __int64)(30ll * (signed int)(v43 << 16) / v13) >> 16) - 30;
                 }
             }
         }
@@ -660,8 +660,8 @@ int _43F5C8_get_point_light_level_with_respect_to_lights( unsigned int uBaseLigh
                             v44 = int_get_vector_length(v17, v42, v39);
                             v24 = v16->uRadius;
                             if ((signed int)v44 < v24)
-                            /*ORIGONAL*/v6 += ((unsigned __int64)(30i64 *(signed int)(v44 << 16) /v24) >> 16) -  30;
-                            //v6 += ((unsigned int)(30 *(signed int)(v44 << 16) /v24) >> 16) -  30;
+                   //*ORIGONAL*/v6 += ((unsigned __int64)(30i64 *(signed int)(v44 << 16) / v24) >> 16) - 30;
+                                v6 += ((unsigned __int64)(30ll * (signed int)(v44 << 16) / v24) >> 16) - 30;
                         }
                     }
                 }
@@ -681,8 +681,8 @@ int _43F5C8_get_point_light_level_with_respect_to_lights( unsigned int uBaseLigh
                     // v33 = pStationaryLightsStack->pLights[i].uRadius;
                     if ((signed int)v45 <
                         pStationaryLightsStack->pLights[i].uRadius)
-/*Origonal */ v6 += ((unsigned __int64)(30i64 *(signed int)(v45 << 16) / pStationaryLightsStack->pLights[i].uRadius) >> 16) -30;
-                 //v6 += ((unsigned int)(30 *(signed int)(v45 << 16) / pStationaryLightsStack->pLights[i].uRadius) >> 16) -30;
+         //*Origonal */ v6 += ((unsigned __int64)(30i64 *(signed int)(v45 << 16) / pStationaryLightsStack->pLights[i].uRadius) >> 16) - 30;
+                        v6 += ((unsigned __int64)(30ll * (signed int)(v45 << 16) / pStationaryLightsStack->pLights[i].uRadius) >> 16) - 30;
 
                 }
             }
