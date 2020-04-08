@@ -435,6 +435,7 @@ void Game::EventLoop() {
 
             pMessageQueue_50CBD0->PopMessage(&uMessage, &uMessageParam,
                                              (int *)&v199);
+            bool _506360_installing_beacon;
             switch (uMessage) {
                 case UIMSG_ChangeGameState:
                     uGameState = GAME_FINISHED;
@@ -1302,8 +1303,8 @@ void Game::EventLoop() {
                         continue;
                     }
 
-                    
-                    bool _506360_installing_beacon = true;
+                    //extern bool _506360_installing_beacon;
+                    _506360_installing_beacon = true;
 
                     pPlayer9->CanCastSpell(uRequiredMana);
                     if (pParty->bTurnBasedModeOn) {

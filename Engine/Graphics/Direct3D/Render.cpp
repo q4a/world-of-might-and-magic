@@ -49,10 +49,6 @@ using EngineIoc = Engine_::IocContainer;
 struct IDirectDrawClipper *pDDrawClipper;
 struct RenderVertexD3D3 pVertices[50];
 
-RenderVertexSoft VertexRenderList[50];  // array_50AC10
-
-RenderVertexD3D3 d3d_vertex_buffer[50];
-
 DDPIXELFORMAT ddpfPrimarySuface;
 
 void ErrHR(HRESULT hr, const char *pAPI, const char *pFunction,
@@ -4110,145 +4106,6 @@ unsigned int _452442_color_cvt(unsigned __int16 a1, unsigned __int16 a2, int a3,
             (__PAIR__(v10, (unsigned __int16)a4 >> 2) & 0x1C00));
 }
 
-int GetActorTintColor(int max_dimm, int min_dimm, float distance, int a4, RenderBillboard *a5) {
-    signed int v6;   // edx@1
-    int v8;          // eax@3
-    double v9;       // st7@12
-    int v11;         // ecx@28
-    double v15;      // st7@44
-    int v18;         // ST14_4@44
-    signed int v20;  // [sp+10h] [bp-4h]@10
-    float a3c;       // [sp+1Ch] [bp+8h]@44
-    int a5a;         // [sp+24h] [bp+10h]@44
-
-    // v5 = a2;
-    v6 = 0;
-
-    if (uCurrentlyLoadedLevelType == LEVEL_Indoor)
-        return 8 * (31 - max_dimm) | ((8 * (31 - max_dimm) | ((31 - max_dimm) << 11)) << 8);
-
-    if (pParty->armageddon_timer) return 0xFFFF0000;
-
-    v8 = pWeather->bNight;
-    if (engine->IsUnderwater())
-        v8 = 0;
-    if (v8) {
-        v20 = 1;
-        if (pParty->pPartyBuffs[PARTY_BUFF_TORCHLIGHT].Active())
-            v20 = pParty->pPartyBuffs[PARTY_BUFF_TORCHLIGHT].uPower;
-        v9 = (double)v20 * 1024.0;
-        if (a4) {
-            v6 = 216;
-            goto LABEL_20;
-        }
-        if (distance <= v9) {
-            if (distance > 0.0) {
-                // a4b = distance * 216.0 / device_caps;
-                // v10 = a4b + 6.7553994e15;
-                // v6 = LODWORD(v10);
-                v6 = floorf(0.5f + distance * 216.0 / v9);
-                if (v6 > 216) {
-                    v6 = 216;
-                    goto LABEL_20;
-                }
-            }
-        } else {
-            v6 = 216;
-        }
-        if (distance != 0.0) {
-        LABEL_20:
-            if (a5) v6 = 8 * _43F55F_get_billboard_light_level(a5, v6 >> 3);
-            if (v6 > 216) v6 = 216;
-            return (255 - v6) | ((255 - v6) << 16) | ((255 - v6) << 8);
-        }
-        // LABEL_19:
-        v6 = 216;
-        goto LABEL_20;
-    }
-
-    if (fabsf(distance) < 1.0e-6f) return 0xFFF8F8F8;
-
-    // dim in measured in 8-steps
-    v11 = 8 * (max_dimm - min_dimm);
-    // v12 = v11;
-    if (v11 >= 0) {
-        if (v11 > 216) v11 = 216;
-    } else {
-        v11 = 0;
-    }
-
-    float fog_density_mult = 216.0f;
-    if (a4)
-        fog_density_mult +=
-            distance / (double)pODMRenderParams->shading_dist_shade * 32.0;
-
-    v6 = v11 + floorf(pOutdoor->fFogDensity * fog_density_mult + 0.5f);
-
-    if (a5) v6 = 8 * _43F55F_get_billboard_light_level(a5, v6 >> 3);
-    if (v6 > 216) v6 = 216;
-    if (v6 < v11) v6 = v11;
-    if (v6 > 8 * pOutdoor->max_terrain_dimming_level)
-        v6 = 8 * pOutdoor->max_terrain_dimming_level;
-    if (!engine->IsUnderwater()) {
-        return (255 - v6) | ((255 - v6) << 16) | ((255 - v6) << 8);
-    } else {
-        v15 = (double)(255 - v6) * 0.0039215689;
-        a3c = v15;
-        // a4c = v15 * 16.0;
-        // v16 = a4c + 6.7553994e15;
-        a5a = floorf(v15 * 16.0 + 0.5f);  // LODWORD(v16);
-                                          // a4d = a3c * 194.0;
-                                          // v17 = a4d + 6.7553994e15;
-        v18 = floorf(a3c * 194.0 + 0.5f);  // LODWORD(v17);
-                                           // a3d = a3c * 153.0;
-                                           // v19 = a3d + 6.7553994e15;
-        return (int)floorf(a3c * 153.0 + 0.5f) /*LODWORD(v19)*/ |
-               ((v18 | (a5a << 8)) << 8);
-    }
-}
-
-bool IsBModelVisible(BSPModel *model, int *reachable) {
-    int v11;      // esi@6
-    int v12;      // esi@8
-    bool result;  // eax@9
-
-    int angle = (int)(pODMRenderParams->uCameraFovInDegrees << 11) / 360 / 2;
-    int v3 = model->vBoundingCenter.x - pIndoorCameraD3D->vPartyPos.x;
-    int v4 = model->vBoundingCenter.y - pIndoorCameraD3D->vPartyPos.y;
-    stru_5C6E00->Sin(pIndoorCameraD3D->sRotationX);
-    int v17 = v3 * stru_5C6E00->Cos(pIndoorCameraD3D->sRotationY) +
-              v4 * stru_5C6E00->Sin(pIndoorCameraD3D->sRotationY);
-    if (pIndoorCameraD3D->sRotationX) {
-        v17 = fixpoint_mul(v17, stru_5C6E00->Cos(pIndoorCameraD3D->sRotationX));
-    }
-    int v19 = v4 * stru_5C6E00->Cos(pIndoorCameraD3D->sRotationY) -
-              v3 * stru_5C6E00->Sin(pIndoorCameraD3D->sRotationY);
-    int v9 = int_get_vector_length(abs(v3), abs(v4), 0);
-    // v10 = v14 * 188;
-    // v22 = device_caps;
-    *reachable = false;
-    if (v9 < model->sBoundingRadius + 256) *reachable = true;
-    if (v19 >= 0)
-        v11 = fixpoint_mul(stru_5C6E00->Sin(angle), v17) -
-              fixpoint_mul(stru_5C6E00->Cos(angle), v19);
-    else
-        v11 = fixpoint_mul(stru_5C6E00->Cos(angle), v19) +
-              fixpoint_mul(stru_5C6E00->Sin(angle), v17);
-    v12 = v11 >> 16;
-    if (v9 <= pIndoorCameraD3D->GetFarClip() + 2048) {
-        // if ( abs(v12) > *(int *)((char *)&pOutdoor->pBModels->sBoundingRadius
-        // + v10) + 512 )
-        if (abs(v12) > model->sBoundingRadius + 512) {
-            result = v12 < 0;
-            HEXRAYS_LOBYTE(result) = v12 >= 0;
-            return result;
-        } else {
-            return true;
-        }
-    }
-    return false;
-}
-
 // int Polygon::_479295() {
 //    int v3;           // ecx@4
 //    int v4;           // eax@4
@@ -4287,21 +4144,6 @@ bool IsBModelVisible(BSPModel *model, int *reachable) {
 void sr_485F53(Vec2_int_ *v) {
     ++v->y;
     if (v->y > 1000) v->y = 0;
-}
-
-void Polygon::_normalize_v_18() {
-    float len = sqrt((double)this->v_18.z * (double)this->v_18.z +
-                     (double)this->v_18.y * (double)this->v_18.y +
-                     (double)this->v_18.x * (double)this->v_18.x);
-    if (fabsf(len) < 1e-6f) {
-        v_18.x = 0;
-        v_18.y = 0;
-        v_18.z = 65536;
-    } else {
-        v_18.x = round_to_int((double)this->v_18.x / len * 65536.0);
-        v_18.y = round_to_int((double)this->v_18.y / len * 65536.0);
-        v_18.z = round_to_int((double)this->v_18.z / len * 65536.0);
-    }
 }
 
 void Render::DrawOutdoorSkyD3D() {

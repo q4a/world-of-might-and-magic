@@ -56,7 +56,7 @@
 #include "Engine/Objects/ObjectList.h"
 #include "Engine/Graphics/Weather.h"
 
-RenderVertexSoft VertexRenderList[50]; 
+RenderVertexSoft VertexRenderList[50]; // array_50AC10
 RenderVertexD3D3 d3d_vertex_buffer[50];
 //end///
 
