@@ -5,10 +5,6 @@ class Mouse;
 namespace Application {
 
 // Handles events from game window (OSWindow) and transforms it to game actions/events
-// change ADDED 
-extern bool _507B98_ctrl_pressed;
-//added
-
 class GameWindowHandler {
  public:
     GameWindowHandler();

@@ -100,7 +100,6 @@ bool Game::Configure(std::shared_ptr<const Configuration> config) {
 void Game::Run() {
     IntegrityTest();
 
-
     EngineFactory engineFactory;
     engine = engineFactory.CreateEngine(config->command_line);
     ::engine = engine;

@@ -16,7 +16,6 @@ using GameIoc = Application::IocContainer;
 
 namespace Application {
 
-extern bool _506360_installing_beacon;
 class Game {
  public:
      inline Game() {

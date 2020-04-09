@@ -35,8 +35,7 @@ jobs:
         fetch-depth: 0
     - name: Install
       run: |
-        export CC=gcc-8
-        export CXX=g++-8
+        export CC=gcc-8 && export CXX=g++-8
         if [ "${{ matrix.Platform }}" = "x64" ]; then
         sudo apt-get update && sudo apt-get install -y libglu1-mesa-dev libavformat-dev libavcodec-dev libswscale-dev libopenal-dev libsdl2-dev zlib1g-dev
         cmake . -DCMAKE_BUILD_TYPE=${{ matrix.Configuration }}
