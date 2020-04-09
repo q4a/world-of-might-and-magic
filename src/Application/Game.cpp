@@ -319,6 +319,8 @@ void Game::OnEscape() {
     viewparams->bRedrawGameUI = true;
 }
 
+extern bool _506360_installing_beacon;
+
 void Game::EventLoop() {
     unsigned int v2;            // edx@7
     GUIWindow *pWindow2;        // ecx@248
@@ -434,7 +436,6 @@ void Game::EventLoop() {
 
             pMessageQueue_50CBD0->PopMessage(&uMessage, &uMessageParam,
                                              (int *)&v199);
-            bool _506360_installing_beacon;
             switch (uMessage) {
                 case UIMSG_ChangeGameState:
                     uGameState = GAME_FINISHED;
@@ -1302,7 +1303,6 @@ void Game::EventLoop() {
                         continue;
                     }
 
-                    //extern bool _506360_installing_beacon;
                     _506360_installing_beacon = true;
 
                     pPlayer9->CanCastSpell(uRequiredMana);
