@@ -52,15 +52,12 @@
 #include "Platform/Api.h"
 #include "Platform/OSWindow.h"
 
-//ADDED // change// Sourcecodeded//
 #include "Engine/Objects/ObjectList.h"
 #include "Engine/Graphics/Weather.h"
 
 RenderVertexSoft VertexRenderList[50]; // array_50AC10
 RenderVertexD3D3 d3d_vertex_buffer[50];
-//end///
 
-//Added change
 void Polygon::_normalize_v_18() {
     float len = sqrt((double)this->v_18.z * (double)this->v_18.z +
                      (double)this->v_18.y * (double)this->v_18.y +
@@ -118,7 +115,6 @@ bool IsBModelVisible(BSPModel *model, int *reachable) {
     return false;
 }
 
-//Weather *pWeather = new Weather;
 int GetActorTintColor(int max_dimm, int min_dimm, float distance, int a4, RenderBillboard *a5) {
     signed int v6;   // edx@1
     int v8;          // eax@3
@@ -217,25 +213,13 @@ int GetActorTintColor(int max_dimm, int min_dimm, float distance, int a4, Render
 }
 
 
-
-
-
-
-
-
-
-
-//
-
-
 std::shared_ptr<IRender> render;
 int uNumDecorationsDrawnThisFrame;
 RenderBillboard pBillboardRenderList[500];
 unsigned int uNumBillboardsToDraw;
 int uNumSpritesDrawnThisFrame;
 
-//ADDED by Sourcecodedeleted
-RenderVertexSoft array_73D150[20]; // added
+RenderVertexSoft array_73D150[20];
 
 void _46E889_collide_against_bmodels(unsigned int ecx0) {
     int v8;            // eax@19
@@ -759,7 +743,7 @@ int _46E44E_collide_against_faces_and_portals(unsigned int b1) {
 
 
 
-int _43F5C8_get_point_light_level_with_respect_to_lights( unsigned int uBaseLightLevel, int uSectorID, float x, float y, float z) {
+int _43F5C8_get_point_light_level_with_respect_to_lights(unsigned int uBaseLightLevel, int uSectorID, float x, float y, float z) {
     signed int v6;     // edi@1
     int v8;            // eax@6
     int v9;            // ebx@6
@@ -831,7 +815,6 @@ int _43F5C8_get_point_light_level_with_respect_to_lights( unsigned int uBaseLigh
                             v44 = int_get_vector_length(v17, v42, v39);
                             v24 = v16->uRadius;
                             if ((signed int)v44 < v24)
-                   //*ORIGONAL*/v6 += ((unsigned __int64)(30i64 *(signed int)(v44 << 16) / v24) >> 16) - 30;
                                 v6 += ((unsigned __int64)(30ll * (signed int)(v44 << 16) / v24) >> 16) - 30;
                         }
                     }
@@ -852,9 +835,7 @@ int _43F5C8_get_point_light_level_with_respect_to_lights( unsigned int uBaseLigh
                     // v33 = pStationaryLightsStack->pLights[i].uRadius;
                     if ((signed int)v45 <
                         pStationaryLightsStack->pLights[i].uRadius)
-         //*Origonal */ v6 += ((unsigned __int64)(30i64 *(signed int)(v45 << 16) / pStationaryLightsStack->pLights[i].uRadius) >> 16) - 30;
                         v6 += ((unsigned __int64)(30ll * (signed int)(v45 << 16) / pStationaryLightsStack->pLights[i].uRadius) >> 16) - 30;
-
                 }
             }
         }
@@ -1038,8 +1019,6 @@ int _43F55F_get_billboard_light_level(RenderBillboard *a1,
         v3, a1->uIndoorSectorID, a1->world_x, a1->world_y, a1->world_z);
 }
 
-//END
-
 unsigned int sub_46DEF2(signed int a2, unsigned int uLayingItemID) {
     unsigned int result = uLayingItemID;
     if (pObjectList->pObjects[pSpriteObjects[uLayingItemID].uObjectDescID].uFlags & 0x10) {
@@ -1082,8 +1061,7 @@ bool sub_47531C(int a1, int* a2, int pos_x, int pos_y, int pos_z, int dir_x,
         HEXRAYS_HIDWORD(v15) = v13 >> 16;
         v14 = a1;
         a10a = v15 / a9a;
-    }
-    else {
+    } else {
         a10a = 0;
         v14 = abs(v13) >> 16;
     }
@@ -1138,8 +1116,7 @@ bool sub_4754BF(int a1, int* a2, int X, int Y, int Z, int dir_x, int dir_y,
         HEXRAYS_HIDWORD(v16) = v14 >> 16;
         v15 = a1;
         a11a = v16 / a1a;
-    }
-    else {
+    } else {
         a11a = 0;
         v15 = abs(v14) >> 16;
     }
@@ -1192,8 +1169,7 @@ int sub_475665(BLVFace* face, int a2, __int16 a3) {
                     pIndoor->pVertices[face->pVertexIDs[v28 + 1]].y;
             }
         }
-    }
-    else {
+    } else {
         if (face->uAttributes & FACE_XZ_PLANE) {
             v26 = (signed __int16)a2;
             v27 = a3;
@@ -1213,8 +1189,7 @@ int sub_475665(BLVFace* face, int a2, __int16 a3) {
                         pIndoor->pVertices[face->pVertexIDs[v29 + 1]].z;
                 }
             }
-        }
-        else {
+        } else {
             v26 = HEXRAYS_SHIWORD(a2);
             v27 = a3;
             if (face->uNumVertices) {
@@ -1321,8 +1296,7 @@ bool sub_4759C9(BLVFace* face, int a2, int a3, __int16 a4) {
                         .y);
             }
         }
-    }
-    else {
+    } else {
         if (face->uAttributes & FACE_XZ_PLANE) {
             v23 = (signed __int16)a3;
             v24 = a4;
@@ -1352,8 +1326,7 @@ bool sub_4759C9(BLVFace* face, int a2, int a3, __int16 a4) {
                             .z);
                 }
             }
-        }
-        else {
+        } else {
             v23 = HEXRAYS_SHIWORD(a3);
             v24 = a4;
             if (face->uNumVertices) {
@@ -1466,8 +1439,7 @@ bool sub_475D85(Vec3_int_* a1, Vec3_int_* a2, int* a3, BLVFace* a4) {
             a1->x * v4->pFacePlane_old.vNormal.x <
             0)
             return 0;
-    }
-    else {
+    } else {
         if (v9 < 0) return 0;
     }
     a4c = abs(-(v4->pFacePlane_old.dist + v8 +
@@ -1515,8 +1487,7 @@ bool sub_475F30(int* a1, BLVFace* a2, int a3, int a4, int a5, int a6, int a7,
             a5 * a2->pFacePlane_old.vNormal.z <
             0)
             return 0;
-    }
-    else {
+    } else {
         if (v16 < 0) {
             return 0;
         }
@@ -1572,8 +1543,7 @@ void SkyBillboardStruct::CalcSkyFrustumVec(int x1, int y1, int z1, int x2, int y
         this->field_8_party_dir_z =
             fixpoint_mul((-pIndoorCameraD3D->vPartyPos.z) << 16, cosx) /*-*/ +
             fixpoint_mul(v11, sinx);
-    }
-    else {
+    } else {
         this->field_0_party_dir_x = v11;
         this->field_4_party_dir_y = v24;
         this->field_8_party_dir_z = (-pIndoorCameraD3D->vPartyPos.z) << 16;
@@ -1586,8 +1556,7 @@ void SkyBillboardStruct::CalcSkyFrustumVec(int x1, int y1, int z1, int x2, int y
         this->CamVecLeft_Z = fixpoint_mul(v17, cosx) + fixpoint_mul(z1, sinx);  // dz
         this->CamVecLeft_X = fixpoint_mul(y1, cosy) - fixpoint_mul(x1, siny);  // dx
         this->CamVecLeft_Y = fixpoint_mul(z1, cosx) /*-*/ + fixpoint_mul(v17, sinx);  // dy
-    }
-    else {
+    } else {
         this->CamVecLeft_Z = fixpoint_mul(x1, cosy) + fixpoint_mul(y1, siny);  // dz
         this->CamVecLeft_X = fixpoint_mul(y1, cosy) - fixpoint_mul(x1, siny);  // dx
         this->CamVecLeft_Y = z1;  // dy
@@ -1600,8 +1569,7 @@ void SkyBillboardStruct::CalcSkyFrustumVec(int x1, int y1, int z1, int x2, int y
         this->CamVecFront_Z = fixpoint_mul(v19, cosx) + fixpoint_mul(z2, sinx);  // dz
         this->CamVecFront_X = fixpoint_mul(y2, cosy) - fixpoint_mul(x2, siny);  // dx
         this->CamVecFront_Y = fixpoint_mul(z2, cosx) /*-*/ + fixpoint_mul(v19, sinx);  // dy
-    }
-    else {
+    } else {
         this->CamVecFront_Z = fixpoint_mul(x2, cosy) + fixpoint_mul(y2, siny);  // dz
         this->CamVecFront_X = fixpoint_mul(y2, cosy) - fixpoint_mul(x2, siny);  // dx
         this->CamVecFront_Y = z2;  // dy
