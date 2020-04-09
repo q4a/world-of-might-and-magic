@@ -27,6 +27,7 @@
 #include <SDL_opengl_glext.h>
 
 #include <algorithm>
+#include <memory>
 
 #include "Engine/Engine.h"
 #include "Engine/OurMath.h"
@@ -55,7 +56,7 @@
 #include "Engine/Objects/ObjectList.h"
 #include "Engine/Graphics/Weather.h"
 
-RenderVertexSoft VertexRenderList[50]; // array_50AC10
+RenderVertexSoft VertexRenderList[50];  // array_50AC10
 RenderVertexD3D3 d3d_vertex_buffer[50];
 
 void Polygon::_normalize_v_18() {
@@ -211,7 +212,6 @@ int GetActorTintColor(int max_dimm, int min_dimm, float distance, int a4, Render
                ((v18 | (a5a << 8)) << 8);
     }
 }
-
 
 std::shared_ptr<IRender> render;
 int uNumDecorationsDrawnThisFrame;
