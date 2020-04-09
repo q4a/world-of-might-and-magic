@@ -1,5 +1,7 @@
 #include "Engine/Objects/Actor.h"
 
+#include <algorithm>
+
 #include "Engine/Engine.h"
 #include "Engine/Localization.h"
 #include "Engine/SpellFxRenderer.h"
