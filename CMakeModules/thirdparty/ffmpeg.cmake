@@ -1,9 +1,11 @@
+if (WIN32)
 # https://ffmpeg.zeranoe.com/builds/
 
 set(FFMPEG_DIR "${LIBRARY_DIR}/ffmpeg-4.2.2")
 set(FFMPEG_BIN_DIR "${FFMPEG_DIR}/bin")
 set(FFMPEG_LIB_DIR "${FFMPEG_DIR}/lib")
 set(FFMPEG_INCLUDE_DIR "${FFMPEG_DIR}/include")
+set(FFMPEG_NAME "ffmpeg")
 
 # hack to be able to create a convenience library without sources
 file(WRITE ${FFMPEG_DIR}/ffmpeg.c "")
@@ -36,3 +38,8 @@ ADD_GLOBAL_DEPENDENCY("${FFMPEG_BIN_DIR}/avutil-56.dll")
 ADD_GLOBAL_DEPENDENCY("${FFMPEG_BIN_DIR}/postproc-55.dll")
 ADD_GLOBAL_DEPENDENCY("${FFMPEG_BIN_DIR}/swresample-3.dll")
 ADD_GLOBAL_DEPENDENCY("${FFMPEG_BIN_DIR}/swscale-5.dll")
+
+else()  # WIN32
+find_package(FFmpeg COMPONENTS AVCODEC AVFORMAT SWSCALE REQUIRED)
+set(FFMPEG_NAME "${FFMPEG_LIBRARIES}")
+endif()
