@@ -82,9 +82,9 @@ target_compile_features (World_of_Might_and_Magic
 )
 target_check_style(World_of_Might_and_Magic)
 
-target_link_libraries(World_of_Might_and_Magic ${ZLIB_NAME})
+target_link_libraries(World_of_Might_and_Magic ${ZLIB_NAME} ${SDL2_NAME})
 if(WIN32)
-target_link_libraries(World_of_Might_and_Magic openal sdl2 ffmpeg)
+target_link_libraries(World_of_Might_and_Magic openal ffmpeg)
 target_link_libraries(World_of_Might_and_Magic ddraw.lib dxguid.lib)
 else()
 message(STATUS "ZLIB_LIBRARIES = ${ZLIB_LIBRARIES}")
@@ -93,7 +93,7 @@ message(STATUS "FFMPEG_LIBRARIES = ${FFMPEG_LIBRARIES}")
 message(STATUS "OPENGL_opengl_LIBRARY = ${OPENGL_opengl_LIBRARY}")
 message(STATUS "OPENGL_glu_LIBRARY = ${OPENGL_glu_LIBRARY}")
 
-target_link_libraries(World_of_Might_and_Magic ${SDL_LIBRARIES} ${FFMPEG_LIBRARIES} ${OPENGL_opengl_LIBRARY} ${OPENGL_glu_LIBRARY})
+target_link_libraries(World_of_Might_and_Magic ${FFMPEG_LIBRARIES} ${OPENGL_opengl_LIBRARY} ${OPENGL_glu_LIBRARY})
 endif()
 target_link_libraries(World_of_Might_and_Magic game arcomage engine gui io media platform objects spells tables graphics turnengine serialization)
 
