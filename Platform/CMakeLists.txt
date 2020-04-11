@@ -16,8 +16,6 @@ else()
     list(APPEND PLATFORM_SOURCES Lin/Lin.cpp)
 endif()
 
-include_directories(${SDL_INCLUDE_DIR})
-
 add_library(platform STATIC ${PLATFORM_SOURCES} ${PLATFORM_HEADERS})
 target_check_style(platform)
 

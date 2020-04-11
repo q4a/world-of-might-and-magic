@@ -31,4 +31,5 @@ ADD_GLOBAL_DEPENDENCY("${SDL2_BIN_DIR}/SDL2.dll")
 else()  # WIN32
 find_package(SDL2 REQUIRED)
 target_link_libraries(sdl2 SDL2)
+include_directories("${SDL_INCLUDE_DIR}")
 endif()

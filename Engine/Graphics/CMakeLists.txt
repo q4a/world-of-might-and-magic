@@ -75,7 +75,5 @@ list(APPEND GRAPHICS_HEADERS
 )
 endif()
 
-include_directories(${SDL_INCLUDE_DIR})
-
 add_library(graphics STATIC ${GRAPHICS_SOURCES} ${GRAPHICS_HEADERS})
 target_check_style(graphics)
