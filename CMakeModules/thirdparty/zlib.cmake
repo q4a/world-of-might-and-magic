@@ -30,6 +30,7 @@ target_link_libraries(
 include_directories(
     "${ZLIB_INCLUDE_DIR}"
 )
+
 else()  # WIN32
 find_package(ZLIB REQUIRED)
 set(ZLIB_NAME "z")
