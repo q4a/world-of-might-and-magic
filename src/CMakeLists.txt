@@ -24,5 +24,6 @@ else()
 endif()
 
 add_library(game STATIC ${GAME_SOURCES} ${GAME_HEADERS})
-target_link_libraries(game engine)
 target_check_style(game)
+
+target_link_libraries(game engine)

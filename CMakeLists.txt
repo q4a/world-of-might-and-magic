@@ -84,7 +84,6 @@ target_check_style(World_of_Might_and_Magic)
 
 target_link_libraries(World_of_Might_and_Magic ${ZLIB_NAME} ${SDL2_NAME} ${FFMPEG_NAME})
 if(WIN32)
-target_link_libraries(World_of_Might_and_Magic openal)
 target_link_libraries(World_of_Might_and_Magic ddraw.lib dxguid.lib)
 else()
 message(STATUS "ZLIB_LIBRARIES = ${ZLIB_LIBRARIES}")
