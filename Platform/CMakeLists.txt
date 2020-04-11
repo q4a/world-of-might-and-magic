@@ -20,4 +20,4 @@ endif()
 add_library(platform STATIC ${PLATFORM_SOURCES} ${PLATFORM_HEADERS})
 target_check_style(platform)
 
-target_link_libraries(platform ${SDL2_NAME})
+target_link_libraries(platform sdl2)
