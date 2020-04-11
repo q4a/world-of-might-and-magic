@@ -73,9 +73,9 @@ list(APPEND GRAPHICS_HEADERS
     Direct3D/RenderD3D.h
     Direct3D/TextureD3D.h
 )
-else()
-include_directories(${SDL_INCLUDE_DIRS})
 endif()
+
+include_directories(${SDL_INCLUDE_DIR})
 
 add_library(graphics STATIC ${GRAPHICS_SOURCES} ${GRAPHICS_HEADERS})
 target_check_style(graphics)

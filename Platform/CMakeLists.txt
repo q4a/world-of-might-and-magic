@@ -14,8 +14,9 @@ if(WIN32)
     list(APPEND PLATFORM_HEADERS Win/Win.h)
 else()
     list(APPEND PLATFORM_SOURCES Lin/Lin.cpp)
-    include_directories(${SDL_INCLUDE_DIRS})
 endif()
+
+include_directories(${SDL_INCLUDE_DIR})
 
 add_library(platform STATIC ${PLATFORM_SOURCES} ${PLATFORM_HEADERS})
 target_check_style(platform)
