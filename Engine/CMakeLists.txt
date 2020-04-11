@@ -69,12 +69,8 @@ endif()
 
 add_library(engine STATIC ${ENGINE_SOURCES} ${ENGINE_HEADERS})
 target_check_style(engine)
-
-if(WIN32)
-    target_link_libraries(engine zlib)
-else()
-    target_link_libraries(engine z game)
-endif()
+target_link_libraries(engine ${ZLIB_NAME})
+target_link_libraries(engine game)
 
 add_subdirectory(Graphics)
 add_subdirectory(Objects)

@@ -1,7 +1,9 @@
+if (WIN32)
 set(ZLIB_DIR "${LIBRARY_DIR}/zlib-1.2.11")
 set(ZLIB_BIN_DIR "${ZLIB_DIR}/bin")
 set(ZLIB_LIB_DIR "${ZLIB_DIR}/lib")
 set(ZLIB_INCLUDE_DIR "${ZLIB_DIR}/include")
+set(ZLIB_NAME "zlib")
 
 set(ZLIB_DEBUG_APPENDIX "")
 if (NOT (CMAKE_BUILD_TYPE MATCHES "RELEASE"))
@@ -28,3 +30,7 @@ target_link_libraries(
 include_directories(
     "${ZLIB_INCLUDE_DIR}"
 )
+else()  # WIN32
+find_package(ZLIB REQUIRED)
+set(ZLIB_NAME "z")
+endif()
