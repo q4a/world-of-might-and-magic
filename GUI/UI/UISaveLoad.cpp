@@ -3,7 +3,7 @@
 #ifdef _WINDOWS
 #include <io.h>
 #else
-#include "Common/PlatformLinux.h"
+#include "Platform/Lin/Lin.h"
 #endif
 #include <string>
 

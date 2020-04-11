@@ -6,7 +6,7 @@
 #include <string>
 #include <climits>
 #ifndef _WINDOWS
-#include "Common/PlatformLinux.h"
+#include "Platform/Lin/Lin.h"
 #endif
 
 #include "Engine/AssetsManager.h"
