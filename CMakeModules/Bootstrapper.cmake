@@ -30,9 +30,9 @@ include(CheckIncludeFile)
 include(CheckIncludeFileCXX)
 include(CheckIncludeFiles)
 
-if (WIN32)
 set(LIB_DIR "${CMAKE_CURRENT_SOURCE_DIR}/lib")
 
+if (WIN32)
 # actual library dir for current build configuration
 set(LIBRARY_DIR "${LIB_DIR}/${BUILD_PLATFORM}/${BUILD_TYPE}")
 

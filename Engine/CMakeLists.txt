@@ -70,7 +70,7 @@ endif()
 add_library(engine STATIC ${ENGINE_SOURCES} ${ENGINE_HEADERS})
 target_check_style(engine)
 
-target_link_libraries(engine ${ZLIB_NAME})
+target_link_libraries(engine zlib)
 target_link_libraries(engine game)
 
 add_subdirectory(Graphics)
