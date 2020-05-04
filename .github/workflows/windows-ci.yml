@@ -17,7 +17,9 @@ jobs:
     - name: Build
       run: |
         call "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Auxiliary\Build\vcvars32.bat"
-        cmake -G "NMake Makefiles" . -A ${{ matrix.Platform }} -DCMAKE_BUILD_TYPE=${{ matrix.Configuration }}
+        mkdir out && cd out
+        #cmake .. -G "NMake Makefiles" -A ${{ matrix.Platform }} -DCMAKE_BUILD_TYPE=${{ matrix.Configuration }}
+        cmake .. -G "NMake Makefiles" -DCMAKE_BUILD_TYPE=${{ matrix.Configuration }}
         nmake check_style
         nmake
       shell: cmd
