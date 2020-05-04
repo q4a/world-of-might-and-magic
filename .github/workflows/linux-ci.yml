@@ -19,11 +19,11 @@ jobs:
         export CC=gcc-8 && export CXX=g++-8
         mkdir out && cd out
         if [ "${{ matrix.Platform }}" = "x64" ]; then
-        sudo apt-get update && sudo apt-get install -y cmake gcc-8 g++-8 libglu1-mesa-dev libavformat-dev libavcodec-dev libswscale-dev libopenal-dev libsdl2-dev zlib1g-dev
+        sudo apt-get update && sudo apt-get install -y gcc-8 g++-8 libglu1-mesa-dev libavformat-dev libavcodec-dev libswscale-dev libopenal-dev libsdl2-dev zlib1g-dev
         cmake .. -DCMAKE_BUILD_TYPE=${{ matrix.Configuration }}
         fi
         if [ "${{ matrix.Platform }}" = "x86" ]; then
-        sudo dpkg --add-architecture i386 && sudo apt-get update && sudo apt-get install -y cmake gcc-multilib g++-8-multilib libglu1-mesa-dev:i386 libavformat-dev:i386 libavcodec-dev:i386 libswscale-dev:i386 libopenal-dev:i386 libsdl2-dev:i386 zlib1g-dev:i386 libavcodec57:i386 libavformat57:i386 librsvg2-2:i386 libbluray2:i386 libxml2:i386
+        sudo dpkg --add-architecture i386 && sudo apt-get update && sudo apt-get install -y gcc-multilib g++-8-multilib libglu1-mesa-dev:i386 libavformat-dev:i386 libavcodec-dev:i386 libswscale-dev:i386 libopenal-dev:i386 libsdl2-dev:i386 zlib1g-dev:i386 libavcodec57:i386 libavformat57:i386 librsvg2-2:i386 libbluray2:i386 libxml2:i386
         CFLAGS="-m32" CXXFLAGS="-m32" cmake .. -DCMAKE_BUILD_TYPE=${{ matrix.Configuration }}
         fi
     - name: Build
