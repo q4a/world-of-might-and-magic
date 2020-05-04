@@ -23,7 +23,7 @@ jobs:
         cmake .. -DCMAKE_BUILD_TYPE=${{ matrix.Configuration }}
         fi
         if [ "${{ matrix.Platform }}" = "x86" ]; then
-        sudo dpkg --add-architecture i386 && sudo apt-get update && sudo apt-get install -y cmake gcc-multilib g++-8-multilib libglu1-mesa-dev:i386 libavformat-dev:i386 libavcodec-dev:i386 libswscale-dev:i386 libopenal-dev:i386 libsdl2-dev:i386 zlib1g-dev:i386
+        sudo dpkg --add-architecture i386 && sudo apt-get update && sudo apt-get install -y cmake gcc-multilib g++-8-multilib libglu1-mesa-dev:i386 libavformat-dev:i386 libavcodec-dev:i386 libswscale-dev:i386 libopenal-dev:i386 libsdl2-dev:i386 zlib1g-dev:i386 libavcodec57:i386 libavcodec-extra57:i386 libavformat57:i386
         CFLAGS="-m32" CXXFLAGS="-m32" cmake .. -DCMAKE_BUILD_TYPE=${{ matrix.Configuration }}
         fi
     - name: Build
