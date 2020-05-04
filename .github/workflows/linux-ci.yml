@@ -30,5 +30,6 @@ jobs:
         make -j$(nproc)
     - name: Upload artifact
       uses: actions/upload-artifact@v1
-      name: World_of_Might_and_Magic
-      path: World_of_Might_and_Magic
+      with:
+        name: World_of_Might_and_Magic
+        path: World_of_Might_and_Magic
