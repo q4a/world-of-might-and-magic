@@ -23,7 +23,7 @@ jobs:
         cmake .. -DCMAKE_BUILD_TYPE=${{ matrix.Configuration }}
         fi
         if [ "${{ matrix.Platform }}" = "x86" ]; then
-        export libxml2_ver=2.9.10+dfsg-2+ubuntu18.04.1+deb.sury.org+1
+        export libxml2_ver=2.9.4+dfsg1-6.1ubuntu1.3
         sudo dpkg --add-architecture i386 && sudo apt-get update && sudo apt-get install -y libxml2=$libxml2_ver libxml2-dev=$libxml2_ver libxml2:i386=$libxml2_ver
         sudo apt-get install -y gcc-multilib g++-8-multilib libglu1-mesa-dev:i386 libavformat-dev:i386 libavcodec-dev:i386 libswscale-dev:i386 libopenal-dev:i386 libsdl2-dev:i386 zlib1g-dev:i386
         CFLAGS="-m32" CXXFLAGS="-m32" cmake .. -DCMAKE_BUILD_TYPE=${{ matrix.Configuration }}
