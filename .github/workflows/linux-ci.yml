@@ -17,19 +17,21 @@ jobs:
     - name: Install
       run: |
         export CC=gcc-8 && export CXX=g++-8
+        mkdir out && cd out
         if [ "${{ matrix.Platform }}" = "x64" ]; then
         sudo apt-get update && sudo apt-get install -y cmake gcc-8 g++-8 libglu1-mesa-dev libavformat-dev libavcodec-dev libswscale-dev libopenal-dev libsdl2-dev zlib1g-dev
-        cmake . -DCMAKE_BUILD_TYPE=${{ matrix.Configuration }}
+        cmake .. -DCMAKE_BUILD_TYPE=${{ matrix.Configuration }}
         fi
         if [ "${{ matrix.Platform }}" = "x86" ]; then
         sudo dpkg --add-architecture i386 && sudo apt-get -qq update && sudo apt-get install -y cmake gcc-multilib g++-8-multilib libglu1-mesa-dev:i386 libavformat-dev:i386 libavcodec-dev:i386 libswscale-dev:i386 libopenal-dev:i386 libsdl2-dev:i386 zlib1g-dev:i386
-        CFLAGS="-m32" CXXFLAGS="-m32" cmake . -DCMAKE_BUILD_TYPE=${{ matrix.Configuration }}
+        CFLAGS="-m32" CXXFLAGS="-m32" cmake .. -DCMAKE_BUILD_TYPE=${{ matrix.Configuration }}
         fi
     - name: Build
+      working-directory: out
       run: |
         make -j$(nproc)
     - name: Upload artifact
       uses: actions/upload-artifact@v1
       with:
         name: World_of_Might_and_Magic
-        path: World_of_Might_and_Magic
+        path: out/World_of_Might_and_Magic
