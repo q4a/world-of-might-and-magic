@@ -1,0 +1,119 @@
+#pragma once
+
+#include <array>
+#include <vector>
+#include <string>
+#include <memory>
+
+#include "Library/Geometry/Rect.h"
+
+#include "GUI/GUIWindow.h"
+
+class GraphicsImage;
+
+class GUIButton {
+ public:
+    GUIButton() {
+        pParent = nullptr;
+    }
+
+    void DrawLabel(std::string_view text, GUIFont *font, Color color, Color shadowColor = colorTable.Black);
+    bool Contains(unsigned int x, unsigned int y);
+    bool Contains(Pointi position);
+
+    /**
+     * Hit test against the oval inscribed in `rect`, which is the shape of a `BUTTON_TYPE_CHARACTER` button.
+     *
+     * @param position                  Point to test.
+     * @return                          Whether the point is inside the oval.
+     */
+    bool containsOval(Pointi position) const;
+
+    void Release();
+
+    std::string id = {}; // Button id, so that buttons can be referenced from tests.
+    Recti rect;
+    ButtonType uButtonType = BUTTON_TYPE_NORMAL;
+    int uData = 0;  // may be pMessageType
+    UIMessageType msg = UIMSG_0;
+    unsigned int  msg_param = 0;
+    int field_28 = 0;
+    bool field_2C_is_pushed = false;
+    GUIWindow *pParent = nullptr;
+    std::vector<std::shared_ptr<GraphicsImage>> vTextures;
+    InputAction action = INPUT_ACTION_INVALID;
+    std::string label = ""; // Shown in the status bar on hover. Dialogue options draw it as the option text.
+    std::string field_75 = "";
+};
+
+extern GUIButton *pBtn_CloseBook;
+extern GUIButton *pBtn_InstallRemoveSpell;
+extern GUIButton *pBtn_Autonotes_Instructors;
+extern GUIButton *pBtn_Autonotes_Misc;
+extern GUIButton *pBtn_Book_6;
+extern GUIButton *pBtn_Book_5;
+extern GUIButton *pBtn_Book_4;
+extern GUIButton *pBtn_Book_3;
+extern GUIButton *pBtn_Book_2;
+extern GUIButton *pBtn_Book_1;
+
+extern GUIButton *pBtn_ExitCancel;
+extern GUIButton *pBtn_YES;
+
+extern GUIButton *pButton_RestUI_Main;
+extern GUIButton *pButton_RestUI_Exit;
+extern GUIButton *pButton_RestUI_Wait5Minutes;
+extern GUIButton *pButton_RestUI_WaitUntilDawn;
+extern GUIButton *pButton_RestUI_Wait1Hour;
+
+
+extern GUIButton *pCharacterScreen_ExitBtn;
+extern GUIButton *pCharacterScreen_AwardsBtn;
+extern GUIButton *pCharacterScreen_InventoryBtn;
+extern GUIButton *pCharacterScreen_SkillsBtn;
+extern GUIButton *pCharacterScreen_StatsBtn;
+extern GUIButton *pCharacterScreen_DollBtn;
+extern GUIButton *pCharacterScreen_DetalizBtn;
+
+
+extern GUIButton *pBtn_NPCRight;
+extern GUIButton *pBtn_NPCLeft;
+extern GUIButton *pBtn_GameSettings;
+extern GUIButton *pBtn_QuickReference;
+extern GUIButton *pBtn_CastSpell;
+extern GUIButton *pBtn_Rest;
+extern GUIButton *pBtn_History;
+extern GUIButton *pBtn_Calendar;
+extern GUIButton *pBtn_Maps;
+extern GUIButton *pBtn_Autonotes;
+extern GUIButton *pBtn_Quests;
+
+
+extern GUIButton *pMMT_MainMenu_BtnMM6;
+extern GUIButton *pMMT_MainMenu_BtnMM7;
+extern GUIButton *pMMT_MainMenu_BtnMM8;
+extern GUIButton *pMMT_MainMenu_BtnContinue;
+extern GUIButton *pMMT_MainMenu_BtnExit;
+
+
+extern GUIButton *pBtn_Up;
+extern GUIButton *pBtn_Down;
+extern GUIButton *pBtn_Scroll;
+
+extern GUIButton *pBtn_Resume;
+extern GUIButton *pBtn_QuitGame;
+extern GUIButton *pBtn_GameControls;
+extern GUIButton *pBtn_LoadGame;
+extern GUIButton *pBtn_SaveGame;
+extern GUIButton *pBtn_NewGame;
+
+extern GUIButton *pBtn_SliderRight;
+extern GUIButton *pBtn_SliderLeft;
+
+extern GUIButton *pBtnDownArrow;
+extern GUIButton *pBtnArrowUp;
+extern GUIButton *pBtnCancel;
+extern GUIButton *pBtnLoadSlot;
+
+extern GUIButton *pBtn_ZoomOut;
+extern GUIButton *pBtn_ZoomIn;

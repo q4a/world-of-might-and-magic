@@ -1,0 +1,51 @@
+cmake_minimum_required(VERSION 3.27 FATAL_ERROR)
+
+set(ENGINE_TABLES_SOURCES
+        AutonoteTable.cpp
+        AwardTable.cpp
+        ChestTable.cpp
+        DecorationTable.cpp
+        HostilityTable.cpp
+        HistoryTable.cpp
+        HouseTable.cpp
+        IconFrameTable.cpp
+        ItemTable.cpp
+        MapTable.cpp
+        MerchantTable.cpp
+        MessageScrollTable.cpp
+        NPCTable.cpp
+        ObjectTable.cpp
+        OverlayTable.cpp
+        PortraitFrameTable.cpp
+        QuestTable.cpp
+        ResourceMaskTable.cpp
+        TextureFrameTable.cpp
+        TileTable.cpp
+        TransitionTable.cpp)
+
+set(ENGINE_TABLES_HEADERS
+        AutonoteTable.h
+        AwardTable.h
+        ChestTable.h
+        DecorationTable.h
+        HostilityTable.h
+        HistoryTable.h
+        HouseTable.h
+        IconFrameTable.h
+        ItemTable.h
+        MapTable.h
+        MerchantTable.h
+        MessageScrollTable.h
+        NPCTable.h
+        ObjectTable.h
+        OverlayTable.h
+        PortraitFrameTable.h
+        QuestTable.h
+        ResourceMaskTable.h
+        TextureFrameTable.h
+        TileTable.h
+        TransitionTable.h)
+
+add_library(engine_tables STATIC ${ENGINE_TABLES_SOURCES} ${ENGINE_TABLES_HEADERS})
+target_link_libraries(engine_tables PUBLIC engine_data)
+target_check_style(engine_tables)

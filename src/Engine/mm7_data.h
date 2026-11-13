@@ -1,0 +1,123 @@
+#pragma once
+
+#include <cstdint>
+#include <array>
+#include <vector>
+#include <string>
+#include <utility>
+#include <memory>
+
+#include "Engine/Data/AwardEnums.h"
+#include "Engine/Pid.h"
+#include "Engine/Objects/CharacterEnums.h"
+#include "Engine/Spells/SpellEnums.h"
+#include "Engine/MapEnums.h"
+
+#include "GUI/GUIEnums.h"
+
+#include "Core/Time/Duration.h"
+
+#include "Library/Color/Color.h"
+
+#include "Utility/IndexedArray.h"
+
+class GUIButton;
+class Actor;
+class GraphicsImage;
+
+//-------------------------------------------------------------------------
+// Data declarations
+
+extern float flt_4D84E8;
+
+extern unsigned int uGammaPos;
+
+extern std::array<int, 6> teleportX;
+extern std::array<int, 6> teleportY;
+extern std::array<int, 6> teleportZ;
+extern std::array<int, 6> teleportYaw;
+
+extern std::array<float, 10> flt_4E4A80;
+
+extern std::array<std::array<int, 6>, 6> pNPCPortraits_x;  // 004E5E50
+extern std::array<std::array<int, 6>, 6> pNPCPortraits_y;  // 004E5EE0
+extern std::array<const char *, 11> pHouse_ExitPictures;
+extern char _4E94D0_light_type;
+extern char _4E94D2_light_type;
+extern char _4E94D3_light_type;
+// TODO(captainurist): face ids index this table as bare ints, 20/21 are the Lich faces and 23/24 the zombie ones.
+// Give them an enum, then use it for uCurrentFace, uPrevFace and the voice ids that mirror them.
+extern std::array<const char *, 25> pPlayerPortraitsNames;
+
+extern std::array<std::array<unsigned char, 25>, 48> byte_4ECF08;
+extern IndexedArray<std::array<unsigned char, 3>, SPEECH_FIRST, SPEECH_LAST> speechVariants;
+extern IndexedArray<std::array<PortraitId, 5>, SPEECH_FIRST, SPEECH_LAST> portraitVariants;
+extern std::array<int16_t, 4> pPlayerPortraitsXCoords_For_PlayerBuffAnimsDrawing;
+extern IndexedArray<int, SKILL_FIRST, SKILL_LAST> skills_max_level;
+extern IndexedArray<Duration, SKILL_FIRST, SKILL_LAST> base_recovery_times_per_weapon_type;
+extern std::array<IndexedArray<SkillAffinity, SKILL_FIRST, SKILL_LAST>, 9> pSkillAvailabilityPerClass;
+extern IndexedArray<IndexedArray<Mastery, SKILL_FIRST, SKILL_LAST>, CLASS_FIRST, CLASS_LAST> skillMaxMasteryPerClass;
+
+extern std::vector<Pid> ai_near_actors_targets_pid;
+extern std::vector<unsigned int> ai_near_actors_ids;
+extern int ai_arrays_size;
+
+extern Pid uLastPointedObjectID;
+extern int KeyboardPageNum;
+extern Color uGameUIFontShadow;
+extern Color uGameUIFontMain;
+extern SpellId dword_507B00_spell_info_to_draw_in_popup;
+extern int dword_507CC0_activ_ch;
+extern bool OpenedTelekinesis;
+extern int enchantingActiveCharacter;
+extern int uSpriteID_Spell11;  // idb
+extern bool IsEnchantingInProgress; // 50C9A0 Indicates that inventory window is opened for enchant-like spell
+extern Duration ItemEnchantmentTimer; // 50C9A8 Timer for enchanting animation for item in inventory
+extern UIMessageType AfterEnchClickEventId; // 50C9D0 Event id that is pushed in queue after enchant item has been clicked
+extern int AfterEnchClickEventSecondParam; // 50C9D4 Parameter passed for event "AfterEnchClickEventId"
+extern Duration AfterEnchClickEventTimeout; // 50C9D8 Timer before event "AfterEnchClickEventId" is pushed in queue
+
+extern unsigned int uNumBlueFacesInBLVMinimap;
+extern std::array<uint16_t, 50> pBlueFacesInBLVMinimapIDs;
+
+extern std::array<std::shared_ptr<GraphicsImage>, 14> party_buff_icons;
+extern unsigned int uIconIdx_FlySpell;
+extern unsigned int uIconIdx_WaterWalk;
+
+extern int uCurrentHouse_Animation;
+
+extern std::string branchless_dialogue_str;
+
+extern int npcIdToDismissAfterDialogue;
+extern int bDialogueUI_InitializeActor_NPC_ID;
+
+extern int uDefaultTravelTime_ByFoot;
+
+extern float fWalkSpeedMultiplier;
+extern float fBackwardWalkSpeedMultiplier;
+extern float fTurnSpeedMultiplier;
+
+/** Recovery multiplier for non-combat actions, e.g. receiving fall damage, casting buffs,
+ * and receiving damage from monsters. */
+constexpr float debug_non_combat_recovery_mul = 1.0f;
+
+/** Recovery multiplier for combat actions, e.g. hand-to-hand and ranged attacks and combat spells. */
+constexpr float debug_combat_recovery_mul = 1.0f;
+
+/** Speed multiplier for monsters in turn-based mode. It does affect actual move distance, but setting a high value
+ * doesn't make monsters dart like crazy because monster speed is capped at 1000. Doh. */
+constexpr float debug_turn_based_monster_movespeed_mul = 1.666666666666667f;
+
+constexpr float flt_debugrecmod3 = 2.133333333333333f;
+
+constexpr float meleeRange = 307.2f;
+
+// maximum +/- XY distance party can reach outdoors
+constexpr float maxPartyAxisDistance = 22528.0f;
+
+extern int uPlayerCreationUI_SelectedCharacter;
+extern int uPlayerCreationUI_NameEditCharacter;
+extern std::string current_npc_text;  // F8B1E8
+extern char dialogue_show_profession_details;
+
+extern bool GameOverNoSound;

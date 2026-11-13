@@ -1,0 +1,226 @@
+#pragma once
+
+#include <array>
+#include <memory>
+#include <vector>
+
+#include "Library/Image/Image.h"
+#include "Library/Color/Color.h"
+#include "Library/Color/ColorTable.h"
+#include "Library/Geometry/Rect.h"
+#include "Engine/HitMap.h"
+#include "Utility/Ptr.h"
+
+#include "TextureRenderId.h"
+#include "Engine/Graphics/ParticleEngine.h"
+#include "Engine/Graphics/RenderEntities.h"
+
+class Actor;
+class GraphicsImage;
+class GameConfig;
+class SpriteFrame;
+struct DecalBuilder;
+class ParticleEngine;
+struct SpellFxRenderer;
+struct SpellFX_Billboard;
+class Vis;
+struct Decal;
+struct nk_context;
+
+bool PauseGameDrawing();
+
+/**
+ * Colors for the up to four color channels of a font texture. Unused channels default to transparent black.
+ *
+ * @see Renderer::DrawTextNew
+ */
+struct TextColors : std::array<Color, 4> {
+    TextColors() = default;
+    TextColors(Color color0, Color color1 = Color(), Color color2 = Color(), Color color3 = Color()) // NOLINT: implicit conversion is intended.
+        : std::array<Color, 4>({{color0, color1, color2, color3}}) {}
+};
+
+class Renderer {
+ public:
+    Renderer(
+        std::shared_ptr<GameConfig> config,
+        DecalBuilder *decal_builder,
+        SpellFxRenderer *spellfx,
+        std::shared_ptr<ParticleEngine> particle_engine,
+        Vis *vis
+    );
+    virtual ~Renderer();
+
+    virtual void Initialize() = 0;
+
+    virtual RgbaImage ReadScreenPixels() = 0;
+    virtual void ClearTarget(Color uColor) = 0;
+    virtual void Present() = 0;
+
+    virtual void BeginLines2D() = 0;
+    virtual void EndLines2D() = 0;
+    virtual void RasterLine2D(Pointi a, Pointi b, Color acolor, Color bcolor) = 0;
+
+    void RasterLine2D(Pointi a, Pointi b, Color color) {
+        RasterLine2D(a, b, color, color);
+    }
+
+    virtual void BeginScene3D() = 0;
+
+    virtual void MakeParticleBillboardAndPush(const Particle& p) = 0;
+    virtual float GetGamma() = 0;
+
+    virtual void DrawBillboards_And_MaybeRenderSpecialEffects_And_EndScene() = 0;
+    virtual void BillboardSphereSpellFX(SpellFX_Billboard *a1, Color diffuse) = 0;
+    virtual void TransformBillboards() = 0;
+    virtual bool AddBillboardIfVisible(Ptr<GraphicsImage> sprite, int palette, const Vec3f& pos, const Vec2f& scale, BillboardFlags flags, Pid id, int sector = 0) = 0;
+
+    virtual void DrawProjectile(float srcX, float srcY, float a3, float a4,
+                                float dstX, float dstY, float a7, float a8,
+                                Ptr<GraphicsImage> texture) = 0;
+
+    virtual TextureRenderId CreateTexture(RgbaImageView image) = 0;
+    virtual void DeleteTexture(TextureRenderId id) = 0;
+
+    virtual void BeginScene2D() = 0;
+    virtual void ScreenFade(Color color, float t) = 0;
+
+    virtual void SetUIClipRect(const Recti &rect) = 0;
+    virtual void ResetUIClipRect() = 0;
+
+    /**
+     * Core 2D quad drawing function. All other 2D texture drawing functions (except `DrawImage`) delegate to this one.
+     *
+     * @param texture                   The texture to draw.
+     * @param srcRect                   Source rectangle in texture pixel coordinates.
+     * @param dstRect                   Destination rectangle in screen pixels.
+     * @param color                     Multiplicative color mask applied to the texture. Use `colorTable.White` for no
+     *                                  tinting. RGB components scale the texture colors, alpha controls transparency.
+     */
+    virtual void DrawQuad2D(Ptr<GraphicsImage> texture, const Recti &srcRect, const Recti &dstRect, Color color = colorTable.White) = 0;
+    void DrawQuad2D(Ptr<GraphicsImage> texture, const Recti &srcRect, Pointi dstPoint, Color color = colorTable.White);
+    void DrawQuad2D(Ptr<GraphicsImage> texture, Pointi dstPoint, Color color = colorTable.White);
+
+    void FillRect(const Recti &rect, Color color);
+
+    // TODO(captainurist): DrawImage uses palette, should be refactored to use a separate palette shader.
+    virtual void DrawImage(Ptr<GraphicsImage>, const Recti &rect, int paletteid = 0, Color colourmask32 = colorTable.White) = 0;
+
+    virtual void BlendTextures(int a2, int a3, Ptr<GraphicsImage> a4, Ptr<GraphicsImage> a5, int t, int start_opacity, int end_opacity) = 0;
+    virtual void DrawMonsterPortrait(const Recti &rc, SpriteFrame *Portrait_Sprite, int Y_Offset) = 0;
+
+    virtual void BeginTextNew(Ptr<GraphicsImage> texture) = 0;
+    virtual void EndTextNew() = 0;
+    virtual void DrawTextNew(const Recti &srcRect, const Recti &dstRect, const TextColors &colors) = 0;
+
+    virtual void DrawOutdoorBuildings() = 0;
+
+    virtual void DrawIndoorSky(int uNumVertices, int uFaceID = 0) = 0;
+    virtual void DrawOutdoorSky() = 0;
+
+    virtual void PrepareDecorationsRenderList_ODM() = 0;
+    virtual void DrawSpriteObjects() = 0;
+
+    virtual void DrawOutdoorTerrain() = 0;
+
+    /**
+     * Takes a screenshot of the game viewport, w/o the UI elements.
+     *
+     * @param width                         Required width
+     * @param height                        Required height.
+     * @return                              Taken screenshot image.
+     */
+    virtual RgbaImage MakeViewportScreenshot(int width, int height) = 0;
+
+    virtual RgbaImage MakeFullScreenshot() = 0;
+
+    virtual std::vector<Actor *> getActorsInViewport(int pDepth) = 0;
+
+    virtual void BeginDecals() = 0;
+    virtual void EndDecals() = 0;
+    virtual void DrawDecal(Decal *pDecal, float z_bias) = 0;
+
+    virtual void DrawSpecialEffectsQuad(Ptr<GraphicsImage> texture, int palette) = 0;
+
+    virtual void DrawIndoorFaces() = 0;
+
+    virtual void ReleaseTerrain() = 0;
+    virtual void ReleaseBSP() = 0;
+
+    virtual void DrawTwodVerts() = 0;
+
+    virtual Sizei GetRenderDimensions() = 0;
+    virtual Sizei GetPresentDimensions() = 0;
+    virtual Pointi MapToRender(Pointi position) = 0;
+    virtual Pointi MapToPresent(Pointi position) = 0;
+
+    virtual bool Reinitialize(bool firstInit = false) = 0;
+    virtual bool ReloadShaders() = 0;
+    virtual void DoRenderBillboards_D3D() = 0;
+
+    virtual void flushAndScale() = 0;
+    virtual void swapBuffers() = 0;
+    virtual void beginOverlays() = 0;
+    virtual void endOverlays() = 0;
+
+    std::shared_ptr<GameConfig> config = nullptr;
+
+    Color uFogColor;
+
+    static const int MAX_BILLBOARDS_D3D = 5000;
+    RenderBillboardD3D pBillboardRenderListD3D[MAX_BILLBOARDS_D3D];
+    std::array<RenderBillboardD3D*, MAX_BILLBOARDS_D3D> pSortedBillboardRenderListD3D;
+    unsigned int uNumBillboardsToDraw = 0; // TODO(captainurist): this is not properly cleared if BeginScene3D is not called,
+                                       //                     resulting in dangling textures in pBillboardRenderListD3D.
+
+    int drawcalls = 0;
+
+    /**
+     * @returns                         1x1 white texture for solid color fills. Initialized lazily on first use.
+     */
+    const std::unique_ptr<GraphicsImage> &solidFillTexture();
+
+ protected:
+    void releaseSolidFillTexture();
+
+    DecalBuilder *decal_builder = nullptr;
+    SpellFxRenderer *spell_fx_renderer = nullptr;
+    std::shared_ptr<ParticleEngine> particle_engine = nullptr;
+    Vis *vis = nullptr;
+
+ private:
+    std::unique_ptr<GraphicsImage> _solidFillTexture;
+};
+
+extern Renderer *render;
+
+extern RenderBillboard pBillboardRenderList[500];
+extern int uNumBillboardsToDraw;
+extern int uNumDecorationsDrawnThisFrame;
+extern int uNumSpritesDrawnThisFrame;
+
+extern RenderVertexSoft VertexRenderList[50];
+extern RenderVertexSoft array_73D150[20];
+
+
+struct SkyBillboardStruct {
+    void CalcSkyFrustumVec(int a2, int a3, int a4, int a5, int a6, int a7);
+
+    float field_0_party_dir_x = 0;  // cam view transform
+    float field_4_party_dir_y = 0;
+    float field_8_party_dir_z = 0;
+    float CamVecLeft_Y = 0;
+    float CamVecLeft_X = 0;
+    float CamVecLeft_Z = 0;
+    float CamVecFront_Y = 0;
+    float CamVecFront_X = 0;
+    float CamVecFront_Z = 0;
+    float CamLeftDot = 0;
+    float CamFrontDot = 0;
+};
+
+extern SkyBillboardStruct SkyBillboard;
+
+Color GetActorTintColor(int max_dim, int min_dim, float distance, int a4, const RenderBillboard *a5);
+
+void UpdateObjects();

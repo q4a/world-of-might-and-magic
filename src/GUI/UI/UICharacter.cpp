@@ -1,0 +1,2109 @@
+#include "UICharacter.h"
+
+#include <algorithm>
+#include <array>
+#include <cstdio>
+#include <memory>
+#include <string>
+#include <unordered_map>
+#include <utility>
+#include <vector>
+
+#include "Engine/AssetsManager.h"
+#include "Engine/Engine.h"
+#include "Engine/EngineGlobals.h"
+#include "Engine/Objects/Character.h"
+#include "Engine/Objects/CharacterEnumFunctions.h"
+#include "Engine/Graphics/Renderer/Renderer.h"
+#include "Engine/Graphics/Viewport.h"
+#include "Engine/Graphics/Image.h"
+#include "Engine/Localization.h"
+#include "Engine/Party.h"
+#include "Engine/Data/AwardEnumFunctions.h"
+#include "Engine/Spells/CastSpellInfo.h"
+#include "Engine/Timer.h"
+#include "Engine/Tables/ItemTable.h"
+#include "Engine/Tables/AwardTable.h"
+#include "Engine/Spells/Spells.h"
+#include "Engine/Data/AwardEnums.h"
+
+#include "GUI/GUIWindow.h"
+#include "GUI/GUIButton.h"
+#include "GUI/GUIMessageQueue.h"
+#include "GUI/UI/ItemGrid.h"
+#include "GUI/UI/UIInventory.h"
+
+#include "Io/Mouse.h"
+
+#include "Media/Audio/AudioPlayer.h"
+
+#include "Utility/IndexedArray.h"
+#include "Utility/MapAccess.h"
+
+void CharacterUI_LoadPaperdollTextures();
+
+static void CharacterUI_DrawItem(int x, int y, Item *item, int id, Ptr<GraphicsImage> item_texture = nullptr, bool doZDraw = false);
+
+/**
+ * Prepare textures of character doll with wetsuit on.
+ *
+ * @param characterIndex                0-based index of the character.
+ * @offset 0x43EF2B
+ */
+static void WetsuitOn(int characterIndex);
+
+/**
+ * Prepare textures of character doll with wetsuit off.
+ *
+ * @param characterIndex                0-based index of the character.
+ * @offset 0x43F0BD
+ */
+static void WetsuitOff(int characterIndex);
+
+HitMap<int> equipmentHitMap;
+
+int bRingsShownInCharScreen;  // 5118E0
+
+Color ui_mainmenu_copyright_color;
+
+Color ui_character_tooltip_header_default_color;
+Color ui_character_default_text_color;
+Color ui_character_skill_highlight_color;
+Color ui_character_header_text_color;
+Color ui_character_bonus_text_color;
+Color ui_character_bonus_text_color_neg;
+Color ui_character_skill_upgradeable_color;
+Color ui_character_skill_default_color;
+Color ui_character_stat_default_color;
+Color ui_character_stat_buffed_color;
+Color ui_character_stat_debuffed_color;
+Color ui_character_skillinfo_can_learn;
+Color ui_character_skillinfo_can_learn_gm;
+Color ui_character_skillinfo_cant_learn;
+Color ui_character_condition_normal_color;
+Color ui_character_condition_light_color;
+Color ui_character_condition_moderate_color;
+Color ui_character_condition_severe_color;
+std::array<Color, 6> ui_character_award_color;
+
+Color ui_game_minimap_outline_color;
+Color ui_game_minimap_actor_friendly_color;
+Color ui_game_minimap_actor_hostile_color;
+Color ui_game_minimap_actor_corpse_color;
+Color ui_game_minimap_decoration_color_1;
+Color ui_game_minimap_projectile_color;
+Color ui_game_minimap_treasure_color;
+
+Color ui_gamemenu_video_gamma_title_color;
+Color ui_gamemenu_keys_action_name_color;
+Color ui_gamemenu_keys_key_selection_blink_color_1;
+Color ui_gamemenu_keys_key_selection_blink_color_2;
+Color ui_gamemenu_keys_key_default_color;
+
+Color ui_book_quests_title_color;
+Color ui_book_quests_text_color;
+Color ui_book_autonotes_title_color;
+Color ui_book_autonotes_text_color;
+Color ui_book_map_title_color;
+Color ui_book_map_coordinates_color;
+
+Color ui_book_calendar_title_color;
+Color ui_book_calendar_time_color;
+Color ui_book_calendar_day_color;
+Color ui_book_calendar_month_color;
+Color ui_book_calendar_year_color;
+Color ui_book_calendar_moon_color;
+Color ui_book_calendar_location_color;
+
+Color ui_book_journal_title_color;
+Color ui_book_journal_text_color;
+Color ui_book_journal_text_shadow;
+
+Color ui_game_dialogue_npc_name_color;
+Color ui_game_dialogue_option_highlight_color;
+Color ui_game_dialogue_option_normal_color;
+
+Color ui_house_player_cant_interact_color;
+
+void set_default_ui_skin_colors() {
+    ui_mainmenu_copyright_color = colorTable.White;
+
+    ui_character_tooltip_header_default_color = colorTable.PaleCanary;
+    ui_character_default_text_color = colorTable.White;
+    ui_character_header_text_color = colorTable.PaleCanary;
+    ui_character_bonus_text_color = colorTable.Green;
+    ui_character_bonus_text_color_neg = colorTable.Red;
+
+    ui_character_skill_upgradeable_color = colorTable.BoltBlue;
+    ui_character_skill_default_color = colorTable.Red;
+    ui_character_skill_highlight_color = colorTable.Red;
+
+    ui_character_stat_default_color = colorTable.White;
+    ui_character_stat_buffed_color = colorTable.Green;
+    ui_character_stat_debuffed_color = colorTable.Scarlet;
+
+    ui_character_skillinfo_can_learn = colorTable.White;
+    ui_character_skillinfo_can_learn_gm = colorTable.Yellow;
+    ui_character_skillinfo_cant_learn = colorTable.Red;
+
+    ui_character_condition_normal_color = colorTable.White;
+    ui_character_condition_light_color = colorTable.Green;
+    ui_character_condition_moderate_color = colorTable.Sunflower;
+    ui_character_condition_severe_color = colorTable.Scarlet;
+
+    ui_character_award_color[0] = colorTable.Magenta;
+    ui_character_award_color[1] = colorTable.Malibu;
+    ui_character_award_color[2] = colorTable.MoonRaker;
+    ui_character_award_color[3] = colorTable.ScreaminGreen;
+    ui_character_award_color[4] = colorTable.Canary;
+    ui_character_award_color[5] = colorTable.Mimosa;
+
+    ui_game_minimap_outline_color = colorTable.Blue;
+    ui_game_minimap_actor_friendly_color = colorTable.Green;
+    ui_game_minimap_actor_hostile_color = colorTable.Red;
+    ui_game_minimap_actor_corpse_color = colorTable.Yellow;
+    ui_game_minimap_decoration_color_1 = colorTable.White;
+    ui_game_minimap_projectile_color = colorTable.Red;
+    ui_game_minimap_treasure_color = colorTable.Blue;
+
+    ui_gamemenu_video_gamma_title_color = colorTable.PaleCanary;
+    ui_gamemenu_keys_action_name_color = colorTable.White;
+    ui_gamemenu_keys_key_selection_blink_color_1 = colorTable.Temptress;
+    ui_gamemenu_keys_key_selection_blink_color_2 = colorTable.Sunflower;
+    ui_gamemenu_keys_key_default_color = colorTable.White;
+
+    ui_book_quests_title_color = colorTable.White;
+    ui_book_quests_text_color = colorTable.White;
+    ui_book_autonotes_title_color = colorTable.White;
+    ui_book_autonotes_text_color = colorTable.White;
+    ui_book_map_title_color = colorTable.White;
+    ui_book_map_coordinates_color = colorTable.White;
+
+    ui_book_calendar_title_color = colorTable.White;
+    ui_book_calendar_time_color = colorTable.Tundora;
+    ui_book_calendar_day_color = colorTable.Tundora;
+    ui_book_calendar_month_color = colorTable.Tundora;
+    ui_book_calendar_year_color = colorTable.Tundora;
+    ui_book_calendar_moon_color = colorTable.Tundora;
+    ui_book_calendar_location_color = colorTable.Tundora;
+
+    ui_book_journal_title_color = colorTable.White;
+    ui_book_journal_text_color = colorTable.White;
+    ui_book_journal_text_shadow = colorTable.Black;
+
+    ui_game_dialogue_npc_name_color = colorTable.EasternBlue;
+    ui_game_dialogue_option_highlight_color = colorTable.Sunflower;
+    ui_game_dialogue_option_normal_color = colorTable.White;
+
+    ui_house_player_cant_interact_color = colorTable.PaleCanary;
+}
+
+std::shared_ptr<GraphicsImage> paperdoll_drhs[4];
+std::shared_ptr<GraphicsImage> paperdoll_dlhus[4];
+std::shared_ptr<GraphicsImage> paperdoll_dlhs[4];
+std::shared_ptr<GraphicsImage> paperdoll_dbods[5];
+IndexedArray<std::array<std::array<std::shared_ptr<GraphicsImage>, 3>, 17>, BODY_TYPE_FIRST, BODY_TYPE_LAST> paperdoll_armor_texture;  // 0x511294
+// int paperdoll_array_51132C[165];
+std::shared_ptr<GraphicsImage> paperdoll_dlaus[5];
+std::shared_ptr<GraphicsImage> paperdoll_dlads[4];
+std::shared_ptr<GraphicsImage> paperdoll_flying_feet[22];      // 005115E0
+IndexedArray<std::array<std::shared_ptr<GraphicsImage>, 6>, BODY_TYPE_FIRST, BODY_TYPE_LAST> paperdoll_boots_texture;   // 511638
+IndexedArray<std::array<std::shared_ptr<GraphicsImage>, 10>, BODY_TYPE_FIRST, BODY_TYPE_LAST> paperdoll_cloak_collar_texture;
+IndexedArray<std::array<std::shared_ptr<GraphicsImage>, 10>, BODY_TYPE_FIRST, BODY_TYPE_LAST> paperdoll_cloak_texture;
+IndexedArray<std::array<std::shared_ptr<GraphicsImage>, 16>, BODY_TYPE_HUMAN_MALE, BODY_TYPE_HUMAN_FEMALE> paperdoll_helm_texture;   // 511698
+IndexedArray<std::array<std::shared_ptr<GraphicsImage>, 7>, BODY_TYPE_FIRST, BODY_TYPE_LAST> paperdoll_belt_texture;   // 511718
+
+const IndexedArray<std::array<std::array<int, 2>, 16>, BODY_TYPE_FIRST, BODY_TYPE_LAST> paperdoll_Weapon = {  // 4E4C30
+    {BODY_TYPE_HUMAN_MALE, {{
+        {128, 205}, {30, 144}, {88, 85}, {0, 0}, {0, 0}, {0, 0}, {17, 104}, {0, 0},
+        {0, 0}, {0, 0}, {0, 0}, {0, 0}, {0, 0}, {0, 0}, {0, 0}, {0, 0},
+    }}},
+    {BODY_TYPE_HUMAN_FEMALE, {{
+        {131, 201}, {38, 158}, {98, 87}, {0, 0}, {0, 0}, {0, 0}, {21, 100}, {0, 0},
+        {0, 0}, {0, 0}, {0, 0}, {0, 0}, {0, 0}, {0, 0}, {0, 0}, {0, 0},
+    }}},
+    {BODY_TYPE_DWARF_MALE, {{
+        {131, 216}, {29, 186}, {88, 119}, {0, 0}, {0, 0}, {0, 0}, {0, 0}, {0, 0},
+        {0, 0}, {0, 0}, {0, 0}, {0, 0}, {0, 0}, {0, 0}, {0, 0}, {0, 0},
+    }}},
+    {BODY_TYPE_DWARF_FEMALE, {{
+        {123, 216}, {35, 184}, {98, 119}, {0, 0}, {0, 0}, {0, 0}, {0, 0}, {0, 0},
+        {0, 0}, {0, 0}, {0, 0}, {0, 0}, {0, 0}, {0, 0}, {0, 0}, {0, 0},
+    }}},
+};
+
+const IndexedArray<std::array<std::array<int, 2>, 7>, BODY_TYPE_FIRST, BODY_TYPE_LAST> paperdoll_Boot = {  // 4E5490
+    {BODY_TYPE_HUMAN_MALE, {{
+        {0x0E, 0x11D}, {0x0D, 0x11D}, {0x0C, 0x10A}, {0x0A, 0xFF}, {0x0D, 0xF9}, {0x0C, 0x10E}, {0x0D, 0x137},
+    }}},
+    {BODY_TYPE_HUMAN_FEMALE, {{
+        {0x14, 0x125}, {0x13, 0x122}, {0x15, 0x120}, {0x15, 0x114}, {0x13, 0x10A}, {0x11, 0x116}, {0x11, 0x13E},
+    }}},
+    {BODY_TYPE_DWARF_MALE, {{
+        {0x1D, 0x121}, {0x1C, 0x11F}, {0x1B, 0x11B}, {0x1C, 0x117}, {0x16, 0x116}, {0x1B, 0x11B}, {0x1B, 0x137},
+    }}},
+    {BODY_TYPE_DWARF_FEMALE, {{
+        {0x1F, 0x127}, {0x1F, 0x122}, {0x1B, 0x11B}, {0x1D, 0x117}, {0x1D, 0x116}, {0x1B, 0x11F}, {0x1D, 0x137},
+    }}},
+};
+const std::unordered_map<ItemId, int> paperdoll_boots_indexByType = {
+    {ITEM_LEATHER_BOOTS, 0},
+    {ITEM_STEEL_PLATED_BOOTS, 1},
+    {ITEM_RANGER_BOOTS, 2},
+    {ITEM_KNIGHTS_BOOTS, 3},
+    {ITEM_PALADIN_BOOTS, 4},
+    {ITEM_ARTIFACT_SEVEN_LEAGUE_BOOTS, 5},
+    {ITEM_ARTIFACT_HERMES_SANDALS, 6},
+};
+const std::unordered_map<int, ItemId> paperdoll_boots_typeByIndex = inverted(paperdoll_boots_indexByType);
+
+const IndexedArray<std::array<std::array<int, 2>, 10>, BODY_TYPE_FIRST, BODY_TYPE_LAST> paperdoll_Cloak = {  // 4E5570
+    {BODY_TYPE_HUMAN_MALE, {{
+        {0x11, 0x68}, {0x0F, 0x68}, {0x14, 0x71}, {0x19, 0x6B}, {0x21, 0x6F}, {0x05, 0x68}, {0x05, 0x68}, {0x14, 0x71},
+        {0x03, 0x6B}, {0x0F, 0x6F},
+    }}},
+    {BODY_TYPE_HUMAN_FEMALE, {{
+        {0x15, 0x64}, {0xB, 0x6B}, {0x0E, 0x67}, {0x15, 0x6B}, {0x1B, 0x6F}, {0x03, 0x6B}, {0, 0x6B}, {0xE, 0x67},
+        {0, 0x6B}, {0x3, 0x6F},
+    }}},
+    {BODY_TYPE_DWARF_MALE, {{
+        {0x10, 0x8A}, {0x9, 0x8B}, {0x18, 0x98}, {0x25, 0x91}, {0x29, 0x90}, {0x08, 0x8A}, {0x9, 0x8B}, {0x18, 0x98},
+        {0x3, 0x91}, {0x3, 0x90},
+    }}},
+    {BODY_TYPE_DWARF_FEMALE, {{
+        {0x14, 0x92}, {0x10, 0x92}, {0x15, 0x98}, {0x1F, 0x91}, {0x22, 0x90}, {0x08, 0x92}, {0x0C, 0x92}, {0x15, 0x98},
+        {0x03, 0x91}, {0x03, 0x90},
+    }}},
+};
+const std::unordered_map<ItemId, int> paperdoll_cloak_indexByType = {
+    {ITEM_LEATHER_CLOAK, 0},
+    {ITEM_HUNTSMANS_CLOAK, 1},
+    {ITEM_RANGERS_CLOAK, 2},
+    {ITEM_ELEGANT_CLOAK, 3},
+    {ITEM_GLORIOUS_CLOAK, 4},
+    {ITEM_RELIC_TWILIGHT, 5},
+    {ITEM_ARTIFACT_CLOAK_OF_THE_SHEEP, 6},
+    {ITEM_SPECIAL_SUN_CLOAK, 7},
+    {ITEM_SPECIAL_MOON_CLOAK, 8},
+    {ITEM_SPECIAL_VAMPIRES_CAPE, 9}
+};
+const std::unordered_map<int, ItemId> paperdoll_cloak_typeByIndex = inverted(paperdoll_cloak_indexByType);
+
+const IndexedArray<std::array<std::array<int, 2>, 10>, BODY_TYPE_FIRST, BODY_TYPE_LAST> paperdoll_CloakCollar = {  // 4E56B0
+    {BODY_TYPE_HUMAN_MALE, {{
+        {0, 0}, {0x34, 0x64}, {0x21, 0x69}, {0x1D, 0x67}, {0x20, 0x67}, {0x21, 0x68}, {0x34, 0x64}, {0x21, 0x69},
+        {0x1D, 0x67}, {0x1F, 0x67},
+    }}},
+    {BODY_TYPE_HUMAN_FEMALE, {{
+        {0, 0}, {0x35, 0x66}, {0x29, 0x68}, {0x1F, 0x68}, {0x1F, 0x6A}, {0x21, 0x6A}, {0x2B, 0x66}, {0x26, 0x68},
+        {0x1F, 0x68}, {0x1F, 0x6A},
+    }}},
+    {BODY_TYPE_DWARF_MALE, {{
+        {0, 0}, {0x30, 0x87}, {0x1E, 0x86}, {0x1B, 0x86}, {0x1C, 0x8A}, {0x21, 0x87}, {0x30, 0x87}, {0x1E, 0x86},
+        {0x1B, 0x86}, {0x1C, 0x8A},
+    }}},
+    {BODY_TYPE_DWARF_FEMALE, {{
+        {0, 0}, {0x38, 0x8A}, {0x24, 0x8B}, {0x1D, 0x8B}, {0x21, 0x8C}, {0x27, 0x8A}, {0x34, 0x8A}, {0x24, 0x8B},
+        {0x25, 0x8B}, {0x21, 0x8C},
+    }}},
+};
+// int dword_4E56B4;
+const IndexedArray<std::array<std::array<int, 2>, 7>, BODY_TYPE_FIRST, BODY_TYPE_LAST> paperdoll_Belt = {  // 4E57F0
+    {BODY_TYPE_HUMAN_MALE, {{
+        {0x3A, 0xB6}, {0x37, 0xB2}, {0x34, 0xB9}, {0x3A, 0xB9}, {0x37, 0xB7}, {0x38, 0xAC}, {0x37, 0xB7},
+    }}},
+    {BODY_TYPE_HUMAN_FEMALE, {{
+        {0x3E, 0xAD}, {0x3A, 0xAC}, {0x37, 0xB0}, {0x3A, 0xB1}, {0x39, 0xB0}, {0x3C, 0xA5}, {0x39, 0xB0},
+    }}},
+    {BODY_TYPE_DWARF_MALE, {{
+        {0x3B, 0xD5}, {0x37, 0xD2}, {0x31, 0xD5}, {0x39, 0xD6}, {0x37, 0xD8}, {0x37, 0xD1}, {0x37, 0xD8},
+    }}},
+    {BODY_TYPE_DWARF_FEMALE, {{
+        {0x42, 0xD2}, {0x3F, 0xD0}, {0x3B, 0xD7}, {0x3C, 0xD5}, {0x3B, 0xD6}, {0x3E, 0xCF}, {0x36, 0xD6},
+    }}},
+};
+const std::unordered_map<ItemId, int> paperdoll_belt_indexByType = {
+    {ITEM_LEATHER_BELT, 0},
+    {ITEM_FINE_BELT, 1},
+    {ITEM_STRONG_BELT, 2},
+    {ITEM_SILVER_BELT, 3},
+    {ITEM_GILDED_BELT, 4},
+    {ITEM_RELIC_TITANS_BELT, 5},
+    {ITEM_ARTIFACT_HEROS_BELT, 6}
+};
+const std::unordered_map<int, ItemId> paperdoll_belt_typeByIndex = inverted(paperdoll_belt_indexByType);
+
+const IndexedArray<std::array<std::array<int, 2>, 16>, BODY_TYPE_FIRST, BODY_TYPE_LAST> paperdoll_Helm = {  // 4E58D0
+    {BODY_TYPE_HUMAN_MALE, {{
+        {0x3E, 0x1F}, {0x41, 0x2C}, {0x37, 0x2F}, {0x31, 0x32}, {0x37, 0x2A}, {0x39, 0x28}, {0x36, 0x34}, {0x41, 0x38},
+        {0x40, 0x31}, {0x40, 0x21}, {0x40, 0x31}, {0x3C, 0x33}, {0x3D, 0x24}, {0x3A, 0x1A}, {0x37, 0x2A}, {0x41, 0x48},
+    }}},
+    {BODY_TYPE_HUMAN_FEMALE, {{
+        {0x41, 0x1E}, {0x42, 0x2B}, {0x37, 0x2F}, {0x34, 0x30}, {0x39, 0x29}, {0x3A, 0x26}, {0x36, 0x34}, {0x41, 0x37},
+        {0x42, 0x32}, {0x40, 0x21}, {0x40, 0x31}, {0x40, 0x2F}, {0x3E, 0x22}, {0x3B, 0x1A}, {0x39, 0x29}, {0x42, 0x47},
+    }}},
+    {BODY_TYPE_DWARF_MALE, {{
+        {0x3F, 0x47}, {0x41, 0x56}, {0x37, 0x59}, {0x32, 0x5E}, {0x37, 0x58}, {0x39, 0x54}, {0x34, 0x61}, {0x40, 0x61},
+        {0x41, 0x5D}, {0x3E, 0x4F}, {0x3E, 0x5B}, {0x3D, 0x5B}, {0x3F, 0x4C}, {0x3B, 0x45}, {0x37, 0x58}, {0x41, 0x74},
+    }}},
+    {BODY_TYPE_DWARF_FEMALE, {{
+        {0x45, 0x45}, {0x46, 0x54}, {0x3A, 0x55}, {0x38, 0x58}, {0x3C, 0x54}, {0x3F, 0x52}, {0x39, 0x5B}, {0x45, 0x5C},
+        {0x47, 0x5C}, {0x44, 0x4B}, {0x44, 0x57}, {0x43, 0x55}, {0x44, 0x4A}, {0x3E, 0x45}, {0x3C, 0x54}, {0x47, 0x70},
+    }}},
+};
+const std::unordered_map<ItemId, int> paperdoll_helm_indexByType = {
+    {ITEM_HORNED_HELM, 0},
+    {ITEM_CONSCRIPTS_HELM, 1},
+    {ITEM_FULL_HELM, 2},
+    {ITEM_PHYNAXIAN_HELM, 3},
+    {ITEM_MOGRED_HELM, 4},
+    {ITEM_PEASANT_HAT, 5},
+    {ITEM_TRAVELLERS_HAT, 6},
+    {ITEM_FANCY_HAT, 7},
+    {ITEM_CROWN, 8},
+    {ITEM_NOBLE_CROWN, 9},
+    {ITEM_REGAL_CROWN, 10},
+    {ITEM_RELIC_TALEDONS_HELM, 11},
+    {ITEM_RELIC_SCHOLARS_CAP, 12},
+    {ITEM_RELIC_PHYNAXIAN_CROWN, 13},
+    {ITEM_ARTIFACT_MINDS_EYE, 14},
+    {ITEM_SPECIAL_SHADOWS_MASK, 15}
+};
+const std::unordered_map<int, ItemId> paperdoll_helm_typeByIndex = inverted(paperdoll_helm_indexByType);
+
+const int pPaperdoll_Beards[4] = {  // 4E5AD0
+    52,
+    130,
+    56,
+    136,
+};
+const IndexedArray<std::array<int, 2>, BODY_TYPE_FIRST, BODY_TYPE_LAST> pPaperdoll_LeftHand = {  // 4E5AE0
+    {BODY_TYPE_HUMAN_MALE, {0x67, 0x6A}},
+    {BODY_TYPE_HUMAN_FEMALE, {0x65, 0x6C}},
+    {BODY_TYPE_DWARF_MALE, {0x74, 0x8D}},
+    {BODY_TYPE_DWARF_FEMALE, {0x74, 0x93}},
+};
+const IndexedArray<std::array<int, 2>, BODY_TYPE_FIRST, BODY_TYPE_LAST> pPaperdoll_SecondLeftHand = {  // 4E5B00
+    {BODY_TYPE_HUMAN_MALE, {0x1A, 0x6B}},
+    {BODY_TYPE_HUMAN_FEMALE, {0x28, 0x6D}},
+    {BODY_TYPE_DWARF_MALE, {0x19, 0x8D}},
+    {BODY_TYPE_DWARF_FEMALE, {0x20, 0x92}},
+};
+const IndexedArray<std::array<int, 2>, BODY_TYPE_FIRST, BODY_TYPE_LAST> pPaperdoll_RightHand = {  // 4E5B20
+    {BODY_TYPE_HUMAN_MALE, {0x1E, 0x90}},
+    {BODY_TYPE_HUMAN_FEMALE, {0x22, 0x9E}},
+    {BODY_TYPE_DWARF_MALE, {0x19, 0xBA}},
+    {BODY_TYPE_DWARF_FEMALE, {0x1F, 0xB8}},
+};
+const IndexedArray<std::array<int, 2>, BODY_TYPE_FIRST, BODY_TYPE_LAST> pPaperdollLeftEmptyHand = {  // 4E5B40
+    {BODY_TYPE_HUMAN_MALE, {0x80, 0xCD}},
+    {BODY_TYPE_HUMAN_FEMALE, {0x83, 0xC9}},
+    {BODY_TYPE_DWARF_MALE, {0x83, 0xD8}},
+    {BODY_TYPE_DWARF_FEMALE, {0x7B, 0xD8}},
+};
+
+int pPaperdoll_BodyX = 481;                  // 004E4C28
+int pPaperdoll_BodyY = 0;                    // 004E4C2C
+const IndexedArray<std::array<std::array<int, 2>, 17>, BODY_TYPE_FIRST, BODY_TYPE_LAST> paperdoll_Armor_Coord = {  // 4E4E30
+    {BODY_TYPE_HUMAN_MALE, {{
+        {0x2C, 0x67}, {0x30, 0x69}, {0x2D, 0x67}, {0x2C, 0x64}, {0x14, 0x66}, {0x22, 0x67}, {0x20, 0x66}, {0x25, 0x66},
+        {0x12, 0x66}, {0x0A, 0x66}, {0x13, 0x64}, {0x0E, 0x64}, {0x0A, 0x63}, {0x14, 0x66}, {0x0A, 0x63}, {0x0A, 0x66},
+        {0x25, 0x66},
+    }}},
+    {BODY_TYPE_HUMAN_FEMALE, {{
+        {0x32, 0x68}, {0x32, 0x69}, {0x35, 0x69}, {0x33, 0x68}, {0x24, 0x67}, {0x30, 0x69}, {0x33, 0x68}, {0x31, 0x69},
+        {0x19, 0x69}, {0x19, 0x6A}, {0x16, 0x66}, {0x16, 0x65}, {0x0F, 0x6B}, {0x24, 0x67}, {0x0F, 0x6B}, {0x19, 0x6A},
+        {0x31, 0x69},
+    }}},
+    {BODY_TYPE_DWARF_MALE, {{
+        {0x2A, 0x8C}, {0x29, 0x8C}, {0x2A, 0x89}, {0x29, 0x86}, {0x12, 0x87}, {0x2D, 0x89}, {0x2A, 0x88}, {0x25, 0x87},
+        {0x12, 0x8B}, {0x12, 0x8B}, {0x11, 0x8A}, {0x15, 0x87}, {0x09, 0x89}, {0x12, 0x87}, {0x09, 0x89}, {0x12, 0x8B},
+        {0x25, 0x87},
+    }}},
+    {BODY_TYPE_DWARF_FEMALE, {{
+        {0x33, 0x90}, {0x32, 0x90}, {0x34, 0x91}, {0x32, 0x8E}, {0x21, 0x8B}, {0x31, 0x8B}, {0x33, 0x8E}, {0x2F, 0x8F},
+        {0x16, 0x8D}, {0x18, 0x8C}, {0x19, 0x8C}, {0x1B, 0x8E}, {0x0C, 0x8C}, {0x21, 0x8B}, {0x0C, 0x8C}, {0x18, 0x8C},
+        {0x2F, 0x8F},
+    }}},
+};
+const std::unordered_map<ItemId, int> paperdoll_armor_indexByType = {
+    {ITEM_LEATHER_ARMOR, 0},
+    {ITEM_STUDDED_LEATHER, 1},
+    {ITEM_OFFICERS_LEATHER, 2},
+    {ITEM_REGNAN_LEATHER, 3},
+    {ITEM_ROYAL_LEATHER, 4},
+    {ITEM_CHAIN_MAIL, 5},
+    {ITEM_STEEL_CHAIN_MAIL, 6},
+    {ITEM_FINE_CHAIN_MAIL, 7},
+    {ITEM_RESPLENDENT_CHAIN_MAIL, 8},
+    {ITEM_GOLDEN_CHAIN_MAIL, 9},
+    {ITEM_PLATE_ARMOR, 10},
+    {ITEM_SPLENDID_PLATE_ARMOR, 11},
+    {ITEM_NOBLE_PLATE_ARMOR, 12},
+    {ITEM_RELIC_HARECKS_LEATHER, 13},
+    {ITEM_ARTIFACT_YORUBA, 14},
+    {ITEM_ARTIFACT_GOVERNORS_ARMOR, 15},
+    {ITEM_ARTIFACT_ELVEN_CHAINMAIL, 16}
+};
+const std::unordered_map<int, ItemId> paperdoll_armor_typeByIndex = inverted(paperdoll_armor_indexByType);
+
+const IndexedArray<std::array<std::array<int, 2>, 17>, BODY_TYPE_FIRST, BODY_TYPE_LAST> paperdoll_shoulder_coord = {  // 4E5050
+    {BODY_TYPE_HUMAN_MALE, {{
+        {0x64, 0x67}, {0x61, 0x67}, {0x65, 0x68}, {0x6E, 0x74}, {0x6C, 0x68}, {0x61, 0x67}, {0x66, 0x68}, {0x6C, 0x6A},
+        {0x6E, 0x6D}, {0x67, 0x69}, {0x70, 0x67}, {0x6E, 0x6D}, {0x6C, 0x6F}, {0x6C, 0x68}, {0x6C, 0x6F}, {0x67, 0x69},
+        {0x6C, 0x6A},
+    }}},
+    {BODY_TYPE_HUMAN_FEMALE, {{
+        {0x60, 0x6B}, {0x60, 0x6C}, {0x60, 0x6B}, {0x61, 0x6A}, {0x60, 0x69}, {0, 0}, {0x60, 0x6A}, {0x61, 0x69},
+        {0x63, 0x6A}, {0x64, 0x6A}, {0x61, 0x66}, {0x66, 0x67}, {0x64, 0x6C}, {0x60, 0x69}, {0x64, 0x6C}, {0x64, 0x6A},
+        {0x61, 0x69},
+    }}},
+    {BODY_TYPE_DWARF_MALE, {{
+        {0x6D, 0x8C}, {0x75, 0x8C}, {0, 0}, {0x72, 0x8D}, {0x6A, 0x89}, {0, 0}, {0x73, 0x8C}, {0x69, 0x8C},
+        {0x6E, 0x8D}, {0x71, 0x8D}, {0x70, 0x8D}, {0x72, 0x8D}, {0x74, 0x8E}, {0x6A, 0x89}, {0x74, 0x8E}, {0x71, 0x8D},
+        {0x69, 0x8C},
+    }}},
+    {BODY_TYPE_DWARF_FEMALE, {{
+        {0x72, 0x91}, {0x72, 0x91}, {0, 0}, {0x6E, 0x92}, {0x6F, 0x91}, {0, 0}, {0, 0}, {0x6E, 0x91},
+        {0x71, 0x90}, {0x72, 0x8D}, {0x72, 0x90}, {0x73, 0x93}, {0x73, 0x90}, {0x6F, 0x91}, {0x73, 0x90}, {0x72, 0x8D},
+        {0x6E, 0x91},
+    }}},
+};
+const IndexedArray<std::array<std::array<int, 2>, 17>, BODY_TYPE_FIRST, BODY_TYPE_LAST> paperdoll_shoulder_second_coord = {  // dword_4E5270
+    {BODY_TYPE_HUMAN_MALE, {{
+        {0, 0}, {0x61, 0x67}, {0, 0}, {0x64, 0x69}, {0x64, 0x68}, {0, 0}, {0, 0}, {0x5E, 0x66},
+        {0x5F, 0x69}, {0x55, 0x69}, {0x5F, 0x67}, {0x5F, 0x68}, {0x32, 0x69}, {0x64, 0x68}, {0x32, 0x69}, {0x55, 0x69},
+        {0x5E, 0x66},
+    }}},
+    {BODY_TYPE_HUMAN_FEMALE, {{
+        {0, 0}, {0, 0}, {0, 0}, {0x60, 0x6C}, {0x5E, 0x69}, {0, 0}, {0, 0}, {0x5D, 0x6A},
+        {0x5B, 0x6A}, {0x5B, 0x6A}, {0x59, 0x69}, {0x56, 0x68}, {0x38, 0x6E}, {0x5E, 0x69}, {0x38, 0x6E}, {0x5B, 0x6A},
+        {0x5D, 0x6A},
+    }}},
+    {BODY_TYPE_DWARF_MALE, {{
+        {0, 0}, {0, 0}, {0, 0}, {0x72, 0x8D}, {0x62, 0x89}, {0, 0}, {0, 0}, {0x69, 0x8C},
+        {0x5E, 0x8D}, {0x61, 0x8D}, {0x5F, 0x8D}, {0x60, 0x8D}, {0x2E, 0x8C}, {0x62, 0x89}, {0x2E, 0x8C}, {0x61, 0x8D},
+        {0x69, 0x8C},
+    }}},
+    {BODY_TYPE_DWARF_FEMALE, {{
+        {0, 0}, {0, 0}, {0, 0}, {0x72, 0x91}, {0x67, 0x8F}, {0, 0}, {0, 0}, {0, 0},
+        {0x64, 0x93}, {0x65, 0x8C}, {0x65, 0x91}, {0x67, 0x91}, {0x36, 0x90}, {0x67, 0x8F}, {0x36, 0x90}, {0x65, 0x8C},
+        {0x6E, 0x91},
+    }}},
+};
+
+static constexpr std::array<const char *, 25> dlad_texnames_by_face = {
+    "pc01lad", "pc02lad", "pc03lad", "pc04lad", "pc05lad", "pc06lad", "pc07lad",
+    "pc08lad", "pc09lad", "pc10lad", "pc11lad", "pc12lad", "pc13lad", "pc14lad",
+    "pc15lad", "pc16lad", "pc17lad", "pc18lad", "pc19lad", "pc20lad", "pc21lad",
+    "pc22lad", "pc23lad", "pc24lad", "pc25lad"};
+static constexpr std::array<const char *, 25> dlau_texnames_by_face = {
+    "pc01lau", "pc02lau", "pc03lau", "pc04lau", "pc05lau", "pc06lau", "pc07lau",
+    "pc08lau", "pc09lau", "pc10lau", "pc11lau", "pc12lau", "pc13lau", "pc14lau",
+    "pc15lau", "pc16lau", "pc17lau", "pc18lau", "pc19lau", "pc20lau", "pc21lau",
+    "pc22lau", "pc23lau", "pc24lau", "pc25lau"};
+static constexpr std::array<const char *, 25> dbod_texnames_by_face = {
+    "pc01bod", "pc02bod", "pc03bod", "pc04bod", "pc05bod", "pc06bod", "pc07bod",
+    "pc08bod", "pc09bod", "pc10bod", "pc11bod", "pc12bod", "pc13bod", "pc14bod",
+    "pc15bod", "pc16bod", "pc17bod", "pc18bod", "pc19bod", "pc20bod", "pc21bod",
+    "pc22bod", "pc23bod", "pc24bod", "pc25bod"};
+static constexpr std::array<const char *, 25> drh_texnames_by_face = {
+    "pc01rh", "pc02rh", "pc03rh", "pc04rh", "pc05rh", "pc06rh", "pc07rh",
+    "pc08rh", "pc09rh", "pc10rh", "pc11rh", "pc12rh", "pc13rh", "pc14rh",
+    "pc15rh", "pc16rh", "pc17rh", "pc18rh", "pc19rh", "pc20rh", "pc21rh",
+    "pc22rh", "pc23rh", "pc24rh", "pc25rh"};
+static constexpr std::array<const char *, 25> dlh_texnames_by_face = {
+    "pc01lh", "pc02lh", "pc03lh", "pc04lh", "pc05lh", "pc06lh", "pc07lh",
+    "pc08lh", "pc09lh", "pc10lh", "pc11lh", "pc12lh", "pc13lh", "pc14lh",
+    "pc15lh", "pc16lh", "pc17lh", "pc18lh", "pc19lh", "pc20lh", "pc21lh",
+    "pc22lh", "pc23lh", "pc24lh", "pc25lh"};
+static constexpr std::array<const char *, 25> dlhu_texnames_by_face = {
+    "pc01lhu", "pc02lhu", "pc03lhu", "pc04lhu", "pc05lhu", "pc06lhu", "pc07lhu",
+    "pc08lhu", "pc09lhu", "pc10lhu", "pc11lhu", "pc12lhu", "pc13lhu", "pc14lhu",
+    "pc15lhu", "pc16lhu", "pc17lhu", "pc18lhu", "pc19lhu", "pc20lhu", "pc21lhu",
+    "pc22lhu", "pc23lhu", "pc24lhu", "pc25lhu"};
+
+std::shared_ptr<GraphicsImage> ui_character_skills_background;
+std::shared_ptr<GraphicsImage> ui_character_awards_background;
+std::shared_ptr<GraphicsImage> ui_character_stats_background;
+std::shared_ptr<GraphicsImage> ui_character_inventory_background;
+std::shared_ptr<GraphicsImage> ui_character_inventory_background_strip;
+std::shared_ptr<GraphicsImage> ui_character_inventory_magnification_glass;
+std::shared_ptr<GraphicsImage> ui_character_inventory_paperdoll_background;
+std::shared_ptr<GraphicsImage> ui_character_inventory_paperdoll_rings_background;
+
+static std::shared_ptr<GraphicsImage> scrollstop;
+
+std::array<std::shared_ptr<GraphicsImage>, 16> paperdoll_dbrds;
+
+Recti savedInventoryLeftClickButtonRect;
+
+GUIWindow_CharacterRecord::GUIWindow_CharacterRecord(ScreenType screen)
+    : GUIWindow(WINDOW_CHARACTER_RECORD, {0, 0}, render->GetRenderDimensions()) {
+    gameTimer->setPaused(true);
+    bRingsShownInCharScreen = false;
+    CharacterUI_LoadPaperdollTextures();
+    current_screen_type = screen;
+
+    pCharacterScreen_StatsBtn = CreateButton(pViewport.topLeft() + Pointi(12, 308),
+                                             paperdoll_dbrds[9]->size(), BUTTON_TYPE_NORMAL, 0,
+                                             UIMSG_ClickStatsBtn, 0, INPUT_ACTION_OPEN_STATS, localization->str(LSTR_STATS),
+                                             {{paperdoll_dbrds[10], paperdoll_dbrds[9]}});
+    pCharacterScreen_SkillsBtn = CreateButton(pViewport.topLeft() + Pointi(102, 308),
+                                              paperdoll_dbrds[7]->size(), BUTTON_TYPE_NORMAL, 0,
+                                              UIMSG_ClickSkillsBtn, 0, INPUT_ACTION_OPEN_SKILLS, localization->str(LSTR_SKILLS),
+                                              {{paperdoll_dbrds[8], paperdoll_dbrds[7]}});
+    pCharacterScreen_InventoryBtn = CreateButton(pViewport.topLeft() + Pointi(192, 308),
+                                                 paperdoll_dbrds[5]->size(), BUTTON_TYPE_NORMAL, 0,
+                                                 UIMSG_ClickInventoryBtn, 0, INPUT_ACTION_OPEN_INVENTORY,
+                                                 localization->str(LSTR_INVENTORY),
+                                                 {{paperdoll_dbrds[6], paperdoll_dbrds[5]}});
+    pCharacterScreen_AwardsBtn = CreateButton(pViewport.topLeft() + Pointi(282, 308),
+                                              paperdoll_dbrds[3]->size(), BUTTON_TYPE_NORMAL, 0,
+                                              UIMSG_ClickAwardsBtn, 0, INPUT_ACTION_OPEN_AWARDS, localization->str(LSTR_AWARDS),
+                                              {{paperdoll_dbrds[4], paperdoll_dbrds[3]}});
+    pCharacterScreen_ExitBtn = CreateButton(pViewport.topLeft() + Pointi(371, 308),
+                                            paperdoll_dbrds[1]->size(), BUTTON_TYPE_NORMAL, 0,
+                                            UIMSG_ClickExitCharacterWindowBtn, 0, INPUT_ACTION_INVALID,
+                                            localization->str(LSTR_EXIT_DIALOGUE),
+                                            {{paperdoll_dbrds[2], paperdoll_dbrds[1]}});
+    CreateButton({0, 0}, {476, 345}, BUTTON_TYPE_NORMAL, 122, UIMSG_InventoryLeftClick, 0);
+    pCharacterScreen_DetalizBtn = CreateButton({600, 300}, {30, 30}, BUTTON_TYPE_NORMAL, 0,
+        UIMSG_ChangeDetaliz, 0, INPUT_ACTION_INVALID, localization->str(LSTR_DETAIL_TOGGLE));
+    pCharacterScreen_DollBtn = CreateButton({476, 0}, {164, 345}, BUTTON_TYPE_NORMAL, 0, UIMSG_ClickPaperdoll, 0);
+
+    CreateCharacterButtons();
+
+    fillAwardsData();
+
+    ui_character_skills_background = assets->getIcon("fr_skill");
+    ui_character_awards_background = assets->getIcon("fr_award");
+    ui_character_stats_background = assets->getIcon("fr_stats");
+    ui_character_inventory_background_strip = assets->getIcon("fr_strip");
+
+    scrollstop = assets->getIcon("con_x");
+}
+
+void GUIWindow_CharacterRecord::releaseAwardsScrollBar() {
+    if (_awardsScrollBarCreated) {
+        _awardsScrollBarCreated = false;
+        pBtn_Scroll->Release();
+        pBtn_Up->Release();
+        pBtn_Down->Release();
+        pBtn_Down = 0;
+        pBtn_Up = 0;
+        for (GUIButton *pButton : pGUIWindow_CurrentMenu->vButtons) {
+            if (pButton->msg == UIMSG_InventoryLeftClick) {
+                pButton->rect = savedInventoryLeftClickButtonRect;
+            }
+        }
+    }
+}
+
+void GUIWindow_CharacterRecord::createAwardsScrollBar() {
+    if (!_awardsScrollBarCreated) {
+        _awardsScrollBarCreated = true;
+        for (GUIButton *pButton : pGUIWindow_CurrentMenu->vButtons) {
+            if (pButton->msg == UIMSG_InventoryLeftClick) {
+                savedInventoryLeftClickButtonRect = pButton->rect;
+                pButton->rect = {};
+            }
+        }
+        pBtn_Up = pGUIWindow_CurrentMenu->CreateButton({438, 46}, ui_ar_up_up->size(), BUTTON_TYPE_NORMAL, 0,
+                                                       UIMSG_ClickAwardsUpBtn, 0, INPUT_ACTION_INVALID, "", {{ui_ar_up_up, ui_ar_up_dn}});
+        pBtn_Down = pGUIWindow_CurrentMenu->CreateButton({438, 292}, ui_ar_dn_up->size(), BUTTON_TYPE_NORMAL, 0,
+                                                         UIMSG_ClickAwardsDownBtn, 0, INPUT_ACTION_INVALID, "", {{ui_ar_dn_up, ui_ar_dn_dn}});
+        pBtn_Scroll = pGUIWindow_CurrentMenu->CreateButton({440, 62}, {16, 232}, BUTTON_TYPE_NORMAL, 0, UIMSG_ClickAwardScrollBar, 0, INPUT_ACTION_INVALID, "");
+    }
+}
+
+void GUIWindow_CharacterRecord::Update() {
+    if (!pParty->hasActiveCharacter())
+        return;
+    auto player = &pParty->activeCharacter();
+
+    switch (current_character_screen_window) {
+        case WINDOW_CHARACTER_STATS: {
+            CharacterUI_ReleaseButtons();
+            releaseAwardsScrollBar();
+            CharacterUI_StatsTab_Draw(player);
+            render->DrawQuad2D(assets->getIcon("ib-cd1-d"), pCharacterScreen_StatsBtn->rect.topLeft());
+            break;
+        }
+        case WINDOW_CHARACTER_SKILLS: {
+            if (dword_507CC0_activ_ch != pParty->activeCharacterIndex()) {
+                CharacterUI_ReleaseButtons();
+                CharacterUI_SkillsTab_CreateButtons();
+            }
+            releaseAwardsScrollBar();
+            CharacterUI_SkillsTab_Draw(player);
+            render->DrawQuad2D(assets->getIcon("ib-cd2-d"), pCharacterScreen_SkillsBtn->rect.topLeft());
+            break;
+        }
+        case WINDOW_CHARACTER_AWARDS: {
+            CharacterUI_ReleaseButtons();
+            createAwardsScrollBar();
+            CharacterUI_AwardsTab_Draw(player);
+            render->DrawQuad2D(assets->getIcon("ib-cd4-d"), pCharacterScreen_AwardsBtn->rect.topLeft());
+            break;
+        }
+        case WINDOW_CHARACTER_INVENTORY: {
+            CharacterUI_ReleaseButtons();
+            releaseAwardsScrollBar();
+            CharacterUI_InventoryTab_Draw(player, false);
+            render->DrawQuad2D(assets->getIcon("ib-cd3-d"), pCharacterScreen_InventoryBtn->rect.topLeft());
+            break;
+        }
+        default:
+            assert(false);
+            break;
+    }
+
+    if (bRingsShownInCharScreen)
+        CharacterUI_DrawPaperdollWithRingOverlay(player);
+    else
+        CharacterUI_DrawPaperdoll(player);
+}
+
+void GUIWindow_CharacterRecord::ShowStatsTab() {
+    current_character_screen_window = WINDOW_CHARACTER_STATS;
+    CharacterUI_ReleaseButtons();
+    releaseAwardsScrollBar();
+    new OnButtonClick3(WINDOW_CHARACTER_STATS,
+        pCharacterScreen_StatsBtn->rect.topLeft(), {0, 0}, pCharacterScreen_StatsBtn);
+}
+
+void GUIWindow_CharacterRecord::ShowSkillsTab() {
+    current_character_screen_window = WINDOW_CHARACTER_SKILLS;
+    CharacterUI_ReleaseButtons();
+    releaseAwardsScrollBar();
+    CharacterUI_SkillsTab_CreateButtons();
+    new OnButtonClick3(WINDOW_CHARACTER_SKILLS,
+        pCharacterScreen_SkillsBtn->rect.topLeft(), {0, 0}, pCharacterScreen_SkillsBtn);
+}
+
+void GUIWindow_CharacterRecord::ShowInventoryTab() {
+    current_character_screen_window = WINDOW_CHARACTER_INVENTORY;
+    releaseAwardsScrollBar();
+    CharacterUI_ReleaseButtons();
+    new OnButtonClick3(WINDOW_CHARACTER_INVENTORY,
+        pCharacterScreen_InventoryBtn->rect.topLeft(), {0, 0}, pCharacterScreen_InventoryBtn);
+}
+
+void GUIWindow_CharacterRecord::ShowAwardsTab() {
+    releaseAwardsScrollBar();
+    CharacterUI_ReleaseButtons();
+    createAwardsScrollBar();
+    current_character_screen_window = WINDOW_CHARACTER_AWARDS;
+    new OnButtonClick3(WINDOW_CHARACTER_AWARDS,
+        pCharacterScreen_AwardsBtn->rect.topLeft(), {0, 0}, pCharacterScreen_AwardsBtn);
+    fillAwardsData();
+}
+
+void GUIWindow_CharacterRecord::ToggleRingsOverlay() {
+    int x, y, w, h;
+
+    bRingsShownInCharScreen ^= 1;
+    pCharacterScreen_DetalizBtn->Release();
+    pCharacterScreen_DollBtn->Release();
+    if (bRingsShownInCharScreen) {
+        h = ui_exit_cancel_button_background->height();
+        w = ui_exit_cancel_button_background->width();
+        y = 445;
+        x = 471;
+    } else {
+        h = 30;
+        w = 30;
+        y = 300;
+        x = 600;
+    }
+    pCharacterScreen_DetalizBtn = pGUIWindow_CurrentMenu->CreateButton({x, y}, {w, h}, BUTTON_TYPE_NORMAL, 0,
+        UIMSG_ChangeDetaliz, 0, INPUT_ACTION_INVALID, localization->str(LSTR_DETAIL_TOGGLE));
+    pCharacterScreen_DollBtn = pGUIWindow_CurrentMenu->CreateButton({476, 0}, {164, 345}, BUTTON_TYPE_NORMAL, 0, UIMSG_ClickPaperdoll, 0);
+}
+
+std::unique_ptr<TargetedSpellUI> CastSpellInfo::GetCastSpellInInventoryWindow() {
+    gameTimer->setPaused(true);
+    bRingsShownInCharScreen = 0;
+    CharacterUI_LoadPaperdollTextures();
+    current_screen_type = SCREEN_CASTING;
+    std::unique_ptr<TargetedSpellUI> CS_inventory_window = std::make_unique<GUIWindow_Inventory_CastSpell>(Pointi(0, 0), render->GetRenderDimensions(), this, "");
+    pCharacterScreen_ExitBtn = CS_inventory_window->CreateButton({394, 318}, {75, 33}, BUTTON_TYPE_NORMAL, 0,
+        UIMSG_ClickExitCharacterWindowBtn, 0, INPUT_ACTION_INVALID, localization->str(LSTR_EXIT_DIALOGUE),
+        {{paperdoll_dbrds[2], paperdoll_dbrds[1]}});
+    CS_inventory_window->CreateButton({0, 0}, {0x1DCu, 0x159u}, BUTTON_TYPE_NORMAL, 122, UIMSG_InventoryLeftClick, 0);
+    pCharacterScreen_DollBtn = CS_inventory_window->CreateButton({0x1DCu, 0}, {0xA4u, 0x159u}, BUTTON_TYPE_NORMAL, 0, UIMSG_ClickPaperdoll, 0);
+
+    CS_inventory_window->CreateCharacterButtons();
+
+    return CS_inventory_window;
+}
+
+static int drawSkillTable(Character *player, int x, int y, const std::initializer_list<Skill> skill_list,
+                          int right_margin, std::string_view skill_group_name) {
+    int y_offset = y;
+    Pointi pt = mouse->position();
+
+    auto str = fmt::format("{}\r{:03}{}", skill_group_name, right_margin, localization->str(LSTR_LEVEL));
+    GUIWindow::DrawText(assets->pFontArrus.get(), {x, y}, ui_character_header_text_color, str, pGUIWindow_CurrentMenu->frameRect);
+
+    int num_skills_drawn = 0;
+    for (Skill skill : skill_list) {
+        for (size_t j = 0; j < pGUIWindow_CurrentMenu->vButtons.size(); ++j) {
+            GUIButton *button = pGUIWindow_CurrentMenu->GetControl(j);
+            if ((short)(button->uData) >= 0) {
+                continue;  // skips an of the stats skills innv awards buttons
+            }
+
+            if (static_cast<Skill>(button->uData & 0x7FFF) != skill) {
+                continue;  // skips buttons that dont match skill
+            }
+
+            ++num_skills_drawn;
+            y_offset = button->rect.y;
+
+            int skill_level = player->getSkillValue(skill).level();
+
+            Color skill_color = colorTable.White;
+            Color skill_mastery_color;
+            if (player->uSkillPoints > skill_level && skills_max_level[skill] != 1) {
+                skill_color = ui_character_skill_upgradeable_color;
+            }
+
+            if (button->Contains(pt)) {
+                if (player->uSkillPoints > skill_level && skills_max_level[skill] > skill_level && skills_max_level[skill] != 1) {
+                    skill_mastery_color = ui_character_bonus_text_color;
+                } else {
+                    skill_mastery_color = ui_character_skill_default_color;
+                }
+                skill_color = skill_mastery_color;
+            }
+
+            Mastery skill_mastery = player->getSkillValue(skill).mastery();
+            if (skill_mastery == MASTERY_NOVICE) {
+                std::string Strsk;
+                if (skills_max_level[skill] == 1) { // Non-investable skill
+                    Strsk = fmt::format("{}\r{:03}-", localization->skillName(skill), right_margin);
+                } else {
+                    Strsk = fmt::format("{}\r{:03}{}", localization->skillName(skill), right_margin, skill_level);
+                }
+                GUIWindow::DrawText(assets->pFontLucida.get(), {x, button->rect.y}, skill_color, Strsk, pGUIWindow_CurrentMenu->frameRect);
+            } else {
+                std::string skill_level_str = skill_mastery == MASTERY_NOVICE ? "" : localization->masteryName(skill_mastery);
+
+                if (skill_mastery_color == Color()) {
+                    skill_mastery_color = ui_character_header_text_color;
+                }
+
+                auto Strsk = fmt::format("{} {::}{}{::}\r{:03}{}",
+                        localization->skillName(skill), skill_mastery_color.tag(), skill_level_str, skill_color.tag(), right_margin, skill_level);
+                GUIWindow::DrawText(assets->pFontLucida.get(), {x, button->rect.y}, skill_color, Strsk, pGUIWindow_CurrentMenu->frameRect);
+            }
+        }
+    }
+
+    if (!num_skills_drawn) {
+        y_offset += assets->pFontLucida->GetHeight() - 3;
+        GUIWindow::DrawText(assets->pFontLucida.get(), {x, y_offset}, colorTable.White, localization->str(LSTR_NONE), pGUIWindow_CurrentMenu->frameRect);
+    }
+
+    return y_offset;
+}
+
+//----- (00419719) --------------------------------------------------------
+void GUIWindow_CharacterRecord::CharacterUI_SkillsTab_Draw(Character *player) {
+    render->DrawQuad2D(ui_character_skills_background, {8, 8});
+
+    auto str = fmt::format(
+        "{} {::}{}\f00000\r177{}: {::}{}\f00000",  // ^Pv[]
+                     localization->str(LSTR_SKILLS_FOR),
+                     ui_character_header_text_color.tag(), player->name,
+                     localization->str(LSTR_SKILL_POINTS),
+                     player->uSkillPoints ? ui_character_bonus_text_color.tag()
+                                          : ui_character_default_text_color.tag(),
+                     player->uSkillPoints);
+    GUIWindow::DrawText(assets->pFontArrus.get(), {24, 18}, colorTable.White, str, pGUIWindow_CurrentMenu->frameRect);
+
+    int y = 2 * assets->pFontLucida->GetHeight() + 13;
+    y = drawSkillTable(player, 24, y, allWeaponSkills(), 400, localization->str(LSTR_WEAPONS));
+
+    y += 2 * assets->pFontLucida->GetHeight() - 10;
+    drawSkillTable(player, 24, y, allMagicSkills(), 400, localization->str(LSTR_MAGIC));
+
+    y = 2 * assets->pFontLucida->GetHeight() + 13;
+    y = drawSkillTable(player, 248, y, allArmorSkills(), 177, localization->str(LSTR_ARMOR));
+
+    y += 2 * assets->pFontLucida->GetHeight() - 10;
+    y = drawSkillTable(player, 248, y, allMiscSkills(), 177, localization->str(LSTR_MISC));
+}
+
+std::string GUIWindow_CharacterRecord::getAchievedAwardsString(int idx) {
+    std::string str;
+
+    // TODO(captainurist): fmt can throw
+    switch (_achievedAwardsList[idx]) {
+    case AWARD_ARENA_PAGE_WINS:
+        str = fmt::sprintf(pAwards[_achievedAwardsList[idx]].pText, pParty->uNumArenaWins[ARENA_LEVEL_PAGE]);
+        break;
+    case AWARD_ARENA_SQUIRE_WINS:
+        str = fmt::sprintf(pAwards[_achievedAwardsList[idx]].pText, pParty->uNumArenaWins[ARENA_LEVEL_SQUIRE]);
+        break;
+    case AWARD_ARENA_KNIGHT_WINS:
+        str = fmt::sprintf(pAwards[_achievedAwardsList[idx]].pText, pParty->uNumArenaWins[ARENA_LEVEL_KNIGHT]);
+        break;
+    case AWARD_ARENA_LORD_WINS:
+        str = fmt::sprintf(pAwards[_achievedAwardsList[idx]].pText, pParty->uNumArenaWins[ARENA_LEVEL_LORD]);
+        break;
+    case AWARD_ARCOMAGE_WINS:
+        str = fmt::sprintf(pAwards[_achievedAwardsList[idx]].pText, pParty->uNumArcomageWins);
+        break;
+    case AWARD_ARCOMAGE_LOSES:
+        str = fmt::sprintf(pAwards[_achievedAwardsList[idx]].pText, pParty->uNumArcomageLoses);
+        break;
+    case AWARD_DEATHS:
+        str = fmt::sprintf(pAwards[_achievedAwardsList[idx]].pText, pParty->uNumDeaths);
+        break;
+    case AWARD_BOUNTIES_COLLECTED:
+        str = fmt::sprintf(pAwards[_achievedAwardsList[idx]].pText, pParty->uNumBountiesCollected);
+        break;
+    case AWARD_FINE:
+        str = fmt::sprintf(pAwards[_achievedAwardsList[idx]].pText, pParty->uFine);
+        break;
+    case AWARD_PRISON_TERMS:
+        str = fmt::sprintf(pAwards[_achievedAwardsList[idx]].pText, pParty->uNumPrisonTerms);
+        break;
+    default:
+        break;
+    }
+
+    if (str.empty()) {
+        str = std::string(pAwards[_achievedAwardsList[idx]].pText);
+    }
+
+    return str;
+}
+
+void GUIWindow_CharacterRecord::clickAwardsUp() {
+    if (_startAwardElem) {
+        _startAwardElem--;
+    }
+}
+
+void GUIWindow_CharacterRecord::clickAwardsDown() {
+    if (!_awardLimitReached) {
+        _startAwardElem++;
+    }
+}
+
+void GUIWindow_CharacterRecord::clickAwardsScroll(int yPos) {
+    if (!_scrollableAwardSteps) {
+        return;
+    }
+
+    int segmentHeight = pBtn_Scroll->rect.h / _scrollableAwardSteps;
+
+    _startAwardElem = std::clamp((int)std::round((float)(yPos - pBtn_Scroll->rect.y) / segmentHeight), 0, _scrollableAwardSteps);
+}
+
+void GUIWindow_CharacterRecord::CharacterUI_AwardsTab_Draw(Character *player) {
+    Recti window(12, 48, 424, 290);
+    int stopPos = 0;
+
+    render->DrawQuad2D(ui_character_awards_background, {8, 8});
+
+    std::string str = fmt::format("{} {::}{}\f00000", localization->str(LSTR_AWARDS_FOR),
+                                  ui_character_header_text_color.tag(), NameAndTitle(player->name, player->classType));
+
+    GUIWindow::DrawText(assets->pFontArrus.get(), {24, 18}, colorTable.White, str, pGUIWindow_CurrentMenu->frameRect);
+
+
+    if (_awardsCharacterId != pParty->activeCharacterIndex()) {
+        fillAwardsData();
+    }
+
+    int currentlyDisplayedElems = 0;
+    for (int i = _startAwardElem; i < _achievedAwardsList.size(); ++i) {
+        std::string str = getAchievedAwardsString(i);
+
+        GUIWindow::DrawText(assets->pFontArrus.get(), {0, 0}, ui_character_award_color[pAwards[_achievedAwardsList[i]].uPriority % 6], str, window);
+        window.y = assets->pFontArrus->CalcTextHeight(str, window.w, 0) + window.y + 8;
+        currentlyDisplayedElems++;
+        if (window.y > window.h) {
+            break;
+        }
+    }
+
+    _awardLimitReached = (_startAwardElem + currentlyDisplayedElems) == _achievedAwardsList.size();
+
+    if (_startAwardElem) {
+        if (!_awardLimitReached) {
+            stopPos = (float(_startAwardElem) / _scrollableAwardSteps) * 211.0f;
+        } else {
+            stopPos = 211;
+        }
+    }
+    render->DrawQuad2D(scrollstop, {439, 65 + stopPos});
+}
+
+//----- (0041A2C1) --------------------------------------------------------
+int GetSizeInInventorySlots(int uNumPixels) {
+    if (uNumPixels < 14)
+        uNumPixels = 14;
+
+    return ((uNumPixels - 14) >> 5) + 1;
+}
+
+//----- (0041A556) --------------------------------------------------------
+void draw_leather() {
+    render->DrawQuad2D(ui_leather_mm7, {8, 8});
+}
+
+//----- (0043CC7C) --------------------------------------------------------
+void CharacterUI_DrawPaperdoll(Character *player) {
+    int index;
+    int item_X;
+    int item_Y;
+
+    bool isDwarf = player->GetRace() == RACE_DWARF;
+    BodyType bodyType = player->bodyType();
+
+    int uPlayerID = pParty->getCharacterIdInParty(player);
+
+    equipmentHitMap.clear();
+    render->ResetUIClipRect();
+    render->DrawQuad2D(ui_character_inventory_paperdoll_background, {467, 0});
+
+    InventoryEntry itemMainHand = player->inventory.entry(ITEM_SLOT_MAIN_HAND);
+    InventoryEntry itemOffHand = player->inventory.entry(ITEM_SLOT_OFF_HAND);
+    bool bTwoHandedGrip = itemMainHand && (itemMainHand->type() == ITEM_TYPE_TWO_HANDED || itemMainHand->skill() == SKILL_SPEAR && !itemOffHand);
+
+    // Aqua-Lung
+    if (player->hasUnderwaterSuitEquipped()) {
+        // TODO(captainurist): need to also z-draw arms and wrists.
+        render->DrawQuad2D(paperdoll_dbods[uPlayerID], {pPaperdoll_BodyX, pPaperdoll_BodyY});
+        if (!bRingsShownInCharScreen)
+            equipmentHitMap.add({pPaperdoll_BodyX, pPaperdoll_BodyY}, paperdoll_dbods[uPlayerID], player->inventory.entry(ITEM_SLOT_ARMOUR).index());
+
+        // hands aren't in two handed grip pose
+        if (!bTwoHandedGrip) {
+            item_X = pPaperdoll_BodyX + pPaperdoll_LeftHand[bodyType][0];
+            item_Y = pPaperdoll_BodyY + pPaperdoll_LeftHand[bodyType][1];
+
+            render->DrawQuad2D(paperdoll_dlads[uPlayerID], {item_X, item_Y});
+        }
+
+        // main hand's item
+        if (itemMainHand) {
+            item_X = pPaperdoll_BodyX + paperdoll_Weapon[bodyType][1][0] - pItemTable->items[itemMainHand->itemId].paperdollAnchorOffset.x;
+            item_Y = pPaperdoll_BodyY + paperdoll_Weapon[bodyType][1][1] - pItemTable->items[itemMainHand->itemId].paperdollAnchorOffset.y;
+
+            std::shared_ptr<GraphicsImage> texture;
+            if (itemMainHand->itemId == ITEM_BLASTER)
+                texture = assets->getIcon("item64v1");
+
+            CharacterUI_DrawItem(item_X, item_Y, itemMainHand.get(), itemMainHand.index(), texture, !bRingsShownInCharScreen);
+        }
+    } else {
+        // bow
+        if (InventoryEntry bow = player->inventory.entry(ITEM_SLOT_BOW)) {
+            item_X = pPaperdoll_BodyX + paperdoll_Weapon[bodyType][2][0] - pItemTable->items[bow->itemId].paperdollAnchorOffset.x;
+            item_Y = pPaperdoll_BodyY + paperdoll_Weapon[bodyType][2][1] - pItemTable->items[bow->itemId].paperdollAnchorOffset.y;
+
+            CharacterUI_DrawItem(item_X, item_Y, bow.get(), bow.index(), nullptr, !bRingsShownInCharScreen);
+        }
+
+        // cloak
+        if (InventoryEntry cloak = player->inventory.entry(ITEM_SLOT_CLOAK)) {
+            index = valueOr(paperdoll_cloak_indexByType, cloak->itemId, -1);
+            if (index != -1) {
+                item_X = pPaperdoll_BodyX + paperdoll_Cloak[bodyType][index][0];
+                item_Y = pPaperdoll_BodyY + paperdoll_Cloak[bodyType][index][1];
+
+                std::shared_ptr<GraphicsImage> texture = paperdoll_cloak_texture[bodyType][index];
+                CharacterUI_DrawItem(item_X, item_Y, cloak.get(), cloak.index(), texture, !bRingsShownInCharScreen);
+            }
+        }
+
+        // paperdoll
+        render->DrawQuad2D(paperdoll_dbods[uPlayerID], {pPaperdoll_BodyX, pPaperdoll_BodyY});
+
+        // armor
+        if (InventoryEntry armor = player->inventory.entry(ITEM_SLOT_ARMOUR)) {
+            index = valueOr(paperdoll_armor_indexByType, armor->itemId, -1);
+            if (index != -1) {
+                item_X = pPaperdoll_BodyX + paperdoll_Armor_Coord[bodyType][index][0];
+                item_Y = pPaperdoll_BodyY + paperdoll_Armor_Coord[bodyType][index][1];
+
+                std::shared_ptr<GraphicsImage> texture = paperdoll_armor_texture[bodyType][index][0];
+                CharacterUI_DrawItem(item_X, item_Y, armor.get(), armor.index(), texture, !bRingsShownInCharScreen);
+            }
+        }
+
+        // boots
+        if (InventoryEntry boots = player->inventory.entry(ITEM_SLOT_BOOTS)) {
+            index = valueOr(paperdoll_boots_indexByType, boots->itemId, -1);
+            if (index != -1) {
+                item_X = pPaperdoll_BodyX + paperdoll_Boot[bodyType][index][0];
+                item_Y = pPaperdoll_BodyY + paperdoll_Boot[bodyType][index][1];
+
+                std::shared_ptr<GraphicsImage> texture;
+                if (boots->itemId == ITEM_ARTIFACT_HERMES_SANDALS) {
+                    texture = paperdoll_flying_feet[player->uCurrentFace];
+                } else {
+                    texture = paperdoll_boots_texture[bodyType][index];
+                }
+
+                CharacterUI_DrawItem(item_X, item_Y, boots.get(), boots.index(), texture, !bRingsShownInCharScreen);
+            }
+        }
+
+        // offhand depending on grip
+        if (!bTwoHandedGrip) {
+            item_X = pPaperdoll_BodyX + pPaperdoll_LeftHand[bodyType][0];
+            item_Y = pPaperdoll_BodyY + pPaperdoll_LeftHand[bodyType][1];
+            render->DrawQuad2D(paperdoll_dlads[uPlayerID], {item_X, item_Y});
+        } else {
+            item_X = pPaperdoll_BodyX + pPaperdoll_SecondLeftHand[bodyType][0];
+            item_Y = pPaperdoll_BodyY + pPaperdoll_SecondLeftHand[bodyType][1];
+            render->DrawQuad2D(paperdoll_dlaus[uPlayerID], {item_X, item_Y});
+        }
+
+        // belt
+        if (InventoryEntry belt = player->inventory.entry(ITEM_SLOT_BELT)) {
+            index = valueOr(paperdoll_belt_indexByType, belt->itemId, -1);
+            if (index != -1) {
+                item_X = pPaperdoll_BodyX + paperdoll_Belt[bodyType][index][0];
+                item_Y = pPaperdoll_BodyY + paperdoll_Belt[bodyType][index][1];
+                std::shared_ptr<GraphicsImage> texture;
+                if (index == 5) // Titan's Belt has dwarf textures.
+                    texture = paperdoll_belt_texture[bodyType][index];
+                else
+                    texture = paperdoll_belt_texture[humanBodyType(bodyType)][index];
+
+                CharacterUI_DrawItem(item_X, item_Y, belt.get(), belt.index(), texture, !bRingsShownInCharScreen);
+            }
+        }
+
+        // armor's shoulders
+        if (InventoryEntry armor = player->inventory.entry(ITEM_SLOT_ARMOUR)) {
+            index = valueOr(paperdoll_armor_indexByType, armor->itemId, -1);
+            if (index != -1) {
+                std::shared_ptr<GraphicsImage> texture;
+                // Some armors doesn't have sleeves so use normal one for two-handed or none if it also unavailable
+                if (bTwoHandedGrip && paperdoll_shoulder_second_coord[bodyType][index][0]) {
+                    item_X = pPaperdoll_BodyX + paperdoll_shoulder_second_coord[bodyType][index][0];
+                    item_Y = pPaperdoll_BodyY + paperdoll_shoulder_second_coord[bodyType][index][1];
+
+                    texture = paperdoll_armor_texture[bodyType][index][2];
+                } else if (paperdoll_shoulder_coord[bodyType][index][0]) {
+                    item_X = pPaperdoll_BodyX + paperdoll_shoulder_coord[bodyType][index][0];
+                    item_Y = pPaperdoll_BodyY + paperdoll_shoulder_coord[bodyType][index][1];
+
+                    texture = paperdoll_armor_texture[bodyType][index][1];
+                }
+
+                if (texture)
+                    CharacterUI_DrawItem(item_X, item_Y, armor.get(), armor.index(), texture, !bRingsShownInCharScreen);
+            }
+        }
+
+        // cloak's collar
+        if (InventoryEntry cloak = player->inventory.entry(ITEM_SLOT_CLOAK)) {
+            index = valueOr(paperdoll_cloak_indexByType, cloak->itemId, -1);
+            if (index != -1) {
+                // leather cloak has no collar
+                if (paperdoll_CloakCollar[bodyType][index][0]) {
+                    item_X = pPaperdoll_BodyX + paperdoll_CloakCollar[bodyType][index][0];
+                    item_Y = pPaperdoll_BodyY + paperdoll_CloakCollar[bodyType][index][1];
+
+                    std::shared_ptr<GraphicsImage> texture = paperdoll_cloak_collar_texture[bodyType][index];
+                    CharacterUI_DrawItem(item_X, item_Y, cloak.get(), cloak.index(), texture, !bRingsShownInCharScreen);
+                }
+            }
+        }
+
+        // beard
+        if ((player->uCurrentFace == 12 || player->uCurrentFace == 13) && paperdoll_dbrds[player->uCurrentFace]) {
+            item_X = pPaperdoll_BodyX + pPaperdoll_Beards[2 * player->uCurrentFace - 24];
+            item_Y = pPaperdoll_BodyY + pPaperdoll_Beards[2 * player->uCurrentFace - 23];
+
+            render->DrawQuad2D(paperdoll_dbrds[player->uCurrentFace], {item_X, item_Y});
+        }
+
+        // helm
+        if (InventoryEntry helm = player->inventory.entry(ITEM_SLOT_HELMET)) {
+            index = valueOr(paperdoll_helm_indexByType, helm->itemId, -1);
+            if (index != -1) {
+                item_X = pPaperdoll_BodyX + paperdoll_Helm[bodyType][index][0];
+                item_Y = pPaperdoll_BodyY + paperdoll_Helm[bodyType][index][1];
+
+                std::shared_ptr<GraphicsImage> texture;
+                if (!isDwarf || helm->itemId != ITEM_PHYNAXIAN_HELM)
+                    texture = paperdoll_helm_texture[humanBodyType(bodyType)][index];
+                else
+                    texture = paperdoll_dbrds[11];
+
+                CharacterUI_DrawItem(item_X, item_Y, helm.get(), helm.index(), texture, !bRingsShownInCharScreen);
+            }
+        }
+
+        // main hand's item
+        if (itemMainHand) {
+            item_X = pPaperdoll_BodyX + paperdoll_Weapon[bodyType][1][0] - pItemTable->items[itemMainHand->itemId].paperdollAnchorOffset.x;
+            item_Y = pPaperdoll_BodyY + paperdoll_Weapon[bodyType][1][1] - pItemTable->items[itemMainHand->itemId].paperdollAnchorOffset.y;
+
+            std::shared_ptr<GraphicsImage> texture;
+            if (itemMainHand->itemId == ITEM_BLASTER)
+                texture = assets->getIcon("item64v1");
+
+            CharacterUI_DrawItem(item_X, item_Y, itemMainHand.get(), itemMainHand.index(), texture, !bRingsShownInCharScreen);
+        }
+
+        // offhand's item
+        if (itemOffHand) {
+            item_X = pPaperdoll_BodyX + paperdoll_Weapon[bodyType][0][0] - pItemTable->items[itemOffHand->itemId].paperdollAnchorOffset.x;
+            item_Y = pPaperdoll_BodyY + paperdoll_Weapon[bodyType][0][1] - pItemTable->items[itemOffHand->itemId].paperdollAnchorOffset.y;
+
+            /*
+             * MM6 artifacts.
+             * These cases should never execute in MM7 as we have spell books in these positions.
+             * Also MM6 doesn't have variable size paperdoll's so cordinates need to account pPaperdoll_BodyX/Y.
+             */
+            if (itemOffHand->skill() == SKILL_DAGGER || itemOffHand->skill() == SKILL_SWORD) {
+                switch (itemOffHand->itemId) {
+                    case ITEM_SPELLBOOK_TORCH_LIGHT: // Mordred
+                        item_X = 596;
+                        item_Y = 86;
+                        assert(false);
+                        break;
+                    case ITEM_SPELLBOOK_FIRE_AURA: // Excalibur
+                        item_X = 596;
+                        item_Y = 28;
+                        assert(false);
+                        break;
+                    case ITEM_SPELLBOOK_JUMP: // Hades
+                        item_X = 595;
+                        item_Y = 33;
+                        assert(false);
+                        break;
+                    default:
+                        break;
+                }
+            }
+
+            CharacterUI_DrawItem(item_X, item_Y, itemOffHand.get(), itemOffHand.index(), nullptr, !bRingsShownInCharScreen);
+        }
+    }
+
+    // mainhand's wrist
+    {
+        item_X = pPaperdoll_BodyX + pPaperdoll_RightHand[bodyType][0];
+        item_Y = pPaperdoll_BodyY + pPaperdoll_RightHand[bodyType][1];
+
+        render->DrawQuad2D(paperdoll_drhs[uPlayerID], {item_X, item_Y});
+    }
+
+    // offhand's wrist
+    if (bTwoHandedGrip) {
+        item_X = pPaperdoll_BodyX + pPaperdoll_SecondLeftHand[bodyType][0];
+        item_Y = pPaperdoll_BodyY + pPaperdoll_SecondLeftHand[bodyType][1];
+
+        render->DrawQuad2D(paperdoll_dlhus[uPlayerID], {item_X, item_Y});
+    } else if (!itemOffHand || itemOffHand && !itemOffHand->isShield()) {
+        item_X = pPaperdoll_BodyX + pPaperdollLeftEmptyHand[bodyType][0];
+        item_Y = pPaperdoll_BodyY + pPaperdollLeftEmptyHand[bodyType][1];
+        render->DrawQuad2D(paperdoll_dlhs[uPlayerID], {item_X, item_Y});
+    }
+
+    // magnifying glass
+    if (!bRingsShownInCharScreen)
+        render->DrawQuad2D(ui_character_inventory_magnification_glass, {603, 299});
+
+    render->DrawQuad2D(game_ui_right_panel_frame, {468, 0});
+}
+
+//----- (0041A2D1) --------------------------------------------------------
+void CharacterUI_InventoryTab_Draw(Character *player, bool Cover_Strip) {
+    render->DrawQuad2D(ui_character_inventory_background, {8, 8});
+
+    if (Cover_Strip) {
+        ui_character_inventory_background_strip = assets->getIcon("fr_strip");
+        render->DrawQuad2D(ui_character_inventory_background_strip, {8, 305});
+    }
+
+    render->SetUIClipRect({ 14, 17, 32 * 14, 32 * 9 });
+    CharacterUI_DrawPickedItemUnderlay({ 14, 17 });
+    render->ResetUIClipRect();
+
+    for (InventoryEntry entry : player->inventory.entries()) {
+        if (entry.zone() != INVENTORY_ZONE_GRID)
+            continue;
+
+        Pointi cellPos = mapFromInventoryGrid(entry.geometry().topLeft(), Pointi(14, 17));
+
+        std::shared_ptr<GraphicsImage> pTexture = assets->getIcon(entry->GetIconName());
+
+        signed int X_offset = itemOffset(pTexture->width());
+        signed int Y_offset = itemOffset(pTexture->height());
+        CharacterUI_DrawItem(cellPos.x + X_offset, cellPos.y + Y_offset, entry.get(), Cover_Strip);
+    }
+}
+
+void CharacterUI_DrawPickedItemUnderlay(Vec2i gridOffset) {
+    if (pParty->pPickedItem.itemId != ITEM_NULL) {
+        // draw shadow of position
+        Pointi mousePos = mouse->position();
+        Pointi mouseOffset = mouse->pickedItemOffset;
+
+        // this is a correction so that the shadow is drawn in the same place as the item
+        // in the inventory grid, and that it is not drawn centered on the mouse cursor
+        Pointi inventoryPos = mapToInventoryGrid(
+            Pointi(mousePos.x + mouseOffset.x, mousePos.y + mouseOffset.y),
+            gridOffset, &pParty->pPickedItem
+        );
+        Sizei itemSize = pParty->pPickedItem.inventorySize();
+
+        render->FillRect(Recti(inventoryPos.x * 32 + gridOffset.x, inventoryPos.y * 32 + gridOffset.y, itemSize.w * 32, itemSize.h * 32), Color(96, 96, 96, 128));
+    }
+}
+
+static void CharacterUI_DrawItem(int x, int y, Item *item, int id, Ptr<GraphicsImage> item_texture, bool doZDraw) {
+    if (!item_texture)
+        item_texture = assets->getIcon(item->GetIconName());
+
+    if (item->ItemEnchanted()) { // enchant animation
+        std::shared_ptr<GraphicsImage> enchantment_texture;
+        if (item->AuraEffectRed())
+            enchantment_texture = assets->getIcon("sptext01");
+        else if (item->AuraEffectBlue())
+            enchantment_texture = assets->getIcon("sp28a");
+        else if (item->AuraEffectGreen())
+            enchantment_texture = assets->getIcon("sp30a");
+        else if (item->AuraEffectPurple())
+            enchantment_texture = assets->getIcon("sp91a");
+        else
+            assert(false);
+
+        ItemEnchantmentTimer = std::max(0_ticks, ItemEnchantmentTimer - gameTimer->dt());
+        if (!ItemEnchantmentTimer) {
+            item->ResetEnchantAnimation(); // TODO(captainurist): doesn't belong here, and doesn't belong in Item.
+            ptr_50C9A4_ItemToEnchant = nullptr;
+        }
+
+        // TODO(pskelton): #time check tickcount usage here
+        render->BlendTextures(x, y, item_texture, enchantment_texture, platform->tickCount() / 10, 0, 255);
+    } else if (item->IsBroken()) {
+        render->DrawQuad2D(item_texture, {x, y}, colorTable.Red);
+    } else if (!item->IsIdentified() && (engine->config->gameplay.ShowUndentifiedItem.value() || id)) { // TODO(captainurist): after my changes id==0 is a valid item id
+        render->DrawQuad2D(item_texture, {x, y}, colorTable.Green);
+    } else {
+        render->DrawQuad2D(item_texture, {x, y});
+    }
+
+    if (doZDraw)
+        equipmentHitMap.add({x, y}, item_texture, id);
+}
+
+//----- (0043E825) --------------------------------------------------------
+void CharacterUI_DrawPaperdollWithRingOverlay(Character *player) {
+    CharacterUI_DrawPaperdoll(player);
+
+    render->DrawQuad2D(ui_character_inventory_paperdoll_rings_background, {473, 0});
+    render->DrawQuad2D(game_ui_right_panel_frame, {468, 0});
+    render->DrawQuad2D(ui_exit_cancel_button_background, pCharacterScreen_DetalizBtn->rect.topLeft());
+
+    for (unsigned i = 0; i < 6; ++i) {
+        InventoryEntry entry = player->inventory.entry(ringSlot(i));
+        if (!entry)
+            continue;
+
+        static constexpr int pPaperdollRingsX[6] = {0x1EA, 0x21A, 0x248, 0x1EA, 0x21A, 0x248};
+        static constexpr int pPaperdollRingsY[6] = {0x0CA, 0x0CA, 0x0CA, 0x0FA, 0x0FA, 0x0FA};
+
+        CharacterUI_DrawItem(
+            pPaperdollRingsX[i], pPaperdollRingsY[i],
+            entry.get(),
+            entry.index());
+    }
+    if (InventoryEntry entry = player->inventory.entry(ITEM_SLOT_AMULET))
+        CharacterUI_DrawItem(493, 91, entry.get(), entry.index());
+    if (InventoryEntry entry = player->inventory.entry(ITEM_SLOT_GAUNTLETS))
+        CharacterUI_DrawItem(586, 88, entry.get(), entry.index());
+}
+
+//----- (0043BCA7) --------------------------------------------------------
+void CharacterUI_LoadPaperdollTextures() {
+    ui_character_inventory_magnification_glass = assets->getIcon("MAGNIF-B");
+    ui_character_inventory_paperdoll_background = assets->getIcon("BACKDOLL");
+    ui_character_inventory_paperdoll_rings_background = assets->getIcon("BACKHAND");
+
+    for (int i = 0; i < pParty->pCharacters.size(); ++i) {
+        if (pParty->pCharacters[i].hasUnderwaterSuitEquipped()) {
+            WetsuitOn(i);
+        } else {
+            WetsuitOff(i);
+        }
+    }
+
+    ui_ar_up_up = assets->getIcon("ar_up_up");
+    ui_ar_up_dn = assets->getIcon("ar_up_dn");
+    ui_ar_dn_up = assets->getIcon("ar_dn_up");
+    ui_ar_dn_dn = assets->getIcon("ar_dn_dn");
+
+    paperdoll_dbrds[9] = assets->getIcon("ib-cd1-d");
+    paperdoll_dbrds[7] = assets->getIcon("ib-cd2-d");
+    paperdoll_dbrds[5] = assets->getIcon("ib-cd3-d");
+    paperdoll_dbrds[3] = assets->getIcon("ib-cd4-d");
+    paperdoll_dbrds[1] = assets->getIcon("ib-cd5-d");
+
+    auto loadTexture = [&](const auto &map, int itemIndex, BodyType bodyType, int shoulderIndex) {
+        std::string name = GetItemTextureFilename(*valuePtr(map, itemIndex), std::to_underlying(bodyType), shoulderIndex);
+        return assets->getIcon(name);
+    };
+
+    for (BodyType bodyType : {BODY_TYPE_HUMAN_MALE, BODY_TYPE_HUMAN_FEMALE}) {
+        for (unsigned j : {0, 1, 2, 3, 4, 6}) // Belt
+            paperdoll_belt_texture[bodyType][j] = loadTexture(paperdoll_belt_typeByIndex, j, bodyType, 0);
+
+        // TODO(captainurist): MM7 ships distinct dwarf helm textures that are never loaded: item091v3, item240v3,
+        //                     item344v3 and item344v4. And item092v3, loaded for dwarves below, is a copy of item092v1.
+        //                     Check whether dwarves should use the dwarf variants.
+        for (unsigned j = 0; j < 16; ++j)  // Helm
+            paperdoll_helm_texture[bodyType][j] = loadTexture(paperdoll_helm_typeByIndex, j, bodyType, 0);
+
+        if (IsDwarfPresentInParty(true))
+            paperdoll_dbrds[11] = assets->getIcon("item092v3");
+    }
+
+    for (BodyType bodyType : allBodyTypes()) {
+        if (isBodyTypeInParty(bodyType)) {
+            paperdoll_belt_texture[bodyType][5] = loadTexture(paperdoll_belt_typeByIndex, 5, bodyType, 0);  // Titan's Belt
+
+            for (int armorIndex = 0; armorIndex < 17; ++armorIndex) {
+                paperdoll_armor_texture[bodyType][armorIndex][0] = loadTexture(paperdoll_armor_typeByIndex, armorIndex, bodyType, 0);  // armor
+                paperdoll_armor_texture[bodyType][armorIndex][1] = loadTexture(paperdoll_armor_typeByIndex, armorIndex, bodyType, 1);  // shoulder 1
+                paperdoll_armor_texture[bodyType][armorIndex][2] = loadTexture(paperdoll_armor_typeByIndex, armorIndex, bodyType, 2);  // shoulder 2
+            }
+
+            for (int bootsIndex = 0; bootsIndex < 6; ++bootsIndex)
+                paperdoll_boots_texture[bodyType][bootsIndex] = loadTexture(paperdoll_boots_typeByIndex, bootsIndex, bodyType, 0);
+
+            for (int cloakIndex = 0; cloakIndex < 10; ++cloakIndex) {
+                paperdoll_cloak_texture[bodyType][cloakIndex] = loadTexture(paperdoll_cloak_typeByIndex, cloakIndex, bodyType, 0);
+                paperdoll_cloak_collar_texture[bodyType][cloakIndex] = loadTexture(paperdoll_cloak_typeByIndex, cloakIndex, bodyType, 1);
+            }
+        }
+    }
+}
+
+void GUIWindow_CharacterRecord::CharacterUI_SkillsTab_CreateButtons() {
+    Skill skill;
+
+    int buttons_count = 0;
+    if (dword_507CC0_activ_ch != -1) CharacterUI_ReleaseButtons();
+    dword_507CC0_activ_ch = pParty->activeCharacterIndex();
+    for (GUIButton *pButton : pGUIWindow_CurrentMenu->vButtons) {
+        if (pButton->msg == UIMSG_InventoryLeftClick) {
+            savedInventoryLeftClickButtonRect = pButton->rect;
+            pButton->rect = {};
+        }
+        buttons_count++;
+    }
+    int first_rows = 0;
+    Character *curr_player = &pParty->activeCharacter();
+
+    int uCurrFontHeght = assets->pFontLucida->GetHeight();
+    int current_Y = 2 * uCurrFontHeght + 13;
+    int width = 204;
+    for (Skill skill : allWeaponSkills()) {
+        if (curr_player->getSkillValue(skill).level()) {
+            current_Y += uCurrFontHeght - 3;
+            ++buttons_count;
+            ++first_rows;
+            unsigned skill_id = std::to_underlying(skill);
+            pGUIWindow_CurrentMenu->CreateButton({24, current_Y}, {width, uCurrFontHeght - 3}, BUTTON_TYPE_SKILLS, skill_id | 0x8000, UIMSG_SkillUp, skill_id);
+        }
+    }
+    if (!first_rows) current_Y += uCurrFontHeght - 3;
+    current_Y += 2 * uCurrFontHeght - 6;
+    for (Skill skill : allMagicSkills()) {
+        if (curr_player->getSkillValue(skill).level() /*&& buttons_count < 15*/) {
+            current_Y += uCurrFontHeght - 3;
+            ++buttons_count;
+            unsigned skill_id = std::to_underlying(skill);
+            pGUIWindow_CurrentMenu->CreateButton({24, current_Y}, {width, uCurrFontHeght - 3}, BUTTON_TYPE_SKILLS, skill_id | 0x8000, UIMSG_SkillUp, skill_id);
+        }
+    }
+    first_rows = 0;
+    current_Y = 2 * uCurrFontHeght + 13;
+    for (Skill skill : allArmorSkills()) {
+        if (curr_player->getSkillValue(skill).level()) {
+            current_Y += uCurrFontHeght - 3;
+            ++buttons_count;
+            ++first_rows;
+            unsigned skill_id = std::to_underlying(skill);
+            pGUIWindow_CurrentMenu->CreateButton({246, current_Y}, {width, uCurrFontHeght - 3}, BUTTON_TYPE_SKILLS, skill_id | 0x8000, UIMSG_SkillUp, skill_id);
+        }
+    }
+    if (!first_rows) current_Y += uCurrFontHeght - 3;
+    current_Y += 2 * uCurrFontHeght - 6;
+    for (Skill skill : allMiscSkills()) {
+        if (curr_player->getSkillValue(skill).level()) {
+            current_Y += uCurrFontHeght - 3;
+            ++buttons_count;
+            unsigned skill_id = std::to_underlying(skill);
+            pGUIWindow_CurrentMenu->CreateButton({246, current_Y}, {width, uCurrFontHeght - 3}, BUTTON_TYPE_SKILLS, skill_id | 0x8000, UIMSG_SkillUp, skill_id);
+        }
+    }
+}
+
+void GUIWindow_CharacterRecord::CharacterUI_StatsTab_Draw(Character *player) {
+    render->DrawQuad2D(ui_character_stats_background, {8, 8});
+
+    auto str1 =
+        fmt::format("{::}{}\f00000\r180{}: {::}{}\f00000\n\n\n",
+                    ui_character_header_text_color.tag(),
+                    NameAndTitle(player->name, player->classType),
+                    localization->str(LSTR_SKILL_POINTS),
+                    player->uSkillPoints ? ui_character_bonus_text_color.tag() : ui_character_default_text_color.tag(),
+                    player->uSkillPoints);
+    GUIWindow::DrawText(assets->pFontArrus.get(), {26, 18}, colorTable.White, str1, pGUIWindow_CurrentMenu->frameRect);
+
+    // Left column
+    auto formatLeftCol = [] (LstrId lstr, int current, int max) {
+        Color color16 = UI_GetHealthManaAndOtherQualitiesStringColor(current, max);
+        if (max < 1000) {
+            return fmt::format("{}{::}\r424{}\f00000 /\t185{}\n", localization->str(lstr), color16.tag(), current, max);
+        } else {
+            return fmt::format("{}{::}\r388{}\f00000 / {}\n", localization->str(lstr), color16.tag(), current, max);
+        }
+    };
+
+    int pY = 53;
+    GUIWindow::DrawText(assets->pFontArrus.get(), {26, pY}, colorTable.White,
+                                     formatLeftCol(LSTR_MIGHT, player->GetActualMight(), player->GetBaseMight()), pGUIWindow_CurrentMenu->frameRect);
+
+    pY += assets->pFontArrus->GetHeight() - 2;
+    GUIWindow::DrawText(assets->pFontArrus.get(), {26, pY}, colorTable.White,
+                                     formatLeftCol(LSTR_INTELLECT, player->GetActualIntelligence(), player->GetBaseIntelligence()), pGUIWindow_CurrentMenu->frameRect);
+    pY += assets->pFontArrus->GetHeight() - 2;
+    GUIWindow::DrawText(assets->pFontArrus.get(), {26, pY}, colorTable.White,
+                                     formatLeftCol(LSTR_PERSONALITY, player->GetActualPersonality(), player->GetBasePersonality()), pGUIWindow_CurrentMenu->frameRect);
+
+    pY += assets->pFontArrus->GetHeight() - 2;
+    GUIWindow::DrawText(assets->pFontArrus.get(), {26, pY}, colorTable.White,
+                                     formatLeftCol(LSTR_ENDURANCE, player->GetActualEndurance(), player->GetBaseEndurance()), pGUIWindow_CurrentMenu->frameRect);
+    pY += assets->pFontArrus->GetHeight() - 2;
+    GUIWindow::DrawText(assets->pFontArrus.get(), {26, pY}, colorTable.White,
+                                     formatLeftCol(LSTR_ACCURACY, player->GetActualAccuracy(), player->GetBaseAccuracy()), pGUIWindow_CurrentMenu->frameRect);
+
+    pY += assets->pFontArrus->GetHeight() - 2;
+    GUIWindow::DrawText(assets->pFontArrus.get(), {26, pY}, colorTable.White,
+                                     formatLeftCol(LSTR_SPEED, player->GetActualSpeed(), player->GetBaseSpeed()), pGUIWindow_CurrentMenu->frameRect);
+    pY += assets->pFontArrus->GetHeight() - 2;
+    GUIWindow::DrawText(assets->pFontArrus.get(), {26, pY}, colorTable.White,
+                                     formatLeftCol(LSTR_LUCK, player->GetActualLuck(), player->GetBaseLuck()), pGUIWindow_CurrentMenu->frameRect);
+
+    pY += 2 * assets->pFontArrus->GetHeight() + 5;
+    GUIWindow::DrawText(assets->pFontArrus.get(), {26, pY}, colorTable.White,
+                                     formatLeftCol(LSTR_HIT_POINTS, player->health, player->GetMaxHealth()), pGUIWindow_CurrentMenu->frameRect);
+    pY += assets->pFontArrus->GetHeight() - 2;
+    GUIWindow::DrawText(assets->pFontArrus.get(), {26, pY}, colorTable.White,
+                                     formatLeftCol(LSTR_SPELL_POINTS, player->mana, player->GetMaxMana()), pGUIWindow_CurrentMenu->frameRect);
+
+    pY += assets->pFontArrus->GetHeight() - 2;
+    GUIWindow::DrawText(assets->pFontArrus.get(), {26, pY}, colorTable.White,
+                                     formatLeftCol(LSTR_ARMOR_CLASS, player->GetActualAC(), player->GetBaseAC()), pGUIWindow_CurrentMenu->frameRect);
+    pY += 2 * assets->pFontArrus->GetHeight() - 2;
+    auto str12 =
+        fmt::format("{}: {::}{}\n",
+                     localization->str(LSTR_CONDITION),
+                     GetConditionDrawColor(player->GetMajorConditionIdx()).tag(),
+                     localization->characterConditionName(player->GetMajorConditionIdx()));
+    pGUIWindow_CurrentMenu->DrawTextInRect(assets->pFontArrus.get(), {26, pY}, colorTable.White, str12, 226, 0);
+
+    pY += assets->pFontArrus->GetHeight() + -1;
+    std::string spellName = localization->str(LSTR_NONE);
+    if (player->uQuickSpell != SPELL_NONE)
+        spellName = pSpellStats->pInfos[player->uQuickSpell].pShortName;
+    auto str13 = fmt::format("{}: {}", localization->str(LSTR_QUICK_SPELL), spellName);
+    pGUIWindow_CurrentMenu->DrawTextInRect(assets->pFontArrus.get(), {26, pY}, colorTable.White, str13, 226, 0);
+
+    // Right column
+    auto formatRightCol = [] (LstrId lstr, int current, int max, bool immune = false) {
+        Color color16 = UI_GetHealthManaAndOtherQualitiesStringColor(current, max);
+        if (immune) {
+            return fmt::format("{}{::}\r180{}\n", localization->str(lstr), color16.tag(), localization->str(LSTR_IMMUNE));
+        } else {
+            if (current < 100 && max < 100) {
+                return fmt::format("{}{::}\t110{}\f00000 / {}\n", localization->str(lstr), color16.tag(), current, max);
+            } else {
+                return fmt::format("{}{::}\r180{}\f00000 / {}\n", localization->str(lstr), color16.tag(), current, max);
+            }
+        }
+    };
+
+    pY = 50;
+    GUIWindow::DrawText(assets->pFontArrus.get(), {266, pY}, colorTable.White,
+                                     formatRightCol(LSTR_AGE, player->GetActualAge(), player->GetBaseAge()), pGUIWindow_CurrentMenu->frameRect);
+
+    pY += assets->pFontArrus->GetHeight() - 2;
+    GUIWindow::DrawText(assets->pFontArrus.get(), {266, pY}, colorTable.White,
+                                     formatRightCol(LSTR_LEVEL, player->GetActualLevel(), player->GetBaseLevel()), pGUIWindow_CurrentMenu->frameRect);
+
+    pY += assets->pFontArrus->GetHeight() - 2;
+    auto str16 =
+        fmt::format("{}\r180{::}{}\f00000\n\n",
+                    localization->str(player->experience <= 9999999 ? LSTR_EXPERIENCE : LSTR_EXP),
+                    player->GetExperienceDisplayColor().tag(), player->experience);
+    GUIWindow::DrawText(assets->pFontArrus.get(), {266, pY}, colorTable.White, str16, pGUIWindow_CurrentMenu->frameRect);
+
+    pY += 2 * assets->pFontArrus->GetHeight();
+    GUIWindow::DrawText(assets->pFontArrus.get(), {266, pY}, colorTable.White,
+                                     fmt::format("{}\t100{:+}\n", localization->str(LSTR_ATTACK), player->GetActualAttack(false)), pGUIWindow_CurrentMenu->frameRect);
+    pY += assets->pFontArrus->GetHeight() - 2;
+    GUIWindow::DrawText(assets->pFontArrus.get(), {266, pY}, colorTable.White,
+                                     fmt::format("{}\t100 {}\n", localization->str(LSTR_DAMAGE), player->GetMeleeDamageString()), pGUIWindow_CurrentMenu->frameRect);
+
+    pY += assets->pFontArrus->GetHeight() - 2;
+    GUIWindow::DrawText(assets->pFontArrus.get(), {266, pY}, colorTable.White,
+                                     fmt::format("{}\t100{:+}\n", localization->str(LSTR_SHOOT), player->GetRangedAttack()), pGUIWindow_CurrentMenu->frameRect);
+    pY += assets->pFontArrus->GetHeight() - 2;
+    GUIWindow::DrawText(assets->pFontArrus.get(), {266, pY}, colorTable.White,
+                                     fmt::format("{}\t100 {}\n\n", localization->str(LSTR_DAMAGE), player->GetRangedDamageString()), pGUIWindow_CurrentMenu->frameRect);
+
+    pY += 2 * assets->pFontArrus->GetHeight() - 4;
+    GUIWindow::DrawText(assets->pFontArrus.get(), {266, pY}, colorTable.White,
+                                     formatRightCol(LSTR_FIRE, player->GetActualResistance(ATTRIBUTE_RESIST_FIRE),
+                                                    player->GetBaseResistance(ATTRIBUTE_RESIST_FIRE)), pGUIWindow_CurrentMenu->frameRect);
+
+    pY += assets->pFontArrus->GetHeight() - 2;
+    GUIWindow::DrawText(assets->pFontArrus.get(), {266, pY}, colorTable.White,
+                                     formatRightCol(LSTR_AIR, player->GetActualResistance(ATTRIBUTE_RESIST_AIR),
+                                                    player->GetBaseResistance(ATTRIBUTE_RESIST_AIR)), pGUIWindow_CurrentMenu->frameRect);
+
+    pY += assets->pFontArrus->GetHeight() - 2;
+    GUIWindow::DrawText(assets->pFontArrus.get(), {266, pY}, colorTable.White,
+                                     formatRightCol(LSTR_WATER, player->GetActualResistance(ATTRIBUTE_RESIST_WATER),
+                                                    player->GetBaseResistance(ATTRIBUTE_RESIST_WATER)), pGUIWindow_CurrentMenu->frameRect);
+
+    pY += assets->pFontArrus->GetHeight() - 2;
+    GUIWindow::DrawText(assets->pFontArrus.get(), {266, pY}, colorTable.White,
+                                     formatRightCol(LSTR_EARTH, player->GetActualResistance(ATTRIBUTE_RESIST_EARTH),
+                                                    player->GetBaseResistance(ATTRIBUTE_RESIST_EARTH)), pGUIWindow_CurrentMenu->frameRect);
+
+    pY += assets->pFontArrus->GetHeight() - 2;
+    bool immuneToMind = player->classType == CLASS_LICH && player->GetBaseResistance(ATTRIBUTE_RESIST_MIND) == 200;
+    GUIWindow::DrawText(assets->pFontArrus.get(), {266, pY}, colorTable.White,
+                                     formatRightCol(LSTR_MIND, player->GetActualResistance(ATTRIBUTE_RESIST_MIND),
+                                                    player->GetBaseResistance(ATTRIBUTE_RESIST_MIND), immuneToMind), pGUIWindow_CurrentMenu->frameRect);
+
+    pY += assets->pFontArrus->GetHeight() - 2;
+    bool immuneToBody = player->classType == CLASS_LICH && player->GetBaseResistance(ATTRIBUTE_RESIST_BODY) == 200;
+    GUIWindow::DrawText(assets->pFontArrus.get(), {266, pY}, colorTable.White,
+                                     formatRightCol(LSTR_BODY, player->GetActualResistance(ATTRIBUTE_RESIST_BODY),
+                                                    player->GetBaseResistance(ATTRIBUTE_RESIST_BODY), immuneToBody), pGUIWindow_CurrentMenu->frameRect);
+}
+
+void GUIWindow_CharacterRecord::fillAwardsData() {
+    Character *pPlayer = &pParty->activeCharacter();
+
+    _awardsCharacterId = pParty->activeCharacterIndex();
+    _startAwardElem = 0;
+    _scrollableAwardSteps = 0;
+    _awardLimitReached = false;
+
+    _achievedAwardsList.clear();
+    for (AwardId awardId : allAwards()) {
+        if (pPlayer->_achievedAwardsBits[awardId] && !pAwards[awardId].pText.empty()) {
+            _achievedAwardsList.push_back(awardId);
+        }
+    }
+
+    std::stable_sort(_achievedAwardsList.begin(), _achievedAwardsList.end(), [&] (AwardId a, AwardId b) { return pAwards[a].uPriority < pAwards[b].uPriority; });
+
+    Recti window(12, 48, 424, 290);
+    int y = 0;
+
+    for (int i = (_achievedAwardsList.size() - 1); i >= 0; --i) {
+        std::string str = getAchievedAwardsString(i);
+
+        y += assets->pFontArrus->CalcTextHeight(str, window.w, 0) + 8;
+        if (y > window.h) {
+            _scrollableAwardSteps = i + 2;
+            break;
+        }
+    }
+}
+
+void WetsuitOn(int characterIndex) {
+    Character *player = &pParty->pCharacters[characterIndex];
+    int texture_num = std::to_underlying(player->bodyType());
+    paperdoll_dbods[characterIndex] = assets->getIcon(fmt::format("pc23v{}Bod", texture_num));  // Body texture
+    paperdoll_dlads[characterIndex] = assets->getIcon(fmt::format("pc23v{}lad", texture_num));  // Left Hand
+    paperdoll_dlaus[characterIndex] = assets->getIcon(fmt::format("pc23v{}lau", texture_num));  // Left Hand2
+    paperdoll_drhs[characterIndex] = assets->getIcon(fmt::format("pc23v{}rh", texture_num));  // Right Hand
+    paperdoll_dlhs[characterIndex] = assets->getIcon(fmt::format("pc23v{}lh", texture_num));  // Left Palm
+    paperdoll_dlhus[characterIndex] = assets->getIcon(fmt::format("pc23v{}lhu", texture_num));  // Left Fist
+
+    if (player->uCurrentFace == 12 || player->uCurrentFace == 13) {
+        paperdoll_dbrds[player->uCurrentFace] = nullptr;
+    }
+    paperdoll_flying_feet[player->uCurrentFace] = nullptr;
+}
+
+void WetsuitOff(int characterIndex) {
+    Character *player = &pParty->pCharacters[characterIndex];
+
+    paperdoll_dbods[characterIndex] = assets->getIcon(dbod_texnames_by_face[player->uCurrentFace]);
+    paperdoll_dlads[characterIndex] = assets->getIcon(dlad_texnames_by_face[player->uCurrentFace]);
+    paperdoll_dlaus[characterIndex] = assets->getIcon(dlau_texnames_by_face[player->uCurrentFace]);
+    paperdoll_drhs[characterIndex] = assets->getIcon(drh_texnames_by_face[player->uCurrentFace]);
+    paperdoll_dlhs[characterIndex] = assets->getIcon(dlh_texnames_by_face[player->uCurrentFace]);
+    paperdoll_dlhus[characterIndex] = assets->getIcon(dlhu_texnames_by_face[player->uCurrentFace]);
+
+    if (player->uCurrentFace == 12 || player->uCurrentFace == 13) {
+        paperdoll_dbrds[player->uCurrentFace] = assets->getIcon(fmt::format("pc{:02}brd", player->uCurrentFace + 1));
+    }
+
+    paperdoll_flying_feet[player->uCurrentFace] = assets->getIcon(fmt::format("item281pc{:02}", player->uCurrentFace + 1));
+}
+
+//----- (00468F8A) --------------------------------------------------------
+void OnPaperdollLeftClick() {
+    int mousex = mouse->position().x;
+    int mousey = mouse->position().y;
+
+    static constexpr int RingsX[6] = {0x1EA, 0x21A, 0x248, 0x1EA, 0x21A, 0x248};
+    static constexpr int RingsY[6] = {0x0CA, 0x0CA, 0x0CA, 0x0FA, 0x0FA, 0x0FA};
+
+    static constexpr int glovex = 586;
+    static constexpr int glovey = 88;
+
+    static constexpr int amuletx = 493;
+    static constexpr int amulety = 91;
+
+    int cellSize = 32;
+    ItemSlot pos = ITEM_SLOT_INVALID;
+
+    // uint16_t v5; // ax@7
+    // int equippos; // esi@27
+    // int v8; // eax@29
+    Skill pSkillType = SKILL_INVALID;
+
+    ItemType pEquipType = ITEM_TYPE_INVALID;
+    CastSpellInfo *pSpellInfo;
+
+    InventoryEntry twohandedequip;
+    Item _this;  // [sp+Ch] [bp-40h]@1
+    _this.Reset();
+    InventoryEntry mainhandequip = pParty->activeCharacter().inventory.entry(ITEM_SLOT_MAIN_HAND);
+    InventoryEntry shieldequip = pParty->activeCharacter().inventory.entry(ITEM_SLOT_OFF_HAND);
+
+    if (mainhandequip && mainhandequip->type() == ITEM_TYPE_TWO_HANDED) {
+        twohandedequip = mainhandequip;
+    }
+
+    ItemId pickeditem = pParty->pPickedItem.itemId;
+
+    if (pParty->pPickedItem.itemId != ITEM_NULL) {  // hold item
+        pEquipType = pParty->pPickedItem.type();
+        pSkillType = pParty->pPickedItem.skill();
+
+        if (pSkillType == SKILL_SPEAR) {
+            if (shieldequip) {
+                // cant use spear in one hand till master
+                if (pParty->activeCharacter().getActualSkillValue(SKILL_SPEAR).mastery() < MASTERY_MASTER) {
+                    pParty->activeCharacter().playReaction(SPEECH_CANT_EQUIP);
+
+                    return;
+                }
+
+                pickeditem = pParty->pPickedItem.itemId;
+            }
+        } else {
+            if ((pSkillType == SKILL_SHIELD || pSkillType == SKILL_SWORD || pSkillType == SKILL_DAGGER) && mainhandequip &&
+                mainhandequip->skill() == SKILL_SPEAR) {
+                // cant use spear in one hand till master
+                if (pParty->activeCharacter().getActualSkillValue(SKILL_SPEAR).mastery() < MASTERY_MASTER) {
+                    pParty->activeCharacter().playReaction(SPEECH_CANT_EQUIP);
+                    return;
+                }
+            }
+        }
+
+        if (!pParty->activeCharacter().CanEquip_RaceAndAlignmentCheck(pickeditem)) {  // special item checks
+            pParty->activeCharacter().playReaction(SPEECH_CANT_EQUIP);
+            return;
+        }
+
+        switch (pEquipType) {
+            case ITEM_TYPE_BOW:
+            case ITEM_TYPE_ARMOUR:
+            case ITEM_TYPE_HELMET:
+            case ITEM_TYPE_BELT:
+            case ITEM_TYPE_CLOAK:
+            case ITEM_TYPE_GAUNTLETS:
+            case ITEM_TYPE_BOOTS:
+            case ITEM_TYPE_AMULET: {
+                if (!pParty->activeCharacter().HasSkill(pSkillType)) {  // hasnt got the skill to use that
+                    pParty->activeCharacter().playReaction(SPEECH_CANT_EQUIP);
+                    return;
+                }
+
+                if (pParty->activeCharacter().hasUnderwaterSuitEquipped() && (pEquipType != ITEM_TYPE_ARMOUR || engine->IsUnderwater())) {  // cant put anything on wearing wetsuit
+                    pAudioPlayer->playUISound(SOUND_error);
+                    return;
+                }
+
+                bool puttingWetsuitsOn = pParty->pPickedItem.itemId == ITEM_QUEST_WETSUIT;
+                bool takingWetsuitsOff = false;
+
+                assert(itemSlotsForItemType(pEquipType).size() == 1);
+                ItemSlot slot = itemSlotsForItemType(pEquipType)[0];
+                if (InventoryEntry entry = pParty->activeCharacter().inventory.entry(slot)) {
+                    Item tmpItem = pParty->activeCharacter().inventory.take(entry);
+                    takingWetsuitsOff = tmpItem.itemId == ITEM_QUEST_WETSUIT;
+                    pParty->activeCharacter().inventory.equip(slot, pParty->takeHoldingItem());
+                    pParty->setHoldingItem(tmpItem);
+                } else {
+                    // Need to check canEquip here b/c we can run out of inventory space. The branch above doesn't need
+                    // this check b/c we're freeing space first.
+                    if (pParty->activeCharacter().inventory.canEquip(slot)) {
+                        pParty->activeCharacter().inventory.equip(slot, pParty->takeHoldingItem());
+                    } else {
+                        pAudioPlayer->playUISound(SOUND_error); // Out of inventory space.
+                        return;
+                    }
+                }
+
+                if (puttingWetsuitsOn)
+                    WetsuitOn(pParty->activeCharacterIndex());
+                if (takingWetsuitsOff)
+                    WetsuitOff(pParty->activeCharacterIndex());
+
+                return;
+            }
+
+            case ITEM_TYPE_RING:
+                if (pParty->activeCharacter().hasUnderwaterSuitEquipped()) {  // cant put anything
+                                                                                        // on wearing wetsuit
+                    pAudioPlayer->playUISound(SOUND_error);
+                    return;
+                }
+
+                if (!bRingsShownInCharScreen) {  // rings not displayd
+                    for (ItemSlot equippos : allRingSlots()) {
+                        if (pParty->activeCharacter().inventory.canEquip(equippos)) {
+                            pParty->activeCharacter().inventory.equip(equippos, pParty->takeHoldingItem());
+                            return;
+                        }
+                    }
+
+                    // cant fit rings so swap out
+                    InventoryEntry freeslot = pParty->activeCharacter().inventory.entry(ITEM_SLOT_RING6);  // slot of last ring
+                    if (!freeslot) {
+                        pAudioPlayer->playUISound(SOUND_error); // Out of inventory space.
+                        return;
+                    }
+
+                    Item tmp = pParty->activeCharacter().inventory.take(freeslot);
+                    pParty->activeCharacter().inventory.equip(ITEM_SLOT_RING6, pParty->takeHoldingItem());
+                    pParty->setHoldingItem(tmp);
+                    return;
+
+                } else {  // rings displayed if in ring area
+                    for (int i = 0; i < 6; ++i) {
+                        if (mousex >= RingsX[i] &&
+                            mousex <= (RingsX[i] + cellSize) &&
+                            mousey >= RingsY[i] &&
+                            mousey <= (RingsY[i] + cellSize)) {  // check against ring slots
+                            pos = ringSlot(i);
+                        }
+                    }
+
+                    if (pos != ITEM_SLOT_INVALID) {  // we have a position to aim for
+                        InventoryEntry entry = pParty->activeCharacter().inventory.entry(pos);
+                        if (!entry) {  // no item in slot so just drop
+                            if (pParty->activeCharacter().inventory.canEquip(pos)) {  // drop ring into free space
+                                pParty->activeCharacter().inventory.equip(pos, pParty->takeHoldingItem());
+                                return;
+                            }
+                        } else {  // item so swap out
+                            Item tmp = pParty->activeCharacter().inventory.take(entry);
+                            pParty->activeCharacter().inventory.equip(pos, pParty->takeHoldingItem());
+                            pParty->setHoldingItem(tmp);
+                            return;
+                        }
+                    } else {  // not click on right area so exit
+                        return;
+                    }
+
+                    return;  // shouldnt get here but in case??
+                }
+
+            case ITEM_TYPE_SHIELD:
+                if (pParty->activeCharacter().hasUnderwaterSuitEquipped()) {
+                    pAudioPlayer->playUISound(SOUND_error);
+                    return;
+                }
+                if (!pParty->activeCharacter().HasSkill(pSkillType)) {
+                    pParty->activeCharacter().playReaction(SPEECH_CANT_EQUIP);
+                    return;
+                }
+                if (shieldequip) {
+                    Item tmp = pParty->activeCharacter().inventory.take(shieldequip);
+                    pParty->activeCharacter().inventory.equip(ITEM_SLOT_OFF_HAND, pParty->takeHoldingItem());
+                    pParty->setHoldingItem(tmp);
+                    if (!twohandedequip) {
+                        return;
+                    }
+                } else {
+                    if (!pParty->activeCharacter().inventory.canEquip(ITEM_SLOT_OFF_HAND)) {
+                        pAudioPlayer->playUISound(SOUND_error); // Out of inventory space.
+                        return;
+                    }
+                    if (!twohandedequip) {
+                        pParty->activeCharacter().inventory.equip(ITEM_SLOT_OFF_HAND, pParty->takeHoldingItem());
+                        return;
+                    }
+                    Item tmp = pParty->activeCharacter().inventory.take(twohandedequip);
+                    pParty->activeCharacter().inventory.equip(ITEM_SLOT_OFF_HAND, pParty->takeHoldingItem());
+                    pParty->setHoldingItem(tmp);
+                }
+                return;
+            case ITEM_TYPE_SINGLE_HANDED:
+            case ITEM_TYPE_WAND:
+                if (pParty->activeCharacter().hasUnderwaterSuitEquipped() && !isAncientWeapon(pParty->pPickedItem.itemId)) {
+                    pAudioPlayer->playUISound(SOUND_error);
+                    return;
+                }
+                if (!pParty->activeCharacter().HasSkill(pSkillType)) {
+                    pParty->activeCharacter().playReaction(SPEECH_CANT_EQUIP);
+                    return;
+                }
+                // dagger at expert or sword at master in left hand
+                if (pSkillType == SKILL_DAGGER && (pParty->activeCharacter().getActualSkillValue(SKILL_DAGGER).mastery() >= MASTERY_EXPERT)
+                    || pSkillType == SKILL_SWORD && (pParty->activeCharacter().getActualSkillValue(SKILL_SWORD).mastery() >= MASTERY_MASTER)) {
+                    if (mouse->position().x >= 560) {
+                        if (!twohandedequip) {
+                            if (shieldequip) {
+                                Item tmp = pParty->activeCharacter().inventory.take(shieldequip);
+                                pParty->activeCharacter().inventory.equip(ITEM_SLOT_OFF_HAND, pParty->takeHoldingItem());
+                                pParty->setHoldingItem(tmp);
+                                if (pEquipType != ITEM_TYPE_WAND) {
+                                    return;
+                                }
+                                break;
+                            }
+                            if (!pParty->activeCharacter().inventory.canEquip(ITEM_SLOT_OFF_HAND)) {
+                                pAudioPlayer->playUISound(SOUND_error); // Out of inventory space.
+                                return;
+                            }
+                            pParty->activeCharacter().inventory.equip(ITEM_SLOT_OFF_HAND, pParty->takeHoldingItem());
+                            if (pEquipType != ITEM_TYPE_WAND) return;
+                            break;
+                        }
+                    }
+                }
+                if (!mainhandequip) {
+                    if (!pParty->activeCharacter().inventory.canEquip(ITEM_SLOT_MAIN_HAND)) {
+                        pAudioPlayer->playUISound(SOUND_error); // Out of inventory space.
+                        return;
+                    }
+                    pParty->activeCharacter().inventory.equip(ITEM_SLOT_MAIN_HAND, pParty->takeHoldingItem());
+                    if (pEquipType != ITEM_TYPE_WAND) return;
+                    break;
+                }
+
+                {
+                    Item tmp = pParty->activeCharacter().inventory.take(mainhandequip);
+                    pParty->activeCharacter().inventory.equip(ITEM_SLOT_MAIN_HAND, pParty->takeHoldingItem());
+                    pParty->setHoldingItem(tmp);
+                    break;
+                }
+            case ITEM_TYPE_TWO_HANDED:
+                if (pParty->activeCharacter().hasUnderwaterSuitEquipped()) {
+                    pAudioPlayer->playUISound(SOUND_error);
+                    return;
+                }
+                if (!pParty->activeCharacter().HasSkill(pSkillType)) {
+                    pParty->activeCharacter().playReaction(SPEECH_CANT_EQUIP);
+                    return;
+                }
+                if (mainhandequip) {
+                    if (shieldequip) {
+                        pAudioPlayer->playUISound(SOUND_error);
+                        return;
+                    }
+                    Item tmp = pParty->activeCharacter().inventory.take(mainhandequip);
+                    pParty->activeCharacter().inventory.equip(ITEM_SLOT_MAIN_HAND, pParty->takeHoldingItem());
+                    pParty->setHoldingItem(tmp);
+                } else {
+                    if (shieldequip) {
+                        Item tmp = pParty->activeCharacter().inventory.take(shieldequip);
+                        pParty->activeCharacter().inventory.equip(ITEM_SLOT_MAIN_HAND, pParty->takeHoldingItem());
+                        pParty->setHoldingItem(tmp);
+                    } else if (pParty->activeCharacter().inventory.canEquip(ITEM_SLOT_MAIN_HAND)) {
+                        pParty->activeCharacter().inventory.equip(ITEM_SLOT_MAIN_HAND, pParty->takeHoldingItem());
+                    } else {
+                        pAudioPlayer->playUISound(SOUND_error); // Out of inventory space.
+                        return;
+                    }
+                }
+                return;
+                //-------------------------------------------------------------------------------
+            default:
+                pParty->activeCharacter().useItem(pParty->activeCharacterIndex(), false);
+                return;
+        }
+        return;
+    }
+
+    // no hold item
+
+    // check if on rings screen - it doesnt use zbuffer
+    if (bRingsShownInCharScreen) {
+        // assume slot width 32 as per inventory
+        if (mousex < 490 || mousex > 618) return;
+
+        if (mousey < 88 || mousey > 282) return;
+
+        if (mousex >= amuletx && mousex <= (amuletx + cellSize) &&
+            mousey >= amulety && mousey <= (amulety + 2 * cellSize)) {
+            // amulet
+            // pitem = pParty->activeCharacter().GetAmuletItem(); //9
+            pos = ITEM_SLOT_AMULET;
+        }
+
+        if (mousex >= glovex && mousex <= (glovex + cellSize) && mousey >= glovey &&
+            mousey <= (glovey + 2 * cellSize)) {
+            // glove
+            // pitem = pParty->activeCharacter().GetGloveItem(); //7
+            pos = ITEM_SLOT_GAUNTLETS;
+        }
+
+        for (int i = 0; i < 6; ++i) {
+            if (mousex >= RingsX[i] && mousex <= (RingsX[i] + cellSize) &&
+                mousey >= RingsY[i] && mousey <= (RingsY[i] + cellSize)) {
+                // ring
+                // pitem = pParty->activeCharacter().GetNthRingItem(i); //10+i
+                pos = ringSlot(i);
+            }
+        }
+
+        InventoryEntry entry;
+        if (pos != ITEM_SLOT_INVALID)
+            entry = pParty->activeCharacter().inventory.entry(pos);
+
+        if (!entry) return;
+        // pParty->activeCharacter().get
+
+        // enchant / recharge item
+        if (IsEnchantingInProgress) {
+            pSpellInfo = pGUIWindow_CastTargetedSpell->spellInfo();
+            pSpellInfo->flags &= ~ON_CAST_TargetedEnchantment;
+            pSpellInfo->targetCharacterIndex = pParty->activeCharacterIndex();
+            pSpellInfo->targetInventoryIndex = entry.index();
+
+            ptr_50C9A4_ItemToEnchant = entry.get();
+            IsEnchantingInProgress = false;
+            engine->_messageQueue->clear();
+            mouse->SetCursorImage("MICON1");
+            AfterEnchClickEventId = UIMSG_Escape;
+            AfterEnchClickEventSecondParam = 0;
+            AfterEnchClickEventTimeout = Duration::fromRealtimeSeconds(2);
+        } else {
+            if (!ptr_50C9A4_ItemToEnchant) {
+                pParty->setHoldingItem(pParty->activeCharacter().inventory.take(entry));
+
+                // pParty->setHoldingItem(&pParty->activeCharacter().pInventoryItemList[v34
+                // - 1]);
+                //  pParty->activeCharacter().pEquipment[pParty->activeCharacter().pInventoryItemList[v34
+                //  - 1].uBodyAnchor - 1] = 0;
+                //  pParty->activeCharacter().pInventoryItemList[v34 -
+                //  1].Reset();
+
+                // return
+                // &this->pInventoryItemList[this->pEquipment[index] -
+                // 1];
+            }
+        }
+
+        // for (unsigned i = 0; i < 6; ++i)
+        //{
+        // if (!player->pEquipment.uRings[i])
+        //  continue;
+
+        // CharacterUI_DrawItem(pPaperdollRingsX[i], pPaperdollRingsY[i],
+        // &player->pInventoryItemList[player->pEquipment.uRings[i] - 1],
+        //  player->pEquipment.uRings[i]);
+        //}
+        // if (player->pEquipment.uAmulet)
+        // CharacterUI_DrawItem(493, 91, player->GetAmuletItem(),
+        // player->pEquipment.uAmulet);
+        // if (player->pEquipment.uGlove)
+        // CharacterUI_DrawItem(586, 88, player->GetGloveItem(),
+        // player->pEquipment.uGlove);
+
+    } else {  // z picking as before
+        int v34 = equipmentHitMap.query(mouse->position(), -1);
+        InventoryEntry entry = pParty->activeCharacter().inventory.entry(v34);
+
+        if (entry) {
+            pEquipType = entry->type();
+            if (entry->itemId == ITEM_QUEST_WETSUIT) {
+                if (engine->IsUnderwater()) {
+                    pAudioPlayer->playUISound(SOUND_error);
+                    return;
+                }
+                WetsuitOff(pParty->activeCharacterIndex());
+            }
+
+            if (IsEnchantingInProgress) {
+                pSpellInfo = pGUIWindow_CastTargetedSpell->spellInfo();
+                pSpellInfo->flags &= ~ON_CAST_TargetedEnchantment;
+                pSpellInfo->targetCharacterIndex = pParty->activeCharacterIndex();
+                pSpellInfo->targetInventoryIndex = entry.index();
+
+                ptr_50C9A4_ItemToEnchant = entry.get();
+                IsEnchantingInProgress = false;
+                engine->_messageQueue->clear();
+                mouse->SetCursorImage("MICON1");
+                AfterEnchClickEventId = UIMSG_Escape;
+                AfterEnchClickEventSecondParam = 0;
+                AfterEnchClickEventTimeout = Duration::fromRealtimeSeconds(2);
+            } else {
+                if (!ptr_50C9A4_ItemToEnchant) {
+                    pParty->setHoldingItem(pParty->activeCharacter().inventory.take(entry));
+                }
+            }
+        } else {
+            if (InventoryEntry entry = pParty->activeCharacter().inventory.entry(ITEM_SLOT_BOW)) {
+                pParty->setHoldingItem(pParty->activeCharacter().inventory.take(entry));
+            }
+        }
+    }
+}
+
+void CharacterUI_ReleaseButtons() {
+    if (dword_507CC0_activ_ch != -1) {
+        dword_507CC0_activ_ch = -1;
+        std::vector<GUIButton*> to_delete;
+        for (GUIButton *pButton : pGUIWindow_CurrentMenu->vButtons) {
+            if (pButton->uData & 0x8000) {
+                to_delete.push_back(pButton);
+            }
+        }
+        for (GUIButton *pButton : to_delete) {
+            pButton->Release();
+        }
+        for (GUIButton *pButton : pGUIWindow_CurrentMenu->vButtons) {
+            if (pButton->msg == UIMSG_InventoryLeftClick) {
+                pButton->rect = savedInventoryLeftClickButtonRect;
+            }
+        }
+    }
+}
+
+bool ringscreenactive() { return bRingsShownInCharScreen; }

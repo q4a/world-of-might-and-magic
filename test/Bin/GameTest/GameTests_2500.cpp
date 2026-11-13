@@ -1,0 +1,1725 @@
+#include <algorithm>
+#include <string>
+#include <string_view>
+#include <tuple>
+#include <utility>
+#include <vector>
+
+#include "Testing/Game/GameTest.h"
+
+#include "Engine/Engine.h"
+#include "Engine/EngineGlobals.h"
+#include "Engine/EngineIocContainer.h"
+#include "Engine/MapEnums.h"
+#include "Engine/Party.h"
+#include "Engine/SaveLoad.h"
+#include "Engine/SpellFxRenderer.h"
+#include "Engine/mm7_data.h"
+#include "Engine/Data/AwardEnums.h"
+#include "Engine/Data/HouseEnums.h"
+#include "Engine/Evt/EvtProgram.h"
+#include "Engine/Evt/EvtVariables.h"
+#include "Engine/Evt/Processor.h"
+#include "Engine/Graphics/Image.h"
+#include "Engine/Graphics/Indoor.h"
+#include "Engine/Graphics/Outdoor.h"
+#include "Engine/Graphics/Vis.h"
+#include "Engine/Objects/Actor.h"
+#include "Engine/Objects/Decoration.h"
+#include "Engine/Objects/MonsterEnumFunctions.h"
+#include "Engine/Objects/SpriteObject.h"
+#include "Engine/Resources/EngineFileSystem.h"
+#include "Engine/Tables/DecorationTable.h"
+#include "Engine/Tables/IconFrameTable.h"
+#include "Engine/Tables/MapTable.h"
+#include "Engine/Tables/NPCTable.h"
+
+#include "GUI/GUIButton.h"
+#include "GUI/GUIProgressBar.h"
+#include "GUI/GUIWindow.h"
+#include "GUI/UI/UIGame.h"
+#include "GUI/UI/UIHouses.h"
+#include "GUI/UI/UISaveLoad.h"
+
+#include "Library/Platform/Interface/Platform.h"
+
+#include "Media/Audio/SoundList.h"
+
+#include "GameTestCommon.h"
+
+static void scriptHiddenTombExit(std::vector<EvtInstruction> script) {
+    // Points the exit at a new event made of the given commands, in order.
+    assert(engine->_localEventMap.instruction(pIndoor->faces[85].eventId, 0).opcode == EVENT_MoveToMap);
+    int eventId = 9000;
+    for (int step = 0; step < script.size(); step++) {
+        script[step].step = step;
+        engine->_localEventMap.add(eventId, script[step]);
+    }
+    pIndoor->faces[85].eventId = eventId; // The exit.
+}
+
+static AccessibleVector<std::string> soundNames(const TestMultiTape<SoundId> &soundsTape) {
+    return soundsTape.flatten().map([](SoundId id) { return pSoundList->soundInfo(id)->name; });
+}
+
+static std::string portraitName(int face) {
+    return fmt::format("{}01", pPlayerPortraitsNames[face]);
+}
+
+static void hireGolem(NpcProfession profession) {
+    // Hires the golem the way global.evt does, with the profession under test.
+    NPCData &golem = pNPCStats->pNPCData[56];
+    golem.profession = profession;
+    golem.flags |= NPC_HIRED;
+    pParty->CountHirelings();
+}
+
+static int lloydsBookSlotCount() {
+    // Zero when the Lloyd's Beacon book isn't open.
+    if (!pGUIWindow_CurrentMenu || pGUIWindow_CurrentMenu->eWindowType != WINDOW_LLOYDS_BEACON)
+        return 0;
+    return std::ranges::count_if(pGUIWindow_CurrentMenu->vButtons, [](std::string_view id) { return id.starts_with("LloydsBook_Slot"); }, &GUIButton::id);
+}
+
+// 2500
+
+GAME_TEST(Issues, Issue2500a) {
+    // Attack preferences are broken. Some monsters attack archers while they should have no attack pref.
+    // Issue2500b covers a class preference, Issue2500c a race one, and Issue2146 promoted classes.
+    test.prepareForNextTest(100, RANDOM_ENGINE_MERSENNE_TWISTER);
+    auto hp0Tape = charTapes.hp(0);
+    auto hp1Tape = charTapes.hp(1);
+
+    engine->config->debug.NoActors.setValue(true);
+    game.startNewGame();
+    test.startTaping();
+    prepareForBattleTest({{CLASS_KNIGHT, RACE_HUMAN}, {CLASS_ARCHER, RACE_HUMAN}});
+
+    // Spawn dragonflies in waves so we get plenty of attacks.
+    engine->config->debug.NoActors.setValue(false);
+    for (int i = 0; i < 8; i++) {
+        game.tick(7);
+        game.spawnMonster(pParty->pos + Vec3f(0, 200, 0), MONSTER_DRAGONFLY_B);
+    }
+    game.tick(200);
+
+    EXPECT_LT(hp0Tape.back(), hp0Tape.front()); // Knight took damage too - no spurious archer preference.
+    EXPECT_LT(hp1Tape.back(), hp1Tape.front()); // Sanity: archer also took damage.
+}
+
+GAME_TEST(Issues, Issue2500b) {
+    // Attack preferences are broken. Archers are missing archer attack preference.
+    // Issue2500a covers having no preference, Issue2500c a race one, and Issue2146 promoted classes.
+    test.prepareForNextTest(100, RANDOM_ENGINE_MERSENNE_TWISTER);
+    auto hp0Tape = charTapes.hp(0);
+    auto hp1Tape = charTapes.hp(1);
+
+    engine->config->debug.NoActors.setValue(true);
+    game.startNewGame();
+    test.startTaping();
+    prepareForBattleTest({{CLASS_KNIGHT, RACE_HUMAN}, {CLASS_ARCHER, RACE_HUMAN}});
+
+    engine->config->debug.NoActors.setValue(false);
+    for (int i = 0; i < 4; i++) {
+        game.tick(7);
+        game.spawnMonster(pParty->pos + Vec3f(0, 1500, 0), MONSTER_ARCHER_A, SPAWN_STATIONARY); // Stay in place & shoot.
+    }
+    game.tick(200);
+
+    EXPECT_EQ(hp0Tape.back(), hp0Tape.front()); // Knight is untouched - archer monsters target archers only.
+    EXPECT_LT(hp1Tape.back(), hp1Tape.front()); // Archer took the damage.
+}
+
+GAME_TEST(Issues, Issue2500c) {
+    // Attack preferences are broken. Dwarven Commanders are missing goblin attack preference.
+    // Issue2500a covers having no preference, Issue2500b a class one, and Issue2146 promoted classes.
+    test.prepareForNextTest(100, RANDOM_ENGINE_MERSENNE_TWISTER);
+    auto hp0Tape = charTapes.hp(0);
+    auto hp1Tape = charTapes.hp(1);
+
+    engine->config->debug.NoActors.setValue(true);
+    game.startNewGame();
+    test.startTaping();
+    prepareForBattleTest({{CLASS_KNIGHT, RACE_HUMAN}, {CLASS_KNIGHT, RACE_GOBLIN}});
+
+    engine->config->debug.NoActors.setValue(false);
+    for (int i = 0; i < 4; i++) {
+        game.tick(7);
+        game.spawnMonster(pParty->pos + Vec3f(0, 200, 0), MONSTER_DWARF_C);
+    }
+    game.tick(200);
+
+    EXPECT_EQ(hp0Tape.back(), hp0Tape.front()); // Human is untouched - Dwarven Commander targets goblins.
+    EXPECT_LT(hp1Tape.back(), hp1Tape.front()); // Goblin took the damage.
+}
+
+GAME_TEST(Issues, Issue2503) {
+    //A new party getting weak mechanic differs from Vanilla
+    game.startNewGame();
+    game.tick();
+    game.pressAndReleaseKey(PlatformKey::KEY_R);
+    game.tick();
+    game.pressGuiButton("Rest_WaitTillDawn");
+    game.tick(30);
+    for (const auto& charac : pParty->pCharacters)
+        EXPECT_TRUE(charac.IsWeak());
+}
+
+GAME_TEST(Issues, Issue2505) {
+    // Water elementals supposed to cast ice blast, casting ice bolt.
+    test.prepareForNextTest(100, RANDOM_ENGINE_MERSENNE_TWISTER);
+    auto spritesTape = tapes.sprites();
+
+    engine->config->debug.NoActors.setValue(true);
+    game.startNewGame();
+    test.startTaping();
+    prepareForBattleTest();
+
+    engine->config->debug.NoActors.setValue(false);
+    game.spawnMonster(pParty->pos + Vec3f(0, 1500, 0), MONSTER_ELEMENTAL_WATER_C, SPAWN_STATIONARY);
+    game.tick(300); // Cast chance is 30%, shall be enough.
+
+    auto flat = spritesTape.flatten();
+    EXPECT_CONTAINS(flat, SPRITE_SPELL_WATER_ICE_BLAST);
+    EXPECT_MISSES(flat, SPRITE_SPELL_WATER_ICE_BOLT);
+}
+
+GAME_TEST(Issues, Issue2507) {
+    // Efreet lightning bolt deals 0 damage.
+    test.prepareForNextTest(100, RANDOM_ENGINE_MERSENNE_TWISTER);
+    auto hpTape = charTapes.hp(0);
+    auto spritesTape = tapes.sprites();
+
+    engine->config->debug.NoActors.setValue(true);
+    game.startNewGame();
+    test.startTaping();
+    prepareForBattleTest();
+
+    engine->config->debug.NoActors.setValue(false);
+    Actor *efreet = game.spawnMonster(pParty->pos + Vec3f(0, 1500, 0), MONSTER_GENIE_C, SPAWN_STATIONARY);
+    EXPECT_EQ(efreet->monsterInfo.spell1Id, SPELL_AIR_LIGHTNING_BOLT);
+    EXPECT_EQ(efreet->monsterInfo.spell1SkillMastery.level(), 10);
+    EXPECT_EQ(efreet->monsterInfo.spell1SkillMastery.mastery(), MASTERY_MASTER);
+
+    // Force the Efreet's spell to fire every time.
+    efreet->monsterInfo.spell1UseChance = 100;
+    game.tick(200);
+
+    EXPECT_CONTAINS(spritesTape.flatten(), SPRITE_SPELL_AIR_LIGHTNING_BOLT); // Lightning Bolt was cast.
+    auto damageRange = hpTape.reverse().adjacentDeltas().minMax();
+    EXPECT_GE(damageRange[0], 10);
+    EXPECT_LE(damageRange[1], 80); // Per-hit damage is within the 10d8 range.
+}
+
+GAME_TEST(Issues, Issue2551a) {
+    // Save list was capped at 45 files, and saving past the cap produced saves that weren't listed in the load menu.
+    game.startNewGame();
+    game.tick(2);
+
+    // Fill the saves folder well past the old cap.
+    ufs->remove("saves/autosave.mm7");
+    Blob save = game.saveGame();
+    for (int i = 0; i < 50; i++)
+        ufs->write(fmt::format("saves/save{:03}.mm7", i), save);
+
+    game.pressAndReleaseKey(PlatformKey::KEY_ESCAPE);
+    game.tick(2);
+    game.pressGuiButton("GameMenu_SaveGame");
+    game.tick(2);
+    GUIWindow_SaveLoad *saveMenu = saveLoadMenu();
+    ASSERT_EQ(saveMenu->slots().size(), 51); // All 50 saves are listed, plus the new save slot...
+    ASSERT_TRUE(saveMenu->selectedSlot().fileName.empty()); // ...which is selected, as this game wasn't loaded from a save.
+
+    // Pressing the save button right away shouldn't save, we want a save name typed in first.
+    game.pressGuiButton("SaveMenu_Save");
+    game.tick(2);
+    EXPECT_EQ(ufs->ls("saves").size(), 50);
+    game.pressAndReleaseKey(PlatformKey::KEY_A);
+    game.tick(2);
+    game.pressAndReleaseKey(PlatformKey::KEY_RETURN); // Confirm the name with Enter.
+    game.tick(10);
+    EXPECT_EQ(ufs->ls("saves").size(), 51); // New save went into a new file.
+    EXPECT_TRUE(ufs->exists("saves/save050.mm7"));
+
+    // The new save shows up in the load menu, sorted by display name - the other saves have blank titles & fall
+    // back to "saveNNN" display names, so "a" sorts first.
+    game.pressAndReleaseKey(PlatformKey::KEY_ESCAPE);
+    game.tick(2);
+    game.pressGuiButton("GameMenu_LoadGame");
+    game.tick(3);
+    GUIWindow_SaveLoad *loadMenu = saveLoadMenu();
+    EXPECT_EQ(loadMenu->slots().size(), 51);
+    EXPECT_EQ(loadMenu->slots()[0].fileName, "save050.mm7");
+    EXPECT_EQ(loadMenu->slots()[0].header.name, "a");
+}
+
+GAME_TEST(Issues, Issue2551b) {
+    // Quickload is handled from inside menus, check that a failed quickload doesn't break the open save menu.
+    game.startNewGame();
+    game.tick(2);
+
+    game.pressAndReleaseKey(PlatformKey::KEY_ESCAPE);
+    game.tick(2);
+    game.pressGuiButton("GameMenu_SaveGame");
+    game.tick(2);
+    game.pressAndReleaseKey(PlatformKey::KEY_F9); // Try to quickload, there is no quicksave so this should fail.
+    game.tick(3);
+    ASSERT_EQ(ufs->ls("saves").size(), 1); // Just the autosave...
+    GUIWindow_SaveLoad *saveMenu = saveLoadMenu();
+    ASSERT_EQ(saveMenu->slots().size(), 1); // ...which is not shown in the save menu, so it's just the new save slot.
+
+    // And the menu is still fully functional.
+    game.doubleClickGuiButton("SaveMenu_Slot0"); // Double click the new save slot to start the name input.
+    game.tick(2);
+    game.pressAndReleaseKey(PlatformKey::KEY_A);
+    game.tick(2);
+    game.pressGuiButton("SaveMenu_Save");
+    game.tick(10);
+    EXPECT_TRUE(ufs->exists("saves/save000.mm7"));
+
+    // Quicksaves are also hidden from the save menu.
+    game.pressAndReleaseKey(PlatformKey::KEY_F5); // Quicksave.
+    game.tick(2);
+    game.pressAndReleaseKey(PlatformKey::KEY_ESCAPE);
+    game.tick(2);
+    game.pressGuiButton("GameMenu_SaveGame");
+    game.tick(2);
+    ASSERT_EQ(ufs->ls("saves").size(), 3); // Autosave, quicksave & our save...
+    GUIWindow_SaveLoad *saveMenu2 = saveLoadMenu();
+    ASSERT_EQ(saveMenu2->slots().size(), 2); // ...but only the new save slot & our save are shown.
+}
+
+GAME_TEST(Issues, Issue2551c) {
+    // Quickload works from the game, from the in-game save menu & from the main menu.
+    game.startNewGame();
+    game.tick(2);
+    engine->config->gameplay.QuickSavesCount.setValue(4); // Quicksave counter wraps 4 -> 0.
+    game.pressAndReleaseKey(PlatformKey::KEY_F5); // Quicksave.
+    game.tick(2);
+    std::string quickSaveName = getCurrentQuickSave();
+    ASSERT_EQ(quickSaveName, "quicksave0.mm7");
+
+    auto checkQuickLoaded = [&] {
+        game.skipLoadingScreen();
+        game.tick(2);
+        EXPECT_EQ(current_screen_type, SCREEN_GAME);
+        EXPECT_EQ(engine->_lastLoadedSaveFileName, quickSaveName);
+        engine->_lastLoadedSaveFileName.clear(); // Make sure the next check is not vacuous.
+    };
+
+    // Quickload in-game.
+    game.pressAndReleaseKey(PlatformKey::KEY_F9);
+    checkQuickLoaded();
+
+    // Quickload from the in-game save menu.
+    game.pressAndReleaseKey(PlatformKey::KEY_ESCAPE);
+    game.tick(2);
+    game.pressGuiButton("GameMenu_SaveGame");
+    game.tick(2);
+    ASSERT_EQ(current_screen_type, SCREEN_SAVEGAME);
+    game.pressAndReleaseKey(PlatformKey::KEY_F9);
+    checkQuickLoaded();
+
+    // Quickload from the main menu.
+    game.goToMainMenu();
+    game.pressAndReleaseKey(PlatformKey::KEY_F9);
+    checkQuickLoaded();
+
+    // Quickload from the load menu in the main menu.
+    game.goToMainMenu();
+    game.pressGuiButton("MainMenu_LoadGame");
+    game.tick(3);
+    ASSERT_EQ(current_screen_type, SCREEN_LOADGAME);
+    game.pressAndReleaseKey(PlatformKey::KEY_F9);
+    checkQuickLoaded();
+}
+
+GAME_TEST(Prs, Pr2599) {
+    // Leaving the Hidden Tomb while looking up used to leave the party staring at the sky in Erathia. Every shipped
+    // MoveToMap carries pitch 0, and the original game applies a script's pitch only when it's non-zero, the view
+    // was leveled by the target map's party start decoration instead, and Erathia has none - only the four
+    // directional ones for foot travel. So this is vanilla behaviour, and we deliberately apply the script's pitch
+    // as is, like on every other arrival.
+    auto mapTape = tapes.map();
+    game.startNewGame();
+    game.teleportTo(MAP_HIDDEN_TOMB, Vec3f(-111, -25, 1), 0); // Just inside the entrance, facing the exit.
+    test.startTaping();
+    game.pressKey(PlatformKey::KEY_PAGEDOWN); // Look up.
+    game.tick(10);
+    game.releaseKey(PlatformKey::KEY_PAGEDOWN);
+    EXPECT_EQ(pParty->_viewPitch, 125);
+    game.pressKey(PlatformKey::KEY_UP);
+    game.tick(10);
+    game.releaseKey(PlatformKey::KEY_UP);
+    game.pressAndReleaseKey(PlatformKey::KEY_SPACE);
+    game.tick();
+    game.pressGuiButton("Transition_Yes");
+    game.tick();
+    game.skipLoadingScreen();
+    EXPECT_EQ(mapTape, tape(MAP_HIDDEN_TOMB, MAP_ERATHIA));
+    EXPECT_EQ(pParty->pos.x, 14207);
+    EXPECT_EQ(pParty->pos.y, -21526);
+    EXPECT_EQ(pParty->_viewYaw, 1536);
+    EXPECT_EQ(pParty->_viewPitch, 0);
+}
+
+// 2600
+
+GAME_TEST(Prs, Pr2615a) {
+    // A decoration's clickable reach extends past the mouse interaction depth by the decoration's radius, so a big
+    // one is clickable from further away than its center. This campfire is at depth 560 with radius 52, clickable
+    // at the default reach of 512.
+    auto foodTape = tapes.food();
+    auto statusTape = tapes.statusBar();
+    game.startNewGame();
+    const LevelDecoration &campfire = pLevelDecorations[7]; // The campfire on the beach.
+    ASSERT_EQ(pDecorationTable->decoration(campfire.uDecorationDescID)->hint, "campfire");
+    ASSERT_EQ(pDecorationTable->decoration(campfire.uDecorationDescID)->uRadius, 52);
+    game.teleportTo(MAP_EMERALD_ISLAND, campfire.vPosition - Vec3f(535, 0, 0), 0); // The pick depth comes out at 560.
+    test.startTaping();
+    game.pointMouseAtDecoration(7);
+    EXPECT_EQ(engine->PickMouseForInteraction().pid, Pid()); // Otherwise the radius allowance isn't what's tested.
+    Vis_PIDAndDepth object = engine->PickMouseForTargeting();
+    EXPECT_EQ(object.pid, Pid(OBJECT_Decoration, 7));
+    EXPECT_GT(object.depth, engine->config->gameplay.MouseInteractionDepth.value());
+    game.pressAndReleaseButton(BUTTON_LEFT);
+    game.tick(3);
+    EXPECT_EQ(foodTape.delta(), 2);
+    EXPECT_CONTAINS(statusTape, "You find 2 food");
+}
+
+GAME_TEST(Prs, Pr2615b) {
+    // Shift-clicking a friendly actor fires the quick spell at it on both sides of the interaction depth, as in
+    // vanilla - a friendliness check in the click handler is not allowed to drop the far click.
+    for (int depth : {300, 1200}) {
+        test.prepareForNextTest();
+        engine->config->debug.NoActors.setValue(true);
+        engine->config->debug.AllMagic.setValue(true);
+        game.startNewGame();
+        test.startTaping();
+        prepareForBattleTest();
+        engine->config->debug.NoActors.setValue(false);
+
+        auto hpTape = actorTapes.hp(0);
+        Actor *peasant = game.spawnMonster(pParty->pos + Vec3f(0, depth, 0), MONSTER_PEASANT_DWARF_FEMALE_A_A,
+                                           SPAWN_DUMMY | SPAWN_FRIENDLY);
+        EXPECT_EQ(peasant->GetActorsRelation(0), HOSTILITY_FRIENDLY); // Otherwise it's the hostile path that's tested.
+        pParty->pCharacters[0].uQuickSpell = SPELL_FIRE_FIRE_BOLT;
+        game.pointMouseAtActor(0);
+        EXPECT_EQ(engine->PickMouseForInteraction().pid == Pid(), depth > engine->config->gameplay.MouseInteractionDepth.value());
+
+        game.pressKey(PlatformKey::KEY_SHIFT);
+        game.pressAndReleaseButton(BUTTON_LEFT);
+        game.tick(2);
+        game.releaseKey(PlatformKey::KEY_SHIFT);
+        game.tick(30);
+        test.stopTaping();
+
+        EXPECT_LT(hpTape.delta(), 0); // The quick spell fired and hit.
+    }
+}
+
+GAME_TEST(Prs, Pr2615c) {
+    // In vanilla telekinesis doesn't work on decorations at all - its targeting pick skips their billboards, so
+    // the decoration branch in castSpell is dead code there, with a garbled line that crashes once reached. OE
+    // deliberately lets the pick see decorations, and this is the OE behavior being tested: telekinesis pulls an
+    // interactive decoration from beyond click reach.
+    auto foodTape = tapes.food();
+    auto statusTape = tapes.statusBar();
+    game.startNewGame();
+    engine->config->debug.AllMagic.setValue(true);
+    const LevelDecoration &campfire = pLevelDecorations[7]; // The campfire on the beach.
+    ASSERT_EQ(pDecorationTable->decoration(campfire.uDecorationDescID)->hint, "campfire");
+    ASSERT_EQ(campfire.uEventID, 0); // The eventless interactive kind - Pr2615d covers the evented kind.
+    game.teleportTo(MAP_EMERALD_ISLAND, campfire.vPosition - Vec3f(1000, 0, 0), 0); // Twice the click reach away.
+    test.startTaping();
+    game.castSpell(0, SPELL_EARTH_TELEKINESIS);
+    game.tick(2);
+    game.pointMouseAtDecoration(7);
+    game.pressAndReleaseButton(BUTTON_LEFT);
+    game.tick(3);
+    EXPECT_EQ(foodTape.delta(), 2);
+    EXPECT_CONTAINS(statusTape, "You find 2 food");
+}
+
+GAME_TEST(Prs, Pr2615d) {
+    // Telekinesis on a decoration that carries a map event - the campfire in Pr2615c is the interactive kind, this
+    // Harmondale fruit tree is the evented kind, and its event hands the player an apple. Fruit trees bear nothing
+    // in autumn and winter, and a new game starts on the 1st of January, so the calendar is pushed into summer first.
+    game.startNewGame();
+    engine->config->debug.AllMagic.setValue(true);
+    game.teleportTo(MAP_HARMONDALE, Vec3f(-12192, 9000, 0), 0); // Decorations belong to the loaded map.
+    const LevelDecoration &tree = pLevelDecorations[559];
+    ASSERT_EQ(pDecorationTable->decoration(tree.uDecorationDescID)->hint, "tree");
+    ASSERT_NE(tree.uEventID, 0); // The point of this test - Pr2615c covers the eventless interactive kind.
+    game.teleportTo(MAP_HARMONDALE, tree.vPosition - Vec3f(1000, 0, 0), 0); // Twice the click reach away.
+    pParty->GetPlayingTime() += Duration::fromDays(150);
+    game.tick(2);
+    ASSERT_EQ(pParty->pPickedItem.itemId, ITEM_NULL);
+    game.castSpell(0, SPELL_EARTH_TELEKINESIS);
+    game.tick(2);
+    game.pointMouseAtDecoration(559);
+    game.pressAndReleaseButton(BUTTON_LEFT);
+    game.tick(3);
+    EXPECT_EQ(pParty->pPickedItem.itemId, ITEM_RED_APPLE); // The tree handed over an apple.
+}
+
+GAME_TEST(Prs, Pr2626) {
+    // GetSector used to stop looking after 5 candidate floor faces, so where more floors than that stack up it
+    // could miss the one the party is standing on. This spot in Colony Zod has 16 of them, and the truncated
+    // search answered sector 9 instead of 23.
+    game.startNewGame();
+    game.teleportTo(MAP_COLONY_ZOD, Vec3f(-1849, 6726, 934), 0);
+    game.tick(2);
+    EXPECT_EQ(pIndoor->GetSector(-1849, 6726.5f, 934), 23);
+}
+
+GAME_TEST(Issues, Pr2635) {
+    // Loading a save and opening the save name editor take a real double click on a slot, and are not
+    // triggered by two ordinary clicks on it.
+    game.startNewGame();
+    game.tick(2);
+
+    // Save something to load back.
+    game.pressAndReleaseKey(PlatformKey::KEY_ESCAPE);
+    game.tick(2);
+    game.pressGuiButton("GameMenu_SaveGame");
+    game.tick(2);
+    game.doubleClickGuiButton("SaveMenu_Slot0");
+    game.tick(2);
+    game.pressAndReleaseKey(PlatformKey::KEY_A);
+    game.tick(2);
+    game.pressGuiButton("SaveMenu_Save");
+    game.tick(10);
+    ASSERT_TRUE(ufs->exists("saves/save000.mm7"));
+
+    // Open the load menu and check a row really is selected before anything is clicked.
+    game.pressAndReleaseKey(PlatformKey::KEY_ESCAPE);
+    game.tick(2);
+    game.pressGuiButton("GameMenu_LoadGame");
+    game.tick(3);
+    ASSERT_EQ(current_screen_type, SCREEN_LOADGAME);
+    ASSERT_TRUE(saveLoadMenu()->hasSelectedSlot()); // A row is selected before the player clicks anything...
+    ASSERT_EQ(saveLoadMenu()->selectedSlot().fileName, "save000.mm7"); // ...and it's the one Slot0 points at.
+
+    // Clicking the already selected row does nothing, however many times it's clicked slowly.
+    game.pressGuiButton("LoadMenu_Slot0");
+    game.tick(2);
+    EXPECT_EQ(current_screen_type, SCREEN_LOADGAME);
+    game.pressGuiButton("LoadMenu_Slot0");
+    game.tick(2);
+    EXPECT_EQ(current_screen_type, SCREEN_LOADGAME);
+
+    // A double click on it loads.
+    game.doubleClickGuiButton("LoadMenu_Slot0");
+    game.tick(2);
+    game.skipLoadingScreen();
+    game.tick(2);
+    EXPECT_EQ(current_screen_type, SCREEN_GAME);
+
+    // Same rule in the save menu - two slow clicks don't open the name input, a double click does.
+    game.pressAndReleaseKey(PlatformKey::KEY_ESCAPE);
+    game.tick(2);
+    game.pressGuiButton("GameMenu_SaveGame");
+    game.tick(2);
+    game.pressGuiButton("SaveMenu_Slot0");
+    game.tick(2);
+    game.pressGuiButton("SaveMenu_Slot0");
+    game.tick(2);
+    EXPECT_NE(saveLoadMenu()->keyboard_input_status, WINDOW_INPUT_IN_PROGRESS);
+
+    game.doubleClickGuiButton("SaveMenu_Slot0");
+    game.tick(2);
+    EXPECT_EQ(saveLoadMenu()->keyboard_input_status, WINDOW_INPUT_IN_PROGRESS);
+}
+
+GAME_TEST(Issues, Issue2636) {
+    // Attribute descriptions in Localization were dangling string_views into unquote() temporaries - crashed
+    // at startup on FreeBSD and drew garbage in the character screen stats tooltips elsewhere.
+    auto textTape = tapes.allGUIWindowsText();
+    game.startNewGame();
+    test.startTaping();
+    game.tick(2);
+    game.goToInventory(0);
+    game.pressAndReleaseKey(PlatformKey::KEY_C); // Switch to the stats tab.
+    game.tick(2);
+    EXPECT_EQ(current_screen_type, SCREEN_CHARACTERS);
+    game.pressButton(BUTTON_RIGHT, 100, 60); // Right-click hold over the Might row shows its tooltip.
+    game.tick(2);
+    game.releaseButton(BUTTON_RIGHT);
+    game.tick(1);
+    EXPECT_CONTAINS(textTape.flatten(), "Might is the statistic that represents a character's overall strength, "
+                                        "and the ability to put that strength where it counts.  Characters with a "
+                                        "high might statistic do more damage in combat.");
+}
+
+// 2700
+
+GAME_TEST(Prs, Pr2723) {
+    // Clicking the top or the bottom of a party portrait did nothing. The portrait is an oval with semi-axes 32
+    // and 41, and the click test used the circle of radius 32 inscribed in it.
+    game.startNewGame();
+
+    pParty->setActiveCharacterIndex(0);
+    ASSERT_EQ(pParty->pCharacters[1].timeToRecovery, 0_ticks); // Portrait clicks do nothing while recovering.
+
+    game.pressAndReleaseButton(BUTTON_LEFT, 177, 460); // 36 pixels below the center of the second portrait.
+    game.tick();
+
+    EXPECT_EQ(pParty->activeCharacterIndex(), 1);
+}
+
+GAME_TEST(Issues, Issue2748) {
+    // Monsters spawned under the floor of the Erathian Sewers, outside the level, kept the party on yellow alert after
+    // the sewers were cleared.
+    auto yellowAlertTape = tapes.custom([] { return pParty->GetYellowAlert(); });
+    auto aliveTape = tapes.custom([] { return static_cast<int>(std::ranges::count_if(pActors, &Actor::CanAct)); });
+    game.startNewGame();
+    game.teleportTo(MAP_ERATHIAN_SEWERS, Vec3f(5157, 8704, -128), 0); // The first visit spawns the monsters. The party lands within alert range of a spawn point outside the level.
+    test.startTaping();
+    game.tick();
+    for (Actor &actor : pActors)
+        if (actor.sectorId != 0) // Everyone the party can reach.
+            Actor::Die(actor.id);
+    game.tick();
+    EXPECT_EQ(aliveTape, tape(45, 0));
+    EXPECT_EQ(yellowAlertTape, tape(true, false));
+}
+
+GAME_TEST(Issues, Issue2754) {
+    // Clicking a paralyzed friendly peasant made the active character attack it, and the hit turned the peasant
+    // hostile. Past the click reach the same click attacked too. The hostile peasant is the control, clicking
+    // that one still has to attack.
+    for (auto [friendly, depth] : {std::pair(false, 300), std::pair(true, 300), std::pair(true, 1200)}) {
+        test.prepareForNextTest();
+        engine->config->debug.NoActors.setValue(true);
+        game.startNewGame();
+        test.startTaping();
+        prepareForBattleTest();
+        engine->config->debug.NoActors.setValue(false);
+
+        auto hpTape = actorTapes.hp(0);
+        auto aggressorTape = actorTapes.custom(0, [](const Actor &a) { return a.ActorEnemy(); });
+        auto msgTape = tapes.uiMessages();
+        Actor *peasant = game.spawnMonster(pParty->pos + Vec3f(0, depth, 0), MONSTER_PEASANT_DWARF_FEMALE_A_A,
+                                           friendly ? SPAWN_DUMMY | SPAWN_FRIENDLY : SPAWN_DUMMY);
+        peasant->buffs[ACTOR_BUFF_PARALYZED].Apply(pParty->GetPlayingTime() + Duration::fromDays(1), MASTERY_GRANDMASTER, 0, 0, 0);
+        ASSERT_EQ(peasant->GetActorsRelation(nullptr) == HOSTILITY_FRIENDLY, friendly);
+        game.pointMouseAtActor(0);
+        ASSERT_EQ(engine->PickMouseForInteraction().pid == Pid(), depth > engine->config->gameplay.MouseInteractionDepth.value());
+
+        for (int i = 0; i < 30; i++) {
+            game.pressAndReleaseButton(BUTTON_LEFT);
+            game.tick(5);
+        }
+        test.stopTaping();
+
+        if (friendly) {
+            EXPECT_MISSES(msgTape.flatten(), UIMSG_Attack); // A swing can miss, the queued message cannot.
+            EXPECT_EQ(hpTape.delta(), 0);
+            EXPECT_EQ(aggressorTape, tape(false));
+        } else {
+            EXPECT_CONTAINS(msgTape.flatten(), UIMSG_Attack);
+            EXPECT_LT(hpTape.delta(), 0);
+        }
+    }
+}
+
+GAME_TEST(Issues, Issue2759) {
+    // Clicking "Learn Skills" in a shop that teaches no skills crashed. Such a shop shouldn't offer the option at all.
+    auto houseTape = tapes.house();
+    auto textTape = tapes.allGUIWindowsText();
+    game.startNewGame();
+    test.startTaping();
+    game.teleportTo(MAP_TATALIA, Vec3f(19174, 15056, 3040), 0); // In front of the door of Vander's Blades & Bows, facing it.
+    game.tick(2);
+    game.pressAndReleaseKey(PlatformKey::KEY_SPACE);
+    game.tick(2);
+    EXPECT_CONTAINS(houseTape, HOUSE_WEAPON_SHOP_TATALIA_1);
+    EXPECT_CONTAINS(textTape.flatten(), "Display Inventory"); // We've seen the shop menu.
+    EXPECT_MISSES(textTape.flatten(), "Learn Skills"); // But there was no "Learn Skills" option.
+}
+
+GAME_TEST(Issues, Issue2760) {
+    // The east wall of an elevator shaft in Stone City was missing while the car was below the top, and the party
+    // could walk through it.
+    auto elevatorTape = tapes.doorState(10);
+    auto xTape = tapes.custom([] { return pParty->pos.x; });
+    engine->config->debug.NoActors.setValue(true);
+    game.startNewGame();
+    game.teleportTo(MAP_STONE_CITY, Vec3f(-3100, 2176, -64), 270); // On the elevator car, facing the button that sends it down.
+    test.startTaping();
+    game.pointMouseAtFace(3459);
+    game.pressAndReleaseButton(BUTTON_LEFT);
+    game.tick(80);
+    ASSERT_EQ(elevatorTape, tape(DOOR_OPEN, DOOR_CLOSING, DOOR_CLOSED)); // Make sure the car is down before strafing.
+    game.pressKey(PlatformKey::KEY_LEFTBRACKET); // Strafe east, into the wall.
+    game.tick(20);
+    game.releaseKey(PlatformKey::KEY_LEFTBRACKET);
+    game.tick();
+    EXPECT_NEAR(xTape.max() + pParty->radius, -2976, 1); // Stopped by the shaft's east wall.
+}
+
+GAME_TEST(Issues, Issue2771) {
+    // Immolation cast by a map event crashed the game on the next regeneration tick. The buff got caster -1, and the
+    // damage sprite built a character pid out of it.
+    auto hpTape = actorTapes.hp(0);
+    auto casterTape = tapes.custom([] {
+        AccessibleVector<Pid> result;
+        for (const SpriteObject &sprite : pSpriteObjects)
+            if (sprite.uObjectDescID != 0 && sprite.uSpellID == SPELL_FIRE_IMMOLATION)
+                result.push_back(sprite.spell_caster_pid);
+        return result;
+    });
+    engine->config->debug.NoActors.setValue(true);
+    game.startNewGame();
+    game.teleportTo(MAP_LAND_OF_THE_GIANTS, Vec3f(3796, 6224, 1216), 0); // 300 west of the pedestal, facing it.
+    game.goToGame(); // A new party arriving here gets a dialogue with Archibald Ironfist, and a Blaster in hand.
+    game.pressAndReleaseKey(PlatformKey::KEY_DIGIT_2); // Puts the Blaster into the second character's pack.
+    game.tick();
+    game.pressAndReleaseKey(PlatformKey::KEY_DIGIT_2); // Makes the second character active.
+    game.pointMouseAtDecoration(380);
+    game.pressAndReleaseButton(BUTTON_LEFT);
+    game.tick(3);
+    ASSERT_TRUE(pParty->ImmolationActive());
+
+    game.spawnMonster(pParty->pos + Vec3f(0, 200, 0), MONSTER_TITAN_A, SPAWN_DUMMY | SPAWN_FRIENDLY);
+    test.startTaping();
+    game.tick(100);
+    EXPECT_LT(hpTape.delta(), 0);
+    EXPECT_EQ(casterTape.flatten().unique(), tape(Pid::character(1))); // The active character.
+}
+
+GAME_TEST(Issues, Issue2776) {
+    // After a party death, characters wearing regeneration gear came back with full HP and SP, regenerated for every
+    // 5 minutes of the week that the death skips.
+    auto deathsTape = tapes.deaths();
+    auto hpsTape = charTapes.hps();
+    auto mpsTape = charTapes.mps();
+    game.startNewGame();
+    for (Character &character : pParty->pCharacters) {
+        character.inventory.equip(ITEM_SLOT_BOOTS, Item(ITEM_ARTIFACT_HERMES_SANDALS));
+        character.mana = character.GetMaxMana() / 2;
+    }
+    test.startTaping();
+    game.tick(); // The frame the party dies in isn't drawn, so the tapes need a frame from before it.
+    for (int i = 0; i < 3; i++)
+        pParty->pCharacters[i].receiveDamage(10000, DAMAGE_PHYSICAL);
+    pParty->pCharacters[3].SetCondition(CONDITION_UNCONSCIOUS, false);
+    game.tick();
+    EXPECT_EQ(deathsTape.delta(), +1);
+    EXPECT_EQ(hpsTape.back(), tape(1, 1, 1, 1));
+    EXPECT_EQ(mpsTape.back(), tape(0, 0, 0, 18)); // Dying zeroes SP, only the unconscious sorcerer keeps it.
+}
+
+GAME_TEST(Issues, Issue2777a) {
+    // A Lich healed at an evil temple was turned into a Zombie.
+    for (Class classType : {CLASS_WIZARD, CLASS_LICH}) {
+        SCOPED_TRACE(fmt::format("class={}", std::to_underlying(classType)));
+        test.prepareForNextTest();
+        game.startNewGame();
+
+        Character &target = pParty->pCharacters[0];
+        setEvtVariable(target, VAR_Class, std::to_underlying(classType));
+        target.SetCondition(CONDITION_DEAD, 0);
+        pParty->SetGold(100000);
+        int zombieFace = target.IsMale() ? 23 : 24;
+
+        auto conditionTape = charTapes.condition(0);
+        auto faceTape = charTapes.face(0);
+        auto hpTape = charTapes.hp(0);
+        auto houseTape = tapes.house();
+        test.startTaping();
+        game.teleportTo(MAP_MOUNT_NIGHON, Vec3f(5894, -11456, 576), 0); // In front of Offerings and Blessings.
+        game.tick(2);
+        game.pressAndReleaseKey(PlatformKey::KEY_SPACE);
+        game.tick(2);
+        game.pressGuiButton("Game_Character1");
+        game.tick();
+        game.pressGuiButton("HouseDialogue_Option0"); // Heal.
+        game.tick(2);
+
+        EXPECT_EQ(houseTape.back(), HOUSE_TEMPLE_MOUNT_NIGHON);
+        EXPECT_EQ(hpTape, tape(0, target.GetMaxHealth()));
+        if (classType == CLASS_LICH) {
+            EXPECT_EQ(conditionTape, tape(CONDITION_DEAD, CONDITION_GOOD));
+            EXPECT_EQ(faceTape.size(), 1);
+        } else {
+            EXPECT_EQ(conditionTape, tape(CONDITION_DEAD, CONDITION_ZOMBIE));
+            EXPECT_EQ(faceTape.back(), zombieFace);
+        }
+        EXPECT_EQ(game_ui_player_faces[0][0]->name(), portraitName(target.uCurrentFace));
+    }
+}
+
+GAME_TEST(Issues, Issue2777b) {
+    // Reanimate forced the Zombie condition and portrait onto a dead Lich.
+    for (Class classType : {CLASS_WIZARD, CLASS_LICH}) {
+        SCOPED_TRACE(fmt::format("class={}", std::to_underlying(classType)));
+        test.prepareForNextTest();
+        game.startNewGame();
+
+        Character &target = pParty->pCharacters[0];
+        setEvtVariable(target, VAR_Class, std::to_underlying(classType));
+        target.SetCondition(CONDITION_UNCONSCIOUS, 0);
+        target.SetCondition(CONDITION_DEAD, 0);
+        int zombieFace = target.IsMale() ? 23 : 24;
+
+        Character &caster = pParty->pCharacters[3];
+        caster.setSkillValue(SKILL_DARK, CombinedSkillValue(10, MASTERY_NOVICE));
+        caster.bHaveSpell[SPELL_DARK_REANIMATE] = true;
+        caster.mana = 1000;
+
+        auto conditionTape = charTapes.condition(0);
+        auto faceTape = charTapes.face(0);
+        auto hpTape = charTapes.hp(0);
+        test.startTaping();
+        game.castSpell(3, SPELL_DARK_REANIMATE);
+        game.tick();
+        game.pressAndReleaseKey(PlatformKey::KEY_DIGIT_1);
+        game.tick(2);
+
+        if (classType == CLASS_LICH) {
+            EXPECT_EQ(conditionTape, tape(CONDITION_DEAD, CONDITION_GOOD));
+            EXPECT_EQ(faceTape.size(), 1);
+            EXPECT_EQ(hpTape, tape(0, target.GetMaxHealth() / 2));
+        } else {
+            EXPECT_EQ(conditionTape, tape(CONDITION_DEAD, CONDITION_ZOMBIE));
+            EXPECT_EQ(faceTape.back(), zombieFace);
+            EXPECT_EQ(hpTape, tape(0, target.GetMaxHealth()));
+        }
+        EXPECT_EQ(game_ui_player_faces[0][0]->name(), portraitName(target.uCurrentFace));
+    }
+}
+
+GAME_TEST(Issues, Issue2777c) {
+    // Promoting a Zombie Wizard to Lich kept the Zombie condition and lost the pre-zombie portrait.
+    game.startNewGame();
+
+    Character &target = pParty->pCharacters[0];
+    setEvtVariable(target, VAR_Class, std::to_underlying(CLASS_WIZARD));
+    target.giveAward(AWARD_PROMOTION_WIZARD);
+    pParty->_questBits[QBIT_DARK_PATH] = true;
+    for (Character &character : pParty->pCharacters)
+        character.inventory.add(Item(ITEM_QUEST_LICH_JAR_EMPTY)); // MM7's promotion script refuses unless every party member carries a jar.
+    int originalFace = target.uCurrentFace;
+    int originalVoice = target.uVoiceID;
+    int zombieFace = target.IsMale() ? 23 : 24;
+    int lichFace = target.IsMale() ? 20 : 21;
+    target.SetCondition(CONDITION_ZOMBIE, 0);
+
+    auto conditionTape = charTapes.condition(0);
+    auto faceTape = charTapes.face(0);
+    auto classTape = charTapes.clazz(0);
+    test.startTaping();
+    game.teleportTo(MAP_PIT, Vec3f(3398, -7952, 59), 0); // In front of Halfgild Wynac's house.
+    game.tick(2);
+    game.pressAndReleaseKey(PlatformKey::KEY_SPACE);
+    game.tick(2);
+    game.pressGuiButton("Game_Character1");
+    game.tick();
+    game.pressGuiButton("House_Npc0"); // Halfgild Wynac, who promotes Wizards to Liches.
+    game.tick();
+    game.pressGuiButton("HouseNpcDialogue_Option0"); // Halfgild's only topic, where he offers the promotion.
+    game.tick(2);
+    game.pressGuiButton("HouseNpcDialogue_Option0"); // And then carries it out.
+    game.tick(2);
+
+    EXPECT_EQ(classTape, tape(CLASS_WIZARD, CLASS_LICH));
+    EXPECT_EQ(conditionTape, tape(CONDITION_ZOMBIE, CONDITION_GOOD));
+    EXPECT_EQ(faceTape, tape(zombieFace, lichFace));
+    EXPECT_EQ(target.uPrevFace, originalFace);
+    EXPECT_EQ(target.uPrevVoiceID, originalVoice);
+    EXPECT_EQ(game_ui_player_faces[0][0]->name(), portraitName(lichFace));
+}
+
+GAME_TEST(Issues, Issue2784a) {
+    // Acid Burst impacts were silent.
+    auto soundsTape = tapes.sounds();
+    engine->config->debug.NoActors.setValue(true);
+    engine->config->debug.AllMagic.setValue(true);
+    game.startNewGame();
+    test.startTaping();
+    prepareForBattleTest();
+    engine->config->debug.NoActors.setValue(false);
+    game.spawnMonster(pParty->pos + Vec3f(0, 800, 0), MONSTER_TITAN_A, SPAWN_DUMMY);
+    game.castQuickSpell(0, SPELL_WATER_ACID_BURST);
+    game.tick(30);
+    EXPECT_CONTAINS(soundNames(soundsTape), "20implosion03");
+}
+
+GAME_TEST(Issues, Issue2784b) {
+    // Elf banks greeted with the Evil Bank lines.
+    auto houseTape = tapes.house();
+    auto soundsTape = tapes.sounds();
+    game.startNewGame();
+    game.teleportTo(MAP_TULAREAN_FOREST, Vec3f(-11514, -10816, 1344), 0); // In front of Nature's Stockpile.
+    test.startTaping();
+    game.pressAndReleaseKey(PlatformKey::KEY_SPACE);
+    game.tick();
+    EXPECT_EQ(houseTape.back(), HOUSE_BANK_TULAREAN_FOREST);
+    EXPECT_EQ(soundNames(soundsTape).count("Elf Bank 01"), 1);
+}
+
+GAME_TEST(Issues, Issue2784c) {
+    // The Balanced Axe should keep the dwarf smith's greeting after it moves out of room 82.
+    auto houseTape = tapes.house();
+    auto soundsTape = tapes.sounds();
+    game.startNewGame();
+    game.teleportTo(MAP_STONE_CITY, Vec3f(-425, -1461, 0), 225); // In front of The Balanced Axe.
+    test.startTaping();
+    game.pressAndReleaseKey(PlatformKey::KEY_SPACE);
+    game.tick();
+    EXPECT_EQ(houseTape.back(), HOUSE_WEAPON_SHOP_STONE_CITY);
+    EXPECT_EQ(soundNames(soundsTape).count("Dwarf Weapon Shop 01"), 1);
+}
+
+GAME_TEST(Issues, Issue2784d) {
+    // Natural Magic greeted with the dwarf smith's lines.
+    auto houseTape = tapes.house();
+    auto soundsTape = tapes.sounds();
+    game.startNewGame();
+    game.teleportTo(MAP_TULAREAN_FOREST, Vec3f(-12992, -6906, 1344), 90); // In front of Natural Magic.
+    test.startTaping();
+    game.pressAndReleaseKey(PlatformKey::KEY_SPACE);
+    game.tick();
+    EXPECT_EQ(houseTape.back(), HOUSE_MAGIC_SHOP_TULAREAN_FOREST);
+    EXPECT_EQ(soundNames(soundsTape).count("Elf Magic Shop 01"), 1);
+}
+
+GAME_TEST(Issues, Issue2789) {
+    // Quickloading while an enchantment spell waited for its target item crashed on the next click on an item.
+    test.prepareForNextTest(10, RANDOM_ENGINE_SEQUENTIAL);
+    engine->config->debug.AllMagic.setValue(true);
+    game.startNewGame();
+    game.tick(2);
+    pParty->pCharacters[0].setSkillValue(SKILL_SWORD, CombinedSkillValue::novice());
+    pParty->pCharacters[0].inventory.equip(ITEM_SLOT_MAIN_HAND, Item(ITEM_BROADSWORD));
+    game.pressAndReleaseKey(PlatformKey::KEY_F5); // Quicksave.
+    game.tick(2);
+
+    game.castSpell(0, SPELL_FIRE_FIRE_AURA); // Opens the enchantment targeting inventory.
+    game.tick();
+    ASSERT_TRUE(IsEnchantingInProgress);
+
+    game.pressAndReleaseKey(PlatformKey::KEY_F9); // Quickload.
+    game.skipLoadingScreen();
+    game.tick(2);
+    EXPECT_FALSE(IsEnchantingInProgress);
+    EXPECT_EQ(enchantingActiveCharacter, -1);
+
+    game.pressAndReleaseKey(PlatformKey::KEY_I);
+    game.tick(2);
+    game.pressAndReleaseButton(BUTTON_LEFT, 521, 95); // The sword on the paperdoll.
+    game.tick(2);
+    EXPECT_EQ(pParty->pPickedItem.itemId, ITEM_BROADSWORD);
+}
+
+GAME_TEST(Issues, Issue2792) {
+    // Pain Reflection at Expert and Master used the Grandmaster duration.
+    static constexpr int skillLevel = 10;
+
+    for (Mastery mastery : {MASTERY_EXPERT, MASTERY_MASTER, MASTERY_GRANDMASTER}) {
+        SCOPED_TRACE(fmt::format("mastery={}", std::to_underlying(mastery)));
+        test.prepareForNextTest();
+        game.startNewGame();
+        test.startTaping();
+
+        Character &caster = pParty->pCharacters[3];
+        caster.classType = CLASS_LICH; // A sorcerer gets half the mana per level, and the spell costs a flat 40.
+        caster.setSkillValue(SKILL_DARK, CombinedSkillValue(skillLevel, mastery));
+        caster.bHaveSpell[SPELL_DARK_PAIN_REFLECTION] = true;
+        caster.mana = caster.GetMaxMana();
+
+        auto buffsTape = charTapes.haveBuffs(CHARACTER_BUFF_PAIN_REFLECTION);
+        game.castSpell(3, SPELL_DARK_PAIN_REFLECTION);
+        Time castAt = pParty->GetPlayingTime(); // The cast runs before the clock advances and the picker pauses it, so the buff lands at exactly this time.
+        game.tick(); // The target picker opens a frame after the spellbook click, and a party-wide cast lands there.
+        if (mastery == MASTERY_EXPERT) {
+            ASSERT_NE(pGUIWindow_CastTargetedSpell, nullptr);
+            game.pressAndReleaseKey(PlatformKey::KEY_DIGIT_1);
+            game.tick();
+        }
+        test.stopTaping();
+
+        bool partyWide = mastery != MASTERY_EXPERT;
+        EXPECT_EQ(buffsTape.frontBack(), tape({false, false, false, false}, {true, partyWide, partyWide, partyWide}));
+
+        // Vanilla MM7 lasts an hour plus five minutes per skill point, and fifteen minutes per point at grandmaster.
+        Duration expectedDuration = Duration::fromHours(1) + Duration::fromMinutes((mastery == MASTERY_GRANDMASTER ? 15 : 5) * skillLevel);
+        for (Character &character : pParty->pCharacters) {
+            SpellBuff &buff = character.pCharacterBuffs[CHARACTER_BUFF_PAIN_REFLECTION];
+            if (buff.Active())
+                EXPECT_EQ(buff.GetExpireTime(), castAt + expectedDuration);
+        }
+    }
+}
+
+GAME_TEST(Issues, Issue2815) {
+    // Evt skill checks read grandmaster as master, so the trap in Tidewater Caverns that grandmasters of Perception and
+    // Disarm Trap should disarm went off for them, and masters disarmed it.
+    for (Mastery mastery : {MASTERY_MASTER, MASTERY_GRANDMASTER}) {
+        test.prepareForNextTest();
+        auto spritesTape = tapes.sprites();
+        auto statusTape = tapes.statusBar();
+        engine->config->debug.NoActors.setValue(true);
+        game.startNewGame();
+        for (Skill skill : {SKILL_PERCEPTION, SKILL_TRAP_DISARM})
+            pParty->pCharacters[0].setSkillValue(skill, CombinedSkillValue(40, mastery));
+        game.teleportTo(MAP_TIDEWATER_CAVERNS, Vec3f(200, 3936, 123), 0); // In the corridor that leads to the trapped wall.
+        auto armedTape = tapes.custom([] { return engine->_persistentVariables.mapVars[0] == 0; });
+        test.startTaping();
+        game.pressKey(PlatformKey::KEY_UP);
+        game.tick(2); // The party walks onto the plate in front of the wall, which arms the trap.
+        game.releaseKey(PlatformKey::KEY_UP);
+        game.pointMouseAtFace(1250); // The trapped wall.
+        game.pressAndReleaseButton(BUTTON_LEFT);
+        game.tick();
+
+        EXPECT_EQ(armedTape, tape(false, true));
+        bool disarmed = mastery == MASTERY_GRANDMASTER;
+        EXPECT_EQ(statusTape.contains("You Successfully disarm the trap"), disarmed);
+        EXPECT_EQ(spritesTape.flatten().contains(SPRITE_SPELL_WATER_ICE_BLAST_IMPACT), !disarmed);
+    }
+}
+
+GAME_TEST(Issues, Issue2817) {
+    // Characters smiled at an award added by a script only when they already had it.
+    auto portraitTape = charTapes.portraits();
+    auto awardTape = tapes.custom([] {
+        return std::ranges::count_if(pParty->pCharacters, [](const Character &character) {
+            return character._achievedAwardsBits[AWARD_EMERALD_ISLE_COMPLETED_MAIN_QUEST];
+        });
+    });
+    auto buffAnimTape = tapes.custom([] {
+        AccessibleVector<int> result;
+        for (const PlayerBuffAnim &anim : EngineIocContainer::ResolveSpellFxRenderer()->pCharacterBuffs)
+            result.push_back(anim.uSpellIconID);
+        return result;
+    });
+    engine->config->debug.NoMargaret.setValue(true); // Her tour would stop the party at the door.
+    game.startNewGame();
+    pParty->_questBits.set(QBIT_EMERALD_ISLAND_SCAVENGER_HUNT_WON); // Unlocks Lord Markham's Congratulations topic.
+    pParty->pCharacters[3]._achievedAwardsBits[AWARD_EMERALD_ISLE_COMPLETED_MAIN_QUEST] = true;
+    test.startTaping();
+    game.teleportTo(MAP_EMERALD_ISLAND, Vec3f(16154, 8560, 128), 180); // In front of Markham's Headquarters.
+    game.pressAndReleaseKey(PlatformKey::KEY_SPACE);
+    game.tick();
+    game.pressGuiButton("House_Npc0"); // Lord Markham.
+    game.tick();
+    game.pressGuiButton("HouseNpcDialogue_Option0"); // Congratulations, which gives the award to the whole party.
+    game.tick();
+
+    EXPECT_EQ(awardTape, tape(1, 4));
+    for (int i = 0; i < 3; i++)
+        EXPECT_CONTAINS(portraitTape.slice(i), PORTRAIT_WIDE_SMILE);
+    EXPECT_MISSES(portraitTape.slice(3), PORTRAIT_WIDE_SMILE); // Already had the award.
+    int expAnim = pIconsFrameTable->animationId("spboost2"); // Add Experience runs right before the award, on everyone.
+    EXPECT_EQ(buffAnimTape, tape({0, 0, 0, 0}, {expAnim, expAnim, expAnim, expAnim}));
+}
+
+GAME_TEST(Issues, Issue2834) {
+    // Evt commands after ForPlayer(Active) did nothing while no character was active, so the hired golem took the
+    // abbey normal head and never gave its own head back.
+    auto abbeyHeadTape = tapes.totalItemCount(ITEM_QUEST_ABBEY_NORMAL_GOLEM_HEAD);
+    auto golemHeadTape = tapes.totalItemCount(ITEM_QUEST_GOLEM_HEAD);
+    auto activeCharacterTape = tapes.activeCharacterIndex();
+    auto golemHeadPlacedTape = tapes.questBit(QBIT_GOLEM_HEAD_PLACED);
+    auto abbeyHeadPlacedTape = tapes.questBit(QBIT_ABBEY_NORMAL_GOLEM_HEAD_PLACED);
+    game.startNewGame();
+    pNPCStats->pNPCData[56].flags |= NPC_HIRED; // The golem, as global.evt hires it.
+    pParty->CountHirelings();
+    pParty->_questBits.set(QBIT_GOLEM_HEAD_PLACED);
+    pParty->pCharacters[0].inventory.add(Item(ITEM_QUEST_ABBEY_NORMAL_GOLEM_HEAD));
+    test.startTaping();
+    for (int i = 0; i < 4; i++) {
+        game.pressAndReleaseKey(PlatformKey::KEY_A);
+        game.tick(1);
+    }
+    ASSERT_FALSE(pParty->hasActiveCharacter());
+
+    game.pressGuiButton("Game_Hireling2"); // Lady Margaret is the first hireling.
+    game.tick(2);
+    game.pressGuiButton("NpcDialogue_Option1"); // Swap the heads.
+    game.tick(2);
+    test.stopTaping();
+
+    EXPECT_EQ(activeCharacterTape, tape(1, 2, 3, -1)); // Nobody recovered while the dialogue was open.
+    EXPECT_EQ(abbeyHeadTape, tape(1, 0));
+    EXPECT_EQ(golemHeadTape, tape(0, 1));
+    EXPECT_EQ(golemHeadPlacedTape, tape(true, false));
+    EXPECT_EQ(abbeyHeadPlacedTape, tape(false, true));
+}
+
+GAME_TEST(Issues, Issue2859a) {
+    // A hired Squire didn't raise weapon and armor skills.
+    auto swordTape = charTapes.skillLevels(SKILL_SWORD);
+    auto bowTape = charTapes.skillLevels(SKILL_BOW);
+    auto shieldTape = charTapes.skillLevels(SKILL_SHIELD);
+    auto leatherTape = charTapes.skillLevels(SKILL_LEATHER);
+    auto armsmasterTape = charTapes.skillLevels(SKILL_ARMSMASTER);
+    game.startNewGame();
+    pParty->pCharacters[0].setSkillValue(SKILL_ARMSMASTER, CombinedSkillValue::novice(1));
+    test.startTaping();
+    game.tick();
+    hireGolem(NPC_PROFESSION_SQUIRE);
+    game.tick();
+
+    EXPECT_EQ(swordTape, tape({1, 0, 0, 0}, {3, 2, 2, 2}));
+    EXPECT_EQ(bowTape, tape({1, 0, 0, 0}, {3, 2, 2, 2}));
+    EXPECT_EQ(shieldTape, tape({0, 0, 0, 0}, {2, 2, 2, 2})); // Vanilla raises skills the character doesn't have too.
+    EXPECT_EQ(leatherTape, tape({1, 1, 1, 1}, {3, 3, 3, 3}));
+    EXPECT_EQ(armsmasterTape, tape({1, 0, 0, 0})); // Armsmaster is not affected.
+}
+
+GAME_TEST(Issues, Issue2859b) {
+    // A hired Sage raised Monster ID but not Item ID.
+    auto itemIdTape = charTapes.skillLevels(SKILL_ITEM_ID);
+    auto monsterIdTape = charTapes.skillLevels(SKILL_MONSTER_ID);
+    game.startNewGame();
+    for (Skill skill : {SKILL_ITEM_ID, SKILL_MONSTER_ID})
+        pParty->pCharacters[0].setSkillValue(skill, CombinedSkillValue::novice(1));
+    test.startTaping();
+    game.tick();
+    hireGolem(NPC_PROFESSION_SAGE);
+    game.tick();
+
+    EXPECT_EQ(itemIdTape, tape({1, 0, 0, 0}, {7, 6, 6, 6}));
+    EXPECT_EQ(monsterIdTape, tape({1, 0, 0, 0}, {7, 6, 6, 6}));
+}
+
+GAME_TEST(Issues, Issue2864a) {
+    // A Lloyd's Beacon scroll opened the book with the reader's own slot count, not the five slots of the scroll's
+    // master skill.
+    auto slotCountTape = tapes.custom(&lloydsBookSlotCount);
+    auto lastSlotTape = charTapes.hasBeacon(3, 4);
+    engine->config->debug.NoActors.setValue(true);
+    game.startNewGame();
+    test.startTaping();
+    ASSERT_LT(pParty->pCharacters[3].getActualSkillValue(SKILL_WATER).mastery(), MASTERY_MASTER);
+    pParty->setHoldingItem(Item(ITEM_SCROLL_LLOYDS_BEACON));
+    game.pressGuiButton("Game_Character4", BUTTON_RIGHT); // Read the scroll.
+    game.tick(3);
+    game.pressGuiButton("LloydsBook_Slot4");
+    game.tick();
+
+    EXPECT_EQ(slotCountTape, tape(0, 5));
+    EXPECT_EQ(lastSlotTape, tape(false, true));
+}
+
+GAME_TEST(Issues, Issue2864b) {
+    // Lloyd's Beacon cast from the spellbook should open the book with the caster's own slot count, three at expert
+    // water.
+    auto slotCountTape = tapes.custom(&lloydsBookSlotCount);
+    engine->config->debug.NoActors.setValue(true);
+    game.startNewGame();
+    test.startTaping();
+    pParty->pCharacters[3].setSkillValue(SKILL_WATER, CombinedSkillValue(4, MASTERY_EXPERT));
+    pParty->pCharacters[3].bHaveSpell[SPELL_WATER_LLOYDS_BEACON] = true; // MM6 lets any water mage learn it, MM7 needs grandmaster.
+    game.castSpell(3, SPELL_WATER_LLOYDS_BEACON);
+    game.tick(2);
+
+    EXPECT_EQ(slotCountTape, tape(0, 3));
+}
+
+GAME_TEST(Issues, Issue2867a) {
+    // A Divine Restoration potion cured a zombie but left the zombie face and voice on.
+    game.startNewGame();
+    Character &zombie = pParty->pCharacters[0];
+    int face = zombie.uCurrentFace;
+    int voice = zombie.uVoiceID;
+    zombie.SetCondition(CONDITION_ZOMBIE, 0);
+    zombie.SetCondition(CONDITION_WEAK, 0);
+    int zombieFace = zombie.IsMale() ? 23 : 24;
+    int zombieVoice = zombieFace; // A zombie's voice has the number of its face.
+
+    auto zombieTape = charTapes.hasCondition(0, CONDITION_ZOMBIE);
+    auto weakTape = charTapes.hasCondition(0, CONDITION_WEAK);
+    auto faceTape = charTapes.face(0);
+    auto voiceTape = charTapes.voice(0);
+    test.startTaping();
+    game.tick(); // Tapes the zombie before the potion.
+    pParty->setHoldingItem(Item(ITEM_POTION_DIVINE_RESTORATION));
+    game.pressGuiButton("Game_Character1", BUTTON_RIGHT); // Drink the potion.
+    game.tick();
+
+    EXPECT_EQ(zombieTape, tape(true, false));
+    EXPECT_EQ(weakTape, tape(true, false));
+    EXPECT_EQ(faceTape, tape(zombieFace, face));
+    EXPECT_EQ(voiceTape, tape(zombieVoice, voice));
+
+    // Checks the portrait on screen, a texture loaded separately from uCurrentFace that the face tape doesn't see.
+    EXPECT_EQ(game_ui_player_faces[0][0]->name(), portraitName(face));
+}
+
+GAME_TEST(Issues, Issue2867b) {
+    // A zombie came back from a party death cured, but with the zombie face and voice.
+    game.startNewGame();
+    Character &zombie = pParty->pCharacters[1];
+    int face = zombie.uCurrentFace;
+    int voice = zombie.uVoiceID;
+    zombie.SetCondition(CONDITION_ZOMBIE, 0);
+    int zombieFace = zombie.IsMale() ? 23 : 24;
+    int zombieVoice = zombieFace; // A zombie's voice has the number of its face.
+
+    auto deathsTape = tapes.deaths();
+    auto zombieTape = charTapes.hasCondition(1, CONDITION_ZOMBIE);
+    auto faceTape = charTapes.face(1);
+    auto voiceTape = charTapes.voice(1);
+    test.startTaping();
+    game.tick(); // The frame the party dies in isn't drawn, so the tapes need a frame from before it.
+    for (Character &character : pParty->pCharacters)
+        character.receiveDamage(10000, DAMAGE_PHYSICAL);
+    game.tick();
+
+    EXPECT_EQ(deathsTape.delta(), +1);
+    EXPECT_EQ(zombieTape, tape(true, false));
+    EXPECT_EQ(faceTape, tape(zombieFace, face));
+    EXPECT_EQ(voiceTape, tape(zombieVoice, voice));
+
+    // Checks the portrait on screen, a texture loaded separately from uCurrentFace that the face tape doesn't see.
+    EXPECT_EQ(game_ui_player_faces[1][0]->name(), portraitName(face));
+}
+
+GAME_TEST(Issues, Issue2867c) {
+    // A diseased zombie who drank from the Erathia well that cures every condition stopped being a zombie but kept the
+    // zombie face and voice.
+    engine->config->debug.NoActors.setValue(true);
+    game.startNewGame();
+    game.teleportTo(MAP_ERATHIA, Vec3f(-5872, 5300, 649), 90, -45); // In the well, looking down at the water.
+    Character &zombie = pParty->pCharacters[0];
+    int face = zombie.uCurrentFace;
+    int voice = zombie.uVoiceID;
+    zombie.SetCondition(CONDITION_ZOMBIE, 0);
+    zombie.SetCondition(CONDITION_DISEASE_WEAK, 0);
+    int zombieFace = zombie.IsMale() ? 23 : 24;
+    int zombieVoice = zombieFace; // A zombie's voice has the number of its face.
+    Pid wellFace = Pid::face(pOutdoor->pBModels[21].faces[10]);
+
+    auto zombieTape = charTapes.hasCondition(0, CONDITION_ZOMBIE);
+    auto diseaseTape = charTapes.hasCondition(0, CONDITION_DISEASE_WEAK);
+    auto faceTape = charTapes.face(0);
+    auto voiceTape = charTapes.voice(0);
+    auto statusTape = tapes.statusBar();
+    test.startTaping();
+    game.pointMouseAtFace(wellFace.id());
+    game.pressAndReleaseButton(BUTTON_LEFT);
+    game.tick();
+
+    EXPECT_EQ(zombieTape, tape(true, false));
+    EXPECT_EQ(diseaseTape, tape(true, false));
+    EXPECT_CONTAINS(statusTape, "Disease Cured");
+    EXPECT_EQ(faceTape, tape(zombieFace, face));
+    EXPECT_EQ(voiceTape, tape(zombieVoice, voice));
+
+    // Checks the portrait on screen, a texture loaded separately from uCurrentFace that the face tape doesn't see.
+    EXPECT_EQ(game_ui_player_faces[0][0]->name(), portraitName(face));
+}
+
+GAME_TEST(Issues, Issue2868a) {
+    // "Killed all Erathian Griffins" was set with the Royal Griffins still alive.
+    // "Killed all Bracada Desert Griffins" wasn't set with every griffin dead, because the Gold Golems were alive.
+    for (auto [map, bit, survivor] : {std::tuple(MAP_ERATHIA, QBIT_ERATHIA_GRIFFINS_KILLED, MONSTER_GRIFFIN_C),
+                                      std::tuple(MAP_BRACADA_DESERT, QBIT_BRACADA_DESERT_GRIFFINS_KILLED, MONSTER_INVALID),
+                                      std::tuple(MAP_BRACADA_DESERT, QBIT_BRACADA_DESERT_GRIFFINS_KILLED, MONSTER_GRIFFIN_A)}) {
+        test.prepareForNextTest();
+        auto mapTape = tapes.map();
+        auto questTape = tapes.questBit(bit);
+        game.startNewGame();
+        test.startTaping();
+        game.teleportTo(map, Vec3f(0, 0, 0), 0);
+        for (Actor &actor : pActors)
+            if (monsterTypeForMonsterId(actor.monsterInfo.id) == MONSTER_TYPE_GRIFFIN && actor.monsterInfo.id != survivor)
+                Actor::Die(actor.id);
+        game.teleportTo(MAP_HARMONDALE, Vec3f(0, 0, 0), 0);
+
+        EXPECT_EQ(mapTape, tape(MAP_EMERALD_ISLAND, map, MAP_HARMONDALE));
+        EXPECT_EQ(questTape, survivor == MONSTER_INVALID ? tape(false, true) : tape(false));
+    }
+}
+
+GAME_TEST(Issues, Issue2868b) {
+    // Spark Burnkindle took the troglodytes under Stone City for killed with the Troglodyte Queens still alive.
+    for (bool killQueens : {false, true}) {
+        test.prepareForNextTest();
+        auto questTape = tapes.questBit(QBIT_STONE_CITY_TROGLODYTES_ACTIVE);
+        auto experienceTape = tapes.totalExperience();
+        auto textTape = tapes.allGUIWindowsText();
+        game.startNewGame();
+        game.teleportTo(MAP_STONE_CITY, Vec3f(3904, -3334, -5), 270); // In front of Spark's house.
+        for (Actor &actor : pActors)
+            if (monsterTypeForMonsterId(actor.monsterInfo.id) == MONSTER_TYPE_TROGLODYTE && (killQueens || actor.monsterInfo.id != MONSTER_TROGLODYTE_C))
+                Actor::Die(actor.id);
+        test.startTaping();
+        game.pressAndReleaseKey(PlatformKey::KEY_SPACE);
+        game.tick();
+        game.pressGuiButton("House_Npc0"); // Spark Burnkindle.
+        game.tick();
+        game.pressGuiButton("HouseNpcDialogue_Option0"); // Take the quest.
+        game.tick();
+        game.pressGuiButton("HouseNpcDialogue_Option0"); // Report the troglodytes killed.
+        game.tick();
+
+        EXPECT_EQ(questTape, killQueens ? tape(false, true, false) : tape(false, true));
+        EXPECT_EQ(experienceTape.delta(), killQueens ? 4 * 5000 : 0);
+        if (killQueens) {
+            EXPECT_CONTAINS(textTape.flatten(), "They're gone?  Routed back into the connecting\ntunnels to Nighon!  Excellent!  We can get back to\n"
+                                                "mining immediately!  Thank you so much for your\nhelp; take this as a reward for your services.");
+        } else {
+            EXPECT_CONTAINS(textTape.flatten(), "There are still troglodytes roaming the lower mine\nlevels.  Please remove them!");
+        }
+    }
+}
+
+GAME_TEST(Issues, Issue2869) {
+    // Divine Intervention cured the Zombie condition, which vanilla MM7 doesn't, and left the zombie face on.
+    game.startNewGame();
+    engine->config->debug.AllMagic.setValue(true);
+    Character &zombie = pParty->pCharacters[1];
+    zombie.SetCondition(CONDITION_ZOMBIE, 0);
+    zombie.SetCondition(CONDITION_WEAK, 0);
+    int zombieFace = zombie.IsMale() ? 23 : 24;
+
+    auto zombieTape = charTapes.hasCondition(1, CONDITION_ZOMBIE);
+    auto weakTape = charTapes.hasCondition(1, CONDITION_WEAK);
+    auto faceTape = charTapes.face(1);
+    test.startTaping();
+    game.castQuickSpell(0, SPELL_LIGHT_DIVINE_INTERVENTION);
+
+    EXPECT_EQ(zombieTape, tape(true));
+    EXPECT_EQ(weakTape, tape(true, false));
+    EXPECT_EQ(faceTape, tape(zombieFace));
+    EXPECT_EQ(game_ui_player_faces[1][0]->name(), portraitName(zombieFace));
+}
+
+GAME_TEST(Prs, Pr2876a) {
+    // An event going on from a branchless dialogue into a transition dialogue lost the transition dialogue. MM6's
+    // outd3.evt event 43 does this, so the test gives the Hidden Tomb's exit the same shape.
+    auto screenTape = tapes.screen();
+    auto mapTape = tapes.map();
+    game.startNewGame();
+    game.teleportTo(MAP_HIDDEN_TOMB, Vec3f(-300, 64, 1), 0); // In front of the exit.
+    EvtInstruction moveToMap(EVENT_MoveToMap);
+    moveToMap.data.move_map_descr.exit_pic_id = 1; // Any exit picture makes MoveToMap open the transition dialogue instead of leaving at once.
+    moveToMap.str = pMapTable->pInfos[MAP_ERATHIA].fileName;
+    scriptHiddenTombExit({EvtInstruction(EVENT_PressAnyKey), moveToMap});
+    test.startTaping();
+    game.pressAndReleaseKey(PlatformKey::KEY_SPACE);
+    game.tick();
+    game.pressAndReleaseKey(PlatformKey::KEY_ESCAPE);
+    game.tick();
+    game.pressGuiButton("Transition_Yes");
+    game.skipLoadingScreen();
+    EXPECT_EQ(screenTape, tape(SCREEN_BRANCHLESS_NPC_DIALOG, SCREEN_INPUT_BLV, SCREEN_GAME));
+    EXPECT_EQ(mapTape, tape(MAP_HIDDEN_TOMB, MAP_ERATHIA));
+}
+
+GAME_TEST(Prs, Pr2876b) {
+    // An event with two branchless dialogues in a row left the second one open on the game screen, where nothing could
+    // close it. MM6's outd3.evt event 210 does this, so the test gives the Hidden Tomb's exit the same shape.
+    auto screenTape = tapes.screen();
+    auto goldTape = tapes.gold();
+    auto dialogueTape = tapes.custom([] { return pGUIWindow_BranchlessDialogue != nullptr; });
+    auto pausedTape = tapes.custom([] { return gameTimer->isPaused(); });
+    game.startNewGame();
+    game.teleportTo(MAP_HIDDEN_TOMB, Vec3f(-300, 64, 1), 0); // In front of the exit.
+    EvtInstruction add(EVENT_Add);
+    add.data.variable_descr.type = VAR_FixedGold;
+    add.data.variable_descr.value = 100;
+    scriptHiddenTombExit({EvtInstruction(EVENT_PressAnyKey), add, EvtInstruction(EVENT_PressAnyKey), add});
+    test.startTaping();
+    game.pressAndReleaseKey(PlatformKey::KEY_SPACE);
+    game.tick();
+    game.pressAndReleaseKey(PlatformKey::KEY_ESCAPE);
+    game.tick();
+    game.pressAndReleaseKey(PlatformKey::KEY_ESCAPE);
+    game.tick();
+    EXPECT_EQ(screenTape, tape(SCREEN_BRANCHLESS_NPC_DIALOG, SCREEN_GAME));
+    EXPECT_EQ(goldTape, tape(200, 300, 400));
+    EXPECT_EQ(dialogueTape, tape(true, false));
+    EXPECT_EQ(pausedTape, tape(true, false));
+}
+
+GAME_TEST(Prs, Pr2876c) {
+    // An event going on from a transition dialogue into a house closed the house right away. Six MM6 castle doors do
+    // this, like outd1.evt event 34, so the test gives the Hidden Tomb's exit the same shape.
+    auto screenTape = tapes.screen();
+    auto houseTape = tapes.house();
+    auto mapTape = tapes.map();
+    game.startNewGame();
+    game.teleportTo(MAP_HIDDEN_TOMB, Vec3f(-300, 64, 1), 0); // In front of the exit.
+    EvtInstruction moveToMap(EVENT_MoveToMap);
+    moveToMap.data.move_map_descr.exit_pic_id = 1; // Any exit picture makes MoveToMap open the transition dialogue instead of leaving at once.
+    moveToMap.str = "0"; // Stay on this map.
+    EvtInstruction speak(EVENT_SpeakInHouse);
+    speak.data.house_id = HOUSE_WEAPON_SHOP_EMERALD_ISLAND;
+    scriptHiddenTombExit({moveToMap, speak});
+    test.startTaping();
+    game.pressAndReleaseKey(PlatformKey::KEY_SPACE);
+    game.tick();
+    game.pressGuiButton("Transition_Yes");
+    game.tick();
+    EXPECT_EQ(screenTape, tape(SCREEN_INPUT_BLV, SCREEN_HOUSE));
+    EXPECT_EQ(houseTape, tape(HOUSE_INVALID, HOUSE_WEAPON_SHOP_EMERALD_ISLAND));
+    EXPECT_EQ(mapTape, tape(MAP_HIDDEN_TOMB));
+}
+
+GAME_TEST(Prs, Pr2963) {
+    // A timer that left the map cleared the timer list mid-loop, and the loop went on reading timers that no longer
+    // existed, firing the due ones on the map being left.
+    auto goldTape = tapes.gold();
+    auto mapTape = tapes.map();
+    game.startNewGame();
+    game.teleportTo(MAP_HIDDEN_TOMB, Vec3f(-300, 64, 1), 0);
+    for (int eventId : {9000, 9001}) { // Timers fire in no set order, so each one does both.
+        EvtInstruction timer(EVENT_OnTimer);
+        timer.data.timer_descr.alt_halfmin_interval = 1;
+
+        EvtInstruction add(EVENT_Add);
+        add.data.variable_descr.type = VAR_FixedGold;
+        add.data.variable_descr.value = 100;
+        add.step = 1;
+
+        EvtInstruction moveToMap(EVENT_MoveToMap);
+        moveToMap.str = pMapTable->pInfos[MAP_ERATHIA].fileName;
+        moveToMap.step = 2;
+
+        for (const EvtInstruction &ir : {timer, add, moveToMap})
+            engine->_localEventMap.add(eventId, ir);
+    }
+    onMapLoad(); // Timers are registered on map load.
+    test.startTaping();
+    game.tick(11); // Let the timers run.
+    game.skipLoadingScreen(); // A timer's event sends the party to Erathia.
+    EXPECT_EQ(goldTape, tape(200, 300));
+    EXPECT_EQ(mapTape, tape(MAP_HIDDEN_TOMB, MAP_ERATHIA));
+}
+
+GAME_TEST(Issues, Issue2881a) {
+    // Holding the jump key let the party bounce across water without taking damage.
+    auto hpTape = tapes.totalHp();
+    auto soundsTape = tapes.sounds();
+    game.startNewGame();
+    game.teleportTo(MAP_EMERALD_ISLAND, Vec3f(12600, 20224, 0), 0); // On the shore, facing the sea to the east.
+    test.startTaping();
+    game.pressKey(PlatformKey::KEY_UP);
+    game.pressKey(PlatformKey::KEY_X);
+    game.tick(10); // The party jumps off the shore and lands in the water.
+    auto zTape = tapes.custom([] { return static_cast<int>(pParty->pos.z); });
+    auto airborneTape = tapes.custom([] { return pParty->isAirborne(); });
+    game.tick(30);
+
+    EXPECT_EQ(zTape, tape(1)); // The party stays in the water.
+    EXPECT_EQ(airborneTape, tape(false));
+    EXPECT_EQ(soundNames(soundsTape).count("splash"), 1);
+    EXPECT_LT(hpTape.delta(), 0); // The party is drowning.
+}
+
+GAME_TEST(Issues, Issue2881b) {
+    // A party under Water Walk should keep jumping across water.
+    auto hpTape = tapes.totalHp();
+    auto soundsTape = tapes.sounds();
+    game.startNewGame();
+    engine->config->debug.AllMagic.setValue(true);
+    game.teleportTo(MAP_EMERALD_ISLAND, Vec3f(12600, 20224, 0), 0); // On the shore, facing the sea to the east.
+    game.castSpell(0, SPELL_WATER_WATER_WALK);
+    test.startTaping();
+    game.pressKey(PlatformKey::KEY_UP);
+    game.pressKey(PlatformKey::KEY_X);
+    game.tick(10); // The party jumps off the shore and lands on the water.
+    auto zTape = tapes.custom([] { return static_cast<int>(pParty->pos.z); });
+    auto airborneTape = tapes.custom([] { return pParty->isAirborne(); });
+    game.tick(30);
+
+    EXPECT_GT(zTape.max(), 1); // Still jumping.
+    EXPECT_GE(airborneTape.count(true), 5); // At least 5 jumps.
+    EXPECT_EQ(soundNames(soundsTape).count("splash"), 0);
+    EXPECT_EQ(hpTape.delta(), 0);
+}
+
+GAME_TEST(Issues, Issue2903) {
+    // Castle Harmondale's war banners put an entry that reads "0" into the quest book.
+    auto mapTape = tapes.map();
+    auto bannersTape = tapes.questBit(QBIT_HARMONDALE_FACTION_BANNERS_HUNG);
+    auto flashTape = tapes.custom([] { return bFlashQuestBook; });
+    auto soundsTape = tapes.sounds();
+    auto screenTape = tapes.screen();
+    auto textTape = tapes.allGUIWindowsText();
+    game.startNewGame();
+    pParty->_questBits.reset(); // Without the Emerald Island quests the quest book has a single page.
+    pParty->_questBits.set(QBIT_BUTLER_MET); // The castle door leads inside instead of to the butler.
+    pParty->_questBits.set(QBIT_FALSE_LOREN_GIVEN);
+    game.teleportTo(MAP_HARMONDALE, Vec3f(-18118, 12544, 480), 180); // In front of the castle door.
+    game.pressAndReleaseKey(PlatformKey::KEY_Q); // Opening the quest book stops it flashing.
+    game.tick();
+    game.pressAndReleaseKey(PlatformKey::KEY_ESCAPE);
+    game.tick();
+    test.startTaping();
+    game.pressAndReleaseKey(PlatformKey::KEY_SPACE);
+    game.tick();
+    game.pressGuiButton("Transition_Yes");
+    game.skipLoadingScreen();
+    game.pressAndReleaseKey(PlatformKey::KEY_Q);
+    game.tick();
+
+    EXPECT_EQ(mapTape, tape(MAP_HARMONDALE, MAP_CASTLE_HARMONDALE));
+    EXPECT_EQ(bannersTape, tape(false, true));
+    EXPECT_EQ(flashTape, tape(false));
+    EXPECT_MISSES(soundsTape.flatten(), SOUND_quest);
+    EXPECT_EQ(screenTape.back(), SCREEN_BOOKS);
+    EXPECT_CONTAINS(textTape.flatten(), "Current Quests");
+    EXPECT_MISSES(textTape.flatten(), "0");
+}
+
+GAME_TEST(Issues, Issue2908) {
+    // The autosave taken when sailing from Emerald Island was written after the week at sea, so loading it put the
+    // party back on the island a week later with its buffs gone.
+    auto mapTape = tapes.map();
+    auto daysTape = tapes.custom([] { return pParty->GetPlayingTime().toDays(); });
+    auto eyeTape = tapes.custom([] { return pParty->pPartyBuffs[PARTY_BUFF_WIZARD_EYE].Active(); });
+    engine->config->debug.NoMargaret.setValue(true); // Her tour would stop the party at the door.
+    game.startNewGame();
+    pParty->_questBits.set(QBIT_EMERALD_ISLAND_SCAVENGER_HUNT_WON); // Lord Markham hands the ship to the winners.
+    pParty->pPartyBuffs[PARTY_BUFF_WIZARD_EYE].Apply(pParty->GetPlayingTime() + Duration::fromHours(1), MASTERY_NOVICE, 0, 0, -1);
+    test.startTaping();
+    game.teleportTo(MAP_EMERALD_ISLAND, Vec3f(16154, 8560, 128), 180); // In front of Markham's Headquarters.
+    game.pressAndReleaseKey(PlatformKey::KEY_SPACE);
+    game.tick(2);
+    game.pressGuiButton("House_Npc0"); // Lord Markham.
+    game.tick();
+    game.pressGuiButton("HouseNpcDialogue_Option0"); // Congratulations.
+    game.tick();
+    game.pressGuiButton("HouseNpcDialogue_Option0"); // Your ship.
+    game.tick();
+    game.pressAndReleaseKey(PlatformKey::KEY_ESCAPE);
+    game.tick();
+    game.pressAndReleaseKey(PlatformKey::KEY_ESCAPE);
+    game.tick();
+    game.teleportTo(MAP_EMERALD_ISLAND, Vec3f(11008, 34, 193), 90); // In front of the Lady Margaret.
+    game.pressAndReleaseKey(PlatformKey::KEY_SPACE);
+    game.tick(2);
+    game.pressGuiButton("HouseNpcDialogue_Option0"); // Cast off!
+    game.tick();
+    game.skipLoadingScreen();
+    game.loadGame(ufs->read("saves/autosave.mm7"));
+
+    EXPECT_EQ(mapTape, tape(MAP_EMERALD_ISLAND, MAP_HARMONDALE, MAP_EMERALD_ISLAND));
+    EXPECT_EQ(daysTape, tape(0, 7, 0));
+    EXPECT_EQ(eyeTape, tape(true, false, true));
+    EXPECT_EQ(pParty->pos, Vec3f(11008, 34, 193)); // In front of the Lady Margaret, where the party boarded.
+}
+
+GAME_TEST(Issues, Issue2923) {
+    // The Castle Harmondale throne room drew "0" as its title. Its row in 2dEvents.txt has no name, and the parser
+    // turned every empty cell into "0".
+    auto screenTape = tapes.screen();
+    auto houseTape = tapes.house();
+    auto textTape = tapes.allGUIWindowsText();
+    game.startNewGame();
+    test.startTaping();
+    game.teleportTo(MAP_CASTLE_HARMONDALE, Vec3f(-3770, 1664, 0), 0); // In front of the throne room door, facing it.
+    game.pressAndReleaseKey(PlatformKey::KEY_SPACE);
+    game.tick();
+
+    EXPECT_EQ(screenTape, tape(SCREEN_GAME, SCREEN_HOUSE));
+    EXPECT_EQ(houseTape, tape(HOUSE_INVALID, HOUSE_CASTLE_HARMONDALE_1));
+    EXPECT_CONTAINS(textTape.flatten(), "Exit Building"); // The house menu was drawn.
+    EXPECT_MISSES(textTape.flatten(), "0");
+}
+
+GAME_TEST(Issues, Issue2931) {
+    // In a shop with two NPCs, talking to the shopkeeper, going back, talking to the shopkeeper again and clicking
+    // Buy Standard crashed the game.
+    auto houseTape = tapes.house();
+    auto dialogueTape = tapes.dialogueType();
+    auto texturesTape = tapes.hudTextures();
+    auto npcCountTape = tapes.custom([] { return static_cast<int>(houseNpcs.size()); });
+    engine->config->debug.NoMargaret.setValue(true); // Her tour would stop the party at the door.
+    game.startNewGame();
+    pNPCStats->pNPCData[2].house = HOUSE_WEAPON_SHOP_EMERALD_ISLAND; // Thomas the Judge, a second NPC in the shop.
+    test.startTaping();
+    game.teleportTo(MAP_EMERALD_ISLAND, Vec3f(13510, 4480, 128), 0); // In front of the weapon shop door.
+    game.pressAndReleaseKey(PlatformKey::KEY_SPACE);
+    game.tick();
+    game.pressGuiButton("House_Npc0"); // The shopkeeper.
+    game.tick();
+    game.pressAndReleaseKey(PlatformKey::KEY_ESCAPE); // Back to the NPC list.
+    game.tick();
+    game.pressGuiButton("House_Npc0"); // The shopkeeper again.
+    game.tick();
+    game.pressGuiButton("HouseDialogue_Option0"); // Buy Standard.
+    game.tick();
+
+    EXPECT_EQ(houseTape, tape(HOUSE_INVALID, HOUSE_WEAPON_SHOP_EMERALD_ISLAND));
+    EXPECT_EQ(npcCountTape, tape(0, 2)); // The shopkeeper and Thomas. With one NPC, going back would close the shop.
+    EXPECT_EQ(dialogueTape, tape(DIALOGUE_NULL, DIALOGUE_MAIN, DIALOGUE_NULL, DIALOGUE_MAIN, DIALOGUE_SHOP_BUY_STANDARD));
+    EXPECT_CONTAINS(texturesTape.back(), "wepntabl"); // The weapon shop background is drawn on the Buy Standard screen.
+}
+
+GAME_TEST(Issues, Issue2932) {
+    // The game stopped drawing frames while the stables' travel line played. The stables should stay on screen until it
+    // ends, and then the party should leave. Escape while the line plays should change nothing.
+    for (bool pressEscape : {false, true}) {
+        SCOPED_TRACE(fmt::format("pressEscape={}", pressEscape));
+        test.prepareForNextTest();
+        auto mapTape = tapes.map();
+        auto goldTape = tapes.gold();
+        auto dayTape = tapes.custom([] { return pParty->GetPlayingTime().toDays(); });
+        auto frameTape = tapes.custom([] { // The tick count keeps every frame a separate sample.
+            return std::tuple(current_screen_type, pParty->GetGold(), pParty->GetPlayingTime().toDays(), platform->tickCount());
+        });
+        game.startNewGame();
+        test.startTaping();
+        game.teleportTo(MAP_HARMONDALE, Vec3f(-5858, 10324, 0), 0); // In front of the J.V.C Corral.
+        game.pressAndReleaseKey(PlatformKey::KEY_SPACE);
+        game.tick(2);
+        game.pressGuiButton("HouseDialogue_Option0"); // Two days to Erathia.
+        if (pressEscape) {
+            for (int i = 0; i < 5; i++) {
+                game.tick();
+                game.pressAndReleaseKey(PlatformKey::KEY_ESCAPE);
+            }
+        }
+        game.skipLoadingScreen();
+
+        auto paidInStables = [](const auto &frame) { return std::get<0>(frame) == SCREEN_HOUSE && std::get<1>(frame) == 150; };
+        auto paidFrames = frameTape.filter(paidInStables);
+        EXPECT_EQ(mapTape, tape(MAP_EMERALD_ISLAND, MAP_HARMONDALE, MAP_ERATHIA));
+        EXPECT_EQ(goldTape, tape(200, 150));
+        EXPECT_EQ(dayTape, tape(0, 2));
+        EXPECT_EQ(paidFrames.size(), 15); // The travel line plays for about a second and a half.
+        EXPECT_EQ(paidFrames.count([](const auto &frame) { return std::get<2>(frame) == 0; }), 14); // The last one is the frame the party leaves on, after the trip's rest.
+    }
+}
+
+GAME_TEST(Issues, Issue2934) {
+    // Telekinesis and Space on the same gold pile in one frame paid the gold twice.
+    auto goldTape = tapes.gold();
+    auto pileTape = tapes.custom([] { return pSpriteObjects[83].uObjectDescID != 0; });
+    engine->config->debug.NoActors.setValue(true);
+    engine->config->debug.AllMagic.setValue(true);
+    game.startNewGame();
+    game.teleportTo(MAP_TULAREAN_FOREST, Vec3f(-2854, 13472, 1133), 0, -20); // Looking at a pile of 142 gold.
+    test.startTaping();
+    game.castSpell(0, SPELL_EARTH_TELEKINESIS);
+    game.pointMouseAtSprite(83);
+    game.pressAndReleaseButton(BUTTON_LEFT);
+    game.pressAndReleaseKey(PlatformKey::KEY_SPACE);
+    game.tick();
+    EXPECT_EQ(goldTape, tape(200, 342));
+    EXPECT_EQ(pileTape, tape(true, false));
+}
+
+GAME_TEST(Issues, Issue2939a) {
+    // Space in front of The Knight's Blade on Emerald Island called Margaret the Docent instead of entering the shop,
+    // because her pressure plate lies closer to the party.
+    auto screenTape = tapes.screen();
+    auto houseTape = tapes.house();
+
+    engine->config->debug.NoActors.setValue(true);
+    game.startNewGame();
+    test.startTaping();
+    game.teleportTo(MAP_EMERALD_ISLAND, Vec3f(13360, 4480, 125), 0); // Facing the shop door, with the plate in between.
+    game.pressAndReleaseKey(PlatformKey::KEY_SPACE);
+    game.tick();
+    EXPECT_EQ(screenTape, tape(SCREEN_GAME, SCREEN_HOUSE));
+    EXPECT_EQ(houseTape, tape(HOUSE_INVALID, HOUSE_WEAPON_SHOP_EMERALD_ISLAND));
+}
+
+GAME_TEST(Issues, Issue2939b) {
+    // Space in The Walls of Mist said "Nothing here" instead of working the block ahead that moves the doors, because
+    // the floor in front of it carries an event that only runs on map load.
+    auto statusTape = tapes.statusBar();
+
+    engine->config->debug.NoActors.setValue(true);
+    game.startNewGame();
+    game.teleportTo(MAP_WALLS_OF_MIST, Vec3f(20992, 9152, -672), 90);
+    auto doorTape = tapes.doorStates({18, 19, 24});
+    test.startTaping();
+    game.tick();
+    game.pressAndReleaseKey(PlatformKey::KEY_SPACE);
+    game.tick(13); // The doors move.
+    EXPECT_EQ(doorTape, tape({DOOR_OPEN, DOOR_CLOSED, DOOR_OPEN}, {DOOR_CLOSING, DOOR_OPENING, DOOR_CLOSING}, {DOOR_CLOSED, DOOR_OPENING, DOOR_CLOSING}, {DOOR_CLOSED, DOOR_OPEN, DOOR_CLOSED}));
+    EXPECT_MISSES(statusTape, "Nothing here");
+}
+
+GAME_TEST(Issues, Issue2941) {
+    // Pressing the Quest Book key right after reading a Lloyd's Beacon scroll crashed the game. Opening the Lloyd's
+    // Beacon book closed the Quest Book, and that freed the tab images both books use.
+    auto windowTape = tapes.custom([] { return pGUIWindow_CurrentMenu ? pGUIWindow_CurrentMenu->eWindowType : WINDOW_NULL; });
+    auto texturesTape = tapes.hudTextures();
+    game.startNewGame();
+    test.startTaping();
+    pParty->setHoldingItem(Item(ITEM_SCROLL_LLOYDS_BEACON));
+    game.pressGuiButton("Game_Character4", BUTTON_RIGHT); // Read the scroll. The cast starts on the next frame.
+    game.tick();
+    game.pressAndReleaseKey(PlatformKey::KEY_Q);
+    game.tick(2);
+    game.pressAndReleaseKey(PlatformKey::KEY_ESCAPE);
+    game.tick();
+
+    EXPECT_EQ(windowTape, tape(WINDOW_NULL, WINDOW_QUEST_BOOK, WINDOW_LLOYDS_BEACON, WINDOW_NULL));
+    EXPECT_CONTAINS(texturesTape.flatten(), "tab-an-6a"); // The Lloyd's Beacon book draws its tabs.
+}
+
+GAME_TEST(Issues, Issue2945) {
+    // The loading bar stopped at 25-30% when the map finished loading.
+    for (auto [map, pos] : {std::pair(MAP_HARMONDALE, Vec3f(-5692, 11137, 1)), std::pair(MAP_ARENA, Vec3f(3844, 2906, 193))}) {
+        SCOPED_TRACE(fmt::format("map={}", std::to_underlying(map)));
+        test.prepareForNextTest();
+        auto barTape = tapes.custom([] { return pGameLoadingUI_ProgressBar->percent(); });
+        game.startNewGame();
+        test.startTaping();
+        game.teleportTo(map, pos, 0);
+
+        EXPECT_EQ(barTape, tape(0, 12, 25, 37, 50, 62, 75, 87, 100));
+    }
+}
+
+GAME_TEST(Issues, Issue2950) {
+    // Pressing the spellbook key right after reading a Lloyd's Beacon scroll opened the Lloyd's Beacon book with no
+    // buttons, so the scroll was wasted.
+    auto windowTape = tapes.custom([] { return pGUIWindow_CurrentMenu ? pGUIWindow_CurrentMenu->eWindowType : WINDOW_NULL; });
+    auto beaconTape = charTapes.hasBeacon(3, 0);
+    game.startNewGame();
+    test.startTaping();
+    pParty->setHoldingItem(Item(ITEM_SCROLL_LLOYDS_BEACON));
+    game.pressGuiButton("Game_Character4", BUTTON_RIGHT); // Read the scroll. The cast starts on the next frame.
+    game.tick();
+    game.pressAndReleaseKey(PlatformKey::KEY_C);
+    game.tick(2);
+    game.pressGuiButton("LloydsBook_Slot0"); // Throws if the book came up with no buttons.
+    game.tick();
+
+    EXPECT_EQ(windowTape, tape(WINDOW_NULL, WINDOW_SPELL_BOOK, WINDOW_LLOYDS_BEACON));
+    EXPECT_EQ(beaconTape, tape(false, true));
+}
+
+GAME_TEST(Issues, Issue2991) {
+    // Renting a tavern room used the house window after it was deleted.
+    auto screenTape = tapes.screen();
+    auto dayTape = tapes.custom([] { return pParty->GetPlayingTime().toDays(); });
+    auto goldTape = tapes.gold();
+    game.startNewGame();
+    test.startTaping();
+    game.teleportTo(MAP_HARMONDALE, Vec3f(-5184, 13370, 0), 270); // In front of On the House, Harmondale's tavern.
+    game.pressAndReleaseKey(PlatformKey::KEY_SPACE);
+    game.tick();
+    game.pressGuiButton("House_Npc0"); // Corbie, the innkeeper.
+    game.tick();
+    game.pressGuiButton("HouseDialogue_Option0"); // Rent Room.
+    game.tick();
+    while (current_screen_type != SCREEN_GAME)
+        game.tick(); // The party sleeps until dawn and wakes up outside.
+
+    EXPECT_EQ(screenTape, tape(SCREEN_GAME, SCREEN_HOUSE, SCREEN_REST, SCREEN_GAME));
+    EXPECT_EQ(dayTape, tape(0, 1));
+    EXPECT_EQ(goldTape.delta(), -3);
+}
+
+GAME_TEST(Issues, Issue2998) {
+    // A wall beside a doorway in the Temple of Baa was brown blocks in a grey brick room.
+    game.startNewGame();
+    game.teleportTo(MAP_TEMPLE_OF_BAA, Vec3f(200, -600, -3072), 256); // Facing that wall from inside its room.
+    EXPECT_EQ(pIndoor->faces[406].texture->name(), pIndoor->faces[408].texture->name()); // The walls on both sides of the doorway.
+}

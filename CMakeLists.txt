@@ -1,121 +1,220 @@
-cmake_minimum_required(VERSION 3.13 FATAL_ERROR)
-project("World of Might and Magic")
-set(PROJECT_VERSION "0.2.0")
+cmake_minimum_required(VERSION 3.27 FATAL_ERROR)
 
-include(${CMAKE_CURRENT_SOURCE_DIR}/CMakeModules/Bootstrapper.cmake)
+# Use upper-case <PACKAGENAME>_ROOT variables in find_package().
+cmake_policy(SET CMP0144 NEW)
+
+project("OpenEnroth")
+
+set(CMAKE_CXX_STANDARD 23)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON) # For clang-tidy and IDEs.
 
 list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/CMakeModules)
-
-find_package(Git)
-if(GIT_FOUND)
-  execute_process(COMMAND ${GIT_EXECUTABLE} describe --always --tags --dirty
-                  WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
-                  OUTPUT_VARIABLE WMM_VERSION
-                  OUTPUT_STRIP_TRAILING_WHITESPACE)
-  if(WMM_VERSION)
-    string(FIND ${WMM_VERSION} "." VERSION_FULL)
-    if(VERSION_FULL STREQUAL "-1")
-      string(REGEX REPLACE "^([0-9]+)\\..*" "\\1" PROJECT_VERSION_MAJOR "${PROJECT_VERSION}")
-      string(REGEX REPLACE "^[0-9]+\\.([0-9]+).*" "\\1" PROJECT_VERSION_MINOR "${PROJECT_VERSION}")
-      execute_process(COMMAND ${GIT_EXECUTABLE} rev-parse --short=7 HEAD
-                    WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
-                    OUTPUT_VARIABLE PROJECT_VERSION_PATCH
-                    OUTPUT_STRIP_TRAILING_WHITESPACE)
-      set(WMM_VERSION "${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}.${PROJECT_VERSION_PATCH}")
-      set(PROJECT_VERSION "${WMM_VERSION}")
-    else()
-      string(REGEX REPLACE "^v([0-9]+)\\..*" "\\1" PROJECT_VERSION_MAJOR "${WMM_VERSION}")
-      string(REGEX REPLACE "^v[0-9]+\\.([0-9]+).*" "\\1" PROJECT_VERSION_MINOR "${WMM_VERSION}")
-      string(REGEX REPLACE "^v[0-9]+\\.[0-9]+.*-g([0-9a-f]+).*" "\\1" PROJECT_VERSION_PATCH "${WMM_VERSION}")
-      set(PROJECT_VERSION "${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}.${PROJECT_VERSION_PATCH}")
-    endif()
-  else()
-    set(WMM_VERSION "${PROJECT_VERSION}")
-    string(REGEX REPLACE "^([0-9]+)\\..*" "\\1" PROJECT_VERSION_MAJOR "${PROJECT_VERSION}")
-    string(REGEX REPLACE "^[0-9]+\\.([0-9]+).*" "\\1" PROJECT_VERSION_MINOR "${PROJECT_VERSION}")
-    string(REGEX REPLACE "^[0-9]+\\.[0-9]+\\.([0-9]+).*" "\\1" PROJECT_VERSION_PATCH "${PROJECT_VERSION}")
-  endif()
-else()
-  set(WMM_VERSION "${PROJECT_VERSION}")
-  string(REGEX REPLACE "^([0-9]+)\\..*" "\\1" PROJECT_VERSION_MAJOR "${PROJECT_VERSION}")
-  string(REGEX REPLACE "^[0-9]+\\.([0-9]+).*" "\\1" PROJECT_VERSION_MINOR "${PROJECT_VERSION}")
-  string(REGEX REPLACE "^[0-9]+\\.[0-9]+\\.([0-9]+).*" "\\1" PROJECT_VERSION_PATCH "${PROJECT_VERSION}")
-endif()
-
-message(STATUS "WMM_VERSION = ${WMM_VERSION}")
-message(STATUS "PROJECT_VERSION = ${PROJECT_VERSION}")
-message(STATUS "PROJECT_VERSION_MAJOR = ${PROJECT_VERSION_MAJOR}")
-message(STATUS "PROJECT_VERSION_MINOR = ${PROJECT_VERSION_MINOR}")
-message(STATUS "PROJECT_VERSION_PATCH = ${PROJECT_VERSION_PATCH}")
-
-if(CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
-  set(CMAKE_CXX_FLAGS "-std=c++2a ${CMAKE_CXX_FLAGS}")
-  set(CMAKE_EXE_LINKER_FLAGS "-fuse-ld=gold -pthread -lavutil -lswresample")
-elseif(CMAKE_CXX_COMPILER_ID STREQUAL "Clang" OR CMAKE_CXX_COMPILER_ID STREQUAL "AppleClang")
-  set(CMAKE_CXX_FLAGS "-std=c++17 -stdlib=libc++ ${CMAKE_CXX_FLAGS}")
-else()
-  add_definitions(-DWINDOWS_IGNORE_PACKING_MISMATCH="") # vs2019 complains about using #pragma pack()
-  set(CMAKE_CXX_FLAGS "/MP ${CMAKE_CXX_FLAGS}")
-  set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} /SAFESEH:NO")
-  set(CMAKE_CXX_STANDARD 17)
-  set(CXX_STANDARD_REQUIRED ON)
-endif()
-
-include_directories(${INCLUDE_DIRECTORIES} ${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_BINARY_DIR})
-
-add_definitions(-DPACKAGE_BUGREPORT="https://github.com/gp-alex/world-of-might-and-magic/issues")
-
+include(Git)
+include(Detection)
+include(ExternalProject)
 include(CppLint)
-enable_check_style()
+include(ClangTidy)
+include(LlsLint)
+include(Dependencies)
+include(CheckLinkerFlag)
+include(Assertions)
 
-add_subdirectory(Arcomage)
-add_subdirectory(Engine)
-add_subdirectory(src)
-add_subdirectory(GUI)
-add_subdirectory(Io)
-add_subdirectory(Launcher)
-add_subdirectory(Media)
-add_subdirectory(Platform)
-
-add_executable(World_of_Might_and_Magic MACOSX_BUNDLE WIN32 ./Engine/Engine.cpp)
-target_compile_features (World_of_Might_and_Magic
-  INTERFACE
-    # Enable C++17 standard compliance
-    cxx_std_17
-)
-target_check_style(World_of_Might_and_Magic)
-
-target_link_libraries(World_of_Might_and_Magic zlib sdl2 ffmpeg)
-if(WIN32)
-target_link_libraries(World_of_Might_and_Magic ddraw.lib dxguid.lib)
+# Defaults.
+if (CMAKE_BUILD_TYPE)
+    set(OE_USE_PREBUILT_DEPENDENCIES_DEFAULT ON)
 else()
-message(STATUS "ZLIB_LIBRARIES = ${ZLIB_LIBRARIES}")
-message(STATUS "SDL_LIBRARIES = ${SDL_LIBRARIES}")
-message(STATUS "FFMPEG_LIBRARIES = ${FFMPEG_LIBRARIES}")
-message(STATUS "OPENGL_opengl_LIBRARY = ${OPENGL_opengl_LIBRARY}")
-message(STATUS "OPENGL_glu_LIBRARY = ${OPENGL_glu_LIBRARY}")
-
-target_link_libraries(World_of_Might_and_Magic ${OPENGL_opengl_LIBRARY} ${OPENGL_glu_LIBRARY})
-
-# For OSX 10.14 and below
-if (APPLE)
-  find_library(COCOA_LIBRARY Cocoa)
-  find_library(CARBON_LIBRARY Carbon)
-  find_library(COREAUDIO_LIBRARY CoreAudio)
-  find_library(COREVIDEO_LIBRARY CoreVideo)
-  find_library(IOKIT_LIBRARY IOKit)
-  find_library(FORCEFEEDBACK_LIBRARY ForceFeedback)
-  find_library(ICONV_LIBRARY iconv)
-  find_library(AUDIOTOOLBOX_LIBRARY AudioToolbox)
-  target_link_libraries(World_of_Might_and_Magic ${COCOA_LIBRARY} ${CARBON_LIBRARY} ${COREAUDIO_LIBRARY} ${COREVIDEO_LIBRARY} ${IOKIT_LIBRARY} ${FORCEFEEDBACK_LIBRARY} ${ICONV_LIBRARY} ${AUDIOTOOLBOX_LIBRARY})
-  target_link_libraries(World_of_Might_and_Magic ${AVUTIL_LIBRARY} ${SWRESAMPLE_LIBRARY})
+    set(OE_USE_PREBUILT_DEPENDENCIES_DEFAULT OFF)
 endif()
 
+# User-settable options.
+set(OE_BUILD_TESTS ON CACHE BOOL "Build OpenEnroth tests.")
+set(OE_BUILD_TOOLS ON CACHE BOOL "Build OpenEnroth tools - LodTool and CodeGen.")
+set(OE_CHECK_STYLE ON CACHE BOOL "Enable style checks.")
+set(OE_CHECK_LUA_STYLE ON CACHE BOOL "Enable lua style checks.")
+set(OE_CHECK_TIDY ON CACHE BOOL "Enable clang-tidy checks.")
+set(OE_USE_PREBUILT_DEPENDENCIES ${OE_USE_PREBUILT_DEPENDENCIES_DEFAULT} CACHE BOOL "Use prebuilt dependencies.")
+set(OE_USE_CCACHE ON CACHE BOOL "Use ccache if available.")
+set(OE_USE_SCCACHE ON CACHE BOOL "Use sccache if available, note that ccache takes precedence.")
+set(OE_USE_LD_MOLD ON CACHE BOOL "Use mold linker if available.")
+set(OE_USE_LD_LLD ON CACHE BOOL "Use lld linker if available, note that mold takes precedence.")
+set(OE_DISTRIBUTION_BUILD OFF CACHE BOOL "Specify that this is a build for distribution, not a dev build.")
+set(OE_USE_SANITIZERS "" CACHE STRING "Sanitizers to build with, passed on to -fsanitize=. Empty string disables sanitizers.")
+
+if(OE_DISTRIBUTION_BUILD)
+    add_compile_definitions(OE_DISTRIBUTION_BUILD)
 endif()
-target_link_libraries(World_of_Might_and_Magic game arcomage engine gui io media platform objects spells tables graphics turnengine serialization)
 
-set_property(
-    DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT World_of_Might_and_Magic
-)
+# Find ccache / sccache.
+if(OE_USE_CCACHE)
+    find_program(CCACHE_FOUND ccache)
+    if(CCACHE_FOUND)
+        message(STATUS "Using ccache at ${CCACHE_FOUND}.")
+        set(CMAKE_C_COMPILER_LAUNCHER ${CCACHE_FOUND})
+        set(CMAKE_CXX_COMPILER_LAUNCHER ${CCACHE_FOUND})
+    else()
+        message(STATUS "ccache is not found.")
+    endif()
+else()
+    message(STATUS "Not configured to use ccache.")
+endif()
 
-RESOLVE_DEPENDENCIES(World_of_Might_and_Magic)
+if(OE_USE_SCCACHE AND NOT CCACHE_FOUND)
+    find_program(SCCACHE_FOUND sccache)
+    if(SCCACHE_FOUND)
+        message(STATUS "Using sccache at ${SCCACHE_FOUND}.")
+        set(CMAKE_C_COMPILER_LAUNCHER ${SCCACHE_FOUND})
+        set(CMAKE_CXX_COMPILER_LAUNCHER ${SCCACHE_FOUND})
+    else()
+        message(STATUS "Neither sccache or ccache is found.")
+    endif()
+endif()
+
+# Set up warnings-as-errors for all compilers.
+if (CMAKE_CXX_COMPILER_ID STREQUAL "GNU" OR CMAKE_CXX_COMPILER_ID STREQUAL "Clang" OR CMAKE_CXX_COMPILER_ID STREQUAL "AppleClang")
+    add_compile_options(-Werror=return-type) # Control reaches the end of non-void function. This is an error on MSVC.
+    add_compile_options(-Werror=unused-result) # Ignoring return value of function declared with 'nodiscard' attribute.
+    add_compile_options(-Werror=unused-value) # Expression result unused.
+    add_compile_options(-Werror=shift-count-overflow) # shift count >= width of type.
+    add_compile_options($<$<COMPILE_LANGUAGE:CXX>:-Werror=mismatched-tags>) # Class 'X' was previously declared as a struct.
+    add_compile_options($<$<COMPILE_LANGUAGE:CXX>:-Werror=suggest-override>) # 'func' overrides a member function but is not marked 'override'.
+endif ()
+if(CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
+    add_compile_options(-Werror=return-local-addr) # Returning reference to temporary.
+    add_compile_options(-Werror=overflow) # conversion from ‘X’ to ‘Y’ changes value.
+elseif(CMAKE_CXX_COMPILER_ID STREQUAL "Clang" OR CMAKE_CXX_COMPILER_ID STREQUAL "AppleClang")
+    add_compile_options(-Werror=return-stack-address) # Returning reference to temporary.
+    add_compile_options(-Werror=unused-comparison) # Comparison result unused.
+    add_compile_options(-Werror=inconsistent-missing-override) # 'override' only used on some of the overridden functions.
+    add_compile_options(-Werror=invalid-noreturn) # function declared 'noreturn' should not return.
+    add_compile_options(-Werror=uninitialized) # variable 'x' is used uninitialized.
+    add_compile_options(-Werror=delete-abstract-non-virtual-dtor) # delete called on 'x' that is abstract but has non-virtual destructor.
+    add_compile_options(-Werror=switch) # enumeration value not handled in switch.
+elseif(CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
+    add_compile_options(/we4834) # Discarding return value of function with 'nodiscard' attribute.
+    add_compile_options(/we4172) # Returning address of local variable or temporary.
+    add_compile_options(/we26433) # Function should be marked with 'override'.
+endif()
+
+# Set up sanitizers.
+if(OE_USE_SANITIZERS)
+    if(NOT CMAKE_CXX_COMPILER_ID STREQUAL "GNU" AND NOT CMAKE_CXX_COMPILER_ID STREQUAL "Clang" AND NOT CMAKE_CXX_COMPILER_ID STREQUAL "AppleClang")
+        message(FATAL_ERROR "OE_USE_SANITIZERS is not supported for ${CMAKE_CXX_COMPILER_ID}.")
+    endif()
+    message(STATUS "Using sanitizers: ${OE_USE_SANITIZERS}.")
+    add_compile_options(-fsanitize=${OE_USE_SANITIZERS} -fno-sanitize-recover=all) # UBSan only warns by default, and gtest-parallel drops the output of passing tests.
+    add_link_options(-fsanitize=${OE_USE_SANITIZERS})
+    if(OE_USE_SANITIZERS MATCHES "address")
+        add_compile_definitions(_GLIBCXX_SANITIZE_VECTOR) # ASan then reports access past a vector's size, into its spare capacity.
+    endif()
+endif()
+
+# Set compiler options. We do a lot of tweaks here.
+if (CMAKE_CXX_COMPILER_ID STREQUAL "GNU" OR (CMAKE_CXX_COMPILER_ID STREQUAL "Clang" AND NOT CMAKE_CXX_COMPILER_FRONTEND_VARIANT STREQUAL "MSVC") OR CMAKE_CXX_COMPILER_ID STREQUAL "AppleClang")
+    # -Og is a better choice than -O0 for producing debuggable code because some compiler passes that collect debug information are disabled at -O0.
+    string(REPLACE " -O0 " "" CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG}")
+    string(REPLACE " -O0 " "" CMAKE_C_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG}")
+    string(REPLACE " -g " " -g -Og " CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG}")
+    string(REPLACE " -g " " -g -Og " CMAKE_C_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG}")
+
+    # Keep frame pointers. Clang drops them at -O2 on x86, and then nothing can walk a stack through code that
+    # has no unwind info - jit traces, the luajit interpreter, a call through a bad pointer.
+    add_compile_options(-fno-omit-frame-pointer)
+
+    # Detect available linkers.
+    check_linker_flag(CXX "-fuse-ld=mold" COMPILER_RT_HAS_FUSE_LD_MOLD_FLAG)
+    check_linker_flag(CXX "-fuse-ld=lld" COMPILER_RT_HAS_FUSE_LD_LLD_FLAG)
+
+    if(OE_USE_LD_MOLD AND COMPILER_RT_HAS_FUSE_LD_MOLD_FLAG)
+        message(STATUS "Using mold linker.")
+        set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -fuse-ld=mold")
+    elseif(OE_USE_LD_LLD AND COMPILER_RT_HAS_FUSE_LD_LLD_FLAG)
+        message(STATUS "Using lld linker.")
+        # "-Wl,-z,notext" is needed because on x86 linux prebuilt ffmpeg is built with --enable-asm, and asm code there
+        # isn't position-independent. Thus, when linking a position-independent binary, LLD has two options:
+        # 1. Choke.
+        # 2. Generate a bunch of relocations in the .text segment.
+        # Default is #1, so we need to instruct it not to choke. Note that LLD behaves differently from GNU LD here,
+        # which picks #2 by default.
+        if (OE_BUILD_PLATFORM STREQUAL "linux")
+            set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -fuse-ld=lld -Wl,-z,notext")
+        endif ()
+    elseif(OE_BUILD_PLATFORM STREQUAL "linux")
+        message(FATAL_ERROR "Supported linkers are lld and mold, other linkers won't work so we won't even try.")
+    else()
+        message(STATUS "Using default linker.")
+    endif()
+
+    if(OE_BUILD_ARCHITECTURE STREQUAL "x86")
+        add_compile_options(-msse2 -mfpmath=sse -march=pentium4) # Don't use x87 fpu in 32-bit builds.
+    endif()
+
+    # Don't set errno for math functions. This is the default on Darwin, so makes sense to pass this flag everywhere.
+    add_compile_options(-fno-math-errno)
+
+    # We don't use fp traps, so compiler can assume that they are disabled.
+    add_compile_options(-fno-trapping-math)
+
+    # Clang & gcc implementations of fp-contract differ, and we are getting diffs in tests. Better to disable it.
+    add_compile_options(-ffp-contract=off)
+endif()
+if(CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
+    add_compile_definitions($<$<CONFIG:Debug>:_GLIBCXX_ASSERTIONS>) # Enable assertions in libstdc++.
+    add_link_options(-static-libstdc++ -static-libgcc) # We build with a newer gcc than our target distros ship.
+elseif((CMAKE_CXX_COMPILER_ID STREQUAL "Clang" AND NOT CMAKE_CXX_COMPILER_FRONTEND_VARIANT STREQUAL "MSVC") OR CMAKE_CXX_COMPILER_ID STREQUAL "AppleClang")
+    add_compile_definitions($<$<CONFIG:Debug>:_LIBCPP_HARDENING_MODE=_LIBCPP_HARDENING_MODE_DEBUG>) # Enable assertions in libcxx.
+elseif(CMAKE_CXX_COMPILER_ID STREQUAL "MSVC" OR (CMAKE_CXX_COMPILER_ID STREQUAL "Clang" AND CMAKE_CXX_COMPILER_FRONTEND_VARIANT STREQUAL "MSVC"))
+    add_compile_definitions(NOMINMAX) # Please don't pull in these macros from <Windows.h>.
+    add_compile_definitions(_CRT_SECURE_NO_WARNINGS) # STL security warnings are just noise.
+    add_compile_definitions(_CRT_NONSTDC_NO_DEPRECATE) # POSIX deprecation warnings are also just noise.
+    add_compile_definitions(_SILENCE_ALL_MS_EXT_DEPRECATION_WARNINGS) # These are also useless.
+    add_compile_definitions(_USE_MATH_DEFINES) # Pull in M_PI and other <cmath> defines.
+    add_compile_options(/MP) # Multi-threaded build.
+    add_compile_options(/Zc:preprocessor) # Use standard compliant preprocessor.
+    add_compile_options(/utf-8) # Source and execution charset are UTF-8, so non-ASCII literals mean the same bytes
+                                # as on GCC and Clang. fmt sets it too, but only on the targets that link fmt.
+    add_link_options(/OPT:REF) # Eliminate unreferenced data & functions.
+    add_link_options(/OPT:ICF) # Enable COMDAT folding, should decrease binary sizes?
+    if (OE_BUILD_ARCHITECTURE STREQUAL "x86")
+        add_link_options(/LARGEADDRESSAWARE) # Enable heap size over 2gb for x86 builds.
+        add_link_options(/SAFESEH:NO) # /SAFESEH is x86-only, don't produce safe exception handler tables.
+    endif()
+
+    # Use /Z7 instead of /Zi for debug information. This puts debug info into .obj files, which is needed for ccache
+    # to work. Note that we're still getting debug info in .pdb files for the final binaries.
+    set(CMAKE_MSVC_DEBUG_INFORMATION_FORMAT "$<$<CONFIG:Debug,RelWithDebInfo>:Embedded>")
+
+    # Allow the compiler to package individual functions in the form of packaged functions (COMDATs).
+    add_compile_options("$<$<CONFIG:RELEASE>:/Gy>")
+
+    # Retains almost all relevant debug information for debugging, but makes a very big difference in performance and is debug safe.
+    # /Ob controls inline expansions and /Ob2 expands any function not explicitly marked for no inlining.
+    string(REPLACE "/Ob0" "/Ob2" CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG}")
+    string(REPLACE "/Ob0" "/Ob2" CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG}")
+
+    # Prebuilt deps are built with MT/MTd.
+    if (OE_USE_PREBUILT_DEPENDENCIES)
+        set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
+    endif()
+endif()
+
+# We're getting linker errors on Android if we don't pass -Bsymbolic.
+# See https://github.com/google/ExoPlayer/issues/9933#issuecomment-1029775358.
+if(OE_BUILD_PLATFORM STREQUAL "android")
+    add_link_options("-Wl,-Bsymbolic")
+endif()
+
+init_check_style()
+init_check_tidy()
+init_check_lua_style()
+resolve_dependencies()
+
+add_subdirectory(thirdparty)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/src)
+if(OE_BUILD_TESTS)
+    include_directories(${CMAKE_CURRENT_SOURCE_DIR}/test)
+    add_subdirectory(test)
+endif()
+add_subdirectory(src)
+add_subdirectory(resources)
+add_subdirectory(distribution)

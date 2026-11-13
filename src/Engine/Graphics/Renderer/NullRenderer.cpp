@@ -1,0 +1,111 @@
+#include "NullRenderer.h"
+
+#include <cassert>
+
+#include "Engine/EngineGlobals.h"
+#include "Engine/Engine.h"
+#include "Engine/EngineCallObserver.h"
+#include "Engine/Graphics/Image.h"
+
+#include "Library/Platform/Application/PlatformApplication.h"
+
+NullRenderer::~NullRenderer() {
+    releaseSolidFillTexture();
+}
+
+void NullRenderer::Initialize() {
+    application->initializeOpenGLContext(PlatformOpenGLOptions());
+    BaseRenderer::Initialize();
+}
+
+bool NullRenderer::Reinitialize(bool firstInit) {
+    return BaseRenderer::Reinitialize(firstInit);
+}
+
+RgbaImage NullRenderer::ReadScreenPixels() {
+    return RgbaImage::solid(Color(), 640, 480);
+}
+
+void NullRenderer::ClearTarget(Color uColor) {}
+
+void NullRenderer::Present() {
+    swapBuffers();
+}
+
+void NullRenderer::BeginLines2D() {}
+void NullRenderer::EndLines2D() {}
+void NullRenderer::RasterLine2D(Pointi a, Pointi b, Color acolor, Color bcolor) {}
+
+void NullRenderer::BeginScene3D() {
+    // TODO(captainurist): doesn't belong here.
+    uNumBillboardsToDraw = 0;
+}
+
+void NullRenderer::DrawProjectile(float srcX, float srcY, float a3, float a4,
+                                  float dstX, float dstY, float a7, float a8,
+                                  Ptr<GraphicsImage> texture) {}
+
+TextureRenderId NullRenderer::CreateTexture(RgbaImageView image) {
+    return TextureRenderId(1);
+}
+
+void NullRenderer::DeleteTexture(TextureRenderId id) {}
+
+void NullRenderer::BeginScene2D() {}
+void NullRenderer::ScreenFade(Color color, float t) {}
+
+void NullRenderer::SetUIClipRect(const Recti &rect) {}
+void NullRenderer::ResetUIClipRect() {}
+
+void NullRenderer::DrawQuad2D(Ptr<GraphicsImage> texture, const Recti &srcRect, const Recti &dstRect, Color color) {
+    assert(texture);
+    if (engine->callObserver)
+        engine->callObserver->notify(CALL_DRAW_2D_TEXTURE, texture->name());
+}
+
+void NullRenderer::DrawImage(Ptr<GraphicsImage>, const Recti &rect, int paletteid, Color colourmask) {}
+
+void NullRenderer::BlendTextures(int a2, int a3, Ptr<GraphicsImage> a4, Ptr<GraphicsImage> a5, int t,
+                                 int start_opacity, int end_opacity) {}
+
+void NullRenderer::BeginTextNew(Ptr<GraphicsImage> texture) {}
+void NullRenderer::EndTextNew() {}
+void NullRenderer::DrawTextNew(const Recti &srcRect, const Recti &dstRect, const TextColors &colors) {}
+
+void NullRenderer::DrawOutdoorBuildings() {}
+
+void NullRenderer::DrawIndoorSky(int uNumVertices, int uFaceID) {}
+void NullRenderer::DrawOutdoorSky() {}
+void NullRenderer::DrawOutdoorTerrain() {}
+
+RgbaImage NullRenderer::MakeViewportScreenshot(const int width, const int height) {
+    return RgbaImage::solid(Color(), width, height);
+}
+
+RgbaImage NullRenderer::MakeFullScreenshot() {
+    return RgbaImage::solid(Color(), 640, 480);
+}
+
+void NullRenderer::BeginDecals() {}
+void NullRenderer::EndDecals() {}
+void NullRenderer::DrawDecal(Decal *pDecal, float z_bias) {}
+
+void NullRenderer::DrawIndoorFaces() {}
+
+void NullRenderer::ReleaseTerrain() {}
+void NullRenderer::ReleaseBSP() {}
+
+void NullRenderer::DrawTwodVerts() {}
+
+bool NullRenderer::ReloadShaders() { return true; }
+
+void NullRenderer::DoRenderBillboards_D3D() {
+    SortBillboards();
+}
+
+void NullRenderer::beginOverlays() {}
+void NullRenderer::endOverlays() {}
+void NullRenderer::flushAndScale() {}
+void NullRenderer::swapBuffers() {
+    openGLContext->swapBuffers();
+}

@@ -1,7 +1,8 @@
 #pragma once
 
-namespace Application {
+#include <memory>
 
-void GameOver_Loop(int);
+class GraphicsImage;
 
-}  // namespace Application
+void GameOver_Setup();
+std::unique_ptr<GraphicsImage> CreateWinnerCertificate();

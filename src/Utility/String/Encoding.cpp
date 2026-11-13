@@ -1,0 +1,150 @@
+#include "Encoding.h"
+
+#include <array>
+#include <cassert>
+#include <span>
+#include <string>
+
+#include <ztd/text.hpp>
+
+template<typename Callback>
+static auto dispatchEncoding(TextEncoding encoding, Callback callback) {
+    switch (encoding) {
+    default:
+        assert(false);
+        [[fallthrough]];
+    case ENCODING_ASCII:        return callback(ztd::text::ascii);
+    case ENCODING_UTF8:         return callback(ztd::text::compat_utf8);
+    case ENCODING_UTF16_BE:     return callback(ztd::text::basic_utf16_be<char>{});
+    case ENCODING_UTF16_LE:     return callback(ztd::text::basic_utf16_le<char>{});
+    case ENCODING_UTF32_BE:     return callback(ztd::text::basic_utf32_be<char>{});
+    case ENCODING_UTF32_LE:     return callback(ztd::text::basic_utf32_le<char>{});
+    case ENCODING_ISO_8859_1:   return callback(ztd::text::iso_8859_1);
+    case ENCODING_ISO_8859_2:   return callback(ztd::text::iso_8859_2);
+    case ENCODING_ISO_8859_3:   return callback(ztd::text::iso_8859_3);
+    case ENCODING_ISO_8859_4:   return callback(ztd::text::iso_8859_4);
+    case ENCODING_ISO_8859_5:   return callback(ztd::text::iso_8859_5);
+    case ENCODING_ISO_8859_6:   return callback(ztd::text::iso_8859_6);
+    case ENCODING_ISO_8859_7:   return callback(ztd::text::iso_8859_7);
+    case ENCODING_ISO_8859_8:   return callback(ztd::text::iso_8859_8);
+    case ENCODING_ISO_8859_10:  return callback(ztd::text::iso_8859_10);
+    case ENCODING_ISO_8859_13:  return callback(ztd::text::iso_8859_13);
+    case ENCODING_ISO_8859_15:  return callback(ztd::text::iso_8859_15);
+    case ENCODING_ISO_8859_16:  return callback(ztd::text::iso_8859_16);
+    case ENCODING_WINDOWS_1251: return callback(ztd::text::windows_1251);
+    case ENCODING_WINDOWS_1252: return callback(ztd::text::windows_1252);
+    case ENCODING_WINDOWS_1253: return callback(ztd::text::windows_1253);
+    case ENCODING_WINDOWS_1255: return callback(ztd::text::windows_1255);
+    case ENCODING_WINDOWS_1256: return callback(ztd::text::windows_1256);
+    case ENCODING_WINDOWS_1257: return callback(ztd::text::windows_1257);
+    case ENCODING_WINDOWS_1258: return callback(ztd::text::windows_1258);
+    case ENCODING_IBM865:       return callback(ztd::text::windows_865_dos_nordic);
+    case ENCODING_IBM866:       return callback(ztd::text::ibm_866_cyrillic);
+    case ENCODING_BIG5:         return callback(ztd::text::big5_hkscs);
+    case ENCODING_EUC_KR:       return callback(ztd::text::euc_kr_uhc);
+    case ENCODING_GB18030:      return callback(ztd::text::gb18030);
+    case ENCODING_SHIFT_JIS:    return callback(ztd::text::shift_jis);
+    case ENCODING_KOI8_R:       return callback(ztd::text::koi8_r);
+    }
+}
+
+/**
+ * UTF-16 that permits unpaired surrogates - encoding into WTF-8 is pointless if the decoder replaces them first.
+ * ztd doesn't expose one, so we build it out of its CRTP base.
+ */
+template<class Unit>
+class BasicWtf16 : public ztd::text::__txt_impl::__utf16_with<BasicWtf16<Unit>, Unit, ztd::text::unicode_code_point, true> {};
+static constexpr BasicWtf16<char16_t> wtf16 = {};
+
+std::string txt::utf16ToUtf8(std::u16string_view str) {
+    std::span<const char16_t> input(str.data(), str.size());
+    return ztd::text::transcode(input, ztd::text::utf16, ztd::text::compat_utf8, ztd::text::replacement_handler);
+}
+
+std::u16string txt::utf8ToUtf16(std::string_view str) {
+    std::span<const char> input(str.data(), str.size());
+    return ztd::text::transcode(input, ztd::text::compat_utf8, ztd::text::utf16, ztd::text::replacement_handler);
+}
+
+std::string txt::wtf16ToWtf8(std::u16string_view str) {
+    std::span<const char16_t> input(str.data(), str.size());
+    return ztd::text::transcode(input, wtf16, ztd::text::compat_wtf8, ztd::text::replacement_handler);
+}
+
+std::u16string txt::wtf8ToWtf16(std::string_view str) {
+    std::span<const char> input(str.data(), str.size());
+    return ztd::text::transcode(input, ztd::text::compat_wtf8, wtf16, ztd::text::replacement_handler);
+}
+
+#ifdef _WINDOWS
+static constexpr BasicWtf16<wchar_t> wideWtf16 = {};
+
+std::string txt::wideToUtf8(std::wstring_view str) {
+    std::span<const wchar_t> input(str.data(), str.size());
+    return ztd::text::transcode(input, ztd::text::wide_utf16, ztd::text::compat_utf8, ztd::text::replacement_handler);
+}
+
+std::string txt::wideToWtf8(std::wstring_view str) {
+    std::span<const wchar_t> input(str.data(), str.size());
+    return ztd::text::transcode(input, wideWtf16, ztd::text::compat_wtf8, ztd::text::replacement_handler);
+}
+
+std::wstring txt::utf8ToWide(std::string_view str) {
+    std::span<const char> input(str.data(), str.size());
+    return ztd::text::transcode(input, ztd::text::compat_utf8, ztd::text::wide_utf16, ztd::text::replacement_handler);
+}
+
+std::wstring txt::wtf8ToWide(std::string_view str) {
+    std::span<const char> input(str.data(), str.size());
+    return ztd::text::transcode(input, ztd::text::compat_wtf8, wideWtf16, ztd::text::replacement_handler);
+}
+#endif
+
+std::string txt::encodedToUtf8(std::string_view str, TextEncoding encoding) {
+    std::span<const char> input(str.data(), str.size());
+    return dispatchEncoding(encoding == ENCODING_BYTES ? ENCODING_UTF8 : encoding, [&](auto enc) {
+        return ztd::text::transcode(input, enc, ztd::text::compat_utf8, ztd::text::replacement_handler);
+    });
+}
+
+std::string txt::utf8ToEncoded(std::string_view str, TextEncoding encoding) {
+    std::span<const char> input(str.data(), str.size());
+    return dispatchEncoding(encoding == ENCODING_BYTES ? ENCODING_UTF8 : encoding, [&](auto enc) {
+        return ztd::text::transcode(input, ztd::text::compat_utf8, enc, ztd::text::replacement_handler);
+    });
+}
+
+std::u32string txt::encodedToUtf32(std::string_view str, TextEncoding encoding) {
+    std::span<const char> input(str.data(), str.size());
+    return dispatchEncoding(encoding == ENCODING_BYTES ? ENCODING_UTF8 : encoding, [&](auto enc) {
+        return ztd::text::transcode(input, enc, ztd::text::utf32, ztd::text::replacement_handler);
+    });
+}
+
+std::string txt::utf32ToEncoded(std::u32string_view str, TextEncoding encoding) {
+    std::span<const char32_t> input(str.data(), str.size());
+    return dispatchEncoding(encoding == ENCODING_BYTES ? ENCODING_UTF8 : encoding, [&](auto enc) {
+        return ztd::text::transcode(input, ztd::text::utf32, enc, ztd::text::replacement_handler);
+    });
+}
+
+char32_t txt::encodedToChar32(char c, TextEncoding encoding) {
+    // Same replacement semantics as `encodedToUtf32`: a byte that's not mapped in the source encoding, or is an
+    // incomplete part of a multi-byte sequence, decodes into the replacement character.
+    char32_t result = 0xFFFD;
+    dispatchEncoding(encoding == ENCODING_BYTES ? ENCODING_UTF8 : encoding, [&](auto enc) {
+        // Size the buffer so that decoding never overflows it, then require exactly one code point. A byte decodes
+        // into a single code point in all of the supported encodings; if a future one produced several, this asserts
+        // rather than silently return a truncated result.
+        std::array<char32_t, ztd::text::max_code_points_v<decltype(enc)>> buffer;
+        auto decoded = ztd::text::decode_one_into(std::span<const char>(&c, 1), enc, std::span<char32_t>(buffer),
+                                                  ztd::text::replacement_handler);
+
+        size_t decodedSize = buffer.size() - decoded.output.size();
+        assert(decodedSize <= 1);
+        if (decodedSize == 1)
+            result = buffer[0];
+    });
+    return result;
+}
+

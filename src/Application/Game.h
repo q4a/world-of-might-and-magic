@@ -1,61 +1,39 @@
 #pragma once
+
 #include <memory>
-
-#include "src/Application/GameConfig.h"
-#include "src/Application/GameMenu.h"
-#include "src/Application/IocContainer.h"
-
-#include "Engine/Engine.h"
-#include "Engine/IocContainer.h"
+#include <string_view>
 
 #include "Io/KeyboardInputHandler.h"
 #include "Io/Mouse.h"
 
-
-using EngineIoc = Engine_::IocContainer;
-using GameIoc = Application::IocContainer;
 using Io::Mouse;
 
-
-namespace Application {
+class Engine;
+struct DecalBuilder;
+class PlatformApplication;
+class Platform;
+class Menu;
 
 class Game {
  public:
-     inline Game() {
-         this->log = EngineIoc::ResolveLogger();
-         this->decal_builder = EngineIoc::ResolveDecalBuilder();
-         this->vis = EngineIoc::ResolveVis();
-         this->menu = GameIoc::ResolveGameMenu();
-     }
+    Game(PlatformApplication *application, std::shared_ptr<GameConfig> config);
+    ~Game();
 
-     bool Configure(std::shared_ptr<const GameConfig> config) {
-         this->config = config;
-         return true;
-     }
-
-     void Run();
+    int run();
 
  private:
-     bool Loop();
-     void EventLoop();
-     void GameLoop();
-     void CloseTargetedSpellWindow();
-     void OnEscape();
-     void OnPressSpace();
-     void ProcessInputActions();
+    bool loop();
+    void processQueuedMessages();
+    void gameLoop();
+    void closeTargetedSpellWindow();
+    void onEscape();
+    void onPressSpace();
 
-
-     std::shared_ptr<const GameConfig> config;
-     std::shared_ptr<Engine> engine;
-     std::shared_ptr<OSWindow> window;
-     std::shared_ptr<IRender> render;
-     std::shared_ptr<Mouse> mouse = nullptr;
-     Log *log = nullptr;
-     DecalBuilder *decal_builder = nullptr;
-     Vis *vis = nullptr;
-     Menu *menu = nullptr;
+ private:
+    PlatformApplication *_application = nullptr;
+    std::shared_ptr<GameConfig> _config;
+    std::unique_ptr<Menu> _menu;
+    DecalBuilder *_decalBuilder = nullptr;
 };
 
-}  // namespace Application
-
-extern class Image *gamma_preview_image;  // 506E40
+extern std::unique_ptr<GraphicsImage> gamma_preview_image;  // 506E40

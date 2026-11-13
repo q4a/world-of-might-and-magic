@@ -1,0 +1,238 @@
+#pragma once
+
+#include <memory>
+#include <optional>
+#include <string>
+#include <vector>
+#include <array>
+
+#include "Application/GameConfig.h"
+
+#include "Engine/Evt/EvtProgram.h"
+#include "Engine/MapEnums.h"
+#include "Engine/PartyPlacement.h"
+#include "Engine/mm7_data.h"
+
+#include "Core/Time/Time.h"
+
+#include "Utility/Memory/Blob.h"
+
+namespace Io {
+class Mouse;
+class KeyboardInputHandler;
+class KeyboardActionMapping;
+} // namespace Io
+
+struct BLVFace;
+struct Vis_PIDAndDepth;
+struct Vis_SelectionFilter;
+struct DecalBuilder;
+struct BloodsplatContainer;
+struct SpellFxRenderer;
+class Vis;
+class ParticleEngine;
+struct ClippingFunctions;
+class GUIMessageQueue;
+class ResourceManager;
+class StatusBar;
+class EngineCallObserver;
+struct IndoorLocation;
+struct OutdoorLocation;
+struct LightsStack_StationaryLight_;
+struct LightsStack_MobileLight_;
+class OverlaySystem;
+
+enum class GameState {
+    GAME_STATE_PLAYING = 0,
+    GAME_FINISHED = 1,
+    GAME_STATE_CHANGE_LOCATION = 2,
+    GAME_STATE_LOADING_GAME = 3,
+    GAME_STATE_NEWGAME_OUT_GAMEMENU = 4,
+    GAME_STATE_5 = 5,
+    GAME_STATE_STARTING_NEW_GAME = 6,
+    GAME_STATE_GAME_QUITTING_TO_MAIN_MENU = 7,
+    GAME_STATE_PARTY_DIED = 8,
+    GAME_STATE_FINAL_WINDOW = 9,
+    GAME_STATE_A = 10
+};
+using enum GameState;
+
+extern GameState uGameState;
+
+struct PersistentVariables {
+    std::array<unsigned char, 75> mapVars;
+    std::array<unsigned char, 125> decorVars;
+};
+
+class Engine {
+ public:
+    explicit Engine(std::shared_ptr<GameConfig> config, OverlaySystem &overlaySystem);
+    virtual ~Engine();
+
+    static void LogEngineBuildInfo();
+
+    ResourceManager *resources() const {
+        return _resourceManager.get();
+    }
+
+    bool isOverlayOpen() const;
+
+    void Initialize();
+    // TODO(captainurist): take a Pointi instead of two coordinates.
+    Vis_PIDAndDepth PickMouse(float fPickDepth, int uMouseX, int uMouseY,
+                              Vis_SelectionFilter *sprite_filter, Vis_SelectionFilter *face_filter);
+    Vis_PIDAndDepth PickKeyboard(float pick_depth, Vis_SelectionFilter *sprite_filter, Vis_SelectionFilter *face_filter);
+
+    /**
+     * Picks whatever is under the cursor for display purposes - monster popups and status bar hints.
+     * Reaches to the monster popup depth, matches anything.
+     */
+    Vis_PIDAndDepth PickMouseForInfo();
+
+    /**
+     * Picks whatever is under the cursor for attacks, targeted spells and viewport clicks. Reaches to the
+     * ranged attack depth and matches anything, so a decoration in front of a monster eats the pick.
+     */
+    Vis_PIDAndDepth PickMouseForTargeting();
+
+    /**
+     * Picks the actor under the cursor for stealing from it. Reaches to the mouse interaction depth,
+     * matches anything.
+     */
+    Vis_PIDAndDepth PickMouseForInteraction();
+
+    /**
+     * @offset 0x42213C
+     */
+    void onGameViewportClick();
+    bool draw_debug_outlines();
+    void StackPartyTorchLight();
+    void DrawParticles();
+    void Draw();
+    void drawWorld();
+    void drawHUD();
+    void drawOverlay();
+    void DrawGUI();
+    void ResetCursor_Palettes_LODs_Level_Audio_SFT_Windows();
+    void SecondaryInitialization();
+    void _461103_load_level_sub();
+    void MM7_Initialize();
+
+    inline bool IsUnderwater() const { return is_underwater; }
+    inline void SetUnderwater(bool is_underwater) { this->is_underwater = is_underwater; }
+    inline bool IsSaturateFaces() const { return is_saturate_faces; }
+    inline void SetSaturateFaces(bool is_saturate_faces) { this->is_saturate_faces = is_saturate_faces; }
+    inline bool IsFog() const { return is_fog; }
+    inline void SetFog(bool is_fog) { this->is_fog = is_fog; } // fog off rather than on??
+
+    void toggleOverlays();
+    void disableOverlays();
+
+    bool is_underwater = false;
+    bool is_saturate_faces = false;
+    bool is_fog = false; // keeps track of whether fog enabled in d3d
+
+    std::shared_ptr<GameConfig> config;
+    int uNumStationaryLights_in_pStationaryLightsStack;
+    BloodsplatContainer *bloodsplat_container = nullptr;
+    DecalBuilder *decal_builder = nullptr;
+    SpellFxRenderer *spell_fx_renedrer = nullptr;
+    EngineCallObserver *callObserver = nullptr;
+    std::shared_ptr<Io::Mouse> mouse;
+    std::shared_ptr<ParticleEngine> particle_engine;
+    Vis *vis = nullptr;
+    std::shared_ptr<Io::KeyboardInputHandler> keyboardInputHandler;
+    std::shared_ptr<Io::KeyboardActionMapping> keyboardActionMapping;
+    EvtProgram _globalEventMap;
+    EvtProgram _localEventMap;
+    std::vector<std::string> _levelStrings;
+    PersistentVariables _persistentVariables;
+    std::array<unsigned char, 50> _OE_transientVariables; // These are cleared on loading a new map
+    MapId _currentLoadedMapId = MAP_INVALID;
+    std::optional<MapDestination> _pendingTransition; // Set while a map change is in flight, consumed by the loaders.
+    std::string _lastLoadedSaveFileName; // File name of the last loaded savegame, pre-selected in the save & load menus.
+    std::string _pendingLoadFileName; // Savegame to load when the main menu FSM exits into the game loop.
+    OverlaySystem &_overlaySystem;
+
+    std::unique_ptr<GUIMessageQueue> _messageQueue;
+    std::unique_ptr<StatusBar> _statusBar;
+    std::unique_ptr<IndoorLocation> _indoor;
+    std::unique_ptr<OutdoorLocation> _outdoor;
+    std::unique_ptr<LightsStack_StationaryLight_> _stationaryLights;
+    std::unique_ptr<LightsStack_MobileLight_> _mobileLights;
+
+ private:
+    std::unique_ptr<ResourceManager> _resourceManager;
+};
+
+extern Engine *engine;
+
+/**
+ * @offset 0x42FC15
+ */
+void PlayButtonClickSound();
+void back_to_game();
+
+void UpdateUserInput_and_MapSpecificStuff();
+void PrepareWorld(int _0_box_loading_1_fullscreen);
+void DoPrepareWorld(bool bLoading, int _1_fullscreen_loading_2_box);
+
+void FinalInitialization();
+
+void MM6_Initialize();
+void MM7Initialization();
+
+void InitializeTurnBasedAnimations(void *);
+int GetGravityStrength();
+
+/**
+ * @offset 0x44861E
+ */
+void setTexture(unsigned int uFaceCog, std::string_view pFilename);
+
+/**
+ * @offset 0x44892E
+ */
+void setFacesBit(int sCogNumber, FaceAttribute bit, int on);
+
+/**
+ * @offset 0x44882F
+ */
+void setDecorationSprite(uint16_t uCog, bool bHide, std::string_view pFileName);  // idb
+void _494035_timed_effects__water_walking_damage__etc(Duration dt);
+void maybeWakeSoloSurvivor();
+void updatePartyDeathState();
+void dropFocusFromIncapacitatedCharacter();
+
+/**
+ * Modify party health or mana based on party or players conditions/buffs.
+ *
+ * @offset 0x493938.
+ */
+void RegeneratePartyHealthMana();
+std::string GetReputationString(int reputation);
+
+/**
+ * @offset 0x494820
+ */
+Duration timeUntilDawn();
+
+/**
+ * @offset 0x443E31
+ */
+void initLevelStrings(const Blob &blob);
+void loadMapEventsAndStrings(MapId mapid);
+bool _44100D_should_alter_right_panel();
+
+/**
+ * Stops all sounds, autosaves if the party is leaving the current map, and flags the game loop to load the target
+ * map on its next iteration. The party is moved once that map is loaded.
+ *
+ * @offset 0x44987B
+ *
+ * @param destination                   Map to load and where to put the party in it, can't be `MAP_INVALID`.
+ */
+void startMapTransition(const MapDestination &destination);
+
+void TeleportToNWCDungeon();
+

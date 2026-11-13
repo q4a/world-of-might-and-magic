@@ -1,0 +1,248 @@
+#pragma once
+
+#include <string>
+#include <memory>
+
+#include "Engine/Spells/SpellEnums.h"
+#include "Engine/Objects/MonsterEnums.h"
+#include "Engine/MapEnums.h"
+#include "Engine/Pid.h"
+
+#include "Library/Geometry/Point.h"
+#include "Library/Platform/Interface/PlatformEnums.h"
+#include "Library/Platform/Interface/PlatformEvents.h"
+
+#include "Utility/Flags.h"
+#include "Utility/Memory/Blob.h"
+
+#include "EngineControlStateHandle.h"
+
+class GUIButton;
+class PlatformEvent;
+class Actor;
+
+enum class SpawnFlag {
+    SPAWN_STATIONARY = 0x1, // Set moveSpeed to 1 so that the monster stays in place.
+    SPAWN_NO_RESISTANCES = 0x2, // Zero out all resistances. Note that you might also want to set `SPAWN_LEVEL_1`.
+    SPAWN_LEVEL_1 = 0x4, // Set level to 1. Level is used in to-hit, resistance and special attack rolls.
+    SPAWN_FRIENDLY = 0x8, // Make the monster friendly to the party, whatever the hostility table says about its type.
+
+    // A predictable stationary target for damage-related tests.
+    SPAWN_DUMMY = SPAWN_STATIONARY | SPAWN_NO_RESISTANCES | SPAWN_LEVEL_1,
+};
+using enum SpawnFlag;
+MM_DECLARE_FLAGS(SpawnFlags, SpawnFlag)
+MM_DECLARE_OPERATORS_FOR_FLAGS(SpawnFlags)
+
+/**
+ * This is the interface to be used from a control routine to control the game thread.
+ *
+ * Most errors are reported as exceptions (derived from `std::runtime_error`) because the main way to use this class
+ * is from unit tests.
+ */
+class EngineController {
+ public:
+    using GameRoutine = std::function<void()>;
+
+    explicit EngineController(EngineControlStateHandle state);
+    ~EngineController();
+
+    /**
+     * Passes execution to the game thread for the provided number of frames. This function provides a coroutine-like
+     * interface for control routines as calling `tick` basically suspends the control routine until the next frame.
+     *
+     * @param count                     Number of frames to suspend the control routine for.
+     */
+    void tick(int count = 1);
+
+    void postEvent(std::unique_ptr<PlatformEvent> event);
+    void pressKey(PlatformKey key);
+    void pressAutoRepeatedKey(PlatformKey key);
+    void releaseKey(PlatformKey key);
+    void pressButton(PlatformMouseButton button, int x, int y, bool isDoubleClick = false);
+    void pressButton(PlatformMouseButton button, Pointi point, bool isDoubleClick = false);
+    void pressButton(PlatformMouseButton button, bool isDoubleClick = false);
+    void releaseButton(PlatformMouseButton button, int x, int y);
+    void releaseButton(PlatformMouseButton button, Pointi point);
+    void releaseButton(PlatformMouseButton button);
+    void moveMouse(int x, int y);
+    void moveMouse(Pointi point);
+
+    void pressAndReleaseKey(PlatformKey key);
+    void pressAndReleaseButton(PlatformMouseButton button, int x, int y);
+    void pressAndReleaseButton(PlatformMouseButton button, Pointi point);
+    void pressAndReleaseButton(PlatformMouseButton button);
+
+    /**
+     * Presses a GUI button identified by the provided id by sending a mouse press and release event.
+     *
+     * @param buttonId                  Button id.
+     * @param button                    Mouse button to press with.
+     * @throws Exception                If the button with the provided id doesn't exist.
+     */
+    void pressGuiButton(std::string_view buttonId, PlatformMouseButton button = BUTTON_LEFT);
+
+    /**
+     * Clicks a GUI button twice, the second click carrying the double click flag the platform would set.
+     *
+     * @param buttonId                  Id of the button to click.
+     * @throws Exception                If the button with the provided id doesn't exist.
+     */
+    void doubleClickGuiButton(std::string_view buttonId);
+
+    /**
+     * Moves the mouse over a GUI button identified by the provided id.
+     *
+     * @param buttonId                  Button id.
+     * @throws Exception                If the button with the provided id doesn't exist.
+     */
+    void hoverGuiButton(std::string_view buttonId);
+
+    /**
+     * Closes all menus and goes to the game screen. Will fail if main menu is currently open.
+     */
+    void goToGame();
+
+    void goToInventory(int characterIndex);
+
+    /**
+     * Opens main menu no matter the current game state.
+     */
+    void goToMainMenu();
+
+    /**
+     * Exits the game through the main menu no matter the current game state.
+     */
+    void exitGame();
+
+    /**
+     * Start new game no matter the current game state.
+     */
+    void startNewGame();
+
+    /**
+     * Waits for the loading screen to complete.
+     *
+     * @throws Exception                If there is no loading screen.
+     */
+    void skipLoadingScreen();
+
+    /**
+     * Saves the game.
+     *
+     * @returns                         `Blob` containing saved game data.
+     */
+    Blob saveGame();
+
+    /**
+     * Loads the game by opening up the load game menu and actually clicking all the buttons.
+     *
+     * @param savedGame                 `Blob` containing saved game data.
+     */
+    void loadGame(const Blob &savedGame);
+
+    /**
+     * Runs the provided routine in game thread and returns once it's finished. This is mainly for running OpenGL code
+     * as the corresponding context is bound in the main thread.
+     *
+     * @param routine                   Routine to run.
+     */
+    void runGameRoutine(GameRoutine routine);
+
+    void resizeWindow(int w, int h);
+
+    /**
+     * Opens up the rest menu, presses the "rest and heal for 8 hours" button, and waits out the rest period.
+     */
+    void restAndHeal();
+
+    /**
+     * Spawns a monster and ticks one frame, so the monster has been drawn and has run its AI once by the time
+     * this returns.
+     *
+     * @param position                  Position to spawn a monster at.
+     * @param id                        Id of the monster to spawn.
+     * @param flags                     Post-spawn tweaks to apply.
+     * @return                          Spawned monster, so you can tweak it after spawning.
+     */
+    Actor *spawnMonster(Vec3f position, MonsterId id, SpawnFlags flags = 0);
+
+    /**
+     * Teleports the party, loading `map` first if it's not the current one.
+     *
+     * @param map                       Map to teleport to.
+     * @param position                  Party position on that map.
+     * @param viewYaw                   View yaw, in degrees.
+     * @param viewPitch                 View pitch, in degrees. Negative values look down.
+     */
+    void teleportTo(MapId map, Vec3f position, int viewYaw, int viewPitch = 0);
+
+    void castSpell(int characterIndex, SpellId spell);
+
+    /**
+     * Casts a spell through the quick spell key. Bolt spells go at the actor under the cursor or the closest one,
+     * and single-actor spells such as Berserk open the targeting interface like `castSpell` does.
+     *
+     * @param characterIndex            0-based index of the casting character.
+     * @param spell                     Spell to cast.
+     */
+    void castQuickSpell(int characterIndex, SpellId spell);
+
+    /**
+     * Casts a spell by shift-clicking the provided actor with the spell set as the quick spell. The cast goes at
+     * that actor without a targeting interface.
+     *
+     * @param characterIndex            0-based index of the casting character.
+     * @param spell                     Spell to cast, must be one that shift-click casts.
+     * @param actorId                   Id of the actor to cast at.
+     * @throws Exception                If the spell can't be cast by shift-click, or if pointing at the actor is
+     *                                  not possible, e.g. it's not on the screen.
+     */
+    void castQuickSpellAtActor(int characterIndex, SpellId spell, int actorId);
+
+    /**
+     * Finds a screen position at which the mouse points at the provided actor & moves the mouse there.
+     *
+     * @param actorId                   Id of the actor to point at.
+     * @throws Exception                If pointing at the actor is not possible, e.g. it's not on the screen.
+     */
+    void pointMouseAtActor(int actorId);
+
+    /**
+     * Finds a screen position at which the mouse points at the provided decoration & moves the mouse there.
+     *
+     * @param decorationId              Id of the decoration to point at.
+     * @throws Exception                If pointing at the decoration is not possible, e.g. it's not on the screen.
+     */
+    void pointMouseAtDecoration(int decorationId);
+
+    /**
+     * Finds a screen position at which the mouse points at the provided sprite object & moves the mouse there.
+     *
+     * @param spriteId                  Index of the sprite object in `pSpriteObjects` to point at.
+     * @throws Exception                If pointing at the sprite object is not possible, e.g. it's not on the screen.
+     */
+    void pointMouseAtSprite(int spriteId);
+
+    /**
+     * Finds a screen position at which the mouse points at the provided face of the current level & moves the mouse
+     * there.
+     *
+     * @param faceId                    Id of the face to point at.
+     * @throws Exception                If pointing at the face is not possible, e.g. it's not on the screen.
+     */
+    void pointMouseAtFace(int faceId);
+
+ private:
+    void goToGameOrMainMenu();
+    void activateCharacter(int characterIndex);
+
+    void pressOrReleaseButton(PlatformEventType type, PlatformMouseButton button, int x, int y, bool isDoubleClick);
+
+    GUIButton *existingButton(std::string_view buttonId);
+
+    void pointMouseAt(Pid target);
+
+ private:
+    EngineControlStateHandle _state;
+};

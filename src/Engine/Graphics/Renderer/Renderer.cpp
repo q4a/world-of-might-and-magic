@@ -1,0 +1,58 @@
+#include "Renderer.h"
+
+#include <cassert>
+#include <memory>
+
+#include "Engine/Graphics/Image.h"
+
+Renderer *render = nullptr;
+
+Renderer::Renderer(
+    std::shared_ptr<GameConfig> config,
+    DecalBuilder *decal_builder,
+    SpellFxRenderer *spellfx,
+    std::shared_ptr<ParticleEngine> particle_engine,
+    Vis *vis
+) {
+    this->config = config;
+    this->decal_builder = decal_builder;
+    this->spell_fx_renderer = spellfx;
+    this->particle_engine = particle_engine;
+    this->vis = vis;
+
+    uFogColor = Color();
+    memset(pBillboardRenderListD3D, 0, sizeof(pBillboardRenderListD3D));
+    pSortedBillboardRenderListD3D.fill(nullptr);
+    uNumBillboardsToDraw = 0;
+    drawcalls = 0;
+}
+
+Renderer::~Renderer() {
+    assert(!_solidFillTexture);
+}
+
+void Renderer::DrawQuad2D(Ptr<GraphicsImage> texture, const Recti &srcRect, Pointi dstPoint, Color color) {
+    Recti dstRect(dstPoint.x, dstPoint.y, srcRect.w, srcRect.h);
+    DrawQuad2D(texture, srcRect, dstRect, color);
+}
+
+void Renderer::DrawQuad2D(Ptr<GraphicsImage> texture, Pointi dstPoint, Color color) {
+    assert(texture);
+    Sizei size = texture->size();
+    DrawQuad2D(texture, Recti(Pointi(), size), Recti(dstPoint, size), color);
+}
+
+const std::unique_ptr<GraphicsImage> &Renderer::solidFillTexture() {
+    if (!_solidFillTexture)
+        _solidFillTexture = GraphicsImage::Create(RgbaImage::solid(colorTable.White, 1, 1));
+    return _solidFillTexture;
+}
+
+void Renderer::releaseSolidFillTexture() {
+    _solidFillTexture.reset();
+}
+
+void Renderer::FillRect(const Recti &rect, Color color) {
+    Recti srcRect(0, 0, 1, 1);
+    DrawQuad2D(solidFillTexture(), srcRect, rect, color);
+}

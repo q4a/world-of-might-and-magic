@@ -1,0 +1,189 @@
+#include <cstdlib>
+#include <string>
+
+#include "Testing/Unit/UnitTest.h"
+
+#include "Utility/Streams/FileOutputStream.h"
+#include "Utility/Streams/FileInputStream.h"
+
+UNIT_TEST(FileOutputStream, Write) {
+    Path tmpfile = Path("tmp_test.txt");
+    const char *tmpfilecontent = "1234\n";
+    size_t tmpfilesize = strlen(tmpfilecontent);
+
+    ScopedTestFileSlot tmp(tmpfile);
+
+    FileOutputStream out(tmpfile);
+    out.write(tmpfilecontent, tmpfilesize);
+    out.close();
+
+    FileInputStream in(tmpfile);
+
+    char buf[1024] = {};
+    size_t bytes = in.read(buf, 1024);;
+    EXPECT_EQ(bytes, 5);
+    EXPECT_EQ(strcmp(buf, tmpfilecontent), 0);
+
+    bytes = in.read(buf, 1024);
+    EXPECT_EQ(bytes, 0);
+    in.close();
+}
+
+UNIT_TEST(FileOutputStream, FlushMidStream) {
+    Path tmpfile = Path("tmp_flush_test.txt");
+    ScopedTestFileSlot tmp(tmpfile);
+
+    FileOutputStream out(tmpfile);
+    out.write("hello");
+    out.flush();
+
+    {
+        FileInputStream in(tmpfile);
+        EXPECT_EQ(in.readAll(), "hello");
+    }
+
+    out.write(" world");
+    out.close();
+
+    FileInputStream in(tmpfile);
+    EXPECT_EQ(in.readAll(), "hello world");
+}
+
+UNIT_TEST(FileOutputStream, LargeWriteBypassesBuffer) {
+    // Use a small buffer so that a large write goes through the direct-write path in _overflow.
+    Path tmpfile = Path("tmp_largewrite_test.txt");
+    ScopedTestFileSlot tmp(tmpfile);
+
+    FileOutputStream out(tmpfile, 64);
+    std::string large(1024, 'x');
+    out.write(large.data(), large.size());
+    out.close();
+
+    FileInputStream in(tmpfile);
+    EXPECT_EQ(in.readAll(), large);
+}
+
+UNIT_TEST(FileOutputStream, MixedSmallAndLargeWrites) {
+    Path tmpfile = Path("tmp_mixed_test.txt");
+    ScopedTestFileSlot tmp(tmpfile);
+
+    FileOutputStream out(tmpfile, 64);
+
+    std::string expected;
+
+    out.write("hello");
+    expected += "hello";
+
+    std::string large(256, 'y');
+    out.write(large.data(), large.size());
+    expected += large;
+
+    out.write(" end");
+    expected += " end";
+
+    out.close();
+
+    FileInputStream in(tmpfile);
+    EXPECT_EQ(in.readAll(), expected);
+}
+
+UNIT_TEST(FileOutputStream, CloseIdempotent) {
+    Path tmpfile = Path("tmp_closeidem_test.txt");
+    ScopedTestFileSlot tmp(tmpfile);
+
+    FileOutputStream out(tmpfile);
+    out.write("hello");
+    out.close();
+    EXPECT_FALSE(out.isOpen());
+    EXPECT_NO_THROW(out.close()); // Double close is fine.
+    EXPECT_FALSE(out.isOpen());
+}
+
+UNIT_TEST(FileOutputStream, ReopenAfterClose) {
+    Path tmpfile = Path("tmp_reopen_test.txt");
+    ScopedTestFileSlot tmp(tmpfile);
+
+    FileOutputStream out(tmpfile);
+    out.write("first");
+    out.close();
+
+    out.open(tmpfile);
+    out.write("second");
+    out.close();
+
+    FileInputStream in(tmpfile);
+    EXPECT_EQ(in.readAll(), "second"); // File is overwritten, not appended.
+}
+
+UNIT_TEST(FileOutputStream, PositionStartsAtZero) {
+    Path tmpfile = Path("tmp_pos_start_test.txt");
+    ScopedTestFileSlot tmp(tmpfile);
+
+    FileOutputStream out(tmpfile);
+    EXPECT_EQ(out.position(), 0u);
+    out.close();
+}
+
+UNIT_TEST(FileOutputStream, PositionAdvancesOnWrite) {
+    Path tmpfile = Path("tmp_pos_write_test.txt");
+    ScopedTestFileSlot tmp(tmpfile);
+
+    FileOutputStream out(tmpfile);
+    out.write("hello");
+    EXPECT_EQ(out.position(), 5u);
+    out.write(" world");
+    EXPECT_EQ(out.position(), 11u);
+    out.close();
+}
+
+UNIT_TEST(FileOutputStream, PositionAfterFlush) {
+    Path tmpfile = Path("tmp_pos_flush_test.txt");
+    ScopedTestFileSlot tmp(tmpfile);
+
+    FileOutputStream out(tmpfile);
+    out.write("hello");
+    out.flush();
+    EXPECT_EQ(out.position(), 5u);
+    out.write(" world");
+    EXPECT_EQ(out.position(), 11u);
+    out.close();
+}
+
+UNIT_TEST(FileOutputStream, PositionAfterLargeWrite) {
+    Path tmpfile = Path("tmp_pos_large_test.txt");
+    ScopedTestFileSlot tmp(tmpfile);
+
+    FileOutputStream out(tmpfile, 64);
+    std::string large(1024, 'x');
+    out.write(large);
+    EXPECT_EQ(out.position(), 1024u);
+    out.close();
+}
+
+UNIT_TEST(FileOutputStream, DestructorFlushesBuffer) {
+    Path tmpfile = Path("tmp_dtor_flush_test.txt");
+    ScopedTestFileSlot tmp(tmpfile);
+
+    {
+        FileOutputStream out(tmpfile);
+        out.write("hello");
+        // No explicit close() - destructor should flush.
+    }
+
+    FileInputStream in(tmpfile);
+    EXPECT_EQ(in.readAll(), "hello");
+}
+
+UNIT_TEST(FileOutputStream, PositionResetsOnReopen) {
+    Path tmpfile = Path("tmp_pos_reopen_test.txt");
+    ScopedTestFileSlot tmp(tmpfile);
+
+    FileOutputStream out(tmpfile);
+    out.write("hello");
+    EXPECT_EQ(out.position(), 5u);
+    out.close();
+
+    out.open(tmpfile);
+    EXPECT_EQ(out.position(), 0u);
+    out.close();
+}

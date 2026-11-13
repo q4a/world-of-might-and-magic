@@ -1,0 +1,1380 @@
+#include <algorithm>
+#include <array>
+#include <string>
+#include <tuple>
+#include <vector>
+
+#include "Testing/Game/GameTest.h"
+
+#include "Engine/Engine.h"
+#include "Engine/MapEnumFunctions.h"
+#include "Engine/mm7_data.h"
+#include "Engine/MapEnums.h"
+#include "Engine/Tables/MapTable.h"
+#include "Engine/Party.h"
+#include "Engine/Random/Random.h"
+#include "Engine/Graphics/DecalBuilder.h"
+#include "Engine/Graphics/Image.h"
+#include "Engine/Graphics/Indoor.h"
+#include "Engine/Graphics/Outdoor.h"
+#include "Engine/Graphics/Viewport.h"
+#include "Engine/Objects/Actor.h"
+#include "Engine/Objects/Chest.h"
+#include "Engine/Objects/MonsterEnumFunctions.h"
+#include "Engine/Objects/SpriteObject.h"
+#include "Engine/Resources/EngineFileSystem.h"
+#include "Engine/Resources/LOD.h"
+#include "Engine/SaveLoad.h"
+#include "Engine/Snapshots/CompositeSnapshots.h"
+
+#include "GUI/GUIProgressBar.h"
+#include "GUI/GUIWindow.h"
+#include "GUI/GUIButton.h"
+#include "GUI/UI/UIChest.h"
+#include "GUI/UI/UISaveLoad.h"
+#include "GUI/UI/UIStatusBar.h"
+
+#include "Library/LodFormats/LodFormats.h"
+
+#include "Io/Mouse.h"
+
+#include "Utility/Segment.h"
+
+#include "GameTestCommon.h"
+
+static void readScroll(EngineController &game, int characterIndex, ItemId scroll) {
+    pParty->setHoldingItem(Item(scroll));
+    game.pressGuiButton(fmt::format("Game_Character{}", characterIndex + 1), BUTTON_RIGHT);
+}
+
+// 2000
+
+GAME_TEST(Issues, Issue2002) {
+    // Character recovery is carried over when loading a saved game in turn based mode
+    // start game and enter turn based mode
+    game.startNewGame();
+    game.pressAndReleaseKey(PlatformKey::KEY_RETURN);
+    game.tick(15);
+    for (int i = 0; i < 3; ++i) {
+        game.pressAndReleaseKey(PlatformKey::KEY_A); // Attack with 3 chars
+        game.tick();
+    }
+
+    // check recovery
+    EXPECT_TRUE(pParty->bTurnBasedModeOn);
+    for (int i = 0; i < 3; ++i)
+        EXPECT_TRUE(pParty->pCharacters[i].timeToRecovery > 0_ticks);
+    EXPECT_FALSE(pParty->pCharacters[3].timeToRecovery > 0_ticks);
+
+    // now load a saved game
+    game.pressAndReleaseKey(PlatformKey::KEY_ESCAPE);
+    game.tick(2);
+    game.pressGuiButton("GameMenu_LoadGame");
+    game.tick(3);
+    game.pressGuiButton("LoadMenu_Slot0");
+    game.tick(2);
+    game.pressGuiButton("LoadMenu_Load");
+    game.tick(2);
+    game.skipLoadingScreen();
+    game.tick(2);
+
+    // check recovery again
+    for (int i = 0; i < 4; i++)
+        EXPECT_FALSE(pParty->pCharacters[i].timeToRecovery > 0_ticks);
+    EXPECT_FALSE(pParty->bTurnBasedModeOn);
+}
+
+GAME_TEST(Issues, Issue2017) {
+    // Bats move through closed doors in Barrow XII
+    test.playTraceFromTestData("issue_2017.mm7", "issue_2017.json");
+    // Make sure all the monsters have stayed contained
+    constexpr std::array<int, 3> monsterIds = { 12, 13, 20 };
+    for (auto ids : monsterIds)
+        EXPECT_LT(pActors[ids].pos.y, -100);
+}
+
+GAME_TEST(Issues, Issue2018a) {
+    // A Town Portal scroll spent the reader's mana on picking the town, and asserted when there wasn't enough.
+    auto mapTape = tapes.map();
+    auto mpTape = charTapes.mp(3);
+    engine->config->debug.NoActors.setValue(true);
+    game.startNewGame();
+    test.startTaping();
+
+    pParty->_questBits[QBIT_TOWN_PORTAL_TO_ERATHIA] = true;
+    pParty->pCharacters[3].mana = 10;
+
+    // A scroll casts Town Portal at master, where it fails half the time.
+    for (int i = 0; i < 10 && current_screen_type != SCREEN_BOOKS; i++) {
+        readScroll(game, 3, ITEM_SCROLL_TOWN_PORTAL);
+        game.tick(3);
+    }
+    game.pressGuiButton("TownPortalBook_Marker2"); // Erathia.
+    game.tick();
+    game.skipLoadingScreen();
+
+    EXPECT_EQ(mapTape, tape(MAP_EMERALD_ISLAND, MAP_ERATHIA));
+    EXPECT_EQ(mpTape, tape(10));
+}
+
+GAME_TEST(Issues, Issue2018b) {
+    // A Lloyd's Beacon scroll spent the reader's mana on setting the beacon, and asserted when there wasn't enough.
+    auto beaconTape = charTapes.hasBeacon(3, 0);
+    auto mpTape = charTapes.mp(3);
+    engine->config->debug.NoActors.setValue(true);
+    game.startNewGame();
+    test.startTaping();
+
+    pParty->pCharacters[3].mana = 10;
+
+    readScroll(game, 3, ITEM_SCROLL_LLOYDS_BEACON);
+    game.tick(3);
+    game.pressGuiButton("LloydsBook_Slot0");
+    game.tick();
+
+    EXPECT_EQ(beaconTape, tape(false, true));
+    EXPECT_EQ(mpTape, tape(10));
+}
+
+GAME_TEST(Issues, Issue2021) {
+    // Lloyd's Beacon put a new beacon in the first free slot instead of the one the player picked.
+    auto firstSlotTape = charTapes.hasBeacon(3, 0);
+    auto pickedSlotTape = charTapes.hasBeacon(3, 2);
+    engine->config->debug.NoActors.setValue(true);
+    game.startNewGame();
+    test.startTaping();
+    readScroll(game, 3, ITEM_SCROLL_LLOYDS_BEACON);
+    game.tick(3);
+    game.pressGuiButton("LloydsBook_Slot2");
+    game.tick();
+
+    EXPECT_EQ(firstSlotTape, tape(false));
+    EXPECT_EQ(pickedSlotTape, tape(false, true));
+}
+
+GAME_TEST(Issues, Issue2022) {
+    // A character who was still recovering could read a spell scroll.
+    auto buffTape = tapes.custom([] { return pParty->pPartyBuffs[PARTY_BUFF_PROTECTION_FROM_MAGIC].Active(); });
+    auto scrollTape = tapes.totalItemCount(ITEM_SCROLL_PROTECTION_FROM_MAGIC);
+    auto soundsTape = tapes.sounds();
+    auto statusTape = tapes.statusBar();
+    engine->config->debug.NoActors.setValue(true);
+    game.startNewGame();
+    test.startTaping();
+
+    game.pressAndReleaseKey(PlatformKey::KEY_DIGIT_2); // Roderick.
+    game.tick();
+    game.pressAndReleaseKey(PlatformKey::KEY_A);
+    game.tick();
+    readScroll(game, 1, ITEM_SCROLL_PROTECTION_FROM_MAGIC);
+    game.tick(3);
+
+    EXPECT_EQ(buffTape, tape(false));
+    EXPECT_EQ(scrollTape, tape(0, 1)); // Still on the cursor.
+    EXPECT_CONTAINS(soundsTape.flatten(), SOUND_error);
+    EXPECT_CONTAINS(statusTape, "That player is not active");
+}
+
+GAME_TEST(Issues, Issue2061) {
+    // Game Crashes if you click the border of the inventory screen.
+    game.startNewGame();
+    game.goToInventory(0);
+    game.pressAndReleaseButton(BUTTON_LEFT, 3, 20); // This used to assert.
+    game.tick();
+    EXPECT_EQ(pParty->pPickedItem.itemId, ITEM_NULL); // Shouldn't pick anything.
+}
+
+GAME_TEST(Issues, Issue2066) {
+    // No error sound when trying to place item outside of inventory boundaries.
+    auto soundsTape = tapes.sounds();
+    game.startNewGame();
+    test.startTaping();
+
+    pParty->pCharacters[0].inventory.clear();
+    pParty->pCharacters[0].inventory.add(Pointi(0, 0), Item(ITEM_LEATHER_ARMOR)); // Add leather armor at (0, 0).
+
+    game.goToInventory(0);
+    game.pressAndReleaseButton(BUTTON_LEFT, 30, 30); // Pick up leather armor.
+    game.tick();
+    game.pressAndReleaseButton(BUTTON_LEFT, 30, 0); // Try to place outside inventory boundaries.
+    game.tick(2); // Two ticks so that the taping engine doesn't merge frames with SOUND_error.
+    game.pressAndReleaseButton(BUTTON_LEFT, 0, 30);
+    game.tick(2);
+    game.pressAndReleaseButton(BUTTON_LEFT, 476 - 60, 30);
+    game.tick(2);
+    game.pressAndReleaseButton(BUTTON_LEFT, 30, 345 - 60);
+    game.tick(2);
+
+    EXPECT_EQ(soundsTape.flatten().count(SOUND_error), 4); // Get 4 errors.
+}
+
+GAME_TEST(Issues, Issue2074) {
+    // Re-entering Castle Gryphonheart made its NPCs hostile.
+    // The first visit to the castle spawns its soldiers from encounter spawn points. A soldier whose spawn roll landed
+    // too far from its spawn point was removed, and removed counts as killed. On leaving, the castle checks whether any
+    // of its soldiers was killed and turns hostile on the next visit if so. Thus walking out and back in made the
+    // Masters of the Sword attack the party.
+    Vec3f castleEntrance(641, 0, 0);
+    Vec3f nextToSwordMasters(-3300, 0, 0);
+    for (int i = 0; i < 16; i++) { // Only one spawn point in the castle can roll too far, and only about half of the time.
+        test.prepareForNextTest();
+        auto castleNotAliveTape = tapes.custom([] {
+            if (engine->_currentLoadedMapId != MAP_CASTLE_GRYPHONHEART)
+                return 0;
+            return static_cast<int>(std::ranges::count_if(pActors, &Actor::IsNotAlive));
+        });
+        auto castleHostileTape = tapes.custom([] {
+            return engine->_currentLoadedMapId == MAP_CASTLE_GRYPHONHEART &&
+                   std::ranges::any_of(pActors, [](const Actor &actor) { return actor.attributes & ACTOR_AGGRESSOR; });
+        });
+        auto hpTape = tapes.totalHp();
+        game.startNewGame();
+        grng->seed(i); // Each iteration rolls the encounter spawns differently.
+        test.startTaping();
+        game.teleportTo(MAP_CASTLE_GRYPHONHEART, castleEntrance, 0); // Facing the exit door, Space below opens it.
+        game.pressAndReleaseKey(PlatformKey::KEY_SPACE);
+        game.tick();
+        game.pressGuiButton("Transition_Yes");
+        game.tick();
+        game.skipLoadingScreen();
+        game.teleportTo(MAP_CASTLE_GRYPHONHEART, nextToSwordMasters, 180);
+        game.tick(100); // The swordmasters take a few seconds to walk up and strike.
+        EXPECT_EQ(castleNotAliveTape, tape(0)); // Every soldier the castle spawned is still there.
+        EXPECT_EQ(castleHostileTape, tape(false)); // Nobody in the castle turns hostile.
+        EXPECT_EQ(hpTape.min(), hpTape.front()); // Nobody attacks the party.
+    }
+}
+
+GAME_TEST(Issues, Issue2075) {
+    // Paralyze works on dead enemies
+    auto turnBased = tapes.custom([] { return pParty->bTurnBasedModeOn; });
+    auto statusTape = tapes.statusBar();
+    auto actorsTape = tapes.custom([] { return pActors[2].aiState; });
+    test.playTraceFromTestData("issue_2075.mm7", "issue_2075.json");
+    EXPECT_TRUE(turnBased.back());
+    EXPECT_CONTAINS(statusTape, "Spell failed");
+    EXPECT_EQ(actorsTape.back(), Dead);
+    EXPECT_EQ(actorsTape.size(), 1);
+}
+
+GAME_TEST(Prs, Pr2083) {
+    // Check that wands are generated with correct number of charges.
+    for (int i = 0; i < 100; i++) {
+        Item wand;
+        wand.itemId = ITEM_MYSTIC_WAND_OF_SHRAPMETAL;
+        wand.postGenerate(ITEM_SOURCE_MONSTER);
+        EXPECT_EQ(wand.numCharges, wand.maxCharges);
+        EXPECT_GE(wand.numCharges, 15+1);
+        EXPECT_LE(wand.numCharges, 15+6);
+    }
+}
+
+GAME_TEST(Issues, Issue2099) {
+    // Opening chest asserts.
+    // We had chests generating with `ITEM_RANDOM_LEVEL_1` and asserting on open, we're just restarting the game three
+    // times (effectively with different random seeds), and checking the chests.
+    for (int iteration = 0; iteration < 3; iteration++) {
+        game.startNewGame();
+        for (const Chest &chest : vChests)
+            for (InventoryConstEntry entry : chest.inventory.entries())
+                EXPECT_FALSE(isRandomItem(entry->itemId));
+    }
+}
+
+// 2100
+
+GAME_TEST(Issues, Issue2104) {
+    // Enemies always hit with ranged attacks.
+    // We test here that both arrows AND monster projectiles that deal magical damage can miss b/c of AC.
+    std::vector<MonsterProjectile> projectiles;
+
+    for (MonsterId monsterId : {MONSTER_ELF_ARCHER_A, MONSTER_DRAGON_A, MONSTER_DRAGON_B, MONSTER_DRAGON_C}) {
+        test.prepareForNextTest(100, RANDOM_ENGINE_MERSENNE_TWISTER);
+        auto hpTape = charTapes.hp(0);
+        auto spritesTape = tapes.sprites();
+
+        engine->config->debug.NoActors.setValue(true);
+        game.startNewGame();
+        test.startTaping();
+        prepareForBattleTest();
+
+        // And make sure char0 has some armor.
+        Character &char0 = pParty->pCharacters[0];
+        char0.setSkillValue(SKILL_LEATHER, CombinedSkillValue(1, MASTERY_NOVICE));
+        char0.inventory.equip(ITEM_SLOT_ARMOUR, Item(ITEM_LEATHER_ARMOR));
+
+        // Spawn a monster & wait.
+        engine->config->debug.NoActors.setValue(false);
+        // Level 1 makes all monsters have the same to-hit rolls, so that we don't have to tweak AC per monster.
+        Actor *monster = game.spawnMonster(pParty->pos + Vec3f(0, 1500, 0), monsterId, SPAWN_STATIONARY | SPAWN_LEVEL_1);
+        game.tick(300);
+
+        int projectileCount = spritesTape.count([&](auto sprites) { return sprites.contains(spriteForMonsterProjectile(monster->monsterInfo.attack1MissileType)); });
+        int hitCount = hpTape.size() - 1;
+
+        ASSERT_GT(hitCount, 0); // Should have hit some.
+        ASSERT_GT(projectileCount, hitCount); // And missed some.
+
+        projectiles.push_back(monster->monsterInfo.attack1MissileType);
+    }
+
+    // Check that we did see both arrows & magical projectiles.
+    EXPECT_EQ(projectiles, tape(MONSTER_PROJECTILE_ARROW, MONSTER_PROJECTILE_AIR_BOLT, MONSTER_PROJECTILE_WATER_BOLT, MONSTER_PROJECTILE_FIRE_BOLT));
+}
+
+GAME_TEST(Issues, Issue2108) {
+    // Shield spell does not work.
+    test.prepareForNextTest(100, RANDOM_ENGINE_MERSENNE_TWISTER);
+    auto hpTape = charTapes.hp(0);
+
+    engine->config->debug.NoActors.setValue(true);
+    engine->config->debug.AllMagic.setValue(true);
+    game.startNewGame();
+    test.startTaping();
+    prepareForBattleTest();
+
+    // Cast shield.
+    game.castSpell(0, SPELL_AIR_SHIELD);
+
+    // Spawn archers & wait.
+    engine->config->debug.NoActors.setValue(false);
+    for (int i = 0; i < 4; i++) {
+        game.tick(7);
+        game.spawnMonster(pParty->pos + Vec3f(0, 1500, 0), MONSTER_ELF_ARCHER_A);
+    }
+    game.tick(100);
+
+    ASSERT_GE(hpTape.size(), 2); // Should have received some damage.
+    auto damageRange = hpTape.reverse().adjacentDeltas().minMax();
+    EXPECT_GE(damageRange[0], 3); // Elf archer's damage is 4d2+2 (so 6-10), after shield it's 3-5.
+    EXPECT_LE(damageRange[1], 5);
+}
+
+GAME_TEST(Issues, Issue2109) {
+    // Shield spell effect being applied from multiple sources.
+    // What we had in this test before the fix was that the damage received was reduced 2^6 times, so was always zero.
+    test.prepareForNextTest(100, RANDOM_ENGINE_MERSENNE_TWISTER);
+    auto hpTape = charTapes.hp(0);
+
+    engine->config->debug.NoActors.setValue(true);
+    game.startNewGame();
+    test.startTaping();
+    prepareForBattleTest();
+
+    // Apply shield from potions & spells.
+    Time tomorrow = pParty->GetPlayingTime() + Duration::fromDays(1);
+    Character &char0 = pParty->pCharacters[0];
+    char0.pCharacterBuffs[CHARACTER_BUFF_SHIELD].Apply(tomorrow, MASTERY_GRANDMASTER, 30, 0, 0);
+    pParty->pPartyBuffs[PARTY_BUFF_SHIELD].Apply(tomorrow, MASTERY_GRANDMASTER, 30, 0, 0);
+
+    // Equip all shield-giving gear.
+    Item ring1(ITEM_ANGELS_RING);
+    ring1.specialEnchantment = ITEM_ENCHANTMENT_OF_SHIELDING;
+    char0.inventory.equip(ITEM_SLOT_RING1, ring1);
+
+    Item ring2(ITEM_ANGELS_RING);
+    ring2.specialEnchantment = ITEM_ENCHANTMENT_OF_STORM;
+    char0.inventory.equip(ITEM_SLOT_RING2, ring2);
+
+    char0.setSkillValue(SKILL_PLATE, CombinedSkillValue(10, MASTERY_EXPERT)); // We don't want plate's damage reduction at Master.
+    char0.inventory.equip(ITEM_SLOT_ARMOUR, Item(ITEM_ARTIFACT_GOVERNORS_ARMOR));
+
+    char0.setSkillValue(SKILL_SHIELD, CombinedSkillValue(10, MASTERY_GRANDMASTER)); // But we want GM shield for shielding.
+    char0.inventory.equip(ITEM_SLOT_OFF_HAND, Item(ITEM_BRONZE_SHIELD));
+
+    // At this point we have 6 sources of shielding. Spawn archers & let them shoot.
+    engine->config->debug.NoActors.setValue(false);
+    for (int i = 0; i < 4; i++) {
+        game.tick(7);
+        Actor *archer = game.spawnMonster(pParty->pos + Vec3f(0, 1500, 0), MONSTER_ELF_ARCHER_A);
+        archer->monsterInfo.level = 200; // Make the archers miss less.
+    }
+    game.tick(150);
+
+    ASSERT_GE(hpTape.size(), 2); // Should have received some damage.
+    auto damageRange = hpTape.reverse().adjacentDeltas().minMax();
+    EXPECT_GE(damageRange[0], 3); // Elf archer's damage is 4d2+2 (so 6-10), after shield it's 3-5.
+    EXPECT_LE(damageRange[1], 5);
+}
+
+GAME_TEST(Issues, Issue2116) {
+    // Resuscitating a character in turn based mode does not give them a turn.
+    auto activeCharacterTape = tapes.activeCharacterIndex();
+
+    game.startNewGame();
+    test.startTaping();
+
+    game.pressAndReleaseKey(PlatformKey::KEY_RETURN);
+    game.tick();
+    EXPECT_TRUE(pParty->bTurnBasedModeOn);
+
+    pParty->pCharacters[3].SetCondDeadWithBlockCheck(false);
+    game.tick();
+
+    for (int i = 0; i < 10; i++) {
+        game.pressAndReleaseKey(PlatformKey::KEY_B); // Pass.
+        do {
+            game.tick();
+        } while (!pParty->hasActiveCharacter());
+    }
+    EXPECT_CONTAINS(activeCharacterTape, 0);
+    EXPECT_CONTAINS(activeCharacterTape, 1);
+    EXPECT_CONTAINS(activeCharacterTape, 2);
+    EXPECT_MISSES(activeCharacterTape, 3);
+
+    pParty->pCharacters[3].conditions.reset(CONDITION_DEAD);
+    pParty->pCharacters[3].conditions.reset(CONDITION_UNCONSCIOUS);
+    pParty->pCharacters[3].health = 1;
+    game.tick();
+
+    for (int i = 0; i < 20; i++) {
+        game.pressAndReleaseKey(PlatformKey::KEY_B); // Pass.
+        do {
+            game.tick();
+        } while (!pParty->hasActiveCharacter());
+    }
+    EXPECT_CONTAINS(activeCharacterTape, 3);
+}
+
+GAME_TEST(Issues, Issue2117) {
+    // Jumping down from Celeste crashes the game.
+    auto mapTape = tapes.map();
+    auto posTape = tapes.custom([] { return pParty->pos; });
+    test.playTraceFromTestData("issue_2117.mm7", "issue_2117.json");
+    EXPECT_EQ(mapTape.front(), MAP_CELESTE);
+    EXPECT_EQ(mapTape.back(), MAP_BRACADA_DESERT); // Jumped down to the desert.
+    EXPECT_TRUE(posTape.contains(Vec3f(8146, 4379, 3700))); // Via the dodgy teleport step.
+}
+
+GAME_TEST(Issues, Issue2118) {
+    // Clicking on wine racks crashes the game.
+    auto potionsTape = tapes.totalItemCount(ITEM_TYPE_POTION);
+
+    engine->config->debug.NoActors.setValue(true);
+    game.startNewGame();
+    test.startTaping();
+    game.teleportTo(MAP_MERCENARY_GUILD, Vec3f(-1160, 3340, -127), 270);
+
+    for (int i = 0; i < 50; i++) {
+        game.pressAndReleaseButton(BUTTON_LEFT, 200, 200);
+        game.tick();
+        engine->_persistentVariables.mapVars[4] = 0; // This one is increased on each click, so we cheat.
+    }
+
+    EXPECT_LT(potionsTape.front(), potionsTape.back()); // Got some potions.
+
+    for (const Character &character : pParty->pCharacters)
+        for (InventoryConstEntry item : character.inventory.entries())
+            if (item->isPotion() && item->itemId != ITEM_POTION_BOTTLE)
+                EXPECT_GT(item->potionPower, 0); // Potions were properly generated.
+}
+
+GAME_TEST(Issues, Issue2123) {
+    // Crash in collisions involving Dragons
+    test.prepareForNextTest(100, RANDOM_ENGINE_MERSENNE_TWISTER);
+    constexpr Vec3f problemPoint(12122.4883, 3494.72949, 743.489258); // position of dragon where the collision used to fail
+
+    auto distTape = tapes.custom([&problemPoint] { return (pActors[0].pos - problemPoint).length(); });
+    engine->config->debug.NoActors.setValue(true);
+    game.startNewGame();
+    test.startTaping();
+    prepareForBattleTest();
+
+    // Spawn a dragon & wait.
+    engine->config->debug.NoActors.setValue(false);
+    game.spawnMonster(problemPoint + Vec3f(0, 0 , 500), MONSTER_DRAGON_A);
+    game.tick(300);
+    EXPECT_LE(distTape.min(), pActors[0].radius + 5.0f); // weve been close enough to trigger the collision
+    EXPECT_GT(distTape.max(), 2500.0f); // and managed to move away again without assert
+    EXPECT_GT(distTape.back(), distTape.front()); // should be further out than spawn point
+}
+
+GAME_TEST(Issues, Issue2124_1283) {
+    // Rare crash when viewing the map
+    auto screenTape = tapes.screen();
+    game.startNewGame();
+    test.startTaping();
+    game.pressAndReleaseKey(PlatformKey::KEY_M); // Open map
+    game.tick(2);
+    game.pressAndReleaseKey(PlatformKey::KEY_RIGHT); // trigger what was an onbutton event
+    game.pressAndReleaseKey(PlatformKey::KEY_M); // and immediately close the map
+    game.tick(1);
+    EXPECT_EQ(screenTape.back(), SCREEN_GAME);
+    EXPECT_CONTAINS(screenTape, SCREEN_BOOKS); // we did open the map
+}
+
+GAME_TEST(Issues, Issue2142) {
+    // Monsters can't cause poisoned / deseased status
+    const std::vector<std::tuple<MonsterId, MonsterSpecialAttack, Condition>> monsterConditions = {
+        {MONSTER_BAT_A, SPECIAL_ATTACK_DISEASE_WEAK, CONDITION_DISEASE_WEAK},
+        {MONSTER_BAT_C, SPECIAL_ATTACK_DISEASE_MEDIUM, CONDITION_DISEASE_MEDIUM},
+        {MONSTER_DEVIL_B, SPECIAL_ATTACK_DISEASE_SEVERE, CONDITION_DISEASE_SEVERE},
+        {MONSTER_SPIDER_A, SPECIAL_ATTACK_POISON_WEAK, CONDITION_POISON_WEAK},
+        {MONSTER_SPIDER_B, SPECIAL_ATTACK_POISON_MEDIUM, CONDITION_POISON_MEDIUM},
+        {MONSTER_SPIDER_C, SPECIAL_ATTACK_POISON_SEVERE, CONDITION_POISON_SEVERE},
+    };
+
+    for (const auto &[monsterId, attack, condition] : monsterConditions) {
+        test.prepareForNextTest(100, RANDOM_ENGINE_MERSENNE_TWISTER);
+        auto specialAttack = tapes.specialAttacks();
+
+        engine->config->debug.NoActors.setValue(true);
+        game.startNewGame();
+        test.startTaping();
+        prepareForBattleTest();
+
+        // Spawn monsters and wait.
+        engine->config->debug.NoActors.setValue(false);
+        for (int i = 0; i < 10; i++)
+            game.spawnMonster(pParty->pos + Vec3f(0, 700, 0), monsterId);
+        for (int i = 0; i < 2000 && !pParty->pCharacters[0].conditions.has(condition); i++) // Special attacks land only some of the time.
+            game.tick();
+
+        EXPECT_CONTAINS(specialAttack.flatten(), attack); // Check that the special attack was used.
+        EXPECT_TRUE(pParty->pCharacters[0].conditions.has(condition)); // Check that the condition was applied.
+    }
+}
+
+GAME_TEST(Issues, Issue2146) {
+    // Monster attack preferences ignored promoted classes, so a monster that hunts sorcerers never went for wizards.
+    // Issue2500a, Issue2500b and Issue2500c cover unpromoted classes, races and having no preference at all.
+    struct AttackPreferenceCase {
+        bool includePromotions;
+        std::array<Class, 4> classes;
+        MonsterId monster;
+        int victim; // Index of the only character allowed to take damage, or -1 if the whole party is fair game.
+    };
+    static constexpr AttackPreferenceCase cases[] = {
+        {true,  {CLASS_KNIGHT, CLASS_KNIGHT, CLASS_WIZARD,        CLASS_KNIGHT}, MONSTER_GOG_A,         2}, // Sorcerer 1st promotion.
+        {true,  {CLASS_KNIGHT, CLASS_KNIGHT, CLASS_PRIEST_OF_SUN, CLASS_KNIGHT}, MONSTER_CLERIC_SUN_A,  2}, // Cleric 2nd promotion.
+        {true,  {CLASS_KNIGHT, CLASS_KNIGHT, CLASS_NINJA,         CLASS_KNIGHT}, MONSTER_MONK_C,        2}, // Monk 2nd promotion.
+        {true,  {CLASS_KNIGHT, CLASS_KNIGHT, CLASS_WARLOCK,       CLASS_KNIGHT}, MONSTER_GOG_A,        -1}, // Druid 2nd promotion, and gogs want sorcerers.
+        {false, {CLASS_KNIGHT, CLASS_KNIGHT, CLASS_WIZARD,        CLASS_KNIGHT}, MONSTER_GOG_A,        -1}, // Sorcerer 1st promotion.
+        {false, {CLASS_KNIGHT, CLASS_KNIGHT, CLASS_PRIEST_OF_SUN, CLASS_KNIGHT}, MONSTER_CLERIC_SUN_A, -1}, // Cleric 2nd promotion.
+    };
+
+    for (int caseIndex = 0; caseIndex < std::size(cases); caseIndex++) {
+        const AttackPreferenceCase &testCase = cases[caseIndex];
+
+        test.prepareForNextTest(100, RANDOM_ENGINE_MERSENNE_TWISTER);
+        engine->config->gameplay.AttackPreferencesIncludePromotions.setValue(testCase.includePromotions);
+        engine->config->debug.NoActors.setValue(true);
+        game.startNewGame();
+        test.startTaping();
+
+        std::vector<CharacterPreset> presets;
+        for (Class classType : testCase.classes)
+            presets.push_back({classType, RACE_HUMAN}); // None of these monsters have a race preference.
+        prepareForBattleTest(presets);
+        auto hpsTape = charTapes.hps();
+
+        engine->config->debug.NoActors.setValue(false);
+        for (int i = 0; i < 6; i++) {
+            game.tick(7);
+            game.spawnMonster(pParty->pos + Vec3f(i * 200 - 500, 1500, 0), testCase.monster, SPAWN_STATIONARY);
+        }
+        game.tick(300);
+        test.stopTaping();
+
+        auto damage = hpsTape.delta();
+        for (int i = 0; i < damage.size(); i++) {
+            if (testCase.victim == -1 || testCase.victim == i) {
+                EXPECT_LT(damage[i], 0) << "case " << caseIndex << ", char " << i;
+            } else {
+                EXPECT_EQ(damage[i], 0) << "case " << caseIndex << ", char " << i;
+            }
+        }
+    }
+}
+
+GAME_TEST(Prs, Pr2157a) {
+    // Test that we can't equip items when inventory is full.
+    auto soundsTape = tapes.sounds();
+    game.startNewGame();
+    game.goToInventory(0);
+    test.startTaping();
+
+    CharacterInventory &inventory = pParty->pCharacters[0].inventory;
+    pParty->pCharacters[0].setSkillValue(SKILL_SWORD, CombinedSkillValue::novice());
+    pParty->pCharacters[0].setSkillValue(SKILL_SHIELD, CombinedSkillValue::novice());
+    pParty->pCharacters[0].setSkillValue(SKILL_LEATHER, CombinedSkillValue::novice());
+    inventory.clear();
+
+    // Fill inventory with brass rings. This should eat up all available space.
+    Sizei gridSize = pParty->pCharacters[0].inventory.gridSize();
+    for (int x = 0; x < gridSize.w; x++)
+        for (int y = 0; y < gridSize.h; y++)
+            inventory.add({x, y}, Item(ITEM_BRASS_RING));
+
+    // Try to equip different items, check that error sound is played.
+    // The items below cover all item slots, plus we have a wetsuit here just to check that we don't trip on it.
+    std::array items = {
+        Item(ITEM_QUEST_WETSUIT),
+        Item(ITEM_CRUDE_LONGSWORD),
+        Item(ITEM_TWO_HANDED_SWORD),
+        Item(ITEM_LEATHER_ARMOR),
+        Item(ITEM_GOBLIN_SHIELD),
+        Item(ITEM_HORNED_HELM),
+        Item(ITEM_LEATHER_BELT),
+        Item(ITEM_LEATHER_CLOAK),
+        Item(ITEM_GAUNTLETS),
+        Item(ITEM_LEATHER_BOOTS),
+        Item(ITEM_DAZZLING_RING),
+        Item(ITEM_EYEBALL_AMULET),
+        Item(ITEM_WAND_OF_FIRE),
+    };
+    for (const Item &item : items) {
+        pParty->takeHoldingItem();
+        pParty->setHoldingItem(item);
+        game.pressAndReleaseButton(BUTTON_LEFT, 600, 200); // Try to equip.
+        game.tick(2); // Two ticks so that the taping engine doesn't merge SOUND_error frames.
+    }
+
+    EXPECT_EQ(soundsTape.flatten().count(SOUND_error), items.size());
+    EXPECT_EQ(inventory.size(), 126);
+    EXPECT_EQ(std::ranges::distance(inventory.equipment()), 0); // No items were equipped.
+    EXPECT_TRUE(std::ranges::all_of(inventory.entries(), [] (InventoryEntry entry) { return entry->itemId == ITEM_BRASS_RING; })); // Backpack wasn't touched.
+}
+
+GAME_TEST(Prs, Pr2157b) {
+    // Test that we can't add items to grid when inventory is full.
+    auto soundsTape = tapes.sounds();
+    game.startNewGame();
+    game.goToInventory(0);
+    test.startTaping();
+
+    CharacterInventory &inventory = pParty->pCharacters[0].inventory;
+    inventory.clear();
+
+    // Fill inventory with brass rings. Leave one cell free.
+    Sizei gridSize = pParty->pCharacters[0].inventory.gridSize();
+    for (int x = 0; x < gridSize.w; x++)
+        for (int y = 0; y < gridSize.h; y++)
+            if (x != 0 || y != 0)
+                inventory.add({x, y}, Item(ITEM_BRASS_RING));
+    inventory.equip(ITEM_SLOT_RING1, Item(ITEM_BRASS_RING));
+
+    // Try to place another ring into the backpack.
+    pParty->setHoldingItem(Item(ITEM_DAZZLING_RING));
+    game.pressAndReleaseButton(BUTTON_LEFT, 20, 20);
+    game.tick();
+
+    EXPECT_EQ(pParty->pPickedItem.itemId, ITEM_DAZZLING_RING);
+    EXPECT_FALSE(inventory.find(ITEM_DAZZLING_RING));
+    EXPECT_EQ(soundsTape.flatten().count(SOUND_error), 1);
+    EXPECT_EQ(inventory.size(), 126);
+}
+
+GAME_TEST(Issues, Issue2186a) {
+    // Actors falling through the hole in the Grand Temple of the Sun upper level ended up deep underground.
+    // A monster spawned over the hole should land on the hall floor below. With #2229's bug it hung in the air instead.
+    game.startNewGame();
+    game.teleportTo(MAP_GRAND_TEMPLE_OF_THE_SUN, Vec3f(-880, 800, 648), 0); // Upper level, facing the hole over the hall.
+    Actor *cleric = game.spawnMonster(Vec3f(0, 550, 900), MONSTER_CLERIC_SUN_C); // Above the hole.
+    auto clericZTape = actorTapes.custom(cleric->id, [](const Actor &actor) { return static_cast<int>(actor.pos.z); });
+    auto clericSectorTape = actorTapes.custom(cleric->id, [](const Actor &actor) { return actor.sectorId; });
+    test.startTaping();
+    game.tick(10);
+
+    EXPECT_EQ(clericZTape.back(), 0); // Sunken floor in the middle of the hall.
+    EXPECT_EQ(clericSectorTape, tape(4, 3)); // Upper level, then the hall.
+}
+
+GAME_TEST(Issues, Issue2186b) {
+    // Items thrown down the hole in the Grand Temple of the Sun upper level fell through the floor of the hall below.
+    // Unlike actors, items don't recompute their sector every frame, so they kept the upper level's.
+    auto armorZTape = tapes.custom([] {
+        AccessibleVector<int> result;
+        for (const SpriteObject &sprite : pSpriteObjects)
+            if (sprite.uObjectDescID != 0 && sprite.containing_item.itemId == ITEM_LEATHER_ARMOR)
+                result.push_back(sprite.vPosition.z);
+        return result;
+    });
+    auto armorSectorTape = tapes.custom([] {
+        AccessibleVector<int> result;
+        for (const SpriteObject &sprite : pSpriteObjects)
+            if (sprite.uObjectDescID != 0 && sprite.containing_item.itemId == ITEM_LEATHER_ARMOR)
+                result.push_back(sprite.uSectorID);
+        return result;
+    });
+    game.startNewGame();
+    game.teleportTo(MAP_GRAND_TEMPLE_OF_THE_SUN, Vec3f(-880, 800, 648), 0); // Upper level, facing the hole over the hall.
+    pParty->setHoldingItem(Item(ITEM_LEATHER_ARMOR));
+    game.pressAndReleaseButton(BUTTON_LEFT, pViewport.center()); // Throw it down the hole.
+    test.startTaping();
+    game.tick(30); // It bounces along the railing top, then drops to the hall.
+
+    EXPECT_EQ(armorZTape.back(), tape(129)); // Raised floor along the west side of the hall below.
+    EXPECT_EQ(armorSectorTape, tape({4}, {3})); // Upper level, then the hall.
+}
+
+GAME_TEST(Issues, Issue2188) {
+    // assert(false) when pressing Z when the character is unconscious.
+    // Assertion was triggering b/c the text "Unconscious" doesn't fit into the status field.
+    auto screenTape = tapes.screen();
+
+    game.startNewGame();
+    test.startTaping();
+    pParty->pCharacters[0].health = 0;
+    pParty->pCharacters[0].SetCondition(CONDITION_UNCONSCIOUS, false);
+
+    game.tick();
+    game.pressAndReleaseKey(PlatformKey::KEY_Z); // Open status menu.
+    game.tick(); // Shouldn't assert.
+
+    EXPECT_EQ(pParty->pCharacters[0].GetMajorConditionIdx(), CONDITION_UNCONSCIOUS);
+    EXPECT_EQ(screenTape, tape(SCREEN_GAME, SCREEN_QUICK_REFERENCE));
+}
+
+// 2200
+
+GAME_TEST(Issues, Issue2201) {
+    // Haste depletes all spell points when any party member is weak.
+    auto mp3Tape = charTapes.mp(3);
+    auto statusTape = tapes.statusBar();
+
+    game.startNewGame();
+    test.startTaping();
+
+    pParty->pCharacters[3].bHaveSpell[SPELL_FIRE_HASTE] = true;
+    pParty->pCharacters[0].SetCondition(CONDITION_WEAK, false);
+
+    game.castSpell(3, SPELL_FIRE_HASTE);
+    game.tick(10); // All mana from 4th character was drained in 10 ticks.
+
+    EXPECT_CONTAINS(statusTape, "Spell failed");
+    EXPECT_EQ(mp3Tape.delta(), -5);
+}
+
+GAME_TEST(Issues, Issue2223) {
+    // tutorial spam excessive
+    auto screenTape = tapes.screen();
+    auto partyYPos = tapes.custom([] { return pParty->pos.y; });
+
+    game.startNewGame();
+    test.startTaping();
+    game.pressKey(PlatformKey::KEY_UP); // Move forward to trigger tutorial
+    game.tick(10);
+    game.releaseKey(PlatformKey::KEY_UP);
+    EXPECT_EQ(current_screen_type, SCREEN_NPC_DIALOGUE); // expect tutorial dialog
+    game.pressAndReleaseKey(PlatformKey::KEY_ESCAPE); // close tutorial
+    game.tick();
+    game.pressKey(PlatformKey::KEY_UP); // Move forward outside trigger area
+    game.tick(10);
+    game.releaseKey(PlatformKey::KEY_UP);
+    game.pressKey(PlatformKey::KEY_DOWN); // Move backwards through trigger area again
+    game.tick(45);
+    game.releaseKey(PlatformKey::KEY_DOWN);
+
+    // got back to original position
+    EXPECT_GT(partyYPos.max(), 2000.0f);
+    EXPECT_LE(partyYPos.back(), partyYPos.front());
+    EXPECT_EQ(screenTape, tape(SCREEN_GAME, SCREEN_NPC_DIALOGUE, SCREEN_GAME)); // only one tutorial shown
+}
+
+GAME_TEST(Issues, Issue2229) {
+    // Cant drop into hole.
+    auto zPos = tapes.custom([] { return pParty->pos.z; });
+    auto sectorTape = tapes.custom([] { return pBLVRenderParams->uPartySectorID; });
+    test.playTraceFromTestData("issue_2229.mm7", "issue_2229.json");
+    EXPECT_GE(zPos.front(), 0.0);
+    EXPECT_LE(zPos.back(), -400.0); // Dropped down the hole.
+    EXPECT_NE(sectorTape.front(), sectorTape.back()); // Changed sectors.
+}
+
+GAME_TEST(Issues, Issue2233) {
+    // Transparent walls - bad normals.
+    auto posTape = tapes.custom([] { return pParty->pos; });
+    test.playTraceFromTestData("issue_2233.mm7", "issue_2233.json");
+    // This was previously impassable due to bad wall normals heading NE.
+    EXPECT_LT(posTape.front().y, 6200);
+    EXPECT_LT(posTape.front().x, -10000);
+    EXPECT_GT(posTape.back().y, 7400);
+    EXPECT_GT(posTape.back().x, -9200);
+    // And spot check a known problem face.
+    EXPECT_GT(dot(pIndoor->faces[6301].facePlane.normal, Vec3f(0.659, -0.742, 0.123)), 0.99f);
+}
+
+GAME_TEST(Issues, Issue2236) {
+    // Minotaur (actor #55) was falling through indoor floors.
+    auto actorZTape = actorTapes.custom(55, [](const Actor &a) { return static_cast<int>(a.pos.z); });
+    test.playTraceFromTestData("issue_2236.mm7", "issue_2236.json");
+    EXPECT_GT(actorZTape.min(), 3200); // Minotaur should not fall through the floor.
+}
+
+GAME_TEST(Issues, Issue2244) {
+    // Lift restarts at bottom.
+    auto zPos = tapes.custom([] { return pParty->pos.z; });
+    auto triggerID = tapes.custom([] {return pParty->floor_face_id; });
+    test.playTraceFromTestData("issue_2244.mm7", "issue_2244.json");
+    EXPECT_GE(zPos.front(), 0.0); // start at the top of the lift
+    EXPECT_LE(zPos.back(), -3070.0); // we are at the bottom at the end of the trace
+    EXPECT_NE(triggerID.front(), 1181); // start off the lift trigger
+    EXPECT_EQ(triggerID.back(), 1181); // and we are on the lift trigger
+}
+
+GAME_TEST(Issues, Issue2244b) {
+    // Make sure events dont trigger on game load
+    auto zPos = tapes.custom([] { return pParty->pos.z; });
+    auto triggerID = tapes.custom([] {return pParty->floor_face_id; });
+    test.playTraceFromTestData("issue_2244b.mm7", "issue_2244b.json");
+    EXPECT_LE(zPos.back(), -3070.0); // we are at the bottom at the end of the trace
+    EXPECT_EQ(triggerID.back(), 1181); // and we are on the lift trigger
+}
+
+GAME_TEST(Issues, Issue2255) {
+    // Monster damage for 1st spell was calculated using 2nd spell mastery.
+    auto hpTape = charTapes.hp(0);
+    auto spritesTape = tapes.sprites();
+
+    engine->config->debug.NoActors.setValue(true);
+    game.startNewGame();
+    test.startTaping();
+    prepareForBattleTest();
+
+    engine->config->debug.NoActors.setValue(false);
+    Actor *archer = game.spawnMonster(pParty->pos + Vec3f(0, 1500, 0), MONSTER_ELF_ARCHER_A);
+    archer->monsterInfo.spell1Id = SPELL_FIRE_FIRE_BOLT;
+    archer->monsterInfo.spell1SkillMastery = CombinedSkillValue(10, MASTERY_GRANDMASTER);
+    archer->monsterInfo.spell1UseChance = 100;
+    archer->monsterInfo.spell2Id = SPELL_NONE;
+    archer->monsterInfo.spell2SkillMastery = CombinedSkillValue::none();
+    archer->monsterInfo.spell2UseChance = 0;
+    archer->moveSpeed = 1;
+    game.tick(100);
+
+    EXPECT_GE(hpTape.size(), 2); // Should have received some damage. Was zero before we fixed the bug.
+    EXPECT_CONTAINS(spritesTape.flatten(), SPRITE_SPELL_FIRE_FIRE_BOLT);
+    EXPECT_CONTAINS(spritesTape.flatten(), SPRITE_SPELL_FIRE_FIRE_BOLT_IMPACT);
+    EXPECT_MISSES(spritesTape.flatten(), SPRITE_PROJECTILE_ARROW); // No arrows were fired, only fire bolts.
+}
+
+GAME_TEST(Issues, Issue2267) {
+    // Bloodsplats not appearing on save reload.
+    // Actor::donebloodsplat is not serialized, and reloading a save mid-session used to keep the in-memory actors,
+    // so re-killing the same monster produced no bloodsplat.
+    test.prepareForNextTest(100, RANDOM_ENGINE_MERSENNE_TWISTER);
+    auto splatsTape = tapes.custom([] { return static_cast<int>(engine->decal_builder->bloodsplat_container->uNumBloodsplats); });
+
+    engine->config->debug.NoActors.setValue(true);
+    game.startNewGame();
+    test.startTaping();
+    prepareForBattleTest();
+    engine->config->debug.NoActors.setValue(false);
+
+    // Expert bow shoots single arrows, peasants die in one hit.
+    Character &char0 = pParty->pCharacters[0];
+    char0.inventory.equip(ITEM_SLOT_BOW, Item(ITEM_CROSSBOW));
+    char0.setSkillValue(SKILL_BOW, CombinedSkillValue(10, MASTERY_EXPERT));
+
+    Actor *peasant = game.spawnMonster(pParty->pos + Vec3f(0, 500, 0), MONSTER_PEASANT_DWARF_FEMALE_A_A);
+    peasant->moveSpeed = 1;
+    ASSERT_TRUE(pMonsterStats->infos[peasant->monsterInfo.id].bloodSplatOnDeath);
+
+    auto shootUntilDead = [&] {
+        for (int i = 0; i < 100 && pActors[0].aiState != Dead; i++) {
+            game.pressAndReleaseKey(PlatformKey::KEY_A);
+            game.tick();
+        }
+        ASSERT_EQ(pActors[0].aiState, Dead);
+        game.tick(5); // Wait out the bloodsplat.
+    };
+
+    // Save while the peasant is alive, then kill it.
+    Blob save = game.saveGame();
+    shootUntilDead();
+
+    // Reload & kill again. Before the fix the peasant kept donebloodsplat = true through the reload, and the second
+    // bloodsplat was never emitted.
+    game.loadGame(save);
+    shootUntilDead();
+    test.stopTaping();
+
+    // One bloodsplat pulse per kill.
+    EXPECT_EQ(splatsTape, tape(0, 1, 0, 1, 0));
+}
+
+GAME_TEST(Issues, Issue2279) {
+    // Game crashed when opening inventory while holding the attack key.
+    test.playTraceFromTestData("issue_2279.mm7", "issue_2279.json");
+    // Test passes if no crash occurred.
+}
+
+GAME_TEST(Issues, Issue2289) {
+    // Monsters were skipping their turns in turn-based mode when their action length was zero.
+    auto turnBasedTape = tapes.custom([] { return pParty->bTurnBasedModeOn; });
+    auto meleeAttacksTape = actorTapes.countByState(AttackingMelee);
+    test.playTraceFromTestData("issue_2289.mm7", "issue_2289.json");
+    EXPECT_CONTAINS(turnBasedTape, true); // We were in turn-based combat.
+    EXPECT_GT(meleeAttacksTape.max(), 0); // Monsters actually attacked.
+}
+
+GAME_TEST(Issues, Issue2298) {
+    // Holding an item when entering a shop = it can not be dropped after
+    // This tests that the mouse cursor updates correctly when dropping an item
+    auto pickedItemTape = tapes.custom([] { return pParty->pPickedItem.itemId; });
+    auto mouseCursorTape = tapes.custom([] { return mouse->cursor_img->name(); });
+    game.startNewGame();
+    test.startTaping();
+    game.tick();
+    pParty->setHoldingItem(Item(ITEM_LEATHER_ARMOR));
+    game.tick();
+    pParty->placeHeldItemInInventoryOrDrop();
+    game.tick();
+
+    EXPECT_EQ(pickedItemTape, tape(ITEM_NULL, ITEM_LEATHER_ARMOR, ITEM_NULL));
+    EXPECT_EQ(mouseCursorTape, tape("micon1", "item066", "micon1"));
+}
+
+// 2300
+
+GAME_TEST(Issues, Issue2317) {
+    // Opening a chest with spacebar insta-collects several items from the chest.
+    // The bug was that key repeat in paused mode triggered every frame while the key was held,
+    // causing multiple item pickups when spacebar was used to open a chest.
+    test.prepareForNextTest(30, RANDOM_ENGINE_SEQUENTIAL);
+
+    auto screenTape = tapes.screen();
+    auto partyItemsTape = tapes.totalItemCount();
+    auto chestItemsTape = tapes.custom([] {
+        int result = 0;
+        for (const Chest &chest : vChests)
+            result += chest.inventory.size();
+        return result;
+    });
+    auto chestIdTape = tapes.custom([] { return current_screen_type == SCREEN_CHEST ? pGUIWindow_CurrentChest->chestId() : -1; });
+
+    game.startNewGame();
+    test.startTaping();
+
+    // Move next to a chest.
+    pParty->pos = Vec3f(8600, 5200, 1);
+    game.tick();
+
+    // Press spacebar and HOLD it for several frames to simulate the bug condition.
+    // The keyrepeat delay is 500ms. At 30ms/frame, holding for 10 frames (300ms)
+    // should NOT trigger any item pickups - only the chest should open.
+    // Before the fix, items would be picked up immediately.
+    game.pressKey(PlatformKey::KEY_SPACE);
+    game.tick(10);
+
+    // Verify chest opened but no items were auto-grabbed.
+    ASSERT_EQ(chestIdTape.size(), 2);
+    EXPECT_EQ(screenTape.back(), SCREEN_CHEST);
+    EXPECT_GT(vChests[chestIdTape.back()].inventory.size(), 0); // Chest had items.
+    EXPECT_EQ(chestItemsTape.delta(), 0); // Chest items unchanged.
+    EXPECT_EQ(partyItemsTape.delta(), 0); // Party items unchanged.
+
+    // Now check that keyrepeat actually works.
+    // We wait for another 450ms, so keyrepeat should now kick in.
+    game.tick(15);
+    EXPECT_LT(chestItemsTape.delta(), 0);
+    EXPECT_GT(partyItemsTape.delta(), 0);
+}
+
+GAME_TEST(Issues, Issue2318) {
+    // Error message in party creation persists when leaving and re-entering the menu.
+    test.prepareForNextTest(10, RANDOM_ENGINE_SEQUENTIAL); // 10ms per frame, so that the timers won't expire.
+    auto messagesTape = tapes.messageBoxes();
+
+    game.goToMainMenu();
+    test.startTaping();
+
+    // Enter party creation.
+    game.pressGuiButton("MainMenu_NewGame");
+    game.tick(2);
+    EXPECT_EQ(current_screen_type, SCREEN_PARTY_CREATION);
+
+    // Uncheck a couple skills.
+    game.pressGuiButton("PartyCreation_RemoveSkill3_0");
+    game.tick();
+    game.pressGuiButton("PartyCreation_RemoveSkill4_0");
+    game.tick();
+
+    // Click OK without proper skills - this should trigger an error message.
+    game.pressGuiButton("PartyCreation_OK");
+    game.tick(2);
+    EXPECT_EQ(current_screen_type, SCREEN_PARTY_CREATION); // Nah, still in party creation.
+    ASSERT_FALSE(messagesTape.back().empty());
+    EXPECT_CONTAINS(messagesTape.back().front(), "Create Party cannot be completed"); // Error message appeared.
+
+    // Leave & re-enter party creation.
+    game.goToMainMenu();
+    game.pressGuiButton("MainMenu_NewGame");
+    game.tick(2);
+    EXPECT_EQ(current_screen_type, SCREEN_PARTY_CREATION);
+    EXPECT_TRUE(messagesTape.back().empty()); // No error messages.
+    game.tick(1);
+    EXPECT_TRUE(messagesTape.back().empty()); // Still no error messages.
+}
+
+GAME_TEST(Issues, Issue2341) {
+    // MouseLook switches off after opening any menu
+    test.prepareForNextTest();
+    game.startNewGame();
+    test.startTaping();
+    EXPECT_EQ(mouse->_mouseLook, Io::Mouse::MouseLookState::Disabled);
+    game.pressAndReleaseKey(PlatformKey::KEY_F10);
+    game.tick();
+    EXPECT_EQ(mouse->_mouseLook, Io::Mouse::MouseLookState::Enabled);
+    game.pressAndReleaseKey(PlatformKey::KEY_ESCAPE);
+    game.tick();
+    EXPECT_EQ(current_screen_type, SCREEN_MENU);
+    EXPECT_EQ(mouse->_mouseLook, Io::Mouse::MouseLookState::Suspended);
+    game.pressAndReleaseKey(PlatformKey::KEY_ESCAPE);
+    game.tick();
+    game.tick();
+    EXPECT_EQ(current_screen_type, SCREEN_GAME);
+    EXPECT_EQ(mouse->_mouseLook, Io::Mouse::MouseLookState::Enabled); // MouseLook should be re-enabled after closing the menu.
+}
+
+GAME_TEST(Prs, Pr2354) {
+    // Verify that all levels (indoor & outdoor) and their default deltas can be deserialized and reconstructed.
+    for (MapId mapId : allMaps()) {
+        std::string_view fileName = pMapTable->pInfos[mapId].fileName;
+        std::string_view baseName = fileName.substr(0, fileName.size() - 4);
+
+        if (isMapIndoor(mapId)) {
+            // Deserialize and reconstruct the base indoor location (.blv).
+            IndoorLocation_MM7 rawLocation;
+            deserialize(lod::decodeMaybeCompressed(pGames_LOD->read(fileName)), &rawLocation);
+            IndoorLocation location;
+            reconstruct(rawLocation, &location);
+
+            // Deserialize and reconstruct the default delta (.dlv).
+            std::string dlvFilename = fmt::format("{}.dlv", baseName);
+            IndoorDelta_MM7 rawDelta;
+            deserialize(lod::decodeMaybeCompressed(pGames_LOD->read(dlvFilename)), &rawDelta, tags::context(rawLocation));
+            reconstruct(rawDelta, &location);
+        } else if (isMapOutdoor(mapId)) {
+            // Deserialize and reconstruct the base outdoor location (.odm).
+            OutdoorLocation_MM7 rawLocation;
+            deserialize(lod::decodeMaybeCompressed(pGames_LOD->read(fileName)), &rawLocation);
+            OutdoorLocation location;
+            reconstruct(rawLocation, &location);
+
+            size_t vertexOffset = 0;
+            for (size_t modelIndex = 0; modelIndex < location.pBModels.size(); ++modelIndex) {
+                const BSPModel &model = location.pBModels[modelIndex];
+                size_t vertexCount = rawLocation.models[modelIndex].numVertices;
+                for (int faceId : model.faces) {
+                    const BLVFace &face = location.faces[faceId];
+                    EXPECT_EQ(face.faceId, faceId);
+                    Pid pid = Pid::face(faceId);
+                    EXPECT_EQ(&location.face(pid), &face);
+                    for (int vertexId : face.vertexIds) {
+                        EXPECT_GE(vertexId, 0);
+                        size_t globalVertexId = static_cast<size_t>(vertexId);
+                        EXPECT_GE(globalVertexId, vertexOffset);
+                        EXPECT_LT(globalVertexId, vertexOffset + vertexCount);
+                        EXPECT_LT(globalVertexId, location.vertices.size());
+                    }
+                }
+                vertexOffset += vertexCount;
+            }
+
+            // Deserialize and reconstruct the default delta (.ddm).
+            std::string ddmFilename = fmt::format("{}.ddm", baseName);
+            OutdoorDelta_MM7 rawDelta;
+            deserialize(lod::decodeMaybeCompressed(pGames_LOD->read(ddmFilename)), &rawDelta, tags::context(rawLocation));
+            reconstruct(rawDelta, &location);
+        }
+    }
+}
+
+// 2400
+
+GAME_TEST(Issues, Issue2408) {
+    // Turn left/right should strafe when mouselook is active.
+    test.prepareForNextTest();
+    game.startNewGame();
+    test.startTaping();
+
+    // Without mouselook: KEY_LEFT turns (yaw changes, position doesn't).
+    int yawBefore = pParty->_viewYaw;
+    Vec3f posBefore = pParty->pos;
+    game.pressKey(PlatformKey::KEY_LEFT);
+    game.tick(5);
+    game.releaseKey(PlatformKey::KEY_LEFT);
+    game.tick(1);
+    EXPECT_NE(pParty->_viewYaw, yawBefore);   // Yaw changed.
+    EXPECT_EQ(pParty->pos, posBefore);         // Position unchanged.
+
+    // With mouselook: KEY_LEFT strafes (position changes, yaw doesn't).
+    game.pressAndReleaseKey(PlatformKey::KEY_F10); // Enable mouselook.
+    game.tick(1);
+    EXPECT_EQ(mouse->_mouseLook, Io::Mouse::MouseLookState::Enabled);
+    yawBefore = pParty->_viewYaw;
+    posBefore = pParty->pos;
+    game.pressKey(PlatformKey::KEY_LEFT);
+    game.tick(5);
+    game.releaseKey(PlatformKey::KEY_LEFT);
+    game.tick(1);
+    EXPECT_EQ(pParty->_viewYaw, yawBefore);   // Yaw unchanged.
+    EXPECT_NE(pParty->pos, posBefore);         // Position changed (strafed).
+}
+
+GAME_TEST(Issues, Issue2409) {
+    // Mouse not centered when mouselooking - interaction position drifted from crosshair.
+    test.prepareForNextTest();
+    game.startNewGame();
+    game.pressAndReleaseKey(PlatformKey::KEY_F10); // Enable mouselook.
+    game.tick();
+    EXPECT_EQ(mouse->_mouseLook, Io::Mouse::MouseLookState::Enabled);
+    game.moveMouse(100, 100); // Move cursor away from center.
+    game.tick();
+    EXPECT_EQ(mouse->position(), pViewport.center()); // Interaction position must stay at crosshair center.
+}
+
+GAME_TEST(Issues, Issue2425) {
+    // Segmentation fault when trying to buy Fire Guild membership on Emerald Island.
+    auto screenTape = tapes.screen();
+    auto airMem = tapes.custom([] -> bool { return pParty->activeCharacter()._achievedAwardsBits[AWARD_MEMBERSHIP_AIR_GUILD]; });
+    auto fireMem = tapes.custom([] -> bool { return pParty->activeCharacter()._achievedAwardsBits[AWARD_MEMBERSHIP_FIRE_GUILD]; });
+    test.playTraceFromTestData("issue_2425.mm7", "issue_2425.json");
+    EXPECT_EQ(screenTape.size(), 3); // game / house / game
+    EXPECT_EQ(airMem, tape(false, true) ); // and weve bought both memberships
+    EXPECT_EQ(fireMem, tape(false, true) );
+}
+
+GAME_TEST(Issues, Issue2451a) {
+    // Enchantment spells failed on equipped items due to off-by-one in inventory index.
+    test.prepareForNextTest(10, RANDOM_ENGINE_SEQUENTIAL);
+    engine->config->debug.AllMagic.setValue(true);
+    game.startNewGame();
+
+    // Prepare char0 - give him a sword.
+    pParty->pCharacters[0].setSkillValue(SKILL_SWORD, CombinedSkillValue::novice());
+    InventoryEntry swordEntry = pParty->pCharacters[0].inventory.equip(ITEM_SLOT_MAIN_HAND, Item(ITEM_BROADSWORD));
+    EXPECT_EQ(swordEntry->specialEnchantment, ITEM_ENCHANTMENT_NULL);
+
+    // Cast Fire Aura - this opens the enchantment targeting UI.
+    game.castSpell(0, SPELL_FIRE_FIRE_AURA);
+    game.tick();
+    ASSERT_TRUE(IsEnchantingInProgress);
+
+    // Click on the broadsword on the paperdoll.
+    game.pressAndReleaseButton(BUTTON_LEFT, 521, 95);
+    game.tick();
+
+    EXPECT_FALSE(IsEnchantingInProgress);
+    EXPECT_EQ(swordEntry->specialEnchantment, ITEM_ENCHANTMENT_OF_INFERNOS); // GM Fire Aura -> OF_INFERNOS.
+}
+
+GAME_TEST(Issues, Issue2451b) {
+    // Same off-by-one as Issue2451a, but for Recharge Item targeting an equipped wand.
+    test.prepareForNextTest(10, RANDOM_ENGINE_SEQUENTIAL);
+    engine->config->debug.AllMagic.setValue(true);
+    game.startNewGame();
+
+    // Prepare char0 - equip a partly-discharged wand.
+    Item wand;
+    wand.itemId = ITEM_WAND_OF_FIRE;
+    wand.numCharges = 1;
+    wand.maxCharges = 10;
+    InventoryEntry wandEntry = pParty->pCharacters[0].inventory.equip(ITEM_SLOT_MAIN_HAND, wand);
+    EXPECT_EQ(wandEntry->numCharges, 1);
+    EXPECT_EQ(wandEntry->maxCharges, 10);
+
+    // Cast Recharge Item - this opens the enchantment targeting UI.
+    game.castSpell(0, SPELL_WATER_RECHARGE_ITEM);
+    game.tick();
+    ASSERT_TRUE(IsEnchantingInProgress);
+
+    // Click on the wand on the paperdoll - same main-hand slot as the sword in 2451a.
+    game.pressAndReleaseButton(BUTTON_LEFT, 521, 95);
+    game.tick();
+
+    EXPECT_FALSE(IsEnchantingInProgress);
+    EXPECT_EQ(wandEntry->numCharges, 9); // GM Recharge Item -> 0.9 * 10 = 9.
+    EXPECT_EQ(wandEntry->maxCharges, 9);
+}
+
+GAME_TEST(Issues, Issue2452) {
+    // Right-clicking on skills tab could draw multiple overlapping tooltips per frame.
+    auto messageBoxesTape = tapes.messageBoxes();
+    auto guiTextTape = tapes.allGUIWindowsText();
+    game.startNewGame();
+    game.goToInventory(0);
+    game.pressAndReleaseKey(PlatformKey::KEY_S);
+    game.tick(2);
+    EXPECT_EQ(current_screen_type, SCREEN_CHARACTERS);
+
+    test.startTaping();
+
+    // Sweep through skill list Y positions and verify at most one tooltip per frame.
+    for (int y = 40; y < 200; y++) {
+        game.pressButton(BUTTON_RIGHT, 100, y);
+        game.tick(1);
+        game.releaseButton(BUTTON_RIGHT);
+        game.tick(1);
+    }
+
+    EXPECT_GE(messageBoxesTape.flatten().size(), 1); // Some message boxes were shown.
+    EXPECT_EQ(messageBoxesTape.count([] (auto &&boxes) { return boxes.size() > 1; }), 0); // But no more than one at a time.
+    EXPECT_CONTAINS(guiTextTape.flatten(), [](const std::string &s) {
+        return s.starts_with("The sword skill covers most types of blades longer than a knife.");
+    }); // We did see a skill popup.
+}
+
+GAME_TEST(Issues, Issue2453) {
+    // Overwriting the last loaded save will crash to desktop.
+    auto loadingTape = tapes.custom([] { return pGameLoadingUI_ProgressBar->IsActive(); });
+    game.startNewGame();
+    test.startTaping();
+
+    // Drop autosave so it doesn't mess things up for us.
+    ufs->remove("saves/autosave.mm7");
+
+    // First save into slot 0.
+    game.pressAndReleaseKey(PlatformKey::KEY_ESCAPE);
+    game.tick(2);
+    game.pressGuiButton("GameMenu_SaveGame");
+    game.tick(2);
+    game.doubleClickGuiButton("SaveMenu_Slot0"); // Double click starts the name input.
+    game.tick(2);
+    game.pressAndReleaseKey(PlatformKey::KEY_DIGIT_0);
+    game.tick(2);
+    game.pressGuiButton("SaveMenu_Save");
+    game.tick(10);
+    EXPECT_EQ(ufs->ls("saves").size(), 1);
+    Blob firstSave = Blob::copy(ufs->read("saves/save000.mm7"));
+
+    // Load it back.
+    game.pressAndReleaseKey(PlatformKey::KEY_ESCAPE);
+    game.tick(2);
+    game.pressGuiButton("GameMenu_LoadGame");
+    game.tick(3);
+    game.pressGuiButton("LoadMenu_Slot0");
+    game.tick(2);
+    game.pressGuiButton("LoadMenu_Load");
+    game.tick(2);
+    game.skipLoadingScreen();
+    game.tick(2);
+
+    // Save over the same save — it's pre-selected in the save menu, so just pressing the save button overwrites it,
+    // and the existing title is preserved, no need to retype.
+    game.pressAndReleaseKey(PlatformKey::KEY_ESCAPE);
+    game.tick(2);
+    game.pressGuiButton("GameMenu_SaveGame");
+    game.tick(2);
+    EXPECT_EQ(saveLoadMenu()->selectedSlot().fileName, "save000.mm7");
+    game.pressGuiButton("SaveMenu_Save");
+    game.tick(10);
+    EXPECT_EQ(ufs->ls("saves").size(), 1);
+    Blob secondSave = Blob::copy(ufs->read("saves/save000.mm7"));
+    EXPECT_NE(firstSave.str(), secondSave.str()); // Save was actually overwritten.
+
+    EXPECT_GE(loadingTape.count(true), 1); // Loading screen was shown.
+
+    // Starting a new game drops the pre-selection — otherwise the save button would overwrite a save from a
+    // previous playthrough.
+    game.startNewGame();
+    game.pressAndReleaseKey(PlatformKey::KEY_ESCAPE);
+    game.tick(2);
+    game.pressGuiButton("GameMenu_SaveGame");
+    game.tick(2);
+    EXPECT_TRUE(saveLoadMenu()->selectedSlot().fileName.empty()); // The new save slot is selected.
+}
+
+GAME_TEST(Issues, Issue2463a) {
+    // Inserting the remaining Walls of Mist keys after a reload did not open the exit.
+    constexpr std::array keys = {ITEM_WEST_PILLAR_KEY, ITEM_CENTRAL_PILLAR_KEY, ITEM_EAST_PILLAR_KEY};
+    constexpr std::array pedestalFaceIds = {164, 4019, 4075};
+    constexpr std::array positions = {Vec3f(-1122, 3392, 1), Vec3f(-482, 3264, 1), Vec3f(158, 3392, 1)};
+    auto insertKey = [&](int pedestal) {
+        game.teleportTo(MAP_WALLS_OF_MIST, positions[pedestal], 180, -22); // Looking down at the pedestal.
+        game.pointMouseAtFace(pedestalFaceIds[pedestal]);
+        game.pressAndReleaseButton(BUTTON_LEFT, mouse->position());
+        game.tick(2);
+        EXPECT_FALSE(pParty->hasItem(keys[pedestal]));
+    };
+
+    auto exitTape = tapes.doorStates({1, 2});
+    engine->config->debug.NoActors.setValue(true);
+    game.startNewGame();
+    for (ItemId key : keys)
+        pParty->pCharacters[0].inventory.add(Item(key));
+    insertKey(0);
+    game.loadGame(game.saveGame());
+    insertKey(1);
+    game.loadGame(game.saveGame());
+    test.startTaping();
+    insertKey(2);
+    game.tick(20);
+    EXPECT_EQ(exitTape, tape({DOOR_CLOSED, DOOR_CLOSED}, {DOOR_OPENING, DOOR_OPENING}, {DOOR_OPEN, DOOR_OPEN}));
+}
+
+GAME_TEST(Issues, Issue2463b) {
+    // Saves with all three Walls of Mist keys consumed could leave the exit permanently closed.
+    auto exitTape = tapes.doorStates({1, 2});
+    engine->config->debug.NoActors.setValue(true);
+    game.startNewGame();
+    game.teleportTo(MAP_WALLS_OF_MIST, Vec3f(-1777, -495, 1), 90);
+    for (int var : {15, 16, 17})
+        engine->_persistentVariables.mapVars[var] = 1; // Flags all three pedestals as used, with the exit still closed.
+    game.loadGame(game.saveGame());
+    test.startTaping();
+    game.tick(20);
+    EXPECT_EQ(exitTape, tape({DOOR_OPENING, DOOR_OPENING}, {DOOR_OPEN, DOOR_OPEN}));
+}
+
+GAME_TEST(Issues, Issue2464a) {
+    // Hovering an option in an NPC dialogue should show its text in the status bar.
+    auto statusTape = tapes.statusBar();
+
+    engine->config->debug.NoActors.setValue(true);
+    game.startNewGame();
+    Actor *npc = game.spawnMonster(pParty->pos + Vec3f(0, 200, 0), MONSTER_PEASANT_DWARF_MALE_A_A, SPAWN_FRIENDLY | SPAWN_STATIONARY);
+    npc->npcId = 19; // Margaret the Docent.
+    game.pointMouseAtActor(npc->id);
+    game.pressAndReleaseButton(BUTTON_LEFT);
+    game.tick();
+    ASSERT_EQ(current_screen_type, SCREEN_NPC_DIALOGUE);
+
+    test.startTaping();
+    game.hoverGuiButton("NpcDialogue_Exit");
+    game.tick();
+    EXPECT_CONTAINS(statusTape, "Exit");
+}
+
+GAME_TEST(Issues, Issue2464b) {
+    // Hovering an option in a vendor's dialogue should not show its text in the status bar.
+    auto statusTape = tapes.statusBar();
+
+    engine->config->debug.NoActors.setValue(true);
+    game.startNewGame();
+    game.teleportTo(MAP_TATALIA, Vec3f(19174, 15056, 3040), 0); // In front of the door of Vander's Blades & Bows.
+    game.tick(2);
+    game.pressAndReleaseKey(PlatformKey::KEY_SPACE);
+    game.tick(2);
+    ASSERT_EQ(current_screen_type, SCREEN_HOUSE);
+
+    test.startTaping();
+    game.hoverGuiButton("HouseDialogue_Option0");
+    game.tick();
+    EXPECT_MISSES(statusTape, "Standard");
+}
+
+GAME_TEST(Issues, Issue2479) {
+    // Character select hotkeys stop working
+    auto screenTape = tapes.screen();
+    auto activeChar = tapes.activeCharacterIndex();
+    auto branchLessCharIndex = tapes.custom([] { if (current_screen_type == SCREEN_BRANCHLESS_NPC_DIALOG) return pParty->activeCharacterIndex(); return -1; });
+
+    test.playTraceFromTestData("issue_2479.mm7", "issue_2479.json");
+    EXPECT_EQ(screenTape, tape(SCREEN_GAME, SCREEN_BRANCHLESS_NPC_DIALOG, SCREEN_GAME));
+    EXPECT_EQ(activeChar, tape(0, 3)); // We switched characters.
+    EXPECT_EQ(branchLessCharIndex, tape(-1, 0, -1)); // We didnt switch before the dialog closed.
+}
+
+GAME_TEST(Issues, Issue2490) {
+    // Opening the autonotes book asserts.
+    test.prepareForNextTest();
+    game.startNewGame();
+    game.tick(2);
+    game.pressAndReleaseKey(PlatformKey::KEY_N); // Open autonotes.
+    game.tick(2);
+    EXPECT_EQ(current_screen_type, SCREEN_BOOKS); // Book opened, no assertion.
+}
+

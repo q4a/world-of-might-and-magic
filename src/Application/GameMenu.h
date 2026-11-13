@@ -1,27 +1,20 @@
 #pragma once
+
 #include <memory>
 
-#include "Engine/IocContainer.h"
-
-#include "Io/Mouse.h"
-
-using EngineIoc = Engine_::IocContainer;
-using Io::Mouse;
-
-namespace Application {
+namespace Io {
+class Mouse;
+} // namespace Io
 
 class Menu {
  public:
-    inline Menu() {
-        this->mouse = EngineIoc::ResolveMouse();
-    }
+    Menu();
+    ~Menu();
 
     void MenuLoop();
 
  private:
-     std::shared_ptr<Mouse> mouse = nullptr;
+     std::shared_ptr<Io::Mouse> mouse = nullptr;
 
      void EventLoop();
 };
-
-}  // namespace Application

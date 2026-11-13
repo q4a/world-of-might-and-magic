@@ -1,0 +1,113 @@
+#include "GUI/GUIButton.h"
+
+#include <cassert>
+#include <vector>
+
+#include "Engine/Graphics/Renderer/Renderer.h"
+
+#include "GUI/GUIFont.h"
+
+
+GUIButton *pBtn_CloseBook;
+GUIButton *pBtn_InstallRemoveSpell;
+GUIButton *pBtn_Autonotes_Instructors;
+GUIButton *pBtn_Autonotes_Misc;
+GUIButton *pBtn_Book_6;
+GUIButton *pBtn_Book_5;
+GUIButton *pBtn_Book_4;
+GUIButton *pBtn_Book_3;
+GUIButton *pBtn_Book_2;
+GUIButton *pBtn_Book_1;
+
+GUIButton *pBtn_ExitCancel;
+GUIButton *pBtn_YES;
+
+GUIButton *pButton_RestUI_Main;
+GUIButton *pButton_RestUI_Exit;
+GUIButton *pButton_RestUI_Wait5Minutes;
+GUIButton *pButton_RestUI_WaitUntilDawn;
+GUIButton *pButton_RestUI_Wait1Hour;
+
+GUIButton *pCharacterScreen_ExitBtn;
+GUIButton *pCharacterScreen_AwardsBtn;
+GUIButton *pCharacterScreen_InventoryBtn;
+GUIButton *pCharacterScreen_SkillsBtn;
+GUIButton *pCharacterScreen_StatsBtn;
+GUIButton *pCharacterScreen_DollBtn;
+GUIButton *pCharacterScreen_DetalizBtn;
+
+GUIButton *pBtn_NPCRight;
+GUIButton *pBtn_NPCLeft;
+GUIButton *pBtn_GameSettings;
+GUIButton *pBtn_QuickReference;
+GUIButton *pBtn_CastSpell;
+GUIButton *pBtn_Rest;
+GUIButton *pBtn_History;
+GUIButton *pBtn_Calendar;
+GUIButton *pBtn_Maps;
+GUIButton *pBtn_Autonotes;
+GUIButton *pBtn_Quests;
+
+GUIButton *pMMT_MainMenu_BtnMM6;
+GUIButton *pMMT_MainMenu_BtnMM7;
+GUIButton *pMMT_MainMenu_BtnMM8;
+GUIButton *pMMT_MainMenu_BtnContinue;
+GUIButton *pMMT_MainMenu_BtnExit;
+
+GUIButton *pBtn_Up;
+GUIButton *pBtn_Down;
+GUIButton *pBtn_Scroll;
+
+GUIButton *pBtn_Resume;
+GUIButton *pBtn_QuitGame;
+GUIButton *pBtn_GameControls;
+GUIButton *pBtn_LoadGame;
+GUIButton *pBtn_SaveGame;
+GUIButton *pBtn_NewGame;
+
+GUIButton *pBtn_SliderRight;
+GUIButton *pBtn_SliderLeft;
+
+GUIButton *pBtn_ZoomOut;
+GUIButton *pBtn_ZoomIn;
+
+GUIButton *pBtnDownArrow;
+GUIButton *pBtnArrowUp;
+GUIButton *pBtnCancel;
+GUIButton *pBtnLoadSlot;
+
+void GUIButton::Release() {
+    std::vector<GUIButton *>::iterator it =
+        std::find(pParent->vButtons.begin(), pParent->vButtons.end(), this);
+    if (it != pParent->vButtons.end())
+        pParent->vButtons.erase(it);
+    delete this;
+}
+
+void GUIButton::DrawLabel(std::string_view text, GUIFont *font, Color color, Color shadowColor) {
+    return GUIWindow::DrawText(font,
+                             {rect.x + (rect.w - font->GetLineWidth(text)) / 2, rect.y + (rect.h - font->GetHeight()) / 2},
+                             color, text, pParent->frameRect, 0, shadowColor);
+}
+
+bool GUIButton::Contains(unsigned int x, unsigned int y) {
+    return rect.contains(Pointi(x, y));
+}
+
+bool GUIButton::Contains(Pointi position) {
+    return rect.contains(position);
+}
+
+bool GUIButton::containsOval(Pointi position) const {
+    assert(uButtonType == BUTTON_TYPE_CHARACTER);
+
+    if (rect.isEmpty())
+        return false;
+
+    Pointi center = rect.center();
+    int dx = position.x - center.x;
+    int dy = position.y - center.y;
+    int semiW = rect.w / 2;
+    int semiH = rect.h / 2;
+    return 1.0 * dx * dx / (semiW * semiW) + 1.0 * dy * dy / (semiH * semiH) < 1.0;
+}

@@ -1,33 +1,26 @@
-#include "src/Application/GameConfig.h"
+#include "GameConfig.h"
 
-using Application::GameConfig;
+#include <memory>
+#include <string>
+#include <utility>
+#include <vector>
 
-GameConfig::GameConfig(const std::string& command_line_str) {
-    command_line = std::make_shared<CommandLine>(command_line_str);
+#include "Library/Logger/Logger.h"
 
-    std::shared_ptr<std::string> value;
-    if (command_line->TryGetValue("render", &value)) {
-        renderer_name = *value;
-    }
-    if (command_line->TryGetValue("display", &value)) {
-        display = std::stoi(*value);
-    }
-    if (command_line->TryGetValue("window_width", &value)) {
-        window_width = std::stoi(*value);
-    }
-    if (command_line->TryGetValue("window_height", &value)) {
-        window_height = std::stoi(*value);
-    }
-    if (command_line->TryGetValue("window_x", &value)) {
-        window_x = std::stoi(*value);
-    }
-    if (command_line->TryGetValue("window_y", &value)) {
-        window_y = std::stoi(*value);
-    }
-    if (command_line->TryGetValue("fullscreen", &value)) {
-        fullscreen = std::stoi(*value);
-    }
-    if (command_line->TryGetValue("borderless", &value)) {
-        borderless = std::stoi(*value);
-    }
+GameConfig::GameConfig() = default;
+GameConfig::~GameConfig() = default;
+
+GameConfig::CheatCommands::CheatCommands(GameConfig *config) : ConfigSection(config, "cheat_commands") {
+    // All 40 slots are empty by default. Built-in commands are defined in
+    // resources/scripts/dev/cheat_commands_list.lua so they can be reordered
+    // without touching config or renumbering entries.
+    static const int maxNumberOfCommands = 40;
+    for (int i = 0; i < maxNumberOfCommands; ++i)
+        _addCommand(i, "");
+}
+
+void GameConfig::CheatCommands::_addCommand(int commandIndex, const std::string& defaultValue) {
+    std::string name = fmt::format("command{:02}", commandIndex + 1);
+    auto item = std::make_unique<String>(this, name, defaultValue, fmt::format("Cheat command #{}.", commandIndex + 1));
+    _commandList.push_back(std::move(item));
 }

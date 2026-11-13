@@ -1,0 +1,177 @@
+#pragma once
+
+#include <cstdint>
+#include <memory>
+#include <string>
+#include <vector>
+
+#include "Engine/Tables/HouseTable.h"
+#include "Engine/MapEnums.h"
+
+#include "GUI/GUIWindow.h"
+
+#include "Utility/IndexedArray.h"
+
+#include "UIHouseEnums.h"
+
+// Right hand side dialogue writing constants
+constexpr int SIDE_TEXT_BOX_WIDTH = 144;
+constexpr int SIDE_TEXT_BOX_POS_X = 484;
+constexpr int SIDE_TEXT_BOX_POS_Z = 334;
+constexpr int SIDE_TEXT_BOX_POS_Y = 113;
+constexpr int SIDE_TEXT_BOX_BODY_TEXT_HEIGHT = 174;
+constexpr int SIDE_TEXT_BOX_BODY_TEXT_OFFSET = 138;
+constexpr int SIDE_TEXT_BOX_MAX_SPACING = 32;
+
+void BackToHouseMenu();
+
+/**
+ * @offset 0x4BCACC
+ */
+void selectProprietorDialogueOption(DialogueId option);
+
+/**
+ * @offset 0x44606A
+ */
+void prepareHouse(HouseId house);
+
+void createHouseUI(HouseId houseId);
+
+/**
+ * @offset 0x44622E
+ */
+bool enterHouse(HouseId uHouseID);
+
+/**
+ * Backs the house dialogue up one level, the way the player's escape does. The level above a house option comes from
+ * `GUIWindow_House::updateDialogueOnEscape`. At the speaker's menu the speaker is deselected and the dialogue window
+ * is queued to close. Also clears the message queue.
+ *
+ * @return                              Whether there is more to back out of. In a house with one NPC, the call
+ *                                      that deselects it already returns `false`. With several NPCs it returns
+ *                                      `true`, and the next call `false`.
+ */
+bool houseDialogueGoBack();
+
+/**
+ * Backs the house dialogue all the way out, to the house screen with no speaker selected. Doesn't leave the house.
+ * Clears the message queue, so a message that should leave the house goes in after the call.
+ */
+void houseDialogueGoBackToTop();
+
+/**
+ * @offset 0x4B1E92
+ */
+void playHouseSound(HouseId houseID, HouseSoundType type);
+
+/**
+ * @param houseId                       House whose sound to look up.
+ * @param type                          Which of the house's sounds.
+ * @return                              How long the sound plays. Zero if the house has no sounds.
+ */
+int64_t houseSoundLengthMs(HouseId houseId, HouseSoundType type);
+
+void selectHouseNPCDialogueOption(DialogueId topic);
+
+/**
+ * @offset 0x4B4224
+ */
+void updateHouseNPCTopics(int npc);
+
+/**
+ * Type of NPC you can have dialogue with inside house.
+ */
+enum class HouseNpcType {
+    HOUSE_PROPRIETOR, // default resident in non-simple houses (shop owner, temple priest etc.).
+    HOUSE_NPC,        // regular NPC, have description in NPCs table, @npc field is points to it.
+    HOUSE_TRANSITION  // transition point to different map, @targetMapID contains ID of target map.
+};
+using enum HouseNpcType;
+
+struct HouseNpcDesc {
+    HouseNpcType type = HOUSE_PROPRIETOR;
+    std::string label = "";
+    std::shared_ptr<GraphicsImage> icon;
+    GUIButton *button = nullptr;
+    MapId targetMapID = MAP_INVALID;
+    NPCData *npc = nullptr;
+};
+
+class GUIWindow_House : public GUIWindow {
+ public:
+    explicit GUIWindow_House(HouseId houseId);
+    virtual ~GUIWindow_House();
+
+    virtual void Update() override;
+
+    HouseType buildingType() const {
+        return houseTable[houseId()].uType;
+    }
+
+    HouseId houseId() const {
+        return _houseId;
+    }
+
+    DialogueId currentDialogue() const {
+        return _currentDialogue;
+    }
+
+    void setCurrentDialogue(DialogueId dialogue) {
+        _currentDialogue = dialogue;
+    }
+
+    void houseDialogManager();
+    void houseNPCDialogue();
+    void initializeProprietorDialogue();
+    void initializeNPCDialogue(int npc);
+    void initializeNPCDialogueButtons(std::vector<DialogueId> optionList);
+    void learnSelectedSkill(Skill skill);
+    void reinitDialogueWindow();
+    bool checkIfPlayerCanInteract();
+
+    void drawOptions(std::vector<std::string> &optionsText, Color selectColor,
+                     int topOptionShift = 0, bool denseSpacing = false) const;
+
+    virtual void houseDialogueOptionSelected(DialogueId option);
+    virtual void houseSpecificDialogue();
+    virtual std::vector<DialogueId> listDialogueOptions();
+    virtual void updateDialogueOnEscape();
+    virtual void houseScreenClick();
+    virtual void playHouseGoodbyeSpeech();
+
+ private:
+    void drawNpcHouseNameAndTitle(NPCData *npcData);
+    void drawNpcHouseGreetingMessage(NPCData *npcData);
+    void drawNpcHouseDialogueOptions(NPCData *npcData) const;
+    void drawNpcHouseDialogueResponse();
+
+ protected:
+    void learnSkillsDialogue(Color selectColor);
+
+    HouseId _houseId = HOUSE_INVALID;
+    DialogueId _currentDialogue = DIALOGUE_NULL;
+    std::shared_ptr<GraphicsImage> _dialogueBackground;
+    std::shared_ptr<GraphicsImage> _shopBackground; // Only shops and guilds have one.
+    int _savedButtonsNum = 0;
+    bool _transactionPerformed = false;
+};
+
+// Originally was a packed struct.
+struct HouseAnimDescr {
+    std::string video_name;
+    int field_4 = 0;
+    int house_npc_id = 0;
+    HouseType uBuildingType = HOUSE_TYPE_INVALID; // Originally was 1 byte.
+    uint8_t uRoomSoundId = 0;
+    uint16_t padding_e = 0;
+};
+
+extern std::shared_ptr<GraphicsImage> _591428_endcap;
+
+extern std::array<const HouseAnimDescr, 196> pAnimatedRooms;
+
+extern const IndexedArray<int, HOUSE_TYPE_WEAPON_SHOP, HOUSE_TYPE_DARK_GUILD> itemAmountInShop;
+
+extern std::vector<HouseNpcDesc> houseNpcs;
+// TODO(captainurist): move into GUIWindow_House. Which NPC the party talks to is the house window's state.
+extern int currentHouseNpc;

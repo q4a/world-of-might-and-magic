@@ -1,0 +1,1135 @@
+#include "GUI/GUIWindow.h"
+
+#include <cstdlib>
+#include <string>
+#include <sstream>
+#include <utility>
+#include <list>
+#include <memory>
+#include <vector>
+
+#include "Engine/Engine.h"
+#include "Engine/EngineGlobals.h"
+#include "Engine/AssetsManager.h"
+#include "Engine/EngineCallObserver.h"
+#include "Engine/Objects/Decoration.h"
+#include "Engine/Graphics/Renderer/Renderer.h"
+#include "Engine/Graphics/Viewport.h"
+#include "Engine/Graphics/Image.h"
+#include "Engine/Localization.h"
+#include "Engine/Random/Random.h"
+#include "Engine/Objects/CharacterEnums.h"
+#include "Engine/Objects/CharacterEnumFunctions.h"
+#include "Engine/Party.h"
+#include "Engine/PriceCalculator.h"
+#include "Engine/EngineIocContainer.h"
+#include "Engine/Tables/AwardTable.h"
+#include "Engine/Tables/IconFrameTable.h"
+#include "Engine/Timer.h"
+#include "Engine/Tables/MapTable.h"
+
+#include "GUI/GUIButton.h"
+#include "GUI/GUIFont.h"
+#include "GUI/GUIMessageQueue.h"
+#include "GUI/UI/UICharacter.h"
+#include "GUI/UI/UIGame.h"
+#include "GUI/UI/UIHouses.h"
+#include "GUI/UI/UIPopup.h"
+#include "GUI/UI/UIDialogue.h"
+#include "GUI/UI/UIBranchlessDialogue.h"
+#include "GUI/UI/UIGameOver.h"
+#include "GUI/UI/UISpell.h"
+#include "GUI/UI/UIMessageScroll.h"
+#include "GUI/UI/UIChest.h"
+
+#include "Io/InputEnums.h"
+#include "Io/KeyboardInputHandler.h"
+#include "Io/Mouse.h"
+
+#include "Media/Audio/AudioPlayer.h"
+#include "Media/MediaPlayer.h"
+
+#include "Library/Serialization/EnumSerialization.h"
+#include "Library/Logger/Logger.h"
+
+extern std::array<int, 4> pHealthBarPos;
+extern std::array<int, 4> pManaBarPos;
+extern const int pHealthManaBarYPos;
+
+std::unique_ptr<GUIWindow> pPrimaryWindow;
+std::unique_ptr<GUIWindow> pGUIWindow_CurrentMenu;
+std::unique_ptr<GUIWindow_Chest> pGUIWindow_CurrentChest;
+std::unique_ptr<GUIWindow_House> window_SpeakInHouse;
+std::unique_ptr<GUIWindow> pDialogueWindow;
+std::unique_ptr<GUIWindow_MessageScroll> pGUIWindow_ScrollWindow; // reading a message scroll
+std::unique_ptr<TargetedSpellUI> pGUIWindow_CastTargetedSpell;
+std::unique_ptr<GUIWindow_GameOver> pGameOverWindow;
+std::unique_ptr<GUIWindow_BranchlessDialogue> pGUIWindow_BranchlessDialogue;
+
+WindowType current_character_screen_window = WINDOW_CHARACTER_STATS;
+std::list<GUIWindow*> lWindowList;
+
+MenuType sCurrentMenuID;
+
+ScreenType current_screen_type = SCREEN_VIDEO;
+ScreenType prev_screen_type;
+
+std::shared_ptr<GraphicsImage> ui_exit_cancel_button_background;
+std::shared_ptr<GraphicsImage> game_ui_right_panel_frame;
+std::shared_ptr<GraphicsImage> dialogue_ui_x_ok_u;
+std::shared_ptr<GraphicsImage> dialogue_ui_x_x_u;
+
+std::shared_ptr<GraphicsImage> ui_buttdesc2;
+std::shared_ptr<GraphicsImage> ui_buttyes2;
+
+std::shared_ptr<GraphicsImage> ui_btn_npc_right;
+std::shared_ptr<GraphicsImage> ui_btn_npc_left;
+
+std::shared_ptr<GraphicsImage> ui_ar_dn_dn;
+std::shared_ptr<GraphicsImage> ui_ar_dn_up;
+std::shared_ptr<GraphicsImage> ui_ar_up_dn;
+std::shared_ptr<GraphicsImage> ui_ar_up_up;
+
+std::shared_ptr<GraphicsImage> ui_leather_mm6;
+std::shared_ptr<GraphicsImage> ui_leather_mm7;
+
+std::array<int, 28> possibleAddressingAwardBits = {{1,  2,  3,  4,  5,  7,  32, 33, 36, 37,
+                                                    38, 40, 41, 42, 43, 45, 46, 47, 48, 49,
+                                                    50, 51, 52, 53, 54, 55, 56, 60}};
+
+constinit const IndexedArray<Color, CHARACTER_BUFF_FIRST, CHARACTER_BUFF_LAST> ui_game_character_record_playerbuff_colors = {
+    {CHARACTER_BUFF_RESIST_AIR,         colorTable.Anakiwa},
+    {CHARACTER_BUFF_BLESS,              colorTable.Mercury},
+    {CHARACTER_BUFF_RESIST_BODY,        colorTable.FlushOrange},
+    {CHARACTER_BUFF_RESIST_EARTH,       colorTable.Gray},
+    {CHARACTER_BUFF_FATE,               colorTable.Mercury},
+    {CHARACTER_BUFF_RESIST_FIRE,        colorTable.DarkOrange},
+    {CHARACTER_BUFF_HAMMERHANDS,        colorTable.FlushOrange},
+    {CHARACTER_BUFF_HASTE,              colorTable.DarkOrange},
+    {CHARACTER_BUFF_HEROISM,            colorTable.Mercury},
+    {CHARACTER_BUFF_RESIST_MIND,        colorTable.PurplePink},
+    {CHARACTER_BUFF_PAIN_REFLECTION,    colorTable.MoonRaker},
+    {CHARACTER_BUFF_PRESERVATION,       colorTable.Mercury},
+    {CHARACTER_BUFF_REGENERATION,       colorTable.FlushOrange},
+    {CHARACTER_BUFF_SHIELD,             colorTable.Anakiwa},
+    {CHARACTER_BUFF_STONESKIN,          colorTable.Gray},
+    {CHARACTER_BUFF_ACCURACY,           colorTable.PaleCanary},
+    {CHARACTER_BUFF_ENDURANCE,          colorTable.PaleCanary},
+    {CHARACTER_BUFF_INTELLIGENCE,       colorTable.PaleCanary},
+    {CHARACTER_BUFF_LUCK,               colorTable.PaleCanary},
+    {CHARACTER_BUFF_STRENGTH,           colorTable.PaleCanary},
+    {CHARACTER_BUFF_PERSONALITY,        colorTable.PaleCanary},
+    {CHARACTER_BUFF_SPEED,              colorTable.PaleCanary},
+    {CHARACTER_BUFF_RESIST_WATER,       colorTable.AzureRadiance},
+    {CHARACTER_BUFF_WATER_WALK,         colorTable.AzureRadiance},
+};
+
+
+void SetCurrentMenuID(MenuType uMenu) {
+    sCurrentMenuID = uMenu;
+}
+
+MenuType GetCurrentMenuID() {
+    return sCurrentMenuID;
+}
+
+bool PauseGameDrawing() {
+    if (current_screen_type != SCREEN_GAME &&
+        current_screen_type != SCREEN_NPC_DIALOGUE &&
+        current_screen_type != SCREEN_CHANGE_LOCATION) {
+        if (current_screen_type == SCREEN_INPUT_BLV) return false; // uCurrentHouse_Animation;
+        if (current_screen_type != SCREEN_BRANCHLESS_NPC_DIALOG) return true;
+    }
+    return false;
+}
+
+GUIButton *GUI_HandleHotkey(PlatformKey hotkey) {
+    for (GUIWindow *pWindow : lWindowList) {
+        for (GUIButton *result : pWindow->vButtons) {
+            if (result->action != INPUT_ACTION_INVALID && keyboardActionMapping->isBound(result->action, hotkey)) {
+                engine->_messageQueue->addMessageCurrentFrame(result->msg, result->msg_param, 0);
+                return result;
+            }
+        }
+
+        int width = render->GetPresentDimensions().w;
+        // TODO(captainurist): Sus. Comparing height to width?
+        if (pWindow->frameRect.x == 0 && pWindow->frameRect.y == 0 &&
+            pWindow->frameRect.w == width && pWindow->frameRect.h == width) {
+            break;
+        }
+    }
+    return 0;
+}
+
+void GUIWindow::setKeyboardControlGroup(int buttonsCount, bool msgOnSelect, int selectStep, int initialPosition) {
+    this->pNumPresenceButton = buttonsCount;
+    this->_msgOnKeyboardSelect = msgOnSelect;
+    this->_selectStep = selectStep;
+
+    if (buttonsCount) {
+        this->pCurrentPosActiveItem = initialPosition;
+        this->pStartingPosActiveItem = initialPosition;
+        this->receives_keyboard_input = true;
+    } else {
+        this->pCurrentPosActiveItem = 0;
+        this->pStartingPosActiveItem = 0;
+        this->receives_keyboard_input = false;
+    }
+}
+
+GUIWindow::~GUIWindow() {
+    DeleteButtons();
+    lWindowList.remove(this);
+    // TODO(captainurist): logger can be NULL here if we're called from cxa_finalize.
+    MM_TRACE("Release window: {}", toString(eWindowType));
+}
+
+void GUIWindow::DeleteButtons() {
+    while (vButtons.size()) {
+        vButtons.front()->Release();
+    }
+}
+
+GUIButton *GUIWindow::GetControl(unsigned int uID) {
+    if (uID >= vButtons.size()) {
+        return nullptr;
+    }
+
+    return vButtons[uID];
+}
+
+// TODO(pskelton): this function may modify frameRect - extract out
+void GUIWindow::DrawMessageBox(Recti& frameRect, std::string sHint) {
+    // TODO(pskelton): Derived Messagebox types for different kinds of popup boxes
+    if (engine->callObserver) {
+        engine->callObserver->notify(CALL_DRAW_MESSAGE_BOX, sHint);
+    }
+
+    Sizei renDims = render->GetRenderDimensions();
+
+    Pointi cursor = EngineIocContainer::ResolveMouse()->position();
+    if (frameRect.x >= 0) {
+        if (frameRect.w + frameRect.x > renDims.w) {
+            frameRect.x = renDims.w - frameRect.w;
+            frameRect.y = cursor.y + 30;
+        }
+    } else {
+        frameRect.x = 0;
+        frameRect.y = cursor.y + 30;
+    }
+
+    if (frameRect.y >= 0) {
+        if (frameRect.y + frameRect.h > renDims.h) {
+            frameRect.y = cursor.y - frameRect.h - 30;
+        }
+    } else {
+        frameRect.y = cursor.y + 30;
+    }
+    if (frameRect.y < 0) {
+        frameRect.y = 0;
+    }
+    if (frameRect.x < 0) {
+        frameRect.x = 0;
+    }
+
+    Recti current_window = frameRect;
+    current_window.x += 12;
+    current_window.w -= 28;
+    current_window.y += 12;
+    current_window.h -= 12;
+    unsigned int uBoxHeight;
+    if (!sHint.empty()) {
+        uBoxHeight = assets->pFontLucida->CalcTextHeight(sHint, current_window.w, 0) + 24;
+    } else {
+        uBoxHeight = frameRect.h;
+    }
+    if (uBoxHeight < 64) {
+        uBoxHeight = 64;
+    }
+    if ((int)(uBoxHeight + frameRect.y) > 479) {
+        uBoxHeight = 479 - frameRect.y;
+    }
+    DrawPopupWindow(frameRect.x, frameRect.y, frameRect.w, uBoxHeight);
+    if (!sHint.empty()) {
+        DrawTitleText(
+            assets->pFontLucida.get(),
+            0, (int)(uBoxHeight - assets->pFontLucida->CalcTextHeight(sHint, current_window.w, 0)) / 2 - 14,
+            colorTable.White, sHint, 3, current_window);
+    }
+}
+
+std::string MakeDateTimeString(Duration time) {
+    CivilDuration d = time.toCivilDuration();
+
+    std::string str;
+    if (d.days) {
+        auto day_str = localization->str(LSTR_DAYS);
+        if (d.days <= 1) day_str = localization->str(LSTR_DAY_CAPITALIZED);
+
+        str += fmt::format("{} {} ", d.days, day_str);
+    }
+
+    if (d.hours) {
+        auto hour_str = localization->str(LSTR_HOURS);
+        if (d.hours <= 1) hour_str = localization->str(LSTR_HOUR);
+
+        str += fmt::format("{} {} ", d.hours, hour_str);
+    }
+
+    if (d.minutes && !d.days) {
+        auto minute_str = localization->str(LSTR_MINUTES);
+        if (d.minutes <= 1) minute_str = localization->str(LSTR_MINUTE);
+
+        str += fmt::format("{} {} ", d.minutes, minute_str);
+    }
+
+    if (d.seconds && !d.hours && !d.days) {
+        auto seconds_str = localization->str(LSTR_SECONDS);
+        if (d.seconds <= 1) seconds_str = localization->str(LSTR_SECOND);
+
+        str += fmt::format("{} {} ", d.seconds, seconds_str);
+    }
+
+    if (!str.empty() && str.back() == ' ')
+        str.pop_back();
+
+    return str;
+}
+
+//----- (004B1854) --------------------------------------------------------
+void GUIWindow::DrawShops_next_generation_time_string(Duration time, Recti frameRect) {
+    auto str = MakeDateTimeString(time);
+    DrawTitleText(assets->pFontArrus.get(), 0,
+                  (212 - assets->pFontArrus->CalcTextHeight(str, frameRect.w, 0)) / 2 + 101, colorTable.PaleCanary,
+                  localization->str(LSTR_PLEASE_TRY_BACK_IN) + str, 3, frameRect);
+}
+
+//----- (0044D406) --------------------------------------------------------
+void GUIWindow::DrawTitleText(GUIFont *pFont, int horizontalMargin, int verticalMargin, Color color, std::string_view text, int lineSpacing, Recti frameRect) {
+    if (engine->callObserver) {
+        engine->callObserver->notify(CALL_GUIWINDOW_DRAWTEXT, std::string(text));
+    }
+    int width = frameRect.w - horizontalMargin;
+    std::string resString = pFont->WrapText(text, frameRect.w, horizontalMargin);
+    std::istringstream stream(resString);
+    std::string line;
+    int x = horizontalMargin + frameRect.x;
+    int y = verticalMargin + frameRect.y;
+    Color lastcolor = color;
+    while (std::getline(stream, line)) {
+        int x_offset = pFont->AlignText_Center(width, line);
+        lastcolor = pFont->DrawTextLine(line, lastcolor, color, {x + x_offset, y});
+        y += pFont->GetHeight() - lineSpacing;
+    }
+}
+
+void GUIWindow::DrawDialoguePanel(std::string_view text) {
+    if (text.empty())
+        return;
+
+    int frameWidth = pViewport.w;
+    int indent = 12;
+
+    GUIFont *font = assets->pFontArrus.get();
+    int textHeight = font->CalcTextHeight(text, frameWidth, indent) + 7;
+    if (352 - textHeight < 8) {
+        font = assets->pFontCreate.get();
+        textHeight = font->CalcTextHeight(text, frameWidth, indent) + 7;
+    }
+
+    int leatherWidth = ui_leather_mm7->width();
+    render->DrawQuad2D(ui_leather_mm7, Recti(0, 0, leatherWidth, textHeight), Recti(8, 352 - textHeight, leatherWidth, textHeight));
+    render->DrawQuad2D(_591428_endcap, {8, 347 - textHeight});
+    DrawText(font, {indent, 354 - textHeight}, colorTable.White, font->WrapText(text, frameWidth, indent), frameRect);
+}
+
+//----- (0044CE08) --------------------------------------------------------
+void GUIWindow::DrawText(GUIFont *font, Pointi position, Color color, std::string_view text, Recti frameRect, int maxY, Color shadowColor) {
+    if (engine->callObserver) {
+        engine->callObserver->notify(CALL_GUIWINDOW_DRAWTEXT, std::string(text));
+    }
+    font->DrawText(frameRect, position, color, text, maxY, shadowColor);
+}
+
+//----- (0044CB4F) --------------------------------------------------------
+int GUIWindow::DrawTextInRect(GUIFont *pFont, Pointi position,
+                              Color uColor, std::string_view text, int rect_width,
+                              int reverse_text) {
+    return pFont->DrawTextInRect(frameRect, position, uColor, text, rect_width, reverse_text);
+}
+
+GUIButton *GUIWindow::CreateButton(Pointi position, Sizei dimensions,
+                                   ButtonType uButtonType, int uData, UIMessageType msg,
+                                   unsigned int msg_param, InputAction action,
+                                   std::string_view label,
+                                   std::vector<std::shared_ptr<GraphicsImage>> textures) {
+    GUIButton *pButton = new GUIButton();
+
+    pButton->pParent = this;
+
+    // Original code used closed intervals [uX, uZ] where uZ = uX + uWidth, so the button covered
+    // uWidth + 1 pixels. With standard half-open Rect semantics [x, x+w), we store w + 1 to match.
+    pButton->rect = Recti(position.x + frameRect.x, position.y + frameRect.y, dimensions.w + 1, dimensions.h + 1);
+    pButton->uButtonType = uButtonType;
+    pButton->field_2C_is_pushed = false;
+    pButton->uData = uData;
+    pButton->msg = msg;
+    pButton->msg_param = msg_param;
+    pButton->action = action;
+    pButton->label = label;
+    pButton->vTextures = std::move(textures);
+
+    vButtons.push_back(pButton);
+
+    return pButton;
+}
+
+GUIButton *GUIWindow::CreateButton(std::string id, Pointi position, Sizei dimensions, ButtonType uButtonType, int uData,
+                        UIMessageType msg, unsigned int msg_param, InputAction action, std::string_view label,
+                        std::vector<std::shared_ptr<GraphicsImage>> textures) {
+    GUIButton *result = CreateButton(position, dimensions, uButtonType, uData, msg, msg_param, action, label, std::move(textures));
+    result->id = std::move(id);
+    return result;
+}
+
+void GUIWindow::CreateCharacterButtons() {
+    CreateButton("Game_Character1", { 29, 383 }, { 63, 81 }, BUTTON_TYPE_CHARACTER, 94, UIMSG_SelectCharacter, 0, INPUT_ACTION_SELECT_CHAR_1);  // buttons for portraits
+    CreateButton("Game_Character2", { 145, 383 }, { 63, 81 }, BUTTON_TYPE_CHARACTER, 94, UIMSG_SelectCharacter, 1, INPUT_ACTION_SELECT_CHAR_2);
+    CreateButton("Game_Character3", { 260, 383 }, { 63, 81 }, BUTTON_TYPE_CHARACTER, 94, UIMSG_SelectCharacter, 2, INPUT_ACTION_SELECT_CHAR_3);
+    CreateButton("Game_Character4", { 375, 383 }, { 63, 81 }, BUTTON_TYPE_CHARACTER, 94, UIMSG_SelectCharacter, 3, INPUT_ACTION_SELECT_CHAR_4);
+
+    CreateButton({ pHealthBarPos[0], pHealthManaBarYPos }, { 5, 49 }, BUTTON_TYPE_NORMAL, UIMSG_ShowStatus_ManaHP, UIMSG_0, 1);  // buttons for HP
+    CreateButton({ pHealthBarPos[1], pHealthManaBarYPos }, { 5, 49 }, BUTTON_TYPE_NORMAL, UIMSG_ShowStatus_ManaHP, UIMSG_0, 2);
+    CreateButton({ pHealthBarPos[2], pHealthManaBarYPos }, { 5, 49 }, BUTTON_TYPE_NORMAL, UIMSG_ShowStatus_ManaHP, UIMSG_0, 3);
+    CreateButton({ pHealthBarPos[3], pHealthManaBarYPos }, { 5, 49 }, BUTTON_TYPE_NORMAL, UIMSG_ShowStatus_ManaHP, UIMSG_0, 4);
+
+    CreateButton({ pManaBarPos[0], pHealthManaBarYPos }, { 5, 49 }, BUTTON_TYPE_NORMAL, UIMSG_ShowStatus_ManaHP, UIMSG_0, 1);  // buttons for SP
+    CreateButton({ pManaBarPos[1], pHealthManaBarYPos }, { 5, 49 }, BUTTON_TYPE_NORMAL, UIMSG_ShowStatus_ManaHP, UIMSG_0, 2);
+    CreateButton({ pManaBarPos[2], pHealthManaBarYPos }, { 5, 49 }, BUTTON_TYPE_NORMAL, UIMSG_ShowStatus_ManaHP, UIMSG_0, 3);
+    CreateButton({ pManaBarPos[3], pHealthManaBarYPos }, { 5, 49 }, BUTTON_TYPE_NORMAL, UIMSG_ShowStatus_ManaHP, UIMSG_0, 4);
+}
+
+bool GUIWindow::Contains(unsigned int x, unsigned int y) {
+    return frameRect.contains(Pointi(x, y));
+}
+
+void GUIWindow::InitializeGUI() {
+    SetUserInterface(PartyAlignment::PartyAlignment_Neutral);
+    MainMenuUI_LoadFontsAndSomeStuff();
+}
+
+void GUIWindow::DrawFlashingInputCursor(int uX, int uY, GUIFont *a2, Recti frameRect) {
+    // TODO(pskelton): check tickcount usage here
+    if (platform->tickCount() % 1000 > 500) {
+        DrawText(a2, {uX, uY}, colorTable.White, "_", frameRect);
+    }
+}
+
+GUIWindow::GUIWindow(WindowType windowType, Pointi position, Sizei dimensions, std::string_view hint): eWindowType(windowType) {
+    this->mouse = EngineIocContainer::ResolveMouse();
+
+    MM_TRACE("New window: {}", toString(windowType));
+    lWindowList.push_front(this);
+    frameRect = Recti(position.x, position.y, dimensions.w, dimensions.h);
+
+    this->sHint = hint;
+    this->receives_keyboard_input = false;
+}
+
+void DialogueEnding() {
+    speakingNpcId = 0;
+    pDialogueWindow = nullptr;
+    animTimer->setPaused(false);
+    gameTimer->setPaused(false);
+}
+
+void OnButtonClick::Update() {
+    if (_playSound) {
+        pAudioPlayer->playUISound(SOUND_StartMainChoice02);
+    }
+    render->DrawQuad2D(_button->vTextures[0], frameRect.topLeft());
+    if (!sHint.empty()) {
+        _button->DrawLabel(sHint, assets->pFontCreate.get(), colorTable.White);
+    }
+
+    delete this;
+}
+
+void OnButtonClick3::Update() {
+    pAudioPlayer->playUISound(SOUND_StartMainChoice02);
+
+    render->DrawQuad2D(_button->vTextures[1], frameRect.topLeft());
+    if (!sHint.empty()) {
+        _button->DrawLabel(sHint, assets->pFontCreate.get(), colorTable.White);
+    }
+
+    delete this;
+}
+
+void OnSaveLoad::Update() {
+    if (!sHint.empty()) {
+        pAudioPlayer->playUISound(SOUND_StartMainChoice02);
+    }
+    render->DrawQuad2D(_button->vTextures[0], frameRect.topLeft());
+    if (!sHint.empty()) {
+        _button->DrawLabel(sHint, assets->pFontCreate.get(), colorTable.White);
+    }
+
+    if (current_screen_type == SCREEN_SAVEGAME) {
+        engine->_messageQueue->addMessageCurrentFrame(UIMSG_SaveGame, 0, 0);
+    } else {
+        engine->_messageQueue->addMessageCurrentFrame(UIMSG_LoadGame, 0, 0);
+    }
+
+    delete this;
+}
+
+void OnCancel::Update() {
+    if (sHint.empty()) {
+        pAudioPlayer->playUISound(SOUND_StartMainChoice02);
+    }
+    render->DrawQuad2D(_button->vTextures[0], frameRect.topLeft());
+    if (!sHint.empty()) {
+        _button->DrawLabel(sHint, assets->pFontCreate.get(), colorTable.White);
+    }
+
+    engine->_messageQueue->addMessageCurrentFrame(UIMSG_Escape, 0, 0);
+
+    delete this;
+}
+
+void OnCancel2::Update() {
+    if (!sHint.empty()) {
+        pAudioPlayer->playUISound(SOUND_StartMainChoice02);
+    }
+    render->DrawQuad2D(_button->vTextures[1], frameRect.topLeft());
+    if (!sHint.empty()) {
+        _button->DrawLabel(sHint, assets->pFontCreate.get(), colorTable.White);
+    }
+
+    engine->_messageQueue->addMessageCurrentFrame(UIMSG_Escape, 0, 0);
+
+    delete this;
+}
+
+void OnCancel3::Update() {
+    if (!sHint.empty()) {
+        pAudioPlayer->playUISound(SOUND_StartMainChoice02);
+    }
+
+    render->DrawQuad2D(_button->vTextures[0], frameRect.topLeft());
+    if (!sHint.empty()) {
+        _button->DrawLabel(sHint, assets->pFontCreate.get(), colorTable.White);
+    }
+
+    engine->_messageQueue->addMessageCurrentFrame(UIMSG_Escape, 0, 0);
+
+    delete this;
+}
+
+void GUI_UpdateWindows() {
+    if (GetCurrentMenuID() != MENU_CREATEPARTY) {
+        extern bool UI_OnKeyDown(PlatformKey key);
+        UI_OnKeyDown(PlatformKey::KEY_PAGEDOWN); // hack to highlight dialog options under mouse cursor
+    }
+
+    // should never activte this - gameui window should always be open
+    if (lWindowList.size() < 1) assert(false);
+
+    std::list<GUIWindow *> tmpWindowList(lWindowList);
+    tmpWindowList.reverse();  // new windows are push front - but front should be drawn last?? testing
+    for (GUIWindow *pWindow : tmpWindowList) {
+        pWindow->Update();
+    }
+
+    if (GetCurrentMenuID() == MENU_NONE) {
+        GameUI_DrawFoodAndGold();
+    }
+
+    if (isHoldingMouseRightButton()) {
+        std::shared_ptr<Io::Mouse> mouse = EngineIocContainer::ResolveMouse();
+        UI_OnMouseRightClick(mouse->position());
+    }
+}
+
+//----- (004226EF) --------------------------------------------------------
+void SetUserInterface(PartyAlignment align) {
+    // TODO(captainurist): function-local static, the applied alignment should live next to the UI skin it caches.
+    static std::optional<PartyAlignment> intAlign;
+    if (intAlign == align) return;
+    intAlign = align;
+
+    extern void set_default_ui_skin_colors();
+    set_default_ui_skin_colors();
+
+    if (!parchment) {
+        parchment = assets->getIcon("parchment");
+    }
+
+    if (align == PartyAlignment::PartyAlignment_Evil) {
+        game_ui_rightframe = assets->getIcon("ib-r-C.pcx");
+        game_ui_bottomframe = assets->getIcon("ib-b-C.pcx");
+        game_ui_topframe = assets->getIcon("ib-t-C.pcx");
+        game_ui_leftframe = assets->getIcon("ib-l-C.pcx");
+        game_ui_statusbar = assets->getIcon("IB-Foot-c.pcx");
+
+        game_ui_right_panel_frame = assets->getIcon("ib-mb-C");
+        game_ui_minimap_frame = assets->getIcon("ib-autmask-c");
+        game_ui_minimap_compass = assets->getIcon("IB-COMP-C");
+
+        game_ui_player_alert_green = assets->getIcon("IB-InitG-c");
+        game_ui_player_alert_yellow = assets->getIcon("IB-InitY-c");
+        game_ui_player_alert_red = assets->getIcon("IB-InitR-c");
+
+        ui_btn_npc_left = assets->getIcon("IB-NPCLD-C");
+        ui_btn_npc_right = assets->getIcon("IB-NPCRD-C");
+        game_ui_btn_zoomin = assets->getIcon("ib-autout-C");
+        game_ui_btn_zoomout = assets->getIcon("ib-autin-C");
+        game_ui_player_selection_frame = assets->getIcon("IB-selec-C");
+        game_ui_btn_cast = assets->getIcon("ib-m1d-c");
+        game_ui_btn_rest = assets->getIcon("ib-m2d-c");
+        game_ui_btn_quickref = assets->getIcon("ib-m3d-c");
+        game_ui_btn_settings = assets->getIcon("ib-m4d-c");
+        ui_exit_cancel_button_background = assets->getIcon("ib-bcu-c");
+
+        game_ui_playerbuff_bless = assets->getIcon("isg-01-c");
+        game_ui_playerbuff_preservation = assets->getIcon("isg-02-c");
+        game_ui_playerbuff_hammerhands = assets->getIcon("isg-03-c");
+        game_ui_playerbuff_pain_reflection = assets->getIcon("isg-04-c");
+
+        game_ui_wizardEye = pIconsFrameTable->animationId("wizeyeC");
+        game_ui_torchLight = pIconsFrameTable->animationId("torchC");
+
+        game_ui_evtnpc = assets->getIcon("evtnpc-c");
+        ui_character_inventory_background = assets->getIcon("fr_inven-c");
+
+        messagebox_corner_y = assets->getIcon("cornr_ll-c");
+        messagebox_corner_w = assets->getIcon("cornr_lr-c");
+        messagebox_corner_x = assets->getIcon("cornr_ul-c");
+        messagebox_corner_z = assets->getIcon("cornr_ur-c");
+        messagebox_border_bottom = assets->getIcon("edge_btm-c");
+        messagebox_border_left = assets->getIcon("edge_lf-c");
+        messagebox_border_right = assets->getIcon("edge_rt-c");
+        messagebox_border_top = assets->getIcon("edge_top-c");
+        _591428_endcap = assets->getIcon("endcap-c");
+
+        uGameUIFontMain = colorTable.MediumRed;
+        uGameUIFontShadow = colorTable.Diesel;
+    } else if (align == PartyAlignment::PartyAlignment_Neutral) {
+        game_ui_rightframe = assets->getIcon("ib-r-A.pcx");
+        game_ui_bottomframe = assets->getIcon("ib-b-A.pcx");
+        game_ui_topframe = assets->getIcon("ib-t-A.pcx");
+        game_ui_leftframe = assets->getIcon("ib-l-A.pcx");
+        game_ui_statusbar = assets->getIcon("IB-Foot-a.pcx");
+
+        game_ui_right_panel_frame = assets->getIcon("ib-mb-A");
+        game_ui_minimap_frame = assets->getIcon("ib-autmask-a");
+        game_ui_minimap_compass = assets->getIcon("IB-COMP-A");
+
+        game_ui_player_alert_green = assets->getIcon("IB-InitG-a");
+        game_ui_player_alert_yellow = assets->getIcon("IB-InitY-a");
+        game_ui_player_alert_red = assets->getIcon("IB-InitR-a");
+
+        ui_btn_npc_left = assets->getIcon("IB-NPCLD-A");
+        ui_btn_npc_right = assets->getIcon("IB-NPCRD-A");
+        game_ui_player_selection_frame = assets->getIcon("IB-selec-A");
+        game_ui_btn_cast = assets->getIcon("ib-m1d-a");
+        game_ui_btn_rest = assets->getIcon("ib-m2d-a");
+        game_ui_btn_quickref = assets->getIcon("ib-m3d-a");
+        game_ui_btn_settings = assets->getIcon("ib-m4d-a");
+        game_ui_btn_zoomin = assets->getIcon("ib-autout-a");
+        game_ui_btn_zoomout = assets->getIcon("ib-autin-a");
+        ui_exit_cancel_button_background = assets->getIcon("ib-bcu-a");
+
+        game_ui_playerbuff_bless = assets->getIcon("isg-01-a");
+        game_ui_playerbuff_preservation = assets->getIcon("isg-02-a");
+        game_ui_playerbuff_hammerhands = assets->getIcon("isg-03-a");
+        game_ui_playerbuff_pain_reflection = assets->getIcon("isg-04-a");
+
+        game_ui_wizardEye = pIconsFrameTable->animationId("wizeyeA");
+        game_ui_torchLight = pIconsFrameTable->animationId("torchA");
+
+        game_ui_evtnpc = assets->getIcon("evtnpc");
+        ui_character_inventory_background = assets->getIcon("fr_inven");
+
+        messagebox_corner_y = assets->getIcon("cornr_ll");
+        messagebox_corner_w = assets->getIcon("cornr_lr");
+        messagebox_corner_x = assets->getIcon("cornr_ul");
+        messagebox_corner_z = assets->getIcon("cornr_ur");
+        messagebox_border_bottom = assets->getIcon("edge_btm");
+        messagebox_border_left = assets->getIcon("edge_lf");
+        messagebox_border_right = assets->getIcon("edge_rt");
+        messagebox_border_top = assets->getIcon("edge_top");
+        _591428_endcap = assets->getIcon("endcap");
+
+        uGameUIFontMain = colorTable.Diesel;
+        uGameUIFontShadow = colorTable.StarkWhite;
+    } else if (align == PartyAlignment::PartyAlignment_Good) {
+        game_ui_rightframe = assets->getIcon("ib-r-B.pcx");
+        game_ui_bottomframe = assets->getIcon("ib-b-B.pcx");
+        game_ui_topframe = assets->getIcon("ib-t-B.pcx");
+        game_ui_leftframe = assets->getIcon("ib-l-B.pcx");
+        game_ui_statusbar = assets->getIcon("IB-Foot-b.pcx");
+
+        game_ui_right_panel_frame = assets->getIcon("ib-mb-B");
+        game_ui_minimap_frame = assets->getIcon("ib-autmask-b");
+        game_ui_minimap_compass = assets->getIcon("IB-COMP-B");
+
+        game_ui_player_alert_green = assets->getIcon("IB-InitG-b");
+        game_ui_player_alert_yellow = assets->getIcon("IB-InitY-b");
+        game_ui_player_alert_red = assets->getIcon("IB-InitR-b");
+
+        ui_btn_npc_left = assets->getIcon("IB-NPCLD-B");
+        ui_btn_npc_right = assets->getIcon("IB-NPCRD-B");
+        game_ui_btn_zoomin = assets->getIcon("ib-autout-B");
+        game_ui_btn_zoomout = assets->getIcon("ib-autin-B");
+        game_ui_player_selection_frame = assets->getIcon("IB-selec-B");
+        game_ui_btn_cast = assets->getIcon("ib-m1d-b");
+        game_ui_btn_rest = assets->getIcon("ib-m2d-b");
+        game_ui_btn_quickref = assets->getIcon("ib-m3d-b");
+        game_ui_btn_settings = assets->getIcon("ib-m4d-b");
+        ui_exit_cancel_button_background = assets->getIcon("ib-bcu-b");
+
+        game_ui_playerbuff_bless = assets->getIcon("isg-01-b");
+        game_ui_playerbuff_preservation = assets->getIcon("isg-02-b");
+        game_ui_playerbuff_hammerhands = assets->getIcon("isg-03-b");
+        game_ui_playerbuff_pain_reflection = assets->getIcon("isg-04-b");
+
+        game_ui_wizardEye = pIconsFrameTable->animationId("wizeyeB");
+        game_ui_torchLight = pIconsFrameTable->animationId("torchB");
+
+        game_ui_evtnpc = assets->getIcon("evtnpc-b");
+        ui_character_inventory_background = assets->getIcon("fr_inven-b");
+
+        messagebox_corner_y = assets->getIcon("cornr_ll-b");
+        messagebox_corner_w = assets->getIcon("cornr_lr-b");
+        messagebox_corner_x = assets->getIcon("cornr_ul-b");
+        messagebox_corner_z = assets->getIcon("cornr_ur-b");
+        messagebox_border_bottom = assets->getIcon("edge_btm-b");
+        messagebox_border_left = assets->getIcon("edge_lf-b");
+        messagebox_border_right = assets->getIcon("edge_rt-b");
+        messagebox_border_top = assets->getIcon("edge_top-b");
+        _591428_endcap = assets->getIcon("endcap-b");
+
+        uGameUIFontMain = colorTable.MediumBlue;
+        uGameUIFontShadow = colorTable.White;
+    } else {
+        assert(false);
+    }
+
+    UI_Create();
+}
+
+void DrawBuff_remaining_time_string(int uY, Recti window, Duration remaining_time, GUIFont *Font) {
+    GUIWindow::DrawText(Font, {32, uY}, colorTable.White, "\r020" + MakeDateTimeString(remaining_time), window);
+}
+
+bool isHoldingMouseRightButton() {
+    return holdingMouseRightButton;
+}
+
+Color GetSkillColor(Class uPlayerClass, Skill uPlayerSkillType, Mastery skill_mastery) {
+    if (skillMaxMasteryPerClass[uPlayerClass][uPlayerSkillType] >= skill_mastery) {
+        return ui_character_skillinfo_can_learn;
+    }
+    for (Class promotionClass : promotionsForClass(uPlayerClass)) {
+        if (skillMaxMasteryPerClass[promotionClass][uPlayerSkillType] >= skill_mastery) {
+            return ui_character_skillinfo_can_learn_gm;
+        }
+    }
+    return ui_character_skillinfo_cant_learn;
+}
+
+std::string BuildDialogueString(std::string_view str, int uPlayerID, NPCData *npc, Item *item, HouseId houseId, ShopScreen shop_screen, Time *a6) {
+    std::string v1;
+    Character *pPlayer;       // ebx@3
+    int v29;               // eax@68
+    std::vector<AwardId> addressingBits;
+    CivilTime time;
+    std::string result;
+
+    pPlayer = &pParty->pCharacters[uPlayerID];
+
+    for (int i = 0, dst = 0; i < str.length(); ++i) {
+        char c = str[i];  // skip through string till we find insertion point
+        if (c != '%') {
+            result += c;  // add char to result string
+        } else {
+            int mask = 10 * (int)(str[i + 1] - '0') + str[i + 2] - '0';  // mask tells what the gap needs filling with
+            i += 2;
+
+            switch (mask) {
+            case 1:
+                result += npc->name;
+                break;
+            case 2:
+                result += pPlayer->name;
+                i += 2;
+                break;
+            case 3:
+            case 4:
+                result += v1;
+                break;
+            case 5:
+                time = pParty->GetPlayingTime().toCivilTime();
+                if (time.hour >= 11 && time.hour < 20) {
+                    result += localization->str(LSTR_DAY_LOWERCASE);
+                } else if (time.hour >= 5 && time.hour < 11) {
+                    result += localization->str(LSTR_MORNING);
+                } else {
+                    result += localization->str(LSTR_EVENING);
+                }
+                // TODO(captainurist): ^ and what about night?
+                break;
+            case 6:
+                if (pPlayer->uSex == SEX_FEMALE) {
+                    result += localization->str(LSTR_LADY_LOWERCASE);
+                } else {
+                    result += localization->str(LSTR_SIR_LOWERCASE);
+                }
+                break;
+            case 7:
+                if (pPlayer->uSex == SEX_FEMALE) {
+                    result += localization->str(LSTR_LADY_CAPITALIZED);
+                } else {
+                    result += localization->str(LSTR_SIR_CAPITALIZED);
+                }
+                break;
+            case 8:
+                // #mm6 remnant, this code simply won't work in mm7, relevant bits don't look like they are related
+                // to titles.
+                assert(false);
+                for (int bit : possibleAddressingAwardBits) {
+                    if (pPlayer->_achievedAwardsBits[static_cast<AwardId>(bit)]) {
+                        addressingBits.push_back(static_cast<AwardId>(bit));
+                    }
+                }
+                if (!addressingBits.empty()) {
+                    AwardId currentAddressingAwardBit = addressingBits[vrng->random(addressingBits.size())];
+                    result += pAwards[currentAddressingAwardBit].pText;
+                } else {
+                    result += pNPCTopics[55].pText; // #mm6 remnant, in mm7 that's a dialogue text for Thieves to Rogues promotion.
+                }
+                break;
+            case 9:
+                if (npc->sex == SEX_FEMALE) {
+                    result += localization->str(LSTR_HER);
+                } else {
+                    result += localization->str(LSTR_HIS);
+                }
+                break;
+            case 10:
+                if (pPlayer->uSex == SEX_FEMALE) {
+                    result += localization->str(LSTR_LADY_CAPITALIZED);
+                } else {
+                    result += localization->str(LSTR_LORD);
+                }
+                break;
+            case 11:
+                result += GetReputationString(pParty->GetPartyReputation());
+                break;
+            case 12:
+                result += GetReputationString(npc->rep);
+                break;
+            case 13:
+                result += pNPCStats->sub_495366_MispronounceName(pPlayer->name[0], pPlayer->uSex);
+                break;
+            case 14:
+                if (npc->sex == SEX_FEMALE) {
+                    result += localization->str(LSTR_SISTER);
+                } else {
+                    result += localization->str(LSTR_BROTHER);
+                }
+                break;
+            case 15:
+                result += localization->str(LSTR_DAUGHTER);
+                break;
+            case 16:
+                if (npc->sex == SEX_FEMALE) {
+                    result += localization->str(LSTR_SISTER);
+                } else {
+                    result += localization->str(LSTR_BROTHER);
+                }
+                break;
+            case 17:  // hired npc text
+            {
+                unsigned pay_percentage = pNPCStats->pProfessions[npc->profession].uHirePrice / 100;
+                if (pay_percentage == 0) pay_percentage = 1;
+                v1 = fmt::format("{}", pay_percentage);
+                result += v1;
+                break;
+            }
+            case 18:
+            case 19:
+            case 20:
+            case 21:
+            case 22:
+            case 26:
+                v1 = str.substr(i + 1, 2);
+                if (v1.starts_with('0'))
+                    v1 = v1.substr(1);
+                result += v1;
+                break;
+            case 23:
+                if (engine->_currentLoadedMapId != MAP_INVALID) {
+                    result += pMapTable->pInfos[engine->_currentLoadedMapId].name;
+                } else {
+                    result += localization->str(LSTR_UNKNOWN);
+                }
+                break;
+
+            case 24:  // item name
+                v1 = fmt::format("{::}{}\f00000\n", colorTable.PaleCanary.tag(), item->GetDisplayName());
+                result += v1;
+                break;
+
+            case 25:  // base prices
+                switch (shop_screen) {
+                case SHOP_SCREEN_INVALID:
+                    assert(false);
+                    [[fallthrough]];
+                case SHOP_SCREEN_BUY:
+                    v29 = PriceCalculator::baseItemBuyingPrice(item->GetValue(), houseTable[houseId].fPriceMultiplier);
+                    break;
+                case SHOP_SCREEN_SELL:
+                    v29 = PriceCalculator::baseItemSellingPrice(item->GetValue(), houseTable[houseId].fPriceMultiplier);
+                    break;
+                case SHOP_SCREEN_IDENTIFY:
+                    v29 = PriceCalculator::baseItemIdentifyPrice(houseTable[houseId].fPriceMultiplier);
+                    break;
+                case SHOP_SCREEN_REPAIR:
+                    v29 = PriceCalculator::baseItemRepairPrice(item->GetValue(), houseTable[houseId].fPriceMultiplier);
+                    break;
+                case SHOP_SCREEN_SELL_FOR_CHEAP:
+                    v29 = PriceCalculator::baseItemSellingPrice(item->GetValue(), houseTable[houseId].fPriceMultiplier) / 2;
+                    break;
+                }
+                v1 = fmt::format("{}", v29);
+                result += v1;
+                break;
+
+            case 27:  // actual price
+                v29 = PriceCalculator::itemBuyingPriceForPlayer(pPlayer, item->GetValue(), houseTable[houseId].fPriceMultiplier);
+                if (shop_screen == SHOP_SCREEN_SELL) {
+                    v29 = PriceCalculator::itemSellingPriceForPlayer(pPlayer, *item, houseTable[houseId].fPriceMultiplier);
+                    v1 = fmt::format("{}", v29);
+                    result += v1;
+                    break;
+                }
+                if (shop_screen != SHOP_SCREEN_IDENTIFY) {
+                    if (shop_screen == SHOP_SCREEN_REPAIR) {
+                    v29 = PriceCalculator::itemRepairPriceForPlayer(
+                        pPlayer, item->GetValue(),
+                        houseTable[houseId].fPriceMultiplier);
+                    } else if (shop_screen == SHOP_SCREEN_SELL_FOR_CHEAP) {
+                        // TODO(captainurist): encapsulate this logic in PriceCalculator
+                        v29 = PriceCalculator::itemSellingPriceForPlayer(pPlayer, *item, houseTable[houseId].fPriceMultiplier) / 2;
+                        if (!v29)  // cannot be 0
+                            v29 = 1;
+                        v1 = fmt::format("{}", v29);
+                        result += v1;
+                        break;
+                    }
+                    v1 = fmt::format("{}", v29);
+                    result += v1;
+                    break;
+                }
+                v1 = fmt::format("{}", PriceCalculator::itemIdentificationPriceForPlayer(pPlayer, houseTable[houseId].fPriceMultiplier));
+                result += v1;
+                break;
+
+            case 28:  // shop type - blacksmith ect..
+                result += houseTable[houseId].pProprieterTitle;
+                break;
+
+            case 29:  // identify cost
+                v1 = fmt::format("{}", PriceCalculator::itemIdentificationPriceForPlayer(pPlayer, houseTable[houseId].fPriceMultiplier));
+                result += v1;
+                break;
+            case 30:
+                if (!a6) {
+                    // result += eventId;
+                    assert(false); // should never get here?
+                    break;
+                }
+                time = a6->toCivilTime();
+                result += localization->format(LSTR_S_D_D, localization->monthName(time.month - 1), time.day, time.year);
+                break;
+            case 31:
+            case 32:
+            case 33:
+            case 34:
+                result += pParty->pCharacters[mask - 31].name;
+                break;
+            default:
+                if (mask <= 50 || mask > 70) {
+                    v1 = str.substr(i + 1, 2);
+                    if (v1.starts_with('0'))
+                        v1 = v1.substr(1);
+                    result += v1;
+                    break;
+                }
+                if (mask - 51 >= 20) {
+                    // result += eventId;
+                    assert(false); // should never get here?
+                    break;
+                }
+
+                time = pParty->PartyTimes._s_times[mask - 51].toCivilTime();
+                result += localization->format(LSTR_S_D_D, localization->monthName(time.month - 1), time.day, time.year);
+                break;
+            }
+        }
+    }
+
+    return result;
+}
+
+WindowManager windowManager;
+
+void WindowManager::DeleteAllVisibleWindows() {
+    pDialogueWindow = nullptr;
+    pGUIWindow_ScrollWindow = nullptr;
+    pGUIWindow_CastTargetedSpell = nullptr;
+    pGameOverWindow = nullptr;
+    pGUIWindow_BranchlessDialogue = nullptr;
+    window_SpeakInHouse = nullptr;
+    pGUIWindow_CurrentChest = nullptr;
+    pGUIWindow_CurrentMenu = nullptr;
+
+    // Only primary window should be left now
+    assert(lWindowList.size() == 1 && "Leaking GUIWindows");
+
+    // reset screen state after deleting all windows
+    current_screen_type = SCREEN_GAME;
+    engine->_messageQueue->clearAll();
+
+    // TODO(captainurist): Unload() un-pauses the game timer, which is not always the right thing to do.
+    //                     So we hack. Find a better way.
+    bool wasPaused = gameTimer->isPaused();
+    pMediaPlayer->Unload();
+    gameTimer->setPaused(wasPaused);
+}
+
+void MainMenuUI_LoadFontsAndSomeStuff() {
+    // for (unsigned i = 0; i < 480; ++i) {  // must be 480 - needs sorting
+    //     pSRZBufferLineOffsets[i] = 640 * i;  // must be 640 - needs sorting
+    // }
+    if (!assets->pFontArrus)
+        assets->pFontArrus = GUIFont::LoadFont("arrus.fnt");
+    if (!assets->pFontLucida)
+        assets->pFontLucida = GUIFont::LoadFont("lucida.fnt");
+    if (!assets->pFontCreate)
+        assets->pFontCreate = GUIFont::LoadFont("create.fnt");
+    if (!assets->pFontSmallnum)
+        assets->pFontSmallnum = GUIFont::LoadFont("smallnum.fnt");
+    if (!assets->pFontComic)
+        assets->pFontComic = GUIFont::LoadFont("comic.fnt");
+}
+
+static void LoadPartyBuffIcons() {
+    for (unsigned i = 0; i < 14; ++i)
+        party_buff_icons[i] = assets->getImage_Buff(fmt::format("isn-{:02}", i + 1));
+
+    uIconIdx_FlySpell = pIconsFrameTable->animationId("spell21");
+    uIconIdx_WaterWalk = pIconsFrameTable->animationId("spell27");
+}
+
+void UI_Create() {
+    game_ui_minimap_dirs[0] = assets->getIcon("MAPDIR1");
+    game_ui_minimap_dirs[1] = assets->getIcon("MAPDIR2");
+    game_ui_minimap_dirs[2] = assets->getIcon("MAPDIR3");
+    game_ui_minimap_dirs[3] = assets->getIcon("MAPDIR4");
+    game_ui_minimap_dirs[4] = assets->getIcon("MAPDIR5");
+    game_ui_minimap_dirs[5] = assets->getIcon("MAPDIR6");
+    game_ui_minimap_dirs[6] = assets->getIcon("MAPDIR7");
+    game_ui_minimap_dirs[7] = assets->getIcon("MAPDIR8");
+
+    game_ui_bar_blue = assets->getIcon("ib-statB");
+    game_ui_bar_green = assets->getIcon("ib-statG");
+    game_ui_bar_yellow = assets->getIcon("ib-statY");
+    game_ui_bar_red = assets->getIcon("ib-statR");
+    game_ui_monster_hp_background = assets->getIcon("mhp_bg");
+    game_ui_monster_hp_border_left = assets->getIcon("mhp_capl");
+    game_ui_monster_hp_border_right = assets->getIcon("mhp_capr");
+    game_ui_monster_hp_green = assets->getIcon("mhp_grn");
+    game_ui_monster_hp_red = assets->getIcon("mhp_red");
+    game_ui_monster_hp_yellow = assets->getIcon("mhp_yel");
+    ui_leather_mm7 = assets->getIcon("LEATHER");
+    ui_leather_mm6 = assets->getIcon("ibground");
+    dialogue_ui_x_x_u = assets->getIcon("x_x_u");
+    ui_buttdesc2 = assets->getIcon("BUTTESC2");
+    dialogue_ui_x_ok_u = assets->getIcon("x_ok_u");
+    ui_buttyes2 = assets->getIcon("BUTTYES2");
+
+    pPrimaryWindow = std::make_unique<GUIWindow>(WINDOW_GAME_UI, Pointi{0, 0}, render->GetRenderDimensions());
+    pPrimaryWindow->CreateButton("Game_Viewport", {7, 8}, {460, 343}, BUTTON_TYPE_NORMAL, 0, UIMSG_MouseLeftClickInGame, 0);
+
+    pPrimaryWindow->CreateCharacterButtons();
+
+    game_ui_tome_quests = assets->getIcon("ib-td1-A");
+    pBtn_Quests = pPrimaryWindow->CreateButton({491, 353}, game_ui_tome_quests->size(), BUTTON_TYPE_NORMAL, 0,
+                                               UIMSG_OpenQuestBook, 0, INPUT_ACTION_OPEN_QUESTS,
+                                               localization->str(LSTR_CURRENT_QUESTS), { game_ui_tome_quests });
+
+    game_ui_tome_autonotes = assets->getIcon("ib-td2-A");
+    pBtn_Autonotes = pPrimaryWindow->CreateButton({527, 353}, game_ui_tome_autonotes->size(), BUTTON_TYPE_NORMAL, 0,
+                                                  UIMSG_OpenAutonotes, 0, INPUT_ACTION_OPEN_AUTONOTES,
+                                                  localization->str(LSTR_AUTO_NOTES), { game_ui_tome_autonotes });
+
+    game_ui_tome_maps = assets->getIcon("ib-td3-A");
+    pBtn_Maps = pPrimaryWindow->CreateButton({546, 353}, game_ui_tome_maps->size(), BUTTON_TYPE_NORMAL, 0,
+                                             UIMSG_OpenMapBook, 0, INPUT_ACTION_OPEN_MAP,
+                                             localization->str(LSTR_MAPS), { game_ui_tome_maps });
+
+    game_ui_tome_calendar = assets->getIcon("ib-td4-A");
+    pBtn_Calendar = pPrimaryWindow->CreateButton({570, 353}, game_ui_tome_calendar->size(), BUTTON_TYPE_NORMAL, 0,
+                                                 UIMSG_OpenCalendar, 0, INPUT_ACTION_OPEN_CALENDAR,
+                                                 localization->str(LSTR_CALENDAR), { game_ui_tome_calendar });
+
+    game_ui_tome_storyline = assets->getIcon("ib-td5-A");
+    pBtn_History = pPrimaryWindow->CreateButton({600, 361}, game_ui_tome_storyline->size(), BUTTON_TYPE_NORMAL, 0,
+                                                UIMSG_OpenHistoryBook, 0, INPUT_ACTION_OPEN_HISTORY,
+                                                localization->str(LSTR_HISTORY), { game_ui_tome_storyline }
+    );
+
+    bFlashAutonotesBook = false;
+    bFlashQuestBook = false;
+    bFlashHistoryBook = false;
+
+    pBtn_ZoomIn = pPrimaryWindow->CreateButton({519, 136}, game_ui_btn_zoomin->size(), BUTTON_TYPE_NORMAL, 0,
+                                               UIMSG_ClickZoomInBtn, 0, INPUT_ACTION_ZOOM_IN,
+                                               localization->str(LSTR_ZOOM_IN), { game_ui_btn_zoomin }
+    );
+
+    pBtn_ZoomOut = pPrimaryWindow->CreateButton({574, 136}, game_ui_btn_zoomout->size(), BUTTON_TYPE_NORMAL, 0,
+                                                UIMSG_ClickZoomOutBtn, 0, INPUT_ACTION_ZOOM_OUT,
+                                                localization->str(LSTR_ZOOM_OUT), { game_ui_btn_zoomout });
+
+    pPrimaryWindow->CreateButton({484, 15}, {138, 116}, BUTTON_TYPE_NORMAL, UIMSG_ShowStatus_DateTime, UIMSG_0, 0);
+    pPrimaryWindow->CreateButton("Game_Hireling1", {491, 149}, {64, 74}, BUTTON_TYPE_NORMAL, 0, UIMSG_StartHireling1Dialogue, 0, INPUT_ACTION_SELECT_NPC_1);
+    pPrimaryWindow->CreateButton("Game_Hireling2", {561, 149}, {64, 74}, BUTTON_TYPE_NORMAL, 0, UIMSG_StartHireling2Dialogue, 0, INPUT_ACTION_SELECT_NPC_2);
+    pPrimaryWindow->CreateButton({476, 322}, {77, 17}, BUTTON_TYPE_NORMAL, UIMSG_ShowStatus_Food, UIMSG_0, 0);
+    pPrimaryWindow->CreateButton({555, 322}, {77, 17}, BUTTON_TYPE_NORMAL, UIMSG_ShowStatus_Funds, UIMSG_0, 0);
+
+    pBtn_CastSpell = pPrimaryWindow->CreateButton("Game_CastSpell", {476, 450}, game_ui_btn_cast->size(), BUTTON_TYPE_NORMAL, 0,
+                                                  UIMSG_SpellBookWindow, 0, INPUT_ACTION_OPEN_SPELLBOOK,
+                                                  localization->str(LSTR_CAST_SPELL), { game_ui_btn_cast });
+    pBtn_Rest = pPrimaryWindow->CreateButton("Game_Rest", {518, 450}, game_ui_btn_rest->size(), BUTTON_TYPE_NORMAL, 0,
+                                             UIMSG_RestWindow, 0, INPUT_ACTION_REST,
+                                             localization->str(LSTR_REST), { game_ui_btn_rest });
+    pBtn_QuickReference = pPrimaryWindow->CreateButton({560, 450}, game_ui_btn_quickref->size(), BUTTON_TYPE_NORMAL, 0,
+                                                       UIMSG_QuickReference, 0, INPUT_ACTION_OPEN_QUICK_REFERENCE,
+                                                       localization->str(LSTR_QUICK_REFERENCE), { game_ui_btn_quickref });
+    pBtn_GameSettings = pPrimaryWindow->CreateButton({602, 450}, game_ui_btn_settings->size(), BUTTON_TYPE_NORMAL, 0,
+                                                     UIMSG_GameMenuButton, 0, INPUT_ACTION_INVALID,
+                                                     localization->str(LSTR_GAME_OPTIONS), { game_ui_btn_settings });
+    pBtn_NPCLeft = pPrimaryWindow->CreateButton({469, 178}, ui_btn_npc_left->size(), BUTTON_TYPE_NORMAL, 0,
+                                                UIMSG_ScrollNPCPanel, 0, INPUT_ACTION_INVALID, "", {ui_btn_npc_left });
+    pBtn_NPCRight = pPrimaryWindow->CreateButton({626, 178}, ui_btn_npc_right->size(), BUTTON_TYPE_NORMAL, 0,
+                                                 UIMSG_ScrollNPCPanel, 1, INPUT_ACTION_INVALID, "", {ui_btn_npc_right });
+
+    LoadPartyBuffIcons();
+}
+

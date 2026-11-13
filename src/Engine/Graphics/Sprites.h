@@ -1,0 +1,58 @@
+#pragma once
+
+#include <array>
+#include <memory>
+#include <string>
+#include <vector>
+
+#include "Core/Time/Duration.h"
+
+#include "SpriteEnums.h"
+#include "SpriteEnumFunctions.h"
+
+struct DecorationData;
+class GraphicsImage;
+
+// TODO(captainurist) : move to Engine/Data and Engine/Tables
+
+class SpriteFrame {
+ public:
+    std::string spriteName; // E.g. "spell11", only used to look up sprites by name. Only set for the 1st
+                            // frame in an animated sequence.
+    std::string textureName; // Texture name in sprites.lod w/o rotational suffixes.
+    std::array<std::shared_ptr<GraphicsImage>, 8> sprites;
+    float scale = 1.0;
+    SpriteFrameFlags flags;
+    int glowRadius = 0;
+    int paletteId = 0;
+    Duration frameLength;
+    Duration animationLength;
+};
+
+struct SpriteFrameTable {
+    /**
+     * Drops the sprites of every frame. Frames load them again when `GetFrame()` or `GetFrameReversed()` next returns
+     * them.
+     */
+    void resetLoadedSprites();
+    void InitializeSprite(signed int uSpriteID);
+
+    /**
+     * @param pSpriteName               Name of the sprite to find. Names are case-insensitive.
+     * @return                          Index in `pSpriteSFrames` for the sprite, or 0 if sprite wasn't found.
+     *                                  Conveniently, sprite 0 is a dummy sprite that actually exists.
+     */
+    int FastFindSprite(std::string_view pSpriteName);
+    SpriteFrame *GetFrame(int uSpriteID, Duration uTime);
+    SpriteFrame *GetFrameReversed(int uSpriteID, Duration time);
+
+    std::vector<SpriteFrame> pSpriteSFrames;
+
+    /** Indices into `pSpriteSFrames`, sorted by sprite name. Note that `pSpriteSFrames` itself is not sorted.
+     * Contains only indices for 'a' (frontal?) sprites, so smaller in size than `pSpriteSFrames`. */
+    std::vector<uint16_t> pSpriteEFrames;
+};
+
+extern SpriteFrameTable *pSpriteFrameTable;
+
+SpriteFrame *LevelDecorationChangeSeason(const DecorationData *desc, Duration t, int month);

@@ -1,0 +1,198 @@
+#include "UITransition.h"
+
+#include <cstdlib>
+#include <memory>
+#include <string>
+
+#include "Engine/Engine.h"
+#include "Engine/AssetsManager.h"
+#include "Engine/Tables/HouseTable.h"
+#include "Engine/Graphics/Outdoor.h"
+#include "Engine/Graphics/Indoor.h"
+#include "Engine/Graphics/Renderer/Renderer.h"
+#include "Engine/Graphics/Image.h"
+#include "Engine/Localization.h"
+#include "Engine/Tables/MapTable.h"
+#include "Engine/Party.h"
+#include "Engine/Timer.h"
+#include "Engine/Tables/TransitionTable.h"
+#include "Engine/mm7_data.h"
+
+#include "GUI/GUIButton.h"
+#include "GUI/GUIFont.h"
+#include "GUI/UI/UIGame.h"
+#include "GUI/UI/UIHouses.h"
+#include "GUI/UI/UIDialogue.h"
+
+#include "Media/Audio/AudioPlayer.h"
+#include "Media/MediaPlayer.h"
+
+#include "Library/Logger/Logger.h"
+
+#include "Utility/String/Ascii.h"
+
+/**
+ * all locations which should have special tranfer message:
+ * dragon caves, markham, bandit cave, haunted mansion,
+ * barrow 7, barrow 9, barrow 10, setag tower,
+ * wromthrax cave, toberti, hidden tomb
+ * TODO(Nik-RE-dev): Use location enums here.
+ */
+std::array<std::string, 11> specialTransferMessageLocationNames = {
+    "mdt12.blv", "d18.blv",   "mdt14.blv", "d37.blv",
+    "mdk01.blv", "mdt01.blv", "mdr01.blv", "mdt10.blv",
+    "mdt09.blv", "mdt15.blv", "mdt11.blv"};
+
+/**
+ * @offset 0x444810
+ * @return Index of special transfer message, 0 otherwise
+ */
+int getSpecialTransferMessageIndex(std::string_view locationName) {
+    for (unsigned i = 0; i < specialTransferMessageLocationNames.size(); ++i)
+        if (ascii::noCaseEquals(locationName, specialTransferMessageLocationNames[i]))
+            return i + 1;
+    return 0;
+}
+
+GUIWindow_Transition::GUIWindow_Transition(WindowType windowType, ScreenType screenType) : GUIWindow(windowType, {0, 0}, render->GetRenderDimensions()) {
+    gameTimer->setPaused(true);
+
+    _dialogueBackground = dialogueBackground(pParty->alignment);
+    prev_screen_type = current_screen_type;
+    current_screen_type = screenType;
+}
+
+void GUIWindow_Transition::createButtons(const std::string &okHint, const std::string &cancelHint, UIMessageType confirmMsg, UIMessageType cancelMsg) {
+    this->sHint = okHint;
+
+    pBtn_ExitCancel = CreateButton("Transition_No", {556, 445}, {75, 33}, BUTTON_TYPE_NORMAL, 0, cancelMsg, 0, INPUT_ACTION_TRANSITION_NO, cancelHint, {ui_buttdesc2});
+    pBtn_YES = CreateButton("Transition_Yes", {476, 445}, {75, 33}, BUTTON_TYPE_NORMAL, 0, confirmMsg, 0, INPUT_ACTION_TRANSITION_YES, okHint, {ui_buttyes2});
+    CreateButton({pNPCPortraits_x[0][0], pNPCPortraits_y[0][0]}, {63, 73}, BUTTON_TYPE_NORMAL, 0, confirmMsg, 1, INPUT_ACTION_INTERACT, okHint);
+    CreateButton({8, 8}, {460, 344}, BUTTON_TYPE_NORMAL, 0, confirmMsg, 1, INPUT_ACTION_INVALID, okHint);
+}
+
+GUIWindow_Transition::~GUIWindow_Transition() {
+    // -----------------------------------------
+    // 0041C26A void GUIWindow::Release --- part
+    // pVideoPlayer->Unload();
+    current_screen_type = prev_screen_type;
+}
+
+GUIWindow_Travel::GUIWindow_Travel() : GUIWindow_Transition(WINDOW_TRAVEL, SCREEN_CHANGE_LOCATION) {
+    std::string hint;
+
+    _transitionIcon = assets->getIcon("outside");
+
+    if (engine->_currentLoadedMapId != MAP_INVALID) {
+        hint = localization->format(LSTR_LEAVE_S, pMapTable->pInfos[engine->_currentLoadedMapId].name);
+    } else {
+        hint = localization->str(LSTR_EXIT_DIALOGUE);
+    }
+
+    createButtons(hint, localization->str(LSTR_STAY_IN_THIS_AREA), UIMSG_OnTravelByFoot, UIMSG_CancelTravelByFoot);
+}
+
+void GUIWindow_Travel::Update() {
+    MapId destinationMap = pOutdoor->getTravelDestination(pParty->pos.x, pParty->pos.y).map();
+
+    render->DrawQuad2D(_dialogueBackground, {477, 0});
+    render->DrawQuad2D(game_ui_right_panel_frame, {468, 0});
+    render->DrawQuad2D(_transitionIcon, {pNPCPortraits_x[0][0], pNPCPortraits_y[0][0]});
+    render->DrawQuad2D(dialogue_ui_x_x_u, {556, 451});
+    render->DrawQuad2D(dialogue_ui_x_ok_u, {476, 451});
+    if (destinationMap != MAP_INVALID) {
+        Recti travel_window = pPrimaryWindow->frameRect;
+        travel_window.x = 493;
+        travel_window.w = 126;
+        DrawTitleText(assets->pFontCreate.get(), 0, 4, colorTable.White, pMapTable->pInfos[destinationMap].name, 3, travel_window);
+        travel_window.x = SIDE_TEXT_BOX_POS_X;
+        travel_window.w = SIDE_TEXT_BOX_WIDTH;
+
+        std::string str;
+        if (getTravelTime() == 1) {
+            str = localization->format(LSTR_IT_WILL_TAKE_D_DAY_TO_CROSS_TO_S, 1, pMapTable->pInfos[destinationMap].name);
+        } else {
+            str = localization->format(LSTR_IT_WILL_TAKE_D_DAYS_TO_TRAVEL_TO_S, getTravelTime(), pMapTable->pInfos[destinationMap].name);
+        }
+        str += "\n \n";
+        str += localization->format(LSTR_DO_YOU_WISH_TO_LEAVE_S_1, pMapTable->pInfos[engine->_currentLoadedMapId].name);
+
+        DrawTitleText(assets->pFontCreate.get(), 0, (212 - assets->pFontCreate->CalcTextHeight(str, travel_window.w, 0)) / 2 + 101, colorTable.White, str, 3, travel_window);
+    }
+}
+
+//----- (00444839) --------------------------------------------------------
+GUIWindow_IndoorEntryExit::GUIWindow_IndoorEntryExit(HouseId transitionHouse, unsigned exit_pic_id, const MapDestination &destination, std::string_view locationName,
+                                                     EvtContinuation continuation)
+    : GUIWindow_Transition(WINDOW_INDOOR_ENTRY_EXIT, SCREEN_INPUT_BLV), _destination(destination), _continuation(continuation) {
+    std::string hint;
+
+    _transitionStringId = std::to_underlying(transitionHouse); // TODO(Nik-RE-dev): is this correct?
+
+    _mapName = locationName;
+
+    _transitionIcon = assets->getIcon(pHouse_ExitPictures[exit_pic_id]);
+
+    // animation or special transfer message
+    if (transitionHouse != HOUSE_INVALID || getSpecialTransferMessageIndex(locationName)) {
+        // TODO(Nik-RE-dev): if message is special then no video when entering indoor?
+        if (!getSpecialTransferMessageIndex(locationName))
+            pMediaPlayer->OpenHouseMovie(pAnimatedRooms[houseTable[transitionHouse].uAnimationID].video_name, 1);
+
+        std::string destMap = std::string(locationName);
+        if (locationName[0] == '0')
+            destMap = pMapTable->pInfos[engine->_currentLoadedMapId].fileName;
+        if (pMapTable->GetMapInfo(destMap) != MAP_INVALID) {
+            hint = localization->format(LSTR_ENTER_S, pMapTable->pInfos[pMapTable->GetMapInfo(destMap)].name);
+        } else {
+            hint = localization->str(LSTR_EXIT_DIALOGUE);
+            playHouseSound(transitionHouse, HOUSE_SOUND_GENERAL_GREETING);
+        }
+        if (uCurrentlyLoadedLevelType == LEVEL_INDOOR && pParty->hasActiveCharacter() && pParty->GetRedOrYellowAlert())
+            pParty->activeCharacter().playReaction(SPEECH_LEAVE_DUNGEON);
+        if (getSpecialTransferMessageIndex(locationName))
+            _transitionStringId = getSpecialTransferMessageIndex(locationName);
+    } else if (!getSpecialTransferMessageIndex(locationName)) { // transfer to outdoors - no special message
+        if (engine->_currentLoadedMapId != MAP_INVALID) {
+            hint = localization->format(LSTR_LEAVE_S, pMapTable->pInfos[engine->_currentLoadedMapId].name);
+        } else {
+            hint = localization->str(LSTR_EXIT_DIALOGUE);
+        }
+        playHouseSound(transitionHouse, HOUSE_SOUND_GENERAL_GREETING);
+        if (uCurrentlyLoadedLevelType == LEVEL_INDOOR && pParty->hasActiveCharacter() && pParty->GetRedOrYellowAlert())
+            pParty->activeCharacter().playReaction(SPEECH_LEAVE_DUNGEON);
+    }
+
+    createButtons(hint, localization->str(LSTR_CANCEL), UIMSG_OnIndoorEntryExit, UIMSG_CancelIndoorEntryExit);
+}
+
+void GUIWindow_IndoorEntryExit::Update() {
+    render->DrawQuad2D(_dialogueBackground, {477, 0});
+    render->DrawQuad2D(game_ui_evtnpc, {pNPCPortraits_x[0][0] - 4, pNPCPortraits_y[0][0] - 4});
+    render->DrawQuad2D(_transitionIcon, {pNPCPortraits_x[0][0], pNPCPortraits_y[0][0]});
+    render->DrawQuad2D(game_ui_right_panel_frame, {468, 0});
+    render->DrawQuad2D(dialogue_ui_x_x_u, {556, 451});
+    render->DrawQuad2D(dialogue_ui_x_ok_u, {476, 451});
+
+    MapId map_id = engine->_currentLoadedMapId;
+    if (pMovie_Track || getSpecialTransferMessageIndex(_mapName))
+        map_id = pMapTable->GetMapInfo(_mapName);
+
+    Recti transition_window = pPrimaryWindow->frameRect;
+    transition_window.x = 493;
+    transition_window.w = 126;
+    DrawTitleText(assets->pFontCreate.get(), 0, 5, colorTable.White, pMapTable->pInfos[map_id].name, 3, transition_window);
+    transition_window.x = SIDE_TEXT_BOX_POS_X;
+    transition_window.w = SIDE_TEXT_BOX_WIDTH;
+
+    if (_transitionStringId) {
+        unsigned int vertMargin = (212 - assets->pFontCreate->CalcTextHeight(pTransitionStrings[_transitionStringId], transition_window.w, 0)) / 2 + 101;
+        DrawTitleText(assets->pFontCreate.get(), 0, vertMargin, colorTable.White, pTransitionStrings[_transitionStringId], 3, transition_window);
+    } else if (map_id != MAP_INVALID) {
+        std::string str = localization->format(LSTR_DO_YOU_WISH_TO_LEAVE_S_2, pMapTable->pInfos[map_id].name);
+        unsigned int vertMargin = (212 - assets->pFontCreate->CalcTextHeight(str, transition_window.w, 0)) / 2 + 101;
+        DrawTitleText(assets->pFontCreate.get(), 0, vertMargin, colorTable.White, str, 3, transition_window);
+    } else {
+        MM_ERROR("Troubles in da house");
+    }
+}

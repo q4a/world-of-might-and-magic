@@ -1,90 +1,98 @@
-#include <map>
+#include <memory>
+#include <unordered_set>
+#include <unordered_map>
+#include <string>
 
-#include "src/Application/GameMenu.h"
+#include "GameMenu.h"
 
-#include "src/Application/Game.h"
+#include "Game.h"
 
 #include "Engine/AssetsManager.h"
 #include "Engine/Engine.h"
-#include "Engine/Graphics/IRender.h"
-#include "Engine/Graphics/Viewport.h"
-#include "Engine/LOD.h"
+#include "Engine/EngineGlobals.h"
+#include "Engine/Graphics/Renderer/Renderer.h"
+#include "Engine/Graphics/Image.h"
 #include "Engine/Localization.h"
 #include "Engine/Party.h"
 #include "Engine/SaveLoad.h"
-#include "Engine/Time.h"
+#include "Engine/Timer.h"
+#include "Engine/EngineIocContainer.h"
 
-#include "Io/GameKey.h"
-#include "Io/InputAction.h"
+#include "Library/Platform/Interface/PlatformEnums.h"
+#include "Io/InputEnums.h"
 #include "Io/KeyboardInputHandler.h"
-#include "Io/Mouse.h"
 
 #include "GUI/GUIButton.h"
+#include "GUI/GUIMessageQueue.h"
 #include "GUI/UI/UIGame.h"
-#include "GUI/UI/UIModal.h"
 #include "GUI/UI/UISaveLoad.h"
 #include "GUI/UI/UIStatusBar.h"
 
 #include "Media/Audio/AudioPlayer.h"
+#include "Utility/MapAccess.h"
 
-#include "Platform/Api.h"
-#include "Platform/OSWindow.h"
+enum class CurrentConfirmationState {
+    CONFIRM_NONE,
+    CONFIRM_NEW_GAME,
+    CONFIRM_QUIT
+};
+using enum CurrentConfirmationState;
 
+CurrentConfirmationState confirmationState = CONFIRM_NONE;
 
-using Application::Menu;
-using Io::TextInputType;
-using Io::KeyToggleType;
-using Io::InputAction;
-
-
-InputAction currently_selected_action_for_binding = InputAction::Invalid;  // 506E68
-std::map<InputAction, bool> key_map_conflicted;  // 506E6C
-std::map<InputAction, GameKey> prev_key_map;
+InputAction currently_selected_action_for_binding = INPUT_ACTION_INVALID;  // 506E68
+std::unordered_set<InputAction> key_map_conflicted;  // 506E6C
+std::unordered_map<InputAction, PlatformKey> curr_key_map;
 
 void Game_StartNewGameWhilePlaying(bool force_start) {
-    if (dword_6BE138 == 124 || force_start) {
-        pMessageQueue_50CBD0->Flush();
+    if (confirmationState == CONFIRM_NEW_GAME || force_start) {
+        engine->_messageQueue->clear();
         // pGUIWindow_CurrentMenu->Release();
         uGameState = GAME_STATE_NEWGAME_OUT_GAMEMENU;
-        current_screen_type = CURRENT_SCREEN::SCREEN_GAME;
-        viewparams->bRedrawGameUI = 1;
+        current_screen_type = SCREEN_GAME;
+        engine->_statusBar->clearAll();
     } else {
-        GameUI_SetStatusBar(LSTR_START_NEW_GAME_PROMPT);
-        pAudioPlayer->PlaySound(SOUND_quest, 0, 0, -1, 0, 0);
-        dword_6BE138 = 124;
+        engine->_statusBar->setEvent(LSTR_ARE_YOU_SURE_CLICK_AGAIN_TO_START_A_NEW);
+        pAudioPlayer->playUISound(SOUND_quest);
+        confirmationState = CONFIRM_NEW_GAME;
     }
 }
 
 void Game_QuitGameWhilePlaying(bool force_quit) {
-    if (dword_6BE138 == 132 || force_quit) {
-        pMessageQueue_50CBD0->Flush();
+    if (confirmationState == CONFIRM_QUIT || force_quit) {
+        engine->_messageQueue->clear();
         // pGUIWindow_CurrentMenu->Release();
-        current_screen_type = CURRENT_SCREEN::SCREEN_GAME;
-        viewparams->bRedrawGameUI = 1;
-        pAudioPlayer->PlaySound(SOUND_WoodDoorClosing, 0, 0, -1, 0, 0);
+        current_screen_type = SCREEN_GAME;
+        pAudioPlayer->stopSounds();
+        pAudioPlayer->playUISound(SOUND_WoodDoorClosing);
         uGameState = GAME_STATE_GAME_QUITTING_TO_MAIN_MENU;
+        engine->_statusBar->clearAll();
     } else {
-        GameUI_SetStatusBar(LSTR_EXIT_GAME_PROMPT);
-        pAudioPlayer->PlaySound(SOUND_quest, 0, 0, -1, 0, 0);
-        dword_6BE138 = 132;
+        engine->_statusBar->setEvent(LSTR_ARE_YOU_SURE_CLICK_AGAIN_TO_QUIT);
+        pAudioPlayer->playUISound(SOUND_quest);
+        confirmationState = CONFIRM_QUIT;
     }
 }
 
 void Game_OpenLoadGameDialog() {
-    pMessageQueue_50CBD0->Flush();
-    pGUIWindow_CurrentMenu->Release();
-    pGUIWindow_CurrentMenu = nullptr;
-    game_ui_status_bar_event_string_time_left = 0;
+    engine->_messageQueue->clear();
+    engine->_statusBar->clearEvent();
     // LoadUI_Load(1);
-    current_screen_type = CURRENT_SCREEN::SCREEN_LOADGAME;
-    pGUIWindow_CurrentMenu = new GUIWindow_Load(true);
+    current_screen_type = SCREEN_LOADGAME;
+    pGUIWindow_CurrentMenu = std::make_unique<GUIWindow_Load>(true);
 }
 
+Menu::Menu() {
+    mouse = EngineIocContainer::ResolveMouse();
+}
+
+Menu::~Menu() = default;
+
 void Menu::EventLoop() {
-    while (!pMessageQueue_50CBD0->Empty()) {
+    while (engine->_messageQueue->haveMessages()) {
         UIMessageType msg;
         int param, param2;
-        pMessageQueue_50CBD0->PopMessage(&msg, &param, &param2);
+        engine->_messageQueue->popMessage(&msg, &param, &param2);
 
         switch (msg) {
             case UIMSG_StartNewGame:
@@ -98,119 +106,98 @@ void Menu::EventLoop() {
                 continue;
 
             case UIMSG_ArrowUp:
-                --pSaveListPosition;
-                if (pSaveListPosition < 0) pSaveListPosition = 0;
-                new OnButtonClick2(215, 199, 17, 17, pBtnArrowUp);
+                saveLoadMenu()->scrollUp();
+                new OnButtonClick({215, 199}, {17, 17}, pBtnArrowUp);
                 continue;
 
             case UIMSG_DownArrow:
-                ++pSaveListPosition;
-                if (pSaveListPosition > (param - 7) ) pSaveListPosition = (param - 7);
-                new OnButtonClick2(215, 323, 17, 17, pBtnDownArrow);
+                saveLoadMenu()->scrollDown();
+                new OnButtonClick({215, 323}, {17, 17}, pBtnDownArrow);
                 continue;
 
             case UIMSG_Cancel:
-                new OnCancel(350, 302, 106, 42, pBtnCancel);
+                new OnCancel({350, 302}, {106, 42}, pBtnCancel);
                 continue;
 
             case UIMSG_SaveLoadBtn:
-                new OnSaveLoad(241, 302, 106, 42, pBtnLoadSlot);
+                new OnSaveLoad({241, 302}, {106, 42}, pBtnLoadSlot);
                 continue;
-            case UIMSG_SelectLoadSlot: {
-                if (pGUIWindow_CurrentMenu->keyboard_input_status == WindowInputStatus::WINDOW_INPUT_IN_PROGRESS)
-                    keyboardInputHandler->SetWindowInputStatus(WindowInputStatus::WINDOW_INPUT_NONE);
-
-                int v10 = pSaveListPosition + param;
-                if (current_screen_type != CURRENT_SCREEN::SCREEN_SAVEGAME ||
-                    uLoadGameUI_SelectedSlot != v10) {
-                    if (dword_6BE138 == pSaveListPosition + param) {
-                        pMessageQueue_50CBD0->AddGUIMessage(UIMSG_SaveLoadBtn, 0, 0);
-                        pMessageQueue_50CBD0->AddGUIMessage(UIMSG_LoadGame, 0, 0);
-                    }
-                    uLoadGameUI_SelectedSlot = v10;
-                    dword_6BE138 = v10;
-                } else {
-                    keyboardInputHandler->StartTextInput(TextInputType::Text, 19, pGUIWindow_CurrentMenu);
-                    if (strcmp(pSavegameHeader[uLoadGameUI_SelectedSlot].pName, localization->GetString(LSTR_EMPTY_SAVESLOT))) {
-                        keyboardInputHandler->SetTextInput(pSavegameHeader[uLoadGameUI_SelectedSlot].pName);
-                    }
-                }
-            }
+            case UIMSG_SelectLoadSlot:
+                saveLoadMenu()->slotClicked(param, param2);
                 continue;
             case UIMSG_LoadGame:
-                if (pSavegameUsedSlots[uLoadGameUI_SelectedSlot]) {
-                    LoadGame(uLoadGameUI_SelectedSlot);
+                if (saveLoadMenu()->hasSelectedSlot()) {
+                    loadGame(saveLoadMenu()->selectedSlot().fileName);
                     uGameState = GAME_STATE_LOADING_GAME;
                 }
                 continue;
-            case UIMSG_SaveGame:
-                if (pGUIWindow_CurrentMenu->keyboard_input_status == WindowInputStatus::WINDOW_INPUT_IN_PROGRESS) {
-                    keyboardInputHandler->SetWindowInputStatus(WindowInputStatus::WINDOW_INPUT_NONE);
-                    strcpy(pSavegameHeader[uLoadGameUI_SelectedSlot].pName, keyboardInputHandler->GetTextInput().c_str());
+            case UIMSG_SaveGame: {
+                pAudioPlayer->playUISound(SOUND_StartMainChoice02);
+                GUIWindow_SaveLoad *menu = saveLoadMenu();
+                if (pGUIWindow_CurrentMenu->keyboard_input_status == WINDOW_INPUT_IN_PROGRESS) {
+                    if (keyboardInputHandler->GetTextInput().empty())
+                        continue; // Saves need a name, keep the input open.
+                    menu->setSelectedSlotName(keyboardInputHandler->GetTextInput());
+                    keyboardInputHandler->EndTextInput();
+                } else if (menu->selectedSlot().fileName.empty() && menu->selectedSlot().header.name.empty()) {
+                    // Don't just save into the new save slot, ask for the save name first.
+                    keyboardInputHandler->StartTextInput(TEXT_INPUT_TEXT, 19, pGUIWindow_CurrentMenu.get());
+                    continue;
                 }
-                DoSavegame(uLoadGameUI_SelectedSlot);
-                continue;
-            case UIMSG_Game_OpenSaveGameDialog: {
-                pGUIWindow_CurrentMenu->Release();
-                game_ui_status_bar_event_string_time_left = 0;
-                current_screen_type = CURRENT_SCREEN::SCREEN_SAVEGAME;
-                pGUIWindow_CurrentMenu = new GUIWindow_Save();
-                // SaveUI_Load(current_screen_type = SCREEN_SAVEGAME);
+                doSavegame(menu->selectedSlot().fileName, menu->selectedSlot().header.name);
                 continue;
             }
+            case UIMSG_Game_OpenSaveGameDialog: {
+                if (engine->_currentLoadedMapId == MAP_ARENA) {
+                    engine->_statusBar->setEvent(LSTR_NO_SAVING_IN_THE_ARENA);
+                    pAudioPlayer->playUISound(SOUND_error);
+                } else {
+                    engine->_statusBar->clearEvent();
+                    current_screen_type = SCREEN_SAVEGAME;
+                    pGUIWindow_CurrentMenu = std::make_unique<GUIWindow_Save>();
+                }
+                continue;
+            }
+            case UIMSG_SaveLoadScroll:
+                saveLoadMenu()->scrollWithMouse(mouse->position());
+                continue;
             case UIMSG_Game_OpenOptionsDialog:  // Open
             {
-                pMessageQueue_50CBD0->Flush();
+                engine->_messageQueue->clear();
 
-                pGUIWindow_CurrentMenu->Release();
-                pGUIWindow_CurrentMenu = new GUIWindow_GameOptions();  // GameMenuUI_Options_Load();
-
-                viewparams->field_48 = 1;
-                current_screen_type = CURRENT_SCREEN::SCREEN_OPTIONS;
+                pGUIWindow_CurrentMenu = std::make_unique<GUIWindow_GameOptions>();
+                current_screen_type = SCREEN_OPTIONS;
 
                 continue;
             }
 
             case UIMSG_OpenKeyMappingOptions:  // Open
             {
-                pMessageQueue_50CBD0->Flush();
+                engine->_messageQueue->clear();
 
-                pGUIWindow_CurrentMenu->Release();
-                pGUIWindow_CurrentMenu = new GUIWindow_GameKeyBindings();  // GameMenuUI_OptionsKeymapping_Load();
-
-                viewparams->field_48 = 1;
-                current_screen_type = CURRENT_SCREEN::SCREEN_KEYBOARD_OPTIONS;
+                pGUIWindow_CurrentMenu = std::make_unique<GUIWindow_GameKeyBindings>();  // GameMenuUI_OptionsKeymapping_Load();
+                current_screen_type = SCREEN_KEYBOARD_OPTIONS;
 
                 continue;
             }
 
             case UIMSG_ChangeKeyButton: {
-                if (currently_selected_action_for_binding != InputAction::Invalid) {
-                    pAudioPlayer->PlaySound(SOUND_error, 0, 0, -1, 0, 0);
+                if (currently_selected_action_for_binding != INPUT_ACTION_INVALID) {
+                    pAudioPlayer->playUISound(SOUND_error);
                 } else {
                     currently_selected_action_for_binding = (InputAction)param;
                     if (KeyboardPageNum != 1)
                         currently_selected_action_for_binding = (InputAction)(param + 14);
-                    keyboardInputHandler->StartTextInput(TextInputType::Text, 1, pGUIWindow_CurrentMenu);
+                    keyboardInputHandler->StartTextInput(TEXT_INPUT_TEXT, 1, pGUIWindow_CurrentMenu.get());
                 }
                 continue;
             }
 
             case UIMSG_ResetKeyMapping: {
-                int v197 = 1;
-                // keyboardController->SetDefaultMapping();
-                for (auto action : AllInputActions()) {
-                    GameKey oldKey = keyboardActionMapping->GetKey(action);
-                    GameKey newKey = keyboardActionMapping->MapDefaultKey(action);
-
-                    if (oldKey != newKey) {
-                        GUI_ReplaceHotkey(oldKey, newKey, v197);
-                        v197 = 0;
-                    }
-                    prev_key_map[action] = oldKey;
-                    key_map_conflicted[action] = false;
-                }
-                pAudioPlayer->PlaySound(SOUND_chimes, 0, 0, -1, 0, 0);
+                curr_key_map = keyboardActionMapping->defaultKeybindings(KEYBINDINGS_CONFIGURABLE);
+                keyboardActionMapping->applyKeybindings(curr_key_map);
+                key_map_conflicted.clear();
+                pAudioPlayer->playUISound(SOUND_chimes);
                 continue;
             }
 
@@ -222,311 +209,199 @@ void Menu::EventLoop() {
                 continue;
 
             case UIMSG_OpenVideoOptions: {
-                pMessageQueue_50CBD0->Flush();
+                engine->_messageQueue->clear();
 
-                pGUIWindow_CurrentMenu->Release();
-                pGUIWindow_CurrentMenu = new GUIWindow_GameVideoOptions();  // GameMenuUI_OptionsVideo_Load();
-                viewparams->field_48 = 1;
-                current_screen_type = CURRENT_SCREEN::SCREEN_VIDEO_OPTIONS;
+                pGUIWindow_CurrentMenu = std::make_unique<GUIWindow_GameVideoOptions>();
+                current_screen_type = SCREEN_VIDEO_OPTIONS;
 
                 continue;
             }
 
-            case UIMSG_1A9:
-                __debugbreak();
+            case UIMSG_ChangeGammaLevel: {
+                int gammalevel = engine->config->graphics.Gamma.value();
                 if (param == 4) {
-                    // --uGammaPos;
-                    if ((uGammaPos-- - 1) < 0) {
-                        uGammaPos = 0;
-                        pAudioPlayer->PlaySound(SOUND_ClickMovingSelector, 0, 0, -1, 0, 0);
-                        continue;
-                    }
-                    double v19 = (double)(signed int)uGammaPos * 0.1 + 0.6;
-                    // engine->pGammaController->Initialize(v19);
-                    new OnButtonClick2(21, 161, 0, 0, pBtn_SliderLeft,
-                                       String(), false);
-                    pAudioPlayer->PlaySound(SOUND_ClickMovingSelector, 0, 0, -1, 0, 0);
-                    continue;
-                }
-                if (param == 5) {
-                    ++uGammaPos;
-                    if ((signed int)uGammaPos <= 9) {
-                        double v21 = (double)(signed int)uGammaPos * 0.1 + 0.6;
-                        // engine->pGammaController->Initialize(v21);
-                        new OnButtonClick2(213, 161, 0, 0,
-                                           pBtn_SliderRight, String(),
-                                           false);
-                        pAudioPlayer->PlaySound(SOUND_ClickMovingSelector, 0, 0, -1, 0, 0);
-                        continue;
-                    }
-                    uGammaPos = 9;
+                    gammalevel--;
+                    new OnButtonClick({21, 161}, {0, 0}, pBtn_SliderLeft, std::string(), false);
+                } else if (param == 5) {
+                    gammalevel++;
+                    new OnButtonClick({213, 161}, {0, 0}, pBtn_SliderRight, std::string(), false);
                 } else {
-                    Point pt = mouse->GetCursorPos();
-                    uGammaPos = (pt.x - 42) / 17;
-                    double v22 = (double)(signed int)uGammaPos * 0.1 + 0.6;
-                    // engine->pGammaController->Initialize(v22);
+                    Pointi pt = mouse->position();
+                    gammalevel = (pt.x - 42) / 17;
                 }
-                pAudioPlayer->PlaySound(SOUND_ClickMovingSelector, 0, 0, -1, 0, 0);
+
+                engine->config->graphics.Gamma.setValue(gammalevel);
+                pAudioPlayer->playUISound(SOUND_ClickMovingSelector);
+
+                gamma_preview_image = GraphicsImage::Create(render->MakeViewportScreenshot(155, 117));
                 continue;
+            }
             case UIMSG_ToggleBloodsplats:
-                engine->ToggleBloodsplats();
+                engine->config->graphics.BloodSplats.toggle();
                 continue;
             case UIMSG_ToggleColoredLights:
-                render->ToggleColoredLights();
+                engine->config->graphics.ColoredLights.toggle();
                 continue;
             case UIMSG_ToggleTint:
-                render->ToggleTint();
+                engine->config->graphics.Tinting.toggle();
                 continue;
 
             case UIMSG_ChangeMusicVolume: {
-                int new_level = engine->config->music_level;
+                int new_level = engine->config->settings.MusicLevel.value();
                 if (param == 4) {
                     new_level -= 1;
-                    new OnButtonClick2(243, 216, 0, 0, pBtn_SliderLeft, String(), false);
+                    new OnButtonClick({243, 216}, {0, 0}, pBtn_SliderLeft, std::string(), false);
                 } else if (param == 5) {
                     new_level += 1;
-                    new OnButtonClick2(435, 216, 0, 0, pBtn_SliderRight, String(), false);
+                    new OnButtonClick({435, 216}, {0, 0}, pBtn_SliderRight, std::string(), false);
                 } else {
-                    Point pt = mouse->GetCursorPos();
+                    Pointi pt = mouse->position();
                     new_level = (pt.x - 263) / 17;  // for mouse
                 }
 
-                engine->SetMusicLevel(new_level);
-                pAudioPlayer->SetMusicVolume(engine->config->music_level);
-                // if (engine->config->music_level > 0)
-                //    pAudioPlayer->PlaySound(SOUND_hurp, -1, 0, -1, 0, 0);
+                engine->config->settings.MusicLevel.setValue(new_level);
+                pAudioPlayer->SetMusicVolume(engine->config->settings.MusicLevel.value());
+                pAudioPlayer->playSound(SOUND_hurp, SOUND_MODE_MUSIC);
                 continue;
             }
 
             case UIMSG_ChangeSoundVolume: {
-                int new_level = engine->config->sound_level;
+                int new_level = engine->config->settings.SoundLevel.value();
                 if (param == 4) {
                     new_level -= 1;
-                    new OnButtonClick2(243, 162, 0, 0, pBtn_SliderLeft, String(), false);
+                    new OnButtonClick({243, 162}, {0, 0}, pBtn_SliderLeft, std::string(), false);
                 } else if (param == 5) {
                     new_level += 1;
-                    new OnButtonClick2(435, 162, 0, 0, pBtn_SliderRight, String(), false);
+                    new OnButtonClick({435, 162}, {0, 0}, pBtn_SliderRight, std::string(), false);
                 } else {
-                    Point pt = mouse->GetCursorPos();
+                    Pointi pt = mouse->position();
                     new_level = (pt.x - 263) / 17;
                 }
 
-                engine->SetSoundLevel(new_level);
+                engine->config->settings.SoundLevel.setValue(new_level);
 
-                pAudioPlayer->SetMasterVolume(engine->config->sound_level);
-                pAudioPlayer->PlaySound(SOUND_church, -1, 0, -1, 0, 0);
+                pAudioPlayer->SetMasterVolume(engine->config->settings.SoundLevel.value());
+                pAudioPlayer->playExclusiveSound(SOUND_church);
                 continue;
             }
             case UIMSG_ToggleFlipOnExit:
-                engine->ToggleFlipOnExit();
+                engine->config->settings.FlipOnExit.toggle();
                 continue;
             case UIMSG_ToggleAlwaysRun:
-                engine->ToggleAlwaysRun();
+                engine->config->settings.AlwaysRun.toggle();
                 continue;
             case UIMSG_ToggleWalkSound:
-                engine->ToggleWalkSound();
+                engine->config->settings.WalkSound.toggle();
                 continue;
             case UIMSG_ToggleShowDamage:
-                engine->ToggleShowDamage();
+                engine->config->settings.ShowHits.toggle();
                 continue;
             case UIMSG_ChangeVoiceVolume: {
-                int new_level = engine->config->voice_level;
+                int new_level = engine->config->settings.VoiceLevel.value();
                 if (param == 4) {
                     new_level -= 1;
-                    new OnButtonClick2(243, 270, 0, 0, pBtn_SliderLeft, String(), false);
+                    new OnButtonClick({243, 270}, {0, 0}, pBtn_SliderLeft, std::string(), false);
                 } else if (param == 5) {
                     new_level += 1;
-                    new OnButtonClick2(435, 270, 0, 0, pBtn_SliderRight, String(), false);
+                    new OnButtonClick({435, 270}, {0, 0}, pBtn_SliderRight, std::string(), false);
                 } else {
-                    Point pt = mouse->GetCursorPos();
+                    Pointi pt = mouse->position();
                     new_level = (pt.x - 263) / 17;
                 }
 
-                engine->SetVoiceLevel(new_level);
-                if (engine->config->voice_level > 0)
-                    pAudioPlayer->PlaySound(SOUND_hf445a, 44, 0, -1, 0, 0);
+                engine->config->settings.VoiceLevel.setValue(new_level);
+                pAudioPlayer->SetVoiceVolume(engine->config->settings.VoiceLevel.value());
+                if (engine->config->settings.VoiceLevel.value() > 0)
+                    pAudioPlayer->playSound(SOUND_hf445a, SOUND_MODE_SPEECH);
                 continue;
             }
             case UIMSG_SetTurnSpeed:
                 if (param)
-                    pParty->sRotationZ = param * pParty->sRotationZ / param;
-                engine->SetTurnSpeed(param);
+                    pParty->_viewYaw = param * pParty->_viewYaw / param;
+                engine->config->settings.TurnSpeed.setValue(param);
                 continue;
 
             case UIMSG_SetGraphicsMode:
-                // if ( !bUseLoResSprites )
-                //{
-                //    byte_6BE388_graphicsmode = uMessageParam;
-                //    MM7Initialization();
-                //    continue;
-                //}
-                // if ( uMessageParam )
-                //{
-                //    if ( uMessageParam == 1 )
-                //    {
-                //    byte_6BE388_graphicsmode = 0;
-                //    }
-                //    else
-                //    {
-                //        if ( uMessageParam != 2 )
-                //            continue;
-                //        byte_6BE388_graphicsmode = 1;
-                //    }
-                //    MM7Initialization();
-                //    continue;
-                //}
-                pModalWindow =
-                    new GUIWindow_Modal(pNPCTopics[453].pText, UIMSG_0);
-                __debugbreak();  // Nomad: graphicsmode as it was now removed
+                assert(false);  // Nomad: graphicsmode as it was now removed
                 continue;
 
             case UIMSG_GameMenu_ReturnToGame:
                 // pGUIWindow_CurrentMenu->Release();
-                pEventTimer->Resume();
-                current_screen_type = CURRENT_SCREEN::SCREEN_GAME;
-                viewparams->bRedrawGameUI = true;
+                gameTimer->setPaused(false);
+                current_screen_type = SCREEN_GAME;
                 continue;
 
             case UIMSG_Escape:
-                if (pModalWindow) {
-                    pModalWindow->Release();
-                    pModalWindow = nullptr;
-                    continue;
-                }
-                render->ClearZBuffer();
-                viewparams->bRedrawGameUI = true;
-                viewparams->field_48 = 1;
+                confirmationState = CONFIRM_NONE;
 
-                if (current_screen_type == CURRENT_SCREEN::SCREEN_MENU) {
-                    pEventTimer->Resume();
-                    current_screen_type = CURRENT_SCREEN::SCREEN_GAME;
-                    viewparams->bRedrawGameUI = true;
-                } else if (current_screen_type == CURRENT_SCREEN::SCREEN_SAVEGAME ||
-                           current_screen_type == CURRENT_SCREEN::SCREEN_LOADGAME) {
-                    // crt_deconstruct_ptr_6A0118();
+                if (current_screen_type == SCREEN_MENU) {
+                    gameTimer->setPaused(false);
+                    current_screen_type = SCREEN_GAME;
+                } else if (current_screen_type == SCREEN_SAVEGAME ||
+                           current_screen_type == SCREEN_LOADGAME) {
+                    current_screen_type = SCREEN_MENU;
+                    pGUIWindow_CurrentMenu = std::make_unique<GUIWindow_GameMenu>();
+                } else if (current_screen_type == SCREEN_OPTIONS) {
+                    current_screen_type = SCREEN_MENU;
+                    pGUIWindow_CurrentMenu = std::make_unique<GUIWindow_GameMenu>();
+                } else if (current_screen_type == SCREEN_VIDEO_OPTIONS) {
+                    current_screen_type = SCREEN_MENU;
+                    pGUIWindow_CurrentMenu = std::make_unique<GUIWindow_GameMenu>();
+                } else if (current_screen_type == SCREEN_KEYBOARD_OPTIONS) {
+                    bool hasConflicts = !key_map_conflicted.empty();
 
-                    pGUIWindow_CurrentMenu->Release();
-                    current_screen_type = CURRENT_SCREEN::SCREEN_MENU;
-                    pGUIWindow_CurrentMenu = new GUIWindow_GameMenu();
-                } else if (current_screen_type == CURRENT_SCREEN::SCREEN_OPTIONS) {
-                    options_menu_skin.Relaease();
-                    OS_SetAppInt("soundflag", engine->config->sound_level);
-                    OS_SetAppInt("musicflag", engine->config->music_level);
-                    OS_SetAppInt("CharVoices", engine->config->voice_level);
-                    OS_SetAppInt("WalkSound", engine->config->NoWalkSound() ? 0 : 1);
-                    OS_SetAppInt("ShowDamage", engine->config->NoShowDamage() ? 0 : 1);
-                    // OS_SetAppInt("graphicsmode", (unsigned
-                    // __int8)byte_6BE388_graphicsmode);
-                    OS_SetAppInt("valAlwaysRun", engine->config->always_run ? 1 : 0);
-                    OS_SetAppInt("FlipOnExit", engine->config->flip_on_exit ? 1 : 0);
-
-                    if (engine->config->turn_speed == 0)
-                        OS_SetAppInt("TurnDelta", 3);
-                    else if (engine->config->turn_speed == 64)
-                        OS_SetAppInt("TurnDelta", 2);
-                    else if (engine->config->turn_speed == 128)
-                        OS_SetAppInt("TurnDelta", 1);
-
-                    pGUIWindow_CurrentMenu->Release();
-                    current_screen_type = CURRENT_SCREEN::SCREEN_MENU;
-                    pGUIWindow_CurrentMenu = new GUIWindow_GameMenu();
-                } else if (current_screen_type == CURRENT_SCREEN::SCREEN_VIDEO_OPTIONS) {
-                    // if ( render->pRenderD3D )
-                    {
-                        OS_SetAppInt("Colored Lights", render->config->is_using_colored_lights);
-                        OS_SetAppInt("Tinting", render->config->is_tinting);
-                        OS_SetAppInt("Bloodsplats", engine->config->NoBloodsplats() ? 0 : 1);
-                    }
-
-                    pGUIWindow_CurrentMenu->Release();
-                    current_screen_type = CURRENT_SCREEN::SCREEN_MENU;
-                    pGUIWindow_CurrentMenu = new GUIWindow_GameMenu();
-                } else if (current_screen_type == CURRENT_SCREEN::SCREEN_KEYBOARD_OPTIONS) {
-                    // KeyToggleType pKeyToggleType;  // [sp+0h] [bp-5FCh]@287
-                    int v197 = 1;
-                    bool anyBindingErrors = false;
-
-                    for (auto action : AllInputActions()) {
-                        if (key_map_conflicted[action]) {
-                            anyBindingErrors = true;
-                        }
-                    }
-                    if (anyBindingErrors) {
-                        pAudioPlayer->PlaySound(SOUND_error, 0, 0, -1, 0, 0);
+                    if (hasConflicts) {
+                        pAudioPlayer->playUISound(SOUND_error);
+                        break; // deny to exit options until all key conflicts are solved
                     } else {
-                        for (uint i = 0; i < 5; i++) {
-                            if (game_ui_options_controls[i]) {
-                                game_ui_options_controls[i]->Release();
-                                game_ui_options_controls[i] = nullptr;
-                            }
-                        }
-
-                        for (auto action : AllInputActions()) {
-                            if (keyboardActionMapping->GetKey(action) != prev_key_map[action]) {
-                                GUI_ReplaceHotkey(
-                                    keyboardActionMapping->GetKey(action),
-                                    prev_key_map[action],
-                                    v197);
-                                v197 = 0;
-                            }
-
-                            keyboardActionMapping->MapKey(action, prev_key_map[action], GetToggleType(action));
-                        }
-                        keyboardActionMapping->StoreMappings();
+                        keyboardActionMapping->applyKeybindings(curr_key_map);
                     }
 
-                    pGUIWindow_CurrentMenu->Release();
-                    current_screen_type = CURRENT_SCREEN::SCREEN_MENU;
-                    pGUIWindow_CurrentMenu = new GUIWindow_GameMenu();
+                    current_screen_type = SCREEN_MENU;
+                    pGUIWindow_CurrentMenu = std::make_unique<GUIWindow_GameMenu>();
                 }
                 continue;
+            case UIMSG_QuickLoad:
+                quickLoadGame();
+                break;
+            default:
+                break;
         }
     }
 }
 
 void Menu::MenuLoop() {
-    pEventTimer->Pause();
-    pAudioPlayer->StopChannels(-1, -1);
-    current_screen_type = CURRENT_SCREEN::SCREEN_MENU;
+    gameTimer->setPaused(true);
+    current_screen_type = SCREEN_MENU;
 
-    pGUIWindow_CurrentMenu = new GUIWindow_GameMenu();
+    pGUIWindow_CurrentMenu = std::make_unique<GUIWindow_GameMenu>();
+    confirmationState = CONFIRM_NONE;
 
-    viewparams->field_48 = 1;
+    gamma_preview_image = GraphicsImage::Create(render->MakeViewportScreenshot(155, 117));
 
-    if (gamma_preview_image) {
-        gamma_preview_image->Release();
-        gamma_preview_image = nullptr;
-    }
-
-    render->SaveScreenshot("gamma.pcx", 155, 117);
-    gamma_preview_image = assets->GetImage_PCXFromFile("gamma.pcx");
+    pParty->resetCharacterEmotions();
 
     while (uGameState == GAME_STATE_PLAYING &&
-           (current_screen_type == CURRENT_SCREEN::SCREEN_MENU ||
-            current_screen_type == CURRENT_SCREEN::SCREEN_SAVEGAME ||
-            current_screen_type == CURRENT_SCREEN::SCREEN_LOADGAME ||
-            current_screen_type == CURRENT_SCREEN::SCREEN_OPTIONS ||
-            current_screen_type == CURRENT_SCREEN::SCREEN_VIDEO_OPTIONS ||
-            current_screen_type == CURRENT_SCREEN::SCREEN_KEYBOARD_OPTIONS)) {
+           (current_screen_type == SCREEN_MENU ||
+            current_screen_type == SCREEN_SAVEGAME ||
+            current_screen_type == SCREEN_LOADGAME ||
+            current_screen_type == SCREEN_OPTIONS ||
+            current_screen_type == SCREEN_VIDEO_OPTIONS ||
+            current_screen_type == SCREEN_KEYBOARD_OPTIONS)) {
         MessageLoopWithWait();
 
         GameUI_WritePointedObjectStatusString();
-        render->BeginScene();
-        {
-            EventLoop();
-            engine->DrawGUI();
-            GUI_UpdateWindows();
-            GameUI_StatusBar_Draw();
-        }
-        render->EndScene();
+        render->BeginScene2D();
+        engine->DrawGUI();
+        GUI_UpdateWindows();
+        engine->_statusBar->draw();
+        mouse->DrawCursor();
         render->Present();
+
+        EventLoop();
     }
 
-    pGUIWindow_CurrentMenu->Release();
     pGUIWindow_CurrentMenu = nullptr;
 
-    if (gamma_preview_image) {
-        gamma_preview_image->Release();
-        gamma_preview_image = nullptr;
-    }
+    gamma_preview_image.reset();
 }

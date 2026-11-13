@@ -1,0 +1,46 @@
+#include "UICredits.h"
+
+#include <string>
+#include <utility>
+
+#include "Engine/Graphics/Renderer/Renderer.h"
+#include "Engine/Graphics/Image.h"
+#include "Engine/AssetsManager.h"
+#include "Engine/Engine.h"
+#include "Engine/Resources/ResourceManager.h"
+
+#include "GUI/GUIFont.h"
+#include "GUI/GUIMessageQueue.h"
+
+constexpr Recti creditsRect(389, 19, 250, 440);
+
+GUICredits::GUICredits() : GUIWindow(WINDOW_CREDITS, {0, 0}, render->GetRenderDimensions()) {
+    _fontQuick = GUIFont::LoadFont("quick.fnt");
+    _fontCChar = GUIFont::LoadFont("cchar.fnt");
+
+    _mm6TitleTexture = assets->getIcon("mm6title.pcx");
+
+    std::string text{ engine->resources()->eventsText("credits.txt").str() };
+
+    int height = _fontQuick->GetStringHeightWithSecondFont(_fontCChar.get(), text, creditsRect.w, 0) + 2 * creditsRect.h;
+
+    RgbaImage credits = RgbaImage::solid(Color(), creditsRect.w, height);
+    _fontQuick->DrawCreditsEntry(_fontCChar.get(), 0, creditsRect.h, creditsRect.w, height, colorTable.CornFlowerBlue, colorTable.Primrose, colorTable.Black, text, &credits);
+    _creditsTexture = GraphicsImage::Create(std::move(credits));
+}
+
+GUICredits::~GUICredits() {
+    assets->evict(std::move(_mm6TitleTexture));
+}
+
+void GUICredits::Update() {
+    render->DrawQuad2D(_mm6TitleTexture, {0, 0});
+    render->SetUIClipRect(creditsRect);
+    render->DrawQuad2D(_creditsTexture, {creditsRect.x, static_cast<int>(creditsRect.y - _moveY)});
+    render->ResetUIClipRect();
+
+    _moveY += 0.25; // TODO(captainurist): #time gotta be dt-based.
+
+    if (_moveY >= _creditsTexture->height())
+        engine->_messageQueue->addMessageCurrentFrame(UIMSG_CreditsFinished);
+}

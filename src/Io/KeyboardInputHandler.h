@@ -1,0 +1,90 @@
+#pragma once
+
+#include <memory>
+#include <string>
+
+#include "Io/KeyboardController.h"
+#include "Io/KeyboardActionMapping.h"
+
+#include "Core/Time/Duration.h"
+
+#include "Library/Platform/Interface/PlatformEnums.h"
+
+class GUIWindow;
+
+enum class WindowInputStatus : int32_t {
+    WINDOW_INPUT_NONE = 0,
+    WINDOW_INPUT_IN_PROGRESS = 1,
+    WINDOW_INPUT_CONFIRMED = 2,
+};
+using enum WindowInputStatus;
+
+namespace Io {
+    // Handles events from OSWindow through GameWindowHandler/IKeyboardController
+    //      and maps it to game actions/events using KeyboardActionMapping
+class KeyboardInputHandler {
+ public:
+    KeyboardInputHandler(KeyboardController *controller, std::shared_ptr<KeyboardActionMapping> actionMapping) {
+        this->controller = controller;
+        this->actionMapping = actionMapping;
+
+        lastKeyPressed = PlatformKey::KEY_NONE;
+        inputType = TEXT_INPUT_NONE;
+        window = nullptr;
+    }
+
+    bool IsRunKeyToggled() const;
+    bool IsTurnStrafingToggled() const;
+    bool IsStealingToggled() const;
+    bool IsTakeAllToggled() const;
+    bool IsAdventurerBackcycleToggled() const;
+    bool IsSpellBackcycleToggled() const;
+    bool IsCastOnClickToggled() const;
+
+    void GenerateInputActions();
+
+    inline PlatformKey LastPressedKey() const {
+        return lastKeyPressed;
+    }
+
+    void StartTextInput(TextInputType type, int max_string_len, GUIWindow *pWindow);
+    bool ProcessTextInput(PlatformKey key, int c);
+    void EndTextInput();
+
+    /**
+     * Ends text input, but only if it was started for the passed window. Windows that start text input call
+     * this as they go away, so that the handler is never left pointing at a dead window.
+     *
+     * Passing the window matters. A window that's closing might not be the one the player is typing into, and
+     * ending someone else's input session would drop the text they'd entered.
+     *
+     * @param window                    Window that's going away.
+     */
+    void EndTextInput(GUIWindow *window);
+
+    const std::string &GetTextInput() const;
+    void SetTextInput(std::string_view text);
+
+ private:
+    void SetWindowInputStatus(WindowInputStatus status);
+    void GenerateActions(bool isPaused);
+    void ProcessPausedAction(InputAction action);
+    void ProcessGameplayAction(InputAction action);
+
+    KeyboardController *controller = nullptr;
+    std::shared_ptr<KeyboardActionMapping> actionMapping;
+
+    PlatformKey lastKeyPressed = PlatformKey::KEY_NONE;
+    Duration keydelaytimer;
+    int max_input_string_len = 0;
+    std::string pPressedKeysBuffer;
+    TextInputType inputType = TEXT_INPUT_NONE;
+    GUIWindow *window = nullptr;
+};
+}  // namespace Io
+
+
+bool UI_OnKeyDown(PlatformKey key);
+
+
+extern std::shared_ptr<Io::KeyboardInputHandler> keyboardInputHandler;

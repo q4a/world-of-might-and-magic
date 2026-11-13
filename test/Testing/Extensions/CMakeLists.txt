@@ -1,0 +1,23 @@
+cmake_minimum_required(VERSION 3.27 FATAL_ERROR)
+
+if(OE_BUILD_TESTS)
+    set(TESTING_EXTENSIONS_SOURCES
+            GoogleTestHelp.cpp
+            ThrowingAssertions.cpp
+            ScopedTestFile.cpp
+            ScopedTestFileSlot.cpp
+            ScopedTestFolder.cpp)
+
+    set(TESTING_EXTENSIONS_HEADERS
+            GoogleTestHelp.h
+            ThrowingAssertions.h
+            ExpectExtensions.h
+            ScopedTestFile.h
+            ScopedTestFileSlot.h
+            ScopedTestFolder.h)
+
+    add_library(testing_extensions ${TESTING_EXTENSIONS_SOURCES} ${TESTING_EXTENSIONS_HEADERS})
+    target_link_libraries(testing_extensions PUBLIC GTest::gtest utility)
+
+    target_check_style(testing_extensions)
+endif()

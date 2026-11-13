@@ -1,0 +1,25 @@
+# The excluded bugprone checks are the ones with existing findings, clean them up to enable them.
+Checks: >
+  -*,
+  bugprone-*,
+  -bugprone-branch-clone,
+  -bugprone-derived-method-shadowing-base-method,
+  -bugprone-easily-swappable-parameters,
+  -bugprone-empty-catch,
+  -bugprone-exception-escape,
+  -bugprone-implicit-widening-of-multiplication-result,
+  -bugprone-integer-division,
+  -bugprone-macro-parentheses,
+  -bugprone-narrowing-conversions,
+  -bugprone-random-generator-seed,
+  -bugprone-reserved-identifier,
+  -bugprone-signed-char-misuse,
+  -bugprone-std-namespace-modification,
+  -bugprone-switch-missing-default-case,
+  -bugprone-throwing-static-initialization,
+  -bugprone-unchecked-optional-access
+WarningsAsErrors: '*'
+HeaderFilterRegex: '/(src|test)/'
+ExcludeHeaderFilterRegex: '/thirdparty/' # Submodules have src and test dirs of their own.
+CheckOptions:
+  bugprone-suspicious-stringview-data-usage.AllowedCallees: 'std::from_chars;fast_float::from_chars;noCaseCompare' # These take an explicit end or size.
